@@ -1,5 +1,5 @@
 ---
-title: Creazione di una tabella (esercitazione) | Documenti Microsoft
+title: Creazione di una tabella (esercitazione) | Microsoft Docs
 ms.custom: 
 ms.date: 04/18/2016
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-2---creating-a-table"></a>Lezione 1-2-Creazione di una tabella
+# <a name="lesson-1-2---creating-a-table"></a>Lezione 1-2 - Creazione di una tabella
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Per creare una tabella, è necessario specificare un nome per la tabella e i nomi e i tipi di dati di ogni colonna di quest'ultima. È inoltre consigliabile indicare se sono consentiti valori Null in ogni colonna. Per creare una tabella è necessario avere l'autorizzazione `CREATE TABLE` e l'autorizzazione `ALTER SCHEMA` per lo schema che conterrà la tabella. Il ruolo predefinito del database `db_ddladmin` dispone di tali autorizzazioni.  

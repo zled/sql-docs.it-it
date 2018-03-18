@@ -1,5 +1,5 @@
 ---
-title: REVOCARE le autorizzazioni del certificato (Transact-SQL) | Documenti Microsoft
+title: REVOKE (autorizzazioni per certificati) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Se l'autorizzazione specificata è stata concessa all'entità senza l'opzione GRANT, l'autorizzazione stessa verrà revocata.  
   
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere revocata per un certificato. Vedere l'elenco riportato di seguito.  
   
- CERTIFICATO ON **::***nome_certificato*  
+ ON CERTIFICATE **::***certificate_name*  
  Specifica il certificato per cui viene revocata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un certificato è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un certificato, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del certificato|Autorizzazione del certificato in cui è inclusa|Autorizzazione del database in cui è inclusa|  
@@ -116,7 +116,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il certificato.  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -125,7 +125,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [CREATE APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

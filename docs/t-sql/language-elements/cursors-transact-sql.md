@@ -1,5 +1,5 @@
 ---
-title: Cursors (Transact-SQL) | Microsoft Docs
+title: Cursori (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="cursors-transact-sql"></a>Cursori (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni producono un set di risultati completo, ma esistono casi i risultati sono preferibile elaborare una riga alla volta. Se si apre un cursore su un set di risultati, il set potrà essere elaborato una riga alla volta. È possibile assegnare un cursore a una variabile o parametro con un **cursore** tipo di dati.  
+  Le istruzioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] producono un set di risultati completo ma in alcuni casi è preferibile elaborare i risultati una riga alla volta. Se si apre un cursore su un set di risultati, il set potrà essere elaborato una riga alla volta. È possibile assegnare un cursore a una variabile o un parametro con il tipo di dati **cursor**.  
   
  Le operazioni di cursori sono supportate nelle seguenti istruzioni:  
   

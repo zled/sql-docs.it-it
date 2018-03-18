@@ -1,5 +1,5 @@
 ---
-title: TRIGGER_NESTLEVEL (Transact-SQL) | Documenti Microsoft
+title: TRIGGER_NESTLEVEL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,18 +49,18 @@ TRIGGER_NESTLEVEL ( [ object_id ] , [ 'trigger_type' ] , [ 'trigger_event_catego
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID di oggetto di un trigger. Se *object_id* viene specificato, il numero di esecuzioni del trigger specificato per l'istruzione viene restituito. Se *object_id* non viene specificato, il numero di volte in cui tutti i trigger sono stati eseguiti per l'istruzione viene restituito.  
+ ID di oggetto di un trigger. Se si specifica *object_id*, viene restituito il numero di esecuzioni del trigger specificato per l'istruzione. Se non si specifica *object_id*, viene restituito il numero di esecuzioni di tutti i trigger per l'istruzione.  
   
  **'** *trigger_type* **'**  
- Specifica se applicare TRIGGER_NESTLEVEL ai trigger AFTER oppure ai trigger INSTEAD OF. Specificare **AFTER** per i trigger AFTER. Specificare **IOT** per i trigger INSTEAD OF. Se *trigger_type* è specificato, *trigger_event_category* deve anche essere specificato.  
+ Specifica se applicare TRIGGER_NESTLEVEL ai trigger AFTER oppure ai trigger INSTEAD OF. Specificare **AFTER** per i trigger AFTER. Specificare **IOT** per i trigger INSTEAD OF. Se *trigger_type* viene specificato, deve essere specificato anche *trigger_event_category*.  
   
  **'** *trigger_event_category* **'**  
- Specifica se applicare TRIGGER_NESTLEVEL ai trigger DML o DDL. Specificare **DML** per i trigger DML. Specificare **DDL** per i trigger DDL. Se *trigger_event_category* è specificato, *trigger_type* deve anche essere specificato. Si noti che solo **AFTER** possono essere specificati con **DDL**, poiché i trigger DDL possono essere solo trigger AFTER.  
+ Specifica se applicare TRIGGER_NESTLEVEL ai trigger DML o DDL. Specificare **DML** per i trigger DML. Specificare **DDL** per i trigger DDL. Se *trigger_event_category* viene specificato, deve essere specificato anche *trigger_type*. Se si specifica **DDL** è possibile specificare solo **AFTER** perché i trigger DDL possono essere solo trigger AFTER.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se non si specifica alcun parametro, TRIGGER_NESTLEVEL restituisce il numero totale di trigger nello stack di chiamate. Nel numero è incluso il parametro stesso. È possibile omettere i parametri quando un trigger esegue comandi che provocano l'attivazione di un altro trigger o crea una serie di attivazioni di trigger.  
   
- Per restituire il numero totale di trigger nello stack di chiamate per una categoria di tipo e all'evento trigger specifico, specificare *object_id* = 0.  
+ Per restituire il numero totale di trigger nello stack di chiamate per un tipo di trigger specifico o una categoria di eventi specifica, impostare *object_id* = 0.  
   
  TRIGGER_NESTLEVEL restituisce il valore 0 se viene eseguita all'esterno di un trigger e i parametri sono diversi da NULL.  
   

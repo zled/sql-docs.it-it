@@ -1,5 +1,5 @@
 ---
-title: Attivare funzioni (Transact-SQL) | Documenti Microsoft
+title: Funzioni trigger (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/08/2017
 ms.prod: sql-non-specified

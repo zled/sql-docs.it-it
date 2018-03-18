@@ -1,5 +1,5 @@
 ---
-title: STDimension (tipo di dati geography) | Documenti Microsoft
+title: STDimension (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geography-data-type"></a>STDimension (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce le dimensioni massime di un **geography** istanza.  
+  Restituisce le dimensioni massime di un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- STDimension() restituisce -1 se il **geography** istanza è vuota.  
+## <a name="remarks"></a>Remarks  
+ STDimension() restituisce -1 se l'istanza **geography** è vuota.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STDimension()` per creare una variabile di tabella per contenere `geography` le istanze e inserisce un `Point`, `LineString`e un `Polygon`.  
+ L'esempio seguente usa `STDimension()` per creare una variabile di tabella per contenere le istanze `geography` e inserisce un valore `Point`, un valore `LineString` e un valore `Polygon`.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geography);  
@@ -65,13 +65,13 @@ SELECT [name], [geom].STDimension() as [dim]
 FROM @temp;  
 ```  
   
- Nell'esempio vengono restituite le dimensioni di ogni `geography`istanza.  
+ L'esempio restituisce quindi le dimensioni di ogni istanza `geography`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Punto|0|  
 |LineString|1|  
-|Poligono|2|  
+|Polygon|2|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi OGC sulle istanze geografiche](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  

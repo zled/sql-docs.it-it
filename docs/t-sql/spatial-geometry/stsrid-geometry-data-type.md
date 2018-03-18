@@ -1,5 +1,5 @@
 ---
-title: STSrid (tipo di dati geometry) | Documenti Microsoft
+title: STSrid (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geometry-data-type"></a>STSrid (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** è un numero intero che rappresenta l'identificatore SRID dell'istanza.  
+  **STSrid** è un Integer che rappresenta l'identificatore SRID dell'istanza.  
   
 Questa proprietà può essere modificata.
   
@@ -46,12 +46,12 @@ STSrid
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo CLR: **SqlInt32**  
   
 ## <a name="examples"></a>Esempi  
- Il primo esempio viene creata una **geometry** istanza con il valore SRID 13 e viene utilizzato `STSrid` per confermare l'identificatore SRID.  
+ Nel primo esempio viene creata un'istanza **geometry** con il valore dell'identificatore SRID uguale a 13 e viene usato `STSrid` per confermare l'identificatore SRID.  
   
 ```  
 DECLARE @g geometry;  

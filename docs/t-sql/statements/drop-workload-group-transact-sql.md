@@ -1,5 +1,5 @@
 ---
-title: DROP WORKLOAD GROUP (Transact-SQL) | Documenti Microsoft
+title: DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   Elimina un gruppo del carico di lavoro esistente di Resource Governor definito dall'utente.  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,10 +50,10 @@ DROP WORKLOAD GROUP group_name
  *group_name*  
  Il nome di un gruppo del carico di lavoro esistente definito dall'utente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione DROP WORKLOAD GROUP non è consentita per i gruppi interni o predefiniti di Resource Governor.  
   
- Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per ulteriori informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
  Se un gruppo del carico di lavoro contiene sessioni attive, non sarà possibile eliminare o spostare il gruppo del carico di lavoro a un pool di risorse diverso quando l'istruzione ALTER RESOURCE GOVERNOR RECONFIGURE dovrà applicare la modifica. Per evitare il problema, eseguire una delle azioni seguenti:  
   

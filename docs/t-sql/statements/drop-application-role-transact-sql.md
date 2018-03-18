@@ -1,5 +1,5 @@
 ---
-title: DROP APPLICATION ROLE (Transact-SQL) | Documenti Microsoft
+title: DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -50,16 +50,16 @@ DROP APPLICATION ROLE rolename
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *roleName*  
+ *rolename*  
  Specifica il nome del ruolo applicazione da eliminare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il ruolo applicazione possiede un'entità a sicurezza diretta, tale ruolo non può essere rimosso. Prima di rimuovere un ruolo applicazione proprietario di entità a protezione diretta, è necessario innanzitutto trasferire la proprietà delle entità a protezione diretta oppure rimuoverle.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database.  
   
 ## <a name="examples"></a>Esempi  
@@ -72,8 +72,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md)   
- [CREATE APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

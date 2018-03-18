@@ -1,5 +1,5 @@
 ---
-title: STMPointFromWKB (tipo di dati geography) | Documenti Microsoft
+title: STMPointFromWKB (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geographyMultiPoint** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Restituisce un'istanza **geographyMultiPoint** da una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_multipoint*  
- Rappresentazione WKB del **geographyMultiPoint** istanza da restituire. *WKB_multipoint* è un **varbinary (max)** espressione.  
+ Rappresentazione WKB dell'istanza **geographyMultiPoint** da restituire. *WKB_multipoint* è un'espressione **varbinary(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geographyMultiPoint** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyMultiPoint** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
  Tipo OGC: **MultiPoint**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo genera un **FormatException** se l'input non è formattata correttamente.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STMPointFromWKB()` per creare un'istanza `geography`.  

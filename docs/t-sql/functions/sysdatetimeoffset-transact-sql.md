@@ -1,5 +1,5 @@
 ---
-title: SYSDATETIMEOFFSET (Transact-SQL) | Documenti Microsoft
+title: SYSDATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -46,9 +46,9 @@ ms.lasthandoff: 12/16/2017
 # <a name="sysdatetimeoffset-transact-sql"></a>SYSDATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce un **datetimeoffset(7)** valore che contiene la data e ora del computer in cui l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione. La differenza di fuso orario è inclusa.  
+  Restituisce il valore **datetimeoffset(7)** che contiene la data e l'ora del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La differenza di fuso orario è inclusa.  
   
- Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Per una panoramica di tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,13 +61,13 @@ SYSDATETIMEOFFSET ( )
 ## <a name="return-type"></a>Tipo restituito  
  **datetimeoffset(7)**  
   
-## <a name="remarks"></a>Osservazioni  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]le istruzioni possono fare riferimento a SYSDATETIMEOFFSET ovunque possono fare riferimento a un **datetimeoffset** espressione.  
+## <a name="remarks"></a>Remarks  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a SYSDATETIMEOFFSET ovunque possano fare riferimento a un'espressione **datetimeoffset**.  
   
  SYSDATETIMEOFFSET è una funzione non deterministica. Le viste e le espressioni che fanno riferimento a questa funzione in una colonna non sono indicizzabili.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Ottiene i valori di data e ora tramite l'API di Windows GetSystemTimeAsFileTime(). L'accuratezza dipende dall'hardware e dalla versione di Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La precisione di tale API è fissata sul valore di 100 nanosecondi. L'accuratezza può essere determinato tramite l'API di Windows GetSystemTimeAdjustment().  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottiene i valori di data e ora tramite l'API Windows GetSystemTimeAsFileTime(). L'accuratezza dipende dall'hardware e dalla versione di Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La precisione di tale API è fissata sul valore di 100 nanosecondi. L'accuratezza può essere determinata usando l'API Windows GetSystemTimeAdjustment().  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti sono utilizzate le sei funzioni di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che restituiscono data e ora corrente per restituire la data, l'ora o entrambe. I valori sono restituiti in serie. Pertanto, i secondi frazionari potrebbero essere diversi.  
@@ -142,8 +142,8 @@ GETUTCDATE()       20:18:45.3470000
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Data e ora funzioni e tipi di &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   
 

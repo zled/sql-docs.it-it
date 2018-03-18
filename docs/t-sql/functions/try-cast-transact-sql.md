@@ -1,5 +1,5 @@
 ---
-title: TRY_CAST (Transact-SQL) | Documenti Microsoft
+title: TRY_CAST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  Valore di cui eseguire il cast. Qualsiasi espressione valida.  
   
  *data_type*  
- Tipo di dati in cui eseguire il cast *espressione*.  
+ Tipo di dati in cui eseguire il cast di *expression*.  
   
  *length*  
  Numero intero facoltativo con cui si specifica la lunghezza del tipo di dati di destinazione.  
@@ -60,10 +60,10 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un cast del valore nel tipo di dati specificato se il cast ha esito positivo. In caso contrario, restituisce Null.  
   
-## <a name="remarks"></a>Osservazioni  
- **TRY_CAST** accetta il valore passato e tenta di convertirlo in oggetto *data_type*. Se il cast ha esito positivo, **TRY_CAST** restituisce il valore specificato *data_type*; se si verifica un errore, viene restituito null. Tuttavia se si richiede una conversione in modo esplicito non valido, quindi **TRY_CAST** genera un errore.  
+## <a name="remarks"></a>Remarks  
+ **TRY_CAST** accetta il valore passato e prova a convertirlo nel tipo di dati *data_type* specificato. Se il cast ha esito positivo, **TRY_CAST** restituisce il valore come elemento *data_type* specificato. Se si verifica un errore, viene restituito Null. Se tuttavia si richiede una conversione non consentita in modo esplicito, **TRY_CAST** ha esito negativo e viene restituito un errore.  
   
- **TRY_CAST** non è una parola chiave riservata nuovi ed è disponibile in tutti i livelli di compatibilità. **TRY_CAST** ha la stessa semantica **TRY_CONVERT** quando ci si connette a server remoti.  
+ **TRY_CAST** non è una nuova parola chiave riservata ed è disponibile in tutti i livelli di compatibilità. La semantica di **TRY_CAST** è uguale a quella di **TRY_CONVERT** quando si esegue la connessione a server remoti.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -141,7 +141,7 @@ Result
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)   
+ [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

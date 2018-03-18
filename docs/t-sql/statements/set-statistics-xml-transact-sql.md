@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS XML (Transact-SQL) | Documenti Microsoft
+title: SET STATISTICS XML (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -49,12 +49,12 @@ ms.lasthandoff: 01/25/2018
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'opzione SET STATISTICS XML viene impostata in fase di esecuzione, non in fase di analisi.  
   
  Se SET STATISTICS XML è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce informazioni sull'esecuzione di ogni istruzione. Quando l'opzione viene impostata su ON, vengono restituite informazioni su tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive fino a quando l'opzione non viene impostata su OFF. Non è necessario che SET STATISTICS XML sia l'unica istruzione in un batch.  
   
- SET STATISTICS XML restituisce l'output come **nvarchar (max)** per le applicazioni, ad esempio il **sqlcmd** utilità, in cui l'output XML viene successivamente usato da altri strumenti per visualizzare ed elaborare il piano di query informazioni.  
+ SET STATISTICS XML restituisce l'output come tipo **nvarchar(max)** per le applicazioni, come l'utilità **sqlcmd**, in cui l'output XML viene successivamente usato da altri strumenti per visualizzare ed elaborare le informazioni del piano di query.  
   
  SET STATISTICS XML restituisce le informazioni sotto forma di documenti XML. Ogni istruzione successiva all'istruzione SET STATISTICS XML ON è rappresentata nell'output da un documento specifico. Ogni documento contiene il testo dell'istruzione, seguito da informazioni dettagliate sui passaggi dell'esecuzione. L'output include informazioni ottenute durante l'esecuzione, quali i costi, gli indici utilizzati e i tipi di operazioni eseguite, l'ordine di join, il numero di esecuzioni di un'operazione fisica, il numero di righe prodotto da ogni operatore fisico e altro ancora.  
   
@@ -62,12 +62,12 @@ SET STATISTICS XML { ON | OFF }
   
  \Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\showplan\showplanxml.xsd  
   
- Lo Showplan Schema è inoltre reperibile in [questo sito Web](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
+ Lo schema Showplan è inoltre reperibile in [questo sito Web](http://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
  SET STATISTICS PROFILE e SET STATISTICS XML sono complementari. La prima crea output di testo, la seconda output XML. Nelle prossime versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le informazioni sui piani di esecuzione delle query verranno visualizzate solo mediante l'istruzione SET STATISTICS XML e non mediante l'istruzione SET STATISTICS PROFILE.  
   
 > [!NOTE]  
->  Se **Includi piano di esecuzione effettivo** è selezionata [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], questa opzione SET non produce un output di Showplan XML. Cancella il **Includi piano di esecuzione effettivo** pulsante prima di utilizzare l'opzione SET.  
+>  Se l'opzione **Includi piano di esecuzione effettivo** è selezionata in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], l'opzione SET non genera alcun output di Showplan XML. Prima di usare l'opzione SET, deselezionare il pulsante **Includi piano di esecuzione effettivo**.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per utilizzare SET STATISTICS XML e visualizzare l'output, è necessario che gli utenti dispongano delle autorizzazioni seguenti:  
@@ -79,7 +79,7 @@ SET STATISTICS XML { ON | OFF }
  Per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che non producono set di risultati STATISTICS XML, sono necessarie solo le autorizzazioni appropriate per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che producono set di risultati STATISTICS XML, devono venire superati i controlli sia dell'autorizzazione di esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] sia dell'autorizzazione SHOWPLAN. Negli altri casi l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] verrà annullata e non verranno generate informazioni Showplan.  
   
 ## <a name="examples"></a>Esempi  
- Nelle due istruzioni seguenti vengono utilizzate le impostazioni dell'istruzione SET STATISTICS XML per illustrare l'analisi e l'ottimizzazione dell'utilizzo degli indici nelle query da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La prima query utilizza l'operatore di confronto uguale a (=) nella clausola WHERE in una colonna indicizzata. La seconda query utilizza l'operatore LIKE nella clausola WHERE. In tal modo viene imposta l'esecuzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'analisi di indice cluster per individuare i dati che soddisfano la condizione della clausola WHERE. I valori nel **EstimateRows** e **EstimatedTotalSubtreeCost** gli attributi sono inferiori per la prima query indicizzata che indica che è stata elaborata molto più rapidamente e utilizzate meno risorse rispetto al query non indicizzata.  
+ Nelle due istruzioni seguenti vengono utilizzate le impostazioni dell'istruzione SET STATISTICS XML per illustrare l'analisi e l'ottimizzazione dell'utilizzo degli indici nelle query da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La prima query utilizza l'operatore di confronto uguale a (=) nella clausola WHERE in una colonna indicizzata. La seconda query utilizza l'operatore LIKE nella clausola WHERE. In tal modo viene imposta l'esecuzione da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di un'analisi di indice cluster per individuare i dati che soddisfano la condizione della clausola WHERE. I valori negli attributi **EstimateRows** e **EstimatedTotalSubtreeCost** della prima query indicizzata sono inferiori, a indicare che la query è stata elaborata molto più rapidamente e con un numero di risorse inferiore rispetto alla query non indicizzata.  
   
 ```  
 USE AdventureWorks2012;  

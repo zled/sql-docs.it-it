@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE i criteri di sicurezza (Transact-SQL) | Documenti Microsoft
+title: DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="drop-security-policy-transact-sql"></a>ELIMINARE i criteri di sicurezza (Transact-SQL)
+# <a name="drop-security-policy-transact-sql"></a>DROP SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Elimina un criterio di sicurezza.  
@@ -48,10 +48,10 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale il criterio di protezione solo se esiste già.  
+ Rimuove in modo condizionale il criterio di sicurezza solo se esiste già.  
   
  *schema_name*  
  Nome dello schema a cui appartiene il criterio di sicurezza.  
@@ -59,9 +59,9 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  Nome del criterio di sicurezza. I nomi dei criteri sicurezza devono essere conformi alle regole per gli identificatori e devono essere univoci all'interno del database e rispetto al relativo schema.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'autorizzazione ALTER ANY SECURITY POLICY e l'autorizzazione ALTER per lo schema.  
   
 ## <a name="example"></a>Esempio  
@@ -75,6 +75,6 @@ DROP SECURITY POLICY secPolicy;
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [sys.security_policies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md)   
- [Sys. security_predicates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
+ [sys.security_predicates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md)  
   
   

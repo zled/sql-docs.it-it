@@ -1,5 +1,5 @@
 ---
-title: STStartPoint (tipo di dati geography) | Documenti Microsoft
+title: STStartPoint (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il punto di inizio di un **geography** istanza.  
+  Restituisce il punto di inizio di un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,14 +44,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- STStartPoint() è l'equivalente di [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`.  
+## <a name="remarks"></a>Remarks  
+ STStartPoint() equivale a [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md)`(1)`.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `LineString` e viene utilizzato `STStartPoint()` per recuperare il punto di inizio dell'istanza.  

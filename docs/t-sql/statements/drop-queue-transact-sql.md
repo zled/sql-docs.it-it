@@ -58,22 +58,22 @@ DROP QUEUE <object>
   
 ## <a name="arguments"></a>Argomenti  
  *database_name*  
- Nome del database contenente la coda da eliminare. Se non si *database_name* viene omesso, viene utilizzato il database corrente.  
+ Nome del database contenente la coda da eliminare. Se non si specifica *database_name*, per impostazione predefinita viene usato il database corrente.  
   
  *schema_name (object)*  
- Nome dello schema a cui appartiene la coda da eliminare. Se non si *schema_name* viene omesso, viene utilizzato lo schema predefinito per l'utente corrente.  
+ Nome dello schema a cui appartiene la coda da eliminare. Se non si specifica *schema_name*, per impostazione predefinita viene usato lo schema predefinito dell'utente corrente.  
   
  *queue_name*  
  Nome della coda da eliminare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è possibile eliminare una coda se esistono servizi che fanno riferimento a essa.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- L'autorizzazione per eliminare una coda per impostazione predefinita al proprietario della coda, ai membri del **db_ddladmin** o **db_owner** fissa ruoli del database e i membri del **sysadmin** fissa ruolo del server.  
+ L'autorizzazione per eliminare una coda viene assegnata per impostazione predefinita al proprietario della coda, ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene eliminato il **ExpenseQueue** coda dal database corrente.  
+ L'esempio seguente elimina la coda **ExpenseQueue** dal database corrente.  
   
 ```  
 DROP QUEUE ExpenseQueue ;  

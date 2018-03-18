@@ -1,5 +1,5 @@
 ---
-title: STUnion (tipo di dati geography) | Documenti Microsoft
+title: STUnion (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geography-data-type"></a>STUnion (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto che rappresenta l'unione di un **geography** istanza con un altro **geography** istanza.  
+  Restituisce un oggetto che rappresenta l'unione di un'istanza **geography** con un'altra istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza per formare un'unione con l'istanza in cui viene richiamato stunion ().  
+ Altra istanza **geography** per formare un'unione con l'istanza sulla quale viene chiamato STUnion().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
 ## <a name="exceptions"></a>Eccezioni  
- Questo metodo genera un **ArgumentException** se l'istanza contiene un bordo opposto.  
+ Questo metodo genera un'eccezione **ArgumentException** se l'istanza contiene un bordo opposto.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli identificatori di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di risultati possibili restituito nel server è stato esteso per **FullGlobe** istanze.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di possibili risultati restituito nel server è stato esteso alle istanze **FullGlobe**.  
   
  Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   

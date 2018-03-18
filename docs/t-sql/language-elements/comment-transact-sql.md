@@ -1,5 +1,5 @@
 ---
-title: -- (Comment) (Transact-SQL) | Microsoft Docs
+title: -- (commento) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/25/2018
  *text_of_comment*  
  Stringa di caratteri contenente il testo del commento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare due trattini (--) per commenti su una sola riga o nidificati. I commenti inseriti con -- sono delimitati dal carattere di nuova riga. I commenti possono essere di qualsiasi lunghezza. Nella tabella seguente sono elencati i tasti di scelta rapida che è possibile utilizzare per impostare o meno il testo come commento.  
   
 |Azione|Standard|  
@@ -61,9 +61,9 @@ ms.lasthandoff: 01/25/2018
 |Impostare il testo selezionato come commento|CTRL+K, CTRL+C|  
 |Rimuovere il commento dal testo selezionato|CTRL+K, CTRL + U|  
   
- Per ulteriori informazioni sui tasti di scelta rapida, vedere [SQL Server Management Studio tasti di scelta rapida](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+ Per altre informazioni sui tasti di scelta rapida, vedere [Tasti di scelta rapida di SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Per commenti su più righe, vedere [barra stella &#40; Blocco di commento &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Per commenti su più righe, vedere [Barra asterisco &#40;blocco di commento&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono utilizzati i caratteri -- per l'inserimento di un commento.  
@@ -81,6 +81,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il controllo di flusso Language &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   

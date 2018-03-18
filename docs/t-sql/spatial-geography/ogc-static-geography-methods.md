@@ -1,5 +1,5 @@
 ---
-title: Metodi di geografia statici OGC | Documenti Microsoft
+title: Metodi di geografia statici OGC | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md)  
   

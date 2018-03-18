@@ -52,7 +52,7 @@ CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  Specifica che *cursor_name* fa riferimento a un cursore globale.  
   
  *cursor_name*  
- Nome di un cursore aperto. Se sono presenti sia globale e un cursore locale con *cursor_name* per il proprio nome, *cursor_name* fa riferimento il cursore globale quando globale è specificata; in caso contrario, *cursor_name* fa riferimento al cursore locale.  
+ Nome di un cursore aperto. Se esistono sia un cursore globale che un cursore locale con il nome *cursor_name*, *cursor_name* fa riferimento al cursore globale quando viene specificato l'argomento GLOBAL. In caso contrario, *cursor_name* fa riferimento al cursore locale.  
   
  *cursor_variable_name*  
  Nome di una variabile di cursore associata a un cursore aperto.  

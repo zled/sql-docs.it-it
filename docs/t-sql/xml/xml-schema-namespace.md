@@ -57,17 +57,17 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  Nome della raccolta di XML Schema da ricostruire. *XML_schema_collection_name* è **sysname**.  
   
  *Spazio dei nomi*  
- Spazio dei nomi URI di XML Schema che si desidera ricostruire. La lunghezza massima è 1000 caratteri. Se l'URI dello spazio dei nomi viene omesso, viene ricostruita l'intera raccolta di XML Schema. *Namespace* è **nvarchar (4000)**.  
+ Spazio dei nomi URI di XML Schema che si desidera ricostruire. La lunghezza massima è 1000 caratteri. Se l'URI dello spazio dei nomi viene omesso, viene ricostruita l'intera raccolta di XML Schema. *Namespace* è **nvarchar(4000)**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **xml**  
   
-## <a name="remarks"></a>Osservazioni  
- Quando si importano i componenti di schema XML nel database utilizzando [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) o [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), vengono mantenuti gli aspetti dello schema utilizzato per la convalida. Pertanto, lo schema ricostruito può non corrispondere al documento dello schema originale dal punto di vista lessicale. Più specificamente, vengono persi i commenti, gli spazi vuoti e le annotazioni, mentre le informazioni implicite sui tipi vengono rese esplicite. Ad esempio, \<xs: element name = "e1" / > diventa \<xs: element name = "e1" type = "xs: anyType" / >. Inoltre, non vengono mantenuti i prefissi degli spazi dei nomi.  
+## <a name="remarks"></a>Remarks  
+ Quando si importano i componenti di XML Schema nel database tramite [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) o [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), vengono preservati aspetti dello schema usati per la convalida. Pertanto, lo schema ricostruito può non corrispondere al documento dello schema originale dal punto di vista lessicale. Più specificamente, vengono persi i commenti, gli spazi vuoti e le annotazioni, mentre le informazioni implicite sui tipi vengono rese esplicite. Ad esempio, \<xs:element name="e1" /> diventa \<xs:element name="e1" type="xs:anyType"/>. Inoltre, non vengono mantenuti i prefissi degli spazi dei nomi.  
   
  Se si specifica un parametro relativo allo spazio dei nomi, il documento dello schema risultante conterrà le definizioni per tutti i componenti degli schemi in quello spazio dei nomi, anche se erano state aggiunte in passaggi DDL o documenti di schemi diversi, o in entrambi.  
   
- È possibile utilizzare questa funzione per costruire documenti di XML schema dal **sys.sys** raccolta di XML schema.  
+ Non è possibile usare questa funzione per costruire documenti di XML Schema dalla raccolta di XML Schema **sys.sys**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene recuperata la raccolta di XML Schema `ProductDescriptionSchemaCollection` dallo schema relazionale di produzione nel database `AdventureWorks2012`.  

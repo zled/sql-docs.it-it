@@ -1,5 +1,5 @@
 ---
-title: M (tipo di dati geography) | Documenti Microsoft
+title: M (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="m-geography-data-type"></a>M (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Il **M** (misura) valore di **geography** istanza. La semantica del valore della misura viene definita dall'utente, ma generalmente descrive la distanza lungo un valore linestring. Il valore della misura, ad esempio, potrebbe essere utilizzato per tenere traccia di pietre miliari lungo una strada.  
+  **M** (misura) dell'istanza **geography**. La semantica del valore della misura viene definita dall'utente, ma generalmente descrive la distanza lungo un valore linestring. Il valore della misura, ad esempio, potrebbe essere utilizzato per tenere traccia di pietre miliari lungo una strada.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore di questa proprietà è null se il **geography** istanza non è un **punto**, nonché per qualsiasi **punto** istanza per cui non è impostata.  
+## <a name="remarks"></a>Remarks  
+ Il valore di questa proprietà è Null se l'istanza **geography** non è **Point** e per qualsiasi istanza **Point** per cui la proprietà non è impostata.  
   
  Questa proprietà è di sola lettura.  
   
- I valori M non vengono utilizzati in alcun calcolo eseguito dalla libreria e non saranno ad alcun calcolo della libreria.  
+ I valori M non vengono usati in alcun calcolo eseguito dalla libreria né verranno trasferiti ad alcun calcolo della libreria.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `Point` con valori Z (innalzamento) e M (misura) valuta e viene utilizzato `M` per recuperare il valore M`M` dell'istanza.  
@@ -66,6 +66,6 @@ SELECT @g.M;
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+ [Z &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

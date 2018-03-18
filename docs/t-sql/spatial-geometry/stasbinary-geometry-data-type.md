@@ -1,5 +1,5 @@
 ---
-title: STAsBinary (tipo di dati geometry) | Documenti Microsoft
+title: STAsBinary (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **varbinary (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **varbinary(max)**  
   
  Tipo CLR restituito: **SqlBytes**  
   

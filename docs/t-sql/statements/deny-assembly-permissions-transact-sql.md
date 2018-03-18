@@ -1,5 +1,5 @@
 ---
-title: DENY-autorizzazioni per Assembly (Transact-SQL) | Documenti Microsoft
+title: DENY - autorizzazioni per assembly (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per un assembly. Vedere l'elenco riportato di seguito.  
   
- ASSEMBLY **::***nome_assembly*  
+ ON ASSEMBLY **::***assembly_name*  
  Specifica l'assembly per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -97,7 +97,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un assembly è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un assembly, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione dell'assembly|Autorizzazione dell'assembly in cui è inclusa|Autorizzazione del database in cui è inclusa|  
@@ -108,7 +108,7 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'assembly. Se si usano l'opzione AS, l'entità specificata deve essere proprietaria dell'assembly.  
   
 ## <a name="see-also"></a>Vedere anche  
@@ -117,8 +117,8 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
- [CREATE APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [CREAZIONE di ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

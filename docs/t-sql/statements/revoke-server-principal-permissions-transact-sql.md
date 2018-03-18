@@ -1,5 +1,5 @@
 ---
-title: "Autorizzazioni per entità Server REVOKE (Transact-SQL) | Documenti Microsoft"
+title: "Autorizzazioni per entità server REVOKE (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -61,16 +61,16 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere revocata per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- Account di accesso **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- RUOLO del SERVER **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Specifica il ruolo del server a cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- {DA | A} \<server_principal > specifica il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruolo del server o account di accesso da cui viene revocata l'autorizzazione.  
+ { FROM | TO } \<server_principal>Specifica l'account di accesso o il ruolo del server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da cui viene revocata l'autorizzazione.  
   
  *SQL_Server_login*  
  Specifica il nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I ruoli del server e gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono entità a protezione diretta a livello di server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un ruolo del server o account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del ruolo del server o dell'account di accesso di SQL Server|Autorizzazione del ruolo del server o dell'account di accesso di SQL Server in cui è inclusa|Autorizzazione del server in cui è inclusa|  
@@ -112,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per gli account di accesso, è richiesta l'autorizzazione CONTROL per l'account di accesso o l'autorizzazione ALTER ANY LOGIN per il server.  
   
  Per i ruoli del server, è richiesta l'autorizzazione CONTROL per il ruolo del server o l'autorizzazione ALTER ANY SERVER ROLE per il server.  
@@ -120,7 +120,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. Revoca dell'autorizzazione IMPERSONATE per un account di accesso  
- Nell'esempio seguente viene revocata `IMPERSONATE` l'autorizzazione per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso `WanidaBenshoof` da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato dall'utente di Windows `AdvWorks\YoonM`.  
+ Nell'esempio seguente viene revocata l'autorizzazione `IMPERSONATE` per l'account di accesso `WanidaBenshoof` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

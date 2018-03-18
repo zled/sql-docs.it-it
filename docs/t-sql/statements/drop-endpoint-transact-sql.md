@@ -53,11 +53,11 @@ DROP ENDPOINT endPointName
  *endPointName*  
  Nome dell'endpoint da rimuovere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è possibile eseguire le istruzioni ENDPOINT DDL all'interno di una transazione utente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Utente deve essere un membro del **sysadmin** ruolo predefinito del server, il proprietario dell'endpoint, o sono state concesse l'autorizzazione CONTROL per l'endpoint.  
+ L'utente deve essere membro del ruolo predefinito del server **sysadmin**, proprietario dell'endpoint oppure disporre dell'autorizzazione CONTROL per l'endpoint.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rimosso l'endpoint denominato `sql_endpoint` precedentemente creato.  

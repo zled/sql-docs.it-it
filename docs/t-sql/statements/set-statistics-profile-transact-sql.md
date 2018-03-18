@@ -1,5 +1,5 @@
 ---
-title: SET STATISTICS PROFILE (Transact-SQL) | Documenti Microsoft
+title: SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'opzione STATISTICS PROFILE è impostata su ON, ogni query eseguita restituisce il normale set di risultati, seguito da un set di risultati aggiuntivo che visualizza un profilo dell'esecuzione della query.  
   
  Il set di risultati aggiuntivo include le colonne SHOWPLAN_ALL per la query e le seguenti colonne aggiuntive.  
@@ -59,9 +59,9 @@ SET STATISTICS PROFILE { ON | OFF }
 |Nome colonna|Description|  
 |-----------------|-----------------|  
 |**Righe**|Numero effettivo di righe restituite da ogni operatore|  
-|**Viene eseguito**|Numero di esecuzioni dell'operatore|  
+|**Executes**|Numero di esecuzioni dell'operatore|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per utilizzare l'opzione SET STATISTICS PROFILE e visualizzare l'output, gli utenti devono disporre delle autorizzazioni seguenti:  
   
 -   Autorizzazioni appropriate per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -72,8 +72,8 @@ SET STATISTICS PROFILE { ON | OFF }
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET STATISTICS TIME &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
- [SET STATISTICS IO &#40; Transact-SQL &#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET STATISTICS TIME &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-time-transact-sql.md)   
+ [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   
   

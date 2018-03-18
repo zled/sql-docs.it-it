@@ -1,5 +1,5 @@
 ---
-title: FILEPROPERTY (Transact-SQL) | Documenti Microsoft
+title: FILEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,12 +52,12 @@ FILEPROPERTY ( file_name , property )
   
 ## <a name="arguments"></a>Argomenti  
  *file_name*  
- Espressione contenente il nome del file associato al database corrente per cui si desidera restituire le informazioni sulla proprietà. *file_name* è **nchar(128)**.  
+ Espressione contenente il nome del file associato al database corrente per cui si desidera restituire le informazioni sulla proprietà. *file_name* è di tipo **nchar(128)**.  
   
- *proprietà*  
- Espressione contenente il nome della proprietà del file da restituire. *proprietà* è **varchar (128)**, e può essere uno dei valori seguenti.  
+ *property*  
+ Espressione contenente il nome della proprietà del file da restituire. *property* è di tipo **varchar(128)**. I valori possibili sono i seguenti.  
   
-|Valore|Description|Valore restituito|  
+|valore|Description|Valore restituito|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|Filegroup di sola lettura.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
 |**IsPrimaryFile**|File primario.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Input non valido.|  
@@ -67,8 +67,8 @@ FILEPROPERTY ( file_name , property )
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- *file_name* corrisponde alla **nome** colonna il **Sys. master_files** o **Sys. database_files** vista del catalogo.  
+## <a name="remarks"></a>Remarks  
+ *file_name* corrisponde alla colonna **name** nella vista del catalogo **sys.master_files** o **sys.database_files**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita l'impostazione della proprietà `IsPrimaryFile` per il file `AdventureWorks_Data` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -89,8 +89,8 @@ Primary File
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FILEGROUPPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILEGROUPPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/filegroupproperty-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

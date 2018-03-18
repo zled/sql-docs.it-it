@@ -1,5 +1,5 @@
 ---
-title: ASSEMBLYPROPERTY (Transact-SQL) | Documenti Microsoft
+title: ASSEMBLYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ Nome dell'assembly.
 *property_name*  
 Nome di una proprietà su cui si desidera recuperare informazioni. *property_name* può essere uno dei valori seguenti.
   
-|Valore|Description|  
+|valore|Description|  
 |---|---|
 |**CultureInfo**|Impostazioni locali dell'assembly.|  
 |**PublicKey**|Chiave pubblica o token di chiave pubblica dell'assembly.|  
@@ -69,7 +69,7 @@ Nome di una proprietà su cui si desidera recuperare informazioni. *property_nam
 **sql_variant**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente si presuppone che un assembly `HelloWorld` sia registrato nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per ulteriori informazioni, vedere [esempio Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
+Nell'esempio seguente si presuppone che un assembly `HelloWorld` sia registrato nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per altre informazioni, vedere [Esempio Hello World](http://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7).
   
 ```sql
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: HasZ (tipo di dati geography) | Documenti Microsoft
+title: HasZ (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
- Tipo CLR restituito: **booleano**  
+ Tipo CLR restituito: **Boolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
   
@@ -60,6 +60,6 @@ SELECT @p.HasZ
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Z &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+ [Z &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

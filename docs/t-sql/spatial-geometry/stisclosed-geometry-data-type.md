@@ -1,5 +1,5 @@
 ---
-title: STIsClosed (tipo di dati geometry) | Documenti Microsoft
+title: STIsClosed (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geometry-data-type"></a>STIsClosed (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se i punti iniziale e finale di dato **geometry** sono gli stessi dell'istanza. Restituisce 1 per **geometrycollection** tipi se ognuno contenuto **geometry** istanza è chiusa. Restituisce 0 se l'istanza non è chiusa.
+Restituisce 1 se i punti di inizio e di fine dell'istanza **geometry** specificata sono gli stessi. Restituisce 1 per i tipi **geometrycollection** se ogni istanza **geometry** contenuta è chiusa. Restituisce 0 se l'istanza non è chiusa.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,14 +44,14 @@ Restituisce 1 se i punti iniziale e finale di dato **geometry** sono gli stessi 
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce 0 se eventuali cifre di un **geometry** istanza sono punti, o se l'istanza è vuota.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce 0 se una figura di un'istanza **geometry** è costituita da punti o se l'istanza è vuota.  
   
- Tutti **poligono** istanze sono considerate chiuse.  
+ Tutte le istanze **Polygon** sono considerate chiuse.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `LineString` e viene utilizzato `STIsClosed()` per verificare se l'istanza `LineString` è chiusa.  

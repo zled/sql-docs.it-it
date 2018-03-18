@@ -1,5 +1,5 @@
 ---
-title: STBoundary (tipo di dati geometry) | Documenti Microsoft
+title: STBoundary (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stboundary-geometry-data-type"></a>STBoundary (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il limite di un **geometry** istanza.  
+  Restituisce il limite di un'istanza **geometry**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- `STBoundary()`Restituisce un oggetto vuoto **GeometryCollection** quando gli endpoint per un **LineString**, **CircularString**, o **CompoundCurve** istanza sono gli stessi.  
+## <a name="remarks"></a>Remarks  
+ `STBoundary()` restituisce un'istanza **GeometryCollection** vuota se gli endpoint per un'istanza **LineString**, **CircularString** o **CompoundCurve** corrispondono.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-stboundary-on-a-linestring-instance-with-different-endpoints"></a>A. Utilizzo di STBoundary() in un'istanza LineString con endpoint diversi  
- Nell'esempio seguente viene creato un `LineString``geometry` istanza. `STBoundary()`Restituisce il limite del `LineString`.  
+ Nell'esempio seguente viene creata un'istanza `LineString``geometry`. `STBoundary()` restituisce il limite dell'istanza `LineString`.  
   
 ```  
 DECLARE @g geometry;  

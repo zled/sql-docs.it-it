@@ -51,7 +51,7 @@ LTRIM ( character_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
- È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati carattere o binario. *character_expression* può essere una costante, variabile o colonna. *character_expression* deve essere un tipo di dati, eccetto **testo**, **ntext**, e **immagine**, che è implicitamente convertibile in **varchar** . In caso contrario, utilizzare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire esplicitamente *character_expression*.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati di tipo carattere o binario. *character_expression* può essere una costante, una variabile o una colonna. *character_expression* deve essere di un tipo di dati, tranne **text**, **ntext** e **image**, che può essere convertito in modo implicito in **varchar**. In caso contrario usare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *character_expression*.  
   
 ## <a name="return-type"></a>Tipo restituito  
  **varchar** o **nvarchar**  
@@ -60,7 +60,7 @@ LTRIM ( character_expression )
 
 ### <a name="a-simple-example"></a>A. Esempio semplice   
 
- Nell'esempio seguente usa LTRIM per rimuovere gli spazi iniziali da un'espressione di caratteri.  
+ Nell'esempio seguente viene usato LTRIM per rimuovere gli spazi iniziali da un'espressione di caratteri.  
   
 ```sql  
 SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.databases;  
@@ -73,7 +73,7 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   Five spaces are at the beginning of this string.
   ```  
 
-### <a name="b-example-using-a-variable"></a>B: esempio utilizzo di una variabile   
+### <a name="b-example-using-a-variable"></a>B: Esempio di uso di una variabile   
   
  Nell'esempio seguente viene utilizzato `LTRIM` per rimuovere gli spazi iniziali da una variabile di tipo carattere.  
   
@@ -102,7 +102,7 @@ Original string Without spaces
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

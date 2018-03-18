@@ -1,5 +1,5 @@
 ---
-title: Il carattere di percentuale (carattere jolly per corrispondenze) (Transact-SQL) | Documenti Microsoft
+title: Carattere di percentuale (carattere jolly) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [&#91; &#93; (Carattere jolly alla corrispondenza)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; ^ &#93; Mancata corrispondenza dei caratteri (jolly)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [&#91; &#93; (carattere jolly)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+  [&#91;^&#93; (carattere jolly per la mancata corrispondenza)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
  [_ (carattere jolly per corrispondenze di singoli caratteri)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

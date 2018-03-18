@@ -59,7 +59,7 @@ Le istruzioni DBCC sono suddivise nelle categorie seguenti.
   
 |Categoria|Attività svolte|  
 |---|---|
-|Maintenance|Attività di manutenzione di un database, un indice o un filegroup.|  
+|Manutenzione|Attività di manutenzione di un database, un indice o un filegroup.|  
 |Varie|Attività varie, ad esempio l'attivazione di flag di traccia o la rimozione di una DLL dalla memoria.|  
 |Istruzioni informative|Attività mirate alla raccolta e alla visualizzazione di vari tipi di informazioni.|  
 |Convalida|Operazioni di convalida di un database, una tabella, un indice, un catalogo, un filegroup o dell'allocazione delle pagine del database.|  
@@ -79,11 +79,11 @@ Quando si esegue uno di questi comandi DBCC, [!INCLUDE[ssDE](../../includes/ssde
 Talvolta lo snapshot interno del database non è necessario oppure non può essere creato. In tali casi, il comando DBCC viene eseguito sul database effettivo. Se il database è online, il comando DBCC attiva il blocco a livello di tabella per garantire la consistenza degli oggetti controllati, come se fosse stata specificata l'opzione WITH TABLOCK.
   
 Lo snapshot interno del database non viene creato quando il comando DBCC viene eseguito:
--   Contro **master**e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in modalità utente singolo.  
--   In un database diverso da **master**, ma il database è stata attivata in modalità utente singolo tramite l'istruzione ALTER DATABASE.  
+-   Sul database **master** e l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in modalità utente singolo.  
+-   Su un database diverso da **master** per cui è stata attivata la modalità utente singolo tramite l'istruzione ALTER DATABASE.  
 -   Su un database di sola lettura.  
 -   Su un database impostato in modalità di emergenza utilizzando l'istruzione ALTER DATABASE.  
--   Contro **tempdb**. In tal caso, lo snapshot del database non può essere creato a causa di restrizioni interne.  
+-   Su **tempdb**. In tal caso, lo snapshot del database non può essere creato a causa di restrizioni interne.  
 -   Con l'opzione WITH TABLOCK. In tal caso, DBCC soddisfa la richiesta evitando di creare uno snapshot del database.  
   
 I comandi DBCC utilizzano blocchi a livello di tabella anziché snapshot interni del database quando vengono eseguiti sugli elementi seguenti:
@@ -93,13 +93,13 @@ I comandi DBCC utilizzano blocchi a livello di tabella anziché snapshot interni
 -   Un volume che non supporta "flussi alternativi"  
   
 > [!NOTE]  
->  Per tentare di eseguire DBCC CHECKALLOC, oppure la parte equivalente di DBCC CHECKDB, con l'opzione WITH TABLOCK è necessario acquisire un blocco esclusivo a livello di database. Questo blocco del database non può essere impostato su **tempdb** o **master** e probabilmente ha esito negativo in tutti gli altri database.  
+>  Per tentare di eseguire DBCC CHECKALLOC, oppure la parte equivalente di DBCC CHECKDB, con l'opzione WITH TABLOCK è necessario acquisire un blocco esclusivo a livello di database. Questo blocco non può essere impostato per **tempdb** o **master** e probabilmente ha esito negativo per tutti gli altri database.  
   
 > [!NOTE]  
->  DBCC CHECKDB non riesce quando viene eseguito su **master** se non è possibile creare uno snapshot interno del database.  
+>  L'esecuzione dell'istruzione DBCC CHECKDB sul database **master** ha esito negativo se non è possibile creare uno snapshot interno del database.  
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>Report di stato per i comandi DBCC  
-Il **Sys.dm exec_requests** vista del catalogo contiene informazioni riguardanti lo stato e la fase corrente dell'esecuzione di comandi DBCC CHECKDB, CHECKFILEGROUP e CHECKTABLE. Il **percent_complete** colonna indica la percentuale di completamento del comando e **comando** colonna segnala la fase di esecuzione del comando corrente.
+La vista del catalogo **sys.dm_exec_requests** contiene informazioni riguardanti lo stato e la fase di esecuzione corrente dei comandi DBCC CHECKDB, CHECKFILEGROUP e CHECKTABLE. La colonna **percent_complete** indica la percentuale di completamento del comando, mentre la colonna **command** indica la fase corrente dell'esecuzione del comando.
   
 L'unità di riferimento dello stato dipende dalla fase di esecuzione corrente del comando DBCC. In alcune fasi lo stato viene segnalato per ogni pagina del database e in altre per ogni correzione del database o dell'allocazione. Nella tabella seguente viene descritta ogni fase di esecuzione e viene specificato il livello di granularità in base a cui viene segnalato lo stato del comando.
   
@@ -107,12 +107,12 @@ L'unità di riferimento dello stato dipende dalla fase di esecuzione corrente de
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Durante questa fase viene controllata la consistenza logica e fisica degli oggetti del database.|Lo stato viene segnalato a livello di pagina del database.<br /><br /> Il valore del report di stato viene aggiornato ogni 1000 pagine del database controllate. |  
 |DBCC TABLE REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori relativi agli oggetti, durante questa fase vengono implementate correzioni nel database.|Lo stato viene segnalato a livello di singola correzione.<br /><br /> Il contatore viene aggiornato ogni volta che viene completata una correzione.|  
-|DBCC ALLOC CHECK|Durante questa fase vengono controllate le strutture di allocazione del database.<br /><br /> Nota: DBCC CHECKALLOC esegue gli stessi controlli.|Lo stato non viene segnalato.|  
+|DBCC ALLOC CHECK|Durante questa fase vengono controllate le strutture di allocazione del database.<br /><br /> Nota: il comando DBCC CHECKALLOC esegue gli stessi controlli.|Lo stato non viene segnalato.|  
 |DBCC ALLOC REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori di allocazione, durante questa fase vengono implementate correzioni nel database.|Lo stato non viene segnalato.|  
 |DBCC SYS CHECK|Durante questa fase vengono controllate le tabelle di sistema del database.|Lo stato viene segnalato a livello di pagina del database.<br /><br /> Il valore del report di stato viene aggiornato ogni 1000 pagine del database controllate.|  
 |DBCC SYS REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori relativi alle tabelle di sistema, durante questa fase vengono implementate correzioni nel database.|Lo stato viene segnalato a livello di singola correzione.<br /><br /> Il contatore viene aggiornato ogni volta che viene completata una correzione.|  
-|DBCC SSB CHECK|Durante questa fase vengono controllati gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Nota: Questa fase non viene eseguita quando viene eseguito DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
-|DBCC CHECKCATALOG|Durante questa fase viene controllata la consistenza dei cataloghi del database.<br /><br /> Nota: Questa fase non viene eseguita quando viene eseguito DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
+|DBCC SSB CHECK|Durante questa fase vengono controllati gli oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker.<br /><br /> Nota: questa fase non viene completata quando viene eseguito il comando DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
+|DBCC CHECKCATALOG|Durante questa fase viene controllata la consistenza dei cataloghi del database.<br /><br /> Nota: questa fase non viene completata quando viene eseguito il comando DBCC CHECKTABLE.|Lo stato non viene segnalato.|  
 |DBCC IVIEW CHECK|Durante questa fase viene controllata la consistenza logica di tutte le viste indicizzate presenti nel database.|Lo stato viene segnalato a livello di singola vista del database controllata.|  
   
 ## <a name="informational-statements"></a>Istruzioni informative  

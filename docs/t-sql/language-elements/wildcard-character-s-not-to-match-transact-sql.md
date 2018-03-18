@@ -1,5 +1,5 @@
 ---
-title: '[^] Mancata corrispondenza dei caratteri (jolly) (Transact-SQL) | Documenti Microsoft'
+title: '[^] (carattere jolly per la mancata corrispondenza dei caratteri) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\]Mancata corrispondenza dei caratteri (jolly) (Transact-SQL)
+# <a name="-wildcard---characters-not-to-match-transact-sql"></a>\[^\] (carattere jolly per la mancata corrispondenza dei caratteri) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Corrisponde a un qualsiasi singolo carattere non compreso nell'intervallo o nel set specificato tra le parentesi quadre.  
@@ -57,8 +57,8 @@ ORDER BY FirstName;
 ## <a name="see-also"></a>Vedere anche  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
- [% &#40; Carattere jolly - carattere &#40; s &#41; in corrispondenza &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
-  [&#91; &#93; &#40; Carattere jolly - carattere &#40; s &#41; in corrispondenza &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
- [\_&#40; Carattere jolly - corrispondenze di singoli caratteri &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+ [% &#40;caratteri jolly per la corrispondenza&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+  [&#91; &#93; &#40;caratteri jolly per la corrispondenza&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
+ [\_ &#40;carattere jolly per corrispondenze di singoli caratteri&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   
   

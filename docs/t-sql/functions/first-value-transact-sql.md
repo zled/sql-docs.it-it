@@ -1,5 +1,5 @@
 ---
-title: FIRST_VALUE (Transact-SQL) | Documenti Microsoft
+title: FIRST_VALUE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/10/2016
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ FIRST_VALUE ( [scalar_expression ] )
   
 ## <a name="arguments"></a>Argomenti  
  *scalar_expression*  
- Valore da restituire. *scalar_expression* può essere una colonna, una sottoquery o un'altra espressione arbitraria che restituisce un valore singolo. Altre funzioni analitiche non sono consentite.  
+ Valore da restituire. *scalar_expression* può essere una colonna, una sottoquery o un'altra espressione arbitraria che restituisce un solo valore. Altre funzioni analitiche non sono consentite.  
   
- SU **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. *rows_range_clause* limita ulteriormente le righe all'interno della partizione specificando i punti iniziale e finale. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. *rows_range_clause* limita ulteriormente le righe all'interno della partizione specificando i punti iniziali e finali. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
- È lo stesso tipo *scalar_expression*.  
+ Tipo identico a *scalar_expression*.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  FIRST_VALUE è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -128,6 +128,6 @@ Accounts Receivable Specialist      Walton                    62            Poe
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

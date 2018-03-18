@@ -1,5 +1,5 @@
 ---
-title: Operatori aritmetici (Transact-SQL) | Documenti Microsoft
+title: Operatori aritmetici (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -33,22 +33,22 @@ ms.lasthandoff: 01/25/2018
 # <a name="arithmetic-operators-transact-sql"></a>Operatori aritmetici (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gli operatori aritmetici eseguono operazioni matematiche su due espressioni di uno o più tipi di dati appartenenti alla categoria dei tipi di dati numerici. Per ulteriori informazioni sulle categorie di tipi di dati, vedere [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+  Gli operatori aritmetici eseguono operazioni matematiche su due espressioni di uno o più tipi di dati appartenenti alla categoria dei tipi di dati numerici. Per altre informazioni sulle categorie dei tipi di dati, vedere [Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Operatore|Significato|  
 |--------------|-------------|  
 |[+ (addizione)](../../t-sql/language-elements/add-transact-sql.md)|Addizione|  
 |[- (sottrazione)](../../t-sql/language-elements/subtract-transact-sql.md)|Sottrazione|  
 |[* (moltiplicazione)](../../t-sql/language-elements/multiply-transact-sql.md)|Moltiplicazione|  
-|[/ (Divide)](../../t-sql/language-elements/divide-transact-sql.md)|Divisione|  
-|[% (Modulo)](../../t-sql/language-elements/modulo-transact-sql.md)|Restituisce il resto intero di una divisione, ad esempio 12 % 5 = 2 perché il resto di 12 diviso 5 è 2|  
+|[/ (divisione)](../../t-sql/language-elements/divide-transact-sql.md)|Divisione|  
+|[% (modulo)](../../t-sql/language-elements/modulo-transact-sql.md)|Restituisce il resto intero di una divisione, ad esempio 12 % 5 = 2 perché il resto di 12 diviso 5 è 2|  
   
- Il segno più (+) e meno (-) operatori possono anche essere utilizzati per eseguire operazioni aritmetiche su **datetime** e **smalldatetime** valori.  
+ Gli operatori di addizione (+) e sottrazione (-) possono essere inoltre usati per eseguire operazioni aritmetiche su valori **datetime** e **smalldatetime**.  
   
- Per ulteriori informazioni sulla precisione e scala del risultato di un'operazione aritmetica, vedere [precisione, scala e lunghezza &#40; Transact-SQL &#41; ](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
+ Per altre informazioni sulla precisione e la scala del risultato di un'operazione aritmetica, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
+ [Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
   

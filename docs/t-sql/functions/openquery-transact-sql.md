@@ -1,5 +1,5 @@
 ---
-title: OPENQUERY (Transact-SQL) | Documenti Microsoft
+title: OPENQUERY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ OPENQUERY ( linked_server ,'query' )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *server_collegato*  
+ *linked_server*  
  Identificatore che rappresenta il nome del server collegato.  
   
  **'** *query* **'**  
  Stringa della query eseguita nel server collegato. La lunghezza massima della stringa è pari a 8 KB.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione OPENQUERY non accetta variabili come argomenti.  
   
  OPENQUERY non può essere utilizzata per eseguire stored procedure estese in un server collegato. È tuttavia possibile eseguire una stored procedure estesa in un server collegato utilizzando un nome in quattro parti, Ad esempio  
@@ -96,7 +96,7 @@ DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitl
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>D. Esecuzione di una query pass-through SELECT  
- L'esempio seguente usa pass-through `SELECT` query per selezionare la riga inserita nell'esempio C.  
+ Nell'esempio seguente viene eseguita una query pass-through `SELECT` per selezionare la riga inserita nell'esempio C.  
   
 ```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
@@ -108,11 +108,11 @@ SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Funzioni rowset &#40; Transact-SQL &#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
+ [Funzioni per i set di righe &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_serveroption &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
+ [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   

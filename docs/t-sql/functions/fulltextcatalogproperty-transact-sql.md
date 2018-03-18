@@ -1,5 +1,5 @@
 ---
-title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Documenti Microsoft
+title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="arguments"></a>Argomenti  
   
 > [!NOTE]  
->  Le seguenti proprietà verranno rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **LogSize** e **PopulateStatus**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
+>  In una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le proprietà seguenti verranno rimosse: **LogSize** e **PopulateStatus**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
   
  *catalog_name*  
  Espressione che contiene il nome del catalogo full-text.  
   
- *proprietà*  
+ *property*  
  Espressione che contiene il nome della proprietà di catalogo full-text. Nella tabella seguente vengono descritte le proprietà e le informazioni restituite.  
   
-|Proprietà|Descrizione|  
+|Proprietà|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Impostazione relativa alla distinzione tra caratteri accentati e non accentati.<br /><br /> 0 = distinzione dei caratteri accentati/non accentati disattivata<br /><br /> 1 = distinzione dei caratteri accentati/non accentati attivata|  
 |**IndexSize**|Dimensioni logiche in megabyte del catalogo full-text. Include le dimensioni della frase chiave semantica e degli indici di somiglianza del documento.<br /><br /> Per ulteriori informazioni, vedere la sezione "Note" più avanti in questo argomento.|  
@@ -76,14 +76,14 @@ FULLTEXTCATALOGPROPERTY ('catalog_name' ,'property')
 ## <a name="exceptions"></a>Eccezioni  
  Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzazione necessaria per visualizzare l'oggetto.  
   
- In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come FULLTEXTCATALOGPROPERTY possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per ulteriori informazioni, vedere [sp_help_fulltext_catalogs &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
+ In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come FULLTEXTCATALOGPROPERTY possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
- FULLTEXTCATALOGPROPERTY ('*catalog_name*','**IndexSize**') analizza solo i frammenti con stato 4 o 6, come illustrato nella [fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Tali frammenti fanno parte dell'indice logico. Pertanto, il **IndexSize** proprietà restituisce solo le dimensioni dell'indice logico. Durante un unione degli indici, tuttavia, le dimensioni effettive dell'indice potrebbero essere doppie rispetto a quelle logiche. Per trovare la dimensione effettiva viene consumata da un indice full-text durante un'operazione di unione, usare il [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) stored procedure di sistema. Tale procedura analizza tutti i frammenti associati a un indice full-text. Se si limita l'aumento delle dimensioni del file di catalogo full-text e non si concede spazio sufficiente per il processo di unione, il popolamento full-text potrebbe non riuscire. In questo caso, FULLTEXTCATALOGPROPERTY ('catalog_name' ,'IndexSize') restituisce 0 e nel log full-text viene scritto il messaggio seguente:  
+## <a name="remarks"></a>Remarks  
+ FULLTEXTCATALOGPROPERTY ('*catalog_name*','**IndexSize**') analizza solo i frammenti con stato 4 o 6, come descritto in [sys.fulltext_index_fragments](../../relational-databases/system-catalog-views/sys-fulltext-index-fragments-transact-sql.md). Tali frammenti fanno parte dell'indice logico. Di conseguenza la proprietà **IndexSize** restituisce solo le dimensioni dell'indice logico. Durante un unione degli indici, tuttavia, le dimensioni effettive dell'indice potrebbero essere doppie rispetto a quelle logiche. Per trovare le dimensioni effettive utilizzate da un indice full-text durante un merge, usare la stored procedure di sistema [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md). Tale procedura analizza tutti i frammenti associati a un indice full-text. Se si limita l'aumento delle dimensioni del file di catalogo full-text e non si concede spazio sufficiente per il processo di unione, il popolamento full-text potrebbe non riuscire. In questo caso, FULLTEXTCATALOGPROPERTY ('catalog_name' ,'IndexSize') restituisce 0 e nel log full-text viene scritto il messaggio seguente:  
   
  `Error: 30059, Severity: 16, State: 1. A fatal error occurred during a full-text population and caused the population to be cancelled. Population type is: FULL; database name is FTS_Test (id: 13); catalog name is t1_cat (id: 5); table name t1 (id: 2105058535). Fix the errors that are logged in the full-text crawl log. Then, resume the population. The basic Transact-SQL syntax for this is: ALTER FULLTEXT INDEX ON table_name RESUME POPULATION.`  
   
- È importante che le applicazioni non si resta in attesa in un ciclo per il **PopulateStatus** proprietà diventi inattivo, che indica che popolamento è stato completato, poiché questa operazione richiede cicli della CPU dal database e full-text i processi di ricerca e i timeout di cause. Inoltre, è in genere preferibile corrispondente **PopulateStatus** proprietà a livello di tabella, **TableFullTextPopulateStatus** nella funzione di sistema OBJECTPROPERTYEX. Questa e le altre nuove proprietà full-text disponibili per la funzione OBJECTPROPERTYEX forniscono informazioni sulla granularità relative alle tabelle di indicizzazione full-text. Per altre informazioni, vedere [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
+ È importante che le applicazioni non rimangano in attesa in un ciclo fino a quando la proprietà **PopulateStatus** diventa inattiva (a indicare che il popolamento è stato completato). Ciò comporta infatti l'uso di cicli della CPU normalmente usati dai processi del database e della ricerca full-text, con un conseguente timeout. È inoltre consigliabile controllare la proprietà **PopulateStatus** corrispondente a livello di tabella, **TableFullTextPopulateStatus** nella funzione di sistema OBJECTPROPERTYEX. Questa e le altre nuove proprietà full-text disponibili per la funzione OBJECTPROPERTYEX forniscono informazioni sulla granularità relative alle tabelle di indicizzazione full-text. Per altre informazioni, vedere [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il numero di voci indicizzate full-text del catalogo full-text `Cat_Desc`.  
@@ -96,8 +96,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FULLTEXTSERVICEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
+ [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sp_help_fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
   
   

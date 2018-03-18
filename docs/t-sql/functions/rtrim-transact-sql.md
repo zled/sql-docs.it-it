@@ -37,7 +37,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="rtrim-transact-sql"></a>RTRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce una stringa di caratteri dopo aver troncato tutti gli spazi finali.  
+  Restituisce una stringa di caratteri dopo la rimozione di tutti gli spazi finali.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,9 +49,9 @@ RTRIM ( character_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
- È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) dati di tipo carattere. *character_expression* può essere una costante, variabile o colonna di tipo carattere o binario.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di dati di tipo carattere. *character_expression* può essere una costante, una variabile o una colonna di dati di tipo carattere o binario.  
   
- *character_expression* deve essere di un tipo di dati che è implicitamente convertibile in **varchar**. In caso contrario, utilizzare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire esplicitamente *character_expression*.  
+ *character_expression* deve essere di un tipo di dati che può essere convertito in modo implicito in **varchar**. In caso contrario usare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *character_expression*.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar** o **nvarchar**  
@@ -69,8 +69,8 @@ SELECT RTRIM('Removes trailing spaces.   ');
   
   `Removes trailing spaces.`  
   
-### <a name="b-simple-example"></a>B: esempio  
- Nell'esempio seguente viene illustrato come utilizzare `RTRIM` per rimuovere gli spazi finali. In questo caso vi è un'altra stringa concatenata alla prima stringa per indicare che sono stati eliminati gli spazi.  
+### <a name="b-simple-example"></a>B: Esempio semplice  
+ L'esempio seguente illustra l'uso di `RTRIM` per rimuovere gli spazi finali. Questa volta c'è un'altra stringa concatenata alla prima stringa per indicare che gli spazi sono stati rimossi.  
   
 ```  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
@@ -114,9 +114,9 @@ GO
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [SUBSTRING &#40;Transact-SQL&#41;](../../t-sql/functions/substring-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: '@@MAX_CONNECTIONS (Transact-SQL) | Documenti Microsoft'
+title: '@@MAX_CONNECTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il numero effettivo di connessioni utente consentite dipende inoltre dalla versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata e dalle limitazioni delle applicazioni e dell'hardware in uso.  
   
- Per riconfigurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per le connessioni di un numero inferiore, utilizzare **sp_configure**.  
+ Per riconfigurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per un numero inferiore di connessioni, usare **sp_configure**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito il numero massimo di connessioni utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non sia stato riconfigurato per un numero inferiore di connessioni utente.  

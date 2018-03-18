@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE l'origine dati esterna (Transact-SQL) | Documenti Microsoft
+title: DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-data-source-transact-sql"></a>ELIMINARE l'origine dati esterna (Transact-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Rimuove un'origine dati esterna di PolyBase.  
+  Rimuove un'origine dati esterna PolyBase.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,27 +43,27 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
   
 ## <a name="arguments"></a>Argomenti  
  *external_data_source_name*  
- Il nome dell'origine dati esterna da eliminare.  
+ Nome dell'origine dati esterna da rimuovere.  
   
 ## <a name="metadata"></a>Metadati  
- Per visualizzare un elenco di dati esterni origini utilizzano la vista di sistema sys.external_data_sources.  
+ Per visualizzare un elenco delle origini dati esterne, usare la vista di sistema sys.external_data_sources.  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario modificare qualsiasi origine dati esterna.  
+ Richiede ALTER ANY EXTERNAL DATA SOURCE.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  
- Acquisisce un blocco condiviso nell'oggetto di origine dati esterna.  
+ Acquisisce un blocco condiviso sull'oggetto origine dati esterna.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Eliminazione di un'origine dati esterna non rimuove i dati esterni.  
+ La rimozione di un'origine dati esterna non comporta la rimozione dei dati esterni.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Utilizzando la sintassi di base  
+### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  

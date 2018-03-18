@@ -1,5 +1,5 @@
 ---
-title: Il tipo di rilascio (Transact-SQL) | Documenti Microsoft
+title: DROP TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -48,28 +48,28 @@ DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale del tipo solo se esiste già.  
+ Rimuove in modo condizionale il tipo solo se esiste già.  
   
  *schema_name*  
  Nome dello schema a cui appartiene il tipo di dati alias o il tipo definito dall'utente.  
   
- *TYPE_NAME*  
+ *type_name*  
  Nome del tipo di dati alias o del tipo definito dall'utente che si desidera rimuovere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione DROP TYPE non verrà eseguita nei casi seguenti:  
   
--   Nel database sono presenti tabelle che contengono colonne con il tipo di dati alias o il tipo definito dall'utente. Informazioni sull'alias o le colonne di tipo definito dall'utente possono essere ottenute eseguendo una query di [Columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) o [column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md) viste del catalogo.  
+-   Nel database sono presenti tabelle che contengono colonne con il tipo di dati alias o il tipo definito dall'utente. Per recuperare informazioni sulle colonne con tipo di dati alias o definito dall'utente, è possibile eseguire una query sulla vista del catalogo [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) o [sys.column_type_usages](../../relational-databases/system-catalog-views/sys-column-type-usages-transact-sql.md).  
   
--   Sono presenti colonne calcolate, vincoli CHECK e viste e funzioni associate a schema le cui definizioni fanno riferimento al tipo di dati alias o definito dall'utente. Informazioni su tali riferimenti possono essere ottenute eseguendo una query di [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) vista del catalogo.  
+-   Sono presenti colonne calcolate, vincoli CHECK e viste e funzioni associate a schema le cui definizioni fanno riferimento al tipo di dati alias o definito dall'utente. Per recuperare informazioni su tali riferimenti, è possibile eseguire una query sulla vista del catalogo [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md).  
   
--   Nel database sono stati creati trigger, funzioni o stored procedure e tali routine utilizzano variabili e parametri con tipo di dati alias o definito dall'utente. Informazioni sui parametri di tipo definito dall'utente o alias possono essere ottenute eseguendo una query di [Sys. Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) o [parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md) viste del catalogo.  
+-   Nel database sono stati creati trigger, funzioni o stored procedure e tali routine utilizzano variabili e parametri con tipo di dati alias o definito dall'utente. Per recuperare informazioni sui parametri con tipo di dati alias o definito dall'utente, è possibile eseguire una query sulla vista del catalogo [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) o [sys.parameter_type_usages](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione CONTROL per su *type_name* o l'autorizzazione ALTER per *schema_name*.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CONTROL per *type_name* o l'autorizzazione ALTER per *schema_name*.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente si presuppone che il tipo denominato `ssn` sia già stato creato nel database corrente.  

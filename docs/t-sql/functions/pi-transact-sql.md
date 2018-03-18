@@ -1,5 +1,5 @@
 ---
-title: PI (Transact-SQL) | Documenti Microsoft
+title: PI (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -66,7 +66,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: La funzione PUBLISHINGSERVERNAME (Transact-SQL) | Documenti Microsoft
+title: PUBLISHINGSERVERNAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ PUBLISHINGSERVERNAME()
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione PUBLISHINGSERVERNAME viene utilizzata in tutti i tipi di replica.  
   
  La funzione PUBLISHINGSERVERNAME viene utilizzata quando nel database di pubblicazione esiste una sessione di mirroring del database tra il server di pubblicazione e un'istanza del partner per il mirroring.  
@@ -58,6 +58,6 @@ PUBLISHINGSERVERNAME()
   
 ## <a name="see-also"></a>Vedere anche  
  [Mirroring e replica del database &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
- [Le funzioni di replica &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
+ [Funzioni di replica &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/53702dee-de58-47d5-a552-7f32000f77d4)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STGeomCollFromWKB (tipo di dati geography) | Documenti Microsoft
+title: STGeomCollFromWKB (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **GeometryCollection**istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Restituisce un'istanza **GeometryCollection** di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_geometrycollection*  
- Rappresentazione WKB del **GeometryCollection** istanza da restituire. *WKB_geometrycollection* è un **varbinary (max)** espressione.  
+ Rappresentazione WKB dell'istanza **GeometryCollection** da restituire. *WKB_geometrycollection* è un'espressione **varbinary(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **GeometryCollection** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **GeometryCollection** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC del **geography** istanza restituita dalla STGeomCollFromWKB() è impostato su **GeometryCollection**, **MultiPolygon**, **MultiLineString**, o **MultiPoint**, in base all'input WKB corrispondente.  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC dell'istanza **geography** restituito da STGeomCollFromWKB() è impostato su **GeometryCollection**, **MultiPolygon**, **MultiLineString** o **MultiPoint**, in base all'input WKB corrispondente.  
   
- Questo metodo genera un **FormatException** eccezione se l'input non è formattata correttamente.  
+ Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STGeomCollFromWKB()` per creare un'istanza `geography`.  

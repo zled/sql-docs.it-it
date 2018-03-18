@@ -1,5 +1,5 @@
 ---
-title: Stpgeomcollfromtext (tipo di dati geometry) | Documenti Microsoft
+title: STGeomCollFromText (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geometry** istanza di una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT), integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
+Restituisce un'istanza **geometry** da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,18 +45,18 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *geometrycollection_tagged_text*  
- È la rappresentazione WKT del **geometry** istanza da restituire. *geometry_tagged_text* è un **nvarchar (max)** espressione.  
+ Rappresentazione WKT dell'istanza **geometry** da restituire. *geometry_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometry** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometry** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC del **geometry** istanza restituita dalla `STGeomCollFromText()` è impostato sull'input WKT corrispondente.  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC dell'istanza **geometry** restituita da `STGeomCollFromText()` è impostato sull'input WKT corrispondente.  
   
  Questo metodo genererà un'eccezione se l'input non è valido.  
   

@@ -1,5 +1,5 @@
 ---
-title: Metodi OGC sulle istanze di geografia | Documenti Microsoft
+title: Metodi OGC sulle istanze di geografia | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ogc-methods-on-geography-instances"></a>Metodi OGC sulle istanze di geografia
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta i metodi Open Geospatial Consortium (OGC) per **geography** istanze.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati i metodi OGC (Open Geospatial Consortium) sulle istanze **geography**.  
   
  Per ulteriori informazioni sulle specifiche OGC, vedere le risorse seguenti:  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [STArea](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STBuffer](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)  
   
--   [STCurveN &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
+-   [STCurveN &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stcurven-geography-data-type.md)  
   
--   [STCurveToLine &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
+-   [STCurveToLine &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stcurvetoline-geography-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geography/stdifference-geography-data-type.md)  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [Metodi di geografia statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
+ [Metodi geography statici OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)   
  [Metodi geography statici estesi](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

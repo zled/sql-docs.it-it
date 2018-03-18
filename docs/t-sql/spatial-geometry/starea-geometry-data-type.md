@@ -1,5 +1,5 @@
 ---
-title: STArea (tipo di dati geometry) | Documenti Microsoft
+title: STArea (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="starea-geometry-data-type"></a>STArea (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce l'area della superficie totale di un **geometry** istanza.  
+  Restituisce l'area della superficie totale di un'istanza **geometry**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **float**  
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- `STArea()`Restituisce 0 se un **geometry** istanza contiene solo figure 0 e 1-dimensioni o se è vuota. `STArea()`Restituisce **NULL** se il **geometry** istanza non inizializzata.  
+## <a name="remarks"></a>Remarks  
+ `STArea()` restituisce 0 se un'istanza **geometry** contiene solo figure zero-dimensionali e uni-dimensionali oppure se è vuota. `STArea()` restituisce **NULL** se non è stata inizializzata l'istanza **geometry**.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-computing-the-area-of-a-polygon-instance"></a>A. Calcolo dell'area di un'istanza Polygon  
- Nell'esempio seguente viene creato un `Polygon``geometry` istanza e viene calcolata l'area del poligono.  
+ Nell'esempio seguente viene creata un'istanza `Polygon``geometry` e viene calcolata l'area del poligono.  
   
 ```  
 DECLARE @g geometry;  

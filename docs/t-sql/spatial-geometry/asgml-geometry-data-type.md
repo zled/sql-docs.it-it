@@ -1,5 +1,5 @@
 ---
-title: AsGml (tipo di dati geometry) | Documenti Microsoft
+title: AsGml (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -36,9 +36,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="asgml-geometry-data-type"></a>AsGml (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce la rappresentazione di Geography Markup Language (GML) di un **geometry** istanza.
+Restituisce la rappresentazione GML (Geography Markup Language) di un'istanza **geometry**.
   
-Per ulteriori informazioni su Geography Markup Language, vedere la seguente specifica Open Geospatial Consortium:[OGC Specifications, Geography Markup Language.](http://go.microsoft.com/fwlink/?LinkId=93629)
+Per altre informazioni su Geography Markup Language (GML), vedere le seguenti specifiche Open Geospatial Consortium: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,11 +48,11 @@ Per ulteriori informazioni su Geography Markup Language, vedere la seguente spec
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **xml**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **xml**  
   
  Tipo CLR restituito: **SqlXml**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `LineString` e viene utilizzato `AsGML()` per restituire la descrizione GML dell'istanza.  

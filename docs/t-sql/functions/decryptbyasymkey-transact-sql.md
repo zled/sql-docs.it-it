@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYASYMKEY (Transact-SQL) | Documenti Microsoft
+title: DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,28 +50,28 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argomenti  
  *Asym_Key_ID*  
- ID di una chiave asimmetrica nel database. *Asym_Key_ID* è **int**.  
+ ID di una chiave asimmetrica nel database. *Asym_Key_ID* è di tipo **int**.  
   
- *testo crittografato*  
+ *ciphertext*  
  Stringa di dati che è stata crittografata con la chiave asimmetrica.  
   
  @ciphertext  
- È una variabile di tipo **varbinary** che contiene dati che sono stati crittografati con la chiave asimmetrica.  
+ Variabile di tipo **varbinary** contenente dati crittografati con la chiave asimmetrica.  
   
  *Asym_Key_Password*  
  Password utilizzata per crittografare la chiave asimmetrica nel database.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La crittografia/decrittografia con chiave asimmetrica è molto costosa rispetto alla crittografia/decrittografia con chiave simmetrica. Non è consigliabile utilizzare una chiave asimmetrica quando si lavora con set di dati di grandi dimensioni, ad esempio i dati utente contenuti nelle tabelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave asimmetrica.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene decrittografato il testo crittografato con la chiave asimmetrica `JanainaAsymKey02`, archiviata in `AdventureWorks2012.ProtectedData04`. I dati restituiti vengono decrittografati tramite la chiave asimmetrica `JanainaAsymKey02`, che è stata a sua volta decrittografata con la password `pGFD4bb925DGvbd2439587y`. Il testo non crittografato verrà convertito nel tipo **nvarchar**.  
+ Nell'esempio seguente viene decrittografato il testo crittografato con la chiave asimmetrica `JanainaAsymKey02`, archiviata in `AdventureWorks2012.ProtectedData04`. I dati restituiti vengono decrittografati tramite la chiave asimmetrica `JanainaAsymKey02`, che è stata a sua volta decrittografata con la password `pGFD4bb925DGvbd2439587y`. Il testo decrittografato viene quindi convertito nel tipo **nvarchar**.  
   
 ```  
 SELECT CONVERT(nvarchar(max),  
@@ -84,7 +84,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ENCRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
+ [ENCRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

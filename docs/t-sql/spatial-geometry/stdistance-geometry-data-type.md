@@ -1,5 +1,5 @@
 ---
-title: STDistance (tipo di dati geometry) | Documenti Microsoft
+title: STDistance (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geometry-data-type"></a>STDistance (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la distanza più breve tra un punto in un **geometry** istanza e un punto in un altro **geometry** istanza.  
+  Restituisce la distanza più breve tra un punto in un'istanza **geometry** e un punto in un'altra istanza **geometry**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da cui misurare la distanza tra l'istanza sulla quale `STDistance()` viene richiamato. Se *other_geometry* è un set vuoto, `STDistance()` restituisce null.  
+ Altra istanza **geometry** da cui misurare la distanza rispetto all'istanza sulla quale viene richiamato `STDistance()`. Se *other_geometry* è un set vuoto, `STDistance()` restituisce Null.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **float**  
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- `STDistance()`Restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ `STDistance()` restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
   

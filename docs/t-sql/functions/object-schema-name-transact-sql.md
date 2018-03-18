@@ -1,5 +1,5 @@
 ---
-title: OBJECT_SCHEMA_NAME (Transact-SQL) | Documenti Microsoft
+title: OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il nome dello schema di database per gli oggetti con ambito schema. Per un elenco di oggetti con ambito schema, vedere [Sys. Objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
+  Restituisce il nome dello schema di database per gli oggetti con ambito schema. Per un elenco degli oggetti con ambito schema, vedere [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +51,10 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>Argomenti  
  *object_id*  
- ID dell'oggetto da utilizzare. *object_id* è **int** e si presuppone che sia un oggetto con ambito schema nel database specificato, o nel contesto del database corrente.  
+ ID dell'oggetto da utilizzare. *object_id* è di tipo **int** e si presume che sia un oggetto con ambito schema nel database specificato o nel contesto del database corrente.  
   
  *database_id*  
- ID del database in cui l'oggetto deve essere cercato. *database_id* è **int**.  
+ ID del database in cui l'oggetto deve essere cercato. *database_id* è di tipo **int**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sysname**  
@@ -64,15 +64,15 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
  Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come OBJECT_SCHEMA_NAME possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ANY per l'oggetto. Per specificare l'ID di un database, è inoltre necessaria l'autorizzazione CONNECT per il database o l'abilitazione dell'account guest.  
   
-## <a name="remarks"></a>Osservazioni  
- È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per ulteriori informazioni, vedere [espressioni](../../t-sql/language-elements/expressions-transact-sql.md) e [in](../../t-sql/queries/where-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE](../../t-sql/queries/where-transact-sql.md).  
   
  Il set di risultati restituito da questa funzione di sistema utilizza le regole di confronto del database corrente.  
   
- Se *database_id* non viene specificato, il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] si presuppone che *object_id* nel contesto del database corrente. Una query che fa riferimento a un *object_id* in un altro database restituisce NULL oppure risultati errati. Ad esempio, nella query seguente il contesto del database corrente è [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca di restituire un nome di schema di oggetto per l'ID di oggetto specificato in tale database anziché il database specificato nella clausola FROM della query. Verranno pertanto restituite informazioni errate.  
+ Se non si specifica *database_id*, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] presuppone che *object_id* sia nel contesto del database corrente. Una query che fa riferimento a un valore di *object_id* in un altro database restituisce NULL oppure risultati errati. Ad esempio, nella query seguente il contesto del database corrente è [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] cerca di restituire un nome di schema di oggetto per l'ID di oggetto specificato in tale database anziché il database specificato nella clausola FROM della query. Verranno pertanto restituite informazioni errate.  
   
 ```  
 SELECT DISTINCT OBJECT_SCHEMA_NAME(object_id)  
@@ -119,10 +119,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
- [Object_id &#40; Transact-SQL &#41;](../../t-sql/functions/object-id-transact-sql.md)   
- [Object_name &#40; Transact-SQL &#41;](../../t-sql/functions/object-name-transact-sql.md)   
+ [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
+ [OBJECT_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/object-name-transact-sql.md)   
  [Entità a protezione diretta](../../relational-databases/security/securables.md)  
   
   

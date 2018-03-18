@@ -53,7 +53,7 @@ EXISTS ( subquery )
   
 ## <a name="arguments"></a>Argomenti  
  *subquery*  
- Istruzione SELECT con restrizioni. La parola chiave INTO non è consentita. Per ulteriori informazioni, vedere le informazioni sulle sottoquery in [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+ Istruzione SELECT con restrizioni. La parola chiave INTO non è consentita. Per altre informazioni, vedere la descrizione delle sottoquery in [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
@@ -119,7 +119,7 @@ Willis                                             Johnson
  ```  
   
 ### <a name="c-comparing-queries-by-using-exists-and--any"></a>C. Confronto di query con le parole chiave EXISTS e = ANY  
- Nell'esempio seguente vengono illustrate due query per la ricerca di negozi il cui nome coincide con quello del fornitore. La prima query utilizza `EXISTS` e il secondo Usa `=``ANY`.  
+ Nell'esempio seguente vengono illustrate due query per la ricerca di negozi il cui nome coincide con quello del fornitore. La prima query usa `EXISTS` e la seconda usa `=``ANY`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -302,10 +302,10 @@ Peng                           Wu                             Quality Assurance 
 (91 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-using-exists"></a>F. L'utilizzo di EXISTS  
- Nell'esempio seguente identifica se una qualsiasi delle righe nel `ProspectiveBuyer` tabella potrebbe essere corrisponde alle righe nel `DimCustomer` tabella. La query restituirà righe solo quando sia il `LastName` e `BirthDate` valori in corrispondenza di due tabelle.  
+### <a name="f-using-exists"></a>F. Uso di EXISTS  
+ L'esempio seguente consente di stabilire se nella tabella `ProspectiveBuyer` sono presenti righe corrispondenti a righe nella tabella `DimCustomer`. La query restituirà righe solo in caso di corrispondenza di entrambi i valori `LastName` e `BirthDate` nelle due tabelle.  
   
 ```  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ WHERE EXISTS
 ```  
   
 ### <a name="g-using-not-exists"></a>G. Utilizzo della parola chiave NOT EXISTS  
- Parola chiave NOT EXISTS funziona come l'opposto di EXISTS. La clausola WHERE in NOT EXISTS viene soddisfatta se la sottoquery non restituisce alcuna riga. Nell'esempio seguente consente di trovare le righe nel `DimCustomer` tabella in cui il `LastName` e `BirthDate` non corrispondono a tutte le voci di `ProspectiveBuyers` tabella.  
+ La parola chiave NOT EXISTS funziona in modo inverso rispetto a EXISTS. La clausola WHERE in NOT EXISTS viene soddisfatta se la sottoquery non restituisce alcuna riga. L'esempio seguente consente di trovare le righe nella tabella `DimCustomer` in cui `LastName` e `BirthDate` non corrispondono ad alcuna voce nella tabella `ProspectiveBuyers`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -333,7 +333,7 @@ WHERE NOT EXISTS
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

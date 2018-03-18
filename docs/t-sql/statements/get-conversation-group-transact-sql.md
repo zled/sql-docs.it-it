@@ -1,5 +1,5 @@
 ---
-title: GET CONVERSATION GROUP (Transact-SQL) | Documenti Microsoft
+title: GET CONVERSATION GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -72,21 +72,21 @@ ms.lasthandoff: 01/25/2018
  Specifica la coda da cui recuperare il gruppo di conversazioni.  
   
  *database_name*  
- Nome del database contenente la coda da cui recuperare il gruppo di messaggi. Se non si *database_name* viene omesso, viene utilizzato il database corrente.  
+ Nome del database contenente la coda da cui recuperare il gruppo di messaggi. Se non si specifica *database_name*, per impostazione predefinita viene usato il database corrente.  
   
  *schema_name*  
- Nome dello schema proprietario della coda da cui recuperare il gruppo di messaggi. Se non si *schema_name* viene omesso, viene utilizzato lo schema predefinito per l'utente corrente.  
+ Nome dello schema proprietario della coda da cui recuperare il gruppo di messaggi. Se non si specifica *schema_name*, per impostazione predefinita viene usato lo schema predefinito dell'utente corrente.  
   
  *queue_name*  
  Nome della coda da cui recuperare il gruppo di conversazioni.  
   
  TIMEOUT *timeout*  
- Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che utilizza l'istruzione WAITFOR non include questa clausola o *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la  *@conversation_group_id*  variabile su NULL.  
+ Specifica la quantità di tempo, in millisecondi, che Service Broker attende l'arrivo di un messaggio nella coda. È possibile utilizzare questa clausola solo insieme alla clausola WAITFOR. Se un'istruzione che usa l'istruzione WAITFOR non include questa clausola oppure se *timeout* è -1, il tempo di attesa è illimitato. Se il timeout scade, l'istruzione GET CONVERSATION GROUP imposta la variabile *@conversation_group_id* su NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), il [!INCLUDE[tsql](../../includes/tsql-md.md)] carattere di terminazione.  
+>  Se l'istruzione GET CONVERSATION GROUP non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Se la coda specificata nell'istruzione GET CONVERSATION GROUP non è disponibile, l'istruzione viene interrotta con un errore [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

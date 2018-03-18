@@ -59,7 +59,7 @@ IF Boolean_expression
   
  Per definire un blocco di istruzioni, utilizzare le parole chiave per il controllo di flusso BEGIN ed END.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile utilizzare un costrutto IF...ELSE in batch, stored procedure e query ad hoc. In caso di utilizzo in una stored procedure, questo costrutto viene in genere utilizzato per verificare l'esistenza di parametri.  
   
  È possibile nidificare condizioni IF dopo un'altra condizione IF o una parola chiave ELSE. Il limite del numero di livelli di nidificazione dipende dalla memoria disponibile.  
@@ -73,10 +73,10 @@ ELSE
        SELECT 'Weekday';
 ```  
   
- Per ulteriori esempi, vedere [ELSE &#40; se... ELSE &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/else-if-else-transact-sql.md).  
+ Per altri esempi, vedere [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md).  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente usa `IF…ELSE` per determinare quale delle due risposte per indicare all'utente, in base al peso di un elemento di `DimProduct` tabella.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'esempio seguente usa `IF…ELSE` per determinare quale delle due risposte visualizzare all'utente, in base al peso di un elemento nella tabella `DimProduct`.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -103,7 +103,7 @@ ELSE
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Il controllo di flusso Language &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40; se... ELSE &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
+ [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
   
   
 

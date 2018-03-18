@@ -1,5 +1,5 @@
 ---
-title: DROP MASTER KEY (Transact-SQL) | Documenti Microsoft
+title: DROP MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DROP MASTER KEY
 ## <a name="arguments"></a>Argomenti  
  Questa istruzione non accetta argomenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La rimozione avrà esito negativo se nel database esistono chiavi private protette dalla chiave master.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -68,8 +68,8 @@ DROP MASTER KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente rimuove la chiave master.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente si rimuove la chiave master.  
   
 ```  
 USE master;  
@@ -79,10 +79,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Aprire la chiave MASTER &#40; Transact-SQL &#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
- [CLOSE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
- [BACKUP MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
- [RESTORE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
+ [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   
+ [CLOSE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-master-key-transact-sql.md)   
+ [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-master-key-transact-sql.md)   
+ [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-master-key-transact-sql.md)   
  [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

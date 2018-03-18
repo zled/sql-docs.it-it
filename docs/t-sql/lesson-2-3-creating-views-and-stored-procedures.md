@@ -1,5 +1,5 @@
 ---
-title: Creazione di viste e Stored procedure | Documenti Microsoft
+title: Creazione di viste e stored procedure | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lezione 2-3 - Creazione di viste e Stored procedure
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Ora che può accedere a Mary di **TestData** database, è possibile creare alcuni oggetti di database, ad esempio una vista e una stored procedure e quindi concedere l'accesso di Mary ad essi. Una vista è costituita da un'istruzione SELECT, mentre una stored procedure da una o più istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] eseguite in un batch.  
+# <a name="lesson-2-3---creating-views-and-stored-procedures"></a>Lezione 2-3 - Creazione di viste e stored procedure
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Dopo aver concesso all'utente Mary l'accesso al database **TestData**, è possibile creare alcuni oggetti di database, ad esempio una vista e una stored procedure, quindi concedere a Mary l'accesso a tali oggetti. Una vista è costituita da un'istruzione SELECT, mentre una stored procedure da una o più istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] eseguite in un batch.  
   
 Sulle viste è possibile eseguire query come con le tabelle, ad eccezione del fatto che le viste non accettano parametri. Le stored procedure sono più complesse delle viste e possono avere parametri di input e output, nonché contenere istruzioni per controllare il flusso del codice, ad esempio istruzioni IF e WHILE. È consigliabile dal punto di vista della programmazione utilizzare le stored procedure per tutte le azioni ripetitive sul database.  
   

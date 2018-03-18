@@ -1,5 +1,5 @@
 ---
-title: DROP ROLE (Transact-SQL) | Documenti Microsoft
+title: DROP ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -58,18 +58,18 @@ DROP ROLE role_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale il ruolo solo se esiste già.  
+ Rimuove in modo condizionale il ruolo solo se esiste già.  
   
  *role_name*  
  Specifica il ruolo da rimuovere dal database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I ruoli proprietari di entità a sicurezza diretta non possono essere rimossi dal database. Per rimuovere un ruolo di database proprietario di entità a sicurezza diretta, è innanzitutto necessario trasferire la proprietà di tali entità oppure rimuovere le entità dal database. I ruoli che includono membri non possono essere rimossi dal database. Per rimuovere un ruolo che include membri, è innanzitutto necessario rimuovere i membri del ruolo.  
   
- Per rimuovere membri da un ruolo del database, utilizzare [ALTER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-role-transact-sql.md).  
+ Per rimuovere membri da un ruolo del database, usare [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md).  
   
  Non è possibile utilizzare l'istruzione DROP ROLE per rimuovere un ruolo predefinito del database.  
   
@@ -78,13 +78,13 @@ DROP ROLE role_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
- Per rimuovere un ruolo del server, utilizzare [DROP SERVER ROLE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-server-role-transact-sql.md).  
+ Per rimuovere un ruolo del server, usare [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- Richiede **ALTER ANY ROLE** autorizzazione per il database, o **controllo** l'autorizzazione per il ruolo o l'appartenenza di **db_securityadmin**.  
+## <a name="permissions"></a>Autorizzazioni  
+ È necessaria l'autorizzazione **ALTER ANY ROLE** per il database, l'autorizzazione **CONTROL** per il ruolo o l'appartenenza a **db_securityadmin**.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene eliminato il ruolo del database `purchasing` dal `AdventureWorks2012` database.  
+ Nell'esempio seguente il ruolo del database `purchasing` viene rimosso dal database `AdventureWorks2012`.  
   
 ```  
 DROP ROLE purchasing;  
@@ -93,8 +93,8 @@ GO
   
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE di ruolo &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
- [ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+ [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+ [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   

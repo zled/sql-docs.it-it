@@ -1,5 +1,5 @@
 ---
-title: '@@REMSERVER (Transact-SQL) | Documenti Microsoft'
+title: '@@REMSERVER (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
- @@REMSERVER consente a una stored procedure controllare il nome del server di database da cui viene eseguita la procedura.  
+## <a name="remarks"></a>Remarks  
+ La funzione @@REMSERVER consente a una stored procedure di verificare il nome del server di database da cui viene eseguita la procedura.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata la procedura `usp_CheckServer` che restituisce il nome del server remoto.  

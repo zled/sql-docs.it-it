@@ -1,5 +1,5 @@
 ---
-title: CEILING (Transact-SQL) | Documenti Microsoft
+title: CEILING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -48,7 +48,7 @@ CEILING ( numeric_expression )
   
 ## <a name="arguments"></a>Argomenti  
 *numeric_expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno, categoria del tipo di dati numerici o numerici approssimativi, ad eccezione del **bit** tipo di dati.
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) della categoria di tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**.
   
 ## <a name="return-types"></a>Tipi restituiti
 Restituisce lo stesso tipo di *numeric_expression*.
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   

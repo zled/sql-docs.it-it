@@ -1,5 +1,5 @@
 ---
-title: ACOS (Transact-SQL) | Documenti Microsoft
+title: ACOS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Funzione matematica che restituisce l'angolo, espresso in radianti, il cui coseno è specificato **float** espressione denominato anche arcocoseno.
+Funzione matematica che restituisce l'angolo, espresso in radianti, il cui coseno corrisponde all'espressione di tipo **float** specificata (denominato anche arcocoseno).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,8 +47,8 @@ ACOS ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un'espressione di tipo **float** o di un tipo che può essere convertito in modo implicito in **float**, con un valore compreso tra -1 e 1. I valori non compresi in questo intervallo restituiscono NULL e segnalano un errore di dominio.
+*float_expression*  
+Espressione di tipo **float** o di un tipo che è possibile convertire in modo implicito in tipo **float** con un valore compreso tra -1 e 1. I valori non compresi in questo intervallo restituiscono NULL e segnalano un errore di dominio.
   
 ## <a name="return-types"></a>Tipi restituiti  
 **float**
@@ -72,7 +72,7 @@ The ACOS of the number is: 3.14159
 (1 row(s) affected)  
 ```  
   
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 Nell'esempio seguente viene restituito l'arcocoseno del numero specificato.
   
@@ -92,7 +92,7 @@ The ACOS of the number is: 3.14159
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 [Funzioni](../../t-sql/functions/functions.md)
   
   

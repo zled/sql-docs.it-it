@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-aggregate-transact-sql"></a>DROP AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Rimuove una funzione di aggregazione definita dall'utente dal database corrente. Le funzioni di aggregazione definita dall'utente vengono create utilizzando [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
+  Rimuove una funzione di aggregazione definita dall'utente dal database corrente. Le funzioni di aggregazione definite dall'utente vengono create tramite l'istruzione [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +50,10 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale l'aggregazione solo se esiste già.  
+ Rimuove in modo condizionale la funzione di aggregazione solo se esiste già.  
   
  *schema_name*  
  Nome dello schema a cui appartiene la funzione di aggregazione definita dall'utente.  
@@ -61,7 +61,7 @@ DROP AGGREGATE [ IF EXISTS ] [ schema_name . ] aggregate_name
  *aggregate_name*  
  Nome della funzione di aggregazione definita dall'utente che si desidera eliminare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione DROP AGGREGATE non viene eseguita se sono presenti viste, funzioni o stored procedure create in base all'associazione a schemi che fanno riferimento alla funzione di aggregazione definita dall'utente che si desidera eliminare.  
   
 ## <a name="permissions"></a>Autorizzazioni  

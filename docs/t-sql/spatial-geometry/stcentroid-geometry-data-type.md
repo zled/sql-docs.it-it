@@ -1,5 +1,5 @@
 ---
-title: STCentroid (tipo di dati geometry) | Documenti Microsoft
+title: STCentroid (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcentroid-geometry-data-type"></a>STCentroid (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce il centro geometrico di un **geometry** istanza costituito da uno o più poligoni.
+Restituisce il centro geometrico di un'istanza **geometry** costituita da uno o più poligoni.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,19 +44,19 @@ Restituisce il centro geometrico di un **geometry** istanza costituito da uno o 
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- `STCentroid()`Restituisce null se il **geometry** istanza non è un **Polygon, CurvePolygon**, o **MultiPolygon** tipo.  
+## <a name="remarks"></a>Remarks  
+ `STCentroid()` restituisce Null se l'istanza **geometry** non è di tipo **Polygon, CurvePolygon** o **MultiPolygon**.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-computing-the-centroid-of-a-polygon-instance"></a>A. Calcolo del centro di un'istanza Polygon  
- L'esempio seguente usa `STCentroid()` per calcolare il centro di un `polygon``geometry` istanza:  
+ L'esempio seguente usa `STCentroid()` per calcolare il centro di un'istanza `polygon``geometry`:  
   
 ```  
 DECLARE @g geometry;  

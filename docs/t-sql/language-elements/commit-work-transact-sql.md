@@ -1,5 +1,5 @@
 ---
-title: OPERAZIONI di COMMIT (Transact-SQL) | Documenti Microsoft
+title: COMMIT WORK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ COMMIT [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa istruzione funziona esattamente come l'istruzione COMMIT TRANSACTION, ad eccezione del fatto che COMMIT TRANSACTION accetta un nome di transazione definito dall'utente. La sintassi di COMMIT, con o senza la parola chiave facoltativa WORK, è compatibile con SQL-92.  
   
 ## <a name="see-also"></a>Vedere anche  

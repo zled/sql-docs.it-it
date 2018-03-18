@@ -1,5 +1,5 @@
 ---
-title: Livelli di isolamento delle transazioni | Documenti Microsoft
+title: Livelli di isolamento delle transazioni | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,17 +44,17 @@ ms.lasthandoff: 01/25/2018
   
 -   Funzioni predefinite di creazione dei metadati  
   
--   **sp_help** gruppo di stored procedure  
+-   Gruppo di stored procedure **sp_help**  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Procedure di catalogo di Native Client  
+-   Stored procedure del catalogo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 -   Viste e funzioni a gestione dinamica  
   
- Per ulteriori informazioni sui livelli di isolamento, vedere [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41; ](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
+ Per altre informazioni sui livelli di isolamento, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
  Nella tabella seguente è incluso un riepilogo sull'accesso ai metadati in livelli di isolamento diversi.  
   
-|Livello di isolamento|Supported|Rispettato|  
+|Livello di isolamento|Supportato|Rispettato|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|no|Rispetto non garantito|  
 |READ COMMITTED|Sì|Sì|  

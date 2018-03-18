@@ -1,5 +1,5 @@
 ---
-title: STGeomFromWKB (tipo di dati geometry) | Documenti Microsoft
+title: STGeomFromWKB (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geometry** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Restituisce un'istanza **geometry** di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,23 +45,23 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_geometry*  
- Rappresentazione WKB del **geometry** istanza da restituire. *WKB_geometry* è un **varbinary (max)** espressione.  
+ Rappresentazione WKB dell'istanza **geometry** da restituire. *WKB_geometry* è un'espressione **varbinary(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometry** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometry** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC del **geometry** istanza restituita dalla `STGeomFromText()` è impostato per l'input WKB corrispondente.  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC dell'istanza **geometry** restituita da `STGeomFromText()` è impostato sull'input WKB corrispondente.  
   
- Questo metodo genererà un **FormatException** se l'input non è formattata correttamente.  
+ Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STGeomFromWKB()` per creare un **geometry** istanza.  
+ Nell'esempio seguente viene usato `STGeomFromWKB()` per creare un'istanza **geometry**.  
   
 ```  
 DECLARE @g geometry;   

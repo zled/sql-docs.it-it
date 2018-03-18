@@ -1,5 +1,5 @@
 ---
-title: STLength (tipo di dati geography) | Documenti Microsoft
+title: STLength (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stlength-geography-data-type"></a>STLength (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la lunghezza totale degli elementi in un **geography** istanza o **geography** istanze all'interno di un **GeometryCollection**.  
+  Restituisce la lunghezza totale degli elementi in un'istanza **geography** o le istanze **geography** in una **GeometryCollection**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **float**  
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Se un **geography** istanza è chiusa, la lunghezza viene calcolata come lunghezza totale lungo l'istanza; la lunghezza di qualsiasi poligono è il relativo perimetro e la lunghezza di un punto è 0. La lunghezza di un **GeometryCollection** trovata mediante il calcolo della somma delle lunghezze di tutte le **geography** istanze contenute all'interno della raccolta.  
+## <a name="remarks"></a>Remarks  
+ Se un'istanza **geography** è chiusa, la lunghezza viene calcolata come lunghezza totale lungo l'istanza. La lunghezza di qualsiasi poligono è il relativo perimetro e la lunghezza di un punto è 0. La lunghezza di un oggetto **GeometryCollection** viene calcolata eseguendo la somma delle lunghezze di tutte le istanze **geography** contenute nella raccolta.  
   
  STLength() può essere utilizzato con oggetti LineString validi e non validi. In genere, un oggetto LineString non è valido a causa di segmenti sovrapposti dovuti ad anomalie, ad esempio tracce GPS imprecise. STLength() non rimuove i segmenti sovrapposti o non validi, i quali vengono inclusi nel valore di lunghezza restituito. È possibile rimuovere i segmenti sovrapposti da un oggetto LineString con il metodo MakeValid().  
   

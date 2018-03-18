@@ -1,5 +1,5 @@
 ---
-title: Parse (motore di Database) | Documenti Microsoft
+title: Parse (motore di database) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="parse-database-engine"></a>Parse (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-L'analisi converte la rappresentazione di stringa canonica di un **hierarchyid** per un **hierarchyid** valore. L'analisi viene chiamato implicitamente quando una conversione da un tipo stringa per **hierarchyid** si verifica. Funziona in modo opposto di [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse () è un metodo statico.
+Il metodo Parse esegue la conversione della rappresentazione stringa canonica di un valore **hierarchyid** in un valore **hierarchyid**. Parse viene chiamato in modo implicito quando viene eseguita una conversione da un tipo stringa in **hierarchyid**. Il metodo funziona in modo opposto a [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() è un metodo statico.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,17 +58,17 @@ static SqlHierarchyId Parse ( SqlString input )
 CLR: valore stringa valutato.
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
-Se l'analisi riceve un valore che non è una rappresentazione di stringa valida di un **hierarchyid**, viene generata un'eccezione. Ad esempio, se **char** tipi di dati contengono spazi finali, viene generata un'eccezione.
+## <a name="remarks"></a>Remarks  
+Se Parse riceve un valore che non è una rappresentazione stringa valida di un valore **hierarchyid**, viene generata un'eccezione. Se, ad esempio, i tipi di dati **char** contengono spazi finali, viene generata un'eccezione.
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-converting-transact-sql-values-without-a-table"></a>A. Conversione di valori Transact-SQL senza una tabella  
-Nell'esempio di codice viene illustrato come utilizzare `ToString` per convertire un **hierarchyid** valore in una stringa e `Parse` per convertire un valore stringa in un **hierarchyid**.
+Nell'esempio di codice seguente viene usato `ToString` per convertire un valore **hierarchyid** in una stringa e `Parse` per convertire un valore stringa in un valore **hierarchyid**.
   
 ```sql
 DECLARE @StringValue AS nvarchar(4000), @hierarchyidValue AS hierarchyid  
@@ -89,7 +89,7 @@ hierarchyidRepresentation    StringRepresentation
 ```
   
 ### <a name="b-clr-example"></a>B. Esempio CLR  
-Frammento di codice seguente chiama il metodo Parse ():
+Nel frammento di codice seguente viene chiamato il metodo Parse():
   
 ```sql
 string input = “/1/2/”;  

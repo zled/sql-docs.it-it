@@ -1,5 +1,5 @@
 ---
-title: Funzioni di configurazione (Transact-SQL) | Documenti Microsoft
+title: Funzioni di configurazione (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ Le funzioni scalari seguenti restituiscono informazioni sulle impostazioni corre
 |[@@MAX_PRECISION](../../t-sql/functions/max-precision-transact-sql.md)|[@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md)|  
 |[@@NESTLEVEL](../../t-sql/functions/nestlevel-transact-sql.md)||  
   
-Tutte le funzioni di configurazione sono non deterministiche, Questo significa che non restituiscono sempre gli stessi risultati ogni volta che vengono chiamate, anche se il set di valori di input è lo stesso. Per ulteriori informazioni sulle funzioni deterministiche, vedere [funzioni deterministiche e non](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Tutte le funzioni di configurazione sono non deterministiche, Questo significa che non restituiscono sempre gli stessi risultati ogni volta che vengono chiamate, anche se il set di valori di input è lo stesso. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni &#40; Transact-SQL &#41;](../../t-sql/functions/functions.md)
+[Funzioni &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)
   
   

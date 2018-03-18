@@ -1,5 +1,5 @@
 ---
-title: DROP PROCEDURE (Transact-SQL) | Documenti Microsoft
+title: DROP PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -60,10 +60,10 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
+ *IF EXISTS*  
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale la procedura solo se esiste già.  
+ Rimuove in modo condizionale la procedura solo se esiste già.  
   
  *schema_name*  
  Nome dello schema a cui appartiene la procedura. Non è possibile specificare un nome di server o di database.  
@@ -72,15 +72,15 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  Nome della stored procedure o del gruppo di stored procedure da rimuovere. Non è possibile eliminare singole procedure all'interno di un gruppo di procedure numerate. In questo caso, viene eliminato l'intero gruppo.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Prima di rimuovere qualsiasi stored procedure, verificare la presenza di eventuali oggetti dipendenti e modificare tali oggetti di conseguenza, L'eliminazione di una stored procedure può causare errori in oggetti e script dipendenti, se tali oggetti non vengono aggiornati. Per ulteriori informazioni, vedere [visualizzare le dipendenze di una Stored Procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
+ Prima di rimuovere qualsiasi stored procedure, verificare la presenza di eventuali oggetti dipendenti e modificare tali oggetti di conseguenza, L'eliminazione di una stored procedure può causare errori in oggetti e script dipendenti, se tali oggetti non vengono aggiornati. Per altre informazioni, vedere [Visualizzare le dipendenze di una stored procedure](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
 ## <a name="metadata"></a>Metadati  
- Per visualizzare un elenco di procedure esistenti, eseguire una query di **Sys. Objects** vista del catalogo. Per visualizzare la definizione della routine, eseguire una query di **Sys. sql_modules** vista del catalogo.  
+ Per visualizzare un elenco delle procedure esistenti, eseguire una query sulla vista del catalogo **sys.objects**. Per visualizzare la definizione della procedura, eseguire una query sulla vista del catalogo **sys.sql_modules**.  
   
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
- Richiede **controllo** autorizzazione per la procedura, o **ALTER** l'autorizzazione per lo schema a cui appartiene la stored procedure o l'appartenenza di **db_ddladmin** ruolo predefinito del server .  
+ È richiesta l'autorizzazione **CONTROL** per la procedura, l'autorizzazione **ALTER** per lo schema a cui appartiene la procedura oppure l'appartenenza al ruolo predefinito del server **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente si rimuove la stored procedure `dbo.uspMyProc` nel database corrente.  
@@ -96,7 +96,7 @@ GO
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
- L'esempio seguente rimuove il `dbo.uspMyProc` stored procedure se esiste, ma non viene generato un errore se la procedura non esiste. Questa sintassi è stata introdotta in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+ L'esempio seguente rimuove la stored procedure `dbo.uspMyProc` se esiste, ma non causa un errore se la procedura non esiste. Questa sintassi è nuova in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ```  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
@@ -107,7 +107,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
- [Sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Eliminare una stored procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)  
   

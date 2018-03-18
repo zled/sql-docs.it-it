@@ -1,5 +1,5 @@
 ---
-title: STDisjoint (tipo di dati geometry) | Documenti Microsoft
+title: STDisjoint (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geometry-data-type"></a>STDisjoint (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geometry** è spazialmente disgiunta da un'altra istanza **geometry** istanza. In caso contrario, restituisce 0.  
+  Restituisce 1 se un'istanza **geometry** è disgiunta a livello spaziale da un'altra istanza **geometry**. In caso contrario, restituisce 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STDisjoint()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STDisjoint()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Due **geometry** istanze sono disgiunte se l'intersezione dei relativi set di punti è vuota.  
+## <a name="remarks"></a>Remarks  
+ Due istanze **geometry** sono disgiunte se l'intersezione dei relativi set di punti è vuota.  
   
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STDisjoint()` per verificare se due **geometry** nelle istanze di spaziale non contiguo.  
+ Nell'esempio seguente viene usato `STDisjoint()` per verificare se due istanze **geometry** sono disgiunte a livello spaziale.  
   
 ```  
 DECLARE @g geometry;  

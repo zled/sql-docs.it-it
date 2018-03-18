@@ -1,5 +1,5 @@
 ---
-title: Inserimento e aggiornamento dei dati in una tabella (esercitazione) | Documenti Microsoft
+title: Inserimento e aggiornamento di dati in una tabella (esercitazione) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lezione 1-3-inserimento e aggiornamento dei dati in una tabella
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Ora che è stato creato il **prodotti** tabella, si è pronti per inserire dati nella tabella utilizzando l'istruzione INSERT. Dopo aver inserito i dati, si procederà alla modifica del contenuto di una riga mediante l'istruzione UPDATE. Per limitare l'operazione di aggiornamento a una sola riga verrà utilizzata la clausola WHERE dell'istruzione UPDATE. Le quattro istruzioni immetteranno i dati seguenti.  
+# <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lezione 1-3 - Inserimento e aggiornamento dei dati in una tabella
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Dopo aver creato la tabella **Products** è possibile inserirvi dati con l'istruzione INSERT. Dopo aver inserito i dati, si procederà alla modifica del contenuto di una riga mediante l'istruzione UPDATE. Per limitare l'operazione di aggiornamento a una sola riga verrà utilizzata la clausola WHERE dell'istruzione UPDATE. Le quattro istruzioni immetteranno i dati seguenti.  
   
 |ProductID|ProductName|Price|ProductDescription|  
 |-------------|---------------|---------|----------------------|  

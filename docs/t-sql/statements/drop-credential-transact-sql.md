@@ -1,5 +1,5 @@
 ---
-title: DROP CREDENTIAL (Transact-SQL) | Documenti Microsoft
+title: DROP CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,15 +54,15 @@ DROP CREDENTIAL credential_name
  *credential_name*  
  Nome della credenziale da rimuovere dal server.  
   
-## <a name="remarks"></a>Osservazioni  
- Per eliminare la chiave privata associata a una credenziale senza rimuovere la credenziale stessa, utilizzare [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per rimuovere il segreto associato a una credenziale, senza rimuovere la credenziale stessa, usare [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
   
- Informazioni sulle credenziali sono visibili nella **credentials** vista del catalogo.  
+ Le informazioni sulle credenziali sono visibili nella vista del catalogo **sys.credentials**.  
   
 > [!WARNING]  
->  I proxy sono associati a credenziali. Se si eliminano le credenziali usate da un proxy, il proxy associato rimane in uno stato inutilizzabile. Quando si elimina una credenziale utilizzata da un proxy, eliminare il proxy (tramite [sp_delete_proxy &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) e ricreare il proxy associato mediante [sp_add_proxy &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
+>  I proxy sono associati a credenziali. Se si eliminano le credenziali usate da un proxy, il proxy associato rimane in uno stato inutilizzabile. Quando si eliminano le credenziali usate da un proxy, eliminare il proxy usando [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md) e ricreare il proxy associato usando [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY CREDENTIAL. Per la rimozione di una credenziale di sistema è richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
@@ -74,10 +74,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [Istruzione ALTER CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
- [DROP DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
+ [ALTER CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-credential-transact-sql.md)   
+ [DROP DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-scoped-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE il tipo di messaggio (Transact-SQL) | Documenti Microsoft
+title: DROP MESSAGE TYPE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ DROP MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>Autorizzazioni  
  L'autorizzazione per eliminare un tipo di messaggio viene assegnata per impostazione predefinita al proprietario del tipo di messaggio, ai membri del ruolo predefinito del database db_ddladmin o db_owner e ai membri del ruolo predefinito del server sysadmin.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è possibile eliminare un tipo di messaggio in caso di contratti che vi fanno riferimento.  
   
 ## <a name="examples"></a>Esempi  

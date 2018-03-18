@@ -1,5 +1,5 @@
 ---
-title: COT (Transact-SQL) | Documenti Microsoft
+title: COT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cot-transact-sql"></a>COT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Funzione matematica che restituisce la cotangente trigonometrica dell'angolo specificato, espresso in radianti, nell'oggetto specificato **float** espressione.
+Funzione matematica che restituisce la cotangente dell'angolo specificato, espressa in radianti, nell'espressione **float** specificata.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,8 +46,8 @@ COT ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md)di tipo **float** o di un tipo che può essere convertito in modo implicito in **float**.
+*float_expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che può essere convertito in modo implicito in **float**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **float**
@@ -71,7 +71,7 @@ The COT of the angle is: -0.040312
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

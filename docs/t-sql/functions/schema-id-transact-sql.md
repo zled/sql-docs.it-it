@@ -1,5 +1,5 @@
 ---
-title: SCHEMA_ID (Transact-SQL) | Documenti Microsoft
+title: SCHEMA_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -52,14 +52,14 @@ SCHEMA_ID ( [ schema_name ] )
   
 |Nome|Definizione|  
 |----------|----------------|  
-|*schema_name*|Nome dello schema. *schema_name* è un **sysname**. Se *schema_name* viene omesso, SCHEMA_ID restituirà l'ID dello schema predefinito del chiamante.|  
+|*schema_name*|Nome dello schema. *schema_name* è di tipo **sysname**. Se *schema_name* viene omesso, SCHEMA_ID restituirà l'ID dello schema predefinito del chiamante.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
- Verrà restituito NULL se *schema_name* non è uno schema valido.  
+ Se *schema_name* non è uno schema valido, verrà restituito un valore NULL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  SCHEMA_ID restituisce gli ID degli schemi di sistema e degli schemi definiti dall'utente. SCHEMA_ID può essere chiamato in un elenco di selezione, in una clausola WHERE e dovunque è consentita un'espressione.  
   
 ## <a name="examples"></a>Esempi  
@@ -77,9 +77,9 @@ SELECT SCHEMA_ID('dbo');
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [SCHEMA_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/schema-name-transact-sql.md)   
- [Schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [SCHEMA_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/schema-name-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)  
   
   
 

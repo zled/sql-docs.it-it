@@ -1,5 +1,5 @@
 ---
-title: '@@LANGID (Transact-SQL) | Documenti Microsoft'
+title: '@@LANGID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -51,8 +51,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **smallint**  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare informazioni sulle impostazioni della lingua, compresi gli ID, eseguire **sp_helplanguage** senza un parametro specificato.  
+## <a name="remarks"></a>Remarks  
+ Per visualizzare informazioni sulle impostazioni della lingua, compresi gli ID, eseguire la procedura **sp_helplanguage** senza alcun parametro.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente la lingua della sessione corrente viene impostata su `Italian`, quindi viene utilizzata la funzione `@@LANGID` per restituire l'ID corrispondente.  
@@ -73,7 +73,7 @@ Language ID
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di configurazione &#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LANGUAGE &#40; Transact-SQL &#41;](../../t-sql/statements/set-language-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)  
   
   

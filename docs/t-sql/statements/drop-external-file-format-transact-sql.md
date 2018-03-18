@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE il formato di FILE esterno (Transact-SQL) | Documenti Microsoft
+title: DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -26,7 +26,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-file-format-transact-sql"></a>ELIMINARE il formato di FILE esterno (Transact-SQL)
+# <a name="drop-external-file-format-transact-sql"></a>DROP EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Rimuove un formato di file esterno PolyBase.  
@@ -43,27 +43,27 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
   
 ## <a name="arguments"></a>Argomenti  
  *external_file_format_name*  
- Il nome del formato di file esterno da eliminare.  
+ Nome del formato di file esterno da eliminare.  
   
 ## <a name="metadata"></a>Metadati  
- Per visualizzare un elenco di formati di file esterni, utilizzare il [sys.external_file_formats &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) vista di sistema.  
+ Per visualizzare un elenco dei formati di file esterni, usare la vista di sistema [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md).  
   
 ```  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario modificare qualsiasi formato di FILE esterno.  
+ Richiede ALTER ANY EXTERNAL FILE FORMAT.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Eliminazione di un formato di file esterni non rimuove i dati esterni.  
+ La rimozione di un formato di file esterno non comporta la rimozione dei dati esterni.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  
  Acquisisce un blocco condiviso per l'oggetto formato di file esterno.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Utilizzando la sintassi di base  
+### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL FILE FORMAT myfileformat;  

@@ -1,5 +1,5 @@
 ---
-title: NumRings (tipo di dati geography) | Documenti Microsoft
+title: NumRings (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="numrings-geography-data-type"></a>NumRings (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero totale di anelli in un' **poligono** istanza. Nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** digitare, esterna e anelli interni non vengono distinti poiché qualsiasi anello può essere considerato l'anello esterno.  
+  Restituisce il numero totale di anelli in un'istanza **Polygon**. Nel tipo **geography** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli anelli esterni e interni non vengono distinti poiché qualsiasi anello può essere considerato come l'anello esterno.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-type"></a>Tipo restituito  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituirà NULL se non è un **poligono** istanza e viene restituito 0 se l'istanza è vuota. Il metodo è preciso.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituirà Null se l'istanza non è **Polygon** e restituirà 0 se l'istanza è vuota. Il metodo è preciso.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio viene creata un'istanza `Polygon` con due anelli e viene confermata la presenza di due anelli per l'istanza stessa.  

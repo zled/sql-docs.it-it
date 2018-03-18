@@ -1,5 +1,5 @@
 ---
-title: LAG (Transact-SQL) | Documenti Microsoft
+title: LAG (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/09/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/02/2018
 # <a name="lag-transact-sql"></a>LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Accede ai dati da una riga precedente nello stesso risultati impostato senza l'utilizzo di un self join a partire da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG fornisce l'accesso a una riga situata a una distanza fisica specificata e precedente rispetto alla riga corrente. Utilizzare questa funzione analitica in un'istruzione SELECT per confrontare valori nella riga corrente con i valori in una riga precedente.  
+  Accede ai dati da una riga precedente nello stesso set di risultati senza l'utilizzo di un self-join che inizia con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. LAG fornisce l'accesso a una riga situata a una distanza fisica specificata e precedente rispetto alla riga corrente. Utilizzare questa funzione analitica in un'istruzione SELECT per confrontare valori nella riga corrente con i valori in una riga precedente.  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,16 +51,16 @@ LAG (scalar_expression [,offset] [,default])
  Valore da restituire basato sull'offset specificato. Tale valore può essere un'espressione di ogni tipo che restituisce un singolo valore scalare. *scalar_expression* non può essere una funzione analitica.  
   
  *offset*  
- Numero di righe in posizioni precedenti rispetto alla riga corrente dalla quale ottenere un valore. Se non specificato, il valore predefinito è 1. *offset* può essere una colonna, una sottoquery o un'altra espressione che restituisce un numero intero positivo o può essere convertito in modo implicito in **bigint**. *offset* non può essere un valore negativo o una funzione analitica.  
+ Numero di righe in posizioni precedenti rispetto alla riga corrente dalla quale ottenere un valore. Se non specificato, il valore predefinito è 1. *offset* può essere una colonna, una sottoquery o un'altra espressione che restituisce un valore intero positivo o che può essere convertita in modo implicito in un tipo di dati **bigint**. *offset* non può essere un valore negativo o una funzione analitica.  
   
- *impostazione predefinita*  
- Il valore da restituire quando *scalar_expression* in *offset* è NULL. Se non viene specificato un valore predefinito, viene restituito NULL. *predefinito* può essere una colonna, una sottoquery o un'altra espressione, ma non può essere una funzione analitica. *predefinito* deve essere di tipo compatibile con *scalar_expression*.  
+ *default*  
+ Valore da restituire quando *scalar_expression* in *offset* è NULL. Se non viene specificato un valore predefinito, viene restituito NULL. *default* può essere una colonna, una sottoquery o un'altra espressione, ma non può essere una funzione analitica. *default* deve essere compatibile a livello di tipo con *scalar_expression*.  
   
- SU **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine dei dati prima che venga applicata la funzione. Se *partition_by_clause* viene specificata, determina l'ordine dei dati nella partizione. Il *order_by_clause* è obbligatorio. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine dei dati prima che venga applicata la funzione. Se specificato, *partition_by_clause* determina l'ordine dei dati nella partizione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Il tipo di dati dell'oggetto specificato *scalar_expression*. Se viene restituito NULL *scalar_expression* ammette valori null o *predefinito* è impostato su NULL.  
+ Tipo di dati dell'elemento *scalar_expression* specificato. Se *scalar_expression* ammette valori Null o se *default* è impostato su NULL, viene restituito NULL.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  LAG è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -145,10 +145,10 @@ b           c           i
 1           5           NULL  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-compare-values-between-quarters"></a>Unità d: confrontare valori tra trimestri  
- L'esempio seguente illustra la funzione LAG. La query utilizza la funzione LAG per restituire la differenza nelle quote vendite per un dipendente specifico negli trimestri di calendario precedente. Si noti che poiché non è presente alcun valore di ritardo disponibile per la prima riga, viene restituita l'impostazione predefinita zero (0).  
+### <a name="d-compare-values-between-quarters"></a>D: Confronto di valori fra trimestri  
+ L'esempio seguente illustra l'utilizzo della funzione LAG. La query usa la funzione LAG per restituire la differenza nelle quote vendite per un dipendente specifico nei trimestri del calendario precedenti. Si noti che poiché non è presente alcun valore di ritardo disponibile per la prima riga, viene restituita l'impostazione predefinita zero (0).  
   
 ```sql   
 -- Uses AdventureWorks  
@@ -175,7 +175,7 @@ Year Quarter  SalesQuota  PrevQuota  Diff
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)  
+ [LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)  
   
   
 

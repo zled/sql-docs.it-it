@@ -1,5 +1,5 @@
 ---
-title: ALTER APPLICATION ROLE (Transact-SQL) | Documenti Microsoft
+title: ALTER APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,16 +58,16 @@ ALTER APPLICATION ROLE application_role_name
  *application_role_name*  
  Nome del ruolo applicazione da modificare.  
   
- NOME =*new_application_role_name*  
+ NAME =*new_application_role_name*  
  Specifica il nuovo nome del ruolo applicazione. Il nome non deve già essere usato per fare riferimento a un'altra entità nel database.  
   
  PASSWORD ='*password*'  
- Viene specificata la password per il ruolo applicazione. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario usare sempre password complesse.  
+ Viene specificata la password per il ruolo applicazione. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È necessario usare sempre password complesse.  
   
  DEFAULT_SCHEMA =*schema_name*  
  Viene specificato il primo schema in cui tramite il server verrà eseguita la ricerca per la risoluzione dei nomi degli oggetti. *schema_name* può essere uno schema che non esiste nel database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il nuovo nome del ruolo applicazione esiste già nel database, l'istruzione non potrà essere completata. Quando si modifica il nome, la password o lo schema predefinito di un ruolo applicazione, l'ID associato al ruolo non viene modificato.  
   
 > [!IMPORTANT]  
@@ -76,9 +76,9 @@ ALTER APPLICATION ROLE application_role_name
  I ruoli applicazione sono visibili nella vista del catalogo sys.database_principals.  
   
 > [!CAUTION]  
->  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]il comportamento degli schemi è cambiato rispetto al comportamento nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Non utilizzare le viste del catalogo delle versioni precedenti, inclusa sysobjects, nei database in cui sia già stata utilizzata una delle istruzioni DLL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
+>  Il comportamento degli schemi in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] è diverso rispetto alle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È possibile che il codice in cui gli schemi sono equivalenti agli utenti del database non restituisca risultati corretti. Non utilizzare le viste del catalogo delle versioni precedenti, inclusa sysobjects, nei database in cui sia già stata utilizzata una delle istruzioni DLL seguenti: CREATE SCHEMA, ALTER SCHEMA, DROP SCHEMA, CREATE USER, ALTER USER, DROP USER, CREATE ROLE, ALTER ROLE, DROP ROLE, CREATE APPROLE, ALTER APPROLE, DROP APPROLE, ALTER AUTHORIZATION. In questi database è necessario usare le nuove viste del catalogo, in cui si tiene conto della separazione tra entità e schemi introdotta in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Per altre informazioni sulle viste del catalogo, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database. Per modificare lo schema predefinito, è inoltre richiesta l'autorizzazione ALTER per il ruolo applicazione. Un ruolo applicazione può modificare il proprio schema predefinito, ma non il nome o la password.  
   
 ## <a name="examples"></a>Esempi  
@@ -119,8 +119,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md)   
- [CREATE APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

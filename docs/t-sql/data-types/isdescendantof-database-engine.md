@@ -1,5 +1,5 @@
 ---
-title: IsDescendantOf (motore di Database) | Documenti Microsoft
+title: IsDescendantOf (motore di database) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce true se *questo* è un discendente dell'elemento padre.
+Restituisce true se l'*elemento* è un discendente dell'elemento padre.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,15 +49,15 @@ SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*elemento padre*  
-Il **hierarchyid** nodo per cui il test di IsDescendantOf deve essere eseguito.
+*parent*  
+Nodo **hierarchyid** per cui il test IsDescendantOf deve essere eseguito.
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo di SQL Server restituito: bit**
+**Tipo SQL Server restituito: bit**
   
 **Tipo CLR restituito: SqlBoolean**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Restituisce true per tutti i nodi nel sottoalbero con radice nel padre specificato e false per tutti gli altri nodi.
   
 Un padre è considerato discendente di se stesso.

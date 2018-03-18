@@ -1,5 +1,5 @@
 ---
-title: STDifference (tipo di dati geography) | Documenti Microsoft
+title: STDifference (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdifference-geography-data-type"></a>STDifference (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto che rappresenta il punto impostato da uno **geography** istanza che si trova di fuori di un altro **geography** istanza.  
+  Restituisce un oggetto che rappresenta il set di punti di un'istanza **geography** che si trova all'esterno di un'altra istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,25 +45,25 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza che indica i punti da rimuovere dall'istanza in cui viene richiamato stdifference ().  
+ Altra istanza **geography** che indica i punti da rimuovere dall'istanza sulla quale viene richiamato STDifference().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
 ## <a name="exceptions"></a>Eccezioni  
- Questo metodo genera un **ArgumentException** se l'istanza contiene un bordo opposto.  
+ Questo metodo genera un'eccezione **ArgumentException** se l'istanza contiene un bordo opposto.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli identificatori di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di risultati possibili restituito nel server è stato esteso per **FullGlobe** istanze. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare. Il metodo non è preciso.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di possibili risultati restituito nel server è stato esteso alle istanze **FullGlobe**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare. Il metodo non è preciso.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-computing-the-difference-between-two-geography-instances"></a>A. Calcolo della differenza tra due istanze di geografia  
- L'esempio seguente usa `STDifference()` per calcolare la differenza tra due **geography** istanze.  
+ L'esempio seguente usa `STDifference()` per calcolare la differenza tra due istanze **geography**.  
   
 ```  
 DECLARE @g geography;  

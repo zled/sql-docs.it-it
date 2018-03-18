@@ -51,16 +51,16 @@ PRINT msg_str | @local_variable | string_expr
   
 ## <a name="arguments"></a>Argomenti  
  *msg_str*  
- Costante di stringa Unicode o stringa di caratteri. Per ulteriori informazioni, vedere [costanti &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).  
+ Costante di stringa Unicode o stringa di caratteri. Per altre informazioni, vedere [Costanti &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).  
   
  **@** *local_variable*  
- Variabile costituita da un qualunque tipo di dati character valido. **@ * * * local_variable* deve essere **char**, **nchar**, **varchar**, o **nvarchar**, o deve essere in grado di essere Questo campo viene convertito in modo implicito per i tipi di dati.  
+ Variabile costituita da un qualunque tipo di dati character valido. **@***local_variable* deve essere di tipo **char**, **nchar**, **varchar** o **nvarchar** oppure deve supportare la conversione implicita in questi tipi di dati.  
   
  *string_expr*  
  Espressione che restituisce una stringa. Può includere variabili, funzioni e valori letterali concatenati. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
- Una stringa di messaggio può contenere al massimo 8.000 caratteri se è una stringa non Unicode e 4.000 caratteri se è una stringa Unicode. Le stringhe più lunghe vengono troncate. Il **varchar (max)** e **nvarchar (max)** tipi di dati vengono troncati in tipi di dati che non superano **varchar(8000)** e **nvarchar(4000)**.  
+## <a name="remarks"></a>Remarks  
+ Una stringa di messaggio può contenere al massimo 8.000 caratteri se è una stringa non Unicode e 4.000 caratteri se è una stringa Unicode. Le stringhe più lunghe vengono troncate. I tipi di dati **varchar(max)** e **nvarchar(max)** vengono troncati a tipi di dati di grandezza non superiore a **varchar(8000)** e **nvarchar(4000)**.  
   
  È possibile utilizzare anche RAISERROR per restituire messaggi. RAISERROR offre questi vantaggi rispetto a PRINT:  
   
@@ -104,7 +104,7 @@ PRINT @PrintMessage;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-conditionally-executing-print"></a>C. Stampa eseguita in modo condizionale  
  Nell'esempio seguente viene utilizzata l'istruzione `PRINT` per restituire un messaggio in modo condizionale.  
@@ -120,7 +120,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   
 

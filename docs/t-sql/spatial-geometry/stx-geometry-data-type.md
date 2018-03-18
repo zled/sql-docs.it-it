@@ -1,5 +1,5 @@
 ---
-title: STX (tipo di dati geometry) | Documenti Microsoft
+title: STX (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stx-geometry-data-type"></a>STX (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-La proprietà della coordinata X di un **punto**istanza.
+Proprietà relativa alla coordinata X di un'istanza **Point**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ La proprietà della coordinata X di un **punto**istanza.
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore di questa proprietà sarà null se il **geometry** istanza non è un punto.  
+## <a name="remarks"></a>Remarks  
+ Il valore di questa proprietà sarà Null se l'istanza **geometry** non è un punto.  
   
  Questa proprietà è di sola lettura.  
   
@@ -64,7 +64,7 @@ SELECT @g.STX;
   
 ## <a name="see-also"></a>Vedere anche  
  [STY &#40;Tipo di dati geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   
- [STSrid &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
+ [STSrid &#40;tipo di dati geography&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

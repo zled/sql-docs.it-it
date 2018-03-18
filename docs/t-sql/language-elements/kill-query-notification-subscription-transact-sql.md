@@ -54,17 +54,17 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  Rimuove tutte le sottoscrizioni nell'istanza.  
   
  *subscription_id*  
- Rimuove la sottoscrizione con l'id sottoscrizione *subscription_id*.  
+ Rimuove la sottoscrizione associata all'ID sottoscrizione definito da *subscription_id*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione KILL QUERY NOTIFICATION SUBSCRIPTION rimuove le sottoscrizioni di notifica delle query senza generare un messaggio di notifica.  
   
- *subscription_id* è l'id per la sottoscrizione, come illustrato nella vista a gestione dinamica [Sys.dm qn_subscriptions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
+ *subscription_id* corrisponde all'ID della sottoscrizione visualizzato nella vista a gestione dinamica [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md).  
   
  Se l'ID sottoscrizione specificato non esiste, l'istruzione genera un errore.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Autorizzazione per eseguire questa istruzione è limitato ai membri del **sysadmin** ruolo predefinito del server.  
+ L'autorizzazione di esecuzione per questa istruzione è limitata ai membri del ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
   

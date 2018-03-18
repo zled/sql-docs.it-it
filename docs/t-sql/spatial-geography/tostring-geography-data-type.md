@@ -1,5 +1,5 @@
 ---
-title: ToString (tipo di dati geography) | Documenti Microsoft
+title: ToString (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,9 +33,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="tostring-geography-data-type"></a>ToString (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT) di un **geography** istanza integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.  
+  Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza **geography** integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.  
   
- Metodo supportata dal tipo di dati geography **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati geography supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
  Tipo CLR restituito: **SqlString**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce la stringa "Null" se viene chiamato su istanze Null. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di risultati possibili nel server è stato esteso per **FullGlobe** istanze. Questo metodo restituirà lo stesso valore di `AsTextZM()`.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce la stringa "Null" se viene chiamato su istanze Null. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di possibili risultati nel server è stato esteso alle istanze **FullGlobe**. Questo metodo restituirà lo stesso valore di `AsTextZM()`.  
   
  Il metodo non è preciso.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una `LineString` istanza e viene utilizzato `ToString()` per restituire la descrizione di testo dell'istanza.  
+ Nell'esempio seguente viene creata un'istanza `LineString` e viene usato `ToString()` per restituire la descrizione di testo dell'istanza.  
   
 ```  
 DECLARE @g geography;  

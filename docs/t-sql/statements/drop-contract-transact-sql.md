@@ -1,5 +1,5 @@
 ---
-title: CONTRATTO DROP (Transact-SQL) | Documenti Microsoft
+title: DROP CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ DROP CONTRACT contract_name
  *contract_name*  
  Nome del contratto da eliminare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è possibile eliminare un contratto se esistono servizi o priorità di conversazione che fanno riferimento a esso.  
   
  Quando si elimina un contratto, tramite [!INCLUDE[ssSB](../../includes/sssb-md.md)] viene interrotta qualsiasi conversazione esistente che utilizza tale contratto e viene generato un errore.  

@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Configurazione delle autorizzazioni per oggetti di Database | Documenti Microsoft'
+title: 'Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-2-configuring-permissions-on-database-objects"></a>Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Concessione dell'accesso utente a un database include tre passaggi. Viene innanzitutto creato un account di accesso, il quale consente all'utente di connettersi a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. L'account di accesso viene quindi configurato come utente nel database specificato. Viene infine concessa l'autorizzazione utente per gli oggetti di database. In questa lezione vengono illustrati tali passaggi e viene descritto come creare due oggetti, ovvero una vista e una stored procedure.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] La concessione di un accesso utente a un database consiste in tre passaggi. Viene innanzitutto creato un account di accesso, il quale consente all'utente di connettersi a [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. L'account di accesso viene quindi configurato come utente nel database specificato. Viene infine concessa l'autorizzazione utente per gli oggetti di database. In questa lezione vengono illustrati tali passaggi e viene descritto come creare due oggetti, ovvero una vista e una stored procedure.  
   
 In questa lezione sono inclusi gli argomenti seguenti:  
   

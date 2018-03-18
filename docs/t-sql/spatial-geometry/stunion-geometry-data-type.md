@@ -1,5 +1,5 @@
 ---
-title: STUnion (tipo di dati geometry) | Documenti Microsoft
+title: STUnion (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stunion-geometry-data-type"></a>STUnion (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce un oggetto che rappresenta l'unione di un **geometry** istanza con un altro **geometry** istanza.
+Restituisce un oggetto che rappresenta l'unione di un'istanza **geometry** con un'altra istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +45,15 @@ Restituisce un oggetto che rappresenta l'unione di un **geometry** istanza con u
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza per formare un'unione con l'istanza in cui `STUnion()` viene richiamato.  
+ Altra istanza **geometry** per formare un'unione con l'istanza sulla quale viene chiamato `STUnion()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   
 ## <a name="examples"></a>Esempi  
   

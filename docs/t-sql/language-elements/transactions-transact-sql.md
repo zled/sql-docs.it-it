@@ -1,5 +1,5 @@
 ---
-title: Transactions (Transact-SQL) | Microsoft Docs
+title: Transazioni (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 
   Una transazione corrisponde a una singola unità di lavoro. Se la transazione viene eseguita correttamente, viene eseguito il commit di tutte le modifiche dei dati apportate durante la transazione e tali modifiche diventano parte permanente del database. Se si verificano errori durante l'esecuzione della transazione ed è necessario annullarla o eseguirne il rollback, verranno cancellate tutte le modifiche dei dati.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]funziona in modalità di transazione seguenti:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le modalità per le transazioni seguenti:  
   
  Transazioni con autocommit  
  Ogni istruzione corrisponde a una transazione.  
@@ -54,10 +54,10 @@ ms.lasthandoff: 01/25/2018
  Applicabile solo a MARS (Multiple Active Result Set). Una transazione definita a livello di ambito di batch è una transazione [!INCLUDE[tsql](../../includes/tsql-md.md)] esplicita o implicita che inizia in una sessione MARS. Se per una transazione definita a livello di ambito di batch non è stato eseguito il commit o il rollback quando il batch è completato, il rollback viene eseguito automaticamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 > [!NOTE] 
-> Per considerazioni speciali relative ai prodotti di Data Warehouse, vedere [transazioni (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
+> Per considerazioni speciali relative ai prodotti di data warehouse, vedere [Transazioni (SQL Data Warehouse)](transactions-sql-data-warehouse.md).   
 
-## <a name="in-this-section"></a>Contenuto della sezione  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fornisce le seguenti istruzioni transaction:  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili le seguenti istruzioni Transaction:  
   
 |||  
 |-|-|  

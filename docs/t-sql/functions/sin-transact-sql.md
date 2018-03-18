@@ -1,5 +1,5 @@
 ---
-title: SIN (Transact-SQL) | Documenti Microsoft
+title: SIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce il seno trigonometrico dell'angolo specificato, espresso in radianti in un numerici approssimati, **float**, espressione.  
+  Restituisce il seno dell'angolo specificato, espresso in radianti, in un'espressione numerica approssimata di tipo **float**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,8 +47,8 @@ SIN ( float_expression )
   
 
 ## <a name="arguments"></a>Argomenti  
- *argomento float_expression*  
- È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** o di un tipo che può essere convertito in modo implicito in float.  
+ *float_expression*  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che può essere convertito in modo implicito in float.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
@@ -71,8 +71,8 @@ The SIN of the angle is: 0.929607
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente calcola il seno di un angolo specificato.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente viene calcolato il seno di un angolo specificato.  
   
 ```  
 SELECT SIN(45.175643);  
@@ -86,7 +86,7 @@ SELECT SIN(45.175643);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
+ [Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   
 

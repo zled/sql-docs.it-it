@@ -1,5 +1,5 @@
 ---
-title: HAS_DBACCESS (Transact-SQL) | Documenti Microsoft
+title: HAS_DBACCESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
@@ -53,19 +53,19 @@ HAS_DBACCESS ( 'database_name' )
   
 ## <a name="arguments"></a>Argomenti  
  '*database_name*'  
- Nome del database di cui l'utente richiede informazioni relative all'accesso. *database_name* è **sysname**.  
+ Nome del database di cui l'utente richiede informazioni relative all'accesso. *database_name* è di tipo **sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  HAS_DBACCESS restituisce 1 se l'utente può accedere al database, 0 in caso contrario e NULL se il nome del database non è valido.  
   
  HAS_DBACCESS restituisce 0 se il database è offline o sospetto.  
   
  HAS_DBACCESS restituisce 0 se il database è in modalità utente singolo ed è utilizzato da un altro utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -76,7 +76,7 @@ SELECT HAS_DBACCESS('AdventureWorks2012');
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente viene verificato se l'utente dispone delle autorizzazioni di accesso al database `AdventureWorksPDW2012`.  
   
 ```  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [IS_MEMBER &#40; Transact-SQL &#41;](../../t-sql/functions/is-member-transact-sql.md)   
+ [IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)   
  [IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)  
   
   

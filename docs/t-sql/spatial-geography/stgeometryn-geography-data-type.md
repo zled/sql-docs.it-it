@@ -1,5 +1,5 @@
 ---
-title: STGeometryN (tipo di dati geography) | Documenti Microsoft
+title: STGeometryN (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto specificato **geography** elemento in un **GeometryCollection** o uno dei relativi sottotipi. Quando STGeometryN() viene utilizzato un sottotipo di un **GeometryCollection**, ad esempio **MultiPoint** o **MultiLineString**, questo metodo restituisce il **geography**  istanza se chiamato con N = 1.  
+  Restituisce un elemento **geography** specificato in un tipo **GeometryCollection** o in uno dei sottotipi. Quando STGeometryN() viene usato su un sottotipo di **GeometryCollection**, ad esempio **MultiPoint** o **MultiLineString**, questo metodo restituisce l'istanza **geography** se chiamato con N = 1.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,19 +43,19 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di **geography** istanze di **GeometryCollection**.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di istanze **geography** in **GeometryCollection**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce null se il parametro è maggiore del risultato di [stnumgeometries ()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e genererà un **ArgumentOutOfRangeException** se il *espressione* il parametro è minore di 1.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce Null se il parametro è maggiore del risultato di [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) e genererà un'eccezione **ArgumentOutOfRangeException** se il parametro *expression* è minore di 1.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `MultiPoint``geography` istanza e viene utilizzato `STGeometryN()` per trovare la seconda `geography` istanza il **GeometryCollection**.  
+ Nell'esempio seguente viene creata un'istanza `MultiPoint``geography` e viene usato `STGeometryN()` per trovare la seconda istanza `geography` del tipo **GeometryCollection**.  
   
 ```  
 DECLARE @g geography;  

@@ -1,5 +1,5 @@
 ---
-title: NEGARE autorizzazioni per Service Broker (Transact-SQL) | Documenti Microsoft
+title: DENY - autorizzazioni per Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -64,13 +64,13 @@ DENY permission  [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere negata per un'entità a sicurezza diretta di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- CONTRATTO **:: * * * contract_name*  
+ CONTRACT **::***contract_name*  
  Specifica il contratto per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  MESSAGE TYPE **::***message_type_name*  
  Specifica il tipo di messaggio per il quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- L'associazione al servizio remoto **:: * * * remote_binding_name*  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
  Specifica l'associazione al servizio remoto per la quale viene negata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  ROUTE **::***route_name*  
@@ -106,10 +106,10 @@ CASCADE
 -   Utente del database di cui è stato eseguito il mapping a una chiave asimmetrica  
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Contratti di Service Broker  
- Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Autorizzazioni più specifiche e limitate che è possibile negare per un [!INCLUDE[ssSB](../../includes/sssb-md.md)] contratto sono elencati nella tabella seguente, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+ Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere negate per un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] assieme alle autorizzazioni più generali incluse in modo implicito.  
   
 |Autorizzazione del contratto di Service Broker|Autorizzazione del contratto di Service Broker in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -141,7 +141,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Route di Service Broker  
- Una route di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Autorizzazioni più specifiche e limitate che è possibile negare per un [!INCLUDE[ssSB](../../includes/sssb-md.md)] route sono elencati nella tabella seguente, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+ Una route di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere negate per una route di [!INCLUDE[ssSB](../../includes/sssb-md.md)] assieme alle autorizzazioni più generali incluse in modo implicito.  
   
 |Autorizzazione della route di Service Broker|Autorizzazione della route di Service Broker in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -151,7 +151,7 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Servizi di Service Broker  
- Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Autorizzazioni più specifiche e limitate che è possibile negare per un [!INCLUDE[ssSB](../../includes/sssb-md.md)] servizio sono elencati nella tabella seguente, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+ Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere negate per un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] assieme alle autorizzazioni più generali incluse in modo implicito.  
   
 |Autorizzazione del servizio di Service Broker|Autorizzazione del servizio di Service Broker in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -166,8 +166,8 @@ CASCADE
   
 ## <a name="see-also"></a>Vedere anche  
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [REVOCARE autorizzazioni per Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
+ [REVOKE - autorizzazioni per Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Autorizzazioni &#40; motore di Database &#41;](../../relational-databases/security/permissions-database-engine.md)  
+ [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: REVOCARE le autorizzazioni Full-Text (Transact-SQL) | Documenti Microsoft
+title: REVOKE - autorizzazioni per il catalogo full-text (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -113,7 +113,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="fulltext-catalog-permissions"></a>Autorizzazioni FULLTEXT CATALOG  
  Un catalogo full-text è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un catalogo full-text, insieme alle autorizzazioni più generali che le includono in modo implicito.  
@@ -141,14 +141,14 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  È richiesta l'autorizzazione CONTROL per il catalogo full-text.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
+ [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [CREARE il catalogo full-text &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
- [CREATE FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [Autorizzazioni GRANT Full-Text &#40; Transact-SQL &#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
+ [GRANT - autorizzazioni per il catalogo full-text &#40;Transact-SQL&#41;](../../t-sql/statements/grant-full-text-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

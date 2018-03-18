@@ -1,5 +1,5 @@
 ---
-title: Funzioni matematiche (Transact-SQL) | Documenti Microsoft
+title: Funzioni di matematiche (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/06/2017
 ms.prod: sql-non-specified
@@ -47,12 +47,12 @@ ms.lasthandoff: 11/21/2017
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  Le funzioni aritmetiche, quali ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS e SIGN, restituiscono un valore dello stesso tipo di dati del valore di input. Trigonometriche e altre funzioni, tra cui EXP, LOG, LOG10, SQUARE e SQRT, eseguire il cast dei relativi valori di input **float** e restituire un **float** valore.  
+>  Le funzioni aritmetiche, quali ABS, CEILING, DEGREES, FLOOR, POWER, RADIANS e SIGN, restituiscono un valore dello stesso tipo di dati del valore di input. Le funzioni trigonometriche e di altro tipo, tra cui EXP, LOG, LOG10, SQUARE e SQRT, assegnano il tipo di dati **float** ai valori di input e restituiscono valori di tipo **float**.  
   
- Tutte le funzioni matematiche, ad eccezione di RAND, sono deterministiche, ovvero restituiscono sempre lo stesso risultato ogni volta che vengono chiamate con un set specifico di valori di input. RAND risulta deterministica solo quando si specifica un parametro per il valore di inizializzazione. Per ulteriori informazioni sulle funzioni deterministiche, vedere [funzioni deterministiche e non](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Tutte le funzioni matematiche, ad eccezione di RAND, sono deterministiche, ovvero restituiscono sempre lo stesso risultato ogni volta che vengono chiamate con un set specifico di valori di input. RAND risulta deterministica solo quando si specifica un parametro per il valore di inizializzazione. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-  [Operatori aritmetici &#40; Transact-SQL &#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
+  [Operatori aritmetici &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  
   [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

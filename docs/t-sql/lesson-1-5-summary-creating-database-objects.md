@@ -1,5 +1,5 @@
 ---
-title: 'Riepilogo: Creazione di oggetti di Database | Documenti Microsoft'
+title: 'Riepilogo: Creazione di oggetti di database | Microsoft Docs'
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-5---summary---creating-database-objects"></a>Lezione 1-5 - riepilogo - creazione di oggetti di Database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]In questa esercitazione che è stato creato un database, creato una tabella nel database, inserita dati nella tabella, modificata i dati e quindi leggere i dati dalla tabella. È stata utilizzata la sintassi di base delle istruzioni necessarie e numerose opzioni di queste ultime non sono state descritte. Per ulteriori informazioni su queste istruzioni, leggerne la sintassi completa nei rispettivi argomenti della documentazione online di SQL Server ed esaminare i numerosi esempi disponibili.  
+# <a name="lesson-1-5---summary---creating-database-objects"></a>Lezione 1-5 - Riepilogo: Creazione di oggetti di database
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] In questa esercitazione sono state illustrate le procedure per la creazione di un database e di una tabella, nonché per l'inserimento, la modifica e la lettura dei dati nella tabella. È stata utilizzata la sintassi di base delle istruzioni necessarie e numerose opzioni di queste ultime non sono state descritte. Per ulteriori informazioni su queste istruzioni, leggerne la sintassi completa nei rispettivi argomenti della documentazione online di SQL Server ed esaminare i numerosi esempi disponibili.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
 [Lezione 2: Configurazione delle autorizzazioni per gli oggetti di database](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  

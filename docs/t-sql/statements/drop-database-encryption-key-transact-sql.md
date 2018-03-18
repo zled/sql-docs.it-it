@@ -1,5 +1,5 @@
 ---
-title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Documenti Microsoft
+title: DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  Elimina una chiave di crittografia del database utilizzata per la crittografia trasparente del database. Per ulteriori informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40; Transparent Data Encryption &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+  Elimina una chiave di crittografia del database utilizzata per la crittografia trasparente del database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 > [!IMPORTANT]  
 >  Il backup del certificato che protegge la chiave di crittografia del database deve essere conservato anche se la crittografia non è più abilitata in un database. Anche se il database non viene più crittografato, è possibile che parti del log delle transazioni restino comunque protette e che il certificato sia necessario per alcune operazioni per l'esecuzione del backup completo del database.  
@@ -48,10 +48,10 @@ ms.lasthandoff: 11/21/2017
 DROP DATABASE ENCRYPTION KEY  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Se il database è crittografato, è necessario innanzitutto rimuovere la crittografia dal database utilizzando l'istruzione ALTER DATABASE. Attendere il completamento della decrittografia prima di rimuovere la chiave di crittografia del database. Per ulteriori informazioni sull'istruzione ALTER DATABASE, vedere [opzioni ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Per visualizzare lo stato del database, utilizzare il [Sys.dm database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) vista a gestione dinamica.  
+## <a name="remarks"></a>Remarks  
+ Se il database è crittografato, è necessario innanzitutto rimuovere la crittografia dal database utilizzando l'istruzione ALTER DATABASE. Attendere il completamento della decrittografia prima di rimuovere la chiave di crittografia del database. Per altre informazioni sull'istruzione ALTER DATABASE, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Per visualizzare lo stato della crittografia del database, usare la DMV [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -72,8 +72,8 @@ DROP DATABASE ENCRYPTION KEY;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente rimuove la crittografia TDE e quindi inserisce la chiave di crittografia del database.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente viene rimossa la crittografia TDE e viene eliminata la chiave di crittografia del database.  
   
 ```  
 ALTER DATABASE AdventureWorksPDW2012  
@@ -107,11 +107,11 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [Crittografia di SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
- [Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [Chiavi di crittografia del database e di SQL Server &#40;motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CREARE una chiave di crittografia del DATABASE &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
   
   

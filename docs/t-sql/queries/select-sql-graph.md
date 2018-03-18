@@ -1,5 +1,5 @@
 ---
-title: Selezionare (SQL grafico) | Documenti Microsoft
+title: SELECT (SQL Graph) | Microsoft Docs
 ms.custom: 
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ SELECT
 
 ## <a name="arguments"></a>Argomenti  
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 
 ## <a name="permissions"></a>Autorizzazioni  
 

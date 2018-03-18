@@ -1,5 +1,5 @@
 ---
-title: FULLTEXTCATALOGPROPERTY (Transact-SQL) | Documenti Microsoft
+title: FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="fulltextserviceproperty-transact-sql"></a>FULLTEXTSERVICEPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce informazioni correlate alle proprietà del motore di ricerca full-text. Queste proprietà possono essere impostate e recuperate tramite **sp_fulltext_service**.  
+  Restituisce informazioni correlate alle proprietà del motore di ricerca full-text. È possibile impostare e recuperare queste proprietà tramite **sp_fulltext_service**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,19 +49,19 @@ FULLTEXTSERVICEPROPERTY ('property')
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *proprietà*  
+ *property*  
  Espressione che contiene il nome della proprietà full-text a livello del servizio. Nella tabella seguente vengono descritte le proprietà e le informazioni restituite.  
   
 > [!NOTE]  
->  Le seguenti proprietà verranno rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout**, e **ResourceUsage**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
+>  Le proprietà seguenti verranno rimosse in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **ConnectTimeout**, **DataTimeout** e **ResourceUsage**. Evitare di utilizzare queste proprietà in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui vengono utilizzate.  
   
-|Proprietà|Valore|  
+|Proprietà|valore|  
 |--------------|-----------|  
-|**Valore ResourceUsage**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
+|**ResourceUsage**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
 |**ConnectTimeout**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
 |**IsFulltextInstalled**|Indica se il componente full-text è installato o meno nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Il componente full-text non è installato.<br /><br /> 1 = Il componente full-text è installato.<br /><br /> NULL = Input non valido o errore.|  
 |**DataTimeout**|Viene restituito 0. Supportata unicamente per compatibilità con le versioni precedenti.|  
-|**LoadOSResources**|Indica se i word breaker e i filtri del sistema operativo sono registrati e utilizzati in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è disabilitata per impostazione predefinita per impedire modifiche accidentali del comportamento in seguito ad aggiornamenti al sistema operativo. L'attivazione dell'utilizzo delle risorse del sistema operativo consente l'accesso alle risorse per le lingue e i tipi di documenti registrati nel servizio di indicizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] per cui non è installata una risorsa specifica dell'istanza. Se si abilita il caricamento delle risorse del sistema operativo, verificare che le risorse del sistema operativo sono file binari firmati attendibili; in caso contrario, non potranno essere caricati quando **VerifySignature** è impostato su 1.<br /><br /> 0 = Utilizza solo i filtri e i word breaker specifici per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Carica i filtri e i word breaker del sistema operativo.|  
+|**LoadOSResources**|Indica se i word breaker e i filtri del sistema operativo sono registrati e utilizzati in questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa proprietà è disabilitata per impostazione predefinita per impedire modifiche accidentali del comportamento in seguito ad aggiornamenti al sistema operativo. L'attivazione dell'utilizzo delle risorse del sistema operativo consente l'accesso alle risorse per le lingue e i tipi di documenti registrati nel servizio di indicizzazione [!INCLUDE[msCoName](../../includes/msconame-md.md)] per cui non è installata una risorsa specifica dell'istanza. Se si abilita il caricamento delle risorse del sistema operativo, verificare che si tratti di file binari firmati attendibili. In caso contrario, non potranno essere caricate quando la proprietà **VerifySignature** è impostata su 1.<br /><br /> 0 = Utilizza solo i filtri e i word breaker specifici per questa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Carica i filtri e i word breaker del sistema operativo.|  
 |**VerifySignature**|Specifica se solo i file binari firmati vengono caricati dal servizio [!INCLUDE[msCoName](../../includes/msconame-md.md)] Search. Per impostazione predefinita vengono caricati solo i file binari firmati attendibili.<br /><br /> 0 = Non verificare se i file binari sono firmati o meno.<br /><br /> 1 = Verifica che vengano caricati solo i file binari firmati attendibili.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -89,8 +89,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FULLTEXTCATALOGPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE il PROVIDER di crittografia (Transact-SQL) | Documenti Microsoft
+title: DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ DROP CRYPTOGRAPHIC PROVIDER provider_name
  *provider_name*  
  Nome del provider EKM.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per eliminare un provider EKM, devono essere arrestate tutte le sessioni che utilizzano il provider.  
   
  Un provider EKM può essere eliminato solo se non presenta credenziali a cui è stato eseguito il mapping.  
   
  In presenza di chiavi associate a un provider EKM, una volta eliminato i GUID per le chiavi restano memorizzati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se successivamente viene creato un provider con gli stessi GUID chiave, le chiavi verranno riutilizzate.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  

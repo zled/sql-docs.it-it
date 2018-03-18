@@ -1,5 +1,5 @@
 ---
-title: STSymDifference (tipo di dati geography) | Documenti Microsoft
+title: STSymDifference (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geography-data-type"></a>STSymDifference (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto che rappresenta tutti i punti in una **geography** istanza o un altro **geography** istanza, ma non i punti che si trovano in entrambe le istanze.  
+  Restituisce un oggetto che rappresenta tutti i punti che si trovano in un'istanza **geography** o un'altra istanza **geography**, ma non i punti che si trovano in entrambe le istanze.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza oltre all'istanza in cui viene richiamato STSymDistance().  
+ Altra istanza **geography** oltre all'istanza sulla quale viene richiamato STSymDistance().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli identificatori di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di risultati possibili nel server è stato esteso per **FullGlobe** istanze.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il set di possibili risultati nel server è stato esteso alle istanze **FullGlobe**.  
   
  Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   

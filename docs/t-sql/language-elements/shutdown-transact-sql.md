@@ -51,40 +51,40 @@ SHUTDOWN [ WITH NOWAIT ]
   
 ## <a name="arguments"></a>Argomenti  
  WITH NOWAIT  
- Facoltativa. Viene arrestato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza eseguire i checkpoint in ogni database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiuso dopo il tentativo di interruzione di tutti i processi degli utenti. All'avvio successivo del server, verrà eseguita una operazione di rollback per le transazioni non completate.  
+ Facoltativo. Viene arrestato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza eseguire i checkpoint in ogni database. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene chiuso dopo il tentativo di interruzione di tutti i processi degli utenti. All'avvio successivo del server, verrà eseguita una operazione di rollback per le transazioni non completate.  
   
-## <a name="remarks"></a>Osservazioni  
- A meno che non viene utilizzata l'opzione di WITHNOWAIT, SHUTDOWN Arresta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da:  
+## <a name="remarks"></a>Remarks  
+ A meno che non venga usata l'opzione WITHNOWAIT, SHUTDOWN arresta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguendo le operazioni seguenti:  
   
-1.  La disabilitazione degli account di accesso (ad eccezione di membri del **sysadmin** e **serveradmin** ruoli predefiniti del server).  
+1.  Disabilitazione degli account di accesso, tranne quelli dei membri dei ruoli predefiniti del server **sysadmin** e **serveradmin**.  
   
     > [!NOTE]  
     >  Per visualizzare un elenco di tutti gli utenti correnti, eseguire **sp_who**.  
   
-2.  Attesa del completamento delle istruzioni Transact-SQL o delle stored procedure in esecuzione. Per visualizzare un elenco di tutti i processi attivi e i blocchi, eseguire **sp_who** e **sp_lock**, rispettivamente.  
+2.  Attesa del completamento delle istruzioni Transact-SQL o delle stored procedure in esecuzione. Per visualizzare un elenco di tutti i processi e i blocchi attivi, eseguire rispettivamente **sp_who** e **sp_lock**.  
   
 3.  Inserimento di un checkpoint in ogni database.  
   
- Tramite l'istruzione SHUTDOWN riduce al minimo la quantità di recupero automatico è necessario eseguire operazioni quando i membri del **sysadmin** riavviare il ruolo server predefinito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tramite l'istruzione SHUTDOWN è possibile ridurre la quantità di lavoro per il recupero automatico richiesta quando i membri del ruolo predefinito del server **sysadmin** riavviano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per arrestare l'esecuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile utilizzare altri strumenti e metodi. Tali strumenti e metodi creano un checkpoint in tutti i database. È possibile scaricare dalla cache dei dati tutti i dati di cui è stato eseguito il commit e arrestare il server:  
   
 -   Utilizzando Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Eseguendo **net stop mssqlserver** da un prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$ * * * instancename* da un prompt dei comandi per un'istanza denominata.  
+-   Eseguendo **net stop mssqlserver** dal prompt dei comandi per un'istanza predefinita oppure eseguendo **net stop mssql$***instancename* dal prompt dei comandi per un'istanza denominata.  
   
 -   Utilizzando Servizi nel Pannello di controllo.  
   
- Se **sqlservr.exe** è stato avviato dal prompt dei comandi, premere CTRL + C per interrompere l'esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo modo, tuttavia, non viene inserito un checkpoint.  
+ Se **sqlservr.exe** è stato avviato dal prompt dei comandi, per arrestare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] premere CTRL+C. In questo modo, tuttavia, non viene inserito un checkpoint.  
   
 > [!NOTE]  
 >  Se si utilizza uno di questi metodi per arrestare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene inviato il messaggio `SERVICE_CONTROL_STOP` a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Le autorizzazioni di arresto vengono assegnate ai membri del **sysadmin** e **serveradmin** ruoli predefiniti del server e non sono trasferibili.  
+ Le autorizzazioni per l'istruzione SHUTDOWN vengono assegnate ai membri dei ruoli predefiniti del server **sysadmin** e **serveradmin** e non sono trasferibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [CHECKPOINT &#40; Transact-SQL &#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
+ [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Applicazione sqlservr](../../tools/sqlservr-application.md)   

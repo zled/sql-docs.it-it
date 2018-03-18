@@ -1,5 +1,5 @@
 ---
-title: "Autorizzazioni per entità Server GRANT (Transact-SQL) | Documenti Microsoft"
+title: "Autorizzazioni per entità server GRANT (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -63,16 +63,16 @@ GRANT permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere concessa per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- Account di accesso **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- RUOLO del SERVER **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Specifica il ruolo del server definito dall'utente per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- PER \<server_principal > specifica il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o ruolo server a cui viene concessa l'autorizzazione.  
+ TO \<server_principal> Specifica l'account di accesso o il ruolo del server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
   
  *SQL_Server_login*  
  Specifica il nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -95,10 +95,10 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile concedere autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
- Informazioni sulle autorizzazioni del server sono visibili nella [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista del catalogo. Informazioni sulle entità server sono visibili nella [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
+ Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  I ruoli del server e gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono entità a protezione diretta a livello di server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un ruolo del server o account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -109,7 +109,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per gli account di accesso, è richiesta l'autorizzazione CONTROL per l'account di accesso o l'autorizzazione ALTER ANY LOGIN per il server.  
   
  Per i ruoli del server, è richiesta l'autorizzazione CONTROL per il ruolo del server o l'autorizzazione ALTER ANY SERVER ROLE per il server.  

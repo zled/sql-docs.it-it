@@ -1,5 +1,5 @@
 ---
-title: TYPE_NAME (Transact-SQL) | Documenti Microsoft
+title: TYPE_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ TYPE_NAME ( type_id )
   
 ## <a name="arguments"></a>Argomenti  
  *type_id*  
- ID del tipo che verrà utilizzato. *type_id* è un **int**, e può fare riferimento a un tipo in qualsiasi schema a cui il chiamante dispone dell'autorizzazione di accesso.  
+ ID del tipo che verrà utilizzato. *type_id* è di tipo **int** e può fare riferimento a un tipo in qualsiasi schema a cui il chiamante può accedere.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sysname**  
@@ -60,12 +60,12 @@ TYPE_NAME ( type_id )
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come TYPE_NAME possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Osservazioni  
- TYPE_NAME restituisce NULL quando *type_id* non è valido o quando il chiamante non dispone di autorizzazioni sufficienti per fare riferimento al tipo.  
+## <a name="remarks"></a>Remarks  
+ TYPE_NAME restituisce NULL quando *type_id* non è valido oppure quando il chiamante non dispone di autorizzazioni sufficienti per fare riferimento al tipo.  
   
- La funzione TYPE_NAME può essere utilizzata sia con tipi di dati di sistema che con tipi di dati definiti dall'utente. Il nome restituito è sempre non qualificato, indipendentemente dallo schema in cui il tipo è contenuto, Ciò significa che il nome non è il *schema***.** biz:,  
+ La funzione TYPE_NAME può essere utilizzata sia con tipi di dati di sistema che con tipi di dati definiti dall'utente. Il nome restituito è sempre non qualificato, indipendentemente dallo schema in cui il tipo è contenuto, e non include pertanto il prefisso *schema***.** biz:,  
   
- È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per ulteriori informazioni, vedere [espressioni &#40; Transact-SQL &#41; ](../../t-sql/language-elements/expressions-transact-sql.md) e [in &#40; Transact-SQL &#41; ](../../t-sql/queries/where-transact-sql.md).  
+ È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere[Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) e [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente vengono restituiti il nome dell'oggetto, il nome della colonna e il nome del tipo per ogni colonna della tabella `Vendor` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -97,15 +97,15 @@ Vendor          PurchasingWebServiceURL  nvarchar
 (8 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Nell'esempio seguente viene restituito il `TYPE ID` per il tipo di dati con id `1`.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente viene restituito il valore di `TYPE ID` per il tipo di dati con ID `1`.  
   
 ```  
 SELECT TYPE_NAME(36) AS Type36, TYPE_NAME(239) AS Type239;  
 GO  
 ```  
   
- Per un elenco di tipi, eseguire una query Sys. Types.  
+ Per un elenco dei tipi, eseguire una query su sys.types.  
   
 ```  
 SELECT * FROM sys.types;  
@@ -113,10 +113,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [TYPE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPEPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

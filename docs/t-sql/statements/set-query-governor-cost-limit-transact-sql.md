@@ -1,5 +1,5 @@
 ---
-title: SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Documenti Microsoft
+title: SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="set-querygovernorcostlimit-transact-sql"></a>SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Esegue l'override attualmente configurato **di query governor cost limit** valore per la connessione corrente.  
+  Sostituisce il valore dell'opzione **query governor cost limit** configurato per la connessione corrente.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,8 +56,8 @@ SET QUERY_GOVERNOR_COST_LIMIT value
   
  Il costo delle query equivale al tempo trascorso, in secondi, stimato per l'esecuzione di una query in una configurazione hardware specifica.  
   
-## <a name="remarks"></a>Osservazioni  
- L'opzione SET QUERY_GOVERNOR_COST_LIMIT viene utilizzata solo per la connessione corrente e solo per la durata della connessione corrente. Utilizzare il [configurare query governor cost limit opzione di configurazione del Server](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md)opzione di **sp_configure** per modificare a livello di server query governor cost valore limite. Per ulteriori informazioni sulla configurazione di questa opzione, vedere [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [opzioni di configurazione del Server &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+## <a name="remarks"></a>Remarks  
+ L'opzione SET QUERY_GOVERNOR_COST_LIMIT viene utilizzata solo per la connessione corrente e solo per la durata della connessione corrente. Usare l'opzione [Configurare l'opzione di configurazione del server query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) di **sp_configure** per modificare il valore del limite di costo di Query Governor per l'intero server. Per altre informazioni sulla configurazione di questa opzione, vedere [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) e [Opzioni di configurazione del server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
  L'opzione SET QUERY_GOVERNOR_COST_LIMIT viene impostata in fase di esecuzione, non in fase di analisi.  
   

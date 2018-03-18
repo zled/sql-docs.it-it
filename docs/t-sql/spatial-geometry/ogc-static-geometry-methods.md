@@ -1,5 +1,5 @@
 ---
-title: Metodi di geometria statici OGC | Documenti Microsoft
+title: Metodi di geometria statici OGC | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [STGeomFromText &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)  
   

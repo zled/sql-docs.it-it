@@ -1,5 +1,5 @@
 ---
-title: DBCC OUTPUTBUFFER (Transact-SQL) | Documenti Microsoft
+title: DBCC OUTPUTBUFFER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Restituisce il buffer di output corrente in formato esadecimale e ASCII per l'oggetto specificato *session_id*.
+Restituisce il buffer di output corrente in formato esadecimale e ASCII per l'ID di sessione specificato in *session_id*.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -68,8 +68,8 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Osservazioni  
-DBCC OUTPUTBUFFER Visualizza i risultati inviati al client specificato (*session_id*). Per processi che non includono flussi di output, viene visualizzato un messaggio di errore.
+## <a name="remarks"></a>Remarks  
+DBCC OUTPUTBUFFER visualizza i risultati inviati al client specificato (*session_id*). Per processi che non includono flussi di output, viene visualizzato un messaggio di errore.
   
 Per visualizzare l'istruzione che ha restituito i risultati visualizzati da DBCC OUTPUTBUFFER, eseguire DBCC INPUTBUFFER.
   

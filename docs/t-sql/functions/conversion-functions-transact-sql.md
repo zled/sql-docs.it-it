@@ -1,5 +1,5 @@
 ---
-title: Funzioni di conversione (Transact-SQL) | Documenti Microsoft
+title: Funzioni di conversione (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,10 +33,10 @@ Nelle funzioni seguenti vengono supportate l'esecuzione del cast e la conversion
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/parse-transact-sql.md)  
-[TRY_CAST &#40; Transact-SQL &#41;](../../t-sql/functions/try-cast-transact-sql.md)  
-[TRY_CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/try-convert-transact-sql.md)  
-[TRY_PARSE &#40; Transact-SQL &#41;](../../t-sql/functions/try-parse-transact-sql.md)
+[PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/parse-transact-sql.md)  
+[TRY_CAST &#40;Transact-SQL&#41;](../../t-sql/functions/try-cast-transact-sql.md)  
+[TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)  
+[TRY_PARSE &#40;Transact-SQL&#41;](../../t-sql/functions/try-parse-transact-sql.md)
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni](../../t-sql/functions/functions.md)  

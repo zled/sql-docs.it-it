@@ -1,5 +1,5 @@
 ---
-title: SET ROWCOUNT (Transact-SQL) | Documenti Microsoft
+title: SET ROWCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -54,13 +54,13 @@ SET ROWCOUNT { number | @number_var }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *numero* | @*number_var*  
+ *number* | @*number_var*  
  Numero intero di righe da elaborare prima dell'arresto della query specifica.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  L'utilizzo di SET ROWCOUNT non avrà effetto sulle istruzioni DELETE, INSERT e UPDATE in una versione futura di SQL Server. Evitare di utilizzare l'opzione SET ROWCOUNT con le istruzioni DELETE, INSERT e UPDATE in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Per un comportamento simile, utilizzare la sintassi TOP. Per ulteriori informazioni, vedere [torna all'inizio &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+>  L'utilizzo di SET ROWCOUNT non avrà effetto sulle istruzioni DELETE, INSERT e UPDATE in una versione futura di SQL Server. Evitare di utilizzare l'opzione SET ROWCOUNT con le istruzioni DELETE, INSERT e UPDATE in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Per un comportamento simile, utilizzare la sintassi TOP. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  Per disattivare questa opzione in modo che vengano restituite tutte le righe, specificare SET ROWCOUNT 0.  
   
@@ -70,7 +70,7 @@ SET ROWCOUNT { number | @number_var }
   
  L'opzione SET ROWCOUNT viene impostata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -107,8 +107,8 @@ GO
 (4 row(s) affected)
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'opzione SET ROWCOUNT consente di arrestare l'elaborazione dopo il numero di righe specificato. Nell'esempio seguente, si noti che più di 20 righe soddisfano i criteri di `AccountType = 'Assets'`. Dopo avere applicato SET ROWCOUNT, tuttavia, si noterà come non siano state restituite tutte le righe.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'opzione SET ROWCOUNT consente di arrestare l'elaborazione dopo il numero di righe specificato. Nell'esempio seguente più di 20 righe soddisfano il criterio `AccountType = 'Assets'`. Dopo avere applicato SET ROWCOUNT, tuttavia, si noterà come non siano state restituite tutte le righe.  
   
 ```  
 -- Uses AdventureWorks  
@@ -118,7 +118,7 @@ SELECT * FROM [dbo].[DimAccount]
 WHERE AccountType = 'Assets';  
 ```  
   
- Per restituire tutte le righe, impostare l'opzione ROWCOUNT su 0.  
+ Per restituire tutte le righe, impostare ROWCOUNT su 0.  
   
 ```  
 -- Uses AdventureWorks  

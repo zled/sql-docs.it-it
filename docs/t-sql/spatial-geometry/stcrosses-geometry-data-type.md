@@ -1,5 +1,5 @@
 ---
-title: STCrosses (tipo di dati geometry) | Documenti Microsoft
+title: STCrosses (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcrosses-geometry-data-type"></a>STCrosses (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza incrocia un'altra **geometry** istanza. In caso contrario, restituisce 0.
+Restituisce 1 se un'istanza **geometry** incrocia un'altra istanza **geometry**. In caso contrario, restituisce 0.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,21 +45,21 @@ Restituisce 1 se un **geometry** istanza incrocia un'altra **geometry** istanza.
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STCrosses()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STCrosses()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Due **geometry** istanze si incrociano se entrambe le condizioni seguenti sono vere:  
+## <a name="remarks"></a>Remarks  
+ Due istanze **geometry** si incrociano se si verificano entrambe le condizioni seguenti:  
   
--   L'intersezione dei due **geometry** istanze restituisce una geometria le cui dimensioni sono minori rispetto alle dimensioni massime dell'origine **geometry** istanze.  
+-   L'intersezione delle due istanze **geometry** restituisce una geometria le cui dimensioni sono minori delle dimensioni massime delle istanze **geometry** di origine.  
   
--   Il set di intersezione è interno a entrambe origine **geometry** istanze.  
+-   Il set di intersezione è interno a entrambe le istanze **geometry** di origine.  
   
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STCrosses()` per verificare se due istanze `geometry` si incrociano.  

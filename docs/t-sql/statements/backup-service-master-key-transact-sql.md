@@ -1,5 +1,5 @@
 ---
-title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Documenti Microsoft
+title: BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -60,10 +60,10 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
  PASSWORD **='***password***'**  
  Password utilizzata per crittografare la chiave master del servizio nel file di backup. Questa password è soggetta ai controlli di complessità delle password. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È consigliabile creare una copia di backup della chiave master del servizio e archiviare la copia di backup in una posizione esterna protetta. La creazione di questa copia di backup dovrebbe essere una delle prime operazioni amministrative eseguite nel server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -74,7 +74,7 @@ BACKUP SERVICE MASTER KEY TO FILE = 'c:\temp_backups\keys\service_master_key' EN
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER SERVICE MASTER KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
+ [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)  
   
   

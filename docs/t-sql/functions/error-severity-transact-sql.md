@@ -1,5 +1,5 @@
 ---
-title: ERROR_SEVERITY (Transact-SQL) | Documenti Microsoft
+title: ERROR_SEVERITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -56,10 +56,10 @@ ERROR_SEVERITY ( )
   
  Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile richiamare ERROR_SEVERITY da un qualsiasi punto nell'ambito di un blocco CATCH.  
   
- ERROR_SEVERITY restituisce la gravità dell'errore indipendentemente dal numero di esecuzioni oppure dalla sua posizione di esecuzione nell'ambito del blocco CATCH. Ciò si differenzia da funzioni come @@ERROR, che restituisce solo il numero di errore nell'istruzione immediatamente successiva a quella che provoca un errore oppure nella prima istruzione di un blocco CATCH.  
+ ERROR_SEVERITY restituisce la gravità dell'errore indipendentemente dal numero di esecuzioni oppure dalla sua posizione di esecuzione nell'ambito del blocco CATCH. Questa caratteristica è diversa da quella di funzioni come, ad esempio, @@ERROR, che restituisce solo il numero di errore nell'istruzione subito dopo quella che ha provocato un errore oppure nella prima istruzione di un blocco CATCH.  
   
  Nei blocchi CATCH nidificati l'istruzione ERROR_SEVERITY restituisce la gravità dell'errore specifica dell'ambito del blocco CATCH contenente il riferimento a essa. Ad esempio, il blocco CATCH di un costrutto esterno TRY...CATCH potrebbe includere un costrutto TRY...CATCH nidificato. Nel blocco CATCH nidificato ERROR_SEVERITY restituisce la gravità dell'errore che ha richiamato il blocco CATCH nidificato. Se ERROR_SEVERITY viene eseguito in un blocco CATCH esterno, restituisce la gravità dell'errore che ha richiamato tale blocco CATCH.  
   
@@ -101,7 +101,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizzo di ERROR_SEVERITY in un blocco CATCH con altri strumenti di gestione degli errori  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. Assieme alla gravità dell'errore vengono restituite le informazioni relative all'errore stesso.  
@@ -130,7 +130,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

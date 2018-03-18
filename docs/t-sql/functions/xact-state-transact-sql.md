@@ -1,5 +1,5 @@
 ---
-title: XACT_STATE (Transact-SQL) | Documenti Microsoft
+title: XACT_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ XACT_STATE()
 ## <a name="return-type"></a>Tipo restituito  
  **smallint**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  XACT_STATE restituisce i valori seguenti.  
   
 |Valore restituito|Significato|  
@@ -61,7 +61,7 @@ XACT_STATE()
 |0|La richiesta corrente non include una transazione utente attiva.|  
 |-1|La richiesta corrente include una transazione utente attiva, ma si è verificato un errore che ne ha causato la classificazione come transazione bloccata. La richiesta non può eseguire il commit della transazione né eseguirne il rollback fino a un punto di salvataggio. L'unica operazione consentita è la richiesta di un rollback completo della transazione. Finché non verrà eseguito il rollback della transazione, non sarà possibile eseguire operazioni di scrittura e saranno consentite solo operazioni di lettura. Dopo il rollback della transazione, la richiesta potrà eseguire operazioni sia di lettura che di scrittura e potrà avviare una nuova transazione.<br /><br /> Al termine dell'esecuzione di un batch, [!INCLUDE[ssDE](../../includes/ssde-md.md)] eseguirà automaticamente il rollback di tutte le transazioni attive di cui non è possibile eseguire il commit. Se non sono stati inviati messaggi di errore al momento dell'attivazione dello stato di blocco per la transazione, al termine dell'esecuzione del batch, verrà inviato un messaggio di errore all'applicazione client. Questo messaggio indica che è stata rilevata una transazione di cui non è possibile eseguire il commit e che ne è stato eseguito il rollback.|  
   
- Entrambi i XACT_STATE e @@TRANCOUNT funzioni possono essere utilizzate per rilevare se la richiesta corrente include una transazione utente attiva. @@TRANCOUNT non può essere utilizzato per determinare se tale transazione è stata classificata come transazione bloccata. Non è possibile utilizzare XACT_STATE per determinare se esistono transazioni nidificate.  
+ Per verificare se la richiesta corrente include una transazione utente attiva, è possibile usare entrambe le funzioni XACT_STATE e @@TRANCOUNT. Non è possibile usare @@TRANCOUNT per determinare se la transazione è stata classificata come transazione di cui non è possibile eseguire il commit. Non è possibile utilizzare XACT_STATE per determinare se esistono transazioni nidificate.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzata la funzione `XACT_STATE` nel blocco `CATCH` di un costrutto `TRY…CATCH` per determinare se è necessario eseguire il commit o il rollback di una transazione. Poiché il valore di `SET XACT_ABORT` è `ON`, l'errore di violazione del vincolo attiva lo stato di blocco per la transazione.  

@@ -1,5 +1,5 @@
 ---
-title: ATAN (Transact-SQL) | Documenti Microsoft
+title: ATAN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="atan-transact-sql"></a>ATAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce l'angolo in radianti, la cui tangente è un oggetto specificato **float** espressione. (definito anche arcotangente).
+Restituisce l'angolo, espresso in radianti, la cui tangente corrisponde all'espressione di tipo **float** specificata. (definito anche arcotangente).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,14 +47,14 @@ ATAN ( float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) del tipo **float** o di un tipo che può essere convertito in modo implicito in **float**.
+*float_expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che può essere convertito in modo implicito in **float**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente accetta un **float** espressione che restituisce l'ARCOTANGENTE dell'angolo specificato.
+Nell'esempio seguente viene valutata un'espressione **float** che restituisce l'arcotangente dell'angolo specificato.
   
 ```sql
 SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
@@ -95,8 +95,8 @@ The ATAN of 197.1099392 is: 1.56572
 (1 row(s) affected)  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Nell'esempio seguente accetta un **float** espressione e restituisce l'arcotangente dell'angolo specificato.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Nell'esempio seguente viene valutata un'espressione **float** che restituisce l'arcotangente dell'angolo specificato.
   
 ```sql
 SELECT ATAN(45.87) AS atanCalc1,  
@@ -115,8 +115,8 @@ atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5
 ```
   
 ## <a name="see-also"></a>Vedere anche
-[CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

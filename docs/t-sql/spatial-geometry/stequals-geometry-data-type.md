@@ -1,5 +1,5 @@
 ---
-title: STEquals (tipo di dati geometry) | Documenti Microsoft
+title: STEquals (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geometry-data-type"></a>STEquals (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza rappresenta lo stesso punto impostato come un altro **geometry** istanza. In caso contrario, restituisce 0.
+Restituisce 1 se un'istanza **geometry** rappresenta lo stesso set di punti di un'altra istanza **geometry**. In caso contrario, restituisce 0.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,18 +45,18 @@ Restituisce 1 se un **geometry** istanza rappresenta lo stesso punto impostato c
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STEquals()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STEquals()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea due `geometry` istanze con `STGeomFromText()` che sono uguali, ma non è uguale in modo semplice e Usa `STEquals()` per verificarne l'uguaglianza.  
+ Nell'esempio seguente viene usato il metodo `STGeomFromText()` per creare due istanze `geometry` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza.  
   
 ```  
 DECLARE @g geometry  

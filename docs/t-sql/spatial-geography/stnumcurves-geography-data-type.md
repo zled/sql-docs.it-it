@@ -1,5 +1,5 @@
 ---
-title: STNumCurves (tipo di dati geography) | Documenti Microsoft
+title: STNumCurves (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero di curve in una matrice unidimensionale **geography** istanza.  
+  Restituisce il numero di curve in un'istanza **geography** unidimensionale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString**, e **CompoundCurve**. Un oggetto vuoto unidimensionale **geography** istanza restituisce 0.  
+## <a name="remarks"></a>Remarks  
+ I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString** e **CompoundCurve**. Un'istanza **geography** unidimensionale vuota restituisce 0.  
   
- `STNumCurves`() funziona solo su tipi semplici; non funziona con **geography** come raccolte **MultiLineString**. **NULL** viene restituito quando il **geography** istanza non è un tipo di dati unidimensionale.  
+ `STNumCurves`() funziona solo su tipi semplici; non funziona con raccolte **geography** come **MultiLineString**. **NULL** viene restituito quando l'istanza **geography** non è un tipo di dati unidimensionale.  
   
- **Null** viene restituito per non inizializzata **geography** istanze.  
+ **Null** viene restituito per le istanze **geography** non inizializzate.  
   
 ## <a name="examples"></a>Esempi  
   

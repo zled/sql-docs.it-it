@@ -1,5 +1,5 @@
 ---
-title: '&lt;= (Minore o uguale a) (Transact-SQL) | Documenti Microsoft'
+title: '&lt;= (minore o uguale a) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (Minore o uguale a) (Transact-SQL)
+# <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (minore o uguale a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Confronta due espressioni (operatore di confronto). Quando si confrontano due espressioni diverse da Null, il risultato è TRUE se il valore dell'operando di sinistra è minore o uguale al valore di quello di destra. In caso contrario il risultato è FALSE.  
@@ -52,15 +52,15 @@ expression <= expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md). È necessario che il tipo di dati di entrambe le espressioni possa essere convertito in modo implicito. La conversione dipende dalle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida. È necessario che il tipo di dati di entrambe le espressioni possa essere convertito in modo implicito. La conversione dipende dalle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using--in-a-simple-query"></a>A. Utilizzando < = in una query semplice  
+### <a name="a-using--in-a-simple-query"></a>A. Uso di <= in una query semplice  
  Nell'esempio seguente vengono restituite tutte le righe nella tabella `HumanResources.Department` che dispongono di un valore in `DepartmentID` minore o uguale a 3.  
   
 ```  
@@ -88,6 +88,6 @@ DepartmentID Name
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

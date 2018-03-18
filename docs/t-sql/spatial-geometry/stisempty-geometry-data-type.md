@@ -1,5 +1,5 @@
 ---
-title: STIsEmpty (tipo di dati geometry) | Documenti Microsoft
+title: STIsEmpty (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geometry-data-type"></a>STIsEmpty (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza è vuota. Restituisce 0 se un **geometry** istanza non è vuota.
+Restituisce 1 se l'istanza **geometry** è vuota. Restituisce 0 se l'istanza **geometry** non è vuota.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ Restituisce 1 se un **geometry** istanza è vuota. Restituisce 0 se un **geometr
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   

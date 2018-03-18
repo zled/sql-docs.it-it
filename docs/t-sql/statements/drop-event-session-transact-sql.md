@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE la sessione di eventi (Transact-SQL) | Documenti Microsoft
+title: DROP EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ON SERVER
  *event_session_name*  
  Nome di una sessione dell'evento esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si rilascia una sessione dell'evento, ogni informazioni di configurazione, ad esempio parametri delle destinazioni e della sessione, viene rimossa completamente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY EVENT SESSION.  
   
 ## <a name="examples"></a>Esempi  

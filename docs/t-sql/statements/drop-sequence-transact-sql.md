@@ -1,5 +1,5 @@
 ---
-title: SEQUENZA DROP (Transact-SQL) | Documenti Microsoft
+title: DROP SEQUENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -47,10 +47,10 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale la sequenza solo se esiste già.  
+ Rimuove in modo condizionale la sequenza solo se esiste già.  
   
  *database_name*  
  Nome del database in cui è stato creato l'oggetto sequenza.  
@@ -61,7 +61,7 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  *sequence_name*  
  Nome della sequenza da eliminare. Il tipo è **sysname**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Dopo la generazione di un numero, un oggetto sequenza non ha una relazione continua con il numero generato, pertanto l'oggetto sequenza può essere eliminato, anche se il numero generato è ancora in uso.  
   
  È possibile eliminare un oggetto sequenza mentre una stored procedure o un trigger vi fa riferimento, perché non è associato a schema. Non è possibile eliminare un oggetto sequenza se vi si fa riferimento come valore predefinito in una tabella. Nel messaggio di errore verrà indicato l'oggetto che fa riferimento alla sequenza.  
@@ -78,11 +78,11 @@ GO
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER o CONTROL per lo schema.  
   
-### <a name="audit"></a>Controllo  
- Per controllare **DROP SEQUENCE**, monitoraggio di **SCHEMA_OBJECT_CHANGE_GROUP**.  
+### <a name="audit"></a>Controllare il funzionamento di  
+ Per controllare **DROP SEQUENCE**, monitorare **SCHEMA_OBJECT_CHANGE_GROUP**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene rimosso un oggetto sequenza denominato `CountBy1` dal database corrente.  
@@ -93,9 +93,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [CREATE SEQUENCE &#40; Transact-SQL &#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [VALORE successivo per &#40; Transact-SQL &#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [Numeri di sequenza](../../relational-databases/sequence-numbers/sequence-numbers.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ConvexHullAggregate (tipo di dati geography) | Documenti Microsoft
+title: ConvexHullAggregate (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="convexhullaggregate-geography-data-type"></a>ConvexHullAggregate (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce una struttura convessa per un determinato set di **geography** oggetti.
+Restituisce una struttura convessa per un set specificato di oggetti **geography**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,24 +45,24 @@ ConvexHullAggregate ( geography_operand )
   
 ## <a name="arguments"></a>Argomenti  
  *geography_operand*  
- È un **geography** colonna di tabella di tipo che rappresenta un set di **geography** oggetti.  
+ Colonna della tabella di tipo **geography** che rappresenta un set di oggetti **geography**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
 ## <a name="exception"></a>Eccezione  
- Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+ Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Metodo **null** quando l'input è vuoto o l'input dispone di SRID diversi. Vedere [identificatori SRID &#40; Identificatori SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ Il metodo restituisce **null** quando l'input è vuoto o dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Metodo ignora **null** input.  
+ Il metodo ignora gli input **null**.  
   
 > [!NOTE]  
->  Metodo **null** se tutti i valori immessi sono **null**.  
+>  Il metodo restituisce **null** se tutti i valori immessi sono **null**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente restituisce una struttura convessa del set di **geography** oggetti.  
+ Nell'esempio seguente viene restituita una struttura convessa del set di oggetti **geography**.  
   
  ```
  USE AdventureWorks2012  

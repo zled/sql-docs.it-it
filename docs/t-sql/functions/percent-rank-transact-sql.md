@@ -1,5 +1,5 @@
 ---
-title: PERCENT_RANK (Transact-SQL) | Documenti Microsoft
+title: PERCENT_RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/20/2015
 ms.prod: sql-non-specified
@@ -46,8 +46,8 @@ PERCENT_RANK( )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- SU **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. Il *order_by_clause* è obbligatorio. Il \<righe o clausola range > della OVER sintassi non può essere specificata in una funzione PERCENT_RANK.  Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. La clausola \<ROWS o RANGE> della sintassi OVER non può essere specificata in una funzione PERCENT_RANK.  Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **float(53)**  
@@ -98,6 +98,6 @@ Information Services   Bueno                  27.4038               0.4         
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
+ [CUME_DIST &#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)  
   
   

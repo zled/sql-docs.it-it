@@ -1,5 +1,5 @@
 ---
-title: CURRENT_REQUEST_ID (Transact-SQL) | Documenti Microsoft
+title: CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,8 +47,8 @@ CURRENT_REQUEST_ID()
 ## <a name="return-types"></a>Tipi restituiti
 **smallint**
   
-## <a name="remarks"></a>Osservazioni  
-Per trovare informazioni precise sulla sessione corrente e la richiesta corrente, utilizzare @@SPID e current_request_id (), rispettivamente.
+## <a name="remarks"></a>Remarks  
+Per trovare informazioni precise sulla sessione corrente e sulla richiesta corrente, usare rispettivamente @@SPID e CURRENT_REQUEST_ID().
   
 ## <a name="see-also"></a>Vedere anche
 [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)

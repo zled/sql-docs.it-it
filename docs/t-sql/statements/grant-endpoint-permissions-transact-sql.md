@@ -1,5 +1,5 @@
 ---
-title: Autorizzazioni per Endpoint GRANT (Transact-SQL) | Documenti Microsoft
+title: GRANT - autorizzazioni per endpoint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/17/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere concessa per un endpoint. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::***endpoint_name*  
  Specifica l'endpoint per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- PER \<server_principal >  
+ TO \<server_principal>  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
   
  *SQL_Server_login*  
@@ -82,10 +82,10 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
- Le autorizzazioni nell'ambito del server possono essere concesso solo quando il database corrente è **master**.  
+## <a name="remarks"></a>Remarks  
+ È possibile concedere autorizzazioni nell'ambito del server solo se il database corrente è il database **master**.  
   
- Informazioni sugli endpoint sono visibili nella [Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) vista del catalogo. Informazioni sulle autorizzazioni del server sono visibili nella [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) è visibile nella vista del catalogo e le informazioni sulle entità server il [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
+ Le informazioni sugli endpoint sono visibili nella vista del catalogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Un endpoint è un'entità a protezione diretta a livello del server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un endpoint, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -97,7 +97,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'endpoint o l'autorizzazione ALTER ANY ENDPOINT per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -122,11 +122,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [NEGARE autorizzazioni per Endpoint &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [REVOKE-autorizzazioni per Endpoint &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [DENY - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [REVOKE - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Viste del catalogo degli endpoint &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [Sys. Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

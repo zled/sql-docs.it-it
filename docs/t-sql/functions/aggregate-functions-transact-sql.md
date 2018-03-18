@@ -1,5 +1,5 @@
 ---
-title: Funzioni di aggregazione (Transact-SQL) | Documenti Microsoft
+title: Funzioni di aggregazione (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/16/2018
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/18/2018
 
 Le funzioni di aggregazione eseguono un calcolo su un set di valori e restituiscono un singolo valore. Ad eccezione della funzione COUNT, le funzioni di aggregazione ignorano i valori Null. Vengono spesso utilizzate con la clausola GROUP BY dell'istruzione SELECT.
   
-Tutte le funzioni di aggregazione sono deterministiche. Ciò significa che le funzioni di aggregazione restituiscono lo stesso valore ogni volta che vengono chiamate con un set specifico di valori di input. Per ulteriori informazioni sulle funzioni deterministiche, vedere [funzioni deterministiche e non](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). Il [clausola OVER](../../t-sql/queries/select-over-clause-transact-sql.md) può seguire tutte le funzioni di aggregazione, ad eccezione di GROUPING e GROUPING_ID.
+Tutte le funzioni di aggregazione sono deterministiche. Ciò significa che le funzioni di aggregazione restituiscono lo stesso valore ogni volta che vengono chiamate con un set specifico di valori di input. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [clausola OVER](../../t-sql/queries/select-over-clause-transact-sql.md) può seguire tutte le funzioni di aggregazione, ad eccezione di GROUPING e GROUPING_ID.
   
 È possibile utilizzare le funzioni di aggregazione come espressioni solo nei casi seguenti:
 -   Nell'elenco di selezione di un'istruzione SELECT (una sottoquery o una query esterna).  
@@ -56,6 +56,6 @@ Tutte le funzioni di aggregazione sono deterministiche. Ciò significa che le fu
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni predefinite &#40;Transact-SQL&#41;](../../t-sql/functions/functions.md)  
-[IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

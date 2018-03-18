@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE il POOL di risorse (Transact-SQL) | Documenti Microsoft
+title: DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 
   Elimina un pool di risorse di Resource Governor definito dall'utente.  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,12 +50,12 @@ DROP RESOURCE POOL pool_name
  *pool_name*  
  Il nome di un pool di risorse esistente definito dall'utente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è possibile eliminare un pool di risorse contenente gruppi del carico di lavoro.  
   
  Non è possibile eliminare pool predefiniti o interni di Resource Governor.  
   
- Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per ulteriori informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
+ Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER.  

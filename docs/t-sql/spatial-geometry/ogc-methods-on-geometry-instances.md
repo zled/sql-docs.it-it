@@ -1,5 +1,5 @@
 ---
-title: Metodi OGC sulle istanze di geometria | Documenti Microsoft
+title: Metodi OGC sulle istanze di geometria | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/25/2018
   
 -   [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
@@ -59,9 +59,9 @@ ms.lasthandoff: 01/25/2018
   
 -   [STCrosses](../../t-sql/spatial-geometry/stcrosses-geometry-data-type.md)  
   
--   [STCurveN &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
+-   [STCurveN &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stcurven-geometry-data-type.md)  
   
--   [STCurveToLine &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+-   [STCurveToLine &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
 -   [STDifference](../../t-sql/spatial-geometry/stdifference-geometry-data-type.md)  
   

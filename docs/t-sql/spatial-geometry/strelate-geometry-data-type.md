@@ -1,5 +1,5 @@
 ---
-title: STRelate (tipo di dati geometry) | Documenti Microsoft
+title: STRelate (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geometry** istanza è correlata a un'altra **geometry** istanza, in cui la relazione è definita da un valore di una matrice di modello Dimensionally Extended 9 Intersection Model (DE-9IM); in caso contrario , restituisce 0.  
+  Restituisce 1 se un'istanza **geometry** è correlata a un'altra istanza **geometry**. La relazione è definita da un valore della matrice del modello DE-9IM (Dimensionally Extended 9 Intersection Model). In caso contrario, restituisce 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,21 +45,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STRelate()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STRelate()`.  
   
  *intersection_pattern_matrix*  
- È una stringa di tipo **nchar(9)** codifica valori accettabili per il dispositivo a matrice del modello DE-9IM tra i due **geometry** istanze.  
+ Stringa di tipo **nchar(9)** che codifica valori accettabili per il dispositivo a matrice del modello DE-9IM tra le due istanze **geometry**.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono. Questo metodo genererà un' **ArgumentException** se la matrice non è corretta.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Questo metodo genererà un'eccezione **ArgumentException** se la matrice non è formattata in modo corretto.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STRelate()` per verificare se due **geometry** istanze spaziali non contiguo utilizzando un modello DE-9IM esplicito.  
+ Nell'esempio seguente viene usato `STRelate()` per verificare se due istanze **geometry** sono disgiunte a livello spaziale usando un modello DE-9IM esplicito.  
   
 ```  
 DECLARE @g geometry;  

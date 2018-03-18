@@ -1,5 +1,5 @@
 ---
-title: Funzioni analitiche (Transact-SQL) | Documenti Microsoft
+title: Funzioni analitiche (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -29,16 +29,16 @@ ms.lasthandoff: 11/21/2017
 # <a name="analytic-functions-transact-sql"></a>Funzioni analitiche (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-SQL Server supporta le seguenti funzioni analitiche. Le funzioni analitiche calcolano un valore di aggregazione basato su un gruppo di righe. A differenza di funzioni di aggregazione, tuttavia, possono restituire più righe per ogni gruppo. È possibile utilizzare le funzioni analitiche per calcolare medie mobili, totali parziali, percentuali o i primi N risultati all'interno di un gruppo.
+In SQL Server sono supportate le funzioni analitiche riportate di seguito. Le funzioni analitiche calcolano un valore di aggregazione basato su un gruppo di righe. A differenza di funzioni di aggregazione, tuttavia, possono restituire più righe per ogni gruppo. È possibile utilizzare le funzioni analitiche per calcolare medie mobili, totali parziali, percentuali o i primi N risultati all'interno di un gruppo.
   
 |||  
 |-|-|  
-|[CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)|[LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)|  
-|[FIRST_VALUE &#40; Transact-SQL &#41;](../../t-sql/functions/first-value-transact-sql.md)|[PERCENTILE_CONT &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-cont-transact-sql.md)|  
-|[RITARDO &#40; Transact-SQL &#41;](../../t-sql/functions/lag-transact-sql.md)|[PERCENTILE_DISC &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)|  
-|[LAST_VALUE &#40; Transact-SQL &#41;](../../t-sql/functions/last-value-transact-sql.md)|[PERCENT_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)|  
+|[CUME_DIST &#40;Transact-SQL&#41;](../../t-sql/functions/cume-dist-transact-sql.md)|[LEAD &#40;Transact-SQL&#41;](../../t-sql/functions/lead-transact-sql.md)|  
+|[FIRST_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/first-value-transact-sql.md)|[PERCENTILE_CONT &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-cont-transact-sql.md)|  
+|[LAG &#40;Transact-SQL&#41;](../../t-sql/functions/lag-transact-sql.md)|[PERCENTILE_DISC &#40;Transact-SQL&#41;](../../t-sql/functions/percentile-disc-transact-sql.md)|  
+|[LAST_VALUE &#40;Transact-SQL&#41;](../../t-sql/functions/last-value-transact-sql.md)|[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)|  
   
 ## <a name="see-also"></a>Vedere anche
-[IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
+[Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   
   

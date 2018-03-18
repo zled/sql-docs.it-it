@@ -1,5 +1,5 @@
 ---
-title: DENY oggetto autorizzazioni (Transact-SQL) | Documenti Microsoft
+title: DENY - autorizzazioni per oggetti (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DENY <permission> [ ,...n ] ON
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per un oggetto contenuto nello schema. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  ALL  
@@ -76,22 +76,22 @@ DENY <permission> [ ,...n ] ON
 PRIVILEGES  
  Opzione inclusa per compatibilità con ANSI-92. Non modifica il funzionamento di ALL.  
   
-*colonna*  
- Specifica il nome di una colonna in una tabella, vista o funzione con valori di tabella per la quale viene negata l'autorizzazione. Le parentesi **()** sono necessari. Per una colonna si possono negare solo le autorizzazioni SELECT, REFERENCES e UPDATE. *colonna* può essere specificato nella clausola delle autorizzazioni o dopo il nome dell'entità a protezione diretta.  
+*column*  
+ Specifica il nome di una colonna in una tabella, vista o funzione con valori di tabella per la quale viene negata l'autorizzazione. Le parentesi **( )** sono obbligatorie. Per una colonna si possono negare solo le autorizzazioni SELECT, REFERENCES e UPDATE. È possibile specificare *column* nella clausola delle autorizzazioni o dopo il nome dell'entità a protezione diretta.  
   
 > [!CAUTION]  
 >  Un'istruzione DENY a livello di tabella non ha la precedenza rispetto a un'istruzione GRANT a livello di colonna. Questa incoerenza nella gerarchia delle autorizzazioni è stata mantenuta per compatibilità con le versioni precedenti.  
   
- ON [oggetto **::** ] [ *schema_name* ] **.** *object_name*  
- Specifica l'oggetto per cui viene negata l'autorizzazione. L'utilizzo di OBJECT è facoltativo se *schema_name* specificato. Se si utilizza Object, il qualificatore di ambito (**::**) è obbligatorio. Se *schema_name* viene omesso, viene utilizzato lo schema predefinito. Se *schema_name* è specificato, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
+ ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
+ Specifica l'oggetto per cui viene negata l'autorizzazione. L'utilizzo di OBJECT è facoltativo se si specifica *schema_name*. Se si usa OBJECT, il qualificatore di ambito (**::**) è obbligatorio. Se si omette *schema_name*, viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
   
- PER \<database_principal >  
+ TO \<database_principal>  
  Specifica l'entità a cui viene negata l'autorizzazione.  
   
  CASCADE  
  Indica che l'autorizzazione negata viene negata anche ad altre entità alle quali è stata concessa da questa entità.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
   
  *Database_user*  
@@ -118,8 +118,8 @@ PRIVILEGES
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Osservazioni  
- Le informazioni sugli oggetti sono visibili in varie viste del catalogo. Per ulteriori informazioni, vedere [oggetto viste del catalogo &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Le informazioni sugli oggetti sono visibili in varie viste del catalogo. Per altre informazioni, vedere [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md).  
   
  Un oggetto è un'entità a protezione diretta a livello di schema contenuta nello schema padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un oggetto, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -127,8 +127,8 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|DELETE|CONTROL|DELETE|  
-|Eseguire|CONTROL|Eseguire|  
+|Elimina|CONTROL|Elimina|  
+|EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  
 |REFERENCES|CONTROL|REFERENCES|  
@@ -138,16 +138,16 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'oggetto.  
   
  Se si utilizza la clausola AS, l'entità specificata deve essere proprietaria dell'oggetto per cui vengono negate le autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  
-L'esempio seguente usa il database AdventureWorks.
+Gli esempi seguenti usano il database AdventureWorks.
   
 ### <a name="a-denying-select-permission-on-a-table"></a>A. Negazione dell'autorizzazione SELECT per una tabella  
- Nell'esempio seguente viene negata il `SELECT` autorizzazione all'utente `RosaQdM` nella tabella `Person.Address`.  
+ Nell'esempio seguente viene negata l'autorizzazione `SELECT` all'utente `RosaQdM` per la tabella `Person.Address`.  
   
 ```  
 DENY SELECT ON OBJECT::Person.Address TO RosaQdM;  
@@ -174,13 +174,13 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [GRANT - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
- [REVOCARE autorizzazioni per oggetti &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
- [Oggetto viste del catalogo &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [REVOKE - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)   
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)  
   
   

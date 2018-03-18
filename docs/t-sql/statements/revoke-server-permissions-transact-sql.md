@@ -1,5 +1,5 @@
 ---
-title: REVOKE-autorizzazioni per Server (Transact-SQL) | Documenti Microsoft
+title: REVOKE - autorizzazioni per server (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -62,12 +62,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere concessa per un server. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- {PER | FROM} \<grantee_principal > specifica l'entità da cui viene revocata l'autorizzazione.  
+ { TO | FROM } \<grantee_principal> Specifica l'entità da cui viene revocata l'autorizzazione.  
   
- AS \<grantor_principal > specifica l'entità da cui l'entità che esegue la query Ottiene il diritto di revocare l'autorizzazione.  
+ AS \<grantor_principal> Specifica l'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
  GRANT OPTION FOR  
  Indica che verrà revocato il diritto di concedere l'autorizzazione specificata ad altre entità. L'autorizzazione stessa non verrà revocata.  
@@ -99,21 +99,21 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *server_role*  
  Specifica un ruolo del server definito dall'utente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile revocare autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
  Con REVOKE vengono rimosse sia le autorizzazioni GRANT che le autorizzazioni DENY.  
   
  Utilizzare REVOKE GRANT OPTION FOR per revocare il diritto di riconcedere l'autorizzazione specificata. Se l'entità dispone dell'autorizzazione con il diritto di concessione, verrà revocato il diritto di concedere tale autorizzazione, ma l'autorizzazione stessa non verrà revocata. Se invece l'entità dispone dell'autorizzazione specificata senza opzione GRANT, verrà revocata l'autorizzazione stessa.  
   
- Informazioni sulle autorizzazioni del server possono essere visualizzate nel [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista del catalogo e le informazioni sulle entità server possono essere visualizzati nel [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo. Informazioni sull'appartenenza ai ruoli del server possono essere visualizzate nel [server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) vista del catalogo.  
+ Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Le informazioni sulle appartenenze dei ruoli del server sono visibili nella vista del catalogo [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
  Un server rappresenta il livello più alto nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un server.  
   
 |Autorizzazione del server|Autorizzazione del server in cui è inclusa|  
 |-----------------------|----------------------------------|  
 |ADMINISTER BULK OPERATIONS|CONTROL SERVER|  
-|ALTER ANY AVAILABILITY GROUP<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|ALTER ANY AVAILABILITY GROUP<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
 |ALTER ANY CONNECTION|CONTROL SERVER|  
 |ALTER ANY CREDENTIAL|CONTROL SERVER|  
 |ALTER ANY DATABASE|CONTROL SERVER|  
@@ -123,7 +123,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |ALTER ANY LINKED SERVER|CONTROL SERVER|  
 |ALTER ANY LOGIN|CONTROL SERVER|  
 |ALTER ANY SERVER AUDIT|CONTROL SERVER|  
-|ALTER ANY SERVER ROLE<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
+|ALTER ANY SERVER ROLE<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
 |ALTER RESOURCES|CONTROL SERVER|  
 |ALTER SERVER STATE|CONTROL SERVER|  
 |ALTER SETTINGS|CONTROL SERVER|  
@@ -133,10 +133,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |CONNECT SQL|CONTROL SERVER|  
 |CONTROL SERVER|CONTROL SERVER|  
 |CREATE ANY DATABASE|ALTER ANY DATABASE|  
-|CREATE AVAILABILITY GROUP<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
+|Creare un gruppo di disponibilità<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY AVAILABILITY GROUP|  
 |CREATE DDL EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |CREATE ENDPOINT|ALTER ANY ENDPOINT|  
-|CREATE SERVER ROLE<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
+|CREATE SERVER ROLE<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|ALTER ANY SERVER ROLE|  
 |CREATE TRACE EVENT NOTIFICATION|ALTER ANY EVENT NOTIFICATION|  
 |EXTERNAL ACCESS ASSEMBLY|CONTROL SERVER|  
 |IMPERSONATE ANY LOGIN<br /><br /> **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|CONTROL SERVER|  
@@ -147,7 +147,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server sysadmin.  
   
 ## <a name="examples"></a>Esempi  
@@ -175,11 +175,11 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [NEGARE autorizzazioni per Server &#40; Transact-SQL &#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
- [REVOKE-autorizzazioni per Server (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
- [Gerarchia delle autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [DENY - autorizzazioni per server &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   
+ [REVOKE - autorizzazioni per server (Transact-SQL)](../../t-sql/statements/revoke-server-permissions-transact-sql.md)   
+ [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [fn_my_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

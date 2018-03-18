@@ -1,5 +1,5 @@
 ---
-title: SET NOEXEC (Transact-SQL) | Documenti Microsoft
+title: SET NOEXEC (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -50,14 +50,14 @@ ms.lasthandoff: 11/21/2017
 SET NOEXEC { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'opzione SET NOEXEC è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compila, ma non esegue, tutti i batch delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. Quando l'opzione è impostata su OFF, tutti i batch vengono eseguiti dopo la compilazione.  
   
  L'esecuzione di istruzioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è composta da due fasi: compilazione ed esecuzione. Tale impostazione risulta utile per consentire la convalida in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della sintassi e dei nomi di oggetto nel codice [!INCLUDE[tsql](../../includes/tsql-md.md)] in fase di esecuzione. Risulta utile inoltre per il debug di istruzioni che normalmente fanno parte di un batch di istruzioni più esteso.  
   
  L'opzione SET NOEXEC viene impostata in fase di esecuzione, non in fase di analisi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -117,7 +117,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_ALL &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
+ [SET SHOWPLAN_ALL &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-all-transact-sql.md)   
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)  
   
   

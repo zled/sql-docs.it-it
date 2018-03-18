@@ -1,5 +1,5 @@
 ---
-title: STGeomFromText (tipo di dati geography) | Documenti Microsoft
+title: STGeomFromText (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,9 +35,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geography** istanza di una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT), integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
+Restituisce un'istanza **geography** da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium), integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
   
-Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.
+Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,20 +48,20 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *geography_tagged_text*  
- È la rappresentazione WKT del **geography** istanza da restituire. *geography_tagged_text* è un **nvarchar (max)** espressione.  
+ Rappresentazione WKT dell'istanza **geography** da restituire. *geography_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geography** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC del **geography** istanza restituita dalla stgeomfromtext () è impostato per l'input WKT corrispondente.  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC dell'istanza **geography** restituita da STGeomFromText() è impostato sull'input WKT corrispondente.  
   
- Questo metodo genererà un' **ArgumentException** se l'input contiene un bordo opposto.  
+ Questo metodo genererà un'eccezione **ArgumentException** se l'input contiene un bordo opposto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STGeomFromText()` per creare un'istanza `geography`.  

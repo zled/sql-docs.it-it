@@ -1,5 +1,5 @@
 ---
-title: FIRMA DROP (Transact-SQL) | Documenti Microsoft
+title: DROP SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,19 +56,19 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_modulo*  
+ *module_name*  
  Nome di una stored procedure, una funzione, un assembly o un trigger.  
   
- CERTIFICATO *cert_name*  
+ CERTIFICATE *cert_name*  
  Nome di un certificato con cui viene firmato un assembly, una stored procedure, una funzione o un trigger.  
   
- CHIAVE asimmetrica *Asym_key_name*  
+ ASYMMETRIC KEY *Asym_key_name*  
  Nome di una chiave asimmetrica con cui viene firmato un assembly, una stored procedure, una funzione o un trigger.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le informazioni sulle firme sono visibili nella vista di catalogo sys.crypt_properties.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione ALTER per l'oggetto e l'autorizzazione CONTROL per il certificato o la chiave asimmetrica. Se una chiave privata associata è protetta tramite una password, è necessario che anche l'utente disponga della password.  
   
 ## <a name="examples"></a>Esempi  
@@ -82,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [Aggiungi firma &#40; Transact-SQL &#41;](../../t-sql/statements/add-signature-transact-sql.md)  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [ADD SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/add-signature-transact-sql.md)  
   
   

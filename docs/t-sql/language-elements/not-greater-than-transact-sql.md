@@ -1,5 +1,5 @@
 ---
-title: '!&gt; (Non maggiore di) (Transact-SQL) | Documenti Microsoft'
+title: '!&gt; (non maggiore di) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="gt-not-greater-than-transact-sql"></a>!&gt; (Non maggiore di) (Transact-SQL)
+# <a name="gt-not-greater-than-transact-sql"></a>!&gt; (non maggiore di) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Confronta due espressioni (operatore di confronto). Quando si confrontano due espressioni diverse da Null, il risultato è TRUE se il valore dell'operando di sinistra non è maggiore del valore di quello di destra. In caso contrario il risultato è FALSE. A differenza dell'operatore = (uguaglianza), il risultato del confronto !> tra due valori NULL non dipende dall'impostazione di ANSI_NULLS.  
@@ -53,14 +53,14 @@ expression !> expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md). È necessario che il tipo di dati di entrambe le espressioni possa essere convertito in modo implicito. La conversione dipende dalle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida. È necessario che il tipo di dati di entrambe le espressioni possa essere convertito in modo implicito. La conversione dipende dalle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

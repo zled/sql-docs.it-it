@@ -1,5 +1,5 @@
 ---
-title: Z (tipo di dati geometry) | Documenti Microsoft
+title: Z (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ Valore Z (elevazione) dell'istanza. La semantica del valore di elevazione è def
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore di questa proprietà sarà null se l'istanza di geometria non è un punto per qualsiasi **punto** istanza per cui non è impostata.  
+## <a name="remarks"></a>Remarks  
+ Il valore di questa proprietà sarà Null se l'istanza di geometria non è un punto e per qualsiasi istanza **Point** per cui la proprietà non è impostata.  
   
  Questa proprietà è di sola lettura.  
   
@@ -65,8 +65,8 @@ SELECT @g.Z;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [M &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [AsTextZM &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
+ [M &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [AsTextZM &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/astextzm-geometry-data-type.md)   
  [Metodi estesi sulle istanze di geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

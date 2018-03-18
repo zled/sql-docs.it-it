@@ -1,5 +1,5 @@
 ---
-title: STMLineFromWKB (tipo di dati geometry) | Documenti Microsoft
+title: STMLineFromWKB (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geometryMultiLineString** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Restituisce un'istanza **geometryMultiLineString** di una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_multilinestring*  
- Rappresentazione WKB del **geometryMultiLineString** istanza da restituire. *WKB_multilinestring* è un **varbinary (max)** espressione.  
+ Rappresentazione WKB dell'istanza **geometryMultiLineString** da restituire. *WKB_multilinestring* è un'espressione **varbinary(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometryMultiLineString** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryMultiLineString** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
  Tipo OGC: **MultiLineString**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo genererà un **FormatException** se l'input non è formattata correttamente.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STMLineFromWKB()` per creare un'istanza `geometry`.  

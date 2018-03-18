@@ -1,5 +1,5 @@
 ---
-title: '@@SPID (Transact-SQL) | Documenti Microsoft'
+title: '@@SPID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -53,8 +53,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **smallint**  
   
-## <a name="remarks"></a>Osservazioni  
- @@SPID può essere usato per identificare il processo utente corrente nell'output di **sp_who**.  
+## <a name="remarks"></a>Remarks  
+ È possibile usare la funzione @@SPID per identificare il processo utente corrente nell'output di **sp_who**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito l'ID, il nome dell'account di accesso e il nome utente della sessione utente corrente.  
@@ -71,8 +71,8 @@ ID     Login Name                     User Name
 54     SEATTLE\joanna                 dbo                             
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- Questo esempio viene restituito il [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ID di sessione, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controllare l'ID sessione del nodo, il nome di account di accesso e il nome utente per il processo utente corrente.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente viene restituito l'ID sessione di [!INCLUDE[ssDW](../../includes/ssdw-md.md)], l'ID sessione del nodo di controllo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nome di accesso e il nome utente per il processo utente corrente.  
   
 ```  
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
@@ -80,7 +80,7 @@ SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', 
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di configurazione](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [sp_lock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
   
   

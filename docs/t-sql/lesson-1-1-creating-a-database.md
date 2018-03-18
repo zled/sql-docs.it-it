@@ -1,5 +1,5 @@
 ---
-title: Creazione di un Database (esercitazione) | Documenti Microsoft
+title: Creazione di un database (esercitazione) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-1---creating-a-database"></a>Lezione 1-1-Creazione di un Database
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Analogamente a numerose [!INCLUDE[tsql](../includes/tsql-md.md)] istruzioni, l'istruzione CREATE DATABASE ha un parametro obbligatorio: il nome del database. L'istruzione CREATE DATABASE dispone inoltre di numerosi parametri facoltativi, ad esempio il percorso su disco in cui si desidera inserire i file del database. Quando si esegue CREATE DATABASE senza parametri facoltativi, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzati i valori predefiniti per molti di tali parametri. In questa esercitazione vengono utilizzati solo alcuni dei parametri facoltativi della sintassi.  
+# <a name="lesson-1-1---creating-a-database"></a>Lezione 1-1 - Creazione di un database
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Analogamente a numerose altre istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)], l'istruzione CREATE DATABASE ha un parametro obbligatorio, ovvero il nome del database. L'istruzione CREATE DATABASE dispone inoltre di numerosi parametri facoltativi, ad esempio il percorso su disco in cui si desidera inserire i file del database. Quando si esegue CREATE DATABASE senza parametri facoltativi, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono utilizzati i valori predefiniti per molti di tali parametri. In questa esercitazione vengono utilizzati solo alcuni dei parametri facoltativi della sintassi.  
   
 ### <a name="to-create-a-database"></a>Per creare un database  
   

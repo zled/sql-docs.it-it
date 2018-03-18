@@ -1,5 +1,5 @@
 ---
-title: DROP SYMMETRIC KEY (Transact-SQL) | Documenti Microsoft
+title: DROP SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,14 +56,14 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  Nome della chiave simmetrica da rimuovere.  
   
  REMOVE PROVIDER KEY  
- Rimuove una chiave EKM (Extensible Key Management ) da un dispositivo EKM. Per ulteriori informazioni su Extensible Key Management, vedere [Extensible Key Management &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Rimuove una chiave EKM (Extensible Key Management ) da un dispositivo EKM. Per altre informazioni su Extensible Key Management, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se la chiave è aperta nella sessione corrente, l'istruzione avrà esito negativo.  
   
- Se la chiave asimmetrica viene eseguito il mapping a una chiave di Extensible Key Management (EKM) in un dispositivo EKM e **REMOVE PROVIDER KEY** opzione non è specificata, la chiave verrà rimossa dal database ma non dal dispositivo e verrà generato un avviso.  
+ Se viene eseguito il mapping della chiave asimmetrica a una chiave EKM (Extensible Key Management) in un dispositivo EKM e l'opzione **REMOVE PROVIDER KEY** non è specificata, la chiave verrà rimossa dal database, ma non dal dispositivo e verrà generato un avviso.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  
@@ -80,7 +80,7 @@ GO
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [CLOSE SYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
+ [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   

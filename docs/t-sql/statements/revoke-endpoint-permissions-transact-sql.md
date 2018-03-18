@@ -1,5 +1,5 @@
 ---
-title: REVOKE-autorizzazioni per Endpoint (Transact-SQL) | Documenti Microsoft
+title: REVOKE - autorizzazioni per endpoint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere concessa per un endpoint. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- ENDPOINT **::***endpoint_name*  
+ ON ENDPOINT **::***endpoint_name*  
  Specifica l'endpoint per cui viene concessa l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- {DA | A} \<server_principal > specifica il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da cui viene revocata l'autorizzazione di accesso.  
+ { FROM | TO } \<server_principal> Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da cui viene revocata l'autorizzazione.  
   
  *SQL_Server_login*  
  Specifica il nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -90,10 +90,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
- Possibile revocare autorizzazioni nell'ambito del server solo quando il database corrente è **master**.  
+## <a name="remarks"></a>Remarks  
+ È possibile revocare autorizzazioni nell'ambito del server solo se il database corrente è il database **master**.  
   
- Informazioni sugli endpoint sono visibili nella [Endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md) vista del catalogo. Informazioni sulle autorizzazioni del server sono visibili nella [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) è visibile nella vista del catalogo e le informazioni sulle entità server il [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
+ Le informazioni sugli endpoint sono visibili nella vista del catalogo [sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md). Le informazioni sulle autorizzazioni del server sono visibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) e le informazioni sulle entità server sono visibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Un endpoint è un'entità a protezione diretta a livello del server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un endpoint, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -105,7 +105,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per l'endpoint o l'autorizzazione ALTER ANY ENDPOINT per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revoca dell'autorizzazione TAKE OWNERSHIP con l'opzione CASCADE  
- Nell'esempio seguente viene revocata `TAKE OWNERSHIP` autorizzazione per l'endpoint `Shipping83` dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utente `PKomosinski` e a tutte le entità a cui `PKomosinski` concesso `TAKE OWNERSHIP` su `Shipping83`.  
+ Nell'esempio seguente viene revocata l'autorizzazione `TAKE OWNERSHIP` per l'endpoint `Shipping83` all'utente `PKomosinski` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le entità a cui l'utente `PKomosinski` ha concesso l'autorizzazione `TAKE OWNERSHIP` per `Shipping83`.  
   
 ```  
 USE master;  
@@ -131,10 +131,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [NEGARE autorizzazioni per Endpoint &#40; Transact-SQL &#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [DENY - autorizzazioni per endpoint &#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
- [Viste del catalogo degli endpoint &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
- [Sys. Endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
+ [Viste del catalogo degli endpoint &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

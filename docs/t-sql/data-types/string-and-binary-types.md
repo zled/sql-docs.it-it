@@ -1,5 +1,5 @@
 ---
-title: Tipi stringa e binari | Documenti Microsoft
+title: Tipi stringa e binari | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -38,6 +38,6 @@ ms.lasthandoff: 11/21/2017
 [binary e varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)  
 [char e varchar &#40;Transact-SQL&#41;](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
 [nchar e nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
-[ntext, testo e immagine &#40; Transact-SQL &#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+[ntext, text e image &#40;Transact-SQL&#41;](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
   
   

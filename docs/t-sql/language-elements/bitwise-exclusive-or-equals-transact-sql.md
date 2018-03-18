@@ -1,5 +1,5 @@
 ---
-title: ^ = (OR esclusivo assegnazione) (Transact-SQL) | Documenti Microsoft
+title: ^= (assegnazione OR esclusivo bit per bit) (Transact-SQL) | Microsoft Docs | Microsoft Docs
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = (OR esclusivo assegnazione) (Transact-SQL)
+# <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^= (assegnazione OR esclusivo bit per bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Esegue un'operazione con OR esclusivo bit per bit tra due valori integer e imposta un valore sul risultato dell'operazione.  
@@ -48,19 +48,19 @@ expression ^= expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno qualsiasi dei dati tipi della categoria numerica, ad eccezione di **bit** tipo di dati.  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di un qualsiasi tipo di dati della categoria numerica, ad eccezione del tipo di dati **bit**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni, vedere [^ &#40; Bit per bit esclusivo &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per altre informazioni, vedere [& &#40;OR bit per bit esclusivo&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operatori bit per bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori bit per bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   

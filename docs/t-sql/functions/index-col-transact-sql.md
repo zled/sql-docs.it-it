@@ -1,5 +1,5 @@
 ---
-title: INDEX_COL (Transact-SQL) | Documenti Microsoft
+title: INDEX_COL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -58,13 +58,13 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
  Nome dello schema a cui appartiene l'indice.  
   
  *table_or_view_name*  
- Nome del proprietario della tabella o della vista indicizzata. *table_or_view_name* devono essere racchiusi tra virgolette singole e può essere qualificato dal nome del database e il nome dello schema.  
+ Nome del proprietario della tabella o della vista indicizzata. *table_or_view_name* deve essere racchiuso tra virgolette singole e può essere qualificato tramite il nome del database e il nome dello schema.  
   
  *index_id*  
- ID dell'indice. *index_id* è **int**.  
+ ID dell'indice. *index_ID* è di tipo **int**.  
   
- *key_ID*  
- Posizione della colonna chiave indice. *key_ID* è **int**.  
+ *key_id*  
+ Posizione della colonna chiave indice. *key_ID* è di tipo **int**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar (128** **)**  
@@ -100,8 +100,8 @@ SalesOrderID        SalesOrderDetailID
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   

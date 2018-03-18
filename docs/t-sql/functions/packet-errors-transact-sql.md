@@ -1,5 +1,5 @@
 ---
-title: '@@PACKET_ERRORS (Transact-SQL) | Documenti Microsoft'
+title: '@@PACKET_ERRORS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -52,8 +52,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare un report contenente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statistiche, tra cui errori dei pacchetti, eseguire **sp_monitor**.  
+## <a name="remarks"></a>Remarks  
+ Per visualizzare un report contenente dati statistici relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso il numero di errori dei pacchetti, eseguire **sp_monitor**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di `@@PACKET_ERRORS`.  
@@ -73,7 +73,7 @@ Packet Errors
 ## <a name="see-also"></a>Vedere anche  
  [@@PACK_RECEIVED &#40;Transact-SQL&#41;](../../t-sql/functions/pack-received-transact-sql.md)   
  [@@PACK_SENT &#40;Transact-SQL&#41;](../../t-sql/functions/pack-sent-transact-sql.md)   
- [la procedura sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
+ [sp_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md)   
  [Funzioni statistiche di sistema &#40;Transact-SQL&#41;](../../t-sql/functions/system-statistical-functions-transact-sql.md)  
   
   

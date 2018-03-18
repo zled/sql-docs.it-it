@@ -1,5 +1,5 @@
 ---
-title: IsValidDetailed (tipo di dati geography) | Documenti Microsoft
+title: IsValidDetailed (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
- Tipo CLR restituito: **stringa**  
+ Tipo CLR restituito: **string**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente sono elencati i valori restituiti possibili:  
   
 |Valore restituito|Description|  
@@ -60,19 +60,19 @@ ms.lasthandoff: 01/25/2018
 |24404|Non valido perché l'anello del poligono {0} interseca se stesso o un altro anello.|  
 |24405|Non valido perché una parte dell'anello del poligono interseca se stessa o un altro anello.|  
 |24406|Non valido perché la curva {0} degenera in un punto.|  
-|24407|Non è valido perché {0} anello poligono viene compresso in una linea nel punto di \\{1 \\}.|  
+|24407|Non valido perché l'anello del poligono {0} si comprime in una linea nel punto {1}.|  
 |24408|Non valido perché l'anello del poligono {0} non è chiuso.|  
 |24409|Non valido perché una parte dell'anello del poligono {0} si trova all'interno di un poligono.|  
 |24410|Non valido perché l'anello {0} è il primo anello in un poligono di cui non costituisce l'anello esterno.|  
-|24411|Non è valido perché l'anello {0} ricade di fuori di \\{1 \\} l'anello esterno del relativo poligono.|  
-|24412|Non è valido perché non è connesso l'area interna di un poligono con anelli {0} e \\{1 \\}.|  
+|24411|Non valido perché l'anello {0} si trova al di fuori dell'anello esterno {1} del relativo poligono.|  
+|24412|Non valido perché l'interno di un poligono con gli anelli {0} e {1} non è connesso.|  
 |24413|Non valido a causa di due bordi sovrapposti nella curva {0}.|  
-|24414|Non è valido perché un bordo della curva {0} si sovrappone a un bordo della curva di \\{1 \\}.|  
+|24414|Non valido perché un bordo della curva {0} si sovrappone a un bordo della curva {1}.|  
 |24415|Non valido perché in qualche poligono è presente una struttura dell'anello non valida.|  
-|24416|Non è valido perché nella curva {0} il bordo che inizia nel punto \\{1 \\} è una linea o un arco degenere con punti finali opposti.|  
+|24416|Non valido perché nella curva {0} il bordo che inizia al punto {1} è una linea o un arco degenerato con estremità diametralmente opposte.|  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente di un oggetto spaziale non valido viene illustrato come la **isvaliddetailed ()** metodi si comporta.  
+ L'esempio seguente di oggetto spaziale non valido illustra il comportamento del metodo **IsValidDetailed()**.  
   
 ```sql  
 DECLARE @p GEOGRAPHY = 'Polygon((2 2, 4 4, 4 2, 2 4, 2 2))'  

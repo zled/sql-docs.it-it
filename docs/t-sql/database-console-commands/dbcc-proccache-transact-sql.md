@@ -1,5 +1,5 @@
 ---
-title: DBCC PROCCACHE (Transact-SQL) | Documenti Microsoft
+title: DBCC PROCCACHE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -55,7 +55,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Disattiva la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 La cache delle procedure viene utilizzata per inserire nella cache i piani compilati e piani di esecuzione per velocizzare l'esecuzione di batch. Le voci in una cache delle procedure si trovano a livello di batch. La cache delle procedure include le voci seguenti:
 -   Piani compilati  
 -   Piani di esecuzione  
@@ -67,12 +67,12 @@ Nella tabella seguente vengono descritte le colonne del set di risultati.
   
 |Nome colonna|Description|  
 |-----------------|-----------------|  
-|**Num proc esperti**|Numero totale di pagine utilizzate da tutte le voci nella cache delle procedure.|  
-|**Num proc esperti utilizzati**|Numero totale di pagine utilizzate da tutte le voci in uso.|  
-|**Num proc esperti active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di pagine utilizzate da tutte le voci in uso.|  
-|**dimensione della cache proc**|Numero totale di voci nella cache delle procedure.|  
-|**proc cache utilizzata**|Numero totale di voci in uso.|  
-|**proc cache attiva**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di voci in uso.|  
+|**num proc buffs**|Numero totale di pagine utilizzate da tutte le voci nella cache delle procedure.|  
+|**num proc buffs used**|Numero totale di pagine utilizzate da tutte le voci in uso.|  
+|**num proc buffs active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di pagine utilizzate da tutte le voci in uso.|  
+|**proc cache size**|Numero totale di voci nella cache delle procedure.|  
+|**proc cache used**|Numero totale di voci in uso.|  
+|**proc cache active**|Disponibile solo per compatibilità con le versioni precedenti. Numero totale di voci in uso.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .

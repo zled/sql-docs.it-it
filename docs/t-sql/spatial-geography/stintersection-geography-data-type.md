@@ -1,5 +1,5 @@
 ---
-title: STIntersection (tipo di dati geography) | Documenti Microsoft
+title: STIntersection (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto che rappresenta i punti in cui un **geography** istanza interseca un'altra **geography** istanza.  
+  Restituisce un oggetto che rappresenta i punti in cui un'istanza **geography** interseca un'altra istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,19 +45,19 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da confrontare con l'istanza in cui viene richiamato stintersection ().  
+ Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato STIntersection().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Viene restituita l'intersezione di due istanze geografiche  
   
- Stintersection () restituisce sempre null se gli identificatori di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+ STIntersection() restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]può includere **FullGlobe** istanze nel set di risultati possibili restituito nel server.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta le istanze spaziali di dimensioni maggiori di un emisfero. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrebbe includere le istanze **FullGlobe** nel set di risultati possibili restituito nel server.  
   
  Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   

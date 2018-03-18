@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Combina due espressioni booleane e restituisce **TRUE** quando entrambe le espressioni sono **TRUE**. Quando più di un operatore logico viene utilizzato in un'istruzione di **AND** operatori vengono valutati per primi. È tuttavia possibile modificare l'ordine di valutazione tramite l'utilizzo delle parentesi.  
+  Combina due espressioni booleane e restituisce **TRUE** se entrambe le espressioni sono **TRUE**. Quando un'istruzione include più operatori logici, gli operatori **AND** vengono valutati per primi. È tuttavia possibile modificare l'ordine di valutazione tramite l'utilizzo delle parentesi.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ boolean_expression AND boolean_expression
   
 ## <a name="arguments"></a>Argomenti  
  *boolean_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) che restituisce un valore booleano: **TRUE**, **FALSE**, o **sconosciuto**.  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida che restituisce un valore booleano: **TRUE**, **FALSE** o **UNKNOWN**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
@@ -58,7 +58,7 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Valore restituito  
  Restituisce TRUE quando entrambe le espressioni sono TRUE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente vengono illustrati i risultati dei confronti eseguiti tra valori TRUE e FALSE tramite l'operatore AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
@@ -102,7 +102,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   

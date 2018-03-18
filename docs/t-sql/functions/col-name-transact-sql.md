@@ -1,5 +1,5 @@
 ---
-title: COL_NAME (Transact-SQL) | Documenti Microsoft
+title: COL_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ COL_NAME ( table_id , column_id )
 Numero di identificazione della tabella contenente la colonna. *table_id* è di tipo **int**.
   
 *column_id*  
-Numero di identificazione della colonna. *column_id* parametro è di tipo **int**.
+Numero di identificazione della colonna. Il parametro *column_id* è di tipo **int**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **sysname**
@@ -62,13 +62,13 @@ Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzaz
   
 Un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come COL_NAME possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
   
-## <a name="remarks"></a>Osservazioni  
-Il *table_id* e *column_id* insieme i parametri, generano una stringa del nome di colonna.
+## <a name="remarks"></a>Remarks  
+La combinazione dei parametri *table_id* e *column_id* restituisce la stringa del nome di colonna.
   
-Per ulteriori informazioni su come ottenere i numeri di identificazione di tabelle e colonne, vedere [OBJECT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
+Per altre informazioni su come ottenere i numeri di identificazione di tabella e di colonna, vedere [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  
-L'esempio seguente restituisce il nome della prima colonna in un campione `Employee` tabella.
+Nell'esempio seguente viene restituito il nome della prima colonna di una tabella `Employee` di esempio.
   
 ```sql
 -- Uses AdventureWorks  
@@ -87,9 +87,9 @@ BusinessEntityID
   
 ## <a name="see-also"></a>Vedere anche
 [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)  
-[COL_LENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/col-length-transact-sql.md)
+[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)
   
   
 

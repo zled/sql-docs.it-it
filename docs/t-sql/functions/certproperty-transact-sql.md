@@ -1,5 +1,5 @@
 ---
-title: CERTPROPERTY (Transact-SQL) | Documenti Microsoft
+title: CERTPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
   
 ## <a name="arguments"></a>Argomenti  
 *Cert_ID*  
-ID del certificato. *Cert_ID* è un tipo int.
+ID del certificato. *Cert_ID* è di tipo int.
   
 *Expiry_Date*  
 Data di scadenza del certificato.
@@ -78,15 +78,15 @@ SID del certificato nel formato di stringa di caratteri. Corrisponde anche al SI
 ## <a name="return-types"></a>Tipi restituiti
 La specifica della proprietà deve essere racchiusa tra virgolette singole.
   
-Il tipo restituito dipende dalla proprietà specificata nella chiamata alla funzione. Restituire tutte vengono inclusi nel tipo restituito di **sql_variant**.
--   *Expiry_Date* e *Start_Date* restituire **datetime**.  
--   *Cert_Serial_Number*, *Issuer_Name*, *soggetto*, e *String_SID* restituire **nvarchar**.  
--   *SID* restituisce **varbinary**.  
+Il tipo restituito dipende dalla proprietà specificata nella chiamata alla funzione. Tutti i valori restituiti vengono inclusi nel tipo restituito di **sql_variant**.
+-   *Expiry_Date* e *Start_Date* restituiscono **datetime**.  
+-   *Cert_Serial_Number*, *Issuer_Name*, *Subject* e *String_SID* restituiscono **nvarchar**.  
+-   *SID* restituisce un valore **varbinary**.  
   
-## <a name="remarks"></a>Osservazioni  
-Informazioni sui certificati sono visibili nella [Sys. Certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) vista del catalogo.
+## <a name="remarks"></a>Remarks  
+Le informazioni sui certificati sono visibili nella vista del catalogo [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Sono richieste autorizzazioni per il certificato ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW DEFINITION per il certificato.
   
 ## <a name="examples"></a>Esempi  
@@ -110,10 +110,10 @@ GO
   
 ## <a name="see-also"></a>Vedere anche
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[Istruzione ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
-[CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) 
- [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)
-[Sys. Certificates &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 
- [Viste del catalogo sicurezza &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
+[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)
+[Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)
   
   

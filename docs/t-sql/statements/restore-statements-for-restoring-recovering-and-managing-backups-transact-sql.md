@@ -1,5 +1,5 @@
 ---
-title: Le istruzioni di ripristino per il ripristino, il ripristino, la gestione dei backup (Transact-SQL) | Documenti Microsoft
+title: Istruzioni RESTORE per il ripristino, il recupero e la gestione dei backup (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/25/2018
 > [!IMPORTANT]  
 >  Nelle versioni precedenti di SQL Server qualsiasi utente poteva ottenere informazioni sui set e i dispositivi di backup tramite le istruzioni Transact-SQL RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY e RESTORE VERIFYONLY. Poiché tali istruzioni rivelano informazioni sul contenuto dei file di backup, per eseguirle in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e versioni successive è necessaria l'autorizzazione CREATE DATABASE. Questo requisito consente di proteggere i file di backup in modo da rendere le informazioni di backup più sicure rispetto alle versioni precedenti. Per informazioni su questa autorizzazione, vedere [GRANT - autorizzazioni per database &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |.|Description|  
 |---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/25/2018
 |[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE FILELISTONLY, che consente di restituire un set di risultati contenente un elenco dei file di database e di log inclusi nel set di backup.|  
 |[RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE HEADERONLY, che consente di restituire un set di risultati contente tutte le informazioni di intestazione del backup per tutti i set di backup in un dispositivo di backup specifico.|  
 |[RESTORE LABELONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE LABELONLY, che consente di restituire un set di risultati contenente informazioni sui supporti di backup identificati dal dispositivo di backup specificato.|  
-|[RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE REWINDONLY, che consente di riavvolgere e chiudere i dispositivi nastro lasciati aperti da istruzioni BACKUP o RESTORE eseguiti con l'opzione NOREWIND.|  
+|[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE REWINDONLY, che consente di riavvolgere e chiudere i dispositivi nastro lasciati aperti da istruzioni BACKUP o RESTORE eseguiti con l'opzione NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Descrive l'istruzione Transact-SQL RESTORE VERIFYONLY, che consente di verificare il backup ma non di ripristinarlo e di controllare che il set di backup sia completo e l'intero backup leggibile. Non viene verificata la struttura dei dati.|  
   
 ## <a name="see-also"></a>Vedere anche  

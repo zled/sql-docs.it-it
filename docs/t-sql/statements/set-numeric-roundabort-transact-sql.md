@@ -1,5 +1,5 @@
 ---
-title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Documenti Microsoft
+title: SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'opzione SET NUMERIC_ROUNDABORT è impostata su ON, viene generato un errore dopo che si verifica una perdita di precisione in un'espressione. Quando l'opzione è impostata su OFF, in seguito alla perdita di precisione non viene visualizzato alcun messaggio di errore e il risultato viene arrotondato alla precisione della colonna o della variabile in cui viene archiviato.  
   
  La perdita di precisione si verifica quando si tenta di archiviare un valore con precisione fissa in una colonna o variabile con grado di precisione inferiore.  
@@ -65,9 +65,9 @@ SET NUMERIC_ROUNDABORT { ON | OFF }
 
  L'opzione SET NUMERIC_ROUNDABORT viene impostata in fase di esecuzione, non in fase di analisi.
 
- È necessario che l'opzione SET NUMERIC_ROUNDABORT sia impostata su OFF quando vengono creati o modificati indici in colonne calcolate o viste indicizzate. Se l'opzione SET NUMERIC_ROUNDABORT è ON, CREATE, le istruzioni UPDATE, INSERT e DELETE nelle tabelle con indici su colonne calcolate o viste indicizzate esito negativo. Per ulteriori informazioni sulle impostazioni dell'opzione SET necessarie con viste indicizzate e indici in colonne calcolate, vedere "Considerazioni quando si usa delle istruzioni SET" in [istruzioni SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).
+ È necessario che l'opzione SET NUMERIC_ROUNDABORT sia impostata su OFF quando vengono creati o modificati indici in colonne calcolate o viste indicizzate. Se l'opzione SET NUMERIC_ROUNDABORT è impostata su ON, le istruzioni CREATE, UPDATE, INSERT e DELETE eseguite in tabelle con indici di colonne calcolate o viste indicizzate hanno esito negativo. Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici nelle colonne calcolate, vedere "Considerazioni sull'uso delle istruzioni SET" nell'argomento [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).
   
- Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query seguente:
+ Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito:
   
 ```  
 DECLARE @NUMERIC_ROUNDABORT VARCHAR(3) = 'OFF';  
@@ -76,7 +76,7 @@ SELECT @NUMERIC_ROUNDABORT AS NUMERIC_ROUNDABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -149,6 +149,6 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   

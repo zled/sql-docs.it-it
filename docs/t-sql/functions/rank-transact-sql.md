@@ -1,5 +1,5 @@
 ---
-title: RANGO (Transact-SQL) | Documenti Microsoft
+title: RANK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/25/2016
 ms.prod: sql-non-specified
@@ -39,10 +39,10 @@ ms.lasthandoff: 11/21/2017
 
   Restituisce il rango di ogni riga all'interno della partizione di un set di risultati. Il valore di rango di una riga è uno più il numero di ranghi che precedono la riga in questione.  
 
-  ROW_NUMBER e numero di dimensioni sono simili. Numeri ROW_NUMBER tutte le righe in sequenza (ad esempio 1, 2, 3, 4, 5). Numero di dimensioni fornisce lo stesso valore numerico per ties (ad esempio 1, 2, 2, 4, 5).   
+  ROW_NUMBER e RANK sono simili. ROW_NUMBER numera tutte le righe in sequenza (ad esempio 1, 2, 3, 4, 5). RANK fornisce lo stesso valore numerico per i valori equivalenti (ad esempio 1, 2, 2, 4, 5).   
   
 > [!NOTE]
-> CLASSIFICAZIONE è che un tipo di valore calcolato quando viene eseguita la query. Per rendere persistenti i numeri in una tabella, vedere [proprietà IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [sequenza](../../t-sql/statements/create-sequence-transact-sql.md). 
+> RANK è un valore temporaneo calcolato al momento dell'esecuzione della query. Per mantenere i numeri in una tabella, vedere [Proprietà IDENTITY](../../t-sql/statements/create-table-transact-sql-identity-property.md) e [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md). 
    
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,13 +53,13 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- SU **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine dei dati prima che venga applicata la funzione. Il *order_by_clause* è obbligatorio. Il \<righe o clausola range > della OVER clausola non può essere specificata per la funzione RANK. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine dei dati prima che venga applicata la funzione. *order_by_clause* è obbligatorio. La clausola \<ROWS o RANGE> della clausola OVER non può essere specificata per la funzione RANK. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **bigint**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se due o più righe hanno un valore equivalente per un rango, ogni riga equivalente riceve lo stesso rango. Ad esempio, se due venditori principali hanno lo stesso valore SalesYTD, viene assegnato a entrambi il rango uno. Al venditore con il valore SalesYTD più alto successivo viene assegnato il rango tre, poiché sono presenti due righe di rango più elevato. Pertanto, la funzione RANK non restituirà sempre valori interi consecutivi.  
   
  L'ordinamento utilizzato per l'intera query determina l'ordinamento in base al quale vengono visualizzate le righe in un set di risultati,  
@@ -135,10 +135,10 @@ BusinessEntityID Rate                  RankBySalary
 10               42.4808               9  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-ranking-rows-within-a-partition"></a>C: classificazione di righe all'interno di una partizione  
- Nell'esempio seguente classifica i venditori in ogni territorio di vendita in base alla loro vendite totali. Il set di righe viene partizionato in base a `SalesTerritoryGroup` e ordinato in base a `SalesAmountQuota`.  
+### <a name="c-ranking-rows-within-a-partition"></a>C: Classificazione di righe all'interno di una partizione  
+ Nell'esempio seguente gli addetti alle vendite in ogni territorio di vendita vengono classificati in base al totale delle vendite. Il set di righe viene partizionato in base a `SalesTerritoryGroup` e ordinato in base a `SalesAmountQuota`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -174,10 +174,10 @@ Pak               10514000.0000  United Kingdom       1
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DENSE_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER &#40; Transact-SQL &#41;](../../t-sql/functions/row-number-transact-sql.md)   
- [NTILE &#40; Transact-SQL &#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [Rango funzioni &#40; Transact-SQL &#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
+ [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati precedenza (Transact-SQL) | Documenti Microsoft
+title: Precedenza dei tipi di dati (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="data-type-precedence-transact-sql"></a>Precedenza tipo di dati (Transact-SQL)
+# <a name="data-type-precedence-transact-sql"></a>Precedenza dei tipi di dati (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Quando due espressioni di tipi di dati diversi vengono combinate da un operatore, le regole per la precedenza dei tipi di dati specificano che i tipi con precedenza inferiore vengano convertiti nei tipi con precedenza superiore. Se la conversione non è una conversione implicita supportata, viene generato un errore. Se a entrambe le espressioni dell'operando è associato lo stesso tipo di dati, quest'ultimo viene assegnato al risultato dell'operazione.
@@ -63,12 +63,12 @@ Per i tipi di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uti
 1. **image**  
 1. **timestamp**  
 1. **uniqueidentifier**  
-1. **nvarchar** (inclusi **nvarchar (max)** )  
+1. **nvarchar** (incluso **nvarchar(max)** )  
 1. **nchar**  
-1. **varchar** (inclusi **varchar (max)** )  
+1. **varchar** (incluso **varchar(max)** )  
 1. **char**  
-1. **varbinary** (inclusi **varbinary (max)** )  
-1. **binario** (minimo)  
+1. **varbinary** (incluso **varbinary(max)** )  
+1. **binary** (inferiore)  
   
 ## <a name="see-also"></a>Vedere anche
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  

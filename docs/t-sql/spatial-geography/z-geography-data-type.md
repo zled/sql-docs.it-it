@@ -1,5 +1,5 @@
 ---
-title: Z (tipo di dati geography) | Documenti Microsoft
+title: Z (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
  Tipo CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Il valore di questa proprietà è null se il **geography** istanza non è un punto per qualsiasi **punto** istanza per cui non è impostata.  
+## <a name="remarks"></a>Remarks  
+ Il valore di questa proprietà è Null se l'istanza **geography** non è un punto e per qualsiasi istanza **Point** per cui la proprietà non è impostata.  
   
  Questa proprietà è di sola lettura.  
   
@@ -66,7 +66,7 @@ SELECT @g.Z;
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [M &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  
   
   

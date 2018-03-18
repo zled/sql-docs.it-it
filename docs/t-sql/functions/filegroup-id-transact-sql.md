@@ -1,5 +1,5 @@
 ---
-title: Filegroup_id (Transact-SQL) | Documenti Microsoft
+title: FILEGROUP_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -51,13 +51,13 @@ FILEGROUP_ID ( 'filegroup_name' )
   
 ## <a name="arguments"></a>Argomenti  
  **'** *filegroup_name* **'**  
- È un'espressione di tipo **sysname** che rappresenta il nome del filegroup per il quale restituire l'ID di filegroup.  
+ Espressione di tipo **sysname** che rappresenta il nome del filegroup per il quale si vuole restituire l'ID di filegroup.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- *filegroup_name* corrisponde alla **nome** colonna il **Sys. FileGroups** vista del catalogo.  
+## <a name="remarks"></a>Remarks  
+ *filegroup_name* corrisponde alla colonna **name** nella vista del catalogo **sys.filegroups**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito l'ID di filegroup corrispondente al filegroup denominato `PRIMARY` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -79,8 +79,8 @@ Filegroup ID
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [FILEGROUP_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Sys. FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
+ [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)  
   
   

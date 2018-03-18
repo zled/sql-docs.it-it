@@ -1,5 +1,5 @@
 ---
-title: ATN2 (Transact-SQL) | Documenti Microsoft
+title: ATN2 (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ATN2 ( float_expression , float_expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*argomento float_expression* è un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) del **float** tipo di dati.
+*float_expression* è un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) del tipo di dati **float**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **float**
@@ -70,8 +70,8 @@ The ATN2 of the angle is: 0.265345
   
 ## <a name="see-also"></a>Vedere anche
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float e real &#40; Transact-SQL &#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
-[Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+[float e real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   
 

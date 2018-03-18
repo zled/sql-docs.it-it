@@ -1,5 +1,5 @@
 ---
-title: MakeValid (tipo di dati geometry) | Documenti Microsoft
+title: MakeValid (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="makevalid-geometry-data-type"></a>MakeValid (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Converte un oggetto non valido **geometry** istanza in un **geometry** istanza con un tipo Open Geospatial Consortium (OGC) valido.
+Converte un'istanza **geometry** non valida in un'istanza **geometry** con un tipo OGC (Open Geospatial Consortium) valido.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ Converte un oggetto non valido **geometry** istanza in un **geometry** istanza c
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo può provocare una modifica nel tipo del **geometry** istanza, nonché provocare dei punti di un **geometry** istanza leggero spostamento.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo può provocare una modifica nel tipo dell'istanza **geometry**, nonché provocare un leggero spostamento dei punti di un'istanza **geometry**.  
   
 ## <a name="examples"></a>Esempi  
  Nel primo esempio viene creata un'istanza `LineString` non valida che si sovrappone e viene utilizzato `STIsValid()` per confermare che tale istanza non è valida. Tramite `STIsValid()` viene restituito il valore 0 per un'istanza non valida.  

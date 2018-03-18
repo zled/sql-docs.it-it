@@ -47,14 +47,14 @@ NCHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *integer_expression*  
- Quando le regole di confronto del database non contengono il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 65535 (tra 0 e 0xFFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL. Per ulteriori informazioni sui caratteri supplementari, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Quando le regole di confronto del database non contengono il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 65535 (tra 0 e 0xFFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL. Per altre informazioni sui caratteri supplementari, vedere [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Quando le regole di confronto del database supportano il flag di caratteri supplementari (SC), si tratta di un numero intero positivo compreso tra 0 e 1114111 (tra 0 e 0x10FFFF). Se viene specificato un valore non compreso in questo intervallo, viene restituito NULL.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nchar (1)** quando le regole di confronto predefinite del database non supporta i caratteri supplementari.  
+ **nchar(1)** quando le regole di confronto predefinite del database non supportano i caratteri supplementari.  
   
- **nvarchar(2)** quando le regole di confronto predefinite del database supportano caratteri supplementari.  
+ **nvarchar(2)** quando le regole di confronto predefinite del database supportano i caratteri supplementari.  
   
  Se il parametro *integer_expression* rientra nell'intervallo 0 - 0xFFFF, viene restituito un solo carattere. Per i valori superiori, NCHAR restituisce la coppia di surrogati corrispondente. Non creare una coppia di surrogati tramite `NCHAR(<High surrogate>) + NCHAR(\<Low Surrogate>)`. Utilizzare invece regole di confronto del database che supportano caratteri supplementari, quindi specificare il punto di codice Unicode per la coppia di surrogati. Nell'esempio seguente vengono illustrati sia il metodo obsoleto per la creazione di una coppia di surrogati che il metodo preferito per la specifica del punto di codice Unicode.  
   
@@ -223,7 +223,7 @@ Character # Unicode Character UNICODE Value
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [UNICODE &#40;Transact-SQL&#41;](../../t-sql/functions/unicode-transact-sql.md)  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

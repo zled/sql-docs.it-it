@@ -1,5 +1,5 @@
 ---
-title: Windows_collation_name (Transact-SQL) | Documenti Microsoft
+title: Nome delle regole di confronto di Windows (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="windows-collation-name-transact-sql"></a>Windows_collation_name (Transact-SQL)
+# <a name="windows-collation-name-transact-sql"></a>Nome delle regole di confronto di Windows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Specifica il nome delle regole di confronto Windows nella clausola COLLATE in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nome delle regole di confronto Windows è composto dalla designazione delle regole di confronto e dagli stili di confronto.  
@@ -66,16 +66,16 @@ CollationDesignator_<ComparisonStyle>
 -   Turco: viene utilizzata la tabella codici 1254.  
   
  *CaseSensitivity*  
- **CI** specifica tra maiuscole e minuscole, **CS** specifica tra maiuscole e minuscole.  
+ **CI** specifica che la distinzione tra maiuscole e minuscole non è rilevante, mentre **CS** indica che la differenza tra maiuscole e minuscole è rilevante.  
   
  *AccentSensitivity*  
- **AI** specifica accentati, **AS** specifica accentati.  
+ **AI** specifica che la distinzione tra caratteri accentati e non accentati non è rilevante, mentre **AS** indica che la distinzione tra caratteri accentati e non accentati è rilevante.  
   
  *KanatypeSensitive*  
- **Omesso** specifica distinzione, senza distinzione Kana **KS** specifica kana.  
+ **Omesso** specifica che la distinzione Kana non è rilevante, **KS** specifica che la distinzione Kana è rilevante.  
   
  *WidthSensitivity*  
- **Omesso** specifica senza distinzione di larghezza, **WS** specifica distinzione di larghezza.  
+ **Omesso** specifica che la distinzione di larghezza non è rilevante, **WS** specifica che la distinzione di larghezza è rilevante.  
   
  **BIN**  
  Specifica che deve essere usato il tipo di ordinamento binario compatibile con le versioni precedenti.  
@@ -83,7 +83,7 @@ CollationDesignator_<ComparisonStyle>
  **BIN2**  
  Specifica l'ordinamento binario che utilizza la semantica del confronto dei punti di codice.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  A seconda della versione delle regole di confronto è possibile che alcuni punti di codice non siano definiti. Confrontare ad esempio quanto segue:  
   
 ```  
@@ -224,18 +224,18 @@ SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Lithuanian_Classic|Lithuanian_Classic|  
 |Deprecato, non disponibile a livello di server in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versioni successive|Macedonian|Macedonian|  
   
- <sup>1</sup>regole di confronto solo Unicode di Windows può essere applicati solo ai dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.  
+ <sup>1</sup>Le regole di confronto solo Unicode di Windows possono essere applicate solo a dati a livello di colonna o a livello di espressione. Tali regole non possono essere usate come regole di confronto del server o del database.  
   
- <sup>2</sup>come regole di confronto cinese (Taiwan), cinese (Macao) utilizza le regole del cinese semplificato, a differenza del cinese (Taiwan), ma usa la tabella codici 950.  
+ <sup>2</sup>Come le regole di confronto per il cinese (Taiwan), il cinese (Macao) usa le regole del cinese semplificato; a differenza del cinese (Taiwan), usa la tabella codici 950.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
- [Costanti &#40; Transact-SQL &#41;](../../t-sql/data-types/constants-transact-sql.md)   
+ [Costanti &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
- [tabella &#40; Transact-SQL &#41;](../../t-sql/data-types/table-transact-sql.md)   
+ [table &#40;Transact-SQL&#41;](../../t-sql/data-types/table-transact-sql.md)   
  [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)  
   
   

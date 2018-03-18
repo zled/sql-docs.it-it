@@ -1,5 +1,5 @@
 ---
-title: STAsBinary (tipo di dati geography) | Documenti Microsoft
+title: STAsBinary (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB) di un **geography** istanza.  
+  Restituisce la rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza **geography**.  
   
- Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,15 +46,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **varbinary (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **varbinary(max)**  
   
  Tipo CLR restituito: **SqlBytes**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC di un **geography** istanza può essere determinata richiamando [stgeometrytype ()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC di un'istanza **geography** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STAsBinary()` per creare un `LineString``geography` istanza (-122,360, 47,656) a (-122,343, 47,656) dal testo. e viene restituito il risultato in formato WKB.  
+ Nell'esempio seguente viene usato `STAsBinary()` per creare un'istanza `LineString``geography` da (-122.360, 47.656) a (-122.343, 47.656) dal testo. e viene restituito il risultato in formato WKB.  
   
 ```  
 DECLARE @g geography;  
