@@ -1,5 +1,5 @@
 ---
-title: STNumCurves (tipo di dati geometry) | Documenti Microsoft
+title: STNumCurves (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumcurves-geometry-data-type"></a>STNumCurves (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Questo metodo restituisce il numero di curve in un **geometry** istanza quando l'istanza è un tipo di dati spaziali unidimensionali. I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString**, e **CompoundCurve**. `STNumCurves`() funziona solo su tipi semplici; non funziona con **geometry** come raccolte **MultiLineString**.
+Questo metodo restituisce il numero di curve di un'istanza **geometry** quando l'istanza è un tipo di dati spaziali unidimensionali. I tipi di dati spaziali unidimensionali includono **LineString**, **CircularString** e **CompoundCurve**. `STNumCurves`() funziona solo su tipi semplici; non funziona con raccolte **geometry** come **MultiLineString**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,12 +41,12 @@ Questo metodo restituisce il numero di curve in un **geometry** istanza quando l
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Un oggetto vuoto unidimensionale **geometry** istanza restituisce 0. **NULL** viene restituito quando il **geometry** istanza non è un'istanza unidimensionale oppure è un'istanza non inizializzata.  
+## <a name="remarks"></a>Remarks  
+ Un'istanza **geometry** unidimensionale vuota restituisce 0. Viene restituito **NULL** quando l'istanza **geometry** non è un'istanza unidimensionale oppure è un'istanza non inizializzata.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -1,5 +1,5 @@
 ---
-title: CURRENT_USER (Transact-SQL) | Documenti Microsoft
+title: CURRENT_USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ CURRENT_USER
 ## <a name="return-types"></a>Tipi restituiti
 **sysname**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 CURRENT_USER restituisce il nome del contesto di sicurezza corrente. Se si esegue CURRENT_USER dopo una chiamata EXECUTE AS per cambiare contesto, CURRENT_USER restituirà il nome del contesto rappresentato. Se un'entità di Windows ha eseguito l'accesso al database tramite l'appartenenza a un gruppo, verrà restituito il nome dell'entità di Windows anziché il nome del gruppo.
   
-Per restituire l'account di accesso dell'utente corrente, vedere [SUSER_NAME &#40; Transact-SQL &#41; ](../../t-sql/functions/suser-name-transact-sql.md) e [SYSTEM_USER &#40; Transact-SQL &#41; ](../../t-sql/functions/system-user-transact-sql.md).
+Per restituire l'account di accesso dell'utente corrente, vedere [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md) e [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  
   
@@ -140,12 +140,12 @@ Wanida
 ```
   
 ## <a name="see-also"></a>Vedere anche
-[USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)  
-[SYSTEM_USER &#40; Transact-SQL &#41;](../../t-sql/functions/system-user-transact-sql.md)  
+[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)  
+[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
 [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
-[Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

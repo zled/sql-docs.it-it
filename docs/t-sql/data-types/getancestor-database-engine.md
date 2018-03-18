@@ -1,5 +1,5 @@
 ---
-title: GetAncestor (motore di Database) | Documenti Microsoft
+title: GetAncestor (motore di database) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getancestor-database-engine"></a>GetAncestor (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **hierarchyid** che rappresenta il  *n* predecessore di *questo*.
+Restituisce un valore **hierarchyid** che rappresenta l'*n* predecessore di *this*.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,17 +50,17 @@ SqlHierarchyId GetAncestor ( int n )
   
 ## <a name="arguments"></a>Argomenti  
 *n*  
-Un **int**, che rappresenta il numero di livelli da salire nella gerarchia.
+Valore **int** che rappresenta il numero di livelli da salire nella gerarchia.
   
 ## <a name="return-types"></a>Tipi restituiti
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Utilizzato per testare se per ogni nodo nell'output il nodo corrente rappresenta un predecessore al livello specificato.
   
-Se un numero maggiore di [Getlevel](../../t-sql/data-types/getlevel-database-engine.md) viene superato, viene restituito NULL.
+Se viene passato un numero maggiore di [GetLevel()](../../t-sql/data-types/getlevel-database-engine.md), viene restituito NULL.
   
 Se viene passato un numero negativo, viene generata un'eccezione.
   
@@ -93,7 +93,7 @@ WHERE OrgNode.GetAncestor(2) = @CurrentEmployee ;
 ```  
   
 ### <a name="c-returning-the-current-row"></a>C. Restituzione della riga corrente  
-Per restituire il nodo corrente utilizzando `GetAncestor(0)`, eseguire il codice seguente.
+Per restituire il nodo corrente usando `GetAncestor(0)`, eseguire il codice seguente.
   
 ```sql
 DECLARE @CurrentEmployee hierarchyid  
@@ -124,7 +124,7 @@ this.GetAncestor(1)
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[IsDescendantOf &#40; motore di Database &#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
+[IsDescendantOf &#40;motore di database&#41;](../../t-sql/data-types/isdescendantof-database-engine.md)  
 [Guida di riferimento ai metodi per il tipo di dati hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)  
 [Dati gerarchici &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md)  
 [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)

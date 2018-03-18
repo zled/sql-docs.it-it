@@ -12,16 +12,16 @@ ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67aaeb56b3d3230e650dc24d16221e2af6872344
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 0306d075998380efc599e82386e49496db3cdaaa
+ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="configure-distributed-availability-group"></a>Configurare un gruppo di disponibilità distribuito  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -210,10 +210,10 @@ GO
 ```  
 
 ## <a name="failover"></a> Aggiungere il database nella replica secondaria del secondo gruppo di disponibilità
-Quando il database nella replica secondaria del secondo gruppo di disponibilità entra in uno stato di ripristino, è necessario aggiungerlo manualmente al gruppo di disponibilità.
+Quando il database nella replica secondaria del secondo gruppo di disponibilità è in uno stato di ripristino, è necessario aggiungerlo manualmente al gruppo di disponibilità.
 
 ```sql  
-ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag1];   
+ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
 ```  
   
 ## <a name="failover"></a> Failover su un gruppo di disponibilità secondario  

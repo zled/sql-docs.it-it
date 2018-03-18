@@ -1,5 +1,5 @@
 ---
-title: CREATE SYNONYM (Transact-SQL) | Documenti Microsoft
+title: CREATE SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
@@ -70,28 +70,28 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="arguments"></a>Argomenti  
  *schema_name_1*  
- Specifica lo schema in cui viene creato il sinonimo. Se *schema* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza lo schema predefinito dell'utente corrente.  
+ Specifica lo schema in cui viene creato il sinonimo. Se lo *schema* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa lo schema predefinito dell'utente corrente.  
   
  *synonym_name*  
  Nome del nuovo sinonimo.  
   
- *nome_server*  
+ *server_name*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Indica il nome del server in cui è archiviato l'oggetto di base.  
   
  *database_name*  
- Indica il nome del database in cui è archiviato l'oggetto di base. Se *database_name* viene omesso, viene utilizzato il nome del database corrente.  
+ Indica il nome del database in cui è archiviato l'oggetto di base. Se *database_name* viene omesso, viene usato il nome del database corrente.  
   
  *schema_name_2*  
- Nome dello schema dell'oggetto di base. Se *schema_name* non è specificato viene utilizzato lo schema predefinito dell'utente corrente.  
+ Nome dello schema dell'oggetto di base. Se *schema_name* viene omesso, viene usato lo schema predefinito dell'utente corrente.  
   
  *object_name*  
  Nome dell'oggetto di base a cui fa riferimento il sinonimo.  
   
  Il database SQL di Windows Azure supporta il formato del nome in tre parti, nome_database.[nome_schema].nome_oggetto, quando nome_database è il database corrente oppure nome_database è tempdb e nome_oggetto inizia con #.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è necessario che l'oggetto di base sia esistente in fase di creazione del sinonimo. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verifica l'esistenza dell'oggetto di base in fase di esecuzione.  
   
  È possibile creare sinonimi per i tipi di oggetti seguenti:  
@@ -103,15 +103,15 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 |Procedura di filtro della replica|Stored procedure estesa|  
 |Funzione scalare SQL|Funzione con valori di tabella di SQL|  
 |Funzione SQL inline con valori di tabella|Stored procedure di SQL|  
-|Visualizza|Tabella<sup>1</sup> (definita dall'utente)|  
+|Vista|Tabella<sup>1</sup> (definita dall'utente)|  
   
- <sup>1 include tabelle temporanee globali e locali</sup>  
+ <sup>1 Include tabelle temporanee globali e locali</sup>  
   
  I nomi composti da quattro parti non sono supportati per gli oggetti funzione di base.  
   
  È possibile creare, eliminare e fare riferimento ai sinonimi in SQL dinamico.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per poter creare un sinonimo in un determinato schema, un utente deve disporre dell'autorizzazione CREATE SYNONYM, oltre a disporre della proprietà dello schema o dell'autorizzazione ALTER SCHEMA.  
   
  L'autorizzazione CREATE SYNONYM è un'autorizzazione che può essere concessa.  
@@ -200,7 +200,7 @@ SELECT @Amt AS OriginalOrder, dbo.CorrectOrder(@Amt) AS ModifiedOrder;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DROP SYNONYM &#40; Transact-SQL &#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
+ [DROP SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/drop-synonym-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

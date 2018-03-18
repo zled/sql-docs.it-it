@@ -1,5 +1,5 @@
 ---
-title: Precedenza degli operatori (Transact-SQL) | Documenti Microsoft
+title: Precedenza degli operatori (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -41,9 +41,9 @@ ms.lasthandoff: 01/25/2018
 |Level|Operatori|  
 |-----------|---------------|  
 |1|~ (NOT bit per bit)|  
-|2|* (Moltiplicazione), / (divisione), % (modulo)|  
-|3|+ (Positivo), - (negativo) + (addizione), (+ concatenazione)-(sottrazione), & (AND bit per bit), ^ (OR bit per bit esclusivo), &#124; (OR bit per bit)|  
-|4|=, >, \<, > =, < =, <>,! =,! >,! < (operatori di confronto)|  
+|2|* (moltiplicazione), / (divisione), % (modulo)|  
+|3|+ (positivo), - (negativo), + (addizione), (+ concatenazione), - (sottrazione), & (AND bit per bit), ^ (OR esclusivo bit per bit), &#124; (OR bit per bit)|  
+|4|=, >, \<, >=, <=, <>, !=, !>, !< (operatori di confronto)|  
 |5|NOT|  
 |6|AND|  
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
@@ -89,8 +89,8 @@ SELECT @MyNumber;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operatori logici &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori logici &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

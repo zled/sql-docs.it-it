@@ -1,5 +1,5 @@
 ---
-title: CURSOR_STATUS (Transact-SQL) | Documenti Microsoft
+title: CURSOR_STATUS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -65,7 +65,7 @@ Specifica una costante che indica che l'origine del cursore è un nome di cursor
 Specifica una costante che indica che l'origine del cursore è una variabile locale.
   
 '*cursor_variable*'  
-Nome di una variabile cursore. Una variabile di cursore deve essere definita utilizzando il **cursore** tipo di dati.
+Nome di una variabile cursore. Le variabili di cursore devono essere definite usando il tipo di dati **cursor**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **smallint**
@@ -134,7 +134,7 @@ After Close
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Funzioni di cursore &#40; Transact-SQL &#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
+[Funzioni per i cursori &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

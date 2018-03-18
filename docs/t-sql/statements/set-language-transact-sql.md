@@ -1,5 +1,5 @@
 ---
-title: IMPOSTAZIONE della lingua (Transact-SQL) | Documenti Microsoft
+title: SET LANGUAGE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/05/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Specifica la lingua per la sessione. La lingua di sessione determina il **datetime** formati e i messaggi di sistema.  
+  Specifica la lingua per la sessione. La lingua impostata determina i formati dei valori **datetime** e la lingua dei messaggi di sistema.  
   
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,15 +51,15 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [**N**]**'***language***'**  |   **@**   *language_var*  
- È il nome della lingua archiviata [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Questo argomento può essere un valore Unicode o un valore DBCS convertito in Unicode. Per specificare una lingua in Unicode, utilizzare **N'***language***'**. Se specificato come una variabile, la variabile deve essere **sysname**.  
+ [**N**]**'***language***'** | **@***language_var*  
+ Nome della lingua archiviata in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). Questo argomento può essere un valore Unicode o un valore DBCS convertito in Unicode. Per specificare una lingua in Unicode, usare **N'***language***'**. Se viene specificata come variabile, deve essere una variabile di tipo **sysname**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'opzione SET LANGUAGE viene impostata in fase di esecuzione, non in fase di analisi.  
   
- SET LANGUAGE imposta in modo implicito l'impostazione di [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).  
+ SET LANGUAGE definisce in modo implicito l'impostazione di [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -80,7 +80,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
- [sp_helplanguage &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
+ [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

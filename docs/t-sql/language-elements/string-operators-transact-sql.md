@@ -1,5 +1,5 @@
 ---
-title: Stringa di operatori (Transact-SQL) | Documenti Microsoft
+title: Operatori stringa (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
   
  [% (Caratteri jolly per la corrispondenza)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; &#93; (Carattere jolly alla corrispondenza)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
+ [&#91; &#93; (caratteri jolly per la corrispondenza)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)  
   
- [&#91; ^ &#93; Mancata corrispondenza dei caratteri (jolly)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
+ [&#91;^&#93; (caratteri jolly per la mancata corrispondenza dei caratteri)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)  
   
  [_ (carattere jolly per corrispondenze di singoli caratteri)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: ':: (Risoluzione ambito) (Transact-SQL) | Documenti Microsoft'
+title: ':: (risoluzione dell''ambito) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -28,10 +28,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-scope-resolution-transact-sql"></a>:: (Risoluzione ambito) (Transact-SQL)
+# <a name="-scope-resolution-transact-sql"></a>:: (risoluzione dell'ambito) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  L'operatore di risoluzione dell'ambito **::** fornisce l'accesso ai membri statici di un tipo di dati compositi. Un tipo di dati composta è uno che contiene più tipi di dati semplici e i metodi, ad esempio i tipi CLR predefiniti e i tipi di SQLCLR User-Defined personalizzati (UDT).  
+  L'operatore di risoluzione dell'ambito **::** fornisce l'accesso ai membri statici di un tipo di dati composto. Un tipo di dati composto è un tipo che contiene più tipi di dati e metodi semplici, ad esempio i tipi CLR predefiniti e i tipi definiti dall'utente (UDT) SQLCLR.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene indicato come utilizzare l'operatore di risoluzione dell'ambito per accedere al membro `GetRoot()` di tipo `hierarchyid`.  
@@ -47,6 +47,6 @@ PRINT @hid.ToString();
  `/`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

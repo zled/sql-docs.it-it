@@ -60,14 +60,14 @@ Attiva i flag di traccia specificati a livello globale.
 WITH NO_INFOMSGS  
 Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 In un server di produzione, per evitare comportamenti imprevisti è consigliabile abilitare i flag di traccia solo a livello di server mediante uno dei metodi seguenti:
--   Utilizzare il **-T** opzione della riga di comando di avvio di Sqlservr.exe. È una procedura consigliata, in quanto consente di eseguire tutte le istruzioni con il flag di traccia abilitato, inclusi i comandi negli script di avvio. Per altre informazioni, vedere [sqlservr Application](../../tools/sqlservr-application.md).  
--   Utilizzare DBCC TRACEON  **(* * * trace #* [* *,**... *n*]**, -1)** solo quando gli utenti o applicazioni non stanno eseguendo contemporaneamente istruzioni nel sistema.  
+-   Usare l'opzione di avvio della riga di comando **-T** di Sqlservr.exe. È una procedura consigliata, in quanto consente di eseguire tutte le istruzioni con il flag di traccia abilitato, inclusi i comandi negli script di avvio. Per altre informazioni, vedere [sqlservr Application](../../tools/sqlservr-application.md).  
+-   Usare DBCC TRACEON **(***trace#* [**,** ...*.n*]**,-1)** solo se gli utenti o le applicazioni non stanno eseguendo contemporaneamente istruzioni nel sistema.  
 
 I flag di traccia consentono di personalizzare alcune caratteristiche controllando il funzionamento di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo essere stati abilitati, i flag rimangono abilitati nel server fino a quando non vengono disabilitati tramite l'istruzione DBCC TRACEOFF. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili due tipi di flag di traccia: di sessione e globali. I flag di traccia di sessione sono attivi per una connessione e sono visibili solo per tale connessione. I flag di traccia globali vengono impostati a livello del server e sono visibili per tutte le connessioni nel server. Per determinare lo stato dei flag di traccia, eseguire DBCC TRACESTATUS. Per disabilitare i flag di traccia, eseguire DBCC TRACEOFF.
   
-Dopo avere attivato un flag di traccia che interessa i piani di query, eseguire `DBCC FREEPROCCACHE;` in modo che i piani memorizzati nella cache vengono ricompilati utilizzando il nuovo comportamento relative ai piani.
+Dopo avere attivato un flag di traccia che interessa i piani di query, eseguire `DBCC FREEPROCCACHE;` in modo che i piani memorizzati nella cache vengano ricompilati usando il nuovo comportamento relativo ai piani.
   
 ## <a name="result-sets"></a>Set di risultati  
  L'istruzione DBCC TRACEON restituisce il set di risultati seguente (messaggio):  
@@ -106,6 +106,6 @@ GO
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  
 [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
-[Abilitare relative ai piani query optimizer comportamento di SQL Server che può essere controllato dal flag di traccia diversi a livello di query specifica](https://support.microsoft.com/kb/2801413)
+[Abilitare il comportamento di SQL Server Query Optimizer con effetto sul piano che può essere controllato da flag di traccia diversi a livello di una query specifica](https://support.microsoft.com/kb/2801413)
   
   

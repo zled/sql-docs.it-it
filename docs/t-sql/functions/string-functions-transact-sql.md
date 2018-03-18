@@ -1,5 +1,5 @@
 ---
-title: Funzioni (Transact-SQL) stringa | Documenti Microsoft
+title: Funzioni per i valori stringa (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2016
 ms.prod: sql-non-specified
@@ -52,9 +52,9 @@ ms.lasthandoff: 11/21/2017
 
 
   
- Funzioni di stringa incorporata tutti tranne `FORMAT` sono deterministiche. ovvero restituiscono sempre lo stesso valore ogni volta che vengono richiamate in base a un set di valori di input specifico. Per ulteriori informazioni sulle funzioni deterministiche, vedere [funzioni deterministiche e non](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
+ Tutte le funzioni per i valori stringa predefinite sono deterministiche, ad eccezione di `FORMAT`. ovvero restituiscono sempre lo stesso valore ogni volta che vengono richiamate in base a un set di valori di input specifico. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
- Quando le funzioni per i valori stringa vengono passate come argomenti che non sono valori stringa, il tipo di input viene convertito in modo implicito in un tipo di dati testo. Per ulteriori informazioni, vedere [conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+ Quando le funzioni per i valori stringa vengono passate come argomenti che non sono valori stringa, il tipo di input viene convertito in modo implicito in un tipo di dati testo. Per altre informazioni, vedere [Conversione del tipo di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

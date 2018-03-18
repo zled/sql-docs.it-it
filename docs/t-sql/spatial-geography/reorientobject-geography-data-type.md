@@ -1,5 +1,5 @@
 ---
-title: ReorientObject (tipo di dati geography) | Documenti Microsoft
+title: ReorientObject (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un **geography** istanza con aree esterne e le aree interne scambiate.  
+  Restituisce un'istanza **geography** con aree esterne e interne scambiate.  
   
- Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,17 +47,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *geography*  
- Un altro **geography** istanza sulla quale `ReorientObject()` viene richiamato.  
+ Altra istanza **geography** su cui viene richiamato `ReorientObject()`.  
   
 ## <a name="return-value"></a>Valore restituito  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo modifica l'orientamento dell'anello di tutti i **poligoni** in un **GeometryCollection** ma non rimuove né modifica alcun **punti** o **Linestrings** nella raccolta specificata.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo modifica l'orientamento dell'anello di tutti gli oggetti **Polygon** in una **GeometryCollection** ma non rimuove né modifica alcun **Point** o **Linestring** nella raccolta specificata.  
   
- Se un **GeometryCollection** viene passato a questo metodo, ogni istanza della raccolta viene riorientata, ma la raccolta nel suo complesso non viene riorientata.  
+ Se una **GeometryCollection** viene passata a questo metodo, ogni istanza della raccolta viene riorientata, ma non viene riorientata la raccolta nel suo complesso.  
   
 ## <a name="examples"></a>Esempi  
   

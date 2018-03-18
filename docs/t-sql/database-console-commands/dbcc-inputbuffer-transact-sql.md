@@ -75,9 +75,9 @@ L'istruzione DBCC INPUTBUFFER restituisce un set di righe che include le colonne
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**EventType**|**nvarchar(30)**|Tipo di evento. Potrebbe trattarsi di **RPC Event** o **evento del linguaggio**. L'output sarà **No Event** quando è non stato rilevato alcun ultimo evento.|  
-|**Parametri**|**smallint**|0 = Testo<br /><br /> 1 -  *n*  = parametri|  
-|**EventInfo**|**nvarchar(4000)**|Per un **EventType** di RPC, **EventInfo** contiene solo il nome della routine. Per un **EventType** del linguaggio, vengono visualizzati solo i primi 4000 caratteri dell'evento.|  
+|**EventType**|**nvarchar(30)**|Tipo di evento. Può corrispondere a **RPC Event** o **Language Event**. Se non viene rilevato un ultimo evento, l'output sarà **No Event**.|  
+|**Parametri**|**smallint**|0 = Testo<br /><br /> 1- *n* = Parametri|  
+|**EventInfo**|**nvarchar(4000)**|Se il valore della colonna **EventType** è RPC Event, **EventInfo** contiene solo il nome della procedura. Se **EventType** corrisponde a Language Event, vengono visualizzati solo i primi 4000 caratteri dell'evento.|  
   
 Se, ad esempio, l'ultimo evento del buffer è DBCC INPUTBUFFER(11), DBCC INPUTBUFFER restituisce il set di risultati seguente.
   
@@ -92,19 +92,19 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
 
 > [!NOTE]
-> A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, utilizzare [Sys.dm exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) per restituire informazioni sulle istruzioni inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> A partire da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, usare [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) per restituire informazioni sulle istruzioni inviate a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="permissions"></a>Autorizzazioni  
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede uno dei seguenti:
--   Utente deve essere un membro del **sysadmin** ruolo predefinito del server.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è richiesta una delle condizioni seguenti:
+-   L'utente deve essere membro del ruolo predefinito del server **sysadmin**.  
 -   L'utente deve disporre di autorizzazione VIEW SERVER STATE.  
--   *session_id* deve essere lo stesso ID di sessione in cui viene eseguito il comando. Per determinare l'ID di sessione, eseguire la query seguente:  
+-   *session_id* deve corrispondere all'ID della sessione in cui è in esecuzione il comando. Per determinare l'ID di sessione, eseguire la query seguente:  
   
 ```sql
 SELECT @@spid;  
 ```
   
-In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium richiede l'autorizzazione VIEW DATABASE STATE nel database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.
+Nei livelli Premium del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'autorizzazione VIEW DATABASE STATE nel database. Nei livelli Basic e Standard del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesto l'account amministratore del [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene eseguito `DBCC INPUTBUFFER` in una seconda connessione durante una transazione di lunga durata su una connessione precedente.

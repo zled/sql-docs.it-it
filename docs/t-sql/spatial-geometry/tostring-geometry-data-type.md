@@ -1,5 +1,5 @@
 ---
-title: ToString (tipo di dati geometry) | Documenti Microsoft
+title: ToString (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -43,17 +43,17 @@ Restituisce una rappresentazione Well-Known Text (WKT) OGC (Open Geospatial Cons
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
  Tipo CLR restituito: **SqlString**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo restituirà la stringa "Null" se viene chiamato su istanze Null.  
   
  Sulle istanze diverse da Null, questo metodo è equivalente a `AsTextZM().`  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una `LineString` istanza e viene utilizzato `ToString()` per recuperare la descrizione dell'istanza.  
+ Nell'esempio seguente viene creata un'istanza `LineString` e viene usato `ToString()` per recuperare la descrizione testuale dell'istanza.  
   
 ```  
 DECLARE @g geometry;  
@@ -62,7 +62,7 @@ SELECT @g.ToString();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [STAsText &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
+ [STAsText &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stastext-geometry-data-type.md)   
  [Metodi estesi sulle istanze di geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   
   

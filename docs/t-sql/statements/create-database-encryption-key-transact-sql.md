@@ -1,5 +1,5 @@
 ---
-title: CREARE una chiave di crittografia del DATABASE (Transact-SQL) | Documenti Microsoft
+title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
- Crea una chiave di crittografia usata per crittografare in modo trasparente un database. Per ulteriori informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40; Transparent Data Encryption &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Crea una chiave di crittografia usata per crittografare in modo trasparente un database. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -78,14 +78,14 @@ Specifica l'algoritmo di crittografia utilizzato per la chiave di crittografia.
 >  [!NOTE]
 >    A partire da SQL Server 2016, tutti gli algoritmi diversi da AES_128, AES_192 e AES_256 sono deprecati. Per usare algoritmi meno recenti (sconsigliato), è necessario impostare il database sul livello di compatibilità del database 120 o su uno inferiore.  
   
-CRITTOGRAFIA nome_componente_crittografia certificato SERVER  
+ENCRYPTION BY SERVER CERTIFICATE Encryptor_Name  
 Specifica il nome del componente di crittografia utilizzato per crittografare la chiave di crittografia del database.  
   
-ENCRYPTION BY SERVER ASYMMETRIC KEY nome_componente_crittografia  
+ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 Specifica il nome della chiave asimmetrica utilizzata per crittografare la chiave di crittografia del database. Per crittografare la chiave di crittografia del database con una chiave asimmetrica, è necessario che quest'ultima risieda in un provider EKM (Extensible Key Management).  
   
-## <a name="remarks"></a>Osservazioni  
-È necessaria una chiave di crittografia del database, prima di un database può essere crittografato utilizzando *crittografia trasparente del Database* (TDE). Crittografandolo in modo trasparente, l'intero database viene crittografato a livello di file, in assenza di qualunque modifica particolare del codice. La chiave asimmetrica o il certificato utilizzato per crittografare la chiave di crittografia del database deve essere archiviata nel database di sistema master.  
+## <a name="remarks"></a>Remarks  
+Per poter crittografare un database usando *Transparent Data Encryption (TDE)* è necessaria una chiave di crittografia del database. Crittografandolo in modo trasparente, l'intero database viene crittografato a livello di file, in assenza di qualunque modifica particolare del codice. La chiave asimmetrica o il certificato utilizzato per crittografare la chiave di crittografia del database deve essere archiviata nel database di sistema master.  
   
 Le istruzioni sulla crittografia del database sono consentite solo sui database utente.  
   
@@ -93,13 +93,13 @@ Non è possibile esportare dal database la relativa chiave di crittografia. È d
   
 Non è necessario rigenerare la chiave di crittografia del database in caso di modifica del proprietario del database (dbo).  
   
-Una chiave di crittografia del database viene creata automaticamente un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database. Non è necessario creare una chiave utilizzando l'istruzione CREATE DATABASE ENCRYPTION KEY.  
+Una chiave di crittografia del database viene creata automaticamente per un database [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Non è necessario creare una chiave usando l'istruzione CREATE DATABASE ENCRYPTION KEY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Sono necessarie l'autorizzazione CONTROL per il database e l'autorizzazione VIEW DEFINITION per la chiave asimmetrica o il certificato utilizzato per crittografare la chiave di crittografia del database.  
   
 ## <a name="examples"></a>Esempi  
-Per ulteriori esempi sull'utilizzo di Transparent Data Encryption, vedere [Transparent Data Encryption &#40; Transparent Data Encryption &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md), [Abilitare TDE in SQL Server con EKM](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md), e [Extensible Key Management con l'insieme di credenziali chiave di Azure &#40; SQL Server &#41; ](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
+Per altri esempi in cui viene usato TDE, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md), [Abilitare TDE in SQL Server con EKM](../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md) e [Extensible Key Management con l'insieme di credenziali delle chiavi di Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md).  
   
 Nell'esempio seguente viene creata una chiave di crittografia del database tramite l'algoritmo `AES_256` e tale chiave viene quindi protetta con un certificato denominato `MyServerCert`.  
   
@@ -115,10 +115,10 @@ GO
 ## <a name="see-also"></a>Vedere anche  
 [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [Crittografia di SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
-[Chiavi di crittografia del database e di SQL Server &#40;Motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+[Chiavi di crittografia del database e di SQL Server &#40;motore di database&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
 [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
 [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
-[ALTER DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
-[DROP DATABASE ENCRYPTION KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
+[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)   
 [sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md)  
     

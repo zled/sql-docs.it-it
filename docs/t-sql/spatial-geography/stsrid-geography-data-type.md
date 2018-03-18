@@ -1,5 +1,5 @@
 ---
-title: STSrid (tipo di dati geography) | Documenti Microsoft
+title: STSrid (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsrid-geography-data-type"></a>STSrid (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  **STSrid** è un numero intero che rappresenta l'identificatore di riferimento spaziale (SRID) dell'istanza.  
+  **STSrid** è un Integer che rappresenta l'identificatore SRID dell'istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,11 +44,11 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **int**  
   
  Tipo CLR: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa proprietà può essere modificata.  
   
 ## <a name="examples"></a>Esempi  
@@ -69,6 +69,6 @@ SELECT @g.STSrid;
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi OGC sulle istanze di geografia](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
- [Gli identificatori SRID &#40; Identificatori SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+ [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
   

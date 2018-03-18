@@ -1,5 +1,5 @@
 ---
-title: DROP SCHEMA (Transact-SQL) | Documenti Microsoft
+title: DROP SCHEMA (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/11/2017
 ms.prod: sql-non-specified
@@ -57,22 +57,22 @@ DROP SCHEMA schema_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Elimina in modo condizionale lo schema solo se esiste già.  
+ Rimuove in modo condizionale lo schema solo se esiste già.  
   
  *schema_name*  
  Nome con il quale è noto lo schema all'interno del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Lo schema da rimuovere non deve contenere oggetti, in caso contrario l'istruzione DROP avrà esito negativo.  
   
- Informazioni sugli schemi sono visibili nella [Schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md) vista del catalogo.  
+ Le informazioni sugli schemi sono visibili nella vista del catalogo [sys.schemas](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md).  
   
- **Attenzione**[!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+ **Attenzione** [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per lo schema o l'autorizzazione ALTER ANY SCHEMA per il database.  
   
 ## <a name="examples"></a>Esempi  
@@ -96,7 +96,7 @@ GO
   
   
 ## <a name="see-also"></a>Vedere anche  
- [CREAZIONE dello SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [L'autorizzazione ALTER SCHEMA &#40; Transact-SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [DROP SCHEMA (Transact-SQL)](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

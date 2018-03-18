@@ -38,6 +38,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="any-transact-sql"></a>ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Confronta un valore scalare con un set di valori a colonna singola. Per ulteriori informazioni, vedere [alcune &#124; I &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+  Confronta un valore scalare con un set di valori a colonna singola. Per altre informazioni, vedere [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
   

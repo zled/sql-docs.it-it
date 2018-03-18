@@ -1,5 +1,5 @@
 ---
-title: Funzioni di crittografia (Transact-SQL) | Documenti Microsoft
+title: Funzioni di crittografia (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -56,7 +56,7 @@ Le funzioni seguenti supportano le funzionalità di crittografia, decrittografia
 |[ENCRYPTBYCert](../../t-sql/functions/encryptbycert-transact-sql.md)|[DECRYPTBYCERT](../../t-sql/functions/decryptbycert-transact-sql.md)|  
 |[ASYMKEYPROPERTY](../../t-sql/functions/asymkeyproperty-transact-sql.md)|[ASYMKEY_ID](../../t-sql/functions/asymkey-id-transact-sql.md)|  
   
-## <a name="signing-and-signature-verification"></a>La firma e verifica della firma
+## <a name="signing-and-signature-verification"></a>Firma e verifica delle firme
   
 |||  
 |-|-|  
@@ -70,7 +70,7 @@ Le funzioni seguenti supportano le funzionalità di crittografia, decrittografia
 |-|-|  
 |[DecryptByKeyAutoCert](../../t-sql/functions/decryptbykeyautocert-transact-sql.md)||  
   
-## <a name="encryption-hashing"></a>Hash di crittografia
+## <a name="encryption-hashing"></a>Hashing di crittografia
   
 |||  
 |-|-|  
@@ -80,8 +80,8 @@ Le funzioni seguenti supportano le funzionalità di crittografia, decrittografia
   
 |||  
 |-|-|  
-|[CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
-|[CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
+|[CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)||  
+|[CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)||  
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni](../../t-sql/functions/functions.md)  

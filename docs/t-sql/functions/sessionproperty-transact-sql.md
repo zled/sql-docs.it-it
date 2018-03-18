@@ -1,5 +1,5 @@
 ---
-title: SESSIONPROPERTY (Transact-SQL) | Documenti Microsoft
+title: SESSIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -49,7 +49,7 @@ SESSIONPROPERTY (option)
   
 ## <a name="arguments"></a>Argomenti  
  *opzione*  
- Impostazione corrente dell'opzione per questa sessione. *opzione* può essere uno dei valori seguenti.  
+ Impostazione corrente dell'opzione per questa sessione. *option* può essere uno dei valori seguenti.  
   
 |Opzione|Description|  
 |------------|-----------------|  
@@ -60,12 +60,12 @@ SESSIONPROPERTY (option)
 |CONCAT_NULL_YIELDS_ NULL|Determina se i risultati della concatenazione di valori Null vengono gestiti come valori Null o valori di stringa vuota.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |NUMERIC_ROUNDABORT|Specifica se vengono generati messaggi di errore o avvisi quando si verifica una perdita di precisione in seguito all'arrotondamento di un'espressione.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |QUOTED_IDENTIFIER|Specifica se devono essere seguite le regole ISO sull'utilizzo delle virgolette per delimitare gli identificatori e le stringhe letterali.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
-|\<Qualsiasi altra stringa >|NULL = Input non valido.|  
+|\<Qualsiasi altra stringa>|NULL = Input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le opzioni SET vengono calcolate combinando opzioni a livello di server, di database e specifiche dell'utente.  
   
 ## <a name="examples"></a>Esempi  

@@ -1,5 +1,5 @@
 ---
-title: ERROR_STATE (Transact-SQL) | Documenti Microsoft
+title: ERROR_STATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -57,8 +57,8 @@ ERROR_STATE ( )
   
  Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
-## <a name="remarks"></a>Osservazioni  
- Alcuni messaggi di errore possono essere generati in più punti del codice per il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a numerose condizioni. A ogni condizione specifica che genera l'errore viene assegnato un codice di stato univoco.  
+## <a name="remarks"></a>Remarks  
+ Alcuni messaggi di errore possono essere generati in più punti del codice di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. L'errore 1105, ad esempio, può essere generato in risposta a numerose condizioni. A ogni condizione specifica che genera l'errore viene assegnato un codice di stato univoco.  
   
  Durante la visualizzazione di database contenenti la trattazione di problemi noti, ad esempio la [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base, è possibile utilizzare il numero di stato per determinare se il problema registrato è uguale all'errore rilevato. Se, ad esempio, in un articolo della Knowledge Base viene trattato il messaggio di errore 1105 con stato 2 e il messaggio di errore 1105 restituito è associato allo stato 3, è possibile che la causa dell'errore rilevato sia diversa da quella descritta nell'articolo.  
   
@@ -66,7 +66,7 @@ ERROR_STATE ( )
   
  È possibile richiamare ERROR_STATE da un qualsiasi punto nell'ambito di un blocco CATCH.  
   
- ERROR_STATE restituisce lo stato dell'errore indipendentemente dal numero di esecuzioni oppure dalla sua posizione di esecuzione nell'ambito del blocco CATCH. Ciò si differenzia da funzioni come @@ERROR, che restituisce solo il numero di errore nell'istruzione immediatamente successiva a quella che provoca un errore oppure nella prima istruzione di un blocco CATCH.  
+ ERROR_STATE restituisce lo stato dell'errore indipendentemente dal numero di esecuzioni oppure dalla sua posizione di esecuzione nell'ambito del blocco CATCH. Questa caratteristica è diversa da quella di funzioni come, ad esempio, @@ERROR, che restituisce solo il numero di errore nell'istruzione subito dopo quella che ha provocato un errore oppure nella prima istruzione di un blocco CATCH.  
   
  Nei blocchi CATCH nidificati l'istruzione ERROR_STATE restituisce lo stato di errore specifico dell'ambito del blocco CATCH contenente il riferimento a essa. Ad esempio, il blocco CATCH di un costrutto esterno TRY...CATCH potrebbe includere un costrutto TRY...CATCH nidificato. Nel blocco CATCH nidificato ERROR_STATE restituisce lo stato dell'errore che ha richiamato il blocco CATCH nidificato. Se ERROR_STATE viene eseguito in un blocco CATCH esterno, restituisce lo stato dell'errore che ha richiamato tale blocco CATCH.  
   
@@ -106,7 +106,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>C. Utilizzo di ERROR_STATE in un blocco CATCH con altri strumenti di gestione degli errori  
  Nell'esempio seguente viene illustrata un'istruzione `SELECT` che genera un errore di divisione per zero. Assieme allo stato dell'errore vengono restituite le informazioni relative all'errore stesso.  

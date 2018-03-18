@@ -1,5 +1,5 @@
 ---
-title: HOST_NAME (Transact-SQL) | Documenti Microsoft
+title: HOST_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/21/2017
 ms.prod: sql-non-specified
@@ -47,9 +47,9 @@ HOST_NAME ()
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il parametro per una funzione di sistema è facoltativo, vengono utilizzati il database, il computer host, l'utente del server o l'utente del database correnti. Le funzioni predefinite devono essere sempre seguite da parentesi.  
   
  È possibile utilizzare funzioni di sistema nell'elenco di selezione, nella clausola WHERE e in tutti i casi in cui è consentita un'espressione.  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

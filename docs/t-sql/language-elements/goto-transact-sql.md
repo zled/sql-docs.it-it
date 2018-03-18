@@ -54,9 +54,9 @@ GOTO label
   
 ## <a name="arguments"></a>Argomenti  
  *label*  
- Posizione da cui inizia l'elaborazione se la destinazione dell'istruzione GOTO è impostata su tale etichetta. Le etichette devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md). È possibile adottare le etichette come metodo per l'inserimento di commenti indipendentemente dall'utilizzo dell'istruzione GOTO.  
+ Posizione da cui inizia l'elaborazione se la destinazione dell'istruzione GOTO è impostata su tale etichetta. Le etichette devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). È possibile adottare le etichette come metodo per l'inserimento di commenti indipendentemente dall'utilizzo dell'istruzione GOTO.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'istruzione GOTO può essere utilizzata in istruzioni condizionali per il controllo di flusso, in blocchi di istruzioni o in procedure ma non è possibile associarla a un'etichetta all'esterno del batch. Le diramazioni implementate tramite l'istruzione GOTO possono fare riferimento a un'etichetta definita prima o dopo GOTO.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -85,7 +85,7 @@ Branch_Three:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Il controllo di flusso Language &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [BEGIN...END &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-end-transact-sql.md)   
  [BREAK &#40;Transact-SQL&#41;](../../t-sql/language-elements/break-transact-sql.md)   
  [CONTINUE &#40;Transact-SQL&#41;](../../t-sql/language-elements/continue-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: CUME_DIST (Transact-SQL) | Documenti Microsoft
+title: CUME_DIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-Calcola la distribuzione cumulativa di un valore in un gruppo di valori in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ovvero CUME_DIST calcola la posizione relativa di un valore specificato in un gruppo di valori. Per una riga *r*, presumendo un ordine crescente, il CUME_DIST di *r* è il numero di righe con valori inferiori o uguali al valore di *r*, diviso per il numero di righe valutata nel set di risultati di query o partizione. CUME_DIST è simile alla funzione PERCENT_RANK.
+Calcola la distribuzione cumulativa di un valore in un gruppo di valori in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. ovvero CUME_DIST calcola la posizione relativa di un valore specificato in un gruppo di valori. Per una riga *r*, presumendo un ordine crescente, il CUME_DIST di *r* è il numero di righe con valori inferiori o uguali al valore di *r*, diviso per il numero di righe valutato nella partizione o nel set di risultati della query. CUME_DIST è simile alla funzione PERCENT_RANK.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,13 +48,13 @@ CUME_DIST( )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-SU **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Il \<righe o clausola range > della OVER sintassi non può essere specificata in una funzione CUME_DIST. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).
+OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+*partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. La clausola \<ROWS o RANGE> della sintassi OVER non può essere specificata in una funzione CUME_DIST. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipi restituiti
 **float(53)**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'intervallo di valori restituiti da CUME_DIST è maggiore di 0 e minore o uguale a 1. I valori restituiscono sempre lo stesso valore di distribuzione cumulativo. I valori NULL sono inclusi per impostazione predefinita e vengono trattati come i valori minori consentiti.
   
 CUME_DIST è non deterministico. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
@@ -100,6 +100,6 @@ Information Services   Bueno                  27.4038               0.4         
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[PERCENT_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)
+[PERCENT_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/percent-rank-transact-sql.md)
   
   

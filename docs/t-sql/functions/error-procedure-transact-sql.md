@@ -1,5 +1,5 @@
 ---
-title: ERROR_PROCEDURE (Transact-SQL) | Documenti Microsoft
+title: ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ERROR_PROCEDURE ( )
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **nvarchar (128)**  
+ **nvarchar(128)**  
   
 ## <a name="return-value"></a>Valore restituito  
  Quando viene chiamata in un blocco CATCH, restituisce il nome della stored procedure in cui si è verificato l'errore.  
@@ -60,10 +60,10 @@ ERROR_PROCEDURE ( )
   
  Restituisce NULL se chiamata all'esterno dell'ambito di un blocco CATCH.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione ERROR_PROCEDURE può essere chiamata in qualsiasi punto nell'ambito di un blocco CATCH.  
   
- ERROR_PROCEDURE restituisce il nome della stored procedure o del trigger in cui si è verificato l'errore, indipendentemente dal numero di chiamate o dal punto in cui viene chiamata nell'ambito del blocco CATCH. Alcune funzioni, ad esempio@ERROR, che restituisce il numero di errore nell'istruzione immediatamente successiva a quella che ha causato l'errore oppure nella prima istruzione del blocco CATCH.  
+ ERROR_PROCEDURE restituisce il nome della stored procedure o del trigger in cui si è verificato l'errore, indipendentemente dal numero di chiamate o dal punto in cui viene chiamata nell'ambito del blocco CATCH. Alcune funzioni, ad esempio @@ERROR, restituiscono invece il numero di errore nell'istruzione immediatamente successiva a quella che ha causato l'errore oppure nella prima istruzione del blocco CATCH.  
   
  Nel caso di blocchi CATCH nidificati, ERROR_PROCEDURE restituisce il nome della stored procedure o del trigger specifico dell'ambito del blocco CATCH in cui vi viene fatto riferimento. Ad esempio, il blocco CATCH di un costrutto TRY…CATCH potrebbe contenere un blocco TRY…CATCH nidificato. All'interno del blocco CATCH nidificato, ERROR_PROCEDURE restituisce il nome della stored procedure o del trigger in cui si è verificato l'errore che ha richiamato il blocco CATCH nidificato. Se la funzione ERROR_PROCEDURE viene eseguita nel blocco CATCH esterno, restituisce il nome della stored procedure o del trigger in cui è verificato l'errore che ha richiamato tale blocco CATCH.  
   
@@ -128,7 +128,7 @@ BEGIN CATCH
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-errorprocedure-in-a-catch-block"></a>C. Utilizzo di ERROR_PROCEDURE in un blocco CATCH  
  Nell'esempio di codice seguente viene illustrata una stored procedure che genera un errore di divisione per zero. `ERROR_PROCEDURE` restituisce il nome della stored procedure in cui si è verificato l'errore.  
@@ -195,7 +195,7 @@ GO
  [ERROR_MESSAGE &#40;Transact-SQL&#41;](../../t-sql/functions/error-message-transact-sql.md)   
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR &#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
   

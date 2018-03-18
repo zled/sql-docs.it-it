@@ -1,5 +1,5 @@
 ---
-title: REVOCARE autorizzazioni per chiavi simmetriche (Transact-SQL) | Documenti Microsoft
+title: REVOKE - autorizzazioni per chiavi simmetriche (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere revocata per una chiave simmetrica. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- CHIAVE SIMMETRICA ON:: *asymmetric_key_name*  
+ ON SYMMETRIC KEY :: *asymmetric_key_name*  
  Specifica la chiave simmetrica per cui viene revocata l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio.  
   
  GRANT OPTION  
@@ -77,10 +77,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  La revoca propagata di un'autorizzazione concessa con WITH GRANT OPTION comporterà la revoca sia delle autorizzazioni GRANT che delle autorizzazioni DENY per tale autorizzazione.  
   
- {PER | FROM} \< *database_principal*>  
+ { TO | FROM } \<*database_principal*>  
  Specifica l'entità da cui viene revocata l'autorizzazione.  
   
- AS \<database_principal > specifica un'entità da cui l'entità che esegue la query Ottiene il diritto di revocare l'autorizzazione.  
+ AS \<database_principal> specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
  *Database_user*  
  Specifica un utente di database.  
@@ -106,8 +106,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Osservazioni  
- Informazioni sulle chiavi simmetriche sono visibili nella [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) vista del catalogo.  
+## <a name="remarks"></a>Remarks  
+ Le informazioni sulle chiavi simmetriche sono visibili nella vista del catalogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  L'istruzione avrà esito negativo se non si specifica CASCADE per la revoca di un'autorizzazione a un'entità a cui l'autorizzazione è stata concessa con GRANT OPTION.  
   
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave simmetrica o l'autorizzazione ALTER ANY SYMMETRIC KEY per il database. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria della chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  
@@ -134,9 +134,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [GRANT-autorizzazioni per chiavi simmetriche &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [NEGARE autorizzazioni per chiavi simmetriche &#40; Transact-SQL &#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT - autorizzazioni per chiavi simmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [DENY - autorizzazioni per chiavi simmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/deny-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

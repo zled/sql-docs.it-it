@@ -1,5 +1,5 @@
 ---
-title: STConvexHull (tipo di dati geometry) | Documenti Microsoft
+title: STConvexHull (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stconvexhull-geometry-data-type"></a>STConvexHull (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un oggetto che rappresenta la struttura convessa di una **geometry** istanza.
+Restituisce un oggetto che rappresenta la struttura convessa di un'istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ Restituisce un oggetto che rappresenta la struttura convessa di una **geometry**
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- `STConvexHull()`Restituisce il più piccolo poligono convesso che contiene il dato **geometry** istanza. **Punti** o **LineString** collineari restituiranno un'istanza dello stesso tipo dell'input.  
+## <a name="remarks"></a>Remarks  
+ `STConvexHull()` restituisce il più piccolo poligono convesso che contiene l'istanza **geometry** specificata. Le istanze **Point** o le istanze **LineString** collineari restituiranno un'istanza dello stesso tipo di quella di input.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STConvexHull()` per trovare la struttura convessa di un'istanza `Polygon``geometry` non convessa.  

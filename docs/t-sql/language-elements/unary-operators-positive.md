@@ -1,5 +1,5 @@
 ---
-title: "+ (Operatore più unario) (Transact-SQL) | Documenti Microsoft"
+title: "+ (Operatore più unario) (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -61,13 +61,13 @@ Restituisce il valore di un'espressione numerica (operatore unario). Gli operato
   
 ## <a name="arguments"></a>Argomenti  
  *numeric_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi uno dei dati di tipi nella categoria di tipi di dati numerici, ad eccezione di **datetime** e **smalldatetime** tipi di dati.  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di un qualsiasi tipo di dati della categoria dei tipi di dati numerici, ad eccezione dei tipi di dati **datetime** e **smalldatetime**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di *numeric_expression*.  
   
-## <a name="remarks"></a>Osservazioni  
- Sebbene sia possibile aggiungere un operatore più unario prima di qualsiasi espressione numerica, in questo caso non viene eseguita alcuna operazione sul valore restituito dall'espressione. In particolare, non verrà restituito il valore positivo di un'espressione negativa. Per restituire un valore positivo di un'espressione negativa, utilizzare il [ABS](../../t-sql/functions/abs-transact-sql.md) (funzione).  
+## <a name="remarks"></a>Remarks  
+ Sebbene sia possibile aggiungere un operatore più unario prima di qualsiasi espressione numerica, in questo caso non viene eseguita alcuna operazione sul valore restituito dall'espressione. In particolare, non verrà restituito il valore positivo di un'espressione negativa. Per restituire il valore positivo di un'espressione negativa, usare la funzione [ABS](../../t-sql/functions/abs-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
@@ -113,8 +113,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [ABS &#40;Transact-SQL&#41;](../../t-sql/functions/abs-transact-sql.md)  
   
   

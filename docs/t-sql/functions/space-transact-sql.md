@@ -1,5 +1,5 @@
 ---
-title: Lo spazio (Transact-SQL) | Documenti Microsoft
+title: SPACE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -48,14 +48,14 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *integer_expression*  
- Valore intero positivo che indica il numero di spazi. Se *integer_expression* è negativo, viene restituita una stringa null.  
+ Valore intero positivo che indica il numero di spazi. Se l'argomento *integer_expression* è negativo, viene restituita una stringa Null.  
   
- Per ulteriori informazioni, vedere [espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
+ Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per includere spazi in dati Unicode oppure per restituire più di 8000 spazi, utilizzare l'istruzione REPLICATE anziché SPACE.  
   
 ## <a name="examples"></a>Esempi  
@@ -70,7 +70,7 @@ ORDER BY LastName, FirstName;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono rimossi gli spazi dei cognomi e quindi vengono concatenati una virgola, due spazi e i nomi delle persone elencate nella tabella `DimCustomer` di `AdventureWorksPDW2012`.  
   
 ```  
@@ -83,8 +83,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [REPLICA &#40; Transact-SQL &#41;](../../t-sql/functions/replicate-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [REPLICATE &#40;Transact-SQL&#41;](../../t-sql/functions/replicate-transact-sql.md)   
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: STDisjoint (tipo di dati geography) | Documenti Microsoft
+title: STDisjoint (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geography** è spazialmente disgiunta da un'altra istanza **geography** istanza. In caso contrario, restituisce 0.  
+  Restituisce 1 se un'istanza **geography** è disgiunta a livello spaziale da un'altra istanza **geography**. In caso contrario, restituisce 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,17 +45,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da confrontare con l'istanza in cui viene richiamato STDisjoint().  
+ Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato STDisjoint().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Due **geography** istanze sono disgiunte se l'intersezione dei relativi set di punti è vuota.  
+## <a name="remarks"></a>Remarks  
+ Due istanze **geography** sono disgiunte se l'intersezione dei relativi set di punti è vuota.  
   
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STDisjoint()` per verificare se due istanze `geography` sono disgiunte a livello spaziale.  

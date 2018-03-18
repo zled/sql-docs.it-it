@@ -1,5 +1,5 @@
 ---
-title: ROLLBACK WORK (Transact-SQL) | Documenti Microsoft
+title: ROLLBACK WORK (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -52,10 +52,10 @@ ROLLBACK [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa istruzione funziona esattamente come l'istruzione ROLLBACK TRANSACTION, con la sola differenza che ROLLBACK TRANSACTION accetta un nome di transazione definita dall'utente. Questa sintassi ROLLBACK è compatibile con ISO, con o senza la parola chiave facoltativa WORK.  
   
- Quando le transazioni sono nidificate, ROLLBACK WORK sempre il rollback per l'istruzione BEGIN TRANSACTION più esterna e decrementa il @@TRANCOUNT funzione di sistema su 0.  
+ Quando le transazioni sono nidificate, l'istruzione ROLLBACK WORK esegue sempre il rollback dell'istruzione BEGIN TRANSACTION più esterna e riduce il valore della funzione di sistema @@TRANCOUNT fino a 0.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Le autorizzazioni per l'istruzione ROLLBACK WORK vengono assegnate per impostazione predefinita a qualsiasi utente valido.  

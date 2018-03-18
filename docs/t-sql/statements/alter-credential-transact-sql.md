@@ -1,5 +1,5 @@
 ---
-title: ALTER CREDENTIAL (Transact-SQL) | Documenti Microsoft
+title: ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/19/2015
 ms.prod: sql-non-specified
@@ -54,20 +54,20 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
  *credential_name*  
  Specifica il nome della credenziale che si desidera modificare.  
   
- IDENTITÀ **='***identity_name***'**  
+ IDENTITY **='***identity_name***'**  
  Specifica il nome dell'account da utilizzare per la connessione all'esterno del server.  
   
- SEGRETO **='***secret***'**  
- Specifica il segreto richiesto per l'autenticazione in uscita. *segreto* è facoltativo.  
+ SECRET **='***secret***'**  
+ Specifica il segreto richiesto per l'autenticazione in uscita. *secret* è facoltativo.  
   
-## <a name="remarks"></a>Osservazioni  
- Quando viene modificata una credenziale, i valori della proprietà *identity_name* e *secret* vengono reimpostate. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
+## <a name="remarks"></a>Remarks  
+ Quando si modifica una credenziale, i valori di *identity_name* e *secret* vengono reimpostati. Se l'argomento facoltativo SECRET viene omesso, il valore del segreto archiviato verrà impostato su NULL.  
   
  Il segreto viene crittografato tramite la chiave master del servizio. Se la chiave master del servizio viene rigenerata, il segreto verrà crittografato nuovamente tramite la nuova chiave master del servizio.  
   
- Informazioni sulle credenziali sono visibili nella **credentials** vista del catalogo.  
+ Le informazioni sulle credenziali sono visibili nella vista del catalogo **sys.credentials**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY CREDENTIAL. Se la credenziale è una credenziale di sistema, è richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
@@ -90,10 +90,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [DROP CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [DROP CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

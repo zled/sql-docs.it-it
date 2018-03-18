@@ -1,5 +1,5 @@
 ---
-title: SET DATEFIRST (Transact-SQL) | Documenti Microsoft
+title: SET DATEFIRST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 
   Imposta il primo giorno della settimana su un numero compreso tra 1 e 7.  
   
- Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Per una panoramica di tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,10 +62,10 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *numero* | **@***number_var*  
+ *number* | **@***number_var*  
  Valore intero che indica il primo giorno della settimana. Può essere uno dei valori seguenti.  
   
-|Valore|Primo giorno della settimana|  
+|valore|Primo giorno della settimana|  
 |-----------|------------------------------|  
 |**1**|Lunedì|  
 |**2**|Martedì|  
@@ -75,14 +75,14 @@ SET DATEFIRST 7 ;
 |**6**|Sabato|  
 |**7** (impostazione predefinita, Stati Uniti Inglese)|Domenica|  
   
-## <a name="remarks"></a>Osservazioni  
- Per visualizzare l'impostazione corrente di SET DATEFIRST, utilizzare il [@@DATEFIRST ](../../t-sql/functions/datefirst-transact-sql.md) (funzione).  
+## <a name="remarks"></a>Remarks  
+ Per visualizzare l'impostazione corrente di SET DATEFIRST, usare la funzione [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  L'opzione SET DATEFIRST viene impostata in fase di esecuzione, non in fase di analisi.  
   
  La specifica di SET DATEFIRST non influisce su DATEDIFF. In DATEDIFF viene utilizzata sempre la domenica come primo giorno della settimana per garantire che la funzione sia deterministica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

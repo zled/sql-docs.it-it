@@ -1,5 +1,5 @@
 ---
-title: DROP STATISTICS (Transact-SQL) | Documenti Microsoft
+title: DROP STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/22/2016
 ms.prod: sql-non-specified
@@ -60,20 +60,20 @@ DROP STATISTICS [ schema_name . ] table_name.statistics_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *tabella* | *visualizzazione*  
- Nome della tabella o vista indicizzata di destinazione di cui si desidera eliminare le statistiche. I nomi di tabelle e viste devono essere conformi alle regole per [identificatori del Database](../../relational-databases/databases/database-identifiers.md). Il nome del proprietario della tabella o vista è facoltativo.  
+ *table* | *view*  
+ Nome della tabella o vista indicizzata di destinazione di cui si desidera eliminare le statistiche. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli [identificatori di database](../../relational-databases/databases/database-identifiers.md). Il nome del proprietario della tabella o vista è facoltativo.  
   
- *nome_statistiche*  
+ *statistics_name*  
  Nome del gruppo di statistiche da eliminare. I nomi dei gruppi di statistiche devono essere conformi alle regole per gli identificatori.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Eliminare le statistiche con cautela, in quanto l'operazione può influire sul piano di esecuzione scelto da Query Optimizer.  
   
  Le statistiche negli indici non possono essere eliminate tramite DROP STATISTICS. Le statistiche vengono mantenute per tutta l'esistenza dell'indice.  
   
- Per ulteriori informazioni sulla visualizzazione delle statistiche, vedere [DBCC SHOW_STATISTICS &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+ Per altre informazioni sulla visualizzazione delle statistiche, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista.  
   
 ## <a name="examples"></a>Esempi  
@@ -96,10 +96,10 @@ DROP STATISTICS Purchasing.Vendor.VendorCredit, Sales.SalesOrderHeader.CustomerT
   
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="b-dropping-statistics-from-a-table"></a>B. Eliminazione di statistiche da una tabella  
- Eliminare gli esempi seguenti il `CustomerStats1` statistiche dalla tabella `Customer`.  
+ Nell'esempio seguente vengono eliminate le statistiche di `CustomerStats1` dalla tabella `Customer`.  
   
 ```  
 DROP STATISTICS Customer.CustomerStats1;  
@@ -112,10 +112,10 @@ DROP STATISTICS dbo.Customer.CustomerStats1;
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Sys. stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
- [sp_createstats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
+ [sp_autostats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)   
+ [sp_createstats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-createstats-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)  

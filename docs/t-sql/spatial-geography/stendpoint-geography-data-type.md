@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (tipo di dati geography) | Documenti Microsoft
+title: STEndpoint (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geography-data-type"></a>STEndpoint (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il punto finale di un **geography** istanza.  
+  Restituisce il punto di fine di un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- STEndPoint() è l'equivalente di [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
+## <a name="remarks"></a>Remarks  
+ STEndPoint() equivale a [STPointN](../../t-sql/spatial-geography/stpointn-geography-data-type.md)`(x.STNumPoints``())`.  
   
- Questo metodo restituisce null se chiamato su un oggetto vuoto **geography** istanza.  
+ Se chiamato su un'istanza **geography** vuota, questo metodo restituisce Null.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `LineString` con `STGeomFromText()` e viene utilizzato `STEndpoint()` per recuperare il punto di fine di `LineString`.  

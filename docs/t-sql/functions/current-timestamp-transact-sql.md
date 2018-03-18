@@ -1,5 +1,5 @@
 ---
-title: CURRENT_TIMESTAMP (Transact-SQL) | Documenti Microsoft
+title: CURRENT_TIMESTAMP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -47,14 +47,14 @@ ms.lasthandoff: 11/21/2017
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce il timestamp di sistema di database corrente come un **datetime** valore senza differenza di fuso orario del database. Questo valore deriva dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Restituisce il timestamp di sistema del database corrente come valore **datetime** senza la differenza di fuso orario del database. Questo valore deriva dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 > [!NOTE]  
 >  La precisione in secondi frazionari di SYSDATETIME e SYSUTCDATE è maggiore di quella di GETDATE e GETUTCDATE. SYSDATETIMEOFFSET include la differenza di fuso orario di sistema. SYSDATETIME, SYSUTCDATE e SYSDATETIMEOFFSET possono essere assegnate a una variabile di qualsiasi tipo di data e ora.  
   
-Questa funzione è l'equivalente di ANSI SQL [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
+Questa funzione è l'equivalente ANSI SQL di [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [funzioni e tipi di dati ora e data](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Per una panoramica di tutti i tipi di dati e funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,8 +70,8 @@ Questa istruzione non accetta argomenti.
 ## <a name="return-type"></a>Tipo restituito  
 **datetime**
   
-## <a name="remarks"></a>Osservazioni  
-[!INCLUDE[tsql](../../includes/tsql-md.md)]le istruzioni possono fare riferimento a CURRENT_TIMESTAMP ovunque possono fare riferimento a un **datetime** espressione.
+## <a name="remarks"></a>Remarks  
+Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a CURRENT_TIMESTAMP in qualsiasi punto in cui possono fare riferimento a un'espressione **datetime**.
   
 CURRENT_TIMESTAMP è una funzione non deterministica. Le viste e le espressioni in cui viene fatto riferimento a questa colonna non sono indicizzabili.
   
@@ -136,7 +136,7 @@ GETUTCDATE()       20:18:45.3470000
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ```sql
 SELECT CURRENT_TIMESTAMP;  

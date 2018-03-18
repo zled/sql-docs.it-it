@@ -1,5 +1,5 @@
 ---
-title: "DENY-autorizzazioni per entità Server (Transact-SQL) | Documenti Microsoft"
+title: "Autorizzazioni per entità server DENY (Transact-SQL) | Microsoft Docs"
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -63,19 +63,19 @@ DENY permission [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- Account di accesso **::** *SQL_Server_login*  
+ LOGIN **::** *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- RUOLO del SERVER **::** *server_role*  
+ SERVER ROLE **::** *server_role*  
  Specifica il ruolo del server a cui viene negata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio.  
   
- PER \<server_principal >  
+ TO \<server_principal>  
  Specifica il ruolo del server o l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene concessa l'autorizzazione.  
   
- PER *SQL_Server_login*  
+ TO *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene negata l'autorizzazione.  
   
  *SQL_Server_login*  
@@ -99,12 +99,12 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Specifica l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dal quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile negare autorizzazioni nell'ambito del server solo se il database corrente è il database master.  
   
- Informazioni sulle autorizzazioni del server sono disponibile nel [server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) vista del catalogo. Informazioni sulle entità server sono disponibile nel [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) vista del catalogo.  
+ Le informazioni sulle autorizzazioni del server sono disponibili nella vista del catalogo [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Le informazioni sulle entità server sono disponibili nella vista del catalogo [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
- L'istruzione DENY ha esito negativo se non si specifica CASCADE la negazione di un'autorizzazione a un'entità che è stato concesso tale autorizzazione con GRANT OPTION.  
+ L'istruzione DENY non riesce se non si specifica CASCADE per la negazione di un'autorizzazione a un'entità a cui l'autorizzazione è stata concessa con GRANT OPTION.  
   
  I ruoli del server e gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono entità a protezione diretta a livello di server. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un ruolo del server o account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -115,7 +115,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per gli account di accesso, è richiesta l'autorizzazione CONTROL per l'account di accesso o l'autorizzazione ALTER ANY LOGIN per il server.  
   
  Per i ruoli del server, è richiesta l'autorizzazione CONTROL per il ruolo del server o l'autorizzazione ALTER ANY SERVER ROLE per il server.  
@@ -123,7 +123,7 @@ DENY permission [ ,...n ] }
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-denying-impersonate-permission-on-a-login"></a>A. Negazione dell'autorizzazione IMPERSONATE per un account di accesso  
- Nell'esempio seguente viene negata il `IMPERSONATE` l'autorizzazione per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso `WanidaBenshoof` per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso creato dall'utente di Windows `AdvWorks\YoonM`.  
+ Nell'esempio seguente viene negata l'autorizzazione `IMPERSONATE` per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `WanidaBenshoof` a un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creato dall'utente di Windows `AdvWorks\YoonM`.  
   
 ```  
 USE master;  

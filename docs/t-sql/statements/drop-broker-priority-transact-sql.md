@@ -1,5 +1,5 @@
 ---
-title: DROP BROKER PRIORITY (Transact-SQL) | Documenti Microsoft
+title: DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,7 +50,7 @@ DROP BROKER PRIORITY ConversationPriorityName
  *ConversationPriorityName*  
  Specifica il nome della priorità di conversazione da rimuovere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si elimina una priorità di conversazione, qualsiasi conversazione esistente continua a funzionare con i livelli di priorità assegnati dalla priorità di conversazione.  
   
 ## <a name="permissions"></a>Autorizzazioni  

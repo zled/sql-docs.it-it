@@ -1,5 +1,5 @@
 ---
-title: CERTPRIVATEKEY (Transact-SQL) | Documenti Microsoft
+title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>Argomenti  
 *certificate_ID*  
-È il **certificate_id** del certificato. Questa opzione è disponibile da Sys. Certificates o utilizzando il [CERT_ID &#40; Transact-SQL &#41; ](../../t-sql/functions/cert-id-transact-sql.md) (funzione). *cert_id* è di tipo **int**
+**certificate_id** del certificato. Disponibile da sys.certificates o tramite la funzione [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* è di tipo **int**
   
 *encryption_password*  
 Password utilizzata per crittografare il valore binario restituito.
@@ -65,11 +65,11 @@ Password utilizzata per decrittografare il valore binario restituito.
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   
-## <a name="remarks"></a>Osservazioni  
-**CERTENCODED** e **CERTPRIVATEKEY** vengono utilizzate insieme per restituire parti diverse di un certificato in formato binario.
+## <a name="remarks"></a>Remarks  
+**CERTENCODED** e **CERTPRIVATEKEY** sono usati insieme per restituire parti diverse di un certificato in formato binario.
   
-## <a name="permissions"></a>Permissions  
-**CERTPRIVATEKEY** è disponibile al pubblico.
+## <a name="permissions"></a>Autorizzazioni  
+**CERTPRIVATEKEY** è disponibile per il ruolo public.
   
 ## <a name="examples"></a>Esempi  
   
@@ -86,12 +86,12 @@ GO
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Per un esempio più complesso che utilizza **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato a un altro database, vedere l'esempio B nell'argomento [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md).
+Per un esempio più complesso che usa **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato in un altro database, vedere l'esempio B nell'argomento [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
-[CREATE CERTIFICATE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-certificate-transact-sql.md) 
- [Funzioni di sicurezza &#40; Transact-SQL &#41; ](../../t-sql/functions/security-functions-transact-sql.md) 
- [Sys. Certificates &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)
+[Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)
+[sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: LOGINPROPERTY (Transact-SQL) | Documenti Microsoft
+title: LOGINPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -64,16 +64,16 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
  *login_name*  
  Nome di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per cui verrà restituito lo stato delle proprietà di accesso.  
   
- *PropertyName*  
- Espressione contenente le informazioni sulle proprietà da restituire per l'account di accesso. *PropertyName* può essere uno dei valori seguenti.  
+ *propertyname*  
+ Espressione contenente le informazioni sulle proprietà da restituire per l'account di accesso. *propertyname* può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**BadPasswordCount**|Restituisce il numero di tentativi consecutivi di accesso con una password non corretta.|  
 |**BadPasswordTime**|Restituisce l'ora dell'ultimo tentativo di accesso con password non corretta.|  
 |**DaysUntilExpiration**|Restituisce il numero di giorni che mancano alla scadenza della password.|  
-|**DefaultDatabase**|Restituisce il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database predefinito di account di accesso archiviato nei metadati o **master** se è specificato alcun database. Restituisce NULL per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il provisioning degli utenti (ad esempio, gli utenti autenticati di Windows).|  
-|**DefaultLanguage**|Restituisce la lingua predefinita dell'account di accesso archiviata nei metadati. Restituisce NULL per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provisioning utenti, Windows, ad esempio, gli utenti autenticati.|  
+|**DefaultDatabase**|Restituisce il database predefinito dell'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archiviato nei metadati oppure **master** se non è specificato alcun database. Restituisce NULL per utenti di cui è stato effettuato il provisioning non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio utenti autenticati di Windows.|  
+|**DefaultLanguage**|Restituisce la lingua predefinita dell'account di accesso archiviata nei metadati. Restituisce NULL per gli utenti di cui è stato effettuato il provisioning non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio utenti autenticati di Windows.|  
 |**HistoryLength**|Restituisce il numero di password rilevate per l'account di accesso, utilizzando il meccanismo di applicazione dei criteri password. 0 se i criteri password non vengono applicati. La ripresa dell'applicazione dei criteri password verrà riavviata da 1.|  
 |**IsExpired**|Indica se l'account di accesso è scaduto.|  
 |**IsLocked**|Indica se l'account di accesso è bloccato.|  
@@ -86,7 +86,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
 ## <a name="returns"></a>Valori di codice restituiti  
  Il tipo di dati dipende dal valore richiesto.  
   
- **IsLocked**, **IsExpired**, e **IsMustChange** sono di tipo **int**.  
+ **IsLocked**, **IsExpired** e **IsMustChange** sono di tipo **int**.  
   
 -   1 se l'account di accesso si trova nello stato specificato.  
   
@@ -112,22 +112,22 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 -   0 se hash SQL7.0  
   
--   1 se un hash SHA-1  
+-   1 se hash SHA-1  
   
 -   2 se hash SHA-2  
   
 -   NULL se l'account di accesso non è un account di accesso di SQL Server valido  
   
-## <a name="remarks"></a>Osservazioni  
- Questa funzione predefinita restituisce informazioni sulle impostazioni relative ai criteri password per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I nomi delle proprietà non sono tra maiuscole e minuscole, pertanto, ad esempio i nomi di proprietà **BadPasswordCount** e **badpasswordcount** sono equivalenti. I valori del **PasswordHash, PasswordHashAlgorithm**, e **PasswordLastSetTime** sono disponibili in tutte le configurazioni supportate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre le altre proprietà è solo disponibile quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] e sono abilitate entrambe le opzioni CHECK_POLICY e CHECK_EXPIRATION. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
+## <a name="remarks"></a>Remarks  
+ Questa funzione predefinita restituisce informazioni sulle impostazioni relative ai criteri password per un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Poiché i nomi delle proprietà non supportano la distinzione tra maiuscole e minuscole, **BadPasswordCount** e **badpasswordcount** sono equivalenti. I valori delle proprietà **PasswordHash, PasswordHashAlgorithm** e **PasswordLastSetTime** sono disponibili in tutte le configurazioni supportate di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mentre le altre proprietà sono disponibili solo se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione in [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] e se sono abilitate entrambe le opzioni CHECK_POLICY e CHECK_EXPIRATION. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW per l'account di accesso. Se si richiede l'hash della password, è inoltre richiesta l'autorizzazione CONTROL SERVER.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-checking-whether-a-login-must-change-its-password"></a>A. Verifica della necessità di modificare la password di un account di accesso  
- Nell'esempio seguente viene controllato se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso `John3` necessario modificare la password al successivo si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Nell'esempio seguente viene controllato se la password dell'account di accesso `John3` di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve essere modificata alla connessione successiva a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 SELECT LOGINPROPERTY('John3', 'IsMustChange');  

@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE l'indice full-text (Transact-SQL) | Documenti Microsoft
+title: DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ DROP FULLTEXT INDEX ON table_name
  *table_name*  
  Nome della tabella o della vista indicizzata contenente l'indice full-text da rimuovere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è necessario eliminare tutte le colonne dall'indice full-text prima di utilizzare il comando DROP FULLTEXT INDEX.  
   
-## <a name="permissions"></a>Permissions  
- L'utente deve disporre dell'autorizzazione ALTER sulla tabella o vista indicizzata oppure essere membro di **sysadmin** ruolo predefinito del server, o **db_owner** o **db_ddladmin** ruoli predefiniti del database.  
+## <a name="permissions"></a>Autorizzazioni  
+ L'utente deve disporre dell'autorizzazione ALTER per la tabella o la vista indicizzata oppure essere un membro del ruolo predefinito del server **sysadmin** o del ruolo predefinito del database **db_owner** o **db_ddladmin**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene eliminato l'indice full-text presente nella tabella `JobCandidate`.  
@@ -70,7 +70,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. fulltext_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
+ [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [Ricerca full-text](../../relational-databases/search/full-text-search.md)  

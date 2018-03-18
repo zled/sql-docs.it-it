@@ -1,5 +1,5 @@
 ---
-title: I comandi della Console del database | Documenti Microsoft
+title: Database Console Command | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili i comandi di gestione seguenti.
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
 
 |||  
 |-|-|  

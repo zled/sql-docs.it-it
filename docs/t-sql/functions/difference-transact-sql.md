@@ -1,5 +1,5 @@
 ---
-title: DIFFERENZA (Transact-SQL) | Documenti Microsoft
+title: DIFFERENCE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -48,18 +48,18 @@ DIFFERENCE ( character_expression , character_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
- È un carattere alfanumerico [espressione](../../t-sql/language-elements/expressions-transact-sql.md) dati di tipo carattere. *character_expression* può essere una costante, variabile o colonna.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) alfanumerica di dati di tipo carattere. *character_expression* può essere una costante, una variabile o una colonna.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore intero restituito rappresenta il numero di caratteri uguali nei valori SOUNDEX e può essere compreso tra 0 e 4: 0 indica una somiglianza scarsa o del tutto assente, mentre 4 indica una somiglianza forte o l'esatta corrispondenza dei valori.  
   
  DIFFERENCE e SOUNDEX sono sensibili alle regole di confronto.  
   
 ## <a name="examples"></a>Esempi  
- Nella prima parte dell'esempio seguente vengono confrontati i valori `SOUNDEX` di due stringhe molto simili. Per le regole di confronto Latin1_General `DIFFERENCE` restituisce un valore di `4`. Nella seconda parte dell'esempio seguente, il `SOUNDEX` i valori per vengono confrontate due stringhe molto diverse e per le regole di confronto Latin1_General `DIFFERENCE` restituisce un valore di `0`.  
+ Nella prima parte dell'esempio seguente vengono confrontati i valori `SOUNDEX` di due stringhe molto simili. Per le regole di confronto Latin1_General `DIFFERENCE` restituisce un valore `4`. Nella seconda parte dell'esempio vengono confrontati i valori `SOUNDEX` di due stringhe molto diverse. Per le regole di confronto Latin1_General `DIFFERENCE` restituisce `0`.  
   
 ```  
 -- Returns a DIFFERENCE value of 4, the least possible difference.  
@@ -85,8 +85,8 @@ B432  G650  0
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SOUNDEX &#40; Transact-SQL &#41;](../../t-sql/functions/soundex-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [SOUNDEX &#40;Transact-SQL&#41;](../../t-sql/functions/soundex-transact-sql.md)   
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

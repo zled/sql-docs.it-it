@@ -36,6 +36,6 @@ ms.lasthandoff: 01/25/2018
 # <a name="continue-transact-sql"></a>CONTINUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Riavvia un ciclo WHILE. Tutte le istruzioni che seguono la parola chiave CONTINUE vengono ignorate. L'istruzione CONTINUE viene spesso attivata, anche se non sempre, da un test IF. Per ulteriori informazioni, vedere [mentre &#40; Transact-SQL &#41; ](../../t-sql/language-elements/while-transact-sql.md) e [del flusso di controllo Language &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+  Riavvia un ciclo WHILE. Tutte le istruzioni che seguono la parola chiave CONTINUE vengono ignorate. L'istruzione CONTINUE viene spesso attivata, anche se non sempre, da un test IF. Per altre informazioni, vedere [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md) e [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
   

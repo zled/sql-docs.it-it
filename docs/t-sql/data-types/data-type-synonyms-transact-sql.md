@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati sinonimi (Transact-SQL) | Documenti Microsoft
+title: Sinonimi dei tipi di dati (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -37,27 +37,27 @@ I sinonimi dei tipi di dati sono disponibili in [!INCLUDE[ssNoVersion](../../inc
   
 |Sinonimo|Tipo di dati di sistema di SQL Server|  
 |---|---|
-|**La variabile binario**|**varbinary**|  
-|**Char (variabile)**|**varchar**|  
-|**carattere**|**char**|  
-|**carattere**|**Char (1)**|  
-|**carattere (**  *n*  **)**|**char(n)**|  
-|**variabile di tipo carattere (**  *n*  **)**|**varchar(n)**|  
-|**DEC**|**decimal**|  
-|**Valore a precisione doppia**|**float**|  
-|**float**[**(***n***)**] per  *n*  = 1-7|**real**|  
-|**float**[**(***n***)**] per  *n*  = 8-15|**float**|  
+|**Binary varying**|**varbinary**|  
+|**char varying**|**varchar**|  
+|**character**|**char**|  
+|**character**|**char(1)**|  
+|**character(** *n* **)**|**char(n)**|  
+|**character varying(** *n* **)**|**varchar(n)**|  
+|**Dec**|**decimal**|  
+|**Double precision**|**float**|  
+|**float**[**(***n***)**] per *n* = 1-7|**real**|  
+|**float**[**(***n***)**] per *n* = 8-15|**float**|  
 |**integer**|**int**|  
-|**caratteri nazionali (**  *n*  **)**|**nchar (n)**|  
-|**National char (**  *n*  **)**|**nchar (n)**|  
-|**variabile di caratteri nazionali (**  *n*  **)**|**nvarchar (n)**|  
-|**char National varying (**  *n*  **)**|**nvarchar (n)**|  
-|**testo nazionale**|**ntext**|  
+|**national character(** *n* **)**|**nchar(n)**|  
+|**national char(** *n* **)**|**nchar(n)**|  
+|**national character varying(** *n* **)**|**nvarchar(n)**|  
+|**national char varying(** *n* **)**|**nvarchar(n)**|  
+|**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-Sinonimi dei tipi di dati può essere utilizzati anziché il nome di tipo di dati di base corrispondente in istruzioni data definition language (DDL), ad esempio CREATE TABLE, CREATE PROCEDURE o dichiarare  *@variable* . I sinonimi non sono tuttavia visibili dopo la creazione dell'oggetto. In fase di creazione infatti all'oggetto viene assegnato il tipo di dati di base associato al sinonimo e la presenza del sinonimo nell'istruzione con cui è stato creato l'oggetto non viene registrata.
+I sinonimi dei tipi di dati possono essere usati in alternativa al nome del tipo di dati di base corrispondente in istruzioni DDL (Data Definition Language), come CREATE TABLE, CREATE PROCEDURE o DECLARE *@variable*. I sinonimi non sono tuttavia visibili dopo la creazione dell'oggetto. In fase di creazione infatti all'oggetto viene assegnato il tipo di dati di base associato al sinonimo e la presenza del sinonimo nell'istruzione con cui è stato creato l'oggetto non viene registrata.
   
-Agli oggetti che derivano dall'oggetto originale, ad esempio colonne del set di risultati o espressioni, viene assegnato il tipo di dati di base. Le successive funzioni per i metadati eseguite sull'oggetto originale e sugli oggetti derivati visualizzano il tipo di dati di base, non il sinonimo. Questo comportamento si verifica con operazioni sui metadati, ad esempio **sp_help** e l'altro sistema stored procedure, le viste degli schemi di informazioni o le varie operazioni di metadati di API di accesso ai dati che fanno riferimento i tipi di dati della tabella o set di risultati colonne.
+Agli oggetti che derivano dall'oggetto originale, ad esempio colonne del set di risultati o espressioni, viene assegnato il tipo di dati di base. Le successive funzioni per i metadati eseguite sull'oggetto originale e sugli oggetti derivati visualizzano il tipo di dati di base, non il sinonimo. Questo comportamento si verifica con le operazioni sui metadati, ad esempio **sp_help** e altre stored procedure di sistema, le viste degli schemi delle informazioni o le varie operazioni sui metadati API per l'accesso ai dati che visualizzano i tipi di dati della tabella o le colonne del set di risultati.
   
 È possibile, ad esempio, creare una tabella specificando `national character varying`:
   
@@ -65,7 +65,7 @@ Agli oggetti che derivano dall'oggetto originale, ad esempio colonne del set di 
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, VarCharCol national character varying(10))  
 ```  
   
-`VarCharCol`viene assegnato un **nvarchar (10)** tipo di dati, e tutte le funzioni successive metadati visualizzeranno la colonna come un **nvarchar (10)** colonna. Le funzioni per metadati mai visualizzate come un **varying(10) caratteri nazionali** colonna.
+Alla colonna `VarCharCol` viene in effetti assegnato il tipo di dati **nvarchar(10)**. Le successive funzioni per i metadati visualizzeranno la colonna come colonna di tipo **nvarchar(10)**. Le funzioni per i metadati non visualizzano mai le colonne come colonne di tipo **national character varying(10)**.
   
 ## <a name="see-also"></a>Vedere anche
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: '@@PROCID (Transact-SQL) | Documenti Microsoft'
+title: '@@PROCID (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="x40x40procid-transact-sql"></a>&#x40;&#x40;PROCID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce l'identificatore di oggetto (ID) del modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] corrente. Un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] può essere una stored procedure, una funzione definita dall'utente o un trigger. @@PROCID non è possibile specificare i moduli CLR o i dati in-process del provider di access.  
+  Restituisce l'identificatore di oggetto (ID) del modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] corrente. Un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] può essere una stored procedure, una funzione definita dall'utente o un trigger. Non è possibile specificare @@PROCID per i moduli CLR o per il provider di accesso ai dati in-process.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,9 +83,9 @@ EXECUTE dbo.usp_FindName 'P%', 'A%';
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [Sys. Objects &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

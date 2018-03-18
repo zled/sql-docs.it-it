@@ -1,5 +1,5 @@
 ---
-title: SET NOCOUNT (Transact-SQL) | Documenti Microsoft
+title: SET NOCOUNT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il conteggio non viene restituito in caso di impostazione di SET NOCOUNT su ON. Il conteggio viene restituito quando SET NOCOUNT è impostata su OFF.  
   
- Il @@ROWCOUNT funzione viene aggiornata anche quando SET NOCOUNT è impostata su ON.  
+ La funzione @@ROWCOUNT viene aggiornata anche quando l'opzione SET NOCOUNT è impostata su ON.  
   
  L'opzione SET NOCOUNT ON impedisce l'invio di messaggi DONE_IN_PROC al client per ogni istruzione di una stored procedure. Nel caso di stored procedure contenenti diverse istruzioni che non restituiscono un'elevata quantità di dati effettivi o di stored procedure contenenti cicli [!INCLUDE[tsql](../../includes/tsql-md.md)], l'impostazione di SET NOCOUNT su ON può determinare un incremento delle prestazioni significativo grazie alla notevole riduzione del traffico di rete.  
   
@@ -69,7 +69,7 @@ SELECT @NOCOUNT AS NOCOUNT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  

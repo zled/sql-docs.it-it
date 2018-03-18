@@ -1,5 +1,5 @@
 ---
-title: DROP SYNONYM (Transact-SQL) | Documenti Microsoft
+title: DROP SYNONYM (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -50,10 +50,10 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+ *IF EXISTS*  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
- Elimina in modo condizionale il sinonimo solo se esiste già.  
+ Rimuove in modo condizionale il sinonimo solo se esiste già.  
   
  *schema*  
  Specifica lo schema in cui è contenuto il sinonimo. Se lo schema viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza lo schema predefinito dell'utente corrente.  
@@ -61,12 +61,12 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
  *synonym_name*  
  Nome del sinonimo da eliminare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I riferimenti ai sinonimi non sono associati a uno schema. È pertanto possibile eliminare un sinonimo in qualsiasi momento. I riferimenti ai sinonimi eliminati verranno trovati solo in fase di esecuzione.  
   
  È possibile creare, eliminare e fare riferimento ai sinonimi in SQL dinamico.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eliminare un sinonimo, un utente deve soddisfare almeno una delle condizioni seguenti: L'utente deve essere:  
   
 -   Il proprietario corrente di un sinonimo.  
@@ -93,7 +93,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE SYNONYM &#40; Transact-SQL &#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
+ [CREATE SYNONYM &#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

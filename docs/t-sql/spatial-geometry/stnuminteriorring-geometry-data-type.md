@@ -1,5 +1,5 @@
 ---
-title: STNumInteriorRing (tipo di dati geometry) | Documenti Microsoft
+title: STNumInteriorRing (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce il numero di anelli interni di un **Polygongeometry** istanza.
+Restituisce il numero di anelli interni in un'istanza **Polygongeometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ Restituisce il numero di anelli interni di un **Polygongeometry** istanza.
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce null se il **geometry** istanza non è un poligono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce null se l'istanza **geometry** non è un poligono.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `Polygon` e viene utilizzato `STNumInteriorRing()` per trovare il numero di anelli interni dell'istanza.  

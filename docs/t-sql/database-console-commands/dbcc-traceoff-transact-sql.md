@@ -58,7 +58,7 @@ Disabilita globalmente i flag di traccia specificati.
 WITH NO_INFOMSGS  
 Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 I flag di traccia consentono di personalizzare alcune caratteristiche controllando il funzionamento dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ## <a name="result-sets"></a>Set di risultati  

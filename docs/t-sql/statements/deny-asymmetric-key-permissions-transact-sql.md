@@ -1,5 +1,5 @@
 ---
-title: NEGARE autorizzazioni per chiavi asimmetriche (Transact-SQL) | Documenti Microsoft
+title: DENY (autorizzazioni per chiavi asimmetriche) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -53,10 +53,10 @@ DENY { permission  [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per una chiave asimmetrica. Vedere l'elenco riportato di seguito.  
   
- CHIAVE asimmetrica **::***asymmetric_key_name*  
+ ON ASYMMETRIC KEY **::***asymmetric_key_name*  
  Specifica la chiave asimmetrica per cui viene negata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
@@ -100,7 +100,7 @@ DENY { permission  [ ,...n ] }
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Una chiave asimmetrica è un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono indicate le autorizzazioni più specifiche e limitate che è possibile concedere per una chiave asimmetrica, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione della chiave asimmetrica|Autorizzazione della chiave asimmetrica in cui è inclusa.|Autorizzazione del database in cui è inclusa|  
@@ -111,7 +111,7 @@ DENY { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave asimmetrica. Se viene utilizzata la clausola AS, l'entità specificata deve essere proprietaria della chiave asimmetrica.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: RESTORE MASTER KEY (Transact-SQL) | Documenti Microsoft
+title: RESTORE MASTER KEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
 ## <a name="arguments"></a>Argomenti  
  FILE ='*path_to_file*'  
- Specifica il percorso completo, nome file incluso, della chiave master del database archiviata. *path_to_file* può essere un percorso locale o un percorso UNC di un percorso di rete.  
+ Specifica il percorso completo, nome file incluso, della chiave master del database archiviata. *path_to_file* può essere un percorso locale o un percorso UNC di rete.  
   
  DECRYPTION BY PASSWORD ='*password*'  
  Specifica la password necessaria per decrittografare la chiave master del database che verrà importata da un file.  
@@ -69,7 +69,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
  FORCE  
  Specifica che il processo RESTORE deve continuare anche se la chiave master del database corrente non viene aperta oppure se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è in grado di decrittografare alcune delle chiavi private crittografate con la chiave master.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si ripristina la chiave master, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono decrittografate tutte le chiavi crittografate con la chiave master attiva corrente. Tali elementi venogno poi crittografati nuovamente con la chiave master ripristinata. Si tratta di un'operazione che utilizza molte risorse e pertanto dovrebbe essere pianificata in periodi di carico ridotto. L'operazione di ripristino avrà esito negativo se la chiave master del database corrente non è aperta e non è possibile aprirla, oppure se non è possibile decrittografare le eventuali chiavi crittografate con tale chiave master.  
   
  Utilizzare l'opzione FORCE solo se la chiave master è irrecuperabile o se la decrittografia ha esito negativo. Le informazioni crittografate esclusivamente da una chiave irrecuperabile andranno perdute.  
@@ -78,7 +78,7 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
   
  Se il database corrente non include alcuna chiave master, con l'esecuzione di RESTORE MASTER KEY verrà creata una chiave master. La nuova chiave master non verrà crittografata automaticamente con la chiave master del servizio.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il database.  
   
 ## <a name="examples"></a>Esempi  

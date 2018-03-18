@@ -1,5 +1,5 @@
 ---
-title: STIsSimple (tipo di dati geometry) | Documenti Microsoft
+title: STIsSimple (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza è semplice, come definito per il OGC Open Geospatial Consortium (). Restituisce 0 se un **geometry** istanza non è semplice.
+Restituisce 1 se un'istanza **geometry** è semplice, in base alla definizione di Open Geospatial Consortium (OGC). Restituisce 0 se l'istanza **geometry** non è semplice.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ Restituisce 1 se un **geometry** istanza è semplice, come definito per il OGC O
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Per essere semplice, un **geometry** istanza deve soddisfare tutti i requisiti seguenti:  
+## <a name="remarks"></a>Remarks  
+ Per essere semplice, un'istanza **geometry** deve soddisfare tutti i requisiti seguenti:  
   
 -   Ogni figura dell'istanza non deve intersecarsi, salvo agli endpoint.  
   

@@ -1,5 +1,5 @@
 ---
-title: STGeometryN (tipo di dati geometry) | Documenti Microsoft
+title: STGeometryN (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce una geometria specificata in un **raccolta di geometrie**.
+Restituisce una geometria specificata in una **raccolta di geometrie**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,19 +44,19 @@ Restituisce una geometria specificata in un **raccolta di geometrie**.
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di **geometry** istanze di **geometrycollection**.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di istanze **geometry** in **geometrycollection**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce **null** se il parametro è maggiore del risultato di `STNumGeometries()` e genererà un **ArgumentOutOfRangeException** se il *espressione* il parametro è minore di 1.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce **null** se il parametro è maggiore del risultato di `STNumGeometries()` e genererà un'eccezione **ArgumentOutOfRangeException** se il parametro *expression* è minore di 1.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `MultiPoint``geometry collection` e utilizza `STGeometryN()` per trovare la seconda `geometry` istanza della raccolta.  
+ Nell'esempio seguente viene creata un'istanza `MultiPoint``geometry collection` e viene usato `STGeometryN()` per trovare la seconda istanza `geometry` della raccolta.  
   
 ```  
 DECLARE @g geometry;  

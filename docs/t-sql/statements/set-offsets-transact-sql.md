@@ -1,5 +1,5 @@
 ---
-title: OFFSET di SET (Transact-SQL) | Documenti Microsoft
+title: SET OFFSETS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET OFFSETS keyword_list { ON | OFF }
  *keyword_list*  
  Elenco delimitato da virgole di costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] che include SELECT, FROM, ORDER, TABLE, PROCEDURE, STATEMENT, PARAM ed EXECUTE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'opzione SET OFFSETS viene utilizzata solo in applicazioni DB-Library.  
   
  L'opzione SET OFFSETS viene impostata in fase di analisi, non in fase di esecuzione. Con l'impostazione in fase di analisi, se l'istruzione SET è inclusa nel batch o nella stored procedure l'impostazione diventa effettiva indipendentemente dal fatto che l'esecuzione del codice raggiunga effettivamente il punto. L'istruzione SET ha inoltre effetto prima di qualsiasi altra istruzione eseguita. Ad esempio, se l'istruzione SET è inclusa in un blocco di istruzione IF...ELSE che non viene mai raggiunto in fase di esecuzione, l'istruzione SET viene comunque eseguita perché il blocco IF...ELSE viene analizzato.  
@@ -66,11 +66,11 @@ SET OFFSETS keyword_list { ON | OFF }
   
  SET PARSEONLY restituisce valori di offset se l'opzione OFFSETS è impostata su ON e non si verificano errori.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET PARSEONLY &#40; Transact-SQL &#41;](../../t-sql/statements/set-parseonly-transact-sql.md)  
+ [SET PARSEONLY &#40;Transact-SQL&#41;](../../t-sql/statements/set-parseonly-transact-sql.md)  
   
   

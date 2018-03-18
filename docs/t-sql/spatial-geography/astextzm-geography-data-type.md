@@ -1,5 +1,5 @@
 ---
-title: AsTextZM (tipo di dati geography) | Documenti Microsoft
+title: AsTextZM (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="astextzm-geography-data-type"></a>AsTextZM (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT) di un **geography** istanza integrata con qualsiasi **Z** (innalzamento) e **M** (misura) valori appartenente all'istanza.  
+  Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza **geography** integrata con qualsiasi valore **Z** (innalzamento) e **M** (misura) appartenente all'istanza.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,14 +46,14 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
  Tipo CLR restituito: **SqlChars**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `Point` istanza contenente **Z** (innalzamento) e **M** valori (misura). `STAsText()`Seleziona i valori WKT, (-122.34900 47.65100); `AsTextZM()` seleziona gli stessi valori WKT e restituisce i valori per **Z** e **M**, generando (-122.34900 47.65100 10.3 12).  
+ Nell'esempio seguente viene creata un'istanza `Point` in cui sono contenuti i valori **Z** (innalzamento) e **M** (misura). `STAsText()` consente di selezionare i valori WKT, (-122.34900 47.65100); `AsTextZM()` consente di selezionare gli stessi valori WKT e di restituire inoltre i valori per **Z** e **M**, generando (-122.34900 47.65100 10.3 12).  
   
 ```  
 DECLARE @g geography;  
@@ -64,7 +64,7 @@ SELECT @g.AsTextZM();
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [M &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
- [Z &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
+ [M &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
+ [Z &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   
   

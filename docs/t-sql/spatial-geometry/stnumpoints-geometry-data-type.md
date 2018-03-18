@@ -1,5 +1,5 @@
 ---
-title: STNumPoints (tipo di dati geometry) | Documenti Microsoft
+title: STNumPoints (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geometry-data-type"></a>STNumPoints (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la somma del numero di punti in ognuna delle figure di un **geometry** istanza.  
+  Restituisce la somma del numero di punti in ognuna delle figure di un'istanza **geometry**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo conta i punti nella descrizione di un **geometry** istanza. Vengono contati anche i punti duplicati. Se questa istanza è un **raccolta** tipo, questo metodo restituisce la somma dei punti in ciascuno dei relativi elementi.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo conta i punti nella descrizione di un'istanza **geometry**. Vengono contati anche i punti duplicati. Se l'istanza è di tipo **collection**, questo metodo restituisce la somma dei punti in ciascuno dei relativi elementi.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `LineString` e viene utilizzato `STNumPoints()` per determinare il numero di punti utilizzati nella descrizione dell'istanza.  

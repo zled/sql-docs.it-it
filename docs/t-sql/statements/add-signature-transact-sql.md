@@ -1,5 +1,5 @@
 ---
-title: Aggiungi firma (Transact-SQL) | Documenti Microsoft
+title: ADD SIGNATURE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -61,22 +61,22 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  *module_class*  
  Classe del modulo a cui viene aggiunta la firma. L'impostazione predefinita per i moduli definiti a livello di ambito dello schema è OBJECT.  
   
- *nome_modulo*  
+ *module_name*  
  Nome di una stored procedure, una funzione, un assembly o un trigger da firmare o controfirmare.  
   
- CERTIFICATO *cert_name*  
+ CERTIFICATE *cert_name*  
  Nome di un certificato con cui firmare o controfirmare la stored procedure, la funzione, l'assembly o il trigger.  
   
- CON la PASSWORD ='*password*'  
+ WITH PASSWORD ='*password*'  
  Password necessaria per decrittografare la chiave privata del certificato o della chiave asimmetrica. Questa clausola è necessaria solo se la chiave privata non è protetta tramite la chiave master del database.  
   
- FIRMA =*signed_blob*  
- Specifica l'oggetto BLOB (Binary Large Object) firmato del modulo. Questa clausola risulta utile se si desidera fornire un modulo senza fornire la chiave privata. Se si utilizza questa clausola, sono necessari solo il modulo, la firma e la chiave pubblica per aggiungere l'oggetto BLOB firmato a un database. *signed_blob* è l'oggetto blob in formato esadecimale.  
+ SIGNATURE =*signed_blob*  
+ Specifica l'oggetto BLOB (Binary Large Object) firmato del modulo. Questa clausola risulta utile se si desidera fornire un modulo senza fornire la chiave privata. Se si utilizza questa clausola, sono necessari solo il modulo, la firma e la chiave pubblica per aggiungere l'oggetto BLOB firmato a un database. *signed_blob* è l'oggetto BLOB in formato esadecimale.  
   
- CHIAVE asimmetrica *Asym_Key_Name*  
+ ASYMMETRIC KEY *Asym_Key_Name*  
  Nome di una chiave asimmetrica con cui firmare o controfirmare la stored procedure, la funzione, l'assembly o il trigger.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il modulo che viene firmato o controfirmato e il certificato o la chiave asimmetrica utilizzati per la firma devono essere già esistenti. Ogni carattere del modulo è utilizzato nel calcolo della firma, inclusi gli avanzamenti di riga e i ritorni a capo iniziali.  
   
  Un modulo può essere firmato e controfirmato da un numero qualsiasi di certificati e chiavi simmetriche.  
@@ -96,9 +96,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
 >  Quando si ricrea una procedura per la firma, tutte le istruzioni del batch originale devono corrispondere al batch di ricreazione. Se una parte del batch è diversa, anche in spazi o commenti, la firma risultante sarà diversa.  
   
 ## <a name="countersignatures"></a>Controfirme  
- Quando si esegue un modulo firmato, le firme verranno aggiunte temporaneamente al token SQL, ma verranno perse se il modulo esegue un altro modulo o se il modulo termina l'esecuzione. Una controfirma è un tipo particolare di firma. che da sola non concede autorizzazioni, tuttavia consente il mantenimento delle firme create dallo stesso certificato o dalla stessa chiave asimmetrica per la durata della chiamata eseguita all'oggetto controfirmato.  
+ In caso di esecuzione di un modulo con segno, le firme verranno aggiunte temporaneamente al token SQL, tuttavia verranno perse se il modulo esegue un altro modulo o termina l'esecuzione. Una controfirma è uno speciale tipo di firma che da sola non concede autorizzazioni, tuttavia consente il mantenimento delle firme create dallo stesso certificato o dalla stessa chiave asimmetrica per la durata della chiamata eseguita all'oggetto controfirmato.  
   
- Si supponga, ad esempio, che l'utente Alice chiami la routine ProcSelectT1ForAlice, che chiama la routine procSelectT1, che esegue la selezione dalla tabella T1. Alice dispone dell'autorizzazione EXECUTE su ProcSelectT1ForAlice e procSelectT1, ma non dell'autorizzazione SELECT su T1 e nell'intera catena non sono coinvolti concatenamenti delle proprietà. Alice non può accedere alla tabella T1, né direttamente né tramite l'utilizzo di ProcSelectT1ForAlice e procSelectT1. Poiché si desidera che Alice utilizzi sempre ProcSelectT1ForAlice per l'accesso, non si desidera concedere l'autorizzazione per eseguire procSelectT1. Ecco come ottenere questo risultato  
+ Si supponga, ad esempio, che l'utente Alice chiami la routine ProcSelectT1ForAlice, che chiama la routine procSelectT1, che esegue la selezione dalla tabella T1. Alice dispone dell'autorizzazione EXECUTE su ProcSelectT1ForAlice e procSelectT1, ma non dell'autorizzazione SELECT su T1 e nell'intera catena non sono coinvolti concatenamenti delle proprietà. Alice non può accedere alla tabella T1, né direttamente né tramite l'utilizzo di ProcSelectT1ForAlice e procSelectT1. Poiché si vuole che Alice usi sempre ProcSelectT1ForAlice per l'accesso, non si concederà l'autorizzazione per eseguire procSelectT1. Ecco come ottenere questo risultato  
   
 -   Se si firma procSelectT1, in modo che procSelectT1 possa accedere a T1, Alice può richiamare direttamente procSelectT1 senza dover chiamare ProcSelectT1ForAlice.  
   
@@ -106,9 +106,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 -   Firmare ProcSelectT1ForAlice non funzionerebbe, in quanto la firma andrebbe persa nella chiamata a procSelectT1.  
   
-Tuttavia, se invece si controfirma procSelectT1 con lo stesso certificato usato per firmare ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrà mantenere la firma attraverso la catena di chiamate e consentirà l'accesso a T1. Se Alice prova a chiamare direttamente procSelectT1, non potrà accedere a T1, poiché la controfirma non concede diritti. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
+Se invece si controfirma procSelectT1 con lo stesso certificato usato per firmare ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] potrà mantenere la firma attraverso la catena di chiamate e consentirà l'accesso a T1. Se Alice prova a chiamare direttamente procSelectT1, non potrà accedere a T1, poiché la controfirma non concede diritti. Nell'esempio C di seguito viene mostrato l'uso di [!INCLUDE[tsql](../../includes/tsql-md.md)] per l'esempio proposto.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione ALTER per l'oggetto e l'autorizzazione CONTROL per il certificato o la chiave asimmetrica. Se una chiave privata associata è protetta tramite una password, è necessario che anche l'utente disponga della password.  
   
 ## <a name="examples"></a>Esempi  
@@ -256,7 +256,7 @@ DROP LOGIN Alice;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [crypt_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [ELIMINARE firma &#40; Transact-SQL &#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
+ [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
+ [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   
   

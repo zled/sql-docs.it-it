@@ -1,5 +1,5 @@
 ---
-title: STMPolyFromWKB (tipo di dati geography) | Documenti Microsoft
+title: STMPolyFromWKB (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geographyMultiPolygon** istanza da una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB).
+Restituisce un'istanza **geographyMultiPolygon** da una rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium).
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,13 +45,13 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *WKB_multipolygon*  
- Rappresentazione WKB del **geographyMultiPolygon** istanza da restituire. *WKB_multipolygon* è un **varbinary (max)** espressione.  
+ Rappresentazione WKB dell'istanza **geographyMultiPolygon** da restituire. *WKB_multipolygon* è un'espressione **varbinary(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geographyMultiPolygon** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geographyMultiPolygon** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   

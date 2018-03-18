@@ -1,5 +1,5 @@
 ---
-title: AsBinaryZM (tipo di dati geometry) | Documenti Microsoft
+title: AsBinaryZM (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Binary (WKB) di un **geometry** istanza integrata con qualsiasi **Z** (innalzamento) e **M** (misura) valori appartenente all'istanza.
+Restituisce la rappresentazione WKB (Well-Known Binary) OGC (Open Geospatial Consortium) di un'istanza **geometry** integrata con qualsiasi valore **Z** (innalzamento) e **M** (misura) appartenente all'istanza.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,11 +41,11 @@ Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known B
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **varbinary (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **varbinary(max)**  
   
  Tipo CLR restituito: **SqlBytes**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
   
@@ -61,8 +61,8 @@ SELECT @g1.AsBinaryZM();
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
- [M &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
- [Z &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
+ [M &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
+ [Z &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   
   
 

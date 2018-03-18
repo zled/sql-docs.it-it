@@ -1,5 +1,5 @@
 ---
-title: ASYMKEYPROPERTY (Transact-SQL) | Documenti Microsoft
+title: ASYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -46,13 +46,13 @@ ASYMKEYPROPERTY (Key_ID , 'algorithm_desc' | 'string_sid' | 'sid')
   
 ## <a name="arguments"></a>Argomenti  
 *Key_ID*  
-Key_ID di una chiave asimmetrica nel database. Per trovare il Key_ID quando si conosce solo il nome della chiave, utilizzare ASYMKEY_ID. *Key_ID* è di tipo di dati **int**.
+Key_ID di una chiave asimmetrica nel database. Per trovare il Key_ID quando si conosce solo il nome della chiave, utilizzare ASYMKEY_ID. *Key_ID* è un tipo di dati **int**.
   
 **'**algorithm_desc**'**  
 Specifica che l'output restituisce la descrizione dell'algoritmo della chiave asimmetrica. Disponibile solo per le chiavi asimmetriche create da un modulo EKM.
   
 **'**string_sid**'**  
-Specifica che l'output restituisce il SID della chiave asimmetrica in **nvarchar()** formato.
+Specifica che l'output restituisce il SID della chiave asimmetrica in formato **nvarchar()**.
   
 **'**sid**'**  
 Specifica che l'output restituisce il SID della chiave asimmetrica in formato binario.
@@ -60,7 +60,7 @@ Specifica che l'output restituisce il SID della chiave asimmetrica in formato bi
 ## <a name="return-types"></a>Tipi restituiti  
 **sql_variant**
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
 Sono richieste le autorizzazioni relative alla chiave asimmetrica ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per la chiave asimmetrica.
   
 ## <a name="examples"></a>Esempi  
@@ -76,14 +76,14 @@ GO
   
 ## <a name="see-also"></a>Vedere anche
 [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)  
-[ALTER ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
-[DROP ASYMMETRIC KEY &#40; Transact-SQL &#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+[ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+[DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[asymmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
+[ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
+[SYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
   
   

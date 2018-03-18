@@ -1,5 +1,5 @@
 ---
-title: DROP EVENT NOTIFICATION (Transact-SQL) | Documenti Microsoft
+title: DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,7 +53,7 @@ ON { SERVER | DATABASE | QUEUE queue_name }
   
 ## <a name="arguments"></a>Argomenti  
  *notification_name*  
- Nome della notifica degli eventi da rimuovere. È possibile specificare più notifiche. Per visualizzare un elenco di notifiche degli eventi, utilizzare [Sys. event_notifications &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
+ Nome della notifica degli eventi da rimuovere. È possibile specificare più notifiche. Per visualizzare un elenco delle notifiche degli eventi disponibili, usare [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md).  
   
  SERVER  
  Indica che l'ambito della notifica degli eventi corrisponde al server corrente. È necessario specificare SERVER se questo è l'ambito impostato al momento della creazione della notifica degli eventi.  
@@ -61,10 +61,10 @@ ON { SERVER | DATABASE | QUEUE queue_name }
  DATABASE  
  Indica che l'ambito della notifica degli eventi corrisponde al database corrente. È necessario specificare DATABASE se questo è l'ambito impostato al momento della creazione della notifica degli eventi.  
   
- CODA *nome_coda*  
- Indica l'ambito della notifica degli eventi corrisponde alla coda specificata da *nome_coda*. È necessario specificare QUEUE se questo è l'ambito impostato al momento della creazione della notifica degli eventi. *nome_coda* è il nome della coda e deve anche essere specificato.  
+ QUEUE *queue_name*  
+ Indica che l'ambito della notifica degli eventi corrisponde alla coda specificata da *queue_name*. È necessario specificare QUEUE se questo è l'ambito impostato al momento della creazione della notifica degli eventi. L'argomento *queue_name* corrisponde al nome della coda ed è obbligatorio specificarlo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se viene attivata una notifica degli eventi all'interno di una transazione e tale notifica viene eliminata all'interno della stessa transazione, l'istanza della notifica degli eventi viene inviata e quindi la notifica degli eventi viene eliminata.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -91,9 +91,9 @@ ON DATABASE;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE EVENT NOTIFICATION &#40; Transact-SQL &#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
+ [CREATE EVENT NOTIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-notification-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [Sys. event_notifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
- [Sys. Events &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
+ [sys.event_notifications &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-event-notifications-transact-sql.md)   
+ [sys.events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-events-transact-sql.md)  
   
   

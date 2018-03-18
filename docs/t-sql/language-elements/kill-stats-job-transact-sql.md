@@ -1,5 +1,5 @@
 ---
-title: KILL STATS JOB (Transact-SQL) | Documenti Microsoft
+title: KILL STATS JOB (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/27/2017
 ms.prod: sql-non-specified
@@ -54,7 +54,7 @@ KILL STATS JOB job_id
  *job_id*  
  Campo job_id restituito dalla vista a gestione dinamica sys.dm_exec_background_job_queue per il processo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  job_id è indipendente da session_id o dall'unità di lavoro utilizzata nelle altre forme dell'istruzione KILL.  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -63,7 +63,7 @@ KILL STATS JOB job_id
  Le autorizzazioni per l'istruzione KILL STATS JOB vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server sysadmin e processadmin e non sono trasferibili.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene illustrato come terminare l'aggiornamento delle statistiche associato a un processo in cui il *job_id* = `53`.  
+ L'esempio seguente mostra come interrompere l'aggiornamento delle statistiche associato a un processo in cui *job_id* = `53`.  
   
 ```  
 KILL STATS JOB 53;  

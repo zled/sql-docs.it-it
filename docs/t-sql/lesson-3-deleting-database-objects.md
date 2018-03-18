@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Eliminazione di oggetti di Database | Documenti Microsoft'
+title: 'Lezione 3: Eliminazione degli oggetti di database | Microsoft Docs'
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -29,7 +29,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="lesson-3-deleting-database-objects"></a>Lezione 3: Eliminazione di oggetti di database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Questa breve lezione rimuove gli oggetti creati nelle lezioni 1 e 2 e quindi Elimina il database.  
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] In questa breve lezione viene illustrato come rimuovere gli oggetti creati nelle lezioni 1 e 2 e come procedere quindi all'eliminazione del database.  
   
 In questa lezione sono inclusi gli argomenti seguenti:  
   

@@ -1,5 +1,5 @@
 ---
-title: STTouches (tipo di dati geometry) | Documenti Microsoft
+title: STTouches (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="sttouches-geometry-data-type"></a>STTouches (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza tocca a livello spaziale un'altra **geometry** istanza. In caso contrario, restituisce 0.
+Restituisce 1 se un'istanza **geometry** tocca a livello spaziale un'altra istanza **geometry**. In caso contrario, restituisce 0.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,17 +45,17 @@ Restituisce 1 se un **geometry** istanza tocca a livello spaziale un'altra **geo
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STTouches()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STTouches()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Due **geometry** istanze toccano se i relativi set di punti, ma non si intersecano le parti interne.  
+## <a name="remarks"></a>Remarks  
+ Due istanze **geometry** si toccano se si intersecano i relativi set di punti, ma non le parti interne.  
   
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STTouches()` per verificare se due istanze `geometry` si toccano.  

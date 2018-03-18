@@ -1,5 +1,5 @@
 ---
-title: STEquals (tipo di dati geography) | Documenti Microsoft
+title: STEquals (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stequals-geography-data-type"></a>STEquals (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geography** istanza rappresenta lo stesso punto impostato come un altro **geography** istanza. In caso contrario, restituisce 0.  
+  Restituisce 1 se un'istanza **geography** rappresenta lo stesso set di punti di un'altra istanza **geography**. In caso contrario, restituisce 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,18 +45,18 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da confrontare con l'istanza sulla quale `STEquals()` viene richiamato.  
+ Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato `STEquals()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea due `geography` istanze con `STGeomFromText()` che sono uguali, ma non è uguale in modo semplice e Usa `STEquals()` per verificarne l'uguaglianza. Le istanze sono uguali perché `LINESTRING` e `POINT` sono contenuti all'interno di `POLYGON`.  
+ Nell'esempio seguente viene usato il metodo `STGeomFromText()` per creare due istanze `geography` uguali in modo non banale e viene usato `STEquals()` per verificarne l'uguaglianza. Le istanze sono uguali perché `LINESTRING` e `POINT` sono contenuti all'interno di `POLYGON`.  
   
 ```  
 DECLARE @g geography;  

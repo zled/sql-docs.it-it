@@ -1,5 +1,5 @@
 ---
-title: Gli operatori di confronto (Transact-SQL) | Documenti Microsoft
+title: Operatori di confronto (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="comparison-operators-transact-sql"></a>Operatori di confronto (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gli operatori di confronto consentono di confrontare due espressioni. Gli operatori di confronto sono utilizzabili in tutte le espressioni, ad eccezione delle espressioni del **testo**, **ntext**, o **immagine** tipi di dati. Nella tabella seguente vengono elencati gli operatori di confronto [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  Gli operatori di confronto consentono di confrontare due espressioni. Possono essere usati in qualsiasi espressione, ad eccezione delle espressioni con tipo di dati **text**, **ntext** o **image**. Nella tabella seguente vengono elencati gli operatori di confronto [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 |Operatore|Significato|  
 |--------------|-------------|  
@@ -47,18 +47,18 @@ ms.lasthandoff: 01/25/2018
 |[>= (maggiore o uguale a)](../../t-sql/language-elements/greater-than-or-equal-to-transact-sql.md)|Maggiore o uguale a|  
 |[<= (minore o uguale a)](../../t-sql/language-elements/less-than-or-equal-to-transact-sql.md)|Minore o uguale a|  
 |[<> (diverso da)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md)|Diverso da|  
-|[\!= (Diverso da)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Diverso da (non conforme allo standard ISO)|  
-|[\!< (Non minore di)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Non minore di (non conforme allo standard ISO)|  
-|[\!> (Non maggiore di)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Non maggiore di (non conforme allo standard ISO)|  
+|[!= (diverso da)](../../t-sql/language-elements/not-equal-to-transact-sql-exclamation.md)|Diverso da (non conforme allo standard ISO)|  
+|[!< (non minore di)](../../t-sql/language-elements/not-less-than-transact-sql.md)|Non minore di (non conforme allo standard ISO)|  
+|[!> (non maggiore di)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|Non maggiore di (non conforme allo standard ISO)|  
   
 ## <a name="boolean-data-type"></a>Tipo di dati Boolean  
- Il risultato di un operatore di confronto ha il **booleano** tipo di dati. I possibili valori sono tre: TRUE, FALSE e UNKNOWN. Le espressioni che restituiscono un **booleano** tipo di dati sono note come espressioni booleane.  
+ Il risultato di un operatore di confronto è espresso nel tipo di dati **Boolean**. I possibili valori sono tre: TRUE, FALSE e UNKNOWN. Le espressioni che restituiscono un tipo di dati **Boolean** sono note come espressioni booleane.  
   
- A differenza degli altri [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, un **booleano** non può essere specificato come tipo di dati di una colonna della tabella o una variabile, tipo di dati e non può essere restituito in un set di risultati.  
+ A differenza di altri tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un tipo di dati **Boolean** non può essere specificato per una colonna di tabella o una variabile e non può essere restituito in un set di risultati.  
   
  Quando l'opzione SET ANSI_NULLS è impostata su ON, un operatore con una o due espressioni NULL restituisce UNKNOWN. Quando l'opzione SET ANSI_NULLS è impostata su OFF, vengono applicate le stesse regole, ma l'operatore di uguaglianza (=) restituisce TRUE quando entrambe le espressioni sono NULL. Ad esempio, se SET ANSI_NULLS è impostata su OFF, NULL = NULL restituisce TRUE.  
   
- Espressioni con **booleano** tipi di dati vengono utilizzati nella clausola WHERE per filtrare le righe che soddisfano le condizioni per le condizioni di ricerca e in istruzioni di controllo di flusso quali IF e WHILE, ad esempio:  
+ Le espressioni con tipi di dati **Boolean** vengono usate nella clausola WHERE per filtrare le righe che soddisfano le condizioni di ricerca e in istruzioni con elementi del linguaggio per il controllo di flusso quali IF e WHILE, ad esempio:  
   
 ```  
 -- Uses AdventureWorks  
@@ -73,6 +73,6 @@ IF (@MyProduct <> 0)
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

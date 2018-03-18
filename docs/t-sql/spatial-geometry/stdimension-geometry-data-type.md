@@ -1,5 +1,5 @@
 ---
-title: STDimension (tipo di dati geometry) | Documenti Microsoft
+title: STDimension (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdimension-geometry-data-type"></a>STDimension (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce le dimensioni massime di un **geometry** istanza.
+Restituisce le dimensioni massime di un'istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,15 +44,15 @@ Restituisce le dimensioni massime di un **geometry** istanza.
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- `STDimension()`Restituisce -1 se il **geometry** istanza è vuota.  
+## <a name="remarks"></a>Remarks  
+ `STDimension()` restituisce -1 se l'istanza **geometry** è vuota.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea una variabile di tabella per contenere **geometry** istanze e inserisce un `Point`, `LineString`e un `Polygon`.  Viene quindi utilizzato `STDimension()` per restituire le dimensioni di ogni **geometry** istanza.  
+ Nell'esempio seguente viene creata una variabile di tabella per contenere istanze **geometry** e vengono inseriti un oggetto `Point`, un oggetto `LineString` e un oggetto `Polygon`.  Viene quindi usato `STDimension()` per restituire le dimensioni di ogni istanza **geometry**.  
   
 ```  
 DECLARE @temp table ([name] varchar(10), [geom] geometry);  
@@ -65,11 +65,11 @@ FROM @temp;
   
  Nell'esempio vengono restituite le dimensioni di ogni istanza `geometry`.  
   
-|name|dim|  
+|NAME|dim|  
 |----------|---------|  
 |Punto|0|  
 |LineString|1|  
-|Poligono|2|  
+|Polygon|2|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi OGC sulle istanze di geometria](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

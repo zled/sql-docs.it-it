@@ -1,5 +1,5 @@
 ---
-title: DATALENGTH (Transact-SQL) | Documenti Microsoft
+title: DATALENGTH (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ DATALENGTH ( expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*espressione*  
-È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo di dati.
+*expression*  
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) con qualsiasi tipo di dati.
   
 ## <a name="return-types"></a>Tipi restituiti
-**bigint** se *espressione* è il **varchar (max)**, **nvarchar (max)** o **varbinary (max)** tipi di dati. in caso contrario **int**.
+**bigint** se *expression* è del tipo di dati **varchar(max)**, **nvarchar(max)** o **varbinary(max)**. In caso contrario, **int**.
   
-## <a name="remarks"></a>Osservazioni  
-DATALENGTH è particolarmente utile con **varchar**, **varbinary**, **testo**, **immagine**, **nvarchar**, e **ntext** tipi di dati perché questi tipi di dati è possono archiviare dati a lunghezza variabile.
+## <a name="remarks"></a>Remarks  
+DATALENGTH è particolarmente utile con i tipi di dati **varchar**, **varbinary**, **text**, **image**, **nvarchar** e **ntext**, in quanto tali tipi di dati consentono di archiviare dati a lunghezza variabile.
   
 Il valore DATALENGTH di NULL è NULL.
   
@@ -76,10 +76,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+[LEN &#40;Transact-SQL&#41;](../../t-sql/functions/len-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
-[Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
+[Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
   
   
 

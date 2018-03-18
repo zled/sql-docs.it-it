@@ -62,7 +62,7 @@ RETURN [ integer_expression ]
 > [!NOTE]  
 >  Se non indicato diversamente, tutte le stored procedure di sistema restituiscono il valore 0 ad indicare l'esito positivo e un valore diverso da zero per indicare l'errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando viene utilizzata con una stored procedure, l'istruzione RETURN non può restituire un valore Null. Se una procedura tenta di restituire un valore Null, ad esempio quando si utilizza RETURN @status e il parametro @status è NULL, viene visualizzato un messaggio di avviso e restituito il valore 0.  
   
  Il valore di stato restituito può essere incluso in istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive nel batch o nella procedura che ha eseguito la procedura corrente, ma deve essere immesso nel formato seguente: `EXECUTE @return_status = <procedure_name>`.  

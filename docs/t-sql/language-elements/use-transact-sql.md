@@ -50,11 +50,11 @@ USE { database_name }
   
 ## <a name="arguments"></a>Argomenti  
  *database_name*  
- Nome del database o dello snapshot del database su cui viene impostato il contesto utente. Database e i nomi degli snapshot di database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Nome del database o dello snapshot del database su cui viene impostato il contesto utente. I nomi di database e di snapshot del database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] il parametro del database può fare riferimento solo al database corrente. Se viene fornito un database diverso da quello corrente, il `USE` istruzione non consente il passaggio tra database e viene restituito il codice di errore 40508. Per cambiare database, è necessario connettersi direttamente al database. L'istruzione USE è contrassegnato come non applicabile al Database SQL nella parte superiore della pagina, perché anche se è possibile avere il `USE` istruzione in un batch, non esegue alcuna operazione.
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] il parametro del database può fare riferimento solo al database corrente. Se viene specificato un database diverso da quello corrente, l'istruzione `USE` non consente il passaggio tra database e viene restituito il codice di errore 40508. Per cambiare database, è necessario connettersi direttamente al database. L'istruzione USE è contrassegnata come non applicabile al database SQL all'inizio di questa pagina, perché anche se è possibile includere l'istruzione `USE` in un batch, non esegue alcuna operazione.
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si connette a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tale account viene connesso automaticamente al relativo database predefinito e acquisisce il contesto di sicurezza di un utente del database. Se per l'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è stato creato alcun utente di database, l'account si connette come guest. Se l'utente del database non dispone dell'autorizzazione CONNECT per il database, l'istruzione USE avrà esito negativo. Se all'account di accesso non è stato assegnato un database predefinito, verrà impostato il database master.  
   
  L'istruzione USE viene eseguita sia in fase di compilazione che in fase di esecuzione e ha effetto immediato. Pertanto, le istruzioni presenti in un batch dopo l'istruzione USE vengono eseguite nel database specificato.  

@@ -1,5 +1,5 @@
 ---
-title: STNumPoints (tipo di dati geography) | Documenti Microsoft
+title: STNumPoints (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumpoints-geography-data-type"></a>STNumPoints (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero totale di punti in ognuna delle figure di un **geography** istanza.  
+  Restituisce il numero totale di punti in ognuna delle figure di un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo conta i punti nella descrizione di un **geography** istanza. Vengono contati anche i punti duplicati; tuttavia, i punti di connessione tra i segmenti vengono contati una sola volta. Se questa istanza è una raccolta, il metodo restituisce il numero totale di punti nella raccolta.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo conta i punti nella descrizione di un'istanza **geography**. Vengono contati anche i punti duplicati; tuttavia, i punti di connessione tra i segmenti vengono contati una sola volta. Se questa istanza è una raccolta, il metodo restituisce il numero totale di punti nella raccolta.  
   
 ## <a name="examples"></a>Esempi  
   

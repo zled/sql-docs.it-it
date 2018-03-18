@@ -35,12 +35,12 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="sql-server-utilities-statements---go"></a>ISTRUZIONI di utilità SQL Server-
+# <a name="sql-server-utilities-statements---go"></a>Istruzioni delle utilità SQL Server - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vengono forniti comandi che non sono [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni, ma che vengono riconosciuti dal **sqlcmd** e **osql** utilità e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor di codice. Questi comandi possono essere utilizzati per facilitare la leggibilità e l'esecuzione di batch e script.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono forniti comandi che non rappresentano istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ma che vengono riconosciuti dalle utilità **sqlcmd** e **osql** e dall'editor del codice di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questi comandi possono essere utilizzati per facilitare la leggibilità e l'esecuzione di batch e script.  
   
-  GO indica la fine di un batch di [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni per la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilità.  
+  GO contrassegna la fine di un batch di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] per le utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,8 +55,8 @@ GO [count]
  *count*  
  Numero integer positivo. Il batch che precede GO verrà eseguito il numero specificato di volte.  
   
-## <a name="remarks"></a>Osservazioni  
- GO non è un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione, ma è un comando riconosciuto dal **sqlcmd** e **osql** utilità e [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editor di codice.  
+## <a name="remarks"></a>Remarks  
+ GO non è un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ma un comando riconosciuto dalle utilità **sqlcmd** e **osql** e dall'editor del codice di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Il comando GO viene interpretato dalle utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come un segnale per l'invio del batch corrente di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il batch di istruzioni corrente è composto da tutte le istruzioni immesse dopo l'ultima esecuzione del comando GO oppure dopo l'avvio della sessione ad hoc o dello script se si tratta della prima esecuzione di GO.  
   
@@ -98,7 +98,7 @@ GO;
 ```  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente vengono creati due batch. Il primo contiene solo un `USE``AdventureWorks2012` istruzione per impostare il contesto di database. Nelle restanti istruzioni viene utilizzata una variabile locale. Pertanto, tutte le dichiarazioni della variabile locale devono essere raggruppate in un singolo batch. A tale scopo, è necessario inserire il comando `GO` solo dopo l'ultima istruzione che fa riferimento alla variabile.  
+ Nell'esempio seguente vengono creati due batch. Il primo contiene solo un'istruzione `USE``AdventureWorks2012` per l'impostazione del contesto del database. Nelle restanti istruzioni viene utilizzata una variabile locale. Pertanto, tutte le dichiarazioni della variabile locale devono essere raggruppate in un singolo batch. A tale scopo, è necessario inserire il comando `GO` solo dopo l'ultima istruzione che fa riferimento alla variabile.  
   
 ```  
 USE AdventureWorks2012;  

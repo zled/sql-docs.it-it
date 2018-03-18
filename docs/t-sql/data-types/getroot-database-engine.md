@@ -1,5 +1,5 @@
 ---
-title: GetRoot (motore di Database) | Documenti Microsoft
+title: GetRoot (motore di database) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="getroot-database-engine"></a>GetRoot (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce la radice dell'albero gerarchico. GetRoot () è un metodo statico.
+Restituisce la radice dell'albero gerarchico. GetRoot() è un metodo statico.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,11 +49,11 @@ static SqlHierarchyId GetRoot ( )
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Utilizzato per determinare il nodo radice in un albero gerarchico.
   
 ## <a name="examples"></a>Esempi  
@@ -68,7 +68,7 @@ WHERE OrgNode = hierarchyid::GetRoot()
 ```  
   
 ### <a name="b-clr-example"></a>B. Esempio CLR  
-Frammento di codice seguente chiama il metodo getRoot ():
+Nel frammento di codice seguente viene chiamato il metodo GetRoot():
   
 ```sql
 SqlHierarchyId.GetRoot()  

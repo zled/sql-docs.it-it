@@ -1,5 +1,5 @@
 ---
-title: MOVE CONVERSATION (Transact-SQL) | Documenti Microsoft
+title: MOVE CONVERSATION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -60,13 +60,13 @@ MOVE CONVERSATION conversation_handle
  TO *conversation_group_id*  
  Variabile o costante contenente l'identificatore del gruppo di conversazioni in cui si trova la conversazione da spostare. *conversation_group_id* deve essere di tipo **uniqueidentifier**.  
   
-## <a name="remarks"></a>Osservazioni  
- L'istruzione MOVE CONVERSATION Sposta la conversazione specificata da *conversation_handle* per il gruppo di conversazioni identificato da *conversation_group_id*. I dialoghi possono essere reindirizzati solo tra gruppi di conversazioni associati alla stessa coda.  
+## <a name="remarks"></a>Remarks  
+ L'istruzione MOVE CONVERSATION sposta la conversazione specificata da *conversation_handle* nel gruppo di conversazioni identificato da *conversation_group_id*. I dialoghi possono essere reindirizzati solo tra gruppi di conversazioni associati alla stessa coda.  
   
 > [!IMPORTANT]  
->  Se l'istruzione MOVE CONVERSATION non è la prima istruzione in un batch o stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), il [!INCLUDE[tsql](../../includes/tsql-md.md)] carattere di terminazione.  
+>  Se l'istruzione MOVE CONVERSATION non è la prima istruzione in un batch o in una stored procedure, l'istruzione precedente deve terminare con un punto e virgola (**;**), ovvero il terminatore di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- L'istruzione MOVE CONVERSATION blocca il gruppo di conversazioni associato *conversation_handle* e il gruppo di conversazioni specificato da *conversation_group_id* fino a quando la transazione contenente l'istruzione commit o rollback.  
+ L'istruzione MOVE CONVERSATION blocca il gruppo di conversazioni associato a *conversation_handle* e il gruppo di conversazioni specificato da *conversation_group_id* finché non viene eseguito il commit o il rollback della transazione contenente l'istruzione.  
   
  MOVE CONVERSATION non è un'istruzione valida in una funzione definita dall'utente.  
   

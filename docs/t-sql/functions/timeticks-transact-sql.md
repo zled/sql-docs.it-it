@@ -1,5 +1,5 @@
 ---
-title: '@@TIMETICKS (Transact-SQL) | Documenti Microsoft'
+title: '@@TIMETICKS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'intervallo di tempo per tick dipende dal computer. Ogni tick nel sistema operativo equivale a 31,25 millisecondi, ovvero un trentaduesimo di secondo.  
   
 ## <a name="examples"></a>Esempi  

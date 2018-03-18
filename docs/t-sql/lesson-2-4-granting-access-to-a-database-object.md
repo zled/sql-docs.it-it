@@ -1,5 +1,5 @@
 ---
-title: Concessione dell'accesso a un oggetto di Database | Documenti Microsoft
+title: Concessione dell'accesso a un oggetto di database | Microsoft Docs
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lezione 2-4-la concessione dell'accesso a un oggetto di Database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Come amministratore, è possibile eseguire l'istruzione SELECT dal **prodotti** tabella e **vw_Names** visualizzare ed eseguire il **pr_Names** procedura; Mary non sono tuttavia. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
+# <a name="lesson-2-4---granting-access-to-a-database-object"></a>Lezione 2-4 - Concessione dell'accesso a un oggetto di database
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] In qualità di amministratore, l'utente è autorizzato a eseguire l'istruzione SELECT dalla tabella **Products** e dalla vista **vw_Names**, nonché a eseguire la procedura **pr_Names**. All'utente Mary non sono tuttavia concesse tali autorizzazioni. Per concedere a tale utente le autorizzazioni necessarie, utilizzare l'istruzione GRANT.  
   
 ### <a name="procedure-title"></a>Titolo della procedura  
   

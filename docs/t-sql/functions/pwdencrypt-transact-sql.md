@@ -1,5 +1,5 @@
 ---
-title: PWDENCRYPT (Transact-SQL) | Documenti Microsoft
+title: PWDENCRYPT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/21/2017
 
   Restituisce l'hash della password di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il valore di input che utilizza la versione corrente dell'algoritmo di hashing delle password.  
   
- PWDENCRYPT è una funzione precedente e potrebbe non essere supportata in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilizzare [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md) invece. HASHBYTES rende disponibili ulteriori algoritmi di hashing.  
+ PWDENCRYPT è una funzione precedente e potrebbe non essere supportata in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare invece [HASHBYTES](../../t-sql/functions/hashbytes-transact-sql.md). HASHBYTES rende disponibili ulteriori algoritmi di hashing.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,16 +49,16 @@ PWDENCRYPT ( 'password' )
   
 ## <a name="arguments"></a>Argomenti  
  *password*  
- Password da crittografare. *password* è **sysname**.  
+ Password da crittografare. *password* è di tipo **sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varbinary(128)**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  PWDENCRYPT è disponibile per il ruolo public.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
- [PWDCOMPARE &#40; Transact-SQL &#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
+ [PWDCOMPARE &#40;Transact-SQL&#41;](../../t-sql/functions/pwdcompare-transact-sql.md)  
   
   

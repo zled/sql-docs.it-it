@@ -1,5 +1,5 @@
 ---
-title: Tipi data e ora | Documenti Microsoft
+title: Tipi di data e ora | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -26,21 +26,21 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="date-and-time-types"></a>Tipi data e ora
+# <a name="date-and-time-types"></a>Tipi di data e ora
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta i seguenti tipi di data e ora.
   
 ## <a name="in-this-section"></a>Contenuto della sezione
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[smalldatetime &#40; Transact-SQL &#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
-[tempo &#40; Transact-SQL &#41;](../../t-sql/data-types/time-transact-sql.md)
+[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  
+[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)
   
 ## <a name="see-also"></a>Vedere anche
-[Data e ora funzioni e tipi di &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-[FUSO orario &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   

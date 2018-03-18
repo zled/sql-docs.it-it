@@ -1,5 +1,5 @@
 ---
-title: Elementi del linguaggio (Transact-SQL) | Documenti Microsoft
+title: Elementi del linguaggio (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -31,14 +31,14 @@ ms.lasthandoff: 01/25/2018
 
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta gli elementi di linguaggio riportati di seguito.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
-[-- &#40;Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
+## <a name="in-this-section"></a>Argomenti della sezione  
+[-- &#40;commento&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)  
   
-[Slash Star &#40;Block Comment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
+[Barra asterisco &#40;blocco di commento&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/slash-star-comment-transact-sql.md)  
  
 [CREATE DIAGNOSTICS SESSION (Transact-SQL)](../../t-sql/language-elements/create-diagnostics-session-transact-sql.md)  
 
-[NULL e sconosciuto (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
+[NULL e UNKNOWN (Transact-SQL)](../../t-sql/language-elements/null-and-unknown-transact-sql.md)
 
 [Transazioni (SQL Data Warehouse)](../../t-sql/language-elements/transactions-sql-data-warehouse.md)
   

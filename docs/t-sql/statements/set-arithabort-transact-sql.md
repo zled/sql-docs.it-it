@@ -1,5 +1,5 @@
 ---
-title: SET ARITHABORT (Transact-SQL) | Documenti Microsoft
+title: SET ARITHABORT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Impostare sempre ARITHABORT su ON nelle sessioni di accesso. L'impostazione ARITHABORT su OFF può influire negativamente sull'ottimizzazione delle query causando problemi di prestazioni.  
   
 > [!WARNING]  
@@ -82,13 +82,13 @@ SET ARITHABORT ON
   
  Se l'opzione SET ARITHABORT o SET ARITHIGNORE è impostata su OFF e l'opzione SET ANSI_WARNINGS è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce comunque un messaggio di errore quando si verificano errori di divisione per zero o di overflow.  
   
- Se SET ARITHABORT è impostata su OFF e si verifica un errore di interruzione durante la valutazione della condizione booleana di un'istruzione IF, viene eseguito il ramo FALSE.
+ Se SET ARITHABORT è impostata su OFF e si verifica un errore di interruzione durante la valutazione della condizione booleana di un'istruzione IF, viene eseguito il segmento di codice associato alla valutazione FALSE.
   
  È necessario che l'opzione SET ARITHABORT sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione è impostata su OFF, le istruzioni CREATE, UPDATE, INSERT e DELETE eseguite nelle tabelle che includono indici in colonne calcolate o viste indicizzate hanno esito negativo.
   
  L'opzione SET ARITHABORT viene impostata in fase di esecuzione, non in fase di analisi.  
   
- Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query seguente:
+ Per visualizzare l'impostazione corrente per questa impostazione, eseguire la query riportata di seguito:
   
 ```  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
@@ -97,7 +97,7 @@ SELECT @ARITHABORT AS ARITHABORT;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -198,7 +198,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHIGNORE &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SET ARITHIGNORE &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithignore-transact-sql.md)   
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

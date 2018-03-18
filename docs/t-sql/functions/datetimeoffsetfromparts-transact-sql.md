@@ -1,5 +1,5 @@
 ---
-title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Documenti Microsoft
+title: DATETIMEOFFSETFROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Restituisce un **datetimeoffset** valore per la data e ora specificate e con l'offset specificati e la precisione.
+Restituisce un valore **datetimeoffset** per la data e l'ora specificata e con gli offset e la precisione indicati.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,25 +45,25 @@ DATETIMEOFFSETFROMPARTS ( year, month, day, hour, minute, seconds, fractions, ho
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*anno*  
+*year*  
 Espressione intera che specifica un anno.
   
-*mese*  
+*month*  
 Espressione intera che specifica un mese.
   
-*giorno*  
+*day*  
 Espressione intera che specifica un giorno.
   
-*ora*  
+*hour*  
 Espressione intera che specifica le ore.
   
-*minuto*  
+*minute*  
 Espressione intera che specifica i minuti.
   
 *secondi*  
 Espressione intera che specifica i secondi.
   
-*frazioni*  
+*fractions*  
 Espressione intera che specifica le frazioni.
   
 *hour_offset*  
@@ -73,15 +73,15 @@ Espressione intera che specifica la parte di ora della differenza di fuso orario
 Espressione intera che specifica la parte di minuto della differenza di fuso orario.
   
 *precisione*  
-Valore letterale integer che specifica la precisione del **datetimeoffset** valore da restituire.
+Valore letterale intero che specifica la precisione del valore **datetimeoffset** da restituire.
   
 ## <a name="return-types"></a>Tipi restituiti
-**DateTimeOffset (** *precisione* **)**
+**datetimeoffset(** *precision* **)**
   
-## <a name="remarks"></a>Osservazioni  
-**DATETIMEOFFSETFROMPARTS** restituisce un oggetto completamente inizializzato **datetimeoffset** tipo di dati. Gli argomenti dell'offset vengono utilizzati per rappresentare la differenza di fuso orario. Se tali argomenti vengono omessi, si presuppone che la differenza di fuso orario sia 00.00, ovvero che non sia presente. Se invece vengono specificati, entrambi gli argomenti devono essere presenti e avere segno positivo o negativo. Se *minute_offset* viene specificato senza *hour_offset*, viene generato un errore. Se altri argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null. Tuttavia, se il *precisione* argomento è null, allora viene generato un errore.
+## <a name="remarks"></a>Remarks  
+**DATETIMEOFFSETFROMPARTS** restituisce un tipo di dati **datetimeoffset** completamente inizializzato. Gli argomenti dell'offset vengono utilizzati per rappresentare la differenza di fuso orario. Se tali argomenti vengono omessi, si presuppone che la differenza di fuso orario sia 00.00, ovvero che non sia presente. Se invece vengono specificati, entrambi gli argomenti devono essere presenti e avere segno positivo o negativo. Se *minute_offset* viene specificato senza *hour_offset*, viene generato un errore. Se altri argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null. Se tuttavia l'argomento *precision* è Null viene generato un errore.
   
-Il *frazioni* argomento varia a seconda di *precisione* argomento. Ad esempio, se *precisione* è 7, quindi ogni frazione rappresenta 100 nanosecondi, mentre se *precisione* è 3, quindi ogni frazione rappresenta un millisecondo. Se il valore di *precisione* è zero, il valore di *frazioni* deve inoltre essere uguale a zero; in caso contrario, viene generato un errore.
+L'argomento *fractions* dipende dall'argomento *precision*. Se ad esempio *precision* è 7, ogni frazione rappresenta 100 nanosecondi, mentre se *precision* è 3 ogni frazione rappresenta un millisecondo. Se il valore di *precision* è zero, anche il valore di *fractions* deve essere zero. In caso contrario, viene generato un errore.
   
 Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -104,10 +104,10 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Esempio con frazioni di un secondo  
-Nell'esempio seguente viene illustrato l'utilizzo del *frazioni* e *precisione* parametri:
-1.   Quando *frazioni* ha un valore pari a 5 e *precisione* ha un valore pari a 1, quindi il valore di *frazioni* rappresenta 5/10 di secondo.  
-1.   Quando *frazioni* ha un valore pari a 50 e *precisione* ha un valore pari a 2, quindi il valore di *frazioni* rappresenta 50/100 di secondo.  
-1.   Quando *frazioni* ha un valore pari a 500 e *precisione* ha un valore pari a 3, quindi il valore di *frazioni* rappresenta 500/1000 di un secondo.  
+L'esempio seguente illustra l'uso dei parametri *fractions* e *precision*:
+1.   Se *fractions* ha valore 5 e *precision* ha valore 1, il valore di *fractions* corrisponde a 5/10 di secondo.  
+1.   Se *fractions* ha valore 50 e *precision* ha valore 2, il valore di *fractions* corrisponde a 50/100 di secondo.  
+1.   Se *fractions* ha valore 500 e *precision* ha valore 3, il valore di *fractions* corrisponde a 500/1000 di secondo.  
   
 ```sql
 SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
@@ -137,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[FUSO orario &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 

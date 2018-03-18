@@ -1,5 +1,5 @@
 ---
-title: CREARE il PROVIDER di crittografia (Transact-SQL) | Documenti Microsoft
+title: CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -59,12 +59,12 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Nome del provider EKM.  
   
  *path_of_DLL*  
- Percorso del file dll che implementa l'interfaccia EKM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si utilizza il **SQL Server Connector per Microsoft Azure Key Vault** il percorso predefinito è **' C:\Program Files\Microsoft SQL Server Connector per Microsoft Azure chiave Vault\Microsoft.AzureKeyVaultService.EKM.dll '**.  
+ Percorso del file dll che implementa l'interfaccia EKM di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quando si usa **Connettore SQL Server per Microsoft Azure Key Vault**, il percorso predefinito è **"C:\Programmi\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll"**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Tutte le chiavi create da un provider faranno riferimento al provider attraverso il GUID. Il GUID viene mantenuto per tutte le versioni della DLL.  
   
- Alla DLL che implementa l'interfaccia SQLEKM deve essere applicata una firma digitale usando qualsiasi certificato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificherà la firma. Ciò include la catena di certificati, che deve avere installato nella radice di **autorità di certificazione radice attendibili** percorso in un sistema di Windows. Se la firma non viene verificata correttamente, l'istruzione CREATE CRYPTOGRAPHIC PROVIDER avrà esito negativo. Per ulteriori informazioni sui certificati e le catene di certificati, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
+ Alla DLL che implementa l'interfaccia SQLEKM deve essere applicata una firma digitale usando qualsiasi certificato. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verificherà la firma. Include la catena di certificati, la cui radice deve essere installata nel percorso **Autorità di certificazione radice attendibili** in un sistema Windows. Se la firma non viene verificata correttamente, l'istruzione CREATE CRYPTOGRAPHIC PROVIDER avrà esito negativo. Per altre informazioni sui certificati e sulle catene di certificati, vedere [Certificati SQL Server e chiavi simmetriche](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
  Quando la DLL di un provider EKM non implementa tutti i metodi necessari, CREATE CRYPTOGRAPHIC PROVIDER può restituire l'errore 33085:  
   
@@ -74,11 +74,11 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione CONTROL SERVER o l'appartenenza di **sysadmin** ruolo predefinito del server.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CONTROL SERVER o l'appartenenza al ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente crea un provider di crittografia denominato `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file con estensione dll. Il file dll è denominato `c:\SecurityProvider\SecurityProvider_v1.dll` ed è installato nel server. Il certificato del provider deve prima essere installato nel server.  
+ Nell'esempio seguente viene creato un provider del servizio di crittografia denominato `SecurityProvider` in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da un file DLL. Il file dll è denominato `c:\SecurityProvider\SecurityProvider_v1.dll` ed è installato nel server. Il certificato del provider deve prima essere installato nel server.  
   
 ```  
 -- Install the provider  

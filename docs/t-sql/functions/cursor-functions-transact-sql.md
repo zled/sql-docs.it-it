@@ -1,5 +1,5 @@
 ---
-title: Funzioni per i cursori (Transact-SQL) | Documenti Microsoft
+title: Funzioni per i cursori (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -39,7 +39,7 @@ Le funzioni scalari elencate di seguito restituiscono informazioni sui cursori.
 |[@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md)|[CURSOR_STATUS](../../t-sql/functions/cursor-status-transact-sql.md)|  
 |[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md)||  
   
-Tutte le funzioni per i cursori sono non deterministiche, Questo significa che non restituiscono sempre gli stessi risultati ogni volta che vengono chiamate, anche se il set di valori di input è lo stesso. Per ulteriori informazioni sulle funzioni deterministiche, vedere [funzioni deterministiche e non](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
+Tutte le funzioni per i cursori sono non deterministiche, Questo significa che non restituiscono sempre gli stessi risultati ogni volta che vengono chiamate, anche se il set di valori di input è lo stesso. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)

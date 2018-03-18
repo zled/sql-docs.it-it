@@ -1,5 +1,5 @@
 ---
-title: Concessione dell'accesso a un Database | Documenti Microsoft
+title: Concessione dell'accesso a un database | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-2-2---granting-access-to-a-database"></a>Lezione 2-2-la concessione dell'accesso a un Database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Mary dispone ora dell'accesso a questa istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma non dispone dell'autorizzazione per accedere ai database. L'utente non dispone inoltre dell'accesso al proprio database predefinito **TestData** a meno che non lo si autorizzi in qualità di utente del database.  
+# <a name="lesson-2-2---granting-access-to-a-database"></a>Lezione 2-2 - Concessione dell'accesso a un database
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]L'utente Mary dispone ora dell'accesso all'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ma non delle autorizzazioni necessarie per accedere ai database. L'utente non dispone inoltre dell'accesso al proprio database predefinito **TestData** a meno che non lo si autorizzi in qualità di utente del database.  
   
 Per concedere l'accesso all'utente Mary, passare al database **TestData** e quindi utilizzare l'istruzione CREATE USER per eseguire il mapping dell'account utente a un utente denominato Mary.  
   

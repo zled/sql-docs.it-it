@@ -1,5 +1,5 @@
 ---
-title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Documenti Microsoft
+title: DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
@@ -46,18 +46,18 @@ DROP DATABASE SCOPED CREDENTIAL credential_name
   
 ## <a name="arguments"></a>Argomenti  
  *credential_name*  
- È il nome delle credenziali con ambito database da rimuovere dal server.  
+ Nome della credenziale con ambito database da rimuovere dal server.  
   
-## <a name="remarks"></a>Osservazioni  
- Per eliminare la chiave privata associata a una credenziale con ambito database senza eliminare le credenziali con ambito database, utilizzare [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per rimuovere il segreto associato a una credenziale con ambito database, senza rimuovere la credenziale con ambito database stessa, usare [ALTER CREDENTIAL](../../t-sql/statements/alter-credential-transact-sql.md).  
   
- Informazioni sulle credenziali con ambito database sono visibili nella [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md) vista del catalogo.  
+ Altre informazioni sulle credenziali con ambito database sono disponibili nella vista del catalogo [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario `ALTER` l'autorizzazione per la credenziale.  
+ È necessaria l'autorizzazione `ALTER` per la credenziale.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente rimuove le credenziali con ambito database chiamata `SalesAccess`.  
+ Nell'esempio seguente viene rimossa la credenziale con ambito database denominata `SalesAccess`.  
   
 ```sql  
 DROP DATABASE SCOPED CREDENTIAL AppCred;  
@@ -65,10 +65,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
- [CREATE DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
- [ALTER DATABASE SCOPED CREDENTIAL &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
- [database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
+ [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)   
+ [ALTER DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-credential-transact-sql.md)   
+ [sys.database_scoped_credentials](../../relational-databases/system-catalog-views/sys-database-scoped-credentials-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
   

@@ -48,13 +48,13 @@ REVERSE ( string_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *string_expression*  
- *string_expression* è un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di un tipo di dati string o binary. *string_expression* può essere una costante, variabile o colonna di tipo carattere o binario.  
+ *string_expression* è un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) con tipo di dati stringa o binario. *string_expression* può essere una costante, una variabile o una colonna di dati di tipo carattere o binario.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar** o **nvarchar**  
   
-## <a name="remarks"></a>Osservazioni  
- *string_expression* deve essere di un tipo di dati che è implicitamente convertibile in **varchar**. In caso contrario, utilizzare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire esplicitamente *string_expression*.  
+## <a name="remarks"></a>Remarks  
+ *string_expression* deve essere di un tipo di dati che può essere convertito in modo implicito in **varchar**. In caso contrario usare [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) per convertire in modo esplicito *string_expression*.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
  Quando si utilizzano le regole di confronto SC, la funzione REVERSE non invertirà l'ordine di due metà di una coppia di surrogati.  
@@ -92,15 +92,15 @@ SELECT REVERSE(@myvar) AS Reversed ;
 GO  
 ```  
   
- Nell'esempio seguente viene eseguita una conversione implicita da un **int** del tipo di dati in **varchar** tipo di dati e quindi inverte il risultato.  
+ Nell'esempio seguente viene eseguita una conversione implicita da un tipo di dati **int** in un tipo di dati **varchar**, quindi viene restituito il risultato in ordine inverso.  
   
 ```  
 SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente restituisce i nomi di tutti i database e i nomi con i caratteri invertito.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'esempio seguente restituisce i nomi di tutti i database e i nomi con i caratteri in ordine inverso.  
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
@@ -117,9 +117,9 @@ GO
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

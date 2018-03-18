@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Documenti Microsoft
+title: ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -55,13 +55,13 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  Passphrase dalla quale generare una chiave simmetrica.  
   
  @passphrase  
- Una variabile di tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** contenente una passphrase da cui generare una chiave simmetrica.  
+ Variabile di tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** contenente una passphrase da cui generare una chiave simmetrica.  
   
- *testo non crittografato*  
+ *cleartext*  
  Testo non crittografato da crittografare.  
   
  @cleartext  
- Una variabile di tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** contenente il testo non crittografato. Le dimensioni massime sono pari a 8.000 byte.  
+ Variabile di tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** contenente il testo non crittografato. Le dimensioni massime sono pari a 8.000 byte.  
   
  *add_authenticator*  
  Indica se un autenticatore verrà crittografato insieme al testo non crittografato. 1 se verrà aggiunto un autenticatore. **int**.  
@@ -69,16 +69,16 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  @add_authenticator  
  Indica se un hash verrà crittografato insieme al testo non crittografato.  
   
- *autenticatore*  
+ *authenticator*  
  Dati da cui derivare un autenticatore. **sysname**.  
   
  @authenticator  
  Variabile contenente i dati dai quali derivare un autenticatore.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Una passphrase è una password contenente spazi. Il vantaggio dell'uso di una passphrase consiste nel fatto che è più facile ricordare una frase significativa che una stringa di caratteri di pari lunghezza.  
   
  Questa funzione non controlla la complessità delle password.  
@@ -108,7 +108,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DECRYPTBYPASSPHRASE &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

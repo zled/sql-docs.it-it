@@ -1,5 +1,5 @@
 ---
-title: GETANSINULL (Transact-SQL) | Documenti Microsoft
+title: GETANSINULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Argomenti  
  '*database*'  
- Nome del database per cui restituire le informazioni sul supporto dei valori Null. *database*è **char** o **nchar**. Se **char**, *database* viene implicitamente convertito in **nchar**.  
+ Nome del database per cui restituire le informazioni sul supporto dei valori Null. *database* è **char** o **nchar**. Se **char**, *database* viene convertito in modo implicito in **nchar**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando il database specificato ammette valori Null e il supporto dei valori Null per colonne o tipi di dati non è definito in modo esplicito, il valore restituito da GETANSINULL è 1. Questa è l'impostazione predefinita di ANSI NULL.  
   
  Per abilitare la funzionalità predefinita di supporto ANSI NULL, è necessario che sia impostata una delle condizioni seguenti:  
   
--   ALTER DATABASE *database_name* SET ANSI_NULL_DEFAULT ON  
+-   ALTER DATABASE *nome_database* SET ANSI_NULL_DEFAULT ON  
   
 -   SET ANSI_NULL_DFLT_ON ON  
   
@@ -86,6 +86,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

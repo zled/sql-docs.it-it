@@ -1,5 +1,5 @@
 ---
-title: Eliminazione di oggetti di Database | Documenti Microsoft
+title: Eliminazione degli oggetti di database | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-3-1---deleting-database-objects"></a>Lezione 3-1-eliminazione degli oggetti di Database
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Per rimuovere tutte le tracce di questa esercitazione, è possibile eliminare solo il database. In questo argomento verranno comunque illustrate le procedure per annullare ogni azione eseguita nell'ambito dell'esercitazione.  
+# <a name="lesson-3-1---deleting-database-objects"></a>Lezione 3-1 - Eliminazione degli oggetti di database
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Per rimuovere completamente tutte le tracce di questa esercitazione, è sufficiente eliminare il database. In questo argomento verranno comunque illustrate le procedure per annullare ogni azione eseguita nell'ambito dell'esercitazione.  
   
 ### <a name="removing-permissions-and-objects"></a>Rimozione di autorizzazioni e oggetti  
   

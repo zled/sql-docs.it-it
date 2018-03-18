@@ -1,5 +1,5 @@
 ---
-title: DROP INDEX (indici XML selettivi) | Documenti Microsoft
+title: DROP INDEX (indici XML selettivi) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -58,7 +58,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  Nome dell'indice esistente che si desidera eliminare.  
   
- *\<Oggetto >* è la tabella che contiene la colonna XML indicizzata. Utilizzare uno dei seguenti formati:  
+ *\< object>* Tabella contenente la colonna XML indicizzata. Utilizzare uno dei seguenti formati:  
   
 -   `database_name.schema_name.table_name`  
   
@@ -68,9 +68,9 @@ DROP INDEX index_name ON <object>
   
 -   `table_name`  
   
- *\<drop_index_option >* per informazioni sulle opzioni di indice di rilascio, vedere [DROP INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-index-transact-sql.md).  
+ *\<drop_index_option>* Per informazioni sulle opzioni di eliminazione dell'indice, vedere [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md).  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Per eseguire DROP INDEX, è necessario disporre dell'autorizzazione ALTER per la tabella o la vista. Questa autorizzazione viene concessa per impostazione predefinita al ruolo predefinito del server sysadmin e ai ruoli predefiniti del database db_ddladmin e db_owner.  

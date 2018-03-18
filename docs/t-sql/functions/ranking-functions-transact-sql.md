@@ -1,5 +1,5 @@
 ---
-title: Valutazione di funzioni (Transact-SQL) | Documenti Microsoft
+title: Funzioni di rango (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -84,6 +84,6 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   

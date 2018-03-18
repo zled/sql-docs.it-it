@@ -1,5 +1,5 @@
 ---
-title: Null (tipo di dati geometry) | Documenti Microsoft
+title: Null (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geometry-data-type"></a>Null (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Fornisce un'istanza null di una proprietà di sola lettura di **geometry** tipo.
+Proprietà di sola lettura che restituisce un'istanza Null del tipo **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,11 +45,11 @@ Null
 ## <a name="arguments"></a>Argomenti  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geometry**  
   
  Tipo CLR: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene recuperata un'istanza `geometry` Null.  

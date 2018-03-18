@@ -1,5 +1,5 @@
 ---
-title: Funzioni di sistema (Transact-SQL) | Documenti Microsoft
+title: Funzioni di sistema (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified

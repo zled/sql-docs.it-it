@@ -1,5 +1,5 @@
 ---
-title: TYPEPROPERTY (Transact-SQL) | Documenti Microsoft
+title: TYPEPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,15 +50,15 @@ TYPEPROPERTY (type , property)
  *type*  
  Nome del tipo di dati.  
   
- *proprietà*  
- Tipo di informazioni da restituire per il tipo di dati. *proprietà* può essere uno dei valori seguenti.  
+ *property*  
+ Tipo di informazioni da restituire per il tipo di dati. I possibili valori di *property* sono i seguenti.  
   
 |Proprietà|Description|Valore restituito|  
 |--------------|-----------------|--------------------|  
 |**AllowsNull**|Il tipo di dati ammette valori Null.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo di dati non trovato.|  
-|**OwnerId**|Proprietario del tipo.<br /><br /> Nota: Il proprietario dello schema non è necessariamente il tipo proprietario.|Valore diverso da Null = ID utente del database del proprietario del tipo.<br /><br /> NULL = Tipo non supportato oppure ID di tipo non valido.|  
-|**Precisione**|Precisione del tipo di dati.|Numero di cifre o caratteri.<br /><br /> -1 = **xml** o il tipo di dati di valori di grandi dimensioni<br /><br /> NULL = Tipo di dati non trovato.|  
-|**Scala**|Scala del tipo di dati.|Numero di posizioni decimali per il tipo di dati.<br /><br /> NULL = tipo di dati non **numerico** o non trovato.|  
+|**OwnerId**|Proprietario del tipo.<br /><br /> Nota: il proprietario dello schema non deve necessariamente corrispondere al proprietario del tipo.|Valore diverso da Null = ID utente del database del proprietario del tipo.<br /><br /> NULL = Tipo non supportato oppure ID di tipo non valido.|  
+|**Precisione**|Precisione del tipo di dati.|Numero di cifre o caratteri.<br /><br /> -1 = **xml** oppure tipo di dati per valori di grandi dimensioni<br /><br /> NULL = Tipo di dati non trovato.|  
+|**Scala**|Scala del tipo di dati.|Numero di posizioni decimali per il tipo di dati.<br /><br /> NULL = Tipo di dati diverso da **numeric** oppure non trovato.|  
 |**UsesAnsiTrim**|In fase di creazione del tipo di dati l'opzione per il riempimento ANSI era impostata su ON.|1 = True<br /><br /> 0 = False<br /><br /> NULL = Tipo di dati non trovato oppure diverso da binary o string.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
@@ -87,13 +87,13 @@ SELECT TYPEPROPERTY( 'tinyint', 'PRECISION');
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [TYPE_ID &#40; Transact-SQL &#41;](../../t-sql/functions/type-id-transact-sql.md)   
- [TYPE_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/type-name-transact-sql.md)   
- [COLUMNPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
+ [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
+ [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [AUTORIZZAZIONE ALTER &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
- [Sys. Types &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
+ [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
+ [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  
   
   
 

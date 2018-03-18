@@ -1,5 +1,5 @@
 ---
-title: La lettura dei dati in una tabella (esercitazione) | Documenti Microsoft
+title: Esercitazione per la lettura dei dati di una tabella | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -28,8 +28,8 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="lesson-1-4---reading-the-data-in-a-table"></a>Lezione 1-4-la lettura dei dati in una tabella
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]Utilizzare l'istruzione SELECT per leggere i dati in una tabella. L'istruzione SELECT è una delle più importanti istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e la relativa sintassi presenta numerose variazioni. Ai fini di questa esercitazione ne verranno utilizzate cinque semplici versioni.  
+# <a name="lesson-1-4---reading-the-data-in-a-table"></a>Lezione 1-4 - Lettura dei dati di una tabella
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)] Usare l'istruzione SELECT per leggere i dati archiviati in una tabella. L'istruzione SELECT è una delle più importanti istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e la relativa sintassi presenta numerose variazioni. Ai fini di questa esercitazione ne verranno utilizzate cinque semplici versioni.  
   
 ### <a name="to-read-the-data-in-a-table"></a>Per leggere i dati archiviati in una tabella  
   

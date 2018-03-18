@@ -1,5 +1,5 @@
 ---
-title: DROP USER (Transact-SQL) | Documenti Microsoft
+title: DROP USER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -58,15 +58,15 @@ DROP USER user_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Elimina in modo condizionale l'utente solo se esiste già.  
+ Rimuove in modo condizionale l'utente solo se esiste già.  
   
- *USER_NAME*  
+ *user_name*  
  Specifica il nome con cui viene identificato l'utente all'interno del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Gli utenti proprietari di entità a protezione diretta non possono essere rimossi dal database. Prima di rimuovere un utente di database proprietario di entità a protezione diretta, è innanzitutto necessario rimuovere o trasferire la proprietà di tali entità a protezione diretta.  
   
  L'utente guest non può essere rimosso. È tuttavia possibile disabilitarlo revocandone l'autorizzazione CONNECT tramite l'esecuzione di REVOKE CONNECT FROM GUEST all'interno di un database diverso da master o tempdb.  
@@ -74,7 +74,7 @@ DROP USER user_name
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY USER per il database.  
   
 ## <a name="examples"></a>Esempi  

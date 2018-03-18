@@ -1,5 +1,5 @@
 ---
-title: Stpgeomcollfromtext (tipo di dati geography) | Documenti Microsoft
+title: STGeomCollFromText (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeomcollfromtext-geography-data-type"></a>STPGeomCollFromText (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geography** istanza di una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT), integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
+Restituisce un'istanza **geography** da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium), integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *geometrycollection_tagged_text*  
- È la rappresentazione WKT del **geography** istanza da restituire. *geometrycollection_tagged_text* è un **nvarchar (max)** espressione.  
+ Rappresentazione WKT dell'istanza **geography** da restituire. *geometrycollection_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geography** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC del **geography** istanza restituita dalla STGeomCollFromText() è impostato per l'input WKT corrispondente.  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC dell'istanza **geography** restituita da STGeomCollFromText() è impostato sull'input WKT corrispondente.  
   
- Questo metodo genera un **ArgumentException** se l'input non è valido.  
+ Questo metodo genera un'eccezione **ArgumentException** se l'input non è valido.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STGeomCollFromText()` per creare un'istanza `geography`.  

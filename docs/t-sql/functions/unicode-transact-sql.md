@@ -48,12 +48,12 @@ UNICODE ( 'ncharacter_expression' )
   
 ## <a name="arguments"></a>Argomenti  
  **'** *ncharacter_expression* **'**  
- È un **nchar** o **nvarchar** espressione.  
+ È un'espressione **nchar** o **nvarchar**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  In versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], tramite la funzione UNICODE viene restituito un punto di codice UCS-2 nell'intervallo compreso tra 0 e 0xFFFF. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ed edizioni successive, quando vengono utilizzate le regole di confronto SC, tramite UNICODE viene restituito un punto di codice UTF-16 nell'intervallo compreso tra 0 e 0x10FFFF.  
   
 ## <a name="examples"></a>Esempi  
@@ -149,7 +149,7 @@ Character # Unicode Character UNICODE Value
  [ASCII &#40;Transact-SQL&#41;](../../t-sql/functions/ascii-transact-sql.md)  
  [CHAR &#40;Transact-SQL&#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40;Transact-SQL&#41;](../../t-sql/functions/nchar-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   

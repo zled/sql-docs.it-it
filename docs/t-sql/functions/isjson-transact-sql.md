@@ -1,5 +1,5 @@
 ---
-title: ISJSON (Transact-SQL) | Documenti Microsoft
+title: ISJSON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 # <a name="isjson-transact-sql"></a>ISJSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Verifica se una stringa contiene JSON valido.  
+  Verifica se una stringa include contenuto JSON valido.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,21 +44,21 @@ ISJSON ( expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
+ *expression*  
  Stringa da testare.  
   
 ## <a name="return-value"></a>Valore restituito  
- Restituisce 1 se la stringa contiene JSON valido; in caso contrario, restituisce 0. Restituisce null se *espressione* è null.  
+ Restituisce 1 se la stringa include contenuto JSON valido. In caso contrario, restituisce 0. Restituisce Null se *expression* è Null.  
   
  Non restituisce errori.  
   
-## <a name="remarks"></a>Osservazioni  
- **ISJSON** non verifica l'univocità delle chiavi allo stesso livello.  
+## <a name="remarks"></a>Remarks  
+ **ISJSON** non controlla l'univocità delle chiavi allo stesso livello.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="example-1"></a>Esempio 1  
-Nell'esempio seguente viene eseguito un blocco di istruzioni in modo condizionale se il valore del parametro `@param` include contenuto JSON valido.  
+L'esempio seguente esegue un blocco di istruzioni in modo condizionale se il valore del parametro `@param` include contenuto JSON valido.  
   
 ```sql  
 DECLARE @param <data type>
@@ -81,6 +81,6 @@ WHERE ISJSON(json_col) > 0
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [I dati JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [Dati JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

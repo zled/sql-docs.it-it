@@ -63,7 +63,7 @@ DBCC OPENTRAN
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* | *database_id*| 0  
- Nome o ID del database per il quale visualizzare le informazioni sulle transazioni meno recenti. Se questo argomento viene omesso oppure se viene specificato il valore 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Nome o ID del database per il quale visualizzare le informazioni sulle transazioni meno recenti. Se questo argomento viene omesso oppure se viene specificato il valore 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  TABLERESULTS  
  Specifica i risultati in un formato tabulare caricabile in una tabella. Utilizzare questa opzione per creare una tabella di risultati che è possibile inserire in una tabella per l'esecuzione di confronti. Se questa opzione viene omessa, i risultati vengono formattati in modo da migliorare la leggibilità.  
@@ -71,7 +71,7 @@ DBCC OPENTRAN
  NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Utilizzare l'istruzione DBCC OPENTRAN per determinare se il log delle transazioni include una transazione aperta. Quando si utilizza l'istruzione BACKUP LOG, è possibile troncare solo la sezione inattiva del log. La presenza di una transazione aperta può comportare un troncamento incompleto del log. Per identificare una transazione aperta, utilizzare la stored procedure sp_who per ottenere l'ID del processo di sistema.
   
 ## <a name="result-sets"></a>Set di risultati  

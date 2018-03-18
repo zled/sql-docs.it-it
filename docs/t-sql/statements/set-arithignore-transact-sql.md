@@ -1,5 +1,5 @@
 ---
-title: SET ARITHIGNORE (Transact-SQL) | Documenti Microsoft
+title: SET ARITHIGNORE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/04/2017
 ms.prod: sql-non-specified
@@ -57,7 +57,7 @@ SET ARITHIGNORE { ON | OFF }
 SET ARITHIGNORE OFF
 ```
 
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'impostazione SET ARITHIGNORE controlla solo se viene restituito un messaggio di errore. Per i calcoli che includono un errore di divisione per zero o di overflow, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce NULL indipendentemente dall'impostazione dell'opzione. È possibile utilizzare l'opzione SET ARITHABORT per determinare se la query viene interrotta. Questa impostazione non influisce sugli errori che si verificano durante le istruzioni INSERT, UPDATE e DELETE.  
   
  Se l'opzione SET ARITHABORT o SET ARITHIGNORE è impostata su OFF e l'opzione SET ANSI_WARNINGS è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce comunque un messaggio di errore quando si verificano errori di divisione per zero o di overflow.  
@@ -73,7 +73,7 @@ SELECT @ARITHIGNORE AS ARITHIGNORE;
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -105,8 +105,8 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente illustra la divisione per zero e gli errori di overflow. In questo esempio non restituisce un messaggio di errore per questi errori perché ARITHIGNORE è impostata su OFF.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Nell'esempio seguente vengono illustrati gli errori di divisione per zero e gli errori di overflow. L'esempio non restituisce un messaggio di errore per questi errori perché ARITHIGNORE è OFF.  
   
 ```  
 -- SET ARITHIGNORE OFF and testing.  
@@ -118,7 +118,7 @@ SELECT CAST(256 AS TINYINT) AS Overflow;
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ARITHABORT &#40; Transact-SQL &#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
+ [SET ARITHABORT &#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md)  
   
   
 

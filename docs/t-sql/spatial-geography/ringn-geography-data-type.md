@@ -1,5 +1,5 @@
 ---
-title: RingN (tipo di dati geography) | Documenti Microsoft
+title: RingN (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="ringn-geography-data-type"></a>RingN (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce l'anello specificato del **geography** istanza: `1 ≤ n ≤ NumRings()`.  
+  Restituisce l'anello specificato dell'istanza **geography**: `1 ≤ n ≤ NumRings()`.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di anelli in un' **poligono** istanza.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di anelli in un'istanza **polygon**.  
   
 ## <a name="return-value"></a>Valore restituito  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Se il valore dell'indice dell'anello  **n**  è minore di 1, questo metodo genera un **dell'eccezione ArgumentOutOfRangeException.** Il valore di indice dell'anello deve essere maggiore o uguale a 1 e deve essere minore o uguale al numero restituito da `NumRings()`.  
+## <a name="remarks"></a>Remarks  
+ Se il valore dell'indice dell'anello **n** è minore di 1, questo metodo genera un'eccezione **ArgumentOutOfRangeException**. Il valore dell'indice dell'anello deve essere maggiore o uguale a 1 e dovrebbe essere minore o uguale al numero restituito da `NumRings()`.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio viene creata un'istanza `Polygon` con due anelli e viene restituito il secondo anello.  

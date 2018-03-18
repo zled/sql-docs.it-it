@@ -1,5 +1,5 @@
 ---
-title: APPLOCK_MODE (Transact-SQL) | Documenti Microsoft
+title: APPLOCK_MODE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -49,13 +49,13 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
   
 ## <a name="arguments"></a>Argomenti  
 '*database_principal*'  
-Utente, ruolo o ruolo applicazione a cui è possibile concedere autorizzazioni per gli oggetti nel database. Il chiamante della funzione deve essere un membro di *database_principal*, dbo o db_owner ruolo predefinito del database per chiamare la funzione correttamente.
+Utente, ruolo o ruolo applicazione a cui è possibile concedere autorizzazioni per gli oggetti nel database. Perché la chiamata della funzione abbia esito positivo, è necessario che il chiamante sia un membro del ruolo predefinito del database *database_principal*, dbo o db_owner.
   
 '*resource_name*'  
-Nome di una risorsa di blocco specificato nell'applicazione client. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name*è **nvarchar (255)** prevede alcun valore predefinito. *resource_name* è di tipo binary confrontati e tra maiuscole e minuscole indipendentemente dalle impostazioni delle regole di confronto del database corrente.
+Nome di una risorsa di blocco specificato nell'applicazione client. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* è di tipo **nvarchar(255)** e non prevede alcun valore predefinito. Per *resource_name* viene eseguito un confronto binario ed è supportata la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto del database corrente.
   
 '*lock_owner*'  
-È il proprietario del blocco, ovvero il *lock_owner* valore quando è stato richiesto il blocco. *lock_owner* è **nvarchar(32)**, e il valore può essere **transazione** (impostazione predefinita) o **sessione**.
+Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è di tipo **nvarchar(32)** e il valore può essere **Transaction** (impostazione predefinita) o **Session**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **nvarchar(32)**
@@ -67,12 +67,12 @@ Restituisce la modalità di blocco acquisita dal proprietario del blocco per una
 |-|-|-|  
 |**NoLock**|**Update**|**\*SharedIntentExclusive**|  
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
-|**Condiviso**|**Exclusive**||  
+|**Shared**|**Exclusive**||  
   
 *Questa modalità di blocco risulta dalla combinazione di altre modalità di blocco e non può essere acquisita in modo esplicito tramite sp_getapplock.
   
-## <a name="function-properties"></a>Proprietà (funzione)
-**Non deterministiche**
+## <a name="function-properties"></a>Proprietà delle funzioni
+**Nondeterministic**
   
 **Nonindexable**
   
@@ -137,8 +137,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

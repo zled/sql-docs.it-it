@@ -1,5 +1,5 @@
 ---
-title: STExteriorRing (tipo di dati geometry) | Documenti Microsoft
+title: STExteriorRing (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stexteriorring-geometry-data-type"></a>STExteriorRing (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce l'anello esterno di un **geometry** istanza che è un poligono.
+Restituisce l'anello esterno di un'istanza **geometry** che è un poligono.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,17 +44,17 @@ Restituisce l'anello esterno di un **geometry** istanza che è un poligono.
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Aprire tipo Geospatial Consortium (OGC): **LineString**  
+ Tipo OGC (Open Geospatial Consortium): **LineString**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce **null** se il **geometry** istanza non è un poligono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce **null** se l'istanza **geometry** non è un poligono.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `Polygon` istanza e viene utilizzato `STExteriorRing()` per restituire l'anello esterno del poligono come un **LineString**.  
+ Nell'esempio seguente viene creata un'istanza `Polygon` e viene usato `STExteriorRing()` per restituire l'anello esterno del poligono come **LineString**.  
   
 ```  
 DECLARE @g geometry;  

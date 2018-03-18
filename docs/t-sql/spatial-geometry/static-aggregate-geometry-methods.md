@@ -1,5 +1,5 @@
 ---
-title: Metodi Geometry di aggregazione statici | Documenti Microsoft
+title: Metodi geometry di aggregazione statici | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,17 +42,17 @@ ms.lasthandoff: 01/25/2018
   
  [OGC Specifications, Simple Feature Access Part 2 – SQL Options](http://go.microsoft.com/fwlink/?LinkId=93628)  
   
- [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
+ [Specifiche OGC, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [CollectionAggregate &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
+-   [CollectionAggregate &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/collectionaggregate-geometry-data-type.md)  
   
--   [ConvexHullAggregate &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
+-   [ConvexHullAggregate &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/convexhullaggregate-geometry-data-type.md)  
   
--   [EnvelopeAggregate &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
+-   [EnvelopeAggregate &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/envelopeaggregate-geometry-data-type.md)  
   
--   [UnionAggregate &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
+-   [UnionAggregate &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/unionaggregate-geometry-data-type.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi estesi sulle istanze di geometria](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   

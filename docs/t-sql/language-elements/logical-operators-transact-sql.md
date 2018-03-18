@@ -1,5 +1,5 @@
 ---
-title: Operatori logici (Transact-SQL) | Documenti Microsoft
+title: Operatori logici (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -36,7 +36,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="logical-operators-transact-sql"></a>Operatori logici (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gli operatori logici verificano la veridicità di una determinata condizione. Analogamente agli operatori di confronto, gli operatori logici restituiscono un **booleano** del tipo di dati con un valore TRUE, FALSE o UNKNOWN.  
+  Gli operatori logici verificano la veridicità di una determinata condizione. Analogamente agli operatori di confronto, gli operatori logici restituiscono un tipo di dati **Boolean** con valore TRUE, FALSE o UNKNOWN.  
   
 |Operatore|Significato|  
 |--------------|-------------|  
@@ -48,10 +48,10 @@ ms.lasthandoff: 01/25/2018
 |[IN](../../t-sql/language-elements/in-transact-sql.md)|Restituisce TRUE se l'operando è uguale a una delle espressioni elencate.|  
 |[LIKE](../../t-sql/language-elements/like-transact-sql.md)|Restituisce TRUE se l'operando corrisponde a un modello.|  
 |[NOT](../../t-sql/language-elements/not-transact-sql.md)|Inverte il valore degli altri operatori booleani.|  
-|[OPPURE](../../t-sql/language-elements/or-transact-sql.md)|Restituisce TRUE se una delle due espressioni booleane è TRUE.|  
-|[ALCUNI](../../t-sql/language-elements/some-any-transact-sql.md)|Restituisce TRUE se alcuni dei confronti specificati sono TRUE.|  
+|[O](../../t-sql/language-elements/or-transact-sql.md)|Restituisce TRUE se una delle due espressioni booleane è TRUE.|  
+|[SOME](../../t-sql/language-elements/some-any-transact-sql.md)|Restituisce TRUE se alcuni dei confronti specificati sono TRUE.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Precedenza tra operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
+ [Precedenza degli operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

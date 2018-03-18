@@ -1,5 +1,5 @@
 ---
-title: KEY_GUID (Transact-SQL) | Documenti Microsoft
+title: KEY_GUID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ Key_GUID( 'Key_Name' )
 ## <a name="return-types"></a>Tipi restituiti  
  **uniqueidentifier**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se è stato specificato un valore Identity al momento della creazione della chiave, il relativo GUID sarà un hash MD5 di tale valore Identity. Se non è stato specificato alcun valore Identity, il GUID viene generato dal server.  
   
  Se la chiave è temporanea, il nome della chiave deve iniziare con il simbolo di cancelletto (#).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Dal momento che le chiavi temporanee sono disponibili solo nella sessione in cui vengono create, per accedervi non sono necessarie autorizzazioni. Per accedere a una chiave non temporanea, è necessario che il chiamante disponga di un'autorizzazione per la chiave e che non gli sia stata negata l'autorizzazione VIEW per la chiave.  
   
 ## <a name="examples"></a>Esempi  
@@ -71,7 +71,7 @@ SELECT Key_GUID('ABerglundKey1');
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [key_encryptions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.key_encryptions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)  
   
   

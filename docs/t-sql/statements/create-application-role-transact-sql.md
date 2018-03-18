@@ -1,5 +1,5 @@
 ---
-title: CREARE il ruolo applicazione (Transact-SQL) | Documenti Microsoft
+title: CREATE APPLICATION ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -57,24 +57,24 @@ CREATE APPLICATION ROLE application_role_name
  Specifica il nome del ruolo applicazione. Il nome non deve già essere usato per fare riferimento a un'altra entità nel database.  
   
  PASSWORD **='***password***'**  
- Specifica la password che verrà usata dagli utenti di database per attivare il ruolo applicazione. È necessario usare sempre password complesse. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Specifica la password che verrà usata dagli utenti di database per attivare il ruolo applicazione. È necessario usare sempre password complesse. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- DEFAULT_SCHEMA  **=**  *schema_name*  
+ DEFAULT_SCHEMA **=***schema_name*  
  Specifica il primo schema in cui il server eseguirà la ricerca per la risoluzione dei nomi degli oggetti per il ruolo. Se DEFAULT_SCHEMA non viene definito, il ruolo applicazione utilizzerà DBO come schema predefinito. *schema_name* può essere uno schema che non esiste nel database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  In fase di impostazione delle password per i ruoli applicazione viene eseguito il controllo dei requisiti di complessità delle password. Le applicazioni che richiamano i ruoli applicazione devono archiviare le relative password. Le password dei ruoli applicazione devono essere sempre archiviate in forma crittografata.  
   
- Ruoli applicazione sono visibili nel [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) vista del catalogo.  
+ I ruoli applicazione sono visibili nella vista del catalogo [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
- Per informazioni su come utilizzare i ruoli applicazione, vedere [ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
+ Per altre informazioni sull'uso dei ruoli applicazione, vedere [Ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY APPLICATION ROLE nel database.  
   
 ## <a name="examples"></a>Esempi  
@@ -89,9 +89,9 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli applicazione](../../relational-databases/security/authentication-access/application-roles.md)   
- [sp_setapprole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
- [ALTER APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
- [DROP APPLICATION ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
+ [sp_setapprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)   
+ [ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-application-role-transact-sql.md)   
+ [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   
  [Criteri password](../../relational-databases/security/password-policy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

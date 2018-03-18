@@ -66,7 +66,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>Argomenti  
 *database_name* | *database_id* | 0  
-Nome o ID del database per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+Nome o ID del database per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 Nome o ID della tabella o della vista indicizzata per cui si desidera segnalare e correggere le statistiche sull'utilizzo dello spazio. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
@@ -83,13 +83,13 @@ Disattiva tutti i messaggi informativi.
 COUNT_ROWS  
 Specifica che la colonna row count viene aggiornata in base al numero di righe corrente della tabella o della vista.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'istruzione DBCC UPDATEUSAGE corregge i conteggi delle righe, delle pagine utilizzate, delle pagine riservate, delle pagine foglia e delle pagine di dati per ogni partizione di una tabella o di un indice. Se nelle tabelle di sistema non vengono rilevate imprecisioni, l'istruzione DBCC UPDATEUSAGE non restituisce alcun dato. Se vengono rilevate e corrette alcune imprecisioni e l'opzione WITH NO_INFOMSGS non è stata utilizzata, l'istruzione DBCC UPDATEUSAGE restituisce le righe e le colonne aggiornate nelle tabelle di sistema.
   
 DBCC CHECKDB è stato migliorato in modo da rilevare i casi in cui il conteggio delle pagine o delle righe diventa negativo. In tali situazioni, l'output DBCC CHECKDB include un avviso e l'indicazione di eseguire DBCC UPDATEUSAGE per risolvere il problema.
   
 ## <a name="best-practices"></a>Procedure consigliate  
-Si consiglia quanto segue:
+È consigliabile attenersi alle linee guida seguenti:
 -   Non eseguire regolarmente DBCC UPDATEUSAGE. Poiché l'istruzione DBCC UPDATEUSAGE può richiedere una certa quantità di tempo se eseguita in tabelle o database di grandi dimensioni, deve essere utilizzata solo se si ritiene che valori non corretti vengano restituiti da sp_spaceused.
 -   Prevedere un'esecuzione regolare di DBCC UPDATEUSAGE, ad esempio ogni settimana, solo se il database subisce frequenti modifiche DDL (Data Definition Language), come l'istruzione CREATE, ALTER o DROP.  
   
@@ -120,7 +120,7 @@ GO
 ```  
   
 ### <a name="c-updating-page-or-row-counts-or-both-for-the-employee-table"></a>C. Aggiornamento del conteggio delle pagine, delle righe o di entrambi per la tabella Employee  
-L'esempio seguente segnala informazioni aggiornate di conteggio di pagine o delle righe per il `Employee` tabella il [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.
+Nell'esempio seguente vengono restituite informazioni aggiornate relative al conteggio delle pagine o delle righe per la tabella `Employee` nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].
   
 ```sql
 DBCC UPDATEUSAGE (AdventureWorks2012,'HumanResources.Employee');  

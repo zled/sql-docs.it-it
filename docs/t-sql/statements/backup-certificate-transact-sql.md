@@ -1,5 +1,5 @@
 ---
-title: Il certificato di BACKUP (Transact-SQL) | Documenti Microsoft
+title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -87,14 +87,14 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
  *decryption_password*  
  Password utilizzata per decrittografare la chiave privata prima di eseguire il backup della chiave.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se la chiave privata è crittografata con una password nel database, è necessario specificare la password di decrittografia.  
   
  Quando si esegue il backup della chiave privata in un file, la crittografia è obbligatoria. La password utilizzata per proteggere il certificato sottoposto a backup non corrisponde alla password utilizzata per crittografare la chiave privata del certificato.  
   
- Per ripristinare un backup del certificato, utilizzare il [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md)istruzione.  
+ Per ripristinare un certificato da un backup, usare l'istruzione [CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il certificato ed è necessario conoscere la password utilizzata per crittografare la chiave privata. Se si esegue il backup della sola parte pubblica del certificato, sono richieste alcune autorizzazioni per il certificato ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per il certificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -130,8 +130,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Istruzione ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
   
   
 

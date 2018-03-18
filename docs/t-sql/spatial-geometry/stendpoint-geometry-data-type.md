@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (tipo di dati geometry) | Documenti Microsoft
+title: STEndpoint (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce il punto finale di un **geometry** istanza.
+Restituisce il punto di fine di un'istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,16 +44,16 @@ Restituisce il punto finale di un **geometry** istanza.
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- `STEndPoint()`è l'equivalente di [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
+## <a name="remarks"></a>Remarks  
+ `STEndPoint()` è equivalente a [STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()).  
   
- Questo metodo restituisce null se chiamato su un oggetto vuoto **geometry** istanza.  
+ Se chiamato su un'istanza **geometry** vuota, questo metodo restituisce Null.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `LineString` con `STGeomFromText()` e viene utilizzato `STEndpoint()` per recuperare il punto di fine di `LineString`.  

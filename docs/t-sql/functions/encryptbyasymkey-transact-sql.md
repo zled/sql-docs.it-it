@@ -1,5 +1,5 @@
 ---
-title: ENCRYPTBYASYMKEY (Transact-SQL) | Documenti Microsoft
+title: ENCRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -51,19 +51,19 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
  *Asym_Key_ID*  
  ID di una chiave asimmetrica nel database. **int**.  
   
- *testo non crittografato*  
+ *cleartext*  
  Stringa di dati che verrà crittografata con la chiave asimmetrica.  
   
  **@plaintext**  
- È una variabile di tipo **nvarchar**, **char**, **varchar**, **binario**, **varbinary**, o **nchar** che contiene i dati da crittografare con la chiave asimmetrica.  
+ Variabile di tipo **nvarchar**, **char**, **varchar**, **binary**, **varbinary** o **nchar** contenente i dati da crittografare con la chiave asimmetrica.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La crittografia e la decrittografia con chiave asimmetrica sono estremamente costose rispetto alla crittografia e alla decrittografia con chiave simmetrica. È consigliabile non utilizzare una chiave asimmetrica per crittografare set di dati di grandi dimensioni, ad esempio i dati utente contenuti nelle tabelle. Crittografare invece i dati mediante una chiave simmetrica avanzata e crittografare la chiave simmetrica utilizzando una chiave asimmetrica.  
   
- **EncryptByAsymKey** restituire **NULL** se l'input supera un determinato numero di byte, a seconda dell'algoritmo. I limiti sono: una chiave RSA a 512 bit può crittografare fino a 53 byte, una chiave a 1024 bit può crittografare fino a 117 byte e una chiave a 2048 bit può crittografare fino a 245 byte. Si noti che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sia i certificati sia le chiavi asimmetriche sono wrapper sulle chiavi RSA.  
+ **EncryptByAsymKey** restituisce **NULL** se l'input supera un determinato numero di byte, a seconda dell'algoritmo. I limiti sono: una chiave RSA a 512 bit può crittografare fino a 53 byte, una chiave a 1024 bit può crittografare un massimo di 117 byte e una chiave a 2048 bit può crittografare fino a 245 byte. Si noti che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sia i certificati sia le chiavi asimmetriche sono wrapper sulle chiavi RSA.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene crittografato il testo archiviato in `@cleartext` con la chiave asimmetrica `JanainaAsymKey02`. I dati crittografati vengono quindi inseriti nella tabella `ProtectedData04`.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DECRYPTBYASYMKEY &#40; Transact-SQL &#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
+ [DECRYPTBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

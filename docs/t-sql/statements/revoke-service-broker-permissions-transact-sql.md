@@ -1,5 +1,5 @@
 ---
-title: REVOCARE autorizzazioni per Service Broker (Transact-SQL) | Documenti Microsoft
+title: REVOKE - autorizzazioni per Service Broker (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -69,13 +69,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere revocata per un'entità a sicurezza diretta di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Per un elenco di queste autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- CONTRATTO **:: * * * contract_name*  
+ CONTRACT **::***contract_name*  
  Specifica il contratto a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  MESSAGE TYPE **::***message_type_name*  
  Specifica il tipo di messaggio a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
- L'associazione al servizio remoto **:: * * * remote_binding_name*  
+ REMOTE SERVICE BINDING **::***remote_binding_name*  
  Specifica l'associazione al servizio remoto a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  ROUTE **::***route_name*  
@@ -85,7 +85,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  Specifica il servizio a cui viene revocata l'autorizzazione. Il qualificatore di ambito **::** è obbligatorio.  
   
  *database_principal*  
- Specifica l'entità da cui viene revocata l'autorizzazione. *database_principal* può essere uno dei seguenti:  
+ Specifica l'entità da cui viene revocata l'autorizzazione. *database_principal* può essere una delle entità seguenti:  
   
 -   Utente del database  
   
@@ -110,7 +110,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  La revoca propagata di un'autorizzazione concessa con WITH GRANT OPTION comporterà la revoca sia delle autorizzazioni GRANT che delle autorizzazioni DENY per tale autorizzazione.  
   
  AS *revoking_principal*  
- Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione. *revoking_principal* può essere uno dei seguenti:  
+ Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione. *revoking_principal* può essere una delle entità seguenti:  
   
 -   Utente del database  
   
@@ -128,10 +128,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Utente del database sul quale non viene eseguito il mapping ad alcuna entità server  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Contratti di Service Broker  
- Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Autorizzazioni più specifiche e limitate che è possibile revocare per un [!INCLUDE[ssSB](../../includes/sssb-md.md)] contratto sono elencati nella tabella seguente, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+ Un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere revocate per un contratto di [!INCLUDE[ssSB](../../includes/sssb-md.md)], con le autorizzazioni più generali in cui sono incluse in modo implicito.  
   
 |Autorizzazione del contratto di Service Broker|Autorizzazione del contratto di Service Broker in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |----------------------------------------|---------------------------------------------------|------------------------------------|  
@@ -163,7 +163,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="service-broker-routes"></a>Route di Service Broker  
- Una route di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Autorizzazioni più specifiche e limitate che è possibile revocare per un [!INCLUDE[ssSB](../../includes/sssb-md.md)] route sono elencati nella tabella seguente, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+ Una route di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere revocate per una route di [!INCLUDE[ssSB](../../includes/sssb-md.md)], con le autorizzazioni più generali in cui sono incluse in modo implicito.  
   
 |Autorizzazione della route di Service Broker|Autorizzazione della route di Service Broker in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |-------------------------------------|------------------------------------------------|------------------------------------|  
@@ -173,7 +173,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ### <a name="service-broker-services"></a>Servizi di Service Broker  
- Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Autorizzazioni più specifiche e limitate che è possibile revocare per un [!INCLUDE[ssSB](../../includes/sssb-md.md)] servizio sono elencati nella tabella seguente, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+ Un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)] è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia di autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che possono essere revocate per un servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)], con le autorizzazioni più generali in cui sono incluse in modo implicito.  
   
 |Autorizzazione del servizio di Service Broker|Autorizzazione del servizio di Service Broker in cui è inclusa|Autorizzazione del database in cui è inclusa|  
 |---------------------------------------|--------------------------------------------------|------------------------------------|  
@@ -187,10 +187,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  È necessaria l'autorizzazione CONTROL per il contratto, il tipo di messaggio, l'associazione al servizio remoto, la route o il servizio di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [Servizio di concessione delle autorizzazioni di Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
- [NEGARE autorizzazioni per Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
+ [GRANT - autorizzazioni per Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
+ [DENY - autorizzazioni per Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Null (tipo di dati geography) | Documenti Microsoft
+title: Null (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="null-geography-data-type"></a>Null (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Fornisce un'istanza null di una proprietà di sola lettura di **geography** tipo.
+Proprietà di sola lettura che restituisce un'istanza Null del tipo **geography**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,11 +46,11 @@ Null
 ## <a name="arguments"></a>Argomenti  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **geography**  
   
  Tipo CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene recuperata un'istanza `geography` Null.  

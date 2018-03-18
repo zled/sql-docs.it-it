@@ -43,9 +43,9 @@ ms.lasthandoff: 01/25/2018
 Deframmenta gli indici della tabella o vista specificata.
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Utilizzare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md).  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [versione](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658))
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* | *database_id* | 0  
- Database contenente l'indice da deframmentare. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Database contenente l'indice da deframmentare. Se si specifica 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  *table_name* | *table_id* | *view_name* | *view_id*  
  Tabella o vista contenente l'indice da deframmentare. I nomi delle tabelle e delle viste devono essere conformi alle regole per gli identificatori.  
@@ -77,7 +77,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Evita la visualizzazione di tutti i messaggi informativi con livello di gravità compreso tra 0 e 10.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 L'istruzione DBCC INDEXDEFRAG deframmenta il livello foglia di un indice in modo che l'ordine fisico delle pagine corrisponda all'ordine logico da sinistra a destra dei nodi foglia, con un conseguente miglioramento delle prestazioni di analisi dell'indice.
   
 > [!NOTE]  
@@ -93,7 +93,7 @@ A differenza di DBCC DBREINDEX e dell'operazione di compilazione degli indici in
   
 La deframmentazione viene sempre registrata indipendentemente dal modello di recupero del database impostato. Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md). La deframmentazione di un indice molto frammentato può generare un log molto maggiore di quello generato per una creazione di indice a registrazione completa. Dato tuttavia che la deframmentazione viene eseguita come una serie di transazioni brevi, se si eseguono backup del log frequenti o si imposta il modello di recupero su SIMPLE, non è necessario un log molto esteso.
   
-## <a name="restrictions"></a>Restrizioni  
+## <a name="restrictions"></a>Restrictions  
 DBCC INDEXDEFRAG sposta le pagine foglia dell'indice. Pertanto, se un indice è intercalato con altri indici sul disco, l'esecuzione di DBCC INDEXDEFRAG su quell'indice non rende contigue tutte le pagine foglia dell'indice. Per migliorare il raggruppamento delle pagine, è necessario ricompilare l'indice.
 Non è possibile utilizzare DBCC INDEXDEFRAG per deframmentare gli indici seguenti:
 -   Un indice disabilitato.  
@@ -116,11 +116,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
-Chiamante deve essere proprietario della tabella o essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database, o **db_ddladmin** ruolo predefinito del database.
+Il chiamante deve essere proprietario della tabella o membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_owner** e **db_ddladmin**.
   
 ## <a name="examples"></a>Esempi  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>A. Utilizzo di DBCC INDEXDEFRAG per deframmentare un indice  
-Nell'esempio seguente consente di deframmentare tutte le partizioni del `PK_Product_ProductID` indicizzare il `Production.Product` tabella il `AdventureWorks` database.
+Nell'esempio seguente vengono deframmentate tutte le partizioni dell'indice `PK_Product_ProductID` nella tabella `Production.Product` del database `AdventureWorks`.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

@@ -1,5 +1,5 @@
 ---
-title: STSymDifference (tipo di dati geometry) | Documenti Microsoft
+title: STSymDifference (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stsymdifference-geometry-data-type"></a>STSymDifference (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un oggetto che rappresenta tutti i punti in una **geometry** istanza o un altro **geometry** istanza, ma non i punti che si trovano in entrambe le istanze.  
+  Restituisce un oggetto che rappresenta tutti i punti che si trovano in un'istanza **geometry** o un'altra istanza **geometry**, ma non i punti che si trovano in entrambe le istanze.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza oltre all'istanza in cui `STSymDistance()` viene richiamato.  
+ Altra istanza **geometry** oltre all'istanza sulla quale viene chiamato `STSymDistance()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono. Il risultato può contenere segmenti di arco circolare solo se le istanze di input contengono segmenti di arco circolare.  
   
 ## <a name="examples"></a>Esempi  
   

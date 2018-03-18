@@ -1,5 +1,5 @@
 ---
-title: Selezionare esempi (Transact-SQL) | Documenti Microsoft
+title: Esempi di istruzioni SELECT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="select-examples-transact-sql"></a>Esempi di istruzioni SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  In questo argomento vengono forniti esempi dell'utilizzo di [selezionare](../../t-sql/queries/select-transact-sql.md) istruzione.  
+  Questo argomento include alcuni esempi relativi all'uso dell'istruzione [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="a-using-select-to-retrieve-rows-and-columns"></a>A. Utilizzo dell'istruzione SELECT per il recupero di righe e colonne  
  Nell'esempio seguente vengono illustrati tre blocchi di codice. Nel primo esempio di codice vengono restituite tutte le righe (clausola WHERE omessa) e tutte le colonne (utilizzando `*`) della tabella `Product` del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
@@ -209,14 +209,14 @@ GO
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [UNION &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-union-transact-sql.md)   
- [Ad eccezione di e INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [EXCEPT e INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
- [INTO Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
+ [Clausola INTO &#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)  
   
   

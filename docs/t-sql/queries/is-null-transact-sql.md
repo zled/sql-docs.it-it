@@ -45,7 +45,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="is-null-transact-sql"></a>È NULL (Transact-SQL)
+# <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determina se un'espressione specificata è NULL.  
@@ -59,8 +59,8 @@ expression IS [ NOT ] NULL
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida.  
   
  NOT  
  Determina la negazione del risultato booleano. Il predicato inverte i valori restituiti. Restituisce TRUE se il valore non è NULL e FALSE se il valore è NULL.  
@@ -69,11 +69,11 @@ expression IS [ NOT ] NULL
  **Boolean**  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Se il valore di *espressione* è NULL, IS NULL restituisce TRUE; in caso contrario, restituisce FALSE.  
+ Se il valore di *expression* è NULL, IS NULL restituisce TRUE. In caso contrario, restituisce FALSE.  
   
- Se il valore di *espressione* è NULL, IS NOT NULL restituisce FALSE; in caso contrario, restituisce TRUE.  
+ Se il valore di *expression* è NULL, IS NOT NULL restituisce FALSE. In caso contrario, restituisce TRUE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per determinare se un'espressione è NULL, utilizzare la funzione IS NULL o IS NOT NULL anziché gli operatori di confronto, ad esempio = o !=, i quali restituiscono UNKNOWN se uno o entrambi gli argomenti sono NULL.  
   
 ## <a name="examples"></a>Esempi  
@@ -89,8 +89,8 @@ ORDER BY Name;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'esempio seguente restituisce i nomi completi di tutti i dipendenti con secondi nomi.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'esempio seguente restituisce i nomi completi di tutti i dipendenti con iniziali del secondo nome.  
   
 ```  
 -- Uses AdventureWorks  
@@ -106,11 +106,11 @@ ORDER BY LastName DESC;
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operatori logici &#40; Transact-SQL &#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori logici &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

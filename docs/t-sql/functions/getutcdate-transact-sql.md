@@ -1,5 +1,5 @@
 ---
-title: GETUTCDATE (Transact-SQL) | Documenti Microsoft
+title: GETUTCDATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -51,12 +51,12 @@ ms.lasthandoff: 11/21/2017
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce il timestamp di sistema di database corrente come un **datetime** valore. La differenza di fuso orario del database non è inclusa. Questo valore rappresenta l'ora UTC (Universal Time Coordinate) corrente. Questo valore deriva dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Restituisce il timestamp di sistema del database corrente come valore **datetime**. La differenza di fuso orario del database non è inclusa. Questo valore rappresenta l'ora UTC (Universal Time Coordinate) corrente. Questo valore deriva dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  La precisione in secondi frazionari di SYSDATETIME e SYSUTCDATETIME è maggiore di quella di GETDATE e GETUTCDATE. SYSDATETIMEOFFSET include la differenza di fuso orario di sistema. SYSDATETIME, SYSUTCDATETIME e SYSDATETIMEOFFSET possono essere assegnate a una variabile di qualsiasi tipo di data e ora.  
   
- Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Per una panoramica di tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,8 +69,8 @@ GETUTCDATE()
 ## <a name="return-types"></a>Tipi restituiti  
  **datetime**  
   
-## <a name="remarks"></a>Osservazioni  
- [!INCLUDE[tsql](../../includes/tsql-md.md)]le istruzioni possono fare riferimento a GETUTCDATE ovunque possono fare riferimento a un **datetime** espressione.  
+## <a name="remarks"></a>Remarks  
+ Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a GETUTCDATE in qualsiasi punto in cui possono fare riferimento a un'espressione **datetime**.  
   
  GETUTCDATE è una funzione non deterministica. Le viste e le espressioni che fanno riferimento a questa funzione in una colonna non sono indicizzabili.  
   
@@ -136,8 +136,8 @@ GETUTCDATE()             01:25:01.6930000
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [FUSO orario &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

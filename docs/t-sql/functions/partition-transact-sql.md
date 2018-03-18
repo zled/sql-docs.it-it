@@ -1,5 +1,5 @@
 ---
-title: $PARTITION (transact-SQL) | Documenti Microsoft
+title: $PARTITION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -53,21 +53,21 @@ ms.lasthandoff: 11/21/2017
  *partition_function_name*  
  Nome di una funzione di partizione esistente in base alla quale viene applicato un set di valori di una colonna di partizionamento.  
   
- *espressione*  
- È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) il cui tipo di dati deve corrispondere o essere convertibile in modo implicito nel tipo di dati della colonna di partizionamento corrispondente. *espressione* può anche essere il nome di una colonna di partizionamento che partecipa *partition_function_name*.  
+ *expression*  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) il cui tipo di dati deve corrispondere al tipo di dati della colonna di partizionamento corrispondente o deve poter essere convertito in modo implicito in tale tipo di dati. *expression* può essere anche il nome di una colonna di partizionamento che partecipa a *partition_function_name*.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- $PARTITION restituisce un **int** compreso tra 1 e il numero di partizioni della funzione di partizione.  
+## <a name="remarks"></a>Remarks  
+ $PARTITION restituisce un valore **int** compreso tra 1 e il numero di partizioni della funzione di partizione.  
   
  $PARTITION restituisce il numero di partizione per qualsiasi valore valido, indipendentemente dal fatto che il valore esista in una tabella o in un dice partizionato che utilizza la funzione di partizione.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-getting-the-partition-number-for-a-set-of-partitioning-column-values"></a>A. Recupero del numero di partizione per un set di valori di colonne di partizionamento  
- Nell'esempio seguente viene creata una funzione di partizione `RangePF1` che esegue il partizionamento di una tabella o di un indice in quattro partizioni.. $PARTITION consente di stabilire che il valore `10`, che rappresenta la colonna di partizionamento di `RangePF1`, verrebbe inserito nella partizione 1 della tabella.  
+ Nell'esempio seguente viene creata una funzione di partizione `RangePF1` che esegue il partizionamento di una tabella o di un indice in quattro partizioni. $PARTITION consente di stabilire che il valore `10`, che rappresenta la colonna di partizionamento di `RangePF1`, verrebbe inserito nella partizione 1 della tabella.  
   
 ```  
 USE AdventureWorks2012;  
@@ -82,7 +82,7 @@ GO
 ### <a name="b-getting-the-number-of-rows-in-each-nonempty-partition-of-a-partitioned-table-or-index"></a>B. Recupero del numero di righe di ogni partizione non vuota di una tabella o di un indice partizionato  
  Nell'esempio seguente viene restituito il numero di righe di ogni partizione della tabella `TransactionHistory` contenente dati. La tabella `TransactionHistory` utilizza la funzione di partizione `TransactionRangePF1` ed è partizionata in base alla colonna `TransactionDate`.  
   
- Per eseguire l'esempio è necessario innanzitutto eseguire lo script PartitionAW.sql nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per ulteriori informazioni, vedere [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+ Per eseguire l'esempio è necessario innanzitutto eseguire lo script PartitionAW.sql nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per altre informazioni, vedere [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 USE AdventureWorks2012;  
@@ -98,7 +98,7 @@ GO
  Nell'esempio seguente vengono restituite tutte le righe incluse nella partizione `5` della tabella `TransactionHistory`.  
   
 > [!NOTE]  
->  Per eseguire l'esempio è necessario innanzitutto eseguire lo script PartitionAW.sql nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per ulteriori informazioni, vedere [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
+>  Per eseguire l'esempio è necessario innanzitutto eseguire lo script PartitionAW.sql nel database di esempio [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Per altre informazioni, vedere [PartitioningScript](http://go.microsoft.com/fwlink/?LinkId=201015).  
   
 ```  
 SELECT * FROM Production.TransactionHistory  

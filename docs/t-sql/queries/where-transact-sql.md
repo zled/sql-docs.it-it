@@ -49,7 +49,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-\<*search_condition* > definisce la condizione deve essere soddisfatta per le righe da restituire. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per ulteriori informazioni sulle condizioni di ricerca e predicati, vedere [condizione di ricerca &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > Definisce la condizione che deve essere soddisfatta per consentire la restituzione delle righe. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per altre informazioni sulle condizioni di ricerca e i predicati, vedere [Condizioni di ricerca &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Negli esempi seguenti viene illustrato come utilizzare alcune condizioni di ricerca comuni nella clausola `WHERE`.  
@@ -126,8 +126,8 @@ WHERE EmployeeKey Between 100 AND 200;
   
 ## <a name="see-also"></a>Vedere anche  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Predicates &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
- [Condizione di ricerca &#40; Transact-SQL &#41;](../../t-sql/queries/search-condition-transact-sql.md)   
+ [Predicati &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
+ [Condizione di ricerca &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  

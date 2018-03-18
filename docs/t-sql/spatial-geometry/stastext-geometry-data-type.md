@@ -1,5 +1,5 @@
 ---
-title: STAsText (tipo di dati geometry) | Documenti Microsoft
+title: STAsText (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geometry-data-type"></a>STAsText (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT) di un **geometry** istanza. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
+Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza **geometry**. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known T
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
  Tipo CLR restituito: **SqlChars**  
   

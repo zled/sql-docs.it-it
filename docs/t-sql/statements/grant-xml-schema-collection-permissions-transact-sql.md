@@ -1,5 +1,5 @@
 ---
-title: Autorizzazioni per raccolte Schema XML GRANT (Transact-SQL) | Documenti Microsoft
+title: GRANT - autorizzazioni per raccolte di XML Schema (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -64,15 +64,15 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Specifica un'autorizzazione che può essere concessa per una raccolta di XML Schema. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- RACCOLTA di XML SCHEMA ON:: [ *schema_name*. ] *XML_schema_collection_name*  
- Specifica la raccolta di XML Schema per cui viene concessa l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio. Se *schema_name* non viene specificato, verrà utilizzato lo schema predefinito. Se *schema_name* è specificato, il qualificatore di ambito dello schema (.) è obbligatorio.  
+ ON XML SCHEMA COLLECTION :: [ *schema_name*. ] *XML_schema_collection_name*  
+ Specifica la raccolta di XML Schema per cui viene concessa l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio. Se si omette *schema_name*, verrà usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (.) è obbligatorio.  
   
- \<database_principal > specifica l'entità a cui viene concessa l'autorizzazione.  
+ \<database_principal> Specifica l'entità di sicurezza a cui viene concessa l'autorizzazione.  
   
  WITH GRANT OPTION  
  Indica che l'entità potrà inoltre concedere l'autorizzazione specificata ad altre entità.  
   
- AS \<database_principal > specifica un'entità da cui l'entità che esegue la query Ottiene il diritto di concedere l'autorizzazione.  
+ AS \<database_principal> Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
  *Database_user*  
  Specifica un utente di database.  
@@ -98,8 +98,8 @@ GRANT permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Osservazioni  
- Informazioni sulle raccolte di XML schema sono visibile nel [xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) vista del catalogo.  
+## <a name="remarks"></a>Remarks  
+ Le informazioni sulle raccolte di XML Schema sono visibili nella vista del catalogo [sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md).  
   
  Una raccolta di XML Schema è un'entità a protezione diretta a livello di schema contenuta nello schema padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per una raccolta di XML Schema, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -138,12 +138,12 @@ GRANT permission  [ ,...n ] ON
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [NEGARE autorizzazioni per raccolte XML Schema &#40; Transact-SQL &#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
- [REVOCARE autorizzazioni per raccolte XML Schema &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
+ [DENY - autorizzazioni per raccolte di XML Schema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)   
+ [REVOKE - autorizzazioni per raccolte di XML Schema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)   
  [sys.xml_schema_collections &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md)   
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Entità &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
+ [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   
 

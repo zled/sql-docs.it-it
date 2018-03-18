@@ -1,5 +1,5 @@
 ---
-title: DENY-autorizzazioni per Database (Transact-SQL) | Documenti Microsoft
+title: DENY - autorizzazioni per database (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/15/2017
 ms.prod: sql-non-specified
@@ -60,7 +60,7 @@ DENY <permission> [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  ALL  
@@ -72,7 +72,7 @@ DENY <permission> [ ,...n ]
  CASCADE  
  Indica che l'autorizzazione verrà negata anche alle entità a cui è stata concessa dall'entità specificata.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
   
  *Database_user*  
@@ -82,7 +82,7 @@ DENY <permission> [ ,...n ]
  Specifica un ruolo del database.  
   
  *Application_role*  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  Specifica un ruolo applicazione.  
   
@@ -101,7 +101,7 @@ DENY <permission> [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del database|Autorizzazione del database in cui è inclusa|Autorizzazione del server in cui è inclusa|  
@@ -113,24 +113,24 @@ DENY <permission> [ ,...n ]
 |ALTER ANY ASYMMETRIC KEY|ALTER|CONTROL SERVER|  
 |ALTER ANY CERTIFICATE|ALTER|CONTROL SERVER|  
 |ALTER ANY COLUMN ENCRYPTION KEY|ALTER|CONTROL SERVER|  
-|MODIFICARE QUALSIASI DEFINIZIONE CHIAVE MASTER DELLA COLONNA|ALTER|CONTROL SERVER|  
+|ALTER ANY COLUMN MASTER KEY DEFINITION|ALTER|CONTROL SERVER|  
 |ALTER ANY CONTRACT|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE AUDIT|ALTER|ALTER ANY SERVER AUDIT|  
 |ALTER ANY DATABASE DDL TRIGGER|ALTER|CONTROL SERVER|  
 |ALTER ANY DATABASE EVENT NOTIFICATION|ALTER|ALTER ANY EVENT NOTIFICATION|  
 |ALTER ANY DATABASE EVENT SESSION<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|ALTER|ALTER ANY EVENT SESSION|  
-|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY DATABASE SCOPED CONFIGURATION<br />  **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY DATASPACE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL DATA SOURCE|ALTER|CONTROL SERVER|  
 |ALTER ANY EXTERNAL FILE FORMAT|ALTER|CONTROL SERVER|  
-|MODIFICARE UNA LIBRERIA ESTERNA <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
+|ALTER ANY EXTERNAL LIBRARY <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
 |ALTER ANY FULLTEXT CATALOG|ALTER|CONTROL SERVER|  
 |ALTER ANY MASK|CONTROL|CONTROL SERVER|  
 |ALTER ANY MESSAGE TYPE|ALTER|CONTROL SERVER|  
 |ALTER ANY REMOTE SERVICE BINDING|ALTER|CONTROL SERVER|  
 |ALTER ANY ROLE|ALTER|CONTROL SERVER|  
 |ALTER ANY ROUTE|ALTER|CONTROL SERVER|  
-|ALTER ANY SECURITY POLICY<br /> **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
+|ALTER ANY SECURITY POLICY<br /> **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|CONTROL SERVER|  
 |ALTER ANY SCHEMA|ALTER|CONTROL SERVER|  
 |ALTER ANY SERVICE|ALTER|CONTROL SERVER|  
 |ALTER ANY SYMMETRIC KEY|ALTER|CONTROL SERVER|  
@@ -167,8 +167,8 @@ DENY <permission> [ ,...n ]
 |CREATE TYPE|ALTER|CONTROL SERVER|  
 |CREATE VIEW|ALTER|CONTROL SERVER|  
 |CREATE XML SCHEMA COLLECTION|ALTER|CONTROL SERVER|  
-|DELETE|CONTROL|CONTROL SERVER|  
-|Eseguire|CONTROL|CONTROL SERVER|  
+|Elimina|CONTROL|CONTROL SERVER|  
+|EXECUTE|CONTROL|CONTROL SERVER|  
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|   
 |INSERT|CONTROL|CONTROL SERVER|  
 |KILL DATABASE CONNECTION<br /> **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|  
@@ -179,12 +179,12 @@ DENY <permission> [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |UNMASK|CONTROL|CONTROL SERVER|  
 |UPDATE|CONTROL|CONTROL SERVER|  
-|CONSENTE DI VISUALIZZARE QUALSIASI CHIAVE DI CRITTOGRAFIA DI COLONNA|CONTROL|VIEW ANY DEFINITION|  
-|CONSENTE DI VISUALIZZARE QUALSIASI DEFINIZIONE DELLA CHIAVE MASTER|CONTROL|VIEW ANY DEFINITION|  
+|VIEW ANY COLUMN ENCRYPTION KEY|CONTROL|VIEW ANY DEFINITION|  
+|VIEW ANY MASTER KEY DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  L'entità che esegue l'istruzione (o l'entità specificata con l'opzione AS) deve disporre dell'autorizzazione CONTROL per il database o di un'autorizzazione di livello superiore che include l'autorizzazione CONTROL per il database.  
   
  Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria del database.  
@@ -203,7 +203,7 @@ GO
 ### <a name="b-denying-references-permission-to-an-application-role"></a>B. Negazione dell'autorizzazione REFERENCES a un ruolo applicazione  
  Nell'esempio seguente viene negata l'autorizzazione `REFERENCES` per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al ruolo applicazione `AuditMonitor`.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ```  
 USE AdventureWorks2012;  
@@ -212,7 +212,7 @@ GO
 ```  
   
 ### <a name="c-denying-view-definition-with-cascade"></a>C. Negazione dell'autorizzazione VIEW DEFINITION con CASCADE  
- Nell'esempio seguente viene negata il `VIEW DEFINITION` l'autorizzazione per la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database utente `CarmineEs` e a tutte le entità a cui `CarmineEs` ha concesso `VIEW DEFINITION` autorizzazione.  
+ Nell'esempio seguente viene negata l'autorizzazione `VIEW DEFINITION` per il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] all'utente `CarmineEs` e a tutte le entità a cui `CarmineEs` ha concesso l'autorizzazione `VIEW DEFINITION`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -221,7 +221,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. database_permissions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
+ [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

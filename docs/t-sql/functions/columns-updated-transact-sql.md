@@ -1,5 +1,5 @@
 ---
-title: COLUMNS_UPDATED (Transact-SQL) | Documenti Microsoft
+title: COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **varbinary** schema di bit che indica le colonne in una tabella o vista che sono state inserite o aggiornate. COLUMNS_UPDATED viene utilizzata in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.
+Restituisce uno schema di bit **varbinary** che indica le colonne inserite o aggiornate in una tabella o vista. COLUMNS_UPDATED viene utilizzata in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,12 +50,12 @@ COLUMNS_UPDATED ( )
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   
-## <a name="remarks"></a>Osservazioni  
-COLUMNS_UPDATED controlla l'esecuzione delle operazioni UPDATE o INSERT in più colonne. Per eseguire il test per l'aggiornamento o inserimento tenta in una colonna, utilizzare [Update ()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
+## <a name="remarks"></a>Remarks  
+COLUMNS_UPDATED controlla l'esecuzione delle operazioni UPDATE o INSERT in più colonne. Per controllare i tentativi di esecuzione delle operazioni UPDATE o INSERT in una colonna, usare [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md).
   
 COLUMNS_UPDATED restituisce uno o più byte ordinati da sinistra a destra, dove il bit meno significativo in ogni byte occupa la posizione più a destra. Il bit più a destra del primo byte rappresenta la prima colonna della tabella, il bit successivo a sinistra rappresenta la seconda colonna e così via. COLUMNS_UPDATED restituisce più byte se la tabella in cui viene creato il trigger include più di 8 colonne e il primo byte corrisponde al byte meno significativo. In operazioni INSERT COLUMNS_UPDATED restituisce TRUE per tutte le colonne in quanto nelle colonne vengono inseriti valori espliciti o impliciti (NULL).
   
-Per controllare l'esecuzione di operazioni di aggiornamento o inserimento in colonne specifiche, aggiungere alla sintassi un operatore bit per bit e una maschera di bit di valori interi delle colonne sottoposte a controllo. Ad esempio, tabella **t1** contiene colonne **C1**, **C2**, **C3**, **C4**, e **C5** . Per verificare che le colonne **C2**, **C3**, e **C4** sono state aggiornate (con la tabella **t1** include un trigger UPDATE), seguire la sintassi con **& 14**. Per verificare se l'unica colonna **C2** viene aggiornata, specificare **& 2**.
+Per controllare l'esecuzione di operazioni di aggiornamento o inserimento in colonne specifiche, aggiungere alla sintassi un operatore bit per bit e una maschera di bit di valori interi delle colonne sottoposte a controllo. Nella tabella **t1**, ad esempio, sono incluse le colonne **C1**, **C2**, **C3**, **C4** e **C5**. Per controllare se le colonne **C2**, **C3** e **C4** sono state aggiornate (la tabella **t1** include un trigger UPDATE), aggiungere alla sintassi **& 14**. Per controllare se solo la colonna **C2** è stata aggiornata, specificare **& 2**.
   
 È possibile utilizzare COLUMNS_UPDATED in qualsiasi punto all'interno di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE.
   
@@ -188,7 +188,7 @@ GO
 ```  
   
 ### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilizzo di COLUMNS_UPDATED per controllare più di 8 colonne  
-Per controllare gli aggiornamenti eseguiti su colonne diverse dalle prime otto colonne di una tabella, utilizzare la funzione `SUBSTRING` per controllare il bit corretto restituito da `COLUMNS_UPDATED`. Nell'esempio seguente verifica disponibilità di aggiornamenti che influiscono sulle colonne `3`, `5`, e `9` nel `AdventureWorks2012.Person.Person` tabella.
+Per controllare gli aggiornamenti eseguiti su colonne diverse dalle prime otto colonne di una tabella, utilizzare la funzione `SUBSTRING` per controllare il bit corretto restituito da `COLUMNS_UPDATED`. Nell'esempio seguente vengono controllati gli aggiornamenti relativi alle colonne `3`, `5` e `9` della tabella `AdventureWorks2012.Person.Person`.
   
 ```sql
 USE AdventureWorks2012;  
@@ -211,8 +211,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Operatori bit per bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
+[Operatori bit per bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
 [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
-[AGGIORNAMENTO &#40; &#41; &#40; Transact-SQL &#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
+[UPDATE&#40;&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/update-trigger-functions-transact-sql.md)
   
   

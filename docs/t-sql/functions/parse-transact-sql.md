@@ -1,5 +1,5 @@
 ---
-title: PARSE (Transact-SQL) | Documenti Microsoft
+title: PARSE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/05/2017
 ms.prod: sql-non-specified
@@ -46,23 +46,23 @@ PARSE ( string_value AS data_type [ USING culture ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *valore_stringa*  
- **nvarchar**valore (4000) che rappresenta il valore formattato da analizzare nel tipo di dati specificato.  
+ *string_value*  
+ Valore **nvarchar**(4000) che rappresenta il valore formattato da analizzare nel tipo di dati specificato.  
   
- *valore_stringa* deve essere una rappresentazione valida del tipo di dati richiesto o contrario PARSE genera un errore.  
+ *string_value* deve essere una rappresentazione valida del tipo di dati richiesto, altrimenti PARSE genera un errore.  
   
  *data_type*  
  Valore letterale che rappresenta il tipo di dati richiesto per il risultato.  
   
- *impostazioni cultura*  
- Stringa facoltativa che identifica le impostazioni cultura in cui *valore_stringa* viene formattato.  
+ *culture*  
+ Stringa facoltativa che identifica le impostazioni cultura in cui viene formattato *string_value*.  
   
- Se il *delle impostazioni cultura* argomento non viene specificato, quindi viene utilizzata la lingua della sessione corrente. Tale lingua viene impostata in modo implicito o in modo esplicito tramite l'istruzione SET LANGUAGE. *impostazioni cultura* accetta qualsiasi impostazione cultura supportata da .NET Framework; non è limitato alle lingue supportate in modo esplicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il *delle impostazioni cultura* argomento non è valido, PARSE genera un errore.  
+ Se l'argomento *culture* non è specificato, viene usata la lingua della sessione corrente. Tale lingua viene impostata in modo implicito o in modo esplicito tramite l'istruzione SET LANGUAGE. *culture* accetta qualsiasi impostazione cultura supportata da .NET Framework e non è limitato alle lingue supportate in modo esplicito da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se l'argomento *culture* non è valido, PARSE genera un errore.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce il risultato dell'espressione, convertito nel tipo di dati richiesto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Eventuali valori Null passati come argomenti a PARSE vengono trattati in due modalità:  
   
 1.  Se viene passata una costante Null, viene generato un errore. Un valore Null non può essere analizzato in un tipo di dati diverso in modo consapevole.  
@@ -71,34 +71,34 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Utilizzare PARSE solo per la conversione da stringa a data/ora e tipi di numero. Per le conversioni di tipi generali, continuare a utilizzare CAST o CONVERT. È opportuno ricordare che si verifica un sovraccarico nelle prestazioni durante l'analisi del valore stringa.  
   
- ANALISI si basa sulla presenza di .NET Framework Common Language Runtime (CLR).  
+ PARSE è basato sulla presenza di CLR (Common Language Runtime) di .NET Framework.  
   
  Questa funzione non sarà eseguita in modalità remota poiché dipende dalla presenza di CLR. L'esecuzione in modalità remota di una funzione che richiede CLR provocherebbe un errore sul server remoto.  
   
- **Ulteriori informazioni sul parametro data_type**  
+ **Altre informazioni sul parametro data_type**  
   
- I valori per il *data_type* parametro sono limitati ai tipi mostrati nella tabella seguente, insieme con gli stili. Le informazioni sugli stili vengono fornite per determinare i tipi di modelli consentiti. Per ulteriori informazioni sugli stili, vedere la documentazione di .NET Framework per la **System.Globalization.NumberStyles** e **DateTimeStyles** enumerazioni.  
+ I valori per il parametro *data_type* sono limitati ai tipi visualizzati nella tabella seguente, insieme con gli stili. Le informazioni sugli stili vengono fornite per determinare i tipi di modelli consentiti. Per altre informazioni sugli stili, vedere la documentazione di .NET Framework relativa alle enumerazioni **System.Globalization.NumberStyles** e **DateTimeStyles**.  
   
 |Category|Tipo|Tipo .NET Framework|Stili utilizzati|  
 |--------------|----------|-------------------------|-----------------|  
 |Numeric|bigint|Int64|NumberStyles.Number|  
-|Numeric|int|Int32|NumberStyles.Number|  
-|Numeric|smallint|Int16|NumberStyles.Number|  
-|Numeric|tinyint|Byte|NumberStyles.Number|  
-|Numeric|decimal|Decimal|NumberStyles.Number|  
-|Numeric|numeric|Decimal|NumberStyles.Number|  
-|Numeric|float|Double|NumberStyles.Float|  
-|Numeric|real|Single|NumberStyles.Float|  
-|Numeric|smallmoney|Decimal|NumberStyles.Currency|  
+|Numeric|INT|Int32|NumberStyles.Number|  
+|Numeric|SMALLINT|Int16|NumberStyles.Number|  
+|Numeric|TINYINT|Byte|NumberStyles.Number|  
+|Numeric|Decimal|Decimal|NumberStyles.Number|  
+|Numeric|NUMERIC|Decimal|NumberStyles.Number|  
+|Numeric|FLOAT|Double|NumberStyles.Float|  
+|Numeric|REAL|Single|NumberStyles.Float|  
+|Numeric|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |Numeric|money|Decimal|NumberStyles.Currency|  
-|Data e ora|data|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e ora|Data|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
-|Data e ora|datetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|Data e ora|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **Ulteriori informazioni sul parametro delle impostazioni cultura**  
+ **Altre informazioni sul parametro culture**  
   
  Nella tabella seguente vengono mostrati i mapping dai linguaggi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle impostazioni cultura di .NET Framework.  
   
@@ -116,16 +116,16 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Português|Portoghese|2070|pt-PT|  
 |Suomi|Finlandese|1035|fi|  
 |Svenska|Svedese|1053|sv-SE|  
-|Čeština|Ceco|1029|Cs-CZ|  
+|čeština|Ceco|1029|Cs-CZ|  
 |magyar|Ungherese|1038|Hu-HU|  
 |polski|Polacco|1045|Pl-PL|  
 |română|Romeno|1048|Ro-RO|  
 |hrvatski|Croato|1050|hr-HR|  
 |slovenčina|Slovacco|1051|Sk-SK|  
 |slovenski|Sloveno|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|Greco|1032|El-GR|  
-|БЪЛГАРСКИ|Bulgaro|1026|bg-BG|  
-|РУССКИЙ|Russo|1049|Ru-RU|  
+|ελληνικά|Greco|1032|El-GR|  
+|български|Bulgaro|1026|bg-BG|  
+|русский|Russo|1049|Ru-RU|  
 |Türkçe|Turco|1055|Tr-TR|  
 |British|Inglese (Regno Unito)|2057|en-GB|  
 |eesti|Estone|1061|Et-EE|  

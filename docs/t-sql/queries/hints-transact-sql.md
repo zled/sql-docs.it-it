@@ -40,7 +40,7 @@ ms.lasthandoff: 01/25/2018
   Gli hint sono opzioni o strategie che vengono specificati per imporre un comportamento specifico a Query Processor di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per l'esecuzione di istruzioni SELECT, INSERT, UPDATE o DELETE. Gli hint consentono di ignorare eventuali piani di esecuzione selezionati da Query Optimizer per una query.  
   
 > [!CAUTION]  
->  Poiché il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer seleziona in genere il piano di esecuzione migliore per una query, è consigliabile che \<join_hint >, \<query_hint >, e \<table_hint > utilizzabile solo come ultima risorsa da esperti gli sviluppatori e amministratori di database.
+>  Dal momento che di norma Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seleziona il miglior piano di esecuzione possibile per una query, \<join_hint>, \<query_hint> e \<table_hint> devono essere usati solo da amministratori di database e sviluppatori esperti in casi di effettiva necessità.
   
  In questa sezione vengono descritti gli hint seguenti:  
   

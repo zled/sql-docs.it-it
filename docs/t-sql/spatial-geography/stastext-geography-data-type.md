@@ -1,5 +1,5 @@
 ---
-title: STAsText (tipo di dati geography) | Documenti Microsoft
+title: STAsText (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stastext-geography-data-type"></a>STAsText (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT) di un **geography** istanza. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.  
+  Restituisce una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) di un'istanza **geography**. Il testo non conterrà alcun valore Z (innalzamento) o M (misura) appartenente all'istanza.  
   
- Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,17 +46,17 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (max)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(max)**  
   
  Tipo CLR restituito: **SqlChars**  
   
-## <a name="remarks"></a>Osservazioni  
- Il tipo OGC di un **geography** istanza può essere determinata richiamando [stgeometrytype ()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
+## <a name="remarks"></a>Remarks  
+ Il tipo OGC di un'istanza **geography** può essere determinato richiamando [STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md).  
   
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di risultati possibili restituito nel server è stato esteso per **FullGlobe** istanze.  
+ In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], il set di possibili risultati restituito nel server è stato esteso alle istanze **FullGlobe**.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STAsText()` per creare un `LineString``geography` istanza (-122,360, 47,656) a (-122,343, 47,656) dal testo. e viene restituito il risultato in formato testo.  
+ Nell'esempio seguente viene usato `STAsText()` per creare un'istanza `LineString``geography` da (-122.360, 47.656) a (-122.343, 47.656) dal testo. e viene restituito il risultato in formato testo.  
   
 ```  
 DECLARE @g geography;  

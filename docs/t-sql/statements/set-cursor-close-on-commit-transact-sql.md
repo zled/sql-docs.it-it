@@ -1,5 +1,5 @@
 ---
-title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Documenti Microsoft
+title: SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'opzione SET CURSOR_CLOSE_ON_COMMIT è impostata su ON, in corrispondenza del commit o del rollback tutti i cursori aperti vengono chiusi in conformità con ISO. Quando l'opzione SET CURSOR_CLOSE_ON_COMMIT è impostata su OFF, i cursori aperti non vengono chiusi in corrispondenza del commit di una transazione.  
   
 > [!NOTE]  
@@ -59,9 +59,9 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  Quando l'opzione SET CURSOR_CLOSE_ON_COMMIT è impostata su OFF, in seguito all'esecuzione di un'istruzione ROLLBACK vengono chiusi solo i cursori asincroni aperti non completamente popolati. Nei cursori STATIC o INSENSITIVE che sono stati aperti dopo l'esecuzione delle modifiche non sarà più riportato lo stato dei dati se viene eseguito il rollback delle modifiche.  
   
- L'opzione SET CURSOR_CLOSE_ON_COMMIT consente di controllare la stessa funzionalità dell'opzione di database CURSOR_CLOSE_ON_COMMIT. Se l'opzione CURSOR_CLOSE_ON_COMMIT è impostata su ON o OFF, l'impostazione viene applicata alla connessione. Se non è stata specificata l'opzione SET CURSOR_CLOSE_ON_COMMIT, il valore di **is_cursor_close_on_commit_on** colonna il **Sys. Databases** vista del catalogo si applica.  
+ L'opzione SET CURSOR_CLOSE_ON_COMMIT consente di controllare la stessa funzionalità dell'opzione di database CURSOR_CLOSE_ON_COMMIT. Se l'opzione CURSOR_CLOSE_ON_COMMIT è impostata su ON o OFF, l'impostazione viene applicata alla connessione. Se l'opzione SET CURSOR_CLOSE_ON_COMMIT non è stata specificata, viene applicato il valore della colonna **is_cursor_close_on_commit_on** nella vista del catalogo **sys.databases**.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client sia impostare CURSOR_CLOSE_ON_COMMIT su OFF quando si connettono. DB-Library non imposta automaticamente il valore dell'opzione CURSOR_CLOSE_ON_COMMIT.  
+ Il provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client impostano entrambi l'opzione CURSOR_CLOSE_ON_COMMIT su OFF al momento della connessione. DB-Library non imposta automaticamente il valore dell'opzione CURSOR_CLOSE_ON_COMMIT.  
   
  Quando l'opzione SET ANSI_DEFAULTS è impostata su ON, l'opzione SET CURSOR_CLOSE_ON_COMMIT risulta abilitata.  
   
@@ -75,7 +75,7 @@ IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -134,10 +134,10 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
- [Chiudi &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
+ [CLOSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET ANSI_DEFAULTS &#40; Transact-SQL &#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
+ [SET ANSI_DEFAULTS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-defaults-transact-sql.md)  
   
   

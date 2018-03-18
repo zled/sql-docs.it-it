@@ -1,5 +1,5 @@
 ---
-title: UnionAggregate (tipo di dati geometry) | Documenti Microsoft
+title: UnionAggregate (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -42,24 +42,24 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="arguments"></a>Argomenti  
  *geometry_operand*  
- È un **geometry** colonna della tabella che contiene il set di tipo **geometry** oggetti su cui eseguire un'operazione di unione.  
+ Colonna della tabella di tipo **geometry** che contiene il set di oggetti **geometry** in cui eseguire un'operazione di unione.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
 ## <a name="exceptions"></a>Eccezioni  
- Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
+ Genera un'eccezione `FormatException` in presenza di valori di input non validi. Vedere [STIsValid &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)  
   
-## <a name="remarks"></a>Osservazioni  
- Metodo **null** quando l'input è vuoto o l'input dispone di SRID diversi. Vedere [identificatori SRID &#40; Identificatori SRID &#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
+## <a name="remarks"></a>Remarks  
+ Il metodo restituisce **null** quando l'input è vuoto o dispone di SRID diversi. Vedere [Identificatori SRID &#40;Spatial Reference Identifier&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)  
   
- Metodo ignora **null** input.  
+ Il metodo ignora gli input **null**.  
   
 > [!NOTE]  
->  Metodo **null** se tutti i valori immessi sono **null**.  
+>  Il metodo restituisce **null** se tutti i valori immessi sono **null**.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente restituisce l'unione di un set di **geometry** gli oggetti in una variabile di tabella.  
+ Nell'esempio seguente viene restituita l'unione di un set di oggetti **geometry** in una variabile di tabella.  
  ```
  -- Setup table variable for UnionAggregate example 
  DECLARE @Geom TABLE 

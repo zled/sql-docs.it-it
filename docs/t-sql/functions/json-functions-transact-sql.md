@@ -1,5 +1,5 @@
 ---
-title: Funzioni JSON (Transact-SQL) | Documenti Microsoft
+title: Funzioni JSON (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
@@ -29,20 +29,20 @@ ms.lasthandoff: 11/17/2017
 # <a name="json-functions-transact-sql"></a>Funzioni JSON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Utilizzare le funzioni descritte nelle pagine di questa sezione per verificare o modificare testo JSON oppure per estrarre valori semplici o complessi.  
+Usare le funzioni descritte nelle pagine di questa sezione per convalidare o modificare testo JSON oppure per estrarre valori semplici o complessi.  
   
 |Funzione|Description|  
 |--------------|-----------------|  
-|[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Verifica se una stringa contiene JSON valido.|  
+|[ISJSON](../../t-sql/functions/isjson-transact-sql.md)|Verifica se una stringa include contenuto JSON valido.|  
 |[JSON_VALUE](../../t-sql/functions/json-value-transact-sql.md)|Estrae un valore scalare da una stringa JSON.|  
 |[JSON_QUERY](../../t-sql/functions/json-query-transact-sql.md)|Estrae un oggetto o una matrice da una stringa JSON.|  
 |[JSON_MODIFY](../../t-sql/functions/json-modify-transact-sql.md)|Aggiorna il valore di una proprietà in una stringa JSON e restituisce la stringa JSON aggiornata.|
 
- Per ulteriori informazioni sul supporto integrato per JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [dati JSON &#40; SQL Server &#41; ](../../relational-databases/json/json-data-sql-server.md).  
+ Per altre informazioni sul supporto integrato per JSON in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Dati JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md).  
     
 ## <a name="see-also"></a>Vedere anche  
- [Convalidare, eseguire Query e modificare i dati JSON con funzioni predefinite &#40; SQL Server &#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
- [Espressioni di percorso JSON &#40; SQL Server &#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [I dati JSON &#40; SQL Server &#41;](../../relational-databases/json/json-data-sql-server.md)  
+ [Convalidare, eseguire query e modificare i dati JSON con funzioni predefinite &#40;SQL Server&#41;](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md)   
+ [Espressioni di percorso JSON &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+ [Dati JSON &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   
   

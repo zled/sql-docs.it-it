@@ -1,5 +1,5 @@
 ---
-title: STCurveToLine (tipo di dati geography) | Documenti Microsoft
+title: STCurveToLine (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un'approssimazione poligonale di un' **geography** istanza contenente i segmenti di arco circolare.  
+  Restituisce un'approssimazione poligonale di un'istanza **geography** contenente segmenti di arco circolare.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,18 +44,18 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Restituisce un **LineString** istanza per un **CircularString** o **CompoundCurve** istanza.  
+## <a name="remarks"></a>Remarks  
+ Restituisce un'istanza **LineString** per un'istanza **CircularString** o **CompoundCurve**.  
   
- Restituisce un **poligono** istanza per un **CurvePolygon** istanza.  
+ Restituisce un'istanza **Polygon** per un'istanza **CurvePolygon**.  
   
- Restituire una copia di **geography** istanze che non contengono **CircularString**, **CompoundCurve**, o **CurvePolygon** istanze.  
+ Restituisce una copia delle istanze **geography** che non contengono istanze **CircularString**, **CompoundCurve** o **CurvePolygon**.  
   
- A differenza della specifica SQL MM, questo metodo non utilizza i valori di coordinata z nel calcolo dell'approssimazione poligonale. Coordinata z tutti i valori presentano nel chiamante **geography** istanza vengono ignorati.  
+ A differenza della specifica SQL MM, questo metodo non usa i valori della coordinata Z nel calcolo dell'approssimazione poligonale. Qualsiasi valore della coordinata Z presente nell'istanza **geometry** chiamante viene ignorato.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituita un'istanza `LineString` che rappresenta un'approssimazione poligonale di un'istanza `CircularString`.  
@@ -68,8 +68,8 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [STLength &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
- [STNumPoints &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
+ [STLength &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
+ [STNumPoints &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Panoramica dei tipi di dati spaziali](../../relational-databases/spatial/spatial-data-types-overview.md)  
   
   

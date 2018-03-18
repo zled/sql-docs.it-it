@@ -1,5 +1,5 @@
 ---
-title: STPointOnSurface (tipo di dati geometry) | Documenti Microsoft
+title: STPointOnSurface (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un punto arbitrario che si trova all'interno di un **geometry** istanza.
+Restituisce un punto arbitrario che si trova all'interno di un'istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +44,13 @@ Restituisce un punto arbitrario che si trova all'interno di un **geometry** ista
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se l'istanza è vuota, il metodo restituisce Null.  
   
 ## <a name="examples"></a>Esempi  

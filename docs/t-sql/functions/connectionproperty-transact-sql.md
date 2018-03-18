@@ -1,5 +1,5 @@
 ---
-title: CONNECTIONPROPERTY (Transact-SQL) | Documenti Microsoft
+title: CONNECTIONPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -45,24 +45,24 @@ CONNECTIONPROPERTY ( property )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*proprietà*  
-Proprietà della connessione. *proprietà* può essere uno dei valori seguenti.
+*property*  
+Proprietà della connessione. I possibili valori di *property* sono i seguenti.
   
-|Valore|Tipo di dati|Description|  
+|valore|Tipo di dati|Description|  
 |---|---|---|
-|net_transport|**nvarchar (40)**|Restituisce il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.<br /><br /> I valori restituiti sono: **HTTP**, **Named pipe**, **sessione**, **Shared memory**, **SSL**, **TCP**, e **VIA**.<br /><br /> Nota: Restituisce sempre **sessione** quando una connessione dispone di più set di risultati attivi (MARS) abilitato, e il pool di connessioni è abilitato.|  
-|protocol_type|**nvarchar (40)**|Restituisce il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
-|auth_scheme|**nvarchar (40)**|Restituisce il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schema di autenticazione per una connessione. Lo schema di autenticazione può essere relativo all'autenticazione di Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) o all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori Null.|  
+|net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.<br /><br /> I valori restituiti sono: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP** e **VIA**.<br /><br /> Nota: viene restituito sempre **Session** quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set) e il pool di connessioni.|  
+|protocol_type|**nvarchar(40)**|Restituisce il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
+|auth_scheme|**nvarchar(40)**|Restituisce lo schema di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per una connessione. Lo schema di autenticazione può essere relativo all'autenticazione di Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) o all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori Null.|  
 |local_net_address|**varchar(48)**|Restituisce l'indirizzo IP del server di destinazione della connessione. Disponibile solo per le connessioni che utilizzano il provider del trasporto TCP. Ammette i valori Null.|  
 |local_tcp_port|**int**|Restituisce la porta TCP del server che verrebbe impiegata nel caso in cui la connessione utilizzasse il trasporto TCP. Ammette i valori Null.|  
 |client_net_address|**varchar(48)**|Richiede l'indirizzo host del client che si connette al server. Ammette i valori Null.|  
-|physical_net_transport|**nvarchar (40)**|Restituisce il protocollo di trasporto fisico utilizzato dalla connessione. È accurato quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set).|  
-|\<Qualsiasi altra stringa >||Restituisce NULL se l'input non è valido.|  
+|physical_net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico utilizzato dalla connessione. È accurato quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set).|  
+|\<Qualsiasi altra stringa>||Restituisce NULL se l'input non è valido.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 **local_net_address** e **local_tcp_port** restituiscono NULL in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-I valori restituiti sono le stesse opzioni mostrate per le colonne corrispondenti nella [Sys.dm exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md) vista a gestione dinamica. Esempio:
+I valori restituiti corrispondono alle opzioni mostrate per le colonne corrispondenti nella DMV [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md). Ad esempio
   
 ```sql
 SELECT   
@@ -72,6 +72,6 @@ ConnectionProperty('protocol_type') AS 'Protocol type';
   
 ## <a name="see-also"></a>Vedere anche
 [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
-[Sys.dm exec_requests &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
   
   

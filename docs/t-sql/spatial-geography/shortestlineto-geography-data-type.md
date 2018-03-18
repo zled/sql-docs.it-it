@@ -1,5 +1,5 @@
 ---
-title: ShortestLineTo (tipo di dati geography) | Documenti Microsoft
+title: ShortestLineTo (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un **LineString** istanza con due punti che rappresentano la distanza più breve tra le due **geography** istanze. La lunghezza del **LineString** istanza restituita è la distanza tra i due **geography** istanze.  
+  Restituisce un'istanza **LineString** con due punti che rappresentano la distanza più breve tra le due istanze **geography**. La lunghezza dell'istanza **LineString** restituita è la distanza tra le due istanze **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *geography_other*  
- Specifica il secondo **geography** istanza chiamante **geography** istanza tenta di determinare la distanza più breve.  
+ Specifica la seconda istanza **geography** da cui l'istanza **geography** chiamante tenta di determinare la distanza più breve.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Il metodo restituisce un **LineString** istanza con endpoint che si trovano sui bordi delle due pianificazioni **geography** istanze da confrontare. La lunghezza del **LineString** restituiti corrisponde alla distanza minore tra i due **geography** istanze. Un oggetto vuoto **LineString** istanza viene restituita quando le due **geography** istanze si intersecano a vicenda.  
+## <a name="remarks"></a>Remarks  
+ Il metodo restituisce un'istanza **LineString** con endpoint che si trovano sui bordi delle due istanze **geography** non intersecate messe a confronto. La lunghezza dell'istanza **LineString** restituita corrisponde alla distanza minore tra le due istanze **geography**. Viene restituita un'istanza **LineString** vuota quando le due istanze **geography** si intersecano.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -70,15 +70,15 @@ ALTER MESSAGE TYPE message_type_name
  Il corpo del messaggio deve contenere XML ben formato.  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- Il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. Il *schema_collection_name* deve essere il nome di una raccolta di XML schema esistente.  
+ Il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. *schema_collection_name* deve corrispondere al nome di una raccolta di XML Schema esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La modifica del tipo di messaggio non influisce sui messaggi che sono già stati recapitati a una coda.  
   
  Per modificare AUTHORIZATION per un tipo di messaggio, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- L'autorizzazione per modificare un tipo di messaggio per impostazione predefinita al proprietario del tipo di messaggio, i membri del **db_ddladmin** o **db_owner** fissa ruoli del database e i membri del **sysadmin**ruolo predefinito del server.  
+ L'autorizzazione per modificare un tipo di messaggio viene assegnata per impostazione predefinita al proprietario del tipo di messaggio, ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  Quando l'istruzione ALTER MESSAGE TYPE specifica una raccolta di schemi, l'utente che esegue l'istruzione deve disporre dell'autorizzazione REFERENCES nella raccolta di schemi specificata.  
   

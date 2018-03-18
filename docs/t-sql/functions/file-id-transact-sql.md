@@ -1,5 +1,5 @@
 ---
-title: File_id (Transact-SQL) | Documenti Microsoft
+title: FILE_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/02/2018
   Restituisce il numero di identificazione (ID) del file per il nome di file logico specificato del database corrente.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilizzare [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) in alternativa.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,15 +55,15 @@ FILE_ID ( file_name )
   
 ## <a name="arguments"></a>Argomenti  
  *file_name*  
- È un'espressione di tipo **sysname** che rappresenta il nome del file per cui restituire l'ID del file.  
+ Espressione di tipo **sysname** che rappresenta il nome del file per il quale restituire l'ID file.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **smallint**  
   
-## <a name="remarks"></a>Osservazioni  
- *file_name* corrisponde al nome di file logico visualizzato nella colonna nome nelle viste del catalogo sys. master_files o Sys. database_files.  
+## <a name="remarks"></a>Remarks  
+ *file_name* corrisponde al nome file logico visualizzato nella colonna name della vista del catalogo sys.master_files o sys.database_files.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il numero di identificazione di file assegnato ai cataloghi full-text è maggiore di 32767. Poiché il tipo restituito della funzione FILE_ID è **smallint**, questa funzione non può essere utilizzata per i file full-text. Utilizzare [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) invece.  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il numero di identificazione di file assegnato ai cataloghi full-text è maggiore di 32767. Poiché il tipo restituito della funzione FILE_ID è **smallint**, questa funzione non può essere usata per file full-text. Usare [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) in alternativa.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene restituito l'ID file per il file `AdventureWorks_Data`.  
@@ -86,8 +86,8 @@ File ID
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità del motore di database deprecate in SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
- [File_name &#40; Transact-SQL &#41;](../../t-sql/functions/file-name-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [FILE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/file-name-transact-sql.md)   
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   

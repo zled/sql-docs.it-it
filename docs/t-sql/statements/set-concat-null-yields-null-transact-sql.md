@@ -1,5 +1,5 @@
 ---
-title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Documenti Microsoft
+title: SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su ON, la concatenazione di un valore Null con una stringa restituisce NULL. Ad esempio, `SELECT 'abc' + NULL` restituisce `NULL`. Quando l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su OFF, la concatenazione di un valore Null con una stringa restituisce la stringa stessa (il valore Null viene considerato una stringa vuota). Ad esempio, `SELECT 'abc' + NULL` restituisce `abc`.  
   
- Se l'opzione SET CONCAT_NULL_YIELDS_NULL viene omesso, l'impostazione del **CONCAT_NULL_YIELDS_NULL** si applica l'opzione di database.  
+ Se non si specifica SET CONCAT_NULL_YIELDS_NULL, si applica l'impostazione dell'opzione di database **CONCAT_NULL_YIELDS_NULL**.  
   
 > [!NOTE]  
 >  L'impostazione dell'opzione SET CONCAT_NULL_YIELDS_NULL è uguale all'impostazione di CONCAT_NULL_YIELDS_NULL di ALTER DATABASE.  
   
  L'opzione SET CONCAT_NULL_YIELDS_NULL viene impostata in fase di esecuzione, non in fase di analisi.  
   
- È necessario che l'opzione SET CONCAT_NULL_YIELDS_NULL sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su OFF, qualsiasi istruzione CREATE, UPDATE, INSERT e DELETE eseguita in tabelle con indici su colonne calcolate o viste indicizzate avrà esito negativo. Per ulteriori informazioni sulle impostazioni dell'opzione SET necessarie con viste indicizzate e indici in colonne calcolate, vedere "Considerazioni quando si usa delle istruzioni SET" in [istruzioni SET &#40; Transact-SQL &#41; ](../../t-sql/statements/set-statements-transact-sql.md).  
+ È necessario che l'opzione SET CONCAT_NULL_YIELDS_NULL sia impostata su ON durante la creazione o la modifica di indici in colonne calcolate o viste indicizzate. Se l'opzione SET CONCAT_NULL_YIELDS_NULL è impostata su OFF, qualsiasi istruzione CREATE, UPDATE, INSERT e DELETE eseguita in tabelle con indici su colonne calcolate o viste indicizzate avrà esito negativo. Per altre informazioni sulle impostazioni dell'opzione SET necessarie per viste indicizzate e indici nelle colonne calcolate, vedere "Considerazioni sull'uso delle istruzioni SET" nell'argomento [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md).  
   
  Quando l'opzione CONCAT_NULL_YIELDS_NULL è impostata su OFF, la concatenazione delle stringhe in più server non può verificarsi.  
   
@@ -104,6 +104,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SESSIONPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
+ [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)  
   
   

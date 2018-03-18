@@ -1,5 +1,5 @@
 ---
-title: Point (tipo di dati geography) | Documenti Microsoft
+title: Point (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="point-geography-data-type"></a>Point (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Costruisce un **geography** istanza che rappresenta un **punto** istanza da cui i valori di latitudine e longitudine e un SRID di ID di riferimento spaziale.
+Costruisce un'istanza **geography** che rappresenta un'istanza **Point** dai relativi valori di latitudine e longitudine e un identificatore SRID.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,16 +46,16 @@ Point ( Lat, Long, SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *Lat*  
- È un **float** espressione che rappresenta la coordinata x del **punto** in corso la generazione.  
+ Espressione **float** che rappresenta la coordinata X dell'istanza **Point** da generare.  
   
  *Long*  
- È un **float** espressione che rappresenta la coordinata y del **punto** in corso la generazione. Per ulteriori informazioni sui valori di longitudine e latitudine validi, vedere [punto](../../relational-databases/spatial/point.md).  
+ Espressione **float** che rappresenta la coordinata Y dell'istanza **Point** da generare. Per altre informazioni sui valori validi di latitudine e longitudine, vedere [Point](../../relational-databases/spatial/point.md).  
   
  *SRID*  
- È un **int** che rappresenta l'identificatore SRID dell'espressione di **geography** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   

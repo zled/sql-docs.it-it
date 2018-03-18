@@ -1,5 +1,5 @@
 ---
-title: SOUNDEX (Transact-SQL) | Documenti Microsoft
+title: SOUNDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -50,13 +50,13 @@ SOUNDEX ( character_expression )
   
 ## <a name="arguments"></a>Argomenti  
  *character_expression*  
- È un carattere alfanumerico [espressione](../../t-sql/language-elements/expressions-transact-sql.md) dati di tipo carattere. *character_expression* può essere una costante, variabile o colonna.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) alfanumerica di dati di tipo carattere. *character_expression* può essere una costante, una variabile o una colonna.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar**  
   
-## <a name="remarks"></a>Osservazioni  
- Tramite SOUNDEX una stringa alfanumerica viene convertita in un codice a quattro caratteri basato sul risultato della pronuncia della stringa. Il primo carattere del codice è il primo carattere di *character_expression*, convertito in lettere maiuscole. I caratteri compresi tra il secondo e il quarto del codice sono numeri che rappresentano le lettere dell'espressione. Le lettere A, E, I, O, U, H, W e Y vengono ignorate, a meno che non rappresentino la prima lettera della stringa. Se necessario per generare un codice di quattro caratteri, vengono aggiunti gli zeri finali. Per ulteriori informazioni sul codice SOUNDEX, vedere [il sistema di indicizzazione di Soundex](https://www.archives.gov/research/census/soundex.html).  
+## <a name="remarks"></a>Remarks  
+ Tramite SOUNDEX una stringa alfanumerica viene convertita in un codice a quattro caratteri basato sul risultato della pronuncia della stringa. Il primo carattere del codice è il primo carattere di *character_expression*, convertito in maiuscolo. I caratteri compresi tra il secondo e il quarto del codice sono numeri che rappresentano le lettere dell'espressione. Le lettere A, E, I, O, U, H, W e Y vengono ignorate, a meno che non rappresentino la prima lettera della stringa. Se necessario per generare un codice di quattro caratteri, vengono aggiunti gli zeri finali. Per altre informazioni sul codice SOUNDEX, vedere [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html) (Sistema di indicizzazione di Soundex).  
   
  È possibile confrontare i codici SOUNDEX di stringhe diverse per vedere le pronunce simili della stringa. Tramite la funzione DIFFERENCE viene eseguito SOUNDEX in due stringhe e viene restituito un Integer che rappresenta la similitudine dei codici SOUNDEX per le stringhe in questione.  
   
@@ -81,7 +81,7 @@ SOUNDEX ( character_expression )
 SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valido per le regole di confronto Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valido per le regole di confronto Latin1_General.  
   
 ```  
   
@@ -99,7 +99,7 @@ SELECT DIFFERENCE('Smithers', 'Smythers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valido per le regole di confronto Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valido per le regole di confronto Latin1_General.  
   
 ```  
 -----------   
@@ -115,7 +115,7 @@ SELECT DIFFERENCE('Anothers', 'Brothers');
 GO  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Valido per le regole di confronto Latin1_General.  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)] Valido per le regole di confronto Latin1_General.  
   
 ```  
 -----------   
@@ -125,8 +125,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [DIFFERENZA &#40; Transact-SQL &#41;](../../t-sql/functions/difference-transact-sql.md)   
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [DIFFERENCE &#40;Transact-SQL&#41;](../../t-sql/functions/difference-transact-sql.md)   
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)  
   
   

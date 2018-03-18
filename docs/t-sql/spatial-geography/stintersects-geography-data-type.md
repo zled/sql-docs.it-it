@@ -1,5 +1,5 @@
 ---
-title: STIntersects (tipo di dati geography) | Documenti Microsoft
+title: STIntersects (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stintersects-geography-data-type"></a>STIntersects (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Restituisce 1 se un **geography** istanza interseca un'altra **geography** istanza. In caso contrario, restituisce 0.  
+  Restituisce 1 se un'istanza **geography** interseca un'altra istanza **geography**. In caso contrario, restituisce 0.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,15 +45,15 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da confrontare con l'istanza sulla quale `STIntersects()` viene richiamato.  
+ Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato `STIntersects()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce sempre **NULL** se gli ID di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce sempre **NULL** se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato `STIntersects()` per determinare se due istanze `geography` si intersecano.  

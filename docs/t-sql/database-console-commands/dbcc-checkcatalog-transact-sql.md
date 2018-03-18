@@ -58,12 +58,12 @@ DBCC CHECKCATALOG
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* | *database_id* | 0  
- Nome o ID del database per il quale verificare la consistenza dei cataloghi. Se questo argomento viene omesso oppure se viene specificato il valore 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Nome o ID del database per il quale verificare la consistenza dei cataloghi. Se questo argomento viene omesso oppure se viene specificato il valore 0, viene utilizzato il database corrente. I nomi dei database devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  WITH NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Dopo il completamento del comando DBCC CATALOG, viene scritto un messaggio nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il comando DBCC viene eseguito correttamente, il messaggio indica il completamento corretto e la durata dell'esecuzione del comando. Se il comando DBCC viene arrestato prima del completamento del controllo a causa di un errore, il messaggio indica che il comando è stato terminato e specifica un valore di stato e la durata dell'esecuzione del comando. Nella tabella seguente sono elencati e descritti i valori di stato che possono essere inclusi nel messaggio.
   
 |State|Description|  
@@ -75,16 +75,16 @@ Dopo il completamento del comando DBCC CATALOG, viene scritto un messaggio nel l
 |4|È stata rilevata una violazione di accesso o asserzione.|  
 |5|Si è verificato un errore sconosciuto che ha causato l'interruzione del comando DBCC.|  
   
-DBCC CHECKCATALOG esegue vari controlli di consistenza tra le tabelle di metadati di sistema. DBCC CHECKCATALOG utilizza uno snapshot interno del database per garantire la consistenza necessaria a livello di transazioni per eseguire queste verifiche. Per ulteriori informazioni, vedere [visualizzare le dimensioni del File Sparse di uno Snapshot del Database &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "DBCC dell'utilizzo di Snapshot interno del Database" in [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKCATALOG esegue vari controlli di consistenza tra le tabelle di metadati di sistema. DBCC CHECKCATALOG utilizza uno snapshot interno del database per garantire la consistenza necessaria a livello di transazioni per eseguire queste verifiche. Per altre informazioni, vedere [Visualizzare le dimensioni del file sparse di uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) e la sezione "Utilizzo dello snapshot interno del database DBCC" in [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Se risulta impossibile creare uno snapshot, DBCC CHECKCATALOG acquisisce un blocco esclusivo a livello di database per ottenere la consistenza richiesta. Le eventuali inconsistenze rilevate non potranno essere riparate e pertanto sarà necessario ripristinare il database da un backup.
   
 > [!NOTE]  
-> Esecuzione di DBCC CHECKCATALOG su **tempdb** non esegue alcun controllo. Questo avviene perché, per motivi di prestazioni, gli snapshot del database non sono disponibili in **tempdb**. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria. Riciclare il server per risolvere gli eventuali **tempdb** problemi relativi ai metadati.  
+> L'esecuzione di DBCC CHECKCATALOG in **tempdb** non comporta l'esecuzione di alcun controllo, perché per motivi di prestazioni gli snapshot di database non sono disponibili in **tempdb**. Ciò significa che non è possibile ottenere la consistenza delle transazioni necessaria. Riciclare il server per risolvere gli eventuali problemi a livello di metadati di **tempdb**.  
   
 > [!NOTE]  
 > I dati di FILESTREAM non vengono controllati da DBCC CHECKCATALOG. Tramite FILESTREAM vengono archiviati oggetti binari di grandi dimensioni (BLOB) nel file system.  
   
-DBCC CHECKCATALOG viene inoltre eseguita come parte di [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
+L'istruzione DBCC CHECKCATALOG viene eseguita anche come parte di [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).
   
 ## <a name="result-sets"></a>Set di risultati  
 Se non si specifica alcun database, DBCC CHECKCATALOG restituisce:
@@ -100,7 +100,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 ```  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'appartenenza di **sysadmin** ruolo predefinito del server, o **db_owner** ruolo predefinito del database.  
+ È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** o al ruolo predefinito del database **db_owner** .  
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene eseguito il controllo dell'integrità dei cataloghi nel database corrente e nel database `AdventureWorks`.
@@ -116,5 +116,5 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
+[Tabelle di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

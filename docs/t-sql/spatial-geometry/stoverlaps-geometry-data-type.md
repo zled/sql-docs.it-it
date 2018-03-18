@@ -1,5 +1,5 @@
 ---
-title: STOverlaps (tipo di dati geometry) | Documenti Microsoft
+title: STOverlaps (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce 1 se un **geometry** istanza si sovrappone a altra **geometry** istanza. In caso contrario, restituisce 0.
+Restituisce 1 se un'istanza **geometry** si sovrappone a un'altra istanza **geometry**. In caso contrario, restituisce 0.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,22 +45,22 @@ Restituisce 1 se un **geometry** istanza si sovrappone a altra **geometry** ista
   
 ## <a name="arguments"></a>Argomenti  
  *other_geometry*  
- Un altro **geometry** istanza da confrontare con l'istanza sulla quale `STOverlaps()` viene richiamato.  
+ Altra istanza **geometry** da confrontare con l'istanza sulla quale viene chiamato `STOverlaps()`.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Due **geometry** istanze si sovrappongono se la regione che rappresenta la loro intersezione ha la stessa dimensione delle istanze e l'area non è uguale a un'istanza.  
+## <a name="remarks"></a>Remarks  
+ Due istanze **geometry** si sovrappongono se la regione che rappresenta la loro intersezione ha la stessa dimensione delle istanze e se la regione non è uguale alle istanze.  
   
- `STOverlaps()`Restituisce sempre 0 se i punti in cui il **geometry** istanze si intersecano non sono della stessa dimensione.  
+ `STOverlaps()` restituisce sempre 0 se i punti in cui le istanze **geometry** si intersecano non hanno la stessa dimensione.  
   
- Questo metodo restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geometry** istanze non corrispondono.  
+ Questo metodo restituisce sempre Null se gli identificatori SRID delle istanze **geometry** non corrispondono.  
   
 ## <a name="examples"></a>Esempi  
- L'esempio seguente usa `STOverlaps()` per verificare se due **geometry** istanze si sovrappongono.  
+ Nell'esempio seguente viene usato `STOverlaps()` per verificare se due istanze **geometry** si sovrappongono.  
   
 ```  
 DECLARE @g geometry;  

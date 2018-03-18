@@ -1,5 +1,5 @@
 ---
-title: SYMKEYPROPERTY (Transact-SQL) | Documenti Microsoft
+title: SYMKEYPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
   
 ## <a name="arguments"></a>Argomenti  
  *Key_ID*  
- Key_ID di una chiave simmetrica nel database. Per trovare il Key_ID quando si conosce solo il nome della chiave, utilizzare SYMKEY_ID. *Key_ID* è di tipo di dati **int**.  
+ Key_ID di una chiave simmetrica nel database. Per trovare il Key_ID quando si conosce solo il nome della chiave, utilizzare SYMKEY_ID. *Key_ID* è un tipo di dati **int**.  
   
  **'**algorithm_desc**'**  
  Specifica che l'output restituisce la descrizione dell'algoritmo della chiave simmetrica. Disponibile solo per le chiavi simmetriche create da un modulo EKM.  
@@ -55,7 +55,7 @@ SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste alcune autorizzazioni relative alla chiave simmetrica ed è necessario che al chiamante non sia stata negata l'autorizzazione VIEW per la chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  
@@ -67,13 +67,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ASYMKEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   
  [DROP SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-symmetric-key-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [Viste del catalogo relative alla sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [KEY_ID &#40; Transact-SQL &#41;](../../t-sql/functions/key-id-transact-sql.md)   
- [ASYMKEYPROPERTY &#40; Transact-SQL &#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [KEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)   
+ [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
   
   

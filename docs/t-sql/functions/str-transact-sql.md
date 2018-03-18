@@ -49,22 +49,22 @@ STR ( float_expression [ , length [ , decimal ] ] )
   
 ## <a name="arguments"></a>Argomenti  
  *float_expression*  
- È un'espressione di numerico approssimato (**float**) il tipo di dati con un separatore decimale.  
+ Espressione del tipo di dati numerico approssimato (**float**) con un separatore decimale.  
   
- *lunghezza*  
+ *length*  
  Lunghezza totale, che include il separatore decimale, il segno, le cifre e gli spazi. Il valore predefinito è 10.  
   
  *decimal*  
- Numero di posizioni a destra del separatore decimale. *decimale* deve essere minore o uguale a 16. Se *decimale* è maggiore di 16, il risultato viene troncato a sedici posizioni a destra del separatore decimale.  
+ Numero di posizioni a destra del separatore decimale. Il valore di *decimal* deve essere minore o uguale a 16. Se *decimal* è maggiore di 16, il risultato viene troncato in modo da includere sedici posizioni a destra del separatore decimale.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **varchar**  
   
-## <a name="remarks"></a>Osservazioni  
- Se fornito, i valori per *lunghezza* e *decimale* tali parametri devono essere positivi. Il numero viene arrotondato a un valore intero per impostazione predefinita o se il parametro decimal è 0. La lunghezza specificata deve essere maggiore o uguale alla parte intera del numero (a sinistra del separatore decimale) più il segno del numero, se disponibile. Un breve *argomento float_expression* viene allineato a destra, la lunghezza specificata e un valore long *argomento float_expression* viene troncato al numero specificato di posizioni decimali. Ad esempio, STR (12**,**10) restituisce il risultato 12. che viene allineato a destra nel set di risultati. Tuttavia, STR (1223**,**2) tronca il set di risultati a * *. Le funzioni stringa possono essere nidificate.  
+## <a name="remarks"></a>Remarks  
+ I valori dei parametri *length* e *decimal* della funzione STR devono essere positivi. Il numero viene arrotondato a un valore intero per impostazione predefinita o se il parametro decimal è 0. La lunghezza specificata deve essere maggiore o uguale alla parte intera del numero (a sinistra del separatore decimale) più il segno del numero, se disponibile. Un argomento di tipo *float_expression* breve viene allineato a destra in base alla lunghezza specificata, mentre un argomento di tipo *float_expression* lungo viene troncato al numero di cifre decimali specificato. Ad esempio, STR(12**,**10) restituisce il risultato 12, che viene allineato a destra nel set di risultati. STR(1223**,**2) tronca invece il set di risultati a **. Le funzioni stringa possono essere nidificate.  
   
 > [!NOTE]  
->  Per convertire i dati Unicode, utilizzare STR in una conversione o [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) funzione di conversione.  
+>  Per eseguire la conversione in dati Unicode, usare STR in una funzione di conversione CONVERT o [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente un'espressione composta da cinque cifre e un separatore decimale viene convertita in una stringa di caratteri con sei posizioni. La parte frazionaria del numero viene arrotondata a una cifra decimale.  
@@ -118,7 +118,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
  [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

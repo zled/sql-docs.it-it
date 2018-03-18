@@ -1,5 +1,5 @@
 ---
-title: Istruzione ALTER CERTIFICATE (Transact-SQL) | Documenti Microsoft
+title: ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-non-specified
@@ -72,7 +72,7 @@ ALTER CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_certificato*  
+ *certificate_name*  
  Nome univoco con il quale il certificato è noto nel database.  
   
  FILE **='***path_to_private_key***'**  
@@ -82,16 +82,16 @@ ALTER CERTIFICATE certificate_name
  Specifica la password necessaria per decrittografare la chiave privata.  
   
  ENCRYPTION BY PASSWORD **='***password***'**  
- Viene specificata la password utilizzata per crittografare la chiave privata del certificato nel database. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
+ Viene specificata la password utilizzata per crittografare la chiave privata del certificato nel database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
  REMOVE PRIVATE KEY  
  Specifica che la chiave privata non deve più essere mantenuta all'interno del database.  
   
- ACTIVE FOR BEGIN_DIALOG  **=**  {ON | OFF}  
+ ACTIVE FOR BEGIN_DIALOG **=** { ON | OFF }  
  Rende il certificato disponibile per un initiator di una conversazione di dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="remarks"></a>Osservazioni  
- La chiave privata deve corrispondere alla chiave pubblica specificata da *nome_certificato*.  
+## <a name="remarks"></a>Remarks  
+ La chiave privata deve corrispondere alla chiave pubblica specificata da *certificate_name*.  
   
  La clausola DECRYPTION BY PASSWORD può essere omessa se la password nel file è protetta con un valore di password Null.  
   
@@ -106,7 +106,7 @@ ALTER CERTIFICATE certificate_name
   
  L'opzione WITH PRIVATE KEY non è disponibile in un database indipendente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER per il certificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -148,7 +148,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

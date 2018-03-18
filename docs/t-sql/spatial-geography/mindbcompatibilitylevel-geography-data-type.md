@@ -1,5 +1,5 @@
 ---
-title: MinDbCompatibilityLevel (tipo di dati geography) | Documenti Microsoft
+title: MinDbCompatibilityLevel (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la compatibilità del database minima che riconosce il **geography** tipo di dati.  
+  Restituisce la compatibilità del database minima che riconosce il tipo di dati **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **int**  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database. Un valido **geography** digitare restituisce 110.  
+## <a name="remarks"></a>Remarks  
+ Utilizzare `MinDbCompatibilityLevel()` per verificare la compatibilità di un oggetto spaziale prima di modificare il livello di compatibilità in un database. Un tipo **geography** non valido restituisce 110.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -98,6 +98,6 @@ END
   
 ## <a name="see-also"></a>Vedere anche  
  [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
- [Compatibilità con le versioni precedenti di SQL Server Database Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
+ [Compatibilità con le versioni precedenti del motore di database di SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

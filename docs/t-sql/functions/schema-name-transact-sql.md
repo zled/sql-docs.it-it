@@ -1,5 +1,5 @@
 ---
-title: SCHEMA_NAME (Transact-SQL) | Documenti Microsoft
+title: SCHEMA_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -49,14 +49,14 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |Nome|Definizione|  
 |----------|----------------|  
-|*schema_id*|ID dello schema. *schema_id* è un **int**. Se *schema_id* non è definito, SCHEMA_NAME restituirà il nome dello schema predefinito del chiamante.|  
+|*schema_id*|ID dello schema. *schema_id* è di tipo **int**. Se *schema_id* viene omesso, SCHEMA_NAME restituirà il nome dello schema predefinito del chiamante.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sysname**  
   
- Restituisce NULL quando *schema_id* non è un ID valido.  
+ Restituisce NULL se *schema_id* non è un ID valido.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  SCHEMA_NAME restituisce i nomi degli schemi di sistema e degli schemi definiti dall'utente. SCHEMA_NAME può essere chiamato in un elenco di selezione, in una clausola WHERE e dovunque è consentita un'espressione.  
   
 ## <a name="examples"></a>Esempi  
@@ -74,12 +74,12 @@ SELECT SCHEMA_NAME(1);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [SCHEMA_ID &#40; Transact-SQL &#41;](../../t-sql/functions/schema-id-transact-sql.md)   
- [Schemas &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
- [Funzioni per i metadati &#40; Transact-SQL &#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
- [IN &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
+ [Funzioni per i metadati &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
+ [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
 

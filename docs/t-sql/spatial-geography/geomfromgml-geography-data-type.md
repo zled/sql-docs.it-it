@@ -1,5 +1,5 @@
 ---
-title: GeomFromGML (tipo di dati geography) | Documenti Microsoft
+title: GeomFromGML (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Costruisce un **geography** data una rappresentazione istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset di Geography Markup Language (GML).
+Costruisce un'istanza **geography** data una rappresentazione nel subset [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di Geography Markup Language (GML).
   
-Per ulteriori informazioni su GML, vedere le seguenti specifiche Open Geospatial Consortium: [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
+Per altre informazioni su GML, vedere le specifiche Open Geospatial Consortium (OGC): [OGC Specifications, Geography Markup Language](http://go.microsoft.com/fwlink/?LinkId=93629)
   
-Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.
+Questo metodo con tipo di dati **geography** supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -53,17 +53,17 @@ GeomFromGml ( GML_input, SRID )
  Input XML da cui GML restituirà un valore.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geography** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geography** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo genera un **FormatException** se l'input non è formattata correttamente.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo genera un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
- Questo metodo genererà **ArgumentException** se l'input contiene un bordo opposto.  
+ Questo metodo genererà un'eccezione **ArgumentException** se l'input contiene un bordo opposto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `GeomFromGml()` per creare un'istanza `geography`.  

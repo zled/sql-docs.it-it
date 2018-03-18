@@ -1,5 +1,5 @@
 ---
-title: STPolyFromText (tipo di dati geometry) | Documenti Microsoft
+title: STPolyFromText (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpolyfromtext-geometry-data-type"></a>STPolyFromText (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **geometry** istanza di una rappresentazione di Open Geospatial Consortium (OGC) Well-Known Text (WKT), integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
+Restituisce un'istanza **geometry** da una rappresentazione WKT (Well-Known Text) OGC (Open Geospatial Consortium) integrata con qualsiasi valore Z (innalzamento) e M (misura) appartenente all'istanza.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,20 +45,20 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argomenti  
  *polygon_tagged_text*  
- È la rappresentazione WKT del **geometryPolygon** istanza da restituire. *polygon_tagged_text* è un **nvarchar (max)** espressione.  
+ Rappresentazione WKT dell'istanza **geometryPolygon** da restituire. *polygon_tagged_text* è un'espressione **nvarchar(max)**.  
   
  *SRID*  
- È un **int** fanno riferimento a espressioni che rappresenta l'ID (SRID) del **geometryPolygon** istanza da restituire.  
+ Espressione **int** che rappresenta l'identificatore SRID dell'istanza **geometryPolygon** da restituire.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Tipo OGC: **poligono**  
+ Tipo OGC: **Polygon**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo genererà un **FormatException** se l'input non è formattata correttamente.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo genererà un'eccezione **FormatException** se l'input non è formattato in modo corretto.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene utilizzato il metodo `STPolyFromText()` per creare un'istanza `geometry`.  

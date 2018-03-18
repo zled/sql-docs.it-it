@@ -1,5 +1,5 @@
 ---
-title: '@@TRANCOUNT (Transact-SQL) | Documenti Microsoft'
+title: '@@TRANCOUNT (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
@@ -50,8 +50,8 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
- L'istruzione BEGIN TRANSACTION incrementa@TRANCOUNT di 1. ROLLBACK TRANSACTION riduce @@TRANCOUNT su 0, ad eccezione di ROLLBACK TRANSACTION *savepoint_name*, che non influisce sulla@TRANCOUNT. COMMIT TRANSACTION o COMMIT WORK decrementa@TRANCOUNT di 1.  
+## <a name="remarks"></a>Remarks  
+ L'istruzione BEGIN TRANSACTION incrementa @@TRANCOUNT di 1. L'istruzione ROLLBACK TRANSACTION decrementa @@TRANCOUNT fino al valore 0, tranne nel caso dell'istruzione ROLLBACK TRANSACTION *savepoint_name* che non ha alcun effetto su @@TRANCOUNT. L'istruzione COMMIT TRANSACTION o COMMIT WORK decrementa @@TRANCOUNT di 1.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -105,6 +105,6 @@ PRINT @@TRANCOUNT
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/rollback-transaction-transact-sql.md)   
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   

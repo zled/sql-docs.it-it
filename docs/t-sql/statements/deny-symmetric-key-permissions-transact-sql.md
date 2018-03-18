@@ -1,5 +1,5 @@
 ---
-title: NEGARE autorizzazioni per chiavi simmetriche (Transact-SQL) | Documenti Microsoft
+title: DENY - autorizzazioni per chiavi simmetriche (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-non-specified
@@ -60,19 +60,19 @@ DENY permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere negata per una chiave simmetrica. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- CHIAVE SIMMETRICA ON::*asymmetric_key_name*  
+ ON SYMMETRIC KEY ::*asymmetric_key_name*  
  Specifica la chiave simmetrica per cui viene negata l'autorizzazione. Il qualificatore di ambito (::) è obbligatorio.  
   
- PER \< *database_principal*>  
+ TO \<*database_principal*>  
  Specifica l'entità da cui viene revocata l'autorizzazione.  
   
  CASCADE  
  Indica che l'autorizzazione negata viene negata anche ad altre entità alle quali è stata concessa da questa entità.  
   
- AS \<database_principal >  
+ AS \<database_principal>  
  Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di negare l'autorizzazione.  
   
  *Database_user*  
@@ -99,8 +99,8 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Osservazioni  
- Informazioni sulle chiavi simmetriche sono visibili nella [symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) vista del catalogo.  
+## <a name="remarks"></a>Remarks  
+ Le informazioni sulle chiavi simmetriche sono visibili nella vista del catalogo [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Una chiave simmetrica è un'entità a sicurezza diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile negare per una chiave simmetrica, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -112,7 +112,7 @@ DENY permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per la chiave simmetrica o l'autorizzazione ALTER ANY SYMMETRIC KEY per il database. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria della chiave simmetrica.  
   
 ## <a name="examples"></a>Esempi  
@@ -125,9 +125,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [symmetric_keys &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
- [GRANT-autorizzazioni per chiavi simmetriche &#40; Transact-SQL &#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
- [Autorizzazioni per chiavi simmetriche REVOKE &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [GRANT - autorizzazioni per chiavi simmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
+ [REVOKE - autorizzazioni per chiavi simmetriche &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

@@ -50,10 +50,10 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
   
 ## <a name="arguments"></a>Argomenti  
  '*character_string*'  
- Stringa di dati di tipo carattere Unicode. *character_string* è **sysname** ed è limitato a 128 caratteri. In caso di input maggiori di 128 caratteri, viene restituito NULL.  
+ Stringa di dati di tipo carattere Unicode. *character_string* è di tipo **sysname** e la lunghezza massima è di 128 caratteri. In caso di input maggiori di 128 caratteri, viene restituito NULL.  
   
  '*quote_character*'  
- Stringa di un solo carattere da utilizzare come delimitatore. Può essere una virgoletta singola ( **'** ), una parentesi quadra sinistra o destra ( **[]** ), o un segno di virgolette doppie ( **"** ). Se *le virgolette* viene omesso, vengono utilizzate le parentesi quadre.  
+ Stringa di un solo carattere da utilizzare come delimitatore. Può essere la virgoletta singola ( **'** ), la parentesi quadra aperta o chiusa ( **[]** ) oppure le virgolette doppie ( **"** ). Se *quote_character* viene omesso, vengono usate le parentesi quadre.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar(258)**  
@@ -75,7 +75,7 @@ SELECT QUOTENAME('abc[]def');
   
  Si noti che nella stringa `abc[]def` la parentesi quadra chiusa è doppia a indicare un carattere di escape.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente vengono utilizzati la stringa di caratteri `abc def` e i caratteri `[` e `]` per creare un identificatore delimitato di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido.  
   
 ```  
@@ -101,7 +101,7 @@ SELECT QUOTENAME('abc def');
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

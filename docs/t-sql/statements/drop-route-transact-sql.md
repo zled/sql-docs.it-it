@@ -1,5 +1,5 @@
 ---
-title: DROP ROUTE (Transact-SQL) | Documenti Microsoft
+title: DROP ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -54,8 +54,8 @@ DROP ROUTE route_name
  *route_name*  
  Nome della route da eliminare. Non è possibile specificare i nomi del server, del database e dello schema.  
   
-## <a name="remarks"></a>Osservazioni  
- La tabella di routing che archivia le route è una tabella di metadati che può essere letta tramite la vista del catalogo **Routes**. e aggiornata esclusivamente utilizzando le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
+## <a name="remarks"></a>Remarks  
+ La tabella di routing in cui sono archiviate le route è una tabella di metadati che può essere letta tramite la vista del catalogo **sys.routes**. e aggiornata esclusivamente utilizzando le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  È possibile eliminare una route indipendentemente dal fatto che sia utilizzata da eventuali conversazioni. Se, tuttavia, non esistono altre route al servizio remoto, i messaggi per tali conversazioni rimarranno nella coda di trasmissione finché non verrà creata una route al servizio remoto o fino al timeout della conversazione.  
   

@@ -1,5 +1,5 @@
 ---
-title: DECRYPTBYCERT (Transact-SQL) | Documenti Microsoft
+title: DECRYPTBYCERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -50,27 +50,27 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
   
 ## <a name="arguments"></a>Argomenti  
  *certificate_ID*  
- ID di un certificato nel database. *certificato*ID è **int**.  
+ ID di un certificato nel database. *certificate_ID* è di tipo **int**.  
   
- *testo crittografato*  
+ *ciphertext*  
  Stringa di dati crittografata tramite la chiave pubblica del certificato.  
   
  @ciphertext  
- È una variabile di tipo **varbinary** che contiene dati che sono stati crittografati con il certificato.  
+ Variabile di tipo **varbinary** contenente dati crittografati con il certificato.  
   
  *cert_password*  
  Password usata per crittografare la chiave privata del certificato. Deve essere Unicode.  
   
  @cert_password  
- È una variabile di tipo **nchar** o **nvarchar** che contiene la password utilizzata per crittografare la chiave privata del certificato. Deve essere Unicode.  
+ Variabile di tipo **nchar** o **nvarchar** contenente la password usata per crittografare la chiave privata del certificato. Deve essere Unicode.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con una dimensione massima di 8.000 byte.  
+ **varbinary** con un valore massimo di 8.000 byte.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione decrittografa dati tramite la chiave privata di un certificato. Le trasformazioni di crittografia tramite chiavi asimmetriche richiedono una quantità elevata di risorse. Di conseguenza, EncryptByCert e DecryptByCert non sono adatte per le normali procedure di crittografia di dati utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il certificato.  
   
 ## <a name="examples"></a>Esempi  
@@ -86,10 +86,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ENCRYPTBYCERT &#40; Transact-SQL &#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
+ [ENCRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbycert-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Istruzione ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   

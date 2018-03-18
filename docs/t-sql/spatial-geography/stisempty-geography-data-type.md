@@ -1,5 +1,5 @@
 ---
-title: STIsEmpty (tipo di dati geography) | Documenti Microsoft
+title: STIsEmpty (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisempty-geography-data-type"></a>STIsEmpty (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se un **geography** istanza è vuota. Restituisce 0 se un **geography** istanza non è vuota.  
+  Restituisce 1 se un'istanza **geography** è vuota. Viene restituito 0 se un'istanza **geography** non è vuota.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   

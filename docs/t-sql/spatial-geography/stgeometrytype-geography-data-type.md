@@ -1,5 +1,5 @@
 ---
-title: STGeometryType (tipo di dati geography) | Documenti Microsoft
+title: STGeometryType (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il nome di tipo Open Geospatial Consortium (OGC) rappresentato da un **geography** istanza.  
+  Restituisce il nome del tipo OGC (Open Geospatial Consortium) rappresentato da un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,12 +44,12 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **nvarchar (4000)**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **nvarchar(4000)**  
   
  Tipo CLR restituito: **SqlString**  
   
-## <a name="remarks"></a>Osservazioni  
- I nomi dei tipi OGC che possono essere restituiti da `STGeometryType()` sono **punto**, **LineString**, **CircularString**, **CompoundCurve**, **Poligono**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, e **MultiPolygon**.  
+## <a name="remarks"></a>Remarks  
+ I nomi dei tipi OGC che possono essere restituiti da `STGeometryType()` sono **Point**, **LineString**, **CircularString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString** e **MultiPolygon**.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `Polygon` e viene utilizzato `STGeometryType()` per confermare che si tratta di un poligono.  

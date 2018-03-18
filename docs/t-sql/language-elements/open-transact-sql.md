@@ -38,7 +38,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Apre un [!INCLUDE[tsql](../../includes/tsql-md.md)] cursore del server e popola il cursore tramite l'esecuzione di [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione specificata nel SET o DECLARE CURSOR *cursor_variable* istruzione.  
+  Apre un cursore server [!INCLUDE[tsql](../../includes/tsql-md.md)] e popola il cursore mediante l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] specificata nell'istruzione DECLARE CURSOR o SET *cursor_variable*.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,15 +54,15 @@ OPEN { { [ GLOBAL ] cursor_name } | cursor_variable_name }
  Specifica che *cursor_name* fa riferimento a un cursore globale.  
   
  *cursor_name*  
- Nome del cursore dichiarato. Se sono presenti sia globale e un cursore locale con *cursor_name* per il proprio nome, *cursor_name* fa riferimento il cursore globale se globale è specificata; in caso contrario, *cursor_name* fa riferimento al cursore locale.  
+ Nome del cursore dichiarato. Se esistono sia un cursore globale che un cursore locale con il nome *cursor_name*, *cursor_name* fa riferimento al cursore globale se viene specificato l'argomento GLOBAL. In caso contrario, *cursor_name* fa riferimento al cursore locale.  
   
  *cursor_variable_name*  
  Nome di una variabile di cursore che fa riferimento a un cursore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il cursore viene dichiarato con l'opzione INSENSITIVE o STATIC, OPEN crea una tabella temporanea per il set di risultati. OPEN ha esito negativo se le dimensioni di una riga del set dei risultati supera le dimensioni massime consentite per le righe delle tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il cursore viene dichiarato con l'opzione KEYSET, OPEN crea una tabella temporanea per il keyset. Le tabelle temporanee vengono archiviate in tempdb.  
   
- Dopo aver aperto un cursore, utilizzare il @@CURSOR_ROWS funzione da ricevere il numero di righe nell'ultimo cursore aperto.  
+ Dopo l'apertura di un cursore, usare la funzione @@CURSOR_ROWS per ricevere il numero delle righe risultanti nell'ultimo cursore aperto.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta la generazione asincrona di cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] gestiti da keyset o statici. [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio OPEN o FETCH, vengono eseguite in batch. Non è quindi necessario generare i cursori [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo asincrono. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta ancora i cursori API del server statici o gestiti da keyset asincroni nei casi in cui l'istruzione OPEN a bassa latenza costituisce un problema, a causa dei round trip del client per ogni operazione del cursore.  

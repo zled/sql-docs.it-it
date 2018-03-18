@@ -1,5 +1,5 @@
 ---
-title: '% = (Operatore di assegnazione) (Transact-SQL) | Documenti Microsoft'
+title: '%= (assegnazione di modulo) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -35,10 +35,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-modulus-assignment-transact-sql"></a>%= (Modulus Assignment) (Transact-SQL)
+# <a name="-modulus-assignment-transact-sql"></a>%= (assegnazione di modulo) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Esegue la divisione tra due numeri e imposta un valore sul risultato dell'operazione. Ad esempio, se una variabile @x è uguale a 38, quindi @x % = 5 accetta il valore originale di @x, divisione per 5 e imposta @x al resto della divisione (3).  
+  Esegue la divisione tra due numeri e imposta un valore sul risultato dell'operazione. Ad esempio, se una variabile @x è uguale a 38, all'espressione @x %= 5 viene assegnato il valore originale di @x, quindi viene eseguita la divisione per 5 e @x viene impostata sul resto della divisione (3).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,18 +49,18 @@ expression %= expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno qualsiasi dei dati tipi della categoria numerica, ad eccezione di **bit** tipo di dati.  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di un qualsiasi tipo di dati della categoria numerica, ad eccezione del tipo di dati **bit**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
-## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni, vedere [% &#40; Modulo &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/modulo-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per altre informazioni, vedere [% &#40;Modulo&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/modulo-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

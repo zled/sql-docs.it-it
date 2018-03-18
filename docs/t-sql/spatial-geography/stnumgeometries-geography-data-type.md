@@ -1,5 +1,5 @@
 ---
-title: STNumGeometries (tipo di dati geography) | Documenti Microsoft
+title: STNumGeometries (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il numero di **geometrie** che costituiscono un **geography** istanza.  
+  Restituisce il numero di **geometrie** che costituiscono un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,15 +44,15 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **int**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **int**  
   
  Tipo CLR restituito: **SqlInt32**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce 1 se il **geography** istanza non è un **MultiPoint**, **MultiLineString**, **MultiPolygon**, o **GeometryCollection** istanza oppure 0 se il **geography** istanza è vuota.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce 1 se l'istanza **geography** non è un'istanza **MultiPoint**, **MultiLineString**, **MultiPolygon** o **GeometryCollection** oppure 0 se l'istanza **geography** è vuota.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creato un `MultiPoint` istanza e viene utilizzato `STNumGeometries()` per scoprire come molti **geometrie** contiene l'istanza.  
+ Nell'esempio seguente viene creata un'istanza `MultiPoint` e viene usato `STNumGeometries()` per trovare il numero di **geometrie** contenute nell'istanza.  
   
 ```  
 DECLARE @g geography;  

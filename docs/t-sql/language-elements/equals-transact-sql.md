@@ -1,5 +1,5 @@
 ---
-title: = (Equals) (Transact-SQL) | Microsoft Docs
+title: = (uguale a) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -48,22 +48,22 @@ expression = expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md). Se il tipo di dati delle espressioni non è uguale, è necessario che il tipo di dati di un'espressione possa essere convertito in modo implicito nel tipo di dati dell'altra. La conversione è in base alle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida. Se il tipo di dati delle espressioni non è uguale, è necessario che il tipo di dati di un'espressione possa essere convertito in modo implicito nel tipo di dati dell'altra. La conversione dipende dalle regole di [precedenza dei tipi di dati](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Osservazioni  
- Quando si confrontano due espressioni NULL, il risultato dipende il `ANSI_NULLS` impostazione:  
+## <a name="remarks"></a>Remarks  
+ Per il confronto di due espressioni NULL, il risultato dipende dall'impostazione `ANSI_NULLS`:  
   
--   Se `ANSI_NULLS` è impostata su ON, il risultato è NULL, che seguono la convenzione ANSI che un valore NULL (o sconosciuto) non è uguale a un altro valore NULL o sconosciuto.  
+-   Se `ANSI_NULLS` è impostata su ON, il risultato è NULL, conformemente alla convenzione ANSI in base alla quale un valore NULL (o sconosciuto) non è uguale a un altro valore NULL o sconosciuto.  
   
--   Se `ANSI_NULLS` è impostata su OFF, il risultato del confronto NULL è TRUE.  
+-   Se `ANSI_NULLS` è impostata su OFF, il risultato del confronto di due espressioni NULL è TRUE.  
 
 Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Qualsiasi tipo di confronto di un valore NULL (sconosciuto) su un valore non NULL restituisce sempre FALSE.  
+ Qualsiasi tipo di confronto di un valore NULL (sconosciuto) con un valore non NULL restituisce sempre FALSE.  
   
   
 ## <a name="examples"></a>Esempi  
@@ -94,7 +94,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>B. Confronto tra valori NULL e non NULL  
- Nell'esempio seguente vengono utilizzati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null di una tabella. Nell'esempio viene inoltre illustrato che `IS NULL` non è influenzato il `SET ANSI_NULLS` impostazione.  
+ Nell'esempio seguente vengono utilizzati gli operatori di confronto Uguale a (`=`) e Diverso da (`<>`) per confrontare i valori `NULL` e non Null di una tabella. L'esempio evidenzia anche il fatto che l'impostazione dell'opzione `SET ANSI_NULLS` non influisce su `IS NULL`.  
   
 ```  
 -- Create table t1 and insert 3 rows.  
@@ -228,7 +228,7 @@ NULL
   
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

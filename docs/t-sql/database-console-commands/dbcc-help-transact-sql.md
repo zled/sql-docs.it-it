@@ -1,5 +1,5 @@
 ---
-title: Istruzione DBCC HELP (Transact-SQL) | Documenti Microsoft
+title: DBCC HELP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
