@@ -1,5 +1,5 @@
 ---
-title: RIPRISTINARE (Transact-SQL) | Documenti Microsoft
+title: REVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -53,9 +53,9 @@ REVERT
   
 ## <a name="arguments"></a>Argomenti  
  WITH COOKIE = @*varbinary_variable*  
- Specifica il cookie creato in un oggetto corrispondente [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) istruzione autonoma. *@varbinary_variable*è **varbinary(100)**.  
+ Specifica il cookie creato in un'istruzione autonoma [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) corrispondente. *@varbinary_variable* è **varbinary(100)**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile specificare REVERT all'interno di un modulo, ad esempio una stored procedure o una funzione definita dall'utente, oppure come un'istruzione autonoma. Se specificata all'interno di un modulo, l'istruzione REVERT è applicabile solo alle istruzioni EXECUTE AS definite nel modulo. Ad esempio, la stored procedure seguente esegue un'istruzione `EXECUTE AS` seguita da un'istruzione `REVERT`.  
   
 ```  
@@ -79,16 +79,16 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- Il `REVERT` istruzione definita all'interno di `usp_myproc` passa il contesto di esecuzione impostato all'interno del modulo, ma non influisce sul contesto di esecuzione impostato all'esterno del modulo. In sintesi, il contesto di esecuzione della sessione rimane impostato su `login1`.  
+ L'istruzione `REVERT` definita all'interno di `usp_myproc` cambia il contesto di esecuzione impostato all'interno del modulo, ma non quello impostato al suo esterno. In sintesi, il contesto di esecuzione della sessione rimane impostato su `login1`.  
   
  Se specificata come istruzione autonoma, l'istruzione REVERT è applicabile alle istruzioni EXECUTE AS definite all'interno di un batch o una sessione. L'istruzione REVERT non ha alcun effetto se la corrispondente istruzione EXECUTE AS contiene la clausola WITH NO REVERT. In questo caso, il contesto di esecuzione rimane valido fino all'eliminazione della sessione.  
   
 ## <a name="using-revert-with-cookie"></a>Utilizzo di REVERT WITH COOKIE  
- EXECUTE come istruzione che viene utilizzata per impostare il contesto di esecuzione di una sessione può includere la clausola facoltativa WITH NO REVERT COOKIE = @*varbinary_variabl*e. Quando si esegue questa istruzione, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a @*varbinary_variabl*e. Il contesto di esecuzione impostato tale istruzione può essere ripristinata al contesto precedente se il chiamante REVERT WITH COOKIE = @*varbinary_variable* istruzione contiene corrette  *@varbinary_variable*  valore.  
+ L'istruzione EXECUTE AS usata per impostare il contesto di esecuzione di una sessione può includere la clausola facoltativa WITH NO REVERT COOKIE = @*varbinary_variable*. Quando questa istruzione viene eseguita, [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a @*varbinary_variable*. Il contesto di esecuzione impostato da tale istruzione può essere riportato al contesto precedente se l'istruzione REVERT WITH COOKIE = @*varbinary_variable* contiene il valore *@varbinary_variable* corretto.  
   
- Questo meccanismo risulta utile in un ambiente in cui vengono utilizzati pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni tra più utenti finali. Poiché il valore passato a  *@varbinary_variable*  è noto solo al chiamante dell'EXECUTE come istruzione (in questo caso, l'applicazione), il chiamante può garantire che il contesto di esecuzione stabilito non può essere modificato dall'utente finale che richiama l'applicazione. Dopo il ripristino del contesto di esecuzione l'applicazione può cambiare il contesto a un'altra entità.  
+ Questo meccanismo risulta utile in un ambiente in cui vengono utilizzati pool di connessioni. Tramite i pool di connessioni vengono gestiti i gruppi di connessioni al database in modo che tali connessioni possano essere riutilizzate dalle applicazioni tra più utenti finali. Poiché il valore passato a *@varbinary_variable* è noto solo al chiamante dell'istruzione EXECUTE AS (in questo caso l'applicazione), il chiamante è in grado di garantire che il contesto di esecuzione stabilito non venga modificato dall'utente finale che chiama l'applicazione. Dopo il ripristino del contesto di esecuzione l'applicazione può cambiare il contesto a un'altra entità.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Non sono necessarie autorizzazioni.  
   
 ## <a name="examples"></a>Esempi  
@@ -138,7 +138,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>B. Utilizzo della clausola WITH COOKIE  
- Nell'esempio seguente imposta il contesto di esecuzione di una sessione a un utente specificato e specifica di WITH NO REVERT COOKIE = @*varbinary_variabl*clausola. Nell'istruzione `REVERT` è necessario specificare il valore passato alla variabile `@cookie` nell'istruzione `EXECUTE AS` per ripristinare correttamente il contesto al chiamante originale. Per eseguire questo esempio, l'account di accesso `login1` e l'utente `user1` creato nell'esempio A devono esistere.  
+ Nell'esempio seguente il contesto di esecuzione di una sessione viene impostato su un utente specifico e quindi viene specificata la clausola WITH NO REVERT COOKIE = @*varbinary_variable*. Nell'istruzione `REVERT` è necessario specificare il valore passato alla variabile `@cookie` nell'istruzione `EXECUTE AS` per ripristinare correttamente il contesto al chiamante originale. Per eseguire questo esempio, l'account di accesso `login1` e l'utente `user1` creato nell'esempio A devono esistere.  
   
 ```  
 DECLARE @cookie varbinary(100);  
@@ -160,11 +160,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ESEGUIRE AS &#40; Transact-SQL &#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [Clausola EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [SUSER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/suser-name-transact-sql.md)   
- [USER_NAME &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
+ [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   
+ [USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [CREATE USER &#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)  
   

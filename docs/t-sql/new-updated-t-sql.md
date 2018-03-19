@@ -1,6 +1,6 @@
 ---
-title: Aggiornato - T-SQL docs | Documenti Microsoft
-description: Visualizzare i frammenti di contenuto aggiornato per modificati di recente nella documentazione, Transact-SQL.
+title: 'Aggiornamento: documentazione di T-SQL | Microsoft Docs'
+description: Visualizza frammenti di contenuto aggiornato relativi alle modifiche recenti alla documentazione per Transact-SQL.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,19 +16,19 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/09/2018
 ---
-# <a name="new-and-recently-updated-transact-sql-docs"></a>Nuovi e recentemente aggiornato: docs Transact-SQL
+# <a name="new-and-recently-updated-transact-sql-docs"></a>Articoli nuovi e aggiornati di recente: documentazione di Transact-SQL
 
 
 
-Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo [Docs.Microsoft.com](http://docs.microsoft.com/) sito Web di documentazione. In questo articolo consente di visualizzare estratti dagli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
+Microsoft aggiorna quasi quotidianamente alcuni degli articoli presenti nel sito Web della documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). Questo articolo contiene estratti degli articoli aggiornati di recente. Possono essere indicati anche collegamenti a nuovi articoli.
 
-In questo articolo viene generato da un programma che viene eseguito di nuovo periodicamente. In alcuni casi un estratto può apparire con formattazione perfetto, o come markdown nell'articolo di origine. Le immagini non vengono mai visualizzate qui.
+Questo articolo è generato da un programma che viene rieseguito periodicamente. In alcuni casi un estratto può avere una formattazione imperfetta o essere visualizzato come markdown dell'articolo di origine. Qui le immagini non vengono mai visualizzate.
 
-Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'oggetto:
+Sono riportati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 
-- *Intervallo degli aggiornamenti di date:* &nbsp; **2017-12-03** &nbsp; - a - &nbsp; **2018-02-03**
+- *Intervallo di date degli aggiornamenti:* &nbsp; **03/12/2017** &nbsp; - &nbsp; **03/02/2018**
 - *Area di interesse:* &nbsp; **T-SQL**.
 
 
@@ -51,9 +51,9 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 
 In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
-Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto semantica corretto Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che la racchiude nell'articolo effettivo. Di conseguenza questi estratti sono solo a scopo generale. Gli estratti consentono solo di sapere se i tuoi interessi garantiscono la necessità di fare clic e visitare l'articolo effettivo.
+Gli estratti visualizzati qui sono separati dal relativo contesto semantico. Inoltre è possibile che un estratto sia talvolta separato da importanti elementi di sintassi markdown che lo circondano nell'articolo vero e proprio. Di conseguenza, questi estratti devono essere usati solo come indicazioni generali. Gli estratti consentono solo di comprendere se sia utile o meno consultare l'articolo completo.
 
-Per queste e altre ragioni, non copiare da questi estratti di codice e non prendono come verità esatta qualsiasi testo estratto. In alternativa, visitare l'articolo effettivo.
+Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità assoluta ciò che si legge negli estratti. Consultare gli articoli completi.
 
 
 
@@ -63,7 +63,7 @@ Per queste e altre ragioni, non copiare da questi estratti di codice e non prend
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Compact elenco degli articoli aggiornato di recente
+### <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
 
 Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
@@ -81,7 +81,7 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 ### <a name="1-nbsp-create-statistics-transact-sqlstatementscreate-statistics-transact-sqlmd"></a>1. &nbsp; [CREATE STATISTICS (Transact-SQL)](statements/create-statistics-transact-sql.md)
 
-*Ultimo aggiornamento: 2018 01-04-* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Avanti](#TitleNum_2))
+*Aggiornamento: 04/01/2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Successivo](#TitleNum_2))
 
 <!-- Source markdown line 200.  ms.author= "edmaca".  -->
 
@@ -93,19 +93,19 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 
 MAXDOP = *max_degree_of_parallelism*
-**si applica a**: SQL Server (a partire dalla CU3 2017 di SQL Server).
+**Si applica a**: SQL Server a partire da SQL Server 2017 CU3.
 
- Esegue l'override di **massimo grado di parallelismo** opzione di configurazione per la durata dell'operazione di statistiche. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.
+ Esegue l'override dell'opzione di configurazione **max degree of parallelism** per la durata dell'operazione statistica. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.
 
- *max_degree_of_parallelism* can be:
+ *max_degree_of_parallelism* può essere:
 
- Generazione di piani paralleli Elimina la 1.
+ 1: disattiva la generazione di piani paralleli.
 
- \>1 limita il numero massimo di processori utilizzati in un'operazione parallela statistica per il numero specificato o meno in base al carico di lavoro di sistema corrente.
+ \>1 Consente di limitare al valore specificato, o a un valore più basso in base al carico di lavoro corrente del sistema, il numero massimo di processori usati in un'operazione parallela statistica.
 
- 0 (impostazione predefinita) corrisponde al numero effettivo di processori o meno in base al carico di lavoro di sistema corrente.
+ 0 (valore predefinito): usa il numero effettivo di processori o un numero inferiore in base al carico di lavoro corrente del sistema.
 
- \<update_stats_stream_option > identificato esclusivamente per scopi informativi. Non supportato. Non è garantita la compatibilità con le versioni future.
+ \<update_stats_stream_option> Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.
 
 
 
@@ -120,7 +120,7 @@ MAXDOP = *max_degree_of_parallelism*
 
 ### <a name="2-nbsp-update-statistics-transact-sqlstatementsupdate-statistics-transact-sqlmd"></a>2. &nbsp; [UPDATE STATISTICS (Transact-SQL)](statements/update-statistics-transact-sql.md)
 
-*Ultimo aggiornamento: 2018 01-04-* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([precedente](#TitleNum_1))
+*Aggiornamento: 04/01/2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Precedente](#TitleNum_1))
 
 <!-- Source markdown line 167.  ms.author= "edmaca".  -->
 
@@ -133,64 +133,64 @@ MAXDOP = *max_degree_of_parallelism*
 
 MAXDOP = *max_degree_of_parallelism*
 
-**Si applica a**: SQL Server (a partire da SQL Server 2017 CU3).
+**Si applica a:** SQL Server a partire da SQL Server 2017 CU3.
 
- Esegue l'override di **massimo grado di parallelismo** opzione di configurazione per la durata dell'operazione di statistiche. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.
+ Esegue l'override dell'opzione di configurazione **max degree of parallelism** per la durata dell'operazione statistica. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](statements/../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.
 
- *max_degree_of_parallelism* can be:
+ *max_degree_of_parallelism* può essere:
 
- Generazione di piani paralleli Elimina la 1.
+ 1: disattiva la generazione di piani paralleli.
 
- \>1 limita il numero massimo di processori utilizzati in un'operazione parallela statistica per il numero specificato o meno in base al carico di lavoro di sistema corrente.
+ \>1 Consente di limitare al valore specificato, o a un valore più basso in base al carico di lavoro corrente del sistema, il numero massimo di processori usati in un'operazione parallela statistica.
 
- 0 (impostazione predefinita) corrisponde al numero effettivo di processori o meno in base al carico di lavoro di sistema corrente.
-
-
+ 0 (valore predefinito): usa il numero effettivo di processori o un numero inferiore in base al carico di lavoro corrente del sistema.
 
 
 
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili su nuovi o aggiornati gli articoli
+
+
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili su articoli nuovi o aggiornati
 
 In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno del repository GitHub pubblico di Microsoft: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 
-#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Aree di interesse che *si* sono nuovi o recentemente aggiornati gli articoli
+#### <a name="subject-areas-that-do-have-new-or-recently-updated-articles"></a>Aree di interesse *con* articoli nuovi o aggiornati di recente
 
 
-- [Nuovo + aggiornato (1 + 3):&nbsp; **Analitica avanzate per SQL** documenti](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **Analitica Platform System per SQL** documenti](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **Connect to SQL** documenti](../connect/new-updated-connect.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **motore di Database per SQL** documenti](../database-engine/new-updated-database-engine.md)
-- [Nuovo + aggiornato (12 + 1): **Integration Services per SQL** documenti](../integration-services/new-updated-integration-services.md)
-- [Nuovo + aggiornato (6 + 2):&nbsp; **Linux per SQL** documenti](../linux/new-updated-linux.md)
-- [Nuovo + aggiornato (15 + 0): **PowerShell per SQL** documenti](../powershell/new-updated-powershell.md)
-- [Nuovo + aggiornato (2 + 9):&nbsp; **database relazionali di SQL** documenti](../relational-databases/new-updated-relational-databases.md)
-- [Nuovo + aggiornato (1 + 0):&nbsp; **Reporting Services per SQL** documenti](../reporting-services/new-updated-reporting-services.md)
-- [Nuovo + aggiornato (1 + 1):&nbsp; **operazioni SQL Studio** documenti](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Nuovo + aggiornato (1 + 1):&nbsp; **Microsoft SQL Server** documenti](../sql-server/new-updated-sql-server.md)
-- [Nuovo + aggiornato (0 + 1):&nbsp; **SQL Server Data Tools (SSDT)** documenti](../ssdt/new-updated-ssdt.md)
-- [Nuovo + aggiornato (1 + 2):&nbsp; **SQL Server Management Studio (SSMS)** documenti](../ssms/new-updated-ssms.md)
-- [Nuovo + aggiornato (0 + 2):&nbsp; **Transact-SQL** documenti](../t-sql/new-updated-t-sql.md)
+- [Nuovo + aggiornato (1+3):&nbsp; documentazione di **Advanced Analytics per SQL** ](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Nuovo + aggiornato (0+1):&nbsp; documentazione della **piattaforma di strumenti analitici per SQL** ](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Nuovo + aggiornato (0+1):&nbsp; documentazione della **connessione a SQL Server** ](../connect/new-updated-connect.md)
+- [Nuovo + aggiornato (0+1):&nbsp; documentazione del **motore di database di SQL Server** ](../database-engine/new-updated-database-engine.md)
+- [Nuovo + aggiornato (12+1): documentazione di **SQL Server Integration Services**](../integration-services/new-updated-integration-services.md)
+- [Nuovo + aggiornato (6+2):&nbsp; documentazione di **Linux per SQL Server** ](../linux/new-updated-linux.md)
+- [Nuovo + aggiornato (15+0): **documentazione di** PowerShell per SQL Server](../powershell/new-updated-powershell.md)
+- [Nuovo + aggiornato (2+9):&nbsp; documentazione dei **database relazionali per SQL Server** ](../relational-databases/new-updated-relational-databases.md)
+- [Nuovo + aggiornato (1+0):&nbsp; documentazione di **SQL Server Reporting Services** ](../reporting-services/new-updated-reporting-services.md)
+- [Nuovo + aggiornato (1+1):&nbsp; documentazione di **SQL Operations Studio** ](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Nuovo + aggiornato (1+1):&nbsp; documentazione di **Microsoft SQL Server** ](../sql-server/new-updated-sql-server.md)
+- [Nuovo + aggiornato (0+1):&nbsp; documentazione di **SQL Server Data Tools (SSDT)** ](../ssdt/new-updated-ssdt.md)
+- [Nuovo + aggiornato (1+2):&nbsp; documentazione di **SQL Server Management Studio (SSMS)** ](../ssms/new-updated-ssms.md)
+- [Nuovo + aggiornato (0+2):&nbsp; documentazione di **Transact-SQL** ](../t-sql/new-updated-t-sql.md)
 
 
 
-#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Oggetto aree che *non* sono nuovi o recentemente aggiornati gli articoli
+#### <a name="subject-areas-that-do-not-have-any-new-or-recently-updated-articles"></a>Aree di interesse *senza* articoli nuovi o aggiornati di recente
 
 
 - [Nuovo + aggiornato (0 + 0): documentazione di **Data Migration Assistant (DMA) per SQL Server**](../dma/new-updated-dma.md)
-- [Nuovo + aggiornato (0 + 0): **oggetti ADO (ActiveX Data) per SQL** documenti](../ado/new-updated-ado.md)
+- [Nuovo + aggiornato (0+0): **ActiveX Data Objects (ADO) for SQL (ActiveX Data Objects (ADO) per SQL)** Docs](../ado/new-updated-ado.md)
 - [Nuovo + aggiornato (0+0): documentazione di **Analysis Services per SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Nuovo + aggiornato (0 + 0): **Data Quality Services per SQL** documenti](../data-quality-services/new-updated-data-quality-services.md)
-- [Nuovo + aggiornato (0 + 0): **estensioni DMX (Data Mining) per SQL** documenti](../dmx/new-updated-dmx.md)
+- [Nuovo + aggiornato (0+0): **Data Quality Services for SQL (Data Quality Services per SQL)** Docs](../data-quality-services/new-updated-data-quality-services.md)
+- [Nuovo + aggiornato (0+0): **Data Mining Extensions (DMX) for SQL (Estensioni di data mining (DMX) per SQL)** Docs](../dmx/new-updated-dmx.md)
 - [Nuovo + aggiornato (0+0): documentazione di **Master Data Services (MDS) per SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Nuovo + aggiornato (0 + 0): **MDX (Multidimensional Expressions) per SQL** documenti](../mdx/new-updated-mdx.md)
-- [Nuovo + aggiornato (0 + 0): **ODBC (Open Database Connectivity) per SQL** documenti](../odbc/new-updated-odbc.md)
-- [Nuovo + aggiornato (0 + 0): **esempi per SQL** documenti](../sample/new-updated-sample.md)
-- [Nuovo + aggiornato (0 + 0): **SQL Server Migration Assistant (SSMA)** documenti](../ssma/new-updated-ssma.md)
+- [Nuovo + aggiornato (0+0): **Multidimensional Expressions (MDX) for SQL(Espressioni MDX per SQL)** Docs](../mdx/new-updated-mdx.md)
+- [Nuovo + aggiornato (0+0): **ODBC (Open Database Connectivity) for SQL (ODBC (Open Database Connectivity) per SQL)** Docs](../odbc/new-updated-odbc.md)
+- [Nuovo + aggiornato (0+0): **Samples for SQL (Esempi per SQL)** Docs](../sample/new-updated-sample.md)
+- [Nuovo + aggiornato (0+0): **SQL Server Migration Assistant (SSMA)** Docs](../ssma/new-updated-ssma.md)
 - [Nuovo + aggiornato (0+0): documentazione degli **strumenti per SQL**](../tools/new-updated-tools.md)
-- [Nuovo + aggiornato (0 + 0): **XQuery per SQL** documenti](../xquery/new-updated-xquery.md)
+- [Nuovo + aggiornato (0+0): **XQuery for SQL (XQuery per SQL)** Docs](../xquery/new-updated-xquery.md)
 
 

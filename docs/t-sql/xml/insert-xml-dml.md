@@ -1,5 +1,5 @@
 ---
-title: Insert (XML DML) | Documenti Microsoft
+title: insert (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="insert-xml-dml"></a>insert (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Inserisce una o più nodi identificati da *Expression1* come nodi figlio o elementi di pari livello del nodo identificato da *Expression2*.  
+  Inserisce uno o più nodi identificati da *Expression1* come nodi figlio o nodi di pari livello del nodo identificato da *Expression2*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,24 +49,24 @@ insert
   
 ## <a name="arguments"></a>Argomenti  
  *Expression1*  
- Identifica uno o più nodi da inserire. Può trattarsi di un'istanza XML costante; un riferimento a un'istanza di tipo di dati XML tipizzata della stessa raccolta di XML Schema in cui il metodo di modifica viene applicato; un'istanza di tipo dati XML non tipizzata utilizzando autonoma **SQL: Column**/**SQL: variable** funzione o un'espressione XQuery. L'espressione può restituire un nodo, anche un nodo di testo, o una sequenza ordinata di nodi, ma non può essere risolta nel nodo radice (/). Se l'espressione restituisce un valore o una sequenza di valori, tali valori vengono inseriti come un nodo di testo nel quale ogni valore della sequenza è separato da uno spazio. Se si specificano più nodi come costante, i nodi vengono racchiusi tra parentesi e sono separati da virgole. Non è possibile inserire sequenze eterogenee, ad esempio una sequenza di elementi, attributi o valori. Se *Expression1* si risolve in una sequenza vuota, non viene inserito nulla e non vengono restituiti errori.  
+ Identifica uno o più nodi da inserire. Può trattarsi di un'istanza XML costante, un riferimento a un'istanza del tipo di dati XML tipizzata della stessa raccolta di XML Schema in cui viene applicato il metodo modify, un'istanza del tipo di dati XML non tipizzata che usa una funzione **sql:column()**/**sql:variable()** autonoma o un'espressione XQuery. L'espressione può restituire un nodo, anche un nodo di testo, o una sequenza ordinata di nodi, ma non può essere risolta nel nodo radice (/). Se l'espressione restituisce un valore o una sequenza di valori, tali valori vengono inseriti come un nodo di testo nel quale ogni valore della sequenza è separato da uno spazio. Se si specificano più nodi come costante, i nodi vengono racchiusi tra parentesi e sono separati da virgole. Non è possibile inserire sequenze eterogenee, ad esempio una sequenza di elementi, attributi o valori. Se *Expression1* viene risolta in una sequenza vuota, non viene inserito nulla e non vengono restituiti errori.  
   
  into  
- I nodi identificati da *Expression1* vengono inseriti come discendenti diretti (nodi figlio) del nodo identificato da *Expression2*. Se il nodo in *Expression2* dispone già di uno o più nodi figlio, è necessario utilizzare **come primo** o **ultimo** per specificare dove si desidera aggiungere il nuovo nodo. ad esempio rispettivamente all'inizio o alla fine dell'elenco di nodi. Il **come primo** e **ultimo** parole chiave vengono ignorate quando si inseriscono attributi.  
+ I nodi identificati da *Expression1* vengono inseriti come discendenti diretti (nodi figlio) del nodo identificato da *Expression2*. Se il nodo in *Expression2* ha già uno o più nodi figlio, è necessario usare **as first** o **as last** per specificare la posizione in cui si intende aggiungere il nuovo nodo, ad esempio rispettivamente all'inizio o alla fine dell'elenco di nodi. Le parole chiave **as first** e **as last** vengono ignorate se si inseriscono attributi.  
   
  after  
- I nodi identificati da *Expression1* vengono inseriti come nodi di pari livello direttamente dopo il nodo identificato dal *Expression2*. Il **dopo** parola chiave non può essere utilizzata per inserire gli attributi. ad esempio per inserire un costruttore di attributi o per restituire un attributo da una query XQuery.  
+ I nodi identificati da *Expression1* vengono inseriti come nodi di pari livello immediatamente dopo il nodo identificato da *Expression2*. Non è possibile usare la parola chiave **after** per inserire attributi, ad esempio per inserire un costruttore di attributi o per restituire un attributo da una query XQuery.  
   
  before  
- I nodi identificati da *Expression1* vengono inseriti come nodi di pari livello direttamente prima del nodo identificato da *Expression2*. Il **prima** non può essere utilizzata quando vengono inseriti gli attributi. ad esempio per inserire un costruttore di attributi o per restituire un attributo da una query XQuery.  
+ I nodi identificati da *Expression1* vengono inseriti come nodi di pari livello immediatamente prima del nodo identificato da *Expression2*. Non è possibile usare la parola chiave **before** se vengono inseriti attributi, ad esempio per inserire un costruttore di attributi o per restituire un attributo da una query XQuery.  
   
  *Expression2*  
- Identifica un nodo. I nodi identificati *Expression1* vengono inseriti in relazione del nodo identificato dal *Expression2*. Quest'ultima può essere un'espressione XQuery che restituisce un riferimento a un nodo esistente nel documento a cui viene fatto riferimento. Se vengono restituiti più nodi, l'inserimento avrà esito negativo. Se *Expression2* restituisce una sequenza vuota, l'inserimento non viene eseguita e non vengono restituiti errori. Se *Expression2* non è staticamente un singleton, viene restituito un errore statico. *Expression2* non può essere un'istruzione di elaborazione, un commento o un attributo. Si noti che *Expression2* deve essere un riferimento a un nodo esistente nel documento e non un nodo costruito.  
+ Identifica un nodo. I nodi identificati in *Expression1* vengono inseriti in relazione al nodo identificato da *Expression2*. Quest'ultima può essere un'espressione XQuery che restituisce un riferimento a un nodo esistente nel documento a cui viene fatto riferimento. Se vengono restituiti più nodi, l'inserimento avrà esito negativo. Se *Expression2* restituisce una sequenza vuota, non viene inserito nulla e non vengono restituiti errori. Se *Expression2* non è staticamente un singleton, viene restituito un errore statico. *Expression2* non può essere un'istruzione di elaborazione, un commento o un attributo. Si noti che *Expression2* deve fare riferimento a un nodo esistente nel documento e non a un nodo costruito.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-inserting-element-nodes-into-the-document"></a>A. Inserimento di nodi elemento nel documento  
- Nell'esempio seguente viene illustrato l'inserimento di elementi in un documento. In primo luogo, in cui viene assegnato un documento XML a una variabile di **xml** tipo. Quindi, tramite vari **inserire** istruzioni XML DML, nell'esempio viene illustrato l'inserimento di nodi elemento nel documento. Dopo ogni inserimento, l'istruzione SELECT visualizza il risultato.  
+ Nell'esempio seguente viene illustrato l'inserimento di elementi in un documento. Viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi illustrato l'inserimento di nodi elemento nel documento tramite numerose istruzioni XML DML **insert**. Dopo ogni inserimento, l'istruzione SELECT visualizza il risultato.  
   
 ```  
 USE AdventureWorks;  
@@ -113,7 +113,7 @@ GO
  Si noti che in diverse espressioni di percorso dell'esempio è specificato "[1]" come requisito per la tipizzazione statica, in modo tale da garantire la presenza di un singolo nodo di destinazione.  
   
 ### <a name="b-inserting-multiple-elements-into-the-document"></a>B. Inserimento di più elementi nel documento  
- Nell'esempio seguente, un documento viene innanzitutto assegnato a una variabile di **xml** tipo. Quindi, una sequenza di due elementi, che rappresenta le funzionalità del prodotto, viene assegnata a una seconda variabile di **xml** tipo. Questa sequenza viene quindi inserita nella prima variabile.  
+ Nell'esempio seguente un documento viene prima assegnato a una variabile di tipo **xml**. Una sequenza di due elementi, che rappresenta le funzionalità del prodotto, viene quindi assegnata a una seconda variabile di tipo **xml**. Questa sequenza viene quindi inserita nella prima variabile.  
   
 ```  
 USE AdventureWorks;  
@@ -136,7 +136,7 @@ GO
 ```  
   
 ### <a name="c-inserting-attributes-into-a-document"></a>C. Inserimento di attributi in un documento  
- Nell'esempio seguente viene illustrato l'inserimento di attributi in un documento. Innanzitutto, un documento viene assegnato a un **xml** variabile di tipo. Quindi, una serie di **inserire** istruzioni XML DML viene utilizzato per inserire attributi nel documento. Dopo ogni inserimento di un attributo, l'istruzione SELECT visualizza il risultato.  
+ Nell'esempio seguente viene illustrato l'inserimento di attributi in un documento. Viene prima assegnato un documento a una variabile di tipo **xml**. Viene quindi usata una serie di istruzioni XML DML **insert** per inserire gli attributi nel documento. Dopo ogni inserimento di un attributo, l'istruzione SELECT visualizza il risultato.  
   
 ```  
 USE AdventureWorks;  
@@ -175,7 +175,7 @@ GO
 ```  
   
 ### <a name="d-inserting-a-comment-node"></a>D. Inserimento di un nodo di commento  
- In questa query, viene innanzitutto assegnato un documento XML a una variabile di **xml** tipo. Viene quindi utilizzato il linguaggio XML DML per inserire un nodo di commento dopo il primo elemento <`step`>.  
+ In questa query viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi utilizzato il linguaggio XML DML per inserire un nodo di commento dopo il primo elemento <`step`>.  
   
 ```  
 USE AdventureWorks;  
@@ -197,7 +197,7 @@ GO
 ```  
   
 ### <a name="e-inserting-a-processing-instruction"></a>E. Inserimento di un'istruzione di elaborazione  
- Nella query seguente, viene innanzitutto assegnato un documento XML a una variabile di **xml** tipo. Viene quindi utilizzata la parola chiave XML DML per inserire un'istruzione di elaborazione all'inizio del documento.  
+ Nella query seguente, viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi utilizzata la parola chiave XML DML per inserire un'istruzione di elaborazione all'inizio del documento.  
   
 ```  
 USE AdventureWorks;  
@@ -219,7 +219,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. Inserimento di dati tramite una sezione CDATA  
- Quando si inserisce testo che include caratteri non validi in XML, ad esempio < o >, è possibile utilizzare le sezioni CDATA per inserire i dati come illustrato nella query seguente. Nella query viene specificata una sezione CDATA che tuttavia viene aggiunta come un nodo di testo nel quale i caratteri non validi sono convertiti in entità, Ad esempio, ' <' viene salvato come &lt;.  
+ Quando si inserisce testo che include caratteri non validi in XML, ad esempio < o >, è possibile utilizzare le sezioni CDATA per inserire i dati come illustrato nella query seguente. Nella query viene specificata una sezione CDATA che tuttavia viene aggiunta come un nodo di testo nel quale i caratteri non validi sono convertiti in entità, ad esempio '<' viene salvato come &lt;.  
   
 ```  
 USE AdventureWorks;  
@@ -250,7 +250,7 @@ GO
 ```  
   
 ### <a name="g-inserting-text-node"></a>G. Inserimento di un nodo di testo  
- In questa query, viene innanzitutto assegnato un documento XML a una variabile di **xml** tipo. Viene quindi utilizzato il linguaggio XML DML per inserire un nodo di testo come primo figlio dell'elemento <`Root`>. Per specificare il testo viene utilizzato il costruttore di testo.  
+ In questa query viene prima assegnato un documento XML a una variabile di tipo **xml**. Viene quindi utilizzato il linguaggio XML DML per inserire un nodo di testo come primo figlio dell'elemento <`Root`>. Per specificare il testo viene utilizzato il costruttore di testo.  
   
 ```  
 USE AdventureWorks;  
@@ -272,7 +272,7 @@ SELECT @myDoc;
 ```  
   
 ### <a name="h-inserting-a-new-element-into-an-untyped-xml-column"></a>H. Inserimento di un nuovo elemento in una colonna xml non tipizzata  
- L'esempio seguente applica XML DML per aggiornare un'istanza XML archiviata in un **xml** colonna di tipo:  
+ Nell'esempio seguente viene usato il linguaggio XML DML per aggiornare un'istanza XML archiviata in una colonna di tipo **xml**:  
   
 ```  
 USE AdventureWorks;  
@@ -306,7 +306,7 @@ GO
 ```  
   
 ### <a name="i-inserting-based-on-an-if-condition-statement"></a>I. Inserimento basato su un'istruzione che include la condizione IF  
- Nell'esempio seguente, una condizione IF viene specificata come parte di Expression1 nel **inserire** istruzione XML DML. Se la condizione è True, all'elemento <`WorkCenter`> viene aggiunto un attributo.  
+ Nell'esempio seguente, una condizione IF viene specificata come parte di Expression1 nell'istruzione XML DML **insert**. Se la condizione è True, all'elemento <`WorkCenter`> viene aggiunto un attributo.  
   
 ```  
 USE AdventureWorks;  
@@ -330,7 +330,7 @@ SELECT @myDoc;
 GO  
 ```  
   
- Nell'esempio seguente è simile, ad eccezione del fatto che il **inserire** istruzione XML DML inserisce un elemento nel documento se la condizione è True. ovvero se l'elemento <`WorkCenter`> include un numero inferiore o uguale a due di elementi figlio <`step`>.  
+ L'esempio seguente è simile, eccetto che per il fatto che l'istruzione XML DML **insert** inserisce un elemento nel documento se la condizione è True, ovvero se l'elemento <`WorkCenter`> include un numero inferiore o uguale a due di elementi figlio <`step`>.  
   
 ```  
 USE AdventureWorks;  
@@ -366,9 +366,9 @@ GO
 ```  
   
 ### <a name="j-inserting-nodes-in-a-typed-xml-column"></a>J. Inserimento di nodi in una colonna xml tipizzata  
- In questo esempio inserisce un elemento e attributo un istruzioni di produzione XML archiviate in un oggetto tipizzato **xml** colonna.  
+ In questo esempio vengono inseriti un elemento e un attributo in un codice XML delle istruzioni di produzione archiviato in una colonna **xml** tipizzata.  
   
- Nell'esempio, creare innanzitutto una tabella (T) con un oggetto tipizzato **xml** colonna, nel database AdventureWorks. Un'istanza del codice XML delle istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel nella tabella T. Gli inserimenti vengono quindi applicati al codice XML nella tabella T.  
+ Viene prima creata una tabella (T) con una colonna **xml** tipizzata nel database AdventureWorks. Un'istanza del codice XML delle istruzioni di produzione viene quindi copiata dalla colonna Instructions della tabella ProductModel nella tabella T. Gli inserimenti vengono quindi applicati al codice XML nella tabella T.  
   
 ```  
 USE AdventureWorks;  
@@ -419,6 +419,6 @@ GO
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguaggio di manipolazione dei dati XML &#40; Linguaggio XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: CON common_table_expression (Transact-SQL) | Documenti Microsoft
+title: WITH common_table_expression (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
@@ -60,17 +60,17 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *expression_name*  
-È un identificatore valido per l'espressione di tabella comune. *expression_name* deve essere diverso dal nome di qualsiasi altra espressione di tabella comune definito in WITH stesso \<common_table_expression > clausola, ma *expression_name* può essere lo stesso nome di un vista o tabella di base. Qualsiasi riferimento *expression_name* nella query viene utilizzata l'espressione di tabella comune e non l'oggetto di base.
+Identificatore valido per l'espressione di tabella comune. *expression_name* deve essere diverso dal nome di qualsiasi altra espressione di tabella comune definita nella stessa clausola WITH \<common_table_expression>, ma *expression_name* può corrispondere al nome di una vista o tabella di base. Tutti i riferimenti a *expression_name* nella query usano l'espressione di tabella comune e non l'oggetto di base.
   
  *column_name*  
- Specifica un nome di colonna nell'espressione di tabella comune. Non sono consentiti nomi duplicati all'interno di una singola definizione CTE. Il numero di nomi di colonna specificato deve corrispondere al numero di colonne nel set di risultati del *elementi CTE_query_definition*. L'elenco dei nomi di colonna è facoltativo solo se i nomi distinti di tutte le colonne risultanti sono specificati nella definizione della query.  
+ Specifica un nome di colonna nell'espressione di tabella comune. Non sono consentiti nomi duplicati all'interno di una singola definizione CTE. Il numero dei nomi di colonna specificato deve corrispondere al numero delle colonne nel set di risultati di *CTE_query_definition*. L'elenco dei nomi di colonna è facoltativo solo se i nomi distinti di tutte le colonne risultanti sono specificati nella definizione della query.  
   
  *CTE_query_definition*  
- Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *elementi CTE_query_definition* deve soddisfare i requisiti necessari per creare una vista, ad eccezione del fatto una CTE non è possibile definire un'altra CTE stessi. Per ulteriori informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Specifica un'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune. L'istruzione SELECT per *CTE_query_definition* deve soddisfare gli stessi requisiti necessari per creare una vista, con la differenza che una CTE non può definire un'altra CTE. Per altre informazioni, vedere la sezione Osservazioni e [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
- Se più oggetti *elementi CTE_query_definition* è definito, le definizioni di query devono essere aggiunti da uno di questi operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
+ Se si definiscono più *CTE_query_definition*, è necessario creare un join delle definizioni di query in base a uno dei seguenti operatori sui set: UNION ALL, UNION, EXCEPT o INTERSECT.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="guidelines-for-creating-and-using-common-table-expressions"></a>Linee guida per la creazione e l'utilizzo delle espressioni di tabella comuni  
  Le linee guida seguenti sono valide per le espressioni di tabella comuni non ricorsive. Per le linee guida relative alle espressioni di tabella comuni ricorsive, vedere "Linee guida per la definizione e l'utilizzo delle espressioni di tabella comuni ricorsive" più avanti.  
@@ -81,9 +81,9 @@ ms.lasthandoff: 01/25/2018
   
 -   Una CTE può far riferimento a se stessa e alle CTE definite in precedenza nella stessa clausola WITH. Il riferimento in avanti non è consentito.  
   
--   Non è consentito specificare più di una clausola WITH in una CTE. Ad esempio, se un *elementi CTE_query_definition* contiene una sottoquery, tale sottoquery non può contenere un annidati con clausola che definisce un'altra CTE.  
+-   Non è consentito specificare più di una clausola WITH in una CTE. Se ad esempio una definizione *CTE_query_definition* include una sottoquery, tale sottoquery non può includere una clausola WITH annidata che definisce un'altra CTE.  
   
--   Le clausole seguenti non possono essere utilizzate nel *elementi CTE_query_definition*:  
+-   Le clausole seguenti non possono essere usate in *CTE_query_definition*:  
   
     -   ORDER BY (tranne quando si specifica una clausola TOP)  
   
@@ -112,15 +112,15 @@ ms.lasthandoff: 01/25/2018
   
 -   Il tipo di dati di una colonna nel membro ricorsivo deve essere lo stesso del tipo di dati della colonna corrispondente nel membro non ricorsivo.  
   
--   La clausola FROM di un membro ricorsivo deve fare riferimento solo una volta alla CTE *expression_name*.  
+-   La clausola FROM di un membro ricorsivo deve fare riferimento solo una volta all'espressione CTE *expression_name*.  
   
--   Gli elementi seguenti non sono consentiti nel *elementi CTE_query_definition* di un membro ricorsivo:  
+-   Gli elementi seguenti non sono consentiti nella definizione *CTE_query_definition* di un membro ricorsivo:  
   
     -   SELECT DISTINCT  
   
     -   GROUP BY  
   
-    -   PIVOT (quando il livello di compatibilità del database è impostato su 110 o oltre. Vedere [modifiche di rilievo apportate alle funzionalità del motore di Database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).)  
+    -   PIVOT (quando il livello di compatibilità del database è impostato su 110 o oltre. Vedere [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
     -   HAVING  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 01/25/2018
   
     -   Sottoquery:  
   
-    -   Hint applicato a un riferimento ricorsivo a un'espressione CTE all'interno di un *elementi CTE_query_definition*.  
+    -   Hint applicato a un riferimento ricorsivo a un'espressione CTE all'interno di una definizione *CTE_query_definition*.  
   
  Le linee guida seguenti sono valide per l'utilizzo delle espressioni di tabella comuni ricorsive.  
   
@@ -142,42 +142,42 @@ ms.lasthandoff: 01/25/2018
   
 -   Non è possibile utilizzare una vista che contiene un'espressione di tabella comune ricorsiva per aggiornare i dati.  
   
--   I cursori possono essere definiti sulle query tramite CTE. Questa è la *select_statement* argomento che definisce il set di risultati del cursore. Sono consentiti solo i cursori fast forward only e statici (snapshot) per le CTE ricorsive. Se viene specificato un altro tipo di cursore in una CTE ricorsiva, il tipo di cursore viene convertito in statico.  
+-   I cursori possono essere definiti sulle query tramite CTE. La CTE corrisponde all'argomento *select_statement* che definisce il set di risultati del cursore. Sono consentiti solo i cursori fast forward only e statici (snapshot) per le CTE ricorsive. Se viene specificato un altro tipo di cursore in una CTE ricorsiva, il tipo di cursore viene convertito in statico.  
   
 -   Nelle CTE è possibile far riferimento alle tabelle nei server remoti. Se nel membro ricorsivo della CTE si fa riferimento al server remoto, viene creato uno spool per ogni tabella remota in maniera che si possa accedere alle tabelle in modo locale ripetutamente. Se la query è di tipo CTE, Index Spool o Lazy Spool viene visualizzato nel piano di query con il predicato aggiuntivo WITH STACK associato. Questo è uno dei modi utilizzati per confermare una ricorsione appropriata.  
   
--   Le funzioni analitiche e di aggregazione nella parte ricorsiva dell'espressione CTE vengono applicate al set per il livello di ricorsione corrente, non al set per l'espressione CTE. Le funzioni come ROW_NUMBER funzionano solo nel subset di dati passato dal livello di ricorsione corrente e non nell'intero set di dati passato alla parte ricorsiva dell'espressione CTE. Per ulteriori informazioni, vedere l'esempio K. utilizzo di funzioni analitiche in un'espressione CTE ricorsiva seguente.  
+-   Le funzioni analitiche e di aggregazione nella parte ricorsiva dell'espressione CTE vengono applicate al set per il livello di ricorsione corrente, non al set per l'espressione CTE. Le funzioni come ROW_NUMBER funzionano solo nel subset di dati passato dal livello di ricorsione corrente e non nell'intero set di dati passato alla parte ricorsiva dell'espressione CTE. Per altre informazioni, vedere l'esempio K, Utilizzo di funzioni analitiche in un'espressione CTE ricorsiva, più avanti.  
   
-## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Funzionalità e limitazioni di una comune tabella espressioni in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- L'implementazione corrente di una CTE in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sono le seguenti limitazioni:  
+## <a name="features-and-limitations-of-common-table-expressions-in-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Funzionalità e limitazioni delle espressioni di tabella comuni in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ L'implementazione corrente delle CTE in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] presenta le caratteristiche e le limitazioni seguenti:  
   
--   Una CTE può essere specificata in un **selezionare** istruzione.  
+-   Una CTE può essere specificata in un'istruzione **SELECT**.  
   
--   Una CTE può essere specificata in un **CREATE VIEW** istruzione.  
+-   Una CTE può essere specificata in un'istruzione **CREATE VIEW**.  
   
--   Una CTE può essere specificata in un **CREATE TABLE AS SELECT** istruzione (un'istruzione CTAS).  
+-   Una CTE può essere specificata in un'istruzione **CREATE TABLE AS SELECT** (CTAS).  
   
--   Una CTE può essere specificata in un **CREATE REMOTE TABLE AS SELECT** istruzione (CRTAS).  
+-   Una CTE può essere specificata in un'istruzione **CREATE REMOTE TABLE AS SELECT** (CRTAS).  
   
--   Una CTE può essere specificata in un **CREATE EXTERNAL TABLE AS SELECT** istruzione (CETAS).  
+-   Una CTE può essere specificata in un'istruzione **CREATE EXTERNAL TABLE AS SELECT** (CETAS).  
   
--   Una tabella remota può fare riferimento da un'espressione CTE.  
+-   Una CTE può fare riferimento a una tabella remota.  
   
--   Una tabella esterna può fare riferimento da un'espressione CTE.  
+-   Una CTE può fare riferimento a una tabella esterna.  
   
--   È possibile definire più definizioni di query CTE in una CTE.  
+-   In una CTE è possibile definire più query CTE.  
   
--   Una CTE deve essere seguita da un singolo **selezionare** istruzione. **Inserisci**, **aggiornamento**, **eliminare**, e **MERGE** istruzioni non sono supportate.  
+-   Una CTE deve essere seguita da un'unica istruzione **SELECT**. Le istruzioni **INSERT**, **UPDATE**, **DELETE** e **MERGE** non sono supportate.  
   
--   Un'espressione di tabella comune che include riferimenti a se stessa (ricorsiva espressione di tabella comune) non è supportata.  
+-   Le espressioni di tabella comuni che includono riferimenti a se stesse (espressioni di tabella comuni ricorsive) non sono supportate.  
   
--   Specificare più di una **WITH** clausola in una CTE non è consentita. Ad esempio, se un elementi CTE_query_definition contiene una sottoquery, tale sottoquery non può contenere un tipo annidato **WITH** clausola che definisce un'altra CTE.  
+-   In una CTE non è consentito specificare più clausole **WITH**. Se ad esempio una definizione CTE_query_definition include una sottoquery, tale sottoquery non può includere una clausola **WITH** annidata che definisce un'altra CTE.  
   
--   Un **ORDER BY** Impossibile utilizzare la clausola in elementi di CTE_query_definition, tranne quando una **TOP** è specificata alcuna clausola.  
+-   Una clausola **ORDER BY** non può essere usata in una definizione CTE_query_definition, tranne quando è specificata una clausola **TOP**.  
   
 -   Quando un'espressione CTE viene utilizzata in un'istruzione che fa parte di un batch, l'istruzione precedente deve essere seguita da un punto e virgola.  
   
--   Se utilizzata in istruzioni preparate da **sp_prepare**, CTE verranno si comportano allo stesso modo di altri **selezionare** istruzioni in PDW. Tuttavia, se le CTE vengono utilizzate come parte di CETAS preparato da **sp_prepare**, il comportamento può differire da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e altre istruzioni PDW a causa di associazione viene implementato per **sp_prepare**. Se **selezionare** riferimenti CTE è utilizzata una colonna di tipo non corretta che non esiste nella CTE, la **sp_prepare** passerà senza rilevare l'errore, ma l'errore verrà generata durante **sp_execute**  invece.  
+-   Se usate all'interno di istruzioni preparate da **sp_prepare**, le CTE si comportano allo stesso modo delle altre istruzioni **SELECT** in PDW. Se tuttavia le CTE vengono usate all'interno di CETAS preparate da **sp_prepare**, il comportamento può differire da quello di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di altre istruzioni PDW a causa della modalità di implementazione dell'associazione per **sp_prepare**. Se l'istruzione **SELECT** che fa riferimento a una CTE usa una colonna non corretta che non esiste nella CTE, l'errore non viene rilevato durante l'esecuzione di **sp_prepare**, ma viene generato durante l'esecuzione di **sp_execute** .  
   
 ## <a name="examples"></a>Esempi  
   
@@ -456,7 +456,7 @@ GO
 ```  
   
 ### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>I. Utilizzo di una CTE ricorsiva in un'istruzione UPDATE  
- Nell'esempio seguente viene aggiornato il `PerAssemblyQty` valore per tutte le parti che vengono utilizzati per generare il prodotto 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). L'espressione di tabella comune restituisce un elenco gerarchico di parti utilizzate per compilare `ProductAssemblyID 800`, i componenti utilizzati per creare tali parti e così via. Vengono modificate solo le righe restituite dall'espressione di tabella comune.  
+ L'esempio seguente aggiorna il valore `PerAssemblyQty` per tutte le parti usate per costruire il prodotto 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`). L'espressione di tabella comune restituisce un elenco gerarchico di parti utilizzate per compilare `ProductAssemblyID 800`, i componenti utilizzati per creare tali parti e così via. Vengono modificate solo le righe restituite dall'espressione di tabella comune.  
   
 ```  
 USE AdventureWorks2012;  
@@ -601,10 +601,10 @@ Lvl  N
   
  `N` restituisce 1 per ogni sessione della parte ricorsiva dell'espressione CTE perché solo il subset di dati per tale livello di ricorsione viene passato a `ROWNUMBER`. Per ognuna delle iterazioni della parte ricorsiva della query, viene passata solo una riga a `ROWNUMBER`.  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Utilizzo di un'espressione di tabella comuni all'interno di un'istruzione di un'istruzione CTAS  
- L'esempio seguente crea una nuova tabella contenente il numero totale di ordini di vendita all'anno per ogni rappresentante di vendita in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
+### <a name="l-using-a-common-table-expression-within-a-ctas-statement"></a>L. Uso di un'espressione di tabella comune all'interno di un'istruzione CTAS  
+ L'esempio seguente crea una nuova tabella contenente il numero totale di ordini di vendita all'anno per tutti i venditori di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -632,8 +632,8 @@ AS
 GO  
 ```  
   
-### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Utilizzo di un'espressione di tabella comuni all'interno di un'istruzione CETAS  
- L'esempio seguente crea una nuova tabella esterna che contiene il numero totale di ordini di vendita all'anno per ogni rappresentante di vendita in [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
+### <a name="m-using-a-common-table-expression-within-a-cetas-statement"></a>M. Uso di un'espressione di tabella comune all'interno di un'istruzione CETAS  
+ L'esempio seguente crea una nuova tabella esterna contenente il numero totale di ordini di vendita all'anno per tutti i venditori di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -662,8 +662,8 @@ AS
 GO  
 ```  
   
-### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Utilizzo di più valori delimitati da virgole separati CTE in un'istruzione  
- Nell'esempio seguente viene illustrato come inclusi due CTE in una singola istruzione. La CTE non possono essere annidato (nessuna ricorsione).  
+### <a name="n-using-multiple-comma-separated-ctes-in-a-statement"></a>N. Uso di più CTE delimitate da virgole in un'istruzione  
+ L'esempio seguente illustra come includere due CTE all'interno di un'unica istruzione. Le CTE non possono essere annidate (la ricorsione non è consentita).  
   
 ```  
 WITH   
@@ -683,8 +683,8 @@ SELECT TableName, TotalAvg FROM CountCustomer;
 ## <a name="see-also"></a>Vedere anche  
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [Ad eccezione di e INTERSECT &#40; Transact-SQL &#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [EXCEPT e INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
   

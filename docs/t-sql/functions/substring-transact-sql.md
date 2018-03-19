@@ -1,5 +1,5 @@
 ---
-title: SUBSTRING (Transact-SQL) | Documenti Microsoft
+title: SUBSTRING (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 10/21/2016
 ms.prod: sql-non-specified
@@ -51,17 +51,17 @@ SUBSTRING ( expression ,start , length )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **carattere**, **binario**, **testo**, **ntext**, o **immagine**[espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ *expression*  
+ È un'**expression** di tipo **carattere**, **binario**, **testo**, **ntesto** o [immagine](../../t-sql/language-elements/expressions-transact-sql.md).  
   
  *start*  
- È un numero intero o **bigint** espressione che specifica il punto di inizio dei caratteri restituiti. (La numerazione è 1 base, significa che il primo carattere dell'espressione è 1). Se *avviare* è minore di 1, l'espressione restituita inizierà con il primo carattere specificato in *espressione*. In questo caso, il numero di caratteri restituiti è il valore massimo della somma delle *avviare* + *lunghezza*- 1 oppure 0. Se *avviare* è maggiore del numero di caratteri nell'espressione valore, viene restituita un'espressione di lunghezza zero.  
+ Valore intero o espressione **bigint** che specifica l'inizio dei caratteri restituiti. (La numerazione è in base 1, ovvero il primo carattere dell'espressione è 1). Se *start* è minore di 1, l'espressione restituita inizierà con il primo carattere specificato in *expression*. In questo caso, il numero di caratteri restituito è il valore maggiore tra la somma di *start* + *length*- 1 oppure 0. Se *start* è maggiore del numero di caratteri nell'espressione valore, viene restituita un'espressione di lunghezza zero.  
   
- *lunghezza*  
- È un numero intero positivo o **bigint** espressione che specifica il numero di caratteri del *espressione* verranno restituiti. Se *lunghezza* è negativo, viene generato un errore e l'istruzione viene terminata. Se la somma di *avviare* e *lunghezza* è maggiore del numero di caratteri in *espressione*, l'intera espressione valore iniziando *avviare*viene restituito.  
+ *length*  
+ Valore integer positivo o espressione **bigint** che specifica quanti caratteri di *expression* verranno restituiti. Se *length* è negativo, viene generato un errore e l'istruzione viene terminata. Se la somma di *start* e *length* è maggiore del numero di caratteri di *expression*, viene restituita l'intera espressione del valore che inizia con *start*.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce dati di tipo carattere se *espressione* è uno dei tipi di dati carattere supportato. Restituisce dati binari se *espressione* è uno dei supportati **binario** tipi di dati. Il tipo di dati della stringa restituita corrisponde a quello dell'espressione specificata, con le eccezioni descritte nella tabella seguente.  
+ Restituisce dati di tipo carattere se *expression* è un tipo di dati carattere supportato. Restituisce dati binari se *expression* è un tipo di dati **binary** supportato. Il tipo di dati della stringa restituita corrisponde a quello dell'espressione specificata, con le eccezioni descritte nella tabella seguente.  
   
 |Espressione specificata|Tipo restituito|  
 |--------------------------|-----------------|  
@@ -69,18 +69,18 @@ SUBSTRING ( expression ,start , length )
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
-## <a name="remarks"></a>Osservazioni  
- I valori per *avviare* e *lunghezza* deve essere specificato nel numero di caratteri per **ntext**, **char**, o **varchar**  tipi di dati e i byte per **testo**, **immagine**, **binario**, o **varbinary** tipi di dati.  
+## <a name="remarks"></a>Remarks  
+ I valori per *start* e *lenght* devono essere specificati nel numero di caratteri per i tipi di dati **ntext**, **char**, o **varchar**  e nei byte per i tipi di dati **text**, **image**, **binary**, o **varbinary**.  
   
- Il *espressione* deve essere **varchar (max)** o **varbinary (max)** quando il *avviare* o *lunghezza* contiene un valore maggiore di 2.147.483.647.  
+ *Expression* deve essere **varchar (max)** o **varbinary (max)** quando *start* o *lenght* contiene un valore maggiore di 2.147.483.647.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caratteri supplementari (coppie di surrogati)  
- Quando si utilizzano le regole di confronto di caratteri supplementari (SC), entrambi *avviare* e *lunghezza* contare ogni coppia di surrogati *espressione* come un singolo carattere. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
+ Quando si usano le regole di confronto SC (caratteri supplementari), ciascuna coppia di surrogati in *expression* viene considerata come un singolo carattere sia da *start* sia da *length*. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-substring-with-a-character-string"></a>A. Utilizzo della funzione SUBSTRING con una stringa di caratteri  
- In questo esempio viene illustrato come restituire solo una parte di una stringa di caratteri. Dal `sys.databases` tabella, questa query restituisce il sistema i nomi di database nella prima colonna, la prima lettera del database nella seconda colonna e i terzi e quarto caratteri nella colonna finale.  
+ In questo esempio viene illustrato come restituire solo una parte di una stringa di caratteri. Dalla tabella `sys.databases`, questa query restituisce i nomi di database di sistema nella prima colonna, la prima lettera del database nella seconda colonna e il terzo e quarto carattere nella colonna finale.  
   
 ```  
 SELECT name, SUBSTRING(name, 1, 1) AS Initial ,
@@ -91,7 +91,7 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|name |Initial |ThirdAndFourthCharacters|
+|NAME |Initial |ThirdAndFourthCharacters|
 |---|--|--|
 |master  |m  |st |
 |tempdb  |t  |mp |
@@ -119,9 +119,9 @@ bcd
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>B. Utilizzo della funzione SUBSTRING con dati di tipo text, ntext e image  
   
 > [!NOTE]  
->  Per eseguire gli esempi seguenti, è necessario installare il **pubs** database.  
+>  Per eseguire gli esempi seguenti è necessario installare il database **pubs**.  
   
- Nell'esempio seguente viene illustrato come restituire i primi 10 caratteri da ognuno di un **testo** e **immagine** colonna di dati nella `pub_info` tabella del `pubs` database. **testo** dati vengono restituiti come **varchar**, e **immagine** dati vengono restituiti come **varbinary**.  
+ Nell'esempio seguente viene illustrato come restituire i primi 10 caratteri di ogni colonna di dati **testo** e **immagine** nella tabella `pub_info` del database `pubs`. I dati di tipo **testo** vengono restituiti come **varchar**, e i dati di tipo **immagine** vengono restituiti come **varbinary**.  
   
 ```  
 USE pubs;  
@@ -141,7 +141,7 @@ WHERE pub_id = '1756';
 (1 row(s) affected)
 ```  
   
- Nell'esempio seguente viene illustrato l'effetto della SOTTOSTRINGA sia **testo** e **ntext** dati. In primo luogo nel database `pubs` viene creata una nuova tabella denominata `npub_info`. In secondo luogo viene creata la colonna `pr_info` nella tabella `npub_info` dai primi 80 caratteri della colonna `pub_info.pr_info` e come primo carattere viene aggiunto `ü`. Infine, un `INNER JOIN` recupera tutti i numeri di identificazione al server di pubblicazione e `SUBSTRING` di entrambi i **testo** e **ntext** colonne di informazioni di pubblicazione.  
+ Nell'esempio seguente vengono illustrati gli effetti della funzione SUBSTRING sui dati di tipo **testo** e **ntesto**. In primo luogo nel database `pubs` viene creata una nuova tabella denominata `npub_info`. In secondo luogo viene creata la colonna `pr_info` nella tabella `npub_info` dai primi 80 caratteri della colonna `pub_info.pr_info` e come primo carattere viene aggiunto `ü`. Infine, tramite un `INNER JOIN` vengono recuperati i numeri di identificazione di tutti i server di pubblicazione e il valore di `SUBSTRING` di entrambe le colonne di tipo **testo** e **ntesto** contenenti informazioni sui server di pubblicazione.  
   
 ```  
 IF EXISTS (SELECT table_name FROM INFORMATION_SCHEMA.TABLES   
@@ -183,7 +183,7 @@ FROM pub_info pr INNER JOIN npub_info npr
 ORDER BY pr.pub_id ASC;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-substring-with-a-character-string"></a>C. Utilizzo della funzione SUBSTRING con una stringa di caratteri  
  In questo esempio viene illustrato come restituire solo una parte di una stringa di caratteri. Questa query eseguita nella tabella `dbo.DimEmployee` restituisce il cognome in una colonna e l'iniziale del nome nella seconda colonna.  
@@ -207,7 +207,7 @@ Barber               D
 Barreto de Mattos    P
 ```  
   
- Nell'esempio seguente viene illustrato come restituire il secondo, terzo e quarto carattere della costante stringa `abcdef`.  
+ L'esempio seguente mostra come restituire il secondo, il terzo e il quarto carattere della costante stringa `abcdef`.  
   
 ```  
 USE ssawPDW;  
@@ -230,7 +230,7 @@ bcd
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [STRING_SPLIT &#40;Transact-SQL&#41;](../../t-sql/functions/string-split-transact-sql.md)  
  [TRIM &#40;Transact-SQL&#41;](../../t-sql/functions/trim-transact-sql.md)  
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [Funzioni per i valori stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
 

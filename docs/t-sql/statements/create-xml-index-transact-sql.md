@@ -1,5 +1,5 @@
 ---
-title: CREARE l'indice XML (Transact-SQL) | Documenti Microsoft
+title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/25/2018
   Crea un indice XML in una tabella specificata. L'indice può essere creato prima dell'immissione dei dati nella tabella. È possibile creare indici XML per tabelle di un altro database specificando un nome di database completo.  
   
 > [!NOTE]  
->  Per creare un indice relazionale, vedere [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md). Per informazioni su come creare un indice spaziale, vedere [CREATE SPATIAL INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-spatial-index-transact-sql.md).  
+>  Per creare un indice relazionale, vedere [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md). Per informazioni su come creare un indice spaziale, vedere [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-spatial-index-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -86,33 +86,33 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ## <a name="arguments"></a>Argomenti  
  [PRIMARY] XML  
- Crea un indice XML su specificato **xml** colonna. Quando viene specificata la parola chiave PRIMARY, viene creato un indice cluster con una chiave cluster costituita dalla chiave di clustering della tabella utente e da un identificatore di nodo XML. Per ogni tabella è possibile creare al massimo 249 indici XML. Quando si crea un indice XML, è necessario tenere presente quanto segue:  
+ Crea un indice XML sulla colonna **xml** specificata. Quando viene specificata la parola chiave PRIMARY, viene creato un indice cluster con una chiave cluster costituita dalla chiave di clustering della tabella utente e da un identificatore di nodo XML. Per ogni tabella è possibile creare al massimo 249 indici XML. Quando si crea un indice XML, è necessario tenere presente quanto segue:  
   
 -   È necessario che esista un indice cluster sulla chiave primaria della tabella utente.  
   
 -   La chiave di clustering della tabella utente può includere al massimo 15 colonne.  
   
--   Ogni **xml** colonna in una tabella può includere un indice XML primario e più indici XML secondari.  
+-   Per ogni colonna **xml** di una tabella è possibile creare un indice XML primario e più indici XML secondari.  
   
--   Un indice XML primario in un **xml** colonna deve essere presente prima di poter creare un indice XML secondario sulla colonna.  
+-   Prima di poter creare un indice XML secondario su una colonna **xml**, è necessario che per tale colonna esista un indice XML primario.  
   
--   Un indice XML può essere creato solo in una singola **xml** colonna. Non è possibile creare un indice XML su un non -**xml** colonna, né creare un indice relazionale in un **xml** colonna.  
+-   È possibile creare un indice XML solo su una singola colonna **xml**. Non è possibile creare un indice XML su una colonna non **xml** né creare un indice relazionale su una colonna **xml**.  
   
--   È possibile creare un indice XML primario o secondario, scegliere un **xml** colonna in una vista, in una variabile con valori di tabella con **xml** colonne, o **xml** variabili di tipo.  
+-   Non è possibile creare un indice XML, primario o secondario, su una colonna **xml** di una vista, su una variabile con valori di tabella con colonne **xml** oppure su variabili di tipo **xml**.  
   
--   Non è possibile creare un indice XML primario in una calcolata **xml** colonna.  
+-   Non è possibile creare un indice XML primario su una colonna **xml** calcolata.  
   
--   Le impostazioni delle opzioni SET devono corrispondere a quelle necessarie per le viste indicizzate e gli indici su colonne calcolate. In particolare, deve impostare l'opzione ARITHABORT su ON quando viene creato un indice XML e inserimento, eliminazione o aggiornamento di valori di **xml** colonna.  
+-   Le impostazioni delle opzioni SET devono corrispondere a quelle necessarie per le viste indicizzate e gli indici su colonne calcolate. In particolare, l'opzione ARITHABORT deve essere impostata su ON quando viene creato un indice XML e quando vengono inseriti, eliminati o aggiornati valori nella colonna **xml**.  
   
  Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
  *index_name*  
- Nome dell'indice. I nomi degli indici devono essere univoci all'interno di una tabella, ma non all'interno di un database. I nomi di indice devono rispettare le regole di [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Nome dell'indice. I nomi degli indici devono essere univoci all'interno di una tabella, ma non all'interno di un database. Devono anche essere conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
- I nomi di indice XML primari non possono iniziare con i seguenti caratteri:  **#** ,  **##** ,  **@** , o  **@@**  .  
+ I nomi di indici XML primari non possono iniziare con i caratteri seguenti: **#**, **##**, **@** o **@@**.  
   
  *xml_column_name*  
- È il **xml** su cui è basato l'indice di colonna. Un solo **xml** colonna può essere specificata in una singola definizione di indice XML; tuttavia, possibile creare più indici XML secondari su un **xml** colonna.  
+ Colonna **xml** su cui l'indice è basato. È possibile specificare una sola colonna **xml** in una singola definizione di indice XML, ma è possibile creare più indici XML secondari su una colonna **xml**.  
   
  USING XML INDEX *xml_index_name*  
  Specifica l'indice XML primario da usare per la creazione di un indice XML secondario.  
@@ -120,7 +120,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Specifica il tipo di indice XML secondario.  
   
- VALUE  
+ Value  
  Crea un indice XML secondario su colonne con le colonne chiave (valore di nodo e percorso) dell'indice XML primario.  
   
  PATH  
@@ -146,45 +146,45 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Specifica le opzioni da usare quando si crea l'indice.  
   
- PAD_INDEX  **=**  {ON | **OFF** }  
+ PAD_INDEX **=** { ON | **OFF** }  
  Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
  ON  
- La percentuale di spazio libero specificata dal *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
+ La percentuale di spazio disponibile specificata in *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
   
- DISATTIVARE o *fillfactor* non è specificato  
+ OFF o *fillfactor* non specificato  
  Le pagine di livello intermedio vengono riempite poco al di sotto della capacità massima, in modo che lo spazio residuo sia sufficiente per almeno una riga della dimensione massima supportata dall'indice, in base al set di chiavi nelle pagine intermedie.  
   
- L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto PAD_INDEX usano la percentuale specificata in FILLFACTOR. Se la percentuale specificata in FILLFACTOR non consente l'inserimento di una riga, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sostituisce internamente tale percentuale in modo da rendere disponibile lo spazio minimo necessario. Il numero di righe in una pagina di indice intermedio non è mai inferiore a due, indipendentemente dal valore di *fillfactor*.  
+ L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto PAD_INDEX usano la percentuale specificata in FILLFACTOR. Se la percentuale specificata in FILLFACTOR non consente l'inserimento di una riga, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sostituisce internamente tale percentuale in modo da rendere disponibile lo spazio minimo necessario. Il numero di righe di una pagina intermedia dell'indice non è mai minore di due, indipendentemente dal valore di *fillfactor*.  
   
- Fattore di riempimento **= * * * fattore di riempimento*  
- Specifica una percentuale che indica il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la ricompilazione dell'indice. *fattore di riempimento* deve essere un valore intero compreso tra 1 e 100. Il valore predefinito è 0. Se *fillfactor* è 100 o 0, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono creati indici con pagine foglia riempite fino alla capacità.  
+ FILLFACTOR **=***fillfactor*  
+ Specifica una percentuale che indica il livello di riempimento del livello foglia di ogni pagina di indice applicato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione o la ricompilazione dell'indice. *fillfactor* deve essere un valore intero compreso tra 1 e 100. Il valore predefinito è 0. Se *fillfactor* è 100 o 0, tramite [!INCLUDE[ssDE](../../includes/ssde-md.md)] vengono creati indici con pagine foglia riempite fino alla capacità massima.  
   
 > [!NOTE]  
 >  I valori 0 e 100 relativi al fattore di riempimento sono equivalenti.  
   
- L'impostazione di FILLFACTOR viene applicata solo in fase di creazione o di ricompilazione dell'indice. La percentuale specificata di spazio vuoto delle pagine non viene mantenuta in modo dinamico da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per visualizzare l'impostazione del fattore di riempimento, utilizzare il [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vista del catalogo.  
+ L'impostazione di FILLFACTOR viene applicata solo in fase di creazione o di ricompilazione dell'indice. La percentuale specificata di spazio vuoto delle pagine non viene mantenuta in modo dinamico da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per visualizzare l'impostazione del fattore di riempimento, usare la vista del catalogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  La creazione di un indice cluster con un valore FILLFACTOR minore di 100 influisce sulla quantità di spazio di archiviazione occupata dai dati perché i dati vengono ridistribuiti da [!INCLUDE[ssDE](../../includes/ssde-md.md)] durante la creazione dell'indice cluster.  
   
  Per altre informazioni, vedere [Specificare un fattore di riempimento per un indice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
- L'OPZIONE SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
- Specifica se archiviare risultati temporanei dell'ordinamento in **tempdb**. Il valore predefinito è OFF.  
+ SORT_IN_TEMPDB **=** { ON | **OFF** }  
+ Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF.  
   
  ON  
- I risultati intermedi dell'ordinamento utilizzati per compilare l'indice vengono archiviati **tempdb**. Questo potrebbe ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
+ I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. Se **tempdb** si trova in un set di dischi diverso rispetto al database utente, il tempo necessario per creare un indice potrebbe essere minore. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
  I risultati intermedi dell'ordinamento vengono archiviati nello stesso database dell'indice.  
   
- Oltre allo spazio necessario nel database utente per creare l'indice, **tempdb** deve essere disponibile la stessa quantità di spazio aggiuntivo per archiviare i risultati intermedi dell'ordinamento. Per ulteriori informazioni, vedere [opzione SORT_IN_TEMPDB per indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
+ Oltre allo spazio necessario nel database utente per la creazione dell'indice, in **tempdb** deve essere disponibile una quantità di spazio aggiuntivo pressoché equivalente per l'archiviazione dei risultati intermedi dell'ordinamento. Per altre informazioni, vedere [Opzione SORT_IN_TEMPDB per gli indici](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
  IGNORE_DUP_KEY **=OFF**  
  Non ha effetto per gli indici XML perché il tipo di indice non è mai univoco. Non impostare questa opzione su ON. In caso contrario, viene generato un errore.  
   
- DROP_EXISTING  **=**  {ON | **OFF** }  
+ DROP_EXISTING **=** { ON | **OFF** }  
  Specifica che è necessario eliminare e quindi ricompilare l'indice XML denominato preesistente. Il valore predefinito è OFF.  
   
  ON  
@@ -195,15 +195,15 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Il tipo di indice non può essere modificato tramite l'opzione DROP_EXISTING. Non è inoltre possibile ridefinire un indice XML primario come indice XML secondario o viceversa.  
   
- ONLINE **= OFF**  
+ ONLINE **=OFF**  
  Specifica che le tabelle sottostanti e gli indici associati non sono disponibili per le query e la modifica dei dati durante l'operazione sull'indice. In questa versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le operazioni di compilazione di indici online non sono supportate per gli indici XML. Se questa opzione è impostata su ON per un indice XML, viene generato un errore. Omettere l'opzione ONLINE o impostare ONLINE su OFF.  
   
  Un'operazione offline sull'indice che crea, ricompila o elimina un indice XML acquisisce un blocco di modifica dello schema (SCH-M) per la tabella. Il blocco impedisce agli utenti di accedere alla tabella sottostante per la durata dell'operazione.  
   
 > [!NOTE]  
->  Operazioni sugli indici online non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
+ ALLOW_ROW_LOCKS **=** { **ON** | OFF }  
  Specifica se sono consentiti blocchi di riga. Il valore predefinito è ON.  
   
  ON  
@@ -212,7 +212,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  I blocchi di riga non vengono utilizzati.  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
+ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }  
  Specifica se sono consentiti blocchi a livello di pagina. Il valore predefinito è ON.  
   
  ON  
@@ -222,12 +222,12 @@ CREATE [ PRIMARY ] XML INDEX index_name
  I blocchi a livello di pagina non vengono utilizzati.  
   
  MAXDOP **=***max_degree_of_parallelism*  
- Esegue l'override di [il max degree of parallelism opzione di configurazione Server Configurare](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) opzione di configurazione per la durata dell'operazione sull'indice. Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
+ Esegue l'override dell'[opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) per la durata dell'operazione sugli indici. Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
 > [!IMPORTANT]  
 >  Sebbene l'opzione MAXDOP sia supportata a livello di sintassi per tutti gli indici XML, per un indice XML primario CREATE XML INDEX usano solo un processore singolo.  
   
- *max_degree_of_parallelism* can be:  
+ *max_degree_of_parallelism* può essere:  
   
  1  
  Disattiva la generazione di piani paralleli.  
@@ -241,17 +241,17 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Per altre informazioni, vedere [Configurazione di operazioni parallele sugli indici](../../relational-databases/indexes/configure-parallel-index-operations.md).  
   
 > [!NOTE]  
->  Operazioni parallele sugli indici non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Le operazioni parallele sugli indici sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Osservazioni  
- Le colonne calcolate derivate da **xml** dati tipi possono essere indicizzate come colonna chiave o inclusa non chiave purché il tipo di dati della colonna calcolata sia consentito come colonna chiave dell'indice o colonna non chiave. Non è possibile creare un indice XML primario in una calcolata **xml** colonna.  
+## <a name="remarks"></a>Remarks  
+ Le colonne calcolate che derivano da tipi di dati **xml** possono essere indicizzate come colonna chiave o come colonna non chiave inclusa a condizione che il tipo di dati della colonna calcolata sia supportato come colonna chiave o colonna non chiave dell'indice. Non è possibile creare un indice XML primario su una colonna **xml** calcolata.  
   
- Per visualizzare informazioni sugli indici XML, utilizzare il [xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md) vista del catalogo.  
+ Per visualizzare informazioni relative agli indici XML, usare la vista del catalogo [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md).  
   
- Per ulteriori informazioni sugli indici XML, vedere [indici XML &#40; SQL Server &#41; ](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Per altre informazioni sugli indici XML, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="additional-remarks-on-index-creation"></a>Osservazioni aggiuntive sulla creazione dell'indice  
- Per ulteriori informazioni sulla creazione dell'indice, vedere la sezione "Osservazioni" in [CREATE INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/create-index-transact-sql.md).  
+ Per altre informazioni sulla creazione dell'indice, vedere la sezione "Osservazioni" in [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   

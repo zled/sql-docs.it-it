@@ -1,5 +1,5 @@
 ---
-title: Credenziali (Transact-SQL) con ambito Database REVOKE | Documenti Microsoft
+title: REVOKE - Credenziali con ambito database (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
@@ -32,10 +32,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="revoke-database-scoped-credential-transact-sql"></a>Credenziali (Transact-SQL) con ambito Database REVOKE
+# <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE - Credenziali con ambito database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Revoca le autorizzazioni per una credenziale con ambito database.  
+  Revoca le autorizzazioni per credenziali con ambito database.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,11 +57,11 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 > [!IMPORTANT]  
 >  Se l'autorizzazione specificata è stata concessa all'entità senza l'opzione GRANT, l'autorizzazione stessa verrà revocata.  
   
- *autorizzazione*  
- Specifica un'autorizzazione che può essere revocata per una credenziale con ambito database. Vedere l'elenco riportato di seguito.  
+ *permission*  
+ Specifica un'autorizzazione che può essere revocata per credenziali con ambito database. Vedere l'elenco riportato di seguito.  
   
- CERTIFICATO ON **::***credential_name*  
- Specifica le credenziali con ambito database per cui viene revocata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
+ ON CERTIFICATE **::***credential_name*  
+ Specifica il tipo di credenziali con ambito database per cui viene revocata l'autorizzazione. Il qualificatore di ambito "::" è obbligatorio.  
   
  *database_principal*  
  Specifica l'entità da cui viene revocata l'autorizzazione. I tipi validi sono:  
@@ -107,10 +107,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   utente del database non mappato ad alcuna entità server.  
   
-## <a name="remarks"></a>Osservazioni  
- Una credenziale con ambito database è un database a livello di entità a protezione diretta contenuta nel database padre nella gerarchia delle autorizzazioni. Le autorizzazioni più specifiche e limitate che è possibile revocare per una credenziale con ambito database sono elencate di seguito, insieme alle autorizzazioni più generali che le includono in modo implicito.  
+## <a name="remarks"></a>Remarks  
+ Le credenziali con ambito database sono un'entità a protezione diretta a livello di database contenuta nel database padre nella gerarchia delle autorizzazioni. Di seguito sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per credenziali con ambito database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
-|Autorizzazione delle credenziali con ambito database|Autorizzazione delle credenziali con ambito database cui è inclusa|Autorizzazione del database in cui è inclusa|  
+|Autorizzazione delle credenziali con ambito database|Implicita nell'autorizzazione delle credenziali con ambito database|Autorizzazione del database in cui è inclusa|  
 |----------------------------|---------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
@@ -118,13 +118,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
- Richiede l'autorizzazione CONTROL per le credenziali con ambito database.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CONTROL per le credenziali con ambito database.  
   
 ## <a name="see-also"></a>Vedere anche  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
- [Credenziali (Transact-SQL) con ambito Database GRANT](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
- [DENY (Transact-SQL) credenziali con ambito Database](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
+ [GRANT - Credenziali con ambito database (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
+ [DENY - Credenziali con ambito database (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)  

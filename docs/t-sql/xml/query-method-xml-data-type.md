@@ -1,5 +1,5 @@
 ---
-title: query () (metodo) (tipo di dati xml) | Documenti Microsoft
+title: Metodo query() (tipo di dati xml) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="query-method-xml-data-type"></a>Metodo query() con tipo di dati XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Specifica un'espressione XQuery un'istanza di **xml** tipo di dati. Il risultato è di **xml** tipo. Il metodo restituisce un'istanza XML non tipizzata.  
+  Specifica una query XQuery su un'istanza con tipo di dati **xml**. Il risultato è di tipo **xml**. Il metodo restituisce un'istanza XML non tipizzata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,10 +46,10 @@ query ('XQuery')
  Stringa costituita da un'espressione XQuery che esegue query su nodi XML, ad esempio elementi o attributi, in un'istanza XML.  
   
 ## <a name="examples"></a>Esempi  
- In questa sezione vengono forniti esempi dell'utilizzo del metodo query () del **xml** tipo di dati.  
+ In questa sezione sono disponibili esempi di uso del metodo query() con tipo di dati **xml**.  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. Utilizzo del metodo query() in una variabile di tipo XML  
- Nell'esempio seguente viene dichiarata una variabile  **@myDoc**  di **xml** digitare e assegna un'istanza XML a esso. Il **query ()** metodo viene quindi utilizzato per specificare un'espressione XQuery sul documento.  
+ Nell'esempio seguente viene dichiarata una variabile **@myDoc** di tipo **xml** a cui viene assegnata un'istanza XML. In seguito viene usato il metodo **query()** per specificare una query XQuery sul documento.  
   
  La query recupera l'elemento figlio <`Features`> dell'elemento <`ProductDescription`>:  
   
@@ -76,7 +76,7 @@ SELECT @myDoc.query('/Root/ProductDescription/Features')
 ```  
   
 ### <a name="b-using-the-query-method-against-an-xml-type-column"></a>B. Utilizzo del metodo query() in una colonna di tipo XML  
- Nell'esempio seguente, il **query ()** metodo viene utilizzato per specificare un'espressione XQuery di **CatalogDescription** colonna di **xml** digitare il  **AdventureWorks** database:  
+ Nell'esempio seguente viene usato il metodo **query()** per specificare una query XQuery sulla colonna **CatalogDescription** di tipo **xml** nel database **AdventureWorks**:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -92,11 +92,11 @@ declare namespace wm="http://schemas.microsoft.com/sqlserver/2004/07/adventure-w
   
  Dalla query precedente si noti quanto segue:  
   
--   La colonna CatalogDescription è una classe tipizzata **xml** colonna. Pertanto, è disponibile il relativo schema associato. Nel [prologo XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), **dello spazio dei nomi** parola chiave viene utilizzata per definire il prefisso che verrà utilizzato successivamente nel corpo della query.  
+-   La colonna CatalogDescription è una colonna **xml** tipizzata. Pertanto, è disponibile il relativo schema associato. Nel [prologo di una query XQuery](../../xquery/modules-and-prologs-xquery-prolog.md), la parola chiave **namespace** viene usata per definire il prefisso incluso in seguito nel corpo della query.  
   
--   Il **query ()** metodo costruisce codice XML, un <`Product`> elemento che dispone di un **ProductModelID** attributo, in cui il **ProductModelID** è il valore di attributo recuperati dal database. Per ulteriori informazioni sulla costruzione di strutture XML, vedere [costruzione di strutture XML &#40; XQuery &#41; ](../../xquery/xml-construction-xquery.md).  
+-   Il metodo **query()** consente di costruire una struttura XML, un elemento <`Product`> con un attributo **ProductModelID** in cui il valore dell'attributo **ProductModelID** viene recuperato dal database. Per altre informazioni sulla costruzione di strutture XML, vedere [XML Construction &#40;XQuery&#41;](../../xquery/xml-construction-xquery.md) (Costruzione XML &#40;XQuery&#41;).  
   
--   Il [metodo exist () (tipo di dati XML)](../../t-sql/xml/exist-method-xml-data-type.md) nella clausola WHERE viene utilizzata per trovare solo le righe che contiene il <`Warranty`> elemento nello schema XML. Nuovamente, il **dello spazio dei nomi** parola chiave viene utilizzata per definire due prefissi di spazio dei nomi.  
+-   Il [metodo exist() (tipo di dati XML)](../../t-sql/xml/exist-method-xml-data-type.md) nella clausola WHERE viene usato per trovare solo le righe che contengono l'elemento <`Warranty`> nella struttura XML. Anche qui la parola chiave **namespace** per definire due prefissi dello spazio dei nomi.  
   
  Risultato parziale:  
   
@@ -125,6 +125,6 @@ where CatalogDescription.exist('
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguaggio di manipolazione dei dati XML &#40; Linguaggio XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

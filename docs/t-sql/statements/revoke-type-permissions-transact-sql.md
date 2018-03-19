@@ -1,5 +1,5 @@
 ---
-title: REVOCARE le autorizzazioni di tipo (Transact-SQL) | Documenti Microsoft
+title: REVOKE - Autorizzazioni per tipi (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -59,13 +59,13 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *autorizzazione*  
+ *permission*  
  Specifica un'autorizzazione che può essere revocata per un tipo. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- TIPO **::** [ *schema_name* ] **.** *TYPE_NAME*  
- Specifica il tipo per cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio. Se *schema_name* viene omesso, viene utilizzato lo schema predefinito. Se *schema_name* è specificato, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
+ ON TYPE **::** [ *schema_name* ] **.** *type_name*  
+ Specifica il tipo per cui viene revocata l'autorizzazione. Il qualificatore di ambito (**::**) è obbligatorio. Se si omette *schema_name* viene usato lo schema predefinito. Se si specifica *schema_name*, il qualificatore di ambito dello schema (**.**) è obbligatorio.  
   
- {DA | A} \<database_principal > specifica l'entità da cui viene revocata l'autorizzazione.  
+ { FROM | TO } \<database_principal> Specifica l'entità da cui viene revocata l'autorizzazione.  
   
  GRANT OPTION  
  Indica che verrà revocato il diritto di concedere l'autorizzazione specificata ad altre entità. L'autorizzazione stessa non verrà revocata.  
@@ -79,7 +79,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 > [!CAUTION]  
 >  La revoca propagata di un'autorizzazione concessa con WITH GRANT OPTION comporterà la revoca sia delle autorizzazioni GRANT che delle autorizzazioni DENY per tale autorizzazione.  
   
- AS \<database_principal > specifica un'entità da cui l'entità che esegue la query Ottiene il diritto di revocare l'autorizzazione.  
+ AS \<database_principal> Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di revocare l'autorizzazione.  
   
  *Database_user*  
  Specifica un utente di database.  
@@ -88,50 +88,50 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifica un ruolo del database.  
   
  *Application_role*  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifica un ruolo applicazione.  
   
  *Database_user_mapped_to_Windows_User*  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifica un utente del database sul quale viene eseguito il mapping a un utente di Windows.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifica un utente del database sul quale viene eseguito il mapping a un gruppo di Windows.  
   
  *Database_user_mapped_to_certificate*  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifica un utente del database sul quale viene eseguito il mapping a un certificato.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifica un utente del database sul quale viene eseguito il mapping a una chiave asimmetrica.  
   
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un tipo è un'entità a sicurezza diretta a livello di schema contenuta nello schema padre nella gerarchia delle autorizzazioni.  
   
 > [!IMPORTANT]  
->  **GRANT**, **DENY** e **revocare** autorizzazioni non si applicano ai tipi di sistema. Ai tipi definiti dall'utente è possibile concedere autorizzazioni. Per ulteriori informazioni sui tipi definiti dall'utente, vedere [utilizzo di tipi definiti dall'utente in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
+>  Le autorizzazioni **GRANT**, **DENY,** e **REVOKE** non si applicano ai tipi di sistema. Ai tipi definiti dall'utente è possibile concedere autorizzazioni. Per altre informazioni sui tipi definiti dall'utente, vedere [Uso di tipi definiti dall'utente in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md).  
   
  Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile revocare per un tipo, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
 |Autorizzazione del tipo|Autorizzazione del tipo in cui è inclusa|Autorizzazione dello schema in cui è inclusa|  
 |---------------------|--------------------------------|----------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
-|Eseguire|CONTROL|Eseguire|  
+|EXECUTE|CONTROL|EXECUTE|  
 |REFERENCES|CONTROL|REFERENCES|  
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CONTROL per il tipo. Se si utilizza l'opzione AS, l'entità specificata deve essere proprietaria del tipo.  
   
 ## <a name="examples"></a>Esempi  
@@ -144,8 +144,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Autorizzazioni per tipi GRANT &#40; Transact-SQL &#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
- [Nega le autorizzazioni di tipo &#40; Transact-SQL &#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
+ [GRANT - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/grant-type-permissions-transact-sql.md)   
+ [DENY - Autorizzazioni per tipi &#40;Transact-SQL&#41;](../../t-sql/statements/deny-type-permissions-transact-sql.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [Autorizzazioni &#40;motore di database&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

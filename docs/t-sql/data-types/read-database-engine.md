@@ -1,5 +1,5 @@
 ---
-title: Lettura (motore di Database) | Documenti Microsoft
+title: Read (Motore di database) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="read-database-engine"></a>Read (Motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Lettura legge una rappresentazione binaria di **SqlHierarchyId** da passato **BinaryReader** e imposta il **SqlHierarchyId** oggetto con tale valore. Lettura non può essere chiamato tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. Utilizzare invece CAST o CONVERT.
+Read legge la rappresentazione binaria di **SqlHierarchyId** dall'elemento passato **BinaryReader** e imposta l'oggetto **SqlHierarchyId** su tale valore. Read non può essere chiamato tramite [!INCLUDE[tsql](../../includes/tsql-md.md)]. Utilizzare invece CAST o CONVERT.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,17 +44,17 @@ void Read( BinaryReader r )
   
 ## <a name="arguments"></a>Argomenti  
 *r*  
- Il **BinaryReader** oggetto che produce un flusso binario corrispondente a una rappresentazione binaria di un **hierarchyid** nodo.  
+ Oggetto **BinaryReader** che produce un flusso binario corrispondente a una rappresentazione binaria di un nodo **hierarchyid**.  
   
 ## <a name="return-types"></a>Tipi restituiti
  **Tipo CLR restituito: void**  
   
-## <a name="remarks"></a>Osservazioni  
- Lettura non di convalida dell'input. Se viene fornito un input binario non valido, lettura potrebbe generare un'eccezione. O potrebbe avere esito positivo e produrre un oggetto non valido **SqlHierarchyId** oggetto i cui metodi possono restituire risultati imprevisti o generare un'eccezione.  
+## <a name="remarks"></a>Remarks  
+ Read non esegue la convalida dell'input. Se viene specificato un input binario non valido, Read può generare un'eccezione oppure può avere esito positivo ma restituire un oggetto **SqlHierarchyId** non valido i cui metodi possono restituire risultati imprevisti o generare un'eccezione.  
   
- Lettura può essere chiamato solo su un oggetto appena creato **SqlHierarchyId** oggetto.  
+ Read può essere chiamato solo su un oggetto **SqlHierarchyId** appena creato.  
   
- Lettura viene utilizzato internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando è necessario, ad esempio durante la scrittura di dati **hierarchyid** colonna. Lettura viene inoltre chiamato internamente quando viene eseguita una conversione tra **varbinary** e **hierarchyid**.  
+ Read viene usato internamente da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quando è necessario, ad esempio in caso di scrittura di dati in una colonna **hierarchyid**. Read viene anche chiamato internamente in caso di esecuzione di una conversione tra **varbinary** e **hierarchyid**.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -67,8 +67,8 @@ hid.Read(br);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Scrittura &#40; motore di Database &#41;](../../t-sql/data-types/write-database-engine.md)  
-[ToString &#40; motore di Database &#41;](../../t-sql/data-types/tostring-database-engine.md)  
+[Write &#40;Motore di database&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;Motore di database&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [Guida di riferimento ai metodi per il tipo di dati hierarchyid](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

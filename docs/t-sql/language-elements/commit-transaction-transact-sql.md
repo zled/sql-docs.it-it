@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Contrassegna la fine di una transazione esplicita o implicita completata correttamente. Se @@TRANCOUNT è 1, COMMIT TRANSACTION rende tutte le modifiche dei dati eseguite dall'inizio della transazione una parte permanente del database, libera le risorse utilizzate dalla transazione e decrementa @@TRANCOUNT su 0. Se @@TRANCOUNT è maggiore di 1, COMMIT TRANSACTION riduce @@TRANCOUNT solo da 1 e la transazione rimane attiva.  
+  Contrassegna la fine di una transazione esplicita o implicita completata correttamente. Se il valore di @@TRANCOUNT è 1, COMMIT TRANSACTION rende permanenti nel database tutte le modifiche dei dati apportate dall'inizio della transazione, libera le risorse usate dalla transazione e decrementa il valore di @@TRANCOUNT a 0. Se il valore di @@TRANCOUNT è maggiore di 1, COMMIT TRANSACTION decrementa il valore di @@TRANCOUNT di una sola unità e la transazione rimane attiva.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,28 +68,28 @@ COMMIT [ TRAN | TRANSACTION ]
   
 ## <a name="arguments"></a>Argomenti  
  *transaction_name*  
- **Si applica a:** SQL Server e Database SQL di Azure
+ **SI APPLICA A:** SQL Server e database SQL di Azure
  
- Ignorato dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* specifica il nome di una transazione assegnato da un'istruzione BEGIN TRANSACTION precedente. *transaction_name*deve essere conforme alle regole per gli identificatori, ma non può superare i 32 caratteri. *transaction_name* utilizzabile come supporto per migliorare la leggibilità i primi quale istruzione nidificata BEGIN TRANSACTION, COMMIT TRANSACTION è associato.  
+ Ignorato dal [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. *transaction_name* consente di specificare il nome di una transazione assegnato da un'istruzione BEGIN TRANSACTION precedente. *transaction_name* deve essere conforme alle regole relative agli identificatori ma non può superare i 32 caratteri. *transaction_name* può essere usato per facilitare la lettura del codice da parte dei programmatori, indicando quale istruzione BEGIN TRANSACTION annidata è associata a COMMIT TRANSACTION.  
   
  *@tran_name_variable*  
- **Si applica a:** SQL Server e Database SQL di Azure  
+ **SI APPLICA A:** SQL Server e database SQL di Azure  
  
 Nome di una variabile definita dall'utente contenente un nome di transazione valido. La variabile deve essere dichiarata con un tipo di dati char, varchar, nchar o nvarchar. Se vengono passati più di 32 caratteri alla variabile vengono utilizzati solo i primi 32 caratteri. Quelli rimanenti vengono troncati.  
   
  DELAYED_DURABILITY  
- **Si applica a:** SQL Server e Database SQL di Azure   
+ **SI APPLICA A:** SQL Server e database SQL di Azure   
 
- Opzione che richiede il commit della transazione con durabilità posticipata. La richiesta viene ignorata se il database è stato modificato con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Vedere l'argomento [controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md) per ulteriori informazioni.  
+ Opzione che richiede il commit della transazione con durabilità posticipata. La richiesta viene ignorata se il database è stato modificato con `DELAYED_DURABILITY = DISABLED` o `DELAYED_DURABILITY = FORCED`. Per altre informazioni, vedere l'argomento [Controllare la durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È compito del programmatore di [!INCLUDE[tsql](../../includes/tsql-md.md)] eseguire l'istruzione COMMIT TRANSACTION solo quando tutti i dati a cui la transazione fa riferimento sono logicamente corretti.  
   
  Se la transazione di cui è stato eseguito il commit è una transazione distribuita di [!INCLUDE[tsql](../../includes/tsql-md.md)], l'istruzione COMMIT TRANSACTION attiva l'utilizzo di un protocollo di commit in due fasi in MS DTC per il commit di tutti i server coinvolti nella transazione. Se una transazione locale si estende su due o più database nella stessa istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)], per eseguire il commit di tutti i database coinvolti nella transazione viene utilizzato un commit a due fasi interno.  
   
- Quando viene eseguito in transazioni nidificate, il commit delle transazioni interne non libera risorse o non rende permanenti le modifiche. Queste operazioni vengono eseguite solo durante il commit delle transazioni esterne. Ogni COMMIT TRANSACTION eseguita quando @@TRANCOUNT è maggiore di 1 semplicemente decrementa @@TRANCOUNT di 1. Quando @@TRANCOUNT è uguale a 0, l'intera transazione esterna viene eseguito il commit. Poiché *transaction_name* viene ignorato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)], esecuzione di COMMIT TRANSACTION che fa riferimento il nome di una transazione esterna quando esistono transazioni interne in attesa solo decrementa @@TRANCOUNT di 1.  
+ Quando viene eseguito in transazioni nidificate, il commit delle transazioni interne non libera risorse o non rende permanenti le modifiche. Queste operazioni vengono eseguite solo durante il commit delle transazioni esterne. Ogni COMMIT TRANSACTION eseguita quando il valore di @@TRANCOUNT è maggiore di 1 decrementa il valore di @@TRANCOUNT di una unità. Quando il valore di @@TRANCOUNT risulta uguale a 0, viene eseguito il commit dell'intera transazione esterna. Poiché *transaction_name* viene ignorato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)], l'esecuzione di COMMIT TRANSACTION con riferimento al nome di una transazione esterna quando esistono transazioni interne in attesa comporta la riduzione del valore di @@TRANCOUNT di una unità.  
   
- Esecuzione di COMMIT TRANSACTION quando @@TRANCOUNT è uguale a 0 genera un errore; non esiste alcuna istruzione BEGIN TRANSACTION corrispondente.  
+ L'esecuzione di COMMIT TRANSACTION quando @@TRANCOUNT è uguale a 0 genera un errore. Non esiste infatti alcuna istruzione BEGIN TRANSACTION corrispondente.  
   
  Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT TRANSACTION. Le modifiche dei dati del database sono diventate permanenti.  
   
@@ -101,9 +101,9 @@ Nome di una variabile definita dall'utente contenente un nome di transazione val
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-committing-a-transaction"></a>A. Esecuzione del commit di una transazione  
-**Si applica a:** SQL Server, Database SQL di Azure, Azure SQL Data Warehouse e Parallel Data Warehouse   
+**SI APPLICA A:** SQL Server, database SQL di Azure, Azure SQL Data Warehouse e Parallel Data Warehouse   
 
-Nell'esempio seguente viene eliminato un candidato di processo. Utilizza AdventureWorks. 
+Nell'esempio seguente viene eliminato un candidato di processo. Viene usato AdventureWorks. 
   
 ```   
 BEGIN TRANSACTION;   
@@ -113,9 +113,9 @@ COMMIT TRANSACTION;
 ```  
   
 ### <a name="b-committing-a-nested-transaction"></a>B. Esecuzione del commit di una transazione nidificata  
-**Si applica a:** SQL Server e Database SQL di Azure    
+**SI APPLICA A:** SQL Server e database SQL di Azure    
 
-Nell'esempio seguente viene creata una tabella, viene generata una transazione nidificata su tre livelli e viene quindi eseguito il commit della transazione nidificata. Sebbene ogni `COMMIT TRANSACTION` istruzione presenta un *transaction_name* parametro, non vi è alcuna relazione tra il `COMMIT TRANSACTION` e `BEGIN TRANSACTION` istruzioni. Il *transaction_name* i parametri sono semplicemente leggibilità del codice per consentire al programmatore di verificare che il numero adeguato di commit venga codificato per decrementare `@@TRANCOUNT` su 0 e quindi eseguire il commit della transazione esterna. 
+Nell'esempio seguente viene creata una tabella, viene generata una transazione nidificata su tre livelli e viene quindi eseguito il commit della transazione nidificata. Sebbene ogni istruzione `COMMIT TRANSACTION` includa un parametro *transaction_name*, non esiste alcuna relazione tra le istruzioni `COMMIT TRANSACTION` e `BEGIN TRANSACTION`. I parametri *transaction_name* migliorano semplicemente il grado di leggibilità del codice per consentire al programmatore di verificare che venga codificato il numero adeguato di commit per il decremento del valore di `@@TRANCOUNT` a 0 e che venga quindi eseguito il commit della transazione esterna. 
   
 ```   
 IF OBJECT_ID(N'TestTran',N'U') IS NOT NULL  

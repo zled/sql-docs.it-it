@@ -1,5 +1,5 @@
 ---
-title: DROP TRIGGER (Transact-SQL) | Documenti Microsoft
+title: DROP TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/12/2017
 ms.prod: sql-non-specified
@@ -66,16 +66,16 @@ ON ALL SERVER
 
   
 ## <a name="arguments"></a>Argomenti  
- *SE ESISTE*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
+ *IF EXISTS*  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658), [!INCLUDE[sssds](../../includes/sssds-md.md)]).  
   
- Elimina in modo condizionale il trigger solo se esiste già.  
+ Rimuove in modo condizionale il trigger solo se esiste già.  
   
  *schema_name*  
- Nome dello schema a cui appartiene un trigger DML. L'ambito dei trigger DML è definito nello schema della tabella o della vista in cui sono i trigger stessi creati. *schema_name* non può essere specificato per i trigger DDL o logon.  
+ Nome dello schema a cui appartiene un trigger DML. L'ambito dei trigger DML è definito nello schema della tabella o della vista in cui sono i trigger stessi creati. *schema_name* non può essere specificato per i trigger DDL o LOGON.  
   
  *trigger_name*  
- Nome del trigger da rimuovere. Per visualizzare un elenco dei trigger attualmente creati, utilizzare [Sys. server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) o [server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Nome del trigger da rimuovere. Per vedere un elenco dei trigger attualmente creati, usare [sys.server_assembly_modules](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) o [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
  DATABASE  
  Indica che l'ambito del trigger DDL corrisponde al database corrente. È necessario specificare DATABASE se tale argomento è stato specificato anche al momento della creazione o della modifica del trigger.  
@@ -88,22 +88,22 @@ ON ALL SERVER
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile rimuovere un trigger DML eliminando il trigger stesso o la tabella di trigger corrispondente. Quando si elimina una tabella, vengono eliminati anche tutti i trigger associati.  
   
- Quando viene eliminato un trigger, informazioni sul trigger viene rimosso dal **Sys. Objects**, **Triggers** e **Sys. sql_modules** viste del catalogo.  
+ Se si elimina un trigger, le informazioni relative al trigger vengono rimosse dalle viste del catalogo **sys.objects**, **sys.triggers** e **sys.sql_modules**.  
   
  È possibile eliminare più trigger DDL con una singola istruzione DROP TRIGGER solo se tutti i trigger sono stati creati con clausole ON identiche.  
   
  Per rinominare un trigger, utilizzare le istruzioni DROP TRIGGER e CREATE TRIGGER. Per modificare la definizione di un trigger, utilizzare ALTER TRIGGER.  
   
- Per ulteriori informazioni sulla determinazione delle dipendenze per un trigger specifico, vedere [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [Sys.dm sql_referenced_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md), e [Sys.dm sql_referencing_entities &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
+ Per altre informazioni su come determinare le dipendenze per un trigger specifico, vedere [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md), [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md) e [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
- Per ulteriori informazioni sulla visualizzazione del testo del trigger, vedere [sp_helptext &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) e [Sys. sql_modules &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
+ Per altre informazioni su come visualizzare il testo del trigger, vedere [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md) e [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Per ulteriori informazioni sulla visualizzazione di un elenco di trigger esistenti, vedere [Triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [server_triggers &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
+ Per altre informazioni su come visualizzare un elenco dei trigger esistenti, vedere [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) e [sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per l'eliminazione di un trigger DML è richiesta l'autorizzazione ALTER per la tabella o la vista in cui è definito il trigger.  
   
  Per eliminare un trigger DDL definito con ambito server (ON ALL SERVER) o un trigger LOGON è necessaria l'autorizzazione CONTROL SERVER nel server. Per l'eliminazione di un trigger DDL con ambito database (ON DATABASE) è richiesta l'autorizzazione ALTER ANY DATABASE DDL TRIGGER nel database corrente.  
@@ -111,7 +111,7 @@ ON ALL SERVER
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-dropping-a-dml-trigger"></a>A. Eliminazione di un trigger DML  
- Nell'esempio seguente viene eliminato il trigger `employee_insupd` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. (A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile utilizzare la sintassi DROP TRIGGER IF EXISTS.)  
+ Nell'esempio seguente viene eliminato il trigger `employee_insupd` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile usare la sintassi DROP TRIGGER IF EXISTS.  
   
 ```  
 IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL  
@@ -122,7 +122,7 @@ IF OBJECT_ID ('employee_insupd', 'TR') IS NOT NULL
  Nell'esempio seguente viene eliminato il trigger DDL `safety`.  
   
 > [!IMPORTANT]  
->  Poiché i trigger DDL non sono con ambito schema e, pertanto non vengono visualizzati il **Sys. Objects** vista del catalogo non è possibile utilizzare la funzione OBJECT_ID per eseguire una query se esistono nel database. Per gli oggetti che non hanno ambito schema è necessario eseguire query nella vista del catalogo appropriata. Per i trigger DDL, utilizzare **Triggers**.  
+>  Poiché i trigger DDL non hanno ambito schema e pertanto non sono inclusi nella vista del catalogo **sys.objects**, non è possibile usare la funzione OBJECT_ID per eseguire una query e scoprire se esistono nel database. Per gli oggetti che non hanno ambito schema è necessario eseguire query nella vista del catalogo appropriata. Per i trigger DDL usare **sys.triggers**.  
   
 ```  
 DROP TRIGGER safety  

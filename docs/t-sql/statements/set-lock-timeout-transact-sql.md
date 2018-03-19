@@ -1,5 +1,5 @@
 ---
-title: SET LOCK_TIMEOUT (Transact-SQL) | Documenti Microsoft
+title: SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/11/2017
 ms.prod: sql-non-specified
@@ -53,11 +53,11 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>Argomenti  
  *timeout_period*  
- È il numero di millisecondi, prima che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore di blocco. Il valore -1 (predefinito) corrisponde a nessun periodo di timeout, ovvero a un'attesa infinita.  
+ Intervallo di attesa, in millisecondi, prima che [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisca un errore di blocco. Il valore -1 (predefinito) corrisponde a nessun periodo di timeout, ovvero a un'attesa infinita.  
   
  Quando l'attesa per un blocco supera il valore di timeout, viene restituito un errore. Un valore uguale a 0 significa nessuna attesa e non appena viene incontrato un blocco viene visualizzato un messaggio.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  All'inizio di una connessione tale impostazione è uguale a -1. Se viene modificata, la nuova impostazione rimane attiva per il resto della connessione.  
   
  L'opzione SET LOCK_TIMEOUT viene impostata in fase di esecuzione, non in fase di analisi.  
@@ -66,12 +66,12 @@ SET LOCK_TIMEOUT timeout_period
   
  Le istruzioni CREATE DATABASE, ALTER DATABASE e DROP DATABASE non rispettano l'impostazione di SET LOCK_TIMEOUT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>R: impostare il timeout di blocco su 1800 millisecondi  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Impostare il timeout di blocco su 1800 millisecondi.  
  Nell'esempio seguente il timeout per l'attesa del blocco viene impostato su `1800` millisecondi.  
   
 ```sql  
@@ -79,16 +79,16 @@ SET LOCK_TIMEOUT 1800;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Impostare il timeout di blocco per l'attesa infinita per un rilascio del blocco.  
- Nell'esempio seguente imposta il timeout di blocco per attesa infinita e non hanno scadenza. Si tratta del comportamento predefinito che è già impostato all'inizio di ogni connessione.  
+### <a name="b-set-the-lock-timeout-to-wait-forever-for-a-lock-to-be-released"></a>B. Impostare il timeout di blocco sull'attesa infinita per il rilascio di un blocco.  
+ Nell'esempio seguente il timeout di blocco è impostato per l'attesa infinita e non ha scadenza. Questo comportamento predefinito è già impostato all'inizio di ogni connessione.  
   
 ```sql  
 SET LOCK_TIMEOUT -1;  
 ```  
   
- Nell'esempio seguente il timeout per l'attesa del blocco viene impostato su `1800` millisecondi. In questa versione, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] verrà analizzare correttamente, l'istruzione, ma ignorerà il valore 1800 e continuare a utilizzare il comportamento predefinito.  
+ Nell'esempio seguente il timeout per l'attesa del blocco viene impostato su `1800` millisecondi. In questa versione, [!INCLUDE[ssDW](../../includes/ssdw-md.md)] analizza correttamente l'istruzione, ma ignora il valore 1800 e continua a usare il comportamento predefinito.  
   
 ```sql  
 SET LOCK_TIMEOUT 1800;  

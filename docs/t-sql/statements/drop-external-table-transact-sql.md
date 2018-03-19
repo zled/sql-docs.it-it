@@ -29,7 +29,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Rimuove una tabella esterna PolyBase da. Questa operazione non elimina i dati esterni.  
+  Rimuove una tabella esterna PolyBase. Questa operazione non elimina i dati esterni.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,19 +42,19 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>Argomenti  
- [ *database_name* . [*schema_name*]. | *schema_name* . ] *table_name*  
- Il nome di uno di tre parti della tabella esterna da rimuovere. Il nome di tabella può includere facoltativamente, lo schema o il database e lo schema.  
+ [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
+ Numero della tabella esterna da rimuovere, composto da una, due o tre parti. Il nome della tabella può includere facoltativamente lo schema o il database e lo schema.  
   
 ## <a name="permissions"></a>Autorizzazioni  
   
--   Richiede **ALTER** autorizzazione per lo schema a cui appartiene la tabella.  
+-   Richiede l'autorizzazione **ALTER** per lo schema a cui appartiene la tabella.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Eliminazione di una tabella esterna rimuove tutti i metadati relativi alle tabelle. Non elimina i dati esterni.  
+ L'eliminazione di una tabella esterna elimina tutti i metadati associati alla tabella. Questa operazione non elimina i dati esterni.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-basic-syntax"></a>A. Utilizzando la sintassi di base  
+### <a name="a-using-basic-syntax"></a>A. Uso della sintassi di base  
   
 ```  
 DROP EXTERNAL TABLE SalesPerson;  
@@ -63,13 +63,13 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ```  
   
 ### <a name="b-dropping-an-external-table-from-the-current-database"></a>B. Eliminazione di una tabella esterna dal database corrente  
- L'esempio seguente rimuove il `ProductVendor1` tabella, i dati, indici e le visualizzazioni dipendenti dal database corrente.  
+ Nell'esempio seguente vengono eliminati dal database corrente la tabella `ProductVendor1`, e i relativi dati, indici e visualizzazioni dipendenti.  
   
 ```  
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
-### <a name="c-dropping-a-table-from-another-database"></a>C. Eliminazione di una tabella da un altro database  
+### <a name="c-dropping-a-table-from-another-database"></a>C. Eliminazione di una tabella da un database diverso da quello corrente  
  Nell'esempio seguente viene eliminata la tabella `SalesPerson` nel database `EasternDivision`.  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: L'istruzione DBCC CHECKCONSTRAINTS (Transact-SQL) | Documenti Microsoft
+title: DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
@@ -61,7 +61,7 @@ DBCC CHECKCONSTRAINTS
   
 ## <a name="arguments"></a>Argomenti  
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
- Tabella o vincolo da controllare. Quando *table_name* o *table_id* è specificato, vengono controllati tutti i vincoli abilitati in tale tabella. Quando *constraint_name* o *constraint_id* è specificato, solo tale vincolo viene controllato. Se non si specifica un identificatore di tabella o un identificatore di vincolo, vengono controllati tutti i vincoli abilitati in tutte le tabelle del database corrente.  
+ Tabella o vincolo da controllare. Se si specifica *table_name* o *table_id* vengono controllati tutti i vincoli abilitati nella tabella. Se si specifica *constraint_name* o *constraint_id* viene controllato solo il vincolo specificato. Se non si specifica un identificatore di tabella o un identificatore di vincolo, vengono controllati tutti i vincoli abilitati in tutte le tabelle del database corrente.  
  Un nome di vincolo identifica in modo univoco la tabella a cui appartiene. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
  con  
@@ -76,7 +76,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Disattiva tutti i messaggi informativi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 DBCC CHECKCONSTRAINTS consente di creare ed eseguire una query per ottenere tutti i vincoli FOREIGN KEY e CHECK di una tabella.
   
 Una query di chiave esterna, ad esempio, presenta il seguente formato:
@@ -93,21 +93,21 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 ```  
   
 I dati della query vengono archiviati in una tabella temporanea. Dopo che tutte le tabelle o tutti i vincoli richiesti sono stati controllati, viene restituito il set di risultati.
-L'istruzione DBCC CHECKCONSTRAINTS controlla l'integrità dei vincoli FOREIGN KEY e CHECK, ma non l'integrità delle strutture di dati su disco di una tabella. Questi controlli struttura di dati possono essere eseguiti tramite [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
+L'istruzione DBCC CHECKCONSTRAINTS controlla l'integrità dei vincoli FOREIGN KEY e CHECK, ma non l'integrità delle strutture di dati su disco di una tabella. Il controllo di queste strutture può essere eseguito tramite [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) e [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
-Se *table_name* o *table_id* specificato e viene abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue inoltre controlli di coerenza sui dati temporali per la tabella specificata. Quando *NO_INFOMSGS* non viene specificato, questo comando restituisce ogni violazione coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]...) = (\<pkcol1_value >, \<pkcol2_value >...) E \<qual è il record della tabella temporale >.
+Se si specifica *table_name* o *table_id* e la tabella è abilitata per il controllo delle versioni di sistema, DBCC CHECKCONSTRAINTS esegue anche le verifiche di coerenza dei dati temporali sulla tabella specificata. Se non è stato specificato *NO_INFOMSGS*, questo comando restituirà ogni violazione della coerenza nell'output in una riga separata. Il formato dell'output sarà ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>…) e \<le anomalie riscontrate nel record di tabella temporale>.
   
-|Controlla|Informazioni aggiuntive nell'output se il controllo non riuscito|  
+|Controlla|Informazioni aggiuntive nell'output in caso di verifica non riuscita|  
 |-----------|-----------------------------------------------|  
-|PeriodEndColumn ≥ PeriodStartColumn (corrente)|[sys_end] = '{0}' e MAX(DATETIME2) = "9999-12-31 23:59:59.99999'|  
-|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' e [sys_end] = '\\{1 \\}'|  
-|PeriodStartColumn < current_utc_time (corrente)|[sys_start] = '{0}' e SYSUTCTIME|  
-|PeriodEndColumn < current_utc_time (cronologia)|[sys_end] = '{0}' e SYSUTCTIME|  
-|Si sovrappone|(sys_start1, sys_end1), (sys_start2, sys_end2) per due record di sovrapposizione.<br /><br /> Se sono presenti più di 2 record sovrapposti, output includerà più righe di ogni coppia di sovrapposizioni di visualizzazione.|  
+|PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
+|PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
+|PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
+|PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
+|Sovrapposizioni|(sys_start1, sys_end1) , (sys_start2, sys_end2) per due record sovrapposti.<br /><br /> In presenza di più di due record sovrapposti, l'output conterrà più righe e ognuna riporterà una coppia di sovrapposizioni.|  
   
-Non è possibile specificare constraint_name o constraint_id per eseguire verifiche di coerenza temporale solo.
+Non è possibile specificare constraint_name o constraint_id per eseguire solo verifiche di coerenza temporali.
   
 ## <a name="result-sets"></a>Set di risultati  
 DBCC CHECKCONSTRAINTS restituisce un set di righe con le colonne seguenti.

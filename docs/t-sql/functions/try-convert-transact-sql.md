@@ -1,5 +1,5 @@
 ---
-title: TRY_CONVERT (Transact-SQL) | Documenti Microsoft
+title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -46,26 +46,26 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *data_type [(lunghezza)]*  
- Tipo di dati in cui eseguire il cast *espressione*.  
+ *data_type [ ( length ) ]*  
+ Tipo di dati in cui eseguire il cast di *expression*.  
   
  *expression*  
  Valore di cui eseguire il cast.  
   
- *stile*  
- Espressione integer che specifica il modo in **TRY_CONVERT** funzione consiste nel tradurre *espressione*.  
+ *style*  
+ Espressione Integer facoltativa che specifica il modo in cui la funzione **TRY_CONVERT** viene usata per convertire *expression*.  
   
- *stile* accetta gli stessi valori di *stile* parametro del **CONVERTIRE** (funzione). Per altre informazioni, vedere [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+ *style* accetta gli stessi valori del parametro *style* della funzione **CONVERT**. Per altre informazioni, vedere [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
- L'intervallo di valori accettabili è determinato dal valore di *data_type*. Se *stile* è null, **TRY_CONVERT** restituisce null.  
+ L'intervallo di valori accettabili è determinato dal valore di *data_type*. Se *style* è Null, **TRY_CONVERT** restituisce Null.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce un cast del valore nel tipo di dati specificato se il cast ha esito positivo. In caso contrario, restituisce Null.  
   
-## <a name="remarks"></a>Osservazioni  
- **TRY_CONVERT** accetta il valore passato e tenta di convertirlo in oggetto *data_type*. Se il cast ha esito positivo, **TRY_CONVERT** restituisce il valore specificato *data_type*; se si verifica un errore, viene restituito null. Tuttavia se si richiede una conversione in modo esplicito non valido, quindi **TRY_CONVERT** genera un errore.  
+## <a name="remarks"></a>Remarks  
+ **TRY_CONVERT** accetta il valore passato e prova a convertirlo nel tipo di dati *data_type* specificato. Se il cast ha esito positivo, **TRY_CONVERT** restituisce il valore come l'elemento *data_type* specificato. Se si verifica un errore, viene restituito Null. Se tuttavia si richiede una conversione non consentita in modo esplicito, **TRY_CONVERT** ha esito negativo e viene restituito un errore.  
   
- **TRY_CONVERT** è una parola chiave riservata nel livello di compatibilità 110 e versioni successive.  
+ **TRY_CONVERT** è una parola chiave riservata nel livello di compatibilità 110 o superiore.  
   
  Questa funzione può essere eseguita in modalità remota in server con versione [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e successive, ma non in server con versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   

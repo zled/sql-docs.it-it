@@ -1,5 +1,5 @@
 ---
-title: STDistance (tipo di dati geography) | Documenti Microsoft
+title: STDistance (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,10 +34,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="stdistance-geography-data-type"></a>STDistance (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce la distanza più breve tra un punto in un **geography** istanza e un punto in un altro **geography** istanza.  
+  Restituisce la distanza più breve tra un punto in un'istanza **geography** e un punto in un'altra istanza **geography**.  
   
 > [!NOTE]  
->  `STDistance()`Restituisce il più breve **LineString** tra due tipi di geografia. È un'approssimazione della distanza geodetica. La deviazione di `STDistance()` in modelli di terra comuni dalla distanza Geodetica esatta non deve superare. 25%. In tal modo si evitano confusioni sulle differenze minime tra lunghezza e distanza nei tipi geodetici.  
+>  `STDistance()` restituisce la **LineString** più breve tra due tipi di geografia. È un'approssimazione della distanza geodetica. La deviazione di `STDistance()` dalla distanza geodetica esatta sui modelli di terra comuni non è superiore allo 0,25%. In tal modo si evitano confusioni sulle differenze minime tra lunghezza e distanza nei tipi geodetici.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,21 +48,21 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da cui misurare la distanza tra l'istanza in cui viene richiamato stdistance (). Se *other_geography* stdistance () è vuota, restituisce null.  
+ Altra istanza **geography** da cui misurare la distanza rispetto all'istanza sulla quale viene chiamato STDistance(). Se *other_geography* è un set vuoto, STDistance() restituisce un valore Null.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **float**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **float**  
   
  Tipo CLR restituito: **SqlDouble**  
   
-## <a name="remarks"></a>Osservazioni  
- Stdistance () restituisce sempre null se gli ID di riferimento spaziale (SRID) del **geography** istanze non corrispondono.  
+## <a name="remarks"></a>Remarks  
+ STDistance() restituisce sempre Null se gli identificatori SRID delle istanze **geography** non corrispondono.  
   
 > [!NOTE]  
->  Metodi di **geography** tipo di dati che calcolano un'area o una distanza restituiranno risultati diversi in base all'identificatore SRID dell'istanza utilizzato nel metodo.   Per ulteriori informazioni sugli identificatori SRID, vedere [gli identificatori di riferimento spaziale &#40; Identificatori SRID &#41; ](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).  
+>  I metodi nel tipo di dati **geography** che calcolano un'area o una distanza restituiscono risultati diversi a seconda dell'identificatore SRID dell'istanza usato nel metodo.   Per altre informazioni sugli identificatori SRID, vedere [Spatial Reference Identifiers &#40;SRIDs&#41;](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) (Identificatori SRID).  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene individuata la distanza tra due **geography** istanze.  
+ Nell'esempio seguente viene trovata la distanza tra due istanze **geography**.  
   
 ```  
 DECLARE @g geography;  

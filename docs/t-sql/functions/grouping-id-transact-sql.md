@@ -1,5 +1,5 @@
 ---
-title: GROUPING_ID (Transact-SQL) | Documenti Microsoft
+title: GROUPING_ID (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  È una funzione che calcola il livello di raggruppamento. GROUPING_ID può essere utilizzato solo in SELECT \<selezionare > elencare, HAVING, o ORDER BY clausole quando GROUP BY è specificato.  
+  È una funzione che calcola il livello di raggruppamento. È possibile usare GROUPING_ID solo in un elenco di \<selezione> SELECT o nelle clausole HAVING o ORDER BY quando è specificato GROUP BY.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,17 +47,17 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- \<column_expression >  
- È un *column_expression* in un [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clausola.  
+ \<column_expression>  
+ *column_expression* in una clausola [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md).  
   
 ## <a name="return-type"></a>Tipo restituito  
  **int**  
   
-## <a name="remarks"></a>Osservazioni  
- GROUPING_ID \<column_expression > deve corrispondere esattamente all'espressione nell'elenco GROUP BY. Ad esempio, se si esegue il raggruppamento per DATEPART (yyyy, \< *nome di colonna*>), utilizzare GROUPING_ID (DATEPART (yyyy, \< *nome di colonna*>)); o se si esegue il raggruppamento \< *nome di colonna*>, utilizzare GROUPING_ID (\<*nome di colonna*>).  
+## <a name="remarks"></a>Remarks  
+ GROUPING_ID \<column_expression> deve corrispondere esattamente all'espressione presente nell'elenco GROUP BY. Se ad esempio si effettua il raggruppamento per DATEPART (yyyy, \<*nome colonna*>), usare GROUPING_ID (DATEPART (yyyy, \<*nome colonna*>)). Se si effettua il raggruppamento per \<*nome colonna*>, usare GROUPING_ID (\<*nome colonna*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Confronto tra GROUPING_ID () e GROUPING ()  
- GROUPING_ID (\<column_expression > [ **,**...  *n*  ]) immette l'equivalente del valore GROUPING (\<column_expression >) restituito per ogni colonna nell'elenco di colonne in ogni riga di output come stringa di uno e zero. GROUPING_ID interpreta tale stringa come numero in base 2 e restituisce il valore intero equivalente. Ad esempio, si consideri l'istruzione seguente: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Nella tabella seguente vengono mostrati i valori di input e output di GROUPING_ID ().  
+ GROUPING_ID (\<column_expression> [ **,**...*n* ]) immette l'equivalente del valore GROUPING (\<column_expression>) restituito per ogni colonna nell'elenco di colonne in ogni riga di output come stringa di valori uno e zero. GROUPING_ID interpreta tale stringa come numero in base 2 e restituisce il valore intero equivalente. Si consideri ad esempio l'istruzione seguente: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. Nella tabella seguente vengono mostrati i valori di input e output di GROUPING_ID ().  
   
 |Colonne aggregate|Input di GROUPING_ID (a, b, c) = GROUPING (a) + GROUPING (b) + GROUPING (c)|Output di GROUPING_ID ()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -70,14 +70,14 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-groupingid-"></a>Definizione tecnica di GROUPING_ID ()  
- Ogni argomento GROUPING_ID deve essere un elemento dell'elenco GROUP BY. GROUPING_ID () restituisce un **intero** bitmap i cui N bit più bassi possono essere accesi. Un elenco **bit** indica l'argomento corrispondente non è una colonna di raggruppamento per la riga di output specificata. L'ordine più basso **bit** corrisponde all'argomento N e la n-1<sup>th</sup> ordine più basso **bit** corrisponde all'argomento 1.  
+ Ogni argomento GROUPING_ID deve essere un elemento dell'elenco GROUP BY. GROUPING_ID () restituisce una mappa di bit **integer** i cui N bit più bassi possono essere attivati. Un **bit** attivato indica che l'argomento corrispondente non è una colonna di raggruppamento per la riga di output specificata. Il **bit** dell'ordine più basso corrisponde all'argomento N<sup></sup> e il **bit** dell'ordine più basso alla posizione N-1 corrisponde all'argomento 1.  
   
 ## <a name="groupingid--equivalents"></a>Equivalenti GROUPING_ID ()  
- Per una singola query di raggruppamento, il raggruppamento (\<column_expression >) è equivalente a GROUPING_ID (\<column_expression >), ed entrambi restituiscono 0.  
+ Per una singola query di raggruppamento, GROUPING (\<column_expression>) è equivalente a GROUPING_ID (\<column_expression>) ed entrambi restituiscono 0.  
   
  Ad esempio, le istruzioni seguenti sono equivalenti:  
   
- Istruzione r:  
+ Istruzione A:  
   
 ```  
 SELECT GROUPING_ID(A,B)  
@@ -85,7 +85,7 @@ FROM T
 GROUP BY CUBE(A,B)   
 ```  
   
- Istruzione b:  
+ Istruzione B:  
   
 ```  
 SELECT 3 FROM T GROUP BY ()  
@@ -145,7 +145,7 @@ GROUP BY ROLLUP(D.Name, E.JobTitle)
   
  Di seguito è riportato il set di risultati non filtrato.  
   
-|Nome|Title|Livello di raggruppamento|Conteggio dipendenti|Nome|  
+|nome|Title|Livello di raggruppamento|Conteggio dipendenti|nome|  
 |----------|-----------|--------------------|--------------------|----------|  
 |Controllo documenti|Specialista controllo|0|2|Controllo documenti|  
 |Controllo documenti|Assistente controllo documenti|0|2|Controllo documenti|  
@@ -245,7 +245,7 @@ ORDER BY
 ### <a name="c-using-groupingid--with-rollup-and-cube-to-identify-grouping-levels"></a>C. Utilizzo di GROUPING_ID () con ROLLUP e CUBE per identificare i livelli di raggruppamento  
  Il codice negli esempi seguenti mostra l'utilizzo di `GROUPING()` per calcolare la colonna `Bit Vector(base-2)`. `GROUPING_ID()` viene utilizzato per calcolare la colonna `Integer Equivalent` corrispondente. L'ordine delle colonne nella funzione `GROUPING_ID()` è il contrario dell'ordine delle colonne delle colonne concatenate dalla funzione `GROUPING()`.  
   
- In questi esempi, `GROUPING_ID()` viene utilizzato per creare un valore per ogni riga nella colonna `Grouping Level` per identificare il livello di raggruppamento. Livelli di raggruppamento non sono sempre un elenco consecutivo di valori interi che iniziano con 1 (0, 1, 2,... *n*).  
+ In questi esempi, `GROUPING_ID()` viene utilizzato per creare un valore per ogni riga nella colonna `Grouping Level` per identificare il livello di raggruppamento. I livelli di raggruppamento non sono sempre un elenco consecutivo di valori interi che iniziano per 1 (0, 1, 2...*n*).  
   
 > [!NOTE]  
 >  GROUPING e GROUPING_ID possono essere utilizzati in una clausola HAVING per filtrare un set di risultati.  
@@ -423,7 +423,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|NULL|NULL|9364513.6416|111|7|Grand Total|  
   
 ## <a name="see-also"></a>Vedere anche  
- [RAGGRUPPAMENTO &#40; Transact-SQL &#41;](../../t-sql/functions/grouping-transact-sql.md)   
- [Clausola GROUP BY &#40; Transact-SQL &#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
+ [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
+ [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   
   

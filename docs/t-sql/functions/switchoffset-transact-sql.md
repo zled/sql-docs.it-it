@@ -1,5 +1,5 @@
 ---
-title: SWITCHOFFSET (Transact-SQL) | Documenti Microsoft
+title: SWITCHOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
@@ -40,9 +40,9 @@ ms.lasthandoff: 11/21/2017
 # <a name="switchoffset-transact-sql"></a>SWITCHOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce un **datetimeoffset** valore che viene modificato dalla differenza di fuso orario archiviata in una differenza di fuso orario nuova specificata.  
+  Restituisce un valore **datetimeoffset** che è stato convertito dalla differenza di fuso orario archiviata a una nuova differenza di fuso orario specificata.  
   
- Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ Per una panoramica di tutti i tipi di dati e funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,20 +54,20 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
 ## <a name="arguments"></a>Argomenti  
  *DATETIMEOFFSET*  
- È un'espressione che può essere risolta in un **DateTimeOffset (n)** valore.  
+ Espressione che può essere risolta in un valore di tipo **datetimeoffset(n)**.  
   
- *fuso orario*  
+ *time_zone*  
  Stringa di caratteri nel formato [+|-]TZH:TZM o intero con segno (relativo ai minuti) che rappresenta la differenza di fuso orario. Deve essere sensibile all'ora legale e adattato ad essa.  
   
 ## <a name="return-type"></a>Tipo restituito  
- **DateTimeOffset** con la precisione frazionaria di *DATETIMEOFFSET* argomento.  
+ **datetimeoffset** con la precisione frazionaria dell'argomento *DATETIMEOFFSET*.  
   
-## <a name="remarks"></a>Osservazioni  
- Utilizzare SWITCHOFFSET per selezionare un **datetimeoffset** valore in un fuso orario è diverso dalla differenza di fuso orario memorizzato in origine. SWITCHOFFSET non aggiorna archiviato *fuso orario* valore.  
+## <a name="remarks"></a>Remarks  
+ Usare SWITCHOFFSET per selezionare un valore **datetimeoffset** in una differenza fuso orario diversa dalla differenza fuso orario che è stata archiviata originalmente. SWITCHOFFSET non aggiorna il valore *time_zone* archiviato.  
   
- SWITCHOFFSET può essere utilizzato per aggiornare un **datetimeoffset** colonna.  
+ È possibile usare SWITCHOFFSET per aggiornare una colonna **datetimeoffset**.  
   
- L'utilizzo di SWITCHOFFSET con la funzione GETDATE() può determinare un'esecuzione lenta della query. Questo perché Query Optimizer non è in grado di ottenere stime relative alla cardinalità precise per il valore di data e ora. Per risolvere il problema, utilizzare l'hint per la query OPTION (RECOMPILE) per forzare la ricompilazione del piano di query da parte di Query Optimizer la volta successiva che viene eseguita la stessa query. A quel punto Query Optimizer disporrà di stime precise sulla cardinalità e offrirà un piano di query più efficace. Per ulteriori informazioni sull'hint per la query RECOMPILE, vedere [hint per la Query &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-query.md).  
+ L'utilizzo di SWITCHOFFSET con la funzione GETDATE() può determinare un'esecuzione lenta della query. Questo perché Query Optimizer non è in grado di ottenere stime relative alla cardinalità precise per il valore di data e ora. Per risolvere il problema, utilizzare l'hint per la query OPTION (RECOMPILE) per forzare la ricompilazione del piano di query da parte di Query Optimizer la volta successiva che viene eseguita la stessa query. A quel punto Query Optimizer disporrà di stime precise sulla cardinalità e offrirà un piano di query più efficace. Per altre informazioni sull'hint per la query RECOMPILE, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
@@ -98,8 +98,8 @@ FROM dbo.test;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [FUSO orario &AMP;#40; Transact-SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)  
   
   
 

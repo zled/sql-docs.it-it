@@ -1,5 +1,5 @@
 ---
-title: CREARE il contratto (Transact-SQL) | Documenti Microsoft
+title: CREATE CONTRACT (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -56,25 +56,25 @@ CREATE CONTRACT contract_name
   
 ## <a name="arguments"></a>Argomenti  
  *contract_name*  
- Nome del contratto da creare. Il nuovo contratto viene creato nel database corrente e diventa di proprietà dell'identità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. Il *contract_name* può contenere fino a 128 caratteri.  
+ Nome del contratto da creare. Il nuovo contratto viene creato nel database corrente e diventa di proprietà dell'identità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. *contract_name* può contenere fino a 128 caratteri.  
   
 > [!NOTE]  
->  Non creare un contratto che utilizza la parola chiave ANY per il *contract_name*. Quando si specifica ANY per un nome del contratto in CREATE BROKER PRIORITY, la priorità viene considerata per tutti i contratti e non è limitata a un contratto il cui nome è ANY.  
+>  Non creare un contratto che usa la parola chiave ANY per *contract_name*. Quando si specifica ANY per un nome del contratto in CREATE BROKER PRIORITY, la priorità viene considerata per tutti i contratti e non è limitata a un contratto il cui nome è ANY.  
   
- AUTORIZZAZIONE *owner_name*  
- Imposta come proprietario del contratto l'utente o il ruolo del database specificato. Quando l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve essere il nome dell'utente corrente, il nome di un utente che l'utente corrente dispone delle autorizzazioni di rappresentazione o il nome di un ruolo a cui appartiene l'utente corrente. Se la clausola viene omessa, il contratto appartiene all'utente corrente.  
+ AUTHORIZATION *owner_name*  
+ Imposta come proprietario del contratto l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve corrispondere al nome dell'utente corrente, al nome di un utente per il quale l'utente corrente dispone di autorizzazione IMPERSONATE oppure al nome di un ruolo a cui appartiene l'utente corrente. Se la clausola viene omessa, il contratto appartiene all'utente corrente.  
   
  *message_type_name*  
  Nome del tipo di messaggio da includere nel contratto.  
   
  SENT BY  
- Specifica l'endpoint che può inviare un messaggio del tipo indicato. I contratti documentano i messaggi che i servizi possono utilizzare per eseguire conversazioni specifiche. Ogni conversazione presenta due endpoint: il *iniziatore* endpoint, il servizio che ha avviato la conversazione, e *destinazione* endpoint, il servizio che sta contattando l'iniziatore.  
+ Specifica l'endpoint che può inviare un messaggio del tipo indicato. I contratti documentano i messaggi che i servizi possono utilizzare per eseguire conversazioni specifiche. Ogni conversazione è caratterizzata da due endpoint, l'endpoint *initiator* (servizio che ha avviato la conversazione) e l'endpoint *target* (servizio che l'endpoint initiator sta contattando).  
   
  INITIATOR  
- Indica che solo l'endpoint initiator della conversazione può inviare messaggi del tipo specificato. Un servizio che avvia una conversazione è definito come il *iniziatore* della conversazione.  
+ Indica che solo l'endpoint initiator della conversazione può inviare messaggi del tipo specificato. Un servizio che avvia una conversazione viene definito *initiator* (iniziatore) della conversazione.  
   
  TARGET  
- Indica che solo l'endpoint target della conversazione può inviare messaggi del tipo specificato. Un servizio che accetta una conversazione avviata da un altro servizio è definito come il *destinazione* della conversazione.  
+ Indica che solo l'endpoint target della conversazione può inviare messaggi del tipo specificato. Un servizio che accetta una conversazione avviata da un altro servizio viene definito *target* (destinazione) della conversazione.  
   
  ANY  
  Indica che i messaggi del tipo specificato possono essere inviati sia dal servizio initiator che dal servizio target.  
@@ -82,21 +82,21 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Indica che il contratto supporta messaggi del tipo predefinito. Per impostazione predefinita, tutti i database contengono un tipo di messaggio denominato DEFAULT. Questo tipo di messaggio utilizza la convalida di tipo NONE. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. In Microsoft SQL Server è inoltre disponibile un contratto DEFAULT che specifica il tipo di messaggio DEFAULT.  
   
-## <a name="remarks"></a>Osservazioni  
- L'ordine dei tipi di messaggio nel contratto non è significativo. Dopo che il servizio di destinazione ha ricevuto il primo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] consente ai lati della conversazione di inviare qualsiasi messaggio consentito al lato specifico della conversazione in qualsiasi momento. Ad esempio, se l'iniziatore della conversazione può inviare messaggi di tipo **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] consente al servizio initiator di inviare un numero qualsiasi di **SubmitExpense**messaggi durante la conversazione.  
+## <a name="remarks"></a>Remarks  
+ L'ordine dei tipi di messaggio nel contratto non è significativo. Dopo che il servizio di destinazione ha ricevuto il primo messaggio, [!INCLUDE[ssSB](../../includes/sssb-md.md)] consente ai lati della conversazione di inviare qualsiasi messaggio consentito al lato specifico della conversazione in qualsiasi momento. Se ad esempio il servizio initiator della conversazione può inviare messaggi di tipo **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] consente a tale servizio di inviare un numero qualsiasi di messaggi **SubmitExpense** durante la conversazione.  
   
  In un contratto non è possibile modificare i tipi di messaggio e la direzione dei messaggi. Per modificare il parametro AUTHORIZATION per un contratto, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
  Un contratto deve consentire al servizio initiator di inviare un messaggio. L'istruzione CREATE CONTRACT ha esito negativo se il contratto non include almeno un tipo di messaggio SENT BY ANY o SENT BY INITIATOR.  
   
- Indipendentemente dal contratto, un servizio può sempre ricevere i tipi di messaggio `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error`, e `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza questi tipi di messaggio per i messaggi di sistema all'applicazione.  
+ Indipendentemente dal contratto, un servizio può sempre ricevere i tipi di messaggio `http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `http://schemas.microsoft.com/SQL/ServiceBroker/Error` e `http://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilizza questi tipi di messaggio per i messaggi di sistema all'applicazione.  
   
  Un contratto non può essere un oggetto temporaneo. Sono consentiti i nomi di contratto che iniziano con #, ma in questo caso si tratta di oggetti permanenti.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per impostazione predefinita, i membri del **db_ddladmin** o **db_owner** ruoli predefiniti del database e **sysadmin** ruolo predefinito del server possono creare contratti.  
+ Per impostazione predefinita i membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e del ruolo predefinito del server **sysadmin** possono creare contratti.  
   
- Per impostazione predefinita, il proprietario del contratto, i membri del **db_ddladmin** o **db_owner** fissa ruoli del database e i membri del **sysadmin** ruolo predefinito del server con riferimenti l'autorizzazione per un contratto.  
+ Per impostazione predefinita il proprietario del contratto, i membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e i membri del ruolo predefinito del server **sysadmin** dispongono dell'autorizzazione REFERENCES per un contratto.  
   
  L'utente che esegue l'istruzione CREATE CONTRACT deve disporre dell'autorizzazione REFERENCES per tutti i tipi di messaggio specificati.  
   

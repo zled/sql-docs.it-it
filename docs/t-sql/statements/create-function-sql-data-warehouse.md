@@ -1,5 +1,5 @@
 ---
-title: CREARE una funzione (SQL Data Warehouse) | Documenti Microsoft
+title: CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -26,10 +26,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="create-function-sql-data-warehouse"></a>CREARE una funzione (SQL Data Warehouse)
+# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Consente di creare una funzione definita dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Una funzione definita dall'utente è un [!INCLUDE[tsql](../../includes/tsql-md.md)] routine che accetta parametri, esegue un'azione, ad esempio un calcolo complesso e restituisce il risultato dell'azione come valore. Il valore restituito deve essere un valore scalare (singolo). Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:  
+  Consente di creare una funzione definita dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Una funzione definita dall'utente è una routine [!INCLUDE[tsql](../../includes/tsql-md.md)] che accetta parametri, esegue un'azione, ad esempio un calcolo complesso, e restituisce il risultato di tale azione sotto forma di valore. Il valore restituito deve essere un valore scalare (singolo). Utilizzare questa istruzione per creare una routine riutilizzabile che può essere utilizzata in queste modalità:  
   
 -   Nelle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio SELECT.  
   
@@ -75,7 +75,7 @@ RETURNS return_data_type
  Nome dello schema a cui appartiene la funzione definita dall'utente.  
   
  *function_name*  
- Nome della funzione definita dall'utente. Nomi di funzione devono essere conformi alle regole per gli identificatori e devono essere univoci all'interno del database e al relativo schema.  
+ Nome della funzione definita dall'utente. I nomi di funzione devono essere conformi alle regole per gli identificatori ed essere univoci all'interno del database e rispetto al relativo schema.  
   
 > [!NOTE]  
 >  È necessario apporre le parentesi dopo il nome della funzione anche se non viene specificato alcun parametro.  
@@ -88,23 +88,23 @@ RETURNS return_data_type
  Specificare un nome di parametro utilizzando come primo carattere il simbolo di chiocciola (@). I nomi di parametro devono essere conformi alle regole per gli identificatori. I parametri sono locali rispetto alla funzione. È pertanto possibile utilizzare gli stessi nomi di parametro in altre funzioni. I parametri possono rappresentare solo costanti, non nomi di tabella, di colonna o di altri oggetti di database.  
   
 > [!NOTE]  
->  ANSI_WARNINGS non viene applicata quando vengono passati parametri a una stored procedure, una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Ad esempio, se una variabile viene definita come **char (3)**e quindi impostato su un valore maggiore di tre caratteri, i dati vengono troncati alla dimensione definita e l'inserimento o aggiornamento istruzione ha esito positivo.  
+>  ANSI_WARNINGS non viene applicata quando vengono passati parametri a una stored procedure, una funzione definita dall'utente oppure in caso di dichiarazione e impostazione delle variabili in un'istruzione batch. Se, ad esempio, la variabile viene definita come **char(3)** e quindi impostata su un valore maggiore di tre caratteri, i dati verranno troncati alla dimensione definita e l'istruzione INSERT o UPDATE avrà esito positivo.  
   
  *parameter_data_type*  
- È il tipo di dati del parametro. Per [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni, tutti i tipi di dati scalari supportati [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sono consentiti. Il tipo di dati timestamp (rowversion) non è un tipo supportato.  
+ Tipo di dati del parametro. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], sono consentiti tutti i tipi di dati scalari supportati in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il tipo di dati timestamp (rowversion) non è supportato.  
   
- [=*predefinito* ]  
- Valore predefinito del parametro. Se un *predefinito* valore è definito, la funzione può essere eseguita senza specificare un valore per tale parametro.  
+ [ =*default* ]  
+ Valore predefinito del parametro. Se un valore viene impostato su *default*, è possibile eseguire la funzione senza specificare un valore per il parametro.  
   
  Se a un parametro della funzione è associato un valore predefinito, alla chiamata della funzione è necessario specificare la parola chiave DEFAULT per recuperare il valore predefinito. Questo comportamento risulta diverso dall'utilizzo di parametri con valore predefinito nelle stored procedure in cui l'omissione del parametro implica l'utilizzo del valore predefinito.  
   
  *return_data_type*  
- Valore restituito di una funzione scalare definita dall'utente. Per [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni, tutti i tipi di dati scalari supportati [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sono consentiti. Il tipo di dati timestamp (rowversion) non è un tipo supportato. I tipi non scalari cursore e la tabella non sono consentiti.  
+ Valore restituito di una funzione scalare definita dall'utente. Per le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], sono consentiti tutti i tipi di dati scalari supportati in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Il tipo di dati timestamp (rowversion) non è supportato. I tipi non scalari cursore e tabella non sono consentiti.  
   
  *function_body*  
- Serie di [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni.  Il function_body non può contenere un'istruzione SELECT e non può fare riferimento a dati del database.  Il function_body non può fare riferimento a tabelle o viste. Il corpo della funzione può chiamare altre funzioni deterministiche, ma non è possibile chiamare funzioni non deterministiche. 
+ Serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  L'argomento function_body non può contenere un'istruzione SELECT e non può fare riferimento a dati del database.  L'argomento function_body non può fare riferimento a tabelle o viste. Il corpo della funzione può chiamare altre funzioni deterministiche, ma non è possibile chiamare funzioni non deterministiche. 
   
- Nelle funzioni scalari, *function_body* è una serie di [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni che in combinazione restituiscono un valore scalare.  
+ Nelle funzioni scalari, *function_body* corrisponde a una serie di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che in combinazione restituiscono un valore scalare.  
   
  *scalar_expression*  
  Specifica il valore scalare restituito dalla funzione scalare.  
@@ -124,18 +124,18 @@ RETURNS return_data_type
   
  Una funzione può essere associata a uno schema solo se vengono soddisfatte le condizioni seguenti:  
   
--   Funzioni definite dall'utente a cui fa riferimento la funzione sono anche associati a schema.  
+-   Le funzioni definite dall'utente a cui la funzione fa riferimento sono anch'esse associate a uno schema.  
   
--   Le funzioni e altre funzioni definite dall'utente a cui fa riferimento la funzione viene fatto riferimento utilizzando un nome di uno o due parti.  
+-   Alle funzioni e alle altre funzioni definite dall'utente a cui fa riferimento la funzione viene fatto riferimento tramite un nome composto da una o due parti.  
   
--   Le funzioni predefinite e altre funzioni definite dall'utente nello stesso database possono fare riferimento solo all'interno del corpo di funzioni definite dall'utente.  
+-   Alle funzioni predefinite e alle altre funzioni definite dall'utente nello stesso database è possibile fare riferimento solo all'interno del corpo di funzioni definite dall'utente.  
   
 -   L'utente che ha eseguito l'istruzione CREATE FUNCTION dispone dell'autorizzazione REFERENCES per gli oggetti di database a cui la funzione fa riferimento.  
   
- Per rimuovere SCHEMABINDING utilizzare ALTER  
+ Per rimuovere SCHEMABINDING usare ALTER  
   
- RESTITUISCE NULL NELL'INPUT NULL | **CHIAMATO SU UN INPUT NULL**  
- Specifica il **OnNULLCall** attributo di una funzione a valori scalari. Se omesso, viene utilizzata l'opzione CALLED ON NULL INPUT per impostazione predefinita. Ciò significa che viene eseguito il corpo della funzione anche se come argomento viene passato NULL.  
+ RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
+ Specifica l'attributo **OnNULLCall** di una funzione a valori scalari. Se omesso, viene utilizzata l'opzione CALLED ON NULL INPUT per impostazione predefinita. Ciò significa che viene eseguito il corpo della funzione anche se come argomento viene passato NULL.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Se una funzione definita dall'utente non viene creata tramite la clausola SCHEMABINDING, le modifiche apportate agli oggetti sottostanti possono influire sulla definizione della funzione e produrre risultati imprevisti quando viene richiamata. È consigliabile implementare uno dei metodi seguenti per assicurarsi che la funzione non diventi obsoleta in seguito a modifiche degli oggetti sottostanti:  
@@ -157,9 +157,9 @@ RETURNS return_data_type
  È possibile nidificare le funzioni definite dall'utente, ovvero una funzione definita dall'utente ne può richiamare un'altra. Il livello di nidificazione aumenta all'avvio della funzione richiamata e diminuisce al termine dell'esecuzione della funzione. Le funzioni definite dall'utente possono essere nidificate fino a un massimo di 32 livelli. Se viene superato il livello massimo di nidificazioni, l'intera sequenza di funzioni chiamanti ha esito negativo.   
   
 ## <a name="metadata"></a>Metadati  
- Questa sezione elenca le viste del catalogo di sistema che è possibile utilizzare per restituire i metadati relativi a funzioni definite dall'utente.  
+ Nella sezione seguente vengono elencate le viste del catalogo di sistema usate per restituire i metadati sulle funzioni definite dall'utente.  
   
- [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : Visualizza la definizione di [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni definite dall'utente. Esempio:  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): visualizza la definizione delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] definite dall'utente. Ad esempio  
   
 ```  
 SELECT definition, type   
@@ -171,17 +171,17 @@ GO
   
 ```  
   
- [Sys. Parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : Visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): visualizza le informazioni sui parametri definiti nelle funzioni definite dall'utente.  
   
- [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : Visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
+ [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md): visualizza gli oggetti sottostanti a cui fa riferimento una funzione.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE FUNCTION nel database e dell'autorizzazione ALTER per lo schema in cui la funzione è in fase di creazione.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Utilizzo di una funzione scalare definita dall'utente per modificare un tipo di dati  
- Questa semplice funzione accetta un **int** del tipo di dati come input e restituisce un **10,2** il tipo di dati come output.  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. Uso di una funzione definita dall'utente a valori scalari per modificare un tipo di dati  
+ Questa semplice funzione accetta un tipo di dati **int** come input e restituisce un tipo di dati **decimal(10,2)** come output.  
   
 ```  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
@@ -199,7 +199,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/25ff3798-eb54-4516-9973-d8f707a13f6c)   
- [ELIMINARE la funzione (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
+ [DROP FUNCTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/1792a90d-0d06-4852-9dec-6de1b9cd229e)  
   
   
 

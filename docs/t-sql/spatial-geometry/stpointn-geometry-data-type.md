@@ -1,5 +1,5 @@
 ---
-title: STPointN (tipo di dati geometry) | Documenti Microsoft
+title: STPointN (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce un punto specificato in un **geometry** istanza.
+Restituisce un punto specificato in un'istanza **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,22 +44,22 @@ Restituisce un punto specificato in un **geometry** istanza.
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di punti di **geometry** istanza.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di punti nell'istanza **geometry**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- Se un **geometry** istanza è creata dall'utente, `STPointN()` restituisce il punto specificato da *espressione* ordinando i punti nell'ordine in cui sono stati originalmente immessi.  
+## <a name="remarks"></a>Remarks  
+ Se un'istanza **geometry** è creata dall'utente, `STPointN()` restituisce il punto specificato da *expression* ordinando i punti con l'ordine di immissione originale.  
   
- Se un **geometry** istanza è stata costruita dal sistema, `STPointN()` restituisce il punto specificato da *espressione* ordinando tutti i punti nello stesso ordine sarebbero output: prima in base alla geometria, quindi in base all'anello all'interno della geometria (se appropriato), quindi dal punto all'interno dell'anello. Questo ordine è deterministico.  
+ Se un'istanza **geometry** è stata costruita dal sistema, `STPointN()` restituisce il punto specificato da *expression* ordinando tutti i punti nello stesso ordine di restituzione, ovvero prima in base alla geometria, quindi in base all'anello all'interno della geometria (se appropriato), infine in base ai punti all'interno dell'anello. Questo ordine è deterministico.  
   
- Se questo metodo viene chiamato con un valore minore di 1, viene generata una **ArgumentOutOfRangeException**.  
+ Se questo metodo viene chiamato con un valore minore di 1, genera un'eccezione **ArgumentOutOfRangeException**.  
   
  Se questo metodo viene chiamato con un valore maggiore del numero di punti nell'istanza, restituisce Null.  
   

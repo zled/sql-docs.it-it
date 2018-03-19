@@ -1,5 +1,5 @@
 ---
-title: RIPRISTINARE il DATABASE (Parallel Data Warehouse) | Documenti Microsoft
+title: RESTORE DATABASE (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -24,17 +24,17 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-database-parallel-data-warehouse"></a>RIPRISTINO di DATABASE (Parallel Data Warehouse)
+# <a name="restore-database-parallel-data-warehouse"></a>RESTORE DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Ripristina un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database utente da un backup di database per un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] accessorio. Il database viene ripristinato da un backup creato in precedenza per il [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [BACKUP DATABASE &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) comando. Utilizzare il backup e ripristinare le operazioni per creare un piano di ripristino di emergenza o spostare i database da un dispositivo a un'altra.  
+  Ripristina un database utente [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] da un backup di database a un'appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Il database viene ripristinato da un backup creato in precedenza dal comando [BACKUP DATABASE &#40;Parallel Data Warehouse&#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Usare le operazioni di backup e ripristino per creare un piano di ripristino di emergenza o per spostare i database da un'appliance a un'altra.  
   
 > [!NOTE]  
->  Ripristino master include informazioni di accesso dello strumento di ripristino. Per ripristinare il master, utilizzare il [ripristinare il Database master &#40; Transact-SQL &#41; ](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) nella pagina di **Configuration Manager** strumento. Un amministratore con accesso al nodo di controllo è possibile eseguire questa operazione.  
+>  Il ripristino del database master include il ripristino delle informazioni di accesso all'appliance. Per ripristinare il database master, usare la pagina [Ripristinare il database master &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md) nello strumento **Configuration Manager**. Questa operazione può essere eseguita da un amministratore con accesso al nodo di controllo.  
   
- Per ulteriori informazioni su [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] backup dei database, vedere "Backup e ripristino" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Per altre informazioni sui backup di database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere la sezione relativa a backup e ripristino nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,107 +62,107 @@ RESTORE HEADERONLY
   
 ## <a name="arguments"></a>Argomenti  
  RESTORE DATABASE *database_name*  
- Specifica per ripristinare un database utente a un database denominato *database_name*. Il database ripristinato può avere un nome diverso da quello del database di origine che è stato eseguito il backup. *database_name* non può già esistere come database sul dispositivo di destinazione. Per ulteriori informazioni su consentiti i nomi di database, vedere "Regole di denominazione degli oggetti" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Specifica il ripristino di un database utente in un database denominato *database_name*. Il database ripristinato può avere un nome diverso da quello del database di origine di cui è stato eseguito il backup. *database_name* non può essere un database già esistente nell'appliance di destinazione. Per altri dettagli sui nomi consentiti per i database, vedere la sezione relativa alle regole di denominazione degli oggetti nella [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Ripristino di un database utente viene ripristinato un backup completo del database e, facoltativamente, ripristina un backup differenziale al dispositivo. Un ripristino di un database utente include il ripristino gli utenti del database e i ruoli del database.  
+ Il ripristino di un database utente implica il ripristino di un backup completo del database e, facoltativamente, di un backup differenziale nell'appliance. Il ripristino di un database utente include il ripristino degli utenti e dei ruoli del database.  
   
  FROM DISK = '\\\\*UNC_path*\\*backup_directory*'  
- Il percorso di rete e la directory da cui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verranno ripristinati i file di backup. Ad esempio, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
+ Il percorso di rete e la directory da cui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] ripristina i file di backup. Ad esempio, FROM DISK = '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
   
  *backup_directory*  
- Specifica il nome di una directory che contiene il backup completo o differenziale. Ad esempio, è possibile eseguire un'operazione RESTORE HEADERONLY in un backup completo o differenziale.  
+ Specifica il nome della directory che contiene il backup completo o differenziale. È ad esempio possibile eseguire un'operazione RESTORE HEADERONLY per un backup completo o differenziale.  
   
  *full_backup_directory*  
- Specifica il nome di una directory che contiene il backup completo.  
+ Specifica il nome della directory che contiene il backup completo.  
   
  *differential_backup_directory*  
  Specifica il nome della directory che contiene il backup differenziale.  
   
--   La directory di backup e di percorso deve esistere e deve essere specificata come un nome completo percorso UNC universal naming convention (UNC).  
+-   Il percorso e la directory di backup devono essere già esistenti e devono essere specificati sotto forma di percorso UNC completo.  
   
--   Il percorso della directory di backup non può essere un percorso locale e non può essere un percorso in uno qualsiasi del [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nodi dello strumento.  
+-   Il percorso della directory di backup non può essere un percorso locale e non può essere il percorso di uno dei nodi di appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
--   La lunghezza massima del percorso UNC e il nome di directory di backup è 200 caratteri.  
+-   La lunghezza massima del percorso UNC e del nome della directory di backup è di 200 caratteri.  
   
--   Ai server host deve essere specificato come un indirizzo IP.  
+-   Il server o l'host deve essere specificato come indirizzo IP.  
   
  RESTORE HEADERONLY  
- Specifica per restituire solo le informazioni di intestazione per il backup di database di un utente. Tra gli altri campi, l'intestazione include la descrizione del backup e il nome del backup. Il nome del backup non è necessario essere lo stesso nome di directory in cui archiviare i file di backup.  
+ Specifica la restituzione sollo delle informazioni di intestazione per un backup del database utente. Tra gli altri campi, l'intestazione include la descrizione in formato testo del backup e il nome del backup stesso. Il nome del backup non deve necessariamente corrispondere al nome della directory in cui sono archiviati i file di backup.  
   
- Risultati di RESTORE HEADERONLY vengono creati dopo il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati RESTORE HEADERONLY. Il risultato ha più di 50 colonne, che non utilizzate dalla [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per una descrizione delle colonne di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risultati RESTORE HEADERONLY, vedere [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
+ I risultati di RESTORE HEADERONLY seguono il modello dei risultati di RESTORE HEADERONLY di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il risultato ha più di 50 colonne, che non vengono usate tutte da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per una descrizione delle colonne nei risultati di RESTORE HEADERONLY di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [RESTORE HEADERONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **CREATE ANY DATABASE** autorizzazione.  
+ È necessaria l'autorizzazione **CREATE ANY DATABASE**.  
   
- Richiede un account di Windows che dispone dell'autorizzazione per accedere e leggere dalla directory di backup. È inoltre necessario archiviare il nome dell'account Windows e la password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ È necessario un account di Windows con l'autorizzazione di accesso e lettura per la directory di backup. È anche necessario archiviare il nome e la password dell'account di Windows in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
-1.  Per verificare le credenziali sono già presenti, utilizzare [sys.dm_pdw_network_credentials &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
+1.  Per verificare le credenziali già presenti, usare [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
-2.  Per aggiungere o aggiornare le credenziali, utilizzare [sp_pdw_add_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
+2.  Per aggiungere credenziali o aggiornare quelle esistenti, usare [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
-3.  Per rimuovere le credenziali da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare [sp_pdw_remove_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+3.  Per rimuovere credenziali da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
   
 ## <a name="error-handling"></a>Gestione degli errori  
- Il comando RESTORE DATABASE produce gli errori nelle condizioni seguenti:  
+ Il comando RESTORE DATABASE genera errori nelle condizioni seguenti:  
   
--   Il nome del database da ripristinare già esiste nel dispositivo di destinazione. Per evitare questo problema, scegliere un nome di database univoco oppure eliminare il database esistente prima di eseguire il ripristino.  
+-   Il nome del database da ripristinare esiste già nell'appliance di destinazione. Per evitare questo problema, scegliere un nome di database univoco oppure rilasciare il database esistente prima di eseguire il ripristino.  
   
--   È un set di file di backup nella directory di backup non valido.  
+-   Nella directory di backup è presente un set di file di backup non valido.  
   
--   Le autorizzazioni di accesso non sono sufficienti per ripristinare un database.  
+-   Le autorizzazioni di accesso non sono sufficienti per il ripristino di un database.  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]non dispone delle autorizzazioni corrette per il percorso di rete in cui si trovano i file di backup.  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non ha le autorizzazioni corrette per il percorso di rete in cui si trovano i file di backup.  
   
--   Il percorso di rete per la directory di backup non esiste o non è disponibile.  
+-   Il percorso di rete della directory di backup non esiste o non è disponibile.  
   
--   Vi è spazio su disco insufficiente nel nodi di calcolo o nel nodo di controllo. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]non conferma l'esistenza di spazio su disco sufficiente nel dispositivo prima di avviare il ripristino. Pertanto, è possibile generare un errore di timeout di spazio su disco durante l'esecuzione dell'istruzione RESTORE DATABASE. Quando si verifica lo spazio su disco insufficiente, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue il rollback del ripristino.  
+-   Lo spazio su disco è insufficiente nei nodi di calcolo o nel nodo di controllo. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non conferma la disponibilità di spazio su disco sufficiente nell'appliance prima dell'avvio del ripristino. È quindi possibile che venga generato un errore di spazio su disco insufficiente durante l'esecuzione dell'istruzione RESTORE DATABASE. Quando si verifica l'errore di spazio su disco insufficiente, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue il rollback del ripristino.  
   
--   Il dispositivo di destinazione a cui si intende ripristinare il database ha meno nodi di calcolo più il dispositivo di origine da cui è stato eseguito il backup database.  
+-   L'appliance di destinazione in cui il database è in corso di ripristino ha un numero di nodi di calcolo inferiore a quello dell'appliance di origine da cui è stato eseguito il backup del database.  
   
--   Il ripristino di database viene tentato dall'interno di una transazione.  
+-   Viene tentato il ripristino del database dall'interno di una transazione.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Registra l'esito positivo del ripristino di database. Prima di ripristinare un backup differenziale del database, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verifica il ripristino completo del database è stata completata.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] tiene traccia dell'esito positivo del ripristino dei database. Prima di ripristinare un backup differenziale del database, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verifica che il ripristino completo del database sia stato completato.  
   
- Dopo un ripristino, il database utente avrà il livello di compatibilità del database 120. Questo vale per tutti i database indipendentemente dal livello di compatibilità originale.  
+ Dopo un ripristino, il database utente ha un livello di compatibilità pari a 120. Questo vale per tutti i database, indipendentemente dal livello di compatibilità originale.  
   
- **Ripristino in un'applicazione con un numero maggiore di nodi di calcolo**  
-Eseguire [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) dopo il ripristino di un database da un dispositivo più piccolo al più grande poiché aumenta la ridistribuzione del log delle transazioni.  
+ **Ripristino in un'appliance con un numero maggiore di nodi di calcolo**  
+Eseguire [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) dopo il ripristino di un database da un'appliance più piccola a una più grande, poiché la ridistribuzione aumenta le dimensioni del log delle transazioni.  
 
-Ripristino di un backup in un'applicazione con un numero maggiore di nodi di calcolo aumenta la dimensione allocata database proporzionalmente al numero di nodi di calcolo.  
+Il ripristino di un backup in un'appliance con un numero maggiore di nodi di calcolo aumenta la dimensione allocata al database proporzionalmente al numero di nodi di calcolo.  
   
-Ad esempio, quando un 60 GB database ripristino da un dispositivo 2 nodi (30 GB per ogni nodo) in un'applicazione di 6 nodi, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crea un database di 180 GB (6 nodi con 30 GB per ogni nodo) nel dispositivo 6-nodo. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]inizialmente il database viene ripristinato a 2 nodi in modo che corrisponda alla configurazione dell'origine e quindi vengono ridistribuiti i dati da tutti i nodi di 6.  
+Se ad esempio si ripristina un database da 60 GB da un'appliance da 2 nodi (30 GB per nodo) in un'appliance da 6 nodi, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crea un database di 180 GB (6 nodi con 30 GB per nodo) nell'appliance da 6 nodi. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] inizialmente ripristina il database in 2 nodi, in modo che corrisponda alla configurazione dell'origine, e quindi ridistribuisce i dati in tutti i 6 nodi.  
   
- Dopo la ridistribuzione ogni nodo di calcolo contiene meno dati effettivi e più spazio rispetto a ogni nodo di calcolo nel dispositivo di origine più piccolo. Utilizzare lo spazio aggiuntivo per aggiungere ulteriori dati al database. Se le dimensioni del database ripristinato sono superiore al necessario, è possibile utilizzare [ALTER DATABASE &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) per compattare le dimensioni dei file di database.  
+ Dopo la ridistribuzione, ogni nodo di calcolo contiene meno dati effettivi e più spazio disponibile rispetto a ogni nodo di calcolo nell'appliance di origine di dimensioni inferiori. Usare lo spazio aggiuntivo per l'aggiunta di altri dati al database. Se le dimensioni del database ripristinato sono maggiori del necessario, è possibile usare [ALTER DATABASE &#40;Parallel Data Warehouse&#41; ](../../t-sql/statements/alter-database-parallel-data-warehouse.md) per compattare le dimensioni dei file del database stesso.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- Per queste limitazioni e restrizioni, il dispositivo di origine è il dispositivo da cui è stato creato il backup del database e il dispositivo di destinazione è il dispositivo a cui verrà ripristinato il database.  
+ In questa sezione, per appliance di origine si intende l'appliance da cui è stato creato il backup del database e per appliance di destinazione si intende l'appliance in cui viene ripristinato il database.  
   
- Ripristino di un database non vengono rigenerate automaticamente le statistiche.  
+ Il ripristino di un database non implica la rigenerazione automatica delle statistiche.  
   
- Istruzione di un solo RESTORE DATABASE o BACKUP del DATABASE può essere eseguiti nel dispositivo in qualsiasi momento. Se più istruzioni backup e ripristino vengono eseguite simultaneamente, il dispositivo verrà inserirli in una coda ed elaborarle uno alla volta.  
+ In qualsiasi momento, nell'appliance può essere in esecuzione una sola istruzione RESTORE DATABASE o BACKUP DATABASE. Se vengono inviate contemporaneamente più istruzioni di backup e ripristino, l'appliance le inserisce in una coda e le elabora una alla volta.  
   
- È possibile solo ripristinare un backup del database per un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo di destinazione con lo stesso numero o più nodi di calcolo rispetto del dispositivo di origine. Il dispositivo di destinazione non può avere un minor numero di nodi di calcolo più il dispositivo di origine.  
+ È possibile ripristinare un backup del database solo in un'appliance di destinazione [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] con un numero di nodi di calcolo uguale o maggiore a quello dell'appliance di origine. L'appliance di destinazione non può avere un numero di nodi di calcolo minore dell'appliance di origine.  
   
- È possibile ripristinare un backup creato su un dispositivo che dispone di hardware di SQL Server 2012 PDW in un'applicazione che dispone di hardware di SQL Server 2008 R2. Ciò vale anche se il dispositivo è in esecuzione il software di SQL Server 2012 PDW e originariamente acquistato con l'hardware di SQL Server 2008 R2 PDW.  
+ Non è possibile ripristinare un backup creato in un'appliance con hardware SQL Server 2012 PDW in un'appliance con hardware SQL Server 2008 R2. Ciò vale anche se l'appliance è stata originariamente acquistata con hardware SQL Server 2008 R2 PDW e ora esegue software SQL Server 2012 PDW.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  
- Accetta un blocco esclusivo sull'oggetto di DATABASE.  
+ Acquisisce un blocco esclusivo per l'oggetto DATABASE.  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-restore-examples"></a>A. Esempi di ripristino semplici  
- Nell'esempio seguente consente di ripristinare un backup completo per il `SalesInvoices2013` database. Cui sono archiviati i file di backup di \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full directory. Il database SalesInvoices2013 non può già esistere nel dispositivo di destinazione o questo comando avrà esito negativo con un errore.  
+### <a name="a-simple-restore-examples"></a>A. Esempi di RESTORE semplici  
+ L'esempio seguente ripristina un backup completo nel database `SalesInvoices2013`. I file di backup sono archiviati nella directory \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full. Nell'appliance di destinazione non può essere già presente un database SalesInvoices2013. In caso contrario, questo comando avrà esito negativo e genererà un errore.  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
 FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
-### <a name="b-restore-a-full-and-differential-backup"></a>B. Ripristinare un backup completo e differenziale  
- Nell'esempio seguente ripristina una procedura completa, quindi un backup differenziale di database SalesInvoices2013  
+### <a name="b-restore-a-full-and-differential-backup"></a>B. Ripristinare un backup completo e un backup differenziale  
+ L'esempio seguente ripristina un backup completo e quindi un backup differenziale nel database SalesInvoices2013  
   
- Il backup completo del database viene ripristinato dal backup completo che viene archiviato nel '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' directory. Se il ripristino viene completato correttamente, viene ripristinato il backup differenziale per il database SalesInvoices2013.  Cui è archiviato il backup differenziale di '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff' directory.  
+ Il backup completo del database viene ripristinato usando il backup completo archiviato nella directory '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Se il ripristino viene completato correttamente, viene ripristinato il backup differenziale nel database SalesInvoices2013.  Il backup differenziale è archiviato nella directory \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff.  
   
 ```  
 RESTORE DATABASE SalesInvoices2013  
@@ -173,7 +173,7 @@ RESTORE DATABASE SalesInvoices2013
 ```  
   
 ### <a name="c-restoring-the-backup-header"></a>C. Ripristino dell'intestazione del backup  
- In questo esempio consente di ripristinare le informazioni di intestazione per il backup di database '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. I risultati del comando in una riga di informazioni per il backup Invoices2013Full.  
+ Questo esempio ripristina le informazioni di intestazione per il backup del database '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full'. Il comando ha come risultato una riga di informazioni per il backup Invoices2013Full.  
   
 ```  
 RESTORE HEADERONLY  
@@ -181,9 +181,9 @@ RESTORE HEADERONLY
 [;]  
 ```  
   
- È possibile utilizzare le informazioni di intestazione per controllare il contenuto di un backup o per assicurarsi che il dispositivo di destinazione ripristino sia compatibile con il dispositivo di backup di origine prima di tentare di ripristinare il backup.  
+ È possibile usare le informazioni di intestazione per controllare il contenuto di un backup o per assicurarsi che l'appliance di ripristino di destinazione sia compatibile con l'appliance di backup di origine prima di tentare il ripristino del backup.  
   
 ## <a name="see-also"></a>Vedere anche  
- [BACKUP DATABASE &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
+ [BACKUP DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   

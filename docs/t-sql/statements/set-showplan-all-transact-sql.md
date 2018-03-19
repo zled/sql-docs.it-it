@@ -1,5 +1,5 @@
 ---
-title: SET SHOWPLAN_ALL (Transact-SQL) | Documenti Microsoft
+title: SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -54,12 +54,12 @@ ms.lasthandoff: 11/21/2017
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'opzione SET SHOWPLAN_ALL viene impostata in fase di esecuzione, non in fase di analisi.  
   
  Quando l'opzione SET SHOWPLAN_ALL è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce le informazioni di esecuzione per ciascuna istruzione, senza eseguirla. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] non vengono eseguite. Quando l'opzione è impostata su ON, vengono restituite informazioni su tutte le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] successive fino a quando l'opzione non viene reimpostata su OFF. Se, ad esempio, si esegue un'istruzione CREATE TABLE quando l'opzione SET SHOWPLAN_ALL è impostata su ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un messaggio di errore di una successiva istruzione SELECT che interessa la stessa tabella, per informare gli utenti che la tabella specificata non esiste. I successivi riferimenti a tale tabella pertanto hanno esito negativo. Quando l'opzione SET SHOWPLAN_ALL è impostata su OFF, le istruzioni vengono eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza la generazione di alcun report.  
   
- L'opzione SET SHOWPLAN_ALL è stata creata specificatamente per l'utilizzo in applicazioni per la gestione dell'output. Utilizzare SET SHOWPLAN_TEXT per ottenere output leggibile per le applicazioni di Microsoft Win32 prompt dei comandi, ad esempio il **osql** utilità.  
+ L'opzione SET SHOWPLAN_ALL è stata creata specificatamente per l'utilizzo in applicazioni per la gestione dell'output. Usare SET SHOWPLAN_TEXT per ottenere output leggibile in applicazioni della riga di comando per Microsoft Win32, ad esempio l'utilità **osql**.  
   
  Non è possibile specificare entrambe le opzioni SET SHOWPLAN_TEXT e SET SHOWPLAN_ALL in una stored procedure. Devono essere inoltre le uniche istruzioni di un batch.  
   
@@ -67,13 +67,13 @@ SET SHOWPLAN_ALL { ON | OFF }
   
 |Nome colonna|Description|  
 |-----------------|-----------------|  
-|**StmtText**|Per righe che non sono di tipo PLAN_ROW, questa colonna include il testo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per righe di tipo PLAN_ROW, include una descrizione dell'operazione. La colonna include l'operatore fisico e facoltativamente l'operatore logico. Può essere inoltre seguita da una descrizione determinata dall'operatore fisico. Per ulteriori informazioni, vedere [Showplan logici e fisici riferimento a operatori](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
+|**StmtText**|Per righe che non sono di tipo PLAN_ROW, questa colonna include il testo dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per righe di tipo PLAN_ROW, include una descrizione dell'operazione. La colonna include l'operatore fisico e facoltativamente l'operatore logico. Può essere inoltre seguita da una descrizione determinata dall'operatore fisico. Per altre informazioni, vedere la [Guida di riferimento a operatori Showplan logici e fisici](../../relational-databases/showplan-logical-and-physical-operators-reference.md).|  
 |**StmtId**|Numero dell'istruzione nel batch corrente.|  
 |**NodeId**|ID del nodo nella query corrente.|  
 |**Parent**|ID del nodo del passaggio padre.|  
 |**PhysicalOp**|Algoritmo di implementazione fisica del nodo. Solo per righe di tipo PLAN_ROWS.|  
 |**LogicalOp**|Operatore algebrico relazionale rappresentato dal nodo. Solo per righe di tipo PLAN_ROWS.|  
-|**Argomento**|Offre informazioni aggiuntive sull'operazione che viene eseguita. Il contenuto di questa colonna dipende dall'operatore fisico.|  
+|**Argument**|Offre informazioni aggiuntive sull'operazione che viene eseguita. Il contenuto di questa colonna dipende dall'operatore fisico.|  
 |**DefinedValues**|Include un elenco delimitato da virgole dei valori introdotti da questo operatore. Tali valori possono essere espressioni calcolate che erano incluse nella query corrente, ad esempio nell'elenco di selezione o nella clausola WHERE, oppure valori interni inseriti da Query Processor per l'elaborazione della query. È inoltre possibile fare riferimento a tali valori in un altro punto della query. Solo per righe di tipo PLAN_ROWS.|  
 |**EstimateRows**|Numero stimato di righe restituite dall'operatore. Solo per righe di tipo PLAN_ROWS.|  
 |**EstimateIO**|Costo* di I/O stimato per l'operatore. Solo per righe di tipo PLAN_ROWS.|  
@@ -81,32 +81,32 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Dimensioni medie stimate (in byte) della riga che viene elaborata dall'operatore.|  
 |**TotalSubtreeCost**|Costo* (cumulativo) stimato dell'operazione e delle operazioni figlio.|  
 |**OutputList**|Include un elenco delimitato da virgole delle colonne previste dall'operazione corrente.|  
-|**Avvisi**|Include un elenco delimitato da virgole dei messaggi di avviso relativi all'operazione corrente. I messaggi di avviso possono includere la stringa "NO STATS:()" con un elenco di colonne. Tale messaggio indica che in Query Optimizer è stata tentata una decisione in base alle statistiche di questa colonna, ma non era disponibile alcuna statistica. Query Optimizer ha pertanto formulato un'ipotesi con cui potrebbe essere stato scelto un piano non efficiente per la query. Per ulteriori informazioni sulla creazione o l'aggiornamento delle statistiche di colonna (consentono a query optimizer scelga un piano di query più efficiente), vedere [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Questa colonna può includere facoltativamente la stringa "MISSING JOIN PREDICATE", a indicare che è stato eseguito un join tra tabelle senza specificare un predicato di join. In seguito all'eliminazione accidentale di un predicato di join, la query potrebbe richiedere tempi di esecuzione maggiori del previsto e restituire un set di risultati di dimensioni elevate. Se la colonna include tale stringa, verificare se l'assenza di un predicato di join è o meno voluta.|  
+|**Avvisi**|Include un elenco delimitato da virgole dei messaggi di avviso relativi all'operazione corrente. I messaggi di avviso possono includere la stringa "NO STATS:()" con un elenco di colonne. Tale messaggio indica che in Query Optimizer è stata tentata una decisione in base alle statistiche di questa colonna, ma non era disponibile alcuna statistica. Query Optimizer ha pertanto formulato un'ipotesi con cui potrebbe essere stato scelto un piano non efficiente per la query. Per altre informazioni sulla creazione o l'aggiornamento di statistiche di colonna, che agevolano la scelta di un piano di query più efficace in Query Optimizer, vedere [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Questa colonna può includere facoltativamente la stringa "MISSING JOIN PREDICATE", a indicare che è stato eseguito un join tra tabelle senza specificare un predicato di join. In seguito all'eliminazione accidentale di un predicato di join, la query potrebbe richiedere tempi di esecuzione maggiori del previsto e restituire un set di risultati di dimensioni elevate. Se la colonna include tale stringa, verificare se l'assenza di un predicato di join è o meno voluta.|  
 |**Tipo**|Tipo di nodo. Per il nodo padre di ogni query, è il tipo di istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio SELECT, INSERT, EXECUTE e così via. Per sottonodi che rappresentano piani di esecuzione, il tipo è PLAN_ROW.|  
-|**Parallel**|**0** = operatore non è in esecuzione in parallelo.<br /><br /> **1** = (operatore) è in esecuzione in parallelo.|  
+|**Parallel**|**0** = L'operatore non viene eseguito in parallelo.<br /><br /> **1** = L'operatore viene eseguito in parallelo.|  
 |**EstimateExecutions**|Numero stimato di esecuzioni dell'operatore durante l'elaborazione della query corrente.|  
   
  *Le unità di costo sono basate su una misurazione interna del tempo, non sul tempo dell'orologio. Si utilizzano per la determinazione del costo relativo di un piano rispetto ad altri piani.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per poter utilizzare SET SHOWPLAN_ALL, è necessario disporre delle autorizzazioni sufficienti per eseguire le istruzioni in cui SET SHOWPLAN_ALL viene eseguito, nonché l'autorizzazione SHOWPLAN per tutti i database contenenti oggetti di riferimento.  
   
- Per SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure*, EXEC e *user_defined_function* istruzioni, per produrre uno Showplan in cui l'utente deve:  
+ Per poter generare uno Showplan con le istruzioni SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* ed EXEC *user_defined_function*, l'utente deve avere:  
   
 -   Autorizzazioni appropriate per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Autorizzazione SHOWPLAN su tutti i database contenenti oggetti a cui fanno riferimento le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)], ad esempio tabelle, viste e così via.  
   
- Per tutte le altre istruzioni, ad esempio DDL, USE *database_name*, SET, DECLARE, SQL, dinamico e così via, solo le autorizzazioni appropriate per eseguire il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni sono necessarie.  
+ Per tutte le altre istruzioni, ad esempio DDL, USE *database_name*, SET, DECLARE, SQL dinamico e così via sono necessarie soltanto le autorizzazioni per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nelle due istruzioni seguenti vengono utilizzate le impostazioni dell'opzione SET SHOWPLAN_ALL per illustrare l'analisi e l'ottimizzazione dell'utilizzo degli indici nelle query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La prima query utilizza l'operatore di confronto uguale a (=) nella clausola WHERE in una colonna indicizzata. Di conseguenza il valore Clustered Index Seek nella **LogicalOp** colonna e il nome dell'indice nella **argomento** colonna.  
+ La prima query utilizza l'operatore di confronto uguale a (=) nella clausola WHERE in una colonna indicizzata. I risultati sono il valore Clustered Index Seek nella colonna **LogicalOp** e il nome dell'indice nella colonna **Argument**.  
   
- La seconda query utilizza l'operatore LIKE nella clausola WHERE. In tal modo viene imposta l'esecuzione di un'analisi di indice cluster in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare i dati che soddisfano la condizione della clausola WHERE. Di conseguenza il valore Clustered Index Scan nella **LogicalOp** colonna con il nome dell'indice nella **argomento** colonna e il valore di filtro nel **LogicalOp** colonna con la condizione della clausola WHERE nel **argomento** colonna.  
+ La seconda query utilizza l'operatore LIKE nella clausola WHERE. In tal modo viene imposta l'esecuzione di un'analisi di indice cluster in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per individuare i dati che soddisfano la condizione della clausola WHERE. I risultati sono il valore Clustered Index Scan nella colonna **LogicalOp** con il nome dell'indice nella colonna **Argument** e il valore Filter nella colonna **LogicalOp** con la condizione della clausola WHERE nella colonna **Argument**.  
   
- I valori di **EstimateRows** e **TotalSubtreeCost** colonne sono inferiori per la prima query indicizzata, che indica che viene elaborato molto più rapidamente e utilizzerebbe meno risorse rispetto alla query non indicizzata .  
+ I valori nelle colonne **EstimateRows** e **TotalSubtreeCost** della prima query indicizzata sono inferiori, a indicare che la query è stata elaborata molto più rapidamente e con un numero di risorse inferiore rispetto alla query non indicizzata.  
   
 ```  
 USE AdventureWorks2012;  
@@ -129,7 +129,7 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [Istruzioni SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [SET SHOWPLAN_TEXT &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)   
- [SET SHOWPLAN_XML &#40; Transact-SQL &#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)  
+ [SET SHOWPLAN_TEXT &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-text-transact-sql.md)   
+ [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)  
   
   

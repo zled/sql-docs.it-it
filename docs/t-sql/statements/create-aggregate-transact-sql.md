@@ -67,14 +67,14 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *aggregate_name*  
  Nome della funzione di aggregazione che si desidera creare.  
   
- **@***nome_parametro*  
- Uno o più parametri della funzione di aggregazione definita dall'utente. Il valore di un parametro deve essere fornito dall'utente quando la funzione di aggregazione viene eseguita. Specificare un nome di parametro con un simbolo "at" (**@**) come primo carattere. Il nome del parametro deve essere conforme alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione.  
+ **@** *param_name*  
+ Uno o più parametri della funzione di aggregazione definita dall'utente. Il valore di un parametro deve essere fornito dall'utente quando la funzione di aggregazione viene eseguita. Specificare un nome di parametro usando come primo carattere il simbolo di chiocciola (**@**). I nomi di parametro devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). I parametri sono locali rispetto alla funzione.  
   
  *system_scalar_type*  
- Qualsiasi tipo di dati scalare di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la memorizzazione del valore del parametro di input o del valore restituito. Tutti i tipi di dati scalare utilizzabile come parametro per una funzione di aggregazione definita dall'utente, ad eccezione di **testo**, **ntext**, e **immagine**. Tipi di dati non scalari, ad esempio **cursore** e **tabella**, non può essere specificato.  
+ Qualsiasi tipo di dati scalare di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la memorizzazione del valore del parametro di input o del valore restituito. È possibile usare tutti i tipi di dati scalari come parametri di una funzione di aggregazione definita dall'utente, eccetto **text**, **ntext** e **image**. Non è possibile specificare tipi di dati non scalari, come **cursor** e **table**.  
   
  *udt_schema_name*  
- Nome dello schema a cui appartiene il tipo CLR definito dall'utente. Se non specificato, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] riferimenti *udt_type_name* nell'ordine seguente:  
+ Nome dello schema a cui appartiene il tipo CLR definito dall'utente. Se viene omesso, [!INCLUDE[ssDE](../../includes/ssde-md.md)] fa riferimento a *udt_type_name* nell'ordine seguente:  
   
 -   Spazio dei nomi del tipo SQL nativo.  
   
@@ -83,21 +83,21 @@ EXTERNAL NAME assembly_name [ .class_name ]
 -   Schema **dbo** nel database corrente.  
   
  *udt_type_name*  
- Nome di un tipo CLR definito dall'utente già creato nel database corrente. Se *udt_schema_name* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone che il tipo appartenga allo schema dell'utente corrente.  
+ Nome di un tipo CLR definito dall'utente già creato nel database corrente. Se *udt_schema_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che il tipo appartenga allo schema dell'utente corrente.  
   
- *nome_assembly* [**. * * * class_name* ]  
- Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *CLASS_NAME* deve essere un valore valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore e corrispondere al nome di una classe esistente nell'assembly. *CLASS_NAME* può essere un nome completo dello spazio dei nomi se il linguaggio di programmazione utilizzato per scrivere la classe utilizza spazi dei nomi, ad esempio c#. Se *class_name* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si presuppone che sia identico *aggregate_name*.  
+ *assembly_name* [ **.***class_name* ]  
+ Specifica l'assembly da associare alla funzione di aggregazione definita dall'utente e, facoltativamente, il nome dello schema a cui l'assembly appartiene e il nome della classe nell'assembly che implementa la funzione di aggregazione definita dall'utente. È necessario che l'assembly sia già stato creato nel database tramite un'istruzione CREATE ASSEMBLY. *class_name* deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido e corrispondere al nome di una classe esistente nell'assembly. *class_name* può essere un nome qualificato con lo spazio dei nomi se il linguaggio di programmazione usato per scrivere la classe usa spazi dei nomi, ad esempio C#. Se *class_name* viene omesso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] presume che equivalga ad *aggregate_name*.  
   
-## <a name="remarks"></a>Osservazioni  
- Per impostazione predefinita, la capacità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il codice CLR è disattivata. È possibile creare, modificare e rilasciare gli oggetti di database che fanno riferimento a moduli di codice gestito, ma il codice in questi moduli non verrà eseguito in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , a meno che il [opzione clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) abilitata utilizzando [sp _ configurare](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per impostazione predefinita, la capacità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il codice CLR è disattivata. È possibile creare, modificare ed eliminare gli oggetti di database che fanno riferimento a moduli di codice gestito, ma il codice in tali moduli verrà eseguito nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se l'opzione[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) viene abilitata tramite la stored procedure [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- La classe dell'assembly a cui fa riferimento *nome_assembly* e i relativi metodi devono soddisfare tutti i requisiti per l'implementazione di una funzione di aggregazione definita dall'utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [aggregazioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
+ La classe dell'assembly a cui viene fatto riferimento in *assembly_name* e i relativi metodi devono soddisfare tutti i requisiti di implementazione di una funzione di aggregazione definita dall'utente in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Aggregazioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessario disporre dell'autorizzazione CREATE AGGREGATE e anche dell'autorizzazione REFERENCES per l'assembly specificato nella clausola EXTERNAL NAME.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente si presuppone che sia stata compilata l'applicazione di esempio StringUtilities.csproj. Per ulteriori informazioni, vedere [esempio funzioni di stringa dell'utilità](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
+ Nell'esempio seguente si presuppone che sia stata compilata l'applicazione di esempio StringUtilities.csproj. Per altre informazioni, vedere [Esempio String Utility Functions](http://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c).  
   
  Nell'esempio viene creata la funzione di aggregazione `Concatenate`, ma prima che venga effettivamente creata la funzione di aggregazione, l'assembly `StringUtilities.dll` viene registrato nel database locale.  
   

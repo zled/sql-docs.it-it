@@ -1,5 +1,5 @@
 ---
-title: GetDescendant (motore di Database) | Documenti Microsoft
+title: GetDescendant (Motore di database) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -50,17 +50,17 @@ SqlHierarchyId GetDescendant ( SqlHierarchyId child1 , SqlHierarchyId child2 )
   
 ## <a name="arguments"></a>Argomenti  
 *child1*  
-NULL o **hierarchyid** di un elemento figlio del nodo corrente.
+NULL o il valore **hierarchyid** di un figlio del nodo corrente.
   
-*Child2*  
-NULL o **hierarchyid** di un elemento figlio del nodo corrente.
+*child2*  
+NULL o il valore **hierarchyid** di un figlio del nodo corrente.
   
 ## <a name="return-types"></a>Tipi restituiti  
-**Tipo: hierarchyid restituito SQL Server**
+**Tipo SQL Server restituito: hierarchyid**
   
 **Tipo CLR restituito: SqlHierarchyId**
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Restituisce un nodo figlio discendente del padre.
 -   Se il padre è Null, restituisce Null.  
 -   Se il padre è diverso da Null e child1 e child2 sono Null, restituisce un figlio del padre.  
@@ -71,12 +71,12 @@ Restituisce un nodo figlio discendente del padre.
 -   Se child2 è diverso da Null, ma non è un figlio del padre, viene generata un'eccezione.  
 -   Se child1 >= child2, viene generata un'eccezione.  
   
-GetDescendant è deterministica. Pertanto, se GetDescendant viene chiamato con gli stessi input, verrà sempre generato lo stesso output. L'identità esatta del figlio restituito può tuttavia variare in base alla relazione con gli altri nodi, come dimostrato nell'esempio C.
+GetDescendant è deterministico. Pertanto, se viene chiamato con gli stessi input GetDescendant restituisce sempre lo stesso output. L'identità esatta del figlio restituito può tuttavia variare in base alla relazione con gli altri nodi, come dimostrato nell'esempio C.
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>A. Inserimento di una riga come ultimo nodo discendente  
-Viene assunto un nuovo dipendente, messo in relazione con un dipendente esistente nel nodo `/3/1/`. Eseguire il codice seguente per inserire una nuova riga utilizzando il metodo GetDescendant senza argomenti per specificare il nuovo nodo di righe come `/3/1/1/`:
+Viene assunto un nuovo dipendente, messo in relazione con un dipendente esistente nel nodo `/3/1/`. Eseguire il codice seguente per inserire la nuova riga usando il metodo GetDescendant senza argomenti per specificare il nuovo nodo delle righe come `/3/1/1/`:
   
 ```sql
 DECLARE @Manager hierarchyid;   
@@ -89,7 +89,7 @@ VALUES
 ```  
   
 ### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>B. Inserimento di una riga come nodo discendente maggiore  
-Viene assunto un altro nuovo dipendente, creazione di report per lo stesso responsabile dell'esempio A. eseguire il codice seguente per inserire una nuova riga utilizzando il metodo GetDescendant utilizzando l'argomento child1 per specificare che il nodo della nuova riga seguirà il nodo dell'esempio , diventando `/3/1/2/`:
+Viene assunto un altro nuovo dipendente, che risponde allo stesso responsabile dell'esempio A. Eseguire il codice seguente per inserire la nuova riga mediante il metodo GetDescendant, usando l'argomento child1 per specificare che il nodo della nuova riga seguirà il nodo dell'esempio A, divenendo `/3/1/2/`:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid;  
@@ -104,7 +104,7 @@ VALUES
 ```  
   
 ### <a name="c-inserting-a-row-between-two-existing-nodes"></a>C. Inserimento di una riga tra due nodi esistenti  
-Viene assunto un terzo dipendente, lo stesso responsabile dell'esempio A. creazione di report Questo esempio viene inserita la nuova riga in un nodo maggiore di `FirstNewEmployee` dell'esempio A e minore di `SecondNewEmployee` nell'esempio B. esecuzione di codice seguente tramite il metodo GetDescendant. Utilizzare sia l'argomento child1 che l'argomento child2 per specificare che il nodo della nuova riga diventerà il nodo `/3/1/1.1/`:
+Viene assunto un terzo dipendente, che risponde allo stesso responsabile dell'esempio A. In questo esempio viene inserita la nuova riga in un nodo maggiore di `FirstNewEmployee` dell'esempio A e minore di `SecondNewEmployee` nell'esempio B. Eseguire il codice seguente usando il metodo GetDescendant. Utilizzare sia l'argomento child1 che l'argomento child2 per specificare che il nodo della nuova riga diventerà il nodo `/3/1/1.1/`:
   
 ```sql
 DECLARE @Manager hierarchyid, @Child1 hierarchyid, @Child2 hierarchyid;  
@@ -120,7 +120,7 @@ VALUES
   
 ```  
   
-Dopo aver completato gli esempi A, B e C, i nodi aggiunti alla tabella sarà peer con il codice seguente **hierarchyid** valori:
+Dopo il completamento degli esempi A, B e C i nodi aggiunti alla tabella si troveranno allo stesso livello dei valori **hierarchyid** seguenti:
   
 `/3/1/1/`
   
@@ -131,7 +131,7 @@ Dopo aver completato gli esempi A, B e C, i nodi aggiunti alla tabella sarà pee
 Il nodo `/3/1/1.1/` è maggiore del nodo `/3/1/1/`, ma si trova allo stesso livello della gerarchia.
   
 ### <a name="d-scalar-examples"></a>D. Esempi scalari  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]supporta eliminazioni di qualsiasi e inserimenti arbitrari **hierarchyid** nodi. Utilizzando GetDescendant (), è sempre possibile generare un nodo tra due **hierarchyid** nodi. Eseguire il codice seguente per generare nodi di esempio utilizzando `GetDescendant`:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta inserimenti ed eliminazioni arbitrari di qualsiasi nodo **hierarchyid**. Usando GetDescendant() è sempre possibile generare un nodo tra due nodi **hierarchyid** qualsiasi. Eseguire il codice seguente per generare nodi di esempio utilizzando `GetDescendant`:
   
 ```sql
 DECLARE @h hierarchyid = hierarchyid::GetRoot();  

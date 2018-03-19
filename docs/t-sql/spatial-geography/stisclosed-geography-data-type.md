@@ -1,5 +1,5 @@
 ---
-title: STIsClosed (tipo di dati geography) | Documenti Microsoft
+title: STIsClosed (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce 1 se i punti iniziale e finale di dato **geography** sono gli stessi dell'istanza. Restituisce 1 per **geography** tipi di raccolta se ogni contenuti **geography** istanza è chiusa. Restituisce 0 se l'istanza non è chiusa.  
+  Restituisce 1 se i punti di inizio e di fine dell'istanza **geography** specificata sono gli stessi. Restituisce 1 per i tipi relativi a una raccolta **geography** se ogni istanza **geography** contenuta è chiusa. Restituisce 0 se l'istanza non è chiusa.  
   
- Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati **geography**supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -46,16 +46,16 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo restituisce 0 se qualche figura di un **geography** istanza sono punti, o se l'istanza è vuota.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo restituisce 0 se una figura di un'istanza **geography** è costituita da punti o se l'istanza è vuota.  
   
- Questo metodo restituisce true se un **FullGlobe** istanza è un **poligono** o di altro tipo di istanza.  
+ Questo metodo restituisce True se un'istanza **FullGlobe** è **Polygon** o un altro tipo di istanza.  
   
- Tutti **poligono** istanze sono considerate chiuse.  
+ Tutte le istanze **Polygon** sono considerate chiuse.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creata un'istanza `Polygon` e viene utilizzato `STIsClosed()` per verificare se l'istanza `Polygon` è chiusa.  

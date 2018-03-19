@@ -81,10 +81,10 @@ CREATE QUEUE <object>
   
 ## <a name="arguments"></a>Argomenti  
  *database_name* (oggetto)  
- Nome del database in cui creare la nuova coda. *database_name* deve specificare il nome di un database esistente. Quando *database_name* non viene fornito, viene creata la coda nel database corrente.  
+ Nome del database in cui creare la nuova coda. *database_name* deve specificare il nome di un database esistente. Se non si specifica *database_name*, la coda viene creata nel database corrente.  
   
  *schema_name* (oggetto)  
- Nome dello schema cui appartiene la nuova coda. Per impostazione predefinita, viene utilizzato lo schema predefinito dell'utente che esegue l'istruzione. Se l'istruzione CREATE QUEUE viene eseguita da un membro del ruolo predefinito del server sysadmin o un membro del db_dbowner o db_ddladmin ruoli predefiniti del database nel database specificato da *database_name*, *schema_name* può specificare uno schema diverso da quello associato all'account di accesso della connessione corrente. In caso contrario, *schema_name* deve essere lo schema predefinito per l'utente che esegue l'istruzione.  
+ Nome dello schema cui appartiene la nuova coda. Per impostazione predefinita, viene utilizzato lo schema predefinito dell'utente che esegue l'istruzione. Se l'istruzione CREATE QUEUE viene eseguita da un membro del ruolo predefinito del server sysadmin o da un membro del ruolo predefinito del database db_dbowner o db_ddladmin nel database specificato da *database_name*, *schema_name* può specificare uno schema diverso da quello associato all'account di accesso della connessione corrente. In caso contrario, *schema_name* deve corrispondere allo schema predefinito per l'utente che esegue l'istruzione.  
   
  *queue_name*  
  Nome della coda da creare. Il nome deve essere conforme alle linee guida per gli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -104,13 +104,13 @@ CREATE QUEUE <object>
  STATUS (attivazione)  
  Specifica se [!INCLUDE[ssSB](../../includes/sssb-md.md)] avvia la stored procedure. Se STATUS = ON, la coda avvia la stored procedure specificata con PROCEDURE_NAME quando il numero di procedure in esecuzione è minore di MAX_QUEUE_READERS e quando i messaggi arrivano nella coda più velocemente di quanto non vengano ricevuti dalle stored procedure. Se STATUS = OFF, la coda non avvia la stored procedure. Se questa clausola viene omessa, il valore predefinito è ON.  
   
- Procedure_name = \<procedura >  
+ PROCEDURE_NAME = \<procedure>  
  Specifica il nome della stored procedure da avviare per l'elaborazione dei messaggi nella coda. Il valore deve essere un identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- *database_name*(routine)  
+ *database_name*(procedure)  
  Nome del database contenente la stored procedure.  
   
- *schema_name*(routine)  
+ *schema_name*(procedure)  
  Nome dello schema contenente la stored procedure.  
   
  *procedure_name*  
@@ -125,8 +125,8 @@ CREATE QUEUE <object>
  SELF  
  Specifica che la stored procedure viene eseguita con l'account dell'utente corrente, ovvero l'entità di database che esegue l'istruzione CREATE QUEUE.  
   
- '*nome_utente*'  
- Nome dell'utente utilizzato per l'esecuzione della stored procedure. Il *nome_utente* parametro deve essere valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificato dall'utente come un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificatore. L'utente corrente deve disporre dell'autorizzazione IMPERSONATE per il *nome_utente* specificato.  
+ '*user_name*'  
+ Nome dell'utente utilizzato per l'esecuzione della stored procedure. Il parametro *user_name* deve essere un utente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valido specificato come identificatore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'utente corrente deve avere l'autorizzazione IMPERSONATE per il nome *user_name* specificato.  
   
  OWNER  
  Specifica che la stored procedure viene eseguita con l'account del proprietario della coda.  
@@ -136,13 +136,13 @@ CREATE QUEUE <object>
   
  Una coda con la gestione di messaggi non elaborabili impostata su OFF non verrà disabilitata dopo cinque rollback di transazioni consecutivi. In questo modo è possibile che un sistema di gestione di messaggi non elaborabili venga definito dall'applicazione.  
   
- ON *filegroup |* [**Predefinito**]  
- Specifica il filegroup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui creare la coda. È possibile utilizzare il *filegroup* parametro per identificare un filegroup oppure utilizzare l'identificatore DEFAULT per utilizzare il filegroup predefinito per il database di service broker. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. Se non si specifica un filegroup, per la coda viene utilizzato il filegroup predefinito del database.  
+ ON *filegroup |* [**DEFAULT**]  
+ Specifica il filegroup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui creare la coda. È possibile usare il parametro *filegroup* per specificare un filegroup oppure usare l'identificatore DEFAULT per usare il filegroup predefinito del database di Service Broker. Nel contesto di questa clausola DEFAULT non è una parola chiave ed è pertanto necessario delimitarlo come identificatore. Se non si specifica un filegroup, per la coda viene utilizzato il filegroup predefinito del database.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Una coda può essere la destinazione di un'istruzione SELECT. È tuttavia possibile modificare il contenuto di una coda solo tramite istruzioni che operano in conversazioni di [!INCLUDE[ssSB](../../includes/sssb-md.md)], quali SEND, RECEIVE e END CONVERSATION. Non è possibile specificare una coda come destinazione di un'istruzione INSERT, UPDATE, DELETE o TRUNCATE.  
   
- Una coda non può essere un oggetto temporaneo. Coda di conseguenza, i nomi che iniziano con  **#**  non sono validi.  
+ Una coda non può essere un oggetto temporaneo. Pertanto i nomi di coda che iniziano con **#** non sono validi.  
   
  La creazione di una coda con stato inattivo consente di predisporre l'infrastruttura necessaria per un servizio prima di consentire la ricezione dei messaggi nella coda.  
   
@@ -158,7 +158,7 @@ CREATE QUEUE <object>
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|status|**tinyint**|Stato del messaggio. L'istruzione RECEIVE restituisce tutti i messaggi di sono di **1**. Se la memorizzazione dei messaggi è attiva, lo stato viene quindi impostato su 0. Se la memorizzazione dei messaggi è disattivata, il messaggio viene eliminato dalla coda. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0**= messaggio ricevuto memorizzato<br /><br /> **1**= pronto per la ricezione<br /><br /> **2**= non ancora completo<br /><br /> **3**= messaggio inviato memorizzato|  
+|status|**tinyint**|Stato del messaggio. L'istruzione RECEIVE restituisce i messaggi con stato **1**. Se la memorizzazione dei messaggi è attiva, lo stato viene quindi impostato su 0. Se la memorizzazione dei messaggi è disattivata, il messaggio viene eliminato dalla coda. I messaggi nella coda possono contenere uno dei valori seguenti:<br /><br /> **0** = Messaggio ricevuto memorizzato<br /><br /> **1** = Pronto per la ricezione<br /><br /> **2** = Non ancora completo<br /><br /> **3** = Messaggio inviato memorizzato|  
 |priority|**tinyint**|Livello di priorità assegnato al messaggio.|  
 |queuing_order|**bigint**|Numero progressivo del messaggio nella coda.|  
 |conversation_group_id|**uniqueidentifier**|Identificatore del gruppo di conversazioni a cui appartiene il messaggio.|  

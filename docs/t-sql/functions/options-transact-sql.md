@@ -1,5 +1,5 @@
 ---
-title: '@@OPTIONS (Transact-SQL) | Documenti Microsoft'
+title: '@@OPTIONS (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 09/18/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="x40x40options-transact-sql"></a>&#x40;&#x40;opzioni (Transact-SQL)
+# <a name="x40x40options-transact-sql"></a>&#x40;&#x40;OPTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulle opzioni SET correnti.  
@@ -49,19 +49,19 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Tipi restituiti  
  **integer**  
   
-## <a name="remarks"></a>Osservazioni  
- Le opzioni possono provenire dall'uso del **impostare** comando o dal **opzioni utente sp_configure** valore. I valori della sessione configurati con il **impostare** comando override il **sp_configure** opzioni. Molti strumenti, come ad esempio [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], configurano automaticamente le opzioni impostate. Ogni utente dispone di un @@OPTIONS funzione che rappresenta la configurazione.  
+## <a name="remarks"></a>Remarks  
+ Le opzioni possono derivare dall'uso del comando **SET** o dal valore di **sp_configure user options**. I valori di sessione configurati con il comando **SET** sostituiscono le opzioni di **sp_configure**. Molti strumenti, come ad esempio [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], configurano automaticamente le opzioni impostate. A ogni utente è associata una funzione @@OPTIONS che rappresenta la configurazione.  
   
- Tramite l'istruzione SET è possibile modificare le opzioni di linguaggio e di esecuzione delle query per una sessione utente specifica. **@@OPTIONS**  può solo rilevare le opzioni sono impostate su ON o OFF.  
+ Tramite l'istruzione SET è possibile modificare le opzioni di linguaggio e di esecuzione delle query per una sessione utente specifica. **@@OPTIONS** è in grado di rilevare solo le opzioni impostate su ON o OFF.  
   
- Il **@@OPTIONS**  funzione restituisce una mappa di bit delle opzioni, convertita in base 10 integer (decimale). Le impostazioni di bit vengono archiviate nei percorsi descritti in una tabella nell'argomento [configurare l'opzione di configurazione Server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
+ La funzione **@@OPTIONS** restituisce una mappa di bit delle opzioni, convertita in un numero intero in base 10 (decimale). Le impostazioni di bit vengono archiviate nei percorsi descritti in un tabella dell'argomento [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md).  
   
- Per decodificare il **@@OPTIONS**  valore, convertire il valore restituito dalla **@@OPTIONS**  in formato binario e quindi cercare i valori della tabella nel [configurare le opzioni utente Server Opzione di configurazione](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Ad esempio, se `SELECT @@OPTIONS;` restituisce il valore `5496`, usare la calcolatrice Windows (**calc.exe**) per convertire il valore decimale `5496` in formato binario. Il risultato è `1010101111000`. La maggior parte dei caratteri destra (binario 1, 2 e 4) sono 0, che indica che i primi tre elementi della tabella sono disattivate. Consultando la tabella, si noterà che sono quelli **DISABLE_DEF_CNST_CHK** e **IMPLICIT_TRANSACTIONS**, e **CURSOR_CLOSE_ON_COMMIT**. L'elemento successivo (**ANSI_WARNINGS** nel `1000` posizione) si trova in. Continuare a lavorare a sinistra se la mappa di bit e verso il basso nell'elenco di opzioni. Quando le opzioni più a sinistra sono 0, che sono state troncate dalla conversione dei tipi. La mappa di bit `1010101111000` è in realtà `001010101111000` per rappresentare tutte e 15 le opzioni.  
+ Per decodificare il valore di **@@OPTIONS**, convertire il numero intero restituito da **@@OPTIONS** in binario e quindi cercare i valori nella tabella riportata in [Configurare l'opzione di configurazione del server user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md). Se, ad esempio, `SELECT @@OPTIONS;` restituisce il valore `5496`, usare la calcolatrice di Windows (**calc.exe**) per convertire il valore decimale `5496` in binario. Il risultato è `1010101111000`. I caratteri più a destra (binario 1, 2 e 4) corrispondono a 0. Ciò indica che i primi tre elementi della tabella sono impostati su OFF. Consultando la tabella, si noterà che si tratta di **DISABLE_DEF_CNST_CHK**, **IMPLICIT_TRANSACTIONS** e **CURSOR_CLOSE_ON_COMMIT**. L'elemento successivo, ovvero **ANSI_WARNINGS** nella posizione `1000`, è impostato su ON. Continuare a lavorare verso sinistra nella mappa di bit e verso il basso nell'elenco di opzioni. Quando le opzioni più a sinistra corrispondono a 0, vengono troncate dalla conversione dei tipi. La mappa di bit `1010101111000` è in realtà `001010101111000` per rappresentare tutte e 15 le opzioni.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-demonstration-of-how-changes-affect-behavior"></a>A. Dimostrazione di come le modifiche influiscono sul comportamento  
- Nell'esempio seguente viene illustrata la differenza nel comportamento di concatenazione con due diverse impostazioni del **CONCAT_NULL_YIELDS_NULL** opzione.  
+ L'esempio seguente illustra la differenza nel comportamento di concatenazione con due diverse impostazioni dell'opzione **CONCAT_NULL_YIELDS_NULL**.  
   
 ```  
 SELECT @@OPTIONS AS OriginalOptionsValue;  
@@ -73,7 +73,7 @@ SELECT 'abc' + NULL AS ResultWhen_ON, @@OPTIONS AS OptionsValueWhen_ON;
 ```  
   
 ### <a name="b-testing-a-client-nocount-setting"></a>B. Test di un'impostazione NOCOUNT del client  
- L'esempio seguente imposta `NOCOUNT``ON` , quindi verifica il valore di `@@OPTIONS`. Il `NOCOUNT``ON` opzione impedisce il messaggio sul numero di righe interessate venga rinviato al client richiedente per ogni istruzione in una sessione. Il valore di `@@OPTIONS` viene impostato su `512` (0x0200), che rappresenta l'opzione NOCOUNT. In questo esempio viene verificato se l'opzione NOCOUNT è stata abilitata nel client. Ciò può risultare utile, ad esempio, per tenere traccia delle differenze di esecuzione in un client.  
+ Nell'esempio seguente viene impostata l'opzione `NOCOUNT``ON` e viene quindi testato il valore di `@@OPTIONS`. L'opzione `NOCOUNT``ON` impedisce che, per ogni istruzione di una sessione, il messaggio relativo al numero di righe interessate venga inviato al client che esegue la richiesta. Il valore di `@@OPTIONS` viene impostato su `512` (0x0200), che rappresenta l'opzione NOCOUNT. In questo esempio viene verificato se l'opzione NOCOUNT è stata abilitata nel client. Ciò può risultare utile, ad esempio, per tenere traccia delle differenze di esecuzione in un client.  
   
 ```  
 SET NOCOUNT ON  

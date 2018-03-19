@@ -1,5 +1,5 @@
 ---
-title: ShortestLineTo (tipo di dati geometry) | Documenti Microsoft
+title: ShortestLineTo (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce un **LineString** istanza con due punti che rappresentano la distanza più breve tra le due **geometry** istanze. La lunghezza del **LineString** istanza restituita è la distanza tra i due **geometry** istanze.
+Restituisce un'istanza **LineString** con due punti che rappresentano la distanza più breve tra le due istanze **geometry**. La lunghezza dell'istanza **LineString** restituita è la distanza tra le due istanze **geometry**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,15 +42,15 @@ Restituisce un **LineString** istanza con due punti che rappresentano la distanz
   
 ## <a name="arguments"></a>Argomenti  
  *geometry_other*  
- Il secondo **geometry** istanza chiamante **geometry** istanza tenta di determinare la distanza più breve.  
+ Seconda istanza **geometry** da cui l'istanza **geometry** chiamante prova a determinare la distanza più breve.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
-## <a name="remarks"></a>Osservazioni  
- Il metodo restituisce un **LineString** istanza con endpoint che si trovano sui bordi delle due pianificazioni **geometry** istanze da confrontare. La lunghezza del **LineString** restituiti corrisponde alla distanza minore tra i due **geometry** istanze. Un oggetto vuoto **LineString** istanza viene restituita quando le due **geometry** istanze si intersecano a vicenda.  
+## <a name="remarks"></a>Remarks  
+ Il metodo restituisce un'istanza **LineString** con endpoint che si trovano sui bordi delle due istanze **geometry** non intersecate messe a confronto. La lunghezza dell'istanza **LineString** restituita corrisponde alla distanza minore tra le due istanze **geometry**. Viene restituita un'istanza **LineString** vuota quando le due istanze **geometry** si intersecano.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -73,7 +73,7 @@ Restituisce un **LineString** istanza con due punti che rappresentano la distanz
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ShortestLineTo &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
+ [ShortestLineTo &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md)  
   
   
 

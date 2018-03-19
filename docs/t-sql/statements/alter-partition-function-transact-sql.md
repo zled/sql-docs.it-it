@@ -1,5 +1,5 @@
 ---
-title: ALTER PARTITION FUNCTION (Transact-SQL) | Documenti Microsoft
+title: ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -65,20 +65,20 @@ ALTER PARTITION FUNCTION partition_function_name()
  Nome della funzione di partizione da modificare.  
   
  SPLIT RANGE ( *boundary_value* )  
- Aggiunge una partizione alla funzione di partizione. *boundary_value* determina l'intervallo della nuova partizione e deve essere diverso dagli intervalli limite esistenti della funzione di partizione. In base a *boundary_value*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] uno degli intervalli esistenti suddivide in due. Tra questi due, il cui nuovo *boundary_value* risiede è considerato la nuova partizione.  
+ Aggiunge una partizione alla funzione di partizione. *boundary_value* determina l'intervallo della nuova partizione e deve essere diverso dagli intervalli limite esistenti della funzione di partizione. In base a *boundary_value*, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] suddividerà in due uno degli intervalli esistenti. L'intervallo in cui si trova il nuovo *boundary_value* verrà considerato la nuova partizione.  
   
  È necessario che un filegroup esista online e sia contrassegnato dallo schema di partizione che utilizza la funzione di partizione come NEXT USED affinché possa contenere la nuova partizione. Per allocare i filegroup alle partizioni è necessario utilizzare un'istruzione CREATE PARTITION SCHEME. Se un'istruzione CREATE PARTITION SCHEME alloca un numero di filegroup maggiore del necessario, ovvero l'istruzione CREATE PARTITION FUNCTION crea un numero di partizioni inferiore rispetto al numero di filegroup disponibili, saranno presenti filegroup non assegnati e quello che verrà contrassegnato come NEXT USED dallo schema di partizione conterrà la nuova partizione. Se non sono presenti filegroup contrassegnati come NEXT USED dallo schema di partizione, è necessario utilizzare l'istruzione ALTER PARTITION SCHEME per aggiungere un filegroup oppure per designarne uno esistente per contenere la nuova partizione. Un filegroup che già include partizioni può essere configurato in modo da contenere partizioni aggiuntive. Poiché una funzione di partizione può essere inclusa in più schemi di partizione, tutti gli schemi di partizione che utilizzano tale funzione di partizione a cui si sta aggiungendo partizioni devono disporre di un filegroup NEXT USED. In caso contrario, l'istruzione ALTER PARTITION FUNCTION avrà esito negativo e restituirà un errore indicante che lo schema o gli schemi di partizione non dispongono di un filegroup NEXT USED.  
   
  Se si creano tutte le partizioni nello stesso filegroup, quest'ultimo verrà inizialmente assegnato automaticamente al successivo filegroup NEXT USED. Tuttavia, dopo l'esecuzione dell'operazione di divisione, non sarà più presente un filegroup NEXT USED designato. È necessario assegnare in modo esplicito il filegroup come filegroup NEXT USED tramite l'istruzione ALTER PARTITION SCHEME, diversamente le successive operazioni di divisione avranno esito negativo.  
   
 > [!NOTE]  
->  Limitazioni dell'indice columnstore: solo le partizioni vuote possono essere suddivise quando nella tabella è presente un indice columnstore. È necessario rimuovere o disabilitare l'indice columnstore prima di eseguire questa operazione  
+>  Limitazioni per l'indice columnstore: quando la tabella include un indice columnstore è possibile suddividere solo partizioni vuote. Prima di eseguire questa operazione è necessario eliminare o disabilitare l'indice columnstore.  
   
- Di tipo MERGE [intervallo ( *boundary_value*)]  
- Elimina una partizione e unisce i valori esistenti in tale partizione in una delle rimanenti partizioni. INTERVALLO (*boundary_value*) deve essere un valore limite esistente, in cui vengono uniti i valori della partizione eliminata. Il filegroup che originalmente *boundary_value* viene rimosso dallo schema di partizione, a meno che non viene utilizzato da una partizione rimanente oppure è contrassegnato con la proprietà NEXT USED. La partizione unita si trova nel filegroup che originariamente non includeva *boundary_value*. *boundary_value* è un'espressione costante che può fare riferimento a variabili (incluse le variabili di tipo definito dall'utente) o funzioni (incluse funzioni definite dall'utente). Non potrà invece fare riferimento a un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* necessario uno corrispondere o essere convertibile in modo implicito nel tipo di dati della colonna di partizionamento corrispondente e non può essere troncato durante la conversione implicita in modo che le dimensioni e la scala del valore non corrisponde a quello del relativo corrispondente *input_parameter_type*.  
+ MERGE [ RANGE ( *boundary_value*) ]  
+ Elimina una partizione e unisce i valori esistenti in tale partizione in una delle rimanenti partizioni. RANGE (*boundary_value*) deve essere un valore limite esistente nel quale vengono uniti i valori della partizione eliminata. Il filegroup che originariamente conteneva *boundary_value* viene rimosso dallo schema di partizione a meno che non sia usato da una partizione rimanente oppure non sia contrassegnato dalla proprietà NEXT USED. La partizione unita si trova nel filegroup che originariamente non conteneva *boundary_value*. *boundary_value* è un'espressione costante che può fare riferimento a variabili (incluse le variabili di tipo definito dall'utente) o funzioni (incluse le funzioni definite dall'utente). Non potrà invece fare riferimento a un'espressione [!INCLUDE[tsql](../../includes/tsql-md.md)]. *boundary_value* deve corrispondere o essere convertibile in modo implicito nel tipo di dati della colonna di partizionamento corrispondente e non può essere troncato durante la conversione implicita in un modo tale che la dimensione e la scala del valore non corrispondano a quelle del valore *input_parameter_type* corrispondente.  
   
 > [!NOTE]  
->  Limitazioni dell'indice columnstore: non è possibile unire due partizioni non vuote contenente un indice columnstore. È necessario rimuovere o disabilitare l'indice columnstore prima di eseguire questa operazione  
+>  Limitazioni per l'indice columnstore: non è possibile unire due partizioni non vuote contenenti un indice columnstore. Prima di eseguire questa operazione è necessario eliminare o disabilitare l'indice columnstore.  
   
 ## <a name="best-practices"></a>Procedure consigliate  
  Mantenere sempre partizioni vuote in entrambe le estremità dell'intervallo di partizione per garantire che la divisione delle partizioni (prima del caricamento di nuovi dati) e l'unione delle partizioni (dopo lo scaricamento di dati non aggiornati) non provochino uno spostamento dei dati. Evitare di suddividere o di unire le partizioni popolate, poiché tale operazione può risultare estremamente inefficiente, in quanto può causare la generazione di log quattro volte superiori e può provocare anche un blocco grave.  
@@ -155,17 +155,17 @@ MERGE RANGE (100);
 ## <a name="see-also"></a>Vedere anche  
  [Tabelle e indici partizionati](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
- [DROP PARTITION FUNCTION &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
+ [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
- [ALTER PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
- [DROP PARTITION SCHEME &#40; Transact-SQL &#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
+ [ALTER PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-scheme-transact-sql.md)   
+ [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [partition_functions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
- [Sys. partition_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
- [Sys.partition_range_values &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
- [Sys. Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [sys.partition_functions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-functions-transact-sql.md)   
+ [sys.partition_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-parameters-transact-sql.md)   
+ [sys.partition_range_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partition-range-values-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [sys.tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

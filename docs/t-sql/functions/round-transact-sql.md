@@ -1,5 +1,5 @@
 ---
-title: ROUND (Transact-SQL) | Documenti Microsoft
+title: ROUND (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 12/14/2017
 ms.prod: sql-non-specified
@@ -48,13 +48,13 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 ## <a name="arguments"></a>Argomenti  
  *numeric_expression*  
- È un [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno, categoria del tipo di dati numerici o numerici approssimativi, ad eccezione del **bit** tipo di dati.  
+ [expression](../../t-sql/language-elements/expressions-transact-sql.md) è un'espressione della categoria di tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**.  
   
  *length*  
- La precisione a cui *numeric_expression* da arrotondare. *lunghezza* deve essere un'espressione di tipo **tinyint**, **smallint**, o **int**. Quando *lunghezza* è un numero positivo, *numeric_expression* viene arrotondato al numero di posizioni decimali specificato da *lunghezza*. Quando *lunghezza* è un numero negativo, *numeric_expression* viene arrotondato a sinistra del separatore decimale, come specificato da *lunghezza*.  
+ Precisione per l'arrotondamento di *numeric_expression* . *length* deve essere un'espressione di tipo **tinyint**, **smallint** o **int**. Quando *length* è un numero positivo, *numeric_expression* viene arrotondato al numero di posizioni decimali specificato da *length*. Quando *length* è un numero negativo, *numeric_expression* viene arrotondato a sinistra del separatore decimale come specificato da *length*.  
   
  *function*  
- Tipo di operazione da eseguire. *funzione* deve essere **tinyint**, **smallint**, o **int**. Quando *funzione* viene omesso oppure è un valore pari a 0 (impostazione predefinita), *numeric_expression* viene arrotondato. Quando un valore diverso da è specificato 0, *numeric_expression* viene troncato.  
+ Tipo di operazione da eseguire. *function* deve essere **tinyint**, **smallint** o **int**. Quando *function* viene omesso oppure è un valore pari a 0 (impostazione predefinita), *numeric_expression* viene arrotondato. Se è specificato un valore diverso da 0, l'argomento *numeric_expression* viene troncato.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce i tipi di dati seguenti:  
@@ -65,23 +65,23 @@ ROUND ( numeric_expression , length [ ,function ] )
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimale** e **numerico** categoria (p, s)|**Decimal (p, s)**|  
-|**Money** e **smallmoney** categoria|**money**|  
-|**float** e **reale** categoria|**float**|  
+|Categoria **decimal** e **numeric** (p, s)|**decimal(p, s)**|  
+|Categoria **money** e **smallmoney**|**money**|  
+|Categoria **float** e **real**|**float**|  
   
-## <a name="remarks"></a>Osservazioni  
- La funzione ROUND restituisce sempre un valore. Se *lunghezza* è negativo e maggiore del numero di cifre prima del separatore decimale, la funzione ROUND restituisce 0.  
+## <a name="remarks"></a>Remarks  
+ La funzione ROUND restituisce sempre un valore. Se l'argomento *length* è negativo e maggiore del numero di cifre che precedono il separatore decimale, la funzione ROUND restituisce 0.  
   
 |Esempio|Risultato|  
 |-------------|------------|  
-|ROUND (748.58 ASSUME, -4)|0|  
+|ROUND(748.58, -4)|0|  
   
- Funzione ROUND restituisce arrotondato *numeric_expression*, indipendentemente dal tipo di dati, quando *lunghezza* è un numero negativo.  
+ La funzione ROUND restituisce un valore *numeric_expression* arrotondato indipendentemente dal tipo di dati quando *length* è un numero negativo.  
   
 |Esempi|Risultato|  
 |--------------|------------|  
-|ROUND (748.58 ASSUME, -1)|750.00|  
-|ROUND (748.58 ASSUME, -2)|700.00|  
+|ROUND(748.58, -1)|750.00|  
+|ROUND(748.58, -2)|700.00|  
 |ROUND(748.58, -3)|Genera un overflow aritmetico, perché 748.58 assume il valore decimal(5,2), tramite il quale non può essere restituito 1000.00.|  
 |Per un arrotondamento fino a 4 cifre, modificare il tipo di dati di input. Ad esempio<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
@@ -141,8 +141,8 @@ GO
 ```
   
 ## <a name="see-also"></a>Vedere anche  
- [CEILING &#40; Transact-SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   
+ [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [Espressioni &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [FLOOR &#40; Transact-SQL &#41;](../../t-sql/functions/floor-transact-sql.md)   
- [Funzioni matematiche &#40; Transact-SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [FLOOR &#40;Transact-SQL&#41;](../../t-sql/functions/floor-transact-sql.md)   
+ [Funzioni matematiche &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)

@@ -1,5 +1,5 @@
 ---
-title: CREARE parole non SIGNIFICATIVE full-text (Transact-SQL) | Documenti Microsoft
+title: CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/21/2017
 
   Crea un nuovo elenco di parole non significative full-text nel database corrente.  
   
- Le parole non significative vengono gestite nei database utilizzando oggetti denominati *significative*. Un elenco di parole non significative è un elenco che, quando associato a un indice full-text, viene applicato alle query full-text su tale indice. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+ Le parole non significative vengono gestite nei database usando oggetti denominati *elenchi di parole non significative*. Un elenco di parole non significative è un elenco che, quando associato a un indice full-text, viene applicato alle query full-text su tale indice. Per altre informazioni, vedere [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
 > [!IMPORTANT]  
 >  CREATE FULLTEXT STOPLIST, ALTER FULLTEXT STOPLIST e DROP FULLTEXT STOPLIST sono supportate solo con livello di compatibilità 100. Con livelli di compatibilità 80 e 90, queste istruzioni non sono supportate. Con tutti i livelli di compatibilità, tuttavia, l'elenco di parole non significative di sistema viene automaticamente associato ai nuovi indici full-text.  
@@ -63,26 +63,26 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="arguments"></a>Argomenti  
  *stoplist_name*  
- Nome dell'elenco di parole non significative. *stoplist_name* può contenere un massimo di 128 caratteri. *stoplist_name* deve essere univoco tra tutti significative nel database corrente e conforme alle regole per gli identificatori.  
+ Nome dell'elenco di parole non significative. *stoplist_name* può essere composto da un massimo di 128 caratteri. *stoplist_name* deve essere univoco tra tutti gli elenchi di parole non significative nel database corrente e conforme alle regole per gli identificatori.  
   
- *stoplist_name* verrà utilizzato quando viene creato l'indice full-text.  
+ *stoplist_name* verrà usato dopo la creazione dell'indice full-text.  
   
  *database_name*  
- È il nome del database in cui l'elenco di parole non significative specificato da *source_stoplist_name* si trova. Se non specificato, *database_name* impostazioni predefinite per il database corrente.  
+ Nome del database in cui si trova l'elenco di parole non significative specificato da *source_stoplist_name*. Se l'argomento *database_name* non viene specificato, il valore predefinito è il database corrente.  
   
  *source_stoplist_name*  
- Specifica che il nuovo elenco di parole non significative viene creato copiando un elenco di parole non significative esistente. Se *source_stoplist_name* non esiste o l'utente del database non dispone delle autorizzazioni corrette, CREATE FULLTEXT STOPLIST ha esito negativo con un errore. Se qualsiasi lingua specificata nelle parole non significative dell'elenco di parole non significative di origine non è registrata nel database corrente, CREATE FULLTEXT STOPLIST ha esito positivo, ma vengono restituiti avvisi e le parole non significative corrispondenti non vengono aggiunte.  
+ Specifica che il nuovo elenco di parole non significative viene creato copiando un elenco di parole non significative esistente. Se *source_stoplist_name* non esiste o l'utente del database non dispone di autorizzazioni corrette, CREATE FULLTEXT STOPLIST ha esito negativo e viene generato un errore. Se qualsiasi lingua specificata nelle parole non significative dell'elenco di parole non significative di origine non è registrata nel database corrente, CREATE FULLTEXT STOPLIST ha esito positivo, ma vengono restituiti avvisi e le parole non significative corrispondenti non vengono aggiunte.  
   
  SYSTEM STOPLIST  
- Specifica che il nuovo elenco di parole non significative viene creato da parole non significative esistente per impostazione predefinita nel [database delle risorse](../../relational-databases/databases/resource-database.md).  
+ Specifica che il nuovo elenco di parole non significative viene creato dall'elenco di parole non significative esistente per impostazione predefinita nel [database delle risorse](../../relational-databases/databases/resource-database.md).  
   
- AUTORIZZAZIONE *owner_name*  
- Specifica il nome di un'entità di database come proprietario dell'elenco di parole non significative. *owner_name* deve essere il nome di un'entità di cui l'utente corrente è un membro oppure l'utente corrente deve disporre dell'autorizzazione IMPERSONATE *owner_name*. Se viene omesso, la proprietà viene assegnata all'utente corrente.  
+ AUTHORIZATION *owner_name*  
+ Specifica il nome di un'entità di database come proprietario dell'elenco di parole non significative. *owner_name* deve essere il nome di un'entità di cui l'utente corrente è membro oppure l'utente corrente deve avere l'autorizzazione IMPERSONATE per *owner_name*. Se viene omesso, la proprietà viene assegnata all'utente corrente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'autore di un elenco di parole non significative è il proprietario dell'elenco.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per creare un elenco di parole non significative sono necessarie le autorizzazioni CREATE FULLTEXT CATALOG. Il proprietario dell'elenco di parole non significative può concedere in modo esplicito l'autorizzazione CONTROL per un elenco per consentire agli utenti di aggiungere e rimuovere parole e di eliminare l'elenco.  
   
 > [!NOTE]  
@@ -115,11 +115,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ALTER FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
- [DROP FULLTEXT STOPLIST &#40; Transact-SQL &#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
- [Configurare e gestire parole non significative ed elenchi per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [fulltext_stoplists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
- [Sys.fulltext_stopwords &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
+ [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
+ [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [sys.fulltext_stoplists &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql.md)   
+ [sys.fulltext_stopwords &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql.md)   
  [Configurare e gestire parole non significative ed elenchi di parole non significative per la ricerca full-text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)  
   
   
