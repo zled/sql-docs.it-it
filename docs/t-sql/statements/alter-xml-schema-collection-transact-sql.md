@@ -1,5 +1,5 @@
 ---
-title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Documenti Microsoft
+title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -63,13 +63,13 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  Identificatore SQL per la raccolta di XML Schema.  
   
- **'** *Componente schema* **'**  
+ **'** *Schema Component* **'**  
  Componente dello schema da inserire.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare ALTER XML SCHEMA COLLECTION per aggiungere nuovi XML Schema i cui spazi dei nomi non sono già nella raccolta di XML Schema, oppure per aggiungere nuovi componenti a spazi dei nomi esistenti nella raccolta.  
   
- Nell'esempio seguente aggiunge un nuovo \<elemento > allo spazio dei nomi esistente `http://MySchema/test_xml_schema` nella raccolta `MyColl`.  
+ Nell'esempio seguente viene aggiunto un nuovo \<elemento> allo spazio dei nomi esistente `http://MySchema/test_xml_schema` nella raccolta `MyColl`.  
   
 ```  
 -- First create an XML schema collection.  
@@ -91,9 +91,9 @@ ALTER XML SCHEMA COLLECTION MyColl ADD '
   
  Si noti che se alcuni dei componenti che si desidera aggiungere alla raccolta fanno riferimento a componenti che sono già nella stessa raccolta, è necessario utilizzare `<import namespace="referenced_component_namespace" />`. Tuttavia, non è consentito utilizzare lo spazio dei nomi dello schema corrente in `<xsd:import>` e pertanto i componenti dello spazio dei nomi di destinazione corrispondente allo spazio dei nomi dello schema corrente vengono importati automaticamente.  
   
- Per rimuovere le raccolte, utilizzare [DROP XML SCHEMA COLLECTION &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
+ Per rimuovere raccolte, usare [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
- Se la raccolta di schema già contiene un carattere jolly convalida lax o un elemento di tipo **xs: anyType**, aggiunta di un nuovo elemento globale, tipo o dichiarazione di attributo alla raccolta di schemi comporterà una riconvalida di tutti archiviato dati che sono vincolati dalla raccolta di schemi.  
+ Se la raccolta di schemi contiene già una carattere jolly di convalida lax o un elemento di tipo **xs:anyType**, l'aggiunta di una nuova dichiarazione di elemento globale, tipo o attributo alla raccolta di schemi comporterà una riconvalida di tutti i dati archiviati vincolati dalla raccolta di schemi.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per modificare XML SCHEMA COLLECTION è richiesta l'autorizzazione ALTER per la raccolta.  
@@ -181,20 +181,20 @@ SET @MySchemaCollection  = N' copy the schema collection here';
 CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;   
 ```  
   
- La variabile utilizzata nell'esempio è di tipo `nvarchar(max)`. La variabile può essere anche di **xml** del tipo di dati, nel qual caso, viene implicitamente convertito in una stringa.  
+ La variabile utilizzata nell'esempio è di tipo `nvarchar(max)`. È anche possibile usare una variabile di tipo **xml**, che viene convertita implicitamente in una stringa.  
   
  Per altre informazioni, vedere [Visualizzare una raccolta di XML Schema archiviata](../../relational-databases/xml/view-a-stored-xml-schema-collection.md).  
   
- È possibile archiviare raccolte di schemi in un **xml** colonna di tipo. In questo caso, per creare una raccolta di XML Schema, eseguire la procedura seguente:  
+ È possibile archiviare le raccolte di schemi in una colonna di tipo **xml**. In questo caso, per creare una raccolta di XML Schema, eseguire la procedura seguente:  
   
-1.  Recuperare la raccolta di schemi dalla colonna utilizzando un'istruzione SELECT e assegnarla a una variabile di **xml** tipo, o un **varchar** tipo.  
+1.  Recuperare la raccolta di schemi dalla colonna tramite un'istruzione SELECT e assegnarla a una variabile di tipo **xml** o **varchar**.  
   
 2.  Specificare il nome della variabile nell'istruzione CREATE XML SCHEMA COLLECTION.  
   
  L'istruzione CREATE XML SCHEMA COLLECTION archivia solo i componenti dello schema riconosciuti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non tutti gli elementi contenuti in XML Schema vengono archiviati nel database. Pertanto, se si desidera una copia esatta della raccolta di XML Schema, è consigliabile salvare gli XML Schema in una colonna di database o in un'altra cartella nel computer.  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Specifica di spazi dei nomi relativi a più schemi in una raccolta di schemi  
- È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Esempio:  
+ È possibile specificare più XML Schema quando si crea una raccolta di XML Schema. Ad esempio  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  
@@ -249,7 +249,7 @@ GO
 ```  
   
 ### <a name="c-importing-a-schema-that-does-not-specify-a-target-namespace"></a>C. Importazione di uno schema che non consente di specificare uno spazio dei nomi di destinazione  
- Se uno schema che non contiene un **targetNamespace** attributo viene importato in una raccolta, i suoi componenti sono associati allo spazio dei nomi di destinazione di una stringa vuota come illustrato nell'esempio seguente. Si noti che la mancata associazione di uno o più schemi importati nella raccolta risulta nell'associazione di più componenti di schema (potenzialmente non correlati) allo spazio dei nomi predefinito della stringa vuota.  
+ Se uno schema che non contiene un attributo **targetNamespace** viene importato in una raccolta, i relativi componenti vengono associati allo spazio dei nomi di destinazione della stringa vuota come illustrato nell'esempio seguente. Si noti che la mancata associazione di uno o più schemi importati nella raccolta risulta nell'associazione di più componenti di schema (potenzialmente non correlati) allo spazio dei nomi predefinito della stringa vuota.  
   
 ```  
 -- Create a collection that contains a schema with no target namespace.  
@@ -273,6 +273,6 @@ WHERE  sys.xml_schema_namespaces.name='';
  [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Requisiti e limitazioni per le raccolte di XML Schema nel server](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

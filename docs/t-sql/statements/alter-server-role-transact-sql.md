@@ -1,5 +1,5 @@
 ---
-title: MODIFICARE il ruolo di SERVER (Transact-SQL) | Documenti Microsoft
+title: ALTER SERVER ROLE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-non-specified
@@ -61,40 +61,40 @@ ALTER SERVER ROLE  server_role_name  DROP MEMBER login;
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*nome_ruolo_server*  
+*server_role_name*  
 Nome del ruolo del server da modificare.  
   
-Aggiungi membro *server_principal*  
-Aggiunge l'entità server specificata al ruolo del server. *server_principal* può essere un account di accesso o un ruolo del server definito dall'utente. *server_principal* non può essere un ruolo predefinito del server, un ruolo del database o dell'amministratore di sistema.  
+ADD MEMBER *server_principal*  
+Aggiunge l'entità server specificata al ruolo del server. *server_principal* può essere un account di accesso o un ruolo del server definito dall'utente. *server_principal* non può essere un ruolo predefinito del server, un ruolo del database o sa.  
   
 DROP MEMBER *server_principal*  
-Rimuove l'entità server specificata dal ruolo del server. *server_principal* può essere un account di accesso o un ruolo del server definito dall'utente. *server_principal* non può essere un ruolo predefinito del server, un ruolo del database o dell'amministratore di sistema.  
+Rimuove l'entità server specificata dal ruolo del server. *server_principal* può essere un account di accesso o un ruolo del server definito dall'utente. *server_principal* non può essere un ruolo predefinito del server, un ruolo del database o sa.  
   
-CON nome  **=**  *new_server_role_name*  
+WITH NAME **=***new_server_role_name*  
 Specifica il nuovo nome del ruolo del server definito dall'utente. Il nome non deve essere già esistente nel server.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 La modifica del nome di un ruolo del server definito dall'utente non comporta la modifica del numero di ID, del proprietario o delle autorizzazioni del ruolo.  
   
-Per modificare l'appartenenza al ruolo, `ALTER SERVER ROLE` sostituisce sp_addsrvrolemember e sp_dropsrvrolemember. Queste stored procedure sono deprecate.  
+Per la modifica dell'appartenenza al ruolo, `ALTER SERVER ROLE` sostituisce sp_addsrvrolemember e sp_dropsrvrolemember. Queste stored procedure sono deprecate.  
   
 È possibile visualizzare i ruoli del server eseguendo una query sulle viste del catalogo `sys.server_role_members` e `sys.server_principals`.  
   
-Per modificare il proprietario di un ruolo del server definito dall'utente, utilizzare [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
+Per modificare il proprietario di un ruolo del server definito dall'utente, usare [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
-Richiede `ALTER ANY SERVER ROLE` autorizzazione per il server per modificare il nome di un ruolo del server definito dall'utente.  
+## <a name="permissions"></a>Autorizzazioni  
+Per modificare il nome di un ruolo del server definito dall'utente è richiesta l'autorizzazione `ALTER ANY SERVER ROLE` per il server.  
   
 **Ruoli predefiniti del server**  
   
 Per aggiungere un membro a un ruolo predefinito del server, è necessario essere membri di tale ruolo o del ruolo predefinito del server `sysadmin`.  
   
 > [!NOTE]  
->  Il `CONTROL SERVER` e `ALTER ANY SERVER ROLE` autorizzazioni non sono sufficienti per eseguire `ALTER SERVER ROLE` per un ruolo predefinito del server, e `ALTER` Impossibile concedere l'autorizzazione in un ruolo predefinito del server.  
+>  Le autorizzazioni `CONTROL SERVER` e `ALTER ANY SERVER ROLE` non sono sufficienti per eseguire `ALTER SERVER ROLE` per un ruolo predefinito del server e l'autorizzazione `ALTER` non può essere concessa per un ruolo predefinito del server.  
   
-**Ruoli server definiti dall'utente**  
+**Ruoli del server definiti dall'utente**  
   
-Per aggiungere un membro a un ruolo del server definito dall'utente, è necessario essere un membro del `sysadmin` ruolo predefinito del server o avere `CONTROL SERVER` o `ALTER ANY SERVER ROLE` autorizzazione. Oppure è necessario disporre `ALTER` l'autorizzazione per tale ruolo.  
+Per aggiungere un membro a un ruolo del server definito dall'utente, è necessario essere membri del ruolo predefinito del server `sysadmin` oppure avere l'autorizzazione `CONTROL SERVER` o `ALTER ANY SERVER ROLE`. In alternativa è necessario avere l'autorizzazione `ALTER` per tale ruolo.  
   
 > [!NOTE]  
 >  A differenza dei ruoli predefiniti del server, i membri di un ruolo del server definito dall'utente non dispongono implicitamente dell'autorizzazione per aggiungere membri a quello stesso ruolo.  
@@ -118,7 +118,7 @@ ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. Aggiunta di un account di accesso di SQL Server a un ruolo del server  
-L'esempio seguente aggiunge un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso denominato `Ted` per il `diskadmin` ruolo predefinito del server.  
+Nell'esempio seguente un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato `Ted` viene aggiunto al ruolo predefinito del server `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE diskadmin ADD MEMBER Ted ;  
@@ -133,7 +133,7 @@ ALTER SERVER ROLE Production DROP MEMBER [adventure-works\roberto0] ;
 ```  
   
 ### <a name="e-removing-a-sql-server-login-from-a-server-role"></a>E. Rimozione di un account di accesso di SQL Server da un ruolo del server  
-L'esempio seguente rimuove il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesso `Ted` dal `diskadmin` ruolo predefinito del server.  
+Nell'esempio seguente l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Ted` viene rimosso dal ruolo predefinito del server `diskadmin`.  
   
 ```  
 ALTER SERVER ROLE Production DROP MEMBER Ted ;  
@@ -149,7 +149,7 @@ GO
 ```  
   
 ### <a name="g-to-view-role-membership"></a>G. Per visualizzare l'appartenenza ai ruoli  
-Per visualizzare l'appartenenza al ruolo, utilizzare il **ruolo del Server (membri)** pagina [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o eseguire la query seguente:  
+Per visualizzare l'appartenenza ai ruoli, usare la pagina **Ruolo server (Membri)** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o eseguire la query seguente:  
   
 ```  
 SELECT SRM.role_principal_id, SP.name AS Role_Name,   
@@ -162,31 +162,31 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>H. Sintassi di base  
-L'esempio seguente aggiunge l'account di accesso `Anna` per il `LargeRC` ruolo del server.  
+Nell'esempio seguente l'account di accesso `Anna` viene aggiunto al ruolo del server `LargeRC`.  
   
 ```  
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
-### <a name="i-remove-a-login-from-a-resource-class"></a>I. Rimuovere un account di accesso da una classe di risorse.  
-Nell'esempio seguente elimina l'appartenenza di Anna il `LargeRC` ruolo del server.  
+### <a name="i-remove-a-login-from-a-resource-class"></a>I. Rimuove un account di accesso da una classe di risorse.  
+L'esempio seguente rimuove l'appartenenza di Anna nel ruolo server `LargeRC`.  
   
 ```  
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[CREATE SERVER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
-[DROP SERVER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
-[CREAZIONE di ruolo &#40; Transact-SQL &#41;](../../t-sql/statements/create-role-transact-sql.md)   
-[ALTER ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-role-transact-sql.md)   
-[DROP ROLE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-role-transact-sql.md)   
-[Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+[CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
+[DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
+[CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
+[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
+[DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   
+[Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
 [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
 [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
-[Sys. server_role_members &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[sys.server_role_members &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
 [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   

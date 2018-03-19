@@ -1,5 +1,5 @@
 ---
-title: STPointN (tipo di dati geography) | Documenti Microsoft
+title: STPointN (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il punto specificato in un **geography** istanza.  
+  Restituisce il punto specificato in un'istanza **geography**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,22 +44,22 @@ ms.lasthandoff: 01/25/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **int** espressione compreso tra 1 e il numero di punti di **geography** istanza.  
+ *expression*  
+ Espressione **int** compresa tra 1 e il numero di punti nell'istanza **geography**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
- Aprire tipo Geospatial Consortium (OGC): **punto**  
+ Tipo OGC (Open Geospatial Consortium): **Point**  
   
-## <a name="remarks"></a>Osservazioni  
- Se un **geography** istanza è creata dall'utente, STPointN() restituisce il punto specificato da *espressione* ordinando i punti nell'ordine in cui sono stati originalmente immessi.  
+## <a name="remarks"></a>Remarks  
+ Se un'istanza **geography** è creata dall'utente, restituisce il punto specificato da *expression* ordinando i punti con l'ordine di immissione originale.  
   
- Se un **geography** istanza viene costruita dal sistema, STPointN() restituisce il punto specificato da *espressione* ordinando tutti i punti nello stesso ordine sarebbero output: innanzitutto in base  **Geography** istanza, quindi in base all'anello all'interno dell'istanza (se appropriato), quindi dal punto all'interno dell'anello. Questo ordine è deterministico.  
+ Se un'istanza **geography** è costruita dal sistema, STPointN() restituisce il punto specificato da *expression* ordinando tutti i punti nello stesso ordine di restituzione, ovvero in primo luogo in base all'istanza **geography**, quindi in base all'anello all'interno dell'istanza (se appropriato), infine in base ai punti all'interno dell'anello. Questo ordine è deterministico.  
   
- Se questo metodo viene chiamato con un valore minore di 1, viene generata una **ArgumentOutOfRangeException**.  
+ Se questo metodo viene chiamato con un valore minore di 1, genera un'eccezione **ArgumentOutOfRangeException**.  
   
  Se questo metodo viene chiamato con un valore maggiore del numero di punti nell'istanza, restituisce Null.  
   

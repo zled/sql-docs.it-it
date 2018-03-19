@@ -1,5 +1,5 @@
 ---
-title: DATETIME2FROMPARTS (Transact-SQL) | Documenti Microsoft
+title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Restituisce un **datetime2** valore per la data e ora specificate e con precisione specificata.
+Restituisce un valore **datetime2** per la data e l'ora specificate e con la precisione indicata.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -45,36 +45,36 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*anno*  
+*year*  
 Espressione intera che specifica un anno.
   
-*mese*  
+*month*  
 Espressione intera che specifica un mese.
   
-*giorno*  
+*day*  
 Espressione intera che specifica un giorno.
   
- *ora*  
+ *hour*  
 Espressione intera che specifica le ore.
   
-*minuto* espressione Integer che specifica i minuti.
+*minute* Espressione intera che specifica i minuti.
   
 *secondi*  
 Espressione intera che specifica i secondi.
   
-*frazioni*  
+*fractions*  
 Espressione intera che specifica le frazioni.
   
 *precisione*  
-Valore letterale integer che specifica la precisione del **datetime2** valore da restituire.
+Valore letterale intero che specifica la precisione del valore **datetime2** da restituire.
   
 ## <a name="return-types"></a>Tipi restituiti
-**datetime2 (** *precisione* **)**
+**datetime2(** *precision* **)**
   
-## <a name="remarks"></a>Osservazioni  
-**DATETIME2FROMPARTS** restituisce un oggetto completamente inizializzato **datetime2** valore. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null. Tuttavia, se il *precisione* argomento è null, allora viene generato un errore.
+## <a name="remarks"></a>Remarks  
+**DATETIME2FROMPARTS** restituisce un valore **datetime2** completamente inizializzato. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null. Se tuttavia l'argomento *precision* è Null viene generato un errore.
   
-Il *frazioni* argomento varia a seconda di *precisione* argomento. Ad esempio, se *precisione* è 7, quindi ogni frazione rappresenta 100 nanosecondi, mentre se *precisione* è 3, quindi ogni frazione rappresenta un millisecondo. Se il valore di *precisione* è zero, il valore di *frazioni* deve inoltre essere uguale a zero; in caso contrario, viene generato un errore.
+L'argomento *fractions* dipende dall'argomento *precision*. Se ad esempio *precision* è 7 ogni frazione rappresenta 100 nanosecondi, mentre se *precision* è 3 ogni frazione rappresenta un millisecondo. Se il valore di *precision* è zero anche il valore di *fractions* deve essere zero. In caso contrario, viene generato un errore.
   
 Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -97,13 +97,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Esempio con frazioni di un secondo  
-Nell'esempio seguente viene illustrato l'utilizzo del *frazioni* e *precisione* parametri:
+Nell'esempio seguente viene illustrato l'uso dei parametri *fractions* e *precision*:
   
-1.  Quando *frazioni* ha un valore pari a 5 e *precisione* ha un valore pari a 1, quindi il valore di *frazioni* rappresenta 5/10 di secondo.  
+1.  Se *fractions* ha il valore 5 e *precision* ha il valore 1, il valore di *fractions* corrisponde a 5/10 di secondo.  
   
-2.  Quando *frazioni* ha un valore pari a 50 e *precisione* ha un valore pari a 2, quindi il valore di *frazioni* rappresenta 50/100 di secondo.  
+2.  Se *fractions* ha il valore 50 e *precision* ha il valore 2, il valore di *fractions* corrisponde a 50/100 di secondo.  
   
-3.  Quando *frazioni* ha un valore pari a 500 e *precisione* ha un valore pari a 3, quindi il valore di *frazioni* rappresenta 500/1000 di un secondo.  
+3.  Se *fractions* ha il valore 500 e *precision* ha il valore 3, il valore di *fractions* corrisponde a 500/1000 di secondo.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

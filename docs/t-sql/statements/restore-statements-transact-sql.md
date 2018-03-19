@@ -53,7 +53,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="restore-statements-transact-sql"></a>RIPRISTINARE le istruzioni (Transact-SQL)
+# <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Vengono ripristinati i backup eseguiti tramite il comando BACKUP. Questo comando consente di effettuare gli scenari di ripristino seguenti:  
@@ -70,9 +70,9 @@ ms.lasthandoff: 01/25/2018
   
 -   Eseguire un ripristino temporizzato di un database fino al punto nel tempo acquisito in uno snapshot del database.  
   
- Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scenari di ripristino, vedere [e panoramica sul ripristino del recupero &#40; SQL Server &#41; ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  Per ulteriori informazioni sulle descrizioni degli argomenti, vedere [argomenti RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   Quando si ripristina un database da un'altra istanza, vedere le informazioni in [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+ Per informazioni sugli scenari di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  Per altre informazioni sulle descrizioni degli argomenti, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   Quando si ripristina un database da un'altra istanza, vedere le informazioni in [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
-> **Nota:** per ulteriori informazioni sul ripristino dal servizio di archiviazione Blob di Windows Azure, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+> **NOTA:** Per altre informazioni sul ripristino dal servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -233,7 +233,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- Per una descrizione degli argomenti, vedere [argomenti RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Per le descrizioni degli argomenti, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="about-restore-scenarios"></a>Informazioni sugli scenari di ripristino  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta un'ampia gamma di scenari di ripristino:  
@@ -244,7 +244,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Ripristino di file  
   
-     Viene ripristinato un file o un filegroup in un database con più filegroup. Si noti che con il modello di recupero con registrazione minima, il file deve appartenere a un filegroup di sola lettura. Dopo un ripristino di file completo è possibile ripristinare un backup di file differenziale. Per ulteriori informazioni, vedere [ripristini di File &#40; Modello di recupero con registrazione completa &#41; ](../../relational-databases/backup-restore/file-restores-full-recovery-model.md) e [File ripristini &#40; Modello di recupero con registrazione minima &#41; ](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md).  
+     Viene ripristinato un file o un filegroup in un database con più filegroup. Si noti che con il modello di recupero con registrazione minima, il file deve appartenere a un filegroup di sola lettura. Dopo un ripristino di file completo è possibile ripristinare un backup di file differenziale. Per altre informazioni, vedere [Ripristini di file &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md) and [Ripristini di file &#40;modello di recupero con registrazione minima&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md).  
   
 -   Ripristino di pagine  
   
@@ -256,11 +256,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Solo recupero  
   
-     Vengono recuperati i dati che sono già coerenti con il database e che devono solo essere resi disponibili. Per altre informazioni, vedere [Recuperare un database senza il ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
+     Vengono recuperati i dati che sono già coerenti con il database e che devono solo essere resi disponibili. Per altre informazioni, vedere [Recupero di un database senza ripristino dei dati &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md).  
   
 -   Ripristino del log delle transazioni  
   
-     Con il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, il ripristino dei backup del log è necessario per raggiungere il punto di recupero desiderato. Per ulteriori informazioni sul ripristino dei backup del log, vedere [applicare backup Log delle transazioni &#40; SQL Server &#41; ](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
+     Con il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, il ripristino dei backup del log è necessario per raggiungere il punto di recupero desiderato. Per altre informazioni sul ripristino di backup del log, vedere [Applicazione dei backup di log delle transazioni &#40; SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
 -   Preparare un database di disponibilità per un gruppo di disponibilità Always On  
   
@@ -268,17 +268,17 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Preparare un database mirror per il mirroring del database  
   
-     Per altre informazioni, vedere [Preparare un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md),  
+     Per altre informazioni, vedere [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md).  
   
 -   Ripristino online  
   
-    > **Nota:** ripristino Online è consentito solo nell'edizione Enterprise di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+    > **NOTA:** il ripristino in linea è consentito solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition.  
   
      Se il ripristino online è supportato e il database è online, i ripristini di file e pagine vengono eseguiti automaticamente online, così come i ripristini di filegroup secondari dopo la fase iniziale di un ripristino a fasi.  
   
-    > **Nota:** ripristino Online può coinvolgere [transazioni posticipate](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
+    > **NOTA:** nei ripristini in linea possono essere incluse [transazioni posticipate](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
-     Per ulteriori informazioni, vedere [ripristino in linea &#40; SQL Server &#41; ](../../relational-databases/backup-restore/online-restore-sql-server.md).  
+     Per altre informazioni, vedere [Ripristino in linea &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
 ## <a name="additional-considerations-about-restore-options"></a>Considerazioni aggiuntive sulle opzioni RESTORE  
   
@@ -294,7 +294,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ### <a name="restore-log"></a>RESTORE LOG  
  È possibile includere un elenco di file in RESTORE LOG per consentire la creazione di file durante il roll forward. Questa procedura viene utilizzata quando il backup del log contiene record di log scritti al momento dell'aggiunta di un file al database.  
   
-> **Nota:** per un database utilizzando il modello di recupero di massa con registrazione completa o, nella maggior parte dei casi è necessario eseguire il backup della parte finale del log prima di ripristinare il database. Se si esegue il ripristino di un database senza aver prima eseguito il backup della parte finale del log si verificherà un errore, a meno che nell'istruzione RESTORE DATABASE non sia inclusa la clausola WITH REPLACE o WITH STOPAT, che deve consentire di specificare l'ora o la transazione verificatasi al termine del backup dei dati. Per altre informazioni sui backup della parte finale del log, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> **NOTA:** per un database impostato per l'uso del modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, nella maggior parte dei casi è necessario eseguire il backup della parte finale del log prima di ripristinare il database. Se si esegue il ripristino di un database senza aver prima eseguito il backup della parte finale del log si verificherà un errore, a meno che nell'istruzione RESTORE DATABASE non sia inclusa la clausola WITH REPLACE o WITH STOPAT, che deve consentire di specificare l'ora o la transazione verificatasi al termine del backup dei dati. Per altre informazioni sui backup della parte finale del log, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
 ### <a name="comparison-of-recovery-and-norecovery"></a>Differenze tra RECOVERY e NORECOVERY  
  Il rollback viene controllato dall'istruzione RESTORE tramite le opzioni [ RECOVERY | NORECOVERY ]:  
@@ -305,14 +305,14 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   RECOVERY (opzione predefinita) indica che il rollback deve essere eseguito dopo il completamento del roll forward per il backup corrente.  
   
-     Ripristinare il database, è necessario che l'intero set di dati da ripristinare (il *set di rollforward*) è coerente con il database. Se il roll forward del set di roll forward non è stato eseguito a un livello sufficiente per garantirne la coerenza con il database e si specifica l'opzione RECOVERY, si verifica un errore nel [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+     Per il recupero del database è necessario che l'intero set di dati da ripristinare (*set di roll forward*) sia coerente con il database. Se il roll forward del set di roll forward non è stato eseguito a un livello sufficiente per garantirne la coerenza con il database e si specifica l'opzione RECOVERY, si verifica un errore nel [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="compatibility-support"></a>Informazioni sulla compatibilità  
- I backup di **master**, **modello** e **msdb** creati utilizzando una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ I backup dei database **master**, **model** e **msdb** creati tramite una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non possono essere ripristinati da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-> **Nota:** n [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ripristinare backup di una versione precedente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rispetto alla versione in cui è stato creato il backup.  
+> **NOTA:** nessun backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere ripristinato in una versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] precedente a quella tramite cui è stato creato il backup.  
   
- Ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza un percorso predefinito diverso rispetto alle versioni precedenti. Per ripristinare un database creato nel percorso predefinito per i backup di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [percorsi di File per predefinite e denominate di istanze di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
+ Ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza un percorso predefinito diverso rispetto alle versioni precedenti. Per ripristinare un database creato nel percorso predefinito per i backup di versioni precedenti, è necessario utilizzare l'opzione MOVE. Per informazioni sul nuovo percorso predefinito, vedere [Percorsi dei file per le istanze predefinite e denominate di SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
  Dopo aver ripristinato un database di una versione precedente a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], il database viene aggiornato automaticamente. In genere, il database diventa subito disponibile. Se tuttavia un database di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] include indici full-text, questi vengono importati, reimpostati o ricompilati dal processo di aggiornamento, a seconda dell'impostazione della proprietà del server  **upgrade_option** . Se l'opzione di aggiornamento è impostata per l'importazione (**upgrade_option** = 2) o la ricompilazione (**upgrade_option** = 0), gli indici full-text non saranno disponibili durante l'aggiornamento. A seconda della quantità di dati indicizzati, l'importazione può richiedere diverse ore, mentre la ricompilazione può risultare dieci volte più lunga. Si noti inoltre che quando l'opzione di aggiornamento è impostata sull'importazione, gli indici full-text associati vengono ricompilati se non è disponibile un catalogo full-text. Per modificare l'impostazione della proprietà del server **upgrade_option** , usare [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md).  
   
@@ -321,7 +321,7 @@ Note: URL is the format used to specify the location and the file name for the W
 ## <a name="general-remarks"></a>Osservazioni generali  
  Durante un ripristino offline, se il database specificato è in uso, l'istruzione RESTORE comporta la disconnessione degli utenti dopo un breve intervallo. Per il ripristino online di un filegroup non primario, il database può rimanere in uso a meno che il filegroup da ripristinare non venga portato offline. Tutti i dati del database specificato vengono sostituiti dai dati ripristinati.  
   
- Per ulteriori informazioni sul recupero di database, vedere [e panoramica sul ripristino del recupero &#40; SQL Server &#41; ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+ Per altre informazioni sul ripristino del database, vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
  È possibile eseguire operazioni di ripristino tra piattaforme diverse, e anche tra tipi di processore diversi, a condizione che il sistema operativo supporti le regole di confronto del database.  
   
@@ -329,7 +329,7 @@ Note: URL is the format used to specify the location and the file name for the W
   
  Non è possibile utilizzare RESTORE in una transazione esplicita o implicita.  
   
- Ripristino di un danneggiato **master** database viene eseguito tramite una procedura speciale. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+ Il ripristino di un database **master** danneggiato viene effettuato tramite una procedura speciale. Per altre informazioni, vedere [Backup e ripristino di Database di sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
  Il ripristino di un database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
   
@@ -346,19 +346,19 @@ Note: URL is the format used to specify the location and the file name for the W
  Per ripristinare un database crittografato, è necessario poter accedere alla chiave asimmetrica o al certificato utilizzato per crittografare il database. Non è possibile effettuare l'operazione di ripristino del database senza almeno uno di questi due elementi. Di conseguenza, il certificato utilizzato per crittografare la chiave di crittografia del database deve essere conservato fino a quando il backup è necessario. Per altre informazioni, vedere [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ### <a name="restoring-a-database-enabled-for-vardecimal-storage"></a>Ripristino di un database abilitato per l'archiviazione vardecimal  
- Eseguire il backup e ripristino funzionano correttamente con il **vardecimal** il formato di archiviazione. Per ulteriori informazioni su **vardecimal** il formato di archiviazione, vedere [sp_db_vardecimal_storage_format &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
+ Il backup e il ripristino funzionano correttamente con il formato di archiviazione **vardecimal**. Per altre informazioni sul formato di archiviazione **vardecimal**, vedere [sp_db_vardecimal_storage_format &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md).  
   
 ### <a name="restore-full-text-data"></a>Ripristino di dati full-text  
  I dati full-text vengono ripristinati insieme agli altri dati del database durante un ripristino completo. Con la normale sintassi `RESTORE DATABASE database_name FROM backup_device`, i file full-text vengono ripristinati nell'ambito del ripristino dei file del database.  
   
  L'istruzione RESTORE consente inoltre di eseguire ripristini in posizioni alternative, ripristini differenziali, ripristini di file e filegroup, nonché ripristini differenziali di file e filegroup di dati full-text. È inoltre possibile utilizzare l'istruzione RESTORE per ripristinare solo i file full-text, come nel caso dei dati di database.  
   
-> **Nota:** cataloghi Full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vengono comunque considerati file di database. Per tali file, la procedura di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] per l'esecuzione del backup dei cataloghi full-text rimane applicabile, a meno che la sospensione e la ripresa durante l'operazione di backup non siano più necessarie. Per ulteriori informazioni, vedere [backup e ripristino di cataloghi Full-Text](http://go.microsoft.com/fwlink/?LinkId=107381).  
+> **NOTA:** i cataloghi full-text importati da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vengono ancora gestiti come file di database. Per tali file, la procedura di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] per l'esecuzione del backup dei cataloghi full-text rimane applicabile, a meno che la sospensione e la ripresa durante l'operazione di backup non siano più necessarie. Per altre informazioni, vedere [Backup e ripristino di cataloghi full-text](http://go.microsoft.com/fwlink/?LinkId=107381).  
   
 ## <a name="metadata"></a>Metadati  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse tabelle cronologiche per backup e ripristini in cui viene tenuta traccia dell'attività di backup e ripristino per ogni istanza del server. Quando si effettua un'operazione di ripristino, vengono modificate anche le tabelle di cronologia di backup. Per informazioni su queste tabelle, vedere [cronologia di Backup e le informazioni di intestazione &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse tabelle cronologiche per backup e ripristini in cui viene tenuta traccia dell'attività di backup e ripristino per ogni istanza del server. Quando si effettua un'operazione di ripristino, vengono modificate anche le tabelle di cronologia di backup. Per informazioni su queste tabelle, vedere [Informazioni sulla cronologia e sull'intestazione del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md).  
   
-##  <a name="REPLACEoption"></a>Impatto dell'opzione REPLACE  
+##  <a name="REPLACEoption"></a> Impatto dell'opzione REPLACE  
  L'opzione REPLACE deve essere utilizzata raramente e solo dopo un'attenta valutazione. In genere, il ripristino impedisce la sovrascrittura accidentale di un database con un altro. Se il database specificato in un'istruzione RESTORE esiste già nel server corrente e il GUID del gruppo di database specificato è diverso da quello registrato nel set di backup, il database non verrà ripristinato. Questa misura di sicurezza è importante.  
   
  L'opzione REPLACE ignora diversi controlli di sicurezza importanti, eseguiti generalmente durante il ripristino. I controlli ignorati riguardano le operazioni seguenti:  
@@ -381,7 +381,7 @@ Note: URL is the format used to specify the location and the file name for the W
  È possibile interrompere e riavviare una sequenza di ripristino tramite il ripristino dell'intero contenuto dei file interessati.  
   
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>Ripristino di un database a uno snapshot del database  
- Oggetto *annullare l'operazione di database* (specificati mediante l'opzione DATABASE_SNAPSHOT) richiede un database di origine completo indietro nella cronologia di ripristino al momento di uno snapshot del database, ovvero sovrascrivendo il database di origine con i dati dal punto di nel tempo inclusi nello snapshot del database specificato. Al momento del ripristino, può esistere solo lo snapshot da ripristinare. L'operazione include la ricompilazione del log, pertanto non è possibile eseguire successivamente il roll forward di un database così ripristinato fino al punto di un errore utente specifico.  
+ L'*operazione di ripristino del database* (specificata con l'opzione DATABASE_SNAPSHOT) consente di portare un database di origine completo in un momento anteriore nel tempo tramite il ripristino del momento di uno snapshot del database, ovvero sovrascrivendo il database di origine con i dati di quel momento presenti nello snapshot specificato del database. Al momento del ripristino, può esistere solo lo snapshot da ripristinare. L'operazione include la ricompilazione del log, pertanto non è possibile eseguire successivamente il roll forward di un database così ripristinato fino al punto di un errore utente specifico.  
   
  La perdita di dati è limitata agli aggiornamenti del database eseguiti dopo la creazione dello snapshot. I metadati di un database così ripristinato corrispondono a quelli esistenti al momento della creazione dello snapshot. Il ripristino a uno snapshot causa tuttavia l'eliminazione di tutti i cataloghi full-text.  
   
@@ -396,20 +396,20 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   Sono disponibili più snapshot del database.  
   
- Per ulteriori informazioni, vedere [ripristinare un Database a uno Snapshot del Database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).  
+ Per altre informazioni, vedere [Ripristinare un database a uno snapshot del database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).  
   
-## <a name="security"></a>Sicurezza  
+## <a name="security"></a>Security  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I supporti protetti con password possono tuttavia essere sovrascritti con l'opzione FORMAT dell'istruzione BACKUP.  
   
 > [!IMPORTANT]  
->  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]La procedura consigliata per la protezione dei backup consiste nell'archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup su disco i file protetti da elenchi di controllo di accesso (ACL). Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
+>  Il livello di protezione garantito da questa password è ridotto. Lo scopo è impedire un ripristino non corretto da parte di utenti autorizzati o non autorizzati mediante gli strumenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non impedisce la lettura dei dati di backup eseguita con altri mezzi o la sostituzione della password. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Per ottenere un livello di protezione adeguato dei backup è consigliabile archiviare i nastri di backup in un luogo sicuro oppure eseguire il backup in file su disco protetti da elenchi di controllo di accesso (ACL) appropriati. Gli elenchi di controllo di accesso devono essere impostati a livello della directory radice in cui vengono creati i backup.  
 >   
->  Per informazioni specifiche di SQL Server backup e ripristino con l'archiviazione Blob di Windows Azure, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+>  Per informazioni specifiche sul backup e sul ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="permissions"></a>Autorizzazioni  
  Se il database da ripristinare non esiste, per eseguire un'operazione RESTORE l'utente deve disporre delle autorizzazioni CREATE DATABASE. Se il database esiste, le autorizzazioni per l'istruzione RESTORE vengono assegnate per impostazione predefinita ai membri dei ruoli predefiniti del server **sysadmin** e **dbcreator** e al proprietario (**dbo**) del database. Per l'opzione FROM DATABASE_SNAPSHOT, il database esiste sempre.  
   
- Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. L'appartenenza ai ruoli predefiniti del database può essere controllata solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, quindi i membri del ruolo predefinito del database **db_owner** non hanno le autorizzazioni per l'istruzione RESTORE.  
+ Le autorizzazioni per l'istruzione RESTORE vengono assegnate ai ruoli in cui le informazioni sull'appartenenza sono sempre disponibili per il server. Poiché è possibile controllare l'appartenenza ai ruoli predefiniti del database solo quando il database è accessibile e non è danneggiato, condizioni che non risultano sempre vere quando si esegue un'operazione RESTORE, i membri del ruolo predefinito del database **db_owner** non dispongono delle autorizzazioni per l'istruzione RESTORE.  
   
 ##  <a name="examples"></a> Esempi  
  In tutti gli esempi si presuppone che sia stato eseguito un backup completo del database.  
@@ -418,11 +418,11 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   A. [Ripristino di un database completo](#restoring_full_db)  
   
--   B. [Ripristino dei backup completi e differenziali del database](#restoring_full_n_differential_db_backups)  
+-   B. [Ripristino di backup completi e differenziali del database](#restoring_full_n_differential_db_backups)  
   
 -   C. [Ripristino di un database con la sintassi RESTART](#restoring_db_using_RESTART)  
   
--   D. [Ripristino di un file di database e spostamento](#restoring_db_n_move_files)  
+-   D. [Ripristino di un database e spostamento dei file](#restoring_db_n_move_files)  
   
 -   E. [Copia di un database tramite BACKUP e RESTORE](#copying_db_using_bnr)  
   
@@ -434,23 +434,23 @@ Note: URL is the format used to specify the location and the file name for the W
   
 -   I. [Ripristino con la sintassi FILE e FILEGROUP](#restoring_using_FILE_n_FG)  
   
--   J. [Ripristino da uno snapshot di database](#reverting_from_db_snapshot)  
+-   J. [Ripristino da uno snapshot del database](#reverting_from_db_snapshot)  
   
--   K. [Ripristino dal servizio di archiviazione Blob di Microsoft Azure](#Azure_Blob)  
+-   K. [Ripristino dal servizio di archiviazione BLOB di Microsoft Azure](#Azure_Blob)  
   
-> **Nota:** per altri esempi, vedere le procedure di ripristino elencate in [e panoramica sul ripristino del recupero &#40; SQL Server &#41; ](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
+> **NOTA:** per altri esempi, vedere gli argomenti relativi alle procedure di ripristino elencate in [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  
   
 ###  <a name="restoring_full_db"></a> A. Ripristino di un database completo  
- Nell'esempio seguente viene ripristinato un backup completo del database dal dispositivo di backup logico `AdventureWorksBackups`. Per un esempio di creazione di questo dispositivo, vedere [dispositivi di Backup](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+ Nell'esempio seguente viene ripristinato un backup completo del database dal dispositivo di backup logico `AdventureWorksBackups`. Per un esempio della creazione di questo dispositivo, vedere [Dispositivi di backup](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
    FROM AdventureWorks2012Backups;  
 ```  
   
-> **Nota:** per un database utilizzando il modello di recupero con registrazione completa o con registrazione bulk [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede in genere che il backup della parte finale del log prima di ripristinare il database. Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
+> **NOTE:** per un database impostato per l'uso del modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nella maggior parte dei casi è necessario eseguire il backup della parte finale del log prima di ripristinare il database. Per altre informazioni, vedere [Backup della parte finale del log &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_full_n_differential_db_backups"></a> B. Ripristino di backup completi e differenziali del database  
  Nell'esempio seguente viene ripristinato un backup completo del database seguito da un backup differenziale dal dispositivo di backup `Z:\SQLServerBackups\AdventureWorks2012.bak`, in cui sono entrambi contenuti. Il backup completo del database da ripristinare rappresenta il sesto set di backup nel dispositivo (`FILE = 6`), mentre il backup differenziale del database rappresenta il nono set di backup nel dispositivo (`FILE = 9`). Il database viene recuperato al termine del recupero del backup differenziale.  
@@ -466,7 +466,7 @@ RESTORE DATABASE AdventureWorks2012
       RECOVERY;  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_db_using_RESTART"></a> C. Ripristino di un database con la sintassi RESTART  
  Nell'esempio seguente viene utilizzata l'opzione `RESTART` per riavviare un'operazione `RESTORE` interrotta a causa di un'interruzione dell'alimentazione del server.  
@@ -480,7 +480,7 @@ RESTORE DATABASE AdventureWorks2012
    FROM AdventureWorksBackups WITH RESTART;  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_db_n_move_files"></a> D. Ripristino di un database e spostamento dei file  
  Nell'esempio seguente vengono ripristinati un database completo e il log delle transazioni. Il database ripristinato viene quindi spostato nella directory `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
@@ -498,7 +498,7 @@ RESTORE LOG AdventureWorks2012
    WITH RECOVERY;  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="copying_db_using_bnr"></a> E. Copia di un database tramite BACKUP e RESTORE  
  Nell'esempio seguente vengono utilizzate le istruzioni `BACKUP` e `RESTORE` per creare una copia del database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. L'istruzione `MOVE` consente di ripristinare i file di dati e di log nelle posizioni specificate. L'istruzione `RESTORE FILELISTONLY` viene utilizzata per determinare il numero e i nomi dei file del database da ripristinare. Alla nuova copia del database viene assegnato il nome `TestDB`. Per altre informazioni, vedere [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
@@ -517,7 +517,7 @@ RESTORE DATABASE TestDB
 GO  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_to_pit_using_STOPAT"></a> F. Ripristino temporizzato tramite STOPAT  
  Nell'esempio seguente viene ripristinato lo stato del database corrispondente alle ore `12:00 AM` del giorno `April 15, 2020` e viene illustrata un'operazione di ripristino di più backup del log. Nel dispositivo di backup, `AdventureWorksBackups`, il backup completo del database da ripristinare è il terzo set di backup (`FILE = 3`), il primo backup del log è il quarto set di backup (`FILE = 4`) e il secondo backup del log è il quinto set di backup (`FILE = 5`).  
@@ -538,7 +538,7 @@ RESTORE DATABASE AdventureWorks2012 WITH RECOVERY;
   
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_transaction_log_to_mark"></a> G. Ripristino del log delle transazioni fino a un contrassegno  
  Nell'esempio seguente viene ripristinato il log delle transazioni fino al contrassegno nella transazione contrassegnata denominata `ListPriceUpdate`.  
@@ -576,7 +576,7 @@ RESTORE LOG AdventureWorks2012
    STOPATMARK = 'UPDATE Product list prices';  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_using_TAPE"></a> H. Ripristino con la sintassi TAPE  
  Nell'esempio seguente viene ripristinato un backup completo del database da un dispositivo di backup di tipo `TAPE`.  
@@ -586,14 +586,14 @@ RESTORE DATABASE AdventureWorks2012
    FROM TAPE = '\\.\tape0';  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="restoring_using_FILE_n_FG"></a> I. Ripristino con la sintassi FILE e FILEGROUP  
  Nell'esempio seguente viene ripristinato un database denominato `MyDatabase` che include due file, un filegroup secondario e un log delle transazioni. Per il database viene utilizzato il modello di recupero con registrazione completa.  
   
  Il backup del database è il nono set di backup nel set di supporti in un dispositivo di backup logico denominato `MyDatabaseBackups`. Vengono quindi ripristinati tre backup del log, disponibili nei tre set di backup successivi (`10`, `11` e `12`) nel dispositivo `MyDatabaseBackups`, utilizzando `WITH NORECOVERY`. Dopo il ripristino dell'ultimo backup del log, il database viene recuperato.  
   
-> **Nota:** ripristino viene eseguito come passaggio separato per ridurre la possibilità di si ripristino troppo presto, prima che tutti i log sono stati ripristinati i backup.  
+> **NOTA:** il recupero viene eseguito come passaggio distinto per ridurre la possibilità che questa operazione venga eseguita troppo presto, ovvero prima del ripristino di tutti i backup del log.  
   
  Si noti che in `RESTORE DATABASE` sono disponibili due tipi di opzioni `FILE`. Le opzioni `FILE` che precedono il nome del dispositivo di backup specificano i nomi di file logici dei file di database da ripristinare dal set di backup, ad esempio `FILE = 'MyDatabase_data_1'`. Questo set di backup non è il primo backup del database nel set di supporti. La relativa posizione nel set di supporti viene pertanto indicata tramite l'opzione `FILE` nella clausola `WITH`, `FILE=9`.  
   
@@ -628,27 +628,27 @@ RESTORE DATABASE MyDatabase WITH RECOVERY;
 GO  
 ```  
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
 ###  <a name="reverting_from_db_snapshot"></a> J. Ripristino da uno snapshot del database  
- Nell'esempio seguente viene eseguito il ripristino di un database con uno snapshot del database. Nell'esempio si presuppone che per il database esista un solo snapshot. Per un esempio di come creare questo snapshot di database, vedere [creare uno Snapshot del Database &#40; Transact-SQL &#41; ](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
+ Nell'esempio seguente viene eseguito il ripristino di un database con uno snapshot del database. Nell'esempio si presuppone che per il database esista un solo snapshot. Per un esempio di come creare lo snapshot di questo database, vedere [Creare uno snapshot del database &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
-> **Nota:** verrà ripristinato come snapshot Elimina tutti i cataloghi full-text.  
+> **NOTA:** il ripristino di uno snapshot causa il rilascio di tutti i cataloghi full-text.  
   
 ```  
 USE master;    
 RESTORE DATABASE AdventureWorks2012 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbss1800';  
 GO  
 ```  
- Per ulteriori informazioni, vedere [ripristinare un Database a uno Snapshot del Database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).  
+ Per altre informazioni, vedere [Ripristinare un database a uno snapshot del database](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md).  
 
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
-###  <a name="Azure_Blob"></a> K. Ripristino dal servizio di archiviazione Blob di Microsoft Azure  
-Nei tre esempi seguenti comportano l'utilizzo del servizio di archiviazione di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`, mentre  Il contenitore per i file di dati è denominato `myfirstcontainer`.  Il contenitore per i file di backup è denominato `mysecondcontainer`.  Criteri di accesso archiviati sono stato creato con diritti di lettura, scrittura, eliminazione ed elenco, per ogni contenitore.  Le credenziali di SQL Server sono state create tramite firme di accesso condiviso che sono associati i criteri di accesso archiviati.  Per informazioni specifiche di SQL Server backup e ripristino con l'archiviazione Blob di Microsoft Azure, vedere [SQL Server Backup e ripristino con il servizio di archiviazione Blob di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
+###  <a name="Azure_Blob"></a> K. Ripristino dal servizio di archiviazione BLOB di Microsoft Azure  
+I tre esempi seguenti prevedono l'uso del servizio di archiviazione di Microsoft Azure.  Il nome dell'account di archiviazione è `mystorageaccount`, mentre  Il contenitore per i file di dati è denominato `myfirstcontainer`.  Il contenitore per i file di backup è denominato `mysecondcontainer`.  Sono stati creati criteri di accesso archiviati con diritti di lettura, scrittura, eliminazione ed elenco per ogni contenitore.  Le credenziali di SQL Server sono state create usando una firma di accesso condiviso associata ai criteri di accesso archiviati.  Per informazioni specifiche sul backup e sul ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
 
 **K1.  Ripristinare un backup completo del database dal servizio di archiviazione di Microsoft Azure**  
-Un backup completo del database, disponibile all'indirizzo `mysecondcontainer`, di `Sales` verrà ripristinato `myfirstcontainer`.  `Sales`non esiste attualmente nel server. 
+Un backup completo, disponibile in `mysecondcontainer`, del database `Sales` verrà ripristinato in `myfirstcontainer`.  `Sales` attualmente non esiste nel server. 
 ```
 RESTORE DATABASE Sales
   FROM URL = 'https://mystorageaccount.blob.core.windows.net/mysecondcontainer/Sales.bak'   
@@ -657,8 +657,8 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
 
-**K2. Ripristinare un backup completo del database dal servizio di archiviazione di Microsoft Azure all'archiviazione locale**  
-Un backup completo del database, disponibile all'indirizzo `mysecondcontainer`, di `Sales` sarà ripristinato allo spazio di archiviazione locale.  `Sales`non esiste attualmente nel server.
+**K2. Ripristinare un backup completo del database dal servizio di archiviazione di Microsoft Azure in una risorsa di archiviazione locale**  
+Un backup completo, disponibile in `mysecondcontainer`, del database `Sales` verrà ripristinato in una risorsa di archiviazione locale.  `Sales` attualmente non esiste nel server.
 ```
 RESTORE DATABASE Sales
   FROM URL = 'https://mystorageaccount.blob.core.windows.net/mysecondcontainer/Sales.bak'   
@@ -667,7 +667,7 @@ RESTORE DATABASE Sales
   STATS = 10;
 ```
   
-**K3. Ripristinare un backup completo del database dall'archiviazione locale per il servizio di archiviazione di Microsoft Azure**  
+**K3. Ripristinare un backup completo del database da una risorsa di archiviazione locale al servizio di archiviazione di Microsoft Azure**  
 ```
 RESTORE DATABASE Sales
   FROM DISK = 'E:\BAK\Sales.bak'
@@ -678,17 +678,17 @@ RESTORE DATABASE Sales
   
 
   
- [&#91; Inizio dell'esempi &#93;](#examples)  
+ [&#91;Inizio degli esempi&#93;](#examples)  
   
-## <a name="much-more-information"></a>Molte più informazioni.  
+## <a name="much-more-information"></a>Altre informazioni  
  - [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
-- [Eseguire il backup e ripristino di database di sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
+- [Backup e ripristino di database di sistema (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
  - [Ripristinare un backup del database con SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
  - [Backup e ripristino di indici e cataloghi full-text](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [Eseguire il backup e ripristino di database replicati](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  - [Set di supporti, gruppi di supporti e set di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
- - [RESTORE REWINDONLY &#40; Transact-SQL &#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
+ - [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
  - [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  - [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
  - [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  

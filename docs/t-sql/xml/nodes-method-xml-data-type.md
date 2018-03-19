@@ -1,5 +1,5 @@
 ---
-title: (tipo di dati xml) metodo Nodes () | Documenti Microsoft
+title: Metodo nodes() (tipo di dati xml) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -32,13 +32,13 @@ ms.lasthandoff: 01/25/2018
 # <a name="nodes-method-xml-data-type"></a>Metodo nodes() (tipo di dati xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Il **Nodes ()** metodo è utile quando si desidera suddividere un **xml** istanza del tipo di dati nei dati relazionali. Tale metodo consente di identificare i nodi sui quali verrà eseguito il mapping a una nuova riga.  
+  È possibile usare il metodo **nodes()** per suddividere un'istanza del tipo di dati **xml** in un insieme di dati relazionali. Tale metodo consente di identificare i nodi sui quali verrà eseguito il mapping a una nuova riga.  
   
- Ogni **xml** istanza del tipo di dati dispone di un nodo di contesto fornito implicitamente. Nel caso di un'istanza XML archiviata in una colonna o variabile, si tratta del nodo del documento, Il nodo del documento è il nodo implicito nella parte superiore di ogni **xml** istanza del tipo di dati.  
+ Per ogni istanza del tipo di dati **xml** esiste un nodo di contesto fornito implicitamente. Nel caso di un'istanza XML archiviata in una colonna o variabile, si tratta del nodo del documento, che costituisce il nodo implicito di livello più alto per ogni istanza del tipo di dati **xml**.  
   
- Il risultato di **Nodes ()** metodo è un set di righe che contiene copie logiche delle istanze XML originali. In tali copie logiche il nodo di contesto di ogni istanza di riga viene impostato su uno dei nodi identificati tramite l'espressione della query, di modo che le query successive possano eseguire spostamenti relativi rispetto ai nodi di contesto.  
+ Il metodo **nodes()** restituisce un set di righe che contiene copie logiche delle istanze XML originali. In tali copie logiche il nodo di contesto di ogni istanza di riga viene impostato su uno dei nodi identificati tramite l'espressione della query, di modo che le query successive possano eseguire spostamenti relativi rispetto ai nodi di contesto.  
   
- Dal set di righe è possibile recuperare più valori. Ad esempio, è possibile applicare il **Value ()** il set di righe restituito dal metodo **Nodes ()** e recuperare più valori dell'istanza XML originale. Si noti che il **Value ()** metodo, quando applicata per l'istanza XML, viene restituito un solo valore.  
+ Dal set di righe è possibile recuperare più valori. È ad esempio possibile applicare il metodo **value()** al set di righe restituito dal metodo **nodes()** e recuperare più valori dall'istanza XML originale. Quando viene applicato a un'istanza XML, il metodo **value()** restituisce un solo valore.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,10 +51,10 @@ nodes (XQuery) as Table(Column)
  *XQuery*  
  Valore letterale stringa costituito da un'espressione XQuery. Se l'espressione della query costruisce nodi, questi ultimi verranno esposti nel set di righe risultante. Se l'espressione della query restituisce una sequenza vuota, il set di righe sarà vuoto. Se l'espressione della query restituisce staticamente una sequenza che contiene valori atomici, anziché nodi, verrà generato un errore statico.  
   
- *Tabella*(*colonna*)  
+ *Table*(*Column*)  
  Nome della tabella e della colonna per il set di righe risultante.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Si consideri ad esempio la tabella seguente:  
   
 ```  
@@ -96,7 +96,7 @@ ModelID      Instructions
              </root>  
 ```  
   
- È quindi possibile eseguire una query questo set di righe utilizzando **xml** metodi con tipo di dati. La query seguente estrae il sottoalbero dell'elemento di contesto per ogni riga generata:  
+ Per eseguire query su tale set di righe, è possibile usare i metodi con tipo di dati **xml**. La query seguente estrae il sottoalbero dell'elemento di contesto per ogni riga generata:  
   
 ```  
 SELECT T2.Loc.query('.')  
@@ -114,15 +114,15 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
- Nel set di righe restituito sono state mantenute le informazioni sul tipo. È possibile applicare **xml** del tipo di dati, metodi, ad esempio **query ()**, **Value ()**, **exist ()**, e **Nodes ()** , al risultato di un **Nodes ()** metodo. Tuttavia, non è possibile applicare il **Modify ()** metodo per modificare l'istanza XML.  
+ Nel set di righe restituito sono state mantenute le informazioni sul tipo. È possibile applicare metodi con tipo di dati **xml**, ad esempio **query()**, **value()**, **exist()** e **nodes()** al risultato di un metodo **nodes()**. Non è tuttavia possibile applicare il metodo **modify()** per modificare l'istanza XML.  
   
  Inoltre, il nodo di contesto nel set di righe non può essere materializzato, ovvero non può essere utilizzato in un'istruzione SELECT. Può essere tuttavia utilizzato nelle istruzioni IS NULL e COUNT(*).  
   
- Scenari per l'utilizzo di **Nodes ()** metodo sono gli stessi dell'utilizzo [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md). che visualizza un'istanza XML come set di righe. Tuttavia, non è necessario utilizzare i cursori quando si utilizza il **Nodes ()** metodo in una tabella che contiene molte righe di documenti XML.  
+ Gli scenari d'uso del metodo **nodes()** sono gli stessi dell'uso di [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md), che visualizza un'istanza XML come set di righe. Non è tuttavia possibile usare cursori quando si usa il metodo **nodes()** su una tabella che contiene più righe di documenti XML.  
   
- Si noti che il set di righe restituito dal **Nodes ()** metodo è un set di righe senza nome. deve essere denominato in modo esplicito tramite alias.  
+ Si noti che, poiché il set di righe restituito dal metodo **nodes()** è senza nome, deve essere denominato in modo esplicito tramite alias.  
   
- Il **Nodes ()** funzione non può essere applicata direttamente ai risultati di una funzione definita dall'utente. Utilizzare il **Nodes ()** funzione con il risultato di una funzione scalare definita dall'utente, è possibile assegnare il risultato della funzione definita dall'utente a una variabile o utilizzare una tabella derivata per assegnare un alias di colonna per la funzione definita dall'utente valore restituito e quindi utilizzare CROSS APPLY per selezionare l'alias.  
+ La funzione **nodes()** non può essere applicata direttamente ai risultati di una funzione definita dall'utente. Per usare la funzione **nodes()** con il risultato di una funzione scalare definita dall'utente, è possibile assegnare il risultato della funzione definita dall'utente a una variabile o usare una tabella derivata per assegnare un alias di colonna al valore restituito dalla funzione definita dall'utente e quindi usare CROSS APPLY per eseguire la selezione dall'alias.  
   
  Nell'esempio seguente viene illustrato un modo per utilizzare `CROSS APPLY` per selezionare il risultato di una funzione definita dall'utente.  
   
@@ -204,9 +204,9 @@ go
 ```  
   
 ### <a name="specifying-the-nodes-method-against-a-column-of-xml-type"></a>Utilizzo del metodo nodes() in una colonna di tipo xml  
- Le istruzioni di produzione di biciclette vengono utilizzate in questo esempio vengono memorizzati nelle istruzioni **xml** colonna tipo di **ProductModel** tabella.  
+ In questo esempio vengono usati documenti di istruzioni per la produzione di biciclette, archiviati nella colonna di tipo **xml** Instructions della tabella **ProductModel**.  
   
- Nell'esempio seguente, il `nodes()` (metodo) viene eseguita la `Instructions` colonna di **xml** digitare il `ProductModel` tabella.  
+ Nell'esempio seguente il metodo `nodes()` viene eseguito sulla colonna `Instructions` di tipo **xml** della tabella `ProductModel`.  
   
  Il metodo `nodes()` imposta gli elementi <`Location`> come nodi di contesto specificando il percorso `/MI:root/MI:Location`. Il set di righe risultante include copie logiche del documento originale, una per ogni nodo <`Location`> del documento, con il nodo di contesto impostato sull'elemento <`Location`>. Il metodo `nodes()` restituisce pertanto un set di nodi di contesto <`Location`>.  
   
@@ -214,9 +214,9 @@ go
   
  In questo esempio la query imposta ogni elemento <`Location`> come nodo di contesto nel documento di istruzioni per la produzione di uno specifico modello di prodotto. È possibile utilizzare tali nodi di contesto per recuperare valori quali i seguenti:  
   
--   Trovare gli ID di percorso in ogni <`Location`>  
+-   Trovare ID dei centri di produzione in ogni elemento <`Location`>  
   
--   Recupero delle fasi di produzione (<`step`> gli elementi figlio) in ogni <`Location`>  
+-   Recuperare i passaggi di produzione (gli elementi figlio <`step`>) in ogni elemento <`Location`>  
   
  La query seguente restituisce l'elemento di contesto. Nel metodo `'.'` viene specificata la sintassi abbreviata per `self::node()`, ovvero `query()`.  
   

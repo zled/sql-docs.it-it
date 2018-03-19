@@ -1,5 +1,5 @@
 ---
-title: NELLA clausola (Transact-SQL) | Documenti Microsoft
+title: Clausola INTO (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/23/2017
 ms.prod: sql-non-specified
@@ -42,10 +42,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---into-clause-transact-sql"></a>-Clausola SELECT INTO (Transact-SQL)
+# <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT…INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
+  SELECT…INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,16 +62,16 @@ ms.lasthandoff: 01/25/2018
  
   *filegroup*
  
- Specifica il nome del filegroup in cui verrà creata la tabella nuova. Il filegroup specificato deve esistere nel database else di genera un'eccezione il motore di SQL Server un errore. Questa opzione è supportata solo a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
+ Specifica il nome del filegroup in cui verrà creata la nuova tabella. Il filegroup specificato deve esistere nel database anche se il motore di SQL Server genera un errore. Questa opzione è supportata solo a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
- Il formato di *new_table* viene determinato valutando le espressioni nell'elenco di selezione. Le colonne in *new_table* vengono creati nell'ordine specificato dall'elenco di selezione. Ogni colonna *new_table* ha lo stesso nome, tipo di dati, ammissione di valori null e valore dell'espressione corrispondente nell'elenco di selezione. La proprietà IDENTITY di una colonna viene trasferita, tranne nelle condizioni definite in "Utilizzo di colonne Identity" nella sezione Osservazioni.  
+ Il formato dell'argomento *new_table* viene determinato tramite la valutazione delle espressioni nell'elenco di selezione. Le colonne di *new_table* vengono create nell'ordine indicato nell'elenco di selezione. A ogni colonna di *new_table* vengono assegnati lo stesso nome, lo stesso tipo di dati, il supporto dei valori Null e lo stesso valore dell'espressione corrispondente nell'elenco di selezione. La proprietà IDENTITY di una colonna viene trasferita, tranne nelle condizioni definite in "Utilizzo di colonne Identity" nella sezione Osservazioni.  
   
- Per creare la tabella in un altro database nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare *new_table* come un nome completo nel formato *TABLE_NAME*.  
+ Per creare la tabella in un altro database della stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare *new_table* come nome completo nel formato *database.schema.table_name*.  
   
- Non è possibile creare *new_table* in un server remoto; tuttavia, è possibile popolare *new_table* da un'origine dati remota. Per creare *new_table* da una tabella di origine remota, specificare la tabella di origine utilizzando un nome composto da quattro parti nel formato *server_collegato*. *catalogo*. *schema*. *oggetto* nella clausola FROM dell'istruzione SELECT. In alternativa, è possibile utilizzare il [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) funzione o [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funzione nella clausola FROM per specificare l'origine dati remota.  
+ Non è possibile creare *new_table* in un server remoto. È tuttavia possibile popolare *new_table* da un'origine dati remota. Per creare *new_table* da una tabella di origine remota, specificare la tabella di origine usando un nome in quattro parti nel formato *linked_server*.*catalog*.*schema*.*object* nella clausola FROM dell'istruzione SELECT. In alternativa, è possibile usare la funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) nella clausola FROM per specificare l'origine dati remota.  
   
 ## <a name="data-types"></a>Tipi di dati  
- L'attributo FILESTREAM non viene trasferito nella nuova tabella. Oggetti BLOB FILESTREAM vengono copiati e archiviati nella nuova tabella come **varbinary (max)** BLOB. Senza l'attributo FILESTREAM, il **varbinary (max)** tipo di dati è limitata a 2 GB. Se un oggetto BLOB FILESTREAM supera questo valore, viene generato l'errore 7119 e l'istruzione viene arrestata.  
+ L'attributo FILESTREAM non viene trasferito nella nuova tabella. Gli oggetti binari di grandi dimensioni FILESTREAM vengono copiati e archiviati nella nuova tabella come oggetti binari di grandi dimensioni di tipo **varbinary(max)**. Senza l'attributo FILESTREAM, il tipo di dati **varbinary(max)** è soggetto al limite di 2 GB. Se un oggetto BLOB FILESTREAM supera questo valore, viene generato l'errore 7119 e l'istruzione viene arrestata.  
   
  Quando viene selezionata una colonna Identity esistente in una nuova tabella, la nuova colonna eredita la proprietà IDENTITY, a meno che non si verifichi una delle seguenti condizioni:  
   
@@ -101,7 +101,7 @@ Se una di queste condizioni risulta vera, la colonna viene creata come colonna N
  Quando nell'elenco di selezione è presente una colonna calcolata, la colonna corrispondente della nuova tabella non è di tipo calcolato. I valori della nuova colonna corrispondono ai valori calcolati quando è stata eseguita l'istruzione SELECT...INTO.  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
- La quantità di registrazioni per SELECT INTO dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con registrazione minima, utilizzando l'istruzione SELECT... UN'istruzione può essere più efficiente rispetto alla creazione di una tabella e quindi popolamento della tabella con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ La quantità di registrazioni per SELECT INTO dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione SELECT... INTO può essere più efficace della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
@@ -173,7 +173,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. Creazione di una tabella specificando colonne provenienti da un'origine dei dati remota  
  Nell'esempio seguente vengono illustrati tre metodi per creare una nuova tabella nel server locale da un'origine dati remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota. Il nome del server collegato, `MyLinkServer,` viene specificato nella clausola FROM della prima istruzione SELECT...INTO e nella funzione OPENQUERY della seconda istruzione SELECT...INTO. La terza istruzione SELECT...INTO utilizza la funzione OPENDATASOURCE che specifica direttamente l'origine dei dati remota anziché utilizzare il nome del server collegato.  
   
- **Si applica a:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Si applica a:**  da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ```sql
 USE master;  
@@ -214,7 +214,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importare da una tabella esterna creata con PolyBase  
- Importare dati da Hadoop o dall'archiviazione di Azure in SQL Server per l'archivio permanente. Utilizzare `SELECT INTO` per importare i dati a cui fa riferimento una tabella esterna per l'archivio permanente in SQL Server. Creare un tabella relazionale e quindi creare un indice di archivio colonne nella parte superiore della tabella in un secondo passaggio.  
+ Importare dati da Hadoop o dall'archiviazione di Azure in SQL Server per l'archivio permanente. Usare `SELECT INTO` per importare i dati a cui fa riferimento una tabella esterna per l'archiviazione permanente in SQL Server. Creare un tabella relazionale e quindi creare un indice di archivio colonne nella parte superiore della tabella in un secondo passaggio.  
   
  **Si applica a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -231,10 +231,10 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 ORDER BY YearlyIncome  
   
 ```  
-### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Crea una nuova tabella come copia di un'altra tabella e caricamento di un filegroup specificato
-Nell'esempio seguente illustra la creazione di una nuova tabella come copia di un'altra tabella e caricarli in un filegroup specificato diverso dal filegroup predefinito dell'utente.
+### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Creare una nuova tabella come copia di un'altra tabella e caricarla in un filegroup specificato
+Nell'esempio seguente viene illustrato come creare una nuova tabella come copia di un'altra tabella e come caricarla in un filegroup specificato diverso dal filegroup predefinito dell'utente.
 
- **Si applica a:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
+ **Si applica a:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -251,8 +251,8 @@ SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
   
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Selezionare esempi &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
- [IDENTITY &#40;Function&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
+ [Esempi di istruzioni SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [Funzione IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

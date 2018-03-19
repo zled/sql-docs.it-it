@@ -1,5 +1,5 @@
 ---
-title: Filtro (tipo di dati geography) | Documenti Microsoft
+title: Filter (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -35,11 +35,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="filter-geography-data-type"></a>Filter (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Un metodo che offre un metodo rapido indice intersezione basato solo per determinare se un **geography** istanza interseca un'altra **geography** istanza, supponendo che un indice sia disponibile.  
+  Metodo di intersezione basato solo su indici che consente di determinare in modo rapido se un'istanza **geography** interseca un'altra istanza **geography**, a condizione che sia disponibile un indice.  
   
- Restituisce 1 se un **geography** istanza interseca potenzialmente un'altra **geography** istanza. Questo metodo può produrre un risultato falso positivo e il risultato esatto può dipendere dal piano. Restituisce un valore esatto 0 (risultato vero positivo) se è presente alcuna intersezione di **geography** istanze trovate.  
+ Restituisce 1 se un'istanza **geography** interseca potenzialmente un'altra istanza **geography**. Questo metodo può produrre un risultato falso positivo e il risultato esatto può dipendere dal piano. Restituisce un valore esatto 0 (risultato vero positivo) se non viene rilevata alcuna intersezione tra le istanze **geography**.  
   
- In casi in cui un indice non è disponibile o non viene utilizzato il metodo restituirà gli stessi valori **stintersects ()** quando viene chiamato con gli stessi parametri.  
+ Nel caso in cui un indice non sia disponibile o non venga usato, il metodo restituisce gli stessi valori di **STIntersects()** se viene chiamato con gli stessi parametri.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,14 +50,14 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *other_geography*  
- Un altro **geography** istanza da confrontare con l'istanza in cui viene richiamato Filter().  
+ Altra istanza **geography** da confrontare con l'istanza sulla quale viene chiamato Filter().  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **bit**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **bit**  
   
  Tipo CLR restituito: **SqlBoolean**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questo metodo non è deterministico e non è preciso.  
   
 ## <a name="examples"></a>Esempi  
@@ -80,7 +80,7 @@ WHERE g.Filter(geography::Parse(
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [STIntersects &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
+ [Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [STIntersects &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stintersects-geography-data-type.md)  
   
   

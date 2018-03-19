@@ -1,5 +1,5 @@
 ---
-title: CORRISPONDENZA (SQL grafico) | Documenti Microsoft
+title: MATCH (grafo SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-  Specifica una condizione di ricerca per un grafico. CORRISPONDENZA possa essere utilizzata solo con graph nodo e bordo tabelle, nell'istruzione SELECT come parte della clausola WHERE. 
+  Specifica una condizione di ricerca per un grafo. Il criterio MATCH può essere usato solo con il nodo del grafico e le tabelle bordi, nell'istruzione SELECT come parte della clausola WHERE. 
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -63,24 +63,24 @@ MATCH (<graph_search_pattern>)
 
 ## <a name="arguments"></a>Argomenti  
 *graph_search_pattern*  
-Specifica il criterio di ricerca o un percorso di attraversare il grafico. Questo modello Usa sintassi ClipArt ASCII per attraversare un percorso nel grafico. Il modello passa da un nodo a un altro tramite un bordo, nella direzione della freccia fornita. Bordo nomi o gli alias vengono forniti all'interno di parantheses. I nomi dei nodi o gli alias vengono visualizzati alle due estremità della freccia. La freccia può andare in entrambe le direzioni nel modello.
+Specifica il criterio di ricerca o il percorso da attraversare nel grafico. Questo criterio usa la sintassi grafica ASCII per attraversare un percorso nel grafico. Il criterio passa da un nodo a un altro tramite un bordo, nella direzione della freccia indicata. I nomi o alias dei bordi vengono specificati all'interno di parentesi. I nomi o gli alias dei nodi vengono visualizzati alle due estremità della freccia. La freccia può andare in entrambe le direzioni nel modello.
 
 *node_alias*  
-Nome o alias di una tabella di nodo specificata nella clausola FROM.
+Nome o alias di una tabella nodi specificata nella clausola FROM.
 
 *edge_alias*  
-Nome o alias di una tabella edge fornita nella clausola FROM.
+Nome o alias di una tabella bordi specificata nella clausola FROM.
 
 
-## <a name="remarks"></a>Osservazioni  
-I nomi dei nodi all'interno di corrispondenza può essere ripetuti.  In altre parole, un nodo può essere attraversato un numero arbitrario di volte nella stessa query.  
-Il nome di un bordo non può essere ripetuto all'interno di corrispondenza.  
-Un bordo può puntare in entrambe le direzioni, ma deve essere una direzione esplicita.  
-O e non gli operatori non sono supportati nel criterio di corrispondenza. CORRISPONDENZA può essere combinata con altre espressioni utilizzando e nella clausola WHERE. Tuttavia, integrarlo con altre espressioni tramite OR o non è supportato. 
+## <a name="remarks"></a>Remarks  
+I nomi dei nodi all'interno del criterio MATCH possono essere ripetuti.  In altre parole, un nodo può essere attraversato un numero arbitrario di volte nella stessa query.  
+Il nome di un bordo non può essere ripetuto all'interno del criterio MATCH.  
+Un bordo può puntare in entrambe le direzioni, ma deve avere una direzione esplicita.  
+Gli operatori OR e NOT non sono supportati nel criterio MATCH. Il criterio MATCH può essere combinato con altre espressioni tramite l'operatore AND nella clausola WHERE. Non può tuttavia essere combinato con altre espressioni tramite l'operatore OR o NOT. 
 
 ## <a name="examples"></a>Esempi  
-### <a name="a--find-a-friend"></a>A.  Trovare un elemento friend 
- Nell'esempio seguente crea una tabella di nodo di persona e una tabella Edge amici, inserisce alcuni dati e quindi Usa corrispondenza per trovare gli elementi Friend di Alice, una persona nel grafico.
+### <a name="a--find-a-friend"></a>A.  Trovare un amico 
+ Nell'esempio seguente viene creata una tabella nodi di persone e una tabella bordi di amici, vengono inseriti alcuni dati e quindi viene usato il criterio MATCH per trovare gli amici di Alice, una persona nel grafo.
 
  ```
  -- Create person node table
@@ -110,8 +110,8 @@ AND Person1.name = 'Alice';
 
  ```
 
- ### <a name="b--find-friend-of-a-friend"></a>B.  Trovare l'elemento friend di un elemento friend
- Nell'esempio seguente tenta di trovare l'elemento friend di un elemento friend di Alice. 
+ ### <a name="b--find-friend-of-a-friend"></a>B.  Trovare un amico di un amico
+ Nell'esempio seguente si tenta di trovare l'amico di un amico di Alice. 
 
  ```
 SELECT Person3.name AS FriendName 
@@ -121,8 +121,8 @@ AND Person1.name = 'Alice';
 
  ```
 
-### <a name="c--more-match-patterns"></a>C.  Ulteriori `MATCH` modelli
- Di seguito sono alcuni altri modi in cui è possibile specificare un criterio all'interno di corrispondenza.
+### <a name="c--more-match-patterns"></a>C.  Altri criteri `MATCH`
+ Di seguito sono riportati alcuni altri modi in cui è possibile specificare un criterio all'interno di MATCH.
 
  ```
  -- Find a friend
@@ -154,5 +154,5 @@ AND Person1.name = 'Alice';
 
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL grafico)](../../t-sql/statements/insert-sql-graph.md)]  
- [L'elaborazione con SQL Server 2017 grafico](../../relational-databases/graphs/sql-graph-overview.md)  
+ [INSERT (grafo SQL)](../../t-sql/statements/insert-sql-graph.md)  
+ [Graph Processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Elaborazione di grafi con SQL Server 2017)  

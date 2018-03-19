@@ -1,5 +1,5 @@
 ---
-title: DECOMPRIMERE (Transact-SQL) | Documenti Microsoft
+title: DECOMPRESS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 11/30/2015
 ms.prod: sql-non-specified
@@ -29,10 +29,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="decompress-transact-sql"></a>DECOMPRIMERE (Transact-SQL)
+# <a name="decompress-transact-sql"></a>DECOMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Decomprimere l'espressione di input utilizzando l'algoritmo GZIP. Risultato della compressione è la matrice di byte (tipo varbinary (max)).  
+  Decomprime l'espressione di input usando l'algoritmo GZIP. Il risultato della decompressione è una matrice di byte di tipo VARBINARY(MAX).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,18 +43,18 @@ DECOMPRESS ( expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È un **varbinary (***n***)**, **varbinary (max)**, o **binario (** *n***)**. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
+ *expression*  
+ È **varbinary(***n***)**, **varbinary(max)** o **binary(***n***)**. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce il tipo di dati di **varbinary (max)** tipo. L'argomento di input viene decompresso utilizzando l'algoritmo ZIP. L'utente deve esplicitamente il cast del risultato a un tipo di destinazione se necessario.  
+ Restituisce il tipo di dati di **varbinary(max)**. L'argomento di input viene decompresso usando l'algoritmo ZIP. Se necessario l'utente dovrà eseguire esplicitamente il cast del risultato a un tipo di destinazione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-decompress-data-at-query-time"></a>A. Decomprimere i dati in fase di Query  
- Nell'esempio seguente viene illustrato come visualizzare dati di compressione di una tabella:  
+### <a name="a-decompress-data-at-query-time"></a>A. Decompressione dei dati al momento della query  
+ L'esempio seguente illustra come visualizzare i dati compressi di una tabella:  
   
 ```  
 SELECT _id, name, surname, datemodified,  
@@ -62,8 +62,8 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>B. Visualizzare i dati compressi utilizzando la colonna calcolata  
- Nell'esempio seguente viene illustrato come creare una tabella per archiviare dati decompressi:  
+### <a name="b-display-compressed-data-using-computed-column"></a>B. Visualizzare i dati compressi usando una colonna calcolata  
+ L'esempio seguente illustra come creare una tabella per archiviare i dati decompressi:  
   
 ```  
 CREATE TABLE (  
@@ -76,7 +76,7 @@ CREATE TABLE (
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni stringa &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
- [COMPRESS &#40; Transact-SQL &#41;](../../t-sql/functions/compress-transact-sql.md)  
+ [Funzioni stringa &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+ [COMPRESS &#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)  
   
   

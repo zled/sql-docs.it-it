@@ -1,5 +1,5 @@
 ---
-title: CurveToLineWithTolerance (tipo di dati geometry) | Documenti Microsoft
+title: CurveToLineWithTolerance (tipo di dati geometry) | Microsoft Docs
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
@@ -31,7 +31,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance (tipo di dati geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente i segmenti di arco circolare.
+Restituisce un'approssimazione poligonale di un'istanza **geometry** contenente segmenti di arco circolare.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,45 +41,45 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *tolleranza di errore*  
- È un **doppie** espressione che definisce l'errore massimo tra il segmento di arco circolare originale e l'approssimazione lineare.  
+ *tolerance*  
+ Espressione **double** che definisce l'errore massimo tra il segmento di arco circolare originale e l'approssimazione lineare.  
   
  *relative*  
- È un **bool** espressione che indica se utilizzare un valore massimo relativo per la deviazione. Quando il parametro relative viene impostato su false (0), viene impostato un valore massimo assoluto per la deviazione che può presentare un'approssimazione lineare. Quando il parametro relative viene impostato su true (1), la tolleranza e viene calcolata come prodotto tra il parametro della tolleranza e il diametro del rettangolo di selezione per l'oggetto spaziale.  
+ Espressione **bool** che indica se usare un valore massimo relativo per la deviazione. Quando il parametro relative viene impostato su false (0), viene impostato un valore massimo assoluto per la deviazione che può presentare un'approssimazione lineare. Quando il parametro relative viene impostato su true (1), la tolleranza e viene calcolata come prodotto tra il parametro della tolleranza e il diametro del rettangolo di selezione per l'oggetto spaziale.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geometry**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geometry**  
   
  Tipo CLR restituito: **SqlGeometry**  
   
 ## <a name="exceptions"></a>Eccezioni  
  L'impostazione della tolleranza <= 0 genera un'eccezione `ArgumentOutOfRange`.  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo può specificare la tolleranza di errore per i risultanti **LineString**.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo può specificare la tolleranza di errore per l'istanza **LineString** risultante.  
   
  Nella tabella seguente viene illustrato il tipo di istanza restituito da `CurveToLineWithTolerance()` per vari tipi.  
   
 |Tipo di istanza di chiamata|Tipo spaziale restituito|  
 |----------------------------|---------------------------|  
-|Istanza di geometria vuota|Vuoto **GeometryCollection** istanza|  
-|**Punto** e **MultiPoint**|**Punto** istanza|  
-|**MultiPoint**|**Punto** o **MultiPoint** istanza|  
-|**CircularString**, **CompoundCurve**, o **LineString**|**LineString** istanza|  
-|**MultiLineString**|**LineString** o **MultiLineString** istanza|  
-|**CurvePolygon** e **poligono**|**Poligono** istanza|  
-|**MultiPolygon**|**Poligono** o **MultiPolygon** istanza|  
-|**GeometryCollection** con una singola istanza che non contiene un segmento di arco circolare|L'istanza contenuta nel **GeometryCollection** determina il tipo di istanza restituita.|  
-|**GeometryCollection** con un'istanza di segmento di arco circolare unidimensionale singolo (**CircularString**, **CompoundCurve**)|**LineString** istanza|  
-|**GeometryCollection** con un'istanza di segmento di arco circolare bidimensionale singolo (**CurvePolygon**)|**Poligono** istanza|  
-|**GeometryCollection** con più istanze unidimensionali|**MultiLineString** istanza|  
-|**GeometryCollection** con più di due istanze bidimensionali|**MultiPolygon** istanza|  
-|**GeometryCollection** con più istanze di dimensioni diverse|**GeometryCollection** istanza|  
+|Istanza di geometria vuota|Istanza **GeometryCollection** vuota|  
+|**Point** e **MultiPoint**|Istanza **Point**|  
+|**MultiPoint**|Istanza **Point** o **MultiPoint**|  
+|**CircularString**, **CompoundCurve** o **LineString**|Istanza **LineString**|  
+|**MultiLineString**|Istanza **LineString** o **MultiLineString**|  
+|**CurvePolygon** e **Polygon**|Istanza **Polygon**|  
+|**MultiPolygon**|Istanza **Polygon** o **MultiPolygon**|  
+|**GeometryCollection** con una sola istanza che non contiene un segmento di arco circolare|L'istanza contenuta in **GeometryCollection** determina il tipo di istanza restituita.|  
+|**GeometryCollection** con una singola istanza di segmento di arco circolare unidimensionale (**CircularString**, **CompoundCurve**)|Istanza **LineString**|  
+|**GeometryCollection** con una singola istanza di segmento di arco circolare bidimensionale (**CurvePolygon**)|Istanza **Polygon**|  
+|**GeometryCollection** con più istanze unidimensionali|Istanza **MultiLineString**|  
+|**GeometryCollection** con più istanze bidimensionali|Istanza **MultiPolygon**|  
+|**GeometryCollection** con più istanze di dimensioni diverse|Istanza **GeometryCollection**|  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-different-tolerance-values-on-a-circularstring-instance"></a>A. Utilizzo di valori di tolleranza diversi in un'istanza CircularString  
- Nell'esempio seguente viene illustrato come l'impostazione della tolleranza sul `LineString`istanza restituita da un `CircularString` istanza:  
+ L'esempio seguente illustra l'impatto dell'impostazione della tolleranza sull'istanza `LineString` restituita da un'istanza `CircularString`:  
   
 ```
  DECLARE @g geometry; 
@@ -106,7 +106,7 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
  ```  
   
 ### <a name="d-setting-relative-to-true-for-an-invoking-curvepolygon-instance"></a>D. Impostazione del parametro relative su true per un'istanza CurvePolygon di chiamata  
- Nell'esempio seguente viene utilizzato un `CurvePolygon` istanza chiamare `CurveToLineWithTolerance()` con *relativo* impostato su true:  
+ Nell'esempio seguente viene usata un'istanza `CurvePolygon` per chiamare `CurveToLineWithTolerance()` con *relative* impostato su true:  
   
 ```
  DECLARE @g geometry = 'CURVEPOLYGON(COMPOUNDCURVE(CIRCULARSTRING(0 4, 4 0, 8 4), (8 4, 0 4)))'; 
@@ -123,8 +123,8 @@ Restituisce un'approssimazione poligonale di un' **geometry** istanza contenente
  ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [CurveToLineWithTolerance &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
- [STCurveToLine &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
+ [CurveToLineWithTolerance &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/curvetolinewithtolerance-geography-data-type.md)   
+ [STCurveToLine &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/stcurvetoline-geometry-data-type.md)  
   
   
 

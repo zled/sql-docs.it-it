@@ -1,5 +1,5 @@
 ---
-title: BufferWithTolerance (tipo di dati geography) | Documenti Microsoft
+title: BufferWithTolerance (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce i valori di un oggetto geometrico che rappresenta l'unione di tutti i punti la cui distanza da un **geography** istanza è minore o uguale a un valore specificato, consentendo una tolleranza specificata.  
+  Restituisce un oggetto geometrico che rappresenta l'unione dei valori di tutti i punti la cui distanza da un'istanza **geography** è minore o uguale a un valore specificato, consentendo una tolleranza specificata.  
   
- Metodo supportata dal tipo di dati geography **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati geography supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,37 +47,37 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *distance*  
- È un **float** espressione che specifica la distanza tra il **geography** istanza intorno alla quale calcolare il buffer.  
+ Espressione **float** che specifica la distanza dall'istanza **geography** intorno alla quale calcolare il buffer.  
   
- La distanza massima del buffer non può superare 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* della circonferenza della terra di 1/2) o l'intero globo.  
+ La distanza massima del buffer non può superare 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 della circonferenza della Terra) o l'intero globo.  
   
- *tolleranza di errore*  
- È un **float** espressione che specifica la tolleranza della distanza del buffer.  
+ *tolerance*  
+ Espressione **float** che specifica la tolleranza della distanza del buffer.  
   
- Il *tolleranza* valore indica la variazione massima della distanza del buffer ideale per l'approssimazione lineare restituita.  
+ Il valore *tolerance* indica la variazione massima nella distanza ideale del buffer per l'approssimazione lineare restituita.  
   
  La distanza ideale del buffer di un punto ad esempio è un cerchio, che però deve essere approssimato da un poligono. Minore è il valore della tolleranza, maggiore sarà il numero di punti del poligono. In questo caso aumenterà la complessità del risultato, ma diminuirà l'errore.  
   
  Il limite minimo è lo 0,1 percento della distanza e qualsiasi tolleranza inferiore verrà arrotondata al limite minimo.  
   
  *relative*  
- È un **bit** che specifica se il *tolleranza* valore è relativo o assoluto. Se 'TRUE' o 1, tolleranza è relativa e viene calcolata come prodotto tra il *tolleranza* parametro e l'estensione angolare \* raggio equatoriale dell'ellissoide. Se 'FALSE' o 0, tolleranza è assoluta e *tolleranza* valore è la variazione massima assoluta nella distanza del buffer ideale per l'approssimazione lineare restituita.  
+ Valore **bit** che specifica se il valore *tolerance* è relativo o assoluto. Se il valore è TRUE o 1, la tolleranza è relativa e viene calcolata come prodotto tra il parametro *tolerance* e l'estensione angolare \* raggio equatoriale dell'ellissoide. Se il valore è FALSE o 0, la tolleranza è assoluta e il valore *tolerance* è la variazione massima assoluta nella distanza ideale del buffer per l'approssimazione lineare restituita.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Questo metodo genererà un' **ArgumentException** se il *distanza* non è un numero (NAN) oppure se *distanza* è infinito positivo o negativo.  Questo metodo genererà inoltre un **ArgumentException** se *tolleranza* è zero (0), non un numero (NaN), infinito negativo o positivo o negativo.  
+## <a name="remarks"></a>Remarks  
+ Questo metodo genera un'eccezione **ArgumentException** se *distance* è non un numero (NAN, Not-a-Number) o se *distance* è un valore infinito positivo o negativo.  Questo metodo genera inoltre un'eccezione **ArgumentException** se *tolerance* è zero (0), non un numero, un negativo o un valore infinito positivo o negativo.  
   
- `STBuffer()`verrà restituito un **FullGlobe** istanza in determinati casi; ad esempio, `STBuffer()` restituisce un **FullGlobe** istanza su due poli quando la distanza del buffer è maggiore della distanza dall'equatore a poli.  
+ `STBuffer()` restituisce un'istanza **FullGlobe** in determinati casi; ad esempio, `STBuffer()` restituisce un'istanza **FullGlobe** su due poli quando la distanza del buffer è maggiore della distanza dall'equatore ai poli.  
   
- Questo metodo genererà un' **ArgumentException** in **FullGlobe** istanze in cui la distanza del buffer eccede il limite seguente:  
+ Questo metodo genera un'eccezione **ArgumentException** nelle istanze **FullGlobe** in cui la distanza del buffer supera il limite seguente:  
   
- 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* della circonferenza della terra di 1/2)  
+ 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 della circonferenza della Terra)  
   
- L'errore tra il buffer calcolato e quello teorico è max (tolleranza, extent \* all'1. e-7) in cui tolleranza di errore è il valore della *tolleranza* parametro. Per ulteriori informazioni sulle estensioni, vedere [metodo riferimento al tipo di dati geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
+ L'errore tra il buffer calcolato e quello teorico è max(tolerance, extents \* 1.E-7) dove tolerance è il valore del parametro *tolerance*. Per altre informazioni sulle estensioni, vedere la [Guida di riferimento ai metodi per il tipo di dati geography](http://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   
  Il metodo non è preciso.  
   
@@ -91,7 +91,7 @@ SELECT @g.BufferWithTolerance(1, .5, 0).ToString();
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [STBuffer &#40; tipo di dati geography &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
+ [STBuffer &#40;tipo di dati geography&#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
  [Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

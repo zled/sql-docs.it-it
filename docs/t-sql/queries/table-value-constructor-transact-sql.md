@@ -1,5 +1,5 @@
 ---
-title: Tabella di costruttore di valori (Transact-SQL) | Documenti Microsoft
+title: Costruttore di valori di tabella (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="table-value-constructor-transact-sql"></a>Costruttore di valori di tabella (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Specifica un set di espressioni valore di riga da costruire in una tabella. Il costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di specificare più righe di dati in una sola istruzione DML. Il costruttore di valori di tabella può essere specificato nella clausola VALUES dell'istruzione INSERT, in uso \<tabella di origine > clausola dell'istruzione MERGE e nella definizione di una tabella derivata nella clausola FROM.  
+  Specifica un set di espressioni valore di riga da costruire in una tabella. Il costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] consente di specificare più righe di dati in una sola istruzione DML. Il costruttore di valori di tabella può essere specificato nella clausola VALUES dell'istruzione INSERT, nella clausola USING \<source table> dell'istruzione MERGE e nella definizione di una tabella derivata nella clausola FROM.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,17 +60,17 @@ VALUES ( <row value expression list> ) [ ,...n ]
  DEFAULT  
  Forza l'inserimento nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] del valore predefinito di una colonna. Se per la colonna non è disponibile alcun valore predefinito e la colonna ammette valori NULL, viene inserito un valore NULL. DEFAULT non è un valore valido per una colonna Identity. Se specificato in un costruttore di valori di tabella, DEFAULT è consentito solo in un'istruzione INSERT.  
   
- *espressione*  
+ *expression*  
  Costante, variabile o espressione. L'espressione non può contenere un'istruzione EXECUTE.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- Costruttori di valori di tabella possono essere utilizzati in uno dei due modi: direttamente nell'elenco dei valori di un'istruzione INSERT... I valori di istruzione, o come una tabella derivata ovunque che tabelle derivate sono consentiti. Se il numero di righe supera il limite massimo, viene restituito l'errore 10738. Per inserire più righe, il limite, è possibile, utilizzare uno dei metodi seguenti:  
+ I costruttori di valori di tabella possono essere usati in due modi: direttamente nell'elenco VALUES di un'istruzione INSERT... VALUES o come tabella derivata, ovunque sono consentite tabelle di questo tipo. Se il numero massimo di righe viene superato, viene restituito l'errore 10738. Per inserire più righe di quelle consentite dal limite, usare uno dei metodi seguenti:  
   
 -   Creare più istruzioni INSERT  
   
 -   Utilizzare una tabella derivata  
   
--   Importazione bulk dei dati tramite il **bcp** utilità o l'istruzione BULK INSERT  
+-   Importare globalmente i dati tramite l'utilità **bcp** o l'istruzione BULK INSERT  
   
  Come espressione valore di riga sono consentiti solo valori scalari singoli. Come espressione valore di riga non è consentita una sottoquery che interessa più colonne. Ad esempio, il codice seguente comporta un errore di sintassi perché il terzo elenco di espressioni valore di riga contiene una sottoquery con più colonne.  
   
@@ -101,7 +101,7 @@ GO
 ```  
   
 ## <a name="data-types"></a>Tipi di dati  
- I valori specificati in un'istruzione INSERT con più righe seguono le proprietà di conversione del tipo di dati della sintassi UNION ALL. Di conseguenza, la conversione implicita dei tipi non corrispondenti al tipo di superiore [precedenza](../../t-sql/data-types/data-type-precedence-transact-sql.md). Se la conversione non è una conversione implicita supportata, viene generato un errore. Ad esempio, l'istruzione seguente consente di inserire un valore integer e un valore del carattere in una colonna di tipo **char**.  
+ I valori specificati in un'istruzione INSERT con più righe seguono le proprietà di conversione del tipo di dati della sintassi UNION ALL. Ciò comporta la conversione implicita dei tipi non corrispondenti nel tipo con [precedenza](../../t-sql/data-types/data-type-precedence-transact-sql.md) maggiore. Se la conversione non è una conversione implicita supportata, viene generato un errore. Nell'istruzione seguente, ad esempio, vengono inseriti un valore integer e un valore di tipo char in una colonna di tipo **char**.  
   
 ```  
 CREATE TABLE dbo.t (a int, b char);  
@@ -149,7 +149,7 @@ SELECT * FROM Sales.MySalesReason;
 ```  
   
 ### <a name="c-specifying-multiple-values-as-a-derived-table-in-a-from-clause"></a>C. Specifica di più valori come tabella derivata in una clausola FROM  
- In questo esempio utilizza il costruttore di valori di tabella per specificare più valori nella clausola FROM di un'istruzione SELECT.  
+ Negli esempi seguenti viene usato il costruttore di valori di tabella per specificare più valori nella clausola FROM di un'istruzione SELECT.  
   
 ```  
 SELECT a, b FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);  
@@ -189,7 +189,7 @@ GROUP BY Change;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

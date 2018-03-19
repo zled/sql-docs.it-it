@@ -1,5 +1,5 @@
 ---
-title: Espressioni (Transact-SQL) | Documenti Microsoft
+title: Espressioni (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
@@ -89,28 +89,28 @@ ms.lasthandoff: 01/25/2018
   
 |Nome|Definizione|  
 |----------|----------------|  
-|*constant*|Simbolo che rappresenta un singolo valore di dati specifico. Per ulteriori informazioni, vedere [costanti &#40; Transact-SQL &#41; ](../../t-sql/data-types/constants-transact-sql.md).|  
-|*scalar_function*|È un'unità di [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi che fornisce un servizio specifico e restituisce un singolo valore. *funzione_scalare* possono essere funzioni scalari predefinite, ad esempio le funzioni SUM, GETDATE o CAST, o funzioni scalari definite dall'utente.|  
-|[ *table_name * * *.* * ]|Nome o alias di una tabella.|  
+|*constant*|Simbolo che rappresenta un singolo valore di dati specifico. Per altre informazioni, vedere [Costanti &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
+|*scalar_function*|Unità di sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] che offre un servizio specifico e restituisce un valore singolo. *scalar_function* può essere costituito da funzioni scalari predefinite, ad esempio SUM, GETDATE o CAST, o da funzioni scalari definite dall'utente.|  
+|[ *table_name***.** ]|Nome o alias di una tabella.|  
 |*column*|Nome di colonna. In un'espressione è consentito soltanto il nome della colonna.|  
 |*variable*|Nome di una variabile o parametro. Per altre informazioni, vedere [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
-|**(** *espressione***)** |Qualsiasi espressione valida, in base a quanto definito in questo argomento. Le parentesi sono operatori di raggruppamento che assicurano che tutti gli operatori dell'espressione tra parentesi siano valutati prima che l'espressione risultante venga combinata con un'altra espressione.|  
-|**(** *scalar_subquery* **)**|Sottoquery che restituisce un valore. Esempio:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** *expression* **)**|Qualsiasi espressione valida, in base a quanto definito in questo argomento. Le parentesi sono operatori di raggruppamento che assicurano che tutti gli operatori dell'espressione tra parentesi siano valutati prima che l'espressione risultante venga combinata con un'altra espressione.|  
+|**(** *scalar_subquery* **)**|Sottoquery che restituisce un valore. Ad esempio<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|Gli operatori unari possono essere applicati solo a espressioni che restituiscono un tipo di dati appartenente alla categoria dei tipi di dati numerici. Operatore con un solo operando numerico:<br /><br /> + indica un numero positivo.<br /><br /> - indica un numero negativo.<br /><br /> ~ indica l'operatore di complemento a uno.|  
-|{ *binary_operator* }|Operatore che consente di definire la modalità in base a cui due espressioni vengono unite per ottenere un unico risultato. *binary_operator* può essere un operatore aritmetico, l'operatore di assegnazione (=), un operatore bit per bit, un operatore di confronto, un operatore logico, l'operatore di concatenazione di stringhe (+) o un operatore unario. Per ulteriori informazioni sugli operatori, vedere [operatori &#40; Transact-SQL &#41; ](../../t-sql/language-elements/operators-transact-sql.md).|  
-|*ranking_windowed_function*|Qualsiasi funzione di rango [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per ulteriori informazioni, vedere [funzioni di rango &#40; Transact-SQL &#41; ](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|Qualsiasi funzione di aggregazione [!INCLUDE[tsql](../../includes/tsql-md.md)] con la clausola OVER. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|{ *binary_operator* }|Operatore che consente di definire la modalità in base a cui due espressioni vengono unite per ottenere un unico risultato. *binary_operator* può essere un operatore aritmetico, l'operatore di assegnazione (=), un operatore bit per bit, un operatore di confronto, un operatore logico, l'operatore di concatenazione delle stringhe (+) o un operatore unario. Per altre informazioni sugli operatori, vedere [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
+|*ranking_windowed_function*|Qualsiasi funzione di rango [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
+|*aggregate_windowed_function*|Qualsiasi funzione di aggregazione [!INCLUDE[tsql](../../includes/tsql-md.md)] con la clausola OVER. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>Risultati dell'espressione  
  Per un'espressione semplice costituita da un'unica costante, variabile, funzione scalare o colonna, il tipo di dati, le regole di confronto, la precisione, la scala e il valore dell'espressione coincidono con quelli dell'elemento a cui viene fatto riferimento.  
   
- Quando due espressioni vengono unite tramite operatori di confronto o logici, viene restituito uno dei tre valori di tipo booleano seguenti: TRUE, FALSE o UNKNOWN. Per ulteriori informazioni sui tipi di dati booleano, vedere [gli operatori di confronto &#40; Transact-SQL &#41; ](../../t-sql/language-elements/comparison-operators-transact-sql.md).  
+ Quando due espressioni vengono unite tramite operatori di confronto o logici, viene restituito uno dei tre valori di tipo booleano seguenti: TRUE, FALSE o UNKNOWN. Per altre informazioni sui tipi di dati booleani, vedere [Comparison Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md) (Operatori di confronto &#40;Transact-SQL&#41;).  
   
  Quando due espressioni vengono unite tramite operatori aritmetici, bit per bit o di stringa, il tipo di dati restituito dipende dall'operatore.  
   
  Le espressioni complesse costituite da più simboli e operatori restituiscono un unico valore. Il tipo di dati, le regole di confronto, la precisione e il valore dell'espressione risultante vengono determinati tramite l'unione di due espressioni componenti alla volta, fino a ottenere il risultato finale. La sequenza in base a cui vengono unite le espressioni è definita dall'ordine di precedenza degli operatori utilizzati nell'espressione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile combinare due espressioni mediante un operatore se entrambe utilizzano tipi di dati supportati dall'operatore e se almeno una delle condizioni seguenti è vera:  
   
 -   Alle espressioni è applicato lo stesso tipo di dati.  
@@ -121,9 +121,9 @@ ms.lasthandoff: 01/25/2018
   
  Se non sono supportate né la conversione implicita né quella esplicita, non è possibile combinare le due espressioni.  
   
- Le regole di confronto di un'espressione che restituisce una stringa di caratteri vengono impostate in base alle regole sulla precedenza delle regole di confronto. Per ulteriori informazioni, vedere [precedenza delle regole di confronto &#40; Transact-SQL &#41; ](../../t-sql/statements/collation-precedence-transact-sql.md).  
+ Le regole di confronto di un'espressione che restituisce una stringa di caratteri vengono impostate in base alle regole sulla precedenza delle regole di confronto. Per altre informazioni, vedere [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md) (Precedenza delle regole di confronto &#40;Transact-SQL&#41;).  
   
- In un linguaggio di programmazione come C o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], un'espressione restituisce sempre un singolo risultato. Le espressioni in un elenco di selezione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguono una variante di questa regola, in quanto vengono valutate singolarmente per ogni riga del set di risultati. Una stessa espressione può avere un valore diverso in ogni riga del set di risultati, ma ogni riga include un solo valore per l'espressione. Nell'istruzione `SELECT` seguente, ad esempio, il riferimento a `ProductID` e il termine `1+2` nell'elenco di selezione sono entrambi espressioni:  
+ In un linguaggio di programmazione come C o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], un'espressione restituisce sempre un unico risultato. Le espressioni in un elenco di selezione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguono una variante di questa regola, in quanto vengono valutate singolarmente per ogni riga del set di risultati. Una stessa espressione può avere un valore diverso in ogni riga del set di risultati, ma ogni riga include un solo valore per l'espressione. Nell'istruzione `SELECT` seguente, ad esempio, il riferimento a `ProductID` e il termine `1+2` nell'elenco di selezione sono entrambi espressioni:  
   
 ```  
 USE AdventureWorks2012;  
@@ -138,10 +138,10 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   
- [Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
- [Precedenza tipo di dati &#40; Transact-SQL &#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
+ [Conversione del tipo di dati &#40;Motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   

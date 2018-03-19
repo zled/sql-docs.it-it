@@ -1,5 +1,5 @@
 ---
-title: BufferWithCurves (tipo di dati geography) | Documenti Microsoft
+title: BufferWithCurves (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un **geography** istanza che rappresenta il set di tutti i punti la cui distanza dal chiamante **geography** istanza è minore o uguale al *distanza* parametro.  
+  Restituisce un'istanza **geography** che rappresenta il set di tutti i punti la cui distanza dall'istanza **geography** chiamante è minore o uguale al parametro *distance*.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -45,36 +45,36 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="arguments"></a>Argomenti  
  *distance*  
- È un **float** che indica la distanza massima che punti che compongono il buffer può essere dall'istanza di geografia.  
+ Valore **float** che indica la distanza massima a cui possono trovarsi i punti che compongono il buffer dall'istanza geography.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
 ## <a name="exceptions"></a>Eccezioni  
- I criteri seguenti genereranno un **ArgumentException**.  
+ I criteri seguenti genereranno un'eccezione **ArgumentException**.  
   
 -   Nessun parametro viene passato al metodo, ad esempio `@g.BufferWithCurves()`  
   
 -   Un parametro non numerico viene passato al metodo, ad esempio `@g.BufferWithCurves('a')`  
   
--   **NULL** viene passato al metodo, ad esempio`@g.BufferWithCurves(NULL)`  
+-   **NULL** viene passato al metodo, ad esempio `@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Nella tabella seguente vengono illustrati i risultati restituiti per i diversi valori della distanza.  
   
 |Valore del parametro distance|Dimensioni tipo|Tipo spaziale restituito|  
 |--------------------|---------------------|---------------------------|  
-|distance < 0|Zero o uno|Vuoto **GeometryCollection** istanza|  
-|distanza \< 0|Due o più|Oggetto **CurvePolygon** o **GeometryCollection** istanza con un buffer negativo.<br /><br /> Nota: Un buffer negativo potrebbe creare un oggetto vuoto **GeometryCollection**|
-|distance = 0|Tutte le dimensioni|Copia di richiamare **geography** istanza|  
-|distance > 0|Tutte le dimensioni|**CurvePolygon** o **GeometryCollection** istanza|  
+|distance < 0|Zero o uno|Istanza **GeometryCollection** vuota|  
+|distance \< 0|Due o più|Istanza **CurvePolygon** o **GeometryCollection** con buffer negativo.<br /><br /> Nota: è possibile che un buffer negativo crei un'istanza **GeometryCollection** vuota.|
+|distance = 0|Tutte le dimensioni|Copia dell'istanza **geography** di chiamata|  
+|distance > 0|Tutte le dimensioni|Istanza **CurvePolygon** o **GeometryCollection**|  
   
 > [!NOTE]  
->  Poiché *distanza* è un **float**, un valore estremamente ridotto può corrispondere a zero nei calcoli.  Quando ciò si verifica, quindi una copia del chiamante **geography** istanza viene restituita.  
+>  Poiché *distance* è di tipo **float**, nei calcoli un valore estremamente ridotto può corrispondere a zero.  Quando ciò si verifica, viene restituita una copia dell'istanza **geography** chiamante.  
   
- Se un **stringa** parametro viene passato al metodo, quindi verrà convertito in un **float** o genererà un `ArgumentException`.  
+ Se un parametro **string** viene passato al metodo, verrà convertito in **float** o verrà generata un'eccezione `ArgumentException`.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -95,17 +95,17 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="c-calling-bufferwithcurves-with-a-parameter-value--0-that-returns-an-empty-geometrycollection"></a>C. Chiamata a BufferWithCurves() con un valore di parametro < 0 che restituisce un'istanza GeometryCollection vuota  
- Nell'esempio seguente viene illustrato cosa accade quando il *distanza* parametro è uguale a -2:  
+ Nell'esempio seguente viene illustrato cosa accade quando il parametro *distance* è uguale a -2:  
   
  ```sql
  DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
  SELECT @g.BufferWithCurves(-2).ToString();
  ```  
   
- Questo **selezionare** istruzione restituisce`GEOMETRYCOLLECTION EMPTY`  
+ Questa istruzione **SELECT** restituisce `GEOMETRYCOLLECTION EMPTY`  
   
 ### <a name="d-calling-bufferwithcurves-with-a-parameter-value--0"></a>D. Chiamata a BufferWithCurves() con un valore di parametro = 0  
- Nell'esempio seguente restituisce una copia dell'oggetto chiamante **geography** istanza:  
+ Nell'esempio seguente viene restituita una copia dell'istanza **geography** chiamante:  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -113,7 +113,7 @@ ms.lasthandoff: 01/25/2018
  ```  
   
 ### <a name="e-calling-bufferwithcurves-with-a-non-zero-parameter-value-that-is-extremely-small"></a>E. Chiamata a BufferWithCurves() con un valore di parametro diverso da zero ed estremamente basso  
- L'esempio seguente restituisce anche una copia del chiamante **geography** istanza:  
+ Anche nell'esempio seguente viene restituita una copia dell'istanza **geography** chiamante:  
 
  ```sql
  DECLARE @g geography = 'LINESTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
@@ -147,7 +147,7 @@ ms.lasthandoff: 01/25/2018
  Si noti che nei due esempi precedenti è stato passato un valore letterale stringa al metodo `BufferWithCurves()`. Il primo esempio funziona perché il valore letterale stringa può essere convertito in un valore numerico. Tuttavia, nel secondo esempio viene generata un'eccezione `ArgumentException`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodi estesi sulle istanze di geografia](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
- [BufferWithCurves &#40; tipo di dati geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
+ [Metodi estesi sulle istanze geografiche](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
+ [BufferWithCurves &#40;tipo di dati geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   
   

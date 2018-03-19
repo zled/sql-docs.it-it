@@ -27,10 +27,10 @@ ms.lasthandoff: 01/25/2018
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Rinomina una tabella creata dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Rinomina una tabella creata dall'utente o un database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Rinomina una tabella creata dall'utente in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Rinomina una tabella o un database creato dall'utente in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la stored procedure [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Per rinominare un database nel database SQL di Azure, usare l'istruzione [ALTER DATABASE (database SQL di Azure)](/statements/alter-database-azure-sql-database.md). 
+>  Per rinominare un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], usare la stored procedure [sp_renamedb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Per rinominare un database nel database SQL di Azure, usare l'istruzione [ALTER DATABASE (database SQL di Azure)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,17 +56,17 @@ RENAME DATABASE [::] database_name TO new_database_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- RINOMINARE L'OGGETTO [:]   
-          [[*database_name* . [ *schema_name* ]. ] | [ *schema_name* . ]]*table_name* a *new_table_name*  
- **SI APPLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ RENAME OBJECT [::]   
+          [ [*database_name*. [ *schema_name* ]. ] | [ *schema_name*. ] ]*table_name* TO *new_table_name*  
+ **SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Modificare il nome di una tabella definita dall'utente. Specificare la tabella da rinominare con un una, due o nome in tre parti.    Specificare la nuova tabella *new_table_name* come nome di una sola parte.  
+ Modifica il nome di una tabella definita dall'utente. Specificare la tabella da rinominare con un nome in una, due o tre parti.    Specificare il nome *new_table_name* della nuova tabella come nome in una parte.  
   
- RINOMINARE IL DATABASE [:]   
-          [ *database_name* a *new_database_name*  
- **SI APPLICA A:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ RENAME DATABASE [::]   
+          [ *database_name* TO *new_database_name*  
+ **SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Modificare il nome di un database definito dall'utente da *database_name* a *new_database_name*.  Non è possibile rinominare un database a uno di questi [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]database nomi riservati:  
+ Modifica il nome di un database definito dall'utente da *database_name* a *new_database_name*.  Non è possibile rinominare un database con uno di questi nomi di database riservati di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]:  
   
 -   master  
   
@@ -87,33 +87,33 @@ RENAME DATABASE [::] database_name TO new_database_name
 -   DWQueue  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Questa autorizzazione è necessaria per eseguire questo comando:  
+ Per eseguire questo comando, è necessaria questa autorizzazione:  
   
--   **ALTER** autorizzazione per la tabella  
+-   Autorizzazione **ALTER** per la tabella  
    
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
   
-### <a name="cannot-rename-an-external-table-indexes-or-views"></a>Non è possibile rinominare una tabella esterna, gli indici o viste
-È possibile rinominare una tabella esterna, gli indici o viste. Anziché rinominare, è possibile eliminare la tabella esterna, vista o indice e quindi ricrearlo con il nuovo nome.
+### <a name="cannot-rename-an-external-table-indexes-or-views"></a>Non è possibile rinominare tabelle, indici e viste esterne
+Non è possibile rinominare tabelle, indici e viste esterne. Anziché rinominare la tabella, l'indice o la vista esterna, è possibile rilasciarla e quindi ricrearla con il nuovo nome.
 
 ### <a name="cannot-rename-a-table-in-use"></a>Non è possibile rinominare una tabella in uso  
- È possibile rinominare una tabella o un database mentre è in uso. Ridenominazione di una tabella richiede un blocco esclusivo sulla tabella. Se la tabella è in uso, si potrebbe essere necessario terminare le sessioni che utilizzano la tabella. Per terminare una sessione è possibile utilizzare il comando KILL. Utilizzare KILL con cautela, poiché quando una sessione è terminata. tutte le operazioni di commit eseguito il rollback. Le sessioni in SQL Data Warehouse sono precedute da 'SID'. È necessario includere questo e il numero della sessione quando si richiama il comando KILL. In questo esempio visualizza un elenco delle sessioni attive o inattive e quindi termina la sessione 'SID1234'.  
+ Non è possibile rinominare una tabella o un database mentre è in uso. Per la ridenominazione di una tabella è necessario un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in SQL Data Warehouse sono caratterizzate dal prefisso 'SID'. Quando si chiama il comando KILL, è necessario includere tale prefisso e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.  
   
-### <a name="views-are-not-updated"></a>Non sono aggiornate  
- Quando si rinomina un database, tutte le viste che utilizzano il nome del database precedente diventerà non valide. Questo vale per le visualizzazioni all'interno e all'esterno del database. Ad esempio, se il database di vendite viene rinominato, una vista che contiene `SELECT * FROM Sales.dbo.table1` diventeranno non validi. Per risolvere questo problema, è possibile evitare di utilizzare nomi in tre parti nelle viste o aggiornare le visualizzazioni per fare riferimento il nuovo nome del database.  
+### <a name="views-are-not-updated"></a>Le viste non vengono aggiornate  
+ Quando si rinomina un database, tutte le viste che usano il nome precedente non sono più valide. Questo vale per le viste sia all'interno che all'esterno del database. Se ad esempio il database delle vendite viene rinominato, le viste che contengono `SELECT * FROM Sales.dbo.table1` non sono più valide. Per risolvere questo problema, è possibile evitare di usare nomi in tre parti nelle viste o aggiornare le viste in modo che facciano riferimento al nuovo nome del database.  
   
- Quando si rinomina una tabella, le viste non vengono aggiornate per il nuovo nome della tabella di riferimento. Ogni vista, all'interno o all'esterno del database, che fa riferimento il nome della tabella precedente non sarà più valido. Per risolvere questo problema, è possibile aggiornare ogni visualizzazione per il nuovo nome della tabella di riferimento.  
+ Quando si rinomina una tabella, le viste non vengono aggiornate in modo che facciano riferimento al nuovo nome di tabella. Tutte le viste, all'interno o all'esterno del database, che fanno riferimento al nome di tabella precedente non sono più valide. Per risolvere questo problema, è possibile aggiornare ogni vista in modo che faccia riferimento al nuovo nome della tabella.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  
- Ridenominazione di una tabella accetta un blocco condiviso per l'oggetto di DATABASE, un blocco condiviso per l'oggetto SCHEMA e un blocco esclusivo sulla tabella.  
+ La ridenominazione di una tabella acquisisce un blocco condiviso per l'oggetto DATABASE, un blocco condiviso per l'oggetto SCHEMA e un blocco esclusivo per la tabella.  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-rename-a-database"></a>A. Rinominare un database  
- **Si applica a:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo  
+ **SI APPLICA A:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solamente  
   
- In questo esempio Rinomina il database definito dall'utente AdWorks a AdWorks2.  
+ Questo esempio rinomina il database definito dall'utente AdWorks in AdWorks2.  
   
 ```  
 -- Rename the user defined database AdWorks  
@@ -121,12 +121,12 @@ RENAME DATABASE AdWorks to AdWorks2;
   
 ```  
   
- Quando si rinomina una tabella, tutti gli oggetti e proprietà associate alla tabella vengono aggiornate per il nuovo nome della tabella di riferimento. Tabella, ad esempio, definizioni, indici, vincoli e vengono aggiornate le autorizzazioni. Non sono aggiornate.  
+ Quando si rinomina una tabella, tutti gli oggetti e tutte le proprietà associate alla tabella vengono aggiornati in modo che facciano riferimento al nuovo nome della tabella. Vengono aggiornati, ad esempio, le definizioni di tabella, gli indici, i vincoli e le autorizzazioni. Le viste non vengono aggiornate.  
   
 ### <a name="b-rename-a-table"></a>B. Rinominare una tabella  
- **SI APPLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- In questo esempio Rinomina la tabella Customer in Customer1.  
+ Questo esempio rinomina la tabella Customer in Customer1.  
   
 ```  
 -- Rename the customer table  
@@ -135,22 +135,22 @@ RENAME OBJECT Customer TO Customer1;
 RENAME OBJECT mydb.dbo.Customer TO Customer1;  
 ```  
   
- Quando si rinomina una tabella, tutti gli oggetti e proprietà associate alla tabella vengono aggiornate per il nuovo nome della tabella di riferimento. Tabella, ad esempio, definizioni, indici, vincoli e vengono aggiornate le autorizzazioni. Non sono aggiornate.  
+ Quando si rinomina una tabella, tutti gli oggetti e tutte le proprietà associate alla tabella vengono aggiornati in modo che facciano riferimento al nuovo nome della tabella. Vengono aggiornati, ad esempio, le definizioni di tabella, gli indici, i vincoli e le autorizzazioni. Le viste non vengono aggiornate.  
    
   
 ### <a name="c-move-a-table-to-a-different-schema"></a>C. Spostare una tabella in un altro schema  
- **SI APPLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- Se si intende spostare l'oggetto in un altro schema, utilizzare [ALTER SCHEMA &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-schema-transact-sql.md). Ad esempio, si sposta l'elemento tabella dallo schema prodotto dello schema dbo.  
+ Se si intende spostare l'oggetto in un altro schema, usare [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md). Questa istruzione, ad esempio, sposta l'elemento tabella dallo schema product allo schema dbo.  
   
 ```  
 ALTER SCHEMA dbo TRANSFER OBJECT::product.item;  
 ```  
   
 ### <a name="d-terminate-sessions-before-renaming-a-table"></a>D. Terminare le sessioni prima di rinominare una tabella  
- **SI APPLICA A:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ **SI APPLICA A:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
- È importante ricordare che è possibile rinominare una tabella mentre è in uso. Un'operazione di ridenominazione di una tabella richiede un blocco esclusivo sulla tabella. Se la tabella è in uso, si potrebbe essere necessario terminare la sessione utilizzando la tabella. Per terminare una sessione è possibile utilizzare il comando KILL. Utilizzare KILL con cautela, poiché quando una sessione è terminata. tutte le operazioni di commit eseguito il rollback. Le sessioni in SQL Data Warehouse sono precedute da 'SID'. È necessario includere questo e il numero della sessione quando si richiama il comando KILL. In questo esempio visualizza un elenco delle sessioni attive o inattive e quindi termina la sessione 'SID1234'.  
+ È importante ricordare che non è possibile rinominare una tabella mentre è in uso. La ridenominazione di una tabella richiede un blocco esclusivo su di essa. Se la tabella è in uso, può essere necessario terminare le sessioni che la usano. Per terminare una sessione è possibile usare il comando KILL. Usare KILL con cautela, poiché quando una sessione viene terminata, viene eseguito il rollback di tutte le operazioni di cui non è stato eseguito il commit. Le sessioni in SQL Data Warehouse sono caratterizzate dal prefisso 'SID'. Quando si chiama il comando KILL, è necessario includere tale prefisso e il numero della sessione. Questo esempio visualizza un elenco di sessioni attive o inattive e quindi termina la sessione 'SID1234'.  
   
 ```  
 -- View a list of the current sessions  

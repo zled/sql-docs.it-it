@@ -51,13 +51,13 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
   
 ## <a name="arguments"></a>Argomenti  
  *scalar_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida.  
   
  { = | <> | != | > | >= | !> | < | <= | !< }  
  Operatore di confronto.  
   
  *subquery*  
- Sottoquery che restituisce un set di risultati a colonna singola. Il tipo di dati della colonna restituita deve essere il tipo di dati stesso come il tipo di dati di *scalar_expression*.  
+ Sottoquery che restituisce un set di risultati a colonna singola. Il tipo di dati della colonna restituita deve essere uguale a quello di *scalar_expression*.  
   
  Istruzione SELECT con restrizioni, in cui la clausola ORDER BY e la parola chiave INTO non sono consentite.  
   
@@ -65,17 +65,17 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (*scalar_expression***,***x)*, quando *x* è un valore nel set di colonna singola; in caso contrario restituisce FALSE.  
+ Restituisce TRUE se il confronto specificato è TRUE per tutte le coppie (*scalar_expression***,***x)*, dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce FALSE.  
   
-## <a name="remarks"></a>Osservazioni  
- TUTTI richiede il *scalar_expression* deve essere confrontato con ogni valore viene restituito dalla sottoquery. Ad esempio, se la sottoquery restituisce i valori 2 e 3, *scalar_expression* < = ALL (sottoquery) restituisce TRUE per un *scalar_expression* di 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (sottoquery) restituisce false, perché alcuni dei valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
+## <a name="remarks"></a>Remarks  
+ ALL specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery. Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* <= ALL (sottoquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, in quanto alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  
   
- Per le istruzioni che richiedono il *scalar_expression* per deve essere confrontato a un solo valore restituito dalla sottoquery, vedere [alcune &#124; I &#40; Transact-SQL &#41; ](../../t-sql/language-elements/some-any-transact-sql.md).  
+ Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con un solo valore restituito dalla sottoquery, vedere [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Le informazioni contenute in questo sono rilevanti per l'utilizzo dell'opzione ALL con una sottoquery. TUTTE possono essere utilizzate anche con [unione](../../t-sql/language-elements/set-operators-union-transact-sql.md) e [selezionare](../../t-sql/queries/select-transact-sql.md).  
+ Le informazioni contenute in questo sono rilevanti per l'utilizzo dell'opzione ALL con una sottoquery. L'opzione ALL può essere usata anche con [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) e [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di un oggetto specificato `SalesOrderID` nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database può essere prodotti nel numero di giorni specificato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato che tutti i valori di `DaysToManufacture` siano maggiori del numero di giorni specificato.  
+ Nell'esempio seguente viene creata una stored procedure che determina se tutti i componenti di una colonna `SalesOrderID` specificata nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] possono essere prodotti nel numero di giorni indicato. Nell'esempio viene utilizzata una sottoquery per creare un elenco contenente i numeri corrispondenti ai valori di `DaysToManufacture` per tutti i componenti della colonna `SalesOrderID` specifica e viene quindi verificato che tutti i valori di `DaysToManufacture` siano maggiori del numero di giorni specificato.  
   
 ```  
 -- Uses AdventureWorks  
@@ -117,10 +117,10 @@ EXECUTE DaysToBuild 49080, 1 ;
   
 ## <a name="see-also"></a>Vedere anche  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  

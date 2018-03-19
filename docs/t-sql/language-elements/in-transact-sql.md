@@ -53,27 +53,27 @@ test_expression [ NOT ] IN
   
 ## <a name="arguments"></a>Argomenti  
  *test_expression*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida.  
   
  *subquery*  
- Sottoquery che include un set di risultati di una colonna. Questa colonna deve avere gli stessi dati di tipo come *test_expression*.  
+ Sottoquery che include un set di risultati di una colonna. Il tipo di dati di questa colonna deve corrispondere a quello di *test_expression*.  
   
- *espressione*[ **,**... *n* ]  
- Elenco di espressioni in cui individuare una corrispondenza. Tutte le espressioni devono essere dello stesso tipo *test_expression*.  
+ *expression*[ **,**... *n* ]  
+ Elenco di espressioni in cui individuare una corrispondenza. Tutte le espressioni devono essere dello stesso tipo di *test_expression*.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- Se il valore di *test_expression* è uguale a qualsiasi valore restituito da *sottoquery* o è uguale a qualsiasi *espressione* dall'elenco delimitato da virgole, il valore di risultato è TRUE. in caso contrario, il valore del risultato è FALSE.  
+ Se il valore di *test_expression* è uguale a uno dei valori restituiti da *subquery* o a qualsiasi elemento *expression* dell'elenco delimitato da virgole, il valore restituito è TRUE. In caso contrario, il valore restituito è FALSE.  
   
- Utilizzo di NOT IN Nega la *sottoquery* valore o *espressione*.  
+ L'uso di NOT IN nega il valore di *subquery* o l'elemento *expression*.  
   
 > [!CAUTION]  
->  Qualsiasi valore null restituito da *sottoquery* o *espressione* che vengono confrontati con *test_expression* utilizzando IN o NOT IN restituisce UNKNOWN. L'utilizzo di valori Null insieme a IN o NOT IN può generare risultati imprevisti.  
+>  Qualsiasi valore Null restituito da *subquery* o *expression* che viene confrontato con *test_expression* usando IN o NOT IN restituisce UNKNOWN. L'utilizzo di valori Null insieme a IN o NOT IN può generare risultati imprevisti.  
   
-## <a name="remarks"></a>Osservazioni  
- Inclusi in modo esplicito un numero molto elevato di valori (molte migliaia di valori separati da virgole) all'interno delle parentesi, in una clausola IN grado di utilizzare le risorse e restituiti errori 8623 o 8632. Per risolvere questo problema, archiviare gli elementi nell'elenco in una tabella e utilizzare una sottoquery SELECT all'interno di una clausola IN.  
+## <a name="remarks"></a>Remarks  
+ L'inclusione esplicita di un numero estremamente elevato di valori (molte migliaia di valori delimitati da virgole) all'interno di parentesi, in una clausola IN può determinare un uso elevato delle risorse e restituire gli errori 8623 o 8632. Per risolvere questo problema, archiviare gli elementi dell'elenco IN in una tabella e usare una sottoquery SELECT all'interno della clausola IN.  
   
  Errore 8623:  
   
@@ -132,7 +132,7 @@ Mary        Dempsey     Marketing Assistant
 ```  
   
 ### <a name="b-using-in-with-a-subquery"></a>B. Utilizzo di IN con una sottoquery  
- Nell'esempio seguente consente di trovare tutti gli ID per i venditori nel `SalesPerson` tabella per i dipendenti che dispongono di una quota di vendite uguale a €250.000 per l'anno e quindi seleziona il `Employee` tabella i nomi di tutti i dipendenti in cui `EmployeeID` che corrispondono il risultante dal `SELECT` sottoquery.  
+ Nell'esempio seguente vengono recuperati tutti gli ID dei venditori nella tabella `SalesPerson` per i dipendenti la cui quota di vendita per l'anno corrente supera € 250.000 e vengono quindi selezionati dalla tabella `Employee` i nomi di tutti i dipendenti il cui `EmployeeID` corrisponde ai risultati della sottoquery `SELECT`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -177,10 +177,10 @@ WHERE p.BusinessEntityID NOT IN
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-in-and-not-in"></a>D. Utilizzo IN e non IN  
- Nell'esempio seguente consente di trovare tutte le voci di `FactInternetSales` tabella che corrispondono `SalesReasonKey` valori il `DimSalesReason` tabella.  
+### <a name="d-using-in-and-not-in"></a>D. Uso di IN e NOT IN  
+ Nell'esempio seguente vengono recuperate tutte le voci nella tabella `FactInternetSales` che corrispondono ai valori `SalesReasonKey` nella tabella `DimSalesReason`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -190,7 +190,7 @@ WHERE SalesReasonKey
 IN (SELECT SalesReasonKey FROM DimSalesReason);   
 ```  
   
- Nell'esempio seguente consente di trovare tutte le voci la `FactInternetSalesReason` tabella che non corrispondono `SalesReasonKey` i valori di `DimSalesReason` tabella.  
+ Nell'esempio seguente vengono recuperate tutte le voci nella tabella `FactInternetSalesReason` che non corrispondono ai valori `SalesReasonKey` nella tabella `DimSalesReason`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -200,8 +200,8 @@ WHERE SalesReasonKey
 NOT IN (SELECT SalesReasonKey FROM DimSalesReason);  
 ```  
   
-### <a name="e-using-in-with-an-expression-list"></a>E. Utilizzo con un elenco di espressioni  
- Nell'esempio seguente consente di trovare tutti gli ID per i venditori nel `DimEmployee` dipendenti che dispongono di un primo nome che è una tabella `Mike` o `Michael`.  
+### <a name="e-using-in-with-an-expression-list"></a>E. Uso di IN con un elenco di espressioni  
+ Nell'esempio seguente vengono recuperati tutti gli ID dei venditori nella tabella `DimEmployee` per i dipendenti di nome `Mike` o `Michael`.  
   
 ```  
 -- Uses AdventureWorks  
@@ -213,9 +213,9 @@ WHERE FirstName IN ('Mike', 'Michael');
   
 ## <a name="see-also"></a>Vedere anche  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)   

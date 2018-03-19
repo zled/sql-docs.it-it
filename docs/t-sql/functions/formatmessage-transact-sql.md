@@ -38,7 +38,7 @@ ms.lasthandoff: 01/18/2018
 # <a name="formatmessage-transact-sql"></a>FORMATMESSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Costruisce un messaggio da un messaggio in sys. Messages esistente o da una stringa specificata. La funzionalità di FORMATMESSAGE è simile a quella dell'istruzione RAISERROR. Tuttavia, mentre RAISERROR stampa il messaggio immediatamente, FORMATMESSAGE restituisce il messaggio modificato per ulteriori elaborazioni.  
+  Crea un messaggio in base a un messaggio esistente di sys.messages o a una stringa specificata. La funzionalità di FORMATMESSAGE è simile a quella dell'istruzione RAISERROR. Tuttavia, mentre RAISERROR stampa il messaggio immediatamente, FORMATMESSAGE restituisce il messaggio modificato per ulteriori elaborazioni.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,12 +50,12 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
   
 ## <a name="arguments"></a>Argomenti  
  *msg_number*  
- È l'ID del messaggio archiviato in sys. Messages. Se *msg_number* è < = 13000 oppure se il messaggio non esiste in sys. Messages, viene restituito NULL.  
+ ID del messaggio archiviato in sys.messages. Se *msg_number* è <= 13000 o se il messaggio non esiste in sys.messages, viene restituito NULL.  
   
  *msg_string*  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- È che una stringa racchiusa tra virgolette singole e valore del parametro contiene segnaposto. Il messaggio di errore può contenere un massimo di 2.047 caratteri. Se contiene più di 2.048 caratteri, vengono visualizzati solo i primi 2.044 e vengono aggiunti tre punti a indicare che il messaggio è stato troncato. I parametri di sostituzione utilizzano un maggior numero di caratteri rispetto a quanto viene visualizzato nell'output a causa della gestione dell'archiviazione interna.  Per informazioni sulla struttura di una stringa di messaggio e l'utilizzo di parametri nella stringa, vedere la descrizione del *argomento msg_str* argomento [RAISERROR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/raiserror-transact-sql.md).  
+ È una stringa racchiusa tra virgolette singole contenente segnaposto per il valore del parametro. Il messaggio di errore può contenere un massimo di 2.047 caratteri. Se contiene più di 2.048 caratteri, vengono visualizzati solo i primi 2.044 e vengono aggiunti tre punti a indicare che il messaggio è stato troncato. I parametri di sostituzione utilizzano un maggior numero di caratteri rispetto a quanto viene visualizzato nell'output a causa della gestione dell'archiviazione interna.  Per informazioni sulla struttura di una stringa di messaggio e sull'uso di parametri nella stringa, vedere la descrizione dell'argomento *msg_str* in [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  *param_value*  
  Valore del parametro da utilizzare nel messaggio. È possibile specificare più di un valore di parametro. È necessario specificare i valori nell'ordine in cui le variabili di segnaposto sono elencate nel messaggio. Il numero di valori massimo consentito è 20.  
@@ -63,8 +63,8 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="return-types"></a>Tipi restituiti  
  **nvarchar**  
   
-## <a name="remarks"></a>Osservazioni  
- In modo analogo all'istruzione RAISERROR, l'istruzione FORMATMESSAGE modifica il messaggio mediante la sostituzione delle variabili di segnaposto con i valori di parametro specificati. Per ulteriori informazioni sui segnaposti supportati nei messaggi di errore e il processo di modifica, vedere [RAISERROR &#40; Transact-SQL &#41; ](../../t-sql/language-elements/raiserror-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ In modo analogo all'istruzione RAISERROR, l'istruzione FORMATMESSAGE modifica il messaggio mediante la sostituzione delle variabili di segnaposto con i valori di parametro specificati. Per altre informazioni sui segnaposto consentiti nei messaggi di errore e sul processo di modifica, vedere [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md).  
   
  L'istruzione FORMATMESSAGE esegue la ricerca del messaggio nella lingua corrente dell'utente. Se non esiste una versione localizzata del messaggio, viene utilizzata la versione inglese (Stati Uniti).  
   
@@ -73,7 +73,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-example-with-a-message-number"></a>A. Esempio con un numero di messaggio  
- Nell'esempio seguente viene utilizzato un messaggio di replica `20009` archiviati in sys. Messages come, "l'articolo"%s"non è stato possibile aggiungere per la pubblicazione"%s"." FORMATMESSAGE sostituisce i valori `First Variable` e `Second Variable` per i segnaposti dei parametri. La stringa risultante, "l'articolo 'First Variable' non è stato possibile aggiungere alla pubblicazione 'Second Variable'.", viene archiviato nella variabile locale `@var1`.  
+ Nell'esempio seguente viene usato un messaggio di replica `20009` archiviato in sys.messages, ad esempio "Impossibile aggiungere l'articolo '%s' alla pubblicazione '%s'". FORMATMESSAGE sostituisce i valori `First Variable` e `Second Variable` per i segnaposti dei parametri. La stringa risultante, "Impossibile aggiungere l'articolo 'First Variable' alla pubblicazione 'Second Variable'", viene archiviata nella variabile locale `@var1`.  
   
 ```  
 SELECT text FROM sys.messages WHERE message_id = 20009 AND language_id = 1033;  
@@ -84,18 +84,18 @@ SELECT @var1;
   
 ### <a name="b-example-with-a-message-string"></a>B. Esempio con una stringa di messaggio  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- Nell'esempio seguente accetta una stringa come input.  
+ Nell'esempio seguente viene accettata come input una stringa.  
   
 ```  
 SELECT FORMATMESSAGE('This is the %s and this is the %s.', 'first variable', 'second variable') AS Result;  
 ```  
   
- Restituisce:`This is the first variable and this is the second variable.`  
+ Restituisce: `This is the first variable and this is the second variable.`  
   
-### <a name="c-additional-message-string-formatting-examples"></a>C. Stringa di messaggio aggiuntivo gli esempi di formattazione  
- Nell'esempio seguente mostrano un'ampia gamma di opzioni di formattazione.  
+### <a name="c-additional-message-string-formatting-examples"></a>C. Esempi aggiuntivi di formattazione della stringa di messaggio  
+ Gli esempi seguenti visualizzano una vasta gamma di opzioni di formattazione.  
   
 ```  
 SELECT FORMATMESSAGE('Signed int %i, %d %i, %d, %+i, %+d, %+i, %+d', 5, -5, 50, -50, -11, -11, 11, 11);  
@@ -113,7 +113,7 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [RAISERROR &#40; Transact-SQL &#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
+ [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
@@ -126,6 +126,6 @@ SELECT FORMATMESSAGE('Hello %20s!', 'TEST');
  [STRING_ESCAPE &#40;Transact-SQL&#41;](../../t-sql/functions/string-escape-transact-sql.md)  
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
   
   

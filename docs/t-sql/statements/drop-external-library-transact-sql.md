@@ -1,5 +1,5 @@
 ---
-title: ELIMINARE una libreria esterna (Transact-SQL) | Documenti Microsoft
+title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-non-specified
@@ -27,10 +27,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="drop-external-library-transact-sql"></a>ELIMINARE una libreria esterna (Transact-SQL)  
+# <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-Elimina una raccolta di pacchetto esistente.
+Elimina una libreria di pacchetti esistente.
 
 ## <a name="syntax"></a>Sintassi  
 
@@ -43,23 +43,23 @@ DROP EXTERNAL LIBRARY library_name
 
 **library_name**
 
-Specifica il nome di una libreria di pacchetto esistente.
+Specifica il nome di una libreria di pacchetti esistente.
 
-Le librerie sono limitate all'utente. I nomi delle librerie, sono considerati univoci all'interno del contesto di un utente specifico o un proprietario.
+Le librerie hanno un ambito di tipo utente. In altri termini i nomi delle librerie sono univoci nel contesto di un utente o proprietario specifico.
 
 **owner_name**
 
-Specifica il nome dell'utente o del ruolo che possiede la libreria esterna.
+Specifica il nome dell'utente o del ruolo che è proprietario della libreria esterna.
 
-I proprietari del database possono eliminare le raccolte create da altri utenti.
+I proprietari di database possono eliminare le librerie create da altri utenti.
 
 ### <a name="return-values"></a>Valori restituiti
 
-Se l'istruzione ha esito positivo, viene restituito un messaggio informativo.
+Se l'istruzione ha esito positivo viene restituito un messaggio informativo.
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
 
-A differenza degli altri `DROP` istruzioni in SQL Server, questa istruzione supporta la specifica di una clausola authorization facoltativo. In questo modo **dbo** o gli utenti di **db_owner** ruolo per eliminare una raccolta di pacchetti caricati da un utente normale nel database.
+A differenza di altre istruzioni `DROP` in SQL Server, questa istruzione supporta la specifica di una clausola di autorizzazione facoltativa. In questo modo gli utenti **dbo** o gli utenti con ruolo **db_owner** possono eliminare una libreria di pacchetti caricata nel database da un utente comune.
 
 ## <a name="examples"></a>Esempi
 
@@ -70,14 +70,14 @@ CREATE EXTERNAL LIBRARY customPackage
 FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Eliminare il `customPackage` libreria.
+Eliminare la libreria `customPackage`.
 
 ```sql
 DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[CREARE una libreria esterna (Transact-SQL)](create-external-library-transact-sql.md)  
+[CREATE EXTERNAL LIBRARY (Transact-SQL)](create-external-library-transact-sql.md)  
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  

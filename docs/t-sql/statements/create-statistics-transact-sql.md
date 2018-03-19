@@ -1,5 +1,5 @@
 ---
-title: CREATE STATISTICS (Transact-SQL) | Documenti Microsoft
+title: CREATE STATISTICS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 01/04/2018
 ms.prod: sql-non-specified
@@ -42,9 +42,9 @@ ms.lasthandoff: 01/05/2018
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Crea le statistiche di ottimizzazione delle query in una o più colonne di una tabella, una vista indicizzata o una tabella esterna. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive con CREATE STATISTICS o modificare la progettazione delle query per ottenere prestazioni migliori di esecuzione delle query.  
+  Crea statistiche di ottimizzazione query per una o più colonne di una tabella o di una vista indicizzata o in una tabella esterna. Per la maggior parte delle query, Query Optimizer genera già le statistiche necessarie per un piano di query di alta qualità. In alcuni casi, è necessario creare statistiche aggiuntive con CREATE STATISTICS o modificare la progettazione delle query per ottenere prestazioni migliori di esecuzione delle query.  
   
- Per ulteriori informazioni, vedere [statistiche](../../relational-databases/statistics/statistics.md).  
+ Per altre informazioni, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -125,24 +125,24 @@ CREATE STATISTICS statistics_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_statistiche*  
+ *statistics_name*  
  Nome delle statistiche da creare.  
   
  *table_or_indexed_view_name*  
- È il nome della tabella, vista indicizzata o tabella esterna in cui creare le statistiche. Per creare statistiche in un altro database, specificare un nome di tabella completo.  
+ Nome della tabella, della vista indicizzata o della tabella esterna su cui creare le statistiche. Per creare statistiche su un altro database, specificare un nome di tabella completo.  
   
- *colonna [,... n]*  
- Uno o più colonne da includere nelle statistiche. Le colonne devono essere in ordine di priorità da sinistra a destra. Solo la prima colonna consente di creare l'istogramma. Tutte le colonne vengono utilizzate per le statistiche sulla correlazione tra colonne denominate densità.  
+ *column [ ,…n]*  
+ Una o più colonne da includere nelle statistiche. Le colonne devono essere in ordine di priorità da sinistra a destra. Per creare l'istogramma viene usata solo la prima colonna. Per le statistiche di correlazione tra colonne, denominate densità, vengono usate tutte le colonne.  
   
  È possibile specificare qualsiasi colonna utilizzabile come colonna chiave di indice, con le eccezioni seguenti:  
   
--   **XML**, full-text, le colonne FILESTREAM non possono essere specificato.  
+-   Non è possibile specificare colonne **Xml**, full-text e FILESTREAM.  
   
 -   È possibile specificare colonne calcolate solo se le opzioni del database ARITHABORT e QUOTED_IDENTIFIER sono impostate su ON.  
   
 -   È possibile specificare colonne di tipo CLR definito dall'utente se il tipo supporta l'ordinamento binario. È possibile specificare colonne calcolate definite come chiamate di metodi da una colonna con tipo definito dall'utente se tali metodi sono contrassegnati come deterministici.  
   
- DOVE \<filter_predicate > specifica un'espressione per la selezione di un subset di righe da includere quando si crea l'oggetto statistiche. Le statistiche create con un predicato del filtro vengono definite statistiche filtrate. Il predicato del filtro utilizza una logica di confronto semplice e non può fare riferimento a una colonna calcolata, una colonna di tipo definito dall'utente, una colonna di tipo di dati spaziali o **hierarchyID** colonna tipo di dati. I confronti in cui vengono utilizzati valori letterali NULL non sono consentiti con gli operatori di confronto. In alternativa, utilizzare gli operatori IS NULL e IS NOT NULL.  
+ WHERE \<filter_predicate> Specifica un'espressione per la selezione di un subset di righe da includere durante la creazione dell'oggetto statistiche. Le statistiche create con un predicato del filtro vengono definite statistiche filtrate. Il predicato del filtro usa una logica di confronto semplice e non può fare riferimento a una colonna calcolata, con tipo definito dall'utente (UDT), con tipo di dati spaziale o con tipo di dati **hierarchyID**. I confronti in cui vengono utilizzati valori letterali NULL non sono consentiti con gli operatori di confronto. In alternativa, utilizzare gli operatori IS NULL e IS NOT NULL.  
   
  Di seguito sono riportati alcuni esempi di predicati di filtro per la tabella Production.BillOfMaterials:  
   
@@ -152,15 +152,15 @@ CREATE STATISTICS statistics_name
   
  * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
- Per ulteriori informazioni sui predicati di filtro, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
+ Per altre informazioni sui predicati di filtro, vedere [Creare indici filtrati](../../relational-databases/indexes/create-filtered-indexes.md).  
   
  FULLSCAN  
- Calcolare le statistiche analizzando tutte le righe. FULLSCAN e SAMPLE 100 PERCENT generano gli stessi risultati. Non è possibile utilizzare FULLSCAN con l'opzione SAMPLE.  
+ Consente di calcolare le statistiche analizzando tutte le righe. FULLSCAN e SAMPLE 100 PERCENT generano gli stessi risultati. Non è possibile utilizzare FULLSCAN con l'opzione SAMPLE.  
   
- Se omessa, utilizza il campionamento per creare le statistiche di SQL Server e determina le dimensioni di esempio che sono necessario per creare un piano di query di alta qualità  
+ Se si omette FULLSCAN, SQL Server crea le statistiche tramite campionamento e determina le dimensioni del campione necessarie per creare un piano di query di qualità elevata  
   
- ESEMPIO *numero* {% | RIGHE}  
- Specifica la percentuale approssimativa o il numero di righe presenti nella tabella o nella vista indicizzata utilizzate da Query Optimizer durante la creazione delle statistiche. Per PERCENT, *numero* può essere compreso tra 0 e 100, mentre per le righe, *numero* può essere compreso tra 0 al numero totale di righe. La percentuale effettiva o il numero di righe campionate da Query Optimizer potrebbero non corrispondere alla percentuale o al numero specificato. Query Optimizer analizza ad esempio tutte le righe in una pagina di dati.  
+ SAMPLE *number* { PERCENT | ROWS }  
+ Specifica la percentuale approssimativa o il numero di righe presenti nella tabella o nella vista indicizzata utilizzate da Query Optimizer durante la creazione delle statistiche. Per PERCENT, *number* può essere compreso tra 0 e 100, mentre per ROWS *number* può essere compreso tra 0 e il numero totale di righe. La percentuale effettiva o il numero di righe campionate da Query Optimizer potrebbero non corrispondere alla percentuale o al numero specificato. Query Optimizer analizza ad esempio tutte le righe in una pagina di dati.  
   
  SAMPLE è utile per i casi speciali in cui il piano di query, basato sul campionamento predefinito, non è ottimale. Nella maggior parte delle situazioni, non è necessario specificare SAMPLE perché Query Optimizer utilizza già il campionamento e determina le dimensioni del campione statisticamente significative per impostazione predefinita, come richiesto per creare piani di query di alta qualità.  
   
@@ -168,26 +168,26 @@ CREATE STATISTICS statistics_name
   
  Si sconsiglia di specificare 0 PERCENT o 0 ROWS. Se si specifica 0 PERCENT o ROWS, l'oggetto statistiche viene creato ma non conterrà i dati delle statistiche.  
  
- PERSIST_SAMPLE_PERCENT = {ON | OFF}  
- Quando **ON**, le statistiche verranno mantenute la percentuale di campionamento di creazione per gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento. Quando **OFF**, verrà reimpostata la percentuale di campionamento delle statistiche per il campionamento predefinito nei successivi aggiornamenti che non specificano in modo esplicito una percentuale di campionamento. Il valore predefinito è **OFF**. 
+ PERSIST_SAMPLE_PERCENT = { ON | OFF }  
+ Se **ON**, le statistiche mantengono la percentuale di campionamento di creazione per gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento. Se **OFF**, la percentuale di campionamento delle statistiche viene reimpostata sul campionamento predefinito per gli aggiornamenti successivi che non la specificano in modo esplicito. L'impostazione predefinita è **OFF**. 
  
- **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
+ **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
- STATS_STREAM  **=**  *stats_stream*  
+ STATS_STREAM **=***stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
- Disabilitare le statistiche automatiche AUTO_UPDATE_STATISTICS, opzione di aggiornamento per *nome_statistiche*. Se si specifica questa opzione, query optimizer completa gli aggiornamenti delle statistiche in corso per *nome_statistiche* e disabilita gli aggiornamenti futuri.  
+ Consente di disabilitare l'opzione di aggiornamento automatico delle statistiche AUTO_STATISTICS_UPDATE per *statistics_name*. Se viene specificata questa opzione, Query Optimizer completa gli aggiornamenti delle statistiche in corso per *statistics_name* e disabilita gli aggiornamenti futuri.  
   
- Per riabilitare gli aggiornamenti delle statistiche, rimuovere le statistiche con [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) e quindi eseguire CREATE STATISTICS senza l'opzione NORECOMPUTE.  
+ Per riabilitare gli aggiornamenti delle statistiche, rimuovere le statistiche con [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md) ed eseguire CREATE STATISTICS senza l'opzione NORECOMPUTE.  
   
 > [!WARNING]  
 >  L'utilizzo di questa opzione può produrre piani di query non ottimali. È consigliabile limitare l'utilizzo di questa opzione e riservarne l'applicazione a un amministratore del sistema qualificato.  
   
- Per ulteriori informazioni sull'opzione AUTO_UPDATE_STATISTICS, vedere [opzioni ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md). Per ulteriori informazioni sulla disabilitazione e riabilitazione degli aggiornamenti delle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md).  
+ Per altre informazioni sull'opzione AUTO_STATISTICS_UPDATE, vedere [Opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md). Per altre informazioni sulla disabilitazione e sulla riabilitazione degli aggiornamenti delle statistiche, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
   
  INCREMENTAL = { ON | OFF }  
- Quando **ON**, le statistiche create sono di tipo per le statistiche della partizione. Quando **OFF**, statistiche sono combinate per tutte le partizioni. Il valore predefinito è **OFF**.  
+ Se **ON**, le statistiche create sono statistiche per partizione. Se **OFF**, le statistiche sono combinate per tutte le partizioni. L'impostazione predefinita è **OFF**.  
   
  Se le statistiche per partizione non sono supportate, viene generato un errore. Le statistiche incrementali non sono supportate per i seguenti tipi di statistiche:  
   
@@ -204,7 +204,7 @@ CREATE STATISTICS statistics_name
 MAXDOP = *max_degree_of_parallelism*  
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
   
- Esegue l'override di **massimo grado di parallelismo** opzione di configurazione per la durata dell'operazione di statistiche. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
+ Esegue l'override dell'opzione di configurazione **max_degree_of_parallelism** per la durata dell'operazione statistica. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
  *max_degree_of_parallelism* può essere:  
   
@@ -212,43 +212,43 @@ MAXDOP = *max_degree_of_parallelism*
  Disattiva la generazione di piani paralleli.  
   
  \>1  
- Limita il numero massimo di processori utilizzati in un'operazione parallela statistica per il numero specificato o meno in base al carico di lavoro di sistema corrente.  
+ Consente di limitare al valore specificato, o a un valore più basso in base al carico di lavoro corrente del sistema, il numero massimo di processori usati in un'operazione parallela statistica.  
   
  0 (predefinito)  
  Utilizza il numero effettivo di processori o un numero inferiore in base al carico di lavoro corrente del sistema.  
   
- \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+ \<update_stats_stream_option> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
 
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede una delle seguenti autorizzazioni:  
+ Richiede una di queste autorizzazioni:  
   
 -   ALTER TABLE  
--   Utente è proprietario della tabella  
--   L'appartenenza di **db_ddladmin** ruolo predefinito del database  
+-   L'utente è il proprietario della tabella  
+-   Appartenenza al ruolo predefinito del database **db_ddladmin**  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]può utilizzare tempdb per ordinare le righe campionate prima compilazione di statistiche.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può usare tempdb per ordinare le righe campionate prima di creare le statistiche.  
   
 ### <a name="statistics-for-external-tables"></a>Statistiche per le tabelle esterne  
- Quando si creano statistiche di tabella esterna, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importa nella tabella esterna in una variabile temporanea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella e quindi crea le statistiche. Per le statistiche di esempi, vengono importate solo le righe campionate. Se si dispone di una tabella esterna di grandi dimensioni, sarà molto più veloce usare il campionamento predefinito anziché l'opzione di analisi completa.  
+ Quando si creano statistiche per le tabelle esterne, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa la tabella esterna in una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporanea e quindi crea le statistiche. Per le statistiche di campioni, vengono importate solo le righe campionate. Se si ha una tabella esterna di grandi dimensioni, è molto più veloce usare il campionamento predefinito anziché l'opzione di analisi completa.  
   
 ### <a name="statistics-with-a-filtered-condition"></a>Statistiche con una condizione filtrata  
  Le statistiche filtrate possono migliorare le prestazioni di esecuzione delle query che effettuano la selezione da subset ben definiti di dati. Le statistiche filtrate utilizzano un predicato del filtro nella clausola WHERE per selezionare il subset di dati incluso nelle statistiche.  
   
 ### <a name="when-to-use-create-statistics"></a>Quando utilizzare CREATE STATISTICS  
- Per ulteriori informazioni sull'utilizzo di CREATE STATISTICS, vedere [statistiche](../../relational-databases/statistics/statistics.md).  
+ Per altre informazioni sulle situazioni in cui usare CREATE STATISTICS, vedere [Statistiche](../../relational-databases/statistics/statistics.md).  
   
 ### <a name="referencing-dependencies-for-filtered-statistics"></a>Dipendenze di riferimento per le statistiche filtrate  
- Il [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) vista del catalogo tiene traccia di ogni colonna nel predicato delle statistiche filtrate come una dipendenza di riferimento. Tenere presente le operazioni eseguite sulle colonne della tabella prima di creare statistiche filtrate poiché non è possibile eliminare, rinominare o modificare la definizione di una colonna della tabella definita in un predicato delle statistiche filtrate.  
+ La vista del catalogo [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) registra ogni colonna nel predicato delle statistiche filtrate come dipendenza di riferimento. Tenere presente le operazioni eseguite sulle colonne della tabella prima di creare statistiche filtrate poiché non è possibile eliminare, rinominare o modificare la definizione di una colonna della tabella definita in un predicato delle statistiche filtrate.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
-* Aggiornamento delle statistiche non è supportata nelle tabelle esterne. Per aggiornare le statistiche in una tabella esterna, eliminare e ricreare le statistiche.  
+* L'aggiornamento delle statistiche non è supportato per le tabelle esterne. Per aggiornare le statistiche in una tabella esterna, eliminare e ricreare le statistiche.  
 * È possibile elencare fino a 64 colonne per ogni oggetto statistiche.
-* L'opzione MAXDOP non è compatibile con opzioni STATS_STREAM, conteggio delle righe e PAGECOUNT.
+* L'opzione MAXDOP non è compatibile con le opzioni STATS_STREAM, ROWCOUNT e PAGECOUNT.
   
 ## <a name="examples"></a>Esempi  
 
-### <a name="examples-use-the-adventureworks-database"></a>Esempi utilizzano il database AdventureWorks.  
+### <a name="examples-use-the-adventureworks-database"></a>Gli esempi usano il database AdventureWorks.  
 
 ### <a name="a-using-create-statistics-with-sample-number-percent"></a>A. Utilizzo di CREATE STATISTICS con l'opzione SAMPLE number PERCENT  
  Nell'esempio seguente vengono create le statistiche `ContactMail1` utilizzando un campionamento casuale del 5% delle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
@@ -280,9 +280,9 @@ GO
 ```  
   
 ### <a name="d-create-statistics-on-an-external-table"></a>D. Creare statistiche per una tabella esterna  
- La decisione sola che quando si creano statistiche in una tabella esterna, oltre a fornire l'elenco di colonne, è necessario è se si desidera creare le statistiche tramite le righe di dati campione o analizzando tutte le righe.  
+ L'unica decisione necessaria quando si creano statistiche per una tabella esterna, oltre a specificare l'elenco delle colonne, è se creare le statistiche tramite campionamento delle righe o tramite l'analisi di tutte le righe.  
   
- Poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiederà più importazioni di dati della tabella esterna in una tabella temporanea per creare le statistiche, l'opzione di analisi completa. Per una tabella di grandi dimensioni, il metodo di campionamento predefinito è in genere sufficiente.  
+ Poiché per creare le statistiche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importa i dati dalla tabella esterna in una tabella temporanea, l'opzione di analisi completa richiede molto più tempo. Per una tabella di grandi dimensioni, il metodo predefinito, corrispondente al campionamento, è in genere sufficiente.  
   
 ```sql  
 --Create statistics on an external table and use default sampling.  
@@ -292,8 +292,8 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Utilizzo di CREATE STATISTICS con le opzioni FULLSCAN e PERSIST_SAMPLE_PERCENT  
- Nell'esempio seguente viene creata la `ContactMail2` statistiche per tutte le righe il `BusinessEntityID` e `EmailPromotion` colonne di `Contact` tabella e imposta una percentuale di campionamento pari al 100% per tutti gli aggiornamenti successivi che eseguire in modo esplicito non specificare un campionamento percentuale.  
+### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. Uso di CREATE STATISTICS con le opzioni FULLSCAN e PERSIST_SAMPLE_PERCENT  
+ L'esempio seguente crea le statistiche `ContactMail2` per tutte le righe nelle colonne `BusinessEntityID` e `EmailPromotion` della tabella `Contact` e imposta una percentuale di campionamento pari al 100% per tutti gli aggiornamenti successivi che non specificano in modo esplicito una percentuale di campionamento.  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
@@ -301,25 +301,25 @@ CREATE STATISTICS NamePurchase
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
 ```  
   
-### <a name="examples-using-adventureworksdw-database"></a>Esempi di utilizzo di database AdventureWorksDW. 
+### <a name="examples-using-adventureworksdw-database"></a>Esempi che usano il database AdventureWorksDW. 
   
-### <a name="f-create-statistics-on-two-columns"></a>F. Creazione di statistiche su due colonne  
- Nell'esempio seguente viene creata la `CustomerStats1` statistiche, in base al `CustomerKey` e `EmailAddress` colonne di `DimCustomer` tabella. Le statistiche vengono create in base a un campione statisticamente significativo delle righe di `Customer` tabella.  
+### <a name="f-create-statistics-on-two-columns"></a>F. Creare statistiche per due colonne  
+ L'esempio seguente crea le statistiche `CustomerStats1` in base alle colonne `CustomerKey` e `EmailAddress` della tabella `DimCustomer`. Le statistiche vengono create in base a un campione statisticamente significativo delle righe nella tabella `Customer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  
 ```  
   
 ### <a name="g-create-statistics-by-using-a-full-scan"></a>G. Creare statistiche tramite un'analisi completa  
- Nell'esempio seguente viene creata la `CustomerStatsFullScan` statistiche, in base a tutte le righe nell'analisi di `DimCustomer` tabella.  
+ L'esempio seguente crea le statistiche `CustomerStatsFullScan` in base all'analisi di tutte le righe della tabella `DimCustomer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsFullScan 
 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
   
-### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Creare statistiche specificando la percentuale di esempio  
- Nell'esempio seguente viene creata la `CustomerStatsSampleScan` statistiche, l'analisi del 50% delle righe in base il `DimCustomer` tabella.  
+### <a name="h-create-statistics-by-specifying-the-sample-percentage"></a>H. Creare statistiche specificando la percentuale di campionamento  
+ L'esempio seguente crea le statistiche `CustomerStatsSampleScan` in base all'analisi del 50% delle righe della tabella `DimCustomer`.  
   
 ```sql  
 CREATE STATISTICS CustomerStatsSampleScan 
@@ -333,7 +333,7 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
- [Sys. stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
 

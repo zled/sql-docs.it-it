@@ -1,5 +1,5 @@
 ---
-title: Sostituire il valore di (XML DML) | Documenti Microsoft
+title: replace value of (XML DML) | Microsoft Docs
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
@@ -47,16 +47,16 @@ with Expression2
   
 ## <a name="arguments"></a>Argomenti  
  *Expression1*  
- Identifica un nodo di cui è necessario aggiornare il valore. Deve identificare solo un singolo nodo, Vale a dire *Expression1* deve essere un singleton statico. Se l'istanza XML è tipizzata, il nodo deve essere di tipo semplice. Nel caso in cui vengano selezionati più nodi, viene restituito un errore. Se *Expression1* restituisce una sequenza vuota, alcuna sostituzione di valori viene eseguita e non vengono restituiti errori. *Expression1* deve restituire un singolo elemento con tipizzazione semplice contenuto (tipo elenco o atomico), un nodo di testo o un nodo attributo. *Expression1* non può essere un tipo di unione, un tipo complesso, un'istruzione di elaborazione, un nodo di documento o un nodo di commento. In caso contrario, viene restituito un errore.  
+ Identifica un nodo di cui è necessario aggiornare il valore. Deve identificare solo un singolo nodo, ovvero *Expression1* deve essere un singleton statico. Se l'istanza XML è tipizzata, il nodo deve essere di tipo semplice. Nel caso in cui vengano selezionati più nodi, viene restituito un errore. Se *Expression1* restituisce una sequenza vuota, non viene eseguita alcuna sostituzione di valori e non vengono restituiti errori. *Expression1* deve restituire un singolo elemento con contenuto a tipizzazione semplice (tipo elenco o atomico), un nodo di testo o un nodo di attributo. *Expression1* non può essere un tipo unione, un tipo complesso, un'istruzione di elaborazione, un nodo di documento o un nodo di commento. In caso contrario, viene restituito un errore.  
   
  *Expression2*  
- Identifica il nuovo valore del nodo. Questo può essere un'espressione che restituisce un nodo con tipizzazione semplice, perché **data ()** verrà utilizzato in modo implicito. Se il valore è un elenco di valori, il **aggiornare** istruzione sostituisce il valore precedente con l'elenco. In caso di modifica di un'istanza XML tipizzata, *Expression2* deve essere dello stesso tipo o un sottotipo di *espressione*1. In caso contrario, viene restituito un errore. In caso di modifica di un'istanza XML non tipizzata, *Expression2* deve essere un'espressione che è possibile atomizzare. In caso contrario, viene restituito un errore.  
+ Identifica il nuovo valore del nodo. Può trattarsi di un'espressione che restituisce un nodo con tipizzazione semplice, in quanto **data()** verrà usato in modo implicito. Se il valore è un elenco di valori, l'istruzione **update** sostituisce il valore precedente con l'elenco. In caso di modifica di un'istanza XML tipizzata, *Expression2* deve essere dello stesso tipo o sottotipo di *Expression*1. In caso contrario, viene restituito un errore. In caso di modifica di un'istanza XML non tipizzata, *Expression2* deve essere un'espressione che è possibile atomizzare. In caso contrario, viene restituito un errore.  
   
 ## <a name="examples"></a>Esempi  
- Negli esempi seguenti del **sostituire il valore di** istruzione XML DML viene illustrato come aggiornare i nodi in un documento XML.  
+ Negli esempi seguenti di istruzione XML DML **replace value of** viene illustrata la modalità di aggiornamento dei nodi in un documento XML.  
   
 ### <a name="a-replacing-values-in-an-xml-instance"></a>A. Sostituzione di valori in un'istanza XML  
- Nell'esempio seguente, un'istanza del documento viene innanzitutto assegnata a una variabile di **xml** tipo. Quindi, **sostituire il valore di** istruzioni XML DML aggiornare i valori nel documento.  
+ Nell'esempio seguente, viene assegnata prima un'istanza di documento a una variabile di tipo **xml**. Successivamente, le istruzioni XML DML **replace value of** aggiornano i valori nel documento.  
   
 ```  
 DECLARE @myDoc xml;  
@@ -87,7 +87,7 @@ SELECT @myDoc;
  Si noti che la destinazione da aggiornare deve essere al massimo un singolo nodo specificato in modo esplicito nell'espressione di percorso aggiungendo "[1]" alla fine dell'espressione.  
   
 ### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Utilizzo dell'espressione if per determinare il valore di sostituzione  
- È possibile specificare il **se** in expression2 all'interno dell'espressione di **sostituire il valore di XML DML** istruzione, come illustrato nell'esempio seguente. Expression1 indica che l'attributo LaborHours del primo centro di lavorazione deve essere aggiornato. Expression2 utilizza un **se** espressione per determinare il nuovo valore dell'attributo LaborHours.  
+ È possibile specificare l'espressione **if** in Expression2 all'interno dell'istruzione XML DML **replace value of**, come illustrato nell'esempio seguente. Expression1 indica che l'attributo LaborHours del primo centro di lavorazione deve essere aggiornato. Expression2 usa un'espressione **if** per determinare il nuovo valore dell'attributo LaborHours.  
   
 ```  
 DECLARE @myDoc xml  
@@ -197,12 +197,12 @@ select Instructions
 from T  
 ```  
   
- Si noti l'uso di **cast** durante la sostituzione del valore LotSize. necessario quando il valore deve essere di un tipo specifico. In questo esempio, se il valore è 500, non è necessario eseguire il cast esplicito.  
+ Si noti l'uso di **cast** per la sostituzione del valore LotSize, necessario quando il valore deve essere di un tipo specifico. In questo esempio, se il valore è 500, non è necessario eseguire il cast esplicito.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Confronto dati XML tipizzati con dati XML non tipizzati](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Creare istanze di dati XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [metodi con tipo di dati XML](../../t-sql/xml/xml-data-type-methods.md)   
- [Linguaggio di manipolazione dei dati XML &#40; Linguaggio XML DML &#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
+ [Linguaggio XML di manipolazione dei dati &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

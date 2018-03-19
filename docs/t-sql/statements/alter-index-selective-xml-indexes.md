@@ -1,5 +1,5 @@
 ---
-title: Istruzione ALTER INDEX (indici XML selettivi) | Documenti Microsoft
+title: ALTER INDEX (indici XML selettivi) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/02/2018
   
 -   Opzioni di indice (clausola WITH).  
   
- Non è possibile modificare indici XML selettivi secondari. Per ulteriori informazioni, vedere [Create, Alter e Drop indici XML selettivi secondari](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
+ Non è possibile modificare indici XML selettivi secondari. Per altre informazioni, vedere [Creare, modificare o eliminare indici XML selettivi secondari](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -120,7 +120,7 @@ identifier
  *index_name*  
  Nome dell'indice esistente che si desidera modificare.  
   
- *\<table_object >*  
+ *\<table_object>*  
  Tabella contenente la colonna XML che si desidera indicizzare. Utilizzare uno dei seguenti formati:  
   
 -   `database_name.schema_name.table_name`  
@@ -131,20 +131,20 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list > **)**]  
- Elenco degli spazi dei nomi utilizzati nei percorsi da indicizzare. Per informazioni sulla sintassi della clausola WITH XMLNAMESPACES, vedere [WITH XMLNAMESPACES &#40; Transact-SQL &#41; ](../../t-sql/xml/with-xmlnamespaces.md).  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ Elenco degli spazi dei nomi utilizzati nei percorsi da indicizzare. Per informazioni sulla sintassi della clausola WITH XMLNAMESPACES, vedere [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md).  
   
- PER **(** \<promoted_node_path_action_list > **)**  
+ FOR **(** \<promoted_node_path_action_list> **)**  
  Elenco dei percorsi indicizzati che si desidera aggiungere o rimuovere.  
   
--   **AGGIUNGERE un percorso.** Per aggiungere un percorso, ricorrere alla stessa sintassi usata per generare percorsi nell'istruzione CREATE SELECTIVE XML INDEX. Per informazioni sui percorsi in cui è possibile specificare nell'istruzione CREATE o ALTER, vedere [specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
+-   **Usare ADD per aggiungere un percorso.** Per aggiungere un percorso, ricorrere alla stessa sintassi usata per generare percorsi nell'istruzione CREATE SELECTIVE XML INDEX. Per informazioni sui percorsi che è possibile specificare nell'istruzione CREATE o ALTER, vedere [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md).  
   
--   **RIMUOVERE un percorso.** Se si rimuove un percorso, fornire il nome specificato per il percorso in fase di creazione.  
+-   **Usare REMOVE per rimuovere un percorso.** Se si rimuove un percorso, fornire il nome specificato per il percorso in fase di creazione.  
   
- [Con **(** \<index_options > **)**]  
- È possibile specificare solo \<index_options > quando si utilizza ALTER INDEX senza la clausola FOR. Se si utilizza ALTER INDEX per aggiungere o rimuovere percorsi nell'indice, le opzioni dell'indice sono argomenti non validi. Per informazioni sulle opzioni di indice, vedere [CREATE XML INDEX &#40; Indici XML selettivi &#41; ](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
+ [WITH **(** \<index_options> **)**]  
+ È possibile specificare \<index_options> solo se si usa ALTER INDEX senza la clausola FOR. Se si utilizza ALTER INDEX per aggiungere o rimuovere percorsi nell'indice, le opzioni dell'indice sono argomenti non validi. Per altre informazioni sulle opzioni di indicizzazione, vedere [CREATE XML INDEX &#40;Indici XML selettivi&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Se si esegue un'istruzione ALTER INDEX, l'indice XML selettivo viene sempre ricompilato. Considerare l'impatto di questo processo sulle risorse del server.  
@@ -177,7 +177,7 @@ PAD_INDEX = ON;
   
 ## <a name="see-also"></a>Vedere anche  
  [Indici XML selettivi &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
- [Creare, modificare ed eliminare indici XML selettivi](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
+ [Creare, modificare o eliminare indici XML selettivi](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)   
  [Specificare percorsi e hint di ottimizzazione per indici XML selettivi](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)  
   
   

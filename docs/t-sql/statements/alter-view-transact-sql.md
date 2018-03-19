@@ -1,5 +1,5 @@
 ---
-title: ALTER VIEW (Transact-SQL) | Documenti Microsoft
+title: ALTER VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -64,22 +64,22 @@ AS select_statement
  *view_name*  
  Vista da modificare.  
   
- *colonna*  
+ *column*  
  Nome o elenco di nomi delimitato da virgole delle colonne che si desidera includere nella vista specificata.  
   
 > [!IMPORTANT]  
 >  Le autorizzazioni di colonna vengono mantenute solo se il nome delle colonne rimane uguale prima e dopo l'esecuzione dell'istruzione ALTER VIEW.  
   
 > [!NOTE]  
->  Nelle colonne di una vista, le autorizzazioni assegnate per un nome di colonna rimangono valide tra istruzioni CREATE VIEW e ALTER VIEW, indipendentemente dall'origine dei dati sottostanti. Ad esempio, se vengono concesse autorizzazioni per il **SalesOrderID** colonna in un'istruzione CREATE VIEW, un'istruzione ALTER VIEW è possibile rinominare il **SalesOrderID** colonna, ad esempio in **OrderRef**e mantenere comunque le autorizzazioni associate alla vista che utilizza **SalesOrderID**.  
+>  Nelle colonne di una vista, le autorizzazioni assegnate per un nome di colonna rimangono valide tra istruzioni CREATE VIEW e ALTER VIEW, indipendentemente dall'origine dei dati sottostanti. Se ad esempio si concedono autorizzazioni per la colonna **SalesOrderID** con un'istruzione CREATE VIEW, è possibile usare un'istruzione ALTER VIEW per rinominare la colonna **SalesOrderID**, ad esempio come **OrderRef**, e mantenere comunque le autorizzazioni associate alla vista che usa la colonna **SalesOrderID**.  
   
  ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Crittografa le voci nella [Sys. syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) che contengono il testo dell'istruzione ALTER VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
+ Crittografa le voci nella tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione ALTER VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   
  SCHEMABINDING  
- Associa la vista allo schema della tabella o delle tabelle sottostanti. Se si specifica SCHEMABINDING non è possibile apportare modifiche alle tabelle di base, che influiscono sulla definizione della vista. In questi casi, è necessario modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si utilizza SCHEMABINDING, il *select_statement* deve includere i nomi di due parti (*schema***.** *oggetto*) di tabelle, viste o funzioni definite dall'utente a cui fa riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
+ Associa la vista allo schema della tabella o delle tabelle sottostanti. Se si specifica SCHEMABINDING non è possibile apportare modifiche alle tabelle di base, che influiscono sulla definizione della vista. In questi casi, è necessario modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si usa SCHEMABINDING, l'argomento *select_statement* deve includere i nomi composti da due parti (*schema***.***object*) delle tabelle, delle viste o delle funzioni definite dall'utente a cui viene fatto riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
   
  Le viste o tabelle che fanno parte di una vista creata con la clausola SCHEMABINDING non possono essere eliminate, a meno che tale vista non venga eliminata o modificata in modo che non sia più associata a uno schema. In caso contrario, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore. Inoltre, le istruzioni ALTER TABLE eseguite su tabelle che fanno parte di viste associate a schema hanno esito negativo se modificano la definizione della vista.  
   
@@ -88,7 +88,7 @@ AS select_statement
   
  Per le viste create con VIEW_METADATA, i metadati in modalità browse restituiscono il nome della vista anziché i nomi delle tabelle di base nella descrizione delle colonne della vista nel set di risultati.  
   
- Quando viene creata una vista con WITH VIEW_METADATA, tutte le relative colonne, tranne una **timestamp** , sono aggiornabili se la vista dispone di INSERT o UPDATE INSTEAD OF attiva. Per ulteriori informazioni, vedere la sezione Osservazioni in [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Quando si crea una vista con l'opzione VIEW_METADATA, tutte le relative colonne, tranne una colonna **timestamp**, risultano aggiornabili se la vista include trigger INSERT o UPDATE INSTEAD OF. Per altre informazioni, vedere la sezione Osservazioni in [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  AS  
  Azioni che la vista deve eseguire.  
@@ -97,10 +97,10 @@ AS select_statement
  Istruzione SELECT che definisce la vista.  
   
  WITH CHECK OPTION  
- Impone a tutte le istruzioni di modifica dei dati eseguite sulla vista di soddisfare i criteri impostati nel *select_statement*.  
+ Forza il rispetto del set di criteri specificato in *select_statement* per tutte le istruzioni di modifica dei dati eseguite sulla vista.  
   
-## <a name="remarks"></a>Osservazioni  
- Per ulteriori informazioni sull'istruzione ALTER VIEW, vedere la sezione Osservazioni in [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per altre informazioni su ALTER VIEW, vedere la sezione Osservazioni in [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
 >  Se la definizione precedente della vista è stata creata con WITH ENCRYPTION o CHECK OPTION, queste opzioni vengono abilitate solo se sono incluse nell'istruzione ALTER VIEW.  
@@ -109,7 +109,7 @@ AS select_statement
   
  È possibile utilizzare ALTER VIEW per viste indicizzate. Tuttavia, in questo caso vengono eliminati tutti gli indici nella vista, senza eccezioni.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire ALTER VIEW, è richiesta come minimo l'autorizzazione ALTER per OBJECT.  
   
 ## <a name="examples"></a>Esempi  
@@ -143,7 +143,7 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
- [DROP VIEW &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

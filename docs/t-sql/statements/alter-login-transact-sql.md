@@ -1,5 +1,5 @@
 ---
-title: L'autorizzazione ALTER LOGIN (Transact-SQL) | Documenti Microsoft
+title: ALTER LOGIN (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/01/2017
 ms.prod: sql-non-specified
@@ -133,14 +133,14 @@ ALTER LOGIN login_name
  Specifica il nome dell'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che si desidera modificare. Gli account di accesso per il dominio devono essere racchiusi tra parentesi nel formato [dominio\utente].  
   
  ENABLE | DISABLE  
- Abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. (Utilizzare il `KILL` istruzione per terminare un connessioni esistenti.) Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.  
+ Abilita o disabilita questo account di accesso. La disabilitazione di un account di accesso non influisce sul comportamento degli account di accesso già connessi. (Usare l'istruzione `KILL` per terminare le connessioni esistenti.) Gli account di accesso disabilitati conservano le autorizzazioni e possono essere ancora rappresentati.  
   
  PASSWORD **='***password***'**  
  Si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica la password per l'account di accesso che viene modificato. Per le password viene fatta distinzione tra maiuscole e minuscole.  
   
- In modo continuo connessioni attive al Database di SQL richiedono la riautorizzazione (eseguita dal motore di Database) almeno ogni 10 ore. Il motore di Database tenta la riautorizzazione utilizzando la password inviata e nessun input utente viene richiesto. Per motivi di prestazioni quando si reimposta una password nel Database SQL, la connessione non verrà nuovamente autenticata, anche se la connessione viene reimpostata a causa del pool di connessioni. Ciò è diverso da quello del Server SQL locale. Se la password è stata modificata dopo la connessione è stata inizialmente autorizzata, è necessario terminare la connessione e stabilire una nuova connessione utilizzando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION possa terminare in modo esplicito una connessione al Database SQL tramite il comando KILL. Per ulteriori informazioni, vedere [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Le connessioni continuamente attive a database SQL richiedono la riautorizzazione (eseguita dal motore di database) almeno ogni 10 ore. Il motore di database prova la riautorizzazione usando la password inviata originariamente e non richiede alcun input da parte dell'utente. Per motivi di prestazioni, quando si reimposta una password nel database SQL la connessione non viene nuovamente autenticata, anche se viene reimpostata a causa del pool di connessioni. Questo comportamento è diverso da quello dell'istanza locale di SQL Server. Se la password è stata cambiata dopo l'autorizzazione iniziale della connessione, è necessario terminare la connessione e stabilirne una nuova usando la nuova password. Un utente con l'autorizzazione KILL DATABASE CONNECTION può terminare in modo esplicito una connessione al database SQL usando il comando KILL. Per altre informazioni, vedere [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).  
   
- PASSWORD  **=**  *hashed_password*  
+ PASSWORD **=***hashed_password*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Si applica solo alla parola chiave HASHED. Specifica il valore hash della password per l'account di accesso in fase di creazione.  
@@ -162,39 +162,39 @@ ALTER LOGIN login_name
   
  Si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si include questa opzione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiederà una password aggiornata al primo utilizzo dell'account di accesso modificato.  
   
- DEFAULT_DATABASE  **=**  *database*  
+ DEFAULT_DATABASE **=***database*  
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica un database predefinito da assegnare all'account di accesso.  
   
- DEFAULT_LANGUAGE  **=**  *language*  
+ DEFAULT_LANGUAGE **=***language*  
  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica una lingua predefinita da assegnare all'account di accesso. La lingua predefinita per gli account di accesso di tutti i Database SQL è l'inglese e non può essere modificata. La lingua predefinita di `sa` account di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Linux, è l'inglese, ma può essere modificata.  
+ Specifica una lingua predefinita da assegnare all'account di accesso. La lingua predefinita per tutti gli account di accesso dei database SQL è l'inglese e non può essere modificata. La lingua predefinita dell'account di accesso `sa` per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su Linux, è l'inglese, ma può essere modificata.  
   
- NOME = *login_name*  
- Nuovo nome dell'account di accesso che viene rinominato. Se si tratta di un account di accesso di Windows, il SID dell'entità di Windows corrispondente al nuovo nome deve corrispondere al SID associato all'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nuovo nome di un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso non può contenere un carattere barra rovesciata (\\).  
+ NAME = *login_name*  
+ Nuovo nome dell'account di accesso che viene rinominato. Se si tratta di un account di accesso di Windows, il SID dell'entità di Windows corrispondente al nuovo nome deve corrispondere al SID associato all'account di accesso in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il nuovo nome di un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non può contenere una barra rovesciata (\\).  
   
- CHECK_EXPIRATION = {ON | **OFF** }  
+ CHECK_EXPIRATION = { ON | **OFF** }  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica se i criteri di scadenza delle password devono essere applicati a questo account di accesso. Il valore predefinito è OFF.  
   
- CHECK_POLICY  **=**  { **ON** | OFF}  
+ CHECK_POLICY **=** { **ON** | OFF }  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Si applica solo agli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specifica che i criteri password di Windows del computer in cui è in esecuzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devono essere applicati a questo account di accesso. Il valore predefinito è ON.  
   
- CREDENZIALE = *credential_name*  
+ CREDENTIAL = *credential_name*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nome della credenziale su cui eseguire il mapping all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La credenziale deve già esistere nel server. Per ulteriori informazioni vedere [credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Impossibile eseguire il mapping di una credenziale per l'account di accesso sa.  
+ Nome della credenziale su cui eseguire il mapping all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La credenziale deve già esistere nel server. Per altre informazioni, vedere [Credenziali &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). Non è possibile eseguire il mapping di credenziali all'account di accesso sa.  
   
  NO CREDENTIAL  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Rimuove gli eventuali mapping esistenti tra l'account di accesso e una credenziale del server. Per ulteriori informazioni vedere [credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Rimuove gli eventuali mapping esistenti tra l'account di accesso e una credenziale del server. Per altre informazioni, vedere [Credenziali &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md).  
   
  UNLOCK  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -204,14 +204,14 @@ ALTER LOGIN login_name
  ADD CREDENTIAL  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Aggiunge una credenziale del provider EKM per l'account di accesso. Per ulteriori informazioni, vedere [Extensible Key Management &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+ Aggiunge una credenziale del provider EKM per l'account di accesso. Per altre informazioni, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  DROP CREDENTIAL  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-Rimuove una credenziale del provider Extensible Key Management (EKM) dall'account di accesso. Per ulteriori informazioni vedere [Extensible Key Management &#40; EKM &#41; ](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
+Rimuove una credenziale del provider EKM dall'account di accesso. Per altre informazioni, vedere [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando CHECK_POLICY è impostato su ON, non è possibile utilizzare l'argomento HASHED.  
   
  Quando si modifica l'opzione CHECK_POLICY impostandola su ON, si verifica il comportamento seguente:  
@@ -230,22 +230,22 @@ Se si specifica MUST_CHANGE, è necessario impostare CHECK_EXPIRATION e CHECK_PO
   
 Se l'opzione CHECK_POLICY è impostata su OFF, non è possibile impostare CHECK_EXPIRATION su ON. Un'istruzione ALTER LOGIN che presenta questa combinazione di opzioni avrà esito negativo.  
   
-Non è possibile utilizzare ALTER_LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Ad esempio, ALTER_LOGIN [*domain\group*] DISABLE restituirà il messaggio di errore seguente:  
+Non è possibile utilizzare ALTER_LOGIN con l'argomento DISABLE per negare l'accesso a un gruppo di Windows. Ad esempio, ALTER_LOGIN [*domain\group*] DISABLE restituisce il messaggio di errore seguente:  
   
  "Messaggio 15151, livello 16, stato 1, riga 1"  
   
- "Non è possibile modificare l'account di accesso '*Domain\Group*', perché non esiste o non si dispone dell'autorizzazione."  
+ "Non è possibile modificare l'oggetto account di accesso '*Domain\Group*' perché non esiste oppure perché non si ha l'autorizzazione".  
   
  Questo si verifica per motivi strutturali.  
   
-In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], dati di accesso necessarie per autenticare una connessione e le regole del firewall a livello di server temporaneamente vengono memorizzati nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database è la versione più recente della tabella gli account di accesso, eseguire [FLUSHAUTHCACHE DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
+In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], i dati dell'account di accesso necessari per autenticare una connessione e le regole del firewall a livello di server vengono memorizzati temporaneamente nella cache in ogni database. Questa cache viene aggiornata periodicamente. Per forzare un aggiornamento della cache di autenticazione e assicurarsi che un database disponga della versione più recente della tabella di account di accesso, eseguire [DBCC FLUSHAUTHCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  
   
  Se viene utilizzata l'opzione CREDENTIAL, è richiesta anche l'autorizzazione ALTER ANY CREDENTIAL.  
   
- Se l'account di accesso da modificare è un membro del **sysadmin** ruolo predefinito del server o un utente che dispongono dell'autorizzazione CONTROL SERVER, richiede l'autorizzazione CONTROL SERVER quando si apportano le modifiche seguenti:  
+ Se l'account di accesso da modificare è un membro del ruolo predefinito del server **sysadmin** o un utente che dispone dell'autorizzazione CONTROL SERVER, è richiesta anche l'autorizzazione CONTROL SERVER quando si apportano le modifiche seguenti:  
   
 -   Reimpostazione della password senza specificare la vecchia password.  
   
@@ -333,9 +333,9 @@ GO
  
   
 ## <a name="see-also"></a>Vedere anche  
- [Credenziali &#40; motore di Database &#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
+ [Credenziali &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
+ [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [Extensible Key Management &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  

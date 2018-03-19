@@ -28,9 +28,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Visualizza le dimensioni e il numero di righe per ogni partizione di una tabella in un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database.
+Visualizza le dimensioni e il numero di righe di ogni partizione di una tabella in un database [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -41,27 +41,27 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ *database_name* . [ *schema_name* ]. | *schema_name* . ] *table_name*  
- L'una, due o tre parti della tabella da visualizzare.  Per due o nomi di tabella composto da tre parti, il nome devono essere racchiusa tra virgolette doppie (""). Utilizzo delle virgolette che racchiudono un nome di tabella composto da una parte è facoltativo.  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
+ Il nome di tabella composto da una, due o tre parti da visualizzare.  Per i nomi di tabella composti da due o tre parti, il nome deve essere racchiuso tra virgolette doppie (""). L'uso delle virgolette nei nomi di tabella composti da una sola parte è facoltativo.  
   
 ## <a name="permissions"></a>Autorizzazioni
-Richiede **VIEW SERVER STATE** autorizzazione.
+È richiesta l'autorizzazione **VIEW SERVER STATE**.
   
 ## <a name="result-sets"></a>Set di risultati  
-Si tratta i risultati per il comando DBCC PDW_SHOWPARTITIONSTATS.
+Risultati per il comando DBCC PDW_SHOWPARTITIONSTATS.
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|partition_number|int|Numero di partizioni.|  
-|used_page_count|bigint|Numero di pagine utilizzate per i dati.|  
-|reserved_page_count|bigint|Numero di pagine allocate alla partizione.|  
-|row_count|bigint|Numero di righe nella partizione.|  
-|pdw_node_id|int|Nodo di calcolo per i dati.|  
-|distribution_id|int|Id di distribuzione per i dati.|  
+|partition_number|INT|Numero di partizioni.|  
+|used_page_count|BIGINT|Numero totale di pagine usate per i dati.|  
+|reserved_page_count|BIGINT|Numero di pagine allocate alla partizione.|  
+|row_count|BIGINT|Numero di righe nella partizione.|  
+|pdw_node_id|INT|Nodo di calcolo per i dati.|  
+|distribution_id|INT|ID di distribuzione per i dati.|  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Esempi di sintassi di base PDW_SHOWPARTITIONSTATS DBCC  
-Gli esempi seguenti mostrano il numero di righe e di spazio utilizzato dalla partizione per la tabella FactInternetSales il [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Esempi di sintassi di base DBCC PDW_SHOWPARTITIONSTATS  
+Gli esempi seguenti visualizzano lo spazio usato e il numero di righe per partizione per la tabella FactInternetSales nel database [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].
   
 ```sql
 DBCC PDW_SHOWPARTITIONSTATS ("ssawPDW.dbo.FactInternetSales");  

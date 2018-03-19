@@ -64,10 +64,10 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="arguments"></a>Argomenti  
  *message_type_name*  
- Nome del tipo di messaggio da creare. Viene creato un nuovo tipo di messaggio nel database corrente, di proprietà dell'entità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. Il *message_type_name* può contenere fino a 128 caratteri.  
+ Nome del tipo di messaggio da creare. Viene creato un nuovo tipo di messaggio nel database corrente, di proprietà dell'entità specificata nella clausola AUTHORIZATION. Non è possibile specificare i nomi del server, del database e dello schema. *message_type_name* può contenere fino a 128 caratteri.  
   
- AUTORIZZAZIONE *owner_name*  
- Imposta come proprietario del tipo di messaggio l'utente o il ruolo del database specificato. Quando l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve essere il nome dell'utente corrente, il nome di un utente che l'utente corrente dispone dell'autorizzazione IMPERSONATE oppure il nome di un ruolo a cui appartiene l'utente corrente. Se questa clausola viene omessa, il tipo di messaggio appartiene all'utente corrente.  
+ AUTHORIZATION *owner_name*  
+ Imposta come proprietario del tipo di messaggio l'utente o il ruolo del database specificato. Se l'utente corrente è **dbo** o **sa**, *owner_name* può essere il nome di qualsiasi utente o ruolo valido. In caso contrario, *owner_name* deve essere il nome dell'utente corrente, il nome di un utente per il quale l'utente corrente dispone dell'autorizzazione IMPERSONATE oppure il nome di un ruolo a cui appartiene l'utente corrente. Se questa clausola viene omessa, il tipo di messaggio appartiene all'utente corrente.  
   
  VALIDATION  
  Specifica la modalità con cui [!INCLUDE[ssSB](../../includes/sssb-md.md)] convalida il corpo dei messaggi di questo tipo. Se questa clausola non viene specificata, l'impostazione predefinita per la convalida è NONE.  
@@ -82,19 +82,19 @@ CREATE MESSAGE TYPE message_type_name
  Specifica che il corpo del messaggio deve contenere codice XML in formato corretto.  
   
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
- Specifica che il corpo del messaggio deve contenere dati XML conformi a uno schema nella raccolta di schemi specificata il *schema_collection_name* deve essere il nome di una raccolta di XML schema esistente.  
+ Specifica che il corpo del messaggio deve contenere dati XML conformi a uno schema incluso nella raccolta di schemi specificata. *schema_collection_name* deve corrispondere al nome di una raccolta di XML Schema esistente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] convalida i messaggi in arrivo. Se il corpo di un messaggio non è conforme al tipo di convalida specificato, [!INCLUDE[ssSB](../../includes/sssb-md.md)] elimina il messaggio non valido e restituisce un errore al servizio che ha inviato il messaggio.  
   
  In entrambi i lati di una conversazione deve essere definito lo stesso nome per un tipo di messaggio. Per semplificare la risoluzione dei problemi, per entrambi i lati di una conversazione viene in genere specificata la stessa convalida per il tipo di messaggio, sebbene questo non sia un requisito di [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
- Un tipo di messaggio non può essere un oggetto temporaneo. A partire da nomi di tipo di messaggio  **#**  sono consentiti, ma sono oggetti permanenti.  
+ Un tipo di messaggio non può essere un oggetto temporaneo. I nomi dei tipi di messaggio che iniziano con **#** sono consentiti, ma sono oggetti permanenti.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Autorizzazione per la creazione di impostazioni predefinite per i membri di un tipo di messaggio di **db_ddladmin** o **db_owner** ruoli predefiniti del database e **sysadmin** ruolo predefinito del server.  
+ L'autorizzazione per la creazione di un tipo di messaggio viene assegnata per impostazione predefinita ai membri del ruolo predefinito del database **db_ddladmin** o **db_owner** e del ruolo predefinito del server **sysadmin**.  
   
- Autorizzazione REFERENCES per un tipo di messaggio per impostazione predefinita al proprietario del tipo di messaggio, i membri del **db_owner** predefinito del database e i membri del **sysadmin** ruolo predefinito del server.  
+ Per impostazione predefinita l'autorizzazione REFERENCES per un tipo di messaggio viene assegnata al proprietario del tipo di messaggio, ai membri del ruolo predefinito del database **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
  Se l'istruzione CREATE MESSAGE TYPE specifica una raccolta di schemi, l'utente che esegue l'istruzione deve disporre dell'autorizzazione REFERENCES per la raccolta di schemi specificata.  
   

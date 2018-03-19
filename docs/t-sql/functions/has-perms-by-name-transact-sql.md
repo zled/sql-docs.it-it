@@ -1,5 +1,5 @@
 ---
-title: HAS_PERMS_BY_NAME (Transact-SQL) | Documenti Microsoft
+title: HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -52,34 +52,34 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *entità a protezione diretta*  
- Nome dell'entità a protezione diretta. Se l'entità a protezione diretta è il server stesso, questo valore deve essere impostato su NULL. *entità a protezione diretta* è un'espressione scalare di tipo **sysname**. Non prevede alcun valore predefinito.  
+ *securable*  
+ Nome dell'entità a protezione diretta. Se l'entità a protezione diretta è il server stesso, questo valore deve essere impostato su NULL. *securable* è un'espressione scalare di tipo **sysname**. Non prevede alcun valore predefinito.  
   
  *securable_class*  
  Nome della classe dell'entità a protezione diretta in cui viene testata l'autorizzazione. *securable_class* è un'espressione scalare di tipo **nvarchar(60)**.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l'argomento securable_class deve essere impostato su uno dei seguenti: **DATABASE**, **oggetto**, **ruolo**, **SCHEMA**, o **utente**.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento securable_class deve essere impostato su uno dei seguenti valori **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
- *autorizzazione*  
- Un'espressione scalare non null di tipo **sysname** che rappresenta il nome dell'autorizzazione da controllare. Non prevede alcun valore predefinito. Il nome di autorizzazione ANY è un carattere jolly.  
+ *permission*  
+ Espressione scalare non Null di tipo **sysname** che rappresenta il nome dell'autorizzazione da controllare. Non prevede alcun valore predefinito. Il nome di autorizzazione ANY è un carattere jolly.  
   
- *entità a protezione diretta Sub*  
+ *sub-securable*  
  Espressione scalare facoltativa di tipo **sysname** che rappresenta il nome della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
   
 > [!NOTE]  
->  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], sottoentità non è possibile utilizzare le parentesi nella forma **' [***nome secondario***]'**. Utilizzare **'***nome secondario***'** invece.  
+>  Nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], le sottoentità a protezione diretta non possono usare le parentesi nella forma **'[***nome secondario***]'**. È necessario usare invece **'***nome secondario***'**.  
   
- *Sub-securable Class*  
+ *sub-securable_class*  
  Espressione scalare facoltativa di tipo **nvarchar(60)** che rappresenta la classe della sottoentità a protezione diretta in cui viene testata l'autorizzazione. Il valore predefinito è NULL.  
   
- In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], l'argomento sub-securable Class è valido solo se l'argomento securable_class è impostato su **oggetto**. Se l'argomento securable_class è impostato su **oggetto**, l'argomento sub-securable Class deve essere impostato su **colonna**.  
+ In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] l'argomento sub-securable_class è valido solo se l'argomento securable_class è impostato su **OBJECT**. Se l'argomento securable_class è impostato su **OBJECT**, l'argomento sub-securable_class deve essere impostato su **COLUMN**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **int**  
   
  Restituisce NULL se la query non viene eseguita correttamente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione predefinita testa se l'entità principale dispone di una determinata autorizzazione valida per un'entità a protezione diretta specificata. HAS_PERMS_BY_NAME restituisce 1 quando l'utente dispone dell'autorizzazione valida sull'entità a protezione diretta, 0 in caso contrario oppure NULL quando la classe di entità a protezione diretta o l'autorizzazione non è valida. Di seguito vengono riportate le autorizzazioni valide:  
   
 -   Autorizzazione concessa direttamente all'entità di protezione e non negata.  
@@ -112,7 +112,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. Verifica dell'autorizzazione utente VIEW SERVER STATE a livello di server  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -120,7 +120,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. Verifica della capacità dell'utente di rappresentare (IMPERSONATE) l'entità server Ps  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

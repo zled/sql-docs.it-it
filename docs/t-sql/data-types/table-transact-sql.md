@@ -1,5 +1,5 @@
 ---
-title: tabella (Transact-SQL) | Documenti Microsoft
+title: table (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Tipo di dati speciale che può essere utilizzato per archiviare un set di risultati per l'elaborazione in un secondo momento. **tabella** viene utilizzato principalmente per l'archiviazione temporanea di un set di righe restituite come set di risultati di una funzione con valori di tabella. Funzioni e variabili possono essere dichiarate come tipo di **tabella**. **tabella** variabili possono essere utilizzate in funzioni, stored procedure e batch. Per dichiarare le variabili di tipo **tabella**, utilizzare [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
+Tipo di dati speciale che può essere utilizzato per archiviare un set di risultati per l'elaborazione in un secondo momento. **table** viene principalmente usato per l'archiviazione temporanea di un set di righe restituite come set di risultati di una funzione con valori di tabella. È possibile dichiarare funzioni e variabili di tipo **table**. Le variabili di tipo **table** possono essere usate in funzioni, stored procedure e batch. Per dichiarare variabili di tipo **table**, usare [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 
 **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -67,19 +67,19 @@ table_type_definition ::=
 ## <a name="arguments"></a>Argomenti  
 *table_type_definition*  
 Stesso subset di informazioni utilizzate per definire una tabella nell'istruzione CREATE TABLE. La dichiarazione di tabella include definizioni di colonna, nomi, tipi di dati e vincoli. Gli unici tipi di vincoli consentiti sono PRIMARY KEY, UNIQUE KEY e NULL.  
-Per ulteriori informazioni sulla sintassi, vedere [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md), [CREATE FUNCTION &#40; Transact-SQL &#41; ](../../t-sql/statements/create-function-transact-sql.md), e [DECLARE @local_variable &#40; Transact-SQL &#41; ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
+Per altre informazioni sulla sintassi, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) e [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
 *collation_definition*  
-Regole di confronto della colonna che è costituita da un [!INCLUDE[msCoName](../../includes/msconame-md.md)] impostazioni locali di Windows e uno stile di confronto, impostazioni locali di Windows e la notazione binaria o una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delle regole di confronto. Se *collation_definition* non viene specificato, la colonna eredita le regole di confronto del database corrente. Se invece viene specificata come tipo CLR (Common Language Runtime) definito dall'utente, la colonna eredita le regole di confronto del tipo definito dall'utente.
+Regole di confronto della colonna composte da impostazioni locali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e uno stile di confronto, impostazioni locali di Windows e la notazione binaria oppure dalle regole di confronto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se *collation_definition* viene omesso, la colonna eredita le regole di confronto del database corrente. Se invece viene specificata come tipo CLR (Common Language Runtime) definito dall'utente, la colonna eredita le regole di confronto del tipo definito dall'utente.
   
-## <a name="remarks"></a>Osservazioni  
-**tabella** fare riferimento alle variabili in base al nome nella clausola FROM di un batch, come illustrato nell'esempio seguente:
+## <a name="remarks"></a>Remarks  
+È possibile fare riferimento alle variabili di tipo **table** per nome nella clausola FROM di un batch, come illustrato nell'esempio seguente:
   
 ```sql
 SELECT Employee_ID, Department_ID FROM @MyTableVar;  
 ```  
   
-All'esterno di una clausola FROM, **tabella** devono fare riferimento alle variabili utilizzando un alias, come illustrato nell'esempio seguente:
+All'esterno di una clausola FROM, è necessario fare riferimento alle variabili di tipo **table** tramite un alias, come illustrato nell'esempio seguente:
   
 ```sql
 SELECT EmployeeID, DepartmentID   
@@ -88,40 +88,40 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
    m.DepartmentID = Employee.DepartmentID);  
 ```  
   
-**tabella** variabili offrono i vantaggi seguenti per le query su scala ridotta contenenti piani di query che non cambiano e quando i problemi di ricompilazione sono dominanti:
--   Oggetto **tabella** variabile si comporta come una variabile locale. Queste variabili hanno un ambito ben definito, corrispondente alla funzione, alla stored procedure o al batch in cui sono dichiarate.  
-     All'interno dell'ambito, un **tabella** variabile può essere utilizzata come una normale tabella. in tutti i casi in cui è possibile utilizzare una tabella o espressione di tabella in istruzioni SELECT, INSERT, UPDATE e DELETE. Tuttavia, **tabella** non può essere utilizzato nell'istruzione seguente:  
+Le variabili di tipo **table** offrono i vantaggi seguenti per le query in scala ridotta contenenti piani di query che non vengono modificati e quando i problemi di ricompilazione sono dominanti:
+-   Le variabili di tipo **table** funzionano in modo analogo alle variabili locali. Queste variabili hanno un ambito ben definito, corrispondente alla funzione, alla stored procedure o al batch in cui sono dichiarate.  
+     All'interno del proprio ambito, le variabili **table** possono essere usate come normali tabelle. in tutti i casi in cui è possibile utilizzare una tabella o espressione di tabella in istruzioni SELECT, INSERT, UPDATE e DELETE. Le variabili **table**, tuttavia, non possono essere usate nell'istruzione seguente:  
   
 ```sql
 SELECT select_list INTO table_variable;
 ```
   
-**tabella** variabili vengono pulite automaticamente alla fine della funzione, stored procedure o batch in cui sono definiti.
+Le variabili di tipo **table** vengono cancellate automaticamente alla fine della funzione, della stored procedure o del batch in cui sono definite.
   
--   **tabella** le variabili utilizzate nelle stored procedure causano un numero di ricompilazioni delle stored procedure rispetto a quando le tabelle temporanee vengono utilizzate quando vi sono scelte basate sui costi che influiscono sulle prestazioni.  
--   Le transazioni che implica **tabella** variabili ultimo solo per la durata di un aggiornamento sul **tabella** variabile. Pertanto, **tabella** variabili richiedono meno risorse di registrazione e il blocco.  
+-   Quando si usano variabili di tipo **table** in stored procedure, il numero di ricompilazioni delle stored procedure risulta minore rispetto al numero eseguito con tabelle temporanee, non essendoci scelte basate sui costi che influiscono sulle prestazioni.  
+-   La durata delle transazioni che includono variabili di tipo **table** corrisponde solo alla durata dell'aggiornamento della variabile di tipo **table**. Le variabili di tipo **table** richiedono pertanto un numero di risorse di blocco e di registrazione minore.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
-**Tabella** variabili non dispone di statistiche di distribuzione, non attiva ricompilazioni. Pertanto, in molti casi, l'utilità di ottimizzazione compila un piano di query supponendo che la variabile di tabella non contenga righe. Per questo motivo, è necessario prestare attenzione in caso di utilizzo di una variabile di tabella se si prevede un numero elevato di righe (maggiore di 100). In tal caso, le tabelle temporanee potrebbero rappresentare una soluzione migliore. In alternativa, per le query che uniscono in join la variabile di tabella con altre tabelle, utilizzare l'hint RECOMPILE, che impedirà all'ottimizzatore di utilizzare la cardinalità corretta per la variabile di tabella.
+Le variabili di tipo **table** non contengono statistiche di distribuzione e non generano ricompilazioni. Pertanto, in molti casi, l'utilità di ottimizzazione compila un piano di query supponendo che la variabile di tabella non contenga righe. Per questo motivo, è necessario prestare attenzione in caso di utilizzo di una variabile di tabella se si prevede un numero elevato di righe (maggiore di 100). In tal caso, le tabelle temporanee potrebbero rappresentare una soluzione migliore. In alternativa, per le query che uniscono in join la variabile di tabella con altre tabelle, usare l'hint RECOMPILE, che fa in modo che l'utilità di ottimizzazione applichi la cardinalità corretta per la variabile di tabella.
   
-**tabella** variabili non sono supportate nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modello di ragionamento basato sui costi dell'utilità di ottimizzazione. È pertanto consigliabile non utilizzarle quando sono necessarie scelte basate sui costi per ottenere un piano di query efficiente. È preferibile utilizzare le tabelle temporanee quando sono necessarie scelte basate sui costi, ad esempio query con join, decisioni di parallelismo e scelte di selezione degli indici.
+Le variabili di tipo **table** non sono supportate nel modello di ragionamento basato sui costi dell'utilità di ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È pertanto consigliabile non utilizzarle quando sono necessarie scelte basate sui costi per ottenere un piano di query efficiente. È preferibile utilizzare le tabelle temporanee quando sono necessarie scelte basate sui costi, ad esempio query con join, decisioni di parallelismo e scelte di selezione degli indici.
   
-Query che modificano **tabella** variabili non generano piani di esecuzione di query parallele. Può influire sulle prestazioni quando grandi **tabella** , variabili o **tabella** le variabili di query complesse, vengono modificati. In questi casi, valutare l'utilizzo di tabelle temporanee in alternativa. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Le query che leggono **tabella** variabili senza modificarle possono ancora essere parallelizzate.
+Per le query che modificano le variabili di tipo **table** non vengono generati piani di esecuzione di query parallele. La modifica di variabili di tipo **table** di dimensioni molto grandi o di variabili di tipo **table** in query complesse può influire sulle prestazioni. In questi casi, valutare l'utilizzo di tabelle temporanee in alternativa. Per altre informazioni, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md). Le query che leggono le variabili di tipo **table** senza modificarle possono comunque essere eseguite in parallelo.
   
-È possibile creare indici in modo esplicito su **tabella** variabili e le statistiche non vengono mantenuti in **tabella** variabili. In alcuni casi, è possibile ottenere un miglioramento delle prestazioni utilizzando tabelle temporanee, che supportano indici e statistiche. Per ulteriori informazioni sulle tabelle temporanee, vedere [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md).
+Non è possibile creare indici in modo esplicito su variabili di tipo **table** e per le variabili di tipo **table** non vengono mantenute statistiche. In alcuni casi, è possibile ottenere un miglioramento delle prestazioni utilizzando tabelle temporanee, che supportano indici e statistiche. Per altre informazioni sulle tabelle temporanee, vedere [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).
   
-Vincoli CHECK, i valori predefiniti e le colonne calcolate nel **tabella** dichiarazione di tipo non è possibile chiamare funzioni definite dall'utente.
+Non è possibile chiamare funzioni definite dall'utente dai vincoli CHECK, dai valori DEFAULT e dalle colonne calcolate nella dichiarazione del tipo **table**.
   
-Operazione di assegnazione tra **tabella** variabili non è supportata.
+Non sono supportate operazioni di assegnazione tra variabili di tipo **table**.
   
-Poiché **tabella** variabili hanno un ambito limitato e non fanno parte del database persistente, non sono influenzati dal rollback di transazioni.
+Le operazioni di rollback delle transazioni non hanno alcun effetto sulle variabili di tipo **table**, poiché tali variabili hanno un ambito limitato e non fanno parte del database persistente.
   
 Le variabili di tabella non possono essere modificate dopo la creazione.
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-declaring-a-variable-of-type-table"></a>A. Dichiarazione di una variabile di tipo table  
-Nell'esempio seguente viene creata una variabile di tipo `table` in cui vengono archiviati i valori specificati nella clausola OUTPUT dell'istruzione UPDATE. Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`. Si noti che i risultati nel `INSERTED.ModifiedDate` colonna sono diversi dai valori di `ModifiedDate` colonna il `Employee` tabella. Questo perché nella tabella `AFTER UPDATE` è stato definito il trigger `ModifiedDate`, che aggiorna il valore di `Employee` in base alla data corrente. Le colonne restituite da `OUTPUT`, tuttavia, riflettono i dati prima dell'attivazione dei trigger. Per ulteriori informazioni, vedere [clausola OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).
+Nell'esempio seguente viene creata una variabile di tipo `table` in cui vengono archiviati i valori specificati nella clausola OUTPUT dell'istruzione UPDATE. Questa variabile è seguita da due istruzioni `SELECT` che restituiscono i valori in `@MyTableVar` e i risultati dell'operazione di aggiornamento nella tabella `Employee`. Si noti che i risultati nella colonna `INSERTED.ModifiedDate` sono diversi rispetto ai valori nella colonna `ModifiedDate` della tabella `Employee`. Questo perché nella tabella `AFTER UPDATE` è stato definito il trigger `ModifiedDate`, che aggiorna il valore di `Employee` in base alla data corrente. Le colonne restituite da `OUTPUT`, tuttavia, riflettono i dati prima dell'attivazione dei trigger. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).
   
 ```sql
 USE AdventureWorks2012;  
@@ -151,7 +151,7 @@ GO
 ```  
   
 ### <a name="b-creating-an-inline-table-valued-function"></a>B. Creazione di una funzione inline con valori di tabella  
-Nell'esempio seguente viene restituita una funzione inline con valori di tabella. Vengono restituite tre colonne `ProductID`, `Name` e l'aggregazione dei totali year-to-date per negozio come `YTD Total` per ogni prodotto venduto al Negozio.
+Nell'esempio seguente viene restituita una funzione inline con valori di tabella. Vengono restituite tre colonne `ProductID`, `Name` e il valore aggregato dei totali dell'anno in corso per negozio come `YTD Total` per ogni prodotto venduto al negozio.
   
 ```sql
 USE AdventureWorks2012;  
@@ -182,12 +182,12 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[COLLATE &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
+[COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)  
 [Funzioni definite dall'utente](../../relational-databases/user-defined-functions/user-defined-functions.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
-[Utilizzare i valori di tabella parametri &#40; motore di Database &#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
+[Usare parametri con valori di tabella &#40;Motore di database&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)  
 [Hint di query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: Transazioni (SQL Data Warehouse) | Documenti Microsoft
+title: Transazioni (SQL Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -29,15 +29,15 @@ ms.lasthandoff: 01/25/2018
 # <a name="transactions-sql-data-warehouse"></a>Transazioni (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Una transazione è un gruppo di uno o più istruzioni di database che sono interamente eseguito il commit o rollback interamente. Ogni transazione è atomico, coerente, isolato e durevole (ACID). Se la transazione ha esito positivo, tutte le istruzioni all'interno di esso vengono eseguito il commit. Se la transazione ha esito negativo, che è almeno una delle istruzioni del gruppo non riesce, viene eseguito il rollback dell'intero gruppo.  
+  Una transazione è un gruppo di una o più istruzioni di database di cui è stato interamente eseguito il commit o il rollback. Ogni transazione è atomica, coerente, isolata e duratura, dotata cioè delle cosiddette proprietà ACID. Se la transazione ha esito positivo, viene eseguito il commit di tutte le istruzioni al suo interno. Se la transazione ha esito negativo, ovvero se almeno una delle istruzioni del gruppo non riesce, viene eseguito il rollback dell'intero gruppo.  
   
- Inizio e alla fine delle transazioni varia a seconda dell'impostazione di AUTOCOMMIT e le istruzioni BEGIN TRANSACTION, COMMIT e ROLLBACK. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]supporta i seguenti tipi di transazioni:  
+ L'inizio e la fine delle transazioni dipendono dell'impostazione AUTOCOMMIT e dalle istruzioni BEGIN TRANSACTION, COMMIT e ROLLBACK. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] supporta i tipi di transazioni seguenti:  
   
--   *Le transazioni esplicite* iniziano con l'istruzione BEGIN TRANSACTION e la fine con l'istruzione COMMIT o ROLLBACK.  
+-   Le *transazioni esplicite* iniziano con l'istruzione BEGIN TRANSACTION e terminano con l'istruzione COMMIT o ROLLBACK.  
   
--   *Le transazioni autocommit* avviare automaticamente all'interno di una sessione e non iniziano con l'istruzione BEGIN TRANSACTION. Quando l'impostazione della modalità AUTOCOMMIT è impostata su ON, ogni istruzione viene eseguita in una transazione e non esplicito COMMIT o ROLLBACK è necessario. Quando l'impostazione della modalità AUTOCOMMIT è impostata su OFF, un'istruzione COMMIT o ROLLBACK è necessario per determinare il risultato della transazione. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], le transazioni con autocommit iniziano immediatamente dopo un'istruzione COMMIT o ROLLBACK oppure dopo un'istruzione SET AUTOCOMMIT OFF.  
+-   Le *transazioni con commit automatico* iniziano automaticamente all'interno di una sessione e non iniziano con l'istruzione BEGIN TRANSACTION. Se l'impostazione AUTOCOMMIT corrisponde a ON, ogni istruzione viene eseguita in una transazione e non è necessaria un'istruzione COMMIT o ROLLBACK esplicita. Se l'impostazione AUTOCOMMIT corrisponde a OFF, è necessaria un'istruzione COMMIT o ROLLBACK per determinare il risultato della transazione. In [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], le transazioni con commit automatico iniziano immediatamente dopo un'istruzione COMMIT o ROLLBACK oppure dopo un'istruzione SET AUTOCOMMIT OFF.  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -51,64 +51,64 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ## <a name="arguments"></a>Argomenti  
  BEGIN TRANSACTION  
- Contrassegna il punto iniziale di una transazione esplicita.  
+ Contrassegna il punto di inizio di una transazione esplicita.  
   
- COMMIT [WORK]  
- Contrassegna la fine di una transazione esplicita o autocommit. Questa istruzione comporta le modifiche apportate nella transazione sottoposte a commit in modo permanente nel database. L'istruzione COMMIT è identico al COMMIT WORK, COMMIT TRAN e COMMIT TRANSACTION.  
+ COMMIT [ WORK ]  
+ Contrassegna la fine di una transazione esplicita o con commit automatico. Con questa istruzione viene eseguito il commit permanente nel database delle modifiche apportate alla transazione. L'istruzione COMMIT è identica alle istruzioni COMMIT WORK, COMMIT TRAN e COMMIT TRANSACTION.  
   
- RIPRISTINO [WORK]  
- Esegue il rollback di una transazione all'inizio della transazione. Nessuna modifica per la transazione viene eseguito il commit nel database. L'istruzione ROLLBACK è identico al ROLLBACK WORK, ROLLBACK TRAN e ROLLBACK TRANSACTION.  
+ ROLLBACK [ WORK ]  
+ Esegue il rollback di una transazione fino all'inizio della transazione stessa. Nel database non viene eseguito il commit di alcuna modifica alla transazione. L'istruzione ROLLBACK è identica alle istruzioni ROLLBACK WORK, ROLLBACK TRAN e ROLLBACK TRANSACTION.  
   
- AUTOCOMMIT SET { **ON** | OFF}  
- Determina come le transazioni possono iniziare e terminare.  
+ SET AUTOCOMMIT { **ON** | OFF }  
+ Determina la modalità di inizio e di fine delle transazioni.  
   
  ON  
- Ogni istruzione viene eseguito con la propria transazione e nessuna istruzione esplicita COMMIT o ROLLBACK è necessaria. Le transazioni esplicite sono consentite quando la proprietà modalità AUTOCOMMIT è impostata su ON.  
+ Ogni istruzione viene eseguita in una transazione specifica. Non è necessaria un'istruzione COMMIT o ROLLBACK esplicita. Se AUTOCOMMIT corrisponde a ON, le transazioni esplicite sono consentite.  
   
  OFF  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Avvia automaticamente una transazione quando una transazione non è già in corso. Tutte le istruzioni successive vengono eseguite come parte della transazione e un'istruzione COMMIT o ROLLBACK è necessario determinare il risultato della transazione. Non appena viene eseguito il commit o rollback in questa modalità operativa di una transazione, la modalità rimane impostata su OFF, e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] avvia una nuova transazione. Le transazioni esplicite non sono consentite quando la proprietà modalità AUTOCOMMIT è impostata su OFF.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] avvia automaticamente una transazione, se non ne è in corso alcuna. Tutte le istruzioni successive vengono eseguite nell'ambito della transazione ed è necessaria un'istruzione COMMIT o ROLLBACK per determinare il risultato della transazione. Non appena viene eseguito il commit o il rollback di una transazione in questa modalità operativa, la modalità rimane impostata su OFF e [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] avvia una nuova transazione. Se AUTOCOMMIT corrisponde a OFF, le transazioni esplicite non sono consentite.  
   
- Se si modifica l'impostazione di AUTOCOMMIT all'interno di una transazione attiva, l'impostazione influisce sulla transazione corrente e non ha effetto fino al completamento della transazione.  
+ Se si modifica l'impostazione AUTOCOMMIT all'interno di una transazione attiva, l'impostazione influisce sulla transazione corrente e ha effetto solo dopo il completamento della transazione.  
   
- Se AUTOCOMMIT è impostata su ON, in esecuzione un'altra istruzione SET AUTOCOMMIT ON non ha alcun effetto. Analogamente, se AUTOCOMMIT è impostata su OFF, in esecuzione un altro SET AUTOCOMMIT OFF non ha effetto.  
+ Se AUTOCOMMIT corrisponde a ON, l'esecuzione di un'altra istruzione SET AUTOCOMMIT ON non ha alcun effetto. Analogamente, se AUTOCOMMIT corrisponde a OFF, l'esecuzione di un'altra istruzione SET AUTOCOMMIT OFF non ha alcun effetto.  
   
- SET IMPLICIT_TRANSACTIONS {ON | **OFF** }  
- Attiva e disattiva la modalità stesso come impostare AUTOCOMMIT. Quando è impostata su ON, l'opzione SET IMPLICIT_TRANSACTIONS imposta per la connessione la modalità di transazione implicita. Quando impostata su OFF, viene ripristinata la connessione in modalità autocommit.  Per ulteriori informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+ SET IMPLICIT_TRANSACTIONS { ON | **OFF** }  
+ Attiva e disattiva le stesse modalità di SET AUTOCOMMIT. Quando è impostata su ON, l'opzione SET IMPLICIT_TRANSACTIONS imposta per la connessione la modalità di transazione implicita. Quando è impostata su OFF, ripristina la modalità di transazione con commit automatico.  Per altre informazioni, vedere [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Sono richieste autorizzazioni specifiche per eseguire le istruzioni relative alle transazioni. Sono necessarie autorizzazioni per eseguire le istruzioni all'interno della transazione.  
+ Per eseguire le istruzioni correlate alle transazioni non sono necessarie autorizzazioni specifiche. Le autorizzazioni sono necessarie per eseguire le istruzioni all'interno della transazione.  
   
 ## <a name="error-handling"></a>Gestione degli errori  
- Se vengono eseguiti COMMIT o ROLLBACK ed è presente alcuna transazione attiva, viene generato un errore.  
+ Se si eseguono istruzioni COMMIT o ROLLBACK e non è presente alcuna transazione attiva, viene generato un errore.  
   
- Se un'istruzione BEGIN TRANSACTION viene eseguita quando è già in corso una transazione, viene generato un errore. Ciò può verificarsi se si verifica un'istruzione BEGIN TRANSACTION dopo un'istruzione BEGIN TRANSACTION ha esito positivo o quando la sessione è in modalità AUTOCOMMIT SET OFF.  
+ Se si esegue un'istruzione BEGIN TRANSACTION mentre è già in corso una transazione, viene generato un errore. Ciò può verificarsi se un'istruzione BEGIN TRANSACTION si verifica dopo un'istruzione BEGIN TRANSACTION con esito positivo o se la sessione è in modalità SET AUTOCOMMIT OFF.  
   
- Se un errore diverso da un errore in fase di esecuzione istruzione impedisce il completamento di una transazione esplicita, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] automaticamente il rollback della transazione e libera tutte le risorse utilizzate dalla transazione. Ad esempio, se la connessione di rete del client a un'istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] viene interrotta o il client si disconnette l'applicazione, vengono eseguito il rollback di tutte le transazioni non salvate per la connessione quando la rete notifica l'istanza dell'interruzione.  
+ Se una transazione esplicita non viene eseguita correttamente a causa di un errore non correlato all'esecuzione di un'istruzione, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] esegue automaticamente il rollback della transazione e libera tutte le risorse usate dalla transazione stessa. Se ad esempio viene interrotta la connessione di rete tra il client e un'istanza di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o se il client si disconnette dall'applicazione, quando la rete notifica l'interruzione all'istanza viene eseguito il rollback di tutte le transazioni della connessione di cui non è ancora stato eseguito il commit.  
   
- Se si verifica un errore in fase di esecuzione istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] comportamento è coerente con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **XACT_ABORT** impostato su **ON** e viene eseguito il rollback dell'intera transazione. Per ulteriori informazioni sul **XACT_ABORT** impostazione, vedere [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
+ Se si verifica un errore durante l'esecuzione di un'istruzione in un batch, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] si comporta in modo coerente con l'impostazione di **XACT_ABORT** su **ON** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene eseguito il rollback dell'intera transazione. Per altre informazioni sull'impostazione **XACT_ABORT**, vedere [SET XACT_ABORT (Transact-SQL)](http://msdn.microsoft.com/library/ms188792.aspx).  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Una sessione può eseguire solo una transazione in un determinato momento; punti di salvataggio e transazioni annidate non sono supportate.  
+ In un momento specifico, una sessione può eseguire solo una transazione. I punti di salvataggio e le transazioni annidate non sono supportati.  
   
- È responsabilità del [!INCLUDE[DWsql](../../includes/dwsql-md.md)] programmatore eseguire il COMMIT solo in un punto quando tutti i dati a cui fa riferimento la transazione è logicamente corretto.  
+ È compito del programmatore di [!INCLUDE[DWsql](../../includes/dwsql-md.md)] eseguire l'istruzione COMMIT solo quando tutti i dati a cui la transazione fa riferimento sono logicamente corretti.  
   
- Quando una sessione è terminata prima che venga completata una transazione, viene eseguito il rollback della transazione.  
+ Se una sessione viene terminata prima del completamento di una transazione, viene eseguito il rollback della transazione stessa.  
   
- Modalità di transazione vengono gestite a livello di sessione. Ad esempio, se una sessione inizia una transazione esplicita o imposta l'AUTOCOMMIT su OFF o imposta l'opzione IMPLICIT_TRANSACTIONS su ON, non ha alcun effetto sulle modalità di transazione da qualsiasi altra sessione.  
+ Le modalità di transazione vengono gestite a livello di sessione. Se, ad esempio, una sessione inizia una transazione esplicita oppure imposta AUTOCOMMIT su OFF o IMPLICIT_TRANSACTIONS su ON, non ha alcun effetto sulle modalità delle transazioni di qualsiasi altra sessione.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- È Impossibile rollback della transazione dopo il rilascio di un'istruzione COMMIT perché le modifiche dei dati sono state apportate a una parte permanente del database.  
+ Non è possibile eseguire il rollback di una transazione dopo l'esecuzione di un'istruzione COMMIT. Le modifiche dei dati del database, infatti, sono diventate permanenti.  
   
- Il [crea DATABASE &#40; Azure SQL Data Warehouse &#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/drop-database-transact-sql.md) comandi non possono essere utilizzati all'interno di una transazione esplicita.  
+ Non è possibile usare i comandi [CREATE DATABASE &#40;Azure SQL Data Warehouse&#41; ](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) e [DROP DATABASE &#40;Transact-SQL&#41; ](../../t-sql/statements/drop-database-transact-sql.md) all'interno di una transazione esplicita.  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]non dispone di una transazione meccanismo di condivisione. Ciò implica che a un certo punto nel tempo, solo una sessione può eseguire le operazioni in qualsiasi transazione nel sistema.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] non ha un meccanismo di condivisione delle transazioni. Ciò comporta il fatto che in qualsiasi momento solo una sessione può eseguire operazioni per una transazione nel sistema.  
   
 ## <a name="locking-behavior"></a>Comportamento di blocco  
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]utilizza il blocco per garantire l'integrità delle transazioni e mantenere la coerenza dei database quando più utenti accedono ai dati nello stesso momento. Il blocco viene utilizzato dalle transazioni sia implicite che esplicite. Ogni transazione richiede blocchi di diversi tipi sulle risorse, ad esempio tabelle o database da cui dipende la transazione. Tutti [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] i blocchi sono tabella o a un livello superiore. I blocchi impediscono alle altre transazioni di modificare le risorse in modo tale da creare problemi alla transazione che richiede il blocco. Ogni transazione libera i relativi blocchi quando non sia più associata una dipendenza dalle risorse bloccate; le transazioni esplicite mantengono blocchi finché la transazione viene completata quando viene eseguito il commit o rollback.  
+ Per garantire l'integrità delle transazioni e mantenere la coerenza dei database se più utenti accedono simultaneamente ai dati, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] usa la funzionalità di blocco. Il blocco viene usato sia dalle transazioni implicite che dalle transazioni esplicite. Ogni transazione richiede blocchi di tipo diverso per le risorse, ad esempio per le tabelle o i database di quali dipende. Tutti i blocchi di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] sono a livello di tabella o superiore. I blocchi impediscono alle altre transazioni di modificare le risorse in modo tale da creare problemi alla transazione che richiede il blocco. Ogni transazione rilascia i propri blocchi quando non ha più una dipendenza dalle risorse bloccate. Le transazioni esplicite mantengono blocchi finché la transazione non viene completata tramite commit o rollback.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-an-explicit-transaction"></a>A. Utilizzo di una transazione esplicita  
+### <a name="a-using-an-explicit-transaction"></a>A. Uso di una transazione esplicita  
   
 ```  
 BEGIN TRANSACTION;  
@@ -117,8 +117,8 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```  
   
-### <a name="b-rolling-back-a-transaction"></a>B. Eseguire il rollback di una transazione  
- Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione.  In questo esempio, l'istruzione ROLLBACK viene eseguito il rollback dell'istruzione INSERT, ma sarà ancora presente nella tabella creata.  
+### <a name="b-rolling-back-a-transaction"></a>B. Rollback di una transazione  
+ Nell'esempio seguente viene illustrato l'effetto del rollback di una transazione.  In questo esempio l'istruzione ROLLBACK esegue il rollback dell'istruzione INSERT, ma la tabella creata sarà ancora presente.  
   
 ```  
 CREATE TABLE ValueTable (id int);  
@@ -128,20 +128,20 @@ BEGIN TRANSACTION;
 ROLLBACK;  
 ```  
   
-### <a name="c-setting-autocommit"></a>C. Impostazione modalità AUTOCOMMIT  
- Nell'esempio seguente imposta l'impostazione di AUTOCOMMIT `ON`.  
+### <a name="c-setting-autocommit"></a>C. Impostazione di AUTOCOMMIT  
+ L'esempio seguente imposta AUTOCOMMIT su `ON`.  
   
 ```  
 SET AUTOCOMMIT ON;  
 ```  
   
- Nell'esempio seguente imposta l'impostazione di AUTOCOMMIT `OFF`.  
+ L'esempio seguente imposta AUTOCOMMIT su `OFF`.  
   
 ```  
 SET AUTOCOMMIT OFF;  
 ```  
   
-### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. Utilizzo di una transazione implicita di multi-istruzione  
+### <a name="d-using-an-implicit-multi-statement-transaction"></a>D. Uso di una transazione implicita con istruzioni multiple  
   
 ```  
 SET AUTOCOMMIT OFF;  

@@ -1,5 +1,5 @@
 ---
-title: '| (OR bit per bit) (Transact-SQL) | Documenti Microsoft'
+title: '| (OR bit per bit) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-non-specified
@@ -50,22 +50,22 @@ expression | expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) della categoria di tipi di dati integer, o **bit**, **binario**, o **varbinary** tipi di dati. *espressione* viene considerato come un numero binario per l'operazione bit per bit.  
+ *expression*  
+ Qualsiasi valore [expression](../../t-sql/language-elements/expressions-transact-sql.md) valido della categoria dei tipi di dati Integer oppure dei tipi di dati **bit**, **binary** o **varbinary**. *expression* viene considerato un numero binario per l'operazione bit per bit.  
   
 > [!NOTE]  
->  Un solo *espressione* può essere del **binario** o **varbinary** il tipo di dati in un'operazione bit per bit.  
+>  In un'operazione bit per bit un solo valore *expression* può avere il tipo di dati **binary** o **varbinary**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
- Restituisce un **int** se i valori di input sono **int**, **smallint** se i valori di input sono **smallint**, o un **tinyint** se i valori di input sono **tinyint**.  
+ Restituisce un tipo **int** se i valori di input sono **int**, un tipo **smallint** se i valori di input sono **smallint** o un valore **tinyint** se i valori di input sono **tinyint**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'operatore | esegue un'operazione con OR logico bit per bit tra due espressioni, considerando tutti i bit corrispondenti in entrambe le espressioni. I bit nel risultato sono impostati su 1 se il valore di uno o di entrambi i bit (per il bit in fase di risoluzione) delle espressioni di input è uguale a 1. Se nessuno dei bit è uguale a 1, il bit del risultato è impostato su 0.  
   
- Se le espressioni sinistra e destra sono tipi di dati integer diverso (ad esempio, sinistra *espressione* è **smallint** e destra *espressione* è  **int**), l'argomento del tipo di dati più piccolo viene convertito nel tipo di dati più grande. In questo esempio, il **smallint * * * espressione* viene convertito in un **int**.  
+ Se alle due espressioni viene applicato un tipo di dati Integer diverso, ad esempio se il tipo *expression* a sinistra è **smallint** e il tipo *expression* a destra è **int**, l'argomento del tipo di dati di livello inferiore viene convertito nel tipo di dati di livello superiore. In questo esempio **smallint***expression* viene convertito in **int**.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene creata una tabella con **int** tipi per mostrare i valori originali di dati e lo inserisce nella tabella in un'unica riga.  
+ Nell'esempio seguente viene creata una tabella con tipi di dati **int** per la visualizzazione dei valori originali. La tabella viene quindi inserita in un'unica riga.  
   
 ```sql  
 CREATE TABLE bitwise  
@@ -78,7 +78,7 @@ INSERT bitwise VALUES (170, 75);
 GO  
 ```  
   
- La query seguente esegue l'operatore OR bit per bit di **a_int_value** e **b_int_value** colonne.  
+ La query seguente esegue l'operazione con OR logico bit per bit nelle colonne **a_int_value** e **b_int_value**.  
   
 ```  
 SELECT a_int_value | b_int_value  
@@ -95,7 +95,7 @@ GO
 (1 row(s) affected)  
 ```  
   
- La rappresentazione binaria di 170 (**a_int_value** o `A`riportato di seguito) è `0000 0000 1010 1010`. La rappresentazione binaria di 75 (**b_int_value** o `B`riportato di seguito) è `0000 0000 0100 1011`. L'operazione con OR logico bit per bit eseguita su questi due valori restituisce il risultato binario `0000 0000 1110 1011`, ovvero 235 decimale.  
+ La rappresentazione binaria di 170 (**a_int_value** o `A` nell'esempio seguente) è `0000 0000 1010 1010`. La rappresentazione binaria di 75 (**b_int_value** o `B` nell'esempio seguente) è `0000 0000 0100 1011`. L'operazione con OR logico bit per bit eseguita su questi due valori restituisce il risultato binario `0000 0000 1110 1011`, ovvero 235 decimale.  
   
 ```  
 (A | B)  
@@ -106,10 +106,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Operatori bit per bit &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [&#124;= &#40;Bitwise OR Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori bit per bit &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
+ [&#124;= &#40;Assegnazione OR bit per bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)   
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
 

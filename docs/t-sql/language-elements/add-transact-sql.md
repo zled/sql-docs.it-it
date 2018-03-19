@@ -1,5 +1,5 @@
 ---
-title: + (Addition) (Transact-SQL) | Microsoft Docs
+title: + + (Addizione) (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -37,7 +37,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="-addition-transact-sql"></a>+ (Addition) (Transact-SQL)
+# <a name="-addition-transact-sql"></a>+ (Addizione) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Esegue la somma di due numeri. Questo operatore aritmetico di addizione consente inoltre di aggiungere un numero, espresso in giorni, a una data.  
@@ -51,8 +51,8 @@ expression + expression
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- È qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di uno qualsiasi dei dati tipi della categoria numerica, ad eccezione di **bit** tipo di dati. Non può essere utilizzato con **data**, **ora**, **datetime2**, o **datetimeoffset** tipi di dati.  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) valida di un qualsiasi tipo di dati della categoria numerica, ad eccezione del tipo di dati **bit**. Non può essere usato con i tipi di dati **date**, **time**, **datetime2** o **datetimeoffset**.  
   
 ## <a name="result-types"></a>Tipi restituiti  
  Restituisce il tipo di dati dell'argomento con la priorità più alta. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
@@ -60,7 +60,7 @@ expression + expression
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>A. Utilizzo dell'operatore di addizione per calcolare il numero totale di ore di assenza per ogni dipendente  
- In questo esempio trova il numero totale di ore di assenza per ogni dipendente aggiungendo il numero di ore di ferie e il numero di ore malattia.  
+ In questo esempio viene calcolato il numero totale di ore di assenza per ogni dipendente tramite la somma del numero di ore di ferie e il numero di ore di assenza per malattia.  
   
 ```  
 -- Uses AdventureWorks  
@@ -74,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-using-the-addition-operator-to-add-days-to-date-and-time-values"></a>B. Utilizzo dell'operatore di addizione per aggiungere giorni a valori di data e ora  
- Questo esempio viene aggiunto un numero di giorni per un `datetime` Data.  
+ In questo esempio viene aggiunto un numero di giorni a una data di tipo `datetime`.  
   
 ```  
   
@@ -98,7 +98,7 @@ Start Date                  Add Date
  ```  
   
 ### <a name="c-adding-character-and-integer-data-types"></a>C. Somma di valori di tipo Integer e char  
- L'esempio seguente aggiunge un **int** del tipo di dati valore e un valore di carattere per la conversione del tipo di dati carattere per **int**. Se è presente un carattere non valido nella **char** stringa, il [!INCLUDE[tsql](../../includes/tsql-md.md)] restituisce un errore.  
+ Nell'esempio seguente vengono sommati un valore di tipo **int** e un valore di tipo char tramite la conversione del valore char nel tipo **int**. Se nella stringa **char** è presente un carattere non valido, il [!INCLUDE[tsql](../../includes/tsql-md.md)] restituisce un errore.  
   
 ```  
 DECLARE @addvalue int;  
@@ -115,10 +115,10 @@ SELECT '125127' + @addvalue;
 (1 row(s) affected)
  ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>Unità d: utilizzo dell'operatore di addizione per calcolare il numero totale di ore di assenza per ogni dipendente  
- Nell'esempio seguente consente di trovare il numero totale di ore di assenza per ogni dipendente aggiungendo il numero di ore di ferie e il numero di ore malattia e ordina i risultati in ordine crescente.  
+### <a name="d-using-the-addition-operator-to-calculate-the-total-number-of-hours-away-from-work-for-each-employee"></a>D. Uso dell'operatore di addizione per calcolare il numero totale di ore di assenza per ogni dipendente  
+ Nell'esempio seguente viene calcolato il numero totale di ore di assenza per ogni dipendente tramite la somma del numero di ore di ferie e il numero di ore di assenza per malattia. I risultati vengono ordinati in ordine crescente.  
   
 ```  
 -- Uses AdventureWorks  
@@ -130,11 +130,11 @@ ORDER BY TotalHoursAway ASC;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [+= &#40;Addition Assignment&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/add-equals-transact-sql.md)   
- [CAST e CONVERT &#40; Transact-SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [Conversione tipo di dati &#40; motore di Database &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
+ [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [Conversione del tipo di dati &#40;Motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Funzioni predefinite &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

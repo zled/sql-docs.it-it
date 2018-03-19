@@ -37,7 +37,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Restituisce un valore Null se le due espressioni specificate sono uguali. Ad esempio, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` restituisce NULL per la prima colonna (4 e 4) perché i due valori di input sono uguali. La seconda colonna restituisce il primo valore (5), poiché i due valori di input sono diversi. 
+  Restituisce un valore Null se le due espressioni specificate sono uguali. Ad esempio, `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` restituisce NULL per la prima colonna (4 e 4) perché i due valori di input sono uguali. La seconda colonna restituisce il primo valore (5) perché i due valori di input sono diversi. 
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,18 +48,18 @@ NULLIF ( expression , expression )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *espressione*  
- Qualsiasi valore valido scalare [espressione](../../t-sql/language-elements/expressions-transact-sql.md).  
+ *expression*  
+ Qualsiasi [espressione](../../t-sql/language-elements/expressions-transact-sql.md) scalare valida.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- Restituisce lo stesso tipo del primo *espressione*.  
+ Restituisce lo stesso tipo di dati del primo argomento *expression*.  
   
- NULLIF restituisce il primo *espressione* se le due espressioni non sono uguali. Se le espressioni sono uguali, NULLIF restituisce un valore null del tipo del primo *espressione*.  
+ Se le due espressioni non sono uguali, la funzione NULLIF restituisce il primo argomento *expression*. Se le espressioni sono uguali, NULLIF restituisce un valore Null del tipo del primo argomento *expression*.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  NULLIF è equivalente a un'espressione CASE avanzata in cui le due espressioni sono uguali e l'espressione risultante è Null.  
   
- È consigliabile non utilizzare funzioni dipendenti dal tempo, ad esempio RAND(), in una funzione NULLIF. Ciò potrebbe causare la funzione deve essere valutata due volte e restituire risultati diversi dalle due chiamate.  
+ È consigliabile non utilizzare funzioni dipendenti dal tempo, ad esempio RAND(), in una funzione NULLIF. La funzione potrebbe essere valutata due volte e restituire risultati diversi nelle due chiamate.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -117,8 +117,8 @@ WHERE ProductID < 10;
 GO  
 ```  
 
-### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C: restituzione degli importi del budget che non contengono dati  
- Nell'esempio seguente viene creato un `budgets` tabella, carica i dati e Usa `NULLIF` per restituire un valore null se non si specifica `current_year` né `previous_year` contiene dati.  
+### <a name="c-returning-budget-amounts-that-contain-no-data"></a>C. Restituzione degli importi del budget che non contengono dati  
+ Nell'esempio seguente viene creata una tabella `budgets`, vengono caricati i dati e viene usato `NULLIF` per restituire un valore Null se né `current_year` né `previous_year` contengono dati.  
   
 ```sql  
 CREATE TABLE budgets (  
@@ -152,8 +152,8 @@ FROM budgets;
   
 ## <a name="see-also"></a>Vedere anche  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
- [Decimal e numeric &#40; Transact-SQL &#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [Funzioni di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [decimal e numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [Funzioni di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
   
   
 

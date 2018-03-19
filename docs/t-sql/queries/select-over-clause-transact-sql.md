@@ -1,5 +1,5 @@
 ---
-title: Clausola (Transact-SQL) OVER | Documenti Microsoft
+title: Clausola OVER (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/11/2017
 ms.prod: sql-non-specified
@@ -38,7 +38,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="select---over-clause-transact-sql"></a>SELECT - sulla clausola (Transact-SQL)
+# <a name="select---over-clause-transact-sql"></a>Clausola SELECT - OVER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Determina il partizionamento e l'ordinamento di un set di righe prima dell'applicazione della funzione finestra associata. In altre parole, la clausola OVER definisce una finestra o un set di righe specificato dall'utente all'interno di un set di risultati della query. Una funzione finestra calcola quindi un valore per ogni riga della finestra. È possibile utilizzare la clausola OVER con le funzioni per calcolare i valori aggregati, ad esempio medie mobili, aggregazioni cumulative, totali parziali o i primi N risultati per gruppo.  
@@ -118,16 +118,16 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  Suddivide il set di risultati della query in partizioni. La funzione finestra viene applicata a ogni singola partizione e il calcolo viene riavviato per ogni partizione.  
   
  *value_expression*  
- Specifica la colonna in base alla quale viene partizionato il set di righe. *value_expression* possono fare riferimento solo a colonne rese disponibili dalla clausola FROM. *value_expression* non può fare riferimento a espressioni o alias nell'elenco di selezione. *value_expression* può essere un'espressione di colonna, una sottoquery scalare, funzione scalare o variabile definita dall'utente.  
+ Specifica la colonna in base alla quale viene partizionato il set di righe. *value_expression* può fare riferimento solo alle colonne rese disponibili dalla clausola FROM. *value_expression* non può fare riferimento a espressioni o alias nell'elenco di selezione. *value_expression* può essere un'espressione di colonna, una sottoquery scalare, una funzione scalare o una variabile definita dall'utente.  
   
- \<Clausola ORDER BY >  
+ \<Clausola ORDER BY>  
  Definisce l'ordine logico delle righe all'interno di ogni partizione del set di risultati. In altre parole, specifica l'ordine logico in cui viene eseguito il calcolo della funzione finestra.  
   
  *order_by_expression*  
- Specifica una colonna o un'espressione in base alla quale eseguire l'ordinamento. *argomento order_by_expression* possono fare riferimento solo a colonne rese disponibili dalla clausola FROM. Non è possibile specificare un numero intero per rappresentare un alias o un nome di colonna.  
+ Specifica una colonna o un'espressione in base alla quale eseguire l'ordinamento. *order_by_expression* può fare riferimento solo alle colonne rese disponibili dalla clausola FROM. Non è possibile specificare un numero intero per rappresentare un alias o un nome di colonna.  
   
  COLLATE *collation_name*  
- Specifica che l'operazione ORDER BY deve essere eseguita in base alle regole di confronto specificate *collation_name*. *collation_name* può essere un nome di regole di confronto Windows o un nome di regole di confronto SQL. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE può essere applicato solo alle colonne di tipo **char**, **varchar**, **nchar**, e **nvarchar**.  
+ Specifica che l'operazione ORDER BY deve essere eseguita in base alle regole di confronto definite in *collation_name*. In *collation_name* è possibile usare nomi di regole di confronto di Windows o SQL. Per altre informazioni, vedere [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md). COLLATE può essere applicato solo alle colonne di tipo **char**, **varchar**, **nchar** e **nvarchar**.  
   
  **ASC** | DESC  
  Specifica che i valori nella colonna specificata devono essere ordinati in ordine crescente o decrescente. ASC è l'ordinamento predefinito. I valori Null vengono considerati i valori in assoluto più piccoli.  
@@ -137,7 +137,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Limita ulteriormente le righe all'interno della partizione specificando i punti iniziali e finali. A tale scopo, è necessario specificare un intervallo di righe rispetto alla riga corrente in base all'associazione logica o all'associazione fisica. L'associazione fisica viene eseguita mediante la clausola ROWS.  
   
- La clausola ROWS limita le righe all'interno di una partizione specificando un numero fisso di righe precedenti o successive alla riga corrente. In alternativa, la clausola RANGE limita logicamente le righe all'interno di una partizione specificando un intervallo di valori rispetto al valore nella riga corrente. Le righe precedenti e successive vengono definite in base all'ordinamento nella clausola ORDER BY. La cornice della finestra "RANGE … CURRENT ROW …" include tutte le righe che hanno gli stessi valori nell'espressione ORDER BY della riga corrente. Ad esempio, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa che la finestra di righe a cui viene applicata la funzione è di tre righe, a partire dalle 2 righe precedenti fino alla riga corrente inclusa.  
+ La clausola ROWS limita le righe all'interno di una partizione specificando un numero fisso di righe precedenti o successive alla riga corrente. In alternativa, la clausola RANGE limita logicamente le righe all'interno di una partizione specificando un intervallo di valori rispetto al valore nella riga corrente. Le righe precedenti e successive vengono definite in base all'ordinamento nella clausola ORDER BY. La cornice di finestra "RANGE … CURRENT ROW …" include tutte le righe che contengono gli stessi valori nell'espressione ORDER BY della riga corrente. Ad esempio, ROWS BETWEEN 2 PRECEDING AND CURRENT ROW significa che la finestra di righe a cui viene applicata la funzione è di tre righe, a partire dalle 2 righe precedenti fino alla riga corrente inclusa.  
   
 > [!NOTE]  
 >  ROWS o RANGE richiede che venga specificata la clausola ORDER BY. Se ORDER BY contiene più espressioni di ordinamento, CURRENT ROW FOR RANGE considera tutte le colonne nell'elenco ORDER BY per la determinazione della riga corrente.  
@@ -147,26 +147,26 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
   
  Specifica che la finestra inizia in corrispondenza della prima riga della partizione. UNBOUNDED PRECEDING può essere specificato solo come punto iniziale della finestra.  
   
- \<Specifica valore senza segno > PRECEDING  
- Specificato con \<Specifica valore senza segno > per indicare il numero di righe o valori in modo che preceda la riga corrente. Questa specifica non è consentita per RANGE.  
+ \<unsigned value specification> PRECEDING  
+ Specificato con \<unsigned value specification> per indicare il numero di righe o valori che deve precedere la riga corrente. Questa specifica non è consentita per RANGE.  
   
  CURRENT ROW  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifica che la finestra inizia o termina in corrispondenza della riga corrente quando viene utilizzato con ROWS o in corrispondenza del valore corrente quando viene utilizzato con RANGE. CURRENT ROW può essere specificato sia come punto iniziale che come punto finale.  
   
- TRA \<limite cornice finestra > AND \<limite cornice finestra >  
+ BETWEEN \<window frame bound > AND \<window frame bound >  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
- Utilizzato con ROWS o RANGE per specificare i punti limite inferiore (punto iniziale) e superiore (punto finale) della finestra. \<limite cornice finestra > definisce il punto limite iniziale e \<limite cornice finestra > definisce il punto limite finale. Il limite superiore non può essere minore del limite inferiore.  
+ Utilizzato con ROWS o RANGE per specificare i punti limite inferiore (punto iniziale) e superiore (punto finale) della finestra. Il valore \<window frame bound> definisce il punto limite iniziale e il valore \<window frame bound> definisce il punto limite finale. Il limite superiore non può essere minore del limite inferiore.  
   
  UNBOUNDED FOLLOWING  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. 
   
  Specifica che la finestra termina in corrispondenza dell'ultima riga della partizione. UNBOUNDED FOLLOWING può essere specificato solo come punto finale della finestra. Ad esempio, RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING definisce una finestra che inizia in corrispondenza della riga corrente e termina in corrispondenza dell'ultima riga della partizione.  
   
- \<Specifica valore senza segno > seguente  
- Specificato con \<Specifica valore senza segno > per indicare il numero di righe o valori di seguire la riga corrente. Quando \<Specifica valore senza segno > seguente viene specificato come punto iniziale della finestra, il punto finale deve essere \<Specifica valore senza segno > seguente. Ad esempio, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING definisce una finestra che inizia in corrispondenza della seconda riga successiva alla riga corrente e termina in corrispondenza della decima riga successiva alla riga corrente. Questa specifica non è consentita per RANGE.  
+ \<unsigned value specification> FOLLOWING  
+ Specificato con \<unsigned value specification> per indicare il numero di righe o valori che deve seguire la riga corrente. Quando \<unsigned value specification> FOLLOWING viene specificato come punto iniziale della finestra, il punto finale deve essere \<unsigned value specification> FOLLOWING. Ad esempio, ROWS BETWEEN 2 FOLLOWING AND 10 FOLLOWING definisce una finestra che inizia in corrispondenza della seconda riga successiva alla riga corrente e termina in corrispondenza della decima riga successiva alla riga corrente. Questa specifica non è consentita per RANGE.  
   
  valore letterale integer senza segno  
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -180,7 +180,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  
 ### <a name="important"></a>Importante!
 
-Se viene specificato ROWS/RANGE e \<cornice finestra precedente > viene utilizzata per \<dimensioni cornice finestra > (sintassi breve), questa specifica viene utilizzata per il limite cornice finestra punto di partenza e CURRENT ROW verrà utilizzato per la fine di limite punto. Ad esempio, "ROWS 5 PRECEDING" corrisponde a "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
+Se viene specificato ROWS/RANGE e \<window frame preceding> viene usato come \<window frame extent> (sintassi breve), questa specifica verrà usata per il punto limite iniziale della cornice della finestra e CURRENT ROW verrà usato per il punto limite finale. Ad esempio, "ROWS 5 PRECEDING" corrisponde a "ROWS BETWEEN 5 PRECEDING AND CURRENT ROW".  
   
 > [!NOTE]
 > Se ORDER BY non viene specificato, viene utilizzata l'intera partizione per una cornice di finestra. Si applica solo alle funzioni che non richiedono la clausola ORDER BY. Se ROWS/RANGE non viene specificato, ma si specifica ORDER BY, come valore predefinito per la cornice della finestra viene utilizzato RANGE UNBOUNDED PRECEDING AND CURRENT ROW. Si applica solo alle funzioni che possono accettare la specifica facoltativa di ROWS/RANGE. Le funzioni di rango, ad esempio, non possono accettare ROWS/RANGE, pertanto questa cornice della finestra non viene applicata anche se ORDER BY è presente e ROWS/RANGE non lo è.  
@@ -188,9 +188,9 @@ Se viene specificato ROWS/RANGE e \<cornice finestra precedente > viene utilizza
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile utilizzare la clausola OVER con la funzione di aggregazione CHECKSUM.  
   
- INTERVALLO non può essere utilizzato con \<Specifica valore senza segno > PRECEDING o \<Specifica valore senza segno > seguente.  
+ RANGE non può essere usato con \<unsigned value specification> PRECEDING o \<unsigned value specification> FOLLOWING.  
   
- A seconda della funzione di rango, aggregazione o analitica utilizzata con la clausola OVER, \<clausola ORDER BY > e/o \<ROWS e RANGE clausola > potrebbe non essere supportato.  
+ A seconda della funzione analitica, di aggregazione o di rango usata con la clausola OVER, è possibile che la \<clausola ORDER BY> e/o la \<clausola ROWS e RANGE> non siano supportate.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -398,7 +398,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Nell'esempio seguente viene utilizzata la clausola ROWS per definire una finestra in cui vengono calcolate le righe come riga corrente e *N* numero di righe che seguono (1 riga in questo esempio).  
+ Nell'esempio seguente viene usata la clausola ROWS per definire una finestra su cui vengono calcolate le righe come la riga corrente e il numero *N* di righe che seguono (in questo esempio 1 riga).  
   
 ```sql  
 SELECT BusinessEntityID, TerritoryID   
@@ -459,7 +459,7 @@ BusinessEntityID TerritoryID SalesYTD             SalesYear   CumulativeTotal
   
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi:[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-the-over-clause-with-the-rownumber-function"></a>E. Utilizzo della clausola OVER con la funzione ROW_NUMBER  
  L'esempio seguente restituisce ROW_NUMBER per i venditori in base alle rispettive quote di vendite assegnata.  
@@ -489,7 +489,7 @@ GROUP BY LastName, FirstName;
  ```
  
 ### <a name="f-using-the-over-clause-with-aggregate-functions"></a>F. Utilizzo della clausola OVER con funzioni di aggregazione  
- Gli esempi seguenti illustrano l'utilizzo della clausola OVER con funzioni di aggregazione. In questo esempio, l'utilizzo della clausola OVER è più efficiente rispetto all'utilizzo di sottoquery.  
+ Nell'esempio seguente viene illustrato l'uso della clausola OVER con funzioni di aggregazione. Nell'esempio l'uso della clausola OVER è più efficace rispetto all'uso di sottoquery.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -521,7 +521,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43664      235      1     2     1    2      1    1  
  ```
  
- Nell'esempio seguente viene illustrato l'utilizzo della clausola OVER con una funzione di aggregazione in un valore calcolato. Si noti che le aggregazioni vengono calcolate da `SalesOrderNumber` e viene calcolata la percentuale di ordine di vendita totale per ogni riga di ogni `SalesOrderNumber`.  
+ Nell'esempio seguente viene illustrato l'uso della clausola OVER con una funzione di aggregazione in un valore calcolato. Si noti che le aggregazioni vengono calcolate in base a `SalesOrderNumber`, mentre la percentuale dell'ordine di vendita totale viene calcolata per ogni riga di ogni `SalesOrderNumber`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -538,7 +538,7 @@ WHERE SalesOrderNumber IN(N'SO43659',N'SO43664') AND
 ORDER BY SalesOrderNumber,ProductKey;  
 ```  
   
- Al primo avvio di questo set di risultati è:  
+ La prima parte di questo set di risultati è:  
   
  ```
  OrderNumber  Product  Qty  Total  PctByProduct  
@@ -550,8 +550,8 @@ ORDER BY SalesOrderNumber,ProductKey;
  ```
  
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di aggregazione &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [Funzioni analitiche &#40; Transact-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
- [Post di blog eccellente sulle funzioni finestra e failover, in sqlmag.com, da Itzik Ben-georgiano](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
+ [Funzioni di aggregazione &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Funzioni analitiche &#40;Transact-SQL&#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
+ [Post di blog sulle funzioni finestra e OVER, in sqlmag.com, di Itzik Ben-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
   
   

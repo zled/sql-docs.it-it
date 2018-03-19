@@ -1,5 +1,5 @@
 ---
-title: Variabili (Transact-SQL) | Documenti Microsoft
+title: Variabili (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 09/12/2017
 ms.prod: sql-non-specified
@@ -29,14 +29,14 @@ ms.lasthandoff: 01/25/2018
 # <a name="variables-transact-sql"></a>Variabili (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Una variabile locale di Transact-SQL è un oggetto che può contenere un singolo valore di dati di un tipo specifico. Le variabili vengono in genere utilizzate in batch e script per gli scopi seguenti: 
+Una variabile Transact-SQL locale è un oggetto che può contenere un solo valore di dati di un tipo specifico. Le variabili vengono in genere utilizzate in batch e script per gli scopi seguenti: 
 
 * Contare o controllare il numero di esecuzioni di un ciclo fungendo da contatori.
 * Archiviare un valore di dati che deve essere testato da un'istruzione per il controllo di flusso.
 * Salvare un valore di dati che deve essere restituito dal codice restituito di una stored procedure o dal valore restituito da una funzione.
 
 > [!NOTE]
-> I nomi di alcune funzioni di sistema Transact-SQL iniziano con due *in* Chiocciole (@ @). Benché nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], @@functions vengono definite a come le variabili globali, non sono variabili e non è simile a quello delle variabili. Il @@functions sono funzioni di sistema e relativa sintassi segue le regole per le funzioni.
+> Il nome di alcune funzioni di sistema Transact-SQL inizia con due *simboli di chiocciola (@@)*. Anche se nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tali funzioni @@functions sono denominate variabili globali, in realtà non sono variabili e non funzionano come tali. Le @@functions sono funzioni di sistema e la loro sintassi segue le regole previste per le funzioni.
 
 Lo script seguente crea e popola con 26 righe una piccola tabella di prova. Lo script utilizza una variabile per eseguire tre operazioni: 
 
@@ -86,23 +86,23 @@ GO
 ```
 
 ## <a name="declaring-a-transact-sql-variable"></a>Dichiarazione di una variabile Transact-SQL
-L'istruzione DECLARE Inizializza una variabile Transact-SQL tramite: 
+L'istruzione DECLARE inizializza una variabile Transact-SQL tramite l'esecuzione delle seguenti operazioni: 
 * Assegnazione di un nome. Il nome deve iniziare con il carattere chiocciola (@).
 * Assegnazione di un tipo di dati definito dall'utente o di sistema, nonché la lunghezza del tipo di dati. Alle variabili numeriche vengono inoltre assegnate precisione e scala. Alle variabili XML è possibile assegnare una raccolta di schemi facoltativa.
 * Impostazione del valore su NULL.
 
-Ad esempio, **DECLARE** istruzione crea una variabile locale denominata  **@mycounter**  con un tipo di dati int.  
+Ad esempio, l'istruzione **DECLARE** seguente crea la variabile locale **@mycounter** con tipo di dati int.  
 ```sql
 DECLARE @MyCounter int;
 ```
 Per dichiarare più variabili locali, è necessario inserire una virgola dopo la prima variabile locale e quindi specificare il nome della variabile locale successiva con il tipo di dati corrispondente.
 
-Ad esempio, **DECLARE** istruzione crea le tre variabili locali  **@LastName** ,  **@FirstName**  e  **@StateProvince** e la inizializza con il valore NULL:  
+Ad esempio, l'istruzione **DECLARE** seguente crea le tre variabili locali **@LastName**, **@FirstName** e **@StateProvince**, quindi le inizializza con il valore NULL:  
 ```sql
 DECLARE @LastName nvarchar(30), @FirstName nvarchar(20), @StateProvince nchar(2);
 ```
 
-L'ambito di una variabile è le istruzioni di intervallo di Transact-SQL che possono fare riferimento alla variabile. L'ambito inizia in corrispondenza del punto in cui la variabile è stata dichiarata e termina alla fine del batch o della stored procedure che include la dichiarazione. Lo script seguente, ad esempio, genera un errore di sintassi, perché la variabile viene dichiarata in un batch ma vi viene fatto riferimento in un altro batch:  
+L'ambito di una variabile definisce l'intervallo di istruzioni Transact-SQL in cui è possibile fare riferimento alla variabile. L'ambito inizia in corrispondenza del punto in cui la variabile è stata dichiarata e termina alla fine del batch o della stored procedure che include la dichiarazione. Lo script seguente, ad esempio, genera un errore di sintassi, perché la variabile viene dichiarata in un batch ma vi viene fatto riferimento in un altro batch:  
 ```sql
 USE AdventureWorks2014;
 GO
@@ -152,7 +152,7 @@ WHERE FirstName = @FirstNameVariable
 GO
 ```
 
-Quando si assegna un valore a una variabile tramite un riferimento in un elenco di selezione, è necessario assegnare un valore scalare oppure l'istruzione SELECT deve restituire una sola riga. Esempio:  
+Quando si assegna un valore a una variabile tramite un riferimento in un elenco di selezione, è necessario assegnare un valore scalare oppure l'istruzione SELECT deve restituire una sola riga. Ad esempio  
 
 ```sql
 USE AdventureWorks2014;
@@ -167,7 +167,7 @@ GO
 > [!WARNING]
 > Se in una singola istruzione SELECT sono presenti più clausole di assegnazione, l'ordine di valutazione delle espressioni non viene garantito. Si noti che gli effetti sono visibili sole se sono presenti riferimenti per le assegnazioni.
 
-Se un'istruzione SELECT restituisce più di una riga e la variabile fa riferimento a un'espressione non scalare, la variabile è impostata sul valore restituito per l'espressione nell'ultima riga del set di risultati. Ad esempio, nel batch seguente  **@EmpIDVariable**  è impostato sul **BusinessEntityID** valore dell'ultima riga restituita, ovvero 1:  
+Se l'istruzione SELECT restituisce più di una riga e la variabile fa riferimento a un'espressione non scalare, la variabile viene impostata sul valore restituito per l'espressione nell'ultima riga del set di risultati. Ad esempio nel batch seguente **@EmpIDVariable** viene impostata sul valore **BusinessEntityID** dell'ultima riga restituita, ovvero 1:  
 
 ```sql
 USE AdventureWorks2014;
@@ -183,10 +183,10 @@ GO
 ```
 
 ## <a name="see-also"></a>Vedere anche  
- [Dichiarare@local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
+ [Declare @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md)  
  [SET @local_variable](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
  [SELECT @local_variable](../../t-sql/language-elements/select-local-variable-transact-sql.md)  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [Composta operatori &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Operatori composti &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
   
   

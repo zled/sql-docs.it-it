@@ -1,5 +1,5 @@
 ---
-title: TERTIARY_WEIGHTS (Transact-SQL) | Documenti Microsoft
+title: TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funzioni di regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
+# <a name="collation-functions---tertiaryweights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Restituisce una stringa binaria di spessori per ogni carattere in un'espressione stringa non Unicode definita tramite una regola di confronto SQL terziaria.
@@ -48,13 +48,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Argomenti  
 *non_Unicode_character_string_expression*  
-È una stringa [espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **char**, **varchar**, o **varchar (max)** definito in una regola di confronto SQL terziaria. Per un elenco di queste regole di confronto, vedere la sezione Osservazioni.
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa di tipo **char**, **varchar** o **varchar(max)** definita tramite una regola di confronto SQL terziaria. Per un elenco di queste regole di confronto, vedere la sezione Osservazioni.
   
 ## <a name="return-types"></a>Tipi restituiti
-TERTIARY_WEIGHTS restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar**e restituisce **varbinary (max)** quando *non_Unicode_character_string_expression* è **varchar (max)**.
+TERTIARY_WEIGHTS restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* è **varchar(max)**.
   
-## <a name="remarks"></a>Osservazioni  
-TERTIARY_WEIGHTS restituisce NULL quando *non_Unicode_character_string_expression* non è definito tramite un confronto SQL terziaria. Nella tabella seguente sono elencate le regole di confronto SQL terziarie.
+## <a name="remarks"></a>Remarks  
+TERTIARY_WEIGHTS restituisce NULL se *non_Unicode_character_string_expression* non è definito tramite una regola di confronto SQL terziaria. Nella tabella seguente sono elencate le regole di confronto SQL terziarie.
   
 |ID tipo di ordinamento|Regole di confronto SQL|  
 |---|---|
@@ -91,7 +91,7 @@ TERTIARY_WEIGHTS restituisce NULL quando *non_Unicode_character_string_expressio
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-TERTIARY_WEIGHTS deve essere utilizzato nella definizione di una colonna calcolata che corrisponde ai valori di un **char**, **varchar**, o **varchar (max)** colonna. Definizione di un indice nella colonna calcolata e **char**, **varchar**, o **varchar (max)** colonna può migliorare le prestazioni quando il **char**, **varchar**, o **varchar (max)** colonna specificata nella clausola ORDER BY di una query.
+La funzione TERTIARY_WEIGHTS viene usata per la definizione di una colonna calcolata definita in base ai valori di una colonna di tipo **char**, **varchar** o **varchar(max)**. La definizione di un indice nella colonna calcolata e nella colonna di tipo **char**, **varchar** o **varchar(max)** può ottimizzare le prestazioni se la colonna di tipo **char**, **varchar** o **varchar(max)** viene specificata nella clausola ORDER BY di una query.
   
 ## <a name="examples"></a>Esempi  
 Nell'esempio seguente viene creata una colonna calcolata in una tabella in cui la funzione `TERTIARY_WEIGHTS` viene applicata ai valori di una colonna di tipo `char`.
@@ -104,6 +104,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[Clausola ORDER BY clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
+[Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: Le regole di confronto | Documenti Microsoft
+title: Regole di confronto | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -48,19 +48,19 @@ COLLATE { <collation_name> | database_default }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *collation_name*  
- Nome delle regole di confronto da applicare all'espressione o alla definizione di colonna o del database. *collation_name* può essere solo un oggetto specificato *Windows_collation_name* o *SQL_collation_name*. *collation_name* deve essere un valore letterale. *collation_name* non può essere rappresentato da una variabile o espressione.  
+ *nome_regole_di_confronto*  
+ Nome delle regole di confronto da applicare all'espressione o alla definizione di colonna o del database. In *collation_name* è possibile usare solo un *Windows_collation_name* o un *SQL_collation_name* specificato. *collation_name* deve essere un valore letterale. *collation_name* non può essere rappresentato da una variabile o un'espressione.  
   
- *Windows_collation_name* è il nome delle regole di confronto per un [windows_collation_name](../../t-sql/statements/windows-collation-name-transact-sql.md).  
+ *Windows_collation_name* è il nome delle regole di confronto per un [Nome delle regole di confronto di Windows](../../t-sql/statements/windows-collation-name-transact-sql.md).  
   
- *Sql_collation_name* è il nome delle regole di confronto per un [nome regole di confronto di SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ *SQL_collation_name* è il nome delle regole di confronto per un [Nome delle regole di confronto di SQL Server](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  In caso di applicazione di regole di confronto al livello di definizione del database, le regole di confronto solo Unicode di Windows non possono essere utilizzate con la clausola COLLATE.  
   
  **database_default**  
  La clausola COLLATE eredita le regole di confronto del database corrente.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile specificare la clausola COLLATE a vari livelli, tra cui:  
   
 1.  In fase di creazione o modifica di un database.  
@@ -68,13 +68,13 @@ COLLATE { <collation_name> | database_default }
      La clausola COLLATE dell'istruzione CREATE DATABASE o ALTER DATABASE consente di specificare le regole di confronto predefinite del database. È inoltre possibile specificare una regola di confronto durante la creazione di un database tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se non vengono specificate regole di confronto, al database verranno assegnate le regole di confronto predefinite dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
-    >  Regole di confronto solo Unicode di Windows sono utilizzabili solo con la clausola COLLATE per applicare le regole di confronto per il **nchar**, **nvarchar**, e **ntext** tipi di dati nel livello di colonna e dati a livello di espressione. non possono essere utilizzate con la clausola COLLATE per modificare le regole di confronto di un'istanza del server o database.  
+    >  Le regole di confronto solo Unicode di Windows possono essere usate solo con la clausola COLLATE per applicare regole di confronto ai tipi di dati **nchar**, **nvarchar** e **ntext** su dati a livello di colonna e a livello di espressione. Queste regole non possono essere usate con la clausola COLLATE per modificare le regole di confronto di un database o un'istanza del server.  
   
 2.  In fase di creazione o modifica di una colonna di tabella.  
   
      È possibile specificare le regole di confronto di ogni colonna contenente stringhe di caratteri tramite la clausola COLLATE dell'istruzione CREATE TABLE o ALTER TABLE. È inoltre possibile specificare una regola di confronto durante la creazione di una tabella tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Se non vengono specificate regole di confronto, alla colonna verranno assegnate le regole di confronto predefinite del database.  
   
-     È inoltre possibile utilizzare il `database_default` opzione nella clausola COLLATE per specificare che una colonna in una tabella temporanea utilizza il valore predefinito di regole di confronto del database utente corrente per la connessione anziché **tempdb**.  
+     È inoltre possibile usare l'opzione `database_default` nella clausola COLLATE per specificare che una colonna di una tabella temporanea usa le regole di confronto predefinite del database utente corrente per la connessione anziché quelle del database **tempdb**.  
   
 3.  In fase di casting delle regole di confronto di un'espressione.  
   
@@ -84,13 +84,13 @@ COLLATE { <collation_name> | database_default }
   
  È possibile creare variabili, etichette GOTO, stored procedure temporanee e tabelle temporanee se il contesto di connessione è associato a un singolo database, e quindi fare riferimento ad esse quando il contesto passa a un altro database. Gli identificatori di variabili, le etichette GOTO, le stored procedure temporanee e le tabelle temporanee sono inclusi nelle regole di confronto predefinite dell'istanza del server.  
   
- La clausola COLLATE può essere applicata solo per il **char**, **varchar**, **testo**, **nchar**, **nvarchar** , e **ntext** tipi di dati.  
+ È possibile applicare la clausola COLLATE solo ai tipi di dati **char**, **varchar**, **text**, **nchar**, **nvarchar** e **ntext**.  
   
- COLLATE utilizza *collate_name* per fare riferimento al nome di regole di confronto di SQL Server o le regole di confronto di Windows da applicare per l'espressione, una definizione di colonna o una definizione di database. *collation_name* può essere solo un oggetto specificato *Windows_collation_name* o *SQL_collation_name* e il parametro deve contenere un valore letterale. *collation_name* non può essere rappresentato da una variabile o espressione.  
+ COLLATE usa *collate_name* per fare riferimento al nome delle regole di confronto di SQL Server o di Windows da applicare all'espressione, alla definizione di colonna o alla definizione del database. In *collation_name* è possibile usare solo un *Windows_collation_name* o un *SQL_collation_name* specificato e il parametro deve contenere un valore letterale. *collation_name* non può essere rappresentato da una variabile o un'espressione.  
   
- Le regole di confronto sono identificate in genere da un nome, ad eccezione che nel programma di installazione. Nel programma di installazione, specificare invece Designazione regole di confronto radice (le impostazioni locali delle regole di confronto) per le regole di confronto di Windows e quindi specificare le opzioni di ordinamento che sono sensibili o senza distinzione tra maiuscole minuscole o degli accenti.  
+ Le regole di confronto sono identificate in genere da un nome, ad eccezione che nel programma di installazione. Nel programma di installazione viene invece specificata la designazione delle regole di confronto radice (le impostazioni locali delle regole di confronto) per le regole di confronto di Windows, quindi vengono specificate le opzioni di ordinamento che possono rispettare o meno la distinzione tra maiuscole e minuscole e tra caratteri accentati e non accentati.  
   
- È possibile eseguire la funzione di sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) per recuperare un elenco di tutti i nomi di regole di confronto valide per le regole di confronto di Windows e le regole di confronto di SQL Server:  
+ È possibile eseguire la funzione di sistema [fn_helpcollations](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) per recuperare un elenco di tutti i nomi validi per le regole di confronto di Windows e SQL Server:  
   
 ```sql  
 SELECT name, description  
@@ -103,13 +103,13 @@ FROM fn_helpcollations();
   
 -   Impostazione delle regole di confronto per una colonna utilizzate durante la creazione o la modifica di una tabella.  
   
--   Durante il ripristino o collegamento di un database, le regole di confronto predefinite del database e le regole di confronto di qualsiasi **char**, **varchar**, e **testo** colonne o parametri del database deve essere supportato dal sistema operativo.  
+-   Durante il ripristino o il collegamento di un database è necessario che le regole di confronto predefinite del database e quelle delle colonne o dei parametri di tipo **char**, **varchar** e **text** presenti nel database siano supportate dal sistema operativo.  
   
 > [!NOTE]
-> Conversioni di tabella codici sono supportate per **char** e **varchar** tipi di dati, ma non per **testo** tipo di dati. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
+> Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
   
 > [!NOTE]
-> Se le regole di confronto specificate o le regole di confronto utilizzate dall'oggetto cui viene fatto riferimento utilizza una tabella codici non supportata da Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore.  
+> Se le regole di confronto specificate o adottate dall'oggetto cui viene fatto riferimento usano una tabella codici non supportata dai sistemi operativi Windows, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene visualizzato un errore.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -158,13 +158,13 @@ Chiapas
 ```  
   
 ### <a name="b-additional-examples"></a>B. Esempi aggiuntivi  
- Per ulteriori esempi che utilizzano **COLLATE**, vedere [CREATE DATABASE &#40; SQL Server Transact-SQL &#41; ](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples) esempio **g. creazione di un database e specificando un nome di regole di confronto e le opzioni**, e [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md#alter_column) esempio **v. modifica delle regole di confronto colonna**.  
+ Per altri esempi in cui viene usata la clausola **COLLATE**, vedere [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md#examples), esempio **G. Creazione di un database e specifica di un nome delle regole di confronto e delle opzioni** e [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md#alter_column), esempio **V. Modifica delle regole di confronto di una colonna**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)    
- [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)    
+ [Regole di confronto e supporto Unicode](../../relational-databases/collations/collation-and-unicode-support.md)    
  [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)     
- [Constants &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
+ [Costanti &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)     
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)     
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)     
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)     

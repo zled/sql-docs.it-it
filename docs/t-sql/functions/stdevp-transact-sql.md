@@ -1,5 +1,5 @@
 ---
-title: STDEVP (Transact-SQL) | Documenti Microsoft
+title: STDEVP (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/13/2017
 ms.prod: sql-non-specified
@@ -66,23 +66,23 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  DISTINCT  
  Consente di considerare ogni valore univoco.  
   
- *espressione*  
- È un valore numerico [espressione](../../t-sql/language-elements/expressions-transact-sql.md). Non è possibile utilizzare funzioni di aggregazione e sottoquery. *espressione* è un'espressione della categoria di tipi di dati numerici o numerici approssimativi esatti, fatta eccezione per il **bit** tipo di dati.  
+ *expression*  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) numerica. Non è possibile utilizzare funzioni di aggregazione e sottoquery. *expression*: espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**.  
   
- SU **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni a cui viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per ulteriori informazioni, vedere [la clausola OVER &#40; Transact-SQL &#41; ](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se la funzione STDEVP viene utilizzata per tutti gli elementi di un'istruzione SELECT, ogni valore del set di risultati viene incluso nel calcolo. STDEVP può essere utilizzata solo con colonne numeriche. I valori Null vengono ignorati.  
   
  STDEVP è una funzione deterministica quando viene utilizzata senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-using-stdevp"></a>R: utilizzare la funzione DEV  
+### <a name="a-using-stdevp"></a>A: uso di STDEVP  
  Nell'esempio seguente viene restituita la deviazione standard per il popolamento per tutti i valori dei premi di produttività nella tabella `SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -91,10 +91,10 @@ FROM Sales.SalesPerson;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B: tramite STDEVP  
- Nell'esempio seguente viene restituito il `STDEVP` dei valori di quota di vendita nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la deviazione standard di tutti i valori distinct e la seconda colonna contiene la deviazione standard di tutti i valori compresi i valori duplicati.  
+### <a name="b-using-stdevp"></a>B: uso di STDEVP  
+ Nell'esempio seguente viene restituita la `STDEVP` dei valori quota di vendite nella tabella `dbo.FactSalesQuota`. La prima colonna contiene la deviazione standard di tutti i valori distinct e la seconda colonna contiene la deviazione standard di tutti i valori, compresi eventuali valori duplicati.  
   
 ```  
 -- Uses AdventureWorks  
@@ -112,8 +112,8 @@ Distinct_Values   All_Values
 397676.79         397226.44
 ```  
   
-### <a name="c-using-stdevp-with-over"></a>C. Con STDEVP OVER  
- Nell'esempio seguente viene restituito il `STDEVP` dei valori di quota di vendite per ogni trimestre dell'anno di calendario. Si noti che `ORDER BY` nella clausola `OVER` ordina `STDEVP` e che `ORDER BY` dell'istruzione `SELECT` ordina il set di risultati.  
+### <a name="c-using-stdevp-with-over"></a>C. Uso di STDEVP con OVER  
+ L'esempio seguente restitusce la `STDEVP` dei valori quota di vendite per ogni trimestre in un anno di calendario. Si noti che `ORDER BY` nella clausola `OVER` ordina `STDEVP` e che `ORDER BY` dell'istruzione `SELECT` ordina il set di risultati.  
   
 ```  
 -- Uses AdventureWorks  
@@ -137,8 +137,8 @@ Year  Quarter  SalesQuota              StdDeviation
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni di aggregazione &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
- [IN una clausola &#40; Transact-SQL &#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
+ [Funzioni di aggregazione &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
+ [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   
   
 

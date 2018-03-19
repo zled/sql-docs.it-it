@@ -1,5 +1,5 @@
 ---
-title: '[] (Carattere jolly per corrispondenze) (Transact-SQL) | Documenti Microsoft'
+title: '[ ] (Caratteri jolly per la corrispondenza) (Transact-SQL) | Microsoft Docs'
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -34,14 +34,14 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/25/2018
 ---
-# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Caratteri jolly - corrispondenza) (Transact-SQL)
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Caratteri jolly per la corrispondenza) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Corrisponde a qualsiasi carattere singolo compreso nell'intervallo specificato o di un set specificato tra parentesi quadre `[ ]`. I caratteri jolly possono essere utilizzati nei confronti di stringa che coinvolgono i criteri di ricerca, ad esempio `LIKE` e `PATINDEX`.  
+  Rileva la corrispondenza con uno dei caratteri inclusi nell'intervallo o set racchiuso tra parentesi quadre `[ ]`. È possibile usare i caratteri jolly nei confronti di stringhe che prevedono l'uso di criteri di ricerca, ad esempio `LIKE` e `PATINDEX`.  
   
 ## <a name="examples"></a>Esempi  
-### <a name="a-simple-example"></a>R: semplice esempio   
-Nell'esempio seguente restituisce i nomi dei che iniziano con la lettera `m`. `[n-z]`Specifica che la seconda lettera deve essere un punto qualsiasi nell'intervallo da `n` a `z`. Il carattere jolly di percentuale `%` consente qualsiasi o nessuna caratteri a partire da 3 caratteri. Il `model` e `msdb` database soddisfino questi criteri. Il `master` non di database e viene escluso dal set di risultati.
+### <a name="a-simple-example"></a>A. Esempio semplice   
+L'esempio seguente restituisce i nomi che iniziano con la lettera `m`. `[n-z]` specifica che la seconda lettera deve essere inclusa nell'intervallo tra `n` e `z`. Il carattere jolly percentuale `%` indica che il terzo carattere può essere qualsiasi o nessuno. I database `model` e `msdb` soddisfano questi criteri. Il database `master` non li soddisfa e viene escluso dal set di risultati.
  
 ```sql
 SELECT name FROM sys.databases
@@ -55,10 +55,10 @@ name
 model
 msdb
 ```   
- È possibile database validi aggiuntivi installati.
+ È possibile che siano installati altri database che soddisfano i criteri.
 
 
-### <a name="b-more-complex-example"></a>B: esempio più complesso   
+### <a name="b-more-complex-example"></a>B. Esempio più complesso   
  Nell'esempio seguente viene utilizzato l'operatore [] per trovare gli ID e i nomi di tutti i dipendenti inclusi in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] il cui indirizzo è associato a un C.A.P. a quattro cifre.  
   
 ```sql  
@@ -86,8 +86,8 @@ EmployeeID      FirstName      LastName      PostalCode
 ## <a name="see-also"></a>Vedere anche  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% &#40; Carattere jolly - carattere &#40; s &#41; in corrispondenza &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; &#40; Carattere jolly - carattere &#40; s &#41; Non corrispondenza &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [\_&#40; Carattere jolly - corrispondenze di singoli caratteri &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+  [% &#40;Wildcard - Character&#40;s&#41; to Match&#41; (Carattere jolly - Corrispondente/i a) &#40;Transact-SQL&#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [&#91;^&#93; &#40;Wildcard - Character&#40;s&#41; Not to Match&#41; (Carattere jolly - Non corrispondente/i a) &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_ &#40;Carattere jolly per corrispondenze di singoli caratteri&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   

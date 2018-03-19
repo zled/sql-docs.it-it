@@ -1,5 +1,5 @@
 ---
-title: Ridurre (tipo di dati geography) | Documenti Microsoft
+title: Reduce (tipo di dati geography) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -34,9 +34,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="reduce-geography-data-type-"></a>Reduce (tipo di dati geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un'approssimazione del determinato **geography** istanza prodotta eseguendo l'algoritmo Douglas-Peucker sull'istanza con la tolleranza specificata.  
+  Restituisce un'approssimazione dell'istanza **geography** specificata prodotta eseguendo l'algoritmo Douglas-Peucker sull'istanza con la tolleranza specificata.  
   
- Questo **geography** metodo supportata dal tipo di dati **FullGlobe** istanze o le istanze spaziali con dimensioni maggiori di un emisfero.  
+ Questo metodo con tipo di dati **geography**supporta le istanze **FullGlobe** o le istanze spaziali con dimensioni maggiori di un emisfero.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,23 +50,23 @@ ms.lasthandoff: 01/25/2018
 |||  
 |-|-|  
 |Nome|Definizione|  
-|*tolleranza di errore*|È un valore di tipo **float**. *tolleranza* è la tolleranza per l'input dell'algoritmo Douglas-Peucker. *tolleranza* deve essere un numero positivo.|  
+|*tolerance*|Valore di tipo **float**. *tolerance* è la tolleranza per l'input dell'algoritmo Douglas-Peucker. *tolerance* deve essere un numero positivo.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipo restituito: **geography**  
+ Tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituito: **geography**  
   
  Tipo CLR restituito: **SqlGeography**  
   
-## <a name="remarks"></a>Osservazioni  
- Per i tipi di raccolta, questo algoritmo opera indipendentemente su ciascun **geography** contenuti nell'istanza. Questo algoritmo non modifica **punto** istanze.  
+## <a name="remarks"></a>Remarks  
+ Per i tipi relativi a una raccolta, questo algoritmo opera indipendentemente su ogni tipo **geography** contenuto nell'istanza. Questo algoritmo non modifica le istanze **Point**.  
   
- Questo metodo tenterà di mantenere gli endpoint di **LineString** istanze, ma potrebbe non riuscire a cui si desidera per mantenere un risultato valido.  
+ Questo metodo prova a mantenere gli endpoint delle istanze **LineString**, ma il tentativo può non riuscire se si vuole mantenere un risultato valido.  
   
- Se `Reduce()` viene chiamato con un valore negativo, questo metodo genererà un' **ArgumentException**. Le tolleranze utilizzate in `Reduce()` devono essere numeri positivi.  
+ Se `Reduce()` viene chiamato con un valore negativo, il metodo genera l'eccezione **ArgumentException**. Le tolleranze utilizzate in `Reduce()` devono essere numeri positivi.  
   
- Il funzionamento dell'algoritmo Douglas-Peucker su ogni curva o cerchio nel **geography** istanza rimuovendo tutti i punti tranne il punto di inizio e fine. Ogni punto rimosso viene quindi aggiunto nuovamente, a partire dal punto dista più lontano, fino a quando non più di *tolleranza* dal risultato. Poiché deve essere garantito un risultato valido, se necessario il risultato viene reso valido.  
+ L'algoritmo Douglas-Peucker può essere usato su ogni curva o cerchio nell'istanza **geography** rimuovendo tutti i punti ad eccezione di quello iniziale e di quello finale. Ogni punto rimosso viene quindi aggiunto nuovamente, a partire da quello esterno più lontano, fino a quando nessun punto ha una distanza dal risultato superiore al valore *tolerance*. Poiché deve essere garantito un risultato valido, se necessario il risultato viene reso valido.  
   
- In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], questo metodo è stato esteso alle **FullGlobe** istanze.  
+ In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] questo metodo è stato esteso alle istanze **FullGlobe**.  
   
  Il metodo non è preciso.  
   

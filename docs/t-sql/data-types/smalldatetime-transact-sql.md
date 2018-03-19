@@ -1,5 +1,5 @@
 ---
-title: smalldatetime (Transact-SQL) | Documenti Microsoft
+title: smalldatetime (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
@@ -41,14 +41,14 @@ ms.lasthandoff: 11/21/2017
 Definisce una data combinata con un'ora del giorno. L'ora si basa su un formato di 24 ore, con secondi sempre a zero (: 00) e senza secondi frazionari.
   
 > [!NOTE]  
->  Utilizzare il **ora**, **data**, **datetime2** e **datetimeoffset** tipi di dati per un nuovo lavoro. Questi tipi sono conformi allo standard SQL. e offrono una migliore portabilità. **tempo**, **datetime2** e **datetimeoffset** offrono una maggiore precisione dei secondi. **DateTimeOffset** fornisce supporto del fuso orario per le applicazioni distribuite globalmente.  
+>  Usare i tipi di dati **time**, **date**, **datetime2** e **datetimeoffset** per la creazione di nuovo codice. Questi tipi sono conformi allo standard SQL. e offrono una migliore portabilità. **time**, **datetime2** e **datetimeoffset** offrono una maggiore precisione dei secondi. **datetimeoffset** offre il supporto del fuso orario per le applicazioni distribuite globalmente.  
   
-## <a name="smalldatetime-description"></a>descrizione di smalldatetime
+## <a name="smalldatetime-description"></a>Descrizione di smalldatetime
   
 |||  
 |-|-|  
 |Sintassi|**smalldatetime**|  
-|Utilizzo|DICHIARARE @MySmalldatetime **smalldatetime**<br /><br /> Crea tabella Table1 (Column1 **smalldatetime** )|  
+|Utilizzo|DECLARE @MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Formati predefiniti dei valori letterali stringa<br /><br /> (utilizzato per client legacy)|Non applicabile|  
 |Intervallo di date|da 01-01-1900 a 06-06-2079<br /><br /> Da 1 gennaio 1900 a 6 giugno 2079|  
 |Intervallo di ore|Da 00:00:00 a 23:59:59<br /><br /> 2007-05-09 23:59:59 verrà arrotondato a<br /><br /> 2007-05-10 00:00:00|  
@@ -58,20 +58,20 @@ Definisce una data combinata con un'ora del giorno. L'ora si basa su un formato 
 |Accuratezza|Un minuto|  
 |Valore predefinito|1900-01-01 00:00:00|  
 |Calendario|Gregoriano<br /><br /> Non è incluso l'intervallo completo di anni.|  
-|Precisione in secondi frazionari definita dall'utente|No|  
-|Considerazione e conservazione delle differenze di fuso orario|No|  
-|Considerazione dell'ora legale|No|  
+|Precisione in secondi frazionari definita dall'utente|no|  
+|Considerazione e conservazione delle differenze di fuso orario|no|  
+|Considerazione dell'ora legale|no|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformità agli standard ANSI e ISO 8601  
-**smalldatetime** non ANSI o ISO 8601 conforme.
+**smalldatetime** non è conforme agli standard ANSI o ISO 8601.
   
-## <a name="converting-date-and-time-data"></a>La conversione dei dati di data e ora
-Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'utilizzo delle funzioni CAST e CONVERT con dati di data e ora, vedere [CAST e CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
+## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi a data e ora
+Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
-### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Conversione smalldatetime in altri tipi di data e ora
-In questa sezione viene descritto cosa accade quando un **smalldatetime** tipo di dati viene convertito in altri tipi di dati data e ora.
+### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Conversione del tipo di dati smalldatetime in altri tipi di dati relativi a data e ora
+Nella sezione seguente viene descritto il risultato della conversione di un tipo di dati **smalldatetime** in altri tipi di dati relativi a data e ora.
   
-Nel caso di conversione **data**, l'anno, mese e giorno vengono copiati. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `date`.
+Nel caso della conversione a **date** vengono copiati l'anno, il mese e il giorno. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `date`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -87,7 +87,7 @@ SELECT @smalldatetime AS '@smalldatetime', @date AS 'date';
 --(1 row(s) affected)  
 ```  
   
-Quando la conversione viene eseguita a **Time (n)**, le ore, minuti e secondi vengono copiati. I secondi frazionari sono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `time(4)`.
+Nel caso della conversione a **time(n)** vengono copiate le ore, i minuti e i secondi. I secondi frazionari sono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `time(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -103,7 +103,7 @@ SELECT @smalldatetime AS '@smalldatetime', @time AS 'time';
 --(1 row(s) affected)  
 ```  
   
-Quando la conversione viene eseguita a **datetime**, **smalldatetime** valore viene copiato il **datetime** valore. I secondi frazionari sono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetime`.
+Nel caso della conversione a **datetime** il valore **smalldatetime** viene copiato nel valore **datetime**. I secondi frazionari sono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetime`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -119,7 +119,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Nel caso di conversione **DateTimeOffset (n)**, **smalldatetime** valore viene copiato il **DateTimeOffset (n)** valore. I secondi frazionari vengono impostati su 0, mentre la differenza di fuso orario viene impostata su +00:0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetimeoffset(4)`.
+Nel caso della conversione a **datetimeoffset(n)** il valore **smalldatetime** viene copiato nel valore **datetimeoffset(n)**. I secondi frazionari vengono impostati su 0, mentre la differenza di fuso orario viene impostata su +00:0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetimeoffset(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -135,7 +135,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetimeoffset AS 'datetimeoffset(4)
 --(1 row(s) affected)  
 ```  
   
-Per la conversione a **datetime2**, **smalldatetime** valore viene copiato il **datetime2** valore. I secondi frazionari sono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetime2(4)`.
+Nel caso della conversione a **datetime2(n)** il valore **smalldatetime** viene copiato nel valore **datetime2(n)**. I secondi frazionari sono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetime2(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
