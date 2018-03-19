@@ -219,7 +219,7 @@ Le correzioni nel flag di traccia 4199 delle versioni precedenti di [!INCLUDE[ss
 |Livello di compatibilità|Parole chiave riservate|  
 |----------------------------------|-----------------------|  
 |130|Da determinare.|  
-|120|nessuna.|  
+|120|Nessuna.|  
 |110|WITHIN GROUP, TRY_CONVERT, SEMANTICKEYPHRASETABLE, SEMANTICSIMILARITYDETAILSTABLE, SEMANTICSIMILARITYTABLE|  
 |100|CUBE, MERGE, ROLLUP|  
 |90|EXTERNAL, PIVOT, UNPIVOT, REVERT, TABLESAMPLE|  
