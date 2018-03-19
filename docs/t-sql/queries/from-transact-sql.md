@@ -167,40 +167,40 @@ FROM { <table_source> [ ,...n ] }
  Specifica una tabella, vista, variabile di tabella o origine di tabella derivata con o senza un alias, da utilizzare nell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)]. In un'istruzione sono consentite fino a 256 origini di tabella. Il limite varia tuttavia in base alla memoria disponibile e alla complessità delle altre espressioni nella query, ovvero alcune query specifiche potrebbero non supportare 256 origini di tabella.  
   
 > [!NOTE]  
->  Nelle query con riferimenti a molte tabelle le prestazioni di esecuzione potrebbero essere ridotte. I tempi di compilazione e ottimizzazione vengono influenzati anche da fattori aggiuntivi, Queste includono la presenza di indici e viste indicizzate in ogni \<table_source > e la dimensione del \<select_list > nell'istruzione SELECT.  
+>  Nelle query con riferimenti a molte tabelle le prestazioni di esecuzione potrebbero essere ridotte. I tempi di compilazione e ottimizzazione vengono influenzati anche da fattori aggiuntivi, ad esempio la presenza di indici e visualizzazioni indicizzate in ogni \<table_source> e le dimensioni di \<select_list> nell'istruzione SELECT.  
   
  L'ordine delle origini di tabella dopo la parola chiave FROM non influisce sul set di risultati restituito. Quando la clausola FROM include nomi duplicati, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un errore.  
   
  *table_or_view_name*  
  Nome di una tabella o di una vista.  
   
- Se la tabella o vista è presente in un altro database nella stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare un nome completo nel formato *database*. *schema*. *object_name*.  
+ Se la tabella o la visualizzazione è presente in un altro database della stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare un nome completo nel formato *database*.*schema*.*object_name*.  
   
- Se la tabella o vista è presente all'esterno dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, specificare un nome composto da quattro parti nel formato *server_collegato*. *catalogo*. *schema*. *oggetto*. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Un nome composto da quattro parti costruito utilizzando il [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funziona come la parte del nome server può essere utilizzata anche per specificare l'origine della tabella remota. Quando viene specificato OPENDATASOURCE, *database_name* e *schema_name* potrebbe non essere applicabile a tutte le origini dati ed è soggetta alle funzionalità del provider OLE DB che accede all'oggetto remoto.  
+ Se la tabella o la visualizzazione è presente all'esterno dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, specificare un nome composto da quattro parti nel formato *linked_server*.*catalog*.*schema*.*object*. Per altre informazioni, vedere [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Per specificare l'origine della tabella remota è anche possibile usare un nome composto da quattro parti formulato tramite la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) come componente server del nome. Quando viene specificato OPENDATASOURCE, *database_name* e *schema_name* possono non essere validi per tutte le origini dati e non essere soggetti alle funzionalità del provider OLE DB che accede all'oggetto remoto.  
   
- [COME] *table_alias*  
- È un alias per *table_source* che può essere utilizzato per convenienza o per contraddistinguere una tabella o vista in un self join o una sottoquery. Un alias è spesso un nome di tabella abbreviato utilizzato per fare riferimento a colonne specifiche delle tabelle di un join. Se lo stesso nome di colonna è presente in più di una tabella del join, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario qualificarlo con un nome di tabella o di vista oppure con un alias. Se viene definito un alias, non è possibile utilizzare il nome di tabella.  
+ [AS] *table_alias*  
+ Alias per *table_source* che può essere usato per convenienza o per contraddistinguere una tabella o una visualizzazione in un self-join o in una sottoquery. Un alias è spesso un nome di tabella abbreviato utilizzato per fare riferimento a colonne specifiche delle tabelle di un join. Se lo stesso nome di colonna è presente in più di una tabella del join, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario qualificarlo con un nome di tabella o di vista oppure con un alias. Se viene definito un alias, non è possibile utilizzare il nome di tabella.  
   
- Quando viene utilizzata una tabella derivata, set di righe o funzione con valori di tabella o nella clausola di operatore (ad esempio PIVOT o UNPIVOT), la *table_alias* alla fine della clausola è il nome della tabella associata per tutte le colonne, incluse le colonne di raggruppamento restituito.  
+ Quando viene usata una tabella derivata, una funzione con valori di tabella o per i set di righe oppure una clausola con operatori (ad esempio PIVOT o UNPIVOT), il parametro *table_alias* necessario alla fine della clausola è il nome della tabella associata per tutte le colonne restituite, comprese le colonne di raggruppamento.  
   
- CON (\<table_hint >)  
+ WITH (\<table_hint> )  
  Specifica che Query Optimizer utilizza una strategia di ottimizzazione o di blocco con questa tabella e per questa istruzione. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  *rowset_function*  
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Specifica una delle funzioni per i set di righe, ad esempio OPENROWSET, che restituisce un oggetto che è possibile utilizzare in sostituzione di un riferimento alla tabella. Per ulteriori informazioni su un elenco di funzioni di set di righe, vedere [funzioni Rowset &#40; Transact-SQL &#41; ](../../t-sql/functions/rowset-functions-transact-sql.md).  
+ Specifica una delle funzioni per i set di righe, ad esempio OPENROWSET, che restituisce un oggetto che è possibile utilizzare in sostituzione di un riferimento alla tabella. Per altre informazioni su un elenco delle funzioni per i set di righe, vedere [Funzioni per i set di righe &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md).  
   
  L'utilizzo delle funzioni OPENROWSET e OPENQUERY per specificare un oggetto remoto dipende dalle funzionalità del provider OLE DB che accede all'oggetto.  
   
  *bulk_column_alias*  
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Alias facoltativo da utilizzare in sostituzione del nome di colonna nel set di risultati. Gli alias di colonna sono consentiti solo nelle istruzioni SELECT che utilizzano la funzione OPENROWSET con l'opzione BULK. Quando si utilizza *bulk_column_alias*, specificare un alias per ogni colonna della tabella nello stesso ordine delle colonne nel file.  
+ Alias facoltativo da utilizzare in sostituzione del nome di colonna nel set di risultati. Gli alias di colonna sono consentiti solo nelle istruzioni SELECT che utilizzano la funzione OPENROWSET con l'opzione BULK. Quando si usa *bulk_column_alias*, specificare un alias per ogni colonna di tabella nello stesso ordine delle colonne nel file.  
   
 > [!NOTE]  
 >  Questo alias esegue l'override dell'attributo NAME negli elementi COLUMN di un file in formato XML, se presente.  
@@ -208,27 +208,27 @@ FROM { <table_source> [ ,...n ] }
  *user_defined_function*  
  Specifica una funzione con valori di tabella.  
   
- OPENXML \<openxml_clause >  
+ OPENXML \<openxml_clause>  
 
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Consente di visualizzare un documento XML come set di righe. Per ulteriori informazioni, vedere [OPENXML &#40; Transact-SQL &#41; ](../../t-sql/functions/openxml-transact-sql.md).  
+ Consente di visualizzare un documento XML come set di righe. Per altre informazioni, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md).  
   
  *derived_table*  
- Sottoquery che recupera le righe dal database. *l'argomento derived_table* viene utilizzato come input per la query esterna.  
+ Sottoquery che recupera le righe dal database. *derived_table* viene usato come input per la query esterna.  
   
- *derivato* *Table* possibile utilizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzionalità costruttore valore di tabella per specificare più righe. Ad esempio, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Per ulteriori informazioni, vedere [il costruttore di valori di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived* *_table* può usare la funzione di costruttore di valori di tabella [!INCLUDE[tsql](../../includes/tsql-md.md)] per specificare più righe. Ad esempio, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Per altre informazioni, vedere [Costruttore di valori di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Alias facoltativo da utilizzare in sostituzione del nome di colonna nel set di risultati della tabella derivata. Includere un alias di colonna per ogni colonna nell'elenco di selezione e racchiudere tra parentesi l'intero elenco di alias di colonna.  
   
- *table_or_view_name* FOR SYSTEM_TIME \<system_time >  
+ *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Specifica che la tabella temporale specificata e la relativa tabella di cronologia delle versioni di sistema collegato viene restituita una versione specifica di dati  
+ Specifica che venga restituita una determinata versione dei dati della tabella temporale indicata e della relativa tabella di cronologia con controllo delle versioni di sistema collegata  
   
 \<tablesample_clause>  
  Specifica che vengono restituiti dati di esempio dalla tabella. I dati di esempio possono essere approssimativi. Questa clausola può essere utilizzata in ogni tabella primaria o unita in join in un'istruzione SELECT, UPDATE o DELETE. Non è possibile specificare TABLESAMPLE con le viste.  
@@ -240,19 +240,19 @@ FROM { <table_source> [ ,...n ] }
  Metodo di campionamento dipendente dall'implementazione specificato dagli standard ISO. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è l'unico metodo di campionamento disponibile e viene applicato per impostazione predefinita. SYSTEM applica un metodo di campionamento basato su pagine in cui come campione viene scelto un set di pagine casuale dalla tabella e tutte le righe di tali pagine vengono restituite come subset campione.  
   
  *sample_number*  
- Espressione numerica costante esatta o approssimativa che rappresenta la percentuale o il numero delle righe. Quando viene specificato con PERCENT, *sample_number* viene implicitamente convertito in un **float** valore; in caso contrario, viene convertito in **bigint**. PERCENT è l'impostazione predefinita.  
+ Espressione numerica costante esatta o approssimativa che rappresenta la percentuale o il numero delle righe. Quando viene specificato con PERCENT, *sample_number* viene implicitamente convertito in valore di tipo **float**. In caso contrario, viene convertito in **bigint**. PERCENT è l'impostazione predefinita.  
   
  PERCENT  
- Specifica che un *sample_number* percento delle righe della tabella deve essere recuperati dalla tabella. Quando viene specificato PERCENT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un valore approssimativo della percentuale specificata. Quando viene specificato PERCENT il *sample_number* espressione deve restituire un valore compreso tra 0 e 100.  
+ Specifica che una percentuale *sample_number* di righe della tabella deve essere recuperata dalla tabella. Quando viene specificato PERCENT, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un valore approssimativo della percentuale specificata. Quando viene specificato PERCENT l'espressione *sample_number* deve restituire un valore compreso tra 0 e 100.  
   
  ROWS  
- Specifica che circa *sample_number* di righe verranno recuperate. Quando viene specificato ROWS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un'approssimazione del numero di righe specificato. Quando viene specificato ROWS, il *sample_number* espressione deve restituire un valore intero maggiore di zero.  
+ Specifica che verrà recuperato un numero di righe approssimativamente pari a *sample_number*. Quando viene specificato ROWS, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce un'approssimazione del numero di righe specificato. Quando viene specificato ROWS, l'espressione *sample_number* deve restituire un valore integer maggiore di zero.  
   
  REPEATABLE  
- Indica che il campione selezionato può essere restituito nuovamente. Quando viene specificato con lo stesso *repeat_seed* valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà lo stesso subset di righe fino a quando non sono state apportate modifiche alle righe nella tabella. Quando viene specificato con un altro *repeat_seed* valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verrà restituisce verosimilmente un campione diverso delle righe nella tabella. Le azioni seguenti nella tabella vengono considerate modifiche: inserimento, aggiornamento, eliminazione, ricompilazione o deframmentazione dell'indice e ripristino o collegamento del database.  
+ Indica che il campione selezionato può essere restituito nuovamente. Se specificato con lo stesso valore *repeat_seed*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce lo stesso subset di righe a condizione che non siano state apportate modifiche alle righe della tabella. Se specificato con un valore *repeat_seed* diverso, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà probabilmente un campione diverso delle righe nella tabella. Le azioni seguenti nella tabella vengono considerate modifiche: inserimento, aggiornamento, eliminazione, ricompilazione o deframmentazione dell'indice e ripristino o collegamento del database.  
   
  *repeat_seed*  
- Espressione di tipo integer costante utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare un numero casuale. *repeat_seed* è **bigint**. Se *repeat_seed* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore in modo casuale. Per uno specifico *repeat_seed* valore, il risultato del campionamento è sempre lo stesso se delle modifiche sono state applicate alla tabella. Il *repeat_seed* espressione deve restituire un numero intero maggiore di zero.  
+ Espressione di tipo integer costante utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per generare un numero casuale. *repeat_seed* è **bigint**. Se *repeat_seed* non viene specificato, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assegna un valore in modo casuale. Per un valore *repeat_seed* specifico, il risultato del campionamento è sempre lo stesso se non sono state applicate modifiche alla tabella. L'espressione *repeat_seed* deve restituire un valore integer maggiore di zero.  
   
  \<joined_table>  
  Set di risultati che rappresenta il prodotto di due o più tabelle. In caso di più join, utilizzare le parentesi per modificarne l'ordine standard.  
@@ -260,7 +260,7 @@ FROM { <table_source> [ ,...n ] }
 \<join_type>  
  Specifica il tipo di operazione di join.  
   
- **INTERNA**  
+ **INNER**  
  Specifica che vengono restituite tutte le coppie di righe corrispondenti. Le righe senza corrispondenza vengono eliminate da entrambe le tabelle. Corrisponde al valore predefinito se non viene specificato alcun tipo di join.  
   
  FULL [OUTER]  
@@ -273,18 +273,18 @@ FROM { <table_source> [ ,...n ] }
  Specifica che, oltre alle righe restituite dall'inner join, vengono incluse nel set di risultati tutte le righe della tabella destra che non rispettano le condizioni di join e le colonne di output che corrispondono all'altra tabella sono impostate su NULL.  
   
 \<join_hint>  
- Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifica che il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer utilizza un hint di join, o algoritmo di esecuzione, per ogni join specificato nella clausola FROM della query. Per ulteriori informazioni, vedere [hint di Join &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
+ Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)], specifica che Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un hint di join o un algoritmo di esecuzione per ogni join specificato nella clausola FROM della query. Per altre informazioni, vedere [Hint &#40;Transact-SQL&#41; - Join](../../t-sql/queries/hints-transact-sql-join.md).  
   
- Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], si applicano questi hint di join INNER join in due colonne non compatibile di distribuzione. È possibile migliorare le prestazioni di query per limitare la quantità di spostamento dei dati che si verifica durante l'elaborazione delle query. Gli hint di join consentiti per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sono i seguenti:  
+ Per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], questi hint di join si applicano ai join INNER in due colonne non compatibili di distribuzione. Possono migliorare le prestazioni delle query limitando lo spostamento dei dati che si verifica durante l'elaborazione delle query. Gli hint di join consentiti per [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sono i seguenti:  
   
- RIDURRE  
- Consente di ridurre il numero di righe da spostare per la tabella sul lato destro del join per rendere compatibili due tabelle non compatibile di distribuzione. Un hint semi-join è l'acronimo di all'hint REDUCE.  
+ REDUCE  
+ Riduce il numero di righe da spostare per la tabella sul lato destro del join per rendere compatibili due tabelle non compatibili di distribuzione. L'hint REDUCE è chiamato anche hint di semi-join.  
   
  REPLICATE  
- Fa sì che i valori nella colonna di join della tabella sul lato sinistro del join devono essere replicate in tutti i nodi. La tabella di destra viene unita alla versione di tali colonne replicata.  
+ Fa in modo che i valori nella colonna di join della tabella sul lato sinistro del join vengano replicati in tutti i nodi. La tabella di destra viene unita alla versione replicata delle colonne.  
   
- RIDISTRIBUIRE  
- Origini dati forza due verranno distribuite nelle colonne specificate nella clausola JOIN. Per una tabella distribuita, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue uno spostamento casuale. Per una tabella replicata, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue uno spostamento di taglio. Per comprendere questi tipi di spostamento, vedere la sezione "DMS pianificare le operazioni di Query" nell'argomento "Informazioni sui piani di Query" il [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Questo hint può migliorare le prestazioni quando il piano di query utilizza uno spostamento di trasmissione per risolvere un join non compatibile di distribuzione.  
+ REDISTRIBUTE  
+ Forza la distribuzione di due origini dati nelle colonne specificate nella clausola JOIN. Per una tabella distribuita, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue uno spostamento casuale. Per una tabella replicata, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue uno spostamento di taglio. Per comprendere questi tipi di spostamento, vedere la sezione "DMS Query Plan Operations" (Operazioni del piano di query del Servizio Migrazione del database) in "Understanding Query Plans" (Informazioni sui piani di query) in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Questo hint può migliorare le prestazioni quando il piano di query usa uno spostamento dei dati trasmessi per risolvere un join non compatibile di distribuzione.  
   
  JOIN  
  Indica che l'operazione di join specificata deve essere eseguita tra le viste o le origini di tabella specificate.  
@@ -304,17 +304,17 @@ ON (p.ProductID = v.ProductID);
   
  È possibile che alcuni predicati includano una sola delle tabelle unite in join nella clausola ON. Tali predicati potrebbero essere presenti inoltre nella clausola WHERE della query. La posizione di tali predicati non è rilevante nel caso di INNER join, ma potrebbe generare risultati diversi se vengono utilizzati OUTER join. I predicati inclusi nella clausola ON infatti vengono applicati alla tabella prima dell'esecuzione del join, mentre la clausola WHERE viene applicata semanticamente ai risultati del join.  
   
- Per ulteriori informazioni sulle condizioni di ricerca e predicati, vedere [condizione di ricerca &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+ Per altre informazioni sulle condizioni di ricerca e i predicati, vedere [Condizioni di ricerca &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CROSS JOIN  
  Specifica il prodotto incrociato di due tabelle. Restituisce le righe che verrebbero restituite se non fosse specificata alcuna clausola WHERE in un join obsoleto, non SQL-92.  
   
- *left_table_source* {CROSS | OUTER} APPLY *right_table_source*  
- Specifica che il *right_table_source* di applica l'operatore viene valutato rispetto a ogni riga del *left_table_source*. Questa funzionalità è utile quando il *right_table_source* contiene una funzione con valori di tabella che accetta i valori della colonna di *left_table_source* come uno dei relativi argomenti.  
+ *left_table_source* { CROSS | OUTER } APPLY *right_table_source*  
+ Specifica che *right_table_source* dell'operatore APPLY viene valutato rispetto a ogni riga di *left_table_source*. Questa funzionalità risulta utile quando *right_table_source* include una funzione con valori di tabella che accetta i valori di colonna da *left_table_source* come uno dei relativi argomenti.  
   
- È necessario specificare CROSS o OUTER con APPLY. Se si specifica CROSS, non vengono restituite righe quando il *right_table_source* viene valutato rispetto a una riga specificata del *left_table_source* e restituisce un set di risultati vuoto.  
+ È necessario specificare CROSS o OUTER con APPLY. Se si specifica CROSS, non vengono restituite righe quando *right_table_source* viene valutato rispetto a ogni riga specificata di *left_table_source* e viene restituito un set di risultati vuoto.  
   
- Se si specifica OUTER, viene generata una riga per ogni riga del *left_table_source* anche quando il *right_table_source* valuta in base a tale riga e restituisce un set di risultati vuoto.  
+ Se si specifica OUTER, viene restituita una riga per ogni riga di *left_table_source* anche quando *right_table_source* viene valutato rispetto a tale riga e viene restituito un set di risultati vuoto.  
   
  Per altre informazioni, vedere la sezione Osservazioni.  
   
@@ -325,9 +325,9 @@ ON (p.ProductID = v.ProductID);
  Origine di tabella definita nell'argomento precedente. Per altre informazioni, vedere la sezione Osservazioni.  
   
  *table_source* PIVOT \<pivot_clause>  
- Specifica che il *table_source* viene trasformata tramite pivot in base il *pivot_column*. *table_source* è una tabella o espressione di tabella. L'output è una tabella che contiene tutte le colonne di *table_source* ad eccezione di *pivot_column* e *value_column*. Le colonne di *table_source*, ad eccezione di *pivot_column* e *value_column*, sono definite colonne di raggruppamento dell'operatore pivot. Per ulteriori informazioni su PIVOT e UNPIVOT, vedere [tramite PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
+ Specifica che *table_source* venga trasformato tramite Pivot in base a *pivot_column*. *table_source* è una tabella o un'espressione di tabella. L'output è una tabella che contiene tutte le colonne di *table_source* ad eccezione di *pivot_column* e *value_column*. Le colonne di *table_source*, eccetto *pivot_column* e *value_column*, vengono definite colonne di raggruppamento dell'operatore PIVOT. Per altre informazioni su PIVOT e UNPIVOT, vedere [Uso di PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- PIVOT esegue un'operazione di raggruppamento sulla tabella di input relativamente alle colonne di raggruppamento e restituisce una riga per ogni gruppo. Inoltre, l'output contiene una colonna per ogni valore specificato nel *column_list* che compare nella *pivot_column* del *input_table*.  
+ PIVOT esegue un'operazione di raggruppamento sulla tabella di input relativamente alle colonne di raggruppamento e restituisce una riga per ogni gruppo. L'output contiene anche una colonna per ogni valore specificato in *column_list* visualizzato in *pivot_column* in *input_table*.  
   
  Per ulteriori informazioni, vedere la sezione Osservazioni riportata di seguito.  
   
@@ -337,55 +337,55 @@ ON (p.ProductID = v.ProductID);
  La funzione di aggregazione di sistema COUNT(*) non è consentita.  
   
  *value_column*  
- Indica la colonna dei valori dell'operatore PIVOT. Se utilizzato con UNPIVOT, *value_column* non può essere il nome di una colonna esistente nell'input *table_source*.  
+ Indica la colonna dei valori dell'operatore PIVOT. Se usato con UNPIVOT, *value_column* non può corrispondere al nome di una colonna esistente in *table_source* nell'input.  
   
  FOR *pivot_column*  
- Colonna pivot dell'operatore PIVOT. *pivot_column* deve essere di un tipo convertibile in modo implicito o esplicito in **nvarchar()**. Questa colonna non può essere **immagine** o **rowversion**.  
+ Colonna pivot dell'operatore PIVOT. *pivot_column* deve essere di un tipo di dati che è possibile convertire in modo implicito o esplicito nel tipo **nvarchar()**. Questa colonna non può essere **image** o **rowversion**.  
   
- Quando viene utilizzato UNPIVOT, *pivot_column* è il nome della colonna di output risultante dal raggruppamento di *table_source*. Non possono essere presenti una colonna esistente in *table_source* con lo stesso nome.  
+ Quando viene usato UNPIVOT, *pivot_column* indica il nome della colonna di output risultante dal raggruppamento delle colonne di *table_source*. In *table_source* non può esistere già una colonna con questo nome.  
   
  IN (*column_list* )  
- Nella clausola PIVOT Elenca i valori di *pivot_column* che diventeranno i nomi delle colonne della tabella di output. L'elenco non è possibile specificare nomi di colonna già presenti nell'input *table_source* che viene trasformata tramite pivot.  
+ Nella clausola PIVOT elenca i valori della colonna *pivot_column* che diventeranno i nomi di colonna della tabella di output. L'elenco non può includere nomi di colonna già presenti nell'origine di tabella di input, specificata in *table_source*, che viene trasformata tramite Pivot.  
   
- Nella clausola UNPIVOT Elenca le colonne in *table_source* che verranno raggruppate in un unico *pivot_column*.  
+ Nella clausola UNPIVOT elenca le colonne in *table_source* che verranno raggruppate in un'unica colonna *pivot_column*.  
   
  *table_alias*  
- Nome dell'alias della tabella di output. *pivot_table_alias* deve essere specificato.  
+ Nome dell'alias della tabella di output. È necessario specificare *pivot_table_alias*.  
   
  UNPIVOT \< unpivot_clause >  
- Specifica che la tabella di input viene ridotta da più colonne in *column_list* in una singola colonna denominata *pivot_column*. Per ulteriori informazioni su PIVOT e UNPIVOT, vedere [tramite PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
+ Indica che la tabella di input viene ridotta da più colonne specificate in *column_list* a una singola colonna denominata *pivot_column*. Per altre informazioni su PIVOT e UNPIVOT, vedere [Uso di PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
- A partire dal \<data_ora >  
+ AS OF \<date_time>  
 
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-
-  
- Restituisce una tabella con un singolo record per ogni riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati per restituire i valori nella riga che era valida nel punto nel tempo specificato per il  *\<data_ora >* parametro. Il valore per una riga viene considerato valido se il *system_start_time_column_name* valore è minore o uguale al  *\<data_ora >* valore del parametro e *system_end_time_ column_name* valore è maggiore di  *\<data_ora >* valore del parametro.   
-  
- DA \<data_ora_inizio > TO \<data_ora_fine >
-
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Restituisce una tabella con i valori per tutte le versioni di record che erano attive all'interno dell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima di  *\<data_ora_inizio >* valore del parametro per FROM argomento o non siano più state attive dopo il  *\<data_ora_fine >* valore del parametro per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe diventate attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM sono incluse e non sono incluse le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO.  
+ Restituisce una tabella con un singolo record per ogni riga contenente i valori che erano effettivi (correnti) in un momento specificato nel passato. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori nella riga che era valida nel momento specificato dal parametro *\<date_time>*. Il valore per una riga viene considerato valido se il valore *system_start_time_column_name* è minore o uguale al valore del parametro *\<date_time>* e il valore *system_end_time_column_name* è maggiore del valore del parametro *\<date_time>*.   
   
- TRA \<data_ora_inizio > AND \<data_ora_fine >  
+ FROM \<start_date_time> TO \<end_date_time>
 
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
-  
- Come sopra il **FROM \<data_ora_inizio > TO \<data_ora_fine >** descrizione, ad eccezione del fatto che include le righe diventate attive in corrispondenza del limite superiore definito dal \<data_ora_fine > endpoint.  
-  
- CONTAINED IN (\<data_ora_inizio >, \<data_ora_fine >)  
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+  
+ Restituisce una tabella con i valori per tutte le versioni di riga che erano attive nell'intervallo di tempo specificato, indipendentemente dal fatto che abbiano iniziato a essere attive prima del valore del parametro *\<start_date_time>* per l'argomento FROM o non siano più state attive dopo il valore del parametro *\<end_date_time>* per l'argomento TO. Internamente, viene eseguita un'unione tra la tabella temporale e la relativa tabella di cronologia e i risultati vengono filtrati in modo da restituire i valori per tutte le versioni di riga che erano attive in qualsiasi momento durante l'intervallo di tempo specificato. Le righe diventate attive esattamente in corrispondenza del limite inferiore definito dall'endpoint FROM sono incluse e le righe diventate attive esattamente in corrispondenza del limite superiore definito dall'endpoint TO non sono incluse.  
+  
+ BETWEEN \<start_date_time> AND \<end_date_time>  
+
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+  
+ Come sopra per la descrizione di **FROM \<start_date_time> TO \<end_date_time>**, tranne per il fatto che include le righe diventate attive in corrispondenza del limite superiore definito dall'endpoint \<end_date_time>.  
+  
+ CONTAINED IN (\<start_date_time> , \<end_date_time>)  
+
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
  Restituisce una tabella con i valori per tutte le versioni di record che sono state aperte e chiuse nell'intervallo di tempo specificato, definito dai due valori datetime per l'argomento CONTAINED IN. Sono incluse le righe diventate attive esattamente in corrispondenza del limite inferiore o che non sono più state attive esattamente in corrispondenza del limite superiore.  
   
  ALL  
- Restituisce una tabella con i valori da tutte le righe dalla tabella corrente sia la tabella di cronologia.  
+ Restituisce una tabella con i valori di tutte le righe della tabella corrente e della tabella di cronologia.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La clausola FROM supporta la sintassi SQL-92 per le tabelle unite in join e per le tabelle derivate. Nella sintassi SQL-92 sono disponibili gli operatori di join INNER, LEFT OUTER, RIGHT OUTER, FULL OUTER e CROSS.  
   
  In una clausola FROM le istruzioni UNION e JOIN sono supportate sia nelle viste, sia nelle tabelle derivate e nelle sottoquery.  
@@ -395,39 +395,39 @@ ON (p.ProductID = v.ProductID);
  Dato che in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono prese in considerazione le statistiche di distribuzione e cardinalità dei server collegati che forniscono statistiche sulla distribuzione delle colonne, non è necessario ricorrere all'hint di join REMOTE per imporre la valutazione di un join in remoto. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Processor analizza le statistiche remote e determina se è appropriato adottare una strategia di join remoto. L'hint di join REMOTE risulta utile per i provider che non forniscono statistiche sulla distribuzione delle colonne.  
   
 ## <a name="using-apply"></a>Utilizzo di APPLY  
- Entrambi gli operandi sinistro e destro dell'operatore APPLY sono espressioni di tabella. La differenza principale tra questi operandi è che il *right_table_source* possibile utilizzare una funzione con valori di tabella che accetta una colonna dal *left_table_source* come uno degli argomenti della funzione. Il *left_table_source* può includere funzioni con valori di tabella, ma non può contenere argomenti che sono colonne di *right_table_source*.  
+ Entrambi gli operandi sinistro e destro dell'operatore APPLY sono espressioni di tabella. La differenza principale tra questi operandi è rappresentata dal fatto che *right_table_source* può usare una funzione con valori di tabella in cui una colonna di *left_table_source* è considerata uno degli argomenti. *left_table_source* può includere funzioni con valori di tabella, ma non può contenere come argomenti colonne di *right_table_source*.  
   
  L'operatore APPLY funziona nel modo seguente per restituire l'origine di tabella per la clausola FROM:  
   
-1.  Valuta *right_table_source* rispetto a ogni riga del *left_table_source* per produrre set di righe.  
+1.  Valuta *right_table_source* rispetto a ogni riga di *left_table_source* per produrre set di righe.  
   
-     I valori di *right_table_source* dipendono *left_table_source*. *right_table_source* può essere rappresentato approssimativamente in questo modo: `TVF(left_table_source.row)`, dove `TVF` è una funzione con valori di tabella.  
+     I valori di *right_table_source* dipendono da *left_table_source*. *right_table_source* può essere rappresentato approssimativamente in questo modo: `TVF(left_table_source.row)`, dove `TVF` è una funzione con valori di tabella.  
   
-2.  Combina i set di risultati che viene generati per ogni riga nella valutazione di *right_table_source* con il *left_table_source* eseguendo un'operazione UNION ALL.  
+2.  Combina i set di risultati restituiti per ogni riga nella valutazione di *right_table_source* con *left_table_source* tramite un'operazione UNION ALL.  
   
-     L'elenco di colonne restituito dal risultato dell'operatore APPLY è il set di colonne dal *left_table_source* combinato con l'elenco di colonne di *right_table_source*.  
+     L'elenco di colonne restituito dal risultato dell'operatore APPLY corrisponde al set di colonne di *left_table_source* combinato con l'elenco di colonne di *right_table_source*.  
   
 ## <a name="using-pivot-and-unpivot"></a>Utilizzo di PIVOT e UNPIVOT  
- Il *pivot_column* e *value_column* sono colonne di raggruppamento utilizzate dall'operatore PIVOT. PIVOT segue il processo seguente per ottenere il set di risultati di output:  
+ *pivot_column* e *value_column* sono colonne di raggruppamento usate dall'operatore PIVOT. PIVOT segue il processo seguente per ottenere il set di risultati di output:  
   
-1.  Esegue GROUP BY nel relativo *input_table* contro il raggruppamento colonne e restituisce una riga di output per ogni gruppo.  
+1.  Esegue GROUP BY in *input_table* sulle colonne di raggruppamento e restituisce una riga di output per ogni gruppo.  
   
-     Le colonne di raggruppamento nella riga di output ottengono i valori di colonna corrispondente per tale gruppo di *input_table*.  
+     Le colonne di raggruppamento nella riga di output ottengono i valori delle colonne corrispondenti per tale gruppo in *input_table*.  
   
 2.  Genera valori per le colonne nell'elenco delle colonne per ogni riga di output eseguendo le operazioni seguenti:  
   
-    1.  Raggruppando le righe restituite in GROUP BY nel passaggio precedente con il *pivot_column*.  
+    1.  Raggruppando le righe restituite in GROUP BY nel passaggio precedente rispetto a *pivot_column*.  
   
-         Per ogni colonna di output di *column_list*, selezionando un sottogruppo che soddisfa la condizione:  
+         Selezionando per ogni colonna di output in *column_list* un sottogruppo che soddisfa la condizione:  
   
          `pivot_column = CONVERT(<data type of pivot_column>, 'output_column')`  
   
-    2.  *funzione_aggregata* viene valutata la *value_column* su questo sottogruppo e il risultato viene restituito come valore dell'oggetto corrispondente *output_column*. Se il sottogruppo è vuoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un valore null per tale *output_column*. Se la funzione di aggregazione è COUNT e il sottogruppo è vuoto, viene restituito zero (0).  
+    2.  *aggregate_function* viene valutata rispetto a *value_column* in questo sottogruppo e il risultato viene restituito come valore per la colonna *output_column* corrispondente. Se il sottogruppo è vuoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un valore Null per *output_column*. Se la funzione di aggregazione è COUNT e il sottogruppo è vuoto, viene restituito zero (0).  
 
 > [!NOTE]
-> Gli identificatori di colonna nel `UNPIVOT` clausola seguire le regole di confronto del catalogo. Per [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le regole di confronto è sempre `SQL_Latin1_General_CP1_CI_AS`. Per [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] database parzialmente indipendenti, le regole di confronto è sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se la colonna viene combinata con altre colonne, quindi una clausola collate (`COLLATE DATABASE_DEFAULT`) è necessario per evitare conflitti.   
+> Gli identificatori di colonna nella clausola `UNPIVOT` seguono le regole di confronto dei cataloghi. Per il [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], le regole di confronto sono sempre `SQL_Latin1_General_CP1_CI_AS`. Per i database parzialmente indipendenti di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], le regole di confronto sono sempre `Latin1_General_100_CI_AS_KS_WS_SC`. Se la colonna è combinata con altre colonne, sarà necessaria una clausola COLLATE, ovvero `COLLATE DATABASE_DEFAULT`, per evitare conflitti.   
   
- Per ulteriori informazioni su PIVOT e UNPIVOT inclusi alcuni esempi, vedere [tramite PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
+ Per altre informazioni su PIVOT e UNPIVOT ed esempi, vedere [Uso di PIVOT e UNPIVOT](../../t-sql/queries/from-using-pivot-and-unpivot.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Sono richieste le autorizzazioni per l'istruzione DELETE, SELECT o UPDATE.  
@@ -471,7 +471,7 @@ FROM HumanResources.Employee WITH (TABLOCK, HOLDLOCK) ;
 ```  
   
 ### <a name="c-using-the-sql-92-cross-join-syntax"></a>C. Utilizzo della sintassi CROSS JOIN di SQL-92  
- Nell'esempio seguente viene restituito il prodotto incrociato delle due tabelle `Employee` e `Department` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Un elenco di tutte le possibili combinazioni di `BusinessEntityID` righe e tutti i `Department` vengono restituite le righe di nome.  
+ Nell'esempio seguente viene restituito il prodotto incrociato delle due tabelle `Employee` e `Department` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Vengono restituiti inoltre un elenco di tutte le possibili combinazioni delle righe di `BusinessEntityID` e tutte le righe di nome `Department`.  
   
 ```wql    
 SELECT e.BusinessEntityID, d.Name AS Department  
@@ -603,11 +603,11 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. Utilizzo di FOR SYSTEM_TIME  
+### <a name="m-using-for-systemtime"></a>M. Uso di FOR SYSTEM_TIME  
   
-**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- L'esempio seguente usa l'argomento date_time_literal_or_variable FOR SYSTEM_TIME AS OF per restituire le righe di tabella che erano effettivi (correnti) a partire da 1 gennaio 2014.  
+ L'esempio seguente usa l'argomento FOR SYSTEM_TIME AS OF date_time_literal_or_variable per restituire le righe di tabella correnti in data 1 gennaio 2014.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -619,7 +619,7 @@ FOR SYSTEM_TIME AS OF '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- L'esempio seguente usa il date_time_literal_or_variable FOR SYSTEM_TIME FROM all'argomento date_time_literal_or_variable per restituire tutte le righe che erano attive durante il periodo definito come a partire da 1 gennaio 2013 e terminando con il 1 ° gennaio 2014 escluso il limite superiore.  
+ L'esempio seguente usa l'argomento FOR SYSTEM_TIME FROM date_time_literal_or_variable TO date_time_literal_or_variable per restituire tutte le righe attive durante il periodo definito che inizia l'1 gennaio 2013 e termina l'1 gennaio 2014, escluso il limite superiore.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -631,7 +631,7 @@ FOR SYSTEM_TIME FROM '2013-01-01' TO '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- L'esempio seguente usa il date_time_literal_or_variable per SYSTEM_TIME tra e argomento date_time_literal_or_variable per restituire tutte le righe che erano attive durante il periodo definito come a partire da 1 gennaio 2013 e terminando con il 1 ° gennaio 2014 inclusivo del limite superiore.  
+ L'esempio seguente usa l'argomento FOR SYSTEM_TIME BETWEEN date_time_literal_or_variable AND date_time_literal_or_variable per restituire tutte le righe attive durante il periodo definito che inizia l'1 gennaio 2013 e termina l'1 gennaio 2014, incluso il limite superiore.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -643,7 +643,7 @@ FOR SYSTEM_TIME BETWEEN '2013-01-01' AND '2014-01-01'
 WHERE ManagerID = 5;
 ```  
   
- Nell'esempio seguente viene utilizzato per argomento SYSTEM_TIME CONTAINED IN (date_time_literal_or_variable, date_time_literal_or_variable) per restituire tutte le righe che sono state aperte e chiuse durante il periodo definito come a partire da 1 gennaio 2013 e che termina con 1 ° gennaio 2014.  
+ L'esempio seguente usa l'argomento FOR SYSTEM_TIME CONTAINED IN ( date_time_literal_or_variable, date_time_literal_or_variable ) per restituire tutte le righe aperte e chiuse durante il periodo definito che inizia l'1 gennaio 2013 e termina l'1 gennaio 2014.  
   
 ```sql
 SELECT DepartmentNumber,   
@@ -655,7 +655,7 @@ FOR SYSTEM_TIME CONTAINED IN ( '2013-01-01', '2014-01-01' )
 WHERE ManagerID = 5;
 ```  
   
- Nell'esempio seguente viene utilizzata una variabile anziché un valore letterale per fornire i valori limite per la query.  
+ L'esempio seguente usa una variabile anziché un letterale per specificare i valori limite di data per la query.  
   
 ```sql
 DECLARE @AsOfFrom datetime2 = dateadd(month,-12, sysutcdatetime());
@@ -670,10 +670,10 @@ FOR SYSTEM_TIME FROM @AsOfFrom TO @AsOfTo
 WHERE ManagerID = 5;
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-the-inner-join-syntax"></a>N. Utilizzo della sintassi INNER JOIN  
- Nell'esempio seguente viene restituito il `SalesOrderNumber`, `ProductKey`, e `EnglishProductName` le colonne di `FactInternetSales` e `DimProduct` tabelle in cui la chiave di join, `ProductKey`, corrisponde in entrambe le tabelle. Il `SalesOrderNumber` e `EnglishProductName` colonne ciascuna presente in uno dei, solo le tabelle, pertanto non è necessario specificare l'alias di tabella con le colonne seguenti, come illustrato; questi alias sono inclusi per migliorare la leggibilità. La parola **AS** prima di un alias di nome non è obbligatorio ma è consigliabile per migliorare la leggibilità e conforme allo standard ANSI.  
+### <a name="n-using-the-inner-join-syntax"></a>N. Uso della sintassi INNER JOIN  
+ L'esempio seguente restituisce le colonne `SalesOrderNumber`, `ProductKey` e `EnglishProductName` delle tabelle `FactInternetSales` e `DimProduct` in cui la chiave di join `ProductKey` corrisponde in entrambe le tabelle. Poiché ogni colonna `SalesOrderNumber` e `EnglishProductName` è presente solo in una delle tabelle, non è necessario specificare l'alias di tabella con queste colonne; in questo caso gli alias sono inclusi per favorire la leggibilità. La parola **AS** prima di un nome di alias non è obbligatoria ma è consigliabile specificarla per migliorare la leggibilità e per conformità allo standard ANSI.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -684,7 +684,7 @@ INNER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Poiché il `INNER` (parola chiave) non è necessaria per gli inner join, la stessa query può essere scritta come:  
+ Poiché la parola chiave `INNER` non è obbligatoria per gli inner join, la stessa query può essere scritta come segue:  
   
 ```sql
 -- Uses AdventureWorks  
@@ -695,7 +695,7 @@ JOIN DimProduct AS dp
 ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Oggetto `WHERE` clausola può inoltre essere utilizzata con questa query per limitare i risultati. In questo esempio limita i risultati ai `SalesOrderNumber` valori superiori a 'SO5000':  
+ È anche possibile usare una clausola `WHERE` con questa query per limitare i risultati. Questo esempio limita i risultati ai valori `SalesOrderNumber` maggiori di ‘SO5000’:  
   
 ```sql
 -- Uses AdventureWorks  
@@ -708,8 +708,8 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Utilizzando la sintassi LEFT OUTER JOIN e RIGHT OUTER JOIN  
- I join di esempio seguente il `FactInternetSales` e `DimProduct` tabelle nel `ProductKey` colonne. La sintassi di outer join sinistro mantiene le righe senza corrispondenza da sinistra (`FactInternetSales`) nella tabella. Poiché il `FactInternetSales` tabella non contiene alcuna `ProductKey` valori che non corrispondono il `DimProduct` tabella, questa query restituisce le stesse righe del primo esempio di inner join precedente.  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. Uso della sintassi LEFT OUTER JOIN e RIGHT OUTER JOIN  
+ L'esempio seguente unisce le tabelle `FactInternetSales` e `DimProduct` nelle colonne `ProductKey`. La sintassi LEFT OUTER JOIN mantiene le righe senza corrispondenza della tabella di sinistra (`FactInternetSales`). Poiché la tabella `FactInternetSales` non contiene valori `ProductKey` che non corrispondono alla tabella `DimProduct`, la query restituisce le stesse righe dell'esempio del primo inner join precedente.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -720,9 +720,9 @@ LEFT OUTER JOIN DimProduct AS dp
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- Questa query può essere scritta anche senza il `OUTER` (parola chiave).  
+ Questa query può essere scritta anche senza la parola chiave `OUTER`.  
   
- In right outer join, le righe non corrispondenti della tabella di destra vengono mantenute. L'esempio seguente restituisce le stesse righe come nell'esempio di outer join sinistro sopra.  
+ Nei right outer join le righe senza corrispondenza della tabella di destra vengono mantenute. L'esempio seguente restituisce le stesse righe dell'esempio di left outer join precedente.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -733,7 +733,7 @@ RIGHT OUTER JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
- La query seguente utilizza il `DimSalesTerritory` tabella come tabella di sinistra in un left outer join. Recupera il `SalesOrderNumber` i valori di `FactInternetSales` tabella. Se non sono presenti ordini per un particolare `SalesTerritoryKey`, la query restituirà un valore NULL per il `SalesOrderNumber` per tale riga. Questa query viene ordinata in base il `SalesOrderNumber` colonna, in modo che qualsiasi i valori null in questa colonna verrà visualizzata nella parte superiore dei risultati.  
+ La query seguente usa la tabella `DimSalesTerritory` come tabella di sinistra in un left outer join. Recupera i valori `SalesOrderNumber` della tabella `FactInternetSales`. Se non sono presenti ordini per un particolare `SalesTerritoryKey`, la query restituisce NULL per `SalesOrderNumber` per la riga. Poiché questa query viene ordinata dalla colonna `SalesOrderNumber`, tutti i valori NULL in questa colonna verranno visualizzati per primi nei risultati.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -757,8 +757,8 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-full-outer-join-syntax"></a>P. Utilizzo della sintassi FULL OUTER JOIN  
- Nell'esempio seguente viene illustrato un full outer join, che restituisce tutte le righe da entrambe le tabelle unite in join, ma restituisce NULL per i valori che non corrispondono, l'altra tabella.  
+### <a name="p-using-the-full-outer-join-syntax"></a>P. Uso della sintassi FULL OUTER JOIN  
+ L'esempio seguente illustra un full outer join che restituisce tutte le righe di entrambe le tabelle unite ma restituisce NULL per i valori che non corrispondono dell'altra tabella.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -770,7 +770,7 @@ FULL OUTER JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
- Questa query può essere scritta anche senza il `OUTER` (parola chiave).  
+ Questa query può essere scritta anche senza la parola chiave `OUTER`.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -782,8 +782,8 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-cross-join-syntax"></a>Q. Utilizzo della sintassi CROSS JOIN  
- L'esempio seguente restituisce il prodotto incrociato del `FactInternetSales` e `DimSalesTerritory` tabelle. Un elenco di tutte le possibili combinazioni di `SalesOrderNumber` e `SalesTerritoryKey` vengono restituiti. Si noti l'assenza del `ON` clausola della query di cross join.  
+### <a name="q-using-the-cross-join-syntax"></a>Q. Uso della sintassi CROSS JOIN  
+ L'esempio seguente restituisce il prodotto presente in entrambe le tabelle `FactInternetSales` e `DimSalesTerritory`. Viene restituito un elenco delle combinazioni possibili di `SalesOrderNumber` e `SalesTerritoryKey`. Si noti l'assenza della clausola `ON` della query di cross join.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -795,7 +795,7 @@ ORDER BY fis.SalesOrderNumber;
 ```  
   
 ### <a name="r-using-a-derived-table"></a>R. Utilizzo di una tabella derivata  
- Nell'esempio seguente viene utilizzata una tabella derivata (un `SELECT` istruzione dopo il `FROM` clausola) per restituire il `CustomerKey` e `LastName` colonne di tutti i clienti nel `DimCustomer` tabella `BirthDate` valori entro il 1 ° gennaio 1970 e il cognome 'Smith'.  
+ L'esempio seguente usa una tabella derivata (un'istruzione `SELECT` dopo la clausola `FROM`) per restituire le colonne `CustomerKey` e `LastName` di tutti i clienti della tabella `DimCustomer` con valori `BirthDate` successivi all'1 gennaio 1970 e il cognome 'Smith'.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -808,8 +808,8 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="s-reduce-join-hint-example"></a>S. RIDURRE l'esempio di hint di join  
- L'esempio seguente usa il `REDUCE` hint di join per l'elaborazione della tabella derivata all'interno della query. Quando si utilizza il `REDUCE` hint di join nella query, il `fis.ProductKey` viene proiettata, replicato e apportate distinte e quindi unita in join a `DimProduct` durante la riproduzione casuale di `DimProduct` su `ProductKey`. La tabella derivata risultante viene distribuita in `fis.ProductKey`.  
+### <a name="s-reduce-join-hint-example"></a>S. Esempio di hint di join REDUCE  
+ L'esempio seguente usa l'hint di join `REDUCE` per modificare l'elaborazione della tabella derivata all'interno della query. Quando si usa l'hint di join `REDUCE` in questa query, `fis.ProductKey` viene proiettato, replicato e differenziato e quindi unito a `DimProduct` durante lo spostamento casuale di `DimProduct` in `ProductKey`. La tabella derivata risultante viene distribuita in `fis.ProductKey`.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -824,8 +824,8 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="t-replicate-join-hint-example"></a>T. Esempio di hint di join di replica  
- In questo esempio viene illustrata la stessa query come nell'esempio precedente, tranne il fatto che un `REPLICATE` hint di join viene utilizzato anziché il `REDUCE` hint di join. Utilizzare il `REPLICATE` hint fa sì che i valori nel `ProductKey` colonna (join) dal `FactInternetSales` tabella devono essere replicate in tutti i nodi. Il `DimProduct` tabella è unita in join alla versione replicata di tali valori.  
+### <a name="t-replicate-join-hint-example"></a>T. Esempio di hint di join REPLICATE  
+ L'esempio successivo illustra la stessa query dell'esempio precedente in cui viene usato un hint di join `REPLICATE` anziché l'hint di join `REDUCE`. L'uso dell'hint `REPLICATE` causa la replica dei valori della colonna `ProductKey` (di join) della tabella `FactInternetSales` in tutti i nodi. La tabella `DimProduct` viene unita alla versione replicata dei valori.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -840,10 +840,10 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Utilizzo dell'hint REDISTRIBUTE per garantire uno spostamento casuale per un join non compatibile di distribuzione  
- La query seguente utilizza l'hint di query di ridistribuzione in un join non compatibile di distribuzione. In questo modo si garantisce che il query optimizer utilizzerà uno spostamento casuale nel piano di query. Ciò garantisce inoltre che il piano di query non utilizzerà uno spostamento di trasmissione che consente di spostare una tabella distribuita a una tabella replicata.  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. Uso dell'hint REDISTRIBUTE per garantire uno spostamento casuale per un join non compatibile di distribuzione  
+ La query seguente usa l'hint di query REDISTRIBUTE in un join non compatibile di distribuzione. In questo modo si garantisce che Query Optimizer userà uno spostamento casuale nel piano di query. Si garantisce anche che il piano di query non userà uno spostamento di trasmissione che sposta una tabella distribuita in una tabella replicata.  
   
- Nell'esempio seguente, l'hint REDISTRIBUTE imposto uno spostamento casuale per la tabella FactInternetSales ProductKey è la colonna di distribuzione per DimProduct e non è la colonna di distribuzione per FactInternetSales.  
+ Nell'esempio seguente l'hint REDISTRIBUTE impone uno spostamento casuale nella tabella FactInternetSales poiché ProductKey è la colonna di distribuzione di DimProduct e non è la colonna di distribuzione di FactInternetSales.  
   
 ```sql
 -- Uses AdventureWorks  
@@ -859,9 +859,9 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
- [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
+ [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

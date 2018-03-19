@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE opzioni File e Filegroup (Transact-SQL) | Documenti Microsoft
+title: Opzioni per file e filegroup ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
@@ -55,10 +55,10 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/08/2018
 ---
-# <a name="alter-database-transact-sql-file-and-filegroup-options"></a>File e Filegroup opzioni ALTER DATABASE (Transact-SQL) 
+# <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opzioni per file e filegroup ALTER DATABASE (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Modifica i file e i filegroup associati al database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente inoltre di aggiungere file e filegroup a un database, di rimuoverli da esso e di modificare gli attributi di un database o i relativi file e filegroup. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+  Modifica i file e i filegroup associati al database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente inoltre di aggiungere file e filegroup a un database, di rimuoverli da esso e di modificare gli attributi di un database o i relativi file e filegroup. Per altre opzioni di ALTER DATABASE, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -113,7 +113,7 @@ ALTER DATABASE database_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-**\<add_or_modify_files >:: =**
+**\<add_or_modify_files>::=**
   
  Specifica i file da aggiungere, rimuovere o modificare.  
   
@@ -123,23 +123,23 @@ ALTER DATABASE database_name
  ADD FILE  
  Aggiunge un file al database.  
   
- AL FILEGROUP { *filegroup_name* }  
- Specifica il filegroup in cui aggiungere il file specificato. Per visualizzare i filegroup correnti e il filegroup è quello predefinito corrente, utilizzare il [Sys. FileGroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md) vista del catalogo.  
+ TO FILEGROUP { *filegroup_name* }  
+ Specifica il filegroup in cui aggiungere il file specificato. Per visualizzare i filegroup correnti e determinare il filegroup attualmente predefinito, usare la vista del catalogo [sys.filegroups](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md).  
   
  ADD LOG FILE  
  Aggiunge un file di log al database specificato.  
   
- REMOVE FILE *nome_file_logico*  
+ REMOVE FILE *logical_file_name*  
  Rimuove la descrizione del file logico da un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ed elimina il file fisico. Il file può essere rimosso solo se è vuoto.  
   
- *nome_file_logico*  
+ *logical_file_name*  
  Nome logico utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file.  
   
 > [!WARNING]  
-> Rimozione di un file di database con FILE_SNAPSHOT associati backup avrà esito positivo, ma non verranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non verranno fisicamente eliminato per mantenere i backup FILE_SNAPSHOT intatto. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+> Sarà possibile rimuovere un file di database con backup FILE_SNAPSHOT associati, ma non saranno eliminati tutti gli snapshot associati per evitare di invalidare i backup che fanno riferimento al file di database. Il file verrà troncato, ma non sarà eliminato fisicamente in modo da mantenere inalterati i backup FILE_SNAPSHOT. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  MODIFY FILE  
- Specifica il file da modificare. Un solo \<filespec > proprietà può essere modificata alla volta. NOME deve sempre essere specificato nella \<filespec > per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.  
+ Specifica il file da modificare. È possibile modificare una sola proprietà \<filespec> alla volta. L'opzione NAME deve essere sempre specificata in \<filespec> per identificare il file da modificare. Se si specifica l'opzione SIZE, le nuove dimensioni del file devono essere superiori a quelle correnti.  
   
  Per modificare il nome logico di un file di dati o di un file di log, specificare il nome del file logico da rinominare nella clausola `NAME` e specificare il nuovo nome logico per il file nella clausola `NEWNAME`. Ad esempio  
   
@@ -155,32 +155,32 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  Per lo spostamento di un catalogo full-text, specificare solo il nuovo percorso nella clausola FILENAME, senza indicare il nome del file nel sistema operativo.  
   
- Per ulteriori informazioni, vedere [spostare i file di Database](../../relational-databases/databases/move-database-files.md).  
+ Per altre informazioni, vedere [Spostare file del database](../../relational-databases/databases/move-database-files.md).  
   
  Per un filegroup FILESTREAM, NAME può essere modificato online. Sebbene FILENAME possa essere modificato online, la modifica non diventa effettiva fino a quando il contenitore non viene rilocato fisicamente e il server non viene arrestato e successivamente riavviato.  
   
  È possibile impostare un file FILESTREAM su OFFLINE. Quando un file FILESTREAM è offline, il filegroup padre sarà contrassegnato internamente come offline. Di conseguenza, ogni accesso a dati FILESTREAM all'interno del filegroup specifico avrà esito negativo.  
   
 > [!NOTE]  
->  \<add_or_modify_files > opzioni non sono disponibili in un Database indipendente.
+>  Le opzioni \<add_or_modify_files> non sono disponibili in un database indipendente.
   
- **\<filespec >:: =**  
+ **\<filespec>::=**  
   
  Controlla le proprietà del file.  
   
- NOME *nome_file_logico*  
+ NAME *logical_file_name*  
  Specifica il nome logico del file.  
   
- *nome_file_logico*  
+ *logical_file_name*  
  Nome logico utilizzato in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file.  
   
  NEWNAME *new_logical_file_name*  
  Specifica un nuovo nome logico per il file.  
   
  *new_logical_file_name*  
- Nome con cui sostituire il nome di file logico esistente. Il nome deve essere univoco all'interno del database e conforme alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome può essere costituito da una costante per valori di carattere o Unicode, da un identificatore regolare o da un identificatore delimitato.  
+ Nome con cui sostituire il nome di file logico esistente. Il nome deve essere univoco all'interno del database e conforme alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md). Il nome può essere costituito da una costante per valori di carattere o Unicode, da un identificatore regolare o da un identificatore delimitato.  
   
- Nome del file { **'***os_file_name***'** | **'***filestream_path* **'** | **'***memory_optimized_data_path***'**}  
+ FILENAME { **'***os_file_name***'** | **'***filestream_path***'** | **'***memory_optimized_data_path***'**}  
  Specifica il nome del file (fisico) del sistema operativo.  
   
  ' *os_file_name* '  
@@ -189,11 +189,11 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  Non è possibile impostare i parametri SIZE, MAXSIZE e FILEGROWTH se è specificato un percorso UNC per il file.  
   
 > [!NOTE]  
-> Database di sistema non possono trovarsi nella directory di condivisione UNC.  
+> I database di sistema non possono trovarsi in directory di condivisione UNC.  
   
  I file di dati non dovrebbero essere memorizzati in file system compressi, a meno che tali file non siano file secondari di sola lettura o il database non sia di sola lettura. I file di log non devono mai essere archiviati in file system compressi.  
   
- Se il file si trova in una partizione non elaborata, *os_file_name* deve specificare solo la lettera di unità di una partizione non elaborata esistente. In ogni partizione non formattata è possibile inserire un solo file.  
+ Se il file si trova in una partizione non formattata, nell'argomento *os_file_name* è necessario specificare solo la lettera dell'unità di una partizione non formattata esistente. In ogni partizione non formattata è possibile inserire un solo file.  
   
  **'** *filestream_path* **'**  
  Per un filegroup FILESTREAM, FILENAME si riferisce a un percorso in cui verrà archiviato FILESTREAM. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente. Se, ad esempio, si specifica il percorso C:\MyFiles\MyFilestreamData, C:\MyFiles deve esistere già prima di eseguire ALTER DATABASE, mentre la cartella MyFilestreamData non deve essere presente.  
@@ -207,23 +207,23 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  Le proprietà SIZE, MAXSIZE e FILEGROWTH non si applicano a un filegroup ottimizzato per la memoria.  
   
- DIMENSIONI *dimensioni*  
+ SIZE *size*  
  Specifica le dimensioni del file. SIZE non si applica a filegroup FILESTREAM.  
   
  *size*  
  Dimensioni del file.  
   
- Quando viene specificato con ADD FILE *dimensioni* è la dimensione iniziale per il file. Quando viene specificato con MODIFY FILE, *dimensioni* è la nuova dimensione per il file e deve essere maggiore delle dimensioni di file corrente.  
+ Quando si specifica con ADD FILE, *size* corrisponde alle dimensioni iniziali del file. Se si specifica con MODIFY FILE, *size* corrisponde alle nuove dimensioni del file, che devono essere superiori a quelle correnti.  
   
- Quando *dimensioni* non viene fornito per il file primario, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza le dimensioni del file primario di **modello** database. Quando viene specificato un file di dati secondario o un file di log, ma *dimensioni* non è specificato per il file, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rende il file di 1 MB.  
+ Se non si specifica *size* per il file primario, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa le dimensioni del file primario del database **model**. Se si specifica un file di dati o un file di log secondario senza specificare *size*, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea un file di 1 MB.  
   
  È possibile utilizzare i suffissi KB, MB, GB e TB per indicare kilobyte, megabyte, gigabyte e terabyte. Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. Se si desidera specificare una frazione di megabyte, convertire il valore in kilobyte moltiplicando il numero per 1024. Ad esempio, specificare 1536 KB anziché 1,5 MB (1,5 x 1024 = 1536).  
   
- MAXSIZE { *max_size*| UNLIMITED}  
+ MAXSIZE { *max_size*| UNLIMITED }  
  Specifica le dimensioni massime consentite per l'aumento di dimensioni del file.  
   
  *max_size*  
- Dimensioni massime del file. È possibile utilizzare i suffissi KB, MB, GB e TB per indicare kilobyte, megabyte, gigabyte e terabyte. Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. Se *max_size* non viene specificato, le dimensioni del file aumentano fino a quando il disco è pieno.  
+ Dimensioni massime del file. È possibile utilizzare i suffissi KB, MB, GB e TB per indicare kilobyte, megabyte, gigabyte e terabyte. Il valore predefinito è MB. Specificare un numero intero, ovvero non includere decimali. Se non si specifica *max_size*, le dimensioni del file aumenteranno fino a quando il disco risulta pieno.  
   
  UNLIMITED  
  Specifica che le dimensioni del file aumentano fino a quando il disco risulta pieno. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un file di log specificato con aumento delle dimensioni illimitato può raggiungere una dimensione massima di 2 TB, mentre un file di dati può raggiungere una dimensione massima di 16 TB. Non vi sono dimensioni massime se questa opzione viene specificata per un contenitore FILESTREAM, il quale continua a crescere finché il disco non è pieno.  
@@ -238,13 +238,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  Il valore 0 indica che l'aumento automatico delle dimensioni è disattivato e non è consentita l'allocazione di spazio aggiuntivo.  
   
- Se FILEGROWTH viene omesso, i valori predefiniti sono:  
+ Se FILEGROWTH viene omesso, i valori predefiniti sono i seguenti:  
   
 |Versione|Valori predefiniti|  
 |-------------|--------------------|  
 |A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Dati 64 MB. File di log 64 MB.|  
-|A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log % 10.|  
-|Nelle versioni precedenti a[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati del 10%. File di log % 10.|  
+|A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 1 MB. File di log 10%.|  
+|Prima di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Dati 10%. File di log 10%.|  
   
  OFFLINE  
  Imposta il file offline e rende inaccessibili tutti gli oggetti nel filegroup.  
@@ -253,13 +253,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 >  Utilizzare questa opzione solo quando il file è danneggiato e non è possibile ripristinarlo. Un file impostato su OFFLINE può essere riportato online solo tramite il ripristino del file dal backup. Per altre informazioni sul ripristino di un singolo file, vedere [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
-> \<filespec > opzioni non sono disponibili in un Database indipendente.  
+> Le opzioni \<filespec> non sono disponibili in un database indipendente.  
   
- **\<add_or_modify_filegroups >:: =**  
+ **\<add_or_modify_filegroups>::=**  
   
  Aggiunge, modifica o rimuove un filegroup nel database.  
   
- Aggiungi FILEGROUP *filegroup_name*  
+ ADD FILEGROUP *filegroup_name*  
  Aggiunge un filegroup nel database.  
   
  CONTAINS FILESTREAM  
@@ -267,7 +267,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Specifica che il filegroup archivia i dati con ottimizzazione per la memoria nel file system. Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). È ammesso un solo filegroup MEMORY_OPTIMIZED_DATA per database. Per la creazione di tabelle con ottimizzazione per la memoria, il filegroup non può essere vuoto. Deve essere presente almeno un file. *filegroup_name* fa riferimento a un percorso. È necessario che il percorso fino all'ultima cartella esista già, mentre l'ultima cartella non deve essere presente.  
   
@@ -279,35 +279,35 @@ GO
 ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
 ```  
   
- RIMUOVERE FILEGROUP *filegroup_name*  
- Rimuove un filegroup dal database. Il filegroup può essere rimosso solo se è vuoto. Rimuove tutti i file a partire dal filegroup. Per ulteriori informazioni, vedere "REMOVE FILE *nome_file_logico*," più indietro in questo argomento.  
+ REMOVE FILEGROUP *filegroup_name*  
+ Rimuove un filegroup dal database. Il filegroup può essere rimosso solo se è vuoto. Rimuove tutti i file a partire dal filegroup. Per altre informazioni, vedere "REMOVE FILE *logical_file_name*" più indietro in questo argomento.  
   
 > [!NOTE]  
 > A meno che il Garbage Collector per FILESTREAM non abbia rimosso tutti i file da un contenitore FILESTREAM, l'operazione ALTER DATABASE REMOVE FILE per rimuovere un contenitore FILESTREAM avrà esito negativo e verrà restituito un errore. Vedere la sezione relativa alla rimozione del contenitore FILESTREAM in "Osservazioni" di seguito in questo argomento.  
   
-Modifica FILEGROUP *filegroup_name* { \<filegroup_updatability_option > | PREDEFINITO | NOME  **=**  *new_filegroup_name* } modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come filegroup predefinito per il database, o modifica il nome del filegroup.  
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=***new_filegroup_name* } Modifica il filegroup impostando lo stato su READ_ONLY o READ_WRITE, impostando il filegroup come predefinito per il database o modificando il nome del filegroup.  
   
- \<filegroup_updatability_option >  
+ \<filegroup_updatability_option>  
  Imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.  
   
  DEFAULT  
- Modifica il filegroup di database predefinito per *filegroup_name*. In un database può esistere un solo filegroup predefinito. Per altre informazioni, vedere [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
+ Modifica il filegroup predefinito del database impostandolo su *filegroup_name*. In un database può esistere un solo filegroup predefinito. Per altre informazioni, vedere [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md).  
   
- NOME = *new_filegroup_name*  
- Modifica il nome del filegroup per il *new_filegroup_name*.  
+ NAME = *new_filegroup_name*  
+ Modifica il nome del filegroup impostandolo su *new_filegroup_name*.  
   
- OPZIONI AUTOGROW_SINGLE_FILE  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ AUTOGROW_SINGLE_FILE  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
- Quando un file nel filegroup soddisfa la soglia di aumento automatico delle dimensioni, cresce solo tale file. Impostazione predefinita.  
+ Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni solo di quel file. Impostazione predefinita.  
   
  AUTOGROW_ALL_FILES  
 
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
- Quando un file nel filegroup soddisfa la soglia di aumento automatico delle dimensioni, tutti i file nel filegroup di aumento delle dimensioni.  
+ Quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni di tutti i file del filegroup.  
   
- **\<filegroup_updatability_option >:: =**  
+ **\<filegroup_updatability_option>::=**  
   
  Imposta la proprietà di sola lettura o di lettura/scrittura per il filegroup.  
   
@@ -321,26 +321,26 @@ Modifica FILEGROUP *filegroup_name* { \<filegroup_updatability_option > | PREDEF
 -   Non vengono attivati blocchi nei database di sola lettura e ciò può portare a migliori prestazioni di esecuzione delle query.  
   
 > [!NOTE]  
->  La parola chiave READONLY verrà rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitarne l'utilizzo in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare READ_ONLY in alternativa.  
+>  La parola chiave READONLY verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitarne l'utilizzo in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Utilizzare READ_ONLY in alternativa.  
   
  READ_WRITE | READWRITE  
  Specifica che il filegroup è di lettura/scrittura. Sono consentiti aggiornamenti degli oggetti contenuti nel filegroup. Per modificare questo stato, è necessario disporre dell'accesso esclusivo al database. Per altre informazioni, vedere la clausola SINGLE_USER.  
   
 > [!NOTE]  
->  La parola chiave `READWRITE` verrà rimossa in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare `READWRITE` nello sviluppo di nuove di lavoro e pianificare la modifica delle applicazioni che attualmente utilizzano `READWRITE` utilizzare `READ_WRITE` invece.  
+>  La parola chiave `READWRITE` verrà rimossa a partire da una delle prossime versioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare l'uso di `READWRITE` in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente usata la parola chiave `READWRITE`. Usare al suo posto la parola chiave `READ_WRITE`.  
   
- Per determinare lo stato di queste opzioni, è possibile esaminare il **is_read_only** colonna il **Sys. Databases** vista del catalogo o **aggiornabilità** proprietà del `DATABASEPROPERTYEX` (funzione).  
+ Per determinare lo stato di queste opzioni, è possibile esaminare la colonna **is_read_only** nella vista del catalogo  **sys.databases** oppure la proprietà **Updateability** della funzione `DATABASEPROPERTYEX`.  
   
 ## <a name="remarks"></a>Remarks  
- Per ridurre le dimensioni di un database, utilizzare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+ Per ridurre le dimensioni di un database, usare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
-È possibile aggiungere o rimuovere un file durante un `BACKUP` è in esecuzione.  
+Non è possibile aggiungere o rimuovere un file durante l'esecuzione di un'istruzione `BACKUP`.  
   
 Per ogni database è possibile specificare un massimo di 32.767 file e 32.767 filegroup.  
   
-A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], lo stato di un file di database (ad esempio, online o offline), viene mantenuto indipendentemente dallo stato del database. Per ulteriori informazioni, vedere [degli stati di File](../../relational-databases/databases/file-states.md). 
+A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] lo stato di un file di database, ad esempio online o offline, viene mantenuto indipendentemente dallo stato del database. Per altre informazioni, vedere [Stati del file](../../relational-databases/databases/file-states.md). 
 -  Lo stato dei file all'interno di un filegroup determina la disponibilità dell'intero filegroup. Un filegroup è disponibile se tutti i file in esso inclusi sono online. 
--  Se un filegroup è offline, qualsiasi tentativo di accesso al filegroup tramite un'istruzione SQL avrà esito negativo e verrà generato un errore. Quando si compilano i piani di query per `SELECT` istruzioni, query optimizer evita gli indici non cluster e viste indicizzate che risiedono nel filegroup offline. Ciò consente la corretta esecuzione di tali istruzioni. Tuttavia, se il filegroup offline contiene l'heap o indice cluster della tabella di destinazione, il `SELECT` istruzione avrà esito negativo. Inoltre, qualsiasi `INSERT`, `UPDATE`, o `DELETE` istruzioni che modificano una tabella con un indice incluso in un filegroup offline avrà esito negativo.  
+-  Se un filegroup è offline, qualsiasi tentativo di accesso al filegroup tramite un'istruzione SQL avrà esito negativo e verrà generato un errore. Per la compilazione di piani delle query per istruzioni `SELECT`, Query Optimizer evita gli indici non cluster e le viste indicizzate presenti in filegroup offline. Ciò consente la corretta esecuzione di tali istruzioni. Se tuttavia il filegroup offline contiene l'indice cluster o heap della tabella di destinazione, l'istruzione `SELECT` avrà esito negativo, così come tutte le istruzioni `INSERT`, `UPDATE` o `DELETE` che implicano la modifica di una tabella tramite un indice incluso in un filegroup offline.  
   
 ## <a name="moving-files"></a>Spostamento di file  
 È possibile spostare file di dati e di log, di sistema o definiti dall'utente, specificando la nuova posizione in FILENAME. Questa procedura può risultare utile nei casi seguenti:  
@@ -349,7 +349,7 @@ A partire da [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], lo s
 -   Rilocazione pianificata.  
 -   Rilocazione per una manutenzione pianificata del disco.  
   
-Per ulteriori informazioni, vedere [spostare i file di Database](../../relational-databases/databases/move-database-files.md).  
+Per altre informazioni, vedere [Spostare file del database](../../relational-databases/databases/move-database-files.md).  
   
 ## <a name="initializing-files"></a>Inizializzazione dei file  
 Per impostazione predefinita, i file di dati e di log vengono inizializzati tramite il riempimento con zeri quando si esegue una delle operazioni seguenti:  
@@ -362,15 +362,15 @@ Per impostazione predefinita, i file di dati e di log vengono inizializzati tram
 I file di dati possono essere inizializzati immediatamente. Ciò consente l'esecuzione rapida di queste operazioni sui file. Per ulteriori informazioni, vedere [Inizializzazione di file di database](../../relational-databases/databases/database-instant-file-initialization.md). 
   
 ## <a name="removing-a-filestream-container"></a>Rimozione di un contenitore FILESTREAM  
- Anche se il contenitore FILESTREAM potrebbe essere stato svuotato mediante l'operazione "DBCC SHRINKFILE", potrebbe essere ancora necessario mantenere nel database i riferimenti ai file eliminati per vari motivi di manutenzione del sistema. [sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) eseguirà il Garbage Collector di FILESTREAM per rimuovere questi file quando è possibile farlo. A meno che il Garbage Collector per FILESTREAM non abbia rimosso tutti i file da un contenitore FILESTREAM, l'operazione ALTER DATABASEREMOVE FILE avrà esito negativo per la rimozione di un contenitore FILESTREAM e verrà restituito un errore. È consigliabile utilizzare il processo seguente per rimuovere un contenitore FILESTREAM.  
+ Anche se il contenitore FILESTREAM potrebbe essere stato svuotato mediante l'operazione "DBCC SHRINKFILE", potrebbe essere ancora necessario mantenere nel database i riferimenti ai file eliminati per vari motivi di manutenzione del sistema. [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) eseguirà il Garbage Collector per FILESTREAM per rimuovere questi file al momento opportuno affinché sia sicuro. A meno che il Garbage Collector per FILESTREAM non abbia rimosso tutti i file da un contenitore FILESTREAM, l'operazione ALTER DATABASEREMOVE FILE avrà esito negativo per la rimozione di un contenitore FILESTREAM e verrà restituito un errore. È consigliabile utilizzare il processo seguente per rimuovere un contenitore FILESTREAM.  
   
-1.  Eseguire [DBCC SHRINKFILE &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) con l'opzione EMPTYFILE per spostare il contenuto di questo contenitore attivo in altri contenitori.  
+1.  Eseguire [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) con l'opzione EMPTYFILE per spostare il contenuto attivo del contenitore in altri contenitori.  
   
 2.  Assicurarsi che siano stati eseguiti i backup del log, nel modello di recupero FULL o BULK_LOGGED.  
   
 3.  Assicurarsi che sia stato eseguito il processo di lettura log repliche, se rilevante.  
   
-4.  Eseguire [sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) per forzare garbage collector di eliminare i file che non sono più necessari in questo contenitore.  
+4.  Eseguire [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) per forzare l'eliminazione tramite Garbage Collector di qualsiasi file non più necessario in questo contenitore.  
   
 5.  Eseguire ALTER DATABASE con l'opzione REMOVE FILE per rimuovere questo contenitore.  
   
@@ -468,7 +468,7 @@ GO
   
 ### <a name="e-modifying-a-file"></a>E. Modifica di un file  
 Nell'esempio seguente vengono aumentate le dimensioni di uno dei file aggiunti nell'esempio B.  
- L'istruzione ALTER DATABASE con il comando MODIFY FILE effettuare una dimensione dei file più grande, pertanto se è necessario per ridurne le dimensioni del file è necessario utilizzare DBCC SHRINKFILE.  
+ L'istruzione ALTER DATABASE con il comando MODIFY FILE può soltanto incrementare le dimensioni di un file. Se si vogliono invece ridurre le dimensioni di un file, è necessario usare DBCC SHRINKFILE.  
   
 ```sql  
 USE master;  
@@ -481,7 +481,7 @@ SIZE = 200MB);
 GO  
 ```
 
-In questo esempio viene ridotta la dimensione di un file di dati a 100 MB e quindi specifica le dimensioni in tale quantità. 
+In questo esempio le dimensioni di un file di dati vengono ridotte a 100 MB e ne vengono specificate le dimensioni. 
 
 ```sql
 USE AdventureWorks2012;
@@ -557,7 +557,7 @@ GO
 5.  Eliminare i file tempdb.mdf e templog.ldf dai percorsi originali.  
   
 ### <a name="h-making-a-filegroup-the-default"></a>H. Impostazione di un filegroup come predefinito  
- Nell'esempio seguente il `Test1FG1` filegroup creato nell'esempio B il filegroup predefinito. Il filegroup `PRIMARY` viene quindi reimpostato come filegroup predefinito. Si noti che il nome `PRIMARY` deve essere delimitato da parentesi quadre o virgolette.  
+ Nell'esempio seguente il filegroup `Test1FG1` creato nell'esempio B viene impostato come filegroup predefinito. Il filegroup `PRIMARY` viene quindi reimpostato come filegroup predefinito. Si noti che il nome `PRIMARY` deve essere delimitato da parentesi quadre o virgolette.  
   
 ```sql  
 USE master;  
@@ -592,8 +592,8 @@ TO FILEGROUP TodaysPhotoShoot;
 GO  
 ```      
         
-### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. Modificare filegroup, in modo che quando un file nel filegroup soddisfa la soglia di aumento automatico delle dimensioni, tutti i file nel filegroup di aumento delle dimensioni
- Nell'esempio seguente genera l'errore obbligatorio `ALTER DATABASE` istruzioni per modificare il filegroup di lettura / scrittura con la `AUTOGROW_ALL_FILES` impostazione.  
+### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>J. Modificare il filegroup in modo che, quando un file del filegroup raggiunge la soglia dell'aumento automatico delle dimensioni, vengono aumentate le dimensioni di tutti i file del filegroup
+ Nell'esempio seguente vengono generate le istruzioni `ALTER DATABASE` necessarie per modificare il filegroup di lettura/scrittura con l'impostazione di `AUTOGROW_ALL_FILES`.  
   
 ```sql  
 --Generate ALTER DATABASE ... MODIFY FILEGROUP statements  
@@ -649,12 +649,12 @@ GO
  [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [data_spaces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
- [Sys. FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.data_spaces &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Dati BLOB (Binary Large Object) (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [DBCC SHRINKFILE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
- [Inizializzazione di File di database](../../relational-databases/databases/database-instant-file-initialization.md)    
+ [Inizializzazione di file di database](../../relational-databases/databases/database-instant-file-initialization.md)    
   
   

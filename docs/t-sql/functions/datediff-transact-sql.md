@@ -1,5 +1,5 @@
 ---
-title: DATEDIFF (Transact-SQL) | Documenti Microsoft
+title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 07/29/2017
 ms.prod: sql-non-specified
@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - DATEDIFF_TSQL
 - DATEDIFF
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - DATEDIFF function [SQL Server]
@@ -31,23 +33,23 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cbbe6e93122cb69253b960afe067635ee0a852d8
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
-ms.translationtype: MT
+ms.openlocfilehash: c7eaab4807f87aca3de9d4fb318c9069f5efdc67
+ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce il conteggio (intero con segno) dell'oggetto specificato *datepart* limiti incrociati tra specificato *startdate* e *enddate*.
+Restituisce il conteggio (intero con segno) dei limiti *datepart* specificati superati con i valori di *startdate* e *enddate* specificati.
   
-Per maggiori differenze, vedere [DATEDIFF_BIG &#40; Transact-SQL &#41; ](../../t-sql/functions/datediff-big-transact-sql.md). Per una panoramica di tutti i [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati data e ora e funzioni, vedere [data e ora i tipi di dati e funzioni &#40; Transact-SQL &#41; ](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Per altre differenze, vedere [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md). Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -58,30 +60,30 @@ DATEDIFF ( datepart , startdate , enddate )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-*parte di una data*  
-È la parte di *startdate* e *enddate* che specifica il tipo di limite sovrapposto. La tabella seguente elenca tutti validi *datepart* argomenti. Variabili definite dall'utente equivalenti non sono valide.
+*datepart*  
+Parte di *startdate* e *enddate* che specifica il tipo di limite superato. Nella tabella seguente vengono elencati tutti gli argomenti *datepart* validi. Variabili definite dall'utente equivalenti non sono valide.
   
-|*parte di una data*|Abbreviazioni|  
+|*datepart*|Abbreviazioni|  
 |---|---|
-|**anno**|**yy, yyyy**|  
-|**trimestre**|**q, q**|  
-|**mese**|**mm, m**|  
-|**DayOfYear**|**dy, y**|  
-|**giorno**|**GG, d**|  
-|**settimana**|**wk, ww**|  
-|**ora**|**hh**|  
-|**minuto**|**mi, n**|  
-|**secondo**|**ss, s**|  
-|**millisecondi**|**MS**|  
-|**microsecondi**|**MCS**|  
-|**nanosecondi**|**NS**|  
+|**year**|**yy, yyyy**|  
+|**quarter**|**qq, q**|  
+|**month**|**mm, m**|  
+|**dayofyear**|**dy, y**|  
+|**day**|**dd, d**|  
+|**week**|**wk, ww**|  
+|**hour**|**hh**|  
+|**minute**|**mi, n**|  
+|**second**|**ss, s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *startdate*  
-È un'espressione che può essere risolta in un **ora**, **data**, **smalldatetime**, **datetime**, **datetime2**, o **datetimeoffset** valore. *Data* può essere un'espressione, l'espressione di colonna, variabile definita dall'utente o stringa letterale. *StartDate* viene sottratto *enddate*.
+Espressione che può essere risolta in un valore **time**, **date**, **smalldatetime**, **datetime**, **datetime2** o **datetimeoffset**. *date* può essere costituito da un'espressione, un'espressione di colonna, una variabile definita dall'utente o un valore letterale stringa. *startdate* viene sottratto da *enddate*.
   
-Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre. Per informazioni sull'anno a due cifre, vedere [configurare l'anno a due cifre cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
+Per evitare ambiguità, esprimere gli anni nel formato a quattro cifre. Per altre informazioni sugli anni a due cifre, vedere [Configurare l'opzione di configurazione del server Cambio data per anno a due cifre](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).
   
-*EndDate*  
+*enddate*  
 Vedere *startdate*.
   
 ## <a name="return-type"></a>Tipo restituito  
@@ -89,22 +91,22 @@ Vedere *startdate*.
   
 ## <a name="return-value"></a>Valore restituito  
   
--   Ogni *datepart* e relative abbreviazioni restituiscono lo stesso valore.  
+-   Ogni elemento *datepart* e le relative abbreviazioni restituiscono lo stesso valore.  
   
-Se il valore restituito è compreso nell'intervallo per **int** (-2.147.483.648 a + 2.147.483.647), viene restituito un errore. Per **millisecondo**, la differenza massima tra *startdate* e *enddate* è 24 giorni, 20 ore, 31 minuti e 23,647 secondi. Per **secondo**, la differenza massima è 68 anni.
+Se il valore restituito non è compreso nell'intervallo per **int** (da -2.147.483.648 a +2.147.483.647), viene restituito un errore. Per **millisecond**, la differenza massima tra *startdate* e *enddate* è 24 giorni, 20 ore, 31 minuti e 23,647 secondi. Per **second**, la differenza massima è 68 anni.
   
-Se *startdate* e *enddate* è assegnato un valore di ora e *datepart* non è un'ora *datepart*, viene restituito 0.
+Se sia a *startdate* che a *enddate* è stato assegnato solo un valore orario e *datepart* non è un oggetto *datepart* orario, viene restituito 0.
   
-Componente di differenza di un fuso orario *startdate* o *endate* non viene utilizzato nel calcolo del valore restituito.
+Per calcolare il valore restituito non viene usato un componente di differenza di fuso orario di *startdate* o *enddate*.
   
-Poiché [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) accurato solo al minuto, quando un **smalldatetime** valore viene utilizzato per *startdate* o *enddate*, secondi e i millisecondi vengono sempre impostati su 0 nel valore restituito.
+Dal momento che [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) garantisce la precisione solo a livello di minuti, quando viene usato un valore **smalldatetime** per *startdate* o *enddate*, i secondi e i millisecondi vengono sempre impostati su 0 nel valore restituito.
   
-Se a una variabile di tipo data viene assegnato solo un valore di tipo ora, il valore della parte mancante della data viene impostato sul valore predefinito: 1900-01-01. Se a una variabile di tipo ora viene assegnato solo un valore di tipo data, il valore della parte mancante dell'ora viene impostato sul valore predefinito: 00.00.00. Se il valore *startdate* o *enddate* avere solo una parte del tempo e l'altro solo una parte della data, ora mancano e parti della data sono impostate sui valori predefiniti.
+Se a una variabile di tipo data viene assegnato solo un valore di tipo ora, il valore della parte mancante della data viene impostato sul valore predefinito: 1900-01-01. Se a una variabile di tipo ora viene assegnato solo un valore di tipo data, il valore della parte mancante dell'ora viene impostato sul valore predefinito: 00.00.00. Se *startdate* o *enddate* hanno solo rispettivamente la parte dell'ora e la parte della data, le parti mancanti vengono impostate sui valori predefiniti.
   
-Se *startdate* e *enddate* sono di tipi data diversi e due con altre parti di ora o la precisione frazionaria dei secondi rispetto a altra, le parti mancanti di altro sono impostate su 0.
+Se i valori *startdate* e *enddate* sono di tipi data diversi e uno di questi comprende un numero maggiore di parti di ora o offre una precisione in secondi frazionari maggiore, le parti mancanti dell'altro valore vengono impostate su 0.
   
-## <a name="datepart-boundaries"></a>limiti di DatePart  
-Le istruzioni seguenti hanno lo stesso *startdate* e lo stesso *endate*. Queste date sono adiacenti e differiscono di 0,0000001 secondi. La differenza tra il *startdate* e *endate* in ogni istruzione attraversa un limite di calendario o di ora della relativa *datepart*. Ciascuna istruzione restituisce 1. Se per questo esempio vengono usati anni diversi e se entrambi *startdate* e *endate* sono nella stessa settimana di calendario, il valore restituito per **settimana** sarà 0.
+## <a name="datepart-boundaries"></a>Limiti di datepart  
+Le istruzioni seguenti comprendono gli stessi valori *startdate* e *enddate*. Queste date sono adiacenti e differiscono di 0,0000001 secondi. La differenza tra *startdate* e *enddate* in ogni istruzione oltrepassa un limite di calendario o di ora del rispettivo valore *datepart*. Ciascuna istruzione restituisce 1. Se per questo esempio vengono usati anni diversi e se *startdate* e *enddate* fanno parte della stessa settimana di calendario, il valore restituito per **week** è 0.
   
 ```sql
 SELECT DATEDIFF(year, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -119,15 +121,15 @@ SELECT DATEDIFF(second, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 La funzione DATEDIFF può essere utilizzata in un elenco SELECT e nelle clausole WHERE, HAVING, GROUP BY e ORDER BY.
   
-DATEDIFF esegue in modo implicito il cast di valori letterali stringa come un **datetime2** tipo. Pertanto, DATEDIFF non supporta il formato AGM se la data viene passata come stringa. È necessario eseguire il cast esplicito la stringa da un **datetime** o **smalldatetime** tipo da utilizzare il formato AGM.
+DATEDIFF consente di eseguire in modo implicito il cast di valori letterali stringa come tipo di dati **datetime2**. Pertanto, DATEDIFF non supporta il formato AGM se la data viene passata come stringa. Per usare il formato AGM è necessario eseguire il cast della stringa in modo esplicito in un tipo **datetime** o **smalldatetime**.
   
 La specifica di SET DATEFIRST non influisce su DATEDIFF. In DATEDIFF viene utilizzata sempre la domenica come primo giorno della settimana per garantire che la funzione sia deterministica.
   
 ## <a name="examples"></a>Esempi  
-Gli esempi seguenti usano tipi diversi di espressioni come argomenti per il *startdate* e *enddate* parametri.
+Negli esempi seguenti vengono usati tipi diversi di espressioni come argomenti per i parametri *startdate* e *enddate*.
   
 ### <a name="a-specifying-columns-for-startdate-and-enddate"></a>A. Specifica di colonne per startdate ed enddate  
 Nell'esempio seguente viene calcolato il numero di limiti di giorno che si sovrappongono tra le date di due colonne in una tabella.
@@ -146,7 +148,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="b-specifying-user-defined-variables-for-startdate-and-enddate"></a>B. Specifica di variabili definite dall'utente per startdate ed enddate  
-Nell'esempio seguente vengono utilizzate variabili definite dall'utente come argomenti per *startdate* e *enddate*.
+Nell'esempio seguente vengono usate variabili definite dall'utente come argomenti per *startdate* e *enddate*.
   
 ```sql
 DECLARE @startdate datetime2 = '2007-05-05 12:10:09.3312722';  
@@ -155,14 +157,14 @@ SELECT DATEDIFF(day, @startdate, @enddate);
 ```  
   
 ### <a name="c-specifying-scalar-system-functions-for-startdate-and-enddate"></a>C. Specifica di funzioni di sistema scalari per startdate ed enddate  
-L'esempio seguente Usa funzioni di sistema scalari come argomenti per *startdate* e *enddate*.
+Nell'esempio seguente vengono usate funzioni di sistema scalari come argomenti per *startdate* e *enddate*.
   
 ```sql
 SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());  
 ```  
   
 ### <a name="d-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>D. Specifica di sottoquery scalari e di funzioni scalari per startdate ed enddate  
-Nell'esempio seguente vengono utilizzate sottoquery scalari e funzioni scalari come argomenti per *startdate* e *enddate*.
+Nell'esempio seguente vengono usate sottoquery e funzioni scalari come argomenti per *startdate* e *enddate*.
   
 ```sql
 USE AdventureWorks2012;  
@@ -172,7 +174,7 @@ SELECT DATEDIFF(day,(SELECT MIN(OrderDate) FROM Sales.SalesOrderHeader),
 ```  
   
 ### <a name="e-specifying-constants-for-startdate-and-enddate"></a>E. Specifica di costanti per startdate ed enddate  
-Nell'esempio seguente vengono utilizzate le costanti carattere come argomenti per *startdate* e *enddate*.
+Nell'esempio seguente vengono usate costanti di tipo carattere come argomenti per *startdate* e *enddate*.
   
 ```sql
 SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'  
@@ -180,7 +182,7 @@ SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="f-specifying-numeric-expressions-and-scalar-system-functions-for-enddate"></a>F. Specifica di espressioni numeriche e funzioni di sistema scalari per enddate  
-Nell'esempio seguente viene utilizzata un'espressione numerica, `(GETDATE ()+ 1)`e funzioni di sistema scalari, `GETDATE` e `SYSDATETIME`, come argomenti per *enddate*.
+Nell'esempio seguente vengono usate un'espressione numerica, `(GETDATE ()+ 1)`, e funzioni di sistema scalari, `GETDATE` e `SYSDATETIME`, come argomenti per *enddate*.
   
 ```sql
 USE AdventureWorks2012;  
@@ -197,7 +199,7 @@ GO
 ```  
   
 ### <a name="g-specifying-ranking-functions-for-startdate"></a>G. Specifica di funzioni di rango per startdate  
-Nell'esempio seguente viene utilizzata una funzione di rango come argomento per *startdate*.
+Nell'esempio seguente viene usata una funzione di rango come argomento per *startdate*.
   
 ```sql
 USE AdventureWorks2012;  
@@ -215,7 +217,7 @@ WHERE TerritoryID IS NOT NULL
 ```  
   
 ### <a name="h-specifying-an-aggregate-window-function-for-startdate"></a>H. Specifica di una funzione finestra di aggregazione per startdate  
-Nell'esempio seguente viene utilizzata una funzione di aggregazione finestra come argomento per *startdate*.
+Nell'esempio seguente viene usata una funzione finestra di aggregazione come argomento per *startdate*.
   
 ```sql
 USE AdventureWorks2012;  
@@ -230,8 +232,8 @@ WHERE soh.SalesOrderID IN(43659,58918);
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-Gli esempi seguenti usano tipi diversi di espressioni come argomenti per il *startdate* e *enddate* parametri.
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+Negli esempi seguenti vengono usati tipi diversi di espressioni come argomenti per i parametri *startdate* e *enddate*.
   
 ### <a name="i-specifying-columns-for-startdate-and-enddate"></a>I. Specifica di colonne per startdate ed enddate  
 Nell'esempio seguente viene calcolato il numero di limiti di giorno che si sovrappongono tra le date di due colonne in una tabella.
@@ -249,7 +251,7 @@ FROM dbo.Duration;
 ```  
   
 ### <a name="j-specifying-scalar-subqueries-and-scalar-functions-for-startdate-and-enddate"></a>J. Specifica di sottoquery scalari e di funzioni scalari per startdate ed enddate  
-Nell'esempio seguente vengono utilizzate sottoquery scalari e funzioni scalari come argomenti per *startdate* e *enddate*.
+Nell'esempio seguente vengono usate sottoquery e funzioni scalari come argomenti per *startdate* e *enddate*.
   
 ```sql
 -- Uses AdventureWorks  
@@ -261,7 +263,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="k-specifying-constants-for-startdate-and-enddate"></a>K. Specifica di costanti per startdate ed enddate  
-Nell'esempio seguente vengono utilizzate le costanti carattere come argomenti per *startdate* e *enddate*.
+Nell'esempio seguente vengono usate costanti di tipo carattere come argomenti per *startdate* e *enddate*.
   
 ```sql
 -- Uses AdventureWorks  
@@ -271,7 +273,7 @@ SELECT TOP(1) DATEDIFF(day, '2007-05-07 09:53:01.0376635'
 ```  
   
 ### <a name="l-specifying-ranking-functions-for-startdate"></a>L. Specifica di funzioni di rango per startdate  
-Nell'esempio seguente viene utilizzata una funzione di rango come argomento per *startdate*.
+Nell'esempio seguente viene usata una funzione di rango come argomento per *startdate*.
   
 ```sql
 -- Uses AdventureWorks  
@@ -283,7 +285,7 @@ FROM dbo.DimEmployee;
 ```  
   
 ### <a name="m-specifying-an-aggregate-window-function-for-startdate"></a>M. Specifica di una funzione finestra di aggregazione per startdate  
-Nell'esempio seguente viene utilizzata una funzione di aggregazione finestra come argomento per *startdate*.
+Nell'esempio seguente viene usata una funzione finestra di aggregazione come argomento per *startdate*.
   
 ```sql
 -- Uses AdventureWorks  
@@ -295,7 +297,7 @@ FROM dbo.DimEmployee
 ```  
   
 ## <a name="see-also"></a>Vedere anche
-[DATEDIFF_BIG &#40; Transact-SQL &#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
+[DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

@@ -1,5 +1,5 @@
 ---
-title: ALTER ROUTE (Transact-SQL) | Documenti Microsoft
+title: ALTER ROUTE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -65,12 +65,12 @@ WITH
  Introduce le clausole che definiscono la route da modificare.  
   
  SERVICE_NAME **='***service_name***'**  
- Specifica il nome del servizio remoto a cui la route fa riferimento. Il *service_name* deve corrispondere esattamente utilizza il nome del servizio remoto. [!INCLUDE[ssSB](../../includes/sssb-md.md)]utilizza un confronto byte per byte per trovare la corrispondenza di *service_name*. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Una route con un nome di servizio **' SQL/ServiceBroker/BrokerConfiguration'** sia una route a un servizio Broker Configuration Notice. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
+ Specifica il nome del servizio remoto a cui la route fa riferimento. *service_name* deve corrispondere esattamente al nome usato dal servizio remoto. Per creare corrispondenza con *service_name*, [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa un confronto byte per byte. In altre parole, nel confronto viene fatta distinzione tra maiuscole e minuscole e non vengono considerate le regole di confronto correnti. Una route con nome di servizio **'SQL/ServiceBroker/BrokerConfiguration'** è una route per un servizio di configurazione di Service Broker. Per una route per questo servizio non è necessario specificare un'istanza di Service Broker.  
   
  Se la clausola SERVICE_NAME viene omessa, il nome del servizio per la route rimane invariato.  
   
  BROKER_INSTANCE **='***broker_instance***'**  
- Specifica il database che ospita il servizio di destinazione. Il *broker_instance* parametro deve essere l'identificatore di istanza di Service broker per il database remoto, che può essere ottenuto eseguendo la query seguente nel database selezionato:  
+ Specifica il database che ospita il servizio di destinazione. Il parametro *broker_instance* deve corrispondere all'identificatore dell'istanza di Service Broker per il database remoto. Per ottenere tale identificatore, è possibile eseguire la query seguente nel database selezionato:  
   
 ```  
 SELECT service_broker_guid  
@@ -87,11 +87,11 @@ WHERE database_id = DB_ID();
  Specifica per quanti secondi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene la route nella tabella di routing. Al termine di questo periodo di tempo, la route scade e non viene più presa in considerazione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la scelta della route per una nuova conversazione. Se questa clausola viene omessa, la durata della route rimane invariata.  
   
  ADDRESS **='***next_hop_address'*  
- Specifica l'indirizzo di rete per la route. Il *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
+ Specifica l'indirizzo di rete per la route. Il parametro *next_hop_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
- **TCP: / /** { *dns_name* | *nome_NetBIOS* |*indirizzo_IP* } **:**  *numero_porta*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
- Specificato *numero_porta* deve corrispondere al numero di porta per il [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
+ Il parametro *port_number* specificato deve corrispondere al numero di porta dell'endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
   
 ```  
 SELECT tcpe.port  
@@ -101,21 +101,21 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Quando una route specifica **'LOCAL'** per il *next_hop_address*, il messaggio viene recapitato a un servizio all'interno dell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'LOCAL'**, il messaggio viene recapitato a un servizio nell'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Quando una route specifica **'TRANSPORT'** per il *next_hop_address*, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Una route che specifica **'TRANSPORT'** possibile specificare un'istanza del nome o del gestore di servizio.  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'**, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. Per una route con valore **'TRANSPORT'** è possibile specificare un nome di servizio o un'istanza di Service Broker.  
   
- Quando il *next_hop_address* è il server principale per un database mirror, è necessario specificare anche l'indirizzo MIRROR_ADDRESS per il server mirror. In caso contrario non può venire eseguito il failover automatico della route al server mirror.  
+ Se il parametro *next_hop_address* corrisponde al server principale per un database mirror, è necessario specificare anche MIRROR_ADDRESS per il server mirror. In caso contrario non può venire eseguito il failover automatico della route al server mirror.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
  MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
- Specifica l'indirizzo di rete per il server mirror di una coppia con mirroring di cui il server principale si trova il *next_hop_address*. Il *next_hop_mirror_address* specifica un indirizzo TCP/IP nel formato seguente:  
+ Specifica l'indirizzo di rete per il server mirror di una coppia con mirroring in cui il server principale si trova all'indirizzo *next_hop_address*. Il parametro *next_hop_mirror_address* specifica un indirizzo TCP/IP nel formato seguente:  
   
- **TCP: / /**{ *dns_name* | *nome_NetBIOS* | *indirizzo_IP* } **:**  *numero_porta*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
- Specificato *numero_porta* deve corrispondere al numero di porta per il [!INCLUDE[ssSB](../../includes/sssb-md.md)] endpoint di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
+ Il parametro *port_number* specificato deve corrispondere al numero di porta dell'endpoint di [!INCLUDE[ssSB](../../includes/sssb-md.md)] per un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer specificato. Per ottenere tale valore, eseguire la query seguente nel database selezionato:  
   
 ```  
 SELECT tcpe.port  
@@ -125,24 +125,24 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- Se si specifica MIRROR_ADDRESS, la route deve specificare la clausola SERVICE_NAME e la clausola BROKER_INSTANCE. Una route che specifica **'LOCAL'** o **'TRANSPORT'** per il *next_hop_address* non è necessario specificare un indirizzo mirror.  
+ Se si specifica MIRROR_ADDRESS, la route deve specificare la clausola SERVICE_NAME e la clausola BROKER_INSTANCE. Per una route con valore **'LOCAL'** o **'TRANSPORT'** per il parametro *next_hop_address* non è necessario specificare un indirizzo mirror.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
   
-## <a name="remarks"></a>Osservazioni  
- La tabella di routing che archivia le route è una tabella di metadati che può essere letta tramite la **Routes** vista del catalogo. e aggiornata esclusivamente utilizzando le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
+## <a name="remarks"></a>Remarks  
+ La tabella di routing in cui sono archiviate le route è una tabella di metadati che può essere letta tramite la vista del catalogo **sys.routes**. e aggiornata esclusivamente utilizzando le istruzioni CREATE ROUTE, ALTER ROUTE e DROP ROUTE.  
   
  Le clausole che non sono specificate nel comando ALTER ROUTE rimangono invariate. Non è possibile pertanto eseguire il comando ALTER per specificare che la route non scade, che corrisponde a un nome di servizio o che corrisponde a un'istanza di Service Broker. Per modificare queste caratteristiche di una route è necessario eliminare la route esistente e creare una nuova route con le nuove informazioni.  
   
- Quando una route specifica **'TRANSPORT'** per il *next_hop_address*, l'indirizzo di rete viene determinato in base al nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]può elaborare correttamente i nomi di servizio che iniziano con un indirizzo di rete in un formato non valido per un *next_hop_address*. I servizi con nomi che contengono indirizzi di rete validi verranno indirizzati all'indirizzo di rete indicato nel nome del servizio.  
+ Se per il parametro *next_hop_address* di una route viene specificato il valore **'TRANSPORT'**, l'indirizzo di rete viene determinato in base all'indirizzo di rete nel nome del servizio. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elabora correttamente i nomi di servizi che iniziano con un indirizzo di rete in un formato valido per *next_hop_address*. I servizi con nomi che contengono indirizzi di rete validi verranno indirizzati all'indirizzo di rete indicato nel nome del servizio.  
   
  La tabella di routing può includere qualsiasi numero di route che specificano lo stesso servizio, indirizzo di rete e/o identificatore dell'istanza di Service Broker. In questo caso, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sceglie una route utilizzando una procedura progettata in modo da individuare la corrispondenza più esatta tra le informazioni specificate nella conversazione e le informazioni della tabella di routing.  
   
  Per modificare il parametro AUTHORIZATION per un servizio, utilizzare l'istruzione ALTER AUTHORIZATION.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- L'autorizzazione per modificare una route per impostazione predefinita al proprietario della route, ai membri del **db_ddladmin** o **db_owner** fissa ruoli del database e i membri del **sysadmin** fissa ruolo del server.  
+ L'autorizzazione per modificare una route viene assegnata per impostazione predefinita al proprietario della route, ai membri dei ruoli predefiniti del database **db_ddladmin** o **db_owner** e ai membri del ruolo predefinito del server **sysadmin**.  
   
 ## <a name="examples"></a>Esempi  
   

@@ -1,5 +1,5 @@
 ---
-title: CREAZIONE di certificati (Transact-SQL) | Documenti Microsoft
+title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/13/2017
 ms.prod: sql-non-specified
@@ -116,23 +116,23 @@ CREATE CERTIFICATE certificate_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *nome_certificato*  
- È il nome per il certificato nel database.  
+ *certificate_name*  
+ Nome del certificato nel database.  
   
- AUTORIZZAZIONE *nome_utente*  
- È il nome dell'utente che possiede il certificato.  
+ AUTHORIZATION *user_name*  
+ Nome dell'utente proprietario del certificato.  
   
- ASSEMBLY *nome_assembly*  
+ ASSEMBLY *assembly_name*  
  Specifica un assembly firmato già caricato nel database.  
   
- [ESEGUIBILE] FILE ='*path_to_file*'  
- Specifica il percorso completo, nome di file incluso, del file con codifica DER che contiene il certificato. Se viene utilizzata l'opzione EXECUTABLE, il file è una DLL firmata dal certificato. *path_to_file* può essere un percorso locale o un percorso UNC di un percorso di rete. Nel contesto di sicurezza di accesso al file il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio. L'account deve disporre delle necessarie autorizzazioni per il file system.  
+ [ EXECUTABLE ] FILE ='*path_to_file*'  
+ Specifica il percorso completo, nome di file incluso, del file con codifica DER che contiene il certificato. Se viene utilizzata l'opzione EXECUTABLE, il file è una DLL firmata dal certificato. *path_to_file* può essere un percorso locale o un percorso UNC di rete. L'accesso al file viene eseguito nel contesto di protezione dell'account del servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'account deve disporre delle necessarie autorizzazioni per il file system.  
   
  WITH PRIVATE KEY  
- Specifica che la chiave privata del certificato viene caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa clausola è valida solo se il certificato viene creato da un file. Per caricare la chiave privata di un assembly, utilizzare [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
+ Specifica che la chiave privata del certificato viene caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questa clausola è valida solo se il certificato viene creato da un file. Per caricare la chiave privata di un assembly, usare [ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md).  
   
  FILE ='*path_to_private_key*'  
- Specifica il percorso completo, compreso il nome del file, per la chiave privata. *path_to_private_key* può essere un percorso locale o un percorso UNC di un percorso di rete. Nel contesto di sicurezza di accesso al file il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio. L'account deve disporre delle necessarie autorizzazioni per il file system.  
+ Specifica il percorso completo, compreso il nome del file, per la chiave privata. *path_to_private_key* può essere un percorso locale o un percorso UNC di rete. L'accesso al file viene eseguito nel contesto di protezione dell'account del servizio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'account deve disporre delle necessarie autorizzazioni per il file system.  
   
 > [!NOTE]  
 >  Questa opzione non è disponibile in un database indipendente.  
@@ -140,53 +140,53 @@ CREATE CERTIFICATE certificate_name
  asn_encoded_certificate  
  Bit di un certificato con codifica ASN specificati come costante binaria.  
   
- BINARIO =*private_key_bits*  
+ BINARY =*private_key_bits*  
  **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Bit della chiave privata specificati come costante binaria. Questi bit possono essere in formato crittografato. Se crittografati, l'utente deve fornire una password di decrittografia. I controlli dei criteri della password non vengono eseguiti su questa password. I bit della chiave privata devono essere in un formato di file PVK.  
   
  DECRYPTION BY PASSWORD ='*key_password*'  
- Specifica la password necessaria per decrittografare la chiave privata recuperata da un file. Questa clausola è facoltativa se la chiave privata è protetta con una password Null. Non è consigliabile salvare una chiave privata in un file senza proteggerla con una password. Se è necessaria una password senza non specifica alcuna password, l'istruzione ha esito negativo.  
+ Specifica la password necessaria per decrittografare la chiave privata recuperata da un file. Questa clausola è facoltativa se la chiave privata è protetta con una password Null. Non è consigliabile salvare una chiave privata in un file senza proteggerla con una password. Se è richiesta una password ma questa non viene specificata, l'istruzione ha esito negativo.  
   
  ENCRYPTION BY PASSWORD ='*password*'  
- Specifica la password utilizzata per crittografare la chiave privata. Utilizzare questa opzione solo se si desidera crittografare il certificato con una password. Se questa clausola viene omessa, la chiave privata è crittografata tramite la chiave master del database. *password* deve soddisfare i requisiti dei criteri password Windows del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
+ Specifica la password usata per crittografare la chiave privata. Utilizzare questa opzione solo se si desidera crittografare il certificato con una password. Se questa clausola viene omessa, la chiave privata viene crittografata con la chiave master del database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che esegue l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
- OGGETTO ='*certificate_subject_name*'  
- Il termine *soggetto* si riferisce a un campo nei metadati del certificato, come definito nello standard x. 509. L'oggetto deve essere lungo non più di 64 caratteri, e questo limite viene applicato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Linux. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Windows, l'oggetto può essere fino a 128 caratteri. Oggetti che superano i 128 caratteri vengono troncati quando questi vengono archiviati nel catalogo, ma l'oggetto binario di grandi dimensioni (BLOB) che contiene il certificato viene mantenuto il nome di oggetto completo.  
+ SUBJECT ='*certificate_subject_name*'  
+ Il termine *subject* (oggetto) fa riferimento a un campo nei metadati del certificato, conformemente ai requisiti dello standard X.509. Non deve essere lungo più di 64 caratteri e questo limite viene applicato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Linux. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Windows, può essere costituito da un massimo di 128 caratteri. Gli oggetti con lunghezza maggiore di 128 caratteri vengono troncati al momento dell'archiviazione nel catalogo, ma nell'oggetto binario di grandi dimensioni (BLOB) contenente il certificato verrà mantenuto il nome di oggetto completo.  
   
- Start_date ='*datetime*'  
- Data di inizio validità del certificato. Se non specificato, START_DATE verrà impostata sulla data corrente. START_DATE è in ora UTC e si può specificare in un qualsiasi formato convertibile in una data e ora.  
+ START_DATE ='*datetime*'  
+ Data di inizio validità del certificato. Se non si specifica una data, per il parametro START_DATE viene impostata la data corrente. START_DATE è in ora UTC e si può specificare in un qualsiasi formato convertibile in una data e ora.  
   
  EXPIRY_DATE ='*datetime*'  
- Data di scadenza del certificato. Se non specificato, EXPIRY_DATE è impostato su una data un anno dopo START_DATE. EXPIRY_DATE è in ora UTC e si può specificare in un qualsiasi formato convertibile in una data e ora. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Service Broker viene controllata la data di scadenza. Tuttavia, scadenza non viene applicata quando il certificato viene utilizzato per la crittografia.  
+ Data di scadenza del certificato. Se non si specifica una data, per il parametro EXPIRY_DATE viene impostata una data di scadenza corrispondente a un anno dopo START_DATE. EXPIRY_DATE è in ora UTC e si può specificare in un qualsiasi formato convertibile in una data e ora. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker controlla la data di scadenza. Tuttavia, la scadenza non viene applicata quando il certificato viene usato per la crittografia.  
   
- ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF}  
+ ACTIVE FOR BEGIN_DIALOG = { **ON** | OFF }  
  Rende il certificato disponibile per un initiator di una conversazione di dialogo di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Il valore predefinito è ON.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un certificato è un'entità a protezione diretta a livello di database conforme allo standard X.509 e che supporta i campi della specifica X.509 V1. L'istruzione CREATE CERTIFICATE consente di caricare un certificato da un file o un assembly e può inoltre essere utilizzata per generare una coppia di chiavi e creare un certificato autofirmato.  
   
- La chiave privata deve essere \<= 2500 byte in formato crittografato. Le chiavi private generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono 1024 bit tempo tramite [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e sono della lunghezza di 2048 bit a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Le chiavi private importate da un'origine esterna devono avere una lunghezza compresa tra 384 bit e 4,096 bit. La lunghezza di una chiave privata importata deve essere un valore intero multiplo di 64 bit. I certificati usati per TDE sono limitati a chiavi private con dimensioni di 3456 bit.  
+ La chiave privata deve essere \<= 2500 byte nel formato crittografato. Le chiavi private generate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono lunghe 1024 bit fino a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e 2048 bit a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Le chiavi private importate da un'origine esterna devono avere una lunghezza compresa tra 384 bit e 4,096 bit. La lunghezza di una chiave privata importata deve essere un valore intero multiplo di 64 bit. I certificati usati per TDE sono limitati a chiavi private con dimensioni di 3456 bit.  
   
- Il numero intero di serie del certificato viene archiviato, ma solo i primi 16 byte viene visualizzata nella vista del catalogo sys. Certificates.  
+ Il numero di serie completo del certificato viene archiviato, ma solo i primi 16 byte vengono visualizzati nella vista del catalogo sys.certificates.  
   
- L'intero campo emittente del certificato viene archiviato, ma solo i primi 884 byte di Sys. Certificates vista del catalogo.  
+ Il campo dell'autorità di certificazione completo viene archiviato, ma solo i primi 884 byte vengono visualizzati nella vista del catalogo sys.certificates.  
   
- La chiave privata deve corrispondere alla chiave pubblica specificata da *nome_certificato*.  
+ La chiave privata deve corrispondere alla chiave pubblica specificata da *certificate_name*.  
   
- Quando si crea un certificato da un contenitore, il caricamento della chiave privata è facoltativo. La chiave privata viene invece sempre creata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un certificato autofirmato. Per impostazione predefinita, la chiave privata viene crittografata con la chiave master del database. Se la chiave master del database non esiste e non viene specificata, l'istruzione ha esito negativo.  
+ Quando si crea un certificato da un contenitore, il caricamento della chiave privata è facoltativo. La chiave privata viene invece sempre creata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un certificato autofirmato. Per impostazione predefinita, la chiave privata viene crittografata con la chiave master del database. Se la chiave master del database non esiste e non si specifica una password, l'istruzione ha esito negativo.  
   
- L'opzione ENCRYPTION BY PASSWORD non è obbligatorio quando la chiave privata è crittografata con la chiave master del database. Utilizzare questa opzione solo quando la chiave privata è crittografata con una password. Se non si specifica la password, la chiave privata del certificato verrà crittografata con la chiave master del database. Se la chiave master del database non può essere aperto, si omette questa clausola causa un errore.  
+ L'opzione ENCRYPTION BY PASSWORD non è obbligatoria se la chiave privata viene crittografata con la chiave master del database. Usare questa opzione solo se la chiave privata viene crittografata con una password. Se non si specifica la password, la chiave privata del certificato verrà crittografata con la chiave master del database. Se si omette questa clausola e non è possibile aprire la chiave master del database, viene generato un errore.  
   
  Non è necessario specificare una password di decrittografia quando la chiave privata è crittografata con la chiave master del database.  
   
 > [!NOTE]  
 >  Le funzioni predefinite per la crittografia e la firma non controllano le date di scadenza dei certificati. Gli utenti di queste funzioni dovranno decidere autonomamente quando eseguire il controllo delle scadenze dei certificati.  
   
- È possibile creare una descrizione binaria di un certificato utilizzando il [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md) e [CERTPRIVATEKEY &#40; Transact-SQL &#41; ](../../t-sql/functions/certprivatekey-transact-sql.md) funzioni. Per un esempio che utilizza **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato a un altro database, vedere l'esempio B nell'argomento [CERTENCODED &#40; Transact-SQL &#41; ](../../t-sql/functions/certencoded-transact-sql.md).  
+ È possibile creare una descrizione binaria di un certificato usando le funzioni [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md) e [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md). Per un esempio che usa **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato in un altro database, vedere l'esempio B nell'argomento [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
- È richiesta l'autorizzazione CREATE CERTIFICATE per il database. Solo account di accesso Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso e i ruoli applicazione possono disporre di certificati. I gruppi e i ruoli non possono disporre di certificati.  
+## <a name="permissions"></a>Autorizzazioni  
+ È richiesta l'autorizzazione CREATE CERTIFICATE per il database. Solo gli account di accesso di Windows e di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i ruoli applicazione possono avere certificati. I gruppi e i ruoli non possono disporre di certificati.  
   
 ## <a name="examples"></a>Esempi  
   
@@ -232,7 +232,7 @@ GO
 ```  
   
 ### <a name="d-creating-a-self-signed-certificate"></a>D. Creazione di un certificato autofirmato  
- Nell'esempio seguente viene creato un certificato denominato `Shipping04` senza specificare una password di crittografia. Questo esempio può essere utilizzato con [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+ Nell'esempio seguente viene creato un certificato denominato `Shipping04` senza specificare una password di crittografia. Questo esempio può essere usato con [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ```  
 CREATE CERTIFICATE Shipping04   
@@ -242,13 +242,13 @@ GO
   
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzione ALTER CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+ [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+ [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
  [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
  [Gerarchia di crittografia](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
- [CERTENCODED &#40; Transact-SQL &#41;](../../t-sql/functions/certencoded-transact-sql.md)   
- [CERTPRIVATEKEY &#40; Transact-SQL &#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
   
   
 

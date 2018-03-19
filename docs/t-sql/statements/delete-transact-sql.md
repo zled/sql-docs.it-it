@@ -1,5 +1,5 @@
 ---
-title: DELETE (Transact-SQL) | Documenti Microsoft
+title: DELETE (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Rimuove uno o più righe da una tabella o vista in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Rimuove una o più righe da una tabella o vista in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,24 +95,24 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- CON \<common_table_expression >  
+ WITH \<common_table_expression>  
  Specifica il set di risultati denominato temporaneo, anche noto come espressione di tabella comune, definito nell'ambito dell'istruzione DELETE. Il set di risultati deriva da un'istruzione SELECT.  
   
- Le espressioni di tabella comuni possono inoltre essere utilizzate con istruzioni SELECT, INSERT, UPDATE e CREATE VIEW. Per ulteriori informazioni, vedere [con common_table_expression &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Le espressioni di tabella comuni possono inoltre essere utilizzate con istruzioni SELECT, INSERT, UPDATE e CREATE VIEW. Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- INIZIO **(***espressione***)** [percentuale]  
- Viene specificato il numero o la percentuale di righe casuali che verranno eliminate. Il valore di*expression* può essere specificato come numero o come percentuale di righe. Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine. Per ulteriori informazioni, vedere [torna all'inizio &#40; Transact-SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
+ TOP **(***expression***)** [ PERCENT ]  
+ Viene specificato il numero o la percentuale di righe casuali che verranno eliminate. Il valore di*expression* può essere specificato come numero o come percentuale di righe. Le righe a cui viene fatto riferimento nell'espressione TOP utilizzata con INSERT, UPDATE o DELETE non sono disposte in alcun ordine. Per altre informazioni, vedere [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
- Parola chiave facoltativa che può essere utilizzata la parola chiave DELETE e di destinazione *table_or_view_name*, o *rowset_function_limited*.  
+ Parola chiave facoltativa che è possibile specificare tra la parola chiave DELETE e l'oggetto di destinazione *table_or_view_name* o *rowset_function_limited*.  
   
  *table_alias*  
- L'alias specificato nel campo da *table_source* clausola che rappresenta la tabella o vista da cui devono essere eliminate le righe.  
+ Alias specificato nella clausola FROM *table_source* che rappresenta la tabella o la vista da cui devono essere eliminate le righe.  
   
- *nome_server*  
+ *server_name*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Il nome del server (nome di un server collegato o [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funzione come nome del server) in cui è contenuta la tabella o vista. Se *nome_server* è specificato, *database_name* e *schema_name* sono necessari.  
+ Nome del server, che usa come nome un nome di server collegato o la funzione [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md), in cui è contenuta la tabella o la vista. Se *server_name* è specificato, è obbligatorio specificare *database_name* e *schema_name*.  
   
  *database_name*  
  Nome del database.  
@@ -120,26 +120,26 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *schema_name*  
  Nome dello schema a cui appartiene la tabella o la vista.  
   
- *view_name table_or*  
+ *table_or view_name*  
  Nome della tabella o della vista da cui si desidera rimuovere le righe.  
   
  È inoltre possibile utilizzare una variabile di tabella, nel relativo ambito, come origine della tabella in un'istruzione DELETE.  
   
- La vista a cui fa riferimento *table_or_view_name* deve essere aggiornabile e fare riferimento esattamente a una tabella di base nella clausola FROM della definizione della vista. Per ulteriori informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ È necessario che la vista a cui viene fatto riferimento in *table_or_view_name* sia aggiornabile e includa un riferimento esatto a una tabella di base nella clausola FROM della definizione della vista. Per altre informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Entrambi i [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) funzione, soggetto alle funzionalità del provider.  
+ Funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md), in base alle funzionalità del provider.  
   
- CON **(** \<table_hint_limited > [... *n*] **)**  
- Specifica uno o più hint di tabella consentiti per una tabella di destinazione. La parola chiave WITH e le parentesi sono obbligatorie. Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per ulteriori informazioni sugli hint di tabella, vedere [hint di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+ WITH **(** \<table_hint_limited> [... *n*] **)**  
+ Specifica uno o più hint di tabella consentiti per una tabella di destinazione. La parola chiave WITH e le parentesi sono obbligatorie. Le opzioni NOLOCK e READUNCOMMITTED non sono consentite. Per altre informazioni sugli hint di tabella, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
- \<OUTPUT_Clause >  
- Restituisce le righe eliminate o le espressioni basate su tali righe nell'ambito di un'operazione DELETE. La clausola OUTPUT non è supportata nelle istruzioni DML eseguite su viste o tabelle remote. Per ulteriori informazioni, vedere [clausola OUTPUT &#40; Transact-SQL &#41; ](../../t-sql/queries/output-clause-transact-sql.md).  
+ \<OUTPUT_Clause>  
+ Restituisce le righe eliminate o le espressioni basate su tali righe nell'ambito di un'operazione DELETE. La clausola OUTPUT non è supportata nelle istruzioni DML eseguite su viste o tabelle remote. Per altre informazioni, vedere [Clausola OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
- DA *table_source*  
- Specifica una clausola FROM aggiuntiva. Questo [!INCLUDE[tsql](../../includes/tsql-md.md)] estensione eliminare consente di specificare dati di \<table_source > ed eliminare le righe corrispondenti dalla tabella nel campo da prima clausola.  
+ FROM *table_source*  
+ Specifica una clausola FROM aggiuntiva. Questa estensione di [!INCLUDE[tsql](../../includes/tsql-md.md)] dell'istruzione DELETE consente di specificare dati di \<table_source> e di eliminare le righe corrispondenti dalla tabella specificata nella prima clausola FROM.  
   
  È possibile utilizzare questa estensione, specificando un join, al posto di una sottoquery nella clausola WHERE per identificare le righe che si desidera rimuovere.  
   
@@ -150,12 +150,12 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Le operazioni di eliminazione possono essere di due diversi tipi in base al contenuto della clausola WHERE:  
   
--   Le eliminazioni con ricerca specificano una condizione di ricerca che qualifica le righe da eliminare. Ad esempio, in cui *column_name* = *valore*.  
+-   Le eliminazioni con ricerca specificano una condizione di ricerca che qualifica le righe da eliminare. Ad esempio, WHERE *column_name* = *value*.  
   
--   Le eliminazioni posizionate utilizzano la clausola CURRENT OF per specificare un cursore. L'operazione di eliminazione viene eseguita nella posizione corrente del cursore. Può trattarsi di un'istruzione DELETE con ricerca che utilizza una clausola WHERE più accurata *search_condition* clausola che qualifica le righe da eliminare. Un'istruzione DELETE con ricerca elimina più righe se la condizione di ricerca non identifica una singola riga in modo univoco.  
+-   Le eliminazioni posizionate utilizzano la clausola CURRENT OF per specificare un cursore. L'operazione di eliminazione viene eseguita nella posizione corrente del cursore. Questo tipo di eliminazione risulta più accurato rispetto a un'istruzione DELETE con ricerca che usa una clausola WHERE *search_condition* per qualificare le righe da eliminare. Un'istruzione DELETE con ricerca elimina più righe se la condizione di ricerca non identifica una singola riga in modo univoco.  
   
-\<search_condition >  
- Specifica le condizioni di restrizione per le righe da eliminare. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per ulteriori informazioni, vedere [condizione di ricerca &#40; Transact-SQL &#41; ](../../t-sql/queries/search-condition-transact-sql.md).  
+\<search_condition>  
+ Specifica le condizioni di restrizione per le righe da eliminare. Non sono previsti limiti per il numero di predicati che è possibile includere in una condizione di ricerca. Per altre informazioni, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
  CURRENT OF  
  Specifica che l'istruzione DELETE viene eseguita nella posizione corrente del cursore specificato.  
@@ -164,18 +164,18 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  Specifica che *cursor_name* fa riferimento a un cursore globale.  
   
  *cursor_name*  
- Nome del cursore aperto da cui viene eseguita l'operazione di recupero. Se entrambe globale e un cursore locale con il nome *cursor_name* esiste, questo argomento fa riferimento il cursore globale se globale è specificata; in caso contrario, fa riferimento al cursore locale. Il cursore deve consentire operazioni di aggiornamento.  
+ Nome del cursore aperto da cui viene eseguita l'operazione di recupero. Se sono presenti un cursore globale e un cursore locale denominati *cursor_name*, l'argomento fa riferimento al cursore globale se è stato specificato l'argomento GLOBAL. In caso contrario, fa riferimento al cursore locale. Il cursore deve consentire operazioni di aggiornamento.  
   
  *cursor_variable_name*  
  Nome di una variabile di cursore. La variabile di cursore deve fare riferimento a un cursore che consente operazioni di aggiornamento.  
   
- OPZIONE **(** \<query_hint > [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,**... *n*] **)**  
  Parole chiave che indicano quali hint di ottimizzazione vengono utilizzati per personalizzare la modalità di elaborazione dell'istruzione nel [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Per altre informazioni, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Procedure consigliate  
- Per eliminare tutte le righe in una tabella, utilizzare TRUNCATE TABLE. L'esecuzione di TRUNCATE TABLE è più rapida rispetto a quella di DELETE e comporta un minor utilizzo di risorse del log delle transazioni e di sistema. TRUNCATE TABLE presenta alcune restrizioni, ad esempio, la tabella non può partecipare alla replica. Per ulteriori informazioni, vedere [TRUNCATE TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
+ Per eliminare tutte le righe in una tabella, utilizzare TRUNCATE TABLE. L'esecuzione di TRUNCATE TABLE è più rapida rispetto a quella di DELETE e comporta un minor utilizzo di risorse del log delle transazioni e di sistema. TRUNCATE TABLE presenta alcune restrizioni, ad esempio, la tabella non può partecipare alla replica. Per altre informazioni, vedere [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)  
   
- Utilizzo di @@ROWCOUNT eliminato di funzione per restituire il numero di righe per l'applicazione client. Per ulteriori informazioni, vedere [@@ROWCOUNT &#40; Transact-SQL &#41; ](../../t-sql/functions/rowcount-transact-sql.md).  
+ Usare la funzione @@ROWCOUNT per restituire il numero di righe eliminate nell'applicazione client. Per altre informazioni, vedere [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md).  
   
 ## <a name="error-handling"></a>Gestione degli errori  
  È possibile implementare la gestione degli errori per l'istruzione DELETE specificando l'istruzione in un costrutto TRY…CATCH.  
@@ -187,9 +187,9 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
 ## <a name="interoperability"></a>Interoperabilità  
  È possibile utilizzare l'istruzione DELETE nel corpo di una funzione definita dall'utente se l'oggetto modificato è una variabile di tabella.  
   
- Quando si elimina una riga che contiene una colonna FILESTREAM, vengono eliminati anche i file del file system sottostanti. I file sottostanti vengono rimossi dal Garbage Collector di FILESTREAM. Per ulteriori informazioni, vedere [accesso ai dati FILESTREAM con Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
+ Quando si elimina una riga che contiene una colonna FILESTREAM, vengono eliminati anche i file del file system sottostanti. I file sottostanti vengono rimossi dal Garbage Collector di FILESTREAM. Per altre informazioni, vedere [Accedere a dati FILESTREAM con Transact-SQL](../../relational-databases/blob/access-filestream-data-with-transact-sql.md).  
   
- Non è possibile specificare la clausola FROM in un'istruzione DELETE contenente un riferimento diretto o indiretto a una vista per cui è stato definito un trigger INSTEAD OF. Per ulteriori informazioni sui trigger INSTEAD OF, vedere [CREATE TRIGGER &#40; Transact-SQL &#41; ](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Non è possibile specificare la clausola FROM in un'istruzione DELETE contenente un riferimento diretto o indiretto a una vista per cui è stato definito un trigger INSTEAD OF. Per altre informazioni sui trigger INSTEAD OF, vedere [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Se TOP viene utilizzato con DELETE, le righe a cui viene fatto riferimento non vengono disposte in alcun ordine e la clausola ORDER BY non può essere specificata in modo diretto in questa istruzione. Se si desidera utilizzare TOP per eliminare le righe in un ordine cronologico significativo, è necessario utilizzare TOP insieme a una clausola ORDER BY in un'istruzione sub-SELECT. Vedere la sezione Esempi più avanti in questo argomento.  
@@ -203,35 +203,35 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Per eliminare le righe di un heap e deallocare le pagine, utilizzare uno dei metodi seguenti.  
   
--   Specificare l'hint TABLOCK nell'istruzione DELETE. Se si utilizza l'hint TABLOCK, nell'operazione di eliminazione viene accettato un blocco esclusivo nella tabella anziché un blocco di riga o di pagina. In questo modo sarà possibile deallocare le pagine. Per ulteriori informazioni sull'hint TABLOCK, vedere [hint di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Specificare l'hint TABLOCK nell'istruzione DELETE. Se si utilizza l'hint TABLOCK, nell'operazione di eliminazione viene accettato un blocco esclusivo nella tabella anziché un blocco di riga o di pagina. In questo modo sarà possibile deallocare le pagine. Per altre informazioni sugli hint TABLOCK, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 -   Utilizzare TRUNCATE TABLE se è necessario eliminare tutte le righe della tabella.  
   
 -   Creare un indice cluster sull'heap prima di eliminare le righe. È possibile eliminare l'indice cluster dopo l'eliminazione delle righe. Questo metodo richiede più tempo rispetto ai precedenti e utilizza una maggiore quantità di risorse temporanee.  
   
 > [!NOTE]  
->  Pagine vuote possono essere rimosse da un heap in qualsiasi momento utilizzando il `ALTER TABLE <table_name> REBUILD` istruzione.  
+>  Le pagine vuote possono essere rimosse da un heap in qualsiasi momento con l'istruzione `ALTER TABLE <table_name> REBUILD`.  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  L'istruzione DELETE viene sempre registrata completamente.  
   
 ## <a name="security"></a>Security  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorizzazioni  
  È necessario disporre delle autorizzazioni DELETE per la tabella di destinazione. Se l'istruzione contiene una clausola WHERE, sono inoltre richieste le autorizzazioni SELECT.  
   
- ELIMINAZIONE di autorizzazioni per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server, il **db_owner** e **db_datawriter** fissa ruoli del database e il proprietario della tabella. I membri del **sysadmin**, **db_owner**e **db_securityadmin** ruoli e il proprietario della tabella possono trasferire autorizzazioni ad altri utenti.  
+ Le autorizzazioni DELETE vengono assegnate per impostazione predefinita ai membri del ruolo predefinito del server **sysadmin** e ai membri dei ruoli predefiniti del database **db_owner** e **db_datawriter** nonché al proprietario della tabella. I membri dei ruoli **sysadmin**, **db_owner**, e **db_securityadmin** e il proprietario della tabella possono trasferire le autorizzazioni ad altri utenti.  
   
 ## <a name="examples"></a>Esempi  
   
 |Category|Elementi di sintassi inclusi|  
 |--------------|------------------------------|  
-|[Sintassi di base](#BasicSyntax)|DELETE|  
+|[Sintassi di base](#BasicSyntax)|Elimina|  
 |[Limitazione delle righe eliminate](#LimitRows)|WHERE • FROM • cursore •|  
 |[Eliminazione di righe da una tabella remota](#RemoteTables)|Server collegato • funzione per set di righe OPENQUERY • funzione per set di righe OPENDATASOURCE|  
 |[Acquisizione dei risultati dell'istruzione DELETE](#CaptureResults)|Clausola OUTPUT|  
   
-###  <a name="BasicSyntax"></a>Sintassi di base  
+###  <a name="BasicSyntax"></a> Sintassi di base  
  Negli esempi contenuti in questa sezione vengono illustrate le funzionalità di base dell'istruzione DELETE tramite la sintassi minima richiesta.  
   
 #### <a name="a-using-delete-with-no-where-clause"></a>A. Utilizzo di DELETE senza una clausola WHERE  
@@ -246,7 +246,7 @@ GO
  Negli esempi riportati in questa sezione viene illustrato come limitare il numero di righe che verranno eliminate.  
   
 #### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilizzo della clausola WHERE per eliminare un set di righe  
- L'esempio seguente elimina tutte le righe dal `ProductCostHistory` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database in cui il valore di `StandardCost` colonna è più di `1000.00`.  
+ Nell'esempio seguente vengono eliminate tutte le righe della tabella `ProductCostHistory` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in cui il valore della colonna `StandardCost` è maggiore di `1000.00`.  
   
 ```    
 DELETE FROM Production.ProductCostHistory  
@@ -254,7 +254,7 @@ WHERE StandardCost > 1000.00;
 GO  
 ```  
   
- Nell'esempio seguente viene illustrata una clausola WHERE più complessa. La clausola WHERE definisce due condizioni che devono essere soddisfatte per determinare le righe da eliminare. Il valore nella colonna `StandardCost` deve essere compreso tra `12.00` e `14.00` , mentre quello nella colonna `SellEndDate` deve essere Null. L'esempio inoltre visualizza il valore di **@@ROWCOUNT**  funzione per restituire il numero di righe eliminate.  
+ Nell'esempio seguente viene illustrata una clausola WHERE più complessa. La clausola WHERE definisce due condizioni che devono essere soddisfatte per determinare le righe da eliminare. Il valore nella colonna `StandardCost` deve essere compreso tra `12.00` e `14.00` , mentre quello nella colonna `SellEndDate` deve essere Null. Nell'esempio viene anche stampato il valore dalla funzione **@@ROWCOUNT** per restituire il numero di righe eliminate.  
   
 ```  
 DELETE Production.ProductCostHistory  
@@ -264,7 +264,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>C. Utilizzo di un cursore per determinare la riga da eliminare  
- Nell'esempio seguente viene eliminata una riga dal `EmployeePayHistory` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database utilizzando un cursore denominato `my_cursor`. L'operazione di eliminazione interessa unicamente la riga attualmente recuperata dal cursore.  
+ Nell'esempio seguente viene eliminata una riga dalla tabella `EmployeePayHistory` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] usando un cursore denominato `my_cursor`. L'operazione di eliminazione interessa unicamente la riga attualmente recuperata dal cursore.  
   
 ```  
 DECLARE complex_cursor CURSOR FOR  
@@ -284,7 +284,7 @@ GO
 ```  
   
 #### <a name="d-using-joins-and-subqueries-to-data-in-one-table-to-delete-rows-in-another-table"></a>D. Utilizzo di join e sottoquery per i dati di una tabella per eliminare righe di un'altra tabella  
- Negli esempi seguenti vengono illustrati due modi per eliminare righe di una tabella in base ai dati di un'altra tabella. In entrambi gli esempi, le righe dal `SalesPersonQuotaHistory` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database vengono eliminati in base alle vendite per anno archiviate nel `SalesPerson` tabella. Il primo `DELETE` istruzione illustra la soluzione di sottoquery compatibile con ISO, mentre la seconda `DELETE` Mostra istruzione il [!INCLUDE[tsql](../../includes/tsql-md.md)] dall'estensione per creare un join di due tabelle.  
+ Negli esempi seguenti vengono illustrati due modi per eliminare righe di una tabella in base ai dati di un'altra tabella. In entrambi gli esempi le righe della tabella `SalesPersonQuotaHistory` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] vengono eliminate in base alle vendite da inizio anno archiviate nella tabella `SalesPerson`. La prima istruzione `DELETE` illustra la soluzione di sottoquery compatibile con ISO, mentre la seconda istruzione `DELETE` illustra l'estensione FROM [!INCLUDE[tsql](../../includes/tsql-md.md)] per creare un join tra le due tabelle.  
   
 ```  
 -- SQL-2003 Standard subquery  
@@ -320,7 +320,7 @@ DELETE spqh
 ```  
   
 #### <a name="e-using-top-to-limit-the-number-of-rows-deleted"></a>E. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando TOP (*n*) clausola viene utilizzata con DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di  *n*  numero di righe. L'esempio seguente elimina `20` righe casuali il `PurchaseOrderDetail` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database contenenti scadenze date precedenti al 1 ° luglio 2006.  
+ Quando si usa una clausola TOP (*n*) con l'istruzione DELETE, l'operazione di eliminazione viene eseguita su una selezione casuale di un numero di righe *n*. Nell'esempio seguente vengono eliminate `20` righe casuali della tabella `PurchaseOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] che contengono date di scadenza precedenti alla data 1 luglio 2006.  
   
 ```  
 DELETE TOP (20)   
@@ -340,13 +340,13 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-###  <a name="RemoteTables"></a>Eliminazione di righe da una tabella remota  
- Negli esempi riportati in questa sezione viene illustrato come eliminare righe da una tabella remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o [funzione rowset](../../t-sql/functions/rowset-functions-transact-sql.md) fare riferimento alla tabella remota. Esiste una tabella remota in un server diverso o un'istanza di SQL Server.  
+###  <a name="RemoteTables"></a> Eliminazione di righe da una tabella remota  
+ Negli esempi riportati in questa sezione viene illustrato come eliminare righe da una tabella remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota. Esiste una tabella remota in un server diverso o un'istanza di SQL Server.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 #### <a name="f-deleting-data-from-a-remote-table-by-using-a-linked-server"></a>F. Eliminazione di dati da una tabella remota tramite un server collegato  
- Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia creando un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene quindi specificato come parte del nome dell'oggetto in quattro parti nel formato *Object*.  
+ Nell'esempio seguente vengono eliminate righe da una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
   
 ```  
 USE master;  
@@ -372,7 +372,7 @@ GO
 ```  
   
 #### <a name="g-deleting-data-from-a-remote-table-by-using-the-openquery-function"></a>G. Eliminazione di dati da una tabella remota tramite una funzione OPENQUERY  
- Nell'esempio seguente elimina le righe da una tabella remota specificando la [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) funzione set di righe. Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
+ Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md). Viene utilizzato il nome del server collegato creato nell'esempio precedente.  
   
 ```  
 DELETE OPENQUERY (MyLinkServer, 'SELECT Name, GroupName 
@@ -382,7 +382,7 @@ GO
 ```  
   
 #### <a name="h-deleting-data-from-a-remote-table-by-using-the-opendatasource-function"></a>H. Eliminazione di dati da una tabella remota tramite una funzione OPENDATASOURCE  
- Nell'esempio seguente elimina le righe da una tabella remota specificando la [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) funzione set di righe. Specificare un nome server valido per l'origine dati utilizzando il formato *nome_server* o *server_name\instance_name*.  
+ Nell'esempio seguente vengono eliminate righe da una tabella remota specificando la funzione per i set di righe [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md). Specificare un nome server valido per l'origine dati usando il formato *nome_server* oppure *nome_server\nome_istanza*.  
   
 ```  
 DELETE FROM OPENDATASOURCE('SQLNCLI',  
@@ -391,10 +391,10 @@ DELETE FROM OPENDATASOURCE('SQLNCLI',
 WHERE DepartmentID = 17;'  
 ```  
   
-###  <a name="CaptureResults"></a>Acquisizione dei risultati dell'istruzione DELETE  
+###  <a name="CaptureResults"></a> Acquisizione dei risultati dell'istruzione DELETE  
   
 #### <a name="i-using-delete-with-the-output-clause"></a>I. Utilizzo di DELETE con la clausola OUTPUT  
- Nell'esempio seguente viene illustrato come salvare i risultati di una `DELETE` istruzione a una variabile di tabella nel [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
+ Nell'esempio seguente viene illustrato come salvare i risultati di un'istruzione `DELETE` in una variabile di tabella nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
 DELETE Sales.ShoppingCartItem  
@@ -409,7 +409,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Utilizzo di OUTPUT con <from_table_name> in un'istruzione DELETE  
- L'esempio seguente elimina le righe il `ProductProductPhoto` tabella il [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database basato su criteri di ricerca definiti nel `FROM` clausola del `DELETE` istruzione. La clausola `OUTPUT` restituisce le colonne della tabella che si desidera eliminare, `DELETED.ProductID`, `DELETED.ProductPhotoID`e alcune colonne della tabella `Product` . Queste informazioni vengono utilizzate nella clausola `FROM` per specificare le righe da eliminare.  
+ Nell'esempio seguente vengono eliminate alcune righe della tabella `ProductProductPhoto` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] in base ai criteri di ricerca definiti nella clausola `FROM` dell'istruzione `DELETE`. La clausola `OUTPUT` restituisce le colonne della tabella che si desidera eliminare, `DELETED.ProductID`, `DELETED.ProductPhotoID`e alcune colonne della tabella `Product` . Queste informazioni vengono utilizzate nella clausola `FROM` per specificare le righe da eliminare.  
   
 ```  
 DECLARE @MyTableVar table (  
@@ -436,25 +436,25 @@ ORDER BY ProductModelID;
 GO  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="k-delete-all-rows-from-a-table"></a>K. Eliminare tutte le righe da una tabella  
+### <a name="k-delete-all-rows-from-a-table"></a>K. Eliminare tutte le righe di una tabella  
  Nell'esempio seguente vengono eliminate tutte le righe dalla tabella `Table1` perché non viene utilizzata una clausola WHERE per limitare il numero di righe eliminate.  
   
 ```  
 DELETE FROM Table1;  
 ```  
   
-### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. ELIMINARE un set di righe da una tabella  
- L'esempio seguente elimina tutte le righe di `Table1` tabella che dispone di un valore maggiore di 1000.00 nel `StandardCost` colonna.  
+### <a name="l-delete-a-set-of-rows-from-a-table"></a>L. Eliminare un set di righe di una tabella  
+ Nell'esempio seguente vengono eliminate dalla tabella `Table1` tutte le righe in cui il valore della colonna `StandardCost` è maggiore di 1000,00.  
   
 ```  
 DELETE FROM Table1  
 WHERE StandardCost > 1000.00;  
 ```  
   
-### <a name="m-using-label-with-a-delete-statement"></a>M. Utilizzo di etichetta con un'istruzione DELETE  
- L'esempio seguente usa un'etichetta con l'istruzione DELETE.  
+### <a name="m-using-label-with-a-delete-statement"></a>M. Uso di LABEL con un'istruzione DELETE  
+ Nell'esempio seguente viene usata un'etichetta con l'istruzione DELETE.  
   
 ```  
 DELETE FROM Table1  
@@ -462,8 +462,8 @@ OPTION ( LABEL = N'label1' );
   
 ```  
   
-### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Utilizzo di un'etichetta e un hint per la query con l'istruzione DELETE  
- Questa query Mostra la sintassi di base per l'utilizzo di un hint di join della query con l'istruzione DELETE. Per ulteriori informazioni sull'hint di join e come utilizzare la clausola OPTION, vedere [opzione (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
+### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Uso di un'etichetta e di un hint per la query con l'istruzione DELETE  
+ Questa query illustra la sintassi di base per l'uso di un hint di join per la query con l'istruzione DELETE. Per altre informazioni sugli hint di join e su come usare la clausola OPTION, vedere [OPTION (SQL Server PDW)](http://msdn.microsoft.com/en-us/72bbce98-305b-42fa-a19f-d89620621ecc).  
   
 ```  
 -- Uses AdventureWorks  
@@ -481,9 +481,9 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [Istruzione TRUNCATE TABLE &#40; Transact-SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
+ [TRUNCATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [CON common_table_expression &#40; Transact-SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   

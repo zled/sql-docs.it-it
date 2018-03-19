@@ -1,7 +1,7 @@
 ---
 title: GRANT - autorizzazioni per database (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9ba4b5f1200a3280418304bda6c0fbc5e2d3fafd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ff1650f0db79758aaff5dac37d0964807aafd2
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT - autorizzazioni per database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,8 @@ permission | ALL [ PRIVILEGES ]
   | Database_user_with_no_login    
 ```  
   
-## <a name="arguments"></a>Argomenti  
+## <a name="arguments"></a>Argomenti
+
  *permission*  
  Specifica un'autorizzazione che può essere concessa per un database. Per un elenco delle autorizzazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
@@ -75,7 +76,7 @@ permission | ALL [ PRIVILEGES ]
  WITH GRANT OPTION  
  Indica che l'entità potrà inoltre concedere l'autorizzazione specificata ad altre entità.  
   
- AS \<database_principal> specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
+ AS \<database_principal> Specifica un'entità dalla quale l'entità che esegue la query ottiene il diritto di concedere l'autorizzazione.  
   
  *Database_user*  
  Specifica un utente di database.  
@@ -111,10 +112,10 @@ permission | ALL [ PRIVILEGES ]
  *Database_user_with_no_login*  
  Specifica un utente del database per cui non esiste un'entità corrispondente a livello del server.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Remarks
   
 > [!IMPORTANT]  
->  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può ad esempio creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.  
+>  Una combinazione di autorizzazioni ALTER e REFERENCE potrebbe consentire in alcuni casi al beneficiario di visualizzare dati o eseguire funzioni non autorizzate. Un utente con autorizzazione ALTER per una tabella e autorizzazione REFERENCE per una funzione può ad esempio creare una colonna calcolata su una funzione e determinarne l'esecuzione. In questo caso, è inoltre necessario disporre dell'autorizzazione SELECT per la colonna calcolata.
   
  Un database è un'entità a protezione diretta contenuta nel server padre nella gerarchia delle autorizzazioni. Nella tabella seguente sono elencate le autorizzazioni più specifiche e limitate che è possibile concedere per un database, insieme alle autorizzazioni più generali che le includono in modo implicito.  
   
@@ -157,6 +158,7 @@ permission | ALL [ PRIVILEGES ]
 |CONNECT REPLICATION|CONTROL|CONTROL SERVER|  
 |CONTROL|CONTROL|CONTROL SERVER|  
 |CREATE AGGREGATE|ALTER|CONTROL SERVER|  
+|CREATE ANY EXTERNAL LIBRARY <br /> **Si applica a**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].|CONTROL|CONTROL SERVER |    
 |CREATE ASSEMBLY|ALTER ANY ASSEMBLY|CONTROL SERVER|  
 |CREATE ASYMMETRIC KEY|ALTER ANY ASYMMETRIC KEY|CONTROL SERVER|  
 |CREATE CERTIFICATE|ALTER ANY CERTIFICATE|CONTROL SERVER|  

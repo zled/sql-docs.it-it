@@ -1,5 +1,5 @@
 ---
-title: table_constraint (Transact-SQL) | Documenti Microsoft
+title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/21/2017
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Specifica le proprietà di una definizione DEFAULT aggiunta a una tabella tramite, un vincolo CHECK, FOREIGN KEY, UNIQUE o una chiave primaria [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
+  Specifica le proprietà di un vincolo PRIMARY KEY, UNIQUE, FOREIGN KEY, CHECK oppure di una definizione DEFAULT aggiunta a una tabella usando [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/21/2017
  Specifica l'inizio di una definizione di un vincolo PRIMARY KEY, UNIQUE, FOREIGN KEY o CHECK oppure di una definizione DEFAULT.  
   
  *constraint_name*  
- Nome del vincolo. I nomi di vincolo devono seguire le regole per [identificatori](../../relational-databases/databases/database-identifiers.md), ad eccezione del fatto che il nome non può iniziare con un simbolo di cancelletto (#). Se constraint_name viene omesso, al vincolo viene assegnato un nome generato dal sistema.  
+ Nome del vincolo. I nomi di vincolo devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md), con l'eccezione che il nome non può iniziare con il simbolo di cancelletto (#). Se constraint_name viene omesso, al vincolo viene assegnato un nome generato dal sistema.  
   
  PRIMARY KEY  
  Vincolo che impone l'integrità di entità per una o più colonne specificate tramite un indice univoco. È possibile creare un solo vincolo PRIMARY KEY per ogni tabella.  
@@ -78,26 +78,26 @@ ms.lasthandoff: 11/21/2017
   
  Se in una tabella esiste già un vincolo o un indice cluster, non è possibile specificare l'opzione CLUSTERED. In questo caso, inoltre, i vincoli PRIMARY KEY sono impostati su NONCLUSTERED.  
   
- Colonne di **ntext**, **testo**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o **immagine** tipi di dati non possono essere specificati come colonne di un indice.  
+ Le colonne con tipo di dati **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** o **image** non possono essere specificate come colonne di un indice.  
   
- *colonna*  
+ *column*  
  Colonna o elenco di colonne tra parentesi utilizzate in un nuovo vincolo.  
   
- [ **ASC** | DESC]  
+ [ **ASC** | DESC ]  
  Specifica l'ordinamento della colonna o delle colonne che fanno parte dei vincoli di tabella. Il valore predefinito è ASC.  
   
- CON valore FILLFACTOR  **=**  *fattore di riempimento*  
- Specifica la percentuale utilizzata da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per riempire ogni pagina dell'indice utilizzata per archiviare dati dell'indice. Specificato dall'utente *fillfactor* valori possono essere compresi tra 1 e 100. Se non viene specificato alcun valore, il valore predefinito è 0.  
+ WITH FILLFACTOR **=***fillfactor*  
+ Specifica la percentuale utilizzata da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per riempire ogni pagina dell'indice utilizzata per archiviare dati dell'indice. I valori per *fillfactor* specificati dall'utente possono essere compresi tra 1 e 100. Se non viene specificato alcun valore, il valore predefinito è 0.  
   
 > [!IMPORTANT]  
->  Documentazione con FILLFACTOR = *fillfactor* come l'unica opzione di indice che si applica ai vincoli PRIMARY KEY o UNIQUE viene mantenuto per compatibilità con le versioni precedenti, ma non sarà più documentata in futuro in questo modo rilascia. È possono specificare altre opzioni di indice di [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) clausola dell'istruzione ALTER TABLE.  
+>  WITH FILLFACTOR = *fillfactor* è documentata come unica opzione di indice per i vincoli PRIMARY KEY o UNIQUE solo per motivi di compatibilità con le versioni precedenti. Non sarà più documentata in questo senso nelle versioni future. È possibile specificare altre opzioni di indice nella clausola [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) di ALTER TABLE.  
   
- ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup* |  **"**predefinito**"** }  
+ ON { *partition_scheme_name***(***partition_column_name***)** | *filegroup*| **"**default**"** }  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Specifica il percorso di archiviazione dell'indice creato per il vincolo. Se *partition_scheme_name* è specificato, l'indice viene partizionato e le partizioni vengono eseguito il mapping ai filegroup specificati da *partition_scheme_name*. Se *filegroup* viene specificato, viene creato l'indice nel filegroup specificato. Se **"**predefinito**"** è specificato o se ON non è specificato, l'indice viene creato nello stesso filegroup della tabella. Se si specifica ON quando si aggiunge un indice cluster per un vincolo PRIMARY KEY o UNIQUE, l'intera tabella viene spostata nel filegroup specificato durante la creazione dell'indice cluster.  
+ Specifica il percorso di archiviazione dell'indice creato per il vincolo. Se si specifica *partition_scheme_name*, l'indice viene partizionato e per le partizioni viene eseguito il mapping ai filegroup specificati da *partition_scheme_name*. Se si specifica *filegroup*, l'indice viene creato nel filegroup specificato. Se si specifica **"**default**"** o si omette ON, l'indice viene creato nello stesso filegroup della tabella. Se si specifica ON quando si aggiunge un indice cluster per un vincolo PRIMARY KEY o UNIQUE, l'intera tabella viene spostata nel filegroup specificato durante la creazione dell'indice cluster.  
   
- In questo contesto, default non è una parola chiave. è un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio ON **"**predefinito**"** oppure ON **[**predefinito**]**. Se **"**predefinito**"** viene specificato, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita.  
+ In questo contesto, default non è una parola chiave bensì un identificatore del filegroup predefinito e deve essere delimitato, come in ON **"**default**"** o ON **[**default**]**. Se si specifica **"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita.  
   
  FOREIGN KEY REFERENCES  
  Vincolo che impone l'integrità referenziale per i dati nella colonna. Per i vincoli FOREIGN KEY è necessario che ogni valore della colonna esista nella colonna specificata della tabella a cui viene fatto riferimento.  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/21/2017
  *ref_column*  
  Colonna o elenco di colonne tra parentesi a cui fa riferimento il nuovo vincolo FOREIGN KEY.  
   
- ELIMINAZIONE { **ALCUNA AZIONE** | CASCADE | SET NULL | IMPOSTAZIONE DEL VALORE PREDEFINITO}  
+ ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  Specifica quale azione si verifica nelle righe della tabella che viene modificata se tali righe includono una relazione referenziale e se la riga a cui viene fatto riferimento viene eliminata dalla tabella padre. Il valore predefinito è NO ACTION.  
   
  NO ACTION  
@@ -127,13 +127,13 @@ ms.lasthandoff: 11/21/2017
   
  Non è possibile definire ON DELETE CASCADE se esiste già un trigger INSTEAD OF per ON DELETE nella tabella che viene modificata.  
   
- Ad esempio, nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, il **ProductVendor** tabella ha una relazione referenziale con la **fornitore** tabella. Il **ProductVendor** riferimenti di chiave esterna di **vendorID** chiave primaria.  
+ Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ad esempio, la tabella **ProductVendor** ha una relazione referenziale con la tabella **Vendor**. La chiave esterna **ProductVendor.VendorID** fa riferimento alla chiave primaria **Vendor.VendorID**.  
   
- Se viene eseguita un'istruzione DELETE in una riga il **fornitore** tabella e un'azione ON DELETE CASCADE viene specificata per **ProductVendor**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica la presenza di uno o più righe dipendenti di **ProductVendor** tabella. Le eventuali righe dipendenti nella **ProductVendor** tabella verrà eliminata assieme alla riga a cui fa riferimento il **fornitore** tabella.  
+ Se viene eseguita un'istruzione DELETE in una riga della tabella **Vendor** e viene specificata un'azione ON DELETE CASCADE per **ProductVendor.VendorID**, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se esistono una o più righe dipendenti nella tabella **ProductVendor**. In caso affermativo, le righe dipendenti della tabella **ProductVendor** vengono eliminate, oltre alla riga a cui viene fatto riferimento nella tabella **Vendor**.  
   
- Al contrario, se si specifica NO ACTION, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore ed eseguire il rollback dell'azione di eliminazione **fornitore** riga quando esiste almeno una riga nel **ProductVendor** tabella cui fa riferimento.  
+ Al contrario, se viene specificato NO ACTION, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore ed esegue il rollback dell'azione di eliminazione per la riga della tabella **Vendor** quando esiste almeno una riga nella tabella **ProductVendor** che vi fa riferimento.  
   
- AGGIORNAMENTO { **ALCUNA AZIONE** | CASCADE | SET NULL | IMPOSTAZIONE DEL VALORE PREDEFINITO}  
+ ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
  Specifica l'azione eseguita nelle righe della tabella modificata se tali righe includono una relazione referenziale e la riga a cui viene fatto riferimento è stata aggiornata nella tabella padre. Il valore predefinito è NO ACTION.  
   
  NO ACTION  
@@ -152,11 +152,11 @@ ms.lasthandoff: 11/21/2017
   
  Non è possibile specificare ON UPDATE CASCADE, SET NULL o SET DEFAULT se nella tabella che viene modificata esiste già un trigger INSTEAD OF per ON UPDATE.  
   
- Ad esempio, nel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database, il **ProductVendor** tabella ha una relazione referenziale con la **fornitore** tabella. Il **ProductVendor** riferimenti di chiave esterna di **vendorID** chiave primaria.  
+ Nel database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], ad esempio, la tabella **ProductVendor** ha una relazione referenziale con la tabella **Vendor**. La chiave esterna **ProductVendor.VendorID** fa riferimento alla chiave primaria **Vendor.VendorID**.  
   
- Se viene eseguita un'istruzione UPDATE in una riga il **fornitore** tabella e un'azione ON UPDATE CASCADE viene specificata per **ProductVendor**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica la presenza di uno o più righe dipendenti di **ProductVendor** tabella. Eventuale riga dipendente nella **ProductVendor** tabella verrà aggiornata, insieme alla riga a cui fa riferimento il **fornitore** tabella.  
+ Se viene eseguita un'istruzione UPDATE in una riga della tabella **Vendor** e viene specificata un'azione ON UPDATE CASCADE per **ProductVendor.VendorID**, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica se esistono una o più righe dipendenti nella tabella **ProductVendor**. L'eventuale riga dipendente individuata nella tabella **ProductVendor** viene aggiornata insieme alla riga a cui viene fatto riferimento nella tabella **Vendor**.  
   
- Al contrario, se si specifica NO ACTION, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore ed eseguire il rollback dell'azione di aggiornamento **fornitore** riga quando esiste almeno una riga nel **ProductVendor** tabella cui fa riferimento.  
+ Al contrario, se si specifica NO ACTION, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore e viene eseguito il rollback dell'azione di aggiornamento nella riga **Vendor** quando esiste almeno una riga nella tabella **ProductVendor** che fa riferimento a essa.  
   
  NOT FOR REPLICATION  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -164,30 +164,30 @@ ms.lasthandoff: 11/21/2017
  Questa clausola può essere specificata per i vincoli FOREIGN KEY e CHECK. Se per un vincolo si specifica questa clausola, il vincolo non viene imposto quando gli agenti di replica eseguono le operazioni di inserimento, aggiornamento o eliminazione.  
   
  DEFAULT  
- Specifica il valore predefinito per la colonna. Le definizioni DEFAULT possono essere utilizzate per assegnare valori a una nuova colonna nelle righe di dati esistenti. Non è possibile aggiungere le definizioni DEFAULT alle colonne che contengono un **timestamp** tipo di dati, una proprietà IDENTITY, una definizione DEFAULT esistente o un valore predefinito associato. Se alla colonna è associato un valore predefinito, è necessario rimuoverlo prima di aggiungere il nuovo valore predefinito. Se è specificato un valore predefinito per una colonna di tipo definito dall'utente, il tipo deve supportare una conversione implicita da *constant_expression* per il tipo definito dall'utente. Per garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile assegnare un nome di vincolo a una definizione DEFAULT.  
+ Specifica il valore predefinito per la colonna. Le definizioni DEFAULT possono essere utilizzate per assegnare valori a una nuova colonna nelle righe di dati esistenti. Non è possibile aggiungere definizioni DEFAULT a colonne che hanno un tipo di dati **timestamp**, una proprietà IDENTITY, una definizione DEFAULT esistente o un valore predefinito associato. Se alla colonna è associato un valore predefinito, è necessario rimuoverlo prima di aggiungere il nuovo valore predefinito. Se si specifica un valore predefinito per una colonna di tipo definito dall'utente, il tipo deve supportare la conversione implicita da *constant_expression* nel tipo definito dall'utente. Per garantire la compatibilità con le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile assegnare un nome di vincolo a una definizione DEFAULT.  
   
  *constant_expression*  
- Valore letterale, valore Null o funzione di sistema utilizzato come valore predefinito della colonna. Se *constant_expression* viene utilizzata in combinazione con una colonna definita per essere di un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definito dall'utente, l'implementazione del tipo deve supportare una conversione implicita dal *constant_ espressione* per il tipo definito dall'utente.  
+ Valore letterale, valore Null o funzione di sistema utilizzato come valore predefinito della colonna. Se la funzione *constant_expression* viene usata insieme a una colonna definita come tipo definito dall'utente di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l'implementazione del tipo deve supportare una conversione implicita da *constant_expression* nel tipo definito dall'utente.  
   
- PER *colonna*  
+ FOR *column*  
  Specifica la colonna associata a una definizione DEFAULT a livello di tabella.  
   
  WITH VALUES  
- Specifica che il valore predefinito fornito *constant_expression* viene archiviato in una nuova colonna che viene aggiunto alle righe esistenti. È possibile specificare la clausola WITH VALUES solo quando viene specificato DEFAULT in una clausola ADD di colonna. Se la colonna aggiunta ammette valori Null e viene specificata la clausola WITH VALUES, il valore predefinito viene archiviato nella nuova colonna aggiunta alle righe esistenti. Se per le colonne che ammettono valori Null la clausola WITH VALUES non viene specificata, il valore NULL viene archiviato nella nuova colonna nelle righe esistenti. Se la nuova colonna non ammette valori Null, il valore predefinito viene archiviato nelle nuove righe, indipendentemente dal fatto che la clausola WITH VALUES sia o meno specificata.  
+ Specifica che il valore assegnato in DEFAULT *constant_expression* viene archiviato in una nuova colonna aggiunta alle righe esistenti. È possibile specificare la clausola WITH VALUES solo quando viene specificato DEFAULT in una clausola ADD di colonna. Se la colonna aggiunta ammette valori Null e viene specificata la clausola WITH VALUES, il valore predefinito viene archiviato nella nuova colonna aggiunta alle righe esistenti. Se per le colonne che ammettono valori Null la clausola WITH VALUES non viene specificata, il valore NULL viene archiviato nella nuova colonna nelle righe esistenti. Se la nuova colonna non ammette valori Null, il valore predefinito viene archiviato nelle nuove righe, indipendentemente dal fatto che la clausola WITH VALUES sia o meno specificata.  
   
  CHECK  
  Vincolo che impone l'integrità di dominio tramite la limitazione dei valori che è possibile inserire in una o più colonne.  
   
- *Logical_Expression*  
- Espressione logica utilizzata in un vincolo CHECK che restituisce TRUE o FALSE. *Logical_Expression* utilizzato con vincoli CHECK non può fare riferimento a un'altra tabella ma può fare riferimento altre colonne nella stessa tabella per la stessa riga. L'espressione non può fare riferimento a un tipo di dati alias.  
+ *logical_expression*  
+ Espressione logica utilizzata in un vincolo CHECK che restituisce TRUE o FALSE. Se usata con vincoli CHECK, *logical_expression* non può fare riferimento a un'altra tabella, ma può fare riferimento ad altre colonne nella stessa tabella per la stessa riga. L'espressione non può fare riferimento a un tipo di dati alias.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si aggiungono vincoli FOREIGN KEY o CHECK, in tutti i dati esistenti viene verificata la presenza di eventuali violazioni dei vincoli, a meno che non venga specificata l'opzione WITH NOCHECK. Se si verificano violazioni, l'istruzione ALTER TABLE ha esito negativo e viene restituito un errore. Quando si aggiunge un nuovo vincolo PRIMARY KEY o UNIQUE a colonne esistenti, i dati delle colonne devono essere univoci. Se vengono individuati valori duplicati, l'istruzione ALTER TABLE ha esito negativo. L'opzione WITH NOCHECK non ha alcun effetto quando si aggiungono vincoli PRIMARY KEY o UNIQUE.  
   
  Ogni vincolo PRIMARY KEY e UNIQUE genera un indice. Il numero di vincoli UNIQUE e PRIMARY KEY non deve generare un numero di indici della tabella maggiore di 999 nel caso di indici non cluster e maggiore di 1 nel caso di indici cluster. I vincoli di chiave esterna non generano automaticamente un indice. Le colonne chiave esterna, tuttavia, vengono in genere utilizzate in criteri di join nelle query confrontando le colonne nel vincolo di chiave esterna di una tabella con le colonne chiave primaria o univoca nell'altra tabella. Un indice nelle colonne chiave esterna consente a [!INCLUDE[ssDE](../../includes/ssde-md.md)] di trovare rapidamente i dati correlati nella tabella della chiave esterna.  
   
 ## <a name="examples"></a>Esempi  
- Per esempi, vedere [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md).  
+ Per esempi, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

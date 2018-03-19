@@ -1,5 +1,5 @@
 ---
-title: CREATE VIEW (Transact-SQL) | Documenti Microsoft
+title: CREATE VIEW (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
@@ -95,10 +95,10 @@ AS <select_statement>
 ```  
   
 ## <a name="arguments"></a>Argomenti
-O ALTER  
+OR ALTER  
  **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   
- Consente di modificare la visualizzazione in modo condizionale solo se esiste già. 
+ Modifica in modo condizionale la vista solo se esiste già. 
  
  *schema_name*  
  Nome dello schema a cui appartiene la vista.  
@@ -106,13 +106,13 @@ O ALTER
  *view_name*  
  Nome della vista. I nomi di vista devono essere conformi alle regole per gli identificatori. Il nome del proprietario della vista è facoltativo.  
   
- *colonna*  
+ *column*  
  Nome da assegnare a una colonna della vista. Il nome della colonna è necessario solo quando una colonna deriva da un'espressione aritmetica, una funzione o una costante, quando due o più colonne potrebbero altrimenti avere lo stesso nome (in genere a causa di un join) oppure quando a una colonna di una vista viene assegnato un nome diverso rispetto alla colonna da cui deriva. È inoltre possibile assegnare nomi di colonna nell'istruzione SELECT.  
   
- Se *colonna* non viene specificato, le colonne della vista acquisiscono gli stessi nomi delle colonne nell'istruzione SELECT.  
+ Se *column* viene omesso, le colonne della vista acquisiscono gli stessi nomi delle colonne dell'istruzione SELECT.  
   
 > [!NOTE]  
->  Nelle colonne di una vista, le autorizzazioni assegnate per un nome di colonna rimangono valide tra istruzioni CREATE VIEW e ALTER VIEW, indipendentemente dall'origine dei dati sottostanti. Ad esempio, se vengono concesse autorizzazioni per il **SalesOrderID** colonna in un'istruzione CREATE VIEW, un'istruzione ALTER VIEW può assegnare un nome di **SalesOrderID** colonna con un nome di colonna diversi, ad esempio **OrderRef**e mantenere comunque le autorizzazioni associate alla vista che utilizza **SalesOrderID**.  
+>  Nelle colonne di una vista, le autorizzazioni assegnate per un nome di colonna rimangono valide tra istruzioni CREATE VIEW e ALTER VIEW, indipendentemente dall'origine dei dati sottostanti. Se, ad esempio, vengono concesse autorizzazioni per la colonna **SalesOrderID** in un'istruzione CREATE VIEW, un'istruzione ALTER VIEW può assegnare alla colonna **SalesOrderID** un nome diverso, ad esempio **OrderRef**, e mantenere le autorizzazioni associate alla vista che usa **SalesOrderID**.  
   
  AS  
  Specifica le operazioni che la vista deve eseguire.  
@@ -137,23 +137,23 @@ O ALTER
   
 -   Un riferimento a una tabella temporanea o a una variabile di tabella  
   
- Poiché *select_statement* utilizza l'istruzione SELECT, è possibile utilizzare \<join_hint > e \<table_hint > hint come specificato nella clausola FROM. Per ulteriori informazioni, vedere [FROM &#40; Transact-SQL &#41; ](../../t-sql/queries/from-transact-sql.md) e [SELECT &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md). 
+ Poiché *select_statement* usa l'istruzione SELECT, è possibile usare gli hint \<join_hint> e \<table_hint> come specificato nella clausola FROM. Per altre informazioni, vedere [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) e [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md). 
   
- Funzioni e più istruzioni SELECT separate dall'operatore UNION o UNION ALL possono essere utilizzate *select_statement*.  
+ In *select_statement* è possibile usare funzioni e più istruzioni SELECT separate dall'operatore UNION o UNION ALL.  
   
  CHECK OPTION  
- Impone a tutte le istruzioni di modifica dei dati eseguite sulla vista di soddisfare i criteri impostati nel *select_statement*. Quando una riga viene modificata tramite una vista, la clausola WITH CHECK OPTION assicura che i dati rimangano visibili nella vista dopo il commit della modifica.  
+ Forza il rispetto del set di criteri specificato in *select_statement* per tutte le istruzioni di modifica dei dati eseguite sulla vista. Quando una riga viene modificata tramite una vista, la clausola WITH CHECK OPTION assicura che i dati rimangano visibili nella vista dopo il commit della modifica.  
   
 > [!NOTE]  
 >  Tutti gli aggiornamenti eseguiti direttamente sulle tabelle sottostanti di una vista non vengono verificati in base alla vista, anche se la clausola CHECK OPTION è specificata.  
   
  ENCRYPTION  
- **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+ **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Crittografa le voci nella [Sys. syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) che contengono il testo dell'istruzione CREATE VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
+ Esegue la crittografia delle voci della tabella [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) contenenti il testo dell'istruzione CREATE VIEW. Se si utilizza WITH ENCRYPTION, la vista non viene pubblicata nell'ambito della replica di SQL Server.  
   
  SCHEMABINDING  
- Associa la vista allo schema della tabella o delle tabelle sottostanti. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare alla tabella o alle tabelle di base modifiche che hanno effetto sulla definizione della vista. È necessario prima modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si utilizza SCHEMABINDING, il *select_statement* deve includere i nomi di due parti (*schema***.** *oggetto*) di tabelle, viste o funzioni definite dall'utente a cui fa riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
+ Associa la vista allo schema della tabella o delle tabelle sottostanti. Quando la clausola SCHEMABINDING viene specificata, non è possibile apportare alla tabella o alle tabelle di base modifiche che hanno effetto sulla definizione della vista. È necessario prima modificare o eliminare la definizione della vista per rimuovere le dipendenze dalla tabella da modificare. Quando si usa SCHEMABINDING, l'argomento *select_statement* deve includere i nomi composti da due parti (*schema***.***object*) delle tabelle, delle viste o delle funzioni definite dall'utente a cui viene fatto riferimento. Tutti gli oggetti a cui viene fatto riferimento devono essere presenti nello stesso database.  
   
  Le viste o le tabelle che fanno parte di una vista creata con la clausola SCHEMABINDING non possono essere eliminate, a meno che la vista non venga eliminata o modificata in modo che non sia più associata a uno schema. In caso contrario, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene generato un errore. Inoltre, l'esecuzione di istruzioni ALTER TABLE su tabelle che fanno parte di viste associate a schema ha esito negativo se tali istruzioni modificano la definizione della vista.  
   
@@ -162,20 +162,20 @@ O ALTER
   
  Per le viste create con VIEW_METADATA, i metadati in modalità browse restituiscono il nome della vista anziché i nomi delle tabelle di base nella descrizione delle colonne della vista nel set di risultati.  
   
- Quando viene creata una vista con WITH VIEW_METADATA, tutte le relative colonne, tranne una **timestamp** , sono aggiornabili se la vista dispone di INSTEAD OF INSERT o i trigger INSTEAD OF UPDATE. Per ulteriori informazioni sulle viste aggiornabili, vedere la sezione Osservazioni.  
+ Quando si crea una vista con la clausola WITH VIEW_METADATA, tutte le relative colonne, escluse quelle di tipo **timestamp**, sono aggiornabili se la vista include trigger INSTEAD OF INSERT o INSTEAD OF UPDATE. Per ulteriori informazioni sulle viste aggiornabili, vedere la sezione Osservazioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile creare una vista solo nel database corrente. CREATE VIEW deve essere la prima istruzione di un batch di query. Una vista può includere al massimo 1.024 colonne.  
   
  Quando si esegue una query tramite una vista, [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifica che tutti gli oggetti di database a cui viene fatto riferimento nell'istruzione esistano e siano validi nel contesto dell'istruzione e che le istruzioni di modifica dei dati non violino le regole di integrità dei dati. Se la verifica ha esito negativo, viene visualizzato un messaggio di errore. In caso contrario, l'azione viene convertita automaticamente in un'operazione sulla tabella o sulle tabelle sottostanti.  
   
  Se si tenta di utilizzare una vista che dipende da una tabella o una vista eliminata, [!INCLUDE[ssDE](../../includes/ssde-md.md)] visualizza un messaggio di errore. Se viene creata una nuova tabella o vista per sostituire quella eliminata e la struttura della nuova tabella non è diversa rispetto alla tabella di base precedente, la vista risulta di nuovo utilizzabile. Se la struttura della nuova tabella o vista è diversa, la vista deve essere eliminata e ricreata.  
   
- Se non è possibile creare una vista con la clausola SCHEMABINDING, [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) deve essere eseguito quando vengono apportate modifiche agli oggetti sottostanti la vista che influiscono sulla definizione della vista. In caso contrario, le query sulla vista possono generare risultati imprevisti.  
+ Se una vista non viene creata tramite la clausola SCHEMABINDING, è consigliabile eseguire [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) quando vengono apportate modifiche agli oggetti sottostanti la vista che influiscono sulla definizione di tale vista. In caso contrario, le query sulla vista possono generare risultati imprevisti.  
   
- Quando viene creata una vista, informazioni sulla visualizzazione vengono archiviate nelle viste del catalogo seguenti: [Sys. Views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [Columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), e [Sys. sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Il testo dell'istruzione CREATE VIEW viene archiviato nel [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vista del catalogo.  
+ Quando si crea una vista, le relative informazioni vengono archiviate nelle viste del catalogo seguenti: [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) e [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md). Il testo dell'istruzione CREATE VIEW viene archiviato nella vista del catalogo [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md).  
   
- Una query che utilizza un indice su una vista definita con **numerico** o **float** espressioni possono generare un risultato diverso da una query simile che non utilizza l'indice sulla vista. Tale differenza può essere dovuta a errori di arrotondamento generati durante l'esecuzione di operazioni INSERT, DELETE o UPDATE sulle tabelle sottostanti.  
+ Una query che usa un indice su una vista definita tramite espressioni **numeric** o **float** può generare un risultato diverso rispetto a una query simile che non usa l'indice sulla vista. Tale differenza può essere dovuta a errori di arrotondamento generati durante l'esecuzione di operazioni INSERT, DELETE o UPDATE sulle tabelle sottostanti.  
   
  In [!INCLUDE[ssDE](../../includes/ssde-md.md)] le impostazioni delle opzioni SET QUOTED_IDENTIFIER e SET ANSI_NULLS vengono salvate in fase di creazione di una vista. Queste impostazioni originali vengono utilizzate per analizzare la vista quando viene utilizzata. Pertanto, tutte le impostazioni di sessione del client per SET QUOTED_IDENTIFIER e SET ANSI_NULLS non hanno effetto sulla definizione della vista durante l'accesso alla vista.  
   
@@ -192,15 +192,15 @@ O ALTER
   
 -   Le colonne da modificare non sono interessate da clausole GROUP BY, HAVING o DISTINCT.  
   
--   Clausola TOP non viene utilizzata in un punto qualsiasi nel *select_statement* della vista in combinazione con la clausola WITH CHECK OPTION.  
+-   La clausola TOP non può essere usata in tutte le posizioni dell'argomento *select_statement* della vista in combinazione con la clausola WITH CHECK OPTION.  
   
- Le restrizioni sopra indicate sono valide sia per qualsiasi sottoquery nella clausola FROM della vista sia per la vista stessa. In genere, [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere in grado di tracciare senza ambiguità le modifiche dalla definizione della vista a una tabella di base. Per ulteriori informazioni, vedere [modificare dati tramite una vista](../../relational-databases/views/modify-data-through-a-view.md).  
+ Le restrizioni sopra indicate sono valide sia per qualsiasi sottoquery nella clausola FROM della vista sia per la vista stessa. In genere, [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve essere in grado di tracciare senza ambiguità le modifiche dalla definizione della vista a una tabella di base. Per altre informazioni, vedere [Modificare i dati tramite una vista](../../relational-databases/views/modify-data-through-a-view.md).  
   
  Se le restrizioni sopra indicate non consentono di modificare i dati direttamente tramite una vista, è possibile ricorrere alle soluzioni seguenti:  
   
 -   **Trigger INSTEAD OF**  
   
-     È possibile creare trigger INSTEAD OF per una vista in modo da renderla aggiornabile. Questo trigger viene eseguito in sostituzione dell'istruzione di modifica dei dati in cui è definito e consente all'utente di specificare il set di azioni che devono essere eseguite per elaborare l'istruzione di modifica dei dati. Pertanto, se è disponibile un trigger INSTEAD OF per una vista in un'istruzione di modifica dei dati specifica (INSERT, UPDATE o DELETE), la vista corrispondente risulta aggiornabile tramite l'istruzione. Per ulteriori informazioni sui trigger INSTEAD OF, vedere [trigger DML](../../relational-databases/triggers/dml-triggers.md).  
+     È possibile creare trigger INSTEAD OF per una vista in modo da renderla aggiornabile. Questo trigger viene eseguito in sostituzione dell'istruzione di modifica dei dati in cui è definito e consente all'utente di specificare il set di azioni che devono essere eseguite per elaborare l'istruzione di modifica dei dati. Pertanto, se è disponibile un trigger INSTEAD OF per una vista in un'istruzione di modifica dei dati specifica (INSERT, UPDATE o DELETE), la vista corrispondente risulta aggiornabile tramite l'istruzione. Per altre informazioni sui trigger INSTEAD OF, vedere [Trigger DML](../../relational-databases/triggers/dml-triggers.md).  
   
 -   **Viste partizionate**  
   
@@ -210,7 +210,7 @@ O ALTER
  Una vista partizionata è una vista definita tramite un'istruzione UNION ALL eseguita su tabelle membro con la stessa struttura, ma archiviate separatamente sotto forma di più tabelle nello stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure in un gruppo di istanze autonome di server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominato federazione di server di database.  
   
 > [!NOTE]  
->  Il metodo consigliato per il partizionamento locale dei dati in un server prevede l'utilizzo di tabelle partizionate. Per altre informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
+>  Il metodo consigliato per il partizionamento locale dei dati in un server prevede l'utilizzo di tabelle partizionate. Per ulteriori informazioni, vedere [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Durante la progettazione di uno schema di partizione, è necessario individuare con chiarezza i dati appartenenti a ogni partizione. Ad esempio, i dati della tabella `Customers` vengono distribuiti in tre tabelle membro su tre server: `Customers_33` su `Server1`, `Customers_66` su `Server2` e `Customers_99` su `Server3`.  
   
@@ -269,7 +269,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   I vincoli devono essere tali per cui qualsiasi valore specificato di `<col>` può soddisfare al massimo uno dei vincoli `C1, ..., Cn` e devono quindi costituire un set di intervalli disgiunti o non sovrapposti. La colonna `<col>` in cui sono definiti i vincoli disgiunti è denominata colonna di partizionamento. Si noti che nelle tabelle sottostanti tale colonna può avere nomi diversi. Per soddisfare i requisiti della colonna di partizionamento sopra descritti, i vincoli devono essere abilitati e attendibili. Se i vincoli sono disabilitati, abilitare di nuovo vincolo controllo mediante il vincolo CHECK *constraint_name* opzione ALTER TABLE e si utilizza l'opzione WITH CHECK convalidarli.  
+    -   I vincoli devono essere tali per cui qualsiasi valore specificato di `<col>` può soddisfare al massimo uno dei vincoli `C1, ..., Cn` e devono quindi costituire un set di intervalli disgiunti o non sovrapposti. La colonna `<col>` in cui sono definiti i vincoli disgiunti è denominata colonna di partizionamento. Si noti che nelle tabelle sottostanti tale colonna può avere nomi diversi. Per soddisfare i requisiti della colonna di partizionamento sopra descritti, i vincoli devono essere abilitati e attendibili. Se i vincoli sono disabilitati, è necessario riabilitare il controllo dei vincoli tramite l'opzione CHECK CONSTRAINT *constraint_name* dell'istruzione ALTER TABLE e convalidarli tramite l'opzione WITH CHECK.  
   
          Negli esempi seguenti vengono illustrati alcuni set di vincoli validi:  
   
@@ -284,7 +284,7 @@ FROM Tn;
   
     -   Deve fare parte della colonna PRIMARY KEY della tabella.  
   
-    -   Non può essere una calcolata, identity, predefinita o **timestamp** colonna.  
+    -   Non può essere una colonna calcolata, Identity, predefinita o **timestamp**.  
   
     -   Se una colonna di una tabella membro ha più vincoli, vengono ignorati tutti i vincoli, anche quando è necessario determinare se la vista è partizionata. Per soddisfare i requisiti per la creazione di viste partizionate, è necessario che la colonna di partizionamento includa un solo vincolo di partizionamento.  
   
@@ -292,7 +292,7 @@ FROM Tn;
   
 3.  Tabelle membro o tabelle sottostanti `T1, ..., Tn`  
   
-    -   Possono essere tabelle locali o tabelle presenti in altri computer che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene fatto riferimento tramite un nome composto da quattro parti oppure un nome basato su OPENDATASOURCE o OPENROWSET. La sintassi di OPENDATASOURCE e OPENROWSET consente di specificare un nome di tabella, ma non una query pass-through. Per ulteriori informazioni, vedere [OPENDATASOURCE &#40; Transact-SQL &#41; ](../../t-sql/functions/opendatasource-transact-sql.md) e [OPENROWSET &#40; Transact-SQL &#41; ](../../t-sql/functions/openrowset-transact-sql.md).  
+    -   Possono essere tabelle locali o tabelle presenti in altri computer che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui viene fatto riferimento tramite un nome composto da quattro parti oppure un nome basato su OPENDATASOURCE o OPENROWSET. La sintassi di OPENDATASOURCE e OPENROWSET consente di specificare un nome di tabella, ma non una query pass-through. Per altre informazioni, vedere [OPENDATASOURCE &#40;Transact-SQL&#41; ](../../t-sql/functions/opendatasource-transact-sql.md) e [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md).  
   
          Se una o più tabelle membro sono remote, la vista viene definita vista partizionata distribuita ed è necessario rispettare alcuni ulteriori requisiti descritti di seguito in questa sezione.  
   
@@ -302,7 +302,7 @@ FROM Tn;
   
     -   Tutti i vincoli PRIMARY KEY delle tabelle membro devono riguardare lo stesso numero di colonne.  
   
-    -   L'impostazione per lo riempimento ANSI deve essere la stessa per tutte le tabelle membro della vista. Può essere impostata utilizzando il **opzioni utente** opzione **sp_configure** o l'istruzione SET.  
+    -   L'impostazione per lo riempimento ANSI deve essere la stessa per tutte le tabelle membro della vista. Questa impostazione può essere configurata tramite l'opzione **user options** della stored procedure **sp_configure** oppure tramite l'istruzione SET.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>Requisiti per la modifica dei dati in viste partizionate  
  Le istruzioni che modificano i dati in viste partizionate sono soggette alle restrizioni seguenti:  
@@ -315,13 +315,13 @@ FROM Tn;
   
 -   Le colonne Identity della vista incluse in una o più tabelle membro non possono essere modificate tramite un'istruzione INSERT o UPDATE.  
   
--   Se una delle tabelle membro include un **timestamp** colonna, i dati non possono essere modificati tramite un'istruzione INSERT o UPDATE.  
+-   Se una delle tabelle membro include una colonna di tipo **timestamp**, non è possibile modificare i dati tramite un'istruzione INSERT o UPDATE.  
   
 -   Se una delle tabelle membro include un trigger oppure un vincolo ON UPDATE CASCADE/SET NULL/SET DEFAULT o ON DELETE CASCADE/SET NULL/SET DEFAULT, la vista non può essere modificata.  
   
 -   Le operazioni INSERT, UPDATE e DELETE eseguite su una vista partizionata non sono consentite se includono un self join con tale vista o con una delle tabelle membro.  
   
--   Importazione bulk di dati in una vista partizionata non è supportata da **bcp** o BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). Tuttavia, è possibile inserire più righe in una vista partizionata utilizzando la [inserire](../../t-sql/statements/insert-transact-sql.md) istruzione.  
+-   L'importazione in blocco di dati in una vista partizionata non è supportata da **bcp** o dalle istruzioni BULK INSERT e INSERT... SELECT * FROM OPENROWSET(BULK...). È tuttavia possibile inserire più righe in una vista partizionata usando l'istruzione [INSERT](../../t-sql/statements/insert-transact-sql.md).  
   
     > [!NOTE]  
     >  Per aggiornare una vista partizionata, l'utente deve disporre delle autorizzazioni INSERT, UPDATE e DELETE per le tabelle membro.  
@@ -333,9 +333,9 @@ FROM Tn;
   
 -   Per consentire il corretto funzionamento delle istruzioni INSERT, UPDATE o DELETE, è necessario impostare l'opzione XACT_ABORT SET su ON.  
   
--   Tutte le colonne delle tabelle remote di tipo **smallmoney** cui viene fatto riferimento in una vista partizionata vengono mappate come **money**. Pertanto, le colonne corrispondenti (nella stessa posizione ordinale nell'elenco di selezione) tabelle locali inoltre devono essere di tipo **money**.  
+-   Per tutte le colonne delle tabelle remote di tipo **smallmoney** a cui viene fatto riferimento in una vista partizionata viene eseguito il mapping come **money**. Pertanto, anche le colonne corrispondenti delle tabelle locali, ovvero le colonne che occupano la stessa posizione ordinale nell'elenco di selezione, devono essere di tipo **money**.  
   
--   Nel database livello di compatibilità 110 e versioni successiva, tutte le colonne delle tabelle remote di tipo **smalldatetime** cui viene fatto riferimento in una vista partizionata vengono mappate come **smalldatetime**. Le colonne corrispondenti (nella stessa posizione ordinale nell'elenco di selezione) tabelle locali devono essere **smalldatetime**. Si tratta di una modifica nel comportamento delle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui tutte le colonne delle tabelle remote di tipo **smalldatetime** cui viene fatto riferimento in una vista partizionata vengono mappate come **datetime** e le colonne corrispondenti nelle tabelle locale devono essere di tipo **datetime**. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+-   Con il livello di compatibilità del database 110 o superiore, viene eseguito il mapping come **smalldatetime** di tutte le colonne delle tabelle remote di tipo **smalldatetime** a cui viene fatto riferimento in una vista partizionata. Le colonne corrispondenti delle tabelle locali, ovvero le colonne che occupano la stessa posizione ordinale nell'elenco di selezione, devono essere di tipo **smalldatetime**. Questo comportamento differisce dalle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene eseguito il mapping come **datetime** di tutte le colonne delle tabelle remote di tipo **smalldatetime** a cui viene fatto riferimento in una vista partizionata e le colonne corrispondenti delle tabelle locali devono essere di tipo **datetime**. Per altre informazioni, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 -   Qualsiasi server collegato nella vista partizionata non può essere di tipo loopback, ovvero non deve puntare alla stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -346,18 +346,18 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>Requisiti per la replica  
  Per creare viste partizionate di tabelle membro coinvolte nella replica, devono essere soddisfatti i requisiti seguenti:  
   
--   Se le tabelle sottostanti sono coinvolte nella replica di tipo merge o transazionale con sottoscrizioni aggiornabili, il **uniqueidentifier** colonna deve essere incluso anche nell'elenco di selezione.  
+-   Se le tabelle sottostanti sono coinvolte nella replica transazionale o di tipo merge con sottoscrizioni aggiornabili, nell'elenco di selezione deve essere presente anche la colonna **uniqueidentifier**.  
   
-     Operazioni INSERT nella vista partizionata devono fornire un valore NEWID () per il **uniqueidentifier** colonna. Le operazioni UPDATE eseguite il **uniqueidentifier** colonna deve fornire NEWID () come valore perché non è possibile utilizzare la parola chiave DEFAULT.  
+     Le operazioni INSERT eseguite nella vista partizionata devono specificare un valore NEWID() per la colonna **uniqueidentifier**. Le operazioni UPDATE eseguite sulla colonna **uniqueidentifier** devono specificare il valore NEWID() in quanto non è possibile usare la parola chiave DEFAULT.  
   
 -   La replica di aggiornamenti tramite la vista equivale alla replica di tabelle in due database distinti, ovvero le tabelle vengono gestite da agenti di replica diversi e l'ordine degli aggiornamenti non è prevedibile.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione CREATE VIEW per il database e l'autorizzazione ALTER per lo schema in cui viene creata la vista.  
   
 ## <a name="examples"></a>Esempi  
 
-L'esempio seguente usa il database AdventureWorks 2012 o AdventureWorksDW.  
+Negli esempi seguenti vengono usati i database AdventureWorks 2012 o AdventureWorksDW.  
 
 ### <a name="a-using-a-simple-create-view"></a>A. Utilizzo di un'istruzione CREATE VIEW semplice  
  Nell'esempio seguente viene creata una vista tramite l'utilizzo di un'istruzione `SELECT` semplice. Una vista semplice risulta utile quando vengono eseguite query frequenti su una combinazione di colonne. I dati di questa vista derivano dalle tabelle `HumanResources.Employee` e `Person.Person` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. I dati contengono informazioni sul nome e la data di assunzione dei dipendenti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. È possibile creare la vista per la persona incaricata di tenere traccia del periodo di assunzione dei dipendenti, senza però consentire a tale utente di accedere a tutti i dati di queste tabelle.  
@@ -375,7 +375,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. Utilizzo della clausola WITH ENCRYPTION  
  Nell'esempio seguente viene utilizzata l'opzione `WITH ENCRYPTION` e vengono illustrate colonne calcolate, colonne rinominate e più colonne.  
   
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -469,10 +469,10 @@ SELECT supplyID, supplier
   FROM dbo.SUPPLY4;  
 ```  
   
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="f-creating-a-simple-view"></a>F. Creazione di una visualizzazione semplice  
- L'esempio seguente crea una visualizzazione selezionando solo alcune colonne della tabella di origine.  
+### <a name="f-creating-a-simple-view"></a>F. Creazione di una vista semplice  
+ Nell'esempio seguente viene creata una vista selezionando solo alcune colonne della tabella di origine.  
   
 ```  
 CREATE VIEW DimEmployeeBirthDates AS  
@@ -480,8 +480,8 @@ SELECT FirstName, LastName, BirthDate
 FROM DimEmployee;  
 ```  
   
-### <a name="g-create-a-view-by-joining-two-tables"></a>G. Creare una vista unendo in join due tabelle  
- Nell'esempio seguente crea una visualizzazione utilizzando un `SELECT` istruzione con un `OUTER JOIN`. I risultati della query join popolano la vista.  
+### <a name="g-create-a-view-by-joining-two-tables"></a>G. Creare una vista creando un join di due tabelle  
+ Nell'esempio seguente viene creata una vista tramite un'istruzione `SELECT` semplice con un elemento `OUTER JOIN`. I risultati della query join popolano la vista.  
   
 ```  
 CREATE VIEW view1  
@@ -497,16 +497,16 @@ ON (fis.SalesTerritoryKey=dst.SalesTerritoryKey);
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/alter-view-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
- [DROP VIEW &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [Creazione di una stored procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
- [sp_refreshview &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
+ [sp_refreshview &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
- [Sys. Views &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
+ [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   
