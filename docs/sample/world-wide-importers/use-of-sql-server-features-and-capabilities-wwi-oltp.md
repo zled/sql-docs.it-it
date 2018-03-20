@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.openlocfilehash: 9a76e8c2bb70be5accc28d65de7f86db86dacd29
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 34535db5b43311e13d21fd663f5302327b24978e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Utilizzo delle funzionalità di SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]WideWorldImporters l'utilizzo di funzionalità di SQL Server e funzionalità nel database OLTP.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+WideWorldImporters l'utilizzo di funzionalità di SQL Server e funzionalità nel database OLTP.
 
 WideWorldImporters è progettato per illustrare molte delle funzionalità chiave di SQL Server, incluse le funzionalità più recenti introdotte in SQL Server 2016. Di seguito è riportato un elenco di funzionalità di SQL Server e funzionalità e una descrizione di come vengono usati in WideWorldImporters.
 
@@ -42,7 +44,7 @@ WideWorldImporters è progettato per illustrare molte delle funzionalità chiave
 |Mascheramento dati dinamici|Nello schema del database, la maschera dati è stata applicata per i dettagli bancari contenuti per i fornitori, nella tabella `Purchasing.Suppliers`. Personale senza privilegi di amministratore non avrà accesso a queste informazioni.|
 |Crittografia sempre attiva|Una demo per Always Encrypted è incluso nel Samples. zip scaricabili, che fa parte di [versione dell'esempio](http://go.microsoft.com/fwlink/?LinkID=800630)... La dimostrazione crea una chiave di crittografia, una tabella utilizzando la crittografia per i dati sensibili e un'applicazione di esempio di piccole dimensioni che inserisce i dati nella tabella.|
 |Estensione database|Il `Warehouse.ColdRoomTemperatures` tabella è stata implementata come una tabella temporale ed è con ottimizzazione della memoria nella versione completa del database di esempio. La tabella di archiviazione è basata su disco e può essere estesi in Azure.|
-|Indici full-text|Indici full-text di migliorare le ricerche per utenti, i clienti e StockItems. Gli indici vengono applicati alle query solo se è installata l'istanza di SQL Server di indicizzazione full-text. Una colonna calcolata non persistente viene utilizzata per creare i dati full-text nella tabella StockItems indicizzato.<br/><br/>`CONCAT`viene utilizzato per la concatenazione di campi per creare SearchData che viene applicata l'indicizzazione full-text.<br/>Per abilitare l'utilizzo di indici full-text Nell'esempio di eseguire l'istruzione seguente nel database:<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>La procedura crea un catalogo full-text predefinito se uno non è già presente, sostituisce le visualizzazioni di ricerca con le versioni full-text di tali visualizzazioni).<br/><br/>Si noti che l'utilizzo di indici full-text in SQL Server richiede l'opzione Full-Text durante l'installazione. Database SQL di Azure non richiede e la configurazione specifica per abilitare gli indici full-text.|
+|Indici full-text|Indici full-text di migliorare le ricerche per utenti, i clienti e StockItems. Gli indici vengono applicati alle query solo se è installata l'istanza di SQL Server di indicizzazione full-text. Una colonna calcolata non persistente viene utilizzata per creare i dati full-text nella tabella StockItems indicizzato.<br/><br/>`CONCAT` viene utilizzato per la concatenazione di campi per creare SearchData che viene applicata l'indicizzazione full-text.<br/>Per abilitare l'utilizzo di indici full-text Nell'esempio di eseguire l'istruzione seguente nel database:<br/><br/>    `EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>La procedura crea un catalogo full-text predefinito se uno non è già presente, sostituisce le visualizzazioni di ricerca con le versioni full-text di tali visualizzazioni).<br/><br/>Si noti che l'utilizzo di indici full-text in SQL Server richiede l'opzione Full-Text durante l'installazione. Database SQL di Azure non richiede e la configurazione specifica per abilitare gli indici full-text.|
 |Colonne calcolate persistenti|Indicizzare le colonne calcolate persistenti utilizzate SupplierTransactions e CustomerTransactions.|
 |Vincoli CHECK|È un vincolo check relativamente complessa in `Sales.SpecialDeals`. Ciò garantisce che uno e uno solo dei DiscountAmount, DiscountPercentage, e UnitPrice è configurato.|
 |Vincoli UNIQUE|Molti a molti costruzione (e i vincoli unique) vengono impostati per Warehouse.StockItemStockGroups'.|
@@ -51,4 +53,4 @@ WideWorldImporters è progettato per illustrare molte delle funzionalità chiave
 |Compressione GZip|Il `Warehouse.VehicleTemperature`tabella s contiene dati del sensore completo, ma quando questi dati sono più di pochi mesi, verrà compressi per risparmiare spazio utilizzando la funzione COMPRESS, che utilizza la compressione GZip.<br/><br/>La vista `Website.VehicleTemperatures` utilizza la funzione DECOMPRESS durante il recupero di dati che è stata compressa in precedenza.|
 |Archivio query|Archivio query è abilitato nel database. Dopo aver eseguito alcune query, aprire il database in Management Studio, aprire l'archivio Query, ovvero del database, il nodo e aprire il report Top query per consumo risorse per visualizzare le esecuzioni di query e i piani per le query che è stata eseguita.|
 |STRING_SPLIT|La colonna `DeliveryInstructions` nella tabella `Sales.Invoices`ha un valore delimitato da virgole che può essere utilizzato per illustrare STRING_SPLIT.|
-|Controllo|Eseguendo l'istruzione seguente nel database, SQL Server Audit può essere abilitata per questo database di esempio:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>Nel Database di SQL Azure, il controllo è abilitato tramite il [portale di Azure](https://portal.azure.com/).<br/><br/>Operazioni di protezione che include gli account di accesso, ruoli e autorizzazioni vengono registrate in tutti i sistemi in cui controllo è abilitato (inclusi i sistemi di standard edition). Controllo viene indirizzato al registro applicazioni di perché questo è disponibile in tutti i sistemi e non richiede autorizzazioni aggiuntive. Un avviso è dato che per una maggiore sicurezza, è necessario reindirizzarlo nel Registro di sicurezza o in un file in una cartella protetta. Viene fornito un collegamento per descrivere le operazioni di configurazione necessarie.<br/><br/>Per i sistemi di valutazione/developer o enterprise edition, viene controllato l'accesso a tutti i dati finanziari transazionali.|
+|Controllare il funzionamento di|Eseguendo l'istruzione seguente nel database, SQL Server Audit può essere abilitata per questo database di esempio:<br/><br/>    `EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>Nel Database di SQL Azure, il controllo è abilitato tramite il [portale di Azure](https://portal.azure.com/).<br/><br/>Operazioni di protezione che include gli account di accesso, ruoli e autorizzazioni vengono registrate in tutti i sistemi in cui controllo è abilitato (inclusi i sistemi di standard edition). Controllo viene indirizzato al registro applicazioni di perché questo è disponibile in tutti i sistemi e non richiede autorizzazioni aggiuntive. Un avviso è dato che per una maggiore sicurezza, è necessario reindirizzarlo nel Registro di sicurezza o in un file in una cartella protetta. Viene fornito un collegamento per descrivere le operazioni di configurazione necessarie.<br/><br/>Per i sistemi di valutazione/developer o enterprise edition, viene controllato l'accesso a tutti i dati finanziari transazionali.|

@@ -20,19 +20,19 @@ helpviewer_keywords:
 - WMI Provider for Server Events, WQL
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d14958366c9dfa24343e244a8a5d5cb880fafa3e
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 1bb07cf51939aec91de5b86b682545de9bfab382
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Utilizzo di WQL con il provider WMI per eventi del server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Le applicazioni di gestione accedono agli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Quando si utilizza WQL, un'applicazione recupera un tipo di evento da un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un database o un oggetto di database (l'unico oggetto attualmente supportato è la coda). Il Provider WMI per eventi del Server converte la query in una notifica degli eventi creata nel database di destinazione per le notifiche degli eventi con ambito database o con ambito oggetto o nel **master** database per l'evento con ambito server notifiche.  
+  Le applicazioni di gestione accedono agli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il provider WMI per eventi del server ed eseguendo istruzioni WQL (WMI Query Language). WQL è un subset semplificato del linguaggio SQL (Structured Query Language), con alcune estensioni specifiche di WMI. Quando si utilizza WQL, un'applicazione recupera un tipo di evento da un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un database o un oggetto di database (l'unico oggetto attualmente supportato è la coda). Il Provider WMI per eventi del Server converte la query in una notifica degli eventi creata nel database di destinazione per le notifiche degli eventi con ambito database o con ambito oggetto o nel **master** database per l'evento con ambito server notifiche.  
   
  Si consideri, ad esempio, la query WQL seguente:  
   

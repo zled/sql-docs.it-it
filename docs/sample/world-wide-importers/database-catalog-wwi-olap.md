@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 10/31/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ed65e42-527a-45e7-9a91-7179e892652e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: d6b43b590e7a5e6117f6752e1eb1dec701ca645e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8d3957abef7fb70698c04fd22d390d96ac4cd17b
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogo del database WideWorldImportersDW
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Spiegazione per gli schemi, tabelle e stored procedure nel database WideWorldImportersDW. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Spiegazione per gli schemi, tabelle e stored procedure nel database WideWorldImportersDW. 
 
 Il database WideWorldImportersDW viene utilizzato per l'elaborazione analitica e di data warehouse. I dati sulle vendite e acquisti transazionali vengano generati nel database WideWorldImporters e caricati nel database WideWorldImportersDW utilizzando un **processo ETL giornaliero**.
 
@@ -35,7 +37,7 @@ I dati in WideWorldImportersDW rispecchia pertanto i dati in WideWorldImporters,
 
 I diversi tipi di tabelle sono organizzati in tre schemi.
 
-|schema|Description|
+|Schema|Description|
 |-----------------------------|---------------------|
 |Dimensione|Tabelle delle dimensioni.|
 |Fatti|Tabelle dei fatti.|  
@@ -97,7 +99,7 @@ Queste procedure vengono utilizzate per configurare l'esempio. Vengono utilizzat
 Le procedure utilizzate per il processo ETL rientrano nelle seguenti categorie:
 - Procedure di supporto per il pacchetto ETL - Get * tutte le procedure.
 - Le procedure utilizzate dal pacchetto ETL per la migrazione di dati di gestione temporanea nelle tabelle del data Warehouse - tutte le procedure di migrazione *.
-- `PopulateDateDimensionForYear`-Accetta un anno e assicura che tutte le date per tale anno vengono popolate nel `Dimension.Date` tabella.
+- `PopulateDateDimensionForYear` -Accetta un anno e assicura che tutte le date per tale anno vengono popolate nel `Dimension.Date` tabella.
 
 ### <a name="sequences-schema"></a>Schema di sequenze
 
