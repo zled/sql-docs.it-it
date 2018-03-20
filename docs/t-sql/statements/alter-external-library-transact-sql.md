@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -21,11 +21,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: 0581957db73b82b9486f938d17b4c8938e20258d
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: e2fb628e2f832b7d1b73a2e3fefae1fb1d6b8e2b
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -61,7 +61,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Specifica il nome di una libreria di pacchetti esistente. Le librerie hanno un ambito di tipo utente. In altri termini i nomi delle librerie sono univoci nel contesto di un utente o proprietario specifico.
+Specifica il nome di una libreria di pacchetti esistente. Le librerie hanno un ambito di tipo utente. I nomi delle librerie devono essere univoci nel contesto di un utente o proprietario specifico.
 
 Il nome della libreria non può essere assegnato in modo arbitrario. È quindi necessario usare il nome previsto dal runtime di chiamata quando viene caricato il pacchetto.
 
@@ -76,13 +76,6 @@ Specifica il contenuto del pacchetto per una piattaforma specifica. È supportat
 Il file può essere specificato usando il percorso locale o il percorso di rete. Se l'opzione dell'origine dati è specificata, il nome del file può essere un percorso relativo che riguarda il contenitore a cui si fa riferimento in `EXTERNAL DATA SOURCE`.
 
 Facoltativamente, è possibile specificare una piattaforma del sistema operativo per il file. È consentito un solo elemento di tipo file o un contenuto per piattaforma del sistema operativo per un linguaggio o un runtime specifico.
-
-**DATA_SOURCE = external_data_source_name**
-
-Specifica il nome dell'origine dati esterna che contiene il percorso del file di libreria. Questo percorso deve fare riferimento a un percorso di archiviazione BLOB di Azure. Per creare un'origine dati esterna, usare [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](create-external-data-source-transact-sql.md).
-
-> [!IMPORTANT] 
-> Attualmente, i BLOB non sono supportati come origine dati nella versione SQL Server 2017.
 
 **library_bits**
 
@@ -104,11 +97,11 @@ L'istruzione `ALTER EXTERNAL LIBRARY` carica solo i bit della libreria nel datab
 
 ## <a name="permissions"></a>Autorizzazioni
 
-È necessaria l'autorizzazione `ALTER ANY EXTERNAL LIBRARY`. Possono modificare la libreria esterna gli utenti che hanno creato una libreria esterna.
+Per impostazione predefinita, l'utente **dbo** o qualsiasi membro del ruolo **db_owner** ha l'autorizzazione per eseguire ALTER EXTERNAL LIBRARY. Inoltre, una libreria esterna può essere modificata dall'utente che ha creato la libreria.
 
 ## <a name="examples"></a>Esempi
 
-Nell'esempio seguente viene modificata una libreria esterna denominata `customPackage`.
+L'esempio seguente modifica una libreria esterna denominata `customPackage`.
 
 ### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>A. Sostituire il contenuto di una libreria usando un file
 
@@ -135,10 +128,12 @@ EXEC sp_execute_external_script
 Nell'esempio seguente viene modificata la libreria esistente passando i nuovi bit come valore letterale esadecimale.
 
 ```SQL
-ALTER EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+ALTER EXTERNAL LIBRARY customLibrary 
+SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-In questo esempio di codice il contenuto della variabile viene troncato per facilitarne la lettura.
+> [!NOTE]
+> Questo esempio di codice illustra solo la sintassi. Il valore binario in `CONTENT =` è stato troncato per migliorare la leggibilità e non crea una libreria di lavoro. Il contenuto effettivo della variabile binaria sarebbe molto più lungo.
 
 ## <a name="see-also"></a>Vedere anche
 

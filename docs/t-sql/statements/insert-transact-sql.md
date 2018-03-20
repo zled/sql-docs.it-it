@@ -39,11 +39,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 645cb458c480fb0842f83bf60721f5228e434d4c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9c1d8692b634c1f6f71c112be59eb9e5ff84ea5e
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -163,7 +163,7 @@ INSERT INTO [ database_name . [ schema_name ] . | schema_name . ] table_name
  *schema_name*  
  Nome dello schema a cui appartiene la tabella o la vista.  
   
- *table_name o view_name*  
+ *table_or view_name*  
  Nome della tabella o della vista in cui si desidera inserire i dati.  
   
  Una variabile [table](../../t-sql/data-types/table-transact-sql.md), all'interno del proprio ambito, può essere usata come origine di tabella in un'istruzione INSERT.  
@@ -398,7 +398,9 @@ Queste ottimizzazioni sono simili a quelle disponibili con il comando BULK INSER
   
  Quando TOP viene utilizzato con INSERT, le righe a cui viene fatto riferimento non vengono disposte in alcun ordine e non è possibile specificare la clausola ORDER BY direttamente in tali istruzioni. Se è necessario utilizzare TOP per inserire righe in un ordine cronologico significativo, è necessario utilizzare questa clausola insieme a una clausola ORDER BY specificata in un'istruzione sub-SELECT. Vedere la sezione Esempi più avanti in questo argomento.
  
-Le query INSERT che usano SELECT con ORDER BY per popolare le righe garantiscono la modalità di calcolo dei valori Identity, ma non l'ordine in cui vengono inserite le righe.    
+Le query INSERT che usano SELECT con ORDER BY per popolare le righe garantiscono la modalità di calcolo dei valori Identity, ma non l'ordine in cui vengono inserite le righe.
+
+In Parallel Data Warehouse la clausola ORDER BY non è valida in VIEWS, CREATE TABLE AS SELECT, INSERT SELECT, nelle funzioni inline, nelle tabelle derivate, nelle sottoquery e nelle espressioni di tabella comuni a meno che non sia specificata anche la clausola TOP.
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
  L'istruzione INSERT è sempre completamente registrata tranne quando si usa la funzione OPENROWSET con la parola chiave BULK o quando si usa l'istruzione `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`. Per queste operazioni è possibile eseguire la registrazione minima. Per ulteriori informazioni, vedere la sezione "Procedure consigliate per il caricamento bulk dei dati" più indietro in questo argomento.  
@@ -720,7 +722,7 @@ GO
  Gli esempi di questa sezione illustrano come inserire righe in una tabella di destinazione remota tramite un [server collegato](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) o una [funzione per i set di righe](../../t-sql/functions/rowset-functions-transact-sql.md) per fare riferimento alla tabella remota.  
   
 #### <a name="m-inserting-data-into-a-remote-table-by-using-a-linked-server"></a>M. Inserimento di dati in una tabella remota tramite un server collegato  
- Nell'esempio seguente vengono inserite righe in una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene quindi specificato all'interno del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
+ Nell'esempio seguente vengono inserite righe in una tabella remota. L'esempio inizia con la creazione di un collegamento all'origine dati remota tramite [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Il nome del server collegato, `MyLinkServer`, viene specificato come parte del nome di oggetto in quattro parti nel formato *server.catalogo.schema.oggetto*.  
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

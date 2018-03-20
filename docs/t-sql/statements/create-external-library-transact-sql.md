@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 02/25/2018
+ms.date: 03/05/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -23,11 +23,11 @@ helpviewer_keywords:
 author: jeannt
 ms.author: jeannt
 manager: craigg
-ms.openlocfilehash: e28716314837225586cf4bd1f80a37c5c6b824ab
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: a8c77b86fac722d43b1634ea7dc5052655bf560d
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -67,7 +67,7 @@ WITH ( LANGUAGE = 'R' )
 
 **library_name**
 
-Al database con ambito dell'utente vengono aggiunte librerie. In altri termini, i nomi delle librerie sono univoci nel contesto di un utente o proprietario specifico e devono essere univoci per utente. I due utenti **RUser1** e **RUser2**, ad esempio, possono entrambi caricare la libreria R `ggplot2` individualmente e separatamente.
+Al database con ambito dell'utente vengono aggiunte librerie. I nomi delle librerie devono essere univoci nel contesto di un utente o proprietario specifico. I due utenti **RUser1** e **RUser2**, ad esempio, possono entrambi caricare la libreria R `ggplot2` individualmente e separatamente. Tuttavia, se **RUser1** vuole caricare una versione più recente di `ggplot2`, la seconda istanza deve essere denominata in modo diverso o deve sostituire la libreria esistente. 
 
 I nomi delle librerie non possono essere assegnati in modo arbitrario. Il nome di una libreria deve corrispondere al nome necessario per caricare la libreria R da R.
 
@@ -107,11 +107,9 @@ L'istruzione `CREATE EXTERNAL LIBRARY` carica i bit della libreria nel database.
 
 Le librerie caricate nell'istanza possono essere pubbliche o private. Se la libreria viene creata da un membro di `dbo`, la libreria è pubblica e può essere condivisa da tutti gli utenti. In caso contrario, la libreria è privata e disponibile solo per tale utente.
 
-In SQL Server versione 2017 non è possibile usare oggetti BLOB come origini dati.
-
 ## <a name="permissions"></a>Autorizzazioni
 
-È necessaria l'autorizzazione `CREATE ANY EXTERNAL LIBRARY`.
+È necessaria l'autorizzazione `CREATE EXTERNAL LIBRARY`. Per impostazione predefinita, ogni utente con **dbo** che è membro del ruolo **db_owner** ha le autorizzazioni per creare una libreria esterna. Per tutti gli altri utenti, è necessario concedere in modo esplicito le autorizzazioni usando un'istruzione [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql) specificando CREATE EXTERNAL LIBRARY come privilegio.
 
 Per modificare una libreria è necessaria un'altra autorizzazione, `ALTER ANY EXTERNAL LIBRARY`.
 
@@ -124,7 +122,7 @@ L'esempio seguente aggiunge una libreria esterna denominata `customPackage` a un
 ```sql
 CREATE EXTERNAL LIBRARY customPackage
 FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\customPackage.zip') WITH (LANGUAGE = 'R');
-```  
+```
 
 Dopo il caricamento della libreria nell'istanza, l'utente esegue la procedura `sp_execute_external_script` per installare la libreria.
 
@@ -145,9 +143,9 @@ Si supponga ad esempio di voler installare un nuovo pacchetto, `packageA`:
 
 Perché l'installazione di `packageA` sia possibile, è necessario creare librerie per `packageB` e `packageC` contemporaneamente all'aggiunta di `packageA` a SQL Server. Assicurarsi di controllare anche le versioni dei pacchetti richiesti.
 
-In pratica, le dipendenze dei pacchetti dai pacchetti più diffusi sono in genere molto più complesse rispetto a questo semplice esempio. ggplot2, ad esempio, può richiedere oltre 30 pacchetti e questi ultimi possono richiedere pacchetti aggiuntivi non disponibili nel server. La mancanza o una versione non corretta di uno qualsiasi di questi pacchetti può causare la mancata riuscita dell'installazione.
+In pratica, le dipendenze dei pacchetti dai pacchetti più diffusi sono in genere molto più complesse rispetto a questo semplice esempio. Ad esempio, **ggplot2** può richiedere oltre 30 pacchetti e questi ultimi possono richiedere pacchetti aggiuntivi non disponibili nel server. La mancanza o una versione non corretta di uno qualsiasi di questi pacchetti può causare la mancata riuscita dell'installazione.
 
-Poiché può essere difficile determinare tutte le dipendenze semplicemente esaminando il manifesto del pacchetto, è consigliabile usare un pacchetto come [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) o [iGraph](http://igraph.org/redirect.html) per identificare tutti i pacchetti che possono essere necessari per eseguire l'installazione.
+Poiché può essere difficile determinare tutte le dipendenze semplicemente esaminando il manifesto del pacchetto, è consigliabile usare un pacchetto come [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) per identificare tutti i pacchetti che possono essere necessari per eseguire l'installazione.
 
 + Caricare il pacchetto di destinazione e le sue dipendenze. Tutti i file devono essere in una cartella accessibile al server.
 
@@ -180,38 +178,26 @@ Poiché può essere difficile determinare tutte le dipendenze semplicemente esam
     @script=N'
     # load the desired package packageA
     library(packageA)
-    # call function from package
-    OutputDataSet <- packageA.function()
+    print(packageVersion("packageA"))
     '
-    with result sets (([result] int));    
     ```
 
 ### <a name="c-create-a-library-from-a-byte-stream"></a>C. Creare una libreria da un flusso di byte
 
-Se non si ha la possibilità di salvare i file del pacchetto in un percorso nel server, è anche possibile passare il contenuto del pacchetto in una variabile. L'esempio seguente crea una libreria passando i bit come valori letterali esadecimali.
+Se non si ha la possibilità di salvare i file del pacchetto in un percorso nel server, è possibile passare il contenuto del pacchetto in una variabile. L'esempio seguente crea una libreria passando i bit come valori letterali esadecimali.
 
 ```SQL
 CREATE EXTERNAL LIBRARY customLibrary FROM (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
 
-Qui i valori esadecimali sono stati troncati per migliorare la leggibilità.
+> [!NOTE]
+> Questo esempio di codice illustra solo la sintassi. Il valore binario in `CONTENT =` è stato troncato per migliorare la leggibilità e non crea una libreria di lavoro. Il contenuto effettivo della variabile binaria sarebbe molto più lungo.
 
 ### <a name="d-change-an-existing-package-library"></a>D. Modificare una libreria di pacchetti esistente
 
 È possibile usare l'istruzione DDL `ALTER EXTERNAL LIBRARY` per aggiungere nuovo contenuto a una libreria o modificare il contenuto esistente della libreria stessa. Per modificare una libreria esistente è necessaria l'autorizzazione `ALTER ANY EXTERNAL LIBRARY`.
 
 Per altre informazioni, vedere [ALTER EXTERNAL LIBRARY](alter-external-library-transact-sql.md).
-
-### <a name="e-delete-a-package-library"></a>E. Per eliminare una libreria di pacchetti
-
-Per eliminare una libreria di pacchetti dal database, eseguire l'istruzione seguente:
-
-```sql
-DROP EXTERNAL LIBRARY customPackage <user_name>;
-```
-
-> [!NOTE]
-> A differenza di altre istruzioni `DROP` in [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], questa istruzione supporta un parametro facoltativo che specifica l'autorizzazione dell'utente. Questa opzione consente agli utenti con ruoli di proprietà di eliminare le librerie caricate dagli utenti normali.
 
 ## <a name="see-also"></a>Vedere anche
 

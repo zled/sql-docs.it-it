@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b1b8fba166243143cd9ab8c03303fcfd7448e7a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8121c4b5054bcf8f3144fee3c05e6979f2252293
+ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -113,8 +113,11 @@ Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **
 |**datetime2**|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
-## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi alla data e all'ora
+## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi a data e ora
 Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+  
+### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Conversione del tipo di dati datetimeoffset in altri tipi di dati relativi a data e ora
+Questa sezione descrive il risultato della conversione di un tipo di dati **datetimeoffset** in altri tipi di dati relativi a data e ora.
   
 Nel caso della conversione in **date** vengono copiati l'anno, il mese e il giorno. Nel codice seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(4)` in un valore `date`.  
   
@@ -198,9 +201,6 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 --(1 row(s) affected)  
 ```  
-  
-### <a name="converting-datetimeoffset-data-type-to-other-date-and-time-types"></a>Conversione del tipo di dati datetimeoffset in altri tipi di dati relativi a data e ora
-Nella tabella seguente viene descritto il risultato della conversione di un tipo di dati **datetimeoffset** in altri tipi di dati relativi a data e ora.
   
 ### <a name="converting-string-literals-to-datetimeoffset"></a>Conversione di valori letterali stringa nel tipo di dati datetimeoffset
 Le conversioni da valori letterali stringa a tipi di data e ora sono consentite se tutte le parti delle stringhe hanno formati validi. In caso contrario, viene generato un errore di runtime. Le conversioni implicite o esplicite che non specificano uno stile, dai tipi di data e ora ai valori letterali stringa, saranno nel formato predefinito della sessione corrente. Nella tabella seguente vengono illustrate le regole per la conversione di un valore letterale stringa nel tipo di dati **datetimeoffset**.
