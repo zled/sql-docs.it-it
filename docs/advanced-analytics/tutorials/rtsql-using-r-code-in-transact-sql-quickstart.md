@@ -1,5 +1,5 @@
 ---
-title: Utilizzo di codice R in Transact-SQL (R nella Guida rapida SQL) | Documenti Microsoft
+title: Utilizzo di codice R in Transact-SQL (R Guida introduttiva SQL) | Documenti Microsoft
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/20/2017
@@ -21,13 +21,13 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Active
-ms.openlocfilehash: d4810554e5ed40a300a902b96ca568f799c63899
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 488661c917690c2ec5af6db40a135c8eb3927db1
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Utilizzo di codice R in Transact-SQL (R nella Guida rapida SQL)
+# <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>Utilizzo di codice R in Transact-SQL (R Guida introduttiva SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questa esercitazione descrive il meccanismo di base per la chiamata di uno script R da una stored procedure T-SQL.
@@ -37,7 +37,7 @@ Questa esercitazione descrive il meccanismo di base per la chiamata di uno scrip
 + Come incorporare R in una funzione T-SQL
 + Alcuni suggerimenti per l'utilizzo di SQL e R dati e i tipi di oggetti dati
 + Come creare un modello semplice e salvarlo in SQL Server
-+ Come creare stime e un tracciato di R usando il modello
++ Come creare un tracciato di R usando il modello e stime
 
 **Tempo stimato**
 
@@ -45,22 +45,22 @@ Questa esercitazione descrive il meccanismo di base per la chiamata di uno scrip
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Con uno dei seguenti già installato, è necessario avere accesso a un'istanza di SQL Server:
+È necessario avere accesso a un'istanza di SQL Server con uno già installati i componenti seguenti:
 
 + Servizi SQL Server 2017 Machine Learning, con il linguaggio R installato
 + SQL Server 2016 R Services
 
-Istanza di SQL Server può essere in una macchina virtuale di Azure o in locale. Solo tenere presente che la funzionalità di scripting esterna è disabilitata per impostazione predefinita, pertanto potrebbe essere necessario eseguire alcuni passaggi aggiuntivi per ottenere lo stesso risultato.
+Istanza di SQL Server può essere in una macchina virtuale di Azure o in locale. Appena tenere presente che la funzionalità di scripting esterna è disabilitata per impostazione predefinita, pertanto potrebbe essere necessario eseguire alcuni passaggi aggiuntivi per ottenere lo.
 
-Per eseguire query SQL che includono script R, è possibile utilizzare qualsiasi altra applicazione in grado di connettersi a un database e di eseguire il codice T-SQL. I professionisti SQL è possono utilizzare SQL Server Management Studio (SSMS) o Visual Studio.
+Per eseguire query SQL che includono script R, è possibile utilizzare qualsiasi altra applicazione che può connettersi a un database ed eseguire codice T-SQL. I professionisti SQL è possono utilizzare SQL Server Management Studio (SSMS) o Visual Studio.
 
-Per questa esercitazione, per mostrare come sia facile eseguire R all'interno di SQL Server, abbiamo utilizzato il nuovo **mssql estensione per il codice di Visual Studio**. Visual Studio Code è un ambiente di sviluppo gratuito che è possibile eseguire in Windows, Linux o Mac OS. Il **mssql** estensione è un'estensione semplice per l'esecuzione di query T-SQL. Per installarla, vedere questo articolo: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Usare l'estensione mssql per Visual Studio Code).
+Per questa esercitazione, per mostrare come sia facile eseguire R all'interno di SQL Server, abbiamo utilizzato il nuovo **mssql estensione per Visual Studio Code**. Visual Studio Code è un ambiente di sviluppo gratuito eseguibili in Windows, Linux o macOS. Il **mssql** estensione è un'estensione semplice per l'esecuzione di query T-SQL. Per installarla, vedere questo articolo: [Use the mssql extension for Visual Studio Code](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Usare l'estensione mssql per Visual Studio Code).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Connettersi a un database ed eseguire uno script di test Hello World
 
 1. In Visual Studio Code creare un nuovo file di testo con il nome BasicRSQL.sql.
-2. Con il file aperto, premere CTRL+MAIUSC+P (Comando+P su macOS), digitare **sql** per elencare i comandi SQL e selezionare **CONNECT**. Codice di Visual Studio viene richiesto di creare un profilo da utilizzare quando ci si connette a un database specifico. È facoltativo, ma rende più semplice passare tra i database e account di accesso.
-    + Scegliere un server o un'istanza in cui è installato R in SQL Server.
+2. Con il file aperto, premere CTRL+MAIUSC+P (Comando+P su macOS), digitare **sql** per elencare i comandi SQL e selezionare **CONNECT**. Codice di Visual Studio chiede di creare un profilo da utilizzare quando ci si connette a un database specifico. Ciò è facoltativo, ma rende più semplice passare tra i database e gli account di accesso.
+    + Scegliere un server o un'istanza in cui è stato installato R in SQL Server.
     + Usare un account dotato delle autorizzazioni necessarie per creare un nuovo database, eseguire istruzioni SELECT e visualizzare definizioni di tabella.
 2. Se la connessione avviene correttamente, dovrebbe essere possibile visualizzare il nome del server e del database sulla barra di stato, insieme alle credenziali correnti. Se la connessione non è riuscita, verificare che il nome del computer e del server siano corretti.
 3. Incollare questa istruzione ed eseguirla.
@@ -84,7 +84,7 @@ Per questa esercitazione, per mostrare come sia facile eseguire R all'interno di
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-+ Se si verificano errori di questa query, l'installazione potrebbe essere incompleta. Dopo aver aggiunto la funzionalità usando l'Installazione guidata di SQL Server, è necessario eseguire alcuni passaggi aggiuntivi per abilitare l'uso di librerie di codice esterne.  Vedere [Configurare SQL Server R Services](../r/set-up-sql-server-r-services-in-database.md).
++ Se si verificano errori di questa query, installazione potrebbe essere incompleta. Dopo aver aggiunto la funzionalità usando l'Installazione guidata di SQL Server, è necessario eseguire alcuni passaggi aggiuntivi per abilitare l'uso di librerie di codice esterne.  Vedere [installare SQL Server 2017 apprendimento servizi](../install/sql-machine-learning-services-windows-install.md) oppure [installare SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 + Assicurarsi che il servizio Launchpad sia in esecuzione. A seconda dell'ambiente, potrebbe essere necessario abilitare gli account di lavoro R per la connessione a SQL Server, installare librerie di rete aggiuntive, abilitare l'esecuzione remota del codice o riavviare l'istanza dopo aver completato la configurazione. Vedere [R Services Installation and Upgrade FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md) (Domande frequenti sull'installazione e l'aggiornamento di R Services)
 
@@ -96,9 +96,9 @@ Ora che l'istanza è pronto per funzionare con R, è possibile iniziare subito.
 
 Lezione 1: [utilizzo di input e output](rtsql-working-with-inputs-and-outputs.md)
 
-Lezione 2: [R e SQL dati e i tipi di oggetti dati](rtsql-r-and-sql-data-types-and-data-objects.md)
+Lezione 2: [SQL e R dati e i tipi di oggetti dati](rtsql-r-and-sql-data-types-and-data-objects.md)
 
-Lezione 3: [R di uso delle funzioni con i dati di SQL Server](rtsql-using-r-functions-with-sql-server-data.md)
+Lezione 3: [uso R delle funzioni con i dati di SQL Server](rtsql-using-r-functions-with-sql-server-data.md)
 
 Lezione 4: [creare un modello predittivo](rtsql-create-a-predictive-model-r.md)
 

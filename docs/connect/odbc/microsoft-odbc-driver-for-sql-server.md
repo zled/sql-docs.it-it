@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
@@ -16,31 +15,31 @@ ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
 caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44d62e94b53d1599a0fcfb3f5815719bdbc2986d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3f890f21a9c4301e10ad11da304d6d07b31fb87f
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
-![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[per scaricare il driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare il driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ODBC è l'API di accesso ai dati nativa principale per le applicazioni scritte in C e C++ per SQL Server. È un driver ODBC per la maggior parte delle origini dati. Altri linguaggi che è possono utilizzare ODBC includono COBOL, Perl, PHP e Python. ODBC viene ampiamente impiegato negli scenari di integrazione dati.
 
-Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](../../tools/sqlcmd-utility.md) e [ **bcp**](../../tools/bcp-utility.md). Il **sqlcmd** utilità consente di eseguire istruzioni Transact-SQL, procedure di sistema e gli script SQL. Il **bcp** utilità copia bulk dei dati tra un'istanza di Microsoft SQL Server e un file di dati in un formato scelto. È possibile utilizzare **bcp** per importare di nuovo numero di righe in tabelle di SQL Server oppure per esportare dati dalle tabelle in file di dati.  
+Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](../../tools/sqlcmd-utility.md) e [ **bcp**](../../tools/bcp-utility.md). Il **sqlcmd** utilità consente di eseguire istruzioni Transact-SQL, procedure di sistema e gli script SQL. Il **bcp** utilità di copia bulk dei dati tra un'istanza di Microsoft SQL Server e un file di dati in un formato specificato dall'utente. È possibile utilizzare **bcp** per importare molte nuove righe in tabelle di SQL Server oppure per esportare dati dalle tabelle in file di dati.  
 
-## <a name="code-example-in-c"></a>Esempio di codice in C++
+## <a name="code-example-in-c"></a>Nell'esempio di codice in C++
 
-Si dispone di un file di piccole dimensioni con estensione zip che contiene il codice sorgente di un programma C++ che utilizza ODBC:
+È disponibile un file di piccole dimensioni con estensione zip che contiene il codice sorgente di un programma C++ che utilizza ODBC:
 
 - [Esempio di codice C++, tramite ODBC](../../odbc/reference/sample-odbc-program.md)
 
 ## <a name="download"></a>Scarica
 
-- ![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[per scaricare il driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare il driver ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ## <a name="documentation"></a>Documentazione  
 
@@ -48,17 +47,17 @@ Si dispone di un file di piccole dimensioni con estensione zip che contiene il c
 
 - [Provider di archivio chiavi personalizzato](../../connect/odbc/custom-keystore-providers.md)
 - [DSN e parole chiave delle stringhe di connessione e gli attributi](dsn-connection-string-attribute.md)
-- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (le funzionalità disponibili si applicano anche, senza OLEDB, per il Driver ODBC per SQL Server)
+- [SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md) (le funzionalità disponibili sono applicabili anche, senza OLEDB per il Driver ODBC per SQL Server)
 - [Utilizzando sempre crittografato](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [Utilizzo di Azure Active Directory](../../connect/odbc/using-azure-active-directory.md)
 - [Utilizzando la risoluzione IP di rete Transparent](../../connect/odbc/using-transparent-network-ip-resolution.md)
 
 ### <a name="linux-and-macos"></a>Linux e macOS
 
-- [L'installazione del Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installazione del Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
 - [Connessione a SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
-- [Connessione con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
-- [Connessione con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
+- [La connessione con **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
+- [La connessione con **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Traccia di accesso ai dati](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
 - [Domande frequenti](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Installazione di Gestione driver](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
@@ -73,7 +72,7 @@ Si dispone di un file di piccole dimensioni con estensione zip che contiene il c
 - [Esempio di esecuzione asincrona (metodo di notifica)](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
 - [Resilienza di connessione nel driver ODBC di Windows](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Pool di connessioni compatibile con il driver](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
-- [Funzionalità e modifiche del comportamento](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
+- [Le funzionalità e modifiche del comportamento](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
 - [Note sulla versione](../../connect/odbc/windows/release-notes.md)
 - [Requisiti di sistema, installazione e file del driver](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 

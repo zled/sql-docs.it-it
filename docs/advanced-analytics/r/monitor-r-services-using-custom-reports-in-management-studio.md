@@ -16,13 +16,13 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 565041e140178055b4839985c10ba4633b5f0334
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0a065ffeeaf5a88ac26cc1e628eaec5d39ba462a
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/21/2018
 ---
-# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitoraggio Machine Learning Services utilizzando i report personalizzati in Management Studio
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Monitorare i servizi di apprendimento macchina tramite i report personalizzati in Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Per rendere più facile da gestire istanza usato per machine learning, il team del prodotto ha fornito un numero di report personalizzato di esempio che è possibile aggiungere a SQL Server Management Studio. In questi rapporti, è possibile visualizzare i dettagli, ad esempio:
@@ -35,7 +35,7 @@ Per rendere più facile da gestire istanza usato per machine learning, il team d
 
 In questo articolo viene illustrato come installare e utilizzare i report personalizzati forniti in modo specifico per leaerning macchina. 
 
-Per un'introduzione generale a report in Management Studio, vedere [report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
+Per un'introduzione generale a report in Management Studio, vedere [i report personalizzati in Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## <a name="how-to-install-the-reports"></a>Come installare i report
 
@@ -86,38 +86,38 @@ Repository di esempi di prodotto in GitHub include attualmente i report seguenti
 
 + **R Services - Sessioni attive**
 
-  Utilizzare questo report per visualizzare gli utenti che sono attualmente connessi per l'istanza di SQL Server e in esecuzione di machine learning i processi. 
+  Usare questo report per visualizzare gli utenti che sono attualmente connessi all'istanza di SQL Server e i processi di apprendimento in esecuzione. 
   
 + **R Services - Configurazione**
 
-  Utilizzare questo report per visualizzare la configurazione del runtime di script esterni e i servizi correlati. Il report indica se è necessario un riavvio e verifica la disponibilità dei protocolli di rete necessari. 
+  Usare questo report per visualizzare la configurazione di runtime dello script esterno e i servizi correlati. Il report indica se è necessario un riavvio e verifica la disponibilità dei protocolli di rete necessari. 
   
-  Autenticazione implicita è necessaria per attività di machine learning in esecuzione in SQL Server come un contesto di calcolo. Per verificare che l'autenticazione implicita è configurato, il report viene verificata l'esistenza di un accesso al database per il gruppo SQLRUserGroup.
+  Autenticazione implicita è necessaria per attività di machine learning che eseguono SQL Server come un contesto di calcolo. Per verificare che l'autenticazione implicita è configurato, il report verificata l'esistenza di un accesso al database per il gruppo SQLRUserGroup.
 
  + **R Services - Configurazione istanza** 
 
-   Questo report consentono di configurare l'apprendimento. È anche possibile eseguire questo report per correggere gli errori di configurazione, vedere il report precedente.
+   Questo report è destinato per configurare l'apprendimento automatico. È anche possibile eseguire questo report per correggere gli errori di configurazione rilevati nel report precedente.
  
 + **R Services - Statistiche di esecuzione**
 
-  Utilizzare questo report per visualizzare le statistiche di esecuzione per i processi di machine learning. Ad esempio, è possibile ottenere il numero totale di script R che sono stati eseguiti, il numero di esecuzioni parallele e le funzioni RevoScaleR usate più di frequente. Fare clic su **Visualizza Script SQL** per ottenere il codice T-SQL completo dietro il report.
+  Usare questo report per visualizzare le statistiche di esecuzione per i processi di machine learning. Ad esempio, è possibile ottenere il numero totale di script R che sono stati eseguiti, il numero di esecuzioni parallele e le funzioni RevoScaleR usate più di frequente. Fare clic su **Script SQL vista** per ottenere il codice T-SQL completo dietro il report.
 
   Attualmente il report controlla solo le statistiche per le funzioni di pacchetto RevoScaleR.
 
 + **R Services - Eventi estesi**
 
-  Utilizzare questo report per visualizzare un elenco degli eventi estesi sono disponibili per il monitoraggio delle attività correlate al runtime dello script esterno. Fare clic su **Visualizza Script SQL** per ottenere il codice T-SQL completo dietro il report.
+  Usare questo report per visualizzare un elenco degli eventi estesi sono disponibili per il monitoraggio delle attività correlate a runtime dello script esterno. Fare clic su **Script SQL vista** per ottenere il codice T-SQL completo dietro il report.
 
 + **R Services - Pacchetti**
 
-  Utilizzare questo report per visualizzare un elenco dei pacchetti R o Python installata nell'istanza di SQL Server.
+  Usare questo report per visualizzare un elenco dei pacchetti Python o R installato nell'istanza di SQL Server.
 
 + **R Services - Uso risorse**
 
-  Utilizzare questo report per visualizzare il consumo di risorse della CPU, memoria e i/o dall'esecuzione dello script esterno. È anche possibile visualizzare l'impostazione di memoria del pool di risorse esterno.
+  Utilizzare questo report per visualizzare il consumo delle risorse della CPU, memoria e i/o dall'esecuzione dello script esterno. È anche possibile visualizzare l'impostazione di memoria del pool di risorse esterno.
 
 ## <a name="see-also"></a>Vedere anche
 
-[Monitoraggio di R Services](../../advanced-analytics/r-services/monitoring-r-services.md)
+[Monitoraggio dei servizi](managing-and-monitoring-r-solutions.md)
 
-[Eventi estesi per R Services](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
+[Eventi estesi per R Services](extended-events-for-sql-server-r-services.md)

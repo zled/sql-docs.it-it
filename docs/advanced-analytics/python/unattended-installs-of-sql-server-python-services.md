@@ -17,10 +17,10 @@ ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
 ms.openlocfilehash: 810adfeca86bc12bf05561eb50d555261579a1a5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="unattended-installation-of-python-machine-learning-services-in-database"></a>Installazione automatica di Python Machine Learning Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,17 +35,17 @@ In questo argomento viene descritto come utilizzare gli argomenti della riga di 
 Prima di avviare il processo di installazione, tenere presenti questi requisiti:
 
 + Il servizio di Python non può essere installato in modo indipendente dal motore di database di SQL Server 2017. È necessario includere la funzionalità motore di database SQL.
-+ Se si esegue un'installazione offline, è necessario scaricare i componenti necessari di Python in anticipo e copiarli in una cartella locale. Per i percorsi di download, vedere [installazione dei componenti di apprendimento computer senza accesso a Internet](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
++ Se si esegue un'installazione offline, è necessario scaricare i componenti Python in anticipo e copiarli in una cartella locale. Per percorsi di download, vedere [installazione dei componenti di apprendimento computer senza accesso a Internet](../../advanced-analytics/r-services/installing-ml-components-without-internet-access.md).
 + È disponibile un nuovo parametro */IACCEPTPYTHONLICENSETERMS*, indicante che si abbia accettato le condizioni di licenza per usare i componenti di Python forniti da Analitica di continuità. Se questo parametro non viene incluso nella riga di comando, l'installazione non riesce.
-+ Per completare l'installazione senza la necessità di rispondere ai prompt, assicurarsi di aver identificato tutti gli argomenti obbligatori, inclusi quelli per Python e delle licenze di SQL Server e ad altre funzionalità che si potrebbero voler installare.
-+  In alcune versioni non definitive di SQL Server 2016, è necessaria l'autenticazione modalità mista. Non è più necessario, anche se potrebbe essere utile negli scenari di sviluppo e testing delle soluzioni in modalità remota utilizzando gli account di accesso SQL in cui gli esperti di dati.
++ Per completare l'installazione senza la necessità di rispondere ai prompt, assicurarsi di aver identificato tutti gli argomenti obbligatori, inclusi quelli per Python e delle licenze di SQL Server e per le altre funzionalità che si potrebbero voler installare.
++  In alcune versioni definitive di SQL Server 2016, è necessaria l'autenticazione modalità mista. Non è più necessario, anche se potrebbe essere utile negli scenari in cui gli esperti di dati sono lo sviluppo e test di soluzioni in remoto mediante gli account di accesso SQL.
 
 ## <a name="perform-an-unattended-installation-of-python-machine-learning-services-in-database"></a>Eseguire un'installazione automatica di Python Machine Learning Services (In-Database)
 
 Nell'esempio seguente il **minimo** necessarie le funzionalità da specificare nella riga di comando quando si esegue un'installazione invisibile all'utente di Python e il motore di database nell'istanza predefinita.
 
 > [!NOTE]
-> Questa funzionalità richiede SQL Server 2017. Python è supportata nelle versioni precedenti di SQL Server.
+> Questa funzionalità richiede SQL Server 2017. Python non è supportata nelle versioni precedenti di SQL Server.
 
 1. Aprire un prompt dei comandi con privilegi elevati ed eseguire il comando seguente:
 
@@ -55,10 +55,10 @@ Nell'esempio seguente il **minimo** necessarie le funzionalità da specificare n
 
     > [!NOTE]
     > 
-    > Esistono nuovi flag di installazione per Python: `SQL_INST_MPY` e`IACCEPTPYTHONLICENSETERMS`
+    > Esistono nuovi flag di installazione per Python: `SQL_INST_MPY` e `IACCEPTPYTHONLICENSETERMS`
 
 2. Riavviare il server come indicato.
-3. Eseguire i passaggi di configurazione post-installazione, come descritto in [in questa sezione](#bkmk_PostInstall). Un altro riavvio dei servizi di SQL Server sono necessario.
+3. Eseguire i passaggi di configurazione post-installazione come descritto in [in questa sezione](#bkmk_PostInstall). Un altro riavvio dei servizi di SQL Server è necessario specificare.
 
 ## <a name = "bkmk_PostInstall"></a>Passaggi successivi all'installazione
 
@@ -72,6 +72,6 @@ Nell'esempio seguente il **minimo** necessarie le funzionalità da specificare n
     > [!NOTE]
     >  È necessario abilitare esplicitamente la funzionalità e riconfigurare; in caso contrario, non sarà possibile richiamare gli script esterni, anche se la funzionalità è stata installata.
   
-3.  Riavviare il servizio SQL Server per l'istanza riconfigurato. In questo modo verrà riavviato automaticamente correlata [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] anche servizio.
+3.  Riavviare il servizio SQL Server per l'istanza riconfigurato. In questo modo verrà riavviato automaticamente la correlate [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] anche servizio.
 
-3. Potrebbero essere necessari alcuni passaggi aggiuntivi in presenza di una configurazione di sicurezza personalizzata o se si intende usare SQL Server per supportare contesti di calcolo remoto. Per ulteriori informazioni, vedere [risoluzione dei problemi di installazione di machine learning](../machine-learning-troubleshooting-faq.md).
+3. Potrebbero essere necessari alcuni passaggi aggiuntivi in presenza di una configurazione di sicurezza personalizzata o se si intende usare SQL Server per supportare contesti di calcolo remoto. Per altre informazioni, vedere [risoluzione dei problemi il programma di installazione di machine learning](../machine-learning-troubleshooting-faq.md).
