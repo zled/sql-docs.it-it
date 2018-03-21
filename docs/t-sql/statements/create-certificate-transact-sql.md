@@ -34,17 +34,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b77ff590d36f866c8679bfbc16e605565d9d8d1d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9648aabb541ff4754eb0c5c0be2a0021e25c27dd
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Aggiunge un certificato a un database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  Questa funzionalità non è compatibile con l'esportazione del database mediante Data Tier Application Framework (DACFx). Prima dell'esportazione, è necessario eliminare tutti i certificati.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -149,7 +151,7 @@ CREATE CERTIFICATE certificate_name
  Specifica la password necessaria per decrittografare la chiave privata recuperata da un file. Questa clausola è facoltativa se la chiave privata è protetta con una password Null. Non è consigliabile salvare una chiave privata in un file senza proteggerla con una password. Se è richiesta una password ma questa non viene specificata, l'istruzione ha esito negativo.  
   
  ENCRYPTION BY PASSWORD ='*password*'  
- Specifica la password usata per crittografare la chiave privata. Utilizzare questa opzione solo se si desidera crittografare il certificato con una password. Se questa clausola viene omessa, la chiave privata viene crittografata con la chiave master del database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che esegue l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
+ Specifica la password usata per crittografare la chiave privata. Utilizzare questa opzione solo se si desidera crittografare il certificato con una password. Se questa clausola viene omessa, la chiave privata viene crittografata con la chiave master del database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ulteriori informazioni, vedere [Password Policy](../../relational-databases/security/password-policy.md).  
   
  SUBJECT ='*certificate_subject_name*'  
  Il termine *subject* (oggetto) fa riferimento a un campo nei metadati del certificato, conformemente ai requisiti dello standard X.509. Non deve essere lungo più di 64 caratteri e questo limite viene applicato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Linux. Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Windows, può essere costituito da un massimo di 128 caratteri. Gli oggetti con lunghezza maggiore di 128 caratteri vengono troncati al momento dell'archiviazione nel catalogo, ma nell'oggetto binario di grandi dimensioni (BLOB) contenente il certificato verrà mantenuto il nome di oggetto completo.  

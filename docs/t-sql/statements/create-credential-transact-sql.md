@@ -31,17 +31,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f0e46404d775da09f4aaeb7b9640dd2a35d3cfa2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 200adf6302cb0c86f487a7480579a173403ed14c
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Crea una credenziale a livello di server. Una credenziale è un record contenente le informazioni di autenticazione necessarie per connettersi a una risorsa all'esterno di SQL Server. La maggior parte delle credenziali include un utente e una password di Windows. Quando si salva il backup di un database in un determinato percorso, ad esempio, può essere necessario specificare credenziali speciali per accedere a tale percorso. Per altre informazioni, vedere [Credenziali (motore di database)](../../relational-databases/security/authentication-access/credentials-database-engine.md).
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Per creare credenziali a livello di database, vedere [CREATE DATABASE SCOPED CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-scoped-credential-transact-sql.md). Usare una credenziale a livello di server quando è necessario usare le stesse credenziali per più database nel server. Usare le credenziali con ambito database per rendere portabile il database. Quando un database viene spostato in un nuovo server, vengono spostate anche le credenziali con ambito database. Usare le credenziali con ambito database nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -78,7 +80,7 @@ WITH IDENTITY = 'identity_name'
   
  Dopo aver creato una credenziale, è possibile eseguirne il mapping a un account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) o [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md). È possibile eseguire il mapping di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una sola credenziale, mentre è possibile eseguire il mapping di una credenziale a più account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Credenziali &#40;motore di database&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md). È possibile eseguire il mapping di una credenziale solo a livello di server, non a un utente del database. 
   
- Le informazioni sulle credenziali sono incluse nella vista del catalogo [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md).  
+ Le informazioni sulle credenziali sono visibili nella vista del catalogo [sys.credentials](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md).  
   
  Se non sono presenti credenziali su cui viene eseguito il mapping a un account accesso per il provider, vengono utilizzate le credenziali sui cui viene eseguito il mapping all'account del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

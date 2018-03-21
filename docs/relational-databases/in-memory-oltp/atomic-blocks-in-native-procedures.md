@@ -14,15 +14,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cadb8454b9d9470afc7b0add40e21fd9f1346b00
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: f70a9c85cf6a4341f6c92674a046bff11c7a077a
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocchi atomici nelle procedure native
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -150,7 +150,7 @@ GO
 |----------------------|-----------------|  
 |**DATEFORMAT**|Tutti i formati data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati. Quando viene specificata, **DATEFORMAT** esegue l'override del formato data predefinito associato a **LANGUAGE**.|  
 |**DATEFIRST**|Quando viene specificata, **DATEFIRST** esegue l'override del valore predefinito associato a **LANGUAGE**.|  
-|**DELAYED_DURABILITY**|I valori supportati sono **OFF** e **ON**.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il commit delle transazioni può essere completamente durevole, che è l'impostazione predefinita, oppure con durabilità ritardata. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).|  
+|**DELAYED_DURABILITY**|I valori supportati sono **OFF** e **ON**.<br /><br /> Il commit delle transazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere completamente durevole, che è l'impostazione predefinita, oppure con durabilità ritardata. Per altre informazioni, vedere [Controllo della durabilità delle transazioni](../../relational-databases/logs/control-transaction-durability.md).|  
   
  Le opzioni SET seguenti presentano lo stesso valore predefinito di sistema per tutti i blocchi atomici in tutte le stored procedure compilate in modo nativo:  
   

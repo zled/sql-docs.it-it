@@ -20,16 +20,16 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6beb362dd1761eae50afae27483db00d311714f
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configurazione della connettività di PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
 
-  Visualizza o modifica le impostazioni di configurazione globali per la connettività tra PolyBase, Hadoop e l'archivio BLOB di Azure.  
+  Visualizza o modifica le impostazioni di configurazione globali per la connettività tra PolyBase, Hadoop e l'archivio BLOB di Azure.
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
