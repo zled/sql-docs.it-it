@@ -168,7 +168,7 @@ nel database. Questa autorizzazione può essere concessa da un utente con autori
   
 -   L'hint per la query sostituisce sia sp_configure sia l'opzione con ambito database. Se il parametro MAXDOP del gruppo di risorse è impostato per il gruppo di carico di lavoro:  
   
-    -   Se l'hint per la query è impostato su 0, viene sostituito dall'impostazione di Resource Governor.  
+    -   Se l'hint per la query non è 0, il valore è limitato dall'impostazione nel resource governor.  
   
     -   Se l'hint per la query non è impostato su 0, viene limitato dall'impostazione di Resource Governor.  
   
