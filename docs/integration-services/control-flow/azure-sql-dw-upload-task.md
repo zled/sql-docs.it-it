@@ -1,29 +1,29 @@
 ---
-title: "Attività di caricamento di Azure SQL DW | Microsoft Docs"
-ms.custom: 
+title: Attività di caricamento di Azure SQL DW | Microsoft Docs
+ms.custom: ''
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
 ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/20/2018
 ---
@@ -40,7 +40,7 @@ Campo|Descrizione
 -----|-----------
 LocalDirectory|Specifica la directory locale che contiene i file di dati da caricare.
 Recursively (Ricorsivo)|Specifica se eseguire una ricerca ricorsiva delle sottodirectory.
-FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. Ad esempio, Foglio*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
+FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. Ad esempio, Foglio\*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
 RowDelimiter|Specifica il carattere che contrassegna la fine di ogni riga.
 ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. Ad esempio, &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
 IsFirstRowHeader|Specifica se la prima riga in ogni file di dati contiene nomi di colonna anziché dati effettivi.
