@@ -1,31 +1,32 @@
 ---
 title: Importare i valori da un file di Excel in un dominio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.importfailing.f1
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d4e8bb9372d6e9e19e674160f9039422cd87ebc
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: c6331f1f695bb2e1c9974d27d8af76e03da55315
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importare i valori da un file di Excel in un dominio
   In questo argomento viene descritto come importare i valori da un file di Excel in un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). L'utilizzo di un file di Excel per importare valori di dominio nell'applicazione [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] semplifica il processo della generazione delle informazioni, risparmiando tempo e fatica. In questo modo è possibile di importare un elenco di valori di dati validi da un file di Excel o un file di testo in un dominio. Da un file di Excel è possibile importare i valori di dominio in uno o più domini in una Knowledge Base. Per altre informazioni sull'importazione di domini in una Knowledge Base, vedere [Importare i domini da un file di Excel in Individuazione informazioni](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md). L'esportazione in un file di Excel non è supportata.  
@@ -109,7 +110,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Ogni riga rappresenta un valore di dominio.  
   
--   La prima riga rappresenta nomi di dominio o è il primo record o valore di dati, a seconda dell'impostazione della casella di controllo **Utilizza la prima riga come intestazione** . Se si seleziona **Use First Row as header** con un file XLSX o XLS, tutti i nomi di colonna null verranno convertiti automaticamente in F*n*e a tutte le colonne duplicate verrà aggiunto un numero.  
+-   La prima riga rappresenta nomi di dominio o è il primo record o valore di dati, a seconda dell'impostazione della casella di controllo **Utilizza la prima riga come intestazione** . Se si seleziona **Utilizza la prima riga come intestazione** con un file XLSX o XLS, tutti i nomi di colonna null verranno convertiti automaticamente in F*n*e a tutte le colonne duplicate verrà aggiunto un numero.  
   
 -   Se si annulla l'operazione di importazione prima del completamento, verrà eseguito il rollback dell'operazione e non verrà importato alcun dato.  
   
