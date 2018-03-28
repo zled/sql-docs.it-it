@@ -2,22 +2,22 @@
 title: Raccolte di connessioni per i database SQL di Microsoft | Documenti Microsoft
 description: Fornisce i collegamenti ai download per i moduli che consentono la connessione a Microsoft SQL Server e Database SQL di Azure da un'ampia gamma di linguaggi di programmazione client.
 author: MightyPen
-ms.service: 
+ms.service: ''
 ms.component: connect
 ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
-ms.custom: 
+ms.custom: ''
 ms.workload: data-management
 ms.topic: article
 ms.date: 08/09/2017
 ms.author: genemi
-ms.openlocfilehash: 9c85a5e40ca7d3b6e35cdb09fc4becbe5c9c65c3
-ms.sourcegitcommit: 1a3584a60c12521ba5b4b12a18d8cb32b1f2d555
+ms.openlocfilehash: 33df5e13dcdeb205a1dbc9fa9c1a5dc7efc754c2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Moduli di connessione per i database SQL di Microsoft
 
@@ -30,7 +30,7 @@ Questo articolo fornisce collegamenti ai moduli di connessione per il download o
 
 #### <a name="oop-to-relational-mismatch"></a>Mancata corrispondenza OOP-relational
 
-*Relazionale*: i programmi Client che vengono scritti in un linguaggio (OOP) programmazione orientata agli oggetti spesso utilizzano i driver SQL che restituiscono dati di query in un formato più relazionali di orientata agli oggetti. Utilizzo di ADO.NET c# è un esempio. La mancata corrispondenza tra formato relazionale OOP talvolta rende il codice OOP più difficile la scrittura e la comprensione.
+*Relazionale*: i programmi Client che vengono scritti in un linguaggio (OOP) programmazione orientata agli oggetti spesso utilizzano i driver SQL che restituiscono dati di query in un formato più relazionale di orientata agli oggetti. Utilizzo di ADO.NET c# è un esempio. La mancata corrispondenza tra formato relazionale OOP talvolta rende il codice OOP più difficile la scrittura e la comprensione.
 
 *ORM*: altri driver o un framework di restituiscono dati di query nel formato OOP, evitando la mancata corrispondenza. Questi driver utilizzare, è previsto che le classi sono state definite affinché corrisponda alle colonne di dati di tabelle SQL specifiche. Il driver esegue quindi il *mapping relazionale a oggetti* ORM () per restituire i dati di query come un'istanza di una classe. Microsoft Entity Framework (EF) per c# e ibernazione per Java, sono riportati due esempi.
 
@@ -60,7 +60,7 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 | C++      | [ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Java     | [JDBC](http://www.microsoft.com/download/details.aspx?id=55539) |
 | Node.js  | [Node.js driver, le istruzioni di installazione](http://docs.microsoft.com/sql/connect/node-js/step-1-configure-development-environment-for-node-js-development) |
-| PHP      | *Sistema operativo:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Ubuntu o MacOS PHP driver, da Github](http://github.com/Microsoft/msphpsql/tree/dev#install-unix) |
+| PHP      | *Sistema operativo:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux o macOS driver PHP da Github](http://github.com/Microsoft/msphpsql/) |
 | Python   | [pyodbc, le istruzioni di installazione](http://docs.microsoft.com/sql/connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development)<br />[Scaricare ODBC](http://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server) |
 | Ruby     | [Driver Ruby, le istruzioni di installazione](https://docs.microsoft.com/sql/connect/ruby/step-1-configure-development-environment-for-ruby-development)<br />[Pagina di download Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |
@@ -90,7 +90,7 @@ Nella tabella seguente sono elencati esempi di Framework relazionale Mapping ORM
 ## <a name="build-an-app-webpages"></a>Pagine Web di compilazione-un-app
 
 
-[http://aka.ms/sqldev](http://aka.ms/sqldev) consente di accedere a un set di *compilazione-un-app* pagine Web. Le pagine Web forniscono informazioni sulle diverse combinazioni di programmazione di lingua, il sistema operativo e driver di connessione SQL. Tra le informazioni contenute nelle pagine Web di compilazione-un-app sono i seguenti elementi:
+[http://aka.ms/sqldev](http://aka.ms/sqldev) Consente di accedere a un set di *compilazione un'app* pagine Web. Le pagine Web forniscono informazioni sulle diverse combinazioni di programmazione di lingua, il sistema operativo e driver di connessione SQL. Tra le informazioni contenute nelle pagine Web di compilazione-un-app sono i seguenti elementi:
 
 - Informazioni dettagliate su come iniziare a fin dall'inizio, per ogni combinazione di lingua del sistema operativo + driver.
     - Istruzioni per l'installazione dei driver più recenti di connessione SQL.

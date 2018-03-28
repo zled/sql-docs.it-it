@@ -1,36 +1,36 @@
 ---
 title: Determinare le autorizzazioni valide per il motore di database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Questo articolo descrive come determinare chi ha le autorizzazioni per i vari oggetti nel motore di database di SQL Server. SQL Server implementa due sistemi di autorizzazione per il motore di database. Nel sistema precedente basato sui ruoli predefiniti esistono autorizzazioni preconfigurate. A partire da SQL Server 2005 è disponibile un sistema più flessibile e preciso. Le informazioni in questo argomento si applicano a SQL Server a partire dalla versione 2005. Alcuni tipi di autorizzazioni non sono disponibili in alcune versioni di SQL Server.
+Questo articolo descrive come determinare chi ha le autorizzazioni per i vari oggetti nel motore di database di SQL Server. SQL Server implementa due sistemi di autorizzazione per il motore di database. Nel sistema precedente basato sui ruoli predefiniti esistono autorizzazioni preconfigurate. A partire da SQL Server 2005 è disponibile un sistema più flessibile e preciso. Le informazioni in questo articolo si applicano a SQL Server a partire dalla versione 2005. Alcuni tipi di autorizzazioni non sono disponibili in alcune versioni di SQL Server.
 
 >  [!IMPORTANT] 
 >  * Le autorizzazioni valide sono il risultato dell'aggregazione di entrambi i sistemi di autorizzazione. 
@@ -45,7 +45,7 @@ Questo articolo descrive come determinare chi ha le autorizzazioni per i vari og
 * Le autorizzazioni a livello di database possono derivare dall'appartenenza ai ruoli predefiniti del database o ai ruoli del database definiti dall'utente. Tutti gli utenti appartengono al ruolo predefinito del database `public` e ricevono tutte le autorizzazioni assegnate a tale ruolo.   
 * Le autorizzazioni a livello di database possono derivare dalle autorizzazioni concesse agli utenti o ai ruoli del database definiti dagli utenti in ogni database.   
 * Le autorizzazioni possono essere ricevute dall'account di accesso `guest` o dall'utente di database `guest`, se abilitato. L'account di accesso `guest` e gli utenti sono disabilitati per impostazione predefinita.   
-* Gli utenti di Windows possono essere membri dei gruppi di Windows che possono disporre di account di accesso. SQL Server viene a conoscenza dell'appartenenza ai gruppi di Windows quando un utente di Windows si connette e presenta un token di Windows con l'identificatore di sicurezza di un gruppo di Windows. Dato che SQL Server non gestisce o riceve gli aggiornamenti automatici sulle appartenenze ai gruppi di Windows, SQL Server non può fare riferimento in modo affidabile alle autorizzazioni degli utenti di Windows ricevute tramite l'appartenenza a gruppi di Windows.   
+* Gli utenti di Windows possono essere membri dei gruppi di Windows che possono avere account di accesso. SQL Server viene a conoscenza dell'appartenenza ai gruppi di Windows quando un utente di Windows si connette e presenta un token di Windows con l'identificatore di sicurezza di un gruppo di Windows. Dato che SQL Server non gestisce o riceve gli aggiornamenti automatici sulle appartenenze ai gruppi di Windows, SQL Server non può fare riferimento in modo affidabile alle autorizzazioni degli utenti di Windows ricevute tramite l'appartenenza a gruppi di Windows.   
 * Le autorizzazioni possono essere acquisite passando a un ruolo applicazione e fornendo la password.   
 * Le autorizzazioni possono essere acquisite eseguendo una stored procedure che include la clausola `EXECUTE AS`.   
 * Le autorizzazioni possono essere acquisite da account di accesso o utenti con l'autorizzazione `IMPERSONATE`.   
@@ -55,9 +55,9 @@ Questo articolo descrive come determinare chi ha le autorizzazioni per i vari og
 
 ## <a name="older-fixed-role-permission-system"></a>Sistema di autorizzazione precedente con ruoli predefiniti
 
-I ruoli predefiniti del server e del database hanno autorizzazioni preconfigurate non modificabili. Per determinare i membri di un ruolo predefinito del server, eseguire la query seguente.    
+I ruoli predefiniti del server e del database hanno autorizzazioni preconfigurate non modificabili. Per determinare i membri di un ruolo predefinito del server, eseguire la query seguente:    
 >  [!NOTE] 
->  Non si applica a database SQL o SQL Data Warehouse per cui non sono disponibili autorizzazioni a livello di server. La colonna `is_fixed_role` di `sys.server_principals` è stata aggiunta in SQL Server 2012. Non è necessaria per le versioni precedenti di SQL Server.  
+>  Non si applica al database SQL o SQL Data Warehouse per cui non è disponibile l'autorizzazione a livello di server. La colonna `is_fixed_role` di `sys.server_principals` è stata aggiunta in SQL Server 2012. Non è necessaria per le versioni precedenti di SQL Server.  
 ```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
@@ -89,11 +89,11 @@ Per informazioni sulle autorizzazioni concesse a ogni ruolo, vedere le descrizio
 
 ## <a name="newer-granular-permission-system"></a>Nuovo sistema di autorizzazioni granulari
 
-Questo sistema è estremamente flessibile e ciò significa che può diventare complicato se gli utenti che lo configurano vogliono essere molto precisi. Non si tratta di un aspetto necessariamente negativo. Ad esempio, è molto importante che gli istituti finanziari siano estremamente precisi. Per semplificare la configurazione può essere utile creare ruoli, assegnare autorizzazioni ai ruoli e quindi aggiungere gruppi di utenti ai ruoli. Si può semplificare ulteriormente il sistema se il team di sviluppo del database separa le attività in base allo schema e quindi concede le autorizzazioni di ruolo per un intero schema anziché per singole tabelle o stored procedure. Il mondo reale è però complesso ed è opportuno presupporre che le esigenze aziendali creino requisiti di sicurezza imprevisti.   
+Questo sistema è flessibile e ciò significa che può diventare complicato se gli utenti che lo configurano vogliono essere precisi. Per semplificare la configurazione può essere utile creare ruoli, assegnare autorizzazioni ai ruoli e quindi aggiungere gruppi di utenti ai ruoli. Si può semplificare ulteriormente il sistema se il team di sviluppo del database separa le attività in base allo schema e quindi concede le autorizzazioni di ruolo per un intero schema anziché per singole tabelle o stored procedure. Gli scenari reali sono complessi e, per esigenze aziendali, si possono creare requisiti di sicurezza imprevisti.   
 
-La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo argomento il poster è molto piccolo e non può essere consultato. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
+La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo articolo l'anteprima è molto piccola e non può essere consultata. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
   
- [![Autorizzazioni del motore di database](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ [![Autorizzazioni del motore di database](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
 
 ### <a name="security-classes"></a>Classi di sicurezza
 
@@ -105,7 +105,7 @@ Le autorizzazioni vengono concesse alle entità. Le entità possono essere ruoli
 
 Quando un utente di Windows si connette usando un account di accesso basato su un gruppo di Windows, alcune attività potrebbero richiedere la creazione di un account accesso in SQL Server o la rappresentazione dell'utente di Windows. Si supponga che un gruppo di Windows (Tecnici) contenga gli utenti Maria, Luca ed Enzo e che il gruppo Tecnici abbia un account utente del database. Se Maria è autorizzata e crea una tabella, potrebbe essere creato un utente (Maria) come proprietario della tabella. Se a Luca viene negata un'autorizzazione che invece ha il resto del gruppo Tecnici, è necessario creare l'utente Luca per tenere traccia della negazione dell'autorizzazione.
 
-Tenere presente che un utente di Windows potrebbe essere un membro di più di un gruppo di Windows, ad esempio sia Tecnici che Manager. Per determinare le autorizzazioni valide, verranno aggregate e valutate tutte le autorizzazioni concesse o negate all'account di accesso Tecnici, all'account di accesso Manager, agli utenti singolarmente e ai ruoli di cui sono membri degli utenti. La funzione `HAS_PERMS_BY_NAME` consente di scoprire se un utente o un account di accesso ha una particolare autorizzazione. Non esiste tuttavia un modo ovvio per determinare l'origine della concessione o negazione dell'autorizzazione. È necessario studiare l'elenco di autorizzazioni e probabilmente sperimentare.
+Tenere presente che un utente di Windows potrebbe essere un membro di più di un gruppo di Windows, ad esempio sia Tecnici che Manager. Per determinare le autorizzazioni valide, verranno aggregate e valutate tutte le autorizzazioni concesse o negate all'account di accesso Tecnici, all'account di accesso Manager, agli utenti singolarmente e ai ruoli di cui sono membri degli utenti. La funzione `HAS_PERMS_BY_NAME` consente di scoprire se un utente o un account di accesso ha una particolare autorizzazione. Non esiste tuttavia un modo ovvio per determinare l'origine della concessione o negazione dell'autorizzazione. Studiare l'elenco di autorizzazioni e sperimentare.
 
 ## <a name="useful-queries"></a>Query utili
 

@@ -1,27 +1,28 @@
 ---
 title: 'Pdostatement:: Bindparam | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61cecbcd76ba7c28135cd4ed306dad1c0ea0830c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,13 +37,13 @@ bool PDOStatement::bindParam($parameter, &$variable[, $data_type[, $length[, $dr
 ```  
   
 #### <a name="parameters"></a>Parametri  
-$*parametro*: un identificatore di parametro (misto). Per un'istruzione che usa segnaposti denominati, utilizzare un nome di parametro (: nome). Per un'istruzione preparata utilizzando la sintassi punto interrogativo, si tratta dell'indice in base 1 del parametro.  
+$*parametro*: un identificatore del parametro (misto). Per un'istruzione che usa segnaposti denominati, utilizzare un nome di parametro (: nome). Per un'istruzione preparata utilizzando la sintassi punto interrogativo, si tratta dell'indice in base 1 del parametro.  
   
 &$*variabile*: il nome (misto) della variabile PHP da associare al parametro dell'istruzione SQL.  
   
 $*data_type*: (intero) facoltativo PDO::PARAM_ * costante. Il valore predefinito è PDO::PARAM_STR.  
   
-$*lunghezza*: una lunghezza (intero) facoltativa del tipo di dati. È possibile specificare PDO:: sqlsrv_param_out_default_size per indicare la dimensione predefinita quando si usa PDO:: param_int o PDO:: param_bool in $*data_type*.  
+$*lunghezza*: lunghezza (intero) facoltativa del tipo di dati. È possibile specificare PDO:: sqlsrv_param_out_default_size per indicare la dimensione predefinita quando si usa PDO:: param_int o PDO:: param_bool in $*data_type*.  
   
 $*driver_options*: le opzioni specifiche del driver (miste) facoltative. Ad esempio, è possibile specificare PDO::SQLSRV_ENCODING_UTF8 per associare la colonna a una variabile come stringa codificata in UTF-8.  
   
@@ -146,6 +147,7 @@ $stmt->execute();
 
 
 ## <a name="see-also"></a>Vedere anche  
-[Classe PDOStatement](../../connect/php/pdostatement-class.md)  
-[PDO](http://go.microsoft.com/fwlink/?LinkID=187441)  
+[Classe PDOStatement](../../connect/php/pdostatement-class.md)
+
+[PDO](http://php.net/manual/book.pdo.php)  
   

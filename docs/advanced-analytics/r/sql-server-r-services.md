@@ -1,32 +1,32 @@
 ---
 title: SQL Server di Machine Learning e R Services (In-Database) | Documenti Microsoft
 ms.date: 03/16/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0d5bb56717eefa50a219db051eb611a82974a0bc
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: f84f61721bca14a78694a9df6c7af8b7f7d74ea7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server di Machine Learning e R Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Un'installazione di nel database di machine learning opera all'interno del contesto di un'istanza del motore database SQL Server, fornendo il supporto di script esterni R e Python per i dati che si trovano nell'istanza di SQL Server. Poiché apprendimento è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile mantenere analitica vicino ai dati ed eliminare i costi e i rischi di sicurezza associati allo spostamento dei dati.
 
-Poiché il motore di database multi-istanza, è possibile installare più istanze di analitica nel database, o anche meno recenti e più recenti versioni-by-side. Le opzioni includono uno [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-standalone-windows-install.md) con R e Python, o [SQL Server 2016 R Services (In appartenente)](../install/sql-r-standalone-windows-install.md) con appena R. 
+Poiché il motore di database multi-istanza, è possibile installare più istanze di analitica nel database, o anche meno recenti e più recenti versioni-by-side. Le opzioni includono uno [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-standalone-windows-install.md) con R e Python, o [SQL Server 2016 R Services (In-Database)](../install/sql-r-standalone-windows-install.md) con appena R. 
 
 I componenti di Machine learning possono anche essere installati come istanza indipendente [server autonomi](r-server-standalone.md). In genere, si consiglia di considerare (Standalone) e (In-Database) installazioni come si escludono a vicenda esclusivo per evitare il conflitto tra risorse, ma se si dispone di risorse sufficienti, non esistono alcun divieti contro installarli entrambi nello stesso computer fisico.
 

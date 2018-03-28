@@ -1,16 +1,16 @@
 ---
 title: Hint per la query (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2017
+ms.custom: ''
+ms.date: 03/11/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Query_Hint_TSQL
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a3c74aa7b1da86c6d0ac54025d337700019465d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.lasthandoff: 01/25/2018
   Gli hint per la query specificano che gli hint indicati devono essere utilizzati in tutta la query e influiscono su tutti gli operatori dell'istruzione. Se la query principale include l'operatore UNION, la clausola OPTION può essere specificata solo nell'ultima query che prevede un'operazione di tipo UNION. Gli hint per la query vengono specificati come parte della [clausola OPTION](../../t-sql/queries/option-clause-transact-sql.md). Se in seguito alla presenza di uno o più hint per la query non viene creato un piano valido da Query Optimizer, viene generato l'errore 8622.  
   
 > [!CAUTION]  
->  Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere seleziona il piano di esecuzione migliore per una query, è consigliabile utilizzare hint solo se strettamente necessario e sempre da parte di sviluppatori e amministratori esperti di database.  
+> Poiché Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in genere seleziona il piano di esecuzione migliore per una query, è consigliabile utilizzare hint solo se strettamente necessario e sempre da parte di sviluppatori e amministratori esperti di database.  
   
  **Si applica a:**  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 01/25/2018
  Specifica che l'ordine di join indicato dalla sintassi della query viene conservato durante l'ottimizzazione della query. L'utilizzo dell'hint FORCE ORDER non ha alcun effetto sulla possibile inversione dei ruoli in Query Optimizer.  
   
 > [!NOTE]  
->  In un'istruzione MERGE, l'accesso alla tabella di origine viene eseguito prima della tabella di destinazione come ordine di join predefinito, a meno che non sia specificata la clausola WHEN SOURCE NOT MATCHED. Specificando FORCE ORDER viene conservato questo comportamento predefinito.  
+> In un'istruzione MERGE, l'accesso alla tabella di origine viene eseguito prima della tabella di destinazione come ordine di join predefinito, a meno che non sia specificata la clausola WHEN SOURCE NOT MATCHED. Specificando FORCE ORDER viene conservato questo comportamento predefinito.  
   
  { FORCE | DISABLE } EXTERNALPUSHDOWN  
  Forzare o disabilitare il pushdown del calcolo delle espressioni di qualificazione in Hadoop. Si applica solo alle query con PolyBase. Non esegue il pushdown nell'archiviazione di Azure.  
@@ -202,31 +202,31 @@ ms.lasthandoff: 01/25/2018
   
  Esegue l'override dell'opzione di configurazione **max degree of parallelism** di **sp_configure** e Resource Governor per la query che specifica l'opzione. L'hint per la query MAXDOP può superare il valore configurato con sp_configure. Se MAXDOP supera il valore configurato con Resource Governor, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] usa il valore MAXDOP di Resource Governor descritto in [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md). Quando si usa l'hint per la query MAXDOP sono valide tutte le regole semantiche usate con l'opzione di configurazione **max degree of parallelism**. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
-> [!WARNING]  
+> [!WARNING]     
 > Se MAXDOP è impostato su zero, il server sceglie il grado massimo di parallelismo.  
   
- MAXRECURSION *number*  
- Specifica il numero massimo di ricorsioni consentito per questa query. *number* è un valore intero non negativo compreso tra 0 e 32767. Se è specificato 0, non viene applicato alcun limite. Se questa opzione non viene specificata, il limite predefinito per il server è 100.  
+ MAXRECURSION *number*     
+ Specifica il numero massimo di ricorsioni consentito per questa query. *number* è un valore intero non negativo compreso tra 0 e 32,767. Se è specificato 0, non viene applicato alcun limite. Se questa opzione non viene specificata, il limite predefinito per il server è 100.  
   
  Se durante l'esecuzione della query viene raggiunto il valore specificato o predefinito per il limite MAXRECURSION, la query viene terminata e viene restituito un errore.  
   
  A causa di questo errore, verrà eseguito il rollback di tutti gli effetti dell'istruzione. Se l'istruzione è un'istruzione SELECT, è possibile che vengano restituiti risultati parziali oppure nessun risultato. È possibile che eventuali risultati parziali non includano tutte le righe nei livelli di ricorsione che superano il livello di ricorsione massimo specificato.  
   
- Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ Per altre informazioni, vedere [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).     
   
- NO_PERFORMANCE_SPOOL  
+ NO_PERFORMANCE_SPOOL    
  **Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Impedisce l'aggiunta di un operatore spool ai piani di query (ad eccezione dei piani in cui spool è necessario per garantire una semantica di aggiornamento valida). In alcuni scenari l'operatore spool può ridurre le prestazioni. Ad esempio, poiché lo spool usa tempdb potrebbe verificarsi un conflitto di tempdb se sono presenti numerose query simultanee in esecuzione con le operazioni di spooling.  
   
- OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )  
+ OPTIMIZE FOR ( *@variable_name* { UNKNOWN | = *literal_constant }* [ **,** ...*n* ] )     
  Imposta Query Optimizer in modo che utilizzi un valore specifico per una variabile locale quando la query viene compilata e ottimizzata. Il valore viene utilizzato solo durante l'ottimizzazione della query e non durante l'esecuzione.  
   
  *@variable_name*  
  Nome di una variabile locale utilizzata in una query alla quale è possibile assegnare un valore da utilizzare con l'hint per la query OPTIMIZE FOR.  
   
  *UNKNOWN*  
- Specifica che Query Optimizer utilizza dati statistici anziché il valore iniziale per determinare il valore per una variabile locale durante l'ottimizzazione della query.  
+ Specifica che Query Optimizer usa dati statistici anziché il valore iniziale per determinare il valore per una variabile locale durante l'ottimizzazione della query.  
   
  *literal_constant*  
  Valore letterale costante a cui assegnare *@variable_name* per l'utilizzo con l'hint per la query OPTIMIZE FOR. *literal_constant* viene usato solo durante l'ottimizzazione della query e non come valore di *@variable_name* durante l'esecuzione della query. *literal_constant* può essere di qualsiasi tipo di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esprimibile come costante letterale. Il tipo di dati di *literal_constant* deve supportare la conversione implicita nel tipo di dati a cui *@variable_name* fa riferimento nella query.  
@@ -238,13 +238,14 @@ ms.lasthandoff: 01/25/2018
   
  Se OPTIMIZE FOR @variable_name = *literal_constant* e OPTIMIZE FOR UNKNOWN sono usati nello stesso hint per la query, Query Optimizer userà il valore *literal_constant* indicato per un valore specifico e UNKNOWN per i valori di variabile rimanenti. I valori vengono utilizzati durante l'ottimizzazione della query e non durante l'esecuzione di questa.  
   
- PARAMETERIZATION { SIMPLE | FORCED }  
+ PARAMETERIZATION { SIMPLE | FORCED }     
  Specifica le regole di parametrizzazione applicate da Query Optimizer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alla query durante la compilazione di questa.  
   
 > [!IMPORTANT]  
-> L'hint per la query PARAMETERIZATION può essere specificato solo all'interno di una guida di piano e non direttamente all'interno di una query.  
+> È possibile specificare l'hint per la query PARAMETERIZATION all'interno di una guida di piano per sostituire l'impostazione corrente dell'opzione SET del database PARAMETERIZATION e non direttamente all'interno di una query.    
+> Per altre informazioni, vedere [Specificare il comportamento di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).
   
- SIMPLE indica a Query Optimizer di tentare la parametrizzazione semplice. FORCED indica a Query Optimizer di tentare la parametrizzazione forzata. L'hint per la query PARAMETERIZATION viene utilizzato per sostituire l'impostazione corrente dell'opzione SET dell'hint di database PARAMETERIZATION all'interno di una guida di piano. Per altre informazioni, vedere [Specificare il comportamento di parametrizzazione delle query tramite guide di piano](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ SIMPLE indica a Query Optimizer di tentare la parametrizzazione semplice. FORCED indica a Query Optimizer di tentare la parametrizzazione forzata. Per altre informazioni, vedere [Parametrizzazione forzata in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#ForcedParam), e [Parametrizzazione semplice in Guida sull'architettura di elaborazione delle query](../../relational-databases/query-processing-architecture-guide.md#SimpleParam).  
   
  RECOMPILE  
  Indica a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] di eliminare il piano generato per la query dopo che questa è stata eseguita e forza Query Optimizer a ricompilare un piano di query alla successiva esecuzione della stessa query. Se RECOMPILE non viene specificato, i piani di query vengono inseriti nella cache e riutilizzati da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Durante la compilazione dei piani di query, l'hint per la query RECOMPILE utilizza i valori correnti delle variabili locali incluse nella query e, se la query è contenuta in una stored procedure, i valori correnti vengono passati ai parametri.  
@@ -256,12 +257,12 @@ ms.lasthandoff: 01/25/2018
   
  Se non è possibile implementare tale piano, viene restituito un errore anziché posticipare il rilevamento dell'errore fino all'esecuzione della query. Le righe possono includere colonne di lunghezza variabile. In [!INCLUDE[ssDE](../../includes/ssde-md.md)] è consentito definire righe con dimensioni massime superiori alla capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. In un'applicazione tuttavia vengono in genere archiviate righe le cui dimensioni effettive rientrano nei limiti della capacità di elaborazione di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Se in [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene rilevata una riga di lunghezza eccessiva, viene restituito un errore di esecuzione.  
  
-<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )  
- **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'***hint_name***'** )    
+ **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
- Specifica uno o più hint aggiuntivi nel processore di query come specificato da un nome di hint **all'interno di virgolette singole**. 
+ Specifica uno o più hint aggiuntivi nel processore di query come specificato da un nome di hint **all'interno di virgolette singole**.   
 
- Sono supportati i nomi di hint seguenti:
+ Sono supportati i nomi di hint seguenti:    
  
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  Indica a Query Processor di non usare un'operazione di ordinamento (ordinamento batch) per i join a cicli annidati ottimizzati durante la generazione di un piano. Equivale al [flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
@@ -285,11 +286,12 @@ ms.lasthandoff: 01/25/2018
 > [!TIP]
 > Per i nomi degli hint non viene fatta distinzione tra maiuscole e minuscole.
   
-  È possibile eseguire una query nell'elenco di tutti i nomi USE HINT supportati usando la DMV [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).
+  È possibile eseguire una query nell'elenco di tutti i nomi USE HINT supportati usando la DMV [sys.dm_exec_valid_use_hints ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md).    
+  
 > [!IMPORTANT] 
-> Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), SQL Server genera un errore quando si tenta di eseguire la query. 
+> Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
 
- USE PLAN N**'***xml_plan***'**  
+ USE PLAN N**'***xml_plan***'**     
  Forza in Query Optimizer l'utilizzo di un piano di query esistente per una query specificata da **'***xml_plan***'**. USE PLAN non può essere specificato nelle istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Applica l'hint di tabella specificato alla tabella o alla visualizzazione che corrisponde a *exposed_object_name*. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  
@@ -302,7 +304,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
   
  Quando viene specificato *exposed_object_name* senza specificare anche un hint di tabella, qualsiasi indice specificato nella query come parte di un hint di tabella per l'oggetto viene ignorato e l'utilizzo di indici è determinato da Query Optimizer. È possibile utilizzare questa tecnica per eliminare l'effetto di un hint di tabella INDEX quando non è possibile modificare la query originale. Vedere l'esempio J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } è l'hint di tabella da applicare alla tabella o alla visualizzazione che corrisponde a *exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } È l'hint di tabella da applicare alla tabella o alla visualizzazione che corrisponde a*exposed_object_name* come hint per la query. Per una descrizione di questi hint, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. Per altre informazioni, vedere la sezione Osservazioni.  
   
@@ -310,7 +312,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 > Se si specifica FORCESEEK con parametri, il numero di piani che possono essere considerati da Query Optimizer viene limitato più di quanto avvenga se si specifica FORCESEEK senza parametri. In questo caso potrebbe venire generato un errore "Impossibile generare il piano" con maggiore frequenza. In una versione futura, le modifiche interne a Query Optimizer potrebbero consentire di prendere in considerazione più piani.  
   
 ## <a name="remarks"></a>Remarks  
- Gli hint per la query non possono essere specificati in un'istruzione INSERT, eccetto quando una clausola SELECT viene utilizzata all'interno dell'istruzione.  
+ Gli hint per la query non possono essere specificati in un'istruzione INSERT, eccetto quando viene usata una clausola SELECT all'interno dell'istruzione.  
   
  È possibile specificare gli hint per la query solo nella query di livello principale e non nelle sottoquery. Quando un hint di tabella viene specificato come hint per la query, l'hint può essere specificato nella query di livello superiore o in una sottoquery, tuttavia il valore specificato per *exposed_object_name* nella clausola TABLE HINT deve corrispondere esattamente al nome esposto nella query o nella sottoquery.  
   
@@ -320,15 +322,10 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
  Se specificati come hint per la query, gli hint di tabella INDEX, FORCESCAN e FORCESEEK sono validi per gli oggetti seguenti:  
   
 -   Tabelle  
-  
 -   Viste  
-  
 -   Viste indicizzate  
-  
 -   Espressioni di tabella comuni (l'hint deve essere specificato nell'istruzione SELECT il cui set di risultati popola l'espressione di tabella comune)  
-  
 -   DMV  
-  
 -   Sottoquery denominate  
   
  Gli hint di tabella INDEX, FORCESCAN e FORCESEEK possono essere specificati come hint per la query senza hint di tabella esistenti oppure possono essere utilizzati per sostituire uno o più hint INDEX, FORCESCAN o FORCESEEK esistenti nella query. Gli hint di tabella diversi da INDEX, FORCESCAN e FORCESEEK non sono consentiti come hint per la query, a meno che la query non disponga già di una clausola WITH che specifica l'hint di tabella. In questo caso è necessario specificare inoltre un hint corrispondente come un hint per la query utilizzando TABLE HINT nella clausola OPTION per mantenere la semantica della query. Ad esempio, se la query contiene l'hint di tabella NOLOCK, la clausola OPTION nel parametro **@hints** della guida di piano deve contenere anch'essa l'hint NOLOCK. Vedere l'esempio K. Quando un hint di tabella diverso da INDEX, FORCESCAN o FORCESEEK viene specificato utilizzando TABLE HINT nella clausola OPTION senza un hint per la query corrispondente, o viceversa, viene generato l'errore 8702, che indica che la clausola OPTION può comportare la modifica della semantica della query, e la query ha esito negativo.  
@@ -338,7 +335,7 @@ TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ]
 ### <a name="a-using-merge-join"></a>A. Utilizzo di MERGE JOIN  
  L'esempio seguente specifica che l'operazione JOIN nella query viene eseguita da MERGE JOIN. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *   
 FROM Sales.Customer AS c  
 INNER JOIN Sales.CustomerAddress AS ca ON c.CustomerID = ca.CustomerID  
@@ -350,7 +347,7 @@ GO
 ### <a name="b-using-optimize-for"></a>B. Utilizzo di OPTIMIZE FOR  
  L'esempio seguente indica a Query Optimizer di usare il valore `'Seattle'` per la variabile locale `@city_name` e di usare dati statistici per determinare il valore per la variabile locale `@postal_code` durante l'ottimizzazione della query. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 DECLARE @city_name nvarchar(30);  
 DECLARE @postal_code nvarchar(15);  
 SET @city_name = 'Ascheim';  
@@ -389,7 +386,7 @@ GO
 ### <a name="d-using-merge-union"></a>D. Utilizzo di MERGE UNION  
  L'esempio seguente usa l'hint per la query MERGE UNION. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT *  
 FROM HumanResources.Employee AS e1  
 UNION  
@@ -402,7 +399,7 @@ GO
 ### <a name="e-using-hash-group-and-fast"></a>E. Utilizzo di HASH GROUP e FAST  
  L'esempio seguente usa gli hint per la query HASH GROUP e FAST. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -417,7 +414,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
 WHERE UnitPrice < $5.00  
@@ -430,7 +427,7 @@ GO
 ### <a name="g-using-index"></a>G. Utilizzo di INDEX  
  Nell'esempio seguente viene utilizzato l'hint INDEX. Nel primo esempio viene specificato un singolo indice. Nel secondo esempio vengono specificati più indici per un singolo riferimento alla tabella. In entrambi gli esempi, dal momento che l'hint INDEX è applicato a una tabella che utilizza un alias, anche la clausola TABLE HINT deve specificare lo stesso alias del nome dell'oggetto esposto. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide1',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -458,7 +455,7 @@ GO
 ### <a name="h-using-forceseek"></a>H. Utilizzo di FORCESEEK  
  Nell'esempio seguente viene utilizzato l'hint di tabella FORCESEEK. Dal momento che l'hint INDEX è applicato a una tabella che utilizza un nome in due parti, anche la clausola TABLE HINT deve specificare lo stesso nome in due parti del nome dell'oggetto esposto. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide3',   
     @stmt = N'SELECT c.LastName, c.FirstName, HumanResources.Employee.Title  
@@ -476,7 +473,7 @@ GO
 ### <a name="i-using-multiple-table-hints"></a>I. Utilizzo di più hint di tabella  
  Nell'esempio seguente vengono applicati l'hint INDEX a una tabella e l'hint FORCESEEK a un'altra. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide4',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -494,7 +491,7 @@ GO
 ### <a name="j-using-table-hint-to-override-an-existing-table-hint"></a>J. Utilizzo di TABLE HINT per eseguire l'override di un hint di tabella esistente  
  Nell'esempio seguente viene illustrato come utilizzare l'hint TABLE HINT senza specificare un hint per eseguire l'override del comportamento dell'hint di tabella INDEX specificato nella clausola FROM della query. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide5',   
     @stmt = N'SELECT e.ManagerID, c.LastName, c.FirstName, e.Title  
@@ -511,7 +508,7 @@ GO
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Specifica di hint di tabella che influiscono sulla semantica  
  Nell'esempio seguente sono contenuti due hint di tabella nella query: NOLOCK, che influisce sulla semantica, e INDEX, che non influisce sulla semantica. Per mantenere la semantica della query l’hint NOLOCK viene specificato nella clausola OPTIONS della guida di piano. Oltre all'hint NOLOCK, vengono specificati gli hint INDEX e FORCESEEK che sostituiscono l'hint INDEX che non influisce sulla semantica nella query quando l'istruzione viene compilata e ottimizzata. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide6',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -528,7 +525,7 @@ GO
   
  Nell'esempio seguente viene illustrato un metodo alternativo per mantenere la semantica della query e consentire a Query Optimizer di scegliere un indice diverso da quello specificato nell'hint di tabella. A tale scopo occorre specificare l'hint NOLOCK nella clausola OPTIONS (poiché influisce sulla semantica) e la parola chiave TABLE HINT con solo un riferimento alla tabella e nessun hint INDEX. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```  
+```sql  
 EXEC sp_create_plan_guide   
     @name = N'Guide7',   
     @stmt = N'SELECT c.LastName, c.FirstName, e.Title  
@@ -547,7 +544,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 SELECT * FROM Person.Address  
 WHERE City = 'SEATTLE' AND PostalCode = 98104
 OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DISABLE_PARAMETER_SNIFFING')); 
@@ -555,7 +552,7 @@ GO
 ```  
     
 ## <a name="see-also"></a>Vedere anche  
- [Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
+ [Hint &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
  [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

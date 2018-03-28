@@ -1,26 +1,26 @@
 ---
-title: "SQL Server Machine Learning Services - disponibilità delle funzionalità tra edizioni | Documenti Microsoft"
-ms.custom: 
+title: SQL Server Machine Learning Services - disponibilità delle funzionalità tra edizioni | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/17/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4322211bcc3a5466976368b9562ed3e95ad7e331
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 50c9f2c8f1039ce0bba25ed9c6b7c5564c1d10d2
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="feature-availability-across-editions-of-sql-server-machine-learning-services"></a>La disponibilità di funzionalità tra le edizioni di SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,9 +28,9 @@ ms.lasthandoff: 03/21/2018
  Funzionalità di Machine learning sono disponibili in SQL Server 2016 e SQL Server 2017. In questo articolo sono elencate le edizioni che fornisce la funzionalità, vengono descritte le limitazioni si applicano in edizioni specifiche e vengono elencate le funzionalità disponibili solo in alcune edizioni.
 
 
-## <a name="sql-server-2017-machine-learning-features"></a>Funzionalità di SQL Server 2017 Machine Learning
+## <a name="sql-server-2017-features"></a>Funzionalità di SQL Server 2017
 
-Edizioni Enterprise e Developer hanno la stessa copertura di funzionalità in modo che è possibile compilare soluzioni per un'installazione Enterprise senza incorrere nel costo stesso. Sebbene le edizioni sono funzionalmente equivlanet, l'utilizzo dell'edizione Developer non è supportato per gli ambienti di produzione.
+Edizioni Enterprise e Developer hanno la stessa copertura di funzionalità in modo che è possibile compilare soluzioni per un'installazione Enterprise senza incorrere nel costo stesso. Sebbene le edizioni sono funzionalmente equivalenti, l'utilizzo dell'edizione Developer non è supportato per gli ambienti di produzione.
 
 La differenza tra l'integrazione di base e avanzata è la scala. Integrazione avanzata è possibile utilizzare tutti i core disponibili per l'elaborazione parallela dei set di dati in qualsiasi dimensione adeguato per il computer. Integrazione di base è limitato a 2 core e set di dati rientra in memoria. 
 

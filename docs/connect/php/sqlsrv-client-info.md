@@ -1,32 +1,34 @@
 ---
-title: sqlsrv_client_info | Documenti Microsoft
-ms.custom: 
+title: sqlsrv_client_info | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_client_info
+apiname:
+- sqlsrv_client_info
 apitype: NA
 helpviewer_keywords:
 - API Reference, sqlsrv_client_info
 - sqlsrv_client_info
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
-caps.latest.revision: "47"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e409dd263583365e38cf02df3c13e0d27c86b9c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6efb2546525b5ed5b4d35ff7b3825d68046a89db
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -48,7 +50,7 @@ Matrice associativa con chiavi descritte nella tabella seguente o **false** se l
   
 **Per PHP per SQL Server versione 3.2 e 3.1**:  
   
-|Key|Descrizione|  
+|Key|Description|  
 |-------|---------------|  
 |DriverDllName|MSODBCSQL11.DLL (ODBC Driver 11 for SQL Server)|  
 |DriverODBCVer|Versione ODBC (xx.yy)|  
@@ -57,7 +59,7 @@ Matrice associativa con chiavi descritte nella tabella seguente o **false** se l
   
 **Per PHP per SQL Server versione 3.0 e 2.0**:  
   
-|Key|Descrizione|  
+|Key|Description|  
 |-------|---------------|  
 |DriverDllName|SQLNCLI10. DLL ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  
 |DriverODBCVer|Versione ODBC (xx.yy)|  
@@ -65,7 +67,7 @@ Matrice associativa con chiavi descritte nella tabella seguente o **false** se l
 |ExtensionVer|versione di php_sqlsrv.dll:<br /><br />2.0.xxxx.x ([!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] versione 2.0)|  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente vengono scritte informazioni client nella console quando l'esempio viene eseguito dalla riga di comando. Nell'esempio si presuppone che SQL Server sia installato nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Nell'esempio seguente vengono scritte informazioni client nella console quando l'esempio viene eseguito dalla riga di comando. Nell'esempio si presuppone che SQL Server sia installato nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -98,6 +100,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FILESTREAM_TSQL
@@ -49,28 +49,30 @@ helpviewer_keywords:
 - number of columns per table
 - maximum number of bytes per row
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ad0dd6ed4d8006a596ac05c35730a8132368d5df
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 33705d53cf51fa0aa32c386ff5cdf3fae54383ff
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Crea una nuova tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]   
 >  Per la sintassi di [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], vedere [CREATE TABLE (Azure SQL Data Warehouse)](../../t-sql/statements/create-table-azure-sql-data-warehouse.md).
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="simple-syntax"></a>Sintassi semplice  
   
 ```  
 --Simple CREATE TABLE Syntax (common if not using options)  
@@ -80,7 +82,7 @@ CREATE TABLE
 [ ; ]  
 ```  
   
-## <a name="syntax"></a>Sintassi  
+## <a name="full-syntax"></a>Sintassi completa  
   
 ```  
 --Disk-Based CREATE TABLE Syntax  
@@ -353,7 +355,7 @@ column_name <data_type>
   
 ## <a name="arguments"></a>Argomenti  
  *database_name*  
- Nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se non viene specificato, per impostazione predefinita *database_name* è il database corrente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name* e tale ID utente deve avere le autorizzazioni CREATE TABLE.  
+ Nome del database in cui è viene creata la tabella. *database_name* deve specificare il nome di un database esistente. Se non viene specificato, per impostazione predefinita *database_name* è il database corrente. L'account di accesso per la connessione corrente deve essere associato a un ID utente esistente nel database specificato da *database_name*. Questo ID utente deve avere le autorizzazioni CREATE TABLE.  
   
  *schema_name*  
  Nome dello schema a cui appartiene la nuova tabella.  
@@ -387,7 +389,7 @@ column_name <data_type>
  In base alle espressioni utilizzate, il supporto dei valori Null per le colonne calcolate viene determinato automaticamente da [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si presuppone che il risultato della maggior parte delle espressioni ammetta valori Null anche se sono presenti solo colonne in cui tali valori non sono ammessi, perché anche i possibili underflow oppure overflow generano risultati NULL. Per stabilire se una colonna calcolata in una tabella ammette o meno i valori Null, usare la funzione COLUMNPROPERTY con la proprietà **AllowsNull**. Un'espressione che ammette valori Null può essere convertita in un'espressione in cui tali valori non sono ammessi specificando ISNULL con la costante *check_expression*, dove la costante è un valore non Null che sostituisce qualsiasi risultato NULL. Per le colonne calcolate basate su espressioni di tipo CLR (Common Language Runtime) definito dall'utente è richiesta l'autorizzazione REFERENCES per il tipo.  
   
  PERSISTED  
- Specifica che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] archivierà fisicamente i valori calcolati nella tabella e aggiornerà i valori in caso di aggiornamento di eventuali altre colonne da cui dipende la colonna calcolata. Quando si contrassegna una colonna calcolata come PERSISTED, è possibile creare un indice deterministico, ma non preciso, in una colonna calcolata. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md). Le colonne calcolate utilizzate come colonne di partizionamento di una tabella partizionata devono essere contrassegnate con PERSISTED in modo esplicito. Se si specifica PERSISTED, il valore di *computed_column_expression* deve essere deterministico.  
+ Specifica che [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] archivierà fisicamente i valori calcolati nella tabella e aggiornerà i valori in caso di aggiornamento di eventuali altre colonne da cui dipende la colonna calcolata. Quando si contrassegna una colonna calcolata come PERSISTED, è possibile creare un indice deterministico, ma non preciso, in una colonna calcolata. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md). Le colonne calcolate utilizzate come colonne di partizionamento di una tabella partizionata devono essere contrassegnate con PERSISTED in modo esplicito. Se è specificato PERSISTED, il valore di *computed_column_expression* deve essere deterministico.  
   
  ON { *partition_scheme* | *filegroup* | **"**default**"** }  
 
@@ -396,7 +398,7 @@ column_name <data_type>
  ON {*partition_scheme* | *filegroup* | **"**default**"**} può inoltre essere specificato in un vincolo PRIMARY KEY o UNIQUE. Questi vincoli comportano la creazione di indici. Se si specifica *filegroup*, l'indice viene archiviato nel filegroup indicato. Se si specifica **"**default**"** oppure si omette ON, l'indice viene archiviato nello stesso filegroup della tabella. Se il vincolo PRIMARY KEY o UNIQUE crea un indice cluster, le pagine di dati della tabella vengono archiviate nello stesso filegroup dell'indice. Se si specifica CLUSTERED o se il vincolo crea in altro modo un indice cluster e si specifica un valore *partition_scheme* diverso dal valore *partition_scheme* o *filegroup* della definizione della tabella, o viceversa, verrà rispettata solo la definizione del vincolo e gli altri valori verranno ignorati.  
   
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio ON **"**default**"** oppure ON **[**default**]**. Se si specifica **"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"**default**"** o ON **[**default**]**. Se si specifica "**"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 > [!NOTE]  
 >  Dopo avere creato una tabella partizionata, impostare l'opzione LOCK_ESCALATION per la tabella su AUTO. In questo modo è possibile migliorare la concorrenza consentendo ai blocchi di eseguire l'escalation a livello di partizione (HoBT) anziché di tabella. Per altre informazioni, vedere [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
@@ -412,7 +414,7 @@ TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non
 
 
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio TEXTIMAGE_ON **"**default**"** o TEXTIMAGE_ON **[**default**]**. Se si specifica **"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio TEXTIMAGE_ON **"**default**"** o TEXTIMAGE_ON **[**default**]**. Se si specifica "**"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  FILESTREAM_ON { *partition_scheme_name* | filegroup | **"**default**"** } **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
  
@@ -499,7 +501,7 @@ TEXTIMAGE_ON modifica solo la posizione dello "spazio di archiviazione LOB", non
   
  Specifica che verrà usata dal sistema una colonna di tipo datetime2 specifica per registrare l'ora di inizio o l'ora di fine per cui un record è valido. La colonna deve essere definita come NOT NULL. Se si tenta di specificare i valori come NULL, il sistema genera un errore. Se non si specifica in modo esplicito NOT NULL per una colonna periodo, il sistema definirà la colonna come NOT NULL per impostazione predefinita. Usare questo argomento in combinazione con gli argomenti SET SYSTEM_VERSIONING e WITH SYSTEM_VERSIONING = ON per consentire il controllo delle versioni di sistema in una tabella. Per altre informazioni, vedere [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
- Gli utenti possono contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito le colonne. In questo modo **SELECT \*FROM***`<table>`* non restituisce un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale. Per modificare l'attributo **HIDDEN** per una colonna periodo esistente, è necessario eliminare e ricreare **PERIOD** con un altro flag nascosto.  
+ È possibile contrassegnare una o entrambe le colonne periodo con il flag **HIDDEN** per nascondere in modo implicito le colonne. In questo modo *SELECT \* FROM***`<table>`* non restituisce un valore per tali colonne. Per impostazione predefinita, le colonne periodo non vengono nascoste. Per poter essere usate, le colonne nascoste devono essere incluse in modo esplicito in tutte le query che fanno direttamente riferimento alla tabella temporale. Per modificare l'attributo **HIDDEN** per una colonna periodo esistente, è necessario eliminare e ricreare **PERIOD** con un altro flag nascosto.  
   
  `INDEX *index_name* [ CLUSTERED | NONCLUSTERED ] (*column_name* [ ASC | DESC ] [ ,... *n* ] )`  
      
@@ -517,7 +519,7 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
  INDEX *index_name* [ NONCLUSTERED ] COLUMNSTORE (*column_name* [ ,... *n* ] )  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Specifica che deve essere creato un indice columnstore non cluster per la tabella. La tabella sottostante può essere un heap rowstore o un indice cluster oppure può essere un indice columnstore cluster. In tutti i casi, la creazione di un indice columnstore non cluster in una tabella consente di archiviare una seconda copia dei dati per le colonne dell'indice.  
   
@@ -542,7 +544,7 @@ Specifica che deve essere creato un indice per la tabella. Può trattarsi di un 
  ON **"**default**"**  
  Crea l'indice specificato nel filegroup predefinito.  
   
- In questo contesto il termine default non rappresenta una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio ON **"**default**"** oppure ON **[**default**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"**default**"** o ON **[**default**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]  
    
@@ -777,14 +779,14 @@ CREATE TABLE t4( c1 int, c2 int, INDEX ix_1 NONCLUSTERED (c1,c2))
  COLUMNSTORE  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. COLUMNSTORE indica di usare la compressione del columnstore che offre le prestazioni migliori. Questa è la scelta tipica.  
   
  COLUMNSTORE_ARCHIVE  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Si applica solo agli indici columnstore, inclusi gli indici columnstore cluster e quelli non cluster. COLUMNSTORE_ARCHIVE comprimerà ulteriormente la tabella o la partizione a una dimensione inferiore. Può essere utilizzata per l'archiviazione o in altre situazioni in cui sono richieste dimensioni di archiviazione inferiori ed è possibile concedere più tempo per l'archiviazione e il recupero.  
   
@@ -939,7 +941,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  MEMORY_OPTIMIZED  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Il valore ON indica che la tabella è ottimizzata per la memoria. Le tabelle ottimizzate per la memoria fanno parte della funzionalità OLTP in memoria, che viene usata ottimizzare le prestazioni dell'elaborazione delle transazioni. Per un'introduzione a OLTP in memoria, vedere [Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). Per informazioni più dettagliate sulle tabelle ottimizzate per la memoria, vedere [Tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
@@ -948,35 +950,35 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  DURABILITY  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
   
  Il valore di SCHEMA_AND_DATA indica che la tabella è durevole, ovvero le modifiche sono persistenti sul disco e restano valide anche dopo il riavvio o il failover.  SCHEMA_AND_DATA è il valore predefinito.  
   
  Il valore di SCHEMA_ONLY indica che la tabella non è durevole. Lo schema delle tabelle è persistente, ma tutti gli aggiornamenti dei dati non sono persistenti al riavvio o failover del database. DURABILITY=SCHEMA_ONLY è consentita solo con MEMORY_OPTIMIZED=ON.  
   
 > [!WARNING]  
->  Quando si crea una tabella con **DURABILITY = SCHEMA_ONLY**, e successivamente si modifica **READ_COMMITTED_SNAPSHOT** usando **ALTER DATABASE** i dati della tabella andranno perduti.  
+>  Quando si crea una tabella con **DURABILITY = SCHEMA_ONLY**, e successivamente si modifica **READ_COMMITTED_SNAPSHOT** usando **ALTER DATABASE**, i dati della tabella andranno perduti.  
   
  BUCKET_COUNT  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
- Indica il numero di bucket che deve essere creato nell'indice hash. Il valore massimo per BUCKET_COUNT in indici hash è 1.073.741.824. Per altre informazioni sui numeri di bucket, vedere [Indici per tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
+ Indica il numero di bucket che deve essere creato nell'indice hash. Il valore massimo per BUCKET_COUNT in indici hash è 1.073.741.824. Per altre informazioni sui numeri di bucket, vedere [Indici in tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md).  
   
  Bucket_count è un argomento obbligatorio.  
   
  INDEX  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
 Gli indici di tabella e di colonna possono essere specificati come parte dell'istruzione CREATE TABLE. Per informazioni dettagliate sull'aggiunta e rimozione degli indici nelle tabelle ottimizzate per la memoria, vedere: [Modifica di tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)
   
  HASH  
    
   
-**Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
+**Si applica a** : da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Indica che viene creato un indice HASH.  
   
@@ -1222,7 +1224,7 @@ SELECT * FROM tempdb.sys.database_files
   
 -   L'istruzione DROP INDEX non consente di eliminare un indice creato per un vincolo. Per eliminare il vincolo, è necessario usare l'istruzione ALTER TABLE. Un indice creato per un vincolo specifico e da esso utilizzato può essere ricompilato tramite l'istruzione ALTER INDEX...REBUILD. Per altre informazioni, vedere [Riorganizzare e ricompilare gli indici](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md).  
   
--   I nomi di vincolo devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md), fatta eccezione per il nome che non può iniziare con il simbolo di cancelletto (#). Se si omette *constraint_name*, al vincolo viene assegnato un nome generato dal sistema. Il nome del vincolo viene indicato nei messaggi di errore relativi alle violazioni di vincolo.  
+-   I nomi di vincolo devono essere conformi alle regole per gli [identificatori](../../relational-databases/databases/database-identifiers.md), con l'eccezione che il nome non può iniziare con il simbolo di cancelletto (#). Se *constraint_name* viene omesso, al vincolo viene assegnato un nome generato dal sistema. Il nome del vincolo viene indicato nei messaggi di errore relativi alle violazioni di vincolo.  
   
 -   Quando in un'istruzione INSERT, UPDATE o DELETE viene violato un vincolo, l'istruzione viene interrotta. Con l'impostazione OFF per SET XACT_ABORT, tuttavia, la transazione continua a essere elaborata se l'istruzione fa parte di una transazione esplicita. Se l'impostazione di SET XACT_ABORT è ON, viene eseguito il rollback dell'intera transazione. È anche possibile usare l'istruzione ROLLBACK TRANSACTION con la definizione di transazione eseguendo un controllo con la funzione di sistema @@ERROR.  
   

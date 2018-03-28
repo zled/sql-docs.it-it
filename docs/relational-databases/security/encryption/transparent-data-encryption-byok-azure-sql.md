@@ -1,29 +1,29 @@
 ---
 title: TDE - Bring Your Own Key (BYOK) - Azure SQL | Microsoft Docs
 description: Supporto di BYOK (Bring Your Own Key) per TDE (Transparent Data Encryption) con Azure Key Vault per database e data warehouse SQL. Panoramica di TDE con BYOK, vantaggi, funzionamento, considerazioni e consigli.
-keywords: 
+keywords: ''
 services: sql-database
-documentationcenter: 
+documentationcenter: ''
 author: aliceku
 manager: craigg
-ms.prod: 
-ms.reviewer: 
+ms.prod: ''
+ms.reviewer: ''
 ms.suite: sql
 ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: 
+ms.custom: ''
 ms.component: security
 ms.workload: On Demand
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.devlang: na
 ms.topic: article
-ms.date: 01/31/2018
+ms.date: 03/16/2018
 ms.author: aliceku
-ms.openlocfilehash: 1fdb7da4fe1276a66494873fc38aa15ae67bae27
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ae89e8496ce8f2aec87d80e36ce7b48acfd6a8cf
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key (ANTEPRIMA) per database SQL di Azure e SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -69,10 +69,10 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 - Usare un insieme di credenziali delle chiavi con [eliminazione temporanea](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) abilitata per evitare la perdita di dati in caso di eliminazione accidentale della chiave o dell'insieme di credenziali delle chiavi:  
   - Le risorse eliminate temporaneamente vengono conservate per un periodo di tempo di 90 giorni, a meno che non vengano recuperate o ripulite.
   - Alle azioni di **recupero** e **pulizia** sono associate autorizzazioni specifiche nei criteri di accesso dell'insieme di credenziali delle chiavi. 
-- Concedere al server logico l'accesso all'insieme di credenziali delle chiavi usando la relativa identità di Azure Active Directory (AAD).  Quando viene usata l'interfaccia utente del portale, viene automaticamente creata l'identità AAD e vengono concesse al server le autorizzazioni di accesso all'insieme di credenziali delle chiavi.  Se si usa PowerShell per configurare TDE con BYOK, è necessario creare l'identità AAD e verificare il completamento. Per istruzioni passo passo dettagliate per l'uso di PowerShell, vedere [Configurare TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
+- Concedere al server logico l'accesso all'insieme di credenziali delle chiavi usando la relativa identità di Azure Active Directory (Azure AD).  Quando viene usata l'interfaccia utente del portale, l'identità Azure AD creata automaticamente e le autorizzazioni di accesso all'insieme di credenziali delle chiavi vengono concesse al server.  Se si usa PowerShell per configurare TDE con BYOK, è necessario creare l'identità Azure AD e verificare il completamento. Per istruzioni passo passo dettagliate per l'uso di PowerShell, vedere [Configurare TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
   >[!NOTE]
-  >Se l'identità AAD **viene eliminata per errore o se vengono revocate le autorizzazioni del server** usando i criteri di accesso dell'insieme di credenziali delle chiavi, il server perde l'accesso all'insieme di credenziali delle chiavi.
+  >Se l'identità Azure AD **viene eliminata per errore o se vengono revocate le autorizzazioni del server** usando i criteri di accesso dell'insieme di credenziali delle chiavi, il server perde l'accesso all'insieme di credenziali delle chiavi.
   >
   
 - Abilitare il controllo e la creazione di report per tutte le chiavi di crittografia: Key Vault offre log che possono essere facilmente inseriti in altri strumenti di informazioni di sicurezza e gestione degli eventi (SIEM). [Log Analytics](https://docs.microsoft.com/azure/log-analytics/log-analytics-azure-key-vault) di Operations Management Suite (OMS) è un esempio di servizio già integrato.
@@ -115,6 +115,12 @@ Nel secondo caso, è necessario configurare Azure Key Vault ridondanti in base a
 
 Per assicurarsi che sia garantito l'accesso continuo alla protezione TDE in Azure Key Vault durante un failover, è necessario eseguire la configurazione prima della replica o del failover di un database in un server secondario. Poiché è necessario che il server primario e il server secondario memorizzino copie delle protezioni TDE in tutti gli altri Azure Key Vault, nell'esempio vengono memorizzate le stesse chiavi in entrambi gli insiemi di credenziali delle chiavi.
 
+Per garantire la ridondanza nello scenario di ripristino di emergenza geografico, sono necessari un database secondario e un insieme di credenziali delle chiavi secondario. Sono supportati fino a quattro scenari.  Il concatenamento, ovvero la creazione di un database secondario per un database secondario, non è supportato.  Durante la fase di installazione iniziale, il servizio conferma la configurazione corretta delle autorizzazioni per l'insieme di credenziali delle chiavi primario e secondario.  È importante mantenere tali autorizzazioni e verificare regolarmente che siano ancora valide.
+
+>[!NOTE]
+>Quando si assegna l'identità del server a un server primario e secondario, l'identità deve essere assegnata prima al server secondario.
+>
+
 Per aggiungere una chiave esistente di un insieme di credenziali delle chiavi in un altro insieme, usare il cmdlet [Add-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/en-us/powershell/module/azurerm.sql/add-azurermsqlserverkeyvaultkey).
 
  ```powershell
@@ -149,4 +155,7 @@ Per evitare questo problema, eseguire il cmdlet [Get-AzureRmSqlServerKeyVaultKey
    ```
 Per altre informazioni sul ripristino dei backup per il database SQL, vedere [Ripristinare un database SQL di Azure mediante i backup automatici del database](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups). Per altre informazioni sul ripristino dei backup per il data warehouse SQL, vedere [Ripristino di SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-restore-database-overview).
 
-Altra considerazione per i file di log sottoposti a backup: i file di log sottoposti a backup rimangono crittografati con il componente di crittografia TDE originale, anche se è stata eseguita la rotazione della protezione TDE e il database ora usa una nuova protezione TDE.  Al momento del ripristino, saranno necessarie entrambe le chiavi per ripristinare il database.  Se il file di log usa una protezione TDE archiviata in Azure Key Vault, al momento del ripristino sarà necessaria questa chiave, anche se nel frattempo il database è stato modificato in modo che usi la crittografia TDE gestita dal servizio.   
+
+Altra considerazione per i file di log sottoposti a backup: i file di log sottoposti a backup rimangono crittografati con il componente di crittografia TDE originale, anche se è stata eseguita la rotazione della protezione TDE e il database ora usa una nuova protezione TDE.  Al momento del ripristino, saranno necessarie entrambe le chiavi per ripristinare il database.  Se il file di log usa una protezione TDE archiviata in Azure Key Vault, al momento del ripristino sarà necessaria questa chiave, anche se nel frattempo il database è stato modificato in modo che usi la crittografia TDE gestita dal servizio.
+
+

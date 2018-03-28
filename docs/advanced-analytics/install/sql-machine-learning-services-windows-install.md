@@ -1,24 +1,24 @@
 ---
 title: Installare SQL Server 2017 di Machine Learning Services (In-Database) in Windows | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1904517351a23bfa736549a249d77be2932b3c07
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a620e7ede1976fbbc50c0c81a595f002410403c8
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2017-machine-learning-services-in-database-on-windows"></a>Installare SQL Server 2017 di Machine Learning Services (In-Database) in Windows 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ In questo articolo viene descritto come installare il componente di machine lear
 
 ## <a name="bkmk_prereqs"> </a> Elenco di controllo pre-installazione
 
-+ SQL Server 2017 è obbligatorio. Se si dispone di SQL Server 2016, installare [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) invece.
++ Il programma di installazione di SQL Server 2017 è necessaria se si desidera installare servizi di Machine Learning con supporto delle lingue per R, Python o entrambi. Se invece si dispone di supporto di installazione di SQL Server 2016, è possibile installare [SQL Server 2016 R Services (In-Database)](sql-r-services-windows-install.md) per ottenere supporto del linguaggio R.
 
 + Un'istanza del motore di database è obbligatorio. Non è possibile installare solo R o Python funzionalità, anche se è possibile aggiungerli in modo incrementale a un'istanza esistente.
 

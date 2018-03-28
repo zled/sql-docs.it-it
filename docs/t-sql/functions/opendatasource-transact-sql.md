@@ -1,16 +1,16 @@
 ---
 title: OPENDATASOURCE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENDATASOURCE
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: 5510b846-9cde-4687-8798-be9a273aad31
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e2ddb99a84c910c89aedaa086eb10e3f9de7abb9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b839da305714566169a95dc3636c00eac9286e94
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="opendatasource-transact-sql"></a>OPENDATASOURCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Restituisce informazioni sulla connessione ad hoc all'interno di un nome di oggetto in quattro parti, senza utilizzare il nome di un server collegato.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
@@ -55,7 +57,7 @@ OPENDATASOURCE ( provider_name, init_string )
  Nome registrato come valore PROGID del provider OLE DB utilizzato per l'accesso all'origine dati. *provider_name* è un tipo di dati **char** e non prevede alcun valore predefinito.  
   
  *init_string*  
- Stringa di connessione passata all'interfaccia IDataInitialize del provider di destinazione. La sintassi della stringa del provider si basa sulla coppia parola chiave/valore separati dal carattere punto e virgola, ad esempio **'***parolachiave1*=*valore***;***parolachiave2*=*valore***'**.  
+ Stringa di connessione passata all'interfaccia IDataInitialize del provider di destinazione. La sintassi della stringa del provider si basa coppie di parola chiave/valore separate da punto e virgola, ad esempio **'***keyword1*=*value***;***keyword2*=*value***'**.  
   
  Per informazioni sulle coppie parola chiave/valore specifiche supportate nel provider, vedere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Data Access SDK. In questa documentazione è definita la sintassi di base. Nella tabella seguente sono elencate le parole chiave di più frequente utilizzo nell'argomento *init_string*.  
   

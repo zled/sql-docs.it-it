@@ -3,30 +3,30 @@ title: Esplorazione dei dati e modellazione predittiva con R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/18/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bf6de7e2-f394-4b8a-a4b7-0b8dadf25426
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: d7c5430e585d7324e94ebe64e5138246e26049c4
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 09f3ec8f5171050082ab4bc5ede085387682a33e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r"></a>Esplorazione dei dati e modellazione predittiva con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo argomento vengono descritti i miglioramenti al processo di analisi scientifica dei dati che sono possibili grazie all'integrazione con SQL Server.
+In questo articolo descrive i miglioramenti al processo di analisi scientifica dei dati che sono possibili grazie all'integrazione con SQL Server.
 
 Si applica a: SQL Server 2016 R Services, servizi SQL Server 2017 macchina Learnign
 
@@ -71,7 +71,7 @@ Oltre alle librerie R proprietarie, incluse con Microsoft Machine Learning, è p
   
      Per ulteriori informazioni su questi pacchetti e sul loro utilizzo, vedere [novità RevoScaleR](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-introduction) e [introduzione RevoPemaR](https://msdn.microsoft.com/microsoft-r/pemar-getting-started). 
 
-+ **MicrosoftML** contiene una raccolta di algoritmi altamente ottimizzato di machine learning e trasformazioni dei dati dal team di analisi scientifica dei dati di Microsoft. Molti degli algoritmi utilizzati anche in Azure Machine Learning. Per ulteriori informazioni, vedere [mediante il pacchetto MicrosoftML](../../advanced-analytics/using-the-microsoftml-package.md).
++ **MicrosoftML** contiene una raccolta di algoritmi di apprendimento automatico altamente ottimizzata e trasformazioni dei dati dal team di analisi scientifica dei dati di Microsoft. Molti degli algoritmi utilizzati anche in Azure Machine Learning. Per ulteriori informazioni, vedere [mediante il pacchetto MicrosoftML](../../advanced-analytics/using-the-microsoftml-package.md).
 
 ### <a name="r-development-tools"></a>Strumenti di sviluppo di R
 

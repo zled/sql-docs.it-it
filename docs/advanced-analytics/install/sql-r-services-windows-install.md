@@ -1,31 +1,31 @@
 ---
 title: Installare SQL Server 2016 R Services (In-Database) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - installazione di SQL Server R Services
 - installazione di servizi di SQL Server Machine Learning
 - Configurare R Services
 - installare l'apprendimento di SQL
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.workload: Active
-ms.openlocfilehash: 0012b48101085b7ccb18695fbda1f25c10a6b90b
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7a00eb7f3151ad95818feee1d981170164f44345
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-sql-server-2016-r-services-in-database"></a>Installare SQL Server 2016 R Services (In-Database) 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ Questo articolo illustra come installare e configurare **SQL Server 2016 R Servi
 
 ## <a name="bkmk_prereqs"> </a> Elenco di controllo pre-installazione
 
-+ SQL Server 2016 è obbligatorio. Se si dispone di SQL Server 2016, installare [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) invece.
++ Il programma di installazione di SQL Server 2016 è necessaria se si desidera installare R Services. Se invece si dispone di supporto di installazione di SQL Server 2017, è necessario installare [SQL Server 2017 Machine Learning Services (In-Database)](sql-machine-learning-services-windows-install.md) per ottenere l'integrazione di R per la versione di SQL Server.
 
 + Un'istanza del motore di database è obbligatorio. Non è possibile installare solo R, anche se è possibile aggiungerlo in modo incrementale a un'istanza esistente.
 

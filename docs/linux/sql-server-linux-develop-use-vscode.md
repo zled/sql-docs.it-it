@@ -8,18 +8,18 @@ ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.custom: sql-linux
 ms.workload: Active
-ms.openlocfilehash: caf053ca9dc50df6d3433a11e992e097f2147d7a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: fa3fb3c1d807698ddf1fa28c6c710956a75d30ea
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Usare codice di Visual Studio per creare ed eseguire script Transact-SQL per SQL Server
 
@@ -97,7 +97,7 @@ La procedura seguente viene illustrato come connettersi a SQL Server con Visual 
 
    | Impostazione | Description |
    |-----|-----|
-   | **Nome server** | Il nome dell'istanza SQL Server. Per questa esercitazione, usare **localhost** per connettersi all'istanza di SQL Server locale nel computer. Se la connessione a un Server SQL remoto, immettere il nome del computer SQL Server di destinazione o il relativo indirizzo IP. |
+   | **Nome server** | Il nome dell'istanza SQL Server. Per questa esercitazione, usare **localhost** per connettersi all'istanza di SQL Server locale nel computer. Se la connessione a un Server SQL remoto, immettere il nome del computer SQL Server di destinazione o il relativo indirizzo IP. Se è necessario specificare una porta per l'istanza di SQL Server, utilizzare la virgola per separare dal nome. Ad esempio per un server locale in esecuzione sulla porta 1401 immesso **localhost, 1401**. |
    | **[Facoltativo] Nome del database** | Il database che si desidera utilizzare. Ai fini di questa esercitazione, non specificare un database e premere **invio** per continuare. |
    | **Nome utente** | Immettere il nome di un utente con accesso a un database nel server. Per questa esercitazione, usare il valore predefinito **SA** account creato durante l'installazione di SQL Server. |
    | **Password (account di accesso SQL)** | Immettere la password per l'utente specificato. | 

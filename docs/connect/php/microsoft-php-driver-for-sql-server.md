@@ -1,33 +1,33 @@
 ---
-title: Microsoft PHP Driver per SQL Server | Documenti Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: Driver Microsoft per PHP per SQL Server | Documenti Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1b9464f25551d391004275fcb6dda33fc9b89e2f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: a7a78c55a54c5e020b26cee82e2e5a08ff09f5e0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="microsoft-php-driver-for-sql-server"></a>Microsoft PHP Driver per SQL Server
+# <a name="microsoft-drivers-for-php-for-sql-server"></a>Driver Microsoft per PHP per SQL Server
 
-![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[di scaricare PHP driver per SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[di scaricare i driver PHP per SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Il Driver SQL Server per PHP consente l'integrazione con SQL Server per le applicazioni PHP. Il driver è un'estensione di PHP che consente la lettura e scrittura dei dati di SQL Server dagli script PHP. Il driver fornisce interfacce per l'accesso ai dati di Database SQL di Azure e in tutte le edizioni di SQL Server 2005 e versioni successive (comprese le edizioni Express). Utilizza il driver di PHP funzionalità, inclusi i flussi PHP per leggere e scrivere oggetti di grandi dimensioni.  
+Microsoft Drivers for PHP per SQL Server abilitare l'integrazione con SQL Server per le applicazioni PHP. I driver sono estensioni PHP che consentono la lettura e scrittura dei dati di SQL Server dagli script PHP. I driver offrono le interfacce per l'accesso ai dati in database SQL di Azure e in tutte le edizioni di SQL Server 2005 e versioni successive (comprese le edizioni Express). I driver assicurarsi di usare le funzionalità PHP, inclusi i flussi PHP, per leggere e scrivere oggetti di grandi dimensioni.  
   
 ## <a name="getting-started"></a>Introduzione  
 * [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di PHP](step-1-configure-development-environment-for-php-development.md)  
@@ -42,13 +42,13 @@ Il Driver SQL Server per PHP consente l'integrazione con SQL Server per le appli
 * [Considerazioni sulla sicurezza](security-considerations-for-php-sql-driver.md)
   
 ## <a name="community"></a>Community  
-* [Risorse di supporto per il Driver SQL PHP](support-resources-for-the-php-sql-driver.md)
+* [Risorse di supporto per i driver Microsoft per PHP per SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Scarica  
 * ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[di scaricare PHP driver per SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
   
 ## <a name="samples"></a>Esempi  
-* [Esempi di codice per il Driver SQL PHP](code-samples-for-php-sql-driver.md)
+* [Esempi di codice per i driver Microsoft per PHP per SQL Server](code-samples-for-php-sql-driver.md)
 * [Introduzione a PHP in Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
 * [Guida introduttiva a PHP in macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
 * [Introduzione a PHP per Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)

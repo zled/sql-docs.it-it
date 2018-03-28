@@ -1,30 +1,31 @@
 ---
 title: 'Procedura: specificare i tipi di dati PHP | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - converting data types
 - streaming data
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a0374a32d2798a28cfe3e27ab557921763eea36
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: b12a1042d4090a9e2369f602010199dea54431ed
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-specify-php-data-types"></a>Procedura: Specificare i tipi di dati PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,14 +38,14 @@ Di seguito sono elencati i passaggi principali per la specifica dei tipi di dati
   
 2.  Rendere una riga di dati disponibile per la lettura con [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md).  
   
-3.  Recuperare i dati di campo da una riga restituita usando [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con il tipo di dati PHP desiderato specificato come terzo parametro facoltativo. Se il terzo parametro facoltativo viene omesso, i dati verranno restituiti in base ai tipi PHP predefiniti. Per informazioni sui tipi PHP restituiti predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
+3.  Recuperare i dati di campo da una riga restituita usando [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md) con il tipo di dati PHP desiderato specificato come terzo parametro facoltativo. Se il terzo parametro facoltativo viene omesso, vengono restituiti dati in base ai tipi PHP predefiniti. Per informazioni sui tipi PHP restituiti predefiniti, vedere [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-    Per informazioni sulle costanti usate per specificare il tipo di dati PHP, vedere la sezione PHPTYPE [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
+    Per informazioni sulle costanti usate per specificare il tipo di dati PHP, vedere la sezione PHPTYPE [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente recupera le righe dalla tabella *Production.ProductReview* del database AdventureWorks. In ogni riga restituita il campo *ReviewDate* viene recuperato come stringa e il campo *Comments* viene recuperato come flusso. I dati del flusso vengono visualizzati usando la funzione [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
+L'esempio seguente recupera le righe dalla tabella *Production.ProductReview* del database AdventureWorks. In ogni riga restituita, il *ReviewDate* campo viene recuperato come stringa e il *commenti* campo viene recuperato come flusso. I dati del flusso vengono visualizzati usando la funzione [fpassthru](http://php.net/manual/en/function.fpassthru.php) PHP.  
   
-Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -111,8 +112,11 @@ Il recupero del quarto campo (*commenti*) come flusso è a scopo dimostrativo. P
 > La funzione [sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md) offre un modo per ottenere informazioni sui campi, incluse informazioni sul tipo, prima di eseguire una query.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Recupero di dati](../../connect/php/retrieving-data.md)  
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)  
+[Recupero di dati](../../connect/php/retrieving-data.md)
+
+[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)
+
 [How to: Retrieve Input and Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver.md)  
   
