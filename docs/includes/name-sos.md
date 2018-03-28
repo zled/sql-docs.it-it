@@ -1,1 +1,1 @@
-<Token>Studio di operazioni di Microsoft SQL (anteprima)</Token>
+<Token>Microsoft SQL Operation Studio (anteprima)</Token>
