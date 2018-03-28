@@ -60,7 +60,7 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
  COMPATIBILITY_LEVEL { 140 | 130 | 120 | 110 | 100 | 90 | 80 }  
  Versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con cui il database deve risultare compatibile. È possibile configurare i valori di livello di compatibilità seguenti:  
   
-|Product|Versione motore di database|Designazione livello di compatibilità|Valori livello di compatibilità supportati|  
+|Prodotto|Versione del motore di database|Designazione di livello di compatibilità|Valori del livello di compatibilità supportato|  
 |-------------|-----------------------------|-------------------------------------|------------------------------------------|  
 |[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]|14|140|140, 130, 120, 110, 100|
 |[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|12|130|140, 130, 120, 110, 100|  
@@ -77,12 +77,12 @@ SET COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 | 90 }
 > 
 > A partire dalla **metà di giugno del 2016**, nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] il livello di compatibilità predefinito è 130 anziché 120 per i database **appena creati**. I database esistenti creati prima della meta di giugno 2016 non sono interessati e mantengono il livello di compatibilità corrente (100, 110 o 120). 
 > 
-> Se si vuole che il livello per il database sia generalmente 130, ma si ritiene preferibile l'algoritmo di **stima della cardinalità** per il livello 110, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) e in particolarità la relativa parola chiave `LEGACY_CARDINALITY_ESTIMATION = ON`.  
+> Se si desidera il livello 130 per il database, ma allo stesso tempo si vuole avere l'algoritmo di **stima della cardinalità** a 110, vedere [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md), in particolare la parola chiave `LEGACY_CARDINALITY_ESTIMATION = ON`.  
 >  
->  Per informazioni dettagliate su come valutare le variazioni di prestazioni delle query più importanti, tra i due livelli di compatibilità [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vedere [Improved Query Performance with Compatibility Level 130 in Azure SQL Database](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/) (Prestazioni di query migliorate con Compatibility Level 130 nel database SQL di Azure).
+>  Per informazioni dettagliate su come valutare le variazioni delle prestazioni delle query più importanti tra i due livelli di compatibilità [!INCLUDE[ssSDS](../../includes/sssds-md.md)] vedere [Prestazioni delle query migliorate con il livello di compatibilità 130 in Database SQL di Azure](http://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
 
 
- Eseguire la query seguente per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] al quale si è connessi.  
+ Eseguire la query seguente per determinare la versione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] a cui si è connessi.   
   
 ```sql  
 SELECT SERVERPROPERTY('ProductVersion');  
@@ -123,12 +123,12 @@ Per tutte le installazioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 > Per alter informazioni sulle modifiche di rilievo, vedere [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2014](http://msdn.microsoft.com/library/ms143179(v=sql.120)), [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2012](http://msdn.microsoft.com/library/ms143179(v=sql.110)) e [Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2008](http://msdn.microsoft.com/library/ms143179(v=sql.100)).
   
 ## <a name="best-practices"></a>Procedure consigliate  
-Per il flusso di lavoro consigliato relativo all'aggiornamento del livello di compatibilità, vedere [Modificare la modalità di compatibilità del database e usare Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
+Per il flusso di lavoro consigliato per l'aggiornamento del livello di compatibilità, vedere [Modificare la modalità di compatibilità del database e usare il Query Store](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>Livelli di compatibilità e stored procedure  
- Quando si esegue una stored procedure, viene utilizzato il livello di compatibilità corrente del database in cui la procedura è definita. Se si modifica l'impostazione di compatibilità di un database, tutte le relative stored procedure vengono ricompilate automaticamente per riflettere tale modifica.  
+ Quando si esegue una stored procedure, viene utilizzato il livello di compatibilità corrente del database in cui la procedura è definita. Se si modifica l'impostazione di compatibilità di un database, tutte le relative stored procedure vengono ricompilate automaticamente al fine di riflettere tale modifica.   
 
-## <a name="differences-between-compatibility-level-130-and-level-140"></a>Differenze tra i livelli di compatibilità 130 e 140  
+## <a name="differences-between-compatibility-level-130-and-level-140"></a>Differenze tra il livello di compatibilità 130 e 140   
 In questa sezione vengono descritti i nuovi comportamenti introdotti con il livello di compatibilità 140.
 
 |Livello di compatibilità 130 o inferiore|Livello di compatibilità 140|  
