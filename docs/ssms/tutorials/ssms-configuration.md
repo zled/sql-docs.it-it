@@ -10,21 +10,22 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: c9ede90c1232469797f85af353c7e3fced6851b5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 8cdb4f258f62b425be78e9f6b4628d69e304c7ba
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Esercitazione: Componenti e configurazione di SQL Server Management Studio
 In questa esercitazione vengono descritti i vari componenti finestra all'interno di SQL Server Management Studio (SSMS) e alcune opzioni di configurazione di base per l'area di lavoro. In questo articolo viene illustrato quanto segue: 
-- I diversi componenti che costituiscono l'ambiente di SSMS
-- Modifica del layout ambiente e reimpostazione dei valori predefiniti
-- Ingrandimento dell'editor di query
-- Modifica di alcune impostazioni di base, ad esempio
-    - Modifica del tipo di carattere
-    - Configurazione delle opzioni di avvio
-    - Reimpostazione della configurazione ai valori predefiniti
+
+> [!div class="checklist"]
+> * I diversi componenti che costituiscono l'ambiente di SSMS
+> * Modifica del layout ambiente e reimpostazione dei valori predefiniti
+> * Ingrandimento dell'editor di query
+> * Modifica del tipo di carattere 
+> * Configurazione delle opzioni di avvio 
+> * Reimpostazione della configurazione ai valori predefiniti 
 
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione è necessario avere SQL Server Management Studio.  
@@ -60,7 +61,7 @@ In questa sezione vengono illustrati i vari componenti finestra disponibili nell
 
     
 
-## <a name="changing-the-environmental-layout"></a>Modifica del layout ambiente 
+## <a name="change-the-environmental-layout"></a>Modificare il layout di ambiente 
 In questa sezione viene illustrata la modifica del layout di ambiente, ad esempio lo spostamento delle varie finestre. 
 
 -  Ogni componente finestra può essere spostato tenendo premuto il titolo e trascinando la finestra. 
@@ -90,7 +91,7 @@ In questa sezione viene illustrata la modifica del layout di ambiente, ad esempi
  
     ![Ripristino del layout della finestra](media/ssms-configuration/resetwindowlayout.png)
     
-## <a name="maximizing-query-editor"></a>Ingrandimento dell'editor di query
+## <a name="maximize-query-editor"></a>Ingrandire l'editor di query
 L'editor di query può essere ingrandito alla modalità schermo intero.
 
 1. Fare clic in un punto qualsiasi della finestra dell'editor di query.
@@ -100,7 +101,7 @@ Questa scelta rapida da tastiera funziona con tutte le finestre dei documenti.
 
 
 
-## <a name="changing-basic-settings"></a>Modifica delle impostazioni di base
+## <a name="change-basic-settings"></a>Modificare le impostazioni di base
 In questa sezione viene illustrato come modificare alcune impostazioni di base in SSMS. Queste opzioni sono disponibili nell'opzione del menu **Strumenti**:
 
   ![Menu Strumenti](media/ssms-configuration/tools.png)
@@ -110,18 +111,32 @@ In questa sezione viene illustrato come modificare alcune impostazioni di base i
 
     ![Personalizzare la barra degli strumenti](media/ssms-configuration/toolbar.png)
 
+### <a name="change-the-font"></a>Modificare il tipo di carattere
 - Il tipo di carattere può essere modificato dal menu **Strumenti** > **Opzioni** > **Fonts and Colors** (Tipi di carattere e colori):
 
      ![Tipi di carattere e colori](media/ssms-configuration/fontsandcolors.png)
 
+### <a name="change-the-startup-options"></a>Modificare le opzioni di avvio
 - Le opzioni di avvio determinano l'aspetto dell'area di lavoro al primo avvio di SSMS. Possono essere configurate dal menu **Strumenti** > **Opzioni** > **Avvio**:
  
     ![Opzioni di avvio](media/ssms-configuration/startup.png)
 
+### <a name="reset-settings-to-default"></a>Reimpostare i valori predefiniti delle impostazioni
 - È possibile esportare e importare tutte queste impostazioni dal menu **Strumenti** > **Import and Export Settings** (Importa/Esporta impostazioni) 
 
     ![Importare ed esportare impostazioni](media/ssms-configuration/settings.png)
     - Da qui è anche possibile ripristinare tutte le impostazioni predefinite. 
+
+
+## <a name="next-steps"></a>Passaggi successivi
+Nel prossimo articolo verranno presentati alcuni suggerimenti aggiuntivi per l'uso di SSMS, ad esempio la ricerca di log degli errori di SQL Server e del nome dell'istanza SQL. 
+
+Per altre informazioni, vedere l'articolo successivo
+> [!div class="nextstepaction"]
+> [Pulsante passaggi successivi](ssms-tricks.md)
+ 
+ 
+
 
 
 

@@ -1,15 +1,15 @@
 ---
-title: "Distribuire soluzioni di modelli con l'utilità di distribuzione | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
+title: Distribuire soluzioni di modelli con l'utilità di distribuzione | Documenti Microsoft
+ms.custom: ''
+ms.date: 03/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deploying [Analysis Services], command prompt
@@ -17,21 +17,25 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1e094ee032e236d39003fe6e2f572edfea6241a5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 38e91da35dc590b3acbe0f49517e3fad891510fc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Distribuire soluzioni di modelli con l'utilità di distribuzione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'utilità **Microsoft.AnalysisServices.Deployment** consente di avviare il motore di distribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal prompt dei comandi. Come file di input vengono usati i file di output XML generati dalla compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. I file di input sono facilmente modificabili in modo da personalizzare la distribuzione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lo script di distribuzione generato può quindi essere eseguito subito oppure salvato per essere distribuito in una fase successiva.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  L'utilità **Microsoft.AnalysisServices.Deployment** consente di avviare il motore di distribuzione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dal prompt dei comandi. Come file di input vengono usati i file di output XML generati dalla compilazione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. I file di input sono facilmente modificabili in modo da personalizzare la distribuzione di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Lo script di distribuzione generato può quindi essere eseguito subito oppure salvato per essere distribuito in una fase successiva.  
   
+> [!NOTE]
+> Il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] guidata/Utilità di distribuzione viene installato con [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) (SSMS). Verificare se che si sta utilizzando la versione più recente. Per impostazione predefinita, la versione più recente della procedura guidata distribuzione è installata in C:\Program Files (x86) \Microsoft SQL Server\140\Tools\Binn\ManagementStudio. 
+
 ## <a name="syntax"></a>Sintassi  
   
 ```  
@@ -70,7 +74,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ## <a name="remarks"></a>Osservazioni  
  L'utilità **Microsoft.AnalysisServices.Deployment** usa un set di file che includono le definizioni degli oggetti, le destinazioni di distribuzione, le opzioni di distribuzione e le impostazioni di configurazione e cerca di distribuire le definizioni degli oggetti alle destinazioni di distribuzione specificate usando le opzioni di distribuzione e le impostazioni di configurazione impostate. Questa utilità può implementare un'interfaccia utente se richiamata in modalità file di risposte o output. Per altre informazioni sull'uso dell'interfaccia utente implementata da questa utilità per creare i file di risposte, vedere [Distribuire soluzioni di modelli tramite la Distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
- L'utilità di trova nella cartella \Programmi (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
+ L'utilità si trova nella cartella \Programmi file (x86) \Microsoft SQL Server\140\Binn\ManagementStudio.  
   
 ##  <a name="Modes"></a> Modalità  
  L'utilità può essere eseguita nelle modalità riportate nella tabella seguente.  

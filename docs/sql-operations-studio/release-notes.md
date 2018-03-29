@@ -2,27 +2,44 @@
 title: Note sulla versione di Microsoft SQL operazioni Studio (anteprima) | Documenti Microsoft
 description: Note sulla versione di Microsoft SQL operazioni Studio (anteprima)
 ms.custom: tools|sos
-ms.date: 02/15/2018
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b8c5e3cce8f84f0565c764a47d3f3b7c1709454
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ba86403e791af25de4f7bcd8b1cbd7b5f188897b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione Studio operazioni SQL (anteprima)
 
-**[Scaricare l'anteprima pubblica di febbraio](download.md)**
+**[Scaricare l'anteprima pubblica di marzo](download.md)**
+
+## <a name="march-2018-march-public-preview"></a>2018 marzo (marzo in anteprima pubblica)
+
+Data di rilascio: il 28 marzo 2018  
+version: 0.27.3
+
+Il *anteprima pubblica di marzo* continua a risolvere i problemi principali GitHub e si concentra sul miglioramento della nostra storia di estendibilità. In particolare l'abilitazione estensione Manager, il miglioramento della gestione di dashboard e fornire SQL Agent e le estensioni di insights. Questa versione include i miglioramenti seguenti:
+
+- Migliorare il modello di estendibilità del dashboard per supportare insights a schede e riquadri di configurazione.
+   - Gestore estensioni del attiva semplice acquisizione delle estensioni.
+   - Le estensioni del dashboard per sp_whoisactive dal [whoisactive.com](http://www.whoisactive.com).
+   - Per informazioni dettagliate, vedere [estendere le funzionalità di SQL Studio operazioni](extensions.md).
+- Aggiungere ulteriori [API di estendibilità per la connessione e oggetto explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
+- Continuare a correggere i clienti che hanno un impatto [problemi GitHub](https://github.com/Microsoft/sqlopsstudio/issues).
+
+Per ulteriori informazioni, vedere il [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
+
 
 ## <a name="february-2018-february-public-preview"></a>2018 febbraio (febbraio in anteprima pubblica)
 
@@ -63,8 +80,6 @@ Il *anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalit
 - Correggere l'interruzione di trascinamento e rilascio bug di scripting.
 - Correggere icona Menu Start aggiunto non corretta.
 - Correggere l'icona di branding mancante Account di Azure.
-
-Per ulteriori informazioni, vedere il [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
 
 ## <a name="december-2017-december-public-preview"></a>Dicembre 2017 (anteprima pubblica di dicembre)

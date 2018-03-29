@@ -10,21 +10,23 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 7b389c5b58dc0afde077f70e2fd8bec7c6cac4d0
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Esercitazione: Connettersi ed eseguire query in SQL Server con SQL Server Management Studio
 In questa esercitazione viene illustrato come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
-    - [Connettersi a SQL Server ](#connect-to-a-sql-server)
-    - [Creare un nuovo database (**TutorialDB**)](#create-a-database)
-    - [Creare una tabella (**Customers**) nel nuovo database](#create-a-table)
-    - [Inserire righe nella nuova tabella **Customers**](#insert-rows)
-    - [Eseguire query sulla tabella **Customers** e visualizzare i risultati](#view-query-results)
-    - [Usare la tabella della finestra di query per verificare le proprietà di connessione](#verify-your-query-window-connection-properties)
-    - [Modificare il server al quale è connessa la finestra di query](#change-server-connection-within-query-window)
+
+> [!div class="checklist"]
+> * [Connettersi a SQL Server ](#connect-to-a-sql-server)
+> * [Creare un nuovo database (**TutorialDB**)](#create-a-database)
+> * [Creare una tabella (**Customers**) nel nuovo database](#create-a-table)
+> * [Inserire righe nella nuova tabella **Customers**](#insert-rows)
+> * [Eseguire query sulla tabella **Customers** e visualizzare i risultati](#view-query-results)
+> * [Usare la tabella della finestra di query per verificare le proprietà di connessione](#verify-your-query-window-connection-properties)
+> * [Modificare il server al quale è connessa la finestra di query](#change-server-connection-within-query-window)
 
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -61,7 +63,7 @@ Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti s
    ![Connessione riuscita](media/connect-query-sql-server/successfulconnection.png)
 
 
-## <a name="create-a-database"></a>Creare un database
+## <a name="create-a-database"></a>Creazione di un database
 La procedura seguente consente di creare un database denominato TutorialDB. 
 
 1. Fare clic con il pulsante destro del mouse in  **Esplora oggetti** e scegliere **Nuova query**:
