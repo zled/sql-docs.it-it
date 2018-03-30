@@ -2,34 +2,36 @@
 title: Provider Microsoft OLE DB per SQL Server | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - providers [ADO], OLE DB provider for SQL Server
 - OLE DB provider for SQL Server [ADO]
 - SQLOLEDB [ADO]
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d7be2d6b7f9be8105723b8781106b50da678b11
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 69e32ae7ddb254e18d0789f22bb6471da17a0c5e
+ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provider Microsoft OLE DB per una panoramica di SQL Server
 Il Provider Microsoft OLE DB per SQL Server, SQLOLEDB, consente di ADO per accedere a Microsoft SQL Server.
+
+**Nota:** non è consigliabile utilizzare il driver per i nuovi sviluppi. Il nuovo provider OLE DB viene chiamato il [Driver Microsoft OLE DB per SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) che verrà aggiornato con le funzionalità di server più recenti in futuro.
 
 ## <a name="connection-string-parameters"></a>Parametri di stringa di connessione
  Per connettersi a questo provider, impostare il *Provider* argomento per il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà:
@@ -125,7 +127,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   Coercizioni dei tipi di dati più comporterà tipi che non corrispondono. Ad esempio, la coercizione di un **sql_variant** con un sottotipo di **GUID** per un **DBTYPE_VARIANT** comporterà un sottotipo di **safearray**(byte) . Conversione di questo tipo di backup per un **sql_variant** comporterà un sottotipo del nuovo **matrice**(byte).
 
--   **Recordset** campi che contengono **sql_variant** dati possono essere eseguita in modalità remota (il marshalling) o persistente solo se il **sql_variant** contiene sottotipi specifici. Il tentativo di remoto o rendere persistenti i dati con il codice seguente non supportato sottotipi causerà un errore di run-time (conversione non supportata) dal Provider di persistenza (MSPersist) di Microsoft: **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, e **VT_DISPATCH.**
+-   **Recordset** i campi che contengono **sql_variant** dati possono essere eseguita in modalità remota (il marshalling) o persistente solo se il **sql_variant** contiene sottotipi specifici. Tentativo di remoto o rendere persistenti i dati con il codice seguente non supportato sottotipi causerà un errore di run-time (conversione non supportata) dal Provider di persistenza (MSPersist) di Microsoft: **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, e **VT_DISPATCH.**
 
 -   Il Provider OLE DB per SQL Server in MDAC 2.7, MDAC 2.8 e 6.0 di applicazione livello dati di Windows ha una proprietà dinamica denominata **consentire Native varianti** , come suggerisce il nome, consentendo agli sviluppatori di accedere il **sql_variant** in il modulo nativo anziché un **DBTYPE_VARIANT**. Se questa proprietà è impostata e un **Recordset** viene aperto con Client Cursor Engine (**adUseClient**), il **Open** chiamata avrà esito negativo. Se questa proprietà è impostata e un **Recordset** viene aperto con i cursori del server (**adUseServer**), il **Open** chiamata avrà esito positivo, ma che accedono a colonne di tipo **sql_variant** genererà un errore.
 
@@ -362,4 +364,4 @@ EXECUTE SalesByCategory 'Produce', '1995'
  Per dettagli specifici sull'implementazione e informazioni funzionale il Provider OLE DB Microsoft SQL Server, vedere il [Provider per SQL Server](http://msdn.microsoft.com/en-us/adf1d6c4-5930-444a-9248-ff1979729635).
 
 ## <a name="see-also"></a>Vedere anche
- [Proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [proprietà Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Proprietà ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [proprietà del Provider (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
