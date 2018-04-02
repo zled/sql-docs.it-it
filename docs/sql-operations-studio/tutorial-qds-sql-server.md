@@ -53,7 +53,7 @@ Il widget in questo esempio richiede *Archivio Query* abilitato quindi eseguire 
 
 Per aggiungere un widget insight alla dashboard, modificare l'impostazione *dashboard.database.widgets* nel file delle *impostazioni utente*.
 
-1. Al fine di accedere al file delle *impostazioni utente* premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
+1. Al fine di accedere al file delle **IMPOSTAZIONI UTENTE** premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
 2. Scrivere *impostazioni* nella casella di ricerca e dai file di impostazioni disponibili, selezionare **Preferenze: Apri impostazioni utente**.
 
    ![Comando apri impostazioni utente](./media/tutorial-qds-sql-server/open-user-settings.png)
