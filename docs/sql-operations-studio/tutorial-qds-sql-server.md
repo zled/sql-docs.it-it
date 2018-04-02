@@ -36,8 +36,8 @@ Con questa esercitazione viene illustrato il processo di aggiunta di uno dei wid
 
 Questa esercitazione richiede il database *TutorialDB*, su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
 
-- [Connettersi ed eseguire query tramite SQL Server[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query utilizzando il Database SQL di Azure[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query sul Database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 
