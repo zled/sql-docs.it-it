@@ -33,7 +33,7 @@ Con questa esercitazione viene illustrato come abilitare un widget sulla dashboa
 
 Questa esercitazione richiede il database *TutorialDB* su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
 
-- [Connettersi ed eseguire query su SQL Server con tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query sul Database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
