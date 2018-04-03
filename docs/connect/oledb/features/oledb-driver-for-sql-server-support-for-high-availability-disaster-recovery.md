@@ -17,11 +17,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9e2d236030dd77f2902e2e13575cc4aea2bc39ae
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Driver OLE DB per SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,12 +33,12 @@ ms.lasthandoff: 03/30/2018
  Se non ci si connette a un listener del gruppo di disponibilità e se più indirizzi IP sono associati un nome host, il Driver OLE DB per SQL Server verranno scorsi in sequenza tutti gli indirizzi IP associati alla voce DNS. Questa operazione può richiedere tempi lunghi se il primo indirizzo IP restituito dal server DNS non è associato ad alcuna scheda di interfaccia di rete. Quando ci si connette a un listener del gruppo di disponibilità, il Driver OLE DB per SQL Server tenta di stabilire connessioni a tutti gli indirizzi IP in parallelo e se un tentativo di connessione ha esito positivo, il driver verrà rimosso qualsiasi tentativo di connessione in sospeso.  
   
 > [!NOTE]  
->  L'aumento del timeout di connessione e l'implementazione della logica di riesecuzione per le connessioni aumentano le probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché potrebbe non essere possibile stabilire una connessione a causa del failover di un gruppo di disponibilità, è opportuno implementare la logica di riesecuzione delle connessioni, finché non si ottiene la riconnessione.  
+> L'aumento del timeout di connessione e l'implementazione della logica di riesecuzione per le connessioni aumentano le probabilità che un'applicazione si connetta a un gruppo di disponibilità. Inoltre, poiché potrebbe non essere possibile stabilire una connessione a causa del failover di un gruppo di disponibilità, è opportuno implementare la logica di riesecuzione delle connessioni, finché non si ottiene la riconnessione.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
- Specificare sempre **MultiSubnetFailover=Yes** in caso di connessione a un listener del gruppo di disponibilità di SQL Server 2012 o a un'istanza del cluster di failover di SQL Server 2012. **MultiSubnetFailover** consente di attivare un failover più veloce per tutti i gruppi di disponibilità e cluster di failover dell'istanza in SQL Server 2012, riducendo notevolmente il tempo di failover per singole e multi-subnet topologie AlwaysOn. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il Driver OLE DB per SQL Server in modo aggressivo ritenterà la connessione TCP.  
+ Specificare sempre **MultiSubnetFailover = Yes** quando ci si connette a un listener di SQL Server gruppo di disponibilità AlwaysOn o [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza Cluster di Failover. **MultiSubnetFailover** consente il failover più veloce per tutti i gruppi di disponibilità AlwaysOn e le istanze del Cluster di Failover in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], riducendo notevolmente il tempo di failover per singole e multi-subnet topologie AlwaysOn. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il Driver OLE DB per SQL Server ritenterà la connessione TCP.  
   
- Il **MultiSubnetFailover** proprietà di connessione indica che l'applicazione viene distribuita in un gruppo di disponibilità o l'istanza del Cluster di Failover e il Driver OLE DB per SQL Server tenterà di connettersi al database di primario [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indirizzi istanza prova a connettersi a tutti l'indirizzo IP. Quando si specifica **MultiSubnetFailover=Yes** per una connessione, i ripetuti tentativi di connessione TCP del client vengono eseguiti più rapidamente rispetto agli intervalli di ritrasmissione TCP predefiniti del sistema operativo. Ciò consente una riconnessione più veloce dopo il failover di un gruppo di disponibilità AlwaysOn o di un sempre nel Cluster di failover ed è applicabile a singolo e con più subnet gruppi di disponibilità sia istanze Cluster di Failover.  
+ Il **MultiSubnetFailover** proprietà di connessione indica che l'applicazione viene distribuita in un gruppo di disponibilità o l'istanza del Cluster di Failover e il Driver OLE DB per SQL Server tenterà di connettersi al database di primario [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indirizzi istanza prova a connettersi a tutti l'indirizzo IP. Quando si specifica **MultiSubnetFailover=Yes** per una connessione, i ripetuti tentativi di connessione TCP del client vengono eseguiti più rapidamente rispetto agli intervalli di ritrasmissione TCP predefiniti del sistema operativo. Ciò consente una riconnessione più veloce dopo il failover di un gruppo di disponibilità AlwaysOn o un'istanza del Cluster di Failover ed è applicabile a singolo e con più subnet gruppi di disponibilità sia istanze del Cluster di Failover.  
   
  Per ulteriori informazioni sulle parole chiave delle stringhe di connessione, vedere [Using Connection String Keywords con il Driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
@@ -58,48 +58,47 @@ ms.lasthandoff: 03/30/2018
   
 -   Le transazioni distribuite non sono supportate.  
   
- Se il routing di sola lettura non è attivo, non è possibile stabilire una connessione a un percorso di replica secondaria in un gruppo di disponibilità nelle situazioni seguenti:  
+Se il routing di sola lettura non è attivo, non è possibile stabilire una connessione a un percorso di replica secondaria in un gruppo di disponibilità nelle situazioni seguenti:  
   
 1.  Se il percorso di replica secondaria non è configurato per accettare le connessioni.  
   
 2.  Se un'applicazione usa **ApplicationIntent=ReadWrite** (vedere di seguito) e il percorso di replica secondaria è configurato per l'accesso in sola lettura.  
   
- Una connessione non riesce se una replica primaria è configurata per rifiutare i carichi di lavoro in sola lettura e la stringa di connessione contiene **ApplicationIntent=ReadOnly**.  
+Una connessione non riesce se una replica primaria è configurata per rifiutare i carichi di lavoro in sola lettura e la stringa di connessione contiene **ApplicationIntent=ReadOnly**.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>Aggiornamento per l'utilizzo di cluster su più subnet dal mirroring del database  
- Si verificherà un errore di connessione se nella stringa di connessione sono presenti le parole chiave di connessione **MultiSubnetFailover** e **Failover_Partner**. Si verificherà un errore anche se viene usato **MultiSubnetFailover** e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce una risposta del partner di failover in cui viene indicato che fa parte di una coppia del mirroring del database.  
+Si verificherà un errore di connessione se nella stringa di connessione sono presenti le parole chiave di connessione **MultiSubnetFailover** e **Failover_Partner**. Si verificherà un errore anche se viene usato **MultiSubnetFailover** e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restituisce una risposta del partner di failover in cui viene indicato che fa parte di una coppia del mirroring del database.  
   
- Se si aggiorna un Driver OLE DB per SQL Server che attualmente Usa il mirroring del database a uno scenario su più subnet, è necessario rimuovere il **Failover_Partner** proprietà di connessione e sostituirla con  **MultiSubnetFailover** impostato su **Sì** e sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=Yes**, il driver genererà un errore. Se tuttavia in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=No** (o **ApplicationIntent=ReadWrite**), l'applicazione userà il mirroring del database.  
+Se si aggiorna un Driver OLE DB per SQL Server che attualmente Usa il mirroring del database a uno scenario su più subnet, è necessario rimuovere il **Failover_Partner** proprietà di connessione e sostituirla con  **MultiSubnetFailover** impostato su **Sì** e sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=Yes**, il driver genererà un errore. Se tuttavia in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=No** (o **ApplicationIntent=ReadWrite**), l'applicazione userà il mirroring del database.  
   
- Il driver restituirà un errore se il mirroring del database viene usato nel database primario nel gruppo di disponibilità e se **MultiSubnetFailover=Yes** veine usato nella stringa di connessione a un database primario anziché a un listener del gruppo di disponibilità.  
+Il driver restituirà un errore se il mirroring del database viene usato nel database primario nel gruppo di disponibilità e se **MultiSubnetFailover=Yes** veine usato nella stringa di connessione a un database primario anziché a un listener del gruppo di disponibilità.  
   
 ## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione  
- Quando **ApplicationIntent = ReadOnly**, il client richiede un carico di lavoro di lettura durante la connessione a un database Always On abilitato. Tramite il server, la finalità verrà applicata al momento della connessione e durante un'istruzione di database USE, ma solo a un database abilitato per Always On.  
+Quando **ApplicationIntent = ReadOnly**, il client richiede un carico di lavoro di lettura durante la connessione a un database Always On abilitato. Il server applicherà la finalità al momento della connessione e durante un `USE` database istruzione, ma solo a un database abilitato AlwaysOn.  
   
- La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
+La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
   
- Un database possibile consentire o negare carichi di lavoro di letture sul database di AlwaysOn destinazione. Questa operazione viene eseguita con la clausola **ALLOW_CONNECTIONS** delle istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] **PRIMARY_ROLE** e **SECONDARY_ROLE**.  
+Un database possibile consentire o negare carichi di lavoro di letture sul database di AlwaysOn destinazione. Questa operazione viene eseguita con la clausola **ALLOW_CONNECTIONS** delle istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] **PRIMARY_ROLE** e **SECONDARY_ROLE**.  
   
- La parola chiave **ApplicationIntent** è usata per abilitare il routing di sola lettura.  
+La parola chiave **ApplicationIntent** è usata per abilitare il routing di sola lettura.  
   
 ## <a name="read-only-routing"></a>Routing di sola lettura  
- Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
+Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
   
 1.  È necessario connettersi a un listener del gruppo di disponibilità Always On.  
   
 2.  La parola chiave della stringa di connessione **ApplicationIntent** deve essere impostata su **ReadOnly**.  
   
-3.  Il gruppo di disponibilità deve essere configurato dall'amministratore del database per abilitare il routing di sola lettura.  
+3.  Il gruppo di disponibilità AlwaysOn deve essere configurato dall'amministratore del database per abilitare il routing di sola lettura.  
   
- È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per assicurare la connessione di tutte le richieste di sola lettura alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità alla parola chiave della stringa di connessione **Server**. Specificare invece il nome dell'istanza di sola lettura.  
+È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per garantire che tutte le richieste di sola lettura di connettersi alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità AlwaysOn per il **Server** parola chiave di stringa di connessione. Specificare invece il nome dell'istanza di sola lettura.  
   
- Il routing di sola lettura potrebbe impiegare più tempo a connettersi rispetto alla replica primaria poiché innanzitutto viene eseguita la connessione del routing di sola lettura alla replica primaria e, successivamente, viene cercata la replica secondaria migliore dal punto di vista della lettura. Per questo motivo è necessario aumentare il timeout di accesso.  
-
+Il routing di sola lettura potrebbe impiegare più tempo a connettersi rispetto alla replica primaria poiché innanzitutto viene eseguita la connessione del routing di sola lettura alla replica primaria e, successivamente, viene cercata la replica secondaria migliore dal punto di vista della lettura. Per questo motivo è necessario aumentare il timeout di accesso.  
   
 ## <a name="ole-db"></a>OLE DB  
- Il Driver OLE DB per SQL Server supporta sia la **ApplicationIntent** e il **MultiSubnetFailover** parole chiave.   
+Il Driver OLE DB per SQL Server supporta sia la **ApplicationIntent** e il **MultiSubnetFailover** parole chiave.   
   
- Le due parole chiave stringa di connessione OLE DB sono stati aggiunti per supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nel Driver OLE DB per SQL Server:  
+Le due parole chiave stringa di connessione OLE DB sono stati aggiunti per supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nel Driver OLE DB per SQL Server:  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -108,13 +107,13 @@ ms.lasthandoff: 03/30/2018
 
 ### <a name="application-intent"></a>Finalità dell'applicazione 
 
- Le proprietà di connessione equivalenti sono:  
+Le proprietà di connessione equivalenti sono:  
   
 -   **SSPROP_INIT_APPLICATIONINTENT**  
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
- Un Driver OLE DB per un'applicazione OLE DB di SQL Server può utilizzare uno dei metodi per specificare la finalità dell'applicazione:  
+Un Driver OLE DB per un'applicazione OLE DB di SQL Server può utilizzare uno dei metodi per specificare la finalità dell'applicazione:  
   
  **IDBInitialize:: Initialize**  
  **IDBInitialize::Initialize** prevede l'uso del set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
@@ -128,9 +127,9 @@ ms.lasthandoff: 03/30/2018
  **IDBProperties::SetProperties**  
  Per impostare il valore della proprietà **ApplicationIntent**, chiamare **IDBProperties::SetProperties** passando la proprietà **SSPROP_INIT_APPLICATIONINTENT** con un valore "**ReadWrite**" o "**ReadOnly**" o la proprietà **DBPROP_INIT_PROVIDERSTRING** con un valore contenente "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
- È possibile specificare la finalità dell'applicazione nel campo delle proprietà della finalità dell’applicazione della scheda Tutte nella finestra di dialogo **Proprietà di Data Link**.  
+È possibile specificare la finalità dell'applicazione nel campo delle proprietà della finalità dell’applicazione della scheda Tutte nella finestra di dialogo **Proprietà di Data Link**.  
   
- Quando vengono stabilite connessioni implicite, per la connessione viene utilizzata l'impostazione relativa alla finalità dell'applicazione definita per la connessione padre. Analogamente, più sessioni create dalla stessa origine dati ereditano l'impostazione relativa alla finalità dell'applicazione definita per l'origine dati.  
+Quando vengono stabilite connessioni implicite, per la connessione viene utilizzata l'impostazione relativa alla finalità dell'applicazione definita per la connessione padre. Analogamente, più sessioni create dalla stessa origine dati ereditano l'impostazione relativa alla finalità dell'applicazione definita per l'origine dati.  
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
@@ -164,10 +163,8 @@ hr = pIDBInitialize->QueryInterface(IID_IDBProperties, (void **)&pIDBProperties)
 pIDBProperties->SetProperties(1, &PropSet);
 ```
 
-
-
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per la funzionalità di SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
- [Utilizzo di parole chiave delle stringhe di connessione con il Driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
+ [Utilizzo delle parole chiave delle stringhe di connessione con driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)  
   
   
