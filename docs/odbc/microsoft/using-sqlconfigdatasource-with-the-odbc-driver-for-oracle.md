@@ -1,28 +1,30 @@
 ---
 title: Utilizzo SQLConfigDatasource con il Driver ODBC per Oracle | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: SQLConfigDataSource function [ODBC], ODBC driver for Oracle
+helpviewer_keywords:
+- SQLConfigDataSource function [ODBC], ODBC driver for Oracle
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 676ab0116fa14af4d2f29c2620a4f6e15f17cdc0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 90ebd3887adec06bfc0ec100101adf7ad7302645
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Utilizzo SQLConfigDatasource con il Driver ODBC per Oracle
 > [!IMPORTANT]  
@@ -35,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  Alcune impostazioni vengono ignorate dal driver, ma vengono accettate da **SQLConfigDatasource**. Tra queste impostazioni nella stringa di connessione ODBC è l'unico modo che sono accettati in fase di esecuzione. Un'impostazione ignorata non verrà archiviata nel Registro di sistema quando **SQLConfigDatasource** crea l'origine dati.  
   
- Nella tabella seguente, *A/N* significa che qualsiasi stringa alfanumerica valida fino alla lunghezza massima consentita. *Max Len* (lunghezza massima) è la lunghezza massima consentita della stringa accettata dall'impostazione, incluso il carattere di terminazione di stringa.  
+ Nella tabella seguente, *A/N* significa che qualsiasi stringa alfanumerica valida fino alla lunghezza massima consentita. *Max Len* (lunghezza massima) è la lunghezza massima consentita della stringa accettata dalla configurazione dell'impostazione, incluso il carattere di terminazione di stringa.  
   
 |Impostazione|Lunghezza massima|Valore predefinito|Valori validi|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
