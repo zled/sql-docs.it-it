@@ -3,25 +3,23 @@ title: Uso dei tipi di dati di R | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 5df99e1c-a89a-42c1-9d68-ffe8d9577c94
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 977d358981e3382a0ea8ee224362098627424e88
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 58728d89907666cbfc6a12e4d850143eb1314493
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-libraries-and-r-data-types"></a>Librerie di R e i tipi di dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +27,7 @@ ms.lasthandoff: 02/11/2018
 Questo argomento descrive le librerie di R inclusi e i tipi di dati che sono supportati nei seguenti prodotti:
 
 + SQL Server 2016 R Services (In-Database)
-+ Sul computer Server SQL Learning Services (In-Database)
++ SQL Server apprendimento Services (In-Database)
 
 In questo argomento elenca anche i tipi di dati non supportato e tipo di dati di elenchi di conversioni che possono essere eseguite in modo implicito quando i dati vengono passati tra R e SQL Server.
 
@@ -39,7 +37,7 @@ Entrambi i prodotti, servizi R e i servizi di Machine Learning con R, sono allin
 
 Per visualizzare la versione di R associata a una particolare istanza di SQL Server, aprire RGui.
 
-1. Per l'istanza predefinita, il percorso dovrebbe essere come segue:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+1. Per l'istanza predefinita, il percorso dovrebbe essere come segue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 2. Viene visualizzato un messaggio che elenca la distribuzione di R e il numero di versione di Microsoft R Open.
 
 Per trovare la versione di R inclusi in una particolare versione di Microsoft R Server, vedere [R Server - Novità](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
@@ -84,7 +82,7 @@ La tabella seguente mostra le modifiche del tipo di dati e dei valori quando i d
 
 Tra le categorie di tipi di dati supportati dal [sistema di tipi di SQL Server](../../t-sql/data-types/data-types-transact-sql.md), i tipi seguenti possono porre problemi se passati al codice R:
 
-+ Tipi di dati elencati nel **altri** sezione dell'argomento di sistema di tipo SQL: **cursore**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabella**
++ Tipi di dati elencati nella **altri** sezione dell'argomento di sistema di tipo SQL: **cursore**, **timestamp**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **tabella**
 + Tutti i tipi spaziali
 + **image**
 

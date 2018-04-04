@@ -1,33 +1,31 @@
 ---
 title: Componenti di SQL Server per il supporto di R | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/05/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 54e9ef3f-1136-471e-865a-7cf013673186
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: c66936108d054c5ee4772769732c8543283af3f9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: cc9f600d6bfce5d522abb8452800c35f41069b92
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componenti di SQL Server per il supporto di R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In SQL Server 2016 e 2017, il motore di database include i componenti facoltativi che supportano l'estensibilità per i linguaggi di script esterni, tra R e Python. È stato aggiunto il supporto per il linguaggio R in SQL Server 2016; il supporto per Python è stato aggiunto in servizi di SQL Server 2017 Machine Learning.
 
-In questo argomento vengono descritti i nuovi componenti che funzionano in modo specifico con il linguaggio R. Per una descrizione del funzionano di questi componenti con R open source, vedere [interoperabilità R](r-interoperability-in-sql-server.md)
+In questo argomento vengono descritti i nuovi componenti che funzionano in modo specifico con il linguaggio R. Per informazioni sul funzionamento di questi componenti con R open source, vedere [interoperabilità R](r-interoperability-in-sql-server.md)
 
 ## <a name="components-and-providers"></a>Provider e componenti
 
@@ -96,7 +94,7 @@ BxlServer usa SQL Satellite per queste attività:
 
     Inoltre è possono utilizzare i processi che potrebbe essere necessario lavorare in "blocchi" o trasferire i dati a un client remoto di. Formato con estensione XDF supportato da Microsoft R. effettivo trasferimento di dati è tramite BLOB codificato.
 
-## <a name="interaction-of-components"></a>Interazione tra componenti
+## <a name="interaction-of-components"></a>Interazione dei componenti
 
 L'architettura dei componenti appena descritta è stata fornita per garantire che il codice R open source possa funzionare "così com'è", offrendo prestazioni notevolmente migliorate per il codice in esecuzione in un computer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Il meccanismo di interazione dei componenti con il runtime R e il motore di database di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è diverso a seconda della modalità di avvio del codice R. Gli scenari principali sono riepilogati in questa sezione.
 
@@ -110,9 +108,9 @@ Il codice R eseguito dall'interno di [!INCLUDE[ssNoVersion_md](../../includes/ss
 2. Il servizio Launchpad avvia l'utilità di avvio appropriata, in questo caso, RLauncher.
 3. RLauncher avvia il processo R esterno.
 4. BxlServer si coordina con il runtime R per gestire gli scambi di dati con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e l'archiviazione dei risultati.
-5. SQL Satellite gestisce le comunicazioni sulle attività correlate e i processi con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5. SQL Satellite che gestisce le comunicazioni sulle attività correlate ed elabora con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer usa SQL Satellite per comunicare lo stato e i risultati a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
-7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Ottiene i risultati e chiude i processi e attività correlate.
+7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ottiene i risultati e chiude le attività e i processi correlati.
 
 ### <a name="r-scripts-executed-from-a-remote-client"></a>Script R eseguiti da un client remoto
 

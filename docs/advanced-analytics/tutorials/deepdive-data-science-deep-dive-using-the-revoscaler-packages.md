@@ -1,30 +1,28 @@
 ---
 title: 'Approfondimento di analisi scientifica dei dati: usare i pacchetti RevoScaleR con SQL Server | Documenti Microsoft'
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: c2efb3f2-cad5-4188-b889-15d68b742ef5
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 003434a055ab73afb288ea5801130ce1c06aa9c5
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 38656e31b48f43c32b57e75c207858292228f7a4
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="data-science-deep-dive-using-the-revoscaler-packages-with-sql-server"></a>Approfondimento di analisi scientifica dei dati: usare i pacchetti RevoScaleR con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +34,7 @@ Informazioni su come creare un contesto di calcolo remoto, spostare i dati tra i
 > [!NOTE]
 > 
 > In questa esercitazione funziona in modo specifico con dati di SQL Server in Windows e utilizza i contesti di calcolo nel database. Se si desidera usare il linguaggio R in altri contesti, ad esempio Teradata, Linux o Hadoop, vedere queste esercitazioni Microsoft R Server: 
-> + [Utilizzare Server R con sparklyr](https://docs.microsoft.com/machine-learning-server/r/tutorial-sparklyr-revoscaler)
+> + [Usare R Server con sparklyr](https://docs.microsoft.com/machine-learning-server/r/tutorial-sparklyr-revoscaler)
 > + [Explore R and ScaleR in 25 Functions](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler) (Esplorare R e ScaleR in 25 funzioni)
 > + [Introduzione a ScaleR in Hadoop MapReduce](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-hadoop)
 
@@ -62,7 +60,7 @@ In questa esercitazione richiede circa 75 minuti per completare, senza includere
 3. [Eseguire query e modificare i dati SQL Server](../../advanced-analytics/tutorials/deepdive-query-and-modify-the-sql-server-data.md)
 4. [Definire e usare i contesti di calcolo](../../advanced-analytics/tutorials/deepdive-define-and-use-compute-contexts.md)
 5. [Creare ed eseguire gli script R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-6. [Visualizzare i dati di SQL Server con R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
+6. [Visualizzare dati di SQL Server con R](../../advanced-analytics/tutorials/deepdive-visualize-sql-server-data-using-r.md)
 7. [Creare modelli R](../../advanced-analytics/tutorials/deepdive-create-models.md)
 8. [Punteggio nuovi dati](../../advanced-analytics/tutorials/deepdive-score-new-data.md)
 9. [Trasformare i dati con R](../../advanced-analytics/tutorials/deepdive-transform-data-using-r.md)
@@ -70,7 +68,7 @@ In questa esercitazione richiede circa 75 minuti per completare, senza includere
 11. [Creare nuove tabelle di SQL Server utilizzando rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
 12. [Eseguire un'analisi in blocchi tramite rxDataStep](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)
 13. [Analizzare i dati in un contesto di calcolo locale](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
-14. [Spostare i dati da SQL Server tramite il file con estensione XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
+14. [Spostare i dati da SQL Server utilizzando i file con estensione XDF](../../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md)
 15. [Creare una simulazione semplice](../../advanced-analytics/tutorials/deepdive-create-a-simple-simulation.md)
 
 ### <a name="target-audience"></a>Destinatari

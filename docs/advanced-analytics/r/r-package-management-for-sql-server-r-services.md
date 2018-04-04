@@ -1,28 +1,26 @@
 ---
 title: L'installazione e la gestione dei pacchetti di machine learning in SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/19/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 0fd96240581203d9f948372dfbe98cac80a3b906
-ms.sourcegitcommit: c08d665754f274e6a85bb385adf135c9eec702eb
+ms.openlocfilehash: 9b2bf101674d6733c137324c9e5581647251726b
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="installing-and-managing-machine-learning-packages-in-sql-server"></a>L'installazione e la gestione dei pacchetti di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -41,7 +39,7 @@ Tuttavia, queste restrizioni necessariamente alcune modifiche in modo che gli es
 
 + In genere, è necessario l'accesso amministrativo al server. In SQL Server 2017, l'amministratore del database può utilizzare i ruoli per consentire a determinati utenti di installare i pacchetti per l'uso privato, ma l'amministratore deve abilitare questa funzionalità.
 + Numero di server non dispone dell'accesso a Internet. L'installazione di pacchetti a tali computer richiede alcune attività di preparazione aggiuntive.
-+ I pacchetti vengono installati in una libreria di istanza. Pacchetti non possono essere condivisa tra più istanze.
++ I pacchetti vengono installati in una libreria di istanza. Pacchetti non possono essere condivisi tra le istanze.
 + Gli utenti non è possibile eseguire i pacchetti che sono stato installato in una libreria di utente.
 
 ## <a name="package-installation-guides-for-r-or-python"></a>Guide all'installazione di pacchetti di R o Python

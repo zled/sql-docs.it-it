@@ -1,25 +1,23 @@
 ---
 title: Considerazioni sulla sicurezza per machine learning in SQL Server | Documenti Microsoft
 ms.date: 02/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 4ed20a8267a8f89e1ab64c19ddafee28cb66c375
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: bd695d866479b88f139011ff4f7760b4c0565734
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Considerazioni sulla sicurezza per machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -75,5 +73,5 @@ Per ulteriori informazioni sulla gestione del servizio e su come eseguire il pro
 
 Per una spiegazione dell'architettura di sicurezza generali, vedere:
 
-+ [Panoramica sulla sicurezza per R](security-overview-sql-server-r.md)
++ [Cenni preliminari sulla sicurezza per R](security-overview-sql-server-r.md)
 + [Cenni preliminari sulla sicurezza per Python](../python/security-overview-sql-server-python-services.md)

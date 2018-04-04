@@ -1,26 +1,24 @@
 ---
 title: Sicurezza per SQL Server machine learning e R | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8fc84754-7fbf-4c1b-9150-7d88680b3e68
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9ee0460e1e6a14e1d40c4e4f4bb3cf084c7d5b85
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 00f5572c5885fe53df8f050e1cbe8320c1256087
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="security-for-sql-server-machine-learning-and-r"></a>Sicurezza per SQL Server machine learning e R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +70,7 @@ Per ulteriori informazioni su [!INCLUDE[rsql_launchpad_md](../../includes/rsql-l
 
 ### <a name="implied-authentication"></a>Autenticazione implicita
 
-**L'autenticazione implicita** è il termine utilizzato per il processo in cui SQL Server Ottiene l'utente le credenziali e quindi esegue tutte le attività dello script esterno per conto di utenti, presupponendo che l'utente dispone delle autorizzazioni corrette nel database. L'autenticazione implicita è particolarmente importante se lo script R deve effettuare una chiamata ODBC all'esterno del database di SQL Server. Ad esempio, il codice potrebbe recuperare un elenco più breve dei fattori da un foglio di calcolo o un'altra origine.
+**L'autenticazione implicita** è il termine utilizzato per il processo in cui SQL Server Ottiene l'utente le credenziali e quindi esegue tutte le attività dello script esterno per conto degli utenti, supponendo che l'utente disponga delle autorizzazioni corrette nel database. L'autenticazione implicita è particolarmente importante se lo script R deve effettuare una chiamata ODBC all'esterno del database di SQL Server. Ad esempio, il codice potrebbe recuperare un elenco più breve dei fattori da un foglio di calcolo o un'altra origine.
 
 Per tali chiamate loopback abbia esito positivo, il gruppo che contiene gli account di lavoro, SQLRUserGroup, deve disporre delle autorizzazioni "Consenti accesso locale". Per impostazione predefinita, questo diritto viene assegnato a tutti i nuovi utenti locali, ma in alcune organizzazioni potrebbero essere applicati criteri di gruppo più restrittivo.
 
@@ -98,4 +96,4 @@ Un amministratore del computer può visualizzare le directory create per ogni pr
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica dell'architettura per l'apprendimento automatico di SQL Server](../../advanced-analytics/r/architecture-overview-sql-server-r.md)
+[Panoramica dell'architettura per l'apprendimento di SQL Server](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

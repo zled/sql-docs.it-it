@@ -1,30 +1,28 @@
 ---
 title: 'Passaggio 6: Rendere operativo il modello di Python utilizzando SQL Server | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 10/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2017
 dev_langs:
 - Python
 - TSQL
-ms.assetid: 
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
-ms.openlocfilehash: 18d90dfca8af630a129e03e73d3c3a4ee4681e18
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
+ms.openlocfilehash: a93461ee03122a3bf70dc37cc2d0f639531d1bcf
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Passaggio 6: Rendere operativo il modello di Python utilizzando SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,8 +35,8 @@ In questo scenario, si intende rendere operativo distribuzione del modello nell'
 
 In questa lezione illustra due metodi per la creazione di stime basate su un modello di Python: batch classificazione e assegnazione dei punteggi di riga per riga.
 
-- **Punteggio batch:** per fornire più righe di dati di input, passare una query di selezione come argomento alla stored procedure. Il risultato è una tabella di osservazioni corrispondente al case di input.
-- **Punteggi singoli:** passare un set di valori di parametri singoli come input.  La stored procedure restituisce una singola riga o un singolo valore.
+- **Operazione di punteggio batch:** per fornire più righe di dati di input, passare una query di selezione come argomento alla stored procedure. Il risultato è una tabella di osservazioni corrispondente al case di input.
+- **Assegnazione dei punteggi singoli:** passare un set di valori di parametri singoli come input.  La stored procedure restituisce una singola riga o un singolo valore.
 
 Tutto il codice Python necessario per il punteggio viene fornito come parte delle stored procedure.
 
@@ -354,16 +352,16 @@ Dopo aver create le stored procedure, è facile generare un punteggio in base a 
 
 L'output di entrambe le procedure è la probabilità di un suggerimento viene pagato il viaggio taxi con i parametri specificati o le funzionalità.
 
-### <a name="changes"></a>Modifiche
+### <a name="changes"></a> Modifiche
 
 In questa sezione elenca le modifiche al codice utilizzati in questa esercitazione. Queste modifiche sono state apportate in modo da riflettere la versione più recente **revoscalepy** versione. Per informazioni sull'API, vedere [Python funzione riferimenti alla libreria](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference).
 
 | Modificare i dettagli | Note|
 | ----|----|
 | eliminare `import pandas` in tutti i campioni| pandas caricati per impostazione predefinita|
-| funzione `rx_predict_ex` modificata in`rx_predict`| Le versioni RTM e pre-release richiedono`rx_predict_ex`|
-| funzione `rx_logit_ex` modificata in`rx_logit`| Le versioni RTM e pre-release richiedono`rx_logit_ex`|
-| ` probList.append(probArray._results["tipped_Pred"])`modificato in`prob_list = prob_array["tipped_Pred"].values`| aggiornamenti all'API|
+| funzione `rx_predict_ex` modificata in `rx_predict`| Le versioni RTM e definitive richiedono `rx_predict_ex`|
+| funzione `rx_logit_ex` modificata in `rx_logit`| Le versioni RTM e definitive richiedono `rx_logit_ex`|
+| ` probList.append(probArray._results["tipped_Pred"])` modificato in `prob_list = prob_array["tipped_Pred"].values`| aggiornamenti all'API|
 
 Se è installato Servizi di Python utilizzando una versione provvisoria di SQL Server 2017, si consiglia di eseguire l'aggiornamento. È inoltre possibile aggiornare solo i componenti di Python e R usando la versione più recente del Server di Machine Learning. Per ulteriori informazioni, vedere [utilizzando l'associazione per aggiornare un'istanza di SQL Server](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
@@ -377,4 +375,4 @@ In questa esercitazione appreso come utilizzare il codice Python incorporato nel
 
 ## <a name="see-also"></a>Vedere anche
 
-[Servizi di Machine Learning con Python](../python/sql-server-python-services.md)
+[Machine Learning servizi con Python](../python/sql-server-python-services.md)

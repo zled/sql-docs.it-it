@@ -1,28 +1,26 @@
 ---
 title: Le funzioni RevoScaleR per l'utilizzo di dati di SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 5f3c9864-9c75-4688-947d-0940045b2671
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: b1567bd6e4a419b293a963a7b3afe96c24409bcc
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 70591237d61d81dd78b09a5ce0c7d251a1b29796
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler-functions-for-working-with-sql-server-data"></a>Funzioni RevoScaleR per l'utilizzo di dati di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -37,13 +35,13 @@ Le funzioni seguenti consentono di definire un'origine dati di [!INCLUDE[ssNoVer
 
 + [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata) -definire un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] oggetto origine dati.
 
-+ [RxOdbcData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxodbcdata) -creare oggetti di dati per gli altri database ODBC. 
++ [RxOdbcData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxodbcdata) -creare oggetti dati per gli altri database ODBC. 
 
 ## <a name="perform-ddl-statements"></a>Eseguire istruzioni DDL
 
 È possibile eseguire istruzioni DDL da R, se si hanno le autorizzazioni necessarie per l'istanza e database. Le funzioni seguenti utilizzano chiamate ODBC per eseguire istruzioni DDL o recuperare lo schema del database.
 
-+ `rxSqlServerTableExists`e [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -eliminare un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] tabella oppure verificare l'esistenza di un oggetto o tabella di database
++ `rxSqlServerTableExists` e [rxSqlServerDropTable](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdroptable) -eliminare un [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] tabella oppure verificare l'esistenza di un oggetto o tabella di database
 
 + [rxExecuteSQLDDL](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexecutesqlddl) -eseguire un comando di definizione del linguaggio DDL (Data) che definisce o modifica gli oggetti di database. Questa funzione non può restituire dati e viene utilizzata solo per recuperare o modificare i metadati dello schema dell'oggetto.
 
@@ -55,17 +53,17 @@ Le funzioni seguenti consentono di definire un nuovo contesto di calcolo, cambia
 
 + [rxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver) - Genera un contesto di calcolo di SQL Server che consente l'esecuzione di funzioni **ScaleR** in SQL Server R Services. Questo contesto di calcolo è attualmente supportato solo per le istanze di SQL Server in Windows.
 
-+ `rxGetComputeContext`e [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - ottenere o impostare il contesto di calcolo attivo.
++ `rxGetComputeContext` e [rxSetComputeContext](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxgetcomputecontext) - ottenere o impostare il contesto di calcolo attivo-attivo.
 
 ## <a name="move-data-and-transform-data"></a>Dati di spostamento e trasformazione di dati
 
 Dopo aver creato un oggetto origine dati, è possibile utilizzare l'oggetto per caricare dati, la trasformazione dei dati o scrivere i nuovi dati nella destinazione specificata. A seconda delle dimensioni dei dati nell'origine, è anche possibile definire le dimensioni del batch come parte dell'origine dati e spostare i dati in blocchi.
 
-+ [metodi di rxOpen](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxopen-methods) - controllare se un'origine dati è disponibile, aprire o chiudere un'origine dati, leggere i dati da un'origine, scrivere i dati di destinazione e chiudere un'origine dati
++ [i metodi rxOpen](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxopen-methods) - controllare se un'origine dati è disponibile, aprire o chiudere un'origine dati, leggere i dati da un'origine, scrivere i dati di destinazione e chiudere un'origine dati
 
 + [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport) -spostare i dati da un'origine dati in archiviazione di file o in un frame di dati.
 
-+ [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) -trasformazione dei dati durante lo spostamento tra le origini dati.
++ [rxDataStep](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatastep) -trasformare i dati durante lo spostamento tra le origini dati.
 
 Le funzioni seguenti possono essere utilizzate per creare un archivio dati locale nel formato con estensione XDF. Questo file può essere utile quando si usano più dati di quanto sia possibile trasferire dal database in un batch o più dati di quanto sia possibile archiviare in memoria.
 

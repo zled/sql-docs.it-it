@@ -1,24 +1,24 @@
 ---
 title: RevoScaleR | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/29/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 8f5df8a224b67be06e5459fc8a65277ddc05f4f6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fac746fbc9b880fdb2b97a69dffa402bf291c1f2
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="revoscaler"></a>RevoScaleR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,7 @@ RevoScaleR è un pacchetto delle funzioni di machine learning, fornito da Micros
 
 + Funzioni supportano l'importazione dei dati, la trasformazione dei dati, riepilogo, visualizzazione e analisi.
 
-+ _Su larga scala_ significa che operazioni possono essere eseguite sul set di dati molto grandi, in parallelo e distribuite nel file System. Gli algoritmi possono operare su set di dati che non rientrano nella memoria, utilizzando la suddivisione in blocchi e il riassemblaggio risultati una volta completate le operazioni.
++ _Su larga scala_ significa che le operazioni possono essere eseguite sul set di dati molto grandi, in parallelo e su distributed file System. Gli algoritmi possono operare su set di dati che non rientrano nella memoria, utilizzando la suddivisione in blocchi e il riassemblaggio risultati una volta completate le operazioni.
 
 + RevoScaleR offre numerosi miglioramenti rispetto funzioni R open source. Sono disponibili funzioni RevoScaleR corrispondente a molte delle funzioni R più diffuse base. Le funzioni RevoScaleR vengono indicate con un **rx** o **Rx** prefisso per facilitarne l'identificazione.
 
@@ -37,7 +37,7 @@ Per esempi di RevoScaleR in azione, vedere i blog:
 
 + [Compilare e distribuire un modello predittivo con R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [Un milione di stime con Machine Learning Server al secondo](https://blogs.msdn.microsoft.com/mlserver/2017/10/15/1-million-predictionssec-with-machine-learning-server-web-service/)
++ [Stime di un milione con Machine Learning Server al secondo](https://blogs.msdn.microsoft.com/mlserver/2017/10/15/1-million-predictionssec-with-machine-learning-server-web-service/)
 
 + [Stima dei suggerimenti taxi utilizzando MicrosoftML](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/2017/01/17/predicting-nyc-taxi-tips-using-microsoftml/)
 
@@ -56,8 +56,8 @@ Se si usa Python, la [revoscalepy](../python/what-is-revoscalepy.md) pacchetto f
 
 Queste esercitazioni ed esempi viene illustrato come utilizzare le funzioni RevoScaleR per ottenere dati da SQL Server, compilazione di modelli e salvare i modelli in un database per il punteggio.
 
-+ [Viene illustrato come utilizzare i contesti di calcolo](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R per gli sviluppatori SQL: eseguire il training e utilizzare un modello](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Imparare a usare contesti di calcolo](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [R per gli sviluppatori SQL: Train e rendere operativo un modello](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [Esempi di Microsoft su GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 
 ## <a name="learn-more-about-revoscaler"></a>Altre informazioni su RevoScaleR

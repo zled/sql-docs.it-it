@@ -1,26 +1,24 @@
 ---
-title: "Interoperabilità di R in SQL Server R Services | Microsoft Docs"
-ms.custom: 
+title: Interoperabilità di R in SQL Server R Services | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0506b950-34b3-4f11-8e2f-d067a58015bd
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 3dd916a0d91d5f237d7a60963c1b3fab1f90b5e9
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 3464b9f051bef8a5403401b022b605b67f54d3df
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-interoperability-in-sql-server"></a>Interoperabilità di R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,11 +31,11 @@ Per informazioni sui componenti aggiuntivi, vedere [nuovi componenti di SQL Serv
 
 ### <a name="open-source-r-components"></a>Componenti di R open source
 
-[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include una distribuzione completa di base pacchetti R e strumenti. Per altre informazioni sui componenti inclusi nella distribuzione base, vedere la documentazione installata durante l'installazione nel percorso predefinito seguente: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
+[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] include una distribuzione completa degli strumenti e dei pacchetti R di base. Per altre informazioni sui componenti inclusi nella distribuzione base, vedere la documentazione installata durante l'installazione nel percorso predefinito seguente: `C:\Program Files\Microsoft SQL Server\<instance_name>\R_SERVICES\doc\manual`
 
 Nell'ambito dell'installazione di [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)], è necessario accettare i termini della licenza GNU Public License. Successivamente, è possibile eseguire i pacchetti R standard senza ulteriori modifiche, esattamente come per qualsiasi altra distribuzione open source di R.
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] non modificare il runtime di R in alcun modo. Il runtime di R viene eseguito all'esterno del processo di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e può essere eseguito in modo indipendente da [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Tuttavia, è consigliabile non eseguire questi strumenti mentre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] usa R, per evitare conflitti di risorse.
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] non modifica in alcun modo il runtime di R. Il runtime di R viene eseguito all'esterno del processo di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e può essere eseguito in modo indipendente da [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Tuttavia, è consigliabile non eseguire questi strumenti mentre [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] usa R, per evitare conflitti di risorse.
 
 La distribuzione base dei pacchetti R associata a una specifica istanza di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è disponibile nella cartella associata all'istanza. Ad esempio, se è installato R Services nell'istanza predefinita, le librerie R si trovano in questa cartella per impostazione predefinita:
 
@@ -47,7 +45,7 @@ Analogamente, gli strumenti di R associati con l'istanza predefinita sono posizi
 
     C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin
 
-Per ulteriori informazioni sulla diversa da una distribuzione di base di R che si potrebbero ottenere da CRAN R Microsoft, vedere [interoperabilità con prodotti di Microsoft R e linguaggio R e funzionalità](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
+Per ulteriori informazioni sul modo in cui Microsoft R è diverso da una distribuzione di basa di R che si potrebbero ottenere da cran r, vedere [interoperabilità con prodotti di Microsoft R e linguaggio R e funzionalità](https://docs.microsoft.com/en-us/r-server/what-is-r-server-interoperability)
 
 ### <a name="additional-r-packages-from-microsoft-r"></a>Pacchetti R aggiuntivi da Microsoft R
 

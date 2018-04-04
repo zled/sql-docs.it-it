@@ -1,31 +1,29 @@
 ---
 title: Creare una simulazione semplice (SQL e R approfondimento) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 - SQL Server 2017
 dev_langs:
 - R
-ms.assetid: f420b816-ddab-4a1a-89b9-c8285a2d33a3
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: cc613d303fa3200c3460face71399223e00272e6
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ca76aef56ef731d9190a8f40d8b4af2e9b04ca00
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-simple-simulation-sql-and-r-deep-dive"></a>Creare una simulazione semplice (SQL e R approfondimento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +36,7 @@ Fino ad oggi si usano già funzioni R progettate specificamente per lo spostamen
 
 In questa lezione, si utilizza il server remoto per creare una semplice simulazione. La simulazione non richiede dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'esempio si limita a illustrare come creare una funzione personalizzata ed eseguirne la chiamata usando la funzione **rxExec** .
 
-Per un esempio più complesso di utilizzo **rxExec**, vedere l'articolo: [il parallelismo con granularità grossolana con foreach e rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Per un esempio più complesso di utilizzo **rxExec**, vedere questo articolo: [parallelismo con granularità grossolana con foreach e rxExec](http://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
 
 ## <a name="create-the-custom-function"></a>Creare la funzione personalizzata
 
@@ -115,7 +113,7 @@ Per eseguire una funzione arbitraria nel contesto del computer [!INCLUDE[ssNoVer
   
     I risultati saranno simili ai seguenti:
   
-     *Perdita Win* *8 a 12*
+     *Perdita Win* *12 8*
 
 ## <a name="conclusions"></a>Conclusioni
 
@@ -128,13 +126,13 @@ In questa esercitazione è stata acquisita familiarità con queste attività:
 -   Passaggio di modelli, dati e grafici tra la workstation e il server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
   
 
-Se si desidera sperimentare queste tecniche utilizzando un set di dati più grande di 10 milioni di osservazioni, i file di dati sono disponibili dal sito web analitica Revolution: [indice dei set di dati](http://packages.revolutionanalytics.com/datasets)
+Se si desidera sperimentare queste tecniche usando un set di dati più grande di 10 milioni di osservazioni, i file di dati sono disponibili dal sito web di Revolution analitica: [indice dei set di dati](http://packages.revolutionanalytics.com/datasets)
 
 Per utilizzare nuovamente questa procedura dettagliata con i file di dati più grandi, scaricare i dati e modificare tutte le origini di dati come segue:
 
 1. Modificare le variabili `ccFraudCsv` e `ccScoreCsv` in modo che punti ai nuovi file di dati
-2. Modificare il nome della tabella a cui fa riferimento *sqlFraudTable* per`ccFraud10`
-3. Modificare il nome della tabella a cui fa riferimento *sqlScoreTable* per`ccFraudScore10`
+2. Modificare il nome della tabella a cui fa riferimento *sqlFraudTable* a `ccFraud10`
+3. Modificare il nome della tabella a cui fa riferimento *sqlScoreTable* a `ccFraudScore10`
 
 ## <a name="additional-samples"></a>Esempi aggiuntivi
 
