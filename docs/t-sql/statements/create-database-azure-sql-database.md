@@ -29,16 +29,16 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d06fb220e8ec0df0ba5aab4fe5983c928d6a732
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -136,6 +136,7 @@ Specifica le regole di confronto predefinite per il catalogo di metadati. *DATAB
 |Da 1024 GB fino a 4096 GB con incrementi di 256 GB* |N/D|N/D|N/D|N/D|√|√|  
   
  \* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB.  P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle seguenti aree: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per le limitazioni correnti, vedere [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) (Database singoli).  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:  
   
