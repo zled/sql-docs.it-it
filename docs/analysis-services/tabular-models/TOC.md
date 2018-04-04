@@ -1,18 +1,19 @@
-# [Panoramica](tabular-models-ssas.md)  
-
-# [Creare modelli tabulari](tabular-model-solutions-ssas-tabular.md)  
+# [Modelli tabulari](tabular-models-ssas.md)  
+## [Livello di compatibilità](compatibility-level-for-tabular-models-in-analysis-services.md)  
+## [Origini dati supportate nei modelli tabulari 1400](data-sources-supported-ssas-tabular-1400.md)  
 ## [Origini dati supportate nei modelli tabulari 1200](data-sources-supported-ssas-tabular.md)  
 ## [Tipi di dati supportati](data-types-supported-ssas-tabular.md)  
+
+# Creare modelli tabulari
 ## [Progettazione di modelli tabulari](tabular-model-designer-ssas.md)  
 ## [Database dell'area di lavoro](workspace-database-ssas-tabular.md)  
-## [Livello di compatibilità](compatibility-level-for-tabular-models-in-analysis-services.md)  
 
 ## [Progetti di modello tabulare](tabular-model-projects-ssas-tabular.md)  
 ### [Creare un nuovo modello di progetto tabulare](create-a-new-tabular-model-project-analysis-services.md)  
 ### [Importare da Analysis Services](import-from-analysis-services-ssas-tabular.md)  
 ### [Importare da Power Pivot](import-from-power-pivot-ssas-tabular.md)  
 
-## [Proprietà](properties-ssas-tabular.md)  
+## Proprietà
 ### [Proprietà report Power View](power-view-reporting-properties-ssas-tabular.md)  
 ### [Configurare il set di campi predefiniti per Power View](power-view-configure-default-field-set-for-reports.md)  
 ### [Configurare le proprietà di comportamento tabella per Power View](power-view-configure-table-behavior-properties-for-reports.md)  
@@ -23,6 +24,8 @@
 ### [Configurare la modellazione dei dati e le proprietà di distribuzione predefinite](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)  
 
 ## Importare dati
+
+### [Origini dati supportate nei modelli tabulari 1400](data-sources-supported-ssas-tabular-1400.md)  
 ### [Origini dati supportate nei modelli tabulari 1200](data-sources-supported-ssas-tabular.md)  
 ### [Tipi di dati supportati](data-types-supported-ssas-tabular.md)  
 ### [Rappresentazione](impersonation-ssas-tabular.md)  
