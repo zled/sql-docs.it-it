@@ -130,9 +130,9 @@ Per controllare gli aggiornamenti più recenti, fare clic sull'icona a forma di 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Vedere una delle Guide rapide seguenti per iniziare:
-- [Connettersi ed eseguire Query in SQL Server](quickstart-sql-server.md)
-- [Connettersi ed eseguire Query di Database SQL di Azure](quickstart-sql-database.md)
-- [Connettersi ed eseguire Query Azure Data Warehouse](quickstart-sql-dw.md)
+- [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
+- [Connettersi ed eseguire query di Database SQL di Azure](quickstart-sql-database.md)
+- [Connettersi ed eseguire query in Azure Data Warehouse](quickstart-sql-dw.md)
 
 Contribuire a [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
