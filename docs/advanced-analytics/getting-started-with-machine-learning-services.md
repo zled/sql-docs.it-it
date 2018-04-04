@@ -1,25 +1,25 @@
 ---
 title: Guida introduttiva con machine learning in SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/20/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a54400e73c7789dcea15cbd4929c2a7878297df5
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 3a2301d67e4e17b553dfbc8584b308d23c047040
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Guida introduttiva con machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +70,7 @@ In SQL Server 2016, utilizzare l'opzione per installare [!INCLUDE[rsql-platform-
 
 ## <a name="related-products"></a>Prodotti correlati
 
-+ [Configurare un client di analisi scientifica dei dati](../advanced-analytics/r/set-up-a-data-science-client.md)
++ [Configurare un client per la data science](../advanced-analytics/r/set-up-a-data-science-client.md)
 
   Se già installato uno di machine learning i prodotti server, in questo articolo fornisce informazioni su come configurare un computer separato per lo sviluppo e test di soluzioni, inclusi gli strumenti e librerie necessarie.
 

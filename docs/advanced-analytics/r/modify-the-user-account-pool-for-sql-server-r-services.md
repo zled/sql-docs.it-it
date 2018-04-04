@@ -1,25 +1,23 @@
 ---
 title: Modificare il pool di account utente per l'apprendimento automatico di SQL Server | Documenti Microsoft
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 58b79170-5731-46b5-af8c-21164d28f3b0
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d12de2f8298e23d5396d7caf2496b293f1bf28ed
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modificare il pool di account utente per l'apprendimento automatico di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +41,7 @@ Per impostazione predefinita, il pool di account utente contiene 20 account uten
 
 Se più di un'istanza Usa il machine learning, il computer sarà necessario più gruppi di utenti. Un gruppo non può essere condivisa tra più istanze.
 
-### <a name = "HowToChangeGroup"></a>Come modificare il numero di account di lavoro
+### <a name = "HowToChangeGroup"> </a>Come modificare il numero di account di lavoro
 
 Per modificare il numero di utenti nel pool di account, è necessario modificare le proprietà del servizio [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], come descritto di seguito.
 

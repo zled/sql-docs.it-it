@@ -1,27 +1,25 @@
 ---
 title: Conversione di codice R per l'uso in R Services | Microsoft Docs
 ms.date: 12/20/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-ms.assetid: 0b11ab52-b2f9-4a4f-b1ab-68ba09c8adcc
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 802ad1ee49920db65eadccfb29650c649c339d48
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 669f52d499b9479e23266af91c04e6bc084bb8ea
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>Conversione del codice R per l'esecuzione nel database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +32,7 @@ Tuttavia, il codice potrebbe richiedere modifiche sostanziali se una qualsiasi d
 
 + Utilizzare librerie R che accedono alla rete o che non può essere installato in SQL Server.
 + Il codice effettua una chiamata a origini dati all'esterno di SQL Server, ad esempio fogli di lavoro di Excel, i file nelle condivisioni e altri database. 
-+ Si desidera eseguire il codice di  *@script*  parametro di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) e inoltre i parametri per la stored procedure.
++ Si desidera eseguire il codice di *@script* parametro di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) e inoltre i parametri per la stored procedure.
 + La soluzione originale include più passaggi che potrebbero essere più efficienti in un ambiente di produzione se eseguite in modo indipendente, ad esempio la preparazione dei dati o di progettazione di funzionalità rispetto al modello di training, creazione di report o di punteggio.
 + Si desidera migliorare ottimizzare le prestazioni modificando le librerie, tramite l'esecuzione parallela, o offload alcune operazioni di elaborazione a SQL Server. 
 
@@ -50,9 +48,9 @@ Tuttavia, il codice potrebbe richiedere modifiche sostanziali se una qualsiasi d
 
 + Se si desidera incorporare il codice R in [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), identificare le origini di dati primario e secondario. 
 
-    + **Primario** le origini dati sono grandi set di dati, ad esempio dati di training del modello o i dati di input per le stime. Pianificazione eseguire il mapping del set di dati più grande per il parametro di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+    + **Primario** origini dei dati sono grandi set di dati, ad esempio dati di training del modello o di input per le stime. Pianificazione eseguire il mapping del set di dati più grande per il parametro di input di [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + **Secondario** le origini dati sono in genere più piccoli set di dati, quali gli elenchi dei fattori o delle variabili di raggruppamento aggiuntive. 
+    + **Secondario** origini dei dati sono in genere più piccoli set di dati, quali gli elenchi di fattori o variabili di raggruppamento aggiuntive. 
     
     Attualmente, sp_execute_external_script supporta solo un singolo set di dati come input per la stored procedure. Tuttavia, è possibile aggiungere più input scalare o binary.
 
@@ -128,9 +126,9 @@ Quanto si modifica il codice varia a seconda che si desidera inviare il codice R
 
 + Con uno sviluppatore di database per determinare come migliorare le prestazioni tramite funzionalità di SQL Server, ad esempio, vedere [tabelle con ottimizzazione per la memoria](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), o, se si dispone dell'edizione Enterprise, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 
-    Per ulteriori informazioni, vedere [suggerimenti di ottimizzazione di SQL Server e consigli per i servizi Analitica](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+    Per altre informazioni, vedere [SQL Server ottimizzazione suggerimenti e consigli per i servizi Analitica](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
-### <a name="step-3-prepare-for-deployment"></a>Passaggio 3. Preparare per la distribuzione
+### <a name="step-3-prepare-for-deployment"></a>Passaggio 3. Operazioni preliminari alla distribuzione
 
 + Inviare una notifica all'amministratore in modo che i pacchetti possano essere installati e testati prima di distribuire il codice. 
 
@@ -138,7 +136,7 @@ Quanto si modifica il codice varia a seconda che si desidera inviare il codice R
 
     Librerie utente non sono supportate, indipendentemente dal fatto che si utilizza una stored procedure o eseguire il codice R nel contesto di calcolo di SQL Server.
 
-**Pacchetto di codice R in una stored procedure**
+**Creare un pacchetto del codice R in una stored procedure**
 
 + Se il codice è relativamente semplice, è possibile incorporarlo in una funzione definita dall'utente di T-SQL senza alcuna modifica, come descritto in questi esempi:
 
@@ -173,6 +171,6 @@ Per visualizzare gli esempi di come è possibile distribuire una soluzione di R 
 
 + [Compilare un modello predittivo per le aziende di noleggio ski con R e SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [Analitica nel Database per gli sviluppatori di SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) di seguito viene illustrato come visualizzare il codice R più modulare mediante il wrapping nelle stored procedure
++ [Analitica nel Database per gli sviluppatori di SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) viene illustrato come effettuare il codice R più modulare eseguendo il wrapping nelle stored procedure
 
 + [Soluzione di analisi scientifica dei dati end-to-End](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) include un confronto di progettazione delle funzioni di R e T-SQL

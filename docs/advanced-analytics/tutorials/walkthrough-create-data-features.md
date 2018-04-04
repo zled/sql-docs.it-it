@@ -1,30 +1,28 @@
 ---
-title: "Creare le funzionalità di dati con R e SQL (procedura dettagliata) | Documenti Microsoft"
-ms.custom: 
+title: Creare le funzionalità di dati con R e SQL (procedura dettagliata) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/23/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 4981d4eb-0874-4fe9-82e1-edf99890e27a
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 9b447f8c8faa834bea4360844308e468bf15d89c
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: ecbdc28ac530dcee1ba9f5a3820d999ad4e0fcd9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>Creare le funzionalità di dati con R e SQL (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,7 +109,7 @@ Prima di tutto, si farlo modalità R sono abituati a: ottenere i dati al compute
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + La funzione rxDataStep supporta vari metodi per la modifica dei dati sul posto. Per ulteriori informazioni, vedere l'articolo: [come subset e trasformazione dati in R Microsft](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + La funzione rxDataStep supporta vari metodi per la modifica dei dati sul posto. Per altre informazioni, vedere questo articolo: [subset e trasformazione dei dati in R Microsft](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
     
     Tuttavia, alcuni punti non degni di nota riguardanti rxDataStep: 
     
@@ -242,7 +240,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 I tempi possono variare notevolmente a seconda della velocità della rete e la configurazione hardware. Nelle configurazioni di cui è stato testato, il [!INCLUDE[tsql](../../includes/tsql-md.md)] approccio alla funzione è stata più veloce rispetto a una funzione R personalizzata. Pertanto, abbiamo utilizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzione per i calcoli nei passaggi successivi.
 
 > [!TIP]
-> Molto spesso, funzionalità di progettazione utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)] sarà più veloce rispetto a R. Ad esempio, T-SQL include windowing veloce e funzioni di rango che possono essere applicate ai calcoli di analisi scientifica dei dati comuni, ad esempio le medie mobili in sequenza e  *n* -riquadri. Scegliere il metodo più efficace in base ai dati e all'attività eseguita.
+> Molto spesso, funzionalità di progettazione utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)] sarà più veloce rispetto a R. Ad esempio, T-SQL include windowing veloce e funzioni di rango che possono essere applicate ai calcoli di analisi scientifica dei dati comuni, ad esempio in sequenza le medie mobili e *n*-riquadri. Scegliere il metodo più efficace in base ai dati e all'attività eseguita.
 
 ## <a name="next-lesson"></a>Lezione successiva
 

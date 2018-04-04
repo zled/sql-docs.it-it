@@ -1,29 +1,27 @@
 ---
 title: SQL e R dati e i tipi di oggetti dati (R nella Guida rapida SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: b0b0f8bd5502dfd70c690dc64d1881c057a97962
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: b763fd5b7c5707d5cc4f49c1ec93b10a0b53c321
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>SQL e R dati e i tipi di oggetti dati (R nella Guida rapida SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -70,7 +68,7 @@ La risposta può essere trovata usando il comando `str()` di R. Aggiungere la fu
 
 Per capire come mai l'Esempio 1 e l'Esempio 2 producano risultati così diversi, inserire la riga `str(OutputDataSet)` alla fine della definizione di variabile _@script_ in ogni istruzione, come riportato di seguito:
 
-**Esempio 1 con la funzione str aggiunto**
+**Esempio 1 con funzione str aggiunto**
 
 ```sql
 EXECUTE sp_execute_external_script

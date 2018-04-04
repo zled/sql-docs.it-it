@@ -3,25 +3,23 @@ title: Configurazione opzioni avanzate per servizi di Machine Learning | Documen
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 8d73fd98-0c61-4a62-94bb-75658195f2a6
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 042e36faee599de3ff31a6bbb8dee32f0a6999cf
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Opzioni di configurazione avanzate per i servizi di Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +28,7 @@ Questo articolo descrive le modifiche apportate dopo l'installazione, per modifi
 
 **Si applica a:** R Services SQL Server 2016, SQL Server 2017 di Machine Learning Services
 
-##  <a name="bkmk_Provisioning"></a>Eseguire il provisioning aggiuntive gli account utente per la macchina apprendimento
+##  <a name="bkmk_Provisioning"></a> Eseguire il provisioning aggiuntive gli account utente per la macchina apprendimento
 
 Processi di script esterni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eseguiti nel contesto dell'account utente locale con privilegi limitati. Questi processi in esecuzione in singoli account con privilegi limitati presenta i vantaggi seguenti:
 
@@ -39,7 +37,7 @@ Processi di script esterni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 Come parte del programma di installazione, una nuova finestra *pool di account utente* viene creato che contiene gli account utente locali necessari per l'esecuzione di processi di runtime esterni, ad esempio R o Python. È possibile modificare il numero di utenti in base alle esigenze per supportare l'attività di machine learning. 
 
-Inoltre, l'amministratore del database è necessario assegnare questo gruppo l'autorizzazione per connettersi a qualsiasi istanza in cui è stato attivato l'apprendimento. Per ulteriori informazioni, vedere [modificare il pool di account utente per i servizi di SQL Server Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Inoltre, l'amministratore del database è necessario assegnare questo gruppo l'autorizzazione per connettersi a qualsiasi istanza in cui è stato attivato l'apprendimento. Per altre informazioni, vedere [modificare il pool di account utente per SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 Alle risorse sensibili protext il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile definire un elenco di controllo di accesso (ACL) per questo gruppo. Specificando le risorse che il gruppo viene negato l'accesso, è possibile impedire l'accesso da processi esterni, ad esempio i runtime R o Python.
 
@@ -51,7 +49,7 @@ Alle risorse sensibili protext il [!INCLUDE[ssNoVersion](../../includes/ssnovers
 
 Per ulteriori informazioni su come apportare modifiche al pool di account utente, vedere [modificare il pool di account utente per i servizi di SQL Server Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
-##  <a name="bkmk_ManagingMemory"></a>Gestire la memoria utilizzata dai processi di script esterni
+##  <a name="bkmk_ManagingMemory"></a> Gestire la memoria utilizzata dai processi di script esterni
 
 Per impostazione predefinita, i runtime dello script esterno per machine learning sono limitati a non più del 20% della memoria totale del computer. Dipende dal sistema, ma in generale, si noterà questo limite non adeguato per le attività di apprendimento macchina grave, ad esempio training di un modello o stima su molte righe di dati. 
 
@@ -75,7 +73,7 @@ Se si modifica l'account del servizio, assicurarsi di usare l'applicazione **Cri
 
 Per altre informazioni sulle autorizzazioni necessarie per l'esecuzione di servizi di SQL Server, vedere [Configurare account di servizio e autorizzazioni di Windows](https://msdn.microsoft.com/library/ms143504.aspx#Windows).
 
-##  <a name="bkmk_ChangingConfig"></a>Modificare le opzioni avanzate del servizio
+##  <a name="bkmk_ChangingConfig"></a> Modificare le opzioni avanzate del servizio
 
 Nelle versioni precedenti di SQL Server 2016 R Services, è possibile modificare alcune proprietà del servizio modificando la [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] file di configurazione. 
 
@@ -93,7 +91,7 @@ Tuttavia, questo file non è più utilizzato per la modifica delle configurazion
 
 **Per modificare le impostazioni di debug**
 
-Proprietà alcuni possono essere modificate solo tramite la file di configurazione del finestra di avvio che potrebbe essere utili in alcuni casi, ad esempio il debug. Il file di configurazione viene creato durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del programma di installazione e per impostazione predefinita viene salvato come file di testo normale nel percorso seguente:`<instance path>\binn\rlauncher.config`
+Proprietà alcuni possono essere modificate solo tramite la file di configurazione del finestra di avvio che potrebbe essere utili in alcuni casi, ad esempio il debug. Il file di configurazione viene creato durante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del programma di installazione e per impostazione predefinita viene salvato come file di testo normale nel percorso seguente: `<instance path>\binn\rlauncher.config`
 
 Per poter apportare modifiche a questo file è necessario essere amministratore del computer su cui è eseguito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se si decide di modificare il file, si consiglia di crearne una copia di backup prima di salvare le modifiche.
 

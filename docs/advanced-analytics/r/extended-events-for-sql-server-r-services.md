@@ -1,26 +1,24 @@
 ---
 title: Eventi estesi per i servizi SQL Server Machine Learning | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 12/21/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 4e90e057-aacb-4adc-8da6-64861f4e87df
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: d2f43ab9235e6c16976789027f6308f95bf9d246
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 2e16c8c468b4e82847e65e808f357e6eefb811f7
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Eventi estesi per i servizi di SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +51,7 @@ Altri eventi estesi sono disponibili per i componenti correlati a e utilizzati d
 
 Per ulteriori informazioni su come eseguire questa operazione, vedere la sezione, [la raccolta di eventi da processi esterni](#bkmk_externalevents).
 
-##  <a name="bkmk_xeventtable"></a>Tabella degli eventi estesi
+##  <a name="bkmk_xeventtable"></a> Tabella degli eventi estesi
 
 |Evento|Description|Note|  
 |-----------|-----------------|---------|  
@@ -88,7 +86,7 @@ Per ulteriori informazioni su come eseguire questa operazione, vedere la sezione
 |satellite_data_chunk_sent|Generato quando la connessione satellite completa l'invio di un singolo blocco di dati.|Contiene informazioni sul numero di colonne, numero di righe, numero di pacchetti e sul tempo impiegato per l'invio del blocco.|  
 |satellite_sessionId_mismatch|L'ID della sessione del messaggio non è previsto.||  
   
-###  <a name="bkmk_externalevents"></a>Raccolta di eventi da processi esterni
+###  <a name="bkmk_externalevents"></a> Raccolta di eventi da processi esterni
 
 Servizi di SQL Server Machine Learning avvia alcuni servizi eseguiti all'esterno del processo di SQL Server. Per acquisire gli eventi relativi a questi processi esterni, è necessario creare un file di configurazione di traccia eventi e inserire il file nella stessa directory del file eseguibile per il processo.  
   
@@ -98,7 +96,7 @@ Servizi di SQL Server Machine Learning avvia alcuni servizi eseguiti all'esterno
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
-+ **BXLServer** è il processo satellite che supporta l'estendibilità SQL con linguaggi di script esterni, ad esempio R o Python. Per ogni istanza di linguaggio esterno, viene avviata un'istanza separata di BxlServer.
++ **BXLServer** è il processo satellite che supporta l'estendibilità SQL con linguaggi di script esterni, ad esempio Python o R. Per ogni istanza di linguaggio esterno, viene avviata un'istanza separata di BxlServer.
   
     Per acquisire gli eventi correlati a BXLServer, inserire il *config* file nella directory di installazione R o Python.  In un'installazione predefinita, il risultato sarà:
      
@@ -187,4 +185,4 @@ L'esempio seguente illustra la definizione di una traccia di eventi per l'esegui
 
 ## <a name="see-also"></a>Vedere anche
 
-[Report gestione personalizzata di Studio per servizi di Machine Learning](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
+[Report di Studio gestione personalizzate per servizi di Machine Learning](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

@@ -1,30 +1,28 @@
 ---
 title: Preparare i dati di utilizzo di PowerShell (procedura dettagliata) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/10/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 applies_to:
 - SQL Server 2016
 dev_langs:
 - R
-ms.assetid: 65fd41d4-c94e-4929-a24a-20e792a86579
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: a1ed4da0aca0b2876e2162c012aabc6c4043c567
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: fbe74b101642ecabe0478a9d5b459e59f277da04
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="prepare-the-data-using-powershell-walkthrough"></a>Preparare i dati di utilizzo di PowerShell (procedura dettagliata)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +110,7 @@ Esistono molti modi diversi, che è possibile installare i pacchetti in SQL Serv
     install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
     ```
 
-    - In questo esempio utilizza la funzione di grep R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per altre informazioni, vedere [http://www.rdocumentation.org/packages/base/functions/grep](http://www.rdocumentation.org/packages/base/functions/grep).
+    - In questo esempio utilizza la funzione di grep R per cercare il vettore di percorsi disponibili e trovare il percorso che include "Program Files". Per ulteriori informazioni, vedere [ http://www.rdocumentation.org/packages/base/functions/grep ](http://www.rdocumentation.org/packages/base/functions/grep).
 
     - Se si ritiene che i pacchetti sono già installati, controllare l'elenco dei pacchetti installati eseguendo `installed.packages()`.
 
@@ -142,7 +140,7 @@ Eseguire lo script nel computer in cui si compila la soluzione: ad esempio, il c
   
 3.  Richiesto per ognuno dei parametri seguenti:
   
-    **Nome del server database**: il nome dell'istanza di SQL Server in cui è installato Machine learning Services o R Services.
+    **Nome server database**: il nome dell'istanza di SQL Server in cui è installato Machine learning servizi o R Services.
 
     A seconda dei requisiti della rete, è possibile che il nome dell'istanza vada qualificato con uno o più nomi di subnet.  Ad esempio, se MYSERVER non funziona, provare myserver.subnet.mycompany.com.
     
@@ -273,13 +271,13 @@ Quando si scaricano i file dal repository GitHub, si ottiene quanto segue:
 + Più script T-SQL
 + Tutto il codice R necessario eseguire questa procedura dettagliata
 
-### <a name="bkmk_data"></a>Set di training e di assegnare punteggi ai dati
+### <a name="bkmk_data"></a>Set di training e assegnare punteggi ai dati
 
 I dati sono un campione rappresentativo del set di dati dei taxi di New York City, contenente record di oltre 173 milioni di corse singole effettuate nel 2013, inclusi gli importi delle corse e delle mance corrisposte per ogni corsa. Per semplificare la manipolazione, il team di analisi scientifica dei dati Microsoft ha eseguito un downsampling per ottenere solo l'1% dei dati.  Tali dati sono stati quindi condivisi in un contenitore di archiviazione BLOB pubblico di Azure, in formato csv. I dati di origine sono un file non compresso, appena sotto 350 MB.
 
-+ Set di dati pubblici: [NYC Taxi e Commissione Limousine] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
++ Set di dati pubblico: [NYC Taxi e Commission Limousine] (http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)
 
-+ [La creazione di modelli di Azure ML nel set di dati NYC Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
++ [Compilazione dei modelli di Azure ML nel set di dati NYC Taxi] (https://blogs.technet.microsoft.com/machinelearning/2015/04/02/building-azure-ml-models-on-the-nyc-taxi-dataset/.
 
 ### <a name="powershell-and-r-script-files"></a>File di script di PowerShell e R
 

@@ -1,26 +1,24 @@
 ---
 title: Prestazioni per R Services - risultati e le risorse | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/09/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
-ms.assetid: 0e902312-ad9c-480d-b82f-b871cd1052d9
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: Inactive
-ms.openlocfilehash: 83c3590714660201d7411c360958f9ff4263240b
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1a0d74c293f092e2c1eb3d9273c97d75b7034dfb
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Prestazioni per R Services: risultati e le risorse
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -339,7 +337,7 @@ I risultati suggerisce che il **numero di funzionalità** aveva un impatto signi
 
 È consigliabile leggere l'esercitazione di accompagnamento per una descrizione dettagliata e l'articolo di blog.
 
--   [Ottimizzazione suggerimenti e consigli per machine learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
+-   [Ottimizzazione suggerimenti e trucchi per machine learning in SQL Server](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
 Molti utenti hanno indicato che vi sia una pausa di piccole dimensioni come il runtime di R (o Python) viene caricato per la prima volta. Per questo motivo, come descritto in questi test, il tempo per la prima esecuzione è spesso misurato ma eliminato in un secondo momento. Conseguente memorizzazione nella cache potrebbe comportare differenze rilevanti delle prestazioni tra il primo e secondo viene eseguito. È inoltre disponibile un overhead quando i dati vengono spostati tra SQL Server e runtime esterno, in particolare se i dati vengono passati tramite la rete, invece di essere caricato direttamente da SQL Server.
 
@@ -355,7 +353,7 @@ Per il training di modelli di grandi dimensioni, o punteggio in batch di grandi 
 
 Di seguito vengono forniti collegamenti a informazioni e strumenti di script utilizzati per lo sviluppo di questi test.
 
-+ Test degli script e i collegamenti ai dati delle prestazioni: [script per uno studio di ottimizzazioni di SQL Server e i dati di esempio](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
++ Test degli script e i collegamenti ai dati delle prestazioni: [campionare i dati e gli script per uno studio di ottimizzazioni di SQL Server](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
 + Articolo che descrive la soluzione corrispondente resume: [suggerimento di ottimizzazione e consigli per SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
@@ -367,7 +365,7 @@ Di seguito vengono forniti collegamenti a informazioni e strumenti di script uti
 
 + [Informazioni sui NUMA](https://technet.microsoft.com/library/ms178144.aspx)
 
-+ [SQL Server supporta la modalità NUMA](https://technet.microsoft.com/library/ms180954.aspx)
++ [Modo in cui SQL Server supporta NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
 + [Soft-NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
@@ -410,8 +408,8 @@ Di seguito vengono forniti collegamenti a informazioni e strumenti di script uti
 
 [Prestazioni di ottimizzazione per R: introduzione](sql-server-r-services-performance-tuning.md)
 
-[Ottimizzazione delle prestazioni per R - configurazione di SQL Server](sql-server-configuration-r-services.md)
+[Ottimizzazione delle prestazioni per R - configurazione SQL Server](sql-server-configuration-r-services.md)
 
 [Ottimizzazione delle prestazioni per R - R ottimizzazione di codice e i dati](r-and-data-optimization-r-services.md)
 
-[Ottimizzazione delle prestazioni - risultati di case study](performance-case-study-r-services.md)
+[Ottimizzazione delle prestazioni - case study sulla risultati](performance-case-study-r-services.md)

@@ -1,29 +1,27 @@
 ---
 title: Creare un modello predittivo (R nella Guida rapida SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 07/26/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.component: 
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.component: ''
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 dev_langs:
 - R
 - SQL
-ms.assetid: 6eb78a80-5791-438f-9ca6-d142ab5d9bb1
-caps.latest.revision: 
-author: jeannt
-ms.author: jeannt
-manager: cgronlund
+ms.author: heidist
+author: HeidiSteen
+manager: cgronlun
 ms.workload: On Demand
-ms.openlocfilehash: 1b40295452da5b7da34a31e6825630da9c6c4861
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: c01d03ff9911a88851b5dd560aaa44e85d4c89ff
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-a-predictive-model-r-in-sql-quickstart"></a>Creare un modello predittivo (R nella Guida rapida SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +57,7 @@ I requisiti di un modello lineare sono semplici:
 + Fornire i dati di input da usare nel training del modello
 
 > [!TIP]
-> Se è necessario un aggiornamento sui modelli lineari, si consiglia di questa esercitazione, che descrive il processo di adattamento di un modello utilizzando rxLinMod: [adattamento modelli lineari](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
+> Se è necessario un aggiornamento sui modelli lineari, si consiglia di questa esercitazione, cui viene descritto il processo di adattamento di un modello utilizzando rxLinMod: [adattamento modelli lineari](https://docs.microsoft.com/r-server/r/how-to-revoscaler-linear-model)
 
 Per compilare effettivamente il modello, si definisce la formula nel codice R e si passano i dati come parametro di input.
 
@@ -152,7 +150,7 @@ VALUES (' latest model', @model)
 
 Tenere presenti le regole per l'utilizzo di parametri SQL e le variabili di R in `sp_execute_external_script`:
 
-+ Tutti i parametri SQL eseguito il mapping di script R devono essere elencati in base al nome nel  _@params_  argomento.
++ Tutti i parametri SQL eseguito il mapping di script R devono essere elencati in base al nome nel _@params_ argomento.
 + Per creare l'output di uno di questi parametri, aggiungere la parola chiave OUTPUT nell'elenco _@params_.
 + Dopo avere elencato i parametri di cui è stato eseguito il mapping, fornire il mapping, riga per riga, dei parametri SQL alle variabili R, immediatamente dopo l'elenco _@params_.
 
