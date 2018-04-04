@@ -1,32 +1,32 @@
 ---
 title: 'Procedura: inviare e recuperare i dati UTF-8 con il supporto incorporato di UTF-8 | Documenti Microsoft'
-ms.custom: 
-ms.date: 01/16/2018
+ms.custom: ''
+ms.date: 03/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - retrieving data, UTF-8 encoded data
 - converting data types
 - updating data
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2d2763ec8906cc3100c1259aa25473ae7e8d8b22
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 55c6c0293dddf4919c270f6feeb59f32670f4344
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,12 +43,12 @@ Per inviare dati con codifica UTF-8 al server o per recuperarli:
   
     Quando si specifica un set di caratteri come parte delle opzioni di connessione, il driver presuppone che le altre stringhe delle opzioni di connessione usino lo stesso set di caratteri. Si presuppone, inoltre, che anche le stringhe di query e nome del server usino tale set di caratteri.  
   
-È possibile passare UTF-8 o SQLSRV_ENC_CHAR a **CharacterSet** (è possibile passare SQLSRV_ENC_BINARY). La codifica predefinita è SQLSRV_ENC_CHAR.  
+È possibile passare UTF-8 o SQLSRV_ENC_CHAR a **CharacterSet**, ma è possibile passare SQLSRV_ENC_BINARY. La codifica predefinita è SQLSRV_ENC_CHAR.  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene illustrato come inviare e recuperare dati con codificata UTF-8 specificando il set di caratteri UTF-8 quando si effettua la connessione. Nell'esempio viene aggiornata la colonna Comments della tabella Production.ProductReview per un ID revisione specificato. Nell'esempio vengono inoltre recuperati e visualizzati i dati appena aggiornati. La colonna Comments è di tipo **nvarchar (3850).** Si noti inoltre che, prima che i dati vengono inviati al server viene convertito in UTF-8 codifica utilizzando PHP **utf8_encode** (funzione). Questo passaggio viene eseguito solo per scopi dimostrativi. In uno scenario di applicazione reale si inizierebbe con dati con codificata UTF-8.  
+Nell'esempio seguente viene illustrato come inviare e recuperare dati con codificata UTF-8 specificando il set di caratteri UTF-8 quando si effettua la connessione. Nell'esempio viene aggiornata la colonna Comments della tabella Production.ProductReview per un ID revisione specificato. Nell'esempio vengono inoltre recuperati e visualizzati i dati appena aggiornati. Si noti che la colonna Comments è di tipo **nvarchar(3850.** Si noti inoltre che, prima che i dati vengono inviati al server viene convertito in UTF-8 codifica utilizzando PHP **utf8_encode** (funzione). Questa operazione viene eseguita solo per scopi dimostrativi. In uno scenario di applicazione reale si inizierebbe con dati con codificata UTF-8.  
   
-Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
+Nell'esempio si presuppone che [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando l'esempio viene eseguito dal browser, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -132,7 +132,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-Per informazioni sull'archiviazione di dati Unicode, vedere [Utilizzo di dati Unicode](http://go.microsoft.com/fwlink/?LinkId=128236).  
+Per informazioni sull'archiviazione di dati Unicode, vedere [utilizzo di dati Unicode](https://msdn.microsoft.com/library/ms175180.aspx).  
   
 ## <a name="example"></a>Esempio  
 L'esempio seguente è simile al primo, ma anziché specificare il set di caratteri UTF-8 nella connessione, in questo caso si illustra come specificare il set di caratteri UTF-8 nella colonna.  
@@ -226,10 +226,15 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Recupero di dati](../../connect/php/retrieving-data.md)  
-[Utilizzo di dati ASCII in Windows non](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
-[aggiornamento dei dati &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
+[Recupero di dati](../../connect/php/retrieving-data.md)
+
+[Utilizzo di dati ASCII non Windows](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+
+[Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+
+[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
 [Applicazione di esempio &#40;Driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
   

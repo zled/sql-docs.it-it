@@ -1,6 +1,6 @@
 ---
 layout: HubPage
-hide_bc: 
+hide_bc: true
 title: Documentazione di Microsoft SQL | Microsoft Docs
 description: Informazioni su SQL
 author: barbkess

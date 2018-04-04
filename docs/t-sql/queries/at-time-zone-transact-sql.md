@@ -1,5 +1,5 @@
 ---
-title: NEL fuso orario (Transact-SQL) | Documenti Microsoft
+title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
@@ -32,9 +32,9 @@ ms.lasthandoff: 01/25/2018
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Converte un *inputdate* corrispondenti *datetimeoffset* valore nel fuso orario di destinazione. Se *inputdate* viene fornito senza informazioni relative all'offset, la funzione viene applicata l'offset del fuso orario, supponendo che *inputdate* valore viene fornito nel fuso orario di destinazione. Se *inputdate* viene fornito come un *datetimeoffset* valore, più **AT TIME ZONE** clausola lo converte nel fuso orario di destinazione utilizzando regole di conversione di fuso orario.  
+  Converte un elemento *inputdate* nel valore *datetimeoffset* corrispondente nel fuso orario di destinazione. Se *inputdate* viene specificato senza informazioni relative alla differenza, la funzione applica la differenza di fuso orario presumendo che il valore di *inputdate* venga specificato nel fuso orario di destinazione. Se *inputdate* viene specificato come un valore *datetimeoffset*, la clausola **AT TIME ZONE** lo converte nel fuso orario di destinazione usando le regole di conversione del fuso orario.  
   
- **NEL fuso orario** implementazione si basa su un meccanismo di Windows per convertire **datetime** valori tra fusi orari.  
+ L'implementazione di **AT TIME ZONE** si basa su un meccanismo di Windows per convertire i valori **datetime** tra fusi orari.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,21 +46,21 @@ inputdate AT TIME ZONE timezone
   
 ## <a name="arguments"></a>Argomenti  
  *inputdate*  
- È un'espressione che può essere risolta in un **smalldatetime**, **datetime**, **datetime2**, o **datetimeoffset** valore.  
+ Espressione che può essere risolta in un valore **smalldatetime**, **datetime**, **datetime2**, o **datetimeoffset**.  
   
  *timezone*  
- Nome del fuso orario di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]si basa sui fusi orari che vengono archiviati nel Registro di sistema Windows. Tutti i fusi orari installati nel computer sono archiviati nell'hive del Registro di sistema seguente: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Un elenco dei fusi orari installati viene inoltre esposta attraverso il [Sys. time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) visualizzazione.  
+ Nome del fuso orario di destinazione. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si basa sui fusi orari che vengono archiviati nel Registro di sistema di Windows. Tutti i fusi orari installati nel computer sono archiviati nell'hive del Registro di sistema seguente: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Un elenco dei fusi orari installati viene anche esposto attraverso la vista [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Restituisce il tipo di dati di **datetimeoffset**  
   
 ## <a name="return-value"></a>Valore restituito  
- Il **datetimeoffset** valore nel fuso orario di destinazione.  
+ Il valore **datetimeoffset** nel fuso orario di destinazione.  
   
-## <a name="remarks"></a>Osservazioni  
- **NEL fuso orario** applicate regole specifiche per la conversione di valori di input **smalldatetime**, **datetime** e **datetime2** tipi di dati che rientrano in un intervallo che è interessato dalla modifica dell'ora legale:  
+## <a name="remarks"></a>Remarks  
+ **AT TIME ZONE** applica le regole specifiche per la conversione di valori di input nei tipi di dati **smalldatetime**, **datetime** e **datetime2** che rientrano in un intervallo che è interessato dalla modifica dell'ora legale:  
   
--   Quando è impostata con l'orologio è presente un gap nell'ora locale in cui la durata dipende dalla durata della regolazione dell'orologio (in genere 1 ora, ma può essere 30 o 45 minuti, a seconda di fuso orario). In tal caso, vengono convertiti i punti nel tempo che appartengono a questo divario con l'offset *dopo* all'ora legale.  
+-   Quando l'ora viene spostata in avanti, c'è uno scostamento nell'ora locale la cui durata dipende dalla durata della regolazione dell'orologio (in genere 1 ora, ma può essere anche 30 o 45 minuti, a seconda del fuso orario). In tal caso, i singoli momenti contenuti in questo scostamento vengono convertiti con la differenza *dopo* il cambio dell'ora.  
   
     ```  
     /*  
@@ -91,7 +91,7 @@ inputdate AT TIME ZONE timezone
   
     ```  
   
-- Quando l'orologio viene reimpostato, 2 ore dall'ora locale si sovrappongono in un'ora.  In tal caso, vengono presentati i punti nel tempo che appartengono all'intervallo sovrapposto all'offset *prima* la modifica dell'orologio:  
+- Quando l'ora viene riportata indietro, 2 ore dell'ora locale si sovrappongono a formarne una sola.  In tal caso, i singoli momenti che appartengono all'intervallo sovrapposto vengono presentati con la differenza *prima* del cambio dell'ora:  
   
     ```  
     /*  
@@ -123,12 +123,12 @@ inputdate AT TIME ZONE timezone
   
     ```  
 
-Poiché alcune informazioni (ad esempio le regole di fuso orario) vengono mantenute all'esterno di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e sono soggetti a modifiche occasionali, il **AT TIME ZONE** funzione è classificata come non deterministiche. 
+Poiché alcune informazioni, come ad esempio le regole di fuso orario, vengono mantenute all'esterno di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e sono soggette a modifiche occasionali, la funzione **AT TIME ZONE** è classificata come non deterministica. 
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Aggiungere datetime senza informazioni relative all'offset di differenza di fuso orario di destinazione  
- Utilizzare **AT TIME ZONE** per aggiungere l'offset in base alle regole di fuso orario, quando si è certi che originale **datetime** valori vengono forniti nello stesso fuso orario:  
+### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Aggiungere la differenza di fuso orario di destinazione a datetime senza informazioni relative alla differenza  
+ Usare **AT TIME ZONE** per aggiungere la differenza in base alle regole del fuso orario, quando si è certi che i valori di **datetime** originali siano specificati nello stesso fuso orario:  
   
 ```  
 USE AdventureWorks2016;  
@@ -139,8 +139,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Convertire valori tra fusi orari diversi  
- Nell'esempio seguente converte i valori compresi tra fusi orari diversi:  
+### <a name="b-convert-values-between-different-time-zones"></a>B. Convertire i valori tra fusi orari diversi  
+ Nell'esempio seguente vengono convertiti valori tra fusi orari diversi:  
   
 ```  
 USE AdventureWorks2016;  
@@ -153,8 +153,8 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Eseguire query su tabelle temporali con fuso orario locale  
- L'esempio seguente seleziona i dati da una tabella temporale.  
+### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Eseguire una query su tabelle temporali con fuso orario locale  
+ Nell'esempio seguente vengono selezionati i dati da una tabella temporale.  
   
 ```  
 USE AdventureWorks2016;  
@@ -173,7 +173,7 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi data e ora](../../t-sql/data-types/date-and-time-types.md)   
- [Data e ora funzioni e tipi di &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ [Tipi di data e ora](../../t-sql/data-types/date-and-time-types.md)   
+ [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
   

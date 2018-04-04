@@ -1,30 +1,31 @@
 ---
 title: Tipi di dati SQL Server predefinito | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b81f0a84c40fc7d184beccf1532386b4284fafd
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: c1facac748e24d465144f93d2e4ccdf38608e6b3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="default-sql-server-data-types"></a>Tipi di dati di SQL Server predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,18 +39,22 @@ Se l'utente non ha specificato alcun tipo di dati di SQL Server, quando si invia
 |Integer|int|int|  
 |Float|float(24)|non supportato|  
 |Stringa (lunghezza minore di 8000 byte)|varchar (<string length>)|varchar (<string length>)|  
-|Stringa (lunghezza maggiore di 8000 byte)|varchar(max)|varchar(max)|  
+|Stringa (lunghezza maggiore di 8000 byte)|ntext|ntext|  
 |Risorsa|Non supportato.|Non supportato.|  
-|Flusso (codifica: non binaria)|varchar(max)|varchar(max)|  
+|Flusso (codifica: non binaria)|ntext|ntext|  
 |Flusso (codifica: binaria)|varbinary|varbinary|  
 |Array|Non supportato.|Non supportato.|  
 |Oggetto|Non supportato.|Non supportato.|  
 |DateTime (1)|datetime|Non supportato.|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
-[Converting Data Types](../../connect/php/converting-data-types.md)  
-[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)  
-[Tipi PHP](http://go.microsoft.com/fwlink/?LinkId=109071)  
-[Tipi di dati (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=109068)  
+[Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
+
+[Conversione dei tipi di dati](../../connect/php/converting-data-types.md)
+
+[sqlsrv_field_metadata](../../connect/php/sqlsrv-field-metadata.md)
+
+[Tipi PHP](http://php.net/manual/language.types.php)
+
+[Tipi di dati (Transact-SQL)](https://docs.microsoft.com/en-us/sql/t-sql/data-types/data-types-transact-sql)  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE DATABASE (Database SQL di Azure) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SERVICE_OBJECTIVE
@@ -29,22 +29,24 @@ helpviewer_keywords:
 - EDITION SQL Database
 - MAXSIZE SQL Database
 ms.assetid: 22b167f7-ae86-490b-adb3-ec02ca1c1508
-caps.latest.revision: 
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c61660015eb2f613148ad58b72386e42eb797db9
-ms.sourcegitcommit: aebbfe029badadfd18c46d5cd6456ea861a4e86d
+ms.openlocfilehash: de82cfb595559b738ca8db7d72acd620101d3995
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE (Database di SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Crea un nuovo database.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 ## <a name="syntax"></a>Sintassi  
   
 ``` 
@@ -134,6 +136,7 @@ Specifica le regole di confronto predefinite per il catalogo di metadati. *DATAB
 |Da 1024 GB fino a 4096 GB con incrementi di 256 GB* |N/D|N/D|N/D|N/D|√|√|  
   
  \* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB.  P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle seguenti aree: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per le limitazioni correnti, vedere [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) (Database singoli).  
+<!---Loc Comment: Link [Single databases] is not working---> 
   
  Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:  
   
@@ -159,7 +162,7 @@ Specifica le regole di confronto predefinite per il catalogo di metadati. *DATAB
  *nome_database_di_origine*  
  Nome del database di cui eseguire la copia.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta gli argomenti e le opzioni seguenti quando si usa l'istruzione `CREATE DATABASE`:  
+ Il `CREATE DATABASE` non supporta gli argomenti e le opzioni seguenti quando si usa l'istruzione [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]:  
   
 -   Parametri correlati alla posizione fisica del file, ad esempio \<filespec> e \<filegroup>  
   

@@ -1,29 +1,29 @@
 ---
 title: Introduzione di ADO | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, programming
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
-ms.author: MightyPen
+ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f20d7d3a90d524cbb452fc081a9a6cdcaa1ebe0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: c771ded1ced6ec2a7984de4ffcd8cd992e74a425
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-overview-and-benefits"></a>Panoramica di ADO e vantaggi
 ActiveX Data Objects (ADO) è un'interfaccia di alto livello, da utilizzare per OLE DB. OLE DB è un'interfaccia di basso livello, ad alte prestazioni per un'ampia gamma di archivi dati. Sia ADO e OLE DB possono essere usati con relazionale (tabulare) e non relazionali (gerarchico o flusso) dei dati.

@@ -1,27 +1,27 @@
 ---
 title: Preparare i dati di Excel per i report per dispositivi mobili di Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/08/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: mobile-reports
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b9f739a009fe8b80ce5005e8145b3fd95648e6f9
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 57440dd767e421cb1448d8d365ebf894edbd065a
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Preparare i dati di Excel per i report per dispositivi mobili di Reporting Services
   
@@ -56,7 +56,7 @@ Quando si prepara un file di Excel come set di dati per un report per dispositiv
   
 Come si può notare nell'esempio precedente, la prima riga contiene il nome della metrica della rispettiva colonna. [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] consente di mantenere le intestazioni delle colonne per semplificarne la consultazione all'interno delle impostazioni dell'elemento della raccolta. Tuttavia, le intestazioni delle colonne non sono obbligatorie. In assenza, [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] genera le intestazioni usando la convenzione di Excel A,B,C,...,AA,BB,...  
   
-[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]rileva automaticamente le intestazioni della prima riga durante l'importazione dei fogli di lavoro di Excel tramite il confronto tra i tipi di dati delle prime due celle di ogni colonna. Se i tipi di dati delle prime due celle di qualsiasi colonna non corrispondono, la prima riga viene assegnata per contenere le intestazioni di colonna. Se una tabella è dotata di intestazioni di colonna numeriche, assegnare un prefisso ai nomi delle intestazioni aggiungendo una stringa in modo che possano essere rilevate come intestazioni nel processo di importazione.  
+[!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] rileva automaticamente le intestazioni della prima riga durante l'importazione dei fogli di lavoro di Excel tramite il confronto tra i tipi di dati delle prime due celle di ogni colonna. Se i tipi di dati delle prime due celle di qualsiasi colonna non corrispondono, la prima riga viene assegnata per contenere le intestazioni di colonna. Se una tabella è dotata di intestazioni di colonna numeriche, assegnare un prefisso ai nomi delle intestazioni aggiungendo una stringa in modo che possano essere rilevate come intestazioni nel processo di importazione.  
   
 ## <a name="cells"></a>Celle  
   

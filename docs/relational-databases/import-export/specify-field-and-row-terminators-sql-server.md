@@ -1,16 +1,16 @@
 ---
 title: Specificare i caratteri di terminazione del campo e della riga (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - bcp utility [SQL Server], terminators
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
-ms.translationtype: MT
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +46,13 @@ ms.lasthandoff: 03/13/2018
 |Carattere di nuova riga|\n<br /><br /> Questo è il carattere di terminazione della riga predefinito.|  
 |Ritorno a capo/avanzamento riga|\r|  
 |Barra rovesciata*|\\\|  
-|Carattere di terminazione Null (non visibile)**|\0|  
+|Carattere di terminazione Null (non visibile)\*\*|\0|  
 |Tutti i caratteri stampabili (i caratteri di controllo non sono stampabili, ad eccezione dei caratteri Null, di tabulazione, di nuova riga e di ritorno a capo)|(*, A, t, l e così via)|  
-|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(**\t\*\*, end, !!!!!!!!!!, \t—\n e così via)|  
+|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(\*\*\t\*\*, end, !!!!!!!!!!, \t—\n e così via)|  
   
  *Per generare un carattere di controllo, è possibile utilizzare solo i caratteri t, n, r, 0 e '\0' in associazione al carattere di escape barra rovesciata.  
   
- **Anche se il carattere di controllo Null (\0) non è visibile quando viene stampato, è un carattere distinto del file di dati. Pertanto, l'utilizzo di un carattere di controllo Null come carattere di terminazione è diverso dall'assenza di qualsiasi carattere di terminazione del campo o della riga.  
+ \*\*Anche se il carattere di controllo Null (\0) non è visibile quando viene stampato, è un carattere distinto del file di dati. Pertanto, l'utilizzo di un carattere di controllo Null come carattere di terminazione è diverso dall'assenza di qualsiasi carattere di terminazione del campo o della riga.  
   
 > [!IMPORTANT]  
 >  Se i dati contengono un carattere di terminazione, questo viene interpretato come tale e non come un'informazione, mentre i dati che seguono tale carattere vengono interpretati come parte del campo o del record successivo. Di conseguenza, è necessario scegliere con attenzione i caratteri di terminazione per evitare che vengano visualizzati nei dati. Un carattere di terminazione del campo di surrogato basso, ad esempio, non costituisce una buona scelta per un carattere di terminazione del campo se i dati contengono tale surrogato basso.  

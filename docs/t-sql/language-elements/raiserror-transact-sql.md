@@ -45,7 +45,7 @@ ms.lasthandoff: 01/25/2018
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys. Messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY…CATCH. Nuove applicazioni devono utilizzare [generare](../../t-sql/language-elements/throw-transact-sql.md) invece.  
+  Consente di generare un messaggio di errore e di inizializzare l'elaborazione dell'errore per la sessione. RAISERROR può fare riferimento a un messaggio definito dall'utente archiviato nella vista del catalogo sys.messages oppure compilare un messaggio in modo dinamico. Il messaggio viene restituito come messaggio di errore del server all'applicazione chiamante o a un blocco CATCH associato di un costrutto TRY…CATCH. Per le nuove applicazioni è invece necessario usare [THROW](../../t-sql/language-elements/throw-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -71,24 +71,24 @@ RAISERROR ( { msg_str | @local_variable }
   
 ## <a name="arguments"></a>Argomenti  
  *msg_id*  
- Un numero di messaggio di errore definiti dall'utente viene archiviato nella vista del catalogo sys. Messages mediante sp_addmessage. I numeri di errore per i messaggi di errore definiti dall'utente devono essere maggiori di 50000. Quando *msg_id* viene omesso, RAISERROR genera un messaggio di errore con numero di errore pari a 50000.  
+ Numero del messaggio di errore definito dall'utente archiviato nella vista del catalogo sys.messages tramite sp_addmessage. I numeri di errore per i messaggi di errore definiti dall'utente devono essere maggiori di 50000. Se non si specifica *msg_id*, RAISERROR genera un messaggio di errore numero 50000.  
   
  *msg_str*  
- È simile a un messaggio definito dall'utente con la formattazione di **printf** funzione nella libreria standard C. Il messaggio di errore può contenere un massimo di 2.047 caratteri. Se contiene più di 2.048 caratteri, vengono visualizzati solo i primi 2.044 e vengono aggiunti tre punti a indicare che il messaggio è stato troncato. I parametri di sostituzione utilizzano un maggior numero di caratteri rispetto a quanto viene visualizzato nell'output a causa della gestione dell'archiviazione interna. Ad esempio, il parametro di sostituzione *%d* con un valore assegnato di 2 genera effettivamente un carattere nella stringa di messaggio, ma internamente occupa fino a tre caratteri aggiuntivi dell'archiviazione. Questo requisito a livello di archiviazione riduce il numero di caratteri disponibili per l'output del messaggio.  
+ Messaggio definito dall'utente con formattazione simile alla funzione **printf** nella libreria standard C. Il messaggio di errore può contenere un massimo di 2.047 caratteri. Se contiene più di 2.048 caratteri, vengono visualizzati solo i primi 2.044 e vengono aggiunti tre punti a indicare che il messaggio è stato troncato. I parametri di sostituzione utilizzano un maggior numero di caratteri rispetto a quanto viene visualizzato nell'output a causa della gestione dell'archiviazione interna. Ad esempio, il parametro di sostituzione *%d* con un valore assegnato pari a 2 genera effettivamente un carattere nella stringa del messaggio, ma internamente occupa fino a tre caratteri aggiuntivi dell'archivio. Questo requisito a livello di archiviazione riduce il numero di caratteri disponibili per l'output del messaggio.  
   
- Quando *argomento msg_str* viene specificato, RAISERROR genera un messaggio di errore con numero di errore pari a 50000.  
+ Se si specifica *msg_str*, RAISERROR genera un messaggio di errore numero 50000.  
   
- *argomento msg_str* è una stringa di caratteri con specifiche di conversione incorporate facoltative. Ogni specifica di conversione definisce come un valore nell'elenco di argomenti viene formattato e inserito in un campo nella posizione della specifica di conversione in *argomento msg_str*. Le specifiche di conversione sono caratterizzate dal formato seguente:  
+ *msg_str* è una stringa di caratteri con specifiche di conversione incorporate facoltative. Ogni specifica di conversione definisce la modalità con cui un valore nell'elenco di argomenti viene formattato e inserito in un campo in corrispondenza della posizione della specifica di conversione definita in *msg_str*. Le specifiche di conversione sono caratterizzate dal formato seguente:  
   
- % [[*flag*] [*larghezza*] [. *precisione*] [{h | l}]] *tipo*  
+ % [[*flag*] [*width*] [. *precision*] [{h | l}]] *type*  
   
- I parametri che possono essere usati in *argomento msg_str* sono:  
+ I parametri che possono essere usati nell'argomento *msg_str* sono i seguenti:  
   
  *flag*  
   
  Codice che determina la spaziatura e l'allineamento del valore sostituito.  
   
-|Codice|Prefisso o allineamento|Description|  
+|codice|Prefisso o allineamento|Description|  
 |----------|-----------------------------|-----------------|  
 |- (meno)|Allineamento a sinistra|Allinea a sinistra il valore dell'argomento entro la larghezza dei campi specificata.|  
 |+ (più)|Segno (prefisso)|Inserisce il segno più (+) o meno (–) all'inizio del valore dell'argomento se il valore è di tipo con segno.|  
@@ -98,7 +98,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  *width*  
   
- Valore intero che definisce la larghezza minima del campo nel quale viene inserito il valore dell'argomento. Se la lunghezza del valore dell'argomento è maggiore o uguale a *larghezza*, il valore viene stampato senza alcun riempimento. Se il valore è inferiore a *larghezza*, il valore viene riempito alla lunghezza specificata *larghezza*.  
+ Valore intero che definisce la larghezza minima del campo nel quale viene inserito il valore dell'argomento. Se la lunghezza del valore dell'argomento è maggiore o uguale a *width*, il valore viene stampato senza alcun riempimento. Se invece è minore di *width*, al valore vengono aggiunti caratteri fino a raggiungere la lunghezza specificata in *width*.  
   
  Un asterisco (*) indica che la larghezza viene specificata dall'argomento associato nell'elenco di argomenti, che deve essere un valore intero.  
   
@@ -106,13 +106,13 @@ RAISERROR ( { msg_str | @local_variable }
   
  Numero massimo di caratteri recuperati dal valore dell'argomento per i valori stringa. Se, ad esempio, una stringa include cinque carattere e la precisione è stata impostata su 3, vengono utilizzati solo i primi tre caratteri del valore stringa.  
   
- Per i valori integer *precisione* è il numero minimo di cifre stampate.  
+ Per i valori interi, *precision* definisce il numero minimo di cifre stampate.  
   
  Un asterisco (*) indica che la precisione viene specificata dall'argomento associato nell'elenco di argomenti, che deve essere un valore intero.  
   
- {h | l} *tipo*  
+ {h | l} *type*  
   
- Viene utilizzato con tipi d, i, o, s, x, X o u e crea **shortint** (h) o **longint** valori (l).  
+ Viene usato con tipi d, i, o, s, x, X, u e consente di creare valori **shortint** (h) o **longint** (l).  
   
 |Specifica del tipo|Rappresenta|  
 |------------------------|----------------|  
@@ -123,18 +123,18 @@ RAISERROR ( { msg_str | @local_variable }
 |x o X|Valori esadecimali senza segno|  
   
 > [!NOTE]  
->  Queste specifiche del tipo si basano su quelle originariamente definite per il **printf** funzione nella libreria standard C. Le specifiche del tipo utilizzate nella mappa di stringhe di messaggio RAISERROR per [!INCLUDE[tsql](../../includes/tsql-md.md)] tipi di dati, mentre le specifiche utilizzate **printf** mappa per tipi di dati del linguaggio C. Specifiche del tipo utilizzate **printf** non sono supportate da RAISERROR quando [!INCLUDE[tsql](../../includes/tsql-md.md)] non dispone di un tipo di dati simile al tipo di dati C associato. Ad esempio, il *%p* specifica per i puntatori non è supportata in RAISERROR perché [!INCLUDE[tsql](../../includes/tsql-md.md)] non dispone di un tipo di dati puntatore.  
+>  Queste specifiche del tipo si basano su quelle originariamente definite per la funzione **printf** nella libreria standard C. Le specifiche del tipo usate nelle stringhe di messaggio di RAISERROR eseguono il mapping ai tipi di dati [!INCLUDE[tsql](../../includes/tsql-md.md)], mentre le specifiche usate in **printf** eseguono il mapping ai tipi di dati del linguaggio C. Le specifiche del tipo usate in **printf** non sono supportate da RAISERROR se [!INCLUDE[tsql](../../includes/tsql-md.md)] non ha un tipo di dati simile al tipo di dati C associato. Ad esempio, la specifica *%p* per i puntatori non è supportata in RAISERROR perché in [!INCLUDE[tsql](../../includes/tsql-md.md)] non è disponibile un tipo di dati puntatore.  
   
 > [!NOTE]  
->  Per convertire un valore di [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** del tipo di dati, specificare **% I64d**.  
+>  Per convertire un valore nel tipo di dati **bigint** di [!INCLUDE[tsql](../../includes/tsql-md.md)], specificare **%I64d**.  
   
  **@** *local_variable*  
- È una variabile di qualsiasi tipo di dati carattere valido contenente una stringa formattata in modo analogo *argomento msg_str*. **@ * * * local_variable* deve essere **char** o **varchar**, o essere in grado di convertire in modo implicito in questi tipi di dati.  
+ Variabile di qualsiasi tipo di dati carattere valido contenente una stringa con la stessa formattazione di *msg_str*. **@***local_variable* deve essere di tipo **char**, o **varchar** oppure deve supportare la conversione implicita in questi tipi di dati.  
   
  *severity*  
- Livello di gravità definito dall'utente associato al messaggio. Quando si utilizza *msg_id* per generare un messaggio definito dall'utente creato mediante sp_addmessage, la gravità specificata in RAISERROR sostituisce quella specificata in sp_addmessage.  
+ Livello di gravità definito dall'utente associato al messaggio. Se si usa *msg_id* per generare un messaggio definito dall'utente creato tramite sp_addmessage, la gravità specificata in RAISERROR ha la priorità sulla gravità specificata in sp_addmessage.  
   
- I livelli di gravità da 0 a 18 possono essere specificati da qualsiasi utente, Livelli di gravità da 19 a 25 possono essere specificati solo dai membri del ruolo predefinito del ruolo del server o gli utenti dispongono dell'autorizzazione ALTER TRACE. I livelli di gravità da 19 a 25 richiedono l'opzione WITH LOG. I livelli di gravità inferiori a 0 vengono interpretati come 0. I livelli di gravità superiori a 25 vengono interpretati come 25.  
+ I livelli di gravità da 0 a 18 possono essere specificati da qualsiasi utente, mentre i livelli di gravità da 19 a 25 possono essere specificati solo dai membri del ruolo predefinito del server sysadmin oppure dagli utenti che hanno l'autorizzazione ALTER TRACE. I livelli di gravità da 19 a 25 richiedono l'opzione WITH LOG. I livelli di gravità inferiori a 0 vengono interpretati come 0. I livelli di gravità superiori a 25 vengono interpretati come 25.  
   
 > [!CAUTION]  
 >  I livelli di gravità da 20 a 25 sono considerati irreversibili. Se viene rilevato un livello di gravità irreversibile, la connessione del client viene interrotta dopo la ricezione del messaggio e l'errore viene registrato nel log degli errori e nel registro applicazioni.  
@@ -153,24 +153,24 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  ```  
   
  *state*  
- Valore intero compreso tra 0 e 255. Per impostazione predefinita i valori negativi su 1. I valori maggiori di 255 non devono essere utilizzati. 
+ Valore intero compreso tra 0 e 255. I valori negativi vengono impostati per impostazione predefinita su 1. I valori maggiori di 255 non devono essere usati. 
   
  Se in più posizioni viene generato lo stesso errore definito dall'utente, lo stesso numero di stato univoco per ogni posizione può semplificare l'individuazione della sezione di codice in cui si sono verificati gli errori.  
   
  *argument*  
- Parametri utilizzati nella sostituzione delle variabili definite in *argomento msg_str* o il messaggio corrispondente *msg_id*. Possono essere presenti 0 o più parametri di sostituzione, ma il numero complessivo di tali parametri non può essere maggiore di 20. Ogni parametro di sostituzione può essere una variabile locale o uno di questi tipi di dati: **tinyint**, **smallint**, **int**, **char**, **varchar**, **nchar**, **nvarchar**, **binario**, o **varbinary**. Non sono supportati altri tipi di dati.  
+ Parametri usati nella sostituzione delle variabili definite in *msg_str* oppure nel messaggio corrispondente a *msg_id*. Possono essere presenti 0 o più parametri di sostituzione, ma il numero complessivo di tali parametri non può essere maggiore di 20. Ogni parametro di sostituzione può essere una variabile locale o uno di questi tipi di dati: **tinyint**, **smallint**, **int**, **char**, **varchar**, **nchar**, **nvarchar**, **binary** o **varbinary**. Non sono supportati altri tipi di dati.  
   
  *opzione*  
  Opzione personalizzata per l'errore. Può essere uno dei valori riportati nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
-|LOG|Registra l'errore nel log degli errori e nel registro applicazione per l'istanza del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Gli errori registrati nel log degli errori non possono superare i 440 byte. Solo un membro del ruolo predefinito del server sysadmin o un utente con autorizzazioni ALTER TRACE può specificare WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|LOG|Registra l'errore nel log degli errori e nel registro applicazioni per l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli errori registrati nel log degli errori non possono superare i 440 byte. Solo i membri del ruolo predefinito del server sysadmin oppure gli utenti che hanno l'autorizzazione ALTER TRACE possono specificare WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Invia i messaggi direttamente al client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
-|SETERROR|Imposta il @@ERROR e i valori ERROR_NUMBER *msg_id* o 50000, indipendentemente dal livello di gravità.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|SETERROR|Imposta i valori di @@ERROR e di ERROR_NUMBER su *msg_id* o 50000, indipendentemente dal livello di gravità.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Osservazioni  
- Gli errori generati da RAISERROR hanno le stesse caratteristiche degli errori generati dal codice di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I valori specificati da RAISERROR vengono segnalati da ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE e @@ERROR funzioni di sistema. Se si esegue RAISERROR con un livello di gravità maggiore o uguale a 11 in un blocco TRY, il controllo viene trasferito al blocco CATCH associato. L'errore viene restituito al chiamante se RAISERROR viene eseguito:  
+## <a name="remarks"></a>Remarks  
+ Gli errori generati da RAISERROR hanno le stesse caratteristiche degli errori generati dal codice di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. I valori specificati da RAISERROR sono restituiti dalle funzioni di sistema ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE e @@ERROR. Se si esegue RAISERROR con un livello di gravità maggiore o uguale a 11 in un blocco TRY, il controllo viene trasferito al blocco CATCH associato. L'errore viene restituito al chiamante se RAISERROR viene eseguito:  
   
 -   All'esterno dell'ambito di qualsiasi blocco TRY.  
   
@@ -178,11 +178,11 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
   
 -   Con una gravità maggiore o uguale a 20; in questo caso la connessione al database viene terminata.  
   
- I blocchi CATCH possono utilizzare RAISERROR per generare nuovamente l'errore che ha richiamato il blocco CATCH mediante l'utilizzo di funzioni di sistema quali ERROR_NUMBER e ERROR_MESSAGE per recuperare le informazioni sull'errore di origine. @@ERROR è impostata su 0 per impostazione predefinita per i messaggi con un livello di gravità compreso tra 1 e 10.  
+ I blocchi CATCH possono utilizzare RAISERROR per generare nuovamente l'errore che ha richiamato il blocco CATCH mediante l'utilizzo di funzioni di sistema quali ERROR_NUMBER e ERROR_MESSAGE per recuperare le informazioni sull'errore di origine. Per impostazione predefinita, @@ERROR viene impostato su 0 per i messaggi con una gravità da 1 a 10.  
   
- Quando *msg_id* specifica il messaggio dalla colonna di testo utilizzando le stesse regole applicate al testo di un messaggio definito dall'utente specificato di un messaggio definito dall'utente disponibile nella vista del catalogo sys. Messages, i processi RAISERROR utilizzando *argomento msg_str*. Il testo del messaggio definito dall'utente può contenere specifiche di conversione; RAISERROR eseguirà il mapping dei valori degli argomenti in base a tali specifiche di conversione. Per aggiungere messaggi di errore definiti dall'utente e sp_dropmessage per eliminare i messaggi di errore definiti dall'utente, utilizzare sp_addmessage.  
+ Se *msg_id* specifica un messaggio definito dall'utente disponibile nella vista del catalogo sys.messages, RAISERROR elabora il messaggio dalla colonna di testo usando le stesse regole applicate al testo di un messaggio definito dall'utente specificato tramite *msg_str*. Il testo del messaggio definito dall'utente può contenere specifiche di conversione; RAISERROR eseguirà il mapping dei valori degli argomenti in base a tali specifiche di conversione. Usare sp_addmessage per aggiungere messaggi di errore definiti dall'utente e sp_dropmessage per eliminarli.  
   
- RAISERROR può essere utilizzato in alternativa a PRINT per restituire i messaggi alle applicazioni di chiamata. RAISERROR supporta la sostituzione di caratteri simile alla funzionalità del **printf** funzione nella libreria C standard, mentre il [!INCLUDE[tsql](../../includes/tsql-md.md)] non istruzione PRINT. L'istruzione PRINT non è interessata dai blocchi TRY, mentre un'istruzione RAISERROR eseguita con un livello di gravità da 11 a 19 in un blocco TRY trasferisce il controllo al blocco CATCH associato. Specificare un livello di gravità minore o uguale a 10 per utilizzare RAISERROR per restituire un messaggio da un blocco TRY senza richiamare il blocco CATCH.  
+ RAISERROR può essere utilizzato in alternativa a PRINT per restituire i messaggi alle applicazioni di chiamata. RAISERROR supporta la sostituzione dei caratteri in modo analogo alla funzionalità **printf** nella libreria standard C, al contrario dell'istruzione PRINT [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'istruzione PRINT non è interessata dai blocchi TRY, mentre un'istruzione RAISERROR eseguita con un livello di gravità da 11 a 19 in un blocco TRY trasferisce il controllo al blocco CATCH associato. Specificare un livello di gravità minore o uguale a 10 per utilizzare RAISERROR per restituire un messaggio da un blocco TRY senza richiamare il blocco CATCH.  
   
  In genere gli argomenti successivi sostituiscono le specifiche di conversione successive, ovvero il primo argomento sostituisce la prima specifica di conversione, il secondo argomento sostituisce la seconda specifica di conversione e così via. Nell'istruzione `RAISERROR` seguente, ad esempio, il primo argomento `N'number'` sostituisce la prima specifica di conversione `%s`; mentre il secondo argomento `5` sostituisce la seconda specifica di conversione `%d.`  
   
@@ -255,7 +255,7 @@ END CATCH;
 ```  
   
 ### <a name="b-creating-an-ad-hoc-message-in-sysmessages"></a>B. Creazione di un messaggio ad hoc in sys.messages  
- Nell'esempio seguente viene illustrato come generare un messaggio archiviato nella vista del catalogo sys. Messages. Il messaggio è stato aggiunto alla vista del catalogo sys. Messages utilizzando il `sp_addmessage` stored procedure di sistema come numero di messaggio `50005`.  
+ Nell'esempio seguente viene illustrato come generare un messaggio archiviato nella vista del catalogo sys.messages. Il messaggio è stato aggiunto alla vista del catalogo sys.messages tramite la stored procedure di sistema `sp_addmessage` come numero di messaggio `50005`.  
   
 ```  
 sp_addmessage @msgnum = 50005,  
@@ -301,7 +301,7 @@ GO
  [ERROR_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
  [ERROR_PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
  [ERROR_SEVERITY &#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [ERROR_STATE &#40; Transact-SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
+ [ERROR_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/error-state-transact-sql.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
   
   

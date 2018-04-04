@@ -1,7 +1,7 @@
 ---
-title: sp_describe_first_result_set (Transact-SQL) | Documenti Microsoft
+title: sp_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 03/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -25,16 +25,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a1b0d3b22cfecff2fc09551400adfc338de341bd
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 76c5088e011f4111e67631a5e7cbfed1ff57059b
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Restituisce i metadati per il primo possibili set di risultati del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Restituisce un set di risultati vuoto se il batch non restituisce risultati. Genera un errore se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non è possibile determinare i metadati per la prima query che verrà eseguita mediante l'esecuzione di un'analisi statica. La vista a gestione dinamica [Sys.dm exec_describe_first_result_set &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) restituisce le stesse informazioni.  
+  Restituisce i metadati per il primo possibili set di risultati del [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Restituisce un set di risultati vuoto se il batch non restituisce risultati. Genera un errore se il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non è possibile determinare i metadati per la prima query che verrà eseguita mediante l'esecuzione di un'analisi statica. La vista a gestione dinamica [DM exec_describe_first_result_set &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) restituisce le stesse informazioni.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,15 +48,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tsql =** ] **'***SQL_batch transact***'**  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* potrebbe essere **nvarchar (***n***)** o **nvarchar (max)**.  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* potrebbe essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
   
  [  **@params =** ] **N'***parametri***'**  
- @paramsfornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, è simile a sp_executesql. I parametri possono essere **nvarchar (n)** o **nvarchar (max)**.  
+ @params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, che è simile a sp_executesql. I parametri possono essere **nvarchar (n)** o **nvarchar (max)**.  
   
- Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n*è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito @params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch nell'istruzione o l'istruzione non contiene parametri, @params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
+ Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati nel [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. *n* è un segnaposto che indica definizioni di parametro aggiuntive. Ogni parametro specificato nell'istruzione deve essere definito @params. Se il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch nell'istruzione o l'istruzione non contiene parametri, @params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
- [  **@browse_information_mode =** ] *tinyint*  
+ [ **@browse_information_mode =** ] *tinyint*  
  Viene specificato se vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave. Se impostato su 1, ogni query viene analizzata come se per essa fosse stata specificata un'opzione FOR BROWSE. Vengono restituite informazioni aggiuntive sulla tabella di origine e sulle colonne chiave.  
   
 -   Se impostato su 0, non viene restituita alcuna informazione.  
@@ -66,23 +66,23 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 -   Se impostato su 2, ogni query viene analizzata come se venisse utilizzata per la preparazione o l'esecuzione di un cursore. Verranno restituiti nomi della vista come informazioni sulla colonna di origine.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **sp_describe_first_result_set** restituisce sempre uno stato pari a zero in caso di esito positivo. Se la procedura genera un errore e la routine viene chiamata come RPC, lo stato restituito viene popolato dal tipo di errore descritto nella colonna error_type di Sys.dm exec_describe_first_result_set. Se la procedura viene chiamata da [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è sempre zero, anche quando si verifica un errore.  
+ **sp_describe_first_result_set** restituisce sempre uno stato pari a zero se l'operazione riesce. Se la procedura genera un errore e la routine viene chiamata come RPC, lo stato restituito viene popolato dal tipo di errore descritto nella colonna error_type di Sys.dm exec_describe_first_result_set. Se la procedura viene chiamata da [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è sempre zero, anche quando si verifica un errore.  
   
 ## <a name="result-sets"></a>Set di risultati  
  Questi metadati comuni vengono restituiti come set di risultati con una riga per ogni colonna nei metadati dei risultati. Ogni riga descrive il tipo e l'ammissione di valori Null della colonna nel formato descritto nella sezione seguente. Se la prima istruzione non esiste per ogni percorso di controllo, viene restituito un set di risultati con zero righe.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**is_hidden**|**bit non NULL.**|Indica che la colonna è una colonna aggiuntiva aggiunta per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
-|**column_ordinal**|**int non NULL.**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
+|**is_hidden**|**bit non NULL**|Indica che la colonna è una colonna aggiuntiva aggiunta per informazioni di esplorazione che non compare effettivamente nel set di risultati.|  
+|**column_ordinal**|**int non NULL**|Contiene la posizione ordinale della colonna nel set di risultati. La posizione della prima colonna viene specificata come 1.|  
 |**name**|**sysname NULL**|Contiene il nome della colonna se è possibile determinare un nome. In caso contrario, contiene NULL.|  
-|**is_nullable**|**bit non NULL.**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
-|**system_type_id**|**int non NULL.**|Contiene il system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
-|**system_type_name**|**nvarchar (256) NULL**|Contiene il nome e gli argomenti, ad esempio lunghezza, precisione e scala, specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
-|**max_length**|**smallint non NULL.**|Lunghezza massima in byte della colonna.<br /><br /> -1 = la colonna è di tipo di dati **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Per **testo** colonne, il **max_length** valore sarà 16 o il valore impostato da **sp_tableoption 'text in row'**.|  
-|**precisione**|**tinyint non NULL.**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**scala**|**tinyint non NULL.**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
-|**collation_name**|**sysname NULL**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
+|**is_nullable**|**bit non NULL**|Contiene il valore 1 se la colonna ammette valori Null, 0 se la colonna non ammette valori Null e 1 se non è possibile determinare se la colonna ammette valori Null.|  
+|**system_type_id**|**int non NULL**|Contiene il system_type_id del tipo di dati della colonna come specificato in sys. Types. Per i tipi CLR, anche se la colonna system_type_name restituisce NULL, in questa colonna viene restituito il valore 240.|  
+|**system_type_name**|**nvarchar(256) NULL**|Contiene il nome e gli argomenti, ad esempio lunghezza, precisione e scala, specificati per il tipo di dati della colonna. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL.|  
+|**max_length**|**Smallint non NULL**|Lunghezza massima in byte della colonna.<br /><br /> -1 = la colonna è di tipo di dati **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Per **testo** colonne, il **max_length** valore sarà 16 o il valore impostato da **sp_tableoption 'text in row'**.|  
+|**precisione**|**tinyint non NULL**|Precisione della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
+|**scala**|**tinyint non NULL**|Scala della colonna se basata su valori numerici. In caso contrario, restituisce 0.|  
+|**nome_regole_di_confronto**|**sysname NULL**|Nome delle regole di confronto della colonna se basata su caratteri. In caso contrario, viene restituito NULL.|  
 |**user_type_id**|**int NULL**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**user_type_database**|**sysname NULL**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
 |**user_type_schema**|**sysname NULL**|Per i tipi di alias e CLR, contiene il nome dello schema in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -92,9 +92,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**xml_collection_database**|**sysname NULL**|Contiene il database in cui viene definita la raccolta XML Schema associata a questo tipo. Questa colonna restituisce NULL se il tipo restituito non è associato a una raccolta XML Schema.|  
 |**xml_collection_schema**|**sysname NULL**|Contiene lo schema in cui viene definita la raccolta XML Schema associata a questo tipo. Questa colonna restituisce NULL se il tipo restituito non è associato a una raccolta XML Schema.|  
 |**xml_collection_name**|**sysname NULL**|Contiene il nome della raccolta XML Schema associata a questo tipo. Questa colonna restituisce NULL se il tipo restituito non è associato a una raccolta XML Schema.|  
-|**is_xml_document**|**bit non NULL.**|Restituisce 1 se il tipo di dati restituito è XML ed è garantito che questo tipo sia un documento XML completo (incluso un nodo radice), contrariamente a un frammento XML. In caso contrario, restituisce 0.|  
-|**is_case_sensitive**|**bit non NULL.**|Restituisce 1 se la colonna è di un tipo stringa che fa distinzione tra maiuscole e minuscole e 0 in caso contrario.|  
-|**is_fixed_length_clr_type**|**bit non NULL.**|Restituisce 1 se la colonna è di un tipo CLR a lunghezza fissa e 0 in caso contrario.|  
+|**is_xml_document**|**bit non NULL**|Restituisce 1 se il tipo di dati restituito è XML ed è garantito che questo tipo sia un documento XML completo (incluso un nodo radice), contrariamente a un frammento XML. In caso contrario, restituisce 0.|  
+|**is_case_sensitive**|**bit non NULL**|Restituisce 1 se la colonna è di un tipo stringa che fa distinzione tra maiuscole e minuscole e 0 in caso contrario.|  
+|**is_fixed_length_clr_type**|**bit non NULL**|Restituisce 1 se la colonna è di un tipo CLR a lunghezza fissa e 0 in caso contrario.|  
 |**source_server**|**sysname**|Nome del server di origine restituito dalla colonna in questo risultato (se ha origine in un server remoto). Il nome è specificato come viene visualizzato in sys. Servers. Restituisce NULL se la colonna ha origine nel server locale o se non è possibile determinare in quale server ha origine. Viene popolata solo se sono richieste informazioni di esplorazione.|  
 |**source_database**|**sysname**|Nome del database di origine restituito dalla colonna in questo risultato. Restituisce NULL se non è possibile determinare il database. Viene popolata solo se sono richieste informazioni di esplorazione.|  
 |**source_schema**|**sysname**|Nome dello schema di origine restituito dalla colonna in questo risultato. Restituisce NULL se non è possibile determinare lo schema. Viene popolata solo se sono richieste informazioni di esplorazione.|  
@@ -108,13 +108,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|Posizione della colonna nell'elenco ORDER BY. Restituisce NULL se la colonna non compare nell'elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco.|  
 |**order_by_list_length**|**smallint NULL**|Lunghezza dell'elenco ORDER BY. Restituisce NULL se non è presente alcun elenco ORDER BY o se l'elenco ORDER BY non può essere determinato in modo univoco. Si noti che questo valore sarà lo stesso per tutte le righe restituite da **sp_describe_first_result_set.**|  
 |**order_by_is_descending**|**smallint NULL**|Se ordinal_in_order_by_list non è NULL, il **order_by_is_descending** colonna indica la direzione della clausola ORDER BY per questa colonna. In caso contrario, viene restituito NULL.|  
-|**tds_type_id**|**int non NULL.**|Per uso interno.|  
-|**tds_length**|**int non NULL.**|Per uso interno.|  
+|**tds_type_id**|**int non NULL**|Per uso interno.|  
+|**tds_length**|**int non NULL**|Per uso interno.|  
 |**tds_collation_id**|**int NULL**|Per uso interno.|  
 |**tds_collation_sort_id**|**tinyint NULL**|Per uso interno.|  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_describe_first_result_set** garantisce che se la procedura restituisce i metadati del primo set di risultati per (un ipotetico) batch A e se tale batch (A) viene successivamente eseguito quindi il batch verranno (1) genera un errore in fase di ottimizzazione, (2) Genera un errore in fase di esecuzione, (3) restituito alcun risultato impostati o (4) restituisce un primo set di risultati con gli stessi metadati descritti da **sp_describe_first_result_set**.  
+ **sp_describe_first_result_set** garantisce che se la procedura restituisce i metadati del primo set di risultati per (un ipotetico) batch A e se tale batch (A) viene successivamente eseguito quindi il batch verranno (1) genera un errore in fase di ottimizzazione, (2) Genera un errore di run-time, (3), verrà restituito alcun impostati o (4) restituisce un primo set di risultati con gli stessi metadati descritti da **sp_describe_first_result_set**.  
   
  Il nome, l'ammissione di valori Null e il tipo di dati possono variare. Se **sp_describe_first_result_set** restituisce un set di risultati vuoto, la garanzia è che l'esecuzione del batch verrà restituito alcun set di risultati.  
   
@@ -146,15 +146,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   Se il tipo di dati è diverso, viene generato un errore e non viene restituito alcun risultato se non nei casi seguenti:  
   
-    -   **varchar(a)** a **varchar(a')** in cui un ' > un.  
+    -   **varchar(a)** al **varchar(a')** in cui un ' > un.  
   
     -   **varchar(a)** a **varchar (max)**  
   
-    -   **nvarchar(a)** a **nvarchar(a')** in cui un ' > un.  
+    -   **nvarchar(a)** al **nvarchar(a')** in cui un ' > un.  
   
     -   **nvarchar(a)** a **nvarchar (max)**  
   
-    -   **varbinary(a)** a **varbinary(a')** in cui un ' > un.  
+    -   **varbinary(a)** al **varbinary(a')** in cui un ' > un.  
   
     -   **varbinary(a)** a **varbinary (max)**  
   
@@ -199,7 +199,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -212,7 +212,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -225,7 +225,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -378,7 +378,7 @@ EXEC(@SQL)
     ); '  
 ```  
   
- Risultato: Column1 **bigint non NULL.**  
+ Risultato: Column1 **bigint non NULL**  
   
 #### <a name="error-caused-by-a-ambiguous-result-set"></a>Errore causato da un set di risultati ambiguo  
  Questo esempio si presuppone che un altro utente denominato user1 disponga di una tabella denominata t1 nello schema predefinito s1 con colonne (un **int non NULL**).  
@@ -408,8 +408,7 @@ N'
  Risultato: un **int NULL** perché dbo.t1.a sia s1.t1.a hanno tipo **int** e supporto di valori null.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_describe_undeclared_parameters &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [Sys.dm exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [Sys.dm exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
-  
-  
+ [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ 

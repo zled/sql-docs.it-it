@@ -1,28 +1,28 @@
 ---
 title: Utilizzo di Always Encrypted con il driver JDBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 3/14/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
-caps.latest.revision: 
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: af8b651364f58c3c4261666d5d6531e99e620efe
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 425f965c37e1d148a267566bd1980eb345cadfc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Utilizzo di Always Encrypted con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -136,7 +136,7 @@ WITH VALUES
 ```
 
 > [!IMPORTANT]
-> L'implementazione di SQLServerColumnEncryptionCertificateStoreProvider del driver JDBC è disponibile con solo nei sistemi operativi Windows e presenta una dipendenza sqljdbc_auth.dll disponibile nel pacchetto driver. Per utilizzare questo provider, copiare il file sqljdbc_auth.dll in una directory nel percorso di sistema di Windows nel computer in cui è installato il driver JDBC. In alternativa è possibile impostare la proprietà di sistema java.libary.path in modo da specificare la directory di sqljdbc_auth.dll. Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64. Ad esempio, se si utilizza la JVM a 32 bit e il driver JDBC è installato nella directory predefinita, è possibile specificare il percorso della DLL con il seguente argomento della macchina virtuale (VM) quando viene avviata l'applicazione Java: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
+> Mentre gli altri provider di archivio chiavi in questo articolo sono disponibili in tutte le piattaforme supportate dal driver, l'implementazione di SQLServerColumnEncryptionCertificateStoreProvider del driver JDBC è disponibile solo nei sistemi operativi Windows. E presenta una dipendenza su sqljdbc_auth disponibile nel pacchetto driver. Per utilizzare questo provider, copiare il file sqljdbc_auth.dll in una directory nel percorso di sistema di Windows nel computer in cui è installato il driver JDBC. In alternativa è possibile impostare la proprietà di sistema java.libary.path in modo da specificare la directory di sqljdbc_auth.dll. Se si esegue Java Virtual Machine (JVM) a 32 bit, utilizzare il file sqljdbc_auth.dll nella cartella x86, anche se la versione del sistema operativo è x64. Se si esegue JVM a 64 bit in un processore x64, utilizzare il file sqljdbc_auth.dll nella cartella x64. Ad esempio, se si utilizza la JVM a 32 bit e il driver JDBC è installato nella directory predefinita, è possibile specificare il percorso della DLL con il seguente argomento della macchina virtuale (VM) quando viene avviata l'applicazione Java: `-Djava.library.path=C:\Microsoft JDBC Driver <version> for SQL Server\sqljdbc_<version>\enu\auth\x86`
 
 ### <a name="using-java-key-store-provider"></a>Utilizzando il provider di archivio di chiavi di Java
 Il driver JDBC viene fornito con un'implementazione del provider di archivio chiavi predefinite per l'archivio di chiavi di Java. Se il **keyStoreAuthentication** proprietà della stringa di connessione è presente nella stringa di connessione e viene impostato su "JavaKeyStorePassword", il driver registra il provider per archivio chiavi di Java e crea automaticamente. Il nome del provider di archivio di chiavi di Java è MSSQL_JAVA_KEYSTORE. Questo nome è anche possibile eseguire query tramite l'API SQLServerColumnEncryptionJavaKeyStoreProvider.getName(). 
@@ -408,7 +408,7 @@ Il **sendTimeAsDatetime** proprietà di connessione viene utilizzata per configu
 Per ulteriori informazioni su questa proprietà, vedere [Java.SQL configurazione come i valori vengono inviati al Server](configuring-how-java-sql-time-values-are-sent-to-the-server.md).
 
 ### <a name="configuring-how-string-values-are-sent-to-the-server"></a>La configurazione come valori stringa vengono inviati al server
-Il **sendStringParametersAsUnicode** proprietà di connessione viene utilizzata per configurare come valori stringa vengono inviati a SQL Server. Se impostato su true, i parametri String viene inviato al server in formato Unicode. Se impostato su false, i parametri di stringa viene inviato in formato non Unicode, ad esempio MBCS, invece di Unicode o ASCII. Il valore predefinito per questa proprietà è true. Quando Always Encrypted è abilitato e una colonna char/varchar/varchar(max) è crittografata, il valore di **sendStringParametersAsUnicode** deve essere impostato su true (o essere lasciato come impostazione predefinita). Se questa proprietà è impostata su false, il driver genererà un'eccezione durante l'inserimento di dati a una colonna crittografata char/varchar/varchar(max). Per ulteriori informazioni su questa proprietà, vedere [impostando le proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
+Il **sendStringParametersAsUnicode** proprietà di connessione viene utilizzata per configurare come valori stringa vengono inviati a SQL Server. Se impostato su true, i parametri String viene inviato al server in formato Unicode. Se impostato su false, i parametri di stringa viene inviato in formato non Unicode, ad esempio MBCS, invece di Unicode o ASCII. Il valore predefinito per questa proprietà è true. Quando Always Encrypted è abilitato e una colonna char/varchar/varchar(max) è crittografata, il valore del **sendStringParametersAsUnicode** deve essere impostata su false. Se questa proprietà è impostata su true, il driver genererà un'eccezione durante la decrittografia dei dati da una colonna crittografata char/varchar/varchar(max) con caratteri Unicode. Per ulteriori informazioni su questa proprietà, vedere [impostando le proprietà di connessione](../../connect/jdbc/setting-the-connection-properties.md).
   
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recupero e modifica di dati nelle colonne crittografate
 Dopo aver abilitato Always Encrypted per le query dell'applicazione, è possibile utilizzare le API JDBC standard per recuperare o modificare i dati in colonne crittografate del database. Se l'applicazione ha le autorizzazioni di database necessari e può accedere alla chiave master di colonna, il driver consente di crittografare i parametri di query che fanno riferimento alle colonne crittografate e per decrittografare i dati recuperati dalle colonne crittografate.

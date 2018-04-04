@@ -48,11 +48,11 @@ ms.lasthandoff: 01/25/2018
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Una clausola dell'istruzione SELECT che divide il risultato della query in gruppi di righe, in genere per eseguire una o più aggregazioni su ogni gruppo. L'istruzione SELECT restituisce una riga per ogni gruppo.  
+Una clausola dell'istruzione SELECT che divide il risultato della query in gruppi di righe solitamente per eseguire una o più aggregazioni in ogni gruppo. L'istruzione SELECT restituisce una riga per ogni gruppo.  
   
 ## <a name="syntax"></a>Sintassi  
 
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ```  
 -- Syntax for SQL Server and Azure SQL Database   
@@ -103,11 +103,11 @@ GROUP BY {
 ## <a name="arguments"></a>Argomenti 
  
 ### <a name="column-expression"></a>*column-expression*  
-Specifica una colonna o un calcolo non di aggregazione su una colonna. Questa colonna può appartenere a una tabella, una tabella derivata o una vista. La colonna deve essere presente nella clausola FROM dell'istruzione SELECT, ma non è necessaria visualizzare nell'elenco di selezione. 
+Specifica una colonna o un calcolo di non aggregazione in una colonna. Questa colonna può appartenere a una tabella, una tabella derivata o una visualizzazione. La colonna deve essere presente nella clausola FROM dell'istruzione SELECT, ma non è necessario che sia inclusa nell'elenco SELECT. 
 
-Per le espressioni valide, vedere [espressione](~/t-sql/language-elements/expressions-transact-sql.md).    
+Per le espressioni valide, vedere [Espressioni](~/t-sql/language-elements/expressions-transact-sql.md).    
 
-La colonna deve essere presente nella clausola FROM dell'istruzione SELECT, ma non è necessaria visualizzare nell'elenco di selezione. Tuttavia, ogni tabella o vista di colonna in qualsiasi espressione non di aggregazione di \<selezionare > elenco deve essere incluso nell'elenco GROUP BY:  
+La colonna deve essere presente nella clausola FROM dell'istruzione SELECT, ma non è necessario che sia inclusa nell'elenco SELECT. Tuttavia, ogni colonna della tabella o della visualizzazione di qualsiasi espressione di non aggregazione presente nell'elenco \<select> deve essere inclusa nell'elenco GROUP BY:  
   
 Le istruzioni seguenti sono consentite:  
   
@@ -126,17 +126,17 @@ Le istruzioni seguenti non sono consentite:
     ```  
 L'espressione della colonna non può contenere:
 
-- Un alias di colonna definito nell'elenco di selezione. È possibile utilizzare un alias di colonna per una tabella derivata definita nella clausola FROM.
-- Una colonna di tipo **testo**, **ntext**, o **immagine**. Tuttavia, è possibile utilizzare una colonna di text, ntext o image come argomento a una funzione che restituisce un valore di un tipo di dati validi. Ad esempio, l'espressione è possibile utilizzare substring () e cast (). Questo vale anche per le espressioni nella clausola HAVING.
-- metodi con tipo di dati XML. Può includere una funzione definita dall'utente che utilizza i metodi con tipo di dati xml. Può includere una colonna calcolata che utilizza i metodi con tipo di dati xml. 
+- L'alias di una colonna definita nell'elenco SELECT. Può usare l'alias di una colonna per una tabella derivata definita nella clausola FROM.
+- Una colonna di tipo **text**, **ntext** o **image**. È possibile tuttavia usare una colonna text, ntext o image come argomento di una funzione che restituisce un valore di un tipo di dati valido. Ad esempio, l'espressione può usare SUBSTRING() e CAST(). Ciò si applica anche alle espressioni nella clausola HAVING.
+- metodi con tipo di dati xml. Può includere una funzione definita dall'utente che usa metodi con tipo di dati xml. Può includere una colonna calcolata che usa metodi con tipo di dati xml. 
 - Sottoquery. Viene restituito l'errore 144. 
-- Una colonna da una vista indicizzata. 
+- Una colonna di una visualizzazione indicizzata. 
  
-### <a name="group-by-column-expression--n-"></a>GROUP BY *espressione di colonna* [,... n] 
+### <a name="group-by-column-expression--n-"></a>GROUP BY *column-expression* [ ,...n ] 
 
-Raggruppa i risultati dell'istruzione SELECT in base ai valori in un elenco di uno o più espressioni di colonna. 
+Raggruppa i risultati dell'istruzione SELECT in base ai valori in un elenco di una o più espressioni di colonna. 
 
-Questa query, ad esempio, crea una tabella Sales con le colonne per paese, regione e Sales. Inserisce quattro righe e due delle righe con valori corrispondenti per paese e area.  
+Ad esempio, questa query crea una tabella Sales con colonne per Country, Region e Sales. Inserisce quattro righe, due delle quali con valori corrispondenti per Country e Region.  
 
 ```
 CREATE TABLE Sales ( Country varchar(50), Region varchar(50), Sales int );
@@ -146,7 +146,7 @@ INSERT INTO sales VALUES (N'Canada', N'British Columbia', 200);
 INSERT INTO sales VALUES (N'Canada', N'British Columbia', 300);
 INSERT INTO sales VALUES (N'United States', N'Montana', 100);
 ```
-La tabella Sales contiene queste righe:
+La tabella Sales contiene le righe seguenti:
 
 | Country | Region | Sales |
 |---------|--------|-------|
@@ -155,14 +155,14 @@ La tabella Sales contiene queste righe:
 | Canada | British Columbia | 300 |
 | United States | Montana | 100 |
 
-Questa query successiva Raggruppa paese e area geografica e restituisce la somma di aggregazione per ogni combinazione di valori.  
+La query successiva raggruppa Country e Region e restituisce la somma aggregata per ogni combinazione di valori.  
  
 ``` 
 SELECT Country, Region, SUM(sales) AS TotalSales
 FROM Sales
 GROUP BY Country, Region;
 ```
-Poiché sono presenti 3 combinazioni di valori per paese e area, il risultato della query è 3 righe. I totali di vendite per il Canada e British Columbia è la somma di due righe. 
+Il risultato della query ha 3 righe poiché sono presenti 3  combinazioni di valori per Country e Region. Il valore TotalSales per Canada e British Columbia è la somma di due righe. 
 
 | Country | Region | TotalSales |
 |---------|--------|-------|
@@ -172,19 +172,19 @@ Poiché sono presenti 3 combinazioni di valori per paese e area, il risultato de
 
 ### <a name="group-by-rollup"></a>GROUP BY ROLLUP
 
-Crea un gruppo per ogni combinazione di espressioni di colonna. Inoltre, "esegue il rollup" i risultati in subtotali e totali complessivi. A tale scopo, vengono spostati da destra a sinistra, riducendo il numero di espressioni di colonna su cui viene creato il aggregation(s) e gruppi. 
+Crea un gruppo per ogni combinazione di espressioni di colonna. Esegue anche il rollup dei risultati in subtotali e totali complessivi. Per eseguire questa operazione, esegue uno spostamento da destra a sinistra riducendo il numero di espressioni di colonna su cui crea gruppi e aggregazioni. 
 
-L'ordine delle colonne influisce sull'output di ROLLUP e può influire sul numero di righe nel set di risultati.  
+L'ordine delle colonne ha effetto sull'output di ROLLUP e può avere effetto sul numero di righe nel set di risultati.  
 
 Ad esempio, `GROUP BY ROLLUP (col1, col2, col3, col4)` crea gruppi per ogni combinazione di espressioni di colonna negli elenchi seguenti.  
 
 - col1, col2, col3, col4 
-- Col1, col2, col3, NULL
-- Col1, col2, NULL, NULL
-- Col1, NULL, NULL, NULL
-- NULL, NULL, NULL, NULL, questo è il totale complessivo
+- col1, col2, col3, NULL
+- col1, col2, NULL, NULL
+- col1, NULL, NULL, NULL
+- NULL, NULL, NULL, NULL --Totale complessivo
 
-Utilizzando la tabella dell'esempio precedente, questo codice viene eseguita un'operazione GROUP BY ROLLUP anziché una clausola GROUP BY semplice.
+Usando la tabella dell'esempio precedente, questo codice esegue un'operazione GROUP BY ROLLUP anziché una semplice operazione GROUP BY.
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -192,7 +192,7 @@ FROM Sales
 GROUP BY ROLLUP (Country, Region);
 ```
 
-Il risultato della query ha le stesse aggregazioni come la clausola GROUP BY semplice senza il ROLLUP. Inoltre, crea i subtotali per ogni valore del paese. Infine, offre un totale complessivo per tutte le righe. Il risultato è simile al seguente:
+Il risultato della query ha le stesse aggregazioni di GROUP BY senza ROLLUP. Inoltre, crea i subtotali per ogni valore di Country. Infine, visualizza un totale complessivo per tutte le righe. Il risultato è simile al seguente:
 
 | Country | Region | TotalSales |
 | :------ | :----- | ---------: |
@@ -203,11 +203,11 @@ Il risultato della query ha le stesse aggregazioni come la clausola GROUP BY sem
 | United States | NULL | 100 |
 | NULL | NULL | 700 |
 
-### <a name="group-by-cube--"></a>GROUP BY () DEL CUBO  
+### <a name="group-by-cube--"></a>GROUP BY CUBE ( )  
 
-GROUP BY CUBE consente di creare gruppi per tutte le possibili combinazioni di colonne. Dispone di gruppi per i valori univoci per GROUP BY CUBE (a, b) i risultati di (a, b), (NULL, b), (a, NULL) e (NULL, NULL).
+GROUP BY CUBE crea gruppi per tutte le possibili combinazioni di colonne. Per GROUP BY CUBE (a, b) il risultato include gruppi per i valori univoci di (a, b), (NULL, b), (a, NULL) e (NULL, NULL).
 
-Utilizzando la tabella degli esempi precedenti, questo codice esegue un'operazione GROUP BY CUBE sul paese e area. 
+Usando la tabella degli esempi precedenti, questo codice esegue un'operazione GROUP BY CUBE in Country e Region. 
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -215,7 +215,7 @@ FROM Sales
 GROUP BY CUBE (Country, Region);
 ```
 
-Il risultato della query ha gruppi per i valori univoci di (Country, Region), (NULL, area), (paese, NULL) e (NULL, NULL). I risultati è simile al seguente:
+Il risultato della query include gruppi per i valori univoci di (Country, Region), (NULL, Region), (Country, NULL) e (NULL, NULL). I risultati sono simili ai seguenti:
 
 | Country | Region | TotalSales |
 |---------|--------|-------|
@@ -229,13 +229,13 @@ Il risultato della query ha gruppi per i valori univoci di (Country, Region), (N
 | Canada | NULL | 600 |
 | United States | NULL | 100 |
    
- ### <a name="group-by-grouping-sets--"></a>GROUP BY () SET DI RAGGRUPPAMENTO  
+ ### <a name="group-by-grouping-sets--"></a>GROUP BY GROUPING SETS ( )  
  
-L'opzione di GROUPING SETS offre la possibilità di combinare più clausole GROUP BY in una clausola GROUP BY. I risultati rappresentano l'equivalente di quelli della clausola UNION ALL dei gruppi specificati. 
+L'opzione GROUPING SETS consente di combinare più clausole GROUP BY in un'unica clausola GROUP BY. I risultati rappresentano l'equivalente di quelli della clausola UNION ALL dei gruppi specificati. 
 
 Ad esempio, `GROUP BY ROLLUP (Country, Region)` e `GROUP BY GROUPING SETS ( ROLLUP (Country, Region) )` restituiscono gli stessi risultati. 
 
-Quando GROUPING SETS dispone di due o più elementi, i risultati sono un'unione degli elementi. In questo esempio restituisce l'unione dei risultati di ROLLUP e CUBE per paese e area.
+Quando GROUPING SETS ha due o più elementi, i risultati sono un'unione degli elementi. Questo esempio restituisce l'unione dei risultati di ROLLUP e CUBE per Country e Region.
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -243,7 +243,7 @@ FROM Sales
 GROUP BY GROUPING SETS ( ROLLUP (Country, Region), CUBE (Country, Region) );
 ```
 
-I risultati sono gli stessi come la query che restituisce l'unione delle due istruzioni GROUP BY.
+I risultati sono gli stessi di questa query che restituisce un'unione delle due istruzioni GROUP BY.
 
 ```
 SELECT Country, Region, SUM(Sales) AS TotalSales
@@ -256,10 +256,10 @@ GROUP BY CUBE (Country, Region)
 ;
 ```
 
-SQL non consolidare gruppi duplicati generati per un elenco GROUPING SETS. Ad esempio, in `GROUP BY ( (), CUBE (Country, Region) )`, entrambi gli elementi restituiscano una riga per il totale complessivo ed entrambe le righe verranno elencate nei risultati. 
+SQL non consolida i gruppi duplicati generati per un elenco GROUPING SETS. Ad esempio, in `GROUP BY ( (), CUBE (Country, Region) )` entrambi gli elementi restituiscono una riga per il totale complessivo ed entrambe le righe saranno elencate nei risultati. 
 
  ### <a name="group-by-"></a>GROUP BY ()  
-Specifica il gruppo vuoto che genera il totale complessivo. Ciò è utile come uno degli elementi di un SET di raggruppamento. Ad esempio, questa istruzione offre le vendite totali per ogni singolo paese e fornisce i totali complessivi per tutti i paesi.
+Specifica il gruppo vuoto che genera il totale complessivo. Ha la stessa funzione di uno degli elementi di GROUPING SET. Ad esempio, questa istruzione restituisce le vendite totali per ogni paese e quindi restituisce il totale complessivo per tutti i paesi.
 
 ```
 SELECT Country, SUM(Sales) AS TotalSales
@@ -267,104 +267,104 @@ FROM Sales
 GROUP BY GROUPING SETS ( Country, () );
 ```
 
-### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ALL]-espressione di colonna [,... n] 
+### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-Si applica a: SQL Server e Database SQL di Azure
+Si applica a: SQL Server e database SQL di Azure
 
-Nota: Questa sintassi è fornita solo per la compatibilità. Verrà rimosso in una versione futura. Evitare di usare questa sintassi in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che attualmente utilizzano questa sintassi.
+NOTA: questa sintassi è disponibile solo per la compatibilità con le versioni precedenti. Verrà rimossa in una versione futura. Evitare pertanto di usarla in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente usano questa sintassi.
 
-Specifica di includere tutti i gruppi nei risultati indipendentemente dal fatto che siano soddisfatti i criteri di ricerca nella clausola WHERE. Gruppi che non soddisfano i criteri di ricerca hanno valore NULL per l'aggregazione. 
+Specifica di includere tutti i gruppi nei risultati indipendentemente dal fatto che soddisfino i criteri di ricerca nella clausola WHERE. I gruppi che non soddisfano i criteri di ricerca hanno valore NULL per l'aggregazione. 
 
-RAGGRUPPA TUTTE:
-- Non è supportata nelle query che accedono a tabelle remote se esiste anche una clausola WHERE della query.
-- Avrà esito negativo in colonne che includono l'attributo FILESTREAM.
+GROUP BY ALL:
+- Questa operazione non è supportata in query che accedono a tabelle remote se la query include anche una clausola WHERE.
+- L'operazione avrà esito negativo nelle colonne con l'attributo FILESTREAM.
   
-### <a name="with-distributedagg"></a>CON (DISTRIBUTED_AGG)
+### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
 Si applica a: Azure SQL Data Warehouse e Parallel Data Warehouse
 
-Hint per la query DISTRIBUTED_AGG impone al sistema di elaborazione parallela massiva (. MPP) per la ridistribuzione di una tabella in una colonna specifica prima di eseguire un'aggregazione. Solo una colonna nella clausola GROUP BY può contenere hint DISTRIBUTED_AGG per la query. Al termine dell'esecuzione della query, viene eliminata la tabella ridistribuita. La tabella originale non viene modificata.  
+L'hint per la query DISTRIBUTED_AGG forza nel sistema di elaborazione parallela elevata (Massively Parallel Processing, MPP) la ridistribuzione di una tabella in una colonna specifica prima dell'esecuzione di un'aggregazione. Solo una colonna della clausola GROUP BY può avere un hint per la query DISTRIBUTED_AGG. Al termine dell'esecuzione della query, la tabella ridistribuita viene eliminata. La tabella originale non viene modificata.  
 
-Nota: L'hint DISTRIBUTED_AGG per la query viene fornito per la compatibilità con le versioni precedenti di Parallel Data Warehouse e non migliorerà le prestazioni per la maggior parte delle query. Per impostazione predefinita, MPP già dati vengono ridistribuiti in base alle esigenze per migliorare le prestazioni per le aggregazioni. 
+NOTA: l'hint per la query DISTRIBUTED_AGG è incluso per la compatibilità con le versioni precedenti di Parallel Data Warehouse e non migliora la prestazioni per la maggior parte delle query. Per impostazione predefinita, MPP distribuisce già i dati in base alle esigenze per migliorare le prestazioni per le aggregazioni. 
   
 ## <a name="general-remarks"></a>Osservazioni generali
 
-### <a name="how-group-by-interacts-with-the-select-statement"></a>GROUP BY interazione con l'istruzione SELECT
-Elenco di selezione:
-- Aggregazioni vettoriali. Se le funzioni di aggregazione sono inclusi nell'elenco di selezione, GROUP BY calcola un valore di riepilogo per ogni gruppo. Tali funzioni sono denominate aggregazioni vettoriali. 
-- Aggregazioni DISTINCT. Le funzioni di aggregazione AVG (DISTINCT *column_name*), COUNT (DISTINCT *column_name*) e SUM (DISTINCT *column_name*) sono supportati con ROLLUP, CUBE e GROUPING SETS.
+### <a name="how-group-by-interacts-with-the-select-statement"></a>Interazione di GROUP BY con l'istruzione SELECT
+Elenco SELECT:
+- Aggregazione di vettori. Se l'elenco SELECT include funzioni di aggregazione, la clausola GROUP BY calcola un valore di riepilogo per ogni gruppo. Tali funzioni sono denominate aggregazioni vettoriali. 
+- Aggregazioni DISTINCT. Le aggregazioni AVG (DISTINCT *column_name*), COUNT (DISTINCT *column_name*) e SUM (DISTINCT *column_name*) sono supportate con ROLLUP, CUBE e GROUPING SETS.
   
 Clausola WHERE:
-- SQL rimuove le righe che non soddisfano le condizioni nella clausola WHERE prima di eseguire qualsiasi operazione di raggruppamento.  
+- SQL rimuove le righe che non soddisfano le condizioni presenti nella clausola WHERE prima che venga eseguita qualsiasi operazione di raggruppamento.  
   
 Clausola HAVING:
-- SQL utilizza la presenza di una clausola per filtrare gruppi nel set di risultati. 
+- SQL usa la clausola HAVING per filtrare i gruppi nel set di risultati. 
   
 Clausola ORDER BY:
 - Per eseguire questa operazione, utilizzare la clausola ORDER BY. La clausola GROUP BY non ordina il set di risultati. 
   
 Valori NULL:
-- Se una colonna di raggruppamento contiene valori NULL, tutti i valori NULL vengono considerati uguali e vengono raccolti in un unico gruppo.   
+- Se una colonna di raggruppamento contiene valori NULL, tutti i valori NULL sono considerati uguali e raccolti in un unico gruppo.   
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni
 
-Si applica a: SQL Server (a partire da 2008) e Azure SQL Data Warehouse
+Si applica a: SQL Server (a partire dalla versione 2008) e Azure SQL Data Warehouse
 
 ### <a name="maximum-capacity"></a>Capacità massima
 
-Per una clausola GROUP BY che utilizza ROLLUP, CUBE o GROUPING SETS, il numero massimo di espressioni è 32. Il numero massimo di gruppi è 4096 (2<sup>12</sup>). Negli esempi seguenti esito negativo perché la clausola GROUP BY è 4096 più gruppi.  
+Per una clausola GROUP BY che usa ROLLUP, CUBE o GROUPING SETS, il numero massimo di espressioni è 32. Il numero massimo di gruppi è 4096 (2<sup>12</sup>). Gli esempi seguenti non possono essere eseguiti correttamente perché la clausola GROUP BY ha più di 4096 gruppi.  
  
--   Nell'esempio seguente viene generati 4.097 (2<sup>12</sup> + 1) set di raggruppamenti e avrà esito negativo.  
+-   L'esempio seguente genera 4097 (2<sup>12</sup> + 1) set di raggruppamenti e ha esito negativo.  
   
     ```  
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), b )  
     ```  
   
--   Nell'esempio seguente viene generati 4.097 (2<sup>12</sup> + 1) gruppi e avrà esito negativo. Sia `CUBE ()` sia il set di raggruppamenti `()` consentono di generare una riga del totale complessivo e i set di raggruppamenti duplicati non vengono eliminati.  
+-   L'esempio seguente genera 4097 (2<sup>12</sup> + 1) gruppi e ha esito negativo. Sia `CUBE ()` sia il set di raggruppamenti `()` consentono di generare una riga del totale complessivo e i set di raggruppamenti duplicati non vengono eliminati.  
   
     ```  
     GROUP BY GROUPING SETS( CUBE(a1, ..., a12), ())  
     ```  
 
--   In questo esempio viene utilizzata la sintassi compatibile con le versioni precedenti. Genera 8192 (2<sup>13</sup>) set di raggruppamenti e avrà esito negativo.  
+-   Questo esempio usa la sintassi compatibile con le versioni precedenti. Genera 8192 (2<sup>13</sup>) set di raggruppamenti e ha esito negativo.  
   
     ```  
     GROUP BY CUBE (a1, ..., a13)   
     GROUP BY a1, ..., a13 WITH CUBE   
     ```    
-    Per compatibilità a ritroso clausole GROUP BY che non contengono CUBE o ROLLUP, il numero di group by items è limitato dalle RAGGRUPPA dimensioni delle colonne, le colonne aggregate, e i valori di aggregazione coinvolti nella query. Tale limite è correlato al limite di 8.060 byte della tabella di lavoro intermedia necessaria per mantenere i risultati intermedi delle query. Quando viene specificato l'operatore CUBE o ROLLUP, sono consentite al massimo 12 espressioni di raggruppamento.
+    Per clausole GROUP BY compatibili con le versioni precedenti che non includono CUBE o ROLLUP, il numero di elementi GROUP BY è limitato dalle dimensioni delle colonne GROUP BY, dalle colonne di aggregazione e dai valori di aggregazione interessati dalla query. Tale limite è correlato al limite di 8.060 byte della tabella di lavoro intermedia necessaria per mantenere i risultati intermedi delle query. Quando viene specificato l'operatore CUBE o ROLLUP, sono consentite al massimo 12 espressioni di raggruppamento.
 
 ### <a name="support-for-iso-and-ansi-sql-2006-group-by-features"></a>Supporto per le funzionalità GROUP BY di SQL-2006 ISO e ANSI
 
-La clausola GROUP BY supporta tutte le funzionalità GROUP BY incluse nello standard SQL-2006 con le eccezioni di sintassi seguenti:  
+La clausola GROPU BY supporta tutte le funzionalità GROUP BY incluse nello standard SQL-2006 con le eccezioni di sintassi seguenti:  
   
--   Nella clausola GROUP BY non è consentito utilizzare set di raggruppamenti a meno che non appartengano a un elenco GROUPING SETS esplicito. Ad esempio, `GROUP BY Column1, (Column2, ...ColumnN`) è consentita nello standard, ma non in Transact-SQL.  Transact-SQL supporta `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` e `GROUP BY Column1, Column2, ... ColumnN`, che sono semanticamente equivalenti. Queste espressioni sono semanticamente equivalenti a quelle dell'esempio relativo a `GROUP BY` precedente. Per evitare la possibilità che `GROUP BY Column1, (Column2, ...ColumnN`) potrebbe essere erroneamente interpretata come `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, che non sono semanticamente equivalenti.  
+-   Nella clausola GROUP BY non è consentito utilizzare set di raggruppamenti a meno che non appartengano a un elenco GROUPING SETS esplicito. Ad esempio, `GROUP BY Column1, (Column2, ...ColumnN`) è consentito nello standard ma non in Transact-SQL.  Transact-SQL supporta `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))` e `GROUP BY Column1, Column2, ... ColumnN` che sono semanticamente equivalenti. Queste espressioni sono semanticamente equivalenti a quelle dell'esempio relativo a `GROUP BY` precedente. Ciò consente di evitare che `GROUP BY Column1, (Column2, ...ColumnN`) possa essere erroneamente interpretato come `GROUP BY C1, GROUPING SETS ((Column2, ...ColumnN))`, che non è semanticamente equivalente.  
   
--   L'utilizzo di set di raggruppamenti non è consentito all'interno di GROUPING SETS. Ad esempio, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` è consentita nello standard SQL-2006 ma non in Transact-SQL. Consente di Transact-SQL `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` o `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )`, che sono semanticamente equivalenti al primo esempio GROUP BY e una sintassi più chiara.  
+-   L'utilizzo di set di raggruppamenti non è consentito all'interno di GROUPING SETS. Ad esempio, `GROUP BY GROUPING SETS (A1, A2,…An, GROUPING SETS (C1, C2, ...Cn))` è consentito nello standard SQL-2006 ma non in Transact-SQL. `GROUP BY GROUPING SETS( A1, A2,...An, C1, C2, ...Cn )` o `GROUP BY GROUPING SETS( (A1), (A2), ... (An), (C1), (C2), ... (Cn) )` sono consentiti in Transact-SQL e sono semanticamente equivalenti al primo esempio di GROUP BY ma hanno una sintassi più chiara.  
   
--   GROUP BY [ALL/DISTINCT] è consentito solo in una clausola GROUP BY semplice che contiene espressioni di colonna. Non è consentito con i costrutti di GROUPING SETS, ROLLUP, CUBE, WITH CUBE o WITH ROLLUP. ALL è il valore predefinito ed è implicito. È consentito anche solo la sintassi compatibile con le versioni precedenti.
+-   GROUP BY [ALL/DISTINCT] è consentito solo in una clausola GROUP BY semplice che contiene espressioni di colonna. Non è consentito con i costrutti GROUPING SETS, ROLLUP, CUBE, WITH CUBE o WITH ROLLUP. ALL è il valore predefinito ed è implicito. È anche consentito solo nella sintassi compatibile con le versioni precedenti.
   
 ### <a name="comparison-of-supported-group-by-features"></a>Confronto tra le funzionalità GROUP BY supportate  
- Nella tabella seguente descrive le funzionalità GROUP BY supportate in base alle versioni di SQL e a livello di compatibilità del database.  
+ La tabella seguente descrive le funzionalità GROUP BY supportate in base alle versioni SQL e al livello di compatibilità del database.  
   
 |Funzionalità|SQL Server Integration Services|Livello di compatibilità di SQL Server 100 o superiore|Livello di compatibilità di SQL Server 2008 o versioni successive pari a 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Aggregazioni DISTINCT|Non supportate per WITH CUBE o WITH ROLLUP.|Supportate per WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE o ROLLUP.|Comportamento analogo al livello di compatibilità pari a 100.|  
-|Funzione definita dall'utente denominata CUBE o ROLLUP nella clausola GROUP BY|Funzione definita dall'utente **dbo. CUBE (***arg1***,***... argN***)** o **dbo. rollup (***arg1***,**... *argN * * *)* * in GROUP BY clausola è consentita.<br /><br /> Esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Funzione definita dall'utente **dbo. CUBE (***arg1***,**... argN**)** o **dbo. rollup (**arg1**,***... argN*** )** in GROUP BY clausola non è consentita.<br /><br /> Esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Viene restituito il seguente messaggio di errore: "sintassi non corretta in prossimità del cubo' parola chiave' &#124;' rollup'. "<br /><br /> Per evitare questo problema, sostituire `dbo.cube` con `[dbo].[cube]` oppure `dbo.rollup` con `[dbo].[rollup]`.<br /><br /> Nell'esempio seguente è consentito:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Funzione definita dall'utente **dbo. CUBE (***arg1***, *... argN*) o **dbo. rollup (***arg1***,***... argN***)**in GROUP BY clausola è consentita<br /><br /> Esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
-|GROUPING SETS|Non supportato|Supported|Supported|  
-|CUBE|Non supportato|Supported|Non supportato|  
-|ROLLUP|Non supportato|Supported|Non supportato|  
-|Totale complessivo, ad esempio GROUP BY ()|Non supportato|Supported|Supported|  
-|GROUPING_ID - funzione|Non supportato|Supported|Supported|  
-|GROUPING - funzione|Supported|Supported|Supported|  
-|WITH CUBE|Supported|Supported|Supported|  
-|WITH ROLLUP|Supported|Supported|Supported|  
-|Rimozione di raggruppamenti duplicati relativa a WITH CUBE o WITH ROLLUP|Supported|Supported|Supported| 
+|Funzione definita dall'utente denominata CUBE o ROLLUP nella clausola GROUP BY|La funzione definita dall'utente **dbo.cube(***arg1***,***...argN***)** o **dbo.rollup(***arg1***,**...*argN***)** nella clausola GROUP BY è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|La funzione definita dall'utente **dbo.cube (***arg1***,**...argN**)** o **dbo.rollup(**arg1**,***...argN***)** nella clausola GROUP BY non è consentita.<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Viene restituito il messaggio di errore seguente: "Sintassi non corretta in prossimità della parola chiave 'cube'&#124;'rollup'".<br /><br /> Per evitare questo problema, sostituire `dbo.cube` con `[dbo].[cube]` oppure `dbo.rollup` con `[dbo].[rollup]`.<br /><br /> L'esempio seguente è consentito: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|La funzione definita dall'utente **dbo.cube (***arg1***,***...argN*) o **dbo.rollup(***arg1***,***...argN***)** nella clausola GROUP BY è consentita<br /><br /> Ad esempio: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUPING SETS|Non supportato|Supportato|Supportato|  
+|CUBE|Non supportato|Supportato|Non supportato|  
+|ROLLUP|Non supportato|Supportato|Non supportato|  
+|Totale complessivo, ad esempio GROUP BY ()|Non supportato|Supportato|Supportato|  
+|GROUPING_ID - funzione|Non supportato|Supportato|Supportato|  
+|GROUPING - funzione|Supportato|Supportato|Supportato|  
+|WITH CUBE|Supportato|Supportato|Supportato|  
+|WITH ROLLUP|Supportato|Supportato|Supportato|  
+|Rimozione di raggruppamenti duplicati relativa a WITH CUBE o WITH ROLLUP|Supportato|Supportato|Supportato| 
  
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-use-a-simple-group-by-clause"></a>A. Utilizzare una clausola GROUP BY semplice  
- Nell'esempio seguente viene recuperato il totale per ogni `SalesOrderID` dalla tabella `SalesOrderDetail`. Questo esempio viene usato AdventureWorks.  
+### <a name="a-use-a-simple-group-by-clause"></a>A. Uso di una clausola GROUP BY semplice  
+ Nell'esempio seguente viene recuperato il totale per ogni `SalesOrderID` dalla tabella `SalesOrderDetail`. Questo esempio usa AdventureWorks.  
   
 ```  
 SELECT SalesOrderID, SUM(LineTotal) AS SubTotal  
@@ -373,8 +373,8 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Utilizzare una clausola GROUP BY con più tabelle  
- Nell'esempio seguente viene recuperato il numero di dipendenti per ogni `City` dalla tabella `Address` unita in join alla tabella `EmployeeAddress`. Questo esempio viene usato AdventureWorks. 
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>B. Uso di una clausola GROUP BY con più tabelle  
+ Nell'esempio seguente viene recuperato il numero di dipendenti per ogni `City` dalla tabella `Address` unita in join alla tabella `EmployeeAddress`. Questo esempio usa AdventureWorks. 
   
 ```  
 SELECT a.City, COUNT(bea.AddressID) EmployeeCount  
@@ -385,7 +385,7 @@ GROUP BY a.City
 ORDER BY a.City;  
 ```  
   
-### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. Utilizzare una clausola GROUP BY con un'espressione  
+### <a name="c-use-a-group-by-clause-with-an-expression"></a>C. Uso di una clausola GROUP BY con un'espressione  
  Nell'esempio seguente vengono recuperate le vendite totali per ogni anno tramite la funzione `DATEPART`. La stessa espressione deve essere presente sia nell'elenco `SELECT` che nella clausola `GROUP BY`.  
   
 ```  
@@ -396,7 +396,7 @@ GROUP BY DATEPART(yyyy,OrderDate)
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. Utilizzare una clausola GROUP BY con una clausola HAVING  
+### <a name="d-use-a-group-by-clause-with-a-having-clause"></a>D. Uso di una clausola GROUP BY con una clausola HAVING  
  Nell'esempio seguente viene utilizzata la clausola `HAVING` per specificare quale gruppo generato nella clausola `GROUP BY` deve essere incluso nel set di risultati.  
   
 ```  
@@ -410,8 +410,8 @@ ORDER BY DATEPART(yyyy,OrderDate);
   
 ## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>Esempi: SQL Data Warehouse e Parallel Data Warehouse  
   
-### <a name="e-basic-use-of-the-group-by-clause"></a>E. Utilizzo di base della clausola GROUP BY  
- Nell'esempio seguente consente di trovare la quantità totale per tutte le vendite in ogni giorno. Una sola riga contenente la somma di tutte le vendite viene restituita per ogni giorno.  
+### <a name="e-basic-use-of-the-group-by-clause"></a>E. Uso di base della clausola GROUP BY  
+ L'esempio seguente trova l'importo totale di tutte le vendite in ogni giornata. Viene restituita una sola riga contenente il totale di tutte le vendite per ogni giornata.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -420,8 +420,8 @@ SELECT OrderDateKey, SUM(SalesAmount) AS TotalSales FROM FactInternetSales
 GROUP BY OrderDateKey ORDER BY OrderDateKey;  
 ```  
   
-### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. Utilizzo di base dell'hint DISTRIBUTED_AGG  
- Questo esempio viene utilizzato l'hint DISTRIBUTED_AGG per la query per forzare il dispositivo da riprodurre in modo casuale la tabella di `CustomerKey` colonna prima di eseguire l'aggregazione.  
+### <a name="f-basic-use-of-the-distributedagg-hint"></a>F. Uso di base dell'hint DISTRIBUTED_AGG  
+ Questo esempio usa l'hint per la query DISTRIBUTED_AGG per forzare nell'appliance la distribuzione casuale della tabella nella colonna `CustomerKey` prima di eseguire l'aggregazione.  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -432,8 +432,8 @@ GROUP BY CustomerKey WITH (DISTRIBUTED_AGG)
 ORDER BY CustomerKey DESC;  
 ```  
   
-### <a name="g-syntax-variations-for-group-by"></a>G. Per RAGGRUPPARE le differenze di sintassi  
- Quando l'elenco di selezione non è nessuna aggregazione, ogni colonna nell'elenco di selezione deve essere incluso nell'elenco GROUP BY. Nell'elenco Seleziona le colonne calcolate possono essere elencate, ma non sono necessari, nell'elenco GROUP BY. Questi sono esempi di istruzioni SELECT sintatticamente valide:  
+### <a name="g-syntax-variations-for-group-by"></a>G. Variazioni della sintassi per GROUP BY  
+ Quando l'elenco SELECT non include aggregazioni, ogni colonna dell'elenco SELECT deve essere inclusa nell'elenco GROUP BY. Le colonne calcolate dell'elenco SELECT possono essere incluse, ma non sono richieste, nell'elenco GROUP BY. Di seguito sono riportati esempi di istruzioni SELECT sintatticamente valide:  
   
 ```  
 -- Uses AdventureWorks  
@@ -445,8 +445,8 @@ SELECT SalesAmount, SalesAmount*1.10 SalesTax FROM FactInternetSales GROUP BY Sa
 SELECT SalesAmount FROM FactInternetSales GROUP BY SalesAmount, SalesAmount*1.10;  
 ```  
   
-### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. Utilizzare GROUP BY con più espressioni di raggruppamento  
- Nell'esempio seguente vengono raggruppati i risultati usando più `GROUP BY` criteri. Se, all'interno di ogni `OrderDateKey` gruppo esistono sottogruppi che possono essere differenziati da `DueDateKey`, verrà definito un nuovo raggruppamento per il set di risultati.  
+### <a name="h-using-a-group-by-with-multiple-group-by-expressions"></a>H. Uso di GROUP BY con più espressioni GROUP BY  
+ L'esempio seguente raggruppa i risultati usando più criteri `GROUP BY`. Se, all'interno di ogni gruppo `OrderDateKey`, sono presenti sottogruppi che possono essere differenziati da `DueDateKey`, verrà definito un nuovo raggruppamento per il set di risultati.  
   
 ```  
 -- Uses AdventureWorks  
@@ -457,7 +457,7 @@ ORDER BY OrderDateKey;
 ```  
   
 ### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>I. Utilizzo di una clausola GROUP BY con una clausola HAVING  
- L'esempio seguente usa il `HAVING` clausola per specificare i gruppi generati nel `GROUP BY` clausola che deve essere incluse nel set di risultati. Nei risultati verranno inclusi solo i gruppi con le date degli ordini nel 2004 o versione successiva.  
+ L'esempio seguente usa la clausola `HAVING` per specificare i gruppi generati nella clausola `GROUP BY` che devono essere inclusi nel set di risultati. Nei risultati verranno inclusi solo i gruppi con date dell'ordine del 2004 o successive.  
   
 ```  
 -- Uses AdventureWorks  
@@ -473,7 +473,7 @@ ORDER BY OrderDateKey;
  [GROUPING_ID &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
  [GROUPING &#40;Transact-SQL&#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-transact-sql.md)   
- [SELECT Clause &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
+ [Clausola SELECT &#40;Transact-SQL&#41;](~/t-sql/queries/select-clause-transact-sql.md)  
   
   
 

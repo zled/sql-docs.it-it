@@ -4,22 +4,22 @@ description: Installare, aggiornare e disinstallare SQL Server in Linux. In ques
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/08/2018
+ms.date: 03/22/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: d8f8cde3d3a299008d75c4b701be224c458880eb
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -34,7 +34,7 @@ In questo articolo vengono fornite indicazioni per l'installazione, aggiornament
 > - [Guida introduttiva di Ubuntu](quickstart-install-connect-ubuntu.md)
 > - [Guida introduttiva di docker](quickstart-install-connect-docker.md)
 
-Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](../linux/sql-server-linux-faq.md).
+Per le risposte alle domande frequenti, vedere la [SQL Server in domande frequenti su Linux](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Piattaforme supportate
 
@@ -47,12 +47,10 @@ Per le risposte alle domande più frequenti, vedere il [SQL Server in domande fr
 | **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motore docker** | 1.8+ | [Ottenere Docker](http://www.docker.com/products/overview)
 
+Microsoft supporta anche la distribuzione e gestione dei contenitori di SQL Server utilizzando OpenShift e Kubernetes.
+
 > [!NOTE]
-> In alcuni casi è possibile installare ed eseguire SQL Server su altre piattaforme Linux strettamente correlati, ma SQL Server viene solo testato e supportato sulle piattaforme elencate nella tabella precedente.
-
-Microsoft supporta la distribuzione e la gestione dei contenitori di SQL Server utilizzando OpenShift e Kubernetes.
-
-Per i criteri di supporto più recenti per SQL Server 2017, vedere [criteri di supporto tecnico per Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
+> SQL Server viene testato e supportato in Linux per le distribuzioni elencate in precedenza. Se si sceglie di installare SQL Server in un sistema operativo non supportato, consultare il **criteri di supporto** sezione del [criteri di supporto tecnico per Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) per comprendere il supporto implicazioni.
 
 ## <a id="system"></a> Requisiti di sistema
 
@@ -69,9 +67,9 @@ SQL Server 2017 presenta i requisiti di sistema seguenti per Linux:
 
 Se si utilizza **File System NFS (Network)** condivisioni remote nell'ambiente di produzione, tenere presente i requisiti di supporto seguenti:
 
-- Utilizzare la versione NFS **4.2 o versioni successive**. Le versioni precedenti di NFS non supportano le funzionalità necessarie, ad esempio fallocate e creazione di file sparse, comune a sistemi di file più recenti.
-- Individuare solo i **/var/opt/mssql** directory di montaggio NFS. Altri file, ad esempio i file binari del sistema di SQL Server, non sono supportati.
-- Assicurarsi che i client NFS utilizzino l'opzione 'nolock' durante il montaggio condivisione remota.
+- Utilizzare la versione NFS **4.2 o versioni successive**. Le versioni precedenti di NFS non supportano le funzionalità necessarie, ad esempio fallocate e la creazione di file sparse, comune a sistemi di file più recenti.
+- Individuare solo i **/var/opt/mssql** le directory di montaggio NFS. Altri file, ad esempio i file binari del sistema di SQL Server, non sono supportati.
+- Assicurarsi che i client NFS utilizzino l'opzione 'nolock' durante il montaggio di tale condivisione.
 
 ## <a id="repositories"></a> Configurare il repository di origine
 
@@ -84,7 +82,7 @@ Quando si installa o si aggiorna SQL Server, è ottenere la versione più recent
 
 È possibile installare SQL Server in Linux dalla riga di comando. Per istruzioni, vedere una delle Guide rapide seguenti:
 
-- [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installare su Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installare in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Eseguire in Docker](quickstart-install-connect-docker.md)
@@ -170,7 +168,7 @@ Per un esempio più dettagliato, vedere gli esempi seguenti:
 
 ## <a id="offline"></a> Installazione offline
 
-Se il computer Linux non ha accesso per i repository online usati nel [introduttive](#platforms), è possibile scaricare direttamente i file del pacchetto. Questi pacchetti si trovano nel repository di Microsoft, [https://packages.microsoft.com](https://packages.microsoft.com).
+Se il computer Linux non ha accesso per i repository online usati nel [introduttive](#platforms), è possibile scaricare direttamente i file del pacchetto. Questi pacchetti si trovano nel repository Microsoft [ https://packages.microsoft.com ](https://packages.microsoft.com).
 
 > [!TIP]
 > Se è installato correttamente con i passaggi descritti in avvio rapido, non è necessario scaricare o installare manualmente i pacchetti di SQL Server. In questa sezione è solo per lo scenario offline.
@@ -218,4 +216,4 @@ Dopo l'installazione, è anche possibile installare o abilitare le funzionalità
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).
+> Per le risposte alle domande frequenti, vedere la [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).

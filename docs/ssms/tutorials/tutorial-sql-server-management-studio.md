@@ -1,17 +1,19 @@
 ---
 title: Esercitazione su SQL Server Management Studio (SSMS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-tutorial
-ms.reviewer: 
+ms.reviewer: sstein
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: sql13.tutorialstart.ssms.f1
+f1_keywords:
+- sql13.tutorialstart.ssms.f1
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - templates [SQL Server], SQL Server Management Studio
@@ -23,46 +25,67 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: "22"
-author: stevestein
-ms.author: sstein
+caps.latest.revision: ''
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5e6ca96ba58cb6f32cdceb4a310ba5b94ce290ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Esercitazione su SQL Server Management Studio
+# <a name="tutorials-for-sql-server-management-studio-ssms"></a>Esercitazioni per SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 L'esercitazione su SQL Server Management Studio (SSMS) illustra l'ambiente integrato per gestire l'infrastruttura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] presenta un'interfaccia grafica per la configurazione, il monitoraggio e l'amministrazione di istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Consente anche di distribuire, monitorare e aggiornare i componenti livello dati usati dalle applicazioni, ad esempio i database. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] offre anche [!INCLUDE[tsql](../../includes/tsql-md.md)]e gli editor di linguaggio MDX, DMX e XML per la modifica e il debug di script.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
-In questa esercitazione sono incluse nozioni utili relative alla presentazione delle informazioni in SSMS e al modo in cui è possibile sfruttare al meglio le funzionalità.
+
+In queste esercitazioni sono incluse nozioni utili relative alla presentazione delle informazioni in SSMS e al modo in cui è possibile sfruttare al meglio le funzionalità.
   
-Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. In questa esercitazione viene illustrato come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.  
+Il modo migliore per acquisire familiarità con SSMS è la pratica diretta. Queste esercitazioni consentono di acquisire familiarità con le varie funzionalità disponibili in SSMS.  In queste esercitazioni viene illustrato come gestire i componenti di SSMS e individuare le funzionalità usate regolarmente.  
+
+Di seguito gli argomenti trattati dalle esercitazioni: 
+
   
-L'esercitazione è suddivisa in tre lezioni:  
+- [Esercitazione: Connettersi ed eseguire query in SQL Server con SSMS](connect-query-sql-server.md)
+
+    In questa sezione viene illustrato come connettersi all'istanza di SQL Server. Sono disponibili anche informazioni su alcuni comandi Transact-SQL (T-SQL) di base per creare un nuovo database ed eseguire una query. 
+
+- [Esercitazione: Scripting di oggetti in SSMS](scripting-ssms.md)
+
+    In questa sezione viene illustrato come creare lo script di vari oggetti in SSMS, tra cui database e query. 
+
+- [Esercitazione: Uso di modelli in SSMS](templates-ssms.md)
+   
+    In questa sezione viene illustrato come usare i modelli preesistenti in SSMS. 
+
+- [Esercitazione: Configurazione di SSMS](ssms-configuration.md)
+
+    In questa sezione vengono illustrate le nozioni di base per la configurazione dell'ambiente SSMS. 
   
-[Lezione 1: Navigazione di base in SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
-In questa lezione viene illustrato come utilizzare i componenti di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], riconfigurare il layout ambiente e ripristinare il layout predefinito.  
-  
-[Lezione 2: Scrittura di codice Transact-SQL](lesson-2-writing-transact-sql.md)  
-In questa lezione viene illustrato come avviare l'editor di query, gestire il codice e usare le altre funzionalità dell'editor di query.  
-  
-[Lezione 3: Utilizzo di modelli, soluzioni e progetti script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
-In questa lezione viene illustrato come utilizzare i modelli e organizzare gli script nelle soluzioni e nei progetti.  
+
+- [Esercitazione: Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)
+
+    In questa sezione vengono illustrati suggerimenti e consigli aggiuntivi per l'uso di SSMS. L'esercitazione include gli argomenti seguenti:
+    - Creazione di commenti e rimozione dei commenti sul testo
+    - Rientro del testo
+    - Filtro degli oggetti in Esplora oggetti
+    - Accesso al log degli errori di SQL Server
+    - Individuazione del nome dell'istanza 
+ 
   
 ## <a name="requirements"></a>Requisiti  
 Questa esercitazione è destinata a sviluppatori e amministratori di database esperti che non hanno familiarità con [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] ma che conoscono i concetti relativi ai database e [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 Per eseguire l'esercitazione è necessario che sia installato quanto segue:  
 
-  
--   Installare la versione più recente di [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
--   SQL Server 2016 o versione successiva con il database di esempio AdventureWorks. Per installare il database di esempio AdventureWorks, vedere [AdventureWorks2014](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks2014) e installare il database AdventureWorks2014 (OLTP).  
+  -   Installare la versione più recente di [SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
+
+La prima sezione descrive come creare un database. Altri database di esempio sono disponibili qui: [Database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristino di un database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+
 
   
 ## <a name="see-also"></a>Vedere anche  

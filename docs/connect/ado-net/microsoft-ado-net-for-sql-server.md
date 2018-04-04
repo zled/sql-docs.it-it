@@ -4,28 +4,28 @@ ms.custom:
 ms.date: 08/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
 ms.component: ado-net
 ms.reviewer: 
 ms.suite: sql
-ms.technology: drivers
+ms.technology:
+- drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54a5cdcd7341972d2f2e5b2e4e3e5fe3e3fe2531
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: d43cb61fc711624a4989d37565e1a6575ccfcb17
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
-![Un cerchio FRECCIAGIÙ download](../../ssdt/media/download.png)[scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usare lo spazio dei nomi System.Data.SqlClient per accedere a SQL Server oppure i provider di altri fornitori per accedere ai rispettivi archivi. Usare System.Data.Odbc o System.Data.Oledb per accedere ai dati dai linguaggi .NET mediante altre tecnologie di accesso ai dati. Usare System.Data.Dataset quando è necessaria una cache di dati offline nelle applicazioni client. Offre anche funzionalità per il salvataggio permanente locale e per XML, che possono risultare utili nei servizi Web.  
   
@@ -42,7 +42,7 @@ ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usa
   
 ## <a name="community"></a>Community  
 * [Forum dei provider gestiti ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [Forum di set di dati ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [ADO.NET DataSet Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>Altri esempi  
 * [Esempi di codice ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  

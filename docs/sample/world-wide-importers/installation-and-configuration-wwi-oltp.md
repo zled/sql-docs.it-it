@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6dd1f09b-dcff-4627-899a-eca5162d9e5b
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 967755e34b397f2dfac98277d34cb799655f5165
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: add5788063cdc5026d343061b8111cbec42e5a4d
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Wide World Importers OLTP istruzioni di installazione e configurazione del database.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Wide World Importers OLTP istruzioni di installazione e configurazione del database.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -36,13 +38,13 @@ ms.lasthandoff: 12/05/2017
 
 La versione più recente dell'esempio:
 
-[unità di importazione di world wide-rilascio](http://go.microsoft.com/fwlink/?LinkID=800630)
+[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Scaricare l'esempio WideWorldImporters database backup/bacpac corrispondente per l'edizione di SQL Server o Database SQL di Azure.
 
 Il codice sorgente per ricreare il database di esempio è disponibile dal seguente percorso. Si noti che si ricreano l'esempio genererà piccole differenze nei dati, poiché è un fattore casuale la generazione di dati:
 
-[livello mondo](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+["wide" mondo](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -58,7 +60,7 @@ Per ripristinare un backup a un'istanza di SQL Server, è possibile utilizzare M
 5. Se necessario, modificare il percorso di destinazione per i dati e file di log, nel **file** riquadro. Si noti che è quindi consigliabile inserire i dati e file di registro in unità differenti.
 6. Scegliere **OK**. Verrà avviato il ripristino di database. Una volta completato, si disporrà del database WideWorldImporters installati nell'istanza del Server SQL.
 
-### <a name="azure-sql-database"></a>Database SQL di Azure
+### <a name="azure-sql-database"></a>Azure SQL Database
 
 Per importare un file bacpac in un nuovo Database SQL, è possibile utilizzare Management Studio.
 
@@ -77,7 +79,7 @@ Per importare un file bacpac in un nuovo Database SQL, è possibile utilizzare M
 Il database di esempio può avvalersi di indicizzazione Full-Text. Tuttavia, tale funzionalità non è installata per impostazione predefinita con SQL Server, è necessario selezionarla durante l'installazione di SQL Server (è abilitata per impostazione predefinita nel database di SQL Azure). Pertanto, un passaggio di post-installazione è necessario.
 
 1. In SQL Server Management Studio, connettersi al database WideWorldImporters e aprire una nuova finestra query.
-2. Eseguire il comando T-SQL seguente per abilitare l'utilizzo dell'indicizzazione Full-Text nel database:`EXECUTE Application.Configuration_ApplyFullTextIndexing`
+2. Eseguire il comando T-SQL seguente per abilitare l'utilizzo dell'indicizzazione Full-Text nel database:  `EXECUTE Application.Configuration_ApplyFullTextIndexing`
 
 
 ### <a name="sql-server-audit"></a>SQL Server Audit

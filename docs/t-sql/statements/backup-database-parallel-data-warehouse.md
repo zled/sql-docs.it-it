@@ -1,5 +1,5 @@
 ---
-title: BACKUP DATABASE (Parallel Data Warehouse) | Documenti Microsoft
+title: BACKUP DATABASE (Parallel Data Warehouse) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -27,15 +27,15 @@ ms.lasthandoff: 01/25/2018
 # <a name="backup-database-parallel-data-warehouse"></a>BACKUP DATABASE (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Crea una copia di backup di un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database e archiviato il backup di disattivare il dispositivo in un percorso di rete specificato dall'utente. Utilizzare questa istruzione con [Ripristina DATABASE &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) per il ripristino di emergenza o copiare un database da un dispositivo a un'altra.  
+  Crea un backup di un database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] e archivia il backup all'esterno dell'appliance in un percorso di rete specificato dall'utente. Usare questa istruzione con [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md) per il ripristino di emergenza o per copiare un database da un'appliance all'altra.  
   
- **Prima di iniziare**, vedere "Acquisire e configurare un Backup del Server" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ **Prima di iniziare**, vedere "Acquisire e configurare un server di backup" in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- Esistono due tipi di backup in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Oggetto *backup completo del database* è un backup di un intero [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. Oggetto *backup differenziale del database* include solo le modifiche apportate dopo l'ultimo backup completo. Un backup di un database utente include gli utenti del database e i ruoli del database. Un backup del database master include gli account di accesso.  
+ In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] sono disponibili due tipi di backup. Un *backup di database completo* è un backup di un intero database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Un *backup di database differenziale* include solo le modifiche apportate dall'ultimo backup completo. Il backup di un database utente include gli utenti del database e i ruoli del database. Il backup del database master include gli account di accesso.  
   
- Per ulteriori informazioni su [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] backup dei database, vedere "Backup e ripristino" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Per altre informazioni sui backup di database [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere "Backup e ripristino" in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- ![Icona di collegamento argomento](../../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -62,61 +62,61 @@ BACKUP DATABASE database_name
   
 ## <a name="arguments"></a>Argomenti  
  *database_name*  
- Il nome del database in cui creare un backup. Il database può essere il database master o un database utente.  
+ Nome del database in cui creare un backup. Il database può essere il database master o un database utente.  
   
- SUL disco = '\\\\*UNC_path*\\*backup_directory*'  
- Il percorso di rete e la directory a cui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] verranno scritti i file di backup. Ad esempio, '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
+ TO DISK = '\\\\*UNC_path*\\*backup_directory*'  
+ Il percorso di rete e la directory in cui [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] scrive i file di backup. Ad esempio, '\\\xxx.xxx.xxx.xxx\backups\2012\Monthly\08.2012.Mybackup'.  
   
--   Il percorso del nome di directory di backup deve essere già presente e deve essere specificato come un nome completo percorso UNC universal naming convention (UNC).  
+-   Il percorso del nome della directory di backup deve esistere già e deve essere specificato come percorso UNC completo.  
   
--   La directory di backup, *backup_directory*, non deve essere presente prima di eseguire il comando di backup. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verrà creata la directory di backup.  
+-   La directory di backup, *backup_directory*, non deve essere presente prima di eseguire il comando di backup. La directory di backup viene creata da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
--   Il percorso della directory di backup non può essere un percorso locale e non può essere un percorso in uno qualsiasi del [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nodi dello strumento.  
+-   Il percorso della directory di backup non può essere un percorso locale e non può essere il percorso di uno dei nodi di appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
--   La lunghezza massima del percorso UNC e il nome di directory di backup è 200 caratteri.  
+-   La lunghezza massima del percorso UNC e del nome della directory di backup è di 200 caratteri.  
   
--   Ai server host deve essere specificato come un indirizzo IP.  È possibile specificare, come il nome host o server.  
+-   Il server o l'host deve essere specificato come indirizzo IP.  Non è possibile specificarlo come nome host o nome server.  
   
- Descrizione = **'***testo***'**  
+ DESCRIPTION = **'***text***'**  
  Specifica una descrizione testuale del backup. La lunghezza massima del testo è di 255 caratteri.  
   
- La descrizione viene archiviata nei metadati e verrà visualizzata quando l'intestazione del backup viene ripristinato con RESTORE HEADERONLY.  
+ La descrizione viene archiviata nei metadati e verrà visualizzata quando l'intestazione del backup viene ripristinata con RESTORE HEADERONLY.  
   
- NOME = **'***Name backup***'**  
+ NAME = **'***backup _name***'**  
  Specifica il nome del backup. Il nome del backup può essere diverso dal nome del database.  
   
 -   I nomi possono essere composti da un massimo di 128 caratteri.  
   
 -   Non è possibile includere un percorso.  
   
--   Deve iniziare con una lettera o un numero di caratteri o un carattere di sottolineatura (_). Caratteri speciali consentiti sono il carattere di sottolineatura (\_), trattino (-) o spazio (). I nomi di backup non possono terminare con un carattere di spazio.  
+-   Deve iniziare con una lettera o un numero oppure con un carattere di sottolineatura (_). I caratteri speciali consentiti sono il carattere di sottolineatura (\_), il trattino (-) o lo spazio ( ). I nomi di backup non possono terminare con uno spazio.  
   
 -   L'istruzione avrà esito negativo se *backup_name* esiste già nel percorso specificato.  
   
- Questo nome viene archiviato nei metadati e verrà visualizzato quando l'intestazione del backup viene ripristinato con RESTORE HEADERONLY.  
+ Questo nome viene archiviato nei metadati e verrà visualizzato quando l'intestazione del backup viene ripristinata con RESTORE HEADERONLY.  
   
  DIFFERENTIAL  
- Consente di eseguire un backup differenziale di un database utente. Se omesso, il valore predefinito è un backup completo del database. Il nome del backup differenziale non deve necessariamente corrispondere al nome del backup completo. Per tenere traccia dei backup differenziale e il relativo backup completo corrispondente, utilizzare lo stesso nome con 'full' o 'diff' aggiunto.  
+ Specifica di eseguire un backup differenziale di un database utente. Se omesso, il valore predefinito è un backup completo del database. Il nome del backup differenziale non deve necessariamente corrispondere al nome del backup completo. Per tenere traccia del backup differenziale e del backup completo corrispondente, può essere utile usare lo stesso nome con l'aggiunta di 'compl' o 'diff'.  
   
- Esempio:  
+ Ad esempio  
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerFull';`  
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il **BACKUP DATABASE** autorizzazione o l'appartenenza di **db_backupoperator** ruolo predefinito del database. Il database master non può essere sottoposti a backup, ma da un utente regolare che è stato aggiunto per il **db_backupoperator** ruolo predefinito del database. Solo essere eseguito il backup del database master da **sa**, l'amministratore dell'infrastruttura o i membri del **sysadmin** ruolo predefinito del server.  
+ Richiede l'autorizzazione **BACKUP DATABASE** o l'appartenenza nel ruolo predefinito del database **db_backupoperator**. Il backup del database master può essere eseguito solo da un utente standard aggiunto al ruolo predefinito del database **db_backupoperator**. Il backup del database master può essere eseguito solo da **sa**, l'amministratore dell'infrastruttura, o dai membri del ruolo predefinito del server **sysadmin**.  
   
- Richiede un account di Windows che dispone dell'autorizzazione per accedere, creare e scrivere nella directory di backup. È inoltre necessario archiviare il nome dell'account Windows e la password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per aggiungere le credenziali di rete per [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il [sp_pdw_add_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure.  
+ Richiede un account di Windows con l'autorizzazione per accedere, creare e scrivere nella directory di backup. È anche necessario archiviare il nome e la password dell'account di Windows in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Per aggiungere queste credenziali di rete in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare la stored procedure [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md).  
   
- Per ulteriori informazioni sulla gestione delle credenziali in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere il [sicurezza](#Security) sezione.  
+ Per altre informazioni sulla gestione delle credenziali in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere la sezione [Sicurezza](#Security).  
   
 ## <a name="error-handling"></a>Gestione degli errori  
- Errori di DATABASE di BACKUP nelle condizioni seguenti:  
+ Gli errori di BACKUP DATABASE si verificano nelle condizioni seguenti:  
   
 -   Le autorizzazioni utente non sono sufficienti per eseguire un backup.  
   
--   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]non dispone delle autorizzazioni corrette per il percorso di rete in cui verrà archiviato il backup.  
+-   [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non ha le autorizzazioni corrette per il percorso di rete in cui verrà archiviato il backup.  
   
 -   Il database non esiste.  
   
@@ -124,42 +124,42 @@ BACKUP DATABASE database_name
   
 -   La condivisione di rete di destinazione non è disponibile.  
   
--   La condivisione di rete di destinazione non dispone di sufficiente spazio per il backup. Il comando di DATABASE di BACKUP non conferma l'esistenza di spazio su disco sufficiente prima di avviare il backup, che consente di generare un errore di timeout di spazio su disco durante l'esecuzione del BACKUP del DATABASE. Quando si verifica lo spazio su disco insufficiente, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] rollback del comando BACKUP DATABASE. Per ridurre le dimensioni del database, eseguire [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)  
+-   La condivisione di rete di destinazione non ha spazio sufficiente per il backup. Il comando BACKUP DATABASE non conferma l'esistenza di spazio su disco sufficiente prima di avviare il backup e rende possibile la generazione di un errore di spazio su disco insufficiente durante l'esecuzione di BACKUP DATABASE. Quando si verifica un errore di spazio su disco insufficiente, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue il rollback del comando BACKUP DATABASE. Per ridurre le dimensioni del database, eseguire [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)  
   
 -   Tentativo di avviare un backup in una transazione.  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
- Prima di eseguire un backup del database, utilizzare [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) ridurre le dimensioni del database. 
+ Prima di eseguire un backup del database, usare [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md) per ridurre le dimensioni del database. 
  
- Oggetto [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] backup viene archiviato come un set di più file all'interno della stessa directory.  
+ Un backup di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] viene archiviato come set di file multipli all'interno della stessa directory.  
   
- Un backup differenziale è in genere richiede meno tempo rispetto a un backup completo e può essere eseguito più di frequente. Quando più copie di backup differenziale si basano su stesso backup completo, ogni backup differenziale include tutte le modifiche nel backup differenziale precedente.  
+ Un backup differenziale richiede in genere meno tempo rispetto a un backup completo e può essere eseguito più di frequente. Quando più copie di backup differenziale si basano sullo stesso backup completo, ogni backup differenziale include tutte le modifiche del backup differenziale precedente.  
   
  Se si annulla un comando BACKUP, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] rimuoverà la directory di destinazione e i file creati per il backup. Se [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] perde la connettività di rete alla condivisione, non è possibile completare il rollback.  
   
- Backup completi e differenziali vengono archiviati in directory distinte. Convenzioni di denominazione non vengono applicate per la specifica di un backup completo e un backup differenziale raggruppati insieme. È possibile rilevare questo tramite le convenzioni di denominazione. In alternativa, è possibile rilevare questa l'opzione per aggiungere una descrizione con descrizione, quindi utilizzando l'istruzione RESTORE HEADERONLY per recuperare la descrizione.  
+ I backup completi e differenziali vengono archiviati in directory distinte. Le convenzioni di denominazione non vengono applicate per specificare che un backup completo e un backup differenziale sono collegati. È possibile tenerne traccia attraverso le proprie convenzioni di denominazione. In alternativa, è possibile tenerne traccia usando l'opzione WITH DESCRIPTION per aggiungere una descrizione e quindi usando l'istruzione RESTORE HEADERONLY per recuperare la descrizione.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
- È possibile eseguire un backup differenziale del database master. Sono supportati solo i backup completi del database master.  
+ Non è possibile eseguire un backup differenziale del database master. Sono supportati solo i backup completi del database master.  
   
- I file di backup vengono archiviati in un formato adatto solo per il ripristino del backup per un [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dispositivo usando il [Ripristina DATABASE &#40; Parallel Data Warehouse &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) istruzione.  
+ I file di backup sono archiviati in un formato adatto esclusivamente al ripristino del backup in un'appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] tramite l'istruzione [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md).  
   
- Il backup con l'istruzione BACKUP DATABASE non può essere utilizzato per trasferire le informazioni utente o di dati in SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. A tale scopo, è possibile utilizzare la funzionalità di copia della tabella remota. Per ulteriori informazioni, vedere "Copia della tabella remota" nel [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+ Il backup con l'istruzione BACKUP DATABASE non può essere usato per trasferire i dati o le informazioni utente in database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMP. Per questa funzionalità, è possibile usare la funzione di copia della tabella remota. Per altre informazioni, vedere "Copia della tabella remota" in [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologia di backup e ripristino di database di backup. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]opzioni di backup sono preconfigurate per utilizzare la compressione dei backup. È possibile impostare le opzioni di backup, ad esempio la compressione, checksum, dimensione del blocco e il numero di buffer.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] usa la tecnologia di backup [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per il backup e il ripristino dei database. Le opzioni di backup [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono preconfigurate per l'utilizzo della compressione dei backup. Non è possibile impostare opzioni di backup come la compressione, il checksum, la dimensione blocco e il conteggio buffer.  
   
- Solo un backup del database o ripristino possa eseguire nel dispositivo in qualsiasi momento. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verranno messi in coda i comandi backup o ripristino fino al corrente backup o il comando restore è stata completata.  
+ È possibile eseguire nell'appliance un solo backup o ripristino di database in qualsiasi momento. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] metterà in coda i comandi di backup o ripristino fino a quando non viene completato il comando di backup o ripristino corrente.  
   
- Il dispositivo di destinazione per il ripristino del backup deve avere almeno un numero di nodi di calcolo del dispositivo di origine. La destinazione può presentare più nodi di calcolo più il dispositivo di origine, ma non può avere meno nodi di calcolo.  
+ L'appliance di destinazione per il ripristino del backup deve avere almeno un numero di nodi di calcolo equivalente a quello dell'appliance di origine. La destinazione può avere un numero di nodi di calcolo maggiore dell'appliance di origine, ma non può avere un numero di nodi di calcolo minore.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]non tiene traccia del percorso e i nomi di backup poiché i backup vengono archiviati disattivato il dispositivo.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non tiene traccia del percorso e dei nomi di backup poiché i backup sono archiviati all'esterno dell'appliance.  
   
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]registrare l'esito positivo o negativo dei backup del database.  
+ [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] tiene traccia dell'esito positivo o negativo dei backup del database.  
   
- Un backup differenziale è consentito solo se l'ultimo backup completo è stata completata correttamente. Si supponga, ad esempio, che il lunedì si crea un backup completo del database Sales e completamento corretto del backup. Quindi martedì creare un backup completo del database Sales e si verifica un errore. Dopo questo errore, è quindi possibile creare un backup differenziale basato su backup completo di lunedì. È innanzitutto necessario creare un backup completo riuscito prima di creare un backup differenziale.  
+ È possibile eseguire un backup differenziale solo se l'ultimo backup completo è stato eseguito correttamente. Ad esempio, si supponga che il lunedì venga creato un backup completo del database Sales e che il backup venga eseguito correttamente. Il martedì si crea un backup completo del database Sales e il backup non viene eseguito correttamente. Dopo questo errore, non sarà possibile creare un backup differenziale basato sul backup completo di lunedì. Prima di creare un backup differenziale è necessario aver già creato un backup completo.  
   
 ## <a name="metadata"></a>Metadati  
- Queste viste a gestione dinamica contengono informazioni su tutti i backup, ripristino e operazioni di caricamento. Le informazioni persiste tra i riavvii del sistema.  
+ Queste DMV contengono informazioni su tutte le operazioni di backup, ripristino e caricamento. Le informazioni vengono mantenute tra un riavvio di sistema e l'altro.  
   
 -   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
@@ -168,57 +168,57 @@ BACKUP DATABASE database_name
 -   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>restazioni  
- Per eseguire un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue il primo backup i metadati e quindi si esegue il backup dei dati di database archiviati nei nodi di calcolo parallelo. La directory di backup, i dati vengono copiati direttamente da ogni nodi di calcolo. Per ottenere prestazioni ottimali per lo spostamento dei dati dei nodi di calcolo per la directory di backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controlla il numero di nodi di calcolo che sono la copia dei dati contemporaneamente.  
+ Per eseguire un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] esegue prima il backup dei metadati e quindi esegue un backup parallelo dei dati di database archiviati nei nodi di calcolo. I dati vengono copiati direttamente da ogni nodo di calcolo nella directory di backup. Per ottenere le migliori prestazioni per lo spostamento dei dati dai nodi di calcolo alla directory di backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] controlla il numero di nodi di calcolo che copiano i dati contemporaneamente.  
   
 ## <a name="locking"></a>Utilizzo di blocchi  
- Acquisisce un blocco ExclusiveUpdate sull'oggetto di DATABASE.  
+ Acquisisce un blocco ExclusiveUpdate nell'oggetto DATABASE.  
   
 ##  <a name="Security"></a> Sicurezza  
- [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]backup non vengono archiviati nel dispositivo. Pertanto, il team IT è responsabile per la gestione di tutti gli aspetti della sicurezza del backup. Ad esempio, sono inclusi gestione la sicurezza dei dati di backup, la sicurezza del server utilizzato per archiviare i backup e la sicurezza dell'infrastruttura di rete che si connette il server di backup per il [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] dello strumento.  
+ I backup di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] non vengono archiviati nell'appliance. Pertanto, il team IT è responsabile della gestione di tutti gli aspetti della sicurezza dei backup. Questi aspetti includono ad esempio la gestione della sicurezza dei dati di backup, del server usato per l'archiviazione dei backup e dell'infrastruttura di rete che connette il server di backup all'appliance [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  **Gestire le credenziali di rete**  
   
- Accesso alla rete per la directory di backup è basato su standard Windows condivisione file security. Prima di eseguire un backup, è necessario creare o designare un account di Windows che verrà utilizzato per l'autenticazione [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] alla directory di backup. Questo account di windows deve disporre dell'autorizzazione per accedere, creare e scrivere nella directory di backup.  
+ L'accesso di rete alla directory di backup è basato sulla sicurezza di condivisione dei file di Windows standard. Prima di eseguire un backup, è necessario creare o impostare un account di Windows che verrà usato per l'autenticazione di [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] nella directory di backup. L'account di Windows deve avere le autorizzazioni per accedere, creare e scrivere nella directory di backup.  
   
 > [!IMPORTANT]  
->  Per ridurre i rischi di sicurezza con i dati, è consigliabile che definisce un account di Windows solo scopo di operazioni di backup e di operazioni di ripristino. Consente questo account dispone delle autorizzazioni per il percorso di backup e non altrove.  
+>  Per ridurre i rischi di sicurezza dei dati, è consigliabile impostare un account di Windows dedicato esclusivamente all'esecuzione delle operazioni di backup e ripristino. Concedere all'account le autorizzazioni solo per il percorso di backup.  
   
- È necessario archiviare il nome utente e password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] eseguendo il [sp_pdw_add_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) stored procedure. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Usa Gestione credenziali di Windows per archiviare e crittografare i nomi utente e password nel nodo di controllo e i nodi di calcolo. Le credenziali non vengono eseguito il backup con il comando BACKUP DATABASE.  
+ È necessario archiviare nome utente e password in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] eseguendo la stored procedure [sp_pdw_add_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md). [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] usa Gestione credenziali di Windows per archiviare e crittografare i nomi utente e le password nel nodo di controllo e nei nodi di calcolo. Con il comando BACKUP DATABASE non viene eseguito il backup delle credenziali.  
   
- Per rimuovere le credenziali di rete da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere [sp_pdw_remove_network_credentials &#40; SQL Data Warehouse &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
+ Per rimuovere le credenziali di rete da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], vedere [sp_pdw_remove_network_credentials &#40;SQL Data Warehouse&#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md).  
   
- Per elencare tutte le credenziali di rete archiviati in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il [sys.dm_pdw_network_credentials &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md) vista a gestione dinamica.  
+ Per visualizzare un elenco di tutte le credenziali di rete archiviate in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], usare la DMV [sys.dm_pdw_network_credentials &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-add-network-credentials-for-the-backup-location"></a>A. Aggiungere le credenziali di rete per il percorso di backup  
- Per creare un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] necessario disporre dell'autorizzazione di lettura/scrittura alla directory di backup. Nell'esempio seguente viene illustrato come aggiungere le credenziali per un utente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verrà memorizzare queste credenziali e utilizzarle per backup e le operazioni di ripristino.  
+ Per creare un backup, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] deve avere l'autorizzazione di lettura/scrittura per la directory di backup. L'esempio seguente illustra come aggiungere le credenziali per un utente. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] memorizzerà queste credenziali che verranno usate per le operazioni di backup e ripristino.  
   
 > [!IMPORTANT]  
->  Per motivi di sicurezza, è consigliabile creare un account di dominio solo scopo di eseguire i backup.  
+>  Per motivi di sicurezza, è consigliabile creare un account di dominio dedicato esclusivamente all'esecuzione dei backup.  
   
 ```  
 EXEC sp_pdw_add_network_credentials 'xxx.xxx.xxx.xxx', 'domain1\backupuser', '*****';  
 ```  
   
 ### <a name="b-remove-network-credentials-for-the-backup-location"></a>B. Rimuovere le credenziali di rete per il percorso di backup  
- Nell'esempio seguente viene illustrato come rimuovere le credenziali per un utente di dominio da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+ L'esempio seguente illustra come rimuovere le credenziali per un utente di dominio da [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 ```  
 EXEC sp_pdw_remove_network_credentials 'xxx.xxx.xxx.xxx';  
 ```  
   
 ### <a name="c-create-a-full-backup-of-a-user-database"></a>C. Creare un backup completo di un database utente  
- L'esempio seguente crea un backup completo del database utente fatture. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verrà creata la directory Invoices2013 e salverà i file di backup per il \\\10.192.63.147\backups\yearly\Invoices2013Full directory.  
+ L'esempio seguente crea un backup completo del database utente Invoices. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crea la directory Invoices2013 e salva i file di backup nella directory \\\10.192.63.147\backups\yearly\Invoices2013Full.  
   
 ```  
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';  
 ```  
   
 ### <a name="d-create-a-differential-backup-of-a-user-database"></a>D. Creare un backup differenziale di un database utente  
- L'esempio seguente crea un backup differenziale, che include tutte le modifiche apportate dopo l'ultimo backup completo del database le fatture. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]verrà creato il \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff directory a cui verranno archiviati i file. La descrizione 'backup differenziale 2013 fatture' verrà archiviata con le informazioni di intestazione per il backup.  
+ L'esempio seguente crea un backup differenziale che include tutte le modifiche apportate dopo l'ultimo backup completo del database Invoices. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] crea la directory \\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff in cui vengono archiviati i file. La descrizione 'Invoices 2013 differential backup' viene memorizzata con la descrizione dell'intestazione del backup.  
   
- Il backup differenziale verrà eseguito correttamente solo se l'ultimo backup completo di fatture è stata completata correttamente.  
+ Il backup differenziale viene eseguito correttamente solo se l'ultimo backup completo di Invoices è stato completato correttamente.  
   
 ```  
 BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff'  
@@ -226,17 +226,17 @@ BACKUP DATABASE Invoices TO DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices201
     DESCRIPTION = 'Invoices 2013 differential backup';  
 ```  
   
-### <a name="e-create-a-full-backup-of-the-master-database"></a>E. Creare un backup completo del database master  
- Nell'esempio seguente crea un backup completo del database master e lo archivia nella directory '\\\10.192.63.147\backups\2013\daily\20130722\master'.  
+### <a name="e-create-a-full-backup-of-the-master-database"></a>E. Creare un backup completo di un database master  
+ L'esempio seguente crea un backup completo del database master e lo archivia nella directory '\\\10.192.63.147\backups\2013\daily\20130722\master'.  
   
 ```  
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master';  
 ```  
   
-### <a name="f-create-a-backup-of-appliance-login-information"></a>F. Creare un backup delle informazioni di accesso di dispositivo.  
- Il database master archivia le informazioni di accesso del dispositivo. Per le informazioni di accesso del dispositivo di backup è necessario backup master.  
+### <a name="f-create-a-backup-of-appliance-login-information"></a>F. Creare un backup delle informazioni di accesso dell'appliance  
+ Il database master archivia le informazioni di accesso dell'appliance. Per eseguire il backup delle informazioni di accesso dell'appliance è necessario eseguire il backup del database master.  
   
- Nell'esempio seguente viene creato un backup completo del database master.  
+ L'esempio seguente crea un backup completo del database master.  
   
 ```  
 BACKUP DATABASE master TO DISK = '\\xxx.xxx.xxx.xxx\backups\2013\daily\20130722\master'  
@@ -248,6 +248,6 @@ WITH (
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ripristina DATABASE &#40; Parallel Data Warehouse &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
+ [RESTORE DATABASE &#40;Parallel Data Warehouse&#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
