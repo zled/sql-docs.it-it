@@ -1,28 +1,28 @@
 ---
 title: Glossario di ADO | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
-ms.technology: "“drivers”"
+ms.technology: drivers
 ms.topic: article
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed92b88736cdc579ddee67dff313f8aad3c69b71
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
@@ -54,7 +54,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Un mapping tra un campo in una tabella e una variabile. Nelle estensioni di Visual C++ ADO, **Recordset** campi vengono mappati a variabili di C/C++.  
   
  bitmask  
- Un valore numerico è progettato per un confronto bit per bit con gli altri valori numerici, in genere per contrassegnare le opzioni di parametro o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici OR bit per bit, ad esempio **e** e **o** in Visual Basic  **&**  e **&#124;** in C++.  
+ Un valore numerico è progettato per un confronto bit per bit con gli altri valori numerici, in genere per contrassegnare le opzioni di parametro o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici OR bit per bit, ad esempio **e** e **o** in Visual Basic **&** e **&#124;** in C++.  
   
  Ad esempio, ADO **FieldAttributeEnum** valori possono essere utilizzati come maschere di bit per determinare gli attributi di un campo. Si supponga di che voler determinare se un campo non è aggiornabile. È possibile effettuare questa verifica con l'espressione seguente in Visual Basic:`Field.Attributes AND adFldUpdatable`  
   
@@ -165,7 +165,7 @@ In questo argomento definisce termini rilevanti per ADO.
   
 ## <a name="e"></a>E  
  Enumerazione  
- Un elenco di costanti denominate. Valori enumerati non devono essere univoci. Tuttavia il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e valori restituiscono, per aggiungere un significato codice ADO e proteggere allo sviluppatore di valori numerici (che possono cambiare a seconda della versione). Ad esempio, per aprire un valore statico **Recordset**, utilizzare il **adOpenStatic** valore enumerato:`Recordset.Open ,,adOpenStatic`  
+ Un elenco di costanti denominate. Valori enumerati non devono essere univoci. Tuttavia il nome di ogni valore deve essere univoco all'interno dell'ambito in cui è definita l'enumerazione. In ADO, le enumerazioni vengono utilizzate per il parametro numerico e valori restituiscono, per aggiungere un significato codice ADO e proteggere allo sviluppatore di valori numerici (che possono cambiare a seconda della versione). Ad esempio, per aprire un valore statico **Recordset**, utilizzare il **adOpenStatic** valore enumerato: `Recordset.Open ,,adOpenStatic`  
   
  Detta anche *costante enumerata*. Vedere anche *costante*.  
   

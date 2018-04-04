@@ -1,5 +1,5 @@
 ---
-title: sp_dropserver (Transact-SQL) | Documenti Microsoft
+title: sp_dropserver (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -25,18 +25,20 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 22ff989b5af20886fe3ff8b0e80948bda2545881
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 13549166cc993a984117655c82e197afbcbfb530
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Rimuove un server dall'elenco dei server remoti e collegati noti nell'istanza locale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
+ ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,11 +49,11 @@ sp_dropserver [ @server = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@server =** ] **'***server***'**  
+ [ **@server =** ] **'***server***'**  
  Server da rimuovere. *server* è di tipo **sysname**e non prevede alcun valore predefinito. *server* deve esistere.  
   
  [  **@droplogins =** ] **'droplogins'** | NULL  
- Indica che gli account di accesso server remoti e collegati per *server* deve essere rimosso anche se **droplogins** specificato. **@droplogins**è **char (10)**, con un valore predefinito è NULL.  
+ Indica che gli account di accesso server remoti e collegati per *server* deve essere rimosso anche se **droplogins** specificato. **@droplogins** viene **char (10)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -61,7 +63,7 @@ sp_dropserver [ @server = ] 'server'
   
  **sp_dropserver** non può essere eseguita all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LINKED SERVER per il server.  
   
 ## <a name="examples"></a>Esempi  
@@ -72,11 +74,11 @@ sp_dropserver 'ACCOUNTS', 'droplogins';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
- [sp_dropremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpremotelogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
- [sp_helpserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpremotelogin-transact-sql.md)   
+ [sp_helpserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

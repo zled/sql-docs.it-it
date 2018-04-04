@@ -1,15 +1,16 @@
 ---
 title: Avvisi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent alerts, event types
@@ -24,19 +25,24 @@ helpviewer_keywords:
 - SQL Server Agent alerts, about alerts
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 64de30ec59f69764c5f4fe0a1f28570da2b4d0a0
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 928b489e882671b74ceacbf22a99a85e677bf58c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="alerts"></a>Avvisi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Gli eventi vengono generati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e immessi nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent legge il registro applicazioni ed esegue un confronto tra gli eventi e gli avvisi definiti. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent rileva una corrispondenza, viene attivato un avviso, che rappresenta una risposta automatica a un evento. Oltre al controllo degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent può inoltre eseguire il monitoraggio delle condizioni delle prestazioni e degli eventi WMI (Windows Management Instrumentation).  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+Gli eventi vengono generati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e immessi nel registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent legge il registro applicazioni ed esegue un confronto tra gli eventi e gli avvisi definiti. Quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent rileva una corrispondenza, viene attivato un avviso, che rappresenta una risposta automatica a un evento. Oltre al controllo degli eventi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent può inoltre eseguire il monitoraggio delle condizioni delle prestazioni e degli eventi WMI (Windows Management Instrumentation).  
   
 Per definire un avviso, è necessario specificare gli elementi seguenti:  
   

@@ -1,16 +1,16 @@
 ---
-title: "Gestione connessione per più file flat | Microsoft Docs"
-ms.custom: 
+title: Gestione connessione per più file flat | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: connection-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multifile.advanced.f1
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 657d18fc805512c9574b2fe7451310601b9d78cb
-ms.translationtype: MT
+ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
   Una gestione connessione per più file flat consente a un pacchetto di accedere a dati contenuti in più file flat. Ad esempio, un'origine file flat può utilizzare una gestione connessione per più file quando l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/13/2018
   
  \<*percorso*>|\<*percorso*>  
   
- Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\*.txt.  
+ Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\\*.txt.  
   
  Se una gestione connessione per più file flat fa riferimento a più file, tutti i file devono avere lo stesso formato.  
   
@@ -87,7 +87,7 @@ ms.lasthandoff: 03/13/2018
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Nomi file**  
- Consente di digitare il percorso e i nomi dei file da utilizzare nella connessione per più flat file. È possibile specificare più file usando caratteri jolly, ad esempio "C:\\*.txt", oppure il carattere barra verticale (|) per separare più nomi di file. Tutti i file devono avere lo stesso formato data.  
+ Consente di digitare il percorso e i nomi dei file da utilizzare nella connessione per più flat file. È possibile specificare più file usando caratteri jolly, ad esempio "C:\\\*.txt", oppure il carattere barra verticale (|) per separare più nomi di file. Tutti i file devono avere lo stesso formato data.  
   
  **Sfoglia**  
  Consente di cercare i nomi dei file da utilizzare nella connessione per più file flat. È possibile selezionare più file. Tutti i file devono avere lo stesso formato data.  

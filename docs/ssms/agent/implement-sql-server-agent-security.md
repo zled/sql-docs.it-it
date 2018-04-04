@@ -1,15 +1,16 @@
 ---
 title: Implementare la sicurezza di SQL Server Agent | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Agent, security
@@ -17,19 +18,23 @@ helpviewer_keywords:
 - security [SQL Server Agent]
 - security [SQL Server], SQL Server Agent
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c6553a91a0e089c48512dbc2446c3694fb9885c3
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 1e86b733db8bc2fcb17fc10264a0e2b9069e5323
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementazione della sicurezza di SQL Server Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent consente all'amministratore del database di eseguire ciascun passaggio di un processo in un contesto di sicurezza in cui sono disponibili solo le autorizzazioni necessarie all'esecuzione di tale passaggio e che viene determinato da un proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Per impostare le autorizzazioni per un particolare passaggio di un processo, è necessario creare un proxy che disponga delle autorizzazioni necessarie e quindi assegnare questo proxy al passaggio del processo. È possibile specificare un proxy per più di un passaggio di processo. Per i passaggi che richiedono le medesime autorizzazioni, viene utilizzato lo stesso proxy.  
   
 Nella sezione che segue viene spiegato quale ruolo di database concedere agli utenti affinché possano creare o eseguire processi utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent.  

@@ -1,27 +1,28 @@
 ---
 title: Tipi di dati di SQL Server e SSIS supportati per i domini DQS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/08/2011
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef8b4bd18c917cf515c120d9f6164c8da7f28c78
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 5f9231a0a985416b08016e30ceb3a95cc0b5dce9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Tipi di dati di SQL Server e SSIS supportati per i domini DQS
   Esistono molti tipi di dati in SQL Server e SQL Server Integration Services (SSIS), ma solo quattro tipi di dati per i domini DQS: Date, Decimal, Integer e String. No tutti i tipi di dati di SQL Server e SSIS sono supportati in DQS. È possibile eseguire il mapping dei dati di origine a un dominio DQS per eseguire le attività per la qualità dei dati solo se il tipo di dati di origine è supportato in DQS e corrisponde al tipo di dati del dominio DQS. In questo argomento vengono fornite informazioni sui tipi di dati supportati in SQL Server e SSIS e disponibili per l'esecuzione del mapping a ognuno dei quattro tipi di dati del dominio in DQS.  

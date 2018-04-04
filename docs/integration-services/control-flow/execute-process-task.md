@@ -1,16 +1,16 @@
 ---
-title: "Attività Esegui processo | Microsoft Docs"
-ms.custom: 
+title: Attività Esegui processo | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76ea783edab9673a720d5b95883caffff9d9a4d7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bf81fa613863d01bc672aba97af796bbd27ad896
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="execute-process-task"></a>Attività Esegui processo
   L'attività Esegui processo consente di eseguire un'applicazione o un file batch nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Sebbene sia possibile usarla per aprire qualsiasi applicazione standard, ad esempio [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] o [!INCLUDE[ofprword](../../includes/ofprword-md.md)], l'attività Esegui processo viene in genere usata per eseguire applicazioni aziendali o file batch che usano un'origine dei dati. È ad esempio possibile utilizzare l'attività Esegui processo per espandere un file di testo compresso. Il pacchetto può quindi utilizzare il file di testo come origine dei dati per il proprio flusso di dati. Sempre a titolo di esempio, è anche possibile utilizzare tale attività per eseguire un'applicazione [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] personalizzata che genera un report giornaliero sulle vendite, che può essere allegato a un'attività Invia messaggi e inoltrato a una lista di distribuzione.  

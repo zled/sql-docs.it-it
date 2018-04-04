@@ -1,5 +1,5 @@
 ---
-title: Sys. Servers (Transact-SQL) | Documenti Microsoft
+title: sys.servers (Transact-SQL) | Microsoft Docs
 ms.custom: 
 ms.date: 06/10/2016
 ms.prod: sql-non-specified
@@ -27,28 +27,29 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 858fe45f817572eea387ce3971a52e72cc23f045
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cc6dcb18c9961bffcf65db5f918ad54f19ca78ae
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale con **server_id** = 0.  
-  
+  Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale che include **server_id** = 0.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID locale del server collegato.|  
-|**name**|**sysname**|Quando **server_id** = 0, questo è il nome del server.<br /><br /> Quando **server_id** > 0, questo è il nome locale del server collegato.|  
+|**name**|**sysname**|Quando si **server_id** = 0, questo è il nome del server.<br /><br /> Quando si **server_id** > 0, si tratta del nome locale del server collegato.|  
 |**product**|**sysname**|Nome del prodotto del server collegato. "SQL Server" indica che si tratta di un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
-|**percorso**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
+|**location**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**provider_string**|**nvarchar(4000)**|Proprietà di connessione della stringa del provider OLE DB.<br /><br /> È NULL tranne nei casi in cui il chiamante dispone dell'autorizzazione ALTER ANY LINKED SERVER.|  
-|**catalogo**|**sysname**|Proprietà di connessione del catalogo OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
+|**catalog**|**sysname**|Proprietà di connessione del catalogo OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**connect_timeout**|**int**|Timeout della connessione espresso in secondi. Restituisce 0 se non si specifica alcun valore.|  
 |**query_timeout**|**int**|Timeout della query espresso in secondi. Restituisce 0 se non si specifica alcun valore.|  
 |**is_linked**|**bit**|0 = è un server di tipo obsoleto aggiunto tramite **sp_addserver**, con diverse RPC e transazioni distribuite.<br /><br /> 1 = Server collegato standard.|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 |**is_data_access_enabled**|**bit**|Il server è abilitato per le query distribuite.|  
 |**is_collation_compatible**|**bit**|Le regole di confronto dei dati remoti vengono considerate compatibili con i dati locali se non sono disponibili informazioni sulle regole di confronto.|  
 |**uses_remote_collation**|**bit**|Il valore 1 indica che vengono utilizzate le regole di confronto segnalate dal server remoto. In caso contrario, vengono utilizzate le regole di confronto specificate dalla colonna successiva.|  
-|**collation_name**|**sysname**|Nome delle regole di confronto da utilizzare oppure NULL se vengono utilizzate le regole di confronto locali.|  
+|**nome_regole_di_confronto**|**sysname**|Nome delle regole di confronto da utilizzare oppure NULL se vengono utilizzate le regole di confronto locali.|  
 |**lazy_schema_validation**|**bit**|Il valore 1 indica che la convalida dello schema non viene verificata all'avvio della query.|  
 |**is_system**|**bit**|È possibile accedere a questo server solo dal sistema interno.|  
 |**is_publisher**|**bit**|Il server è un server di pubblicazione per la replica.|  
@@ -67,23 +68,23 @@ ms.lasthandoff: 11/21/2017
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|Se 1, la chiamata di una stored procedure remota comporta l'avvio di una transazione distribuita e l'integrazione della transazione in MS DTC. Per altre informazioni, vedere [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Data dell'ultima modifica delle informazioni relative al server.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Il valore in **provider_string** è sempre NULL a meno che il chiamante dispone dell'autorizzazione ALTER ANY LINKED SERVER.  
   
  Non sono richieste autorizzazioni per visualizzare il server locale (**server_id** = 0).  
   
- Quando si crea un server collegato o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblica** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità a questi server, rimuovere il mapping di account di accesso predefinito eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
+ Quando si crea un server collegato o remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblico** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità a questi server, rimuovere il mapping predefinito degli account di accesso eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
   
  Se il mapping predefinito degli account di accesso viene eliminato, solo gli utenti aggiunti esplicitamente come account di accesso collegato o remoto possono visualizzare i server collegati o remoti per cui dispongono di un account di accesso. Per visualizzare tutti i server collegati e remoti in seguito all'eliminazione del mapping predefinito degli account di accesso, sono richieste le autorizzazioni seguenti:  
   
 -   ALTER ANY LINKED SERVER o ALTER ANY LOGIN ON SERVER  
   
--   L'appartenenza di **setupadmin** o **sysadmin** ruoli predefiniti del server  
+-   L'appartenenza ai **setupadmin** oppure **sysadmin** ruoli server  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Viste del catalogo di server collegati &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
- [la procedura sp_addlinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
+ [Server collegati viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
   

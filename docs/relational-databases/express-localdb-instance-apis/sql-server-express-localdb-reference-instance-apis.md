@@ -13,19 +13,19 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b12274cfd0ee0c7703229cc416793fb23a1a91ae
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a3fa10bd51bca3bacd1f54157cf860e305724866
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-express-localdb-reference---instance-apis"></a>Riferimento al database locale - API dell'istanza di SQL Server Express
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In SQL Server basato su servizi, tradizionale, le singole istanze di SQL Server installate in un solo computer sono separate fisicamente; ovvero, ogni istanza deve essere installata e rimossa separatamente. Inoltre, ciascuna istanza dispone di un set separato di file binari e si esegue in un processo del servizio separato. Il nome dell'istanza di SQL Server viene utilizzato per specificare l'istanza di SQL Server a cui l'utente desidera effettuare la connessione.  
+  In SQL Server basato su servizi, tradizionale, le singole istanze di SQL Server installate in un solo computer sono separate fisicamente; ovvero, ogni istanza deve essere installata e rimossa separatamente. Inoltre, ciascuna istanza dispone di un set separato di file binari e si esegue in un processo del servizio separato. Il nome dell'istanza di SQL Server viene utilizzato per specificare l'istanza di SQL Server a cui l'utente desidera effettuare la connessione.  
   
  Nell'API dell'istanza del database locale di SQL Server Express viene utilizzato un modello di istanza semplificato e leggero. Anche se le istanze del database locale singole sono separate sul disco e nel Registro di sistema, in esse viene utilizzato lo stesso set di file binari condivisi del database locale. Inoltre, nel database locale non vengono utilizzati servizi. Le istanze del database locale vengono avviate su richiesta tramite le chiamate API dell'istanza del database locale. Nel database locale il nome dell'istanza viene utilizzato per specificare quali delle istanze del database locale l'utente desideri utilizzare.  
   

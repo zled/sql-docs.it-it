@@ -1,31 +1,38 @@
 ---
 title: Eliminare processi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: delete jobs
+helpviewer_keywords:
+- delete jobs
 ms.assetid: bffb915e-bc84-4417-aa35-183243ca3312
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd50bb466f4c34b38effd5b562131b46f8243d67
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: a2c914e9ae1c940cacc418d0132f19434fa013b9
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="delete-jobs"></a>eliminare processi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Un processo è una serie specificata di operazioni eseguite in sequenza tramite SQL Server Agent. Per impostazione predefinita, i processi non vengono eliminati al termine dell'esecuzione. È possibile eliminare uno o più processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, indipendentemente dall'esito positivo o negativo del processo. È inoltre possibile configurare [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per eliminare automaticamente determinati processi in caso di esito positivo, esito negativo o completamento.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+Un processo è una serie specificata di operazioni eseguite in sequenza tramite SQL Server Agent. Per impostazione predefinita, i processi non vengono eliminati al termine dell'esecuzione. È possibile eliminare uno o più processi di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, indipendentemente dall'esito positivo o negativo del processo. È inoltre possibile configurare [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per eliminare automaticamente determinati processi in caso di esito positivo, esito negativo o completamento.  
   
 Per impostazione predefinita, i membri del ruolo predefinito del server **sysadmin** possono eseguire la stored procedure di sistema [sp_delete_job (Transact-SQL)](http://msdn.microsoft.com/en-us/b85db6e4-623c-41f1-9643-07e5ea38db09) per eliminare un processo. Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent seguenti nel database **msdb** :  
   

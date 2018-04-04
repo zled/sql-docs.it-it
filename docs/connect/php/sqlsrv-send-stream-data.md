@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_send_stream_data | Documenti Microsoft
-ms.custom: 
+title: sqlsrv_send_stream_data | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_send_stream_data
+apiname:
+- sqlsrv_send_stream_data
 apitype: NA
 helpviewer_keywords:
 - sqlsrv_send_stream_data
 - API Reference, sqlsrv_send_stream_data
 - streaming data
 ms.assetid: 826c2d45-694f-42b8-b12b-cd4523a31883
-caps.latest.revision: "32"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0fae36ffda842365145e07b6846965cdc45b6c05
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 7c8ea12c087a5702776a596f1f5b989e04733078
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvsendstreamdata"></a>sqlsrv_send_stream_data
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -51,7 +53,7 @@ sqlsrv_send_stream_data( resource $stmt)
 Valore booleano: **true** se sono presenti altri dati da inviare. In caso contrario, **false**.  
   
 ## <a name="example"></a>Esempio  
-L'esempio seguente apre una revisione del prodotto sotto forma di flusso e lo invia al server. Il comportamento predefinito di invio di tutti i dati di flusso in fase di esecuzione è disabilitato. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+L'esempio seguente apre una revisione del prodotto sotto forma di flusso e lo invia al server. Il comportamento predefinito di invio di tutti i dati di flusso in fase di esecuzione è disabilitato. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -101,6 +103,8 @@ sqlsrv_close( $conn);
   
 ## <a name="see-also"></a>Vedere anche  
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+
 [Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
   

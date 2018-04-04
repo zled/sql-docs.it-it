@@ -1,33 +1,39 @@
 ---
 title: Organizzare processi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - job category
 - organize jobs
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da6bc0b22dd7d7a2cfa2fc7ac13be6af924ef0cb
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 844b71d9f24e5f4c9ddf28d308cdea1b9d3b6bfb
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="organize-jobs"></a>organizzare processi
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È inoltre possibile creare categorie di processi personalizzate.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+Le categorie consentono di organizzare i processi per semplificare le operazioni di raggruppamento e filtro. È ad esempio possibile organizzare tutti i processi di backup dei database raggruppandoli nella categoria Manutenzione database. È inoltre possibile creare categorie di processi personalizzate.  
   
 > [!WARNING]  
 > Le categorie multiserver sono disponibili solo in un server master. In un server master è disponibile una sola categoria di processi predefinita: [**Senza categoria (multiserver)**]. Quando viene scaricato un processo multiserver, la categoria viene modificata in **Processi dal server MSX** nel server di destinazione.  

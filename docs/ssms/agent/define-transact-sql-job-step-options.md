@@ -1,35 +1,40 @@
 ---
 title: Definire le opzioni del passaggio di processo Transact-SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Transact-SQL job step
 - job steps [Transact-SQL]
 - SQL Server Agent jobs, Transact-SQL step
 ms.assetid: b2a47057-f6fb-432b-a7b6-5d61f33a5d9c
-caps.latest.revision: 
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e68e6b11cc23c4f6f0a5caa6c0da1e1bfb8e4536
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fb941b886668e3a1ab263979df51209815fd7c73
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="define-transact-sql-job-step-options"></a>Definire le opzioni del passaggio di processo Transact-SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come definire le opzioni per i passaggi del processo [!INCLUDE[msCoName](../../includes/msconame_md.md)] di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[tsql](../../includes/tsql_md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o SQL Server Management Objects.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+In questo argomento viene descritto come definire le opzioni per i passaggi del processo [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]  [!INCLUDE[tsql](../../includes/tsql_md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] o SQL Server Management Objects.  
   
 **Contenuto dell'argomento**  
   

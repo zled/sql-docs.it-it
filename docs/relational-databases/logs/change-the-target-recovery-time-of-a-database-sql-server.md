@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 520fc09bb08f2110ae6cc53b6a61d1305735601c
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 3d29688e3d5ff47f7ddd253ebfc1c2109dc8cc36
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modificare il tempo di recupero di riferimento di un database (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In questo argomento viene illustrato come impostare la modifica del tempo di recupero di riferimento di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per impostazione predefinita, il tempo di recupero di riferimento è 60 secondi e il database usa *checkpoint indiretti*. Il tempo di recupero di riferimento stabilisce un limite superiore per il tempo di recupero per questo database.  
+  In questo argomento viene illustrato come impostare la modifica del tempo di recupero di riferimento di un database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per impostazione predefinita, il tempo di recupero di riferimento è 60 secondi e il database usa *checkpoint indiretti*. Il tempo di recupero di riferimento stabilisce un limite superiore per il tempo di recupero per questo database.  
   
 > [!NOTE]  
 >  Il limite superiore specificato per un determinato database dall'impostazione del tempo di recupero di riferimento può essere superato se una transazione con esecuzione prolungata provoca tempi eccessivi di UNDO.  

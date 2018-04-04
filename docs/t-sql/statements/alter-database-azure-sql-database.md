@@ -1,5 +1,5 @@
 ---
-title: ALTER DATABASE (Database SQL Azure) | Documenti Microsoft
+title: ALTER DATABASE (database SQL di Azure) | Microsoft Docs
 ms.custom: 
 ms.date: 02/13/2018
 ms.prod: 
@@ -18,16 +18,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80aa017e3876a7a41077f770d5328e4c6c49b5be
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6c303c5abe51eaee2208028ea13991d2d557f1b3
+ms.sourcegitcommit: a8311ec5ad8313e85e6989f70c5ff9ef120821d6
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Database SQL di Azure)
+# <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Modifica un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Modifica il nome di un obiettivo del database, l'edizione e il servizio di un database, join di un pool elastico e imposta le opzioni di database.  
+  Modifica un [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Modifica il nome di un database, l'edizione e l'obiettivo di servizio di un database, aggiunge un pool elastico e imposta le opzioni di database.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -192,7 +192,7 @@ ALTER DATABASE { database_name }
 <temporal_history_retention>  ::=  TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```  
   
- Per una descrizione completa delle opzioni set, vedere [opzioni ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [modificare a livello di compatibilità del DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+ Per una descrizione completa delle opzioni di impostazione, vedere [Opzioni &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) e [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="arguments"></a>Argomenti  
  *database_name*  
@@ -201,30 +201,30 @@ ALTER DATABASE { database_name }
  CURRENT  
  Specifica che il database corrente in uso deve essere modificato.  
   
- Modifica nome **= * * * new_database_name*  
- Rinomina il database con il nome specificato come *new_database_name*. Nell'esempio seguente modifica il nome di un database `db1` a `db2`:   
+ MODIFY NAME **=***new_database_name*  
+ Rinomina il database con il nome specificato come *new_database_name*. Nell'esempio seguente il nome di un database `db1` viene modificato in `db2`:   
 
 ```  
 ALTER DATABASE db1  
     MODIFY Name = db2 ;  
 ```    
 
- Modifica (edizione  **=**  ['base' | 'standard' | 'premium'])    
- Modifica il livello di servizio del database. Supporto per 'premiumrs' è stato rimosso. Per domande, utilizzare l'alias di posta elettronica: premium-rs@microsoft.com.
+ MODIFY (EDITION **=** ['basic' | 'standard' | 'premium' ])    
+ Modifica il livello di servizio del database. Il supporto di "premiumrs" è stato rimosso. In caso di domande, usare l'alias di posta elettronica seguente: premium-rs@microsoft.com.
 
-L'esempio seguente modifica edition a `premium`:
+Nell'esempio seguente l'edizione viene modificata in `premium`:
   
 ```  
 ALTER DATABASE current 
     MODIFY (EDITION = 'premium');
 ``` 
 
-La modifica dell'edizione ha esito negativo se la proprietà MAXSIZE per il database è impostata su un valore non compreso nell'intervallo valido supportato dall'edizione.  
+La modifica di EDITION ha esito negativo se la proprietà MAXSIZE per il database è impostata su un valore non compreso nell'intervallo valido supportato da questa edizione.  
 
- MODIFICARE (MAXSIZE  **=**  [100 MB | 500 MB | 1 | 1024... 4096] GB)  
+ MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024…4096] GB)  
  Specifica le dimensioni massime del database. Le dimensioni massime devono essere conformi al set valido di valori per la proprietà EDITION del database. La modifica delle dimensioni massime del database può causare la modifica del valore di EDITION del database. Nella tabella seguente sono elencati i valori MAXSIZE supportati e i valori predefiniti (P) per i livelli del servizio di [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
+|**MAXSIZE**|**Base**|**S0-S2**|**S3-S12**|**P1-P6**|**P11-P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100 MB|√|√|√|√|√|  
 |250 MB|√|√|√|√|√|  
@@ -246,87 +246,87 @@ La modifica dell'edizione ha esito negativo se la proprietà MAXSIZE per il data
 |500 GB|N/D|√|√|√ (P)|√|  
 |750 GB|N/D|√|√|√|√|  
 |1024 GB|N/D|√|√|√|√ (P)|  
-|Da 1024 GB fino a 4096 GB con incrementi di 256 GB *|N/D|N/D|N/D|N/D|√|√|  
+|Da 1024 GB fino a 4096 GB con incrementi di 256 GB*|N/D|N/D|N/D|N/D|√|√|  
   
- \* P11 e P15 consentono MAXSIZE fino a 4 TB con 1024 GB da quelle predefinite.  P11 e P15 possono utilizzare fino a 4 TB di spazio di archiviazione incluse senza costi aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle seguenti aree: ci East2, Stati Uniti occidentali, ci Gov Virginia, Europa occidentale, Germania centrale, Sud Asia sudorientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per le limitazioni attuali, vedere [singolo database](https://docs.microsoft.com/azure/sql-database-single-database-resources).  
+ \* P11 e P15 consentono un valore massimo di MAXSIZE pari a 4 TB. Le dimensioni predefinite sono 1024 GB.  P11 e P15 possono usare fino a 4 TB di spazio di archiviazione incluso senza addebiti aggiuntivi. Nel livello Premium, MAXSIZE maggiore di 1 TB è attualmente disponibile nelle seguenti aree: Stati Uniti orientali 2, Stati Uniti occidentali, US Gov Virginia, Europa occidentale, Germania centrale, Asia sud-orientale, Giappone orientale, Australia orientale, Canada centrale e Canada orientale. Per le limitazioni correnti, vedere [Single databases](https://docs.microsoft.com/azure/sql-database-single-database-resources) (Database singoli).  
 
   
  Le seguenti regole vengono applicate agli argomenti MAXSIZE ed EDITION:  
   
--   Il valore MAXSIZE, se specificato, deve essere un valore valido presente nella tabella precedente.  
+-   Il valore MAXSIZE, se specificato, deve essere un valore valido presente nella precedente tabella.  
   
 -   Se il valore di EDITION è specificato e il valore di MAXSIZE viene omesso, viene utilizzato il valore predefinito dell'edizione. Ad esempio, se EDITION è impostato su Standard e MAXSIZE non è specificato, il valore di MAXSIZE viene automaticamente impostato su 500 MB.  
   
--   Se né MAXSIZE né EDITION vengono specificati, EDITION viene impostato su Standard (S0) e MAXSIZE viene impostato su 250 GB.  
+-   Se né MAXSIZE né EDITION sono specificati, EDITION viene impostato su Standard (S0) e MAXSIZE viene impostato su 250 GB.  
  
 
- Modifica (SERVICE_OBJECTIVE = \<obiettivo di servizio >)  
- Specifica il livello di prestazioni. Nell'esempio seguente servizio obiettivo di un database premium per `P6`:
+ MODIFY (SERVICE_OBJECTIVE = \<service-objective>)  
+ Specifica il livello di prestazioni. Nell'esempio seguente l'obiettivo di servizio di un database Premium viene modificato in `P6`:
  
 ```  
 ALTER DATABASE current 
     MODIFY (SERVICE_OBJECTIVE = 'P6');
 ```  
- I valori disponibili per l'obiettivo di servizio sono: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, o`P15`. Per descrizioni degli obiettivi di servizio e altre informazioni sulle dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [livelli di servizio di Database SQL Azure e i livelli di prestazioni](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se il SERVICE_OBJECTIVE specificato non è supportato dall'edizione, viene visualizzato un errore. Per cambiare il valore di SERVICE_OBJECTIVE da un livello a un altro (ad esempio da S1 a P1), è necessario modificare anche il valore EDITION. Supporto per gli obiettivi di servizio le prenotazioni permanenti sono state rimosse. Per domande, utilizzare l'alias di posta elettronica: premium-rs@microsoft.com. 
+ I valori disponibili per l'obiettivo di servizio sono: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11` o `P15`. Per le descrizioni degli obiettivi di servizio e altre informazioni su dimensioni, edizioni e combinazioni di obiettivi di servizio, vedere [Livelli di servizio e livelli di prestazioni del database SQL di Azure](http://msdn.microsoft.com/library/azure/dn741336.aspx). Se SERVICE_OBJECTIVE non è supportato da EDITION, viene visualizzato un errore. Per cambiare il valore di SERVICE_OBJECTIVE da un livello a un altro (ad esempio da S1 a P1), è necessario modificare anche il valore EDITION. Il supporto per gli obiettivi di servizio PRS è stato rimosso. In caso di domande, usare l'alias di posta elettronica seguente: premium-rs@microsoft.com. 
   
- Modifica (SERVICE_OBJECTIVE = ELASTICA\_POOL (nome = \<elastic_pool_name >)  
- Per aggiungere un database esistente a un pool elastico, impostare l'ELASTIC_POOL SERVICE_OBJECTIVE del database e specificare il nome del pool elastico. È inoltre possibile utilizzare questa opzione per modificare il database a un pool elastico diversi nello stesso server. Per ulteriori informazioni, vedere [creare e gestire un pool elastico SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Per rimuovere un database da un pool elastico, utilizzare ALTER DATABASE per impostare il SERVICE_OBJECTIVE a livello di prestazioni un singolo database.  
+ MODIFY (SERVICE_OBJECTIVE = ELASTIC\_POOL (name = \<elastic_pool_name>)  
+ Per aggiungere un database esistente a un pool elastico, impostare SERVICE_OBJECTIVE del database su ELASTIC_POOL e specificare il nome del pool elastico. È anche possibile usare questa opzione per modificare il database in un pool elastico all'interno dello stesso server. Per altre informazioni, vedere [Creare e gestire un pool elastico in un database SQL](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/). Per rimuovere un database da un pool elastico, usare ALTER DATABASE per impostare SERVICE_OBJECTIVE su un livello di prestazioni di un unico database.  
 
- Aggiungere SERVER secondario ON \<partner_server_name >  
- Crea un database di replica geografica secondaria con lo stesso nome in un server partner, rendendo il database locale in una replica geografica primaria e viene avviata in modo asincrono la replica dei dati dal database primario per il nuovo database secondario. Se un database con lo stesso nome esiste già nel database secondario, il comando non riesce. Il comando viene eseguito nel database master nel server che ospita il database locale diventa il database primario.  
+ ADD SECONDARY ON SERVER \<partner_server_name>  
+ Crea un database secondario con replica geografica usando lo stesso nome in un server partner e trasformando il database locale in un database con replica geografica. Avvia la replica asincrona dei dati dal database primario nel nuovo database secondario. Se esiste già un database con lo stesso nome nel database secondario, il comando non riesce. Il comando viene eseguito nel database master sul server che ospita il database locale, il quale diventa il database primario.  
   
- CON L'ARGOMENTO ALLOW_CONNECTIONS {TUTTI | **N** }  
- Quando l'argomento ALLOW_CONNECTIONS viene omesso, viene impostata su NO per impostazione predefinita. Se è impostato tutti, è un database di sola lettura che consente a tutti gli account di accesso con le autorizzazioni appropriate per la connessione.  
+ WITH ALLOW_CONNECTIONS { **ALL** | NO }  
+ Se non si specifica ALLOW_CONNECTION, il valore ALL viene impostato per impostazione predefinita. Se viene impostato ALL, il database è di sola lettura e consente a tutti gli account che hanno le autorizzazioni necessarie di connettersi.  
   
- CON SERVICE_OBJECTIVE {'S0' | 'S1' | 'S2 ' IN CORSO... | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | 'S12' | 'P1' | 'P2' | 'P4' | 'P6' | 'P11' | 'P15'}  
- Se SERVICE_OBJECTIVE non è specificato, il database secondario viene creato a livello di servizio stesso come database primario. Se SERVICE_OBJECTIVE è impostata, il database secondario viene creato al livello specificato. Questa opzione supporta la creazione di database secondari con replica geografica con i livelli di servizio meno costosi. Il SERVICE_OBJECTIVE specificato deve essere compresa la stessa edizione come origine. Ad esempio, è possibile specificare S0 se l'edizione premium.  
+ WITH SERVICE_OBJECTIVE {  'S0' | 'S1' | 'S2' | 'S3" | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' }  
+ Se non si specifica SERVICE_OBJECTIVE, il database secondario viene creato allo stesso livello di servizio del database primario. Se si specifica SERVICE_OBJECTIVE, il database secondario viene creato al livello specificato. Questa opzione supporta la creazione di database secondari con replica geografica con livelli di servizio meno costosi. Il valore SERVICE_OBJECTIVE specificato deve rientrare nella stessa edizione dell'origine. Ad esempio, non è possibile specificare S0 se l'edizione è Premium.  
   
- ELASTIC_POOL (nome = \<elastic_pool_name)  
- Quando ELASTIC_POOL non viene specificato, il database secondario non viene creato in un pool elastico. Quando viene specificato ELASTIC_POOL, il database secondario viene creato nel pool specificato.  
-  
-> [!IMPORTANT]  
->  L'utente che esegue il comando Aggiungi database secondario deve essere DBManager nel server primario, sono membri di db_owner nel database locale e DBManager nel server secondario.  
-  
- Rimuovi SERVER secondario ON \<partner_server_name >  
- Rimuove il replica geografica secondario database specificato nel server specificato. Il comando viene eseguito nel database master nel server che ospita il database primario.  
+ ELASTIC_POOL (name = \<elastic_pool_name)  
+ Se non si specifica ELASTIC_POOL, il database secondario non viene creato in un pool elastico. Se si specifica ELASTIC_POOL, il database secondario viene creato nel pool specificato.  
   
 > [!IMPORTANT]  
->  L'utente che esegue il comando rimuovere secondario deve essere DBManager nel server primario.  
+>  Chi esegue il comando ADD SECONDARY deve avere il ruolo DBManager nel server primario, db_owner membership nel database locale e DBManager nel server secondario.  
+  
+ REMOVE SECONDARY ON SERVER  \<partner_server_name>  
+ Rimuove il database secondario con replica geografica nel server specificato. Il comando viene eseguito nel database master sul server che ospita il database primario.  
+  
+> [!IMPORTANT]  
+>  Chi esegue il comando REMOVE SECONDARY deve avere il ruolo DBManager nel server primario.  
   
  FAILOVER  
- Alza di livello database secondario nella relazione di replica geografica in cui il comando viene eseguito per principale e Abbassa di livello il database primario corrente per diventare il nuovo database secondario. Come parte di questo processo, la modalità di replica geografica temporaneamente passa dalla modalità asincrona in modalità sincrona. Durante il processo di failover:  
+ Alza di livello il database secondario nella relazione con replica geografica in cui il comando viene eseguito perché il database diventi primario e abbassa di livello il database corrente perché diventi il nuovo database secondario. Durante questo processo, la modalità di replica geografica passa temporaneamente dalla modalità asincrona alla modalità sincrona. Durante il processo di failover:  
   
-1.  Il database primario viene arrestato accettando nuove transazioni.  
+1.  Il database primario non accetta più nuove transazioni.  
   
 2.  Tutte le transazioni in sospeso vengono scaricate nel database secondario.  
   
-3.  Il database secondario diventa la primaria e viene avviata la replica geografica asincrona con primario precedente o il nuovo database secondario.  
+3.  Il database secondario diventa il database primario e la replica geografica asincrona viene avviata con il database primario precedente e il nuovo database secondario.  
   
- Questa sequenza assicura che si verifica alcuna perdita di dati. Il periodo durante il quale non sono disponibili entrambi i database è nell'ordine di secondi 0-25, mentre i ruoli vengono scambiati. L'operazione totale richiede non più di circa un minuto. Se il database primario è disponibile quando viene eseguito questo comando, il comando ha esito negativo con un messaggio di errore che indica che il database primario non è disponibile. Se il processo di failover non viene completata e sembra bloccato, è possibile utilizzare il comando di failover forzato e accettare la perdita di dati e quindi, se è necessario recuperare i dati persi, chiamare devops (CSS) per recuperare i dati perduti.  
+ Questa sequenza impedisce la perdita di dati. I due database non sono disponibili generalmente per un periodo di tempo compreso tra 0 e 25 secondi, il tempo necessario per lo scambio dei ruoli. L'operazione totale non richiederà più di un minuto circa. Se il database primario non è disponibile quando viene eseguito questo comando, il comando ha esito negativo e genera un messaggio di errore indicando che il database primario non è disponibile. Se il processo di failover non viene completato e sembra bloccato, è possibile usare il comando per forzare il failover e accettare la perdita di dati. Se è necessario recuperare i dati persi, chiamare la metodologia DevOps (CSS).  
   
 > [!IMPORTANT]  
->  L'utente che esegue il comando FAILOVER deve essere DBManager nel server primario e il server secondario.  
+>  Chi esegue il comando FAILOVER deve avere il ruolo DBManager sia nel server primario sia nel server secondario.  
   
  FORCE_FAILOVER_ALLOW_DATA_LOSS  
- Alza di livello database secondario nella relazione di replica geografica in cui il comando viene eseguito per principale e Abbassa di livello il database primario corrente per diventare il nuovo database secondario. Utilizzare questo comando solo quando il database primario corrente non è più disponibile. È progettato per il ripristino di emergenza, solo quando la disponibilità di ripristino è critico e perdita di dati è accettabile.  
+ Alza di livello il database secondario nella relazione con replica geografica in cui il comando viene eseguito perché il database diventi primario e abbassa di livello il database corrente perché diventi il nuovo database secondario. Usare questo comando solo quando il database primario corrente non è più disponibile. È progettato per essere usato solo in caso di ripristino di emergenza, quando la disponibilità di ripristino è critica e la perdita di dati è accettabile.  
   
  Durante un failover forzato:  
   
-1.  Il database secondario specificato immediatamente diventa il database primario e inizia ad accettare nuove transazioni.  
+1.  Il database secondario specificato diventa immediatamente il database primario e inizia ad accettare nuove transazioni.  
   
-2.  Quando la replica primaria originale può riconnettersi con il nuovo database primario, un backup incrementale viene eseguito sull'originale primario e la replica primaria originale diventa un nuovo database secondario.  
+2.  Quando il database primario originale si riconnette al nuovo database primario, viene eseguito un backup incrementale nel database primario originale e il database primario originale diventa un nuovo database secondario.  
   
-3.  Per ripristinare dati da questo backup incrementale sul database primario precedente, l'utente si attiva devops/CSS.  
+3.  Per ripristinare i dati da questo backup incrementale nel database primario precedente, è necessario usare la metodologia DevOps/CSS.  
   
-4.  Se sono presenti altri database secondari, vengono riconfigurati automaticamente per diventano database secondari del nuovo database primario. Questo processo è asincrono e potrebbe verificarsi un ritardo fino al completamento di questo processo. Fino a quando non è stata completata la riconfigurazione, i database secondari continuano a essere repliche secondarie del database primario precedente.  
+4.  Se esistono altri database secondari, vengono riconfigurati automaticamente per diventare i database secondari del nuovo database primario. Questo processo è asincrono. Fino al suo completamento, è possibile assistere a un ritardo. Quando la riconfigurazione è completa, i database secondari continuano a essere database secondari del database primario precedente.  
   
 > [!IMPORTANT]  
->  L'utente che esegue il comando FORCE_FAILOVER_ALLOW_DATA_LOSS deve essere DBManager nel server primario e il server secondario.  
+>  Chi esegue il comando FORCE_FAILOVER_ALLOW_DATA_LOSS deve avere il ruolo DBManager sia nel server primario sia nel server secondario.  
   
-## <a name="remarks"></a>Osservazioni  
- Per rimuovere un database, utilizzare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
+## <a name="remarks"></a>Remarks  
+ Per rimuovere un database, usare [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md).  
   
- Per ridurre le dimensioni di un database, utilizzare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+ Per ridurre le dimensioni di un database, usare [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
  L'istruzione ALTER DATABASE deve essere eseguita in modalità autocommit (modalità predefinita di gestione delle transazioni) e non è consentita in una transazione esplicita o implicita.  
   
@@ -355,7 +355,7 @@ ALTER DATABASE current
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-check-the-edition-options-and-change-them"></a>A. Controllare le opzioni di edizione e modificarli in:
+### <a name="a-check-the-edition-options-and-change-them"></a>A. Controllare le opzioni di edizione e modificarle:
 
 ```
 SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
@@ -365,7 +365,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Spostare un database in un altro pool elastico  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Spostare un database in un pool elastico diverso  
  Sposta un database esistente in un pool denominato pool1:  
   
 ```  
@@ -373,32 +373,32 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="c-add-a-geo-replication-secondary"></a>C. Aggiungere un database di replica geografica secondario  
- Crea un database secondario non leggibile di db1 sul server `secondaryserver` del db1 nel server locale.  
+### <a name="c-add-a-geo-replication-secondary"></a>C. Aggiungere un database secondario con replica geografica  
+ Crea un database secondario leggibile denominato db1 nel server `secondaryserver` di db1 nel server locale.  
   
 ```  
 ALTER DATABASE db1   
 ADD SECONDARY ON SERVER secondaryserver   
-WITH ( ALLOW_CONNECTIONS = NO )  
+WITH ( ALLOW_CONNECTIONS = ALL )  
 ```  
   
-### <a name="d-remove-a-geo-replication-secondary"></a>D. Rimuovere la replica geografica secondaria  
- Rimuove il database secondario db1 sul server `secondaryserver`.  
+### <a name="d-remove-a-geo-replication-secondary"></a>D. Rimuovere un database secondario con replica geografica  
+ Rimuove il database secondario db1 nel server `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1   
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Failover a un database di replica geografica secondario  
- Alza di livello db1 un database secondario nel server `secondaryserver` per diventare il nuovo database primario quando viene eseguito sul server `secondaryserver`.  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>E. Eseguire il failover di un database secondario con replica geografica  
+ Alza di livello un database secondario db1 nel server `secondaryserver` perché diventi il nuovo database primario quando viene eseguito nel server `secondaryserver`.  
   
 ```  
 ALTER DATABASE db1 FAILOVER  
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Crea DATABASE &#40; Database SQL di Azure &#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
+ [CREATE DATABASE &#40;Azure SQL Database&#41;](../../t-sql/statements/create-database-azure-sql-database.md)   
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

@@ -21,19 +21,19 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a746ab7863c97e7738760f863227c7d1c0020644
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 778ca272ca6e7cc4a8d3092386457dc2ae5899b2
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>Amministrare più server tramite server di gestione centrale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-È possibile amministrare più server designando server di gestione centrale e creando gruppi di server.  
+  È possibile amministrare più server designando server di gestione centrale e creando gruppi di server.  
   
 ## <a name="what-is-a-central-management-server-and-server-groups"></a>Che cos’è un server di gestione centrale e cosa sono i gruppi di server?  
  Un'istanza di SQL Server definita come server di gestione centrale gestisce i gruppi di server che contengono le informazioni sulla connessione per una o più istanze. Le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] e i criteri della gestione basata su criteri possono essere eseguiti contemporaneamente in più gruppi di server. È inoltre possibile visualizzare i file di log in istanze gestite tramite un server di gestione centrale. 

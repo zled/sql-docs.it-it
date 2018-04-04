@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 4292564f8e3e392bd01d5b1e580e1f28251840bd
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introduzione alle autorizzazioni del motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -166,7 +166,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
 ## <a name="list-of-permissions"></a>Elenco di autorizzazioni  
  [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] contiene 230 autorizzazioni. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] contiene 219 autorizzazioni. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] contiene 214 autorizzazioni. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] contiene 195 autorizzazioni. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]e la [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] contengono meno autorizzazioni perché espongono solo una parte del motore di database, anche se contengono alcune autorizzazioni che non si applicano a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo argomento il poster è molto piccolo e non può essere consultato. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
   
-[![Autorizzazioni del motore di database](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+[![Autorizzazioni del motore di database](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
  
  Per una rappresentazione grafica delle relazioni tra le entità del [!INCLUDE[ssDE](../../../includes/ssde-md.md)] e gli oggetti server e di database, vedere [Gerarchia delle autorizzazioni &#40;motore di database&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md).  
   

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e47c0022-ce87-4ba5-a24b-df55efe66431
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 6d87a24e91f96957170671303af641c6bacc6599
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0d458bc15530aa87bfa922787558fff3f07645f7
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Il database WideWorldImporters contiene tutte le informazioni sulle transazioni e dati giornalieri di acquisti e vendite, nonché dati del sensore dei veicoli e chat fredda.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Il database WideWorldImporters contiene tutte le informazioni sulle transazioni e dati giornalieri di acquisti e vendite, nonché dati del sensore dei veicoli e chat fredda.
 
 ## <a name="schemas"></a>Schemi
 
@@ -35,7 +37,7 @@ WideWorldImporters utilizza gli schemi per scopi diversi, ad esempio l'archiviaz
 
 Questi schemi contengono i dati. Un numero di tabelle necessarie per tutti gli altri schemi e si trova nello schema dell'applicazione.
 
-|schema|Description|
+|Schema|Description|
 |-----------------------------|---------------------|
 |Applicazione|Livello di applicazione utenti, contatti e i parametri. Contiene anche le tabelle di riferimento con i dati che viene utilizzati da più schemi|
 |Purchasing|Magazzino acquisti da fornitori e i dettagli relativi ai fornitori.|  
@@ -46,11 +48,11 @@ Questi schemi contengono i dati. Un numero di tabelle necessarie per tutti gli a
 
 Questi schemi vengono utilizzati per le applicazioni esterne che non è consentite accedere direttamente alle tabelle di dati. Contengono viste e stored procedure utilizzate da applicazioni esterne.
 
-|schema|Description|
+|Schema|Description|
 |-----------------------------|---------------------|
 |Sito Web|Accesso al database dal sito Web aziendale avviene totalmente tramite questo schema.|
 |Report|Accesso al database dai report di Reporting Services avviene totalmente tramite questo schema.|
-|Power BI|Accesso al database dal dashboard di Power BI tramite il Gateway aziendale avviene totalmente tramite questo schema.|
+|PowerBI|Accesso al database dal dashboard di Power BI tramite il Gateway aziendale avviene totalmente tramite questo schema.|
 
 Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione iniziale del database di esempio. Tuttavia, gli esempi di tutti i Power BI e Reporting Services basati su questo database sono incoraggiati a utilizzare questi schemi.
 
@@ -58,7 +60,7 @@ Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione
 
 Schemi speciale
 
-|schema|Description|
+|Schema|Description|
 |-----------------------------|---------------------|
 |Integrazione|Gli oggetti e le procedure necessari per l'integrazione di data warehouse (ad esempio la migrazione dei dati al database WideWorldImportersDW).|
 |Sequenze|Contiene le sequenze utilizzate da tutte le tabelle nell'applicazione.|
@@ -138,7 +140,7 @@ WideWorldImporters utilizza un numero ridotto di schemi in modo che sia facile d
 
 Laddove possibile, il database collocates tabelle che sono in genere sottoposti a query insieme nello stesso schema per ridurre al minimo la complessità di join.
 
-Lo schema del database è stato generato codice basato su una serie di tabelle di metadati in un altro database WWI_Preparation. In questo modo WideWorldImporters un livello molto elevato di coerenza di progettazione, denominazione coerenza e completezza. Per informazioni dettagliate su come è stato generato lo schema, vedere il codice sorgente: [wide-world-utilità di importazione/wwi-database-script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
+Lo schema del database è stato generato codice basato su una serie di tabelle di metadati in un altro database WWI_Preparation. In questo modo WideWorldImporters un livello molto elevato di coerenza di progettazione, denominazione coerenza e completezza. Per informazioni dettagliate sul modo in cui è stato generato lo schema, vedere il codice sorgente: [wide-world-unità di importazione/wwi-database-script](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ### <a name="table-design"></a>Progettazione tabella
 

@@ -1,29 +1,30 @@
 ---
-title: Introduzione al Driver SQL PHP | Documenti Microsoft
-ms.custom: 
-ms.date: 01/19/2017
+title: Guida introduttiva con i driver Microsoft per PHP per SQL Server | Documenti Microsoft
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bf4b5eee7fbeb00aa477e7769ca9ebaaa84e7d4c
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 48811b32eaaf76b586fce57d4d1592704dfe1dc3
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="getting-started-with-the-php-sql-driver"></a>Introduzione al driver SQL PHP
+# <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Guida introduttiva con i driver Microsoft per PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 In questa sezione vengono fornite informazioni sui requisiti di sistema per usare i [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]e caricare il driver nello spazio di elaborazione PHP.  
@@ -35,7 +36,9 @@ In questa sezione vengono fornite informazioni sui requisiti di sistema per usar
 * [Passaggio 4: Connettere in modo resiliente a SQL con PHP](../../connect/php/step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Applicazione di esempio &#40;Driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  
-[Guida di programmazione per il driver SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Applicazione di esempio &#40;Driver SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)
+
+[Guida di programmazione per i driver Microsoft per PHP per SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

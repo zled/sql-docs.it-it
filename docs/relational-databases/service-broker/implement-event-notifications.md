@@ -18,19 +18,19 @@ helpviewer_keywords:
 - event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 
-author: BYHAM
-ms.author: rickbyh
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 259065dc0de5207598a785e21815cfaddf37d4b1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0bc6fa83db480d08b454aad852dd67a07134d1f8
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="implement-event-notifications"></a>Implementazione di notifiche degli eventi
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Per implementare una notifica degli eventi, è necessario prima creare un servizio di destinazione che riceverà le notifiche degli eventi.  
+  Per implementare una notifica degli eventi, è necessario prima creare un servizio di destinazione che riceverà le notifiche degli eventi.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] per le notifiche degli eventi che prevedono l'invio di messaggi a Service Broker su un server remoto. La sicurezza del dialogo deve essere configurata manualmente in base al modello di sicurezza avanzata.  

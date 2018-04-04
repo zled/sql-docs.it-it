@@ -1,33 +1,35 @@
 ---
-title: sqlsrv_prepare | Documenti Microsoft
-ms.custom: 
+title: sqlsrv_prepare | Microsoft Docs
+ms.custom: ''
 ms.date: 10/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: sqlsrv_prepare
+apiname:
+- sqlsrv_prepare
 apitype: NA
 helpviewer_keywords:
 - executing queries
 - API Reference, sqlsrv_prepare
 - sqlsrv_prepare
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-caps.latest.revision: "52"
+caps.latest.revision: ''
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56dbdc5aad9e0c9362ee7d5f9ddb5650a920130d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: dbfcece545b5fb66dbc8c2e8fd8afb1bcb9f9336
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +48,7 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
 *$tsql*: espressione Transact-SQL che corrisponde all'istruzione creata.  
   
-*$params* [facoltativo]: un **matrice** di valori che corrispondono ai parametri in una query con parametri. Ogni elemento della matrice può corrispondere a uno dei seguenti:
+*$params* [facoltativo]: una **matrice** dei valori corrispondenti ai parametri in una query con parametri. Ogni elemento della matrice può corrispondere a uno dei seguenti:
   
 -   Valore letterale.  
   
@@ -63,16 +65,16 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
   
     Nella tabella riportata di seguito vengono descritti gli elementi di matrice seguenti:  
   
-    |Elemento|Descrizione|  
+    |Elemento|Description|  
     |-----------|---------------|  
     |*&$value*|Valore letterale o riferimento a una variabile PHP.|  
-    |*$direction*[facoltativo]|Uno dei seguenti **SQLSRV_PARAM _\***  costanti usate per indicare la direzione del parametro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40; Driver Microsoft per PHP per SQL Server &#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$direction*[facoltativo]|Uno dei seguenti **SQLSRV_PARAM _\***  costanti usate per indicare la direzione del parametro: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. Il valore predefinito è **SQLSRV_PARAM_IN**.<br /><br />Per ulteriori informazioni sulle costanti PHP, vedere [costanti &#40;Microsoft Drivers for PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$phpType*[facoltativo]|Oggetto **SQLSRV_PHPTYPE _\***  costante che specifica il tipo di dati PHP del valore restituito.|  
     |*$sqlType*[facoltativo]|Oggetto **SQLSRV_SQLTYPE\***  costante che specifica il tipo di dati di SQL Server del valore di input.|  
   
 *$options* [facoltativo]: matrice associativa che imposta le proprietà della query. Nella tabella seguente sono elencate le chiavi supportate e i valori corrispondenti:  
   
-|Key|Valori supportati|Descrizione|  
+|Key|Valori supportati|Description|  
 |-------|--------------------|---------------|  
 |QueryTimeout|Valore integer positivo.|Imposta il timeout in secondi della query. Per impostazione predefinita, il driver attende indefinitamente per ottenere i risultati.|  
 |SendStreamParamsAtExec|**true** o **false**<br /><br />Il valore predefinito è **true**.|Configura il driver per l'invio di tutti i flussi di dati al momento dell'esecuzione (**true**), o per inviare il flusso di dati in blocchi (**false**). Per impostazione predefinita, il valore è impostato su **true**. Per altre informazioni, vedere [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
@@ -86,12 +88,12 @@ Quando si prepara un'istruzione che usa variabili come parametri, le variabili v
   
 La combinazione di **sqlsrv_prepare** e **sqlsrv_execute** , che separa la preparazione e l'esecuzione dell'istruzione in due chiamate di funzione, può essere usata per eseguire query con parametri. Questa funzione è ideale per eseguire un'istruzione più volte con valori di parametro diversi per ciascuna esecuzione.  
   
-Per strategie alternative per la scrittura e la lettura di grandi quantità di informazioni, vedere la pagina relativa ai [batch di istruzioni SQL](http://go.microsoft.com/fwlink/?LinkId=104225) e la pagina [BULK INSERT](http://go.microsoft.com/fwlink/?LinkId=104226).  
+Per strategie alternative per la scrittura e lettura di grandi quantità di informazioni, vedere [batch di istruzioni SQL](../../odbc/reference/develop-app/batches-of-sql-statements.md) e [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 Per altre informazioni, vedere [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene preparata ed eseguita un'istruzione. L'istruzione, quando eseguita (vedere [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), aggiorna un campo di *Sales. SalesOrderDetail* tabella del database AdventureWorks. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Nell'esempio seguente viene preparata ed eseguita un'istruzione. L'istruzione, quando eseguita (vedere [sqlsrv_execute](../../connect/php/sqlsrv-execute.md)), aggiorna un campo di *Sales. SalesOrderDetail* tabella del database AdventureWorks. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -138,7 +140,7 @@ sqlsrv_close($conn);
 ```  
   
 ## <a name="example"></a>Esempio  
-Nell'esempio seguente viene illustrato come preparare un'istruzione ed eseguirla nuovamente con valori diversi per i parametri. L'esempio aggiorna la colonna *OrderQty* della tabella *Sales.SalesOrderDetail* nel database AdventureWorks. Dopo gli aggiornamenti, viene eseguita una query nel database per verificare che gli aggiornamenti siano stati completati correttamente. Nell'esempio si presuppone che SQL Server e il database [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) siano installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nella console.  
+Nell'esempio seguente viene illustrato come preparare un'istruzione ed eseguirla nuovamente con valori diversi per i parametri. L'esempio aggiorna la colonna *OrderQty* della tabella *Sales.SalesOrderDetail* nel database AdventureWorks. Dopo gli aggiornamenti, viene eseguita una query nel database per verificare che gli aggiornamenti siano stati completati correttamente. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
 ```  
 <?php  
@@ -251,11 +253,17 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
-[Procedura: Eseguire query con parametri](../../connect/php/how-to-perform-parameterized-queries.md)  
-[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)  
-[Procedura: Inviare dati come flusso](../../connect/php/how-to-send-data-as-a-stream.md)  
-[Uso dei parametri direzionali](../../connect/php/using-directional-parameters.md)  
-[Recupero di dati](../../connect/php/retrieving-data.md)  
-[Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
-  
+[Riferimento all'API del driver SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
+
+[Procedura: Eseguire query con parametri](../../connect/php/how-to-perform-parameterized-queries.md)
+
+[Informazioni sugli esempi di codice nella documentazione](../../connect/php/about-code-examples-in-the-documentation.md)
+
+[Procedura: Inviare dati come flusso](../../connect/php/how-to-send-data-as-a-stream.md)
+
+[Uso dei parametri direzionali](../../connect/php/using-directional-parameters.md)
+
+[Recupero di dati](../../connect/php/retrieving-data.md)
+
+[Aggiornamento dei dati &#40;Driver Microsoft per PHP per SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
+

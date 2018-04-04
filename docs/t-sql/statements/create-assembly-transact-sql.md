@@ -1,16 +1,16 @@
 ---
 title: CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 8/07/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ASSEMBLY
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - CREATE ASSEMBLY statement
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-caps.latest.revision: 
+caps.latest.revision: 94
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 62fb31b65d89180fa14d75670a7c4bdbf7e9942c
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
   Crea un modulo di applicazione gestita contenente metadati di classe e codice gestito come un oggetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Facendo riferimento a questo modulo, è possibile creare nel database funzioni CLR (Common Language Runtime), stored procedure, trigger, funzioni di aggregazione definite dall'utente e tipi definiti dall'utente.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 >  [!WARNING]
 >  CLR usa la Sicurezza dall'accesso di codice (CAS, Code Access Security) in .NET Framework, non più supportata come limite di sicurezza. Un assembly CLR creato con `PERMISSION_SET = SAFE` potrebbe essere in grado di accedere alle risorse di sistema esterne, chiamare codice non gestito e acquisire privilegi sysadmin. A partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], viene introdotta un'opzione `sp_configure` denominata `clr strict security` per migliorare la sicurezza degli assembly CLR. `clr strict security` è abilitata per impostazione predefinita e considera gli assembly CLR `SAFE` e `UNSAFE` come se fossero contrassegnati `EXTERNAL_ACCESS`. È possibile disabilitare l'opzione `clr strict security` per la compatibilità con le versioni precedenti, ma questa operazione è sconsigliata. Microsoft consiglia che tutti gli assembly siano firmati con un certificato o una chiave asimmetrica con un account di accesso corrispondente che disponga dell'autorizzazione `UNSAFE ASSEMBLY` nel database master. Per altre informazioni, vedere [CLR strict security](../../database-engine/configure-windows/clr-strict-security.md).  
   

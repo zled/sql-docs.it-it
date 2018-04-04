@@ -1,16 +1,16 @@
 ---
 title: GRANT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - GRANT_TSQL
@@ -27,23 +27,23 @@ helpviewer_keywords:
 - database-level securables [SQL Server]
 - permissions [SQL Server], granting
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 618e2068c1b1e9b99a68d0216c17c66e9b2cf3d1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6b470e1247c98d35aff96e19216d0cec36650749
+ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Concede a un'entità autorizzazioni per un'entità a protezione diretta.  Il formato da usare è GRANT \<autorizzazione> ON \<oggetto> TO \<utente, account di accesso o gruppo>. Per una descrizione generale delle autorizzazioni, vedere [Autorizzazioni &#40;Motore di database&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icona di collegamento a un articolo](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un articolo")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -83,7 +83,7 @@ GRANT
   
 ## <a name="arguments"></a>Argomenti  
  ALL  
- Questa opzione è deprecata ed è stata mantenuta solo a scopo di compatibilità con le versioni precedenti. Non concede tutte le possibili autorizzazioni. La concessione di autorizzazioni tramite l'argomento ALL equivale alla concessione delle autorizzazioni seguenti.  
+ Questa opzione è deprecata ed è stata mantenuta solo a scopo di compatibilità con le versioni precedenti. Non concede tutte le possibili autorizzazioni. L'impostazione di ALL equivale a concedere le autorizzazioni seguenti: 
   
 -   Se l'entità a protezione diretta è un database, ALL corrisponde a BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE e CREATE VIEW.  
   
@@ -101,7 +101,7 @@ PRIVILEGES
  Opzione inclusa per compatibilità con lo standard ISO. Non modifica il funzionamento di ALL.  
   
 *permission*  
- Nome di un'autorizzazione. I mapping validi tra le autorizzazioni e le entità a protezione diretta sono descritti negli argomenti correlati elencati di seguito.  
+ Nome di un'autorizzazione. I mapping validi di autorizzazioni ed entità a protezione diretta sono descritti negli argomenti correlati elencati di seguito.  
   
 *column*  
  Specifica il nome di una colonna in una tabella per la quale vengono concesse autorizzazioni. È necessario utilizzare le parentesi ().  
@@ -113,7 +113,7 @@ PRIVILEGES
  Specifica l'entità a protezione diretta a cui viene concessa l'autorizzazione.  
   
 TO *principal*  
- Nome di un'entità. Le entità a cui è possibile concedere le autorizzazioni per un'entità a protezione diretta variano in base all'entità a protezione diretta specifica. Per ulteriori informazioni sulle combinazioni valide, vedere gli argomenti secondari elencati di seguito.  
+ Nome di un'entità. Le entità a cui è possibile concedere le autorizzazioni per un'entità a protezione diretta variano in base all'entità a protezione diretta specifica. Per altre informazioni sulle combinazioni valide, vedere gli argomenti secondari elencati di seguito.  
   
 GRANT OPTION  
  Indica che l'utente autorizzato potrà inoltre concedere l'autorizzazione specificata ad altre entità.  
@@ -126,7 +126,7 @@ L'uso della clausola AS in genere non è consigliabile, a meno che non sia neces
 L'uso di AS in questa istruzione non implica la possibilità di rappresentare un altro utente. 
   
 ## <a name="remarks"></a>Remarks  
- La sintassi completa dell'istruzione GRANT è complessa. Il diagramma della sintassi precedente è stato semplificato per evidenziarne la struttura. La sintassi completa per la concessioni di autorizzazioni per entità a protezione diretta specifiche viene descritta negli argomenti riportati di seguito.  
+ La sintassi completa dell'istruzione GRANT è complessa. Il diagramma della sintassi precedente è stato semplificato per evidenziarne la struttura. La sintassi completa per la concessioni di autorizzazioni per entità a protezione diretta specifiche viene descritta negli articoli riportati di seguito.  
   
  È possibile utilizzare l'istruzione REVOKE per rimuovere le autorizzazioni concesse e l'istruzione DENY per negare un'autorizzazione specifica a un'entità anche in caso di esecuzione di un'istruzione GRANT.  
   
@@ -154,17 +154,17 @@ GRANT EXECUTE ON TestMe TO User2 AS TesterRole;
 ```  
   
 ## <a name="chart-of-sql-server-permissions"></a>Grafico delle autorizzazioni di SQL Server  
- Per un grafico di grandi dimensioni di tutte le autorizzazioni [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato pdf, vedere [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142).  
+ Per un'anteprima di grandi dimensioni di tutte le autorizzazioni del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in formato pdf, vedere [https://aka.ms/sql-permissions-poster](https://aka.ms/sql-permissions-poster).  
   
 ## <a name="permissions"></a>Autorizzazioni  
- L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa. Se si utilizza l'opzione AS, sono previsti requisiti aggiuntivi. Per ulteriori informazioni, vedere l'argomento relativo alle entità a protezione diretta.  
+ L'utente che concede le autorizzazioni (o l'entità specificata con l'opzione AS) deve disporre della relativa autorizzazione con GRANT OPTION oppure di un'autorizzazione di livello superiore che include l'autorizzazione che viene concessa. Se si utilizza l'opzione AS, sono previsti requisiti aggiuntivi. Per altre informazioni dettagliate, vedere l'articolo relativo alle entità a protezione diretta.  
   
  I proprietari degli oggetti possono concedere autorizzazioni per gli oggetti di cui sono proprietari. Le entità con l'autorizzazione CONTROL per un'entità a sicurezza diretta possono concedere l'autorizzazione per quella entità.  
   
  Gli utenti che dispongono dell'autorizzazione CONTROL SERVER, ad esempio i membri del ruolo predefinito del server sysadmin, possono concedere qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel server. Gli utenti che dispongono dell'autorizzazione CONTROL in un database, ad esempio i membri del ruolo predefinito del database db_owner, possono concedere qualsiasi autorizzazione per qualsiasi entità a protezione diretta nel database. Gli utenti che dispongono dell'autorizzazione CONTROL in uno schema, possono concedere qualsiasi autorizzazione per qualsiasi oggetto all'interno dello schema.  
   
 ## <a name="examples"></a>Esempi  
- Nella tabella seguente vengono elencate le entità a protezione diretta e gli argomenti in cui viene descritta la relativa sintassi specifica.  
+ Nella tabella seguente vengono elencate le entità a protezione diretta e gli articoli in cui viene descritta la relativa sintassi specifica.  
   
 |||  
 |-|-|  

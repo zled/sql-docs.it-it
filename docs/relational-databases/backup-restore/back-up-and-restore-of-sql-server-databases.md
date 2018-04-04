@@ -1,16 +1,16 @@
 ---
 title: Backup e ripristino di database SQL Server | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - disaster recovery [SQL Server], see restoring [SQL Server]
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backups
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
-caps.latest.revision: 
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 4dddfcc3841704e7863a55253e8152b44d73a8d9
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   In questo argomento vengono descritti i vantaggi dell'esecuzione del backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e illustrati i termini di base del backup e del ripristino. Vengono inoltre presentate alcune strategie di backup e ripristino per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alcune considerazioni relative alla sicurezza per il backup e il ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > **Servono istruzioni dettagliate?** Questo argomento **non fornisce procedure specifiche per l'esecuzione di un backup**. Per informazioni specifiche sul backup, in fondo a questa pagina è presente una sezione di collegamenti, organizzati per attività di backup e in base all'uso di T-SQL o SQL Server Management Studio.  
   
  Il componente di backup e ripristino di SQL Server rappresenta uno strumento essenziale per la sicurezza e la protezione di dati di importanza critica archiviati nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ridurre il rischio di perdita irreversibile dei dati, è necessario eseguire regolarmente il backup dei database per preservare le modifiche ai dati. Una strategia di backup e ripristino ben pianificata aiuta a proteggere i database dalla perdita di dati causata da vari tipi di guasti e problemi. Il test della strategia mediante il ripristino di un set di backup e il recupero del database assicura una efficace preparazione a reagire in qualsiasi emergenza.  

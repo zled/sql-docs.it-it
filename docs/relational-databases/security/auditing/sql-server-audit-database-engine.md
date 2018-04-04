@@ -1,16 +1,16 @@
 ---
 title: Controllo di SQL Server (motore di database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/21/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -18,21 +18,23 @@ helpviewer_keywords:
 - SQL Server Audit
 - audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3ca903d27dc667095e8db79e3a92e8cb85737004
+ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Il*controllo* di un'istanza del [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] o di un database individuale comporta il rilevamento e la registrazione di eventi che si verificano nel [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit consente di creare controlli del server che possono contenere specifiche del controllo del server per gli eventi a livello di server e specifiche del controllo del database per gli eventi a livello di database. Gli eventi controllati possono essere scritti nei registri eventi o nei file di controllo.  
+  
+[!INCLUDE[ssMIlimitation](../../../includes/sql-db-mi-limitation.md)]
   
  Per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]sono disponibili numerosi livelli di controllo, a seconda dei requisiti legislativi o standard previsti per la propria installazione. In[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit sono disponibili gli strumenti e i processi necessari per abilitare, archiviare e visualizzare controlli in vari oggetti server e di database.  
   
@@ -131,7 +133,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mirroring del database e SQL Server Audit  
  Un database che dispone di una specifica del controllo del database definita e che utilizza il mirroring del database includerà la specifica del controllo del database. Per funzionare correttamente sull'istanza SQL Server con mirroring, è necessario che siano configurati gli elementi seguenti:  
   
--   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Per questa configurazione usare il comando CREATE AUDIT WITH GUID**=***\<<GUID del controllo del server di origine>*.  
+-   Il server mirror deve disporre di un controllo con lo stesso GUID per consentire alla specifica del controllo del database di scrivere i record di controllo. Per questa configurazione usare il comando CREATE AUDIT WITH GUID**=***\<GUID del controllo del server di origine*>.  
   
 -   Per le destinazioni del file binario, l'account di servizio del server mirror deve disporre delle autorizzazioni appropriate per il percorso in cui verrà scritto l'itinerario di controllo.  
   
@@ -188,7 +190,7 @@ ms.lasthandoff: 11/21/2017
 > [!CAUTION]  
 >  Le entità nel ruolo sysadmin possono alterare qualsiasi componente del controllo, mentre quelle nel ruolo db_owner possono alterare le specifiche del controllo in un database. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit convaliderà una situazione in cui un accesso che crea o modifica una specifica del controllo dispone almeno dell'autorizzazione ALTER ANY DATABASE AUDIT, ma non esegue alcuna convalida quando si collega un database. È necessario presupporre che tutte le specifiche del controllo del database siano attendibile come le entità nel ruolo sysadmin o db_owner.  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [Creazione di un controllo del server e di una specifica del controllo del database](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  

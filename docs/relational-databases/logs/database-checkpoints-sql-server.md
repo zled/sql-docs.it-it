@@ -30,19 +30,19 @@ helpviewer_keywords:
 - active logs
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b46508013b66ab14175b0edc2710c9c98ed901a9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7c82c775f808b1747261f3ce33d46ca467d8bca1
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Un *checkpoint* crea un punto valido noto da cui [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può iniziare ad applicare le modifiche contenute nel log durante il recupero successivo a un arresto anomalo del sistema.  
+ Un *checkpoint* crea un punto valido noto da cui [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] può iniziare ad applicare le modifiche contenute nel log durante il recupero successivo a un arresto anomalo del sistema.  
  
   
 ##  <a name="Overview"></a> Panoramica   
@@ -55,7 +55,7 @@ Per motivi legati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ss
 |Automatico|EXEC sp_configure **'**recovery interval**','***seconds***'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall'opzione di configurazione del server **intervallo di recupero** . I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 50 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server intervallo di recupero](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indiretto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], il valore predefinito è 1 minuto. Il valore predefinito è 0 per le versioni precedenti, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Emesso quando si esegue un comando CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il checkpoint manuale si verifica nel database corrente per la connessione. Per impostazione predefinita, i checkpoint manuali vengono eseguiti fino al completamento. La limitazione funziona come per i checkpoint automatici.  Facoltativamente, il parametro *checkpoint_duration* specifica una quantità di tempo richiesta, in secondi, per il completamento del checkpoint.<br /><br /> Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
-|Interno|nessuna.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
+|Interno|Nessuna.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
   
 >[!NOTE]
 > L'opzione di impostazione avanzata **-k** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente a un amministratore del database di limitare il comportamento di I/O del checkpoint in base alla velocità effettiva del sottosistema di I/O per alcuni tipi di checkpoint. L'opzione di impostazione **-k** riguarda i checkpoint automatici e i checkpoint interni e manuali senza limitazione.  

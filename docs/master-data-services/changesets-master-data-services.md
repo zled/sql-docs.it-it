@@ -1,19 +1,19 @@
 ---
 title: Insiemi di modifiche (Master Data Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - master-data-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
-caps.latest.revision: 
+caps.latest.revision: ''
 author: leolimsft
 ms.author: lle
 manager: craigg
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/05/2018
   
     1.  Creare un insieme di modifiche. Lo stato dell'insieme di modifiche è Aperto. Vedere [Creare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
-    2.  Applicare l'insieme di modifiche e aggiungere alcune modifiche all'insieme. Vedere [Apply and Update a Changeset &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
+    2.  Applicare l'insieme di modifiche e aggiungere alcune modifiche all'insieme. Vedere [Applicare e aggiornare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)  
   
     3.  Inviare l'insieme di modifiche all'amministratore di entità per l'approvazione. Lo stato dell'insieme di modifiche è In sospeso. Vedere [Eseguire il commit o inviare un insieme di modifiche &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   

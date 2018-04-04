@@ -21,19 +21,19 @@ helpviewer_keywords:
 - classes [WMI]
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 743d51467ade689f46643e566779dd507e852fe9
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: d46971f891f8f86389c70c74153be88ef65e0742
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Classi del provider WMI per la gestione della configurazione
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Il provider WMI (Windows Management Instrumentation, Strumentazione gestione Windows) per la gestione della configurazione fornisce funzionalità per le classi seguenti:  
+  Il provider WMI (Windows Management Instrumentation, Strumentazione gestione Windows) per la gestione della configurazione fornisce funzionalità per le classi seguenti:  
   
  [Classe CInstance](../../relational-databases/wmi-provider-configuration-classes/cinstance-class.md)  
   

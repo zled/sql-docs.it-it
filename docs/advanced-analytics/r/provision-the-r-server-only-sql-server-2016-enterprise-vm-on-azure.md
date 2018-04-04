@@ -1,25 +1,25 @@
 ---
 title: Eseguire il provisioning di una macchina virtuale per machine learning in Azure | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c8826df7-aa67-4768-baa9-bdc875c4a766
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.openlocfilehash: 62e1c347a3c5ee110e6865cd8c13ade76ba62b80
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.sourcegitcommit: 270de8a0260fa3c0ecc37f91eec4a5aee9b9834a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/27/2018
 ---
 # <a name="provision-a-virtual-machine-for-machine-learning-on-azure"></a>Eseguire il provisioning di una macchina virtuale per machine learning in Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +74,7 @@ Una macchina virtuale basato su Windows per SQL Server 2017 Enterprise Edition c
 Per gli annunci relativi nuove macchine virtuali di analisi scientifica dei dati, controllare i siti di blog:
 
 + [Cortana Intelligence e Machine Learning](https://blogs.technet.microsoft.com/machinelearning/)
-+ [Data Platform Insider](https://blogs.technet.microsoft.com/dataplatforminsider/)
++ [Data Platform Insider di](https://blogs.technet.microsoft.com/dataplatforminsider/)
 
 ### <a name="adding-sql-server-to-an-existing-virtual-machine"></a>Aggiunta di SQL Server a una macchina virtuale esistente
 
@@ -120,7 +120,7 @@ Il "RRE per macchina virtuale Windows" che in precedenza era disponibile in Azur
 
 Sono disponibili per Linux CentOS versione 7.2, Linux RedHat 7.2 e Ubuntu versione 16.04 anche le immagini della macchina Server di apprendimento.
 
-Per ulteriori informazioni, vedere [Machine Learning Server nel Cloud](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
+Per altre informazioni, vedere [Machine Learning Server nel Cloud](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-in-the-cloud)
 
 ### <a name="configuring-machine-learning-server-or-r-server-to-support-web-services"></a>Configurazione di Server di Machine Learning o R Server per supportare i servizi web
 
@@ -130,7 +130,7 @@ Per istruzioni, vedere [configurazione del Server di Machine Learning per render
 
 Configurazione aggiuntiva non è necessario se si desidera utilizzare i pacchetti, ad esempio RevoScaleR o MicrosoftML.
 
-## <a name="bkmk_list"></a>Elenco di macchine virtuali
+## <a name="bkmk_list"></a> Elenco di macchine virtuali
 
 Le macchine virtuali seguenti sono attualmente disponibili per machine learning con SQL Server:
 

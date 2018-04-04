@@ -1,27 +1,28 @@
 ---
 title: Gestione di un dominio | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/31/2012
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ca23eae8c1593e9bc5d8a9a58402b6a46d7603d
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 7e988d58dc4f160ae85273762173d129c2cc9c2c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
   In questo argomento viene descritto l'utilizzo dei domini in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio contiene una rappresentazione semantica dei dati in un campo specifico nell'origine dati che deve essere analizzata. Un dominio fa parte della Knowledge Base che si crea per un'origine dati e le informazioni che si accumulano analizzando un'origine dati di esempio, o importando dati, vengono aggiunte ai domini definiti nella Knowledge Base. Le informazioni in tali domini verranno in seguito utilizzate per eseguire attività di pulizia e di individuazione delle corrispondenze in un progetto Data Quality. I domini sono al centro di tutte le attività in Data Quality Services.  

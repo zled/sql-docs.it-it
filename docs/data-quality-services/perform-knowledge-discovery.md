@@ -1,15 +1,16 @@
 ---
 title: Eseguire l'individuazione di informazioni | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/04/2013
 ms.prod: sql-non-specified
 ms.prod_service: data-quality-services
-ms.service: 
+ms.service: ''
 ms.component: data-quality-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: data-quality-services
-ms.tgt_pltfrm: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dqs.kb.kbterms.f1
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.dqs.kb.kbanalyze.f1
 - sql13.dqs.kb.kbmap.f1
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-caps.latest.revision: "38"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9c9cb4fb01f38cf1a65069dbd41ccc4d5d0aa91b
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 0958845553a92f18e64c5fd39a3a62229bf9ed7b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="perform-knowledge-discovery"></a>Esecuzione dell'individuazione delle informazioni
   In questo argomento viene descritto come compilare una Knowledge Base tramite l'individuazione delle informazioni. Durante il processo di individuazione in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vengono analizzati i dati in un'origine dati di esempio tramite un processo computerizzato e vengono aggiunte le informazioni ottenute dalla Knowledge Base. Tali informazioni possono essere modificate e migliorate nel passaggio **Gestisci valori di dominio** dell'attività di individuazione delle informazioni o nell'attività di gestione del dominio.  

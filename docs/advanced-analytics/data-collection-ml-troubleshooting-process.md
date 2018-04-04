@@ -1,28 +1,28 @@
 ---
 title: Risoluzione dei problemi di raccolta dati per l'apprendimento automatico, SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 06/16/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - R
-caps.latest.revision: 
+caps.latest.revision: ''
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: ee3b5fb649d659ade9cca22292aa5c8715f515c8
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 95b70a2992b5c43ebaefb8faa729ec16ac3c84f7
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Risoluzione dei problemi di raccolta dati per l'apprendimento automatico
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,7 +51,7 @@ Assistenza per determinare quale edizione e la versione, vedere l'articolo, in c
 
 A seconda dell'edizione di SQL Server in uso, alcune funzionalità di apprendimento automatico potrebbe essere non disponibile o limitate.
 
-Vedere gli argomenti seguenti per un elenco delle funzionalità di machine learning nelle edizioni Enterprise, Developer, Standard ed Express.
+Vedere gli articoli seguenti per un elenco delle funzionalità di machine learning nelle edizioni Enterprise, Developer, Standard ed Express.
 
 * [Edizioni e le funzionalità supportate di SQL Server](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
 * [Differenze nelle funzionalità di R tra le edizioni di SQL Server](https://docs.microsoft.com/sql/advanced-analytics/r/differences-in-r-features-between-editions-of-sql-server)
@@ -146,7 +146,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Se non è in esecuzione servizi di Machine Learning, è possibile determinare la versione installata di Python esaminando il file pythonlauncher.config. Si consiglia di verificare e aprire una copia del file in modo da non modificare accidentalmente alcuna proprietà.
 
-1. Solo per SQL Server 2017:`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
+1. Solo per SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
 2. Ottenere il valore di **PYTHONHOME**.
 3. Ottenere il valore della directory di lavoro corrente.
 
@@ -253,7 +253,7 @@ Ad esempio, i messaggi di log seguenti riguardano il framework di estendibilità
 
 * *Inizializzazione di gestore del contesto di sicurezza non riuscita* 
 
-* *Inizializzazione di gestione di sessioni satellite non riuscita*
+* *Inizializzazione di gestione di sessioni satellite non è riuscita*
 
 ### <a name="are-there-any-related-system-events"></a>Sono presenti tutti gli eventi di sistema correlate?
 
@@ -262,7 +262,7 @@ Ad esempio, i messaggi di log seguenti riguardano il framework di estendibilità
 
 Ad esempio, i messaggi seguenti sono comuni errori di sistema che riguardano il framework di estendibilità di SQL Server: 
 
-* *Il servizio SQL Server Launchpad (MSSQLSERVER) non è stato possibile avviare a causa dell'errore seguente:<text>*
+* *Il servizio SQL Server Launchpad (MSSQLSERVER) non è stato possibile avviare a causa dell'errore seguente:  <text>*
 
 * *Il servizio non ha risposto alla richiesta di avvio o di controllo in modo tempestivo.* 
 
@@ -310,7 +310,7 @@ Per singoli account utente:
    - Tutti tranne *db_owner*: richiedono EXECUTE ANY EXTERNAL SCRIPT.
    - *db_datawriter*: per scrivere i risultati da R o Python. 
    - *db_ddladmin*: per creare nuovi oggetti. 
-   - *db_datareader*: per leggere i dati che viene utilizzati dal codice R o Python. 
+   - *db_datareader*: leggere i dati utilizzati da codice Python o R. 
 4. Nota Se è stato modificato qualsiasi account di avvio predefiniti durante l'installazione di SQL Server 2016.
 5. Se un utente deve installare i nuovi pacchetti R o utilizzare i pacchetti R che sono stati installati da altri utenti, è necessario abilitare la gestione dei pacchetti nell'istanza e quindi assegnare le autorizzazioni aggiuntive. Per ulteriori informazioni, vedere [abilitare o disabilitare la gestione dei pacchetti R](r\r-package-how-to-enable-or-disable.md).
 
@@ -338,7 +338,7 @@ Un'installazione di R di base include più strumenti che è possibile utilizzare
 
 Se il runtime di R è funzionante, ma lo script restituisce errori, è consigliabile provare il debug di script in un ambiente di sviluppo R dedicato, ad esempio strumenti R per Visual Studio.
 
-È inoltre consigliabile esaminare e leggermente riscrivere lo script per risolvere eventuali problemi con i tipi di dati che potrebbero verificarsi quando si spostano dati tra R e il motore di database. Per ulteriori informazioni, vedere [R librerie e tipi di dati](r/r-libraries-and-data-types.md).
+È inoltre consigliabile esaminare e leggermente riscrivere lo script per risolvere eventuali problemi con i tipi di dati che potrebbero verificarsi quando si spostano dati tra R e il motore di database. Per altre informazioni, vedere [tipi di dati e delle librerie R](r/r-libraries-and-data-types.md).
 
 Inoltre, è possibile utilizzare il pacchetto sqlrutils per raggruppare script R in un formato più facilmente utilizzabile come una stored procedure. Per altre informazioni, vedere:
 * [Generare una stored procedure per il codice R tramite il pacchetto sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
@@ -346,4 +346,4 @@ Inoltre, è possibile utilizzare il pacchetto sqlrutils per raggruppare script R
 
 ## <a name="see-also"></a>Vedere anche
 
-[Risoluzione dei problemi di apprendimento in SQL Server](machine-learning-troubleshooting-faq.md)
+[Risolvere i problemi di apprendimento automatico in SQL Server](machine-learning-troubleshooting-faq.md)

@@ -1,15 +1,16 @@
 ---
 title: Gestire i processi in un'organizzazione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - multiserver job management [SQL Server]
@@ -18,19 +19,24 @@ helpviewer_keywords:
 - SQL Server Agent jobs, modifying
 - target servers [SQL Server], job changes
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b973e138659e09adf6f246614420b2d0437c7133
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d86d60ceb74886eb90eed7ce060aca303a95b13b
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>Gestire i processi in un'azienda
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Se non si usa [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per apportare modifiche a definizioni di processi multiserver, è necessario inviare le modifiche all'elenco di download per consentire ai server di destinazione di scaricare nuovamente il processo aggiornato. Per garantire che i server di destinazione dispongano delle definizioni dei processi più aggiornate, inviare un'istruzione INSERT dopo l'aggiornamento del processo multiserver:  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+Se non si usa [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per apportare modifiche a definizioni di processi multiserver, è necessario inviare le modifiche all'elenco di download per consentire ai server di destinazione di scaricare nuovamente il processo aggiornato. Per garantire che i server di destinazione dispongano delle definizioni dei processi più aggiornate, inviare un'istruzione INSERT dopo l'aggiornamento del processo multiserver:  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  

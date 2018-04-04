@@ -1,29 +1,29 @@
 ---
 title: Architettura | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: python
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 5ca823bc7094c77a31cfd3178294cd49a360d77a
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 1cea2b772ec098a5354727ac9eca012ef443e3e6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-machine-learning-services-with-python"></a>Panoramica dell'architettura per i servizi di Machine Learning con Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo argomento viene fornita una panoramica di come Python è integrato con SQL Server, tra cui il modello di sicurezza, i componenti motore di database che supportano l'esecuzione dello script esterno e nuovi componenti che consentono l'interoperabilità di Python con SQL Server. Per informazioni dettagliate, vedere gli argomenti collegati.
+Questo articolo fornisce una panoramica delle modalità di integrazione Python con SQL Server, quali il modello di sicurezza, i componenti motore di database che supportano l'esecuzione dello script esterno e nuovi componenti che consentono l'interoperabilità di Python con SQL Server. Per informazioni dettagliate, vedere gli articoli collegati.
 
 > [!IMPORTANT]
 > Supporto per Python è disponibile a partire da SQL Server 2017 CTP 2.0. Questa funzionalità non definitiva è soggetta a modifiche.
@@ -56,4 +56,4 @@ Per ulteriori informazioni, vedere [governance delle risorse per R](../../advanc
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-[Eseguire Python con T-SQL](../tutorials/run-python-using-t-sql.md)
+[Eseguire Python utilizzando T-SQL](../tutorials/run-python-using-t-sql.md)

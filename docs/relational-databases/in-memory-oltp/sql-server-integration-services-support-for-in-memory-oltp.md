@@ -14,19 +14,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 caps.latest.revision: 
-author: JennieHubbard
-ms.author: jhubbard
+author: CarlRabeler
+ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57a7662de278ed7122583bc62ab02895f29aeb8f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: a73d5f22778702b943860dce5fc2a155385fab47
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Supporto di SQL Server Integration Services per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-È possibile usare una tabella ottimizzata per la memoria, una vista che fa riferimento a tabelle ottimizzate per la memoria o una stored procedure compilata in modo nativo come origine o destinazione del pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). È possibile usare [ADO NET Source](../../integration-services/data-flow/ado-net-source.md), [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)o [ODBC Source](../../integration-services/data-flow/odbc-source.md) nel flusso di dati di un pacchetto SSIS e configurare il componente di origine per recuperare i dati da una tabella ottimizzata per la memoria o una vista oppure specificare un'istruzione SQL per eseguire una stored procedure compilata in modo nativo. Analogamente, è possibile usare [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md), [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)o [ODBC Destination](../../integration-services/data-flow/odbc-destination.md) per caricare i dati in una tabella ottimizzata per la memoria o una vista oppure specificare un'istruzione SQL per eseguire una stored procedure compilata in modo nativo.  
+  È possibile usare una tabella ottimizzata per la memoria, una vista che fa riferimento a tabelle ottimizzate per la memoria o una stored procedure compilata in modo nativo come origine o destinazione del pacchetto di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS). È possibile usare [ADO NET Source](../../integration-services/data-flow/ado-net-source.md), [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)o [ODBC Source](../../integration-services/data-flow/odbc-source.md) nel flusso di dati di un pacchetto SSIS e configurare il componente di origine per recuperare i dati da una tabella ottimizzata per la memoria o una vista oppure specificare un'istruzione SQL per eseguire una stored procedure compilata in modo nativo. Analogamente, è possibile usare [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md), [OLE DB Destination](../../integration-services/data-flow/ole-db-destination.md)o [ODBC Destination](../../integration-services/data-flow/odbc-destination.md) per caricare i dati in una tabella ottimizzata per la memoria o una vista oppure specificare un'istruzione SQL per eseguire una stored procedure compilata in modo nativo.  
   
  È possibile configurare i componenti di origine e destinazione precedentemente citati in un pacchetto SSIS per le operazioni di lettura/scrittura nelle tabelle ottimizzate per la memoria e nelle viste nello stesso modo di altre tabelle e viste di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, è necessario considerare gli aspetti importanti nella sezione seguente quando si utilizzano le stored procedure compilate in modo nativo.  
   

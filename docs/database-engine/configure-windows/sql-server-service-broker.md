@@ -1,15 +1,16 @@
 ---
 title: SQL Server Service Broker | Microsoft Docs
-ms.custom: 
-ms.date: 08/01/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - SQL13.SWB.SSBMSGTYPEPROPERTIES.GENERAL.F1
@@ -24,21 +25,25 @@ helpviewer_keywords:
 - SQL Server Service Broker
 - Service Broker
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20407c3b614ed6e977e2ba69ba687b75f7d18fdf
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fab7b17dd546ed4723df73d3ee166e125090b57d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il supporto nativo per le applicazioni di messaggistica e accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Questa caratteristica semplifica il lavoro degli sviluppatori per creare applicazioni complesse che utilizzano i componenti di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per comunicare tra database diversi. Gli sviluppatori possono utilizzare [!INCLUDE[ssSB](../../includes/sssb-md.md)] per compilare con facilità applicazioni distribuite e affidabili.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] include il supporto nativo per le applicazioni di messaggistica e accodamento nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Questa caratteristica semplifica il lavoro degli sviluppatori per creare applicazioni complesse che utilizzano i componenti di [!INCLUDE[ssDE](../../includes/ssde-md.md)] per comunicare tra database diversi. Gli sviluppatori possono utilizzare [!INCLUDE[ssSB](../../includes/sssb-md.md)] per compilare con facilità applicazioni distribuite e affidabili.  
   
  Gli sviluppatori di applicazioni che utilizzano [!INCLUDE[ssSB](../../includes/sssb-md.md)] possono distribuire il carico di lavoro su più database senza programmare interni di comunicazione e messaggistica complessi. In questo modo, è possibile ottenere una riduzione delle attività di sviluppo e test, in quanto [!INCLUDE[ssSB](../../includes/sssb-md.md)] gestisce i percorsi di comunicazione nel contesto di una conversazione, con conseguente miglioramento delle prestazioni. Ad esempio, i database front-end che supportano i siti Web possono registrare le informazioni e mettere in coda le attività con molti processi nei database back-end. [!INCLUDE[ssSB](../../includes/sssb-md.md)] si assicura che tutte le attività vengano gestite nel contesto delle transazioni per garantire affidabilità e coerenza tecnica.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
 ## <a name="where-is-the-documentation-for-service-broker"></a>Dove si trova la documentazione per Service Broker?  
  La documentazione di riferimento per [!INCLUDE[ssSB](../../includes/sssb-md.md)] è inclusa nella documentazione di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Nella documentazione di riferimento sono incluse le sezioni seguenti:  

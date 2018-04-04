@@ -1,15 +1,16 @@
 ---
 title: Eseguire il polling dei server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-agent
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - target servers [SQL Server], polling interval
@@ -18,19 +19,24 @@ helpviewer_keywords:
 - master servers [SQL Server], polling
 - polling interval [SQL Server]
 ms.assetid: 96f5fd43-3edd-4418-9dd0-4d34e618890e
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc6cbe3e91315892016bcc800b6381b8770a9897
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 4157f5773cca95a02e8d89c3c535f409c0a9a54c
+ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="poll-servers"></a>Polling dei server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Quando viene implementata un'amministrazione multiserver, i server di destinazione contattano periodicamente il server master per caricare le informazioni relative ai processi eseguiti e per eseguire il download di nuovi processi. L'operazione in cui viene contattato il server master, chiamata *polling del server* , viene eseguita a *intervalli di polling*regolari.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+> [!IMPORTANT]  
+> In [Istanza gestita di database SQL di Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) sono attualmente supportate la maggior parte delle funzionalità di SQL Server Agent, ma non tutte. Per informazioni dettagliate, vedere [Differenze T-SQL tra Istanza gestita del database SQL di Azure e SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent).
+
+Quando viene implementata un'amministrazione multiserver, i server di destinazione contattano periodicamente il server master per caricare le informazioni relative ai processi eseguiti e per eseguire il download di nuovi processi. L'operazione in cui viene contattato il server master, chiamata *polling del server* , viene eseguita a *intervalli di polling*regolari.  
   
 ## <a name="polling-intervals"></a>Intervalli di polling  
 L'intervallo di polling, la cui impostazione predefinita è un minuto, controlla la frequenza con cui il server di destinazione contatta il server master per eseguire il download delle istruzioni e per caricare i risultati dell'esecuzione dei processi.  
@@ -51,7 +57,7 @@ EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 Il comando consente di mantenere i server di destinazione sincronizzati con la definizione del processo corrente.  
   
-Non è necessario inviare operazioni in modo esplicito se si utilizza:  
+Se si usano gli elementi seguenti non è necessario inviare operazioni in modo esplicito:  
   
 -   Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] per controllare i processi multiserver.  
   

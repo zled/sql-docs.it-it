@@ -1,16 +1,16 @@
 ---
-title: Reporting Services (SSRS) | Microsoft Docs
-description: Informazioni sugli strumenti e i servizi per i report Reporting Services impaginati e per dispositivi mobili e per i report Power BI in locale.
-ms.custom: 
-ms.date: 07/01/2017
+title: Che cos'è SQL Server Reporting Services (SSRS) | Microsoft Docs
+description: Informazioni sugli strumenti e i servizi per i report di Reporting Services impaginati e per dispositivi mobili in locale.
+ms.custom: ''
+ms.date: 03/16/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 helpviewer_keywords:
 - reports [Reporting Services]
@@ -19,24 +19,24 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-caps.latest.revision: 
+caps.latest.revision: ''
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 85377a9d96bbaa8d7d94dacafc0989d3089ff7dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8f7c8f1fb8e72ba3861df9b4ac015468dc143459
+ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Che cos'è SQL Server Reporting Services (SSRS)?
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)] Per informazioni sul server di report di Power BI Vedere [Introduzione al server di report di Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
-Creare, distribuire e gestire report Reporting Services impaginati e per dispositivi mobili e report Power BI in locale con la gamma di strumenti e servizi pronti all'uso offerti da SQL Server Reporting Services (SSRS) e Power BI.
+Creare, distribuire e gestire report impaginati e per dispositivi mobili di Reporting Services in locale, con la gamma di strumenti e servizi pronti all'uso offerti da SQL Server Reporting Services (SSRS).
 
 ![SQL Server Reporting Services su tutti i dispositivi](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services su tutti i dispositivi")
 
@@ -48,12 +48,9 @@ Per SQL Server 2016, Reporting Services offre una famiglia di prodotti aggiornat
 
 * **Report impaginati "tradizionali"** aggiornati, in modo da poter creare report dall'aspetto moderno, con strumenti aggiornati e nuove funzionalità per crearli.
 * **Nuovi report per dispositivi mobili** con un layout reattivo, in grado di adattarsi a diversi dispositivi e a diverse modalità di orientamento.
-* **Un portale Web moderno** visualizzabile in qualsiasi browser moderno. Nel nuovo portale è possibile organizzare e visualizzare report impaginati e per dispositivi mobili e indicatori KPI di Reporting Services, oltre a report di Power BI Desktop. È anche possibile archiviare cartelle di lavoro di Excel nel portale.
+* **Un portale Web moderno** visualizzabile in qualsiasi browser moderno. Nel nuovo portale è possibile organizzare e visualizzare report impaginati e per dispositivi mobili e indicatori KPI di Reporting Services. È anche possibile archiviare cartelle di lavoro di Excel nel portale.
 
 Nelle sezioni che seguono sono disponibili informazioni più dettagliate.
-
-> [!NOTE]
-> Per informazioni sul server di report di Power BI, Vedere [Introduzione al server di report di Power BI](https://powerbi.microsoft.com/documentation/reportserver-get-started/).
 
 ### <a name="whats-new-in-reporting-services"></a>Novità di Reporting Services
 
@@ -90,13 +87,13 @@ I report per dispositivi mobili vengono creati con la nuova app [Mobile Report P
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-Per gli utenti finali di Reporting Services in modalità nativa, la porta d'ingresso è un portale Web moderno che è possibile visualizzare in qualsiasi browser moderno. È possibile accedere a tutti i report impaginati e per dispositivi mobili e gli indicatori KPI di Reporting Services e anche ai report di Power BI Desktop. Per altre informazioni, vedere [Power BI reports in Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md) (Report di Power BI in Reporting Services).  
+Per gli utenti finali di Reporting Services in modalità nativa, la porta d'ingresso è un portale Web moderno che è possibile visualizzare in qualsiasi browser moderno. È possibile accedere a tutti i report impaginati e per dispositivi mobili e gli indicatori KPI di Reporting Services.
 
 Nel portale Web è possibile applicare una grafica personalizzata e anche creare indicatori KPI, in modo da visualizzare le principali metriche aziendali immediatamente nel browser, senza dover aprire un report. 
 
 Il nuovo portale Web è una riscrittura completa di Report Manager. È ora diventato un'app HTML5 a pagina singola, basata su standard, per cui sono ottimizzati i browser moderni: Microsoft Edge, Internet Explorer 10 e 11, Chrome, Firefox, Safari e tutti i browser più diffusi.
 
-Il contenuto del portale Web è organizzato in base al tipo: report impaginati e per dispositivi mobili e indicatori KPI di Reporting Services, report di Power BI Desktop, cartelle di lavoro di Excel, set di dati condivisi e origini dati condivise da usare come blocchi predefiniti per i report. È possibile archiviare e gestire questi elementi in modo sicuro nel portale con la gerarchia di cartelle classica. È possibile contrassegnare i preferiti e gestire il contenuto, se si dispone del ruolo appropriato.
+Il contenuto del portale Web è organizzato in base al tipo: report impaginati e per dispositivi mobili e indicatori KPI di Reporting Services, cartelle di lavoro di Excel, set di dati condivisi e origini dati condivise da usare come blocchi predefiniti per i report. È possibile archiviare e gestire questi elementi in modo sicuro nel portale con la gerarchia di cartelle classica. È possibile contrassegnare i preferiti e gestire il contenuto, se si dispone del ruolo appropriato.
 
 Nel nuovo portale Web è ancora possibile pianificare l'elaborazione dei report, accedere ai report su richiesta e sottoscrivere report pubblicati.
 
@@ -119,6 +116,5 @@ Per altre informazioni, vedere [Guida per gli sviluppatori (Reporting Services)]
 * [Installare Reporting Services](../reporting-services/install-windows/install-reporting-services.md)  
 * [Installare Generatore report](../reporting-services/install-windows/install-report-builder.md)   
 * [Scaricare SQL Server Data Tools (SSDT)](http://go.microsoft.com/fwlink/?LinkID=616714)  
-* [Power BI reports in Reporting Services](../reporting-services/power-bi-reports-in-reporting-services.md) (Report di Power BI in Reporting Services)
 
 Altre domande? [Visitare il forum su Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -4,7 +4,8 @@ ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
 ms.component: samples
-ms.technology: samples
+ms.technology:
+- samples
 ms.custom: 
 ms.date: 01/30/2017
 ms.reviewer: 
@@ -12,20 +13,21 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4d4dcb00-b93e-44db-9d67-061702bba41a
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BarbKess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 658c1b3ffd44cd2194c75d6ad45888e24e0772c1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4d22aada117e3230e36aa52e911f31eea53439e
+ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="wide-world-importers-overview"></a>Panoramica di Wide World Importers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Questa è una panoramica della società fittizia Wide World Importers e i flussi di lavoro che vengono affrontati nel database di esempio WideWorldImporters per SQL Server e Database SQL di Azure.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+Questa è una panoramica della società fittizia Wide World Importers e i flussi di lavoro che vengono affrontati nel database di esempio WideWorldImporters per SQL Server e Database SQL di Azure.  
 
 Wide World Importers (WWI) è un importatore di merci originalità all'ingrosso e operativo dall'area di San Francisco alloggiamenti server di distribuzione.
 
@@ -69,6 +71,6 @@ L'azienda opera con un esercizio che inizia il 1 ° novembre.
 
 ## <a name="terms-of-use"></a>Condizioni di utilizzo
 
-La licenza per il database di esempio e il codice di esempio descritto di seguito: [License](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+La licenza per il database di esempio e il codice di esempio descritto di seguito: [License. txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-Il database di esempio include dati pubblici che sono stati caricati dal data.gov ed EarthData naturale. In questa sezione sono le condizioni di utilizzo: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)
+Il database di esempio include dati pubblici che sono stati caricati dal data.gov ed EarthData naturale. In questa sezione sono riportate le condizioni di utilizzo: [http://www.naturalearthdata.com/about/terms-of-use/](http://www.naturalearthdata.com/about/terms-of-use/)

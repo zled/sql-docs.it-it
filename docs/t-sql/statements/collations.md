@@ -1,16 +1,16 @@
 ---
 title: Regole di confronto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - COLLATE
@@ -21,21 +21,23 @@ helpviewer_keywords:
 - collations [SQL Server], COLLATE clause
 - COLLATE clause
 ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7a206f638b78a5e4311ab7889a7902aa39a17413
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+ms.openlocfilehash: a59320941ecd488abbaa728968a1326525682839
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="collations"></a>Regole di confronto
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Clausola che è possibile applicare a una definizione di database o di colonna per definire le regole di confronto oppure a un'espressione stringa di caratteri per applicare il casting delle regole di confronto.  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -105,6 +107,9 @@ FROM fn_helpcollations();
   
 -   Durante il ripristino o il collegamento di un database è necessario che le regole di confronto predefinite del database e quelle delle colonne o dei parametri di tipo **char**, **varchar** e **text** presenti nel database siano supportate dal sistema operativo.  
   
+> [!NOTE]
+> Le regole di confronto del server di Istanza gestita di database SQL di Azure sono **SQL_Latin1_General_CP1_CI_AS** e non possono essere modificate.
+
 > [!NOTE]
 > Le conversioni tra tabelle codici sono supportate per i tipi di dati **char** e **varchar**, ma non per il tipo di dati **text**. L'eventuale perdita di dati che si verifica durante la conversione tra tabelle codici non viene segnalata.  
   

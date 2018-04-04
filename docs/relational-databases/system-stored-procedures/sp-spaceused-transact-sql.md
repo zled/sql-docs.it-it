@@ -1,16 +1,16 @@
 ---
 title: sp_spaceused (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_spaceused_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 670fc2eaf7d6e5c4e499ff57c3a5564bec903ac1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,44 +50,44 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Argomenti  
 
-Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spacedused` deve specificare i parametri denominati (ad esempio `sp_spacedused (@objname= N'Table1');` anziché basarsi sulla posizione ordinale dei parametri. 
+Per [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` deve specificare i parametri denominati (ad esempio `sp_spaceused (@objname= N'Table1');` anziché basarsi sulla posizione ordinale dei parametri. 
 
  [  **@objname=**] **'***objname***'** 
    
  Nome completo o non qualificato della tabella, della vista indicizzata o della coda per cui si desidera ottenere informazioni sull'utilizzo dello spazio. Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Se viene specificato un nome di oggetto completo, ovvero contenente un nome di database, il nome del database deve essere quello del database corrente.  
 Se *objname* viene omesso, vengono restituiti risultati per l'intero database.  
-*objname* è **nvarchar(776)**, con un valore predefinito è NULL.  
+*objname* viene **nvarchar(776)**, con un valore predefinito è NULL.  
 > [!NOTE]  
-> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)]e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] supportano solo gli oggetti di database e tabella.
+> [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] e [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] supportano solo gli oggetti di database e la tabella.
   
  [  **@updateusage=**] **'***updateusage***'**  
- Esegue l'istruzione DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo dello spazio. Quando *objname* viene omesso, l'istruzione viene eseguita sull'intero database; in caso contrario, l'istruzione viene eseguita *objname*. I valori possono essere **true** o **false**. *UPDATEUSAGE* è **varchar (5)**, il valore predefinito è **false**.  
+ Esegue l'istruzione DBCC UPDATEUSAGE per aggiornare le informazioni sull'utilizzo dello spazio. Quando *objname* viene omesso, l'istruzione viene eseguita sull'intero database; in caso contrario, l'istruzione viene eseguita *objname*. I valori possono essere **true** o **false**. *UPDATEUSAGE* viene **varchar (5)**, il valore predefinito è **false**.  
   
  [  **@mode=**] **'***modalità***'**  
  Indica l'ambito dei risultati. Per un database, o una tabella estesa di *modalità* parametro consente di includere o escludere la parte remota dell'oggetto. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
  Il *modalità* argomento può avere i valori seguenti:  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ALL|Restituisce le statistiche di archiviazione dell'oggetto o database, inclusi la parte locale sia la parte remota.|  
 |LOCAL_ONLY|Restituisce le statistiche di archiviazione solo la parte locale del database o oggetto. Se l'oggetto o il database non è abilitata per l'estensione, restituisce le stesse statistiche come quando @mode = ALL.|  
 |REMOTE_ONLY|Restituisce le statistiche di archiviazione di solo la parte remota dell'oggetto o database. Questa opzione genera un errore quando viene soddisfatta una delle condizioni seguenti:<br /><br /> La tabella non è abilitata per l'estensione.<br /><br /> La tabella è abilitata per l'estensione, ma la migrazione dei dati non è abilitato. In questo caso, la tabella remota non dispone ancora di uno schema.<br /><br /> L'utente ha rimosso manualmente la tabella remota.<br /><br /> Il provisioning dell'archivio dati remoto ha restituito uno stato di esito positivo, ma in realtà non è riuscito.|  
   
- *modalità* è **varchar (11)**, il valore predefinito è **stored '**.  
+ *modalità* viene **varchar (11)**, il valore predefinito è **al '**.  
   
  [  **@oneresultset=**] *oneresultset*  
  Indica se restituire un singolo set di risultati. Il *oneresultset* argomento può avere i valori seguenti:  
   
 |Valore|Descrizione|  
 |-----------|-----------------|  
-|0|Quando  *@objname*  è null o non è specificato, vengono restituiti due set di risultati. Due set di risultati è il comportamento predefinito.|  
-|1|Quando  *@objname*  = null o viene omesso, viene restituito un singolo set di risultati.|  
+|0|Quando *@objname* è null o non è specificato, vengono restituiti due set di risultati. Due set di risultati è il comportamento predefinito.|  
+|1|Quando *@objname* = null o viene omesso, viene restituito un singolo set di risultati.|  
   
- *oneresultset* è **bit**, il valore predefinito è **0**.  
+ *oneresultset* viene **bit**, il valore predefinito è **0**.  
 
 [ **@include_total_xtp_storage**] **'***include_total_xtp_storage***'**  
-**Si applica a:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**Si applica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
   
  Quando @oneresultset= 1, il parametro @include_total_xtp_storage determina se il singolo set di risultati include le colonne per l'archiviazione MEMORY_OPTIMIZED_DATA. Il valore predefinito è 0, vale a dire, per impostazione predefinita (se il parametro viene omesso) le colonne XTP non sono incluse nel set di risultati.  
 
@@ -174,7 +174,7 @@ Se *objname* viene omesso, il valore di oneresultset è 1, e *include_total_xtp_
 |**xtp_pending_truncation**|**varchar(18)**|Dimensioni totali dei file di checkpoint con stato WAITING_FOR_LOG_TRUNCATION, in KB. Questo è lo spazio su disco utilizzato per i file di checkpoint in attesa di pulizia, una volta che si verifica il troncamento del log. Restituisce NULL se il database non dispone di un filegroup memory_optimized_data con almeno un contenitore. Questa colonna è solo se incluse `@include_total_xtp_storage=1`.|
 
 ## <a name="remarks"></a>Osservazioni  
- **database_size** è sempre maggiore della somma di **riservato** + **spazio non allocato** perché include le dimensioni dei file di log, ma **riservato** e **unallocated_space** prendere in considerazione solo le pagine di dati.  
+ **database_size** è sempre maggiore della somma di **riservata** + **spazio non allocato** perché comprende anche le dimensioni dei file di log, ma **riservato**e **unallocated_space** prendere in considerazione solo le pagine di dati.  
   
  Le pagine vengono utilizzate per indici XML e indici full-text vengono incluse **index_size** per entrambi i set di risultati. Quando *objname* è specificato, le pagine per gli indici XML e indici full-text per l'oggetto vengono conteggiate in totale **riservato** e **index_size** risultati.  
   
@@ -211,7 +211,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Visualizzazione di informazioni sull'utilizzo di spazio sulla tabella remota associata a una tabella abilitata per l'estensione  
- Nell'esempio seguente viene riepilogato lo spazio utilizzato dalla tabella remota associata a una tabella abilitata per l'estensione tramite il  **@mode**  argomento per specificare la destinazione remota. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ Nell'esempio seguente viene riepilogato lo spazio utilizzato dalla tabella remota associata a una tabella abilitata per l'estensione tramite il **@mode** argomento per specificare la destinazione remota. Per ulteriori informazioni, vedere [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  

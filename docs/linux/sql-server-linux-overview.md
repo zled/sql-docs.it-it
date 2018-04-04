@@ -1,10 +1,10 @@
-﻿---
+---
 title: Panoramica di SQL Server in Linux | Documenti Microsoft
 description: "Questo articolo descrive le modalità di esecuzione in Linux e fornisce informazioni su come per altre informazioni in SQL Server."
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,22 +15,23 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: faa2898017347f59d415f7f5bf5bd6795a3f9de6
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 3ec35adddc04a42ed885600a2e8402121c86107c
+ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="sql-server-on-linux"></a>SQL Server in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
+SQL Server 2017 viene ora eseguito in Linux. È lo stesso motore di database di SQL Server, con molti servizi indipendentemente dal sistema operativo e le funzionalità di simili.
 
 ## <a name="install"></a>Install
 
 Per iniziare, installare SQL Server in Linux con una delle seguenti esercitazioni di avvio rapido:
 
-- [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installare su Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installare in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Eseguire in Docker](quickstart-install-connect-docker.md)
@@ -51,11 +52,11 @@ Dopo l'installazione, connettersi all'istanza di SQL Server nel computer Linux. 
 
 ## <a name="explore"></a>Esplora
 
-SQL Server 2017 ha lo stesso motore di database sottostanti in tutte le piattaforme supportate, tra cui Linux. Numero così elevato e le funzionalità esistenti funzionano nello stesso modo in Linux. Questa area della documentazione espone alcune di queste funzionalità da una prospettiva di Linux. Chiama anche le aree che sono previsti requisiti specifici in Linux.
+SQL Server 2017 ha lo stesso motore di database sottostanti in tutte le piattaforme supportate, tra cui Linux. Numero così elevato e le funzionalità esistenti funzionano allo stesso modo su Linux. Questa area della documentazione espone alcune di queste funzionalità da una prospettiva di Linux. Chiama anche le aree dotato di requisiti specifici per Linux.
 
-Se si ha già familiarità con SQL Server, esaminare il [note sulla versione](sql-server-linux-release-notes.md) per linee guida generali e i problemi noti per questa versione. Esaminare quindi [novità di SQL Server in Linux](sql-server-linux-whats-new.md) nonché [novità di SQL Server 2017 generale](../sql-server/what-s-new-in-sql-server-2017.md). 
+Se ha già familiarità con SQL Server, esaminare i [note sulla versione](sql-server-linux-release-notes.md) per le linee guida generali e i problemi noti per questa versione. Quindi esaminare [novità di SQL Server in Linux](sql-server-linux-whats-new.md) nonché [novità di SQL Server 2017 complessiva](../sql-server/what-s-new-in-sql-server-2017.md). 
 
 > [!TIP]
-> Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).
+> Per le risposte alle domande frequenti, vedere la [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

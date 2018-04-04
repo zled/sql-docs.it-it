@@ -1,16 +1,16 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - OPENROWSET_TSQL
@@ -27,24 +27,26 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-caps.latest.revision: 
+caps.latest.revision: ''
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: ee158cdc30d1c083151bc07c58ba7ddea515a308
+ms.sourcegitcommit: 3ed9be04cc7fb9ab1a9ec230c298ad2932acc71b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Include tutte le informazioni di connessione necessarie per l'accesso remoto ai dati da un'origine dati OLE DB. Si tratta di un metodo alternativo per l'accesso alle tabelle di un server collegato e corrisponde a un metodo ad hoc eseguito una sola volta per la connessione e l'accesso ai dati remoti tramite OLE DB. Per ottenere riferimenti più frequenti alle origini dati OLE DB, utilizzare server collegati. Per altre informazioni, vedere [Server collegati &#40;Motore di database&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). È possibile fare riferimento alla funzione `OPENROWSET` nella clausola FROM di una query come se fosse un nome di tabella. È anche possibile fare riferimento alla funzione `OPENROWSET` come tabella di destinazione di un'istruzione`INSERT`, `UPDATE` o `DELETE`, a seconda delle funzionalità del provider OLE DB. Anche quando la query può restituire più set di risultati, la funzione `OPENROWSET` restituisce solo il primo set.  
   
  `OPENROWSET` supporta anche le operazioni bulk tramite un provider BULK predefinito che consente di leggere i dati da un file e restituirli come set di righe.  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  

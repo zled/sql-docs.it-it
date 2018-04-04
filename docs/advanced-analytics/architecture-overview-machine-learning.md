@@ -1,34 +1,34 @@
 ---
 title: Panoramica dell'architettura di servizi di SQL Server Machine Learning | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 11/03/2017
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 4272a0f421bc8286fc9be7be44e3b7ef8cc13905
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 7993a93eec3bd657f4d37fbbbfbb16dd514453fa
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Panoramica dell'architettura di servizi di SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Questo argomento descrive gli obiettivi di framework di estendibilità che supporta l'esecuzione dello script Python e R in SQL Server.
+Questo articolo descrive gli obiettivi di extensibility framework, che supporta l'esecuzione dello script Python e R in SQL Server.
 
 Fornisce inoltre una panoramica di come l'architettura è progettata per soddisfare questi obiettivi, come vengono supportati ed eseguire da SQL Server e i vantaggi di integrazione R e Python.
 
-In generale, il framework di estendibilità è quasi identico per R e Python, con alcune piccole differenze dei dettagli di avvio che viene chiamati, le opzioni di configurazione e così via. Per ulteriori informazioni sull'implementazione per una lingua specifica, vedere questi argomenti:
+In generale, il framework di estendibilità è quasi identico per R e Python, con alcune piccole differenze dei dettagli di avvio che viene chiamati, le opzioni di configurazione e così via. Per ulteriori informazioni sull'implementazione per una lingua specifica, vedere i seguenti articoli:
 
 - [Panoramica dell'architettura per SQL Server R Services](r/architecture-overview-sql-server-r.md)
 - [Panoramica dell'architettura per Python in SQL Server](python/architecture-overview-sql-server-python.md)
@@ -42,7 +42,7 @@ In SQL Server 2016, sono state introdotte numerose modifiche al motore di databa
 
 Tramite l'esecuzione di un linguaggio di scripting attendibile all'interno di un framework sicuro gestito da SQL Server, lo sviluppatore del database può garantire la sicurezza, consentendo di esperti di dati utilizzare i dati dell'organizzazione.
 
-  ![Obiettivi dell'integrazione con SQL Server](media/ml-service-value-add.png "Machine Learning servizi a valore aggiunto")
+  ![Gli obiettivi di integrazione con SQL Server](media/ml-service-value-add.png "Machine Learning servizi a valore aggiunto")
 
 - Gli utenti correnti di R o Python devono essere in grado di convertire il codice ed eseguirlo in SQL Server con le modifiche di lieve.
 - Il modello di protezione dati in SQL Server viene esteso ai dati utilizzati dai linguaggi di script esterni. In altre parole, un utente che esegue uno script R o Python non deve essere in grado di utilizzare tutti i dati non è stato possibile accedere da tale utente in una query SQL.
@@ -93,7 +93,7 @@ Di seguito viene illustrato come funziona in pratica.
 
 Non si è certi che machine learning soluzione adatta alle proprie esigenze? Oltre a analitica incorporato in SQL Server 2016 e SQL Server 2017, Microsoft fornisce il computer seguente apprendimento piattaforme e servizi:
 
-+ [Microsoft R Server e Server di Machine Learning](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
++ [Microsoft R Server e il Server di Machine Learning](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)
 
   Un ambiente multi-piattaforma per lo sviluppo, distribuzione e gestione dei processi di machine learning
 + [Macchina virtuale per operazioni di data science](https://docs.microsoft.com/azure/machine-learning/machine-learning-data-science-virtual-machine-overview)
