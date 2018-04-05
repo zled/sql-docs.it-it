@@ -26,16 +26,16 @@ keywords:
 - sql server ssms
 - ssms express
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 7b64f3d78ceafd5e1eac62e1e3dd1155827e8c61
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 014067623255c257ee611b8be8a0b8f49f5e57bc
+ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Scaricare SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -141,7 +141,7 @@ Se usata con l'ultimo Service Pack disponibile, questa versione di SSMS supporta
 ### <a name="minimize-installation-reboots"></a>Ridurre al minimo i riavvii durante l'installazione
 
 * Per ridurre le probabilità che al termine del programma di installazione di SSMS sia necessario il riavvio del computer, eseguire le azioni seguenti:
-  * Assicurarsi che sia in esecuzione una versione aggiornata di Visual C++ 2013 Redistributable Package. È obbligatoria la versione 12.00.40649.5 o successiva. È necessaria solo la versione x64.
+  * Assicurarsi che sia in esecuzione una versione aggiornata di Visual C++ 2013 Redistributable Package. È obbligatoria la versione 12.0.40649.5 o successiva. È necessaria solo la versione x64.
   * Verificare che la versione di .NET Framework nel computer corrisponda alla versione 4.6.1 o successiva.
   * Chiudere eventuali altre istanze di Visual Studio aperte nel computer.
   * Assicurarsi che nel computer siano installati tutti gli aggiornamenti del sistema operativo più recenti.
