@@ -1,16 +1,16 @@
 ---
 title: Recupero di database correlati che contengono transazioni contrassegnate | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transaction logs [SQL Server], marks
@@ -25,7 +25,7 @@ helpviewer_keywords:
 - marked transactions [SQL Server], restoring
 - database restores [SQL Server], point in time
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/23/2018
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Le informazioni contenute in questo argomento sono rilevanti solo per i database che includono transazioni contrassegnate e utilizzano il modello di recupero con registrazione completa o con registrazione minima delle operazioni bulk.  
   
- Per informazioni sui requisiti per il ripristino fino a un punto di recupero specifico, vedere [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+ Per informazioni sui requisiti per il ripristino fino a un punto di recupero specifico, vedere [Ripristinare un database di SQL Server fino a un punto specifico &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'inserimento di contrassegni denominati nel log delle transazioni per il recupero fino a un punto specifico. I contrassegni del log sono specifici della transazione e vengono inseriti solo se viene eseguito il commit della transazione associata. In questo modo, i contrassegni risultano legati a serie di operazioni specifiche ed è possibile eseguire il recupero includendo o escludendo le serie di operazioni desiderate.  
   

@@ -1,27 +1,28 @@
 ---
 title: SQL Server PowerShell | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
 ms.prod_service: powershell
-ms.service: 
+ms.service: ''
 ms.component: powershell
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ab19a8a86bba6cbdacbc0c7de1b44d42a263b692
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: d9dc11888ffd63ad97031e666d4e63893dc2db3e
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +40,7 @@ Per inviare gli aggiornamenti di SQL PowerShell, è stato necessario modificare 
 
 **Aggiornare gli script di PowerShell che importano il modulo SQLPS.**
 
-Se si hanno script di PowerShell script che eseguono `Import-Module -Name SQLPS` e se si vogliono sfruttare la nuova funzionalità del provider e i nuovi cmdlet, è necessario modificarli in `Import-Module -Name SqlServer`. Il nuovo modulo viene installato in `%Program Files\WindowsPowerShell\Modules\SqlServer`. Non è quindi necessario aggiornare la variabile $env:PSModulePath. Se si hanno script che usano una versione di terze parti o community di un modulo denominato **SqlServer**, usare il parametro Prefix per evitare conflitti di nome. Non sono state apportate modifiche al modulo usato da SQL Server Agent. 
+Se si hanno script di PowerShell script che eseguono `Import-Module -Name SQLPS` e se si vogliono sfruttare la nuova funzionalità del provider e i nuovi cmdlet, è necessario modificarli in `Import-Module -Name SqlServer`. Il nuovo modulo viene installato nella cartella `%ProgramFiles%\WindowsPowerShell\Modules\SqlServer`. Non è quindi necessario aggiornare la variabile $env:PSModulePath. Se si hanno script che usano una versione di terze parti o community di un modulo denominato **SqlServer**, usare il parametro Prefix per evitare conflitti di nome. Non sono state apportate modifiche al modulo usato da SQL Server Agent. 
 
   
 ## <a name="sql-server-powershell-components"></a>Componenti di PowerShell di SQL Server  

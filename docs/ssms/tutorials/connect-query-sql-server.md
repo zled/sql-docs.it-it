@@ -1,6 +1,6 @@
 ---
-Title: 'Tutorial: Connect and Query SQL Server using SQL Server Management Studio'
-description: Esercitazione per la connessione a SQL Server tramite SQL Server Management Studio ed esecuzione di query T-SQL di base.
+Title: 'Tutorial: Connect to and query a SQL Server instance by using SQL Server Management Studio'
+description: Esercitazione per la connessione a un'istanza di SQL Server tramite SQL Server Management Studio e l'esecuzione di query T-SQL di base.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
@@ -10,67 +10,68 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 6f4110a0ae1b4ca349cc9b990cc9a32f7d41764d
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: fe8d438d95e994438df565013eaf79da92ccf9b3
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="tutorial-connect-and-query-sql-server-using-sql-server-management-studio"></a>Esercitazione: Connettersi ed eseguire query in SQL Server con SQL Server Management Studio
-In questa esercitazione viene illustrato come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio
+Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
 
-> [!div class="checklist"]
-> * [Connettersi a SQL Server ](#connect-to-a-sql-server)
-> * [Creare un nuovo database (**TutorialDB**)](#create-a-database)
-> * [Creare una tabella (**Customers**) nel nuovo database](#create-a-table)
-> * [Inserire righe nella nuova tabella **Customers**](#insert-rows)
-> * [Eseguire query sulla tabella **Customers** e visualizzare i risultati](#view-query-results)
-> * [Usare la tabella della finestra di query per verificare le proprietà di connessione](#verify-your-query-window-connection-properties)
-> * [Modificare il server al quale è connessa la finestra di query](#change-server-connection-within-query-window)
-
+> [!div class="checklist"]  
+> * Connessione a un'istanza di SQL Server    
+> * Creare un database ("TutorialDB")    
+> * Creare una tabella ("Customers") nel nuovo database   
+> * Inserire righe nella nuova tabella 
+> * Eseguire query nella tabella e visualizzare i risultati    
+> * Usare la tabella della finestra di query per verificare le proprietà di connessione 
+> * Modificare il server al quale è connessa la finestra di query
 
 ## <a name="prerequisites"></a>Prerequisites
-Per completare questa esercitazione, sono necessari SQL Server Management Studio e l'accesso a SQL Server. 
+Per completare questa esercitazione è necessario avere SQL Server Management Studio e l'accesso a un'istanza di SQL Server. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
 
-Se non si ha accesso a SQL Server, selezionare la piattaforma dai collegamenti seguenti. Assicurarsi di conoscere l'account di accesso e la password SQL se si decide di accedere tramite l'autenticazione SQL:
-- [Windows - Scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piattaforma in uso tra i collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
+- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
 
 
-## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
+## <a name="connect-to-a-sql-server-instance"></a>Connessione a un'istanza di SQL Server
 
-1. Avviare SQL Server Management Studio (SSMS).
-1. La prima volta che si esegue SSSM viene visualizzata la finestra di dialogo **Connetti al server**. 
-      - Se la finestra di dialogo **Connetti al server** non si apre, è possibile aprirla manualmente in **Esplora oggetti** > **Connetti** (o l'icona a fianco) > **Motore di database**.
+1. Avviare SQL Server Management Studio.  
+    Quando si esegue SSMS per la prima volta viene visualizzata la finestra di dialogo **Connetti al server**. Se la finestra non si apre è possibile aprirla manualmente selezionando **Esplora oggetti** > **Connetti** > **Motore di database**.
 
-        ![Eseguire la connessione in Esplora oggetti](media/connect-query-sql-server/connectobjexp.png)
+    ![Collegamento Connetti in Esplora oggetti](media/connect-query-sql-server/connectobjexp.png)
 
-1. Nella finestra di dialogo **Connetti al server** compilare le opzioni di connessione: 
+2. Nella finestra **Connetti al Server** seguire questa procedura: 
 
-    - **Tipo server**: motore di database (in genere opzione selezionata per impostazione predefinita)
-    - **Autenticazione**: autenticazione di Windows. In questo articolo viene usata l'autenticazione di Windows. È comunque supportata anche l'opzione Account di accesso SQL. Se selezionata, è necessario immettere nome utente e password.
+    - In **Tipo di server** selezionare **Motore di database** (in genere l'opzione predefinita).
+    - In **Nome server** immettere il nome dell'istanza di SQL Server in uso. In questo articolo viene usato il nome istanza SQL2016ST sul nome host NODE5 [NODE5\SQL2016ST]. Se non si sa come determinare il nome dell'istanza di SQL Server, vedere [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md#determine-sql-server-name).  
 
-      ![Connessione](media/connect-query-sql-server/connection.png)
+    ![Campo "Nome server" con il nome dell'istanza di esempio](media/connect-query-sql-server/connection.png)
 
-        È possibile modificare anche le opzioni di connessione aggiuntive, ad esempio il database della connessione, il valore di timeout della connessione e il protocollo di rete, facendo clic sul pulsante **Opzioni**. Ai fini di questo articolo, sono stati lasciati i valori predefiniti. 
+    ![Campo "Nome server" con l'opzione per l'uso dell'istanza di SQL Server](media/connect-query-sql-server/connection2.png)
 
-1. Dopo aver compilato i campi, fare clic su **Connetti**. 
+    - In **Autenticazione** selezionare **Autenticazione di Windows**. In questo articolo viene usata l'autenticazione di Windows, ma è supportato anche l'accesso di SQL Server. Se si seleziona **Account di accesso SQL** viene richiesto di specificare un nome utente e una password. Per altre informazioni sui tipi di autenticazione, vedere [Connetti al server (motore di database)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
 
-1. Esplorare gli oggetti in **Esplora oggetti** per verificare se è stato possibile connettersi a SQL Server: 
+    È anche possibile modificare altre opzioni di connessione selezionando **Opzioni**. Sono esempi di opzioni di connessione il database al quale ci si connette, il valore di timeout della connessione e il protocollo di rete. In questo articolo vengono usati i valori predefiniti per tutte le opzioni. 
+
+3. Dopo aver completato tutti i campi selezionare **Connetti**. 
+
+4. Verificare che la connessione all'istanza di SQL Server sia riuscita, visualizzando gli oggetti in Esplora oggetti come illustrato di seguito: 
 
    ![Connessione riuscita](media/connect-query-sql-server/successfulconnection.png)
 
-
 ## <a name="create-a-database"></a>Creazione di un database
-La procedura seguente consente di creare un database denominato TutorialDB. 
+Creare un database denominato TutorialDB seguendo questa procedura: 
 
-1. Fare clic con il pulsante destro del mouse in  **Esplora oggetti** e scegliere **Nuova query**:
+1. Fare clic con il pulsante destro del mouse in Esplora oggetti e scegliere **Nuova query**:
 
-   ![Nuova query](media/connect-query-sql-server/newquery.png)
+   ![Collegamento Nuova query](media/connect-query-sql-server/newquery.png)
    
-1. Incollare il frammento di codice T-SQL seguente nella finestra di query: 
+2. Nella finestra di query incollare il frammento di codice T-SQL seguente: 
    ```sql
    USE master
    GO
@@ -82,23 +83,22 @@ La procedura seguente consente di creare un database denominato TutorialDB.
    CREATE DATABASE [TutorialDB]
    GO
    ```
-2. Per eseguire la query, fare clic su **Esegui** o premere F5 sulla tastiera. 
+2. Per eseguire la query fare clic su **Esegui** o premere F5 sulla tastiera. 
 
-   ![Eseguire la query](media/connect-query-sql-server/execute.png)
+   ![Comando Esegui](media/connect-query-sql-server/execute.png)
   
- 
-Al termine della query, il nuovo database **TutorialDB** sarà visualizzato nell'elenco dei database in **Esplora oggetti**. Se il database non è visualizzato, fare clic con il pulsante destro del mouse sul nodo Database e selezionare **Aggiorna**.  
+    Al termine della query il nuovo database TutorialDB viene visualizzato nell'elenco dei database in Esplora oggetti. Se il database non viene visualizzato, fare clic con il pulsante destro del mouse sul nodo **Database** e selezionare **Aggiorna**.  
 
 
-## <a name="create-a-table"></a>Creare una tabella
-La procedura seguente consente di creare ora una tabella nel database **TutorialDB** appena creato. Si vuole creare una tabella nel database *TutorialDB*, ma l'editor di query è ancora nel contesto del database *master*. 
+## <a name="create-a-table-in-the-new-database"></a>Creare una tabella nel nuovo database
+In questa sezione si crea una tabella nel database TutorialDB appena creato. L'editor di query è ancora nel contesto del database *master*. Cambiare il contesto e impostare la connessione al database *TutorialDB* seguendo questa procedura: 
 
-1. Modificare il contesto della connessione della query dal database master al database **TutorialDB** selezionando il database necessario dall'elenco a discesa dei database. 
+1. Nella casella di riepilogo a discesa dei database selezionare il database desiderato, come indicato di seguito: 
 
    ![Modificare il database](media/connect-query-sql-server/changedb.png)
 
-1. Incollare il frammento di codice T-SQL seguente nella finestra di query, evidenziarlo, fare clic su **Esegui** o premere F5 sulla tastiera: 
-    - È possibile sostituire il testo esistente nella finestra di query o aggiungerlo alla fine. Se si vuole eseguire l'intero testo nella finestra di query, fare clic su **Esegui**. Se si vuole eseguire una parte del testo, evidenziare tale parte e fare clic su **Esegui**.  
+2. Incollare il frammento di codice T-SQL seguente nella finestra di query, selezionarlo e fare clic su **Esegui** o premere F5 sulla tastiera.  
+   È possibile sostituire il testo esistente nella finestra di query o aggiungerlo alla fine. Per eseguire l'intero testo nella finestra di query, selezionare **Esegui**. Per eseguire una parte del testo, evidenziare la parte desiderata e selezionare **Esegui**.  
   
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -116,12 +116,11 @@ La procedura seguente consente di creare ora una tabella nel database **Tutorial
    );
    GO
    ```
-Al termine della query, la nuova tabella **Customers** sarà visualizzata nell'elenco delle tabelle in **Esplora oggetti**. Se la tabella non è visualizzata, fare clic con il pulsante destro del mouse sul nodo **TutorialDB > Tabelle** in **Esplora oggetti** e selezionare **Aggiorna**.
 
-## <a name="insert-rows"></a>Inserire righe
-Il passaggio seguente consente di inserire alcune righe nella tabella **Customers** creata in precedenza. 
+Al termine della query la nuova tabella Customers viene visualizzata nell'elenco delle tabelle in Esplora oggetti. Se la tabella non viene visualizzata, fare clic con il pulsante destro del mouse sul nodo **TutorialDB** > **Tabelle** in Esplora oggetti e selezionare **Aggiorna**.
 
-Incollare il frammento di codice T-SQL seguente nella finestra di query e fare clic su **Esegui**: 
+## <a name="insert-rows-into-the-new-table"></a>Inserire righe nella nuova tabella
+Ora si inseriranno alcune righe nella tabella Customers creata in precedenza. Incollare il frammento di codice T-SQL seguente nella finestra di query e selezionare **Esegui**: 
 
 
    ```sql
@@ -136,44 +135,49 @@ Incollare il frammento di codice T-SQL seguente nella finestra di query e fare c
    GO
    ```
 
-## <a name="view-query-results"></a>Visualizzare i risultati delle query
-I risultati di una query vengono visualizzati sotto la finestra di testo della query. La procedura seguente consente di eseguire una query sulla tabella **Customers** e visualizzare le righe che sono state precedentemente inserite.  
+## <a name="query-the-table-and-view-the-results"></a>Eseguire query nella tabella e visualizzare i risultati
+I risultati di una query vengono visualizzati sotto la finestra di testo della query. Per eseguire una query sulla tabella Customers e visualizzare le righe inserite in precedenza, seguire questa procedura:  
 
-1. Incollare il frammento di codice T-SQL seguente nella finestra di query e fare clic su **Esegui**: 
+1. Incollare il frammento di codice T-SQL seguente nella finestra di query e selezionare **Esegui**: 
 
    ```sql
    -- Select rows from table 'Customers'
    SELECT * FROM dbo.Customers;
    ```
-1. I risultati della query vengono visualizzati al di sotto dell'area in cui il testo è stato immesso: 
 
-   ![Risultati delle query](media/connect-query-sql-server/queryresults.png)
+    I risultati della query vengono visualizzati al di sotto dell'area in cui il testo è stato immesso: 
 
+   ![Elenco Risultati](media/connect-query-sql-server/queryresults.png)
 
-1.  È possibile modificare il formato di visualizzazione dei risultati selezionando una delle opzioni seguenti:
+2. Modificare il formato di visualizzazione dei risultati selezionando una delle opzioni seguenti:
 
-     ![risultati](media/connect-query-sql-server/results.png)
+     ![Tre opzioni per la visualizzazione dei risultati della query](media/connect-query-sql-server/results.png)
 
-    - Per impostazione predefinita, i risultati sono disponibili in **Visualizzazione griglia**, ovvero il pulsante centrale e i risultati vengono visualizzati sotto forma di tabella. 
+    - Il pulsante centrale visualizza i risultati in **Visualizzazione griglia**, l'opzione predefinita. 
     - Il primo pulsante visualizza i risultati in **Visualizzazione testo**, come illustrato nell'immagine della sezione successiva.
-    - Il terzo pulsante consente di salvare i risultati in un file, un file che termina con * ed estensione rpt per impostazione predefinita.
+    - Il terzo pulsante consente di salvare i risultati in un file che per impostazione predefinita ha l'estensione rpt.
 
-## <a name="verify-your-query-window-connection-properties"></a>Verificare le proprietà di connessione della finestra di query
-È possibile trovare informazioni sulle proprietà di connessione tra i risultati della query. 
-- Dopo aver eseguito la query specificata nel passaggio precedente, esaminare le proprietà di connessione nella parte inferiore della finestra di query.
-    - È possibile determinare il server e il database ai quali ci si è connessi e l'utente che ha eseguito la connessione.
-    - È anche possibile visualizzare la durata della query e il numero di righe restituite dalla query eseguita in precedenza.
+## <a name="verify-your-connection-properties-by-using-the-query-window-table"></a>Verificare le proprietà di connessione usando la tabella della finestra di query
+È possibile trovare informazioni sulle proprietà di connessione tra i risultati della query. Dopo aver eseguito la query specificata nel passaggio precedente, esaminare le proprietà di connessione nella parte inferiore della finestra di query.
+
+- È possibile determinare il server e il database ai quali si è connessi e il nome utente con il quale è stata effettuata la connessione.
+- È anche possibile visualizzare la durata della query e il numero di righe restituite dalla query eseguita in precedenza.
+
+    ![Proprietà di connessione](media/connect-query-sql-server/connectionproperties.png)
     
-    ![Proprietà di connessione](media/connect-query-sql-server/connectionproperties.png)  
-    In questa immagine i risultati sono visualizzati in **Visualizzazione testo**.  
+    Si noti che in questa immagine i risultati appaiono in **Visualizzazione testo**. 
 
-## <a name="change-server-connection-within-query-window"></a>Modificare la connessione al server nella finestra di query
-È possibile modificare il server al quale la finestra di query corrente è connessa attenendosi alla procedura seguente.
-1. Fare clic con il pulsante destro all'interno della finestra di query > Connessione > Cambia connessione.
-2. Si aprirà nuovamente la finestra di dialogo **Connetti al server** in cui è possibile modificare il server al quale la query si connette. 
+## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Modificare il server al quale è connessa la finestra di query
+È possibile modificare il server al quale è connessa la finestra di query corrente seguendo questa procedura:
+
+1. Fare clic con il pulsante destro del mouse nella finestra di query e selezionare **Connessione** > **Cambia connessione**.  
+    Viene visualizzata di nuovo la finestra **Connetti al server**.
+2. Modificare il server al quale è connessa la query. 
  
-   ![Cambia connessione](media/connect-query-sql-server/changeconnection.png)
-   - Si noti che in questo modo non si modifica il server al quale **Esplora oggetti** è connesso, ma solo la finestra di query corrente. 
+   ![Comando Cambia connessione](media/connect-query-sql-server/changeconnection.png)
+
+    > [!NOTE]
+    > Questa azione modifica solo il server al quale è connessa la finestra di query e non il server al quale è connesso Esplora oggetti. 
 
 
 

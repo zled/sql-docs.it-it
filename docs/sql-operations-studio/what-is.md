@@ -1,4 +1,4 @@
----
+﻿---
 title: "Che cos'è Microsoft SQL Operations Studio (anteprima)? | Microsoft Docs"
 description: "Microsoft SQL Operations Studio (anteprima) è uno strumento gratuito supportato in Windows, macOS e Linux, per la gestione di SQL Server, Database SQL di Azure e Azure SQL Data Warehouse, ovunque essi siano installati."
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: overview
 author: stevestein
 ms.author: sstein

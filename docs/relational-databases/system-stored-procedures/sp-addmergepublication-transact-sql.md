@@ -1,16 +1,16 @@
 ---
 title: sp_addmergepublication (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,7 +20,7 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepublication
 ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
-caps.latest.revision: 
+caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -114,7 +114,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Specifica se è consentito creare sottoscrizioni anonime per la pubblicazione specificata. *allow_anonymous* è **nvarchar (5)**, il valore predefinito è TRUE, che consente sottoscrizioni anonime per la pubblicazione. Per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **true**.  
   
  [  **@enabled_for_internet =** ] **'***enabled_for_internet***'**  
- Specifica se la pubblicazione è abilitata per Internet e determina se è possibile utilizzare FTP per il trasferimento dei file di snapshot in un Sottoscrittore. *enabled_for_internet* è **nvarchar (5)**, con un valore predefinito è FALSE. Se **true**, i file di sincronizzazione per la pubblicazione vengono inseriti nella directory C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\repldata\ftp.. La directory Ftp deve essere creata dall'utente. Se **false**, la pubblicazione non è abilitata per l'accesso a Internet.  
+ Specifica se la pubblicazione è abilitata per Internet e determina se è possibile utilizzare FTP per il trasferimento dei file di snapshot in un Sottoscrittore. *enabled_for_internet* è **nvarchar (5)**, con un valore predefinito è FALSE. Se **true**, i file di sincronizzazione per la pubblicazione vengono inseriti nella directory C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\repldata\ftp. La directory Ftp deve essere creata dall'utente. Se **false**, la pubblicazione non è abilitata per l'accesso a Internet.  
   
  [  **@centralized_conflicts =**] **'***centralized_conflicts***'**  
  Questo parametro è deprecato ed è supportato solo per compatibilità con gli script di versioni precedenti. Utilizzare *conflict_logging* per specificare il percorso in cui sono archiviati i record dei conflitti.  
@@ -123,7 +123,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Consente alla pubblicazione di tipo merge di utilizzare i filtri di riga con parametri. *dynamic_filters* è **nvarchar (5)**, con un valore predefinito è FALSE.  
   
 > [!NOTE]  
->  Si consiglia di non specificare questo parametro ma di consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di determinare automaticamente se vengono utilizzati i filtri di riga con parametri. Se si specifica un valore di **true** per *dynamic_filters*, è necessario definire un filtro di riga con parametri per l'articolo. Per altre informazioni, vedere [Define and Modify a Parameterized Row Filter for a Merge Article](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+>  Si consiglia di non specificare questo parametro ma di consentire a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di determinare automaticamente se vengono utilizzati i filtri di riga con parametri. Se si specifica un valore di **true** per *dynamic_filters*, è necessario definire un filtro di riga con parametri per l'articolo. Per altre informazioni, vedere [Definizione e modifica di un filtro di riga con parametri per un articolo di merge](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
  [  **@snapshot_in_defaultfolder =** ] **'***snapshot_in_default_folder***'**  
  Viene specificato se i file di snapshot sono archiviati nella cartella predefinita. *snapshot_in_default_folder* è **nvarchar (5)**, con un valore predefinito è TRUE. Se **true**, i file di snapshot sono disponibili nella cartella predefinita. Se **false**, verranno archiviati i file di snapshot nella posizione alternativa specificata da *alternate_snapshot_folder*. Una posizione alternativa può essere un altro server, un'unità di rete oppure un supporto rimovibile, ad esempio un CD o un disco rimovibile. È inoltre possibile archiviare i file di snapshot in un sito FTP (File Transfer Protocol) in modo da poterli recuperare successivamente tramite il Sottoscrittore. Si noti che questo parametro può essere true e una posizione specificata da *alt_snapshot_folder*. Tale combinazione indica che i file di snapshot vengono archiviati sia nella posizione predefinita che in posizioni alternative.  
@@ -138,7 +138,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Specifica un puntatore a un **SQL** percorso del file. *post_snapshot_script* è **nvarchar (255)**, con un valore predefinito è NULL. L'agente di merge esegue lo script post-snapshot dopo l'applicazione di tutti gli altri script di oggetti replicati e dei dati durante una sincronizzazione iniziale. Lo script viene eseguito nel contesto di sicurezza utilizzato dall'agente di merge durante la connessione al database di sottoscrizione. Gli script di post-snapshot non vengono eseguiti nei [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori.  
   
  [  **@compress_snapshot =** ] **'***compress_snapshot***'**  
- Specifica che lo snapshot scritto il  **@alt_snapshot_folder**  deve essere compresso nel si trova il [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è **nvarchar (5)**, con un valore predefinito è FALSE. **false** specifica che non lo snapshot verrà compresso; **true** indica che lo snapshot verrà compresso. I file di snapshot di dimensioni superiori a 2GB non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione dove viene eseguito l'agente di merge; in genere le sottoscrizioni pull vengono utilizzate con gli snapshot compressi in modo che i file vengono decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita. Per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **false**.  
+ Specifica che lo snapshot scritto il **@alt_snapshot_folder** deve essere compresso nel si trova il [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. *compress_snapshot* è **nvarchar (5)**, con un valore predefinito è FALSE. **false** specifica che non lo snapshot verrà compresso; **true** indica che lo snapshot verrà compresso. I file di snapshot di dimensioni superiori a 2GB non possono essere compressi. I file di snapshot compressi vengono decompressi nella posizione dove viene eseguito l'agente di merge; in genere le sottoscrizioni pull vengono utilizzate con gli snapshot compressi in modo che i file vengono decompressi nel Sottoscrittore. Non è possibile comprimere lo snapshot all'interno della cartella predefinita. Per supportare [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, è necessario specificare **false**.  
   
  [  **@ftp_address =** ] **'***ftp_address***'**  
  Indirizzo di rete del servizio FTP per il database di distribuzione. *ftp_address* è **sysname**, con un valore predefinito è NULL. Specifica la posizione dei file di snapshot della pubblicazione, dove i file possono essere prelevati dall'agente di merge di un Sottoscrittore. Poiché questa proprietà viene archiviata per ogni pubblicazione, ogni pubblicazione può essere un altro *ftp_address*. La pubblicazione deve supportare la propagazione di snapshot tramite FTP.  
@@ -219,11 +219,11 @@ sp_addmergepublication [ @publication = ] 'publication'
  [  **@replicate_ddl =** ] *replicate_ddl*  
  Indica se per la pubblicazione è supportata la replica dello schema. *replicate_ddl* è **int**, con un valore predefinito è 1. **1** indica che vengono replicate istruzioni di data definition language (DDL) eseguite nel server di pubblicazione, e **0** indica che le istruzioni DDL non vengono replicate. Per altre informazioni, vedere [Apportare modifiche allo schema nei database di pubblicazione](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
   
- Il  *@replicate_ddl*  parametro viene rispettato quando un'istruzione DDL aggiunge una colonna. Il  *@replicate_ddl*  parametro viene ignorato quando un'istruzione DDL modifica o elimina una colonna per i motivi seguenti.  
+ Il *@replicate_ddl* parametro viene rispettato quando un'istruzione DDL aggiunge una colonna. Il *@replicate_ddl* parametro viene ignorato quando un'istruzione DDL modifica o elimina una colonna per i motivi seguenti.  
   
--   Quando viene eliminata una colonna, è necessario aggiornare sysarticlecolumns per evitare che le nuove istruzioni DML, compresi la colonna eliminata che potrebbe causare l'agente di distribuzione. Il  *@replicate_ddl*  parametro verrà ignorato perché la replica deve replicare sempre la modifica dello schema.  
+-   Quando viene eliminata una colonna, è necessario aggiornare sysarticlecolumns per evitare che le nuove istruzioni DML, compresi la colonna eliminata che potrebbe causare l'agente di distribuzione. Il *@replicate_ddl* parametro verrà ignorato perché la replica deve replicare sempre la modifica dello schema.  
   
--   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il  *@replicate_ddl*  parametro verrà ignorato perché la replica deve replicare sempre la modifica dello schema.  
+-   Quando una colonna viene modificata, è probabile che venga modificato il tipo di dati di origine o il supporto dei valori Null, di conseguenza le istruzioni DML contengono un valore che potrebbe non essere compatibile con la tabella nel Sottoscrittore. Tali istruzioni DML potrebbero determinare la mancata esecuzione dell'agente di distribuzione. Il *@replicate_ddl* parametro verrà ignorato perché la replica deve replicare sempre la modifica dello schema.  
   
 -   Quando un'istruzione DDL aggiunge una nuova colonna, sysarticlecolumns non include la nuova colonna. Le istruzioni DML non tenteranno di replicare i dati per la nuova colonna. Il parametro viene rispettato perché la replica o la non replica di DDL è accettabile.  
   
@@ -256,7 +256,7 @@ sp_addmergepublication [ @publication = ] 'publication'
  Viene specificato il numero di modifiche contenute in una generazione. Una generazione è una raccolta di modifiche recapitate a un server di pubblicazione o a un Sottoscrittore. *generation_leveling_threshold* è **int**, con un valore predefinito di 1000.  
   
  [  **@automatic_reinitialization_policy =** ] *automatic_reinitialization_policy*  
- Specifica se le modifiche vengono caricate dal sottoscrittore prima di una reinizializzazione automatica richiesta da una modifica apportata alla pubblicazione, dove il valore **1** è stato specificato per  **@force_reinit_subscription** . *automatic_reinitialization_policy* è di tipo bit e il valore predefinito è 0. **1** significa che le modifiche vengono caricate dal sottoscrittore prima che si verifichi una reinizializzazione automatica.  
+ Specifica se le modifiche vengono caricate dal sottoscrittore prima di una reinizializzazione automatica richiesta da una modifica apportata alla pubblicazione, dove il valore **1** è stato specificato per **@force_reinit_subscription**. *automatic_reinitialization_policy* è di tipo bit e il valore predefinito è 0. **1** significa che le modifiche vengono caricate dal sottoscrittore prima che si verifichi una reinizializzazione automatica.  
   
 > [!IMPORTANT]  
 >  Se si aggiunge, elimina o modifica un filtro con parametri, le modifiche in sospeso nel Sottoscrittore non possono essere caricate nel server di pubblicazione durante la reinizializzazione. Per caricare le modifiche in sospeso, sincronizzare tutte le sottoscrizioni prima di modificare il filtro.  
@@ -277,7 +277,7 @@ sp_addmergepublication [ @publication = ] 'publication'
 ## <a name="remarks"></a>Osservazioni  
  **sp_addmergepublication** viene utilizzata nella replica di tipo merge.  
   
- Per elencare oggetti di pubblicazione in Active Directory tramite il  **@add_to_active_directory**  parametro, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto sia già stato creato in Active Directory.  
+ Per elencare oggetti di pubblicazione in Active Directory tramite il **@add_to_active_directory** parametro, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto sia già stato creato in Active Directory.  
   
  Se esistono più pubblicazioni che pubblicano lo stesso oggetto di database, solo per le pubblicazioni con un *replicate_ddl* valore **1** replicherà ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION e Istruzioni ALTER TRIGGER DDL. Una istruzione ALTER TABLE DROP COLUMN DDL verrà tuttavia replicata da tutte le pubblicazioni che stanno pubblicando la colonna eliminata.  
   
