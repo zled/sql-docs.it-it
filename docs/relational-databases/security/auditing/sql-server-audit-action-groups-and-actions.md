@@ -1,16 +1,16 @@
 ---
 title: Azioni e gruppi di azioni di SQL Server Audit | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/19/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - audit
@@ -24,7 +24,7 @@ helpviewer_keywords:
 - audit action groups [SQL Server]
 - audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/21/2017
 |DATABASE_PERMISSION_CHANGE_GROUP|Questo evento viene generato ogni volta che una qualsiasi entità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] emette GRANT, REVOKE o DENY per un'autorizzazione per le istruzioni. Questa situazione si applica ad eventi relativi esclusivamente a database, ad esempio la concessione di autorizzazioni in un database.<br /><br /> Questo evento viene generato per qualsiasi modifica alle autorizzazioni del database (evento GDR) per qualsiasi database del server. Equivale a [Audit Database Scope GDR Event Class](../../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md).|  
 |DATABASE_PRINCIPAL_CHANGE_GROUP|Questo evento viene generato quando in un database vengono create, modificate o eliminate entità, quali gli utenti. Equivale a [Audit Database Principal Management Event Class](../../../relational-databases/event-classes/audit-database-principal-management-event-class.md). L'evento equivale anche alla classe di evento Audit Add DB Principal, generata in relazione alle stored procedure deprecate sp_grantdbaccess, sp_revokedbaccess, sp_addPrincipal e sp_dropPrincipal.<br /><br /> Questo evento viene generato ogni volta che un ruolo del database viene aggiunto o rimosso utilizzando le stored procedure sp_addrole e sp_droprole. nonché ogni volta che una qualsiasi entità di database viene creata, modificata o eliminata da un database. Equivale a [Audit Add Role Event Class](../../../relational-databases/event-classes/audit-add-role-event-class.md).|  
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|Questo evento viene generato in presenza di un'operazione di rappresentazione nell'ambito del database, ad esempio EXECUTE AS \<entità> o SETPRINCIPAL. Questo evento viene generato per le rappresentazioni effettuate in qualsiasi database. Equivale a [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md).|  
-|DATABASE_ROLE_MEMBER_CHANGE_GROUP|Questo evento viene generato ogni volta che un account di accesso viene aggiunto a un ruolo del database o rimosso. La classe di evento viene generata in relazione alle stored procedure sp_addrolemember, sp_changegroup e sp_droprolemember. Questo evento viene generato per qualsiasi modifica apportata ai membri del ruolo del database in qualsiasi database. Equivale a [Audit Add Member to DB Role Event Class](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
+|DATABASE_ROLE_MEMBER_CHANGE_GROUP|Questo evento viene generato ogni volta che un account di accesso viene aggiunto a un ruolo del database o rimosso. La classe di evento viene generata in relazione alle stored procedure sp_addrolemember, sp_changegroup e sp_droprolemember. Questo evento viene generato per qualsiasi modifica apportata ai membri del ruolo del database in qualsiasi database. Equivale a [Classe di evento Audit Add Member to DB Role](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md).|  
 |DBCC_GROUP|Questo evento viene generato ogni volta che un'entità esegue un comando DBCC. Equivale a [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md).|  
 |FAILED_DATABASE_AUTHENTICATION_GROUP|Viene indicato il tentativo fallito di accesso a un database indipendente da parte di un'entità. Gli eventi di questa classe vengono generati da connessioni nuove o riutilizzate da un pool di connessioni. Equivale a [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
 |FAILED_LOGIN_GROUP|Indica che un'entità ha tentato di accedere a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e l'operazione ha avuto esito negativo. Gli eventi di questa classe vengono generati da connessioni nuove o riutilizzate da un pool di connessioni. Equivale a [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md).|  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/21/2017
 |SERVER_PERMISSION_CHANGE_GROUP|Questo evento viene generato quando viene eseguita un'istruzione GRANT, REVOKE o DENY in relazione alle autorizzazioni nell'ambito del server, ad esempio in caso di creazione di un account di accesso. Equivale a [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|Questo evento viene generato in caso di creazione, modifica o eliminazione di entità del server. Equivale a [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md).<br /><br /> Questo evento viene generato quando un'entità esegue la stored procedure sp_defaultdb o sp_defaultlanguage o l'istruzione ALTER LOGIN. Equivale a [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md).<br /><br /> Questo evento viene generato in relazione alle stored procedure sp_addlogin e sp_droplogin. e a [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md).<br /><br /> Questo evento viene generato in relazione alla stored procedure sp_grantlogin o sp_revokelogin. Equivale a [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md).|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|Questo evento viene generato in presenza di una rappresentazione nell'ambito del server, ad esempio EXECUTE AS \<account di accesso>. Equivale a [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md).|  
-|SERVER_ROLE_MEMBER_CHANGE_GROUP|Questo evento viene generato ogni volta che un account di accesso viene aggiunto a un ruolo predefinito del server o rimosso. L'evento viene generato in relazione alle stored procedure sp_addsrvrolemember e sp_dropsrvrolemember. Equivale a [Audit Add Login to Server Role Event Class](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
+|SERVER_ROLE_MEMBER_CHANGE_GROUP|Questo evento viene generato ogni volta che un account di accesso viene aggiunto a un ruolo predefinito del server o rimosso. L'evento viene generato in relazione alle stored procedure sp_addsrvrolemember e sp_dropsrvrolemember. Equivale a [Classe di evento Audit Add Login to Server Role](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md).|  
 |SERVER_STATE_CHANGE_GROUP|Questo evento viene generato quando lo stato del servizio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene modificato. Equivale a [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md).|  
 |SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|Viene indicato il corretto accesso a un database indipendente da parte di un'entità. Equivale alla classe di evento Audit Successful Database Authentication.|  
 |SUCCESSFUL_LOGIN_GROUP|Viene indicato il corretto accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]da parte di un'entità. Gli eventi di questa classe vengono generati da connessioni nuove o riutilizzate da un pool di connessioni. Equivale a [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md).|  

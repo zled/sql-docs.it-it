@@ -1,20 +1,22 @@
 ---
-title: "Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2017 | Microsoft Docs"
-description: "Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017"
+title: Modifiche di rilievo apportate alle funzionalità del Motore di database in SQL Server 2017 | Microsoft Docs
+description: Modifiche di rilievo apportate alle funzionalità del motore di database in SQL Server 2017
 ms.date: 04/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.custom: 
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.custom: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: breaking changes 2017 [SQL Server]
-ms.assetid: 
-caps.latest.revision: "1"
+helpviewer_keywords:
+- breaking changes 2017 [SQL Server]
+ms.assetid: ''
+caps.latest.revision: 1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
