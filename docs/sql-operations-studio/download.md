@@ -35,14 +35,14 @@ Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Ottenere Studio operazioni SQL (anteprima) per Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Ottenere SQL Operations Studio (anteprima) per Windows
 
-Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un'esperienza di installazione di Windows standard e un file ZIP: 
+Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un'installazione di Windows standard e un file ZIP: 
 
 **Programma di installazione**
 
-1. Scaricare ed eseguire il [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] programma di installazione per Windows](https://go.microsoft.com/fwlink/?linkid=870837).
-1. Avviare il [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
+1. Scaricare ed eseguire il [programma di installazione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=870837).
+1. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 
 **file con estensione zip**
@@ -52,14 +52,14 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 3. Eseguire `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere Studio operazioni SQL (anteprima) per macOS
+## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere SQL Operations Studio (anteprima) per macOS
 
 1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=870839).
 2. Per espandere il contenuto del file zip, fare doppio clic.
-3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *sqlops.app* per il *applicazioni* cartella.
+3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *sqlops.app* sulla cartella *applicazioni*.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere Studio operazioni SQL (anteprima) per Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere SQL Operations Studio (anteprima) per Linux
 
 1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux](https://go.microsoft.com/fwlink/?linkid=870840).
 1. Per estrarre il file e avviare [!INCLUDE[name-sos](../includes/name-sos-short.md)], aprire una nuova finestra terminale e digitare i comandi seguenti:
@@ -90,7 +90,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
    ``` 
 
    > [!NOTE]
-   > In Debian, Redhat e Ubuntu, si dispone di dipendenze mancanti. Per installare queste dipendenze a seconda della versione di Linux, utilizzare i comandi seguenti:
+   > In Debian, Redhat e Ubuntu, potrebbero mancare alcune dipendenze. Per installarle, a seconda della versione di Linux, utilizzare i comandi seguenti:
    
 
    **Debian:** 
@@ -113,15 +113,15 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Disinstallare Studio operazioni SQL (anteprima)
+## <a name="uninstall-sql-operations-studio-preview"></a>Disinstallare SQL Operations Studio (anteprima)
 
-Se è stato installato [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] utilizzando il programma di installazione di Windows, quindi disinstallare allo stesso modo rimuovere tutte le applicazioni di Windows.
+Se [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato utilizzando il programma di installazione di Windows, disinstallare nel modo comune a tutte le applicazioni di Windows.
 
-Se è stato installato [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] con un file ZIP o altro archivio, quindi eliminare i file.
+Se[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato con un file ZIP o altro archivio, eliminare i file.
 
 ## <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] viene eseguito in Windows, macOS e Linux ed è supportato sulle piattaforme seguenti:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] è supportato in Windows, macOS e Linux, sulle piattaforme seguenti:
 
 ### <a name="windows"></a>Windows
 - Windows 10 (64 bit)
@@ -149,9 +149,9 @@ Per controllare gli aggiornamenti più recenti, fare clic sull'icona a forma di 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Vedere una delle Guide rapide seguenti per iniziare:
-- [Connetti & Query in SQL Server](quickstart-sql-server.md)
-- [Connettersi & Query di Database SQL di Azure](quickstart-sql-database.md)
-- [Connettersi & Query Azure Data Warehouse](quickstart-sql-dw.md)
+- [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
+- [Connettersi ed eseguire query di Database SQL di Azure](quickstart-sql-database.md)
+- [Connettersi ed eseguire query in Azure Data Warehouse](quickstart-sql-dw.md)
 
 Contribuire a [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 - [https://github.com/Microsoft/sqlopsstudio](https://github.com/Microsoft/sqlopsstudio) 
