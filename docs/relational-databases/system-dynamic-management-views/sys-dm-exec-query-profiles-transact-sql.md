@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_query_profiles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9a7656b78478c321e277ae16577f9bce178aeca
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b93ca80039e4fbfd0ce7d9d432ac03b256cb2a7f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/03/2018
 |segment_read_count|**int**|Numero di letture anticipate di segmenti.|  
 |segment_skip_count|**int**|Numero di segmenti ignorati finora.| 
 |actual_read_row_count|**bigint**|Numero di righe lette da un operatore, prima è stato applicato il predicato residuo.| 
-|estimated_read_row_count|**bigint**|**Si applica a:** a partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate da leggere da un operatore prima che il predicato residuo è stato applicato.|  
+|estimated_read_row_count|**bigint**|**Si applica a:** iniziano con [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Numero di righe stimate da leggere da un operatore prima che il predicato residuo è stato applicato.|  
   
 ## <a name="general-remarks"></a>Osservazioni generali  
  Se il nodo del piano di query non contiene I/O, tutti i contatori correlati alle operazioni di I/O vengono impostati su NULL.  
@@ -97,10 +97,10 @@ ms.lasthandoff: 02/03/2018
  SET STATISTICS XML ON e SET STATISTICS PROFILE ON utilizzare sempre le statistiche di esecuzione di query legacy infrastruttura di analisi.
   
 ## <a name="permissions"></a>Autorizzazioni  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessaria l'autorizzazione VIEW SERVER STATE nel server.  
-  
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Premium richiede l'autorizzazione VIEW DATABASE STATE nel database. In [!INCLUDE[ssSDS](../../includes/sssds-md.md)] livelli Standard e Basic richiede il [!INCLUDE[ssSDS](../../includes/sssds-md.md)] account amministratore.  
-  
+
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+   
 ## <a name="examples"></a>Esempi  
  Passaggio 1: Account di accesso a una sessione in cui si intende eseguire la query da che analizzare con Sys.dm exec_query_profiles. Per configurare la query per la profilatura utilizzare SET STATISTICS PROFILE in. Eseguire la query in questa stessa sessione.  
   
@@ -134,7 +134,7 @@ ORDER BY node_id;
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Funzioni e viste a gestione dinamica &#40; relative all'esecuzione Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

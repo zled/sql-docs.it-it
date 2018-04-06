@@ -1,6 +1,6 @@
 ---
-title: Scaricare e installare Microsoft SQL operazioni Studio (anteprima) | Documenti Microsoft
-description: Scaricare e installare Microsoft SQL operazioni Studio (preview per Windows, Mac OS o Linux)
+title: Scaricare e installare Microsoft SQL Operations Studio (anteprima) | Microsoft Docs
+description: Scaricare e installare Microsoft SQL Operations Studio (anteprima per Windows, Mac OS o Linux)
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -14,25 +14,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b52d06c5981a994ccb5ef3ace486ee0f6a946c38
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 31b4ee5f9bef46f6b3e654d1cf16a7abbd2cbac8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare Studio operazioni SQL (anteprima)
+# <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare Studio operazioni SQL (anteprima) 
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] viene eseguito in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente, il *anteprima pubblica di marzo*:
+[!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
 
-|Piattaforma|Scarica|Data di rilascio| Version |
+Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di febbraio*:
+
+|Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
 |Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=870837)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=870838)|28 marzo 2018 |0.27.3|
 |macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=870839)|28 marzo 2018 |0.27.3|
 |Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=870842)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=870841)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)|28 marzo 2018 |0.27.3|
 
-Per informazioni dettagliate sulla versione più recente, vedere il [note sulla versione](release-notes.md).
+Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
 ## <a name="get-sql-operations-studio-preview-for-windows"></a>Ottenere Studio operazioni SQL (anteprima) per Windows
 
@@ -46,7 +47,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 
 **file con estensione zip**
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=870838).
+1. Scaricare lo [ZIP di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=870838).
 2. Individuare il file scaricato e decomprimerlo.
 3. Eseguire `\sqlops-windows\sqlops.exe`
 
@@ -78,6 +79,15 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 
    sqlops
    ```
+
+   **GZ installazione:**
+   ```bash 
+   cd ~ 
+   cp ~/Downloads/sqlops-linux-<version string>.tar.gz ~ 
+   tar -xvf ~/sqlops-linux-<version string>.tar.gz 
+   echo 'export PATH="$PATH:~/sqlops-linux-x64"' >> ~/.bashrc source ~/.bashrc 
+   sqlops 
+   ``` 
 
    > [!NOTE]
    > In Debian, Redhat e Ubuntu, si dispone di dipendenze mancanti. Per installare queste dipendenze a seconda della versione di Linux, utilizzare i comandi seguenti:
