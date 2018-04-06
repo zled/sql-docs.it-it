@@ -1,16 +1,16 @@
 ---
 title: Sys.database_service_objectives (Database SQL di Azure) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/30/2016
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database, sql-data-warehouse
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - Pool elastico
@@ -18,16 +18,16 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-caps.latest.revision: 
+caps.latest.revision: 16
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08c801fe0f7d917de2c520e788320ec3677d8a6e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 40f4d0d98cd33a57d6ab1e6f9c46ebd2174c9a15
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -43,9 +43,9 @@ Restituisce l'edizione (livello di servizio), l'obiettivo di servizio (livello d
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|int|L'ID del database, univoco all'interno di un'istanza del server di Database SQL di Azure. Attive con [Sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|edition|sysname|Il livello di servizio per il database o data warehouse: **base**, **Standard**, **Premium** o **Data Warehouse**.|  
-|service_objective|sysname|Il piano tariffario del database. Se il database è in un pool elastico, restituisce **ElasticPool**.<br /><br /> Nel **base** livello, restituisce **base**.<br /><br /> **Solo i database in un livello di servizio standard** restituisce uno dei seguenti: S0, S1, S2 o S3.<br /><br /> **Solo i database in un livello premium** restituisce delle operazioni seguenti: P1, P2, P4, P6/P3 o P11.<br /><br /> **SQL Data Warehouse** restituisce DW100 tramite DW2000.|  
+|database_id|int|L'ID del database, univoco all'interno di un'istanza del server di Database SQL di Azure. Attive con [Sys. Databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|edition|sysname|Il livello di servizio per il database o data warehouse: **base**, **Standard**, **Premium**, **generale**,  **Business critico**, o **Data Warehouse**.|  
+|service_objective|sysname|Il piano tariffario del database. Se il database è in un pool elastico, restituisce **ElasticPool**.<br /><br /> Nel **base** livello, restituisce **base**.<br /><br /> Solo i database in un livello di servizio standard restituisce i valori validi correnti per questo livello.<br /><br /> Solo i database in un livello premium restituisce i valori validi correnti per questo livello di servizio.<br /><br />Singolo database nel livello di servizio generico restituisce i valori validi correnti per questo livello di servizio.<br /><br />Singolo database nel livello di servizio Business Critical restituisce i valori validi correnti per questo livello di servizio.<br /><br /> SQL Data Warehouse restituisce i valori validi correnti per SQL Data Warehouse.|  
 |elastic_pool_name|sysname|Il nome del [pool elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) al quale appartiene il database. Restituisce **NULL** se il database è un singolo database o un warehoue di dati.|  
   
 ## <a name="permissions"></a>Autorizzazioni  

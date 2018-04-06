@@ -1,16 +1,16 @@
 ---
 title: sys.dm_tran_locks (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_tran_locks
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c54a97a7b84dcb4d9873ee2537e31714b6f62172
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+ms.openlocfilehash: ec60197ba99cf24e0da74fd3b887b81d5cd0e44c
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,22 +53,23 @@ ms.lasthandoff: 02/20/2018
 |**resource_lock_partition**|**Int**|ID della partizione di blocco per una risorsa di blocco partizionata. Il valore per le risorse di blocco non partizionate è 0.|  
 |**request_mode**|**nvarchar(60)**|Modalità relativa alla richiesta. Per le richieste concesse, indica la modalità concessa. Per le richieste in attesa, indica la modalità richiesta.|  
 |**request_type**|**nvarchar(60)**|Tipo di richiesta. Il valore è LOCK.|  
-|**request_status**|**nvarchar(60)**|Stato corrente della richiesta. I valori possibili sono GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT o ABORT_BLOCKERS. Per ulteriori informazioni sulle attese con priorità bassa e blocchi di interruzione, vedere il *low_priority_lock_wait* sezione [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).|  
+|**request_status**|**nvarchar(60)**|Stato corrente della richiesta. I valori possibili sono GRANTED, CONVERT, WAIT, LOW_PRIORITY_CONVERT, LOW_PRIORITY_WAIT o ABORT_BLOCKERS. Per ulteriori informazioni sulle attese con priorità bassa e blocchi di interruzione, vedere la *low_priority_lock_wait* sezione [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).|  
 |**request_reference_count**|**smallint**|Restituisce un numero approssimativo di volte che lo stesso richiedente ha richiesto la risorsa.|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|ID di sessione attualmente proprietario della richiesta. L'ID di sessione proprietario può cambiare per le transazioni distribuite e associate. Il valore -2 indica che la richiesta appartiene a una transazione distribuita orfana. Il valore -3 indica che la richiesta appartiene a una transazione di recupero posticipata, ad esempio una transazione per cui durante il recupero un rollback è stato posticipato poiché non poteva essere completato correttamente.|  
 |**request_exec_context_id**|**int**|ID del contesto di esecuzione del processo attualmente proprietario della richiesta.|  
 |**request_request_id**|**int**|ID della richiesta (ID batch) del processo attualmente proprietario della richiesta. Questo valore verrà modificato ogni volta che viene modificata la connessione MARS (Multiple Active Result Set) attiva per una transazione.|  
 |**request_owner_type**|**nvarchar(60)**|Tipo di entità proprietaria della richiesta. Le richieste di Gestione blocchi possono appartenere a varie entità. I valori possibili sono:<br /><br /> TRANSACTION = La richiesta appartiene a una transazione.<br /><br /> CURSOR = La richiesta appartiene a un cursore.<br /><br /> SESSION = La richiesta appartiene a una sessione utente.<br /><br /> SHARED_TRANSACTION_WORKSPACE = La richiesta appartiene alla parte condivisa dell'area di lavoro della transazione.<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = la richiesta è di proprietà della parte esclusiva dell'area di lavoro della transazione.<br /><br /> NOTIFICATION_OBJECT = la richiesta è di proprietà di un componente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interno. Questo componente ha richiesto a Gestione blocchi di inviare una notifica quando un altro componente è in attesa del blocco. La caratteristica FileTable è un componente che utilizza questo valore.<br /><br /> **Nota:** le aree di lavoro vengono utilizzate internamente per mantenere attivi i blocchi per le sessioni integrate.|  
-|**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta, **request_owner_id** è uno dei valori seguenti.<br /><br /> <br /><br /> -4: un blocco di database è stato applicato da una tabella FileTable.<br /><br /> -3: è stato applicato un blocco di tabella con una FileTable.<br /><br /> Altro valore: il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [Sys.dm filestream_non_transacted_handles &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
+|**request_owner_id**|**bigint**|ID del proprietario specifico della richiesta.<br /><br /> Quando una transazione è il proprietario della richiesta, questo valore contiene l'ID transazione.<br /><br /> Quando una tabella FileTable è il proprietario della richiesta, **request_owner_id** è uno dei valori seguenti.<br /><br /> <br /><br /> -4: un blocco di database è stato applicato da una tabella FileTable.<br /><br /> -3: è stato applicato un blocco di tabella con una FileTable.<br /><br /> Altro valore: il valore rappresenta un handle di file. Questo valore viene inoltre visualizzato come **fcb_id** nella vista a gestione dinamica [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md).|  
 |**request_owner_guid**|**uniqueidentifier**|GUID del proprietario specifico della richiesta. Questo valore viene utilizzato soltanto da una transazione distribuita nei casi in cui corrisponde al GUID MS DTC della transazione.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Questo valore rappresenta l'ID dello spazio di blocco del richiedente. L'ID dello spazio di blocco determina se due richiedenti sono reciprocamente compatibili e possono ottenere blocchi in modalità altrimenti in conflitto.|  
 |**lock_owner_address**|**varbinary(8)**|Indirizzo di memoria della struttura dei dati interna utilizzata per tener traccia della richiesta. Questa colonna può essere unita di con **resource_address** colonna **Sys.dm os_waiting_tasks**.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
-## <a name="permissions"></a>Autorizzazioni  
+## <a name="permissions"></a>Autorizzazioni
+
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessario il `VIEW DATABASE STATE` autorizzazione per il database. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Standard e Basic, è necessario il **amministratore del Server** o **amministratore di Azure Active Directory** account.  
+In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
  
 ## <a name="remarks"></a>Osservazioni  
  Uno stato di richiesta concessa indica che un blocco è stato concesso per una risorsa al richiedente. Una richiesta in attesa indica che la richiesta non è stata ancora concessa. Vengono restituiti i seguenti tipi di richieste in attesa per il **request_status** colonna:  
@@ -85,7 +86,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
   
 -   SET TRANSACTION ISOLATION LEVEL per specificare il livello di blocco per una sessione. Per altre informazioni, vedere [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
--   Hint di tabelle di blocco per specificare il livello di blocco per un riferimento individuale di una tabella in una clausola FROM. Per la sintassi e le restrizioni, vedere [hint di tabella &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+-   Hint di tabelle di blocco per specificare il livello di blocco per un riferimento individuale di una tabella in una clausola FROM. Per la sintassi e le restrizioni, vedere [hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Una risorsa in esecuzione in un ID di sessione può ottenere la concessione di più blocchi. Diverse entità che sono in esecuzione in una sessione possono possedere ognuna un blocco sulla stessa risorsa, e cui vengono visualizzate le informazioni di **request_owner_type** e **request_owner_id** le colonne restituito da **Sys.dm tran_locks**. Se più istanze dello stesso **request_owner_type** esiste, il **request_owner_id** colonna viene utilizzata per distinguere ogni istanza. Per le transazioni distribuite, il **request_owner_type** e **request_owner_guid** colonne verranno visualizzate le informazioni di entità diversa.  
   
@@ -93,7 +94,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
   
  Più cursori in esecuzione in una sessione non sono distinguibili e vengono considerati come un'unica entità.  
   
- Le transazioni distribuite non associate a un valore di ID di sessione sono transazioni orfane a cui viene assegnato il valore di ID di sessione -2. Per ulteriori informazioni, vedere [KILL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/kill-transact-sql.md).  
+ Le transazioni distribuite non associate a un valore di ID di sessione sono transazioni orfane a cui viene assegnato il valore di ID di sessione -2. Per ulteriori informazioni, vedere [KILL & #40; Transact-SQL & #41; ](../../t-sql/language-elements/kill-transact-sql.md).  
   
 ## <a name="resource-details"></a>Informazioni dettagliate sulle risorse  
  Nella tabella seguente sono elencate le risorse sono rappresentate nel **resource_associated_entity_id** colonna.  
@@ -278,7 +279,7 @@ In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] livelli Premium, è necessar
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- I seguenti XEvent sono correlati alla partizione **COMMUTATORE** e ricompilazione dell'indice online. Per informazioni sulla sintassi, vedere [ALTER TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-index-transact-sql.md).  
+ I seguenti XEvent sono correlati alla partizione **COMMUTATORE** e ricompilazione dell'indice online. Per informazioni sulla sintassi, vedere [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) e [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
 -   lock_request_priority_state  
   

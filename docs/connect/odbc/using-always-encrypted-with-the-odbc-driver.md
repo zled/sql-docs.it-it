@@ -1,27 +1,28 @@
 ---
 title: Utilizzo di Always Encrypted con il Driver ODBC per SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 10/01/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
-caps.latest.revision: "3"
+caps.latest.revision: 3
 ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 1456db9e5474f2970508b4bc035915744172b3df
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilizzo di Always Encrypted con il Driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -301,7 +302,7 @@ Per controllare l'impatto sulle prestazioni di recupero dei metadati di crittogr
 
 Per controllare il comportamento di un'istruzione Always Encrypted, chiamare la funzione SQLSetStmtAttr per impostare il `SQL_SOPT_SS_COLUMN_ENCRYPTION` attributo dell'istruzione a uno dei valori seguenti:
 
-|Valore|Description|
+|Value|Description|
 |-|-|
 |`SQL_CE_DISABLED` (0)|Always Encrypted è disabilitato per l'istruzione|
 |`SQL_CE_RESULTSETONLY` (1)|Solo la decrittografia. Set di risultati e i valori restituiti vengono decrittografati e parametri non vengono crittografati.|
@@ -333,10 +334,16 @@ Se SQL Server indica al driver che il parametro non deve essere crittografato, l
 
 ### <a name="column-encryption-key-caching"></a>Chiave di crittografia di colonna la memorizzazione nella cache
 
-Per ridurre il numero di chiamate a un archivio chiavi master della colonna per decrittografare le chiavi di crittografia di colonna, il driver memorizza nella cache il testo non crittografato delle chiavi Cek in memoria. Dopo aver ricevuto la chiave ECEK dai metadati del database, il driver tenta innanzitutto di trovare CEK crittografato corrispondente al valore della chiave crittografato nella cache. Il driver chiama l'archivio chiavi contenente la chiave CMK solo se non si trova il testo non crittografato corrispondente CEK nella cache.
+Per ridurre il numero di chiamate a un archivio chiavi master della colonna per decrittografare le chiavi di crittografia di colonna, il driver memorizza nella cache il testo non crittografato delle chiavi Cek in memoria. La cache CEK è globale per il driver e non sono associati a qualsiasi un'unica connessione. Dopo aver ricevuto la chiave ECEK dai metadati del database, il driver tenta innanzitutto di trovare CEK crittografato corrispondente al valore della chiave crittografato nella cache. Il driver chiama l'archivio chiavi contenente la chiave CMK solo se non si trova il testo non crittografato corrispondente CEK nella cache.
 
 > [!NOTE]
 > Nel Driver ODBC per SQL Server, le voci nella cache vengono rimossi dopo un timeout di due ore. Ciò significa che per una determinata chiave ECEK, il driver contatta l'archivio chiavi una sola volta durante il ciclo di vita dell'applicazione o ogni due ore, a seconda del valore è minore.
+
+A partire da 17.1 il Driver ODBC per SQL Server, il timeout della cache CEK può essere regolato usando il `SQL_COPT_SS_CEKCACHETTL` attributo di connessione, che specifica il numero di secondi una CEK rimarrà nella cache. A causa della natura globale della cache, questo attributo può essere modificato da un handle di connessione valido per il driver. Quando la cache viene diminuito durata (TTL), eseguono esistente che supererebbe la nuova durata (TTL) inoltre vengono rimossi. Se è 0, non viene memorizzati nella cache eseguono.
+
+### <a name="trusted-key-paths"></a>Percorsi principali attendibili
+
+A partire 17.1 il Driver ODBC per SQL Server, il `SQL_COPT_SS_TRUSTEDCMKPATHS` attributo di connessione consente a un'applicazione richiedere che le operazioni di crittografia sempre attiva utilizzano solo un elenco di CMK, identificato dal relativo percorso di chiave specificato. Per impostazione predefinita, questo attributo è NULL, che indica che il driver accetta qualsiasi percorso della chiave. Per utilizzare questa funzionalità, impostare `SQL_COPT_SS_TRUSTEDCMKPATHS` in modo che punti a una stringa di caratteri wide delimitato da null, con terminazione null che elenca i percorsi di chiave consentiti. La memoria a cui fa riferimento questo attributo deve rimanere valida durante le operazioni di crittografia o decrittografia utilizzando l'handle di connessione in cui è impostato---su cui il driver viene verificato se il percorso CMK come specificato dai metadati del server soggetti in questo elenco. Se il percorso CMK non è presente nell'elenco, l'operazione ha esito negativo. L'applicazione può modificare il contenuto della memoria che punta questo attributo, per modificare l'elenco di CMK attendibile, senza impostare l'attributo nuovamente.
 
 ## <a name="working-with-column-master-key-stores"></a>Uso degli archivi delle chiavi master delle colonne
 
@@ -351,7 +358,7 @@ Il Driver ODBC per SQL Server viene fornito con i provider di archivio chiavi pr
 | Nome | Description | Nome del provider (metadati) |Disponibilità|
 |:---|:---|:---|:---|
 |Insieme di credenziali chiave di Azure |CMK archivi in un insieme di credenziali chiave di Azure | `AZURE_KEY_VAULT` |Windows, macOS, Linux|
-|Archivio certificati di Windows|Archivia CMK localmente nell'archivio di Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
+|Archivio certificati Windows|Archivia CMK localmente nell'archivio di Windows| `MSSQL_CERTIFICATE_STORE`|Windows|
 
 - È necessario assicurarsi che il nome del provider, configurato nei metadati della chiave master della colonna, sia corretto e che il percorso della chiave master di colonna conformi al formato del percorso della chiave per il provider è (o l'amministratore del database). È consigliabile configurare le chiavi usando strumenti come SQL Server Management Studio, che genera automaticamente i nomi di provider e i percorsi di chiave validi quando viene eseguita l'istruzione [CREATE COLUMN MASTER KEY (Transact-SQL)](../../t-sql/statements/create-column-master-key-transact-sql.md) .
 
@@ -430,7 +437,7 @@ Il driver tenta di caricare la libreria identificata dal parametro ValuePtr util
 |`CE203`|Il simbolo "CEKeyStoreProvider" esportato non è stato trovato nella libreria.|
 |`CE203`|Uno o più provider nella raccolta sono già caricati.|
 
-`SQLSetConnectAttr`Restituisce l'errore normale o valori di esito positivo e informazioni aggiuntive è disponibile per gli eventuali errori che si sono verificati tramite il meccanismo di diagnostica ODBC standard.
+`SQLSetConnectAttr` Restituisce l'errore normale o valori di esito positivo e informazioni aggiuntive disponibili per gli eventuali errori che si sono verificati tramite il meccanismo di diagnostica ODBC standard.
 
 > [!NOTE]
 > Il programmatore di applicazioni è necessario assicurarsi che tutti i provider personalizzati vengono caricati prima di qualsiasi query richiesta viene inviata tramite qualsiasi connessione. In caso contrario, genera l'errore:
@@ -518,7 +525,7 @@ Il chiamante deve garantire che un buffer di lunghezza sufficiente seguendo la s
 
 Questa interfaccia non inserito nessun requisito aggiuntivo sul formato dei dati trasferiti tra un'applicazione e un provider dell'archivio chiavi. Ogni provider è possibile definire il proprio formato di dati/protocollo, a seconda delle esigenze.
 
-Per un esempio di implementazione di un provider di archivio chiavi, vedere [provider archivio chiavi personalizzati](../../connect/odbc/custom-keystore-providers.md)
+Per un esempio di implementazione di provider di archivio chiavi personalizzato, vedere [provider archivio chiavi personalizzati](../../connect/odbc/custom-keystore-providers.md)
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Limitazioni del driver ODBC quando si Usa crittografia sempre attiva
 
@@ -567,8 +574,8 @@ Vedere [migrare dati sensibili protetti da crittografia sempre attiva](../../rel
 
 |Nome|Description|  
 |----------|-----------------|  
-|`ColumnEncryption`|I valori accettati sono `Enabled` / `Disabled`.<br>`Enabled`-Abilita la funzionalità crittografia sempre attiva per la connessione.<br>`Disabled`-Disabilita la funzionalità sempre crittografato per la connessione. <br><br>Il valore predefinito è `Disabled`.|  
-|`KeyStoreAuthentication` | I valori validi: `KeyVaultPassword`,`KeyVaultClientSecret` |
+|`ColumnEncryption`|I valori accettati sono `Enabled` / `Disabled`.<br>`Enabled` -Abilita la funzionalità crittografia sempre attiva per la connessione.<br>`Disabled` -disabilitare la funzionalità crittografia sempre attiva per la connessione. <br><br>Il valore predefinito è `Disabled`.|  
+|`KeyStoreAuthentication` | I valori validi: `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword`, impostare questo valore su un nome entità utente di Active Directory di Azure valido. <br>Quando `KeyStoreAuthetication`  =  `KeyVaultClientSecret` impostare questo valore su un valido ID Azure Active Directory dell'applicazione Client |
 |`KeyStoreSecret` | Quando `KeyStoreAuthentication`  =  `KeyVaultPassword` impostare questo valore per la password per il nome utente corrispondente. <br>Quando `KeyStoreAuthentication`  =  `KeyVaultClientSecret` impostare questo valore per il segreto dell'applicazione associata a una Azure Active Directory dell'applicazione Client ID valido|
 
@@ -576,15 +583,17 @@ Vedere [migrare dati sensibili protetti da crittografia sempre attiva](../../rel
 
 |Nome|Tipo|Description|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connessione|`SQL_COLUMN_ENCRYPTION_DISABLE`(0), disabilita sempre crittografato <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) - abilitare crittografia sempre attiva|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|Pre-connessione|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) - disable crittografia sempre attiva <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) - abilitare crittografia sempre attiva|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|Post-connessione|[Set] Tentativo di caricamento CEKeystoreProvider<br>[Get] Restituisce un nome di CEKeystoreProvider|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|Post-connessione|[Set] Scrivere dati CEKeystoreProvider<br>[Get] Leggere i dati da CEKeystoreProvider|
+|`SQL_COPT_SS_CEKCACHETTL`|Post-connessione|[Impostato] Impostare la durata (TTL) della cache CEK<br>[Get] Ottenere la durata (TTL) di cache CEK corrente|
+|`SQL_COPT_SS_TRUSTEDCMKPATHS`|Post-connessione|[Impostato] Impostare il puntatore di percorsi attendibile CMK<br>[Get] Ottenere il puntatore di percorsi attendibile CMK corrente|
 
 ### <a name="statement-attributes"></a>Attributi di istruzione
 
 |Nome|Description|  
 |----------|-----------------|  
-|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED`(0) - always Encrypted è disabilitato per l'istruzione <br>`SQL_CE_RESULTSETONLY`(1) - solo la decrittografia. Set di risultati e i valori restituiti vengono decrittografati e parametri non vengono crittografati. <br>`SQL_CE_ENABLED`(3) - always Encrypted è abilitato e usato per i parametri e i risultati|
+|`SQL_SOPT_SS_COLUMN_ENCRYPTION`|`SQL_CE_DISABLED` (0) - always Encrypted è disabilitato per l'istruzione <br>`SQL_CE_RESULTSETONLY` (1) - solo la decrittografia. Set di risultati e i valori restituiti vengono decrittografati e parametri non vengono crittografati. <br>`SQL_CE_ENABLED` (3) - always Encrypted è abilitato e usato per entrambi i parametri e i risultati|
 
 ### <a name="descriptor-fields"></a>Campi di descrizione
 

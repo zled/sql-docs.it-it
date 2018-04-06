@@ -1,29 +1,29 @@
 ---
 title: DSN e stringa di connessione parole chiave e gli attributi utilizzati nel Driver ODBC per SQL Server | Documenti Microsoft
-ms.custom: 
-ms.date: 01/24/2018
+ms.custom: ''
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
 - DSN
 - Connection String Keywords
 - Connection Attributes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: MightyPen
 ms.author: v-jizho2
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 09af03a1f7f9389bbbc86bc5f9f1a5a358aaf885
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+ms.openlocfilehash: 641d0cf4134dc488436f981df1d4bee2c089acd2
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN e parole chiave delle stringhe di connessione e gli attributi
 
@@ -166,6 +166,7 @@ Imposta la modalità di autenticazione da utilizzare quando ci si connette a SQL
 |SqlPassword|SQL_AU_PASSWORD|Autenticazione di SQL Server con nome utente e password.|
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Autenticazione integrata di Active Directory Azure.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Autenticazione di Password di Active Directory di Azure.|
+|ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory interattivo autenticazione.|
 | |SQL_AU_RESET|Non impostato. Esegue l'override di qualsiasi DSN o l'impostazione della stringa di connessione.|
 
 ### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
@@ -219,6 +220,6 @@ Carica una raccolta di provider di archivio chiavi per Always Encrypted o recupe
 
 | Valore dell'attributo | Description |
 |-|-|
-| Char * | Percorso di una raccolta di provider di archivio chiavi |
+| char * | Percorso di una raccolta di provider di archivio chiavi |
 
 
