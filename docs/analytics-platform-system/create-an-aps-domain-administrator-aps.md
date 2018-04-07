@@ -2,25 +2,25 @@
 title: Creare un amministratore di dominio punti di accesso (AP)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: ed52bf78-2b0a-4252-98a7-8c2805e22d3d
-caps.latest.revision: 
-ms.openlocfilehash: 0ebc616d28fe734b9dac52303641390ce9bc0957
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 7
+ms.openlocfilehash: 6842992931ba35f450d49d6db9beb803dce6b73a
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="create-an-aps-domain-administrator"></a>Creare un amministratore di dominio punti di accesso
 Alcune operazioni richiedono privilegi di amministratore di sistema della piattaforma Analitica dominio. Viene descritto come creare gli amministratori di dominio aggiuntivo dello strumento.  
@@ -54,5 +54,5 @@ Disporre delle autorizzazioni sufficienti per configurare tutti i nodi di punti 
     Aggiunge il nuovo utente per il **Domain Admins** gruppo e **PdwControlNodeAccess** gruppo. Scegliere **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40; Sistema della piattaforma Analitica &#41;](launch-the-configuration-manager.md)  
+[Avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md)  
   

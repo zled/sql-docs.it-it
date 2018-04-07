@@ -1,30 +1,31 @@
 ---
 title: Connettersi a Sybase (SybaseToSQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-sybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf5f7f5c12a8a2e3af85ba2901e2348da92c30b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 85cc0d5c5dbea4526afd86fb4efb4b4ec65d7ac9
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Connettersi a Sybase (SybaseToSQL)
 Utilizzare il **Connetti Sybase** finestra di dialogo per connettersi all'istanza di Sybase Adaptive Server Enterprise (ASE) che si desidera eseguire la migrazione.  
@@ -44,7 +45,7 @@ Immettere o selezionare il nome o indirizzo IP del Server adattivo. Il nome del 
 **Porta server**  
 Se si utilizza una porta non predefinita per le connessioni a ASE, immettere il numero di porta. Il numero di porta predefinito è 5000. Questa è un'opzione di modalità standard.  
   
-**User name**  
+**Nome utente**  
 Immettere il nome utente utilizzato per connettersi a ASE. Questa è un'opzione di modalità standard.  
   
 **Password**  
@@ -55,14 +56,14 @@ Immettere la stringa di connessione completa per la connessione di base.
   
 Le stringhe di connessione è costituito da coppie nome / valore di parametro. I nomi dei parametri variano con il provider in uso.  
   
-**Come indicato di seguito sono riportati i parametri di connessione per diversi provider:**  
+**Parametri di connessione per diversi provider sono i seguenti:**  
   
 1.  Parametri di connessione per **Provider OLE DB**  
   
     |Impostazione|Parametro Sybase 12,5|Parametro Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nome server|Server Name|Server|  
-    |Port|Indirizzo di porta del server|Port|  
+    |Nome server|Nome server|Server|  
+    |Porta|Indirizzo di porta del server|Porta|  
     |Nome utente|ID utente|ID utente|  
     |Password|Password|Password|  
     |Provider|Provider|Provider|  
@@ -80,10 +81,10 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
     |Impostazione|Parametro Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nome del driver|Driver|  
-    |Server Name|Server|  
-    |Nome utente|UID|  
+    |Nome server|Server|  
+    |Nome utente|Uid|  
     |Password|Pwd|  
-    |Numero di porta|Port|  
+    |Numero di porta|Porta|  
   
     Per Sybase ASE 12,5 o 15, una stringa di connessione di esempio è la seguente:  
   
@@ -93,10 +94,10 @@ Le stringhe di connessione è costituito da coppie nome / valore di parametro. I
   
     |Impostazione|Parametro Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Server Name|Server|  
-    |Nome utente|UID|  
+    |Nome server|Server|  
+    |Nome utente|Uid|  
     |Password|Pwd|  
-    |Numero di porta|Port|  
+    |Numero di porta|Porta|  
   
     Un esempio di stringa di connessione per il Provider ADO.NET è come segue:  
   

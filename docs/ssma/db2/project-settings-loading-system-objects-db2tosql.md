@@ -2,29 +2,30 @@
 title: Impostazioni (oggetti di sistema durante il caricamento) del progetto (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f0bf007faf72861607740d5af0f6ec418fefb71f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f0ec81e97380007724ba1cfeb9ee2580ca64edd0
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Impostazioni (oggetti di sistema durante il caricamento) del progetto (DB2ToSQL)
 La pagina di oggetti di sistema durante il caricamento del **impostazioni progetto** la finestra di dialogo consente di specificare quali oggetti di sistema DB2 SSMA converte e li carica in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -38,21 +39,21 @@ Il riquadro oggetti di sistema durante il caricamento è disponibile nel **impos
 ## <a name="default-settings"></a>Impostazioni predefinite  
 La conversione di oggetti di sistema utilizza risorse di sistema e richiede tempo. Per migliorare le prestazioni, SSMA seleziona solo gli oggetti di sistema utilizzate più di frequente, come illustrato nel seguente elenco:  
   
--   SYS. DBMS_OUTPUT  
+-   SYS.DBMS_OUTPUT  
   
--   SYS. DBMS_PIPE  
+-   SYS.DBMS_PIPE  
   
 -   SYS. DBMS_UTILITY  
   
--   SYS. STANDARD  
+-   SYS.STANDARD  
   
--   SYS. UTL_FILE  
+-   SYS.UTL_FILE  
   
--   SYS. DBMS_LOB  
+-   SYS.DBMS_LOB  
   
--   SYS. DBMS_SQL  
+-   SYS.DBMS_SQL  
   
--   SYS. DBMS_SESSION  
+-   SYS.DBMS_SESSION  
   
 Se gli oggetti di DB2 fanno riferimento a oggetti di sistema aggiuntive, è necessario selezionare gli oggetti. Se non si seleziona gli oggetti di sistema che fanno riferimento gli oggetti di database DB2, SSMA verrà segnalati gli errori di conversione. Se si ricevono errori di conversione causati dalla mancanza di oggetti di sistema, selezionare gli oggetti mancanti nella finestra di dialogo. È quindi possibile ripetere la conversione in base alle esigenze.  
   

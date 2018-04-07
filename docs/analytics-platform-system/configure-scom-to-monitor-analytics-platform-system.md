@@ -2,25 +2,25 @@
 title: Configurare SCOM per il monitoraggio di sistema della piattaforma Analitica
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4dba9b50-1447-45fc-b219-b9fc99d47d8d
-caps.latest.revision: "10"
-ms.openlocfilehash: 435bbae75548d1959d509b9833bd9a6f7ec658e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 53fc0bce73f2fd30553e2a834122e86cdb0a65fc
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-scom-to-monitor-analytics-platform-system"></a>Configurare SCOM per il monitoraggio di sistema della piattaforma Analitica
 Seguire questi passaggi per configurare i Management Pack di System Center Operations Manager (SCOM) per il sistema di piattaforma Analitica. I Management Pack sono necessari per il monitoraggio di sistema della piattaforma Analitica da SCOM.  
@@ -30,12 +30,12 @@ Seguire questi passaggi per configurare i Management Pack di System Center Opera
   
 System Center Operations Manager 2007 R2 deve essere installato e in esecuzione.  
   
-I management pack deve essere installato e configurato. Vedere [installa i Management Pack SCOM &#40; Sistema della piattaforma Analitica &#41; ](install-the-scom-management-packs.md) e [importare il Management Pack SCOM per PDW &#40; Sistema della piattaforma Analitica &#41; ](import-the-scom-management-pack-for-pdw.md).  
+I management pack deve essere installato e configurato. Vedere [installare i Management Pack SCOM &#40;Analitica Platform System&#41; ](install-the-scom-management-packs.md) e [Importa Management Pack di SCOM per PDW &#40;Analitica Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
 ## <a name="ConfigureRunAsProfile"></a>Configurare i profili runas in System Center  
 Per configurare System Center, è necessario eseguire la procedura seguente:  
   
--   Creare account RunAs per il **APS Watcher** utente di dominio e mapparlo al **Account Watcher punti di accesso di Microsoft.**  
+-   Creare account RunAs per il **APS Watcher** utente di dominio e mapparlo al **Microsoft APS Watcher Account.**  
   
 -   Creare account RunAs per il **monitoring_user** utente APS ed eseguire il mapping per il **Account azione dei punti di accesso di Microsoft**.  
   
@@ -43,7 +43,7 @@ Di seguito sono fornite istruzioni dettagliate su come è possibile farlo:
   
 1.  Creare il **APS Watcher** account RunAs con **Windows** account di tipo per il **APS Watcher** utente di dominio.  
   
-    1.  Passare il **amministrazione** destro del mouse sul riquadro **configurazione runas** -> **account** e selezionare **crea Account runas...**  
+    1.  Passare il **amministrazione** pulsante destro del mouse nel riquadro **Run As Configuration** -> **account** e selezionare **crea Account runas...**  
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
@@ -81,7 +81,7 @@ Di seguito sono fornite istruzioni dettagliate su come è possibile farlo:
   
     4.  Nel **proprietà generali** pagina fare clic su **Avanti**.  
   
-    5.  Nel **account RunAs** pagina fare clic su di **Aggiungi...** e selezionare creato in precedenza **APS Watcher** account RunAs.  
+    5.  Nel **gli account RunAs** pagina fare clic sul **Aggiungi...** e selezionare creato in precedenza **APS Watcher** account RunAs.  
   
         ![RunAsProfileWizardAdd](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd.png "RunAsProfileWizardAdd")  
   
@@ -116,12 +116,12 @@ Di seguito sono fornite istruzioni dettagliate su come è possibile farlo:
   
     1.  Passare il **Account azione dei punti di accesso di Microsoft** proprietà come descritto nel passaggio 2.  
   
-    2.  Nel **account RunAs** pagina fare clic su **Aggiungi...** Selezionare l'account RunAs appena creato.  
+    2.  Nel **gli account RunAs** pagina fare clic su **Aggiungi...** Selezionare l'account RunAs appena creato.  
   
         ![RunAsProfileWizardAdd2](./media/configure-scom-to-monitor-analytics-platform-system/RunAsProfileWizardAdd2.png "RunAsProfileWizardAdd2")  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Ora che è stato configurato il Management Pack, si è pronti per avviare il monitoraggio del dispositivo. Per ulteriori informazioni, vedere [monitorare l'accessorio tramite System Center Operations Manager &#40; Sistema della piattaforma Analitica &#41; ](monitor-the-appliance-by-using-system-center-operations-manager.md).  
+Ora che è stato configurato il Management Pack, si è pronti per avviare il monitoraggio del dispositivo. Per altre informazioni, vedere [monitorare l'accessorio by Using System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md).  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

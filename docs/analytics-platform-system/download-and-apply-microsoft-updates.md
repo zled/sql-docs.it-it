@@ -2,25 +2,25 @@
 title: Scaricare e applicare gli aggiornamenti di Microsoft (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: "51"
-ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 51
+ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Scaricare e applicare gli aggiornamenti Microsoft
 In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalogo di Microsoft Update per Windows Server Update Services (WSUS) e applicare gli aggiornamenti ai server accessorio Analitica Platform System. Microsoft Update installerà tutti gli aggiornamenti per Windows e SQL Server. Windows Server Update Services è installato nella macchina virtuale VMM del dispositivo.  
@@ -32,22 +32,22 @@ In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalo
 >   
 > Non si applicano Microsoft Updates mentre il dispositivo è in uso. L'applicazione degli aggiornamenti potrebbe nodi dello strumento riavviare il computer. Gli aggiornamenti da applicare durante una finestra di manutenzione quando il dispositivo non è in uso.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 Prima di eseguire questi passaggi, è necessario:  
   
--   Configurare WSUS del dispositivo seguendo le istruzioni in [configurare Windows Server Update Services &#40; Windows Server Update Services &#41; &#40; Sistema della piattaforma Analitica &#41; ](configure-windows-server-update-services-wsus.md).  
+-   Configurare WSUS del dispositivo seguendo le istruzioni in [configurare Windows Server Update Services &#40;WSUS&#41; &#40;Analitica Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
 -   Conoscenza delle informazioni di accesso account amministratore di dominio dell'infrastruttura.  
   
 -   Disporre di un account di accesso con le autorizzazioni per accedere alla Console di Amministrazione sistema piattaforma Analitica e visualizzare informazioni sullo stato del dispositivo.  
   
--   Nella maggior parte dei casi, è necessario accedere ai server di fuori dell'accessorio WSUS. Per supportare questo scenario di utilizzo Analitica piattaforma del sistema DNS possono essere configurati per supportare un server d'inoltro nome esterno che consentirà di host Analitica Platform System e macchine virtuali (VM) utilizzare i server DNS esterni per la risoluzione dei nomi di fuori del dispositivo. Per ulteriori informazioni, vedere [utilizzare un server d'inoltro DNS per risolvere nomi DNS Non dispositivo &#40; Sistema della piattaforma Analitica &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
+-   Nella maggior parte dei casi, è necessario accedere ai server di fuori dell'accessorio WSUS. Per supportare questo scenario di utilizzo Analitica piattaforma del sistema DNS possono essere configurati per supportare un server d'inoltro nome esterno che consentirà di host Analitica Platform System e macchine virtuali (VM) utilizzare i server DNS esterni per la risoluzione dei nomi di fuori del dispositivo. Per altre informazioni, vedere [utilizzare un server d'inoltro di DNS per risolvere nomi DNS Non accessorio &#40;Analitica Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 ## <a name="bkmk_ImportUpdates"></a>Per scaricare e applicare aggiornamenti Microsoft  
   
 #### <a name="verify-the-appliance-state-indicators"></a>Verificare gli indicatori di stato del dispositivo  
   
-1.  Aprire la Console di amministrazione e passare alla pagina di stato dello strumento. Per ulteriori informazioni, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40; Sistema della piattaforma Analitica &#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+1.  Aprire la Console di amministrazione e passare alla pagina di stato dello strumento. Per altre informazioni, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
 2.  Verificare gli indicatori di stato per tutti i nodi allo stato del dispositivo.  
   
@@ -85,7 +85,7 @@ Prima di eseguire questi passaggi, è necessario:
   
     ![Selezionare tutti gli aggiornamenti applicabili e fare clic su Approva. ] (./media/download-and-apply-microsoft-updates/SQL_Server_PDW_WSUSSelectApprove.png "SQL_Server_PDW_WSUSSelectApprove")  
   
-4.  Selezionare il gruppo di server di dispositivo è stato creato in [configurare Windows Server Update Services &#40; Windows Server Update Services &#41; &#40; Sistema della piattaforma Analitica &#41; ](configure-windows-server-update-services-wsus.md).  
+4.  Selezionare il gruppo di server appliance creato nella [configurare Windows Server Update Services &#40;WSUS&#41; &#40;Analitica Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
 5.  Fare clic su **approvati per l'installazione**, quindi fare clic su **OK**.  
   
@@ -111,9 +111,9 @@ Prima di eseguire questi passaggi, è necessario:
   
 #### <a name="apply-microsoft-updates"></a>Applicare aggiornamenti Microsoft  
   
-1.  Prima di iniziare, aprire il [monitorare il dispositivo tramite la Console di amministrazione &#40; Sistema della piattaforma Analitica &#41; ](monitor-the-appliance-by-using-the-admin-console.md), fare clic su di **stato dello strumento** scheda e verificare che il **Cluster** e **rete** colonne Mostra verde (o NA) per tutti i nodi. Se in una di queste colonne sono presenti eventuali avvisi, il dispositivo potrebbe non essere in grado di installare correttamente gli aggiornamenti. Risolvere tutti gli avvisi esistenti nel **Cluster** e **rete** colonne prima di procedere.  
+1.  Prima di iniziare, aprire il [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), fare clic sui **stato dello strumento** scheda e verificare che il  **Cluster** e **rete** colonne Mostra verde (o NA) per tutti i nodi. Se in una di queste colonne sono presenti eventuali avvisi, il dispositivo potrebbe non essere in grado di installare correttamente gli aggiornamenti. Risolvere tutti gli avvisi esistenti nel **Cluster** e **rete** colonne prima di procedere.  
   
-2.  Eseguire l'accesso di *< nome_dominio >***-HST01** nodo come amministratore di dominio dell'infrastruttura.  
+2.  Eseguire l'accesso di *< nome_dominio > * * *-HST01** nodo come amministratore di dominio dell'infrastruttura.  
   
 3.  Per applicare tutti gli aggiornamenti approvati per Windows Server Update Services, eseguire il programma di aggiornamento. Vedere [eseguire il programma di aggiornamento](#RunUpdateWizard) sotto per le istruzioni.  
   
@@ -125,11 +125,11 @@ Prima di eseguire questi passaggi, è necessario:
   
 3.  Espandere **tutti i computer**.  
   
-4.  Selezionare il gruppo di server di dispositivo è stato creato in [configurare Windows Server Update Services &#40; Windows Server Update Services &#41; &#40; Sistema della piattaforma Analitica &#41; ](configure-windows-server-update-services-wsus.md).  
+4.  Selezionare il gruppo di server appliance creato nella [configurare Windows Server Update Services &#40;WSUS&#41; &#40;Analitica Platform System&#41;](configure-windows-server-update-services-wsus.md).  
   
 5.  Nel **stato** menu a discesa, seleziona **qualsiasi** e fare clic su **aggiornamento**.  
   
-6.  Espandere **servizi di aggiornamento**,  *<appliance name>* - VMM, **aggiornamenti**, **tutti gli aggiornamenti**, dove  *<appliance name>*  è il nome del dispositivo.  
+6.  Espandere **servizi di aggiornamento**, *<appliance name>*- VMM, **aggiornamenti**, **tutti gli aggiornamenti**, dove *<appliance name>* è il nome del dispositivo.  
   
 7.  Nel **tutti gli aggiornamenti** finestra set **approvazione** a **tutti tranne i rifiutati**.  
   
@@ -141,7 +141,7 @@ Prima di eseguire questi passaggi, è necessario:
   
 #### <a name="ensure-there-are-no-critical-alerts-in-the-sql-server-pdw-admin-console"></a>Verificare che non siano presenti avvisi critici nella Console di amministrazione di SQL Server PDW  
   
-1.  Aprire la Console di amministrazione, fare clic sulla scheda stato dello strumento. Vedere [monitorare il dispositivo tramite la Console di amministrazione &#40; Sistema della piattaforma Analitica &#41; ](monitor-the-appliance-by-using-the-admin-console.md).  
+1.  Aprire la Console di amministrazione, fare clic sulla scheda stato dello strumento. Vedere [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md).  
   
 2.  Verificare che il **Cluster** e **rete** colonne Mostra verde (o NA) per tutti i nodi. Se in una di queste colonne sono presenti eventuali avvisi, il dispositivo potrebbe non essere in grado di installare correttamente gli aggiornamenti. Contattare il supporto tecnico se esistono eventuali avvisi critici.  
   
@@ -153,7 +153,7 @@ Seguire queste istruzioni per eseguire il programma di aggiornamento del sistema
   
 1.  Assicurarsi di essere connessi a nodo HST01 come amministratore di dominio dell'infrastruttura.  
   
-2.  Aprire una finestra del prompt dei comandi e immettere i comandi seguenti. Sostituire  *<parameter>*  con le informazioni designate.  
+2.  Aprire una finestra del prompt dei comandi e immettere i comandi seguenti. Sostituire *<parameter>* con le informazioni designate.  
   
 **Per eseguire l'aggiornamento di Microsoft:**  
   
@@ -168,8 +168,8 @@ C:\pdwinst\media\setup.exe /action="ReportMicrosoftUpdateClientStatus" /DomainAd
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
-[Disinstallare gli aggiornamenti di Microsoft &#40; Sistema della piattaforma Analitica &#41;](uninstall-microsoft-updates.md)  
-[Applica gli hotfix del sistema di piattaforma Analitica &#40; Sistema della piattaforma Analitica &#41;](apply-analytics-platform-system-hotfixes.md)  
-[Disinstallare gli aggiornamenti rapidi del sistema di piattaforma Analitica &#40; Sistema della piattaforma Analitica &#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[Software di manutenzione &#40; Sistema della piattaforma Analitica &#41;](software-servicing.md)  
+[Disinstallazione di aggiornamenti Microsoft &#40;Analitica Platform System&#41;](uninstall-microsoft-updates.md)  
+[Applicare aggiornamenti rapidi di sistema della piattaforma Analitica &#40;Analitica Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
+[Disinstallare Analitica piattaforma sistema hotfix &#40;Analitica Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
+[Manutenzione del software &#40;Analitica Platform System&#41;](software-servicing.md)  
   

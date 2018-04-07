@@ -2,14 +2,15 @@
 title: La gestione delle password (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Password management, importing or exporting encrypted password
 - Password management, securing password
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ef6e3271cb4374a5df35427f8a681f0eaa04ce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4592eba9b40be32498f57f26a202dada2d48151e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-passwords-mysqltosql"></a>La gestione delle password (MySQLToSQL)
 In questa sezione riguarda la protezione delle password di database e le procedure per importare o esportare tali tra server:  
@@ -45,9 +46,9 @@ Specificare una password valida utilizzando uno dei tre metodi seguenti:
   
 1.  **Testo non crittografato:** digitare la password del database dell'attributo value del nodo 'password'. Si trovi sotto il nodo della definizione di server nella sezione Server di file di script o file di connessione del server.  
   
-    Le password in testo non crittografato non sono protette. Pertanto, si verificherà il seguente messaggio di avviso nell'output della console: *"Server &lt;id server&gt; password viene fornito in formato testo non crittografato non protetta, l'applicazione Console SSMA fornisce un'opzione per proteggere la password mediante crittografia, vedere l'opzione – securepassword SSMA file della Guida per ulteriori informazioni."*  
+    Le password in testo non crittografato non sono protette. Pertanto, si verifica il seguente messaggio di avviso nell'output della console: *"Server &lt;id server&gt; password viene fornita in formato testo non crittografato non sicure, applicazione Console SSMA fornisce un'opzione per proteggere il password mediante crittografia, vedere opzione – securepassword in SSMA file per altre informazioni della Guida."*  
   
-    **Le password crittografate:** la password specificata, in questo caso, è archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
+    **Le password crittografate:** la password specificata, in questo caso, viene archiviata in formato crittografato nel computer locale in ProtectedStorage.ssma.  
   
     -   **Protezione delle password**  
   
@@ -79,7 +80,7 @@ Specificare una password valida utilizzando uno dei tre metodi seguenti:
                 
                 Re-enter password for server_id 'target _1': xxxxxxx
             
-    -   **Rimuovere le password crittografate**  
+    -   **Rimozione di password crittografate**  
   
         Eseguire il `SSMAforMySQLConsole.exe` con il`–securepassword` e `–remove` passa alla riga di comando passando l'ID del server, per rimuovere le password crittografate dal file di archiviazione protetto presentano nel computer locale.  
   

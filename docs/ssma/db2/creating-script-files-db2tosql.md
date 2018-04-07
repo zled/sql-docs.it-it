@@ -2,29 +2,30 @@
 title: Creazione di file di Script (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 088cd42b2635193ff34e45490811c44d6450ffc5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>Creazione di file di Script (DB2ToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -33,7 +34,7 @@ Il file di script può essere suddiviso in tre sezioni, dei quali..,:
   
 1.  **configurazione:** consente all'utente di impostare i parametri di configurazione per l'applicazione console.  
   
-2.  **Server:** consente all'utente di impostare le definizioni del server di origine/destinazione. Questo può essere anche in un file di connessione server separato.  
+2.  **Server:** consente all'utente di impostare l'origine/destinazione le definizioni del server. Questo può essere anche in un file di connessione server separato.  
   
 3.  **i comandi script:** consente all'utente di eseguire i comandi del flusso di lavoro SSMA.  
   
@@ -46,7 +47,7 @@ Se viene specificato uno degli elementi nel nodo configurazione, vengono imposta
   
 Le opzioni configurabili dall'utente includono:  
   
-1.  **Provider di finestra di output:** se messaggi esclusione di attributo è impostato su 'true', il comando specifica i messaggi non viene visualizzati nella console. La descrizione degli attributi è indicata di seguito:  
+1.  **Provider di finestra di output:** se i messaggi esclusione di attributo è impostato su 'true', le specifiche del comando messaggi non viene visualizzati nella console. La descrizione degli attributi è indicata di seguito:  
   
     -   destinazione: Specifica se l'output è necessario ottenere stampato in un file o stdout. Questo è false per impostazione predefinita.  
   
@@ -89,7 +90,7 @@ Le opzioni configurabili dall'utente includono:
     </…All commands…>  
     ```  
   
-2.  **Il Provider di connessione della migrazione di dati:** specifica che il server di origine/destinazione viene considerato per la migrazione dei dati.  Origine utilizzare-ultimo usato indica l'ultimo server di origine utilizzato viene utilizzato per la migrazione dei dati. Allo stesso modo destinazione utilizzare-ultimo usato indica l'ultimo server di destinazione utilizzato viene utilizzato per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) utilizzando il server di origine di attributi o i server di destinazione.  
+2.  **Il Provider di connessione della migrazione di dati:** consente di specificare quali server di origine/destinazione viene considerato per la migrazione dei dati.  Origine utilizzare-ultimo usato indica l'ultimo server di origine utilizzato viene utilizzato per la migrazione dei dati. Allo stesso modo destinazione utilizzare-ultimo usato indica l'ultimo server di destinazione utilizzato viene utilizzato per la migrazione dei dati. L'utente può anche specificare il server (origine o destinazione) utilizzando il server di origine di attributi o i server di destinazione.  
   
     Solo uno o l'altro attributo specificato può essere utilizzato ad esempio:  
   
@@ -124,7 +125,7 @@ Le opzioni configurabili dall'utente includono:
   
     Le modalità di includono:  
   
-    -   **chiedere-utente -** richiesto all'utente di continue('yes') o un errore ('no').  
+    -   **chiedere-utente -** chiede di continue('yes') o generato un errore ('no').  
   
     -   **errore -** la console viene visualizzato un errore e arresta l'esecuzione.  
   
@@ -153,7 +154,7 @@ Le opzioni configurabili dall'utente includono:
     </connect-target-database>  
     ```  
   
-4.  **Ristabilire la connessione del Provider:** in questo modo all'utente di impostare la riconnessione delle impostazioni nel caso di errori di connessione. Può essere impostato per i server di origine e di destinazione.  
+4.  **Ristabilire la connessione del Provider:** in questo modo all'utente di impostare la riconnessione ignori le impostazioni degli errori di connessione. Può essere impostato per i server di origine e di destinazione.  
   
     Le modalità di riconnessione sono:  
   
@@ -201,7 +202,7 @@ Le opzioni configurabili dall'utente includono:
     </migrate-data>  
     ```  
   
-5.  **Provider di sovrascrittura di convertitore:** per consentire all'utente di gestire gli oggetti che sono già presenti nella destinazione della metabase. Le possibili azioni includono:  
+5.  **Provider di sovrascrittura di convertitore:** ciò consente all'utente di gestire gli oggetti che sono già presenti nella destinazione della metabase. Le possibili azioni includono:  
   
     -   Errore: la console viene visualizzato un errore e arresta l'esecuzione.  
   
@@ -230,7 +231,7 @@ Le opzioni configurabili dall'utente includono:
     </convert-schema>  
     ```  
   
-6.  **Provider di prerequisiti non riuscito:** per consentire all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', un'eccezione viene generato l'errore soddisfare i prerequisiti.  
+6.  **Provider di prerequisiti non riuscito:** in questo modo all'utente di gestire tutti i prerequisiti necessari per l'elaborazione di un comando. Per impostazione predefinita, la modalità strict è 'false'. Se è impostata su 'true', un'eccezione viene generato l'errore soddisfare i prerequisiti.  
   
     **Esempio:**  
   
@@ -252,7 +253,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   ogni 1%  
   
-    -   ogni 2%  
+    -   every-2%  
   
     -   ogni 5%  
   
@@ -325,7 +326,7 @@ Le opzioni configurabili dall'utente includono:
     </…All commands…>  
     ```  
   
-10. **Password crittografata di sostituzione:** se 'true', la password di testo non crittografato specificato è nell'area di definizione di server del file di connessione del server o nel file di script, sostituzioni archiviata spazio di archiviazione protetto, se presente. Se non viene specificata in testo non crittografato, l'utente viene richiesto di immettere la password.  
+10. **Password crittografata di sostituzione:** se 'true', la password come testo non crittografato specificato è nell'area di definizione di server dei file di connessione del server o nel file di script, le sostituzioni archiviata spazio di archiviazione protetto, se presente. Se non viene specificata in testo non crittografato, l'utente viene richiesto di immettere la password.  
   
     In questo caso, si verificano due casi:  
   
@@ -345,17 +346,17 @@ Le opzioni configurabili dall'utente includono:
   
 È l'opzione non è configurabile.  
   
--   **Numero massimo di tentativi di riconnessione:** quando una connessione stabilita timeout o interruzioni a causa di un errore di rete, il server è necessario la riconnessione. I tentativi di riconnessione è consentiti un massimo di **5** tentativi dopo il quale, la console viene eseguita automaticamente la riconnessione. La funzionalità di riconnessione automatica consente di ridurre il lavoro richiesto nell'eseguire nuovamente lo script.  
+-   **Numero massimo di tentativi di riconnessione:** quando una connessione stabilita verifica il timeout o interruzioni a causa di errori di rete, il server è necessario per essere riconnessa. I tentativi di riconnessione è consentiti un massimo di **5** tentativi dopo il quale, la console viene eseguita automaticamente la riconnessione. La funzionalità di riconnessione automatica consente di ridurre il lavoro richiesto nell'eseguire nuovamente lo script.  
   
 ## <a name="server-connection-parameters"></a>Parametri di connessione server  
-Parametri di connessione di server possono essere definiti nel file di script o nel file di connessione del server. Consultare la [creazione OracleToSQL i file di connessione del Server &#40; &#41;](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sezione per ulteriori dettagli.  
+Parametri di connessione di server possono essere definiti nel file di script o nel file di connessione del server. Consultare il [creano i file di connessione del Server &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-the-server-connection-files-oracletosql.md) sezione per ulteriori dettagli.  
   
 ## <a name="script-commands"></a>Comandi script  
 Il file script contiene una sequenza di comandi del flusso di lavoro di migrazione in formato XML. L'applicazione console SSMA elabora la migrazione nell'ordine i comandi visualizzati nel file di script.  
   
 Ad esempio, una migrazione di dati tipici di una tabella specifica in un database DB2 segue la gerarchia di: Schema -&gt; tabella.  
   
-Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statica con informazioni sulla variabile contenuti in un [OracleToSQL creazione di file di valore variabile &#40; &#41;](../../ssma/oracle/creating-variable-value-files-oracletosql.md) o, in una sezione separata all'interno del file di script per i valori delle variabili.  
+Quando tutti i comandi nel file di script vengono eseguiti correttamente, l'applicazione console SSMA viene chiusa e restituisce il controllo all'utente. Il contenuto di un file script è più o meno statica con le informazioni sulla variabile contenuti in un [creazione di file con valori di variabile &#40;OracleToSQL&#41; ](../../ssma/oracle/creating-variable-value-files-oracletosql.md) oppure, in una sezione separata all'interno del file di script per i valori delle variabili.  
   
 **Esempio:**  
   
@@ -396,14 +397,14 @@ Modelli costituito da 3 file di script (per l'esecuzione di vari scenari di), fi
   
 È possibile eseguire i modelli (file) dopo la modifica dei parametri visualizzati al suo interno per rilevanza.  
   
-Elenco completo dei comandi di script è reperibile [in esecuzione la Console di SSMA &#40; DB2ToSQL &#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
+Elenco completo dei comandi di script è reperibile nella [in esecuzione la Console di SSMA &#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
 ## <a name="script-file-validation"></a>Convalida File di script  
 L'utente può facilmente convalidare il file di script nel file di definizione dello schema **'O2SSConsoleScriptSchema.xsd'** disponibile nella cartella 'Schemi'.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo nella console di gestione è [DB2ToSQL creazione di file di valore variabile &#40; &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
+Il passaggio successivo nella console di gestione viene [creazione di file di valore variabile &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione di file di valore della variabile &#40; DB2ToSQL &#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
+[Creazione di file di valore della variabile &#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

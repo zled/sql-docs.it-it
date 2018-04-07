@@ -2,24 +2,24 @@
 title: Caricare i dati con Integration Services
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
 description: Fornisce informazioni di riferimento e di distribuzione per il caricamento dei dati in SQL Server Parallel Data Warehouse utilizzando i pacchetti di SQL Server Integration Services (SSIS).
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
-caps.latest.revision: "69"
-ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 69
+ms.openlocfilehash: d32e6b97d036437f6a28b81622873d14854d304f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="load-data-with-integration-services"></a>Caricare i dati con Integration Services
 Fornisce informazioni di riferimento e di distribuzione per il caricamento dei dati in SQL Server Parallel Data Warehouse utilizzando i pacchetti di SQL Server Integration Services (SSIS).  
@@ -59,14 +59,14 @@ Per impostazione predefinita, le offerte esegue i pacchetti utilizzando i file b
 Per eseguire il pacchetto dall'interno di SQL Server Data Tools, fare doppio clic sul pacchetto e scegliere **Esegui pacchetto**.  
   
 ### <a name="run-from-powershell"></a>Esecuzione di PowerShell  
-Per eseguire il pacchetto di Windows PowerShell, usando il **dtexec** utilità:`dtexec /FILE <packagePath>`  
+Per eseguire il pacchetto di Windows PowerShell, usando il **dtexec** utilità: `dtexec /FILE <packagePath>`  
   
-Ad esempio, usare `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Ad esempio, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ### <a name="run-from-a-windows-command-prompt"></a>Eseguire Windows da un prompt dei comandi 
-Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando il **dtexec** utilità:`dtexec /FILE <packagePath>`  
+Per eseguire il pacchetto da un prompt dei comandi di Windows, utilizzando il **dtexec** utilità: `dtexec /FILE <packagePath>`  
   
-Ad esempio: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Esempio: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Tipi di dati  
 Quando si utilizza servizi di integrazione per caricare dati da un'origine dati a un database di SQL Server PDW, i dati viene prima eseguito il mapping dall'origine dei dati ai tipi di dati di Integration Services. In questo modo è possibile eseguire il mapping dei dati di più origini a un set comune di tipi di dati.  
@@ -89,7 +89,7 @@ Quindi i mapping dei dati da servizi di integrazione di tipi di dati di SQL Serv
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -252,15 +252,15 @@ Eseguire il pacchetto nel computer in uso di Integration Services.
 2.  Il pacchetto verrà eseguito e verranno visualizzati lo stato di avanzamento e gli eventuali errori nel **lo stato di avanzamento** riquadro. Utilizzare un client SQL per confermare o monitorare il carico mediante la Console di amministrazione di SQL Server PDW.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creare un'attività script che utilizza l'adapter di destinazione PDW SSIS](create-ssis-script-task-using-pdw-destination-adapter.md)  
+[Creare un'attività script che utilizza l'adapter di destinazione SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](http://msdn.microsoft.com/library/ms141026&#40;v=sql11&#40;.aspx)  
 [Progettazione e implementazione di pacchetti (Integration Services)](http://msdn.microsoft.com/library/ms141091&#40;v=sql11&#40;.aspx)  
 [Esercitazione: Creazione di un pacchetto di base tramite una procedura guidata](http://technet.microsoft.com/library/ms365330&#40;v=sql11&#40;.aspx)  
 [Introduzione (Integration Services)](http://go.microsoft.com/fwlink/?LinkId=202412)  
-[Esempio di generazione dinamica dei pacchetti](http://go.microsoft.com/fwlink/?LinkId=202413)  
+[Esempio di generazione di pacchetti dinamiche](http://go.microsoft.com/fwlink/?LinkId=202413)  
 [Progettazione di pacchetti SSIS per parallelismo (Video di SQL Server)](http://msdn.microsoft.com/library/dd795221.aspx)  
-[Esempi della Community di Microsoft SQL Server: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
-[Miglioramento dei caricamenti incrementali con Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
+[Negli esempi della Community di Microsoft SQL Server: Integration Services](http://go.microsoft.com/fwlink/?LinkId=202415)  
+[Miglioramento dei caricamenti incrementali tra Change Data Capture](http://msdn.microsoft.com/library/bb895315&#40;v=sql11&#40;.aspx)  
 [Trasformazione Dimensione a modifica lenta](http://msdn.microsoft.com/library/ms141715&#40;v=sql11&#40;.aspx)  
 [Attività Inserimento bulk](http://msdn.microsoft.com/library/ms141239&#40;v=sql11&#40;.aspx)  
   

@@ -21,13 +21,13 @@ ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
 caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc01dc51a4c3b50e77a719d9b3bab08def84f879
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ab617555d71bb2067b1c2d2c8e073e74af6e908
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connessione a Sybase ASE (SybaseToSQL)
 Per eseguire la migrazione dei database Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario connettersi al Server adattivo che contiene i database che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nel Server adattivo e visualizza i metadati del database nel riquadro di esplorazione dei metadati di Sybase. SSMA archivia le informazioni relative al server di database, ma non archivia le password.  
@@ -39,21 +39,21 @@ I metadati relativi a Adaptive Server non viene aggiornato automaticamente. In a
 ## <a name="required-ase-permissions"></a>Autorizzazioni necessarie ASE  
 L'account utilizzato per connettersi a ASE deve disporre di almeno **pubblica** accesso al database master e a qualsiasi database di origine per eseguire la migrazione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Inoltre, per selezionare le autorizzazioni per le tabelle incluse nella migrazione, l'utente deve disporre delle autorizzazioni SELECT su tabelle di sistema seguenti:  
   
--   .dbo.sysobjects [source_db]  
+-   [source_db].dbo.sysobjects  
   
--   .dbo.syscolumns [source_db]  
+-   [source_db].dbo.syscolumns  
   
--   .dbo.sysusers [source_db]  
+-   [source_db].dbo.sysusers  
   
--   .dbo.systypes [source_db]  
+-   [source_db].dbo.systypes  
   
--   .dbo.sysconstraints [source_db]  
+-   [source_db].dbo.sysconstraints  
   
--   .dbo.syscomments [source_db]  
+-   [source_db].dbo.syscomments  
   
--   .dbo.sysindexes [source_db]  
+-   [source_db].dbo.sysindexes  
   
--   .dbo.sysreferences [source_db]  
+-   [source_db].dbo.sysreferences  
   
 -   master.dbo.sysdatabases  
   
@@ -63,7 +63,7 @@ Quando ci si connette a un Server adattiva, SSMA legge i metadati del database n
 > [!IMPORTANT]  
 > Prima di provare a connettersi al server di database, assicurarsi che il server di database è in esecuzione e può accettare connessioni.  
   
-**Per connettersi a Sybase ASE**  
+**Per la connessione per Sybase ASE**  
   
 1.  Nel **File** dal menu **Connetti Sybase**.  
   
@@ -99,7 +99,7 @@ Quando ci si connette a un Server adattiva, SSMA legge i metadati del database n
   
         `Server=sybserver;User ID=MyUserID;Password=MyP@$$word;Provider= ASEOLEDB;Port=5000;`  
   
-    2.  **Stringa di connessione del Provider ODBC Sybase:**  
+    2.  **Stringa di connessione per il Provider ODBC Sybase:**  
   
         `Driver=Adaptive Server Enterprise;Server=sybserver;uid=MyUserID;pwd=MyP@$$word;Port=5000;`  
   
@@ -107,7 +107,7 @@ Quando ci si connette a un Server adattiva, SSMA legge i metadati del database n
   
         `Server=sybserver;Port=5000;uid=MyUserID;pwd=MyP@$$word;`  
   
-    Per ulteriori informazioni, vedere [Connetti per Sybase &#40; SybaseToSQL &#41; ](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
+    Per altre informazioni, vedere [Connect per Sybase &#40;SybaseToSQL&#41;](../../ssma/sybase/connect-to-sybase-sybasetosql.md).  
   
 ## <a name="reconnecting-to-sybase-ase"></a>La riconnessione per Sybase ASE  
 La connessione al server di database rimane attiva finché non si chiude il progetto. Quando si riapre il progetto, sarà necessario riconnettere se si desidera una connessione attiva al Server adattivo. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, e la migrazione dei dati.  
@@ -127,8 +127,8 @@ I metadati sui database ASE non vengono aggiornati automaticamente. I metadati n
   
 ## <a name="next-step"></a>Passaggio successivo  
   
--   Il passaggio successivo del processo di migrazione consiste nel [connettersi a un'istanza di SQL Server](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [connessione a un'istanza di SQL Azure](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
+-   Il passaggio successivo del processo di migrazione consiste [connettersi a un'istanza di SQL Server](http://msdn.microsoft.com/en-us/dd368a1a-45b0-40e9-b4d3-5cdb48c26606) / [la connessione a un'istanza di SQL Azure](http://msdn.microsoft.com/en-us/9e77e4b0-40c0-455c-8431-ca5d43849aa7)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Sybase ASE a SQL Server: database SQL di Azure &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrazione di database Sybase ASE a SQL Server: SQL Azure database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

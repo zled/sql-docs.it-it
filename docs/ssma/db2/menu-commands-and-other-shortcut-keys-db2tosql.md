@@ -2,29 +2,30 @@
 title: I comandi di menu e altri tasti di scelta rapida (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a2b634fba01678302e397903f528343c6acf946
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b81e9aae756b94302d2a70db4b66a2c3933e10c7
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>I comandi di menu e altri tasti di scelta rapida (DB2ToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione di DB2.  
@@ -190,5 +191,5 @@ Per accedere ai menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Vai a dichiarazione.|F12|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Tasti di scelta rapida &#40; DB2ToSQL &#41;](../../ssma/db2/shortcut-keys-db2tosql.md)  
+[Tasti di scelta rapida &#40;DB2ToSQL&#41;](../../ssma/db2/shortcut-keys-db2tosql.md)  
   

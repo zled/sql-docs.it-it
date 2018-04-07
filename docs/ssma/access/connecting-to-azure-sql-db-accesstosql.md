@@ -2,14 +2,15 @@
 title: La connessione al database SQL di Azure (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - SQL Azure, reconnecting
 - SQL Azure, synchronizing metadata
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e68c4b94210234875eebbe166f83d87baebbc0e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e5bf0afdc08b67a73bc4972ce3d01ee79ebdd925
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>La connessione al database SQL di Azure (AccessToSQL)
 Per eseguire la migrazione di database di Access a SQL Azure, è necessario connettersi all'istanza di destinazione di SQL Azure. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di SQL Azure e visualizza i metadati del database in Esplora risorse di metadati di SQL Azure. SSMA archivia le informazioni sull'istanza di SQL Azure si è connessi a, ma non archivia le password.  
@@ -52,7 +53,7 @@ L'account utilizzato per connettersi a SQL Azure richiede autorizzazioni diverse
 ## <a name="establishing-a-sql-azure-connection"></a>La definizione di un database SQL Azure connessione  
 Prima di convertire gli oggetti di database di Access in sintassi SQL Azure, è necessario stabilire una connessione all'istanza di SQL Azure in cui si desidera eseguire la migrazione del database o database.  
   
-Quando si definiscono le proprietà di connessione, è inoltre possibile specificare il database in cui verranno migrati dati e oggetti. Dopo la connessione a SQL Azure, è possibile personalizzare questo mapping al livello dello schema di accesso. Per ulteriori informazioni, vedere [Mapping accesso database di SQL Server](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+Quando si definiscono le proprietà di connessione, è inoltre possibile specificare il database in cui verranno migrati dati e oggetti. Dopo la connessione a SQL Azure, è possibile personalizzare questo mapping al livello dello schema di accesso. Per altre informazioni, vedere [i database di Access Mapping per gli schemi di SQL Server](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
 > Prima di provare a connettersi a SQL Azure, assicurarsi che l'istanza di SQL Azure è in esecuzione e può accettare connessioni.  
@@ -114,8 +115,8 @@ Il passaggio successivo della migrazione dipende dalle esigenze del progetto:
   
 -   Per personalizzare il mapping dei tipi di dati di origine e di destinazione, vedere [Mapping tipi di origine e destinazione dati](http://msdn.microsoft.com/en-us/b362a075-16e7-423f-b63f-e1e9f02844a9).  
   
--   Se non è necessario eseguire una di queste attività, è possibile convertire le definizioni degli oggetti di database di Access in definizioni di oggetti di SQL Azure. Per ulteriori informazioni, vedere [la conversione dei database di Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+-   Se non è necessario eseguire una di queste attività, è possibile convertire le definizioni degli oggetti di database di Access in definizioni di oggetti di SQL Azure. Per altre informazioni, vedere [la conversione dei database di Access](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

@@ -2,29 +2,30 @@
 title: Impostazioni (migrazione) (DB2ToSQL) del progetto | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf47fee6992ec74ca331972e711be931d4dfb34e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5d143857c00815a8d219b5add7b3281cf982723d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-migration-db2tosql"></a>Impostazioni del progetto (migrazione) (DB2ToSQL)
 La pagina di migrazione del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità SSMA viene eseguita la migrazione dei dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -39,7 +40,7 @@ Il riquadro di migrazione è disponibile in entrambi i **impostazioni progetto**
   
 |Nome|Definizione|  
 |--------|--------------|  
-|**Modulo di migrazione**|Specifica il motore di database utilizzato durante la migrazione dei dati. Migrazione dei dati sul lato client fa riferimento al client SSMA recupero dei dati dall'origine e in blocco inserimento di dati in SQL Server. Migrazione dei dati lato server fa riferimento al modulo di migrazione di dati SSMA (programma di copia bulk) in esecuzione nella finestra di SQL Server come un processo SQL Agent, il recupero dei dati dall'origine e inserimento direttamente in SQL Server, evitando in tal modo un ulteriore client-hop (prestazioni).<br /><br />**Modalità predefinita**: modulo di migrazione dei dati sul lato Client<br /><br />**Modalità ottimistica**: modulo di migrazione dei dati sul lato Client<br /><br />**Modalità**: modulo di migrazione dei dati sul lato Client|  
+|**Modulo di migrazione**|Specifica il motore di database utilizzato durante la migrazione dei dati. Migrazione dei dati sul lato client fa riferimento al client SSMA recupero dei dati dall'origine e in blocco inserimento di dati in SQL Server. Migrazione dei dati lato server fa riferimento al modulo di migrazione di dati SSMA (programma di copia bulk) in esecuzione nella finestra di SQL Server come un processo SQL Agent, il recupero dei dati dall'origine e inserimento direttamente in SQL Server, evitando in tal modo un ulteriore client-hop (prestazioni).<br /><br />**Modalità predefinita**: modulo di migrazione dei dati lato Client<br /><br />**Modalità ottimistica**: modulo di migrazione dei dati lato Client<br /><br />**Modalità**: modulo di migrazione dei dati lato Client|  
   
 > [!IMPORTANT]  
 > Quando il **modulo di migrazione** opzione è impostata su **modulo di migrazione dei dati lato Server**, un nuovo progetto opzione **modulo di migrazione dei dati lato Server utilizzare 32 Bit** viene visualizzato. Specifica se l'utilità di programma di copia Bulk (BCP) a 32 bit o a 64 bit viene utilizzato per la migrazione dei dati.  
@@ -55,16 +56,16 @@ Il riquadro di migrazione è disponibile in entrambi i **impostazioni progetto**
 |**Attive trigger**|Specifica se SSMA deve attivare i trigger di inserimento durante l'aggiunta di dati in tabelle SQL Server.<br /><br />**Modalità predefinita**: False<br /><br />**Modalità ottimistica**: False<br /><br />**Modalità**: False|  
 |**Mantieni valori Identity**|Specifica se SSMA consente di mantenere i valori null nei dati di origine durante l'aggiunta di dati a SQL Server, indipendentemente dai valori predefiniti specificati in SQL Server.<br /><br />**Modalità predefinita**: True<br /><br />**Modalità ottimistica**: True<br /><br />**Modalità**: False|  
 |**Mantieni valori Null**|Specifica se SSMA consente di mantenere i valori null nei dati di origine durante l'aggiunta di dati a SQL Server, indipendentemente dai valori predefiniti specificati in SQL Server.<br /><br />**Modalità predefinita**: True<br /><br />**Modalità ottimistica**: True<br /><br />**Modalità**: True|  
-|**Contrassegnare l'operazione di taglio di stringa con errore**|Se le dimensioni di colonna di destinazione sono minore della lunghezza di stringa di origine, il valore verrà tagliato e contrassegnato come errore.<br /><br />**Modalità predefinita**: Sì<br /><br />**Modalità ottimistica**: Sì<br /><br />**Modalità**: Sì|  
-|**In caso di errore**|Arresta la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompere la migrazione:** interrompe l'operazione di migrazione di dati<br /><br />**Passare alla tabella riportata di seguito:** interrompe la migrazione dei dati alla tabella corrente e continua a quella successiva<br /><br />**Procedere al batch successivo:** interrompe la migrazione dei dati per il batch corrente e continua a quella successiva<br /><br />**Modalità predefinita**: procedere con il batch successivo<br /><br />**Modalità ottimistica**: procedere con il batch successivo<br /><br />**Modalità**: procedere con il batch successivo|  
-|**Sostituire le date non supportate**|Specifica se SSMA deve correggere date precedenti rispetto a quello meno recente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** data (01 gennaio 1753).<br /><br />Per mantenere i valori di data corrente, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]in una colonna datetime non accetta le date precedenti 01 gennaio 1753. Se si utilizzano le date precedenti, è necessario convertire i valori datetime ai valori di carattere.<br /><br />Per convertire le date precedenti 01 gennaio 1753 su NULL, selezionare **sostituire con il valore NULL**.<br /><br />Per sostituire le date precedenti 01 gennaio 1753 con una data, selezionare **sostituire con più vicino di date supportato**.<br /><br />**Modalità predefinita**: non eseguire alcuna operazione<br /><br />**Modalità ottimistica**: non eseguire alcuna operazione<br /><br />**Modalità**: sostituire con più vicino di data supportati|  
+|**Contrassegnare l'operazione di taglio stringa con l'errore**|Se le dimensioni di colonna di destinazione sono minore della lunghezza di stringa di origine, il valore verrà tagliato e contrassegnato come errore.<br /><br />**Modalità predefinita**: Sì<br /><br />**Modalità ottimistica**: Sì<br /><br />**Modalità**: Sì|  
+|**In caso di errore**|Arresta la migrazione dei dati quando si verifica un errore. Sono disponibili tre opzioni:<br /><br />**Interrompere la migrazione:** Arresta operazione di migrazione dei dati<br /><br />**Passare alla tabella successiva:** interrompe la migrazione dei dati alla tabella corrente e consente di passare a quella successiva<br /><br />**Procedere al batch successivo:** interrompe la migrazione dei dati per il batch corrente e consente di passare a quella successiva<br /><br />**Modalità predefinita**: procedere con il batch successivo<br /><br />**Modalità ottimistica**: procedere con il batch successivo<br /><br />**Modalità**: procedere con il batch successivo|  
+|**Sostituire le date non supportate**|Specifica se SSMA deve correggere date precedenti rispetto a quello meno recente [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **datetime** data (01 gennaio 1753).<br /><br />Per mantenere i valori di data corrente, selezionare **non eseguire alcuna operazione**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non accetterà le date precedenti 01 gennaio 1753 in una colonna datetime. Se si utilizzano le date precedenti, è necessario convertire i valori datetime ai valori di carattere.<br /><br />Per convertire le date precedenti 01 gennaio 1753 su NULL, selezionare **sostituire con il valore NULL**.<br /><br />Per sostituire le date precedenti 01 gennaio 1753 con una data, selezionare **sostituire con più vicino di date supportato**.<br /><br />**Modalità predefinita**: non eseguire alcuna azione<br /><br />**Modalità ottimistica**: non eseguire alcuna azione<br /><br />**Modalità**: sostituire con più vicino di date supportato|  
 |**Blocco a livello di tabella**|Specifica se SSMA consente di bloccare le tabelle durante l'aggiunta di dati alle tabelle durante la migrazione dei dati. Ottiene un blocco di aggiornamento bulk per tutta la durata dell'operazione di copia bulk. Se il valore è False, viene impostato un blocco a livello di riga.<br /><br />**Modalità predefinita**: True<br /><br />**Modalità ottimistica**: True<br /><br />**Modalità**: True|  
   
 ## <a name="parallel-data-migration"></a>Migrazione dei dati paralleli  
   
 |Nome|Definizione|  
 |--------|--------------|  
-|**Modalità di migrazione di dati paralleli**|Specifica la modalità utilizzata per il thread di divisione per abilitare la migrazione di dati paralleli. In modalità Auto, SSMA sceglie il numero di thread (10 per impostazione predefinita) duplicato per la migrazione dei dati. In modalità personalizzata, utente può specificare il numero di thread duplicata per la migrazione dei dati (valore minimo è 1 e valore massimo è 100). Modulo di migrazione client solo dati sul lato attualmente supporta la migrazione dei dati paralleli.<br /><br />**Modalità predefinita**: Auto<br /><br />**Modalità ottimistica**: Auto<br /><br />**Modalità**: Auto|  
+|**Modalità di migrazione dei dati paralleli**|Specifica la modalità utilizzata per il thread di divisione per abilitare la migrazione di dati paralleli. In modalità Auto, SSMA sceglie il numero di thread (10 per impostazione predefinita) duplicato per la migrazione dei dati. In modalità personalizzata, utente può specificare il numero di thread duplicata per la migrazione dei dati (valore minimo è 1 e valore massimo è 100). Modulo di migrazione client solo dati sul lato attualmente supporta la migrazione dei dati paralleli.<br /><br />**Modalità predefinita**: Auto<br /><br />**Modalità ottimistica**: Auto<br /><br />**Modalità**: Auto|  
   
 > [!IMPORTANT]  
 > Quando il **modalità di migrazione di dati parallelo** opzione è impostata su **personalizzato**, un nuovo progetto, l'impostazione di opzione **conteggio Thread** viene visualizzato. Specifica il numero di thread utilizzati per la migrazione dei dati.  

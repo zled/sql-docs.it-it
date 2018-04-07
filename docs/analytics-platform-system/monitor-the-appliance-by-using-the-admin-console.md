@@ -2,31 +2,31 @@
 title: Monitorare il dispositivo tramite la Console di amministrazione (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: "26"
-ms.openlocfilehash: db27003d4e1efd54a179551f585fb23ce9c0ed82
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 26
+ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-the-admin-console"></a>Monitoraggio del dispositivo tramite la Console di amministrazione
 La Console di amministrazione è un'applicazione web di SQL Server PDW che espone le informazioni di stato, l'integrità e prestazioni dello strumento. Gli utenti di connettersi alla Console di amministrazione tramite Internet Explorer.  
   
 ## <a name="About"></a>Sulla Console di amministrazione  
-![Home Console dello strumento](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
+![Appliance Console Home](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
 **Dispositivo**  
 Home  
@@ -112,12 +112,12 @@ La Console di amministrazione consente di monitorare le operazioni seguenti:
 |-|-|  
 |**Tipo di informazioni**|**Come l'accesso nella Console di amministrazione**|  
 |Stato generale del dispositivo|Fare clic su **stato dello strumento** nel menu in alto o **Home**.|  
-|Avvisi|Fare clic su **avvisi**. Per ulteriori informazioni, vedere [informazioni sugli avvisi di Console di amministrazione &#40; Sistema della piattaforma Analitica &#41; ](understanding-admin-console-alerts.md).|  
+|Avvisi|Fare clic su **avvisi**. Per altre informazioni, vedere [informazioni sugli avvisi della Console di amministrazione &#40;Analitica Platform System&#41;](understanding-admin-console-alerts.md).|  
 |I componenti dello strumento e il relativo stato|Fare clic su **stato dello strumento** nel menu in alto o **Home**.|  
 |Richieste di monitoraggio (incluse le query, caricamenti, backup e ripristini)|Fare clic su **sessioni** per visualizzare le sessioni attualmente attive o recenti.<br /><br />Fare clic su **query** per visualizzare le query attualmente attive o recenti. Le informazioni visualizzate per le query includono carichi, backup e ripristini.<br /><br />Fare clic su **blocchi** per visualizzare i blocchi attivi.|  
 |Monitorare le informazioni aggiuntive per i carichi, backup e ripristini.|Fare clic su **carichi** o **backup e ripristino**.|  
 |Informazioni sulle prestazioni|Fare clic su **Performance Monitor**.|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Monitoraggio dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-monitoring.md)  
+[Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
   

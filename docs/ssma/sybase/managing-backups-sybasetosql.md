@@ -21,13 +21,13 @@ ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89df7322e4025ffb79f3ae2aecb2ef67fa52c8d7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 122cc3c70f69a6c6037484b499a85480b16792ef
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="managing-backups-sybasetosql"></a>La gestione dei backup (SybaseToSQL)
 Gestione dei Backup Sybase consente di backup e ripristino dati di tabelle, prima o dopo l'esecuzione di un test. È inoltre possibile gestire il contenuto di backup con la finestra di gestione contenuto di Backup.  
@@ -45,7 +45,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
 Per aprire la finestra di dialogo di ripristino, scegliere il menu di Tester per la gestione del Backup Sybase, quindi fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare uno o più tabelle per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -81,7 +81,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
 Per aprire la finestra di dialogo di ripristino, il Tester scegliere dal menu Gestione Backup di SQL Server, fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare almeno una tabella per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -104,5 +104,5 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
 -   Fare clic su di **chiudere** per chiudere la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di eseguire la migrazione di oggetti di Database &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

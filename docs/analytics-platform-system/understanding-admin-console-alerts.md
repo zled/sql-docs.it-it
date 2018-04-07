@@ -2,32 +2,32 @@
 title: Informazioni sugli avvisi della Console di amministrazione (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: "10"
-ms.openlocfilehash: 84d7632df2e16c6939b91d299850ab26d5d93d4f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 10
+ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="understanding-admin-console-alerts"></a>Informazioni sugli avvisi di Console di amministrazione
 Gli avvisi vengono visualizzati nell'accessorio **Console di amministrazione** e **System Center Operations Manager** (SCOM). Utilizzare questo elenco di avvisi per identificare gli avvisi che richiedono un'ulteriore analisi.  
   
-Per informazioni sulla connessione per il **Console di amministrazione** utilizzando Internet Explorer, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40; Sistema della piattaforma Analitica &#41; ](monitor-the-appliance-by-using-the-admin-console.md). Per informazioni su **SCOM**, vedere [monitorare l'accessorio tramite System Center Operations Manager &#40; Sistema della piattaforma Analitica &#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+Per informazioni sulla connessione per il **Console di amministrazione** utilizzando Internet Explorer, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Per informazioni sulle **SCOM**, vedere [monitorare l'accessorio by Using System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
-Per informazioni su come ottenere informazioni sugli avvisi con Transact\-SQL, vedere [monitorare il dispositivo utilizzando le viste di sistema &#40; Sistema della piattaforma Analitica &#41; ](monitor-the-appliance-by-using-system-views.md).  
+Per informazioni su come ottenere informazioni sugli avvisi tramite Transact\-SQL, vedere [monitorare l'accessorio dall'utilizzo di viste di sistema &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-views.md).  
   
 ## <a name="types-of-alerts"></a>Tipi di avvisi  
 I nomi degli avvisi che indicano uno stato normale non richiedono in genere l'analisi. I nomi degli avvisi che contengono le parole NON_CRITICAL talvolta richiedono azioni. Analisi è necessaria per tutti gli altri tipi di avvisi.  
@@ -35,7 +35,7 @@ I nomi degli avvisi che indicano uno stato normale non richiedono in genere l'an
 ## <a name="alert-list"></a>Elenco degli avvisi  
 Gli avvisi sono elencati in ordine alfabetico per il **nome avviso**. Tutti gli avvisi possibili non sono presenti nell'elenco. Il testo di alcuni avvisi varia leggermente per fornitori diversi.  
   
-|**Nome dell'avviso**|**Azione richiesta?**|**State**|**Severity**|**Descrizione**|**Ulteriori informazioni**|  
+|**Nome dell'avviso**|**Azione richiesta?**|**State**|**Severity**|**Description**|**Ulteriori informazioni**|  
 |------------------|------------------------|-------------|----------------|-------------------|------------------------|  
 |Ambari agente con stato CRITICO.|Sì|Non riuscito|Errore|Questa risorsa Ambari agente non riuscita (stato: 4) o non è in linea (stato: 3). Gli altri Stati offline inclusi sono quando offline è in sospeso (stato: 130). Stato viene indicato nella proprietà "hadoop_service_status" del componente.|Esaminare la risorsa Cluster nei nodi Head e i dati.|  
 |Ambari agente con stato NON CRITICO.|Sì|Ridotto|Avviso|Questa risorsa Ambari agente è in un non-stato critico a causa di uno dei seguenti motivi:-risorsa si trova in stato ereditato (stato: 0)-risorsa si trova in stato in sospeso (stato: 128)-risorsa è online in sospeso-stato (stato: 129)-risorsa esegue iniziale ization (stato: 1) stato viene indicato nella proprietà "hadoop_service_status" del componente.|Esaminare la risorsa Cluster nei nodi Head e i dati.|  
@@ -157,8 +157,8 @@ Gli avvisi sono elencati in ordine alfabetico per il **nome avviso**. Tutti gli 
 |Disco virtuale con stato NON CRITICO.|Sì|Ridotto|Avviso|Indica lo stato di un disco virtuale spazi di archiviazione è un avviso non critici, ma è ancora operativo sistema (stato: 1-avviso). Lo stato viene indicato nella proprietà "virtual_disk_status" del componente.  Lo stato operativo, nella proprietà "virtual_disk_oper_status" potrebbe fornire ulteriori informazioni sul problema.  Se il disco virtuale è stato spostato in un altro nodo, quindi controllare lo stato del cluster di volume componenti condivisi e riportare i dischi per il proprietario del previsto, indicato dal numero dopo N nel nome, ad esempio. N01D01 appartiene HSA01.|Per ulteriori informazioni, esaminare gli eventi del nodo nel log 'Applicazione e servizio logs\Microsoft\Windows\StorageSpaces-Driver\Operational'.  L'integrità del server mirror può essere interessata dalla perdita di un singolo disco in modo da un altro avviso potrebbe essersi verificato per il disco stesso.|  
 |Disco virtuale con stato normale.|no|Operativo|Istruzioni informative|Lo stato di un disco virtuale spazi di archiviazione è normale (stato: integro-0). Lo stato viene indicato nella proprietà "virtual_disk_status" del componente.||  
 |Disco virtuale è UNKNOWN lo stato.|Sì|Operativo|Avviso|Non è stato possibile determinare lo stato di un disco virtuale spazi di archiviazione (stato: 5-sconosciuto). Lo stato viene indicato nella proprietà "virtual_disk_status" del componente.  Lo stato operativo, nella proprietà "virtual_disk_oper_status" potrebbe fornire ulteriori informazioni sul problema.  Se il disco virtuale è stato spostato in un altro nodo, quindi controllare lo stato del cluster di volume componenti condivisi e riportare i dischi per il proprietario del previsto, indicato dal numero dopo N nel nome, ad esempio. N01D01 appartiene HSA01.|Per ulteriori informazioni, esaminare gli eventi del nodo nel log 'Applicazione e servizio logs\Microsoft\Windows\StorageSpaces-Driver\Operational'.|  
-|Lo stato di spazio libero volume è CRITICO.|Sì|Ridotto|Errore|Spazio libero del volume è insufficiente. Lo spazio su disco utilizzato volume corrente è oltre il 90% della capacità totale. Pulire i file o i dati non necessari per garantire il funzionamento dello strumento normale.|I report della Console di amministrazione spazio allocato e spazio utilizzato non necessariamente. È possibile utilizzare DBCC PDW_SHOWSPACEUSED esaminare utilizzato e spazio allocato. È inoltre possibile utilizzare DBCC SHRINKLOG <!-collegamenti mancanti [SHRINKLOG DBCC &#40; SQL Server PDW &#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) di compattare i database.|  
-|Lo stato di spazio libero volume è NON CRITICO.|Facoltativo|Operativo|Avviso|Lo spazio su disco utilizzato volume corrente è compreso tra il 70% e del 90% completo. Esaminare lo spazio su disco utilizzato in questo volume e pulire i file o i dati non necessari per garantire il funzionamento dello strumento normale.|I report della Console di amministrazione spazio allocato e spazio utilizzato non necessariamente. È possibile utilizzare [PDW_SHOWSPACEUSED DBCC](../t-sql/statements/alter-database-parallel-data-warehouse.md) esaminare utilizzato e spazio allocato. È inoltre possibile utilizzare DBCC SHRINKLOG <!-collegamenti mancanti [SHRINKLOG DBCC &#40; SQL Server PDW &#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) di compattare i database.|  
+|Lo stato di spazio libero volume è CRITICO.|Sì|Ridotto|Errore|Spazio libero del volume è insufficiente. Lo spazio su disco utilizzato volume corrente è oltre il 90% della capacità totale. Pulire i file o i dati non necessari per garantire il funzionamento dello strumento normale.|I report della Console di amministrazione spazio allocato e spazio utilizzato non necessariamente. È possibile utilizzare DBCC PDW_SHOWSPACEUSED esaminare utilizzato e spazio allocato. È inoltre possibile utilizzare DBCC SHRINKLOG <!-collegamenti mancanti [DBCC SHRINKLOG &#40;SQL Server PDW&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) compattazione database.|  
+|Lo stato di spazio libero volume è NON CRITICO.|Facoltativo|Operativo|Avviso|Lo spazio su disco utilizzato volume corrente è compreso tra il 70% e del 90% completo. Esaminare lo spazio su disco utilizzato in questo volume e pulire i file o i dati non necessari per garantire il funzionamento dello strumento normale.|I report della Console di amministrazione spazio allocato e spazio utilizzato non necessariamente. È possibile utilizzare [PDW_SHOWSPACEUSED DBCC](../t-sql/statements/alter-database-parallel-data-warehouse.md) esaminare utilizzato e spazio allocato. È inoltre possibile utilizzare DBCC SHRINKLOG <!-collegamenti mancanti [DBCC SHRINKLOG &#40;SQL Server PDW&#41; ](../t-sql/statements/alter-database-parallel-data-warehouse.md) compattazione database.|  
 |Lo stato di spazio libero volume è normale.|no|Operativo|Istruzioni informative|È sufficiente spazio libero su disco sul volume. Lo spazio su disco utilizzato volume corrente è inferiore al 70%.|Indica che il componente in precedenza ha segnalato uno stato diverso, ma poiché è tornato alla normale.|  
   
 <!-- MISSING LINKS ## See Also  

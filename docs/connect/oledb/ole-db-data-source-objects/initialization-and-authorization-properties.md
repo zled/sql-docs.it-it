@@ -10,7 +10,7 @@ ms.component: ole-db-data-source-objects
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6be9ab05f9f7a5c669e62f92c238be3d06dbf44d
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: a785c2bf470df9f09b177fc7b5119132ed93c319
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Proprietà di inizializzazione e di autorizzazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/30/2018
 |SSPROP_INIT_ENCRYPT|Tipo: VT_BOOL<br /><br /> L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: per crittografare i dati trasmessi in rete, la proprietà SSPROP_INIT_ENCRYPT è impostata su VARIANT_TRUE.<br /><br /> Se è abilitata la crittografia del protocollo, la crittografia verrà sempre eseguita, indipendentemente dall'impostazione di SSPROP_INIT_ENCRYPT. Se la crittografia del protocollo è disabilitata e la proprietà SSPROP_INIT_ENCRYPT è impostata su VARIANT_TRUE, la crittografia verrà eseguita.<br /><br /> Se la crittografia del protocollo è disabilitata e la proprietà SSPROP_INIT_ENCRYPT è impostata su VARIANT_FALSE, non verrà eseguita alcuna crittografia.|  
 |SSPROP_INIT_FAILOVERPARTNER|Tipo: VT_BSTR<br /><br /> L/S: Lettura/Scrittura<br /><br /> Descrizione: specifica il nome del partner di failover per il mirroring del database. Si tratta di una proprietà di inizializzazione e può essere impostata solo prima dell'inizializzazione stessa. Al termine dell'inizializzazione restituirà il partner di failover, se presente, restituito dal server primario.<br /><br /> Consente a un'applicazione smart di memorizzare nella cache il server di backup determinato più di recente, ma con tali applicazioni è necessario tenere conto del fatto che le informazioni vengono aggiornate solo quando la connessione viene stabilita per la prima volta (o reimpostata, se in pool) e possono diventare obsolete nel caso di connessioni prolungate.<br /><br /> Una volta stabilita la connessione, l'applicazione può eseguire una query su questo attributo per determinare l'identità del partner di failover. Se il server primario non dispone di partner di failover, la proprietà restituirà una stringa vuota. Per ulteriori informazioni, vedere [utilizzando il mirroring del Database](../../oledb/features/using-database-mirroring.md).|  
 |SSPROP_INIT_FILENAME|Tipo: VT_BSTR<br /><br /> L/S: Lettura/Scrittura<br /><br /> Descrizione: specifica il nome del file primario di un database collegabile. Questo database viene collegato e diventa il database predefinito per la connessione. Per utilizzare SSPROP_INIT_FILENAME, è necessario specificare il nome del database come valore della proprietà di inizializzazione DBPROP_INIT_CATALOG. Se il nome del database non esiste, viene eseguita la ricerca del nome del file primario specificato in SSPROP_INIT_FILENAME e il database viene collegato al nome specificato in DBPROP_INIT_CATALOG. Se il database è stato collegato in precedenza, non viene ricollegato in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|SSPROP_INIT_MARSCONNECTION|Tipo: VT_BOOL<br /><br /> L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: specifica se per la connessione è abilitata la funzionalità MARS (Multiple Active Result Set). Questa opzione deve essere impostata su true prima che venga stabilita una connessione al database. Per ulteriori informazioni, vedere [utilizzando Multiple Active Result Set &#40; MARS &#41; ](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
+|SSPROP_INIT_MARSCONNECTION|Tipo: VT_BOOL<br /><br /> L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: specifica se per la connessione è abilitata la funzionalità MARS (Multiple Active Result Set). Questa opzione deve essere impostata su true prima che venga stabilita una connessione al database. Per ulteriori informazioni, vedere [utilizzando Multiple Active Result Set & #40; MARS & #41; ](../../oledb/features/using-multiple-active-result-sets-mars.md).|  
 |SSPROP_INIT_NETWORKADDRESS|Tipo: VT_BSTR<br /><br /> L/S: Lettura/Scrittura<br /><br /> Descrizione: indirizzo di rete del server che esegue un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] specificata dalla proprietà DBPROP_INIT_DATASOURCE.|  
 |SSPROP_INIT_NETWORKLIBRARY|Tipo: VT_BSTR<br /><br /> L/S: Lettura/Scrittura<br /><br /> Descrizione: nome della libreria di rete (DLL) utilizzata per comunicare con un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il nome non deve include il percorso o l'estensione di file DLL.<br /><br /> L'impostazione predefinita può essere personalizzata utilizzando l'utilità Configurazione client di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].<br /><br /> Nota: Solo TCP e Named pipe sono supportate da questa proprietà. Se si utilizza questa proprietà con un prefisso, si verifica una situazione in cui sono presenti due prefissi. Tale situazione comporta un errore, in quanto la proprietà viene utilizzata per generare internamente un prefisso.|  
 |SSPROP_INIT_PACKETSIZE|Tipo: VT_I4<br /><br /> L/S: Lettura/Scrittura<br /><br /> Descrizione: dimensioni del pacchetto di rete in byte. Il valore della proprietà delle dimensioni del pacchetto deve essere compreso tra 512 e 32.767. Il valore predefinito Driver OLE DB per dimensioni pacchetto di rete SQL Server è 4.096.|  
@@ -93,6 +93,6 @@ Server=MyServer;UID=MyUserName;
  Per un elenco di parole chiave disponibili nel Driver OLE DB per SQL Server, vedere [Using Connection String Keywords con il Driver OLE DB per SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli oggetti origine dati &#40; OLE DB &#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Gli oggetti origine dati & #40; OLE DB & #41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

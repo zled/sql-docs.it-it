@@ -2,28 +2,28 @@
 title: Le istruzioni T-SQL Analitica piattaforma Parallel Data Warehouse di System | Documenti Microsoft
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
 description: Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
 documentationcenter: NA
-editor: 
+editor: ''
 ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
 ms.devlang: NA
 ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: 54613765219912b7ad0db5d4dfd36478f6e5e3b3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="t-sql-topics"></a>Negli argomenti di T-SQL
 Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
@@ -49,14 +49,14 @@ Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitic
 * [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
 * [CREATE VIEW](../t-sql/statements/create-view-transact-sql.md)
 * [ELIMINARE L'ORIGINE DATI ESTERNA](../t-sql/statements/drop-external-data-source-transact-sql.md)
-* [ELIMINARE IL FORMATO DI FILE ESTERNO](../t-sql/statements/drop-external-file-format-transact-sql.md)
-* [ELIMINARE UNA TABELLA ESTERNA](../t-sql/statements/drop-external-table-transact-sql.md)
+* [DROP FORMATO DI FILE ESTERNO](../t-sql/statements/drop-external-file-format-transact-sql.md)
+* [ELIMINA TABELLA ESTERNA](../t-sql/statements/drop-external-table-transact-sql.md)
 * [DROP INDEX](../t-sql/statements/drop-index-transact-sql.md)
 * [DROP PROCEDURE](../t-sql/statements/drop-procedure-transact-sql.md)
 * [ELIMINARE STATISTICHE](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
-* [ELIMINARE LO SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
-* [VISUALIZZAZIONE RIEPILOGO](../t-sql/statements/drop-view-transact-sql.md)
+* [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
+* [RIMUOVERE LA VISTA](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
 * [UPDATE STATISTICS](../t-sql/statements/update-statistics-transact-sql.md)
@@ -82,24 +82,24 @@ Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitic
 * [EXPLAIN](../t-sql/queries/explain-transact-sql.md)
 * [FROM](../t-sql/queries/from-transact-sql.md)
 * [Utilizzo di PIVOT e UNPIVOT](../t-sql/queries/from-using-pivot-and-unpivot.md)
-* [RAGGRUPPA PER](../t-sql/queries/select-group-by-transact-sql.md)
-* [CON](../t-sql/queries/select-having-transact-sql.md)
+* [GROUP BY](../t-sql/queries/select-group-by-transact-sql.md)
+* [HAVING](../t-sql/queries/select-having-transact-sql.md)
 * [ORDER BY](../t-sql/queries/select-order-by-clause-transact-sql.md)
-* [OPZIONE](../t-sql/queries/option-clause-transact-sql.md)
-* [UNIONE](../t-sql/language-elements/set-operators-union-transact-sql.md)
+* [OPTION](../t-sql/queries/option-clause-transact-sql.md)
+* [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
 * [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
-* [Alias](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
+* [Aliasing](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
 * [Condizione di ricerca](../t-sql/queries/search-condition-transact-sql.md)
 * [Sottoquery](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Istruzioni di sicurezza
-* Autorizzazioni: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [revocare](../t-sql/statements/revoke-transact-sql.md)
+* Autorizzazioni: [GRANT](../t-sql/statements/grant-transact-sql.md), [Nega](../t-sql/statements/deny-transact-sql.md), [revocare](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ISTRUZIONE ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [L'AUTORIZZAZIONE ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
-* [MODIFICARE LA CHIAVE MASTER](../t-sql/statements/alter-master-key-transact-sql.md)
+* [ISTRUZIONE ALTER MASTER KEY](../t-sql/statements/alter-master-key-transact-sql.md)
 * [MODIFICA RUOLO](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)

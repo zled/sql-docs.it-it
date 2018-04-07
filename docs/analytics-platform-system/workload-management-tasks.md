@@ -1,24 +1,24 @@
 ---
-title: "Attività di gestione del carico di lavoro"
+title: Attività di gestione del carico di lavoro
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/12/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: 70f70c504aab81f490ee39d244555022bf73d91b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0a9c3ffd4768d78a4063ad40f7903dfe00b647e5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="workload-management-tasks"></a>Attività di gestione del carico di lavoro
 
@@ -111,7 +111,7 @@ Per ulteriori informazioni sulla modifica appartenenza al ruolo di classe di ris
 ## <a name="change-a-login-to-the-default-system-resources-for-its-requests"></a>Modificare un account di accesso alle risorse di sistema predefinito per le richieste
 Viene descritto come modificare le allocazioni di risorse di sistema assegnate a un account di accesso di SQL Server PDW agli importi predefinito. Questo problema riguarda le risorse di sistema SQL Server PDW assegna alle richieste inviate dall'account di accesso.  
   
-Per descrizioni classe di risorse, vedere [del carico di lavoro](workload-management.md)  
+Per le descrizioni classe di risorse, vedere [gestione del carico di lavoro](workload-management.md)  
   
 Quando un account di accesso non è un membro di qualsiasi ruolo di server di classe di risorse, le richieste inviate dall'account di accesso riceverà la quantità di risorse di sistema predefinita.  
   

@@ -2,24 +2,24 @@
 title: dwloader caricatore della riga di comando per Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "**dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente."
+description: '**dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente.'
 ms.date: 11/04/2016
 ms.topic: article
 ms.assetid: f79b8354-fca5-41f7-81da-031fc2570a7c
-caps.latest.revision: 
-ms.openlocfilehash: 4050df3fa69a823ebb36076367c2e8d7344ac1a2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+caps.latest.revision: 90
+ms.openlocfilehash: 83d04928aa0c8f7fe0156f557466edccc36470dd
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="dwloader-command-line-loader"></a>dwloader caricatore della riga di comando
 **dwloader** è uno strumento da riga di comando Parallel Data Warehouse (PDW) che esegue il caricamento bulk di righe di tabella in una tabella esistente. Durante il caricamento di righe, è possibile aggiungere tutte le righe alla fine della tabella (*modalità append* o *modalità fastappend*), aggiungere nuove righe e aggiornare le righe esistenti (*modalità upsert*), o eliminarli tutti righe prima del caricamento esistente e quindi inserire tutte le righe in una tabella vuota (*ricaricare modalità*).  
@@ -140,7 +140,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 Utilizzare un file di parametro, *parameter_file_name*, al posto di parametri della riga di comando. *parameter_file_name* può contenere tutti i parametri della riga di comando tranne *nome_utente* e *password*. Se viene specificato un parametro della riga di comando e nel file di parametri, la riga di comando sostituisce il parametro file.  
   
-Il file dei parametri contiene un parametro, senza il  **-**  prefisso, per ogni riga.  
+Il file dei parametri contiene un parametro, senza il **-** prefisso, per ogni riga.  
   
 Esempi:  
   
@@ -402,7 +402,7 @@ Il caricatore inserisce righe alla fine delle righe esistenti nella tabella di d
 fastappend  
 Il caricatore inserisce righe direttamente, senza utilizzare una tabella temporanea, alla fine delle righe esistenti nella tabella di destinazione. fastappend richiede la multi-transazione (-m) opzione. Quando si utilizza fastappend, non è possibile specificare un database di gestione temporanea. Viene eseguito alcun rollback con fastappend, il che significa che il ripristino da un carico interrotto o non deve essere gestito dal proprio processo di caricamento.  
   
-Upsert **-K***merge_column* [,... *n* ]  
+eseguire l'Upsert **-K***merge_column* [,... *n* ]    
 Il caricatore Usa l'istruzione Merge SQL Server per aggiornare le righe esistenti e inserire nuove righe.  
   
 L'opzione -K specifica le colonne su cui basare il merge. Queste colonne formano una chiave di tipo merge, che deve rappresentare una riga univoca. Se la chiave di tipo merge esiste nella tabella di destinazione, la riga viene aggiornata. Se la chiave di tipo merge non esiste nella tabella di destinazione, la riga viene aggiunto.  

@@ -2,24 +2,24 @@
 title: Configurazioni hardware (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "L'hardware Analitica piattaforma di strumenti analitici viene progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali."
+description: L'hardware Analitica piattaforma di strumenti analitici viene progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali.
 ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: f95945b7-97ae-4ab9-bae5-c792a516acea
-caps.latest.revision: "9"
-ms.openlocfilehash: 6762775fdec3cd3a01a372ed5c16fbc4a93c1426
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: d6f4b25584826d637db0a5f51ebe8ede458136c2
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hardware-configurations"></a>Configurazioni hardware
 L'hardware Analitica piattaforma di strumenti analitici viene progettato con unità scalabili in modo che si acquista la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali. Il dispositivo di scala di archiviazione per SQL Server Parallel Data Wareouse (PDW) da qualche terabyte per oltre 6 petabyte di dati.  
@@ -52,10 +52,10 @@ Ogni fornitore di hardware specifica il numero di unità di scala di dati che è
 ### <a name="scale-out-example---hpe"></a>Scalabilità orizzontale esempio - HPE  
 Questo diagramma mostra un accessorio 3 rack HP che contiene 20 nodi di calcolo.  
   
-![Dispositivo HPE con 20 nodi di calcolo](media/scale-out-hpe.png "accessorio HPE con 20 nodi di calcolo")  
+![Accessorio HPE con 20 nodi di calcolo](media/scale-out-hpe.png "accessorio HPE con 20 nodi di calcolo")  
   
 ### <a name="scale-out-example--dell-quanta"></a>Esempio: DELL, quantum con scalabilità  
 Questo diagramma mostra 3 rack DELL o Quanta appliance che contiene i nodi di calcolo 21.  
   
-![Il dispositivo Dell con nodi di calcolo 21](media/scale-out-dell.png "dispositivo Dell con 21 nodi di calcolo")  
+![Dispositivo Dell con nodi di calcolo 21](media/scale-out-dell.png "accessorio Dell con 21 nodi di calcolo")  
  

@@ -10,7 +10,7 @@ ms.component: OLE DB Driver
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a3d642eb3cef1f9f01accd8b50f571f5e4903ac
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: fe6342e3a61ecc59594917431c026681e51f8e63
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>Driver OLE DB per la programmazione di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,24 +51,24 @@ ms.lasthandoff: 03/30/2018
  [Driver OLE DB per SQL Server](../oledb/oledb-driver-for-sql-server.md)  
  Elenca le significative nuovo Driver OLE DB per le funzionalità di SQL Server.  
   
- [Quando utilizzare OLE DB Driver per SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
+ [Quando utilizzare il driver OLE DB per SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  Viene illustrato come integrare il Driver OLE DB per SQL Server con i dati di Microsoft tecnologie di accesso, viene presentato un confronto con Windows DAC e ADO.NET e vengono fornite informazioni utili per decidere quale tecnologia utilizzare di accesso ai dati.  
   
- [Driver OLE DB per la funzionalità di SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [Driver OLE DB per funzionalità di SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
  Vengono descritte le funzionalità supportate dal Driver OLE DB per SQL Server.  
   
- [Compilazione di applicazioni con il Driver OLE DB per SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Compilazione di applicazioni con il driver OLE DB per SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  Viene fornita una panoramica del Driver OLE DB per lo sviluppo di SQL Server, incluse le differenze rispetto a Windows DAC, i componenti utilizzati e la modalità di utilizzo di ADO con esso.  
   
  In questa sezione viene inoltre Driver OLE DB per l'installazione di SQL Server e distribuzione, incluso come ridistribuire il Driver OLE DB per la libreria di SQL Server.  
   
- [Requisiti di sistema per il Driver OLE DB per SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
+ [Requisiti di sistema per driver OLE DB per SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  Vengono illustrate le risorse di sistema necessarie per l'utilizzo del Driver OLE DB per SQL Server.  
   
  [Driver OLE DB per SQL Server &#40;OLE DB&#41;](../oledb/ole-db/oledb-driver-for-sql-server-ole-db.md)  
  Vengono fornite informazioni sull'utilizzo del Driver OLE DB per SQL Server.  
   
- [Ricerca di ulteriori OLE DB Driver per informazioni su SQL Server](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
+ [Ricerca di ulteriori driver OLE DB per informazioni su SQL Server](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
  Fornisce risorse aggiuntive su Driver OLE DB per SQL Server, inclusi i collegamenti a risorse esterne e istruzioni per ottenere assistenza.  
   
   

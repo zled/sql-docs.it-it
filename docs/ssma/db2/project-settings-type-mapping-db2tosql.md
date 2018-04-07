@@ -2,30 +2,30 @@
 title: Impostazioni (Mapping dei tipi) del progetto (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: cf426c69-6a8e-4d19-951d-6661d5ae2562
-caps.latest.revision: 
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ab07bb5ad3932c45dacb7aa1b359083f05ec9bf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: a268c4a080248028d8eeb399db68f0de57412b01
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Impostazioni (Mapping dei tipi) del progetto (DB2ToSQL)
 La pagina Mapping dei tipi del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità di conversione di tipi di dati DB2 in SSMA [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati.  
@@ -44,7 +44,7 @@ La tabella seguente mostra il **del mapping dei tipi** scheda Opzioni:
 **Tipo origine**  
 Il tipo di dati DB2 mappato.  
   
-Tipo di destinazione  
+**Tipo di destinazione**  
 La destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] il tipo di dati per il tipo di dati DB2 specificato.  
   
 Vedere le tabelle nella sezione successiva per il valore predefinito SSMA per i mapping dei tipi di DB2.  
@@ -276,5 +276,5 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |XmlType|xml|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Riferimento all'interfaccia utente &#40; DB2ToSQL &#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
+[Riferimento all'interfaccia utente &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

@@ -2,29 +2,29 @@
 title: Transparent Data Encryption per Parallel Data Warehouse
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
 description: Crittografia dati trasparente (TDE) esegue la crittografia dei / o in tempo reale e la decrittografia dei dati e i file di log delle transazioni e i file di log PDW speciali.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d
-caps.latest.revision: "22"
-ms.openlocfilehash: 6c96bd67d9a935756b8353999f6c778134d2ed57
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 22
+ms.openlocfilehash: d93d76018baeed1577b6831cbde359002c89416e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="transparent-data-encryption"></a>Transparent Data Encryption
 Per proteggere il database è possibile adottare alcune accortezze, tra cui la progettazione di un sistema sicuro, la crittografia dei dati riservati e la compilazione di un firewall attorno ai server di database. Tuttavia, nel caso in cui i supporti fisici (ad esempio unità o nastri di backup) venissero rubati, un malintenzionato potrebbe ripristinare o collegare il database e accedere ai dati. Una soluzione per ovviare al problema consiste nel crittografare i dati sensibili nel database e proteggere con un certificato le chiavi usate per la crittografia. In questo modo si impedisce a chi è sprovvisto delle chiavi di usare i dati; tuttavia, questo tipo di protezione deve essere pianificato in anticipo.  
   
-*Crittografia dati trasparente* (TDE) esegue la crittografia dei / o in tempo reale e la decrittografia dei dati e i file di log delle transazioni e le speciali PDW i file di log. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database master di SQL Server PDW. TDE consente di proteggere i dati "non operativi", ovvero i file di dati e di log, e assicura la conformità a numerose leggi, normative e linee guida stabilite in vari settori. Gli sviluppatori software possono ora crittografare i dati usando gli algoritmi di crittografia AES e 3DES senza modificare applicazioni esistenti.  
+*Crittografia dati trasparente* (TDE) esegue la crittografia dei / o in tempo reale e la decrittografia dei dati e file di log file di log delle transazioni e PDW speciali. Per la crittografia viene usata una chiave di crittografia del database (DEK), archiviata nel record di avvio del database affinché sia disponibile durante le operazioni di recupero. La chiave DEK è una chiave simmetrica protetta tramite un certificato archiviato nel database master di SQL Server PDW. TDE consente di proteggere i dati "non operativi", ovvero i file di dati e di log, e assicura la conformità a numerose leggi, normative e linee guida stabilite in vari settori. Gli sviluppatori software possono ora crittografare i dati usando gli algoritmi di crittografia AES e 3DES senza modificare applicazioni esistenti.  
   
 > [!IMPORTANT]  
 > TDE non fornisce la crittografia per i dati scambiati fra il client e di PDW. Per ulteriori informazioni su come crittografare i dati tra il client e SQL Server PDW, vedere [il provisioning di un certificato](provision-certificate.md).  
@@ -61,7 +61,7 @@ Per usare TDE, eseguire le operazioni seguenti: I primi tre passaggi sono solo u
   
 L'esempio seguente illustra la crittografia di `AdventureWorksPDW2012` database con un certificato denominato `MyServerCert`, creato in SQL Server PDW.  
   
-**Prima: Abilitare TDE in SQL Server PDW.** Questo è necessario solo una volta.  
+**Primo passaggio: Abilitare TDE in SQL Server PDW.** Questo è necessario solo una volta.  
   
 ```sql  
 USE master;  
@@ -98,7 +98,7 @@ BACKUP CERTIFICATE MyServerCert
 GO  
 ```  
   
-**: Creare la chiave di Decrittografia e dell'ultima, Utilizzare ALTER DATABASE per crittografare un database utente.** Ciò viene ripetuto per ogni database protetto con TDE.  
+**: Creare la chiave DEK e dell'ultima, Utilizzare ALTER DATABASE per crittografare un database utente.** Ciò viene ripetuto per ogni database protetto con TDE.  
   
 ```sql  
 USE AdventureWorksPDW2012;  
@@ -149,7 +149,7 @@ Durante un'analisi di una nuova crittografia di un database, le operazioni di ma
   
 È possibile trovare lo stato di crittografia del database utilizzando il **sys.dm_pdw_nodes_database_encryption_keys** vista a gestione dinamica. Per ulteriori informazioni, vedere il *viste del catalogo e viste a gestione dinamica* in precedenza in questo argomento).  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restrizioni  
 Le operazioni seguenti non sono consentite durante il `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, o `ALTER DATABASE...SET ENCRYPTION` istruzioni.  
   
 -   Eliminazione del database.  
@@ -202,7 +202,7 @@ SELECT TOP 1 encryption_state
 Tutti i dati scritti nel log delle transazioni prima di una modifica della chiave di crittografia del database saranno crittografati usando la chiave di crittografia del database precedente.  
   
 ### <a name="pdw-activity-logs"></a>Log attività PDW  
-SQL Server PDW gestisce un set di registri previsto per la risoluzione dei problemi. Si noti, non si tratta del log delle transazioni, il log degli errori di SQL Server o il registro eventi di Windows. Questi log attività PDW possono contenere istruzioni complete in testo non crittografato, alcuni dei quali può contenere i dati utente. Sono esempi tipici **inserire** e **aggiornamento** istruzioni. Mascheramento dei dati utente possa essere esplicitamente attivata o disattivata tramite **sp_pdw_log_user_data_masking**. Abilitazione di crittografia in SQL Server PDW automaticamente consente di attivare il mascheramento dei dati utente nei log attività PDW per proteggerli. **sp_pdw_log_user_data_masking** consente inoltre al fine di mascherare le istruzioni quando non si utilizza Transparent Data Encryption, ma non è consigliabile in quanto riduce notevolmente la capacità del Team di supporto Microsoft di analizzare i problemi.  
+SQL Server PDW gestisce un set di registri previsto per la risoluzione dei problemi. Si noti, non si tratta del log delle transazioni, il log degli errori di SQL Server o il registro eventi di Windows. Questi log attività PDW possono contenere istruzioni complete in testo non crittografato, alcuni dei quali può contenere i dati utente. Sono esempi tipici **inserire** e **aggiornamento** istruzioni. Mascheramento dei dati utente possa essere esplicitamente attivata o disattivata tramite **sp_pdw_log_user_data_masking**. Abilitazione di crittografia in SQL Server PDW automaticamente consente di attivare il mascheramento dei dati utente nei log attività PDW per proteggerli. **sp_pdw_log_user_data_masking** consente inoltre al fine di mascherare istruzioni se non si utilizza Transparent Data Encryption, ma non è consigliabile in quanto riduce notevolmente la capacità del Team di supporto di Microsoft di analizzare i problemi.  
   
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>Transparent Data Encryption e database di sistema tempdb  
 Il database di sistema tempdb viene crittografato durante la crittografia è abilitata tramite [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md). Ciò è necessario prima di qualsiasi database può utilizzare Transparent Data Encryption. Potrebbe essere un effetto sulle prestazioni per database non crittografati presenti nella stessa istanza di SQL Server PDW.  

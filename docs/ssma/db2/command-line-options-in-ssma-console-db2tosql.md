@@ -2,29 +2,30 @@
 title: Opzioni della riga di comando nella Console SSMA (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5eff60694cdcfdb4d2d147ae0531fbbc2ecfb32
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1ece5c9b4a72f588608103437b03902fd81cc89f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Opzioni della riga di comando nella Console SSMA (DB2ToSQL)
 Microsoft offre un set affidabile opzioni riga di comando per eseguire e controllare le attività SSMA. In dettaglio le sezioni che seguono lo stesso.  
@@ -162,21 +163,21 @@ Visualizza il riepilogo della sintassi delle opzioni di SSMA Console:
   
 `C:\>SSMAforDB2Console.EXE -?`  
   
-Per una visualizzazione tabulare delle opzioni della riga di comando SSMA Console, fare riferimento a [appendice - 1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md).  
+Per una visualizzazione tabulare delle opzioni della riga di comando della Console di SSMA, consultare [appendice - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md).  
   
 ### <a name="securepassword-help-option-securepassword--help"></a>Opzione SecurePassword Help:: securepassword-? /Help  
 Visualizza il riepilogo della sintassi delle opzioni di SSMA Console:  
   
 `C:\>SSMAforDB2Console.EXE -securepassword -?`  
   
-Per una visualizzazione tabulare delle opzioni della riga di comando SSMA Console, fare riferimento a [appendice - 1 &#40; DB2ToSQL &#41;](../../ssma/db2/appendix-1-db2tosql.md)  
+Per una visualizzazione tabulare delle opzioni della riga di comando della Console di SSMA, consultare [appendice - 1 &#40;DB2ToSQL&#41;](../../ssma/db2/appendix-1-db2tosql.md)  
   
 ### <a name="next-step"></a>Passaggio successivo  
 Il passaggio successivo dipende dai requisiti del progetto:  
   
-1.  Per specificare una password o l'esportazione / importazione per le password, vedere [DB2ToSQL le password di gestione &#40; &#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
+1.  Consente di specificare una password o l'esportazione / importazione per le password, vedere [la gestione delle password &#40;DB2ToSQL&#41;](../../ssma/db2/managing-passwords-db2tosql.md).  
   
-2.  Per la generazione di report, vedere [DB2ToSQL la generazione di report &#40; &#41;](../../ssma/db2/generating-reports-db2tosql.md).  
+2.  Per la generazione di report, vedere [la generazione di report &#40;DB2ToSQL&#41;](../../ssma/db2/generating-reports-db2tosql.md).  
   
-3.  Per la risoluzione dei problemi nella console, vedere [DB2ToSQL Troubleshooting &#40; &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
+3.  Per la risoluzione dei problemi nella console, vedere [Troubleshooting &#40;DB2ToSQL&#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   

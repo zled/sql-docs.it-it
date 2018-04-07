@@ -2,24 +2,24 @@
 title: Componenti hardware di sistema della piattaforma Analitica
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Analitica piattaforma di strumenti analitici Usa componenti scalabili in modo che è possibile acquistare la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali."
+description: Analitica piattaforma di strumenti analitici Usa componenti scalabili in modo che è possibile acquistare la giusta quantità di elaborazione e archiviazione in base alle esigenze aziendali.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: aa1cdcc7-cfee-4658-bbce-7d319bfb7483
-caps.latest.revision: "17"
-ms.openlocfilehash: cd58b4a7afb2f69081b99a884d3b0f32b194097a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 17
+ms.openlocfilehash: 4b972c4b926463a67588c4ee41ed0157da7cdc80
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-hardware-components"></a>Componenti hardware di sistema della piattaforma Analitica
 
@@ -30,7 +30,7 @@ Analitica piattaforma di strumenti analitici Usa componenti scalabili in modo ch
  
 Tutti i componenti di punti di accesso vengono memorizzati in uno o più rack che rientrano nel proprio data center. Ogni rack dotato di unità di distribuzione dell'alimentazione (PDU), due commutatori InfiniBand e due commutatori Ethernet.  
   
-![Rack e rete](media/rack-and-network.png "APS montare su rack e di rete")  
+![Rack e la rete](media/rack-and-network.png "APS montare su rack e di rete")  
   
 ## <a name="datascaleunit"></a>Unità di scala di dati
  
@@ -46,7 +46,7 @@ L'archiviazione associata diretta (DAS) è un pool di dischi connessi agli host 
   
 ### <a name="data-scale-unit-architecture---dell-and-quanta"></a>Scala unità architettura di dati - quantum e DELL
   
-![Unità di scalabilità](media/scalability-unit-dell.png "unità scalabilità Dell")  
+![Unità di scalabilità](media/scalability-unit-dell.png "unità di scalabilità Dell")  
   
 ### <a name="data-scale-unit-architecture---hpe"></a>Architettura di unità di scala dei dati - HPE 
  
@@ -66,9 +66,9 @@ Numero totale dei dischi per i nodi di calcolo:
   
 -   Inoltre, ogni array di dischi dispone di dischi di riserva a caldo e di un disco di sistema.  
   
-**Per la disponibilità elevata**, quando un calcolo eseguito il failover è possibile continuano a funzionare e di accedere ai dati utente tramite l'altro host nell'unità di scala di dati. Almeno uno degli host fisici collegati direttamente deve funzionare o accesso ai dati nella risorsa di archiviazione viene perso.  
+**Per la disponibilità elevata**, quando un calcolo eseguito il failover è possibile continuano a funzionare e di accedere ai dati utente tramite l'altro host nell'unità di scala dei dati. Almeno uno degli host fisici collegati direttamente deve funzionare o accesso ai dati nella risorsa di archiviazione viene perso.  
   
-**Per i dischi**, l'archiviazione associata diretta può avere 1, 2 o 3 unità disco di Terabyte. Tutte le unità di scala di dati devono essere dischi delle stesse dimensioni.  
+**Per le dimensioni dei dischi**, l'archiviazione associata diretta può avere 1, 2 o 3 unità disco Terabyte. Tutte le unità di scala di dati devono essere dischi delle stesse dimensioni.  
   
 ## <a name="basescaleunit"></a>Unità di scala di base 
  
@@ -88,5 +88,5 @@ L'unità di scala di Base include un'unità di scala di dati che si trova nella 
   
 Questo diagramma mostra l'unità di scala di Base oltre il Rack e la rete. Questa è la configurazione minima per un dispositivo di sistema della piattaforma Analitica.  
   
-![Unità di scala base](media/base-scale-unit.png "unità di scala di Base")  
+![Unità di scala di base](media/base-scale-unit.png "unità di scala di Base")  
  

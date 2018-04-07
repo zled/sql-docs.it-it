@@ -2,23 +2,23 @@
 title: Concedi autorizzazioni
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
-ms.openlocfilehash: d7d685d15eb0e5704698ebd2b79c20589f49ee16
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 35542a9ea2544f0bdd357d3609937e1596e00a3f
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="grant-permissions"></a>Concedi autorizzazioni
 
@@ -221,9 +221,9 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 -->
 
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Concedere le autorizzazioni per il monitoraggio del dispositivo
-Lo strumento di SQL Server PDW può essere monitorato da utilizzo delle viste di sistema della Console di amministrazione o di SQL Server PDW. Gli account di accesso richiedono il livello di server **VIEW SERVER STATE** autorizzazione per il monitoraggio del dispositivo. Gli account di accesso richiedono il **l'autorizzazione ALTER ANY CONNECTION** dell'autorizzazione per terminare le connessioni utilizzando la Console di amministrazione o **KILL** comando. Per informazioni sulle autorizzazioni necessarie per utilizzare la Console di amministrazione, vedere [Grant-autorizzazioni per utilizzare la Console di amministrazione &#40; SQL Server PDW &#41; ](#grant-permissions-to-use-the-admin-console).  
+Lo strumento di SQL Server PDW può essere monitorato da utilizzo delle viste di sistema della Console di amministrazione o di SQL Server PDW. Gli account di accesso richiedono il livello di server **VIEW SERVER STATE** autorizzazione per il monitoraggio del dispositivo. Gli account di accesso richiedono il **l'autorizzazione ALTER ANY CONNECTION** dell'autorizzazione per terminare le connessioni utilizzando la Console di amministrazione o **KILL** comando. Per informazioni sulle autorizzazioni necessarie per utilizzare la Console di amministrazione, vedere [concedere autorizzazioni per utilizzare la Console di amministrazione &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Concedere l'autorizzazione per il monitoraggio del dispositivo tramite viste di sistema  
+### <a name="PermsAdminConsole"></a>Concedere l'autorizzazione per controllare il dispositivo utilizzando viste di sistema  
 Le istruzioni SQL seguenti creano un account di accesso denominato `monitor_login` e concede il **VIEW SERVER STATE** dell'autorizzazione per la `monitor_login` account di accesso.  
   
 ```sql  

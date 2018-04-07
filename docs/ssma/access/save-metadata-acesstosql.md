@@ -2,31 +2,32 @@
 title: Salvare i metadati (AcessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 38d74c7c7bd5d1cc2ac3bf4dbbf940ecf1abafc3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: aec8951b1c0670f7f07329c7cc1e637b474ba392
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="save-metadata-acesstosql"></a>Salvare i metadati (AcessToSQL)
+# <a name="save-metadata-acesstosql"></a>Save Metadata (AcessToSQL)
 Il **salvare metadati** la finestra di dialogo viene richiesto di caricare i metadati al progetto SSMA prima del salvataggio. Questo consente di avere un file di progetto completo che è possibile utilizzare non in linea e inviare ad altri utenti, come il personale di supporto tecnico.  
   
 Per l'accesso di **salvare metadati** nella finestra di dialogo Salva il progetto. Se i metadati mancanti, SSMA verrà visualizzato il **salvare metadati** la finestra di dialogo.  
@@ -46,7 +47,7 @@ Seleziona database tutti elencati.
 **Clear**  
 Cancella la casella di controllo per tutti i database con metadati mancanti. È possibile deselezionare la casella di controllo se i metadati sono stato caricato.  
   
-**Salvare**  
+**Salva**  
 Salva il progetto, il caricamento dei metadati per i database selezionati con metadati mancanti.  
   
 **Annulla**  

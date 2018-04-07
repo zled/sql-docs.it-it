@@ -21,13 +21,13 @@ ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 069e14ae3babfb3961042edaf0d99e24367df85d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2612b2658ae1d89891e410768dc0e31d78eb299c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Trovare la procedura guidata database (selezione dei percorsi) (AccessToSQL)
 Nella pagina della procedura guidata database trovare selezionare percorsi, si immettono i parametri di ricerca per trovare i database di Access.  
@@ -38,10 +38,10 @@ Per aprire Creazione guidata database di ricerca, scegliere il **File** menu, fa
 **Sfoglia**  
 Fare clic per cercare il computer o in rete. Selezionare la cartella o un percorso per cercare e quindi fare clic su **OK**. Fare clic su **Aggiungi** per aggiungere il percorso all'elenco.  
   
-**Casella Percorso**  
+**Finestra di percorso**  
 Mostra il percorso da aggiungere alla casella percorsi. Immettere o selezionare il percorso in cui si desidera controllare, quindi scegliere il **Aggiungi** pulsante.  
   
-**Casella percorsi**  
+**Finestra di percorsi**  
 Elenca i percorsi di che SSMA eseguirà l'analisi. Quando si fa clic il **Aggiungi** pulsante, il percorso specificato viene aggiunto a questa casella.  
   
 **Aggiungi**  
@@ -59,7 +59,7 @@ Per trovare i database che presentano nomi che contengono una stringa specifica,
 **Data creazione**  
 Per trovare i database creati all'interno di un intervallo di date specifico, immettere la data di inizio nel **da** casella e la fine di date nel **a** casella.  
   
-**Data dell'ultimo aggiornamento**  
+**Data ultimo aggiornamento**  
 Per trovare i database aggiornati all'interno di un intervallo di date specifico, immettere la data di inizio nel **da** casella e la fine di date nel **a** casella.  
   
 **Dimensione**  
@@ -69,6 +69,6 @@ Per trovare i database che corrispondono a un criterio di dimensione, selezionar
 Immettere il nome utente di Windows completo del proprietario. Questo potrebbe essere formattato come *dominio*\\*utente*.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Aggiunta e rimozione di file di Database di Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
+[Aggiunta e rimozione dei file di Database di Access](http://msdn.microsoft.com/en-us/e944c740-4c8a-4bc1-b0ed-be57bc06dced)  
 [Reference(Access) dell'interfaccia utente](http://msdn.microsoft.com/en-us/af24c303-4a41-449b-9c86-d6558a97e839)  
   

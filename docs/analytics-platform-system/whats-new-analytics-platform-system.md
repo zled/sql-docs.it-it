@@ -1,23 +1,23 @@
 ---
-title: "Novità di sistema della piattaforma Analitica: scalabilità orizzontale data warehouse"
+title: 'Novità di sistema della piattaforma Analitica: scalabilità orizzontale data warehouse'
 author: happynicolle
 ms.author: nicw;barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "Novità di Microsoft® Analitica piattaforma del sistema, uno strumento di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse, vedere."
+description: Novità di Microsoft® Analitica piattaforma del sistema, uno strumento di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse, vedere.
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c6af71d6b7c2bc67aeea0fdc5c1af2e668f537c5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Novità di Analitica piattaforma System 2016, un data warehouse di scalabilità orizzontale MPP
 Vedere quali sono le novità in Microsoft® Analitica piattaforma di strumenti analitici 2016, l'ultimo aggiornamento del dispositivo per un dispositivo di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
@@ -32,9 +32,9 @@ APS 2016 supporta questi miglioramenti di compatibilità di T-SQL.  Questi eleme
 
 - [Regole di confronto a livello di colonna SQL][] sono ora supportati oltre alle regole di confronto di Windows.
 - [Indici non cluster in indici columnstore cluster][] migliorare le prestazioni delle query che cercano valori specifici in corrispondenza dell'indice columnstore cluster. 
-- [SELEZIONA... IN][] 
-- [sp_spaceused()][] consente di visualizzare lo spazio su disco utilizzato o riservato in una tabella o di un database.
-- [Tabelle estese in larghezza][] corrisponde al supporto di SQL Server 2016. Il limite di 32 KB precedente per le dimensioni di riga non esiste più. 
+- [SELECT...INTO][] 
+- [sp_spaceused()][] consente di visualizzare lo spazio su disco utilizzato o riservato in una tabella o database.
+- [Tabelle estese in larghezza][] supporto è quella di SQL Server 2016. Il limite di 32 KB precedente per le dimensioni di riga non esiste più. 
 
 ### <a name="data-types"></a>Tipi di dati
 
@@ -58,8 +58,8 @@ APS 2016 supporta questi miglioramenti di compatibilità di T-SQL.  Questi eleme
 
 ### <a name="additional-functions"></a>Funzioni aggiuntive
 
-- [NEWID)][]
-- [RAND)][]
+- [NEWID()][]
+- [RAND()][]
 
 ## <a name="polybasehadoop-enhancements"></a>Miglioramenti di PolyBase, Hadoop
 
@@ -99,7 +99,7 @@ Installazione o l'aggiornamento a APS 2016 è più veloce e richiede meno tempo 
 [nvarchar (max)]:https://msdn.microsoft.com/library/ms186939.aspx
 [varbinary (max)]:https://msdn.microsoft.com/library/ms188362.aspx
 [SYSNAME]:https://msdn.microsoft.com/library/ms188021.aspx
-[SELEZIONA... IN]:https://msdn.microsoft.com/library/ms188029.aspx
+[SELECT...INTO]:https://msdn.microsoft.com/library/ms188029.aspx
 [sp_spaceused()]:https://msdn.microsoft.com/library/ms188776.aspx
 [Tabelle estese in larghezza]:https://msdn.microsoft.com/library/ms143432.aspx
 [BULK INSERT]:https://msdn.microsoft.com/library/ms188365.aspx
@@ -114,8 +114,8 @@ Installazione o l'aggiornamento a APS 2016 è più veloce e richiede meno tempo 
 [Checksum ()]:https://msdn.microsoft.com/library/ms189788.aspx
 [BINARY_CHECKSUM()]:https://msdn.microsoft.com/library/ms173784.aspx
 [HAS_PERMS_BY_NAME()]:https://msdn.microsoft.com/library/ms189802.aspx
-[NEWID)]:https://msdn.microsoft.com/library/ms190348.aspx
-[RAND)]:https://msdn.microsoft.com/library/ms177610.aspx
+[NEWID()]:https://msdn.microsoft.com/library/ms190348.aspx
+[RAND()]:https://msdn.microsoft.com/library/ms177610.aspx
 
 
   

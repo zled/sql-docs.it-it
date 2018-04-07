@@ -10,7 +10,7 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a501daca74470e7df9e08fc329e956301417b4ca
-ms.sourcegitcommit: 9f4330a4b067deea396b8567747a6771f35e6eee
+ms.openlocfilehash: ffb8b7f18cf9c1653e5c77217f1d1dd339333fcf
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="sparse-columns-support-in-ole-db-driver-for-sql-server"></a>Supporto per colonne di tipo sparse in OLE DB Driver per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,6 +67,6 @@ ms.lasthandoff: 03/30/2018
  Tuttavia, se **queryout** viene utilizzato per l'esportazione e si fa riferimento le colonne di tipo sparse che sono membri di una colonna di tipo sparse impostata in base al nome, non è possibile eseguire un'importazione diretta in una tabella dalla struttura analoga. In questo modo l'utilità BCP utilizza metadati consistenti con un **selezionare \***  operazione per l'importazione ed è Impossibile trovare la corrispondenza **column_set** colonne membri con questi metadati. Per importare **column_set** colonne membri singolarmente, è necessario definire una visualizzazione sulla tabella che fa riferimento l'oggetto desiderato **column_set** colonne ed è necessario eseguire l'operazione di importazione utilizzando la visualizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Driver OLE DB per la programmazione di SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
+ [Driver OLE DB per programmazione con SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)  
   
   
