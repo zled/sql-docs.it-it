@@ -8,34 +8,34 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc9e91255317d53a63dd9867f6060af591f36e3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server utilizzando l'autenticazione di Windows - Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]supporta la connessione a SQL Server tramite Kerberos.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta la connessione a SQL Server tramite Kerberos.
 
 Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o Linux, è necessario impostare un **ticket Kerberos** il collegamento all'utente corrente a un account di dominio di Windows. 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerequisiti
 
 - Accedere a un computer di dominio di Windows per eseguire query di Controller di dominio Kerberos.
-- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Deve esistere SPN registrati per ogni istanza di Sql Server si sta tentando di connettersi. Ulteriori informazioni sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Deve esistere SPN registrati per ogni istanza di Sql Server si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
 ## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verifica se Sql Server il programma di installazione di Kerberos
 
 Account di accesso al computer host di Sql Server. Dal prompt dei comandi Windows, utilizzare il `setspn -L %COMPUTERNAME%` per elencare tutti i nomi dell'entità servizio per l'host. Verranno visualizzate voci che iniziano con MSSQLSvc/HostName.Domain.com indica che Sql Server è registrato un nome SPN e pronto accettare l'autenticazione Kerberos. 
-- Se non si ha accesso all'Host di Sql Server, quindi da qualsiasi altro sistema operativo Windows unita in join nella stessa directory di Active, è possibile utilizzare il comando `setspn -L <SQLSERVER_NETBIOS>` dove < SQLSERVER_NETBIOS > è il nome del computer di hsot di Sql Server.
+- Se non si ha accesso all'Host di Sql Server, quindi da qualsiasi altro sistema operativo Windows aggiunto ad Active Directory stesso, è possibile utilizzare il comando `setspn -L <SQLSERVER_NETBIOS>` dove < SQLSERVER_NETBIOS > è il nome del computer dell'host di Sql Server.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Ottenere il centro distribuzione chiavi Kerberos
@@ -62,7 +62,7 @@ Copiare il nome del controller di dominio che è il valore di configurazione KDC
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Modificare il `/etc/network/interfaces` file in modo che l'indirizzo IP del controller di dominio Active Directory è elencato come un dns server dei nomi. Ad esempio 
+Modificare il `/etc/network/interfaces` file in modo che l'indirizzo IP del controller di dominio Active Directory è elencato come un dns server dei nomi. Esempio: 
 
 ```/etc/network/interfaces
 <...>
@@ -94,7 +94,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>Red Hat Enterprise Linux
+### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```
@@ -126,9 +126,9 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    
 ```
 
-### <a name="macos"></a>MacOS
+### <a name="macos"></a>macOS
 
-- Creare un join del macOS per il Controller di dominio Active Directory [procedendo come segue] (https://support.apple.com/kb/PH26282?viewlocale=en_US & delle impostazioni locali = it_IT).
+- Creare un join di macOS al Controller di dominio Active Directory [procedendo come segue] (https://support.apple.com/kb/PH26282?viewlocale=en_US&locale=en_US).
 
 
 
@@ -170,12 +170,12 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Connetti tramite[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>Connetti tramite [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 * Creare un nuovo profilo di connessione
 
 * Scegliere **l'autenticazione di Windows** come il tipo di autenticazione
 
-* Completare il profilo di connessione, fare clic su **Connect**
+* Completare il profilo di connessione, fare clic su **Connetti**
 
 Dopo avere stabilito la connessione, il server viene visualizzata nella *server* barra laterale.

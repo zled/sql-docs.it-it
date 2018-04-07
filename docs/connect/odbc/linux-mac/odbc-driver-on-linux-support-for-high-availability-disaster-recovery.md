@@ -1,27 +1,28 @@
 ---
-title: "Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza | Documenti Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza | Documenti Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53553cc88d771aeb7ef7d537309583fb49e1aaa6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: e69df64ad4e5c5e5319719fe14f380c745b0aeba
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Driver ODBC in Linux e macOS il supporto per la disponibilità elevata e ripristino di emergenza
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ Se il primo indirizzo IP restituito del server DNS non è collegabile, queste it
 
 Specificare sempre **MultiSubnetFailover = Yes** (o **= True**) durante la connessione a un [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] listener del gruppo di disponibilità o [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] istanza Cluster di Failover. **MultiSubnetFailover** consente il failover più veloce per tutti i gruppi di disponibilità e istanza del cluster di failover in [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **MultiSubnetFailover** riduce anche notevolmente il tempo di failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, vengono tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il driver Ritenta in modo insistente la connessione TCP.
 
-La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione è in corso di distribuzione in un gruppo di disponibilità o in un'istanza del cluster di failover. Il driver tenta di connettersi al database del server primario [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza tentando di connettersi a tutti gli IP indirizzi. Quando ci si connette con **MultiSubnetFailover = Yes**, il client riesegue i tentativi di connessione TCP più velocemente rispetto a intervalli di ritrasmissione TCP predefinita del sistema operativo. Dopo il failover,**MultiSubnetFailover = Yes** consente una riconnessione più veloce di un gruppo di disponibilità AlwaysOn o di un'istanza del cluster di failover AlwaysOn. **MultiSubnetFailover = Yes** si applica a singolo e con più subnet gruppi di disponibilità sia istanze Cluster di Failover.  
+La proprietà di connessione **MultiSubnetFailover** indica che l'applicazione è in corso di distribuzione in un gruppo di disponibilità o in un'istanza del cluster di failover. Il driver tenta di connettersi al database del server primario [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] istanza tentando di connettersi a tutti gli IP indirizzi. Quando ci si connette con **MultiSubnetFailover = Yes**, il client riesegue i tentativi di connessione TCP più velocemente rispetto a intervalli di ritrasmissione TCP predefinita del sistema operativo. Dopo il failover,**MultiSubnetFailover = Yes** consente una riconnessione più veloce di un gruppo di disponibilità AlwaysOn o di un'istanza del cluster di failover AlwaysOn. **MultiSubnetFailover = Yes** si applica sia a singolo e con più subnet gruppi di disponibilità istanze del Cluster di Failover.  
 
 Usare **MultiSubnetFailover=Yes** in caso di connessione al listener di un gruppo di disponibilità o a un'istanza del cluster di failover. In caso contrario, le prestazioni dell'applicazione possono essere influenzate negativamente.
 
@@ -74,29 +75,11 @@ Se il routing di sola lettura non è attivo, non è possibile stabilire una conn
 2.  Se un'applicazione usa **ApplicationIntent=ReadWrite** e il percorso di replica secondaria è configurato per l'accesso in sola lettura.  
   
 Una connessione non riesce se una replica primaria è configurata per rifiutare i carichi di lavoro di sola lettura e la stringa di connessione contiene **ApplicationIntent=ReadOnly**.  
-  
-## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione  
-Se **ApplicationIntent=ReadOnly**, il client richiede un carico di lavoro di lettura quando si connette a un database abilitato per AlwaysOn. Il server applica la finalità al momento della connessione e durante un'istruzione USE database, ma solo a un database AlwaysOn abilitato.
 
-La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
 
-Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. (Utilizzare il **ALLOW_CONNECTIONS** clausola del **PRIMARY_ROLE** e **SECONDARY_ROLE** [!INCLUDE[tsql](../../../includes/tsql_md.md)] istruzioni.)  
-  
-La parola chiave **ApplicationIntent** è usata per abilitare il routing di sola lettura.  
-  
-## <a name="read-only-routing"></a>Routing di sola lettura  
-Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
-  
-1.  Connettersi a un listener del gruppo di disponibilità Always On.  
-  
-2.  La parola chiave della stringa di connessione **ApplicationIntent** deve essere impostata su **ReadOnly**.  
-  
-3.  L'amministratore del database deve configurare il gruppo di disponibilità in modo da abilitare il routing di sola lettura.  
-  
-È possibile che più connessioni che usano il routing di sola lettura si connettano a diverse repliche di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per assicurare la connessione di tutte le richieste di sola lettura alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità alla parola chiave di connessione **Server** . Specificare invece il nome dell'istanza di sola lettura.  
-  
-Prevedere tempi di connessione maggiori con il routing di sola lettura rispetto alla connessione al database primario. Pertanto, aumentare il timeout di accesso. Il routing di sola lettura si connette prima al database primario e quindi cerca il miglior database secondario leggibile disponibile.  
-  
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="odbc-syntax"></a>Sintassi ODBC
 
 Due parole chiave di stringa di connessione ODBC supportano [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
@@ -120,7 +103,7 @@ Un'applicazione ODBC che utilizza [!INCLUDE[ssHADR](../../../includes/sshadr_md.
 |Funzione|Description|  
 |------------|---------------|  
 |[Funzione SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** supporta sia **ApplicationIntent** e **MultiSubnetFailover** tramite un nome origine dati (DSN) o un attributo di connessione.|  
-|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** supporta **ApplicationIntent** e **MultiSubnetFailover** tramite l'attributo di connessione, parola chiave di stringa di connessione o DSN.|
+|[Funzione SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** supporta **ApplicationIntent** e **MultiSubnetFailover** tramite DSN, parola chiave di stringa di connessione o attributo di connessione.|
   
 ## <a name="see-also"></a>Vedere anche  
 

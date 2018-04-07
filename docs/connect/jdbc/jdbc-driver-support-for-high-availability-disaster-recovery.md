@@ -1,27 +1,28 @@
 ---
-title: "Supporto del Driver JDBC per il ripristino di emergenza a disponibilità elevato | Documenti Microsoft"
-ms.custom: 
-ms.date: 01/19/2017
+title: Supporto del Driver JDBC per il ripristino di emergenza a disponibilità elevato | Documenti Microsoft
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 621f31fbeddee6ec3705396b5d049f5496f4ae04
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 1e41503e9b319d1e4372d93d835c4791563fd2da
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>Supporto di Microsoft JDBC Driver per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -55,7 +56,7 @@ Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e **multiS
  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Connessione con MultiSubnetFailover  
- Specificare sempre **multiSubnetFailover = true** quando ci si connette al listener del gruppo di disponibilità di un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] gruppo di disponibilità o un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] istanza Cluster di Failover. **multiSubnetFailover** consente il failover più veloce per tutti i gruppi di disponibilità e le istanze del cluster di failover in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] e riduce notevolmente il tempo di failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] riproverà continuamente la connessione TCP.  
+ Specificare sempre **multiSubnetFailover = true** quando ci si connette al listener del gruppo di disponibilità di un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] gruppo di disponibilità o un [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] istanza Cluster di Failover. **multiSubnetFailover** consente il failover più veloce per tutti i gruppi di disponibilità e le istanze del cluster di failover in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)] , riducendo notevolmente il tempo di failover per le topologie AlwaysOn singole e su più subnet. Durante un failover su più subnet, verranno tentate connessioni in parallelo da parte del client. Durante un failover della subnet, il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] riproverà continuamente la connessione TCP.  
   
  Il **multiSubnetFailover** proprietà di connessione indica che l'applicazione viene distribuita in un gruppo di disponibilità o l'istanza del Cluster di Failover e che il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] tenterà di connettersi al database del server primario [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] istanza tentando di connettersi a tutti gli IP indirizzi. Quando **MultiSubnetFailover = true** specificato per una connessione, il client riesegue i tentativi di connessione TCP più velocemente rispetto a intervalli di ritrasmissione TCP predefinita del sistema operativo. In tal modo si abilita la riconnessione a seguito di failover di un gruppo di disponibilità AlwaysOn o un'istanza del cluster di failover AlwaysOn ed è applicabile a istanze del cluster di failover o a gruppi di disponibilità su una singola subnet o su più subnet.  
   
@@ -63,7 +64,7 @@ Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e **multiS
   
  Specifica di **multiSubnetFailover = true** quando la connessione a un elemento diverso da un listener del gruppo di disponibilità o l'istanza del Cluster di Failover può comportare un impatto negativo sulle prestazioni e non è supportata.  
   
- Se lo strumento di gestione della sicurezza non è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine per un periodo di tempo limitato definito, per impostazione predefinita, dall'implementazione JDK e dalle proprietà Java networkaddress.cache.ttl e networkaddress.cache.negative.ttl. Se lo strumento di gestione della sicurezza JDK è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine, ma la cache non viene aggiornata per impostazione predefinita. È consigliabile impostare "time-to-live" (networkaddress.cache.ttl) su un giorno per la cache di Java Virtual Machine. Se non si imposta il valore predefinito su un giorno (o un valore simile), il valore precedente non verrà eliminato dalla cache di Java Virtual Machine quando viene aggiunto o aggiornato un indirizzo IP virtuale. Per ulteriori informazioni su networkaddress.cache.ttl e networkaddress.cache.negative.ttl, vedere [http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
+ Se lo strumento di gestione della sicurezza non è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine per un periodo di tempo limitato definito, per impostazione predefinita, dall'implementazione JDK e dalle proprietà Java networkaddress.cache.ttl e networkaddress.cache.negative.ttl. Se lo strumento di gestione della sicurezza JDK è installato, gli indirizzi IP virtuali vengono memorizzati nella cache di Java Virtual Machine, ma la cache non viene aggiornata per impostazione predefinita. È consigliabile impostare "time-to-live" (networkaddress.cache.ttl) su un giorno per la cache di Java Virtual Machine. Se non si imposta il valore predefinito su un giorno (o un valore simile), il valore precedente non verrà eliminato dalla cache di Java Virtual Machine quando viene aggiunto o aggiornato un indirizzo IP virtuale. Per ulteriori informazioni su networkAddress e networkAddress, vedere [ http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](http://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html).  
   
  Utilizzare le linee guida seguenti per connettersi a un server in un gruppo di disponibilità o nell'istanza del cluster di failover:  
   
@@ -93,29 +94,11 @@ Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e **multiS
  Se si aggiorna un [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] applicazione che utilizza il mirroring del database a uno scenario su più subnet, è necessario rimuovere il **failoverPartner** proprietà di connessione e sostituirla con **multiSubnetFailover**  impostato su **true** e sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se viene utilizzata una stringa di connessione **failoverPartner** e **multiSubnetFailover = true**, il driver genererà un errore. Tuttavia, se viene utilizzata una stringa di connessione **failoverPartner** e **multiSubnetFailover = false** (o **ApplicationIntent = ReadWrite**), l'applicazione utilizzerà database il mirroring.  
   
  Il driver restituirà un errore se il mirroring del database viene utilizzato nel database primario del gruppo di disponibilità e **multiSubnetFailover = true** viene utilizzata nella stringa di connessione che si connette a un database primario anziché a un gruppo di disponibilità listener.  
-  
-## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione  
- Quando **applicationIntent = ReadOnly**, il client richiede un carico di lavoro di sola lettura quando ci si connette a un database AlwaysOn abilitato. Le finalità verranno applicate dal server in fase di connessione e durante un istruzione di database USE, ma solo a un database abilitato per AlwaysOn.  
-  
- Il **applicationIntent** (parola chiave) non funziona con i database legacy di sola lettura.  
-  
- Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola **ALLOW_CONNECTIONS** delle istruzioni [!INCLUDE[tsql](../../includes/tsql_md.md)] **PRIMARY_ROLE** e **SECONDARY_ROLE**.  
-  
- Il **applicationIntent** parola chiave viene utilizzata per abilitare il routing di sola lettura.  
-  
-## <a name="read-only-routing"></a>Routing di sola lettura  
- Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
-  
-1.  È necessario connettersi a un listener di un gruppo di disponibilità AlwaysOn.  
-  
-2.  Il **applicationIntent** parola chiave di stringa di connessione deve essere impostato su **ReadOnly**.  
-  
-3.  Il gruppo di disponibilità deve essere configurato dall'amministratore del database per abilitare il routing di sola lettura.  
-  
- È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per garantire che tutte le richieste di sola lettura di connettersi alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità o l'indirizzo IP virtuale per il **serverName** parola chiave di stringa di connessione. Specificare invece il nome dell'istanza di sola lettura.  
-  
- Per il routing di sola lettura può essere necessario più tempo rispetto alla connessione alla replica primaria, in quanto viene innanzitutto eseguita la connessione alla replica primaria e quindi viene individuata la miglior replica secondaria leggibile disponibile. Per questo motivo è necessario aumentare il timeout di accesso.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>Nuovi metodi che supportano multiSubnetFailover e applicationIntent  
  I metodi seguenti forniscono accesso a livello di codice per il **multiSubnetFailover**, **applicationIntent** e **transparentNetworkIPResolution** stringa di connessione parole chiave:  
   
@@ -127,7 +110,7 @@ Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e **multiS
   
 -   [SQLServerDataSource.setMultiSubnetFailover](../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)  
   
--   [Sqlserverdriver](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
+-   [SQLServerDriver.getPropertyInfo](../../connect/jdbc/reference/getpropertyinfo-method-sqlserverdriver.md)  
 
 -   SQLServerDataSource.setTransparentNetworkIPResolution
 
@@ -136,7 +119,7 @@ Se si utilizza Microsoft JDBC Driver 4.2 (o inferiore) per SQL Server e **multiS
  Il **getMultiSubnetFailover**, **setMultiSubnetFailover**, **getApplicationIntent**, **setApplicationIntent**, **getTransparentNetworkIPResolution** e **setTransparentNetworkIPResolution** vengono inoltre aggiunti i metodi [classe SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ Classe SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), e [classe SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md).  
   
 ## <a name="ssl-certificate-validation"></a>Convalida del certificato SSL  
- Un gruppo di disponibilità è costituito da più server fisici. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]aggiunto il supporto per **nome soggetto alternativo** in certificati SSL in modo più host possano essere associati con lo stesso certificato. Per ulteriori informazioni su SSL, vedere [supporto SSL comprensione](../../connect/jdbc/understanding-ssl-support.md).  
+ Un gruppo di disponibilità è costituito da più server fisici. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] aggiunta del supporto per **nome soggetto alternativo** nei certificati SSL in modo più host possano essere associati con lo stesso certificato. Per ulteriori informazioni su SSL, vedere [supporto SSL comprensione](../../connect/jdbc/understanding-ssl-support.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Connessione a SQL Server con il Driver JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

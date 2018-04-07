@@ -1,7 +1,7 @@
 ---
 title: Supporto per la disponibilità elevata, ripristino di emergenza per i driver Microsoft per PHP per SQL Server | Documenti Microsoft
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: ''
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ee0be974c5998d531e20ed64c871ca85892aa46f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 6cb7f145f14861720d11401a3d60db0ce0efcfd9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>Supporto per il ripristino di emergenza a disponibilità elevata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,29 +73,11 @@ Si verificherà un errore di connessione se nella stringa di connessione sono pr
 Se si aggiorna un [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] applicazione che utilizza il mirroring del database a uno scenario su più subnet, è necessario rimuovere il **Failover_Partner** proprietà di connessione e sostituirla con **MultiSubnetFailover**  impostato su **Sì** e sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se viene utilizzata una stringa di connessione **Failover_Partner** e **MultiSubnetFailover = true**, il driver genererà un errore. Tuttavia, se viene utilizzata una stringa di connessione **Failover_Partner** e **MultiSubnetFailover = false** (o **ApplicationIntent = ReadWrite**), l'applicazione utilizzerà database il mirroring.  
   
 Il driver restituirà un errore se il mirroring del database viene utilizzato nel database primario del gruppo di disponibilità e **MultiSubnetFailover = true** viene utilizzata nella stringa di connessione che si connette a un database primario anziché a un gruppo di disponibilità listener.  
-  
-## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione  
-Se **ApplicationIntent=ReadOnly**, il client richiede un carico di lavoro di lettura quando si connette a un database abilitato per AlwaysOn. Tramite il server, la finalità verrà applicata al momento della connessione e durante un'istruzione di database USE, ma solo a un database abilitato per Always On.  
-  
-La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
-  
-Un database può consentire o impedire carichi di lavoro di lettura nel database AlwaysOn di destinazione. Questa operazione viene eseguita con la clausola **ALLOW_CONNECTIONS** delle istruzioni [!INCLUDE[tsql](../../includes/tsql_md.md)] **PRIMARY_ROLE** e **SECONDARY_ROLE**.  
-  
-La parola chiave **ApplicationIntent** è usata per abilitare il routing di sola lettura.  
-  
-## <a name="read-only-routing"></a>Routing di sola lettura  
-Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
-  
-1.  È necessario connettersi a un listener del gruppo di disponibilità Always On.  
-  
-2.  La parola chiave della stringa di connessione **ApplicationIntent** deve essere impostata su **ReadOnly**.  
-  
-3.  Il gruppo di disponibilità deve essere configurato dall'amministratore del database per abilitare il routing di sola lettura.  
-  
-È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per assicurare la connessione di tutte le richieste di sola lettura alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità alla parola chiave della stringa di connessione **Server**. Specificare invece il nome dell'istanza di sola lettura.  
-  
-Per il routing di sola lettura può essere necessario più tempo rispetto alla connessione alla replica primaria, in quanto viene innanzitutto eseguita la connessione alla replica primaria e quindi viene individuata la miglior replica secondaria leggibile disponibile. In questo caso, è necessario aumentare il timeout di accesso.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="see-also"></a>Vedere anche  
 [Connessione al server](../../connect/php/connecting-to-the-server.md)  
   

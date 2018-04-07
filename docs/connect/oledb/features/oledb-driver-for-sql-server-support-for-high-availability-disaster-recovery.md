@@ -2,7 +2,7 @@
 title: Driver OLE DB per SQL Server Support for High Availability, Disaster Recovery | Documenti Microsoft
 description: Il Driver OLE DB per SQL Server il supporto per il ripristino di emergenza a disponibilità elevato
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -17,9 +17,9 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: HT
+ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/06/2018
 ---
@@ -72,29 +72,11 @@ Si verificherà un errore di connessione se nella stringa di connessione sono pr
 Se si aggiorna un Driver OLE DB per SQL Server che attualmente Usa il mirroring del database a uno scenario su più subnet, è necessario rimuovere il **Failover_Partner** proprietà di connessione e sostituirla con  **MultiSubnetFailover** impostato su **Sì** e sostituire il nome del server nella stringa di connessione con un listener del gruppo di disponibilità. Se in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=Yes**, il driver genererà un errore. Se tuttavia in una stringa di connessione vengono usati **Failover_Partner** e **MultiSubnetFailover=No** (o **ApplicationIntent=ReadWrite**), l'applicazione userà il mirroring del database.  
   
 Il driver restituirà un errore se il mirroring del database viene usato nel database primario nel gruppo di disponibilità e se **MultiSubnetFailover=Yes** veine usato nella stringa di connessione a un database primario anziché a un listener del gruppo di disponibilità.  
-  
-## <a name="specifying-application-intent"></a>Specificazione della finalità dell'applicazione  
-Quando **ApplicationIntent = ReadOnly**, il client richiede un carico di lavoro di lettura durante la connessione a un database Always On abilitato. Il server applicherà la finalità al momento della connessione e durante un `USE` database istruzione, ma solo a un database abilitato AlwaysOn.  
-  
-La parola chiave **ApplicationIntent** non funziona con i database legacy di sola lettura.  
-  
-Un database possibile consentire o negare carichi di lavoro di letture sul database di AlwaysOn destinazione. Questa operazione viene eseguita con la clausola **ALLOW_CONNECTIONS** delle istruzioni [!INCLUDE[tsql](../../../includes/tsql-md.md)] **PRIMARY_ROLE** e **SECONDARY_ROLE**.  
-  
-La parola chiave **ApplicationIntent** è usata per abilitare il routing di sola lettura.  
-  
-## <a name="read-only-routing"></a>Routing di sola lettura  
-Il routing di sola lettura è una funzionalità che può garantire la disponibilità di una replica di sola lettura di un database. Per abilitare il routing di sola lettura:  
-  
-1.  È necessario connettersi a un listener del gruppo di disponibilità Always On.  
-  
-2.  La parola chiave della stringa di connessione **ApplicationIntent** deve essere impostata su **ReadOnly**.  
-  
-3.  Il gruppo di disponibilità AlwaysOn deve essere configurato dall'amministratore del database per abilitare il routing di sola lettura.  
-  
-È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per garantire che tutte le richieste di sola lettura di connettersi alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità AlwaysOn per il **Server** parola chiave di stringa di connessione. Specificare invece il nome dell'istanza di sola lettura.  
-  
-Per il routing di sola lettura può essere necessario più tempo rispetto alla connessione alla replica primaria, in quanto viene innanzitutto eseguita la connessione alla replica primaria e quindi viene individuata la miglior replica secondaria leggibile disponibile. Per questo motivo è necessario aumentare il timeout di accesso.  
-  
+
+
+[!INCLUDE[specify-application-intent_read-only-routing](~/includes/paragraph-content/specify-application-intent-read-only-routing.md)]
+
+
 ## <a name="ole-db"></a>OLE DB  
 Il Driver OLE DB per SQL Server supporta sia la **ApplicationIntent** e il **MultiSubnetFailover** parole chiave.   
   
