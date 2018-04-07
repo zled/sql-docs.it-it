@@ -2,29 +2,30 @@
 title: Valutare gli schemi di DB2 per la conversione (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ee5825c7a7df208baeccd27a463defb2c6e250c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 96c437f34bbe4b45c33082a18536aef33dd4b218
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Valutare gli schemi di DB2 per la conversione (DB2ToSQL)
 Prima di caricare gli oggetti e la migrazione dei dati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario determinare come complessa la migrazione sarà e quanto tempo richiederà la migrazione. SSMA è possibile creare un report di valutazione che mostra la percentuale di oggetti che verranno convertiti correttamente. SSMA consente inoltre di visualizzare i problemi specifici che provocano errori di conversione.  
@@ -32,7 +33,7 @@ Prima di caricare gli oggetti e la migrazione dei dati per [!INCLUDE[ssNoVersion
 ## <a name="creating-assessment-reports"></a>Creazione di report di valutazione  
 Quando viene creato il report di valutazione, SSMA converte gli oggetti di database DB2 selezionati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintassi, quindi Mostra i risultati.  
   
-**Per creare una relazione di valutazione**  
+**Per creare un report di valutazione**  
   
 1.  Nel Visualizzatore metadati DB2, selezionare gli schemi da valutare.  
   
@@ -82,13 +83,13 @@ Il riquadro delle statistiche di conversione sono indicate le statistiche di con
   
     -   Aggiornare la sintassi di DB2 in SSMA. È possibile aggiornare la sintassi di routine, funzioni, trigger, funzioni incluse nel pacchetto e nel pacchetto. Per aggiornare la sintassi, selezionare l'oggetto nel riquadro di esplorazione dei metadati di DB2, fare clic su di **SQL** scheda e quindi modificare il codice SQL. Quando si esce dall'elemento, verrà richiesto di salvare l'aggiornamento della sintassi. È possibile visualizzare gli errori segnalati per l'oggetto nella **Report** scheda.  
   
-    -   In DB2, è possibile modificare l'oggetto di DB2 per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, è necessario aggiornare i metadati. Per ulteriori informazioni, vedere [la connessione al Database DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
+    -   In DB2, è possibile modificare l'oggetto di DB2 per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, è necessario aggiornare i metadati. Per altre informazioni, vedere [la connessione al Database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md).  
   
     -   È possibile escludere l'oggetto dalla migrazione. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati ed Esplora i metadati di DB2, deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e la migrazione dei dati da DB2.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Conversione di schemi di DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
+[Conversione di schemi di DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/converting-db2-schemas-db2tosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database DB2 a SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Database DB2 la migrazione a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

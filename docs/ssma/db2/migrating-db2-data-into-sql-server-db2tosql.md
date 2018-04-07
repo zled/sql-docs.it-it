@@ -2,29 +2,30 @@
 title: La migrazione dei dati DB2 in SQL Server (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7249a757ecc1c7c8fb88687953eed93e98890d45
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0714e217aff8f6aa728bbc401472b9b538add968
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>La migrazione dei dati di DB2 in SQL Server (DB2ToSQL)
 Dopo che è stato possibile sincronizzare gli oggetti convertiti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile migrare dati da DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -43,7 +44,7 @@ Prima della migrazione di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
     2.  Modulo di migrazione dei dati lato server  
   
-**Migrazione dei dati sul lato client:**  
+**Migrazione dei dati lato client:**  
   
 -   Per avviare la migrazione dei dati sul lato client, selezionare il **modulo di migrazione dei dati sul lato Client** opzione il **impostazioni progetto** la finestra di dialogo.  
   
@@ -63,7 +64,7 @@ La migrazione di dati sono un'operazione di caricamento bulk che consente di spo
   
 Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquadro di Output. In caso contrario, dal **vista** dal menu **Output**.  
   
-**La migrazione dei dati**  
+**Per eseguire la migrazione dei dati**  
   
 1.  Verificare gli elementi seguenti:  
   
@@ -79,7 +80,7 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
   
 3.  Per eseguire la migrazione dei dati, si verificano due casi:  
   
-    **Migrazione dei dati sul lato client:**  
+    **Migrazione dei dati lato client:**  
   
     -   Per l'esecuzione di **migrazione dei dati sul lato Client**, selezionare il **modulo di migrazione dei dati sul lato Client** opzione il **impostazioni progetto** la finestra di dialogo.  
   
@@ -98,15 +99,15 @@ Per visualizzare i messaggi di migrazione, verificare che sia visibile il riquad
     > [!NOTE]  
     > Se SSMA per DB2 estensione Pack non è installato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]e se **modulo di migrazione dei dati lato Server** è selezionata, durante la migrazione dei dati al database di destinazione, viene verificato il seguente errore: ' componenti SSMA migrazione dei dati non sono stati trovati in SQL Server, non sarà possibile eseguire la migrazione dei dati lato server. Verificare se il pacchetto di estensione sia installato correttamente '. Fare clic su **Annulla** per terminare la migrazione dei dati.  
   
-5.  Nel **connessione a DB2** nella finestra di dialogo immettere le credenziali di connessione e quindi fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a DB2, vedere [la connessione al Database DB2 &#40; DB2ToSQL &#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
+5.  Nel **connessione a DB2** nella finestra di dialogo immettere le credenziali di connessione e quindi fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a DB2, vedere [la connessione al Database DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)  
   
-    Per la connessione al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], immettere le credenziali di connessione nel **Connetti al Server SQL** la finestra di dialogo e fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [connessione a SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
+    Per la connessione al database di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], immettere le credenziali di connessione nel **Connetti al Server SQL** la finestra di dialogo e fare clic su **Connetti**. Per ulteriori informazioni sulla connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], vedere [la connessione a SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e)  
   
-    I messaggi verranno visualizzati nel **Output** riquadro. Al termine, la migrazione di **Report di migrazione di dati** viene visualizzato. Se tutti i dati non sono stati migrati, fare clic sulla riga che contiene gli errori e quindi fare clic su **dettagli**. Quando si è finito di lavorare con il report, fare clic su **Chiudi**. Per ulteriori informazioni sul Report di migrazione di dati, vedere [Report di migrazione di dati (SSMA comune)](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
+    I messaggi verranno visualizzati nel **Output** riquadro. Al termine, la migrazione di **Report di migrazione di dati** viene visualizzato. Se tutti i dati non sono stati migrati, fare clic sulla riga che contiene gli errori e quindi fare clic su **dettagli**. Quando si è finito di lavorare con il report, fare clic su **Chiudi**. Per ulteriori informazioni sul Report di migrazione dei dati, vedere [Report di migrazione dei dati (SSMA comune)](http://msdn.microsoft.com/en-us/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)  
   
 > [!NOTE]  
 > Quando SQL Express edition viene utilizzato come database di destinazione, è consentita solo migrazione dei dati sul lato client e migrazione dei dati lato server non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
-[La migrazione dei dati di DB2 in SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
+[La migrazione dei dati DB2 in SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-data-into-sql-server-db2tosql.md)  
   

@@ -2,36 +2,37 @@
 title: Creazione di file di valore della variabile (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d19975c619dcbcbf2b0c99b26d6065940d7414f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2c9e2d86d94c8e49c2aa54e431e5b2c2c4a1ba43
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>Creazione di file di valore della variabile (AccessToSQL)
 Un File di valore di variabile è un file XML che include i valori dei parametri dei comandi (ad esempio il nome di server di origine o di destinazione) che cambiano spesso tra le migrazioni a server. Quando si verifica un numero elevato di migrazioni di database, più file di variabile per archiviare il valore di ogni server di origine vengono creati e a cui fa riferimento in un file di script master con il **– v** passare alla riga di comando. Questo comportamento consente di mantenere i valori statici, in alcuni file di script con i valori delle variabili in più file di variabile.  
   
 > [!NOTE]  
 > -  I nomi delle variabili sono preceduti e seguiti da un simbolo di dollaro $. Se una variabile non viene assegnata un valore nel file del valore della variabile, verificherà un errore durante l'analisi del file di script, risultante in bloccare il processo di esecuzione della console.  
-> -  The escape character for **$** is **$$**. Se il valore di un valore statico o variabile di un parametro contiene un  **$**  simbolo (dollaro), quindi  **$$**  deve essere specificata di considerarlo come un carattere anziché una variabile.  
+> -  The escape character for **$** is **$$**. Se il valore di un valore statico o variabile di un parametro contiene un **$** simbolo (dollaro), quindi **$$** deve essere specificata di considerarlo come un carattere anziché una variabile.  
 > -  Per motivi di manutenzione, le variabili possono essere dichiarate all'interno di `‘variable-group’` elementi per la separazione logica delle variabili definite dall'utente.  Utilizzo di questo elemento non è obbligatorio.  
   
 **Esempi:**  
@@ -101,8 +102,8 @@ Un File di valore di variabile è un file XML che include i valori dei parametri
 L'utente facilmente è in grado di convalidare il file di valore della variabile nel file di definizione dello schema **ConsoleScriptVariablesSchema.xsd** disponibile nella cartella 'Schemi'.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Il passaggio successivo nella console di gestione è [creare i file di connessione del Server &#40; AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+Il passaggio successivo nella console di gestione viene [creano i file di connessione del Server &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Creazione dei file di connessione del Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+[La creazione dei file di connessione di Server (accesso)](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

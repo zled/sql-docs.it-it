@@ -2,25 +2,25 @@
 title: Monitorare l'accessorio utilizzando viste di sistema (sistema di piattaforma Analitica)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: d6e34c16-12ba-4a6f-80a7-391bca5ba534
-caps.latest.revision: "8"
-ms.openlocfilehash: 17845f9be4a3b6c40573403d2d314c8802b71015
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 8
+ms.openlocfilehash: c6e756946e7ed558d6875bf5b330e1ebc9c35f5d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitor-the-appliance-by-using-system-views"></a>Monitorare l'accessorio utilizzando viste di sistema
 In questo argomento vengono elencate le viste di sistema che è possibile utilizzare per il monitoraggio di SQL Server PDW.  
@@ -42,5 +42,5 @@ SQL Server PDW include visualizzazioni di sistema completo che consentono di ott
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[Monitoraggio dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-monitoring.md)  
+[Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
   

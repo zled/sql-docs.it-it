@@ -2,25 +2,25 @@
 title: Configurare SQL Server PDW per le copie della tabella remota (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 496b4214-5891-404c-8237-c2a1e09db6d5
-caps.latest.revision: "11"
-ms.openlocfilehash: 08257e4823eed7bf86977ddca1df41eee7f8bda2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 46fdb88ce3a244946b89f14320229905793564ac
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-sql-server-pdw-for-remote-table-copies"></a>Configurare SQL Server PDW per copie tabella remota
 Viene descritto come configurare SQL Server PDW per utilizzare la funzionalità di copia della tabella remota per copiare le tabelle per database SMP SQL Server nel server non strumento.  
@@ -30,7 +30,7 @@ In questo argomento viene descritto uno dei passaggi di configurazione per la co
 ## <a name="before-you-begin"></a>Prima di iniziare  
 Per configurare SQL Server PDW per l'utilizzo di copia della tabella remota, è necessario:  
   
--   Dispone di un account di amministratore di sistema della piattaforma Analitica con la possibilità di accedere direttamente al  ***appliance_domain*-AD01** e  ***appliance_domain*-AD02** nodi.  
+-   Dispone di un account di amministratore di sistema della piattaforma Analitica con la possibilità di accedere direttamente al ***appliance_domain *-AD01** e ***appliance_domain *-AD02** nodi.  
   
 -   Conoscere il nome host o IP del server di destinazione.  
   
@@ -39,7 +39,7 @@ Il **CREATE REMOTE TABLE** istruzione utilizzata per le copie di tabella remota,
   
 Di seguito viene illustrato come aggiornare il server DNS.  
   
-1.  Accedere al nodo attivo di Active Directory (in genere  ***appliance_domain*-AD01**).  
+1.  Accedere al nodo attivo di Active Directory (in genere ***appliance_domain *-AD01**).  
   
 2.  Aprire Gestore DNS. Il file si trova in **strumenti di amministrazione** nel **avviare** menu.  
   

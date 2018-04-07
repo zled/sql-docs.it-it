@@ -2,34 +2,35 @@
 title: Impostazioni (caricamento di oggetti) del progetto (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da86fe46153ede299a41a2b4e308f1b5b51f6947
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 16d21bbe8cb2d3bc2e2d069c12fe53607774373e
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Impostazioni (caricamento di oggetti) del progetto (AccessToSQL)
 Le impostazioni di progetto durante il caricamento di oggetti consentono di configurare come oggetti di database di Access vengono sincronizzati con gli oggetti di database di SQL Server.  
   
-Le azioni predefinite specificano le impostazioni predefinite per l'aggiornamento di oggetti dal database di Access e per la sincronizzazione degli oggetti con il database di SQL Server. Per ulteriori informazioni, vedere [Aggiorna da Database &#40; AccessToSQL &#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
+Le azioni predefinite specificano le impostazioni predefinite per l'aggiornamento di oggetti dal database di Access e per la sincronizzazione degli oggetti con il database di SQL Server. Per altre informazioni, vedere [aggiornamento dal Database di &#40;AccessToSQL&#41;](../../ssma/access/refresh-from-database-accesstosql.md)  
   
 È possibile accedere a due diverse pagine di sincronizzazione che contengono le stesse impostazioni:  
   

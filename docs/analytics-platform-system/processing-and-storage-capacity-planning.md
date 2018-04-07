@@ -1,25 +1,25 @@
 ---
-title: "Capacità di elaborazione e archiviazione della piattaforma Analitica"
+title: Capacità di elaborazione e archiviazione della piattaforma Analitica
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology: mpp-data-warehouse
-description: "I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici."
+description: I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici.
 ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 2c32fec4-e97c-4797-b7f8-7c8d4301b7b6
-caps.latest.revision: "7"
-ms.openlocfilehash: 9d7f933c45f05d7d4226a2f64fd41eff8d1c914a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 68852344c65863ee051467e524eb0c3f09211483
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="analytics-platform-system-processing-and-storage-capacity"></a>Capacità di elaborazione e di archiviazione di sistema della piattaforma Analitica
 I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici. Utilizzare questi calcoli di elaborazione e archiviazione per la capacità di acquisto e decisioni relative alla pianificazione.  
@@ -91,23 +91,23 @@ Questa tabella stima che è possibile caricare e archiviare fino a 6 petabyte di
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
 |HPE|3 TB|48 TB|8|384 TB|960 TB|7|6,720 TB|  
-|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2160 TB|  
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2,160 TB|  
 |DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
 |DELL|3 TB|48 TB|9|432 TB|1080 TB|6|6,480 TB|  
   
 Spiegazione:  
   
--   **Dimensioni dell'unità** è 1, 2 o 3 TB per ogni fornitore Hardware.  
+-   **Dimensioni dell'unità** è 1, 2 o 3 TB per ogni fornitore dell'Hardware.  
   
 -   **Archivio dati fisico per ogni nodo di calcolo** = (dimensioni dell'unità) * (16 dischi per ogni nodo di calcolo). Non sono inclusi i dischi con mirroring poiché sono per la ridondanza.  
   
--   **I nodi di calcolo massima per ogni rack** è specifico per il fornitore dell'hardware.  
+-   **Nodi di calcolo massima per ogni rack** è specifico per il fornitore dell'hardware.  
   
--   **Archiviazione fisica massima dei dati per ogni rack** = (archivio dati fisico per ogni nodo di calcolo) * (nodi di calcolo massima per ogni rack).  
+-   **Archiviazione fisica massima dei dati per ogni rack** = (archivio dati fisico per ogni nodo di calcolo) * (nodi di calcolo massima per rack).  
   
--   **Archiviazione massima dei dati per ogni rack stimato** = (archiviazione fisica massima dei dati per ogni rack) * (5 per un rapporto di compressione 5:1) \* (50% per i registri e tempDB). Si tratta di una stima per i dati utente non compresso che possono essere caricati e memorizzati nel dispositivo. Si tratta di una stima e non viene applicata dal software. L'archiviazione dei dati utente effettivo varia a seconda dei dati e la configurazione.  
+-   **Stimato massimo archiviazione dei dati per ogni rack** = (archiviazione fisica massima dei dati per ogni rack) * (5 per un rapporto di compressione 5:1) \* (50% per i log e tempDB). Si tratta di una stima per i dati utente non compresso che possono essere caricati e memorizzati nel dispositivo. Si tratta di una stima e non viene applicata dal software. L'archiviazione dei dati utente effettivo varia a seconda dei dati e la configurazione.  
   
 -   **Rack massimo** è specifico per ogni fornitore dell'Hardware.  
   
--   **Archiviazione massima dei dati per ogni dispositivo stimato** = (archiviazione di dati massimo stimato per rack) * (massimo rack). Si tratta di una stima della dimensione totale complessivo dei dati utente che è stato possibile caricare e archiviare in un dispositivo completamente compilato.  
+-   **Stimato archiviazione massima dei dati per ogni dispositivo** = (archiviazione stimato massima dei dati per ogni rack) * (massimo sistemi rack). Si tratta di una stima della dimensione totale complessivo dei dati utente che è stato possibile caricare e archiviare in un dispositivo completamente compilato.  
   

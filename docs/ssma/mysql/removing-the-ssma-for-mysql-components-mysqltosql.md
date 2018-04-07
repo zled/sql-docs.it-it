@@ -2,14 +2,15 @@
 title: Rimozione di SSMA per i componenti di MySQL (MySQLToSql) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 504a35ff20ee162bef8e2524cc382dde190fb3e5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: adf008b1a6bbcd584c0d3c0ee90dcb4345cf1819
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Rimozione di SSMA per i componenti di MySQL (MySQLToSql)
 Al termine di migrazione di database da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile disinstallare i componenti SSMA. È possibile disinstallare i componenti client in qualsiasi momento. Tuttavia, se si disinstalla il pacchetto di estensione da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , quindi SSMA non supporterà più migrazione dei dati da MySQL al database di destinazione (SQL Server o SQL Azure) usando il modulo di migrazione dei dati lato Server.  
@@ -35,7 +36,7 @@ Al termine di migrazione di database da MySQL a [!INCLUDE[ssNoVersion](../../inc
 ## <a name="uninstalling-the-ssma-for-mysql-client"></a>Disinstallazione di SSMA per Client di MySQL  
 È possibile disinstallare SSMA utilizzando **Aggiungi / Rimuovi programmi**.  
   
-**Per disinstallare SSMA**  
+**Per disinstallare di SSMA**  
   
 1.  Nel Pannello di controllo aprire **Aggiungi / Rimuovi programmi**.  
   
@@ -67,6 +68,6 @@ Al termine di migrazione di database da MySQL a [!INCLUDE[ssNoVersion](../../inc
 Dopo aver completato il processo di disinstallazione, è possibile confermare che gli oggetti nel **sysdb.ssma_MySQL** schema ed eventualmente l'intero **sysdb** del database, è stato rimosso utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Tuttavia, se si utilizzano altri prodotti SSMA, anche usano il **sysdb** database. Se il database esista e si è certi che nessun altro database fanno riferimento agli oggetti in questo database, è possibile scollegare il database.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Installazione di SSMA per MySQL Client &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
+[Installazione di SSMA per Client di MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
 [Installazione di componenti SSMA in SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   

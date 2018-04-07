@@ -2,14 +2,15 @@
 title: Mapping di MySQL e SQL Server Data Types (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-mysql
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -18,22 +19,22 @@ helpviewer_keywords:
 - Mapping, customize data type mapping
 - Mapping, Type mapping
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 265030255071cb9292cf5604320d98c447173928
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee34e34e1b0048fd1cb15744cc215962e5a563e5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mapping di tipi di dati (MySQLToSQL) di SQL Server e MySQL
 Diversi tipi di database MySQL da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipi di database di SQL Azure. Quando si esegue la conversione di oggetti di database MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di SQL Azure, è necessario specificare come eseguire il mapping dei tipi di dati da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle procedure seguenti.  
   
 ## <a name="default-mappings"></a>Mapping predefiniti  
-SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco dei mapping predefiniti, vedere [impostazioni progetto &#40; Mapping dei tipi di &#41; &#40; MySQLToSQL &#41; ](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
+SSMA è un set predefinito di mapping dei tipi di dati. Per l'elenco di mapping predefiniti, vedere [impostazioni del progetto di &#40;Mapping dei tipi&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
 ## <a name="type-mapping-inheritance"></a>Mapping di ereditarietà dei tipi  
 È possibile personalizzare i mapping dei tipi a livello di progetto, il livello di categoria oggetto (ad esempio, tutte le stored procedure) o livello di oggetto. Le impostazioni vengono ereditate da un livello più alto, a meno che vengano sostituiti con un livello inferiore. Ad esempio, se si esegue il mapping **smallint** a **int** a livello di progetto, tutti gli oggetti nel progetto utilizzerà questo mapping, a meno che per personalizzare il mapping a livello di oggetto o alla categoria.  
@@ -92,5 +93,5 @@ Quando si visualizza il **del mapping dei tipi** scheda SSMA, lo sfondo è contr
 Il passaggio successivo del processo di migrazione è su [creare una relazione di valutazione](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) o [MySQL convertire gli oggetti di database in SQL Server o SQL Azure sintassi](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7). Se si crea un report, gli oggetti di MySQL vengono convertiti automaticamente durante la valutazione.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database MySQL a SQL Server: database SQL di Azure &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Database MySQL la migrazione a SQL Server - SQL di Azure DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

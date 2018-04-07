@@ -2,25 +2,25 @@
 title: Ripristinare il Database Master (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: "11"
-ms.openlocfilehash: b82ef65734b6953c085436d5322e7bf42ef979b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 0f1acb692198873897d5dc26e2074beab4517e44
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="restore-the-master-database"></a>Ripristinare il Database Master
 Il **ripristino Master** pagina di Gestione configurazione SQL Server PDW consente di ripristinare il database master da un backup.  
@@ -32,7 +32,7 @@ Il **ripristino Master** pagina di Gestione configurazione SQL Server PDW consen
   
 ## <a name="to-restore-the-master-database"></a>Per ripristinare il database master  
   
-1.  Avviare Gestione configurazione. Per ulteriori informazioni, vedere [avviare Gestione configurazione &#40; Sistema della piattaforma Analitica &#41; ](launch-the-configuration-manager.md).  
+1.  Avviare Gestione configurazione. Per altre informazioni, vedere [avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  Nel riquadro a sinistra di Configuration Manager, fare clic su **ripristino Master**.  
   

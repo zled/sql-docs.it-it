@@ -2,25 +2,25 @@
 title: Configurare il sistema di Windows esterno per ottenere copie della tabella remota InfiniBand PDW
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
-caps.latest.revision: "11"
-ms.openlocfilehash: efebff74a8c17952b39efb43006051603c624a03
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 11
+ms.openlocfilehash: 32875c5c7b93f47dbf9dbcc01c621df402ab782d
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>Configurare un sistema di Windows esterno per la ricezione di copie di tabella remota utilizzando InfiniBand
 Viene descritto come acquistare e configurare un sistema di Windows non strumento connesso tramite la rete InfiniBand da usare con la funzionalità di copia tabella remota in SQL Server PDW. Il sistema di Windows verrà ospitato il database di SQL Server che riceve la copia della tabella remota da un database di SQL Server PDW. È acquistata separatamente dal dispositivo e connesso alla rete InfiniBand accessorio.  
@@ -28,7 +28,7 @@ Viene descritto come acquistare e configurare un sistema di Windows non strument
 > [!NOTE]  
 > Connessione attraverso la rete InfiniBand non è necessaria per l'utilizzo di copia della tabella remota. Connessione tramite rete Ethernet può essere eseguita se la larghezza di banda Ethernet soddisfa le proprie esigenze.  
   
-In questo argomento viene descritto uno dei passaggi di configurazione per la configurazione di copia della tabella remota. Per un elenco di tutti i passaggi di configurazione, vedere [copia della tabella remota](remote-table-copy.md)  
+In questo argomento viene descritto uno dei passaggi di configurazione per la configurazione di copia della tabella remota. Per un elenco di tutti i passaggi di configurazione, vedere [copia tabella remota](remote-table-copy.md)  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
 Prima di configurare il sistema esterno di Windows, è necessario:  
@@ -39,7 +39,7 @@ Prima di configurare il sistema esterno di Windows, è necessario:
   
 3.  Acquistare una scheda di rete InfiniBand e dei cavi InfiniBand dal fornitore di hardware del dispositivo. Si consiglia di acquisto di una scheda di rete con due porte per la tolleranza di errore quando si ricevono i dati esportati. Una scheda di rete due porte è consigliabile, ma non è un requisito.  
   
-## <a name="HowToWindows"></a>Configurare un sistema di Windows esterno per la ricezione di copie di una tabella remota  
+## <a name="HowToWindows"></a>Configurare un sistema di Windows esterno per ricevono una copia di tabella remota  
 Per configurare il sistema esterno di Windows, utilizzare la procedura seguente:  
   
 1.  Installare la scheda di rete InfiniBand nel sistema di Windows.  

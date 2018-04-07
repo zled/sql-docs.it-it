@@ -2,25 +2,25 @@
 title: Configurazione di rete dello strumento (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: "27"
-ms.openlocfilehash: 34f322e9bd1d500b3755262332ab5724de5aa301
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 27
+ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="appliance-network-configuration"></a>Configurazione di rete dispositivo
 Lo strumento di SQL Server PDW è creato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili di fabbrica del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.  
@@ -30,7 +30,7 @@ Lo strumento di SQL Server PDW è creato e configurato con un set di correzione 
   
 Il **configurazione di rete** pagina consente di visualizzare le impostazioni di rete accessibile pubblicamente per i nodi nel dispositivo di sistema della piattaforma Analitica. Questa pagina è di sola lettura.  
   
-![Rete dello strumento DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Per aggiornare la configurazione di rete del dispositivo  
 Modificare gli indirizzi IP del dominio dell'infrastruttura, il dominio del carico di lavoro e domini di HDInsight modificando il **AplianceInfo.xml** file e quindi eseguendo il programma di installazione. Si tratta di un'operazione offline. HDInsight (se presente) sia PDW aree verranno automaticamente arrestate durante la modifica degli indirizzi IP.  
@@ -60,10 +60,10 @@ Per ulteriori informazioni su accessori Dell, vedere:
   
 -   Istruzioni Switch PowerConnect [Dell PowerConnect 6200 serie sistema CLI Guida di riferimento](http://downloads.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_powerconnect/powerconnect-6224f_Reference%20Guide_en-us.pdf)  
   
--   iDRAC/BMC [manuale dell'utente 1.30.30 versione integrato Dell remota accesso Controller 7 (iDRAC7)](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
+-   iDRAC/BMC [manuale dell'utente versione 1.30.30 integrata Dell remota accesso Controller 7 (iDRAC7)](http://downloads.dell.com/Manuals/all-products/esuprt_electronics/esuprt_software/esuprt_remote_ent_sys_mgmt/integrated-dell-remote-access-cntrllr-7-v1.30.30_User%27s%20Guide_en-us.pdf?c=us&l=en&cs=555&s=biz)  
   
 -   PDU **Dell a consumo Rack PDU**`ftp://ftp.dell.com/Manuals/all-products/esuprt_ser_stor_net/esuprt_rack_infrastructure/dell-metered-pdu-led_User's%20Guide_en-us.pdf`  
   
 ## <a name="see-also"></a>Vedere anche  
-[Avviare Gestione configurazione &#40; Sistema della piattaforma Analitica &#41;](launch-the-configuration-manager.md)  
+[Avviare Gestione configurazione &#40;Analitica Platform System&#41;](launch-the-configuration-manager.md)  
   

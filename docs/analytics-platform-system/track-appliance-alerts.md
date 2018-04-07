@@ -2,25 +2,25 @@
 title: Registrare gli avvisi di dispositivo (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: "14"
-ms.openlocfilehash: a780aa34667280d9e079dad4f44954ba919275d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 14
+ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="track-appliance-alerts"></a>Avvisi dello strumento di traccia
 In questo argomento viene illustrato come utilizzare le Console di amministrazione e le viste di sistema per tenere traccia degli avvisi in un dispositivo di SQL Server PDW.  
@@ -33,7 +33,7 @@ Avvisi e registri di SQL Server PDW [sys.dm_pdw_component_health_alerts](../rela
 ### <a name="view-alerts-by-using-the-admin-console"></a>Visualizzare gli avvisi tramite la Console di amministrazione  
 È presente un **avvisi** scheda per l'area PDW, l'area HDI e per l'area dell'infrastruttura del dispositivo. Dopo che si verifica il failover, l'evento di failover è incluso nel numero di avvisi nella pagina. È una pagina per l'area PDW, l'area HDI e per l'area dell'infrastruttura del dispositivo. Ogni pagina di stato è disponibile una scheda. Per ulteriori informazioni su un avviso, fare clic su di **integrità** pagina il **avvisi** scheda e quindi fare clic su un avviso.  
   
-![Avvisi della Console di amministrazione PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Nel **avvisi** pagina:  
   
@@ -78,5 +78,5 @@ ORDER BY
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Monitoraggio dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-monitoring.md)  
+[Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
   

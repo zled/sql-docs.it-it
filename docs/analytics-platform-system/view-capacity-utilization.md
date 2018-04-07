@@ -1,26 +1,26 @@
 ---
-title: "Visualizzare l'utilizzo della capacità (Analitica piattaforma sistema)"
+title: Visualizzare l'utilizzo della capacità (Analitica piattaforma sistema)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/05/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 373633ca-c5af-4618-88e8-58ca84e8e5f4
-caps.latest.revision: "9"
-ms.openlocfilehash: 9bf391d92b29acc057fad1170f878bfb47bccd23
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 9
+ms.openlocfilehash: 03da2fa3295153c08de1f844866a45ab0ca8ea8c
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="view-capacity-utilization"></a>Visualizzare l'utilizzo della capacità
 In questo argomento viene illustrato come visualizzare l'utilizzo della capacità del dispositivo di SQL Server PDW.  
@@ -28,7 +28,7 @@ In questo argomento viene illustrato come visualizzare l'utilizzo della capacit�
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>Per visualizzare l'utilizzo della capacità utilizzando la Console di amministrazione  
 Per visualizzare lo spazio utilizzato, aprire la Console di amministrazione e fare clic su di **archiviazione** scheda. È presente un **archiviazione** scheda per l'area HDI e l'area PDW.  
   
-![Archiviazione della Console di amministrazione PDW](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
+![PDW Admin Console Storage](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>Per visualizzare l'utilizzo della capacità tramite query  
 Per capire se un nodo sta esaurendo lo spazio, il sistema di monitoraggio dello stato di SQL Server PDW già consente di monitorare lo spazio disponibile per tutti i volumi all'interno di ogni nodo.  
@@ -111,5 +111,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[Monitoraggio dispositivo &#40; Sistema della piattaforma Analitica &#41;](appliance-monitoring.md)  
+[Monitoraggio dello strumento &#40;Analitica Platform System&#41;](appliance-monitoring.md)  
   

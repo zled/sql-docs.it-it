@@ -2,25 +2,25 @@
 title: Configurare il Server SQL SMP esterni per la ricezione di copie della tabella remota (PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6bbd2ed6-064e-4b45-b67b-608dc0f2b2bc
-caps.latest.revision: "13"
-ms.openlocfilehash: 18b61d60e8ca771feab84b24a9ff53cc7bdfc193
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 13
+ms.openlocfilehash: 94b62dbae331c19fa97c1625a53804f4cd96bfa5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies"></a>Configurare un Server SQL SMP esterni per ricevono una copia di tabella remota
 Viene descritto come configurare un'istanza esterna di SQL Server per ricevere copie tabella remota di SQL Server PDW.  
@@ -51,7 +51,7 @@ Per configurare SQL Server, attenersi alla procedura seguente:
   
 5.  Stabilire un account di SQL Server nel Server SQL SMP che verrà utilizzato per l'autenticazione. Concedere all'account il privilegio per creare, eliminare e inserire dati in tabelle nel database di destinazione per l'operazione di esportazione di dati paralleli.  
   
-## <a name="BPSQLConfig"></a>Procedure consigliate per la configurazione di Server SQL SMP per la copia della tabella remota  
+## <a name="BPSQLConfig"></a>Procedure consigliate per la configurazione del Server SQL SMP per copia della tabella remota  
 Quando si configura il Server SQL SMP per ricevono una copia di tabella remota, è possibile utilizzare le seguenti procedure consigliate per migliorare le prestazioni.  
   
 1.  Seguire le procedure consigliate, come illustrato nella documentazione del prodotto SQL Server. Ad esempio, abilitare la crittografia dei dati. Per ulteriori informazioni sulla sicurezza di SQL Server, vedere [sicurezza di SQL Server](../relational-databases/security/securing-sql-server.md) su MSDN.  

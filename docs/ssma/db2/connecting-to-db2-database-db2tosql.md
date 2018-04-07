@@ -2,29 +2,30 @@
 title: La connessione al Database di DB2 (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-db2
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f718f75a750d376bdae9ff7bfab10f298107822d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 588fe34578ac6018ccefbc08f6ab70a017283353
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>La connessione al Database di DB2 (DB2ToSQL)
 Per eseguire la migrazione di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario connettersi al database DB2 che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti gli schemi di DB2 e successivamente visualizzata nel riquadro di esplorazione dei metadati di DB2. SSMA archivia le informazioni relative al server di database, ma non archivia le password.  
@@ -84,7 +85,7 @@ Quando ci si connette a un database, SSMA legge i metadati del database e quindi
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
-    Per ulteriori informazioni, vedere [OracleToSQL connettersi a Oracle &#40; &#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
+    Per altre informazioni, vedere [connettersi a Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
 ## <a name="reconnecting-to-db2"></a>La riconnessione a DB2  
 La connessione al server di database rimane attiva finché non si chiude il progetto. Quando si riapre il progetto, sarà necessario riconnettere se si desidera una connessione attiva al database. È possibile lavorare offline fino a quando non si desidera aggiornare i metadati, caricare gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e la migrazione dei dati.  
@@ -119,5 +120,5 @@ I metadati relativi al database DB2 non viene aggiornato automaticamente. I meta
 -   Il passaggio successivo del processo di migrazione consiste nel [connessione a SQL Server](http://msdn.microsoft.com/en-us/b59803cb-3cc6-41cc-8553-faf90851410e).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database DB2 a SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+[Database DB2 la migrazione a SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

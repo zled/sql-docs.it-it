@@ -21,13 +21,13 @@ ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef959c05f397a898d9c1e72adddd6b895eabf87d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 938f0dd71ea980af429591cf53bc8f6bd39e9b13
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Tramite il repository Test (SybaseToSQL)
 Il Repository Test SSMA archivi SSMA Tester test case e i risultati del test per un uso successivo. I dati del Repository vengono salvati nelle tabelle di SQL Server **TestCaseRepository** e **RunTestCaseResultRepository** nello schema **ssma_sybase_utilities** di **ssmatesterdb_syb** database.  
@@ -39,7 +39,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo Repository del Te
 -   Fare clic su di **chiudere** per chiudere la finestra di dialogo di Repository del Test case.  
   
 ## <a name="test-cases-repository"></a>Repository di test case  
-È possibile visualizzare il Repository Test case, fare clic su **Test case...** dal **Tester** menu. SSMA consente quindi di visualizzare il **Repository del Test case** finestra di dialogo con un elenco di salvato test case il **Test case** pagina.  
+È possibile visualizzare il Repository Test case facendo **Test case...** dal **Tester** menu. SSMA consente quindi di visualizzare il **Repository del Test case** finestra di dialogo con un elenco di salvato test case il **Test case** pagina.  
   
 Nella griglia vengono visualizzate le informazioni seguenti relative a ogni test case:  
   
@@ -59,10 +59,10 @@ I pulsanti seguenti sono disponibili nella pagina di Test case:
   
 -   Fare clic su di **modifica** pulsante per eseguire la procedura guidata di Test Case e modificare il test selezionato.  
   
--   Fare clic su di **eseguire** pulsante per aprire la [esegue Test case &#40; SybaseToSQL &#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) finestra di dialogo ed eseguire il test selezionato.  
+-   Fare clic sul **eseguiti** pulsante per aprire la [che esegue Test case &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) finestra di dialogo ed eseguire il test selezionato.  
   
 ## <a name="test-results-repository"></a>Repository dei risultati del test  
-È possibile visualizzare il Repository dei risultati del Test sul **risultati dei Test** pagina del **Repository del Test case** finestra. Aprirlo facendo **risultati dei Test...** dal **Tester** menu.  
+È possibile visualizzare il Repository dei risultati del Test sul **risultati dei Test** pagina del **Repository del Test case** finestra. Aprire facendo **i risultati dei Test...** dal **Tester** menu.  
   
 È possibile utilizzare due filtri su **risultati dei Test** pagina:  
   
@@ -80,11 +80,11 @@ Le seguenti informazioni sui risultati dei test viene visualizzate nella griglia
   
 I pulsanti seguenti sono disponibili nella pagina dei risultati di Test:  
   
--   Fare clic su di **vista** pulsante per aprire [visualizzazione di report di Test Case &#40; SybaseToSQL &#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) del risultato del Test Case corrente.  
+-   Fare clic sui **vista** pulsante per aprire [visualizzazione di report di Test Case &#40;SybaseToSQL&#41; ](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md) del risultato del Test Case corrente.  
   
 -   Fare clic su di **eliminare** pulsante per eliminare il risultato del Test selezionato  
   
 ## <a name="see-also"></a>Vedere anche  
-[Esecuzione di Test case &#40; SybaseToSQL &#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Test di eseguire la migrazione di oggetti di Database &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Esecuzione di Test case &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

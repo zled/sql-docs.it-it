@@ -2,33 +2,33 @@
 title: Monitoraggio delle query attive (SQL Server PDW)
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.technology: mpp-data-warehouse
-ms.custom: 
+ms.custom: ''
 ms.date: 01/13/2017
 ms.reviewer: na
 ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
-caps.latest.revision: "7"
-ms.openlocfilehash: 44f128124c8027bf4c37e34309d6c711006ac113
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 7
+ms.openlocfilehash: 8a792e8dc4f29a257568f37350ba1b2c792c88fe
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="monitoring-active-queries"></a>Monitoraggio delle query attive
 In questo argomento viene illustrato come utilizzare la Console di amministrazione e le viste di sistema di SQL Server PDW per il monitoraggio delle query attive. Vedere [monitorare il dispositivo tramite la Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md) e [viste di sistema](tsql-system-views.md) per informazioni su questi strumenti.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisiti  
 Indipendentemente dal metodo utilizzato per il monitoraggio delle query attive, l'accesso deve disporre delle autorizzazioni descritte in "Utilizzo tutti della Console di amministrazione" in [Grant-autorizzazioni per utilizzare la Console di amministrazione](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
-## <a name="PermsAdminConsole"></a>Monitoraggio di query attive  
+## <a name="PermsAdminConsole"></a>Monitoraggio interroga Active  
 Sia la Console di amministrazione e le viste di sistema di SQL Server PDW sono utilizzabile per il monitoraggio delle query attive. Seguire le istruzioni seguenti.  
   
 ### <a name="to-monitor-active-queries-by-using-the-admin-console"></a>Per il monitoraggio delle query attive tramite la Console di amministrazione  

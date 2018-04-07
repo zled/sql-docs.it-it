@@ -2,14 +2,15 @@
 title: Connessione a SQL Server (AccessToSQL) | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7f2c52a7af7fc3f9a35585678b222d6a29e5787
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 572c516cfac93f3122814cdc93a3eed4f2b9c291
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Connessione a SQL Server (AccessToSQL)
 Per eseguire la migrazione di database di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è necessario connettersi all'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando ci si connette, SSMA Ottiene i metadati relativi ai database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e visualizza i metadati del database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati. SSMA archivia le informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] connessi, ma non archivia le password.  
@@ -55,7 +56,7 @@ L'account utilizzato per connettersi a [!INCLUDE[ssNoVersion](../../includes/ssn
 ## <a name="establishing-a-sql-server-connection"></a>Stabilire una connessione di SQL Server  
 Prima di convertire oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintassi, è necessario stabilire una connessione all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] in cui si desidera eseguire la migrazione di database di Access.  
   
-Quando si definiscono le proprietà di connessione, è inoltre possibile specificare il database in cui verranno migrati dati e oggetti. È possibile personalizzare il mapping a livello di accesso database dopo la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per ulteriori informazioni, vedere [Mapping database di origine e destinazione](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+Quando si definiscono le proprietà di connessione, è inoltre possibile specificare il database in cui verranno migrati dati e oggetti. È possibile personalizzare il mapping a livello di accesso database dopo la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Per altre informazioni, vedere [Mapping database di origine e destinazione](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 > [!IMPORTANT]  
 > Prima di connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], assicurarsi che l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è in esecuzione e può accettare connessioni. Per ulteriori informazioni, vedere "connessione al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] motore di Database" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea.  
@@ -84,7 +85,7 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
   
     Il nome del database di destinazione non può contenere spazi o caratteri speciali. Ad esempio, è possibile migrare i database di Access per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database denominato "abc". Ma è possibile eseguire la migrazione di database di Access per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database denominato "a b, c".  
   
-    Dopo la connessione, è possibile personalizzare questo mapping per ogni database. Per ulteriori informazioni, vedere [Mapping database di origine e destinazione](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
+    Dopo la connessione, è possibile personalizzare questo mapping per ogni database. Per altre informazioni, vedere [Mapping database di origine e destinazione](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4)  
   
 5.  Nel **autenticazione** -menu a discesa, seleziona il tipo di autenticazione da utilizzare per la connessione. Per utilizzare l'account di Windows, selezionare **l'autenticazione di Windows**. Per utilizzare un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] account di accesso, selezionare **autenticazione di SQL Server**, quindi specificare un nome utente e una password.  
   
@@ -106,7 +107,7 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
   
 ||||||||
 |-|-|-|-|-|-|-|
-|**VERSIONE SERVER di destinazione e tipo di progetto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2005 (versione: 9)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2008 (versione: 10. x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]2016 (Version:13.x)|SQL Azure|  
+|**TIPO Visual Studio versione SERVER di destinazione del progetto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 (versione: 9)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 (versione: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 (Version:13.x)|SQL Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005|Sì|Sì|Sì|Sì|Sì||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008||Sì|Sì|Sì|Sì||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|||Sì|Sì|Sì||
@@ -129,9 +130,9 @@ La connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] riman
   
 La procedura per la riconnessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è uguale a quella per stabilire una connessione.  
   
-## <a name="next-steps"></a>Next Steps  
-Se si desidera personalizzare il mapping tra i database di origine e di destinazione, vedere [Mapping database di origine e destinazione](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) in caso contrario, il passaggio successivo consiste per convertire gli oggetti di database per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando la sintassi [convertire gli oggetti di database](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
+## <a name="next-steps"></a>Passaggi successivi  
+Se si desidera personalizzare il mapping tra i database di origine e di destinazione, vedere [mapping dei database di origine e destinazione](http://msdn.microsoft.com/en-us/69bee937-7b2c-49ee-8866-7518c683fad4) in caso contrario, il passaggio successivo consiste nel convertire oggetti di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] utilizzando la sintassi [convertire oggetti di database](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

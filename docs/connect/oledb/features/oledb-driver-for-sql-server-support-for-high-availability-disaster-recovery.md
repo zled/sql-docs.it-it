@@ -10,23 +10,23 @@ ms.component: oledb|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
-- docset-sql-devref
+- drivers
 ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05275a1f770ce4a01f583dda768872a26b5e3725
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
-ms.translationtype: MT
+ms.openlocfilehash: c915af2ec748c4b2c15882c9a643c8e200442e98
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Driver OLE DB per SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Questo argomento vengono illustrati i Driver OLE DB per il supporto di SQL Server (aggiunto [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Listener del gruppo di disponibilità, connettività client e failover dell’applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+  Questo articolo illustra i Driver OLE DB per il supporto di SQL Server (aggiunto [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Per altre informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Listener del gruppo di disponibilità, connettività client e failover dell’applicazione &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creazione e configurazione di gruppi di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) e [Repliche secondarie attive: Repliche secondarie leggibili &#40;Gruppi di disponibilità AlwaysOn&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  È possibile specificare il listener di un determinato gruppo di disponibilità nella stringa di connessione. Se un Driver OLE DB per SQL Server è connesso a un database in un gruppo di disponibilità che esegue il failover, la connessione originale viene interrotta e l'applicazione deve aprire una nuova connessione per continuare a funzionare dopo il failover.  
   
@@ -93,7 +93,7 @@ Il routing di sola lettura è una funzionalità che può garantire la disponibil
   
 È possibile che non tutte le connessioni in cui viene utilizzato il routing di sola lettura vengano stabilite alla stessa replica di sola lettura. Le modifiche nella sincronizzazione del database o nella configurazione di routing del server possono comportare connessioni client a repliche di sola lettura diverse. Per garantire che tutte le richieste di sola lettura di connettersi alla stessa replica di sola lettura, non passare un listener del gruppo di disponibilità AlwaysOn per il **Server** parola chiave di stringa di connessione. Specificare invece il nome dell'istanza di sola lettura.  
   
-Il routing di sola lettura potrebbe impiegare più tempo a connettersi rispetto alla replica primaria poiché innanzitutto viene eseguita la connessione del routing di sola lettura alla replica primaria e, successivamente, viene cercata la replica secondaria migliore dal punto di vista della lettura. Per questo motivo è necessario aumentare il timeout di accesso.  
+Per il routing di sola lettura può essere necessario più tempo rispetto alla connessione alla replica primaria, in quanto viene innanzitutto eseguita la connessione alla replica primaria e quindi viene individuata la miglior replica secondaria leggibile disponibile. Per questo motivo è necessario aumentare il timeout di accesso.  
   
 ## <a name="ole-db"></a>OLE DB  
 Il Driver OLE DB per SQL Server supporta sia la **ApplicationIntent** e il **MultiSubnetFailover** parole chiave.   
@@ -113,18 +113,15 @@ Le proprietà di connessione equivalenti sono:
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-Un Driver OLE DB per un'applicazione OLE DB di SQL Server può utilizzare uno dei metodi per specificare la finalità dell'applicazione:  
+Un Driver OLE DB per SQL Server può utilizzare uno dei metodi per specificare la finalità dell'applicazione:  
   
- **IDBInitialize:: Initialize**  
+ -   **IDBInitialize:: Initialize**  
  **IDBInitialize::Initialize** prevede l'uso del set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
   
- **IDataInitialize:: GetDatasource**  
+ -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize::GetDatasource** accetta una stringa di connessione di input che può contenere la parola chiave **Application Intent**.  
   
- **IDBProperties::GetProperties**  
- **IDBProperties::GetProperties** consente di recuperare il valore della proprietà attualmente impostata sull'origine dati.  È possibile recuperare il valore di **Application Intent** tramite la proprietà DBPROP_INIT_PROVIDERSTRING e la proprietà SSPROP_INIT_APPLICATIONINTENT.  
-  
- **IDBProperties::SetProperties**  
+ -   **IDBProperties::SetProperties**  
  Per impostare il valore della proprietà **ApplicationIntent**, chiamare **IDBProperties::SetProperties** passando la proprietà **SSPROP_INIT_APPLICATIONINTENT** con un valore "**ReadWrite**" o "**ReadOnly**" o la proprietà **DBPROP_INIT_PROVIDERSTRING** con un valore contenente "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
 È possibile specificare la finalità dell'applicazione nel campo delle proprietà della finalità dell’applicazione della scheda Tutte nella finestra di dialogo **Proprietà di Data Link**.  
@@ -133,13 +130,22 @@ Quando vengono stabilite connessioni implicite, per la connessione viene utilizz
   
 ### <a name="multisubnetfailover"></a>MultiSubnetFailover
 
-La proprietà di connessione equivalente è:  
+Le proprietà di connessione equivalenti sono:  
   
 -   **SSPROP_INIT_MULTISUBNETFAILOVER**  
+  
+-   **DBPROP_INIT_PROVIDERSTRING**  
 
-La proprietà SSPROP_INIT_MULTISUBNETFAILOVER è di tipo Boolean. La proprietà accetta valori di VARIANT_TRUE o VARIANT_FALSE.
+Un Driver OLE DB per SQL Server può utilizzare uno dei metodi seguenti per impostare l'opzione MultiSubnetFailover:  
 
-Per impostare il valore della proprietà MultiSubnetFailover, chiamare **IDBProperties:: SetProperties** passando la proprietà SSPROP_INIT_MULTISUBNETFAILOVER con valore **VARIANT_TRUE** o **VARIANT_ FALSE**. 
+ -   **IDBInitialize:: Initialize**  
+ **IDBInitialize::Initialize** prevede l'uso del set di proprietà precedentemente configurato per inizializzare l'origine dati e creare l'oggetto origine dati. La finalità dell'applicazione viene specificata come proprietà del provider o come parte della stringa di proprietà estesa.  
+  
+ -   **IDataInitialize:: GetDatasource**  
+ **IDataInitialize:: GetDatasource** accetta una stringa di connessione di input che può contenere le **MultiSubnetFailover** (parola chiave).  
+
+-   **IDBProperties::SetProperties**  
+Per impostare il **MultiSubnetFailover** valore della proprietà, chiamare **IDBProperties:: SetProperties** passando il **SSPROP_INIT_MULTISUBNETFAILOVER** proprietà con il valore  **VARIANT_TRUE** oppure **VARIANT_FALSE** o **DBPROP_INIT_PROVIDERSTRING** proprietà con un valore contenente "**MultiSubnetFailover = Yes** "o"**MultiSubnetFailover = No**".
 
 #### <a name="example"></a>Esempio
 

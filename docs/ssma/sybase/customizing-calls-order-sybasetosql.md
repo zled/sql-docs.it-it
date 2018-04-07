@@ -21,13 +21,13 @@ ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fcc1a0055eabcde9b4718e537e2ee37956f116f9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b066455346d63c0a4d41d8bf51ac2fd730e63ba5
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>Personalizzazione dell'ordine delle chiamate (SybaseToSQL)
 In questo passaggio si seleziona l'ordine in cui gli oggetti per eseguire il test verranno richiamati.  
@@ -36,8 +36,8 @@ In questo passaggio si seleziona l'ordine in cui gli oggetti per eseguire il tes
 Utilizzare i pulsanti posizionati nella parte superiore della griglia con l'elenco di oggetti da posizionare gli oggetti nell'ordine corretto. In alternativa, è possibile utilizzare i pulsanti visualizzati su destra quando viene selezionata la riga.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Completamento della preparazione del Test Case &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
+[Completamento della preparazione del Test Case &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di eseguire la migrazione di oggetti di Database &#40; SybaseToSQL &#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   
