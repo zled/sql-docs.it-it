@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server tramite SQL Operations Studio (anteprima) | Microsoft Docs'
 description: Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a SQL Server ed eseguire una query
 ms.custom: tools|sos
@@ -32,7 +32,7 @@ Per completare questa guida rapida, è necessario [!INCLUDE[name-sos](../include
 Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai collegamenti seguenti (assicurarsi di usare l'account di accesso SQL e la password corretti):
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -è necessario seguire i passaggi fino a *Create e eseguire query sui dati*.
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - è necessario seguire i passaggi fino a *Create e eseguire query sui dati*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
@@ -53,7 +53,6 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
     - **Gruppo di server:** \<predefinito\>  
 
    ![Schermata "Nuova connessione"](media/quickstart-sql-server/new-connection-screen.png)
-
 
 
 ## <a name="create-a-database"></a>Creazione di un database
