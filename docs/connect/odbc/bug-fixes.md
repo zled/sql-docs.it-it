@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: dc71f74ca8e81f370037b82e42fd78957e096775
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Elenco di bug risolti
 
@@ -38,10 +38,10 @@ Questa pagina contiene un elenco di bug in ogni versione, a partire da [!INCLUDE
 - Correzione di un bug raro in Windows a 32 bit quando la conversione mobile numero a virgola in un intero
 - Non risolto un problema in cui verrebbe inserimento double nel campo decimale con crittografia sempre attiva in alcun errore di troncamento di dati restituito
 - Fissa un avviso nel programma di installazione MacOS
+- Fisso l'invio di stato non corretto a SQL Server durante il tentativo di ripristino della sessione quando resilienza di connessione sia il pool di connessioni sono abilitati, causando sessione da eliminare dal Server
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-17-for-includessnoversionincludesssnoversionmdmd"></a>Correzioni di bug nel [!INCLUDE[msCoName](../../includes/msconame_md.md)] 17 Driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]
 
-- Fisso l'invio di stato non corretto a SQL Server durante il tentativo di ripristino della sessione quando resilienza di connessione sia il pool di connessioni sono abilitati, causando sessione da eliminare dal Server
 - Correzione di un bug in quando si utilizza l'autenticazione Kerberos, bulk insert potrebbe non riuscire con errore "accesso negato"
 - Soluzione alternativa rimosso per un bug unixODBC presente nella versione precedente a 2.3.1 (driver raddoppiato le dimensioni di alcuni buffer passato a unixODBC)
 - Fissa resilienza delle connessioni (riconnessione) sporgente quando si utilizza ColumnEncryption = abilitata

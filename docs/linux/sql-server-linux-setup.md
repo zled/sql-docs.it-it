@@ -4,7 +4,7 @@ description: Installare, aggiornare e disinstallare SQL Server in Linux. In ques
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 03/22/2018
+ms.date: 04/06/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: ef5e2131681981e85971d734ebbe576e106e2b92
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -34,7 +34,7 @@ In questo articolo vengono fornite indicazioni per l'installazione, aggiornament
 > - [Guida introduttiva di Ubuntu](quickstart-install-connect-ubuntu.md)
 > - [Guida introduttiva di docker](quickstart-install-connect-docker.md)
 
-Per le risposte alle domande frequenti, vedere la [SQL Server in domande frequenti su Linux](../linux/sql-server-linux-faq.md).
+Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](../linux/sql-server-linux-faq.md).
 
 ## <a id="supportedplatforms"></a> Piattaforme supportate
 
@@ -67,9 +67,9 @@ SQL Server 2017 presenta i requisiti di sistema seguenti per Linux:
 
 Se si utilizza **File System NFS (Network)** condivisioni remote nell'ambiente di produzione, tenere presente i requisiti di supporto seguenti:
 
-- Utilizzare la versione NFS **4.2 o versioni successive**. Le versioni precedenti di NFS non supportano le funzionalità necessarie, ad esempio fallocate e la creazione di file sparse, comune a sistemi di file più recenti.
-- Individuare solo i **/var/opt/mssql** le directory di montaggio NFS. Altri file, ad esempio i file binari del sistema di SQL Server, non sono supportati.
-- Assicurarsi che i client NFS utilizzino l'opzione 'nolock' durante il montaggio di tale condivisione.
+- Utilizzare la versione NFS **4.2 o versioni successive**. Le versioni precedenti di NFS non supportano le funzionalità necessarie, ad esempio fallocate e creazione di file sparse, comune a sistemi di file più recenti.
+- Individuare solo i **/var/opt/mssql** directory di montaggio NFS. Altri file, ad esempio i file binari del sistema di SQL Server, non sono supportati.
+- Assicurarsi che i client NFS utilizzino l'opzione 'nolock' durante il montaggio condivisione remota.
 
 ## <a id="repositories"></a> Configurare il repository di origine
 
@@ -82,7 +82,7 @@ Quando si installa o si aggiorna SQL Server, è ottenere la versione più recent
 
 È possibile installare SQL Server in Linux dalla riga di comando. Per istruzioni, vedere una delle Guide rapide seguenti:
 
-- [Installare su Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
+- [Installare in Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Installare in SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Installare in Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Eseguire in Docker](quickstart-install-connect-docker.md)
@@ -179,7 +179,7 @@ Se il computer Linux non ha accesso per i repository online usati nel [introdutt
 
 1. **Installare il pacchetto di motore di database**. Utilizzare uno dei seguenti comandi basati sulla piattaforma. Sostituire il nome file del pacchetto in questo esempio con il nome esatto di che cui è stato scaricato.
 
-   | Piattaforma | Comando di rimozione del pacchetto |
+   | Piattaforma | Comando di installazione del pacchetto |
    |-----|-----|
    | RHEL | `sudo yum localinstall mssql-server_versionnumber.x86_64.rpm` |
    | SLES | `sudo zypper install mssql-server_versionnumber.x86_64.rpm` |
@@ -216,4 +216,4 @@ Dopo l'installazione, è anche possibile installare o abilitare le funzionalità
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]
 
 > [!TIP]
-> Per le risposte alle domande frequenti, vedere la [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).
+> Per le risposte alle domande più frequenti, vedere il [SQL Server in domande frequenti su Linux](sql-server-linux-faq.md).

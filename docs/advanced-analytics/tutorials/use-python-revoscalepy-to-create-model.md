@@ -13,11 +13,11 @@ ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
-ms.openlocfilehash: f54d131868caf332351d7806881ea89238843236
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 21d4ea90d5ee29c68161f9cf2d59ed2d31002d0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Usare Python con revoscalepy per creare un modello
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,7 +27,6 @@ In questa lezione si informazioni su come eseguire il codice Python da un client
 ## <a name="prerequisites"></a>Prerequisiti
 
 + In questa lezione utilizza dati diversi dalle lezioni precedenti. Non è necessario completare prima le lezioni precedenti. Tuttavia, se si hanno completato le lezioni precedenti e si dispone di un server già configurato per l'esecuzione di Python, utilizzare il server e database come contesto di calcolo.
-
 + Per eseguire il codice Python utilizzando SQL Server come un calcolo contesto richiede SQL Server 2017 o versione successiva. Inoltre, è necessario installare in modo esplicito e quindi abilitare la funzionalità, **Machine Learning Services**, scegliendo l'opzione di linguaggio Python.
 
     Se è installata una versione non definitiva di SQL Server 2017, è necessario aggiornare a almeno la versione RTM. Nelle versioni successive del servizio è sono costantemente espandere e migliorare le funzionalità di Python. Alcune funzionalità di questa esercitazione potrebbero non funzionare nelle prime versioni di pre-release.
@@ -52,9 +51,9 @@ Questa lezione viene illustrato inoltre i concetti di base impostare e utilizzar
 
     ```sql
     CREATE DATABASE sqlpy;
-    GO;
+    GO
     USE sqlpy;
-    GO;
+    GO
     ```
 
     > [!IMPORTANT]
