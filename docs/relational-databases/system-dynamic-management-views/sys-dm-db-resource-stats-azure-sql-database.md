@@ -1,7 +1,7 @@
 ---
 title: Sys.dm db_resource_stats (Database SQL di Azure) | Documenti Microsoft
 ms.custom: ''
-ms.date: 03/16/2016
+ms.date: 04/06/2018
 ms.prod: ''
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -28,11 +28,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 116c5875ad7933e1b3d68f0c65ca7d0cb4d2b661
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,8 @@ ms.lasthandoff: 04/05/2018
 |xtp_storage_percent|**decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
 |max_worker_percent|**decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
 |max_session_percent|**decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
-|dtu_limit|**int**|Max database DTU impostazione corrente per il database durante questo intervallo.|  
+|dtu_limit|**int**|Max database DTU impostazione corrente per il database durante questo intervallo. |
+|||
   
 > [!TIP]  
 >  Per ulteriori informazioni di contesto su questi limiti e i livelli di servizio, vedere gli argomenti [livelli di servizio](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) e [funzionalità di livello e i limiti del servizio](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
@@ -58,13 +59,13 @@ ms.lasthandoff: 04/05/2018
  Questa vista richiede l'autorizzazione VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Osservazioni  
- I dati restituiti da **Sys.dm db_resource_stats** è espressa come percentuale del valore massimo consentito di limiti DTU del livello di servizio/prestazioni livello in esecuzione per i database Basic, Standard e Premium.
+ I dati restituiti da **db_resource_stats** espressa come percentuale del valore massimo consentito i limiti del livello di servizio/prestazioni livello sia in esecuzione.
  
  Se è stato effettuato il failover del database in un altro server negli ultimi 60 minuti, la vista restituirà solo i dati relativi al tempo in cui il database è stato primario dopo il failover.  
   
  Per una vista meno dettagliata di questi dati, utilizzare **resource_stats** vista del catalogo di **master** database. Questa vista acquisisce i dati ogni 5 minuti e conserva i dati cronologici per 14 giorni.  Per altre informazioni, vedere [Sys. resource_stats &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Quando un database è un membro di un pool elastico, presentate come valori percentuali, le statistiche di risorse sono espressi come percentuale del limite di DTU massimo per i database come set di configurazione del pool elastico.  
+ Quando un database è un membro di un pool elastico, presentate come i valori percentuali, le statistiche di risorse sono espressi come percentuale del limite massimo per i database impostati nella configurazione del pool elastico.  
   
 ## <a name="example"></a>Esempio  
   

@@ -1,6 +1,6 @@
 ---
-title: Aggiornato - Analysis Services per i documenti del Server SQL | Documenti Microsoft
-description: Visualizzare i frammenti di contenuto aggiornato per modificati di recente nella documentazione, Analysis Services per Microsoft SQL Server.
+title: -Esempi aggiornati per i documenti del Server SQL | Documenti Microsoft
+description: Visualizzare i frammenti di contenuto aggiornato per modificati di recente nella documentazione, esempi per Microsoft SQL Server.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -8,15 +8,15 @@ ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.prod_service: sql-non-specified
-ms.component: ssas
+ms.component: samples
 ms.date: 02/03/2018
-ms.openlocfilehash: 41d563b6ca464b46df9ee8e61b084ad18dad51fa
+ms.openlocfilehash: 758ce1d48b6a8dc961635ee7dcb4023867d727d1
 ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Nuovi e aggiornati: Analysis Services per SQL Server
+# <a name="new-and-recently-updated-samples-for-sql-server"></a>Nuovi e aggiornati: esempi per SQL Server
 
 
 
@@ -29,7 +29,7 @@ Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'og
 
 
 - *Intervallo di date degli aggiornamenti:* &nbsp; **03/12/2017** &nbsp; - &nbsp; **03/02/2018**
-- *Area di interesse:* &nbsp; **Analysis Services per SQL Server**.
+- *Area di interesse:* &nbsp; **esempi per SQL Server**.
 
 
 

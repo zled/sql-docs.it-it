@@ -102,7 +102,6 @@
 ### [Aggiornamento delle istanze di replica](upgrading-always-on-availability-group-replica-instances.md)  
 ### [Visualizzare lo stato di integrità con criteri](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
 
-
 # Riferimenti
 ## [Cmdlet di PowerShell](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
 ## [Transact-SQL](transact-sql-statements-for-always-on-availability-groups.md)  
@@ -143,3 +142,17 @@
 ### [Alcune repliche di disponibilità non presentano un ruolo integro](some-availability-replicas-do-not-have-a-healthy-role.md)  
 ### [Alcune repliche sincrone non sono sincronizzate](some-synchronous-replicas-are-not-synchronized.md)  
 ### [Il servizio cluster WSFC è offline](wsfc-cluster-service-is-offline.md)  
+## [Guida al monitoraggio e alla risoluzione dei problemi](always-on-availability-groups-troubleshooting-and-monitoring-guide.md)
+### [Monitorare le prestazioni per i gruppi di disponibilità](monitor-performance-for-always-on-availability-groups.md)
+### [Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)
+### [Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)
+### [Risoluzione dei problemi: Le modifiche nel database primario non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)
+### [Strumenti utili per la risoluzione dei problemi](useful-tools-for-troubleshooting.md)
+#### [Eventi estesi](always-on-extended-events.md)
+#### [Log di diagnostica dell'integrità](always-on-health-diagnostics-log.md)
+#### [Criteri](always-on-policies.md)
+#### [Buffer circolari](always-on-ring-buffers.md)
+#### [Tipi di attesa](always-on-wait-types.md)
+#### [CLUSTER.LOG](cluster-log-always-on-availability-groups.md)
+#### [Viste del catalogo e viste a gestione dinamica](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)
+#### [Log degli errori di SQL Server](sql-server-error-log-always-on-availability-groups.md)
