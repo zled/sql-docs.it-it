@@ -29,7 +29,7 @@ Per completare questa guida rapida, è necessario [!INCLUDE[name-sos](../include
 
 - [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
-Se non si dispone di alcun SQL Server, selezionarne uno dai collegamenti seguenti:
+Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai collegamenti seguenti (assicurarsi di usare l'account di accesso SQL e la password corretti):
 - [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 - [macOS - scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
 - [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - è necessario seguire i passaggi fino a *Create e eseguire query sui dati*.
@@ -39,11 +39,11 @@ Se non si dispone di alcun SQL Server, selezionarne uno dai collegamenti seguent
 
    
 1. Avviare  **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
-1. Alla prima esecuzione di *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* verrà mostrata la finestra di dialogo **connessione**. Se essa non appare, fare clic sull'icona **nuova connessione** nella pagina **server**:
+1. Alla prima esecuzione di *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* verrà mostrata la finestra di dialogo **Connessione**. Se essa non appare, fare clic sull'icona **Nuova connessione** nella pagina **SERVER**:
    
-   ![Icona "nuova connessione"](media/quickstart-sql-server/new-connection-icon.png)
+   ![Icona "Nuova connessione"](media/quickstart-sql-server/new-connection-icon.png)
 
-1. Questo articolo usa *account di accesso SQL*, ma l'accesso tramite *autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito:
+1. Questo articolo usa *Account di accesso SQL*, ma l'accesso tramite *Autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito:
  
     - **Nome del server:** localhost
     - **Tipo di autenticazione:** account di accesso SQL  
@@ -52,8 +52,7 @@ Se non si dispone di alcun SQL Server, selezionarne uno dai collegamenti seguent
     - **Nome del database:** lasciare vuoto questo campo 
     - **Gruppo di server:** \<predefinito\>  
 
-   ![Schermata "nuova connessione"](media/quickstart-sql-server/new-connection-screen.png)
-
+   ![Schermata "Nuova connessione"](media/quickstart-sql-server/new-connection-screen.png)
 
 
 ## <a name="create-a-database"></a>Creazione di un database
@@ -79,23 +78,23 @@ La seguente procedura crea un database denominato **TutorialDB**:
    ```
 1. Per eseguire la query, fare clic su **esegui** .
 
-Dopo il completamento della query, il nuovo **TutorialDB** viene visualizzato nell'elenco dei database. Se non è presente, fare doppio clic sul nodo **database** e selezionare **aggiorna**.
+Dopo il completamento della query, il nuovo **TutorialDB** viene visualizzato nell'elenco dei database. Se non è presente, fare doppio clic sul nodo **Database** e selezionare **Aggiorna**.
 
 
 ## <a name="create-a-table"></a>Creare una tabella
 
 L'editor di query è ancora connesso al *master* database, ma si vuole creare una tabella nel database *TutorialDB*. 
 
-1. Modificare quindi il contesto di connessione per **TutorialDB**:
+1. Modificare il contesto di connessione per **TutorialDB**:
 
    ![Modifica del contesto](media/quickstart-sql-server/change-context.png)
 
 
 
-1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **esegui**:
+1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
 
    > [!NOTE]
-   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il click su **esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite.
+   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -114,11 +113,11 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
    GO
    ```
 
-Dopo il completamento della query, la nuova tabella **dbo.Customers** è visualizzata nell'elenco di tabelle. Potrebbe tuttavia essere necessario aggiornare il database, tramite click su **aggiorna** al nodo **TutorialDB > tabelle**.
+Dopo il completamento della query, la nuova tabella **dbo.Customers** è visualizzata nell'elenco di tabelle. Potrebbe tuttavia essere necessario fare clic con il pulsante destro del mouse sul nodo **TutorialDB > Tabelle** e selezionare **Aggiorna**.
 
 ## <a name="insert-rows"></a>Inserimento di righe
 
-- Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **esegui**:
+- Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
 
    ```sql
    -- Insert rows into table 'Customers'
@@ -135,7 +134,7 @@ Dopo il completamento della query, la nuova tabella **dbo.Customers** è visuali
 
 
 ## <a name="view-the-data-returned-by-a-query"></a>Visualizzare i dati restituiti da una query
-1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **esegui**:
+1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
 
    ```sql
    -- Select rows from table 'Customers'
@@ -148,6 +147,6 @@ Dopo il completamento della query, la nuova tabella **dbo.Customers** è visuali
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Ora che si è connessi con SQL Server e si sono eseguite query, provare l'[esercitazione editor di codice](tutorial-sql-editor.md).
+Ora che si è connessi con SQL Server e si sono eseguite query, provare l'[Esercitazione editor di codice](tutorial-sql-editor.md).
 
 
