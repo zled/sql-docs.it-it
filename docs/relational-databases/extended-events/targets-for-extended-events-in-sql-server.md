@@ -1,29 +1,29 @@
 ---
 title: Destinazioni per gli eventi estesi in SQL Server | Microsoft Docs
-ms.custom: 
-ms.date: 06/12/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: extended-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 - xevents
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
-caps.latest.revision: 
+caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3c0d634e359b9b3578ba46649d202beef3367dd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: e75149107c4576a51737f77cf49679c62a2a0d42
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinazioni per gli eventi estesi in SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,6 +90,10 @@ Gli eventi estesi di SQL Server possono interagire con Event Tracing for Windows
 
 Questa destinazione di ETW elabora *in modalità sincrona* i dati ricevuti, mentre la maggior parte delle destinazioni esegue l'elaborazione *in modalità asincrona*.
 
+> [!NOTE]
+> Il database SQL di Azure non supporta la destinazione ETW. Lo stesso vale per l'Istanza gestita di database SQL di Azure.
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 <a name="h2_target_event_counter"></a>
 
@@ -152,6 +156,12 @@ La destinazione **event_file** scrive l'output della sessione eventi dal buffer 
 
 
 - Il nome di file selezionato viene usato dal sistema come prefisso a cui viene aggiunto un valore long integer basato su data-ora, seguito dall'estensione xel.
+
+> [!NOTE]
+> Il database SQL di Azure supporta la destinazione **event_file**, ma solo mediante un BLOB per l'output in Archiviazione di Azure. Il database SQL non può archiviare l'output in un file sull'unità disco rigido locale.
+> Per un esempio di codice **event_file** specifico per il database SQL (e l'Istanza gestita di database SQL), vedere [Codice di destinazione del file evento per eventi estesi nel database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+
+<!-- After OPS Versioning is live, the above !NOTE could be converted into a "3colon ZONE".  GeneMi = MightyPen. -->
 
 
 #### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION con destinazione **event_file**

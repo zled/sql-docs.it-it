@@ -1,16 +1,16 @@
 ---
 title: RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 03/15/2017
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE FILELISTONLY
@@ -24,22 +24,25 @@ helpviewer_keywords:
 - RESTORE FILELISTONLY statement
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
-caps.latest.revision: 
+caps.latest.revision: 83
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 29cc42e61ff88ee1d7b1d61a2a4ed214d72b3e1d
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Istruzioni RESTORE - FILELISTONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
+
 
   Restituisce un set di risultati contenente un elenco dei file di database e di log contenuti nel set di backup in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
 > [!NOTE]  
 >  Per le descrizioni degli argomenti, vedere [Argomenti RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
@@ -93,7 +96,7 @@ FROM <backup_device>
 |LogicalName|**nvarchar(128)**|Nome logico del file.|  
 |PhysicalName|**nvarchar(260)**|Nome fisico o del sistema operativo del file.|  
 |Tipo|**char(1)**|Tipo di file. I tipi possibili sono:<br /><br /> **L** = File di log di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **D** =  file di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **F** = catalogo full text<br /><br /> **S** = contenitore FileStream, FileTable o [!INCLUDE[hek_2](../../includes/hek-2-md.md)]|  
-|FileGroupName|**nvarchar(128)**|Nome del filegroup che contiene il file.|  
+|FileGroupName|**nvarchar(128)** NULL|Nome del filegroup che contiene il file.|  
 |Dimensione|**numeric(20,0)**|Dimensioni correnti in byte.|  
 |MaxSize|**numeric(20,0)**|Dimensioni massime consentite in byte.|  
 |FileID|**bigint**|Identificatore del file, univoco all'interno del database.|  
@@ -105,13 +108,13 @@ FROM <backup_device>
 |BackupSizeInBytes|**bigint**|Dimensioni in byte del backup di questo file.|  
 |SourceBlockSize|**int**|Dimensioni in byte del blocco del dispositivo fisico contenente il file, non del dispositivo di backup.|  
 |FileGroupID|**int**|ID del filegroup.|  
-|LogGroupGUID|**uniqueidentifier NULL**|NULL|  
+|LogGroupGUID|**uniqueidentifier** Null|NULL|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|Per i backup differenziali le modifiche con numeri di sequenza del file di log maggiori o uguali a **DifferentialBaseLSN** sono incluse nel backup differenziale.<br /><br /> Per gli altri tipi di backup il valore è NULL.|  
-|DifferentialBaseGUID|**uniqueidentifier**|Per i backup differenziali, identificatore univoco della base differenziale.<br /><br /> Per gli altri tipi di backup il valore è NULL.|  
+|DifferentialBaseGUID|**uniqueidentifier** Null|Per i backup differenziali, identificatore univoco della base differenziale.<br /><br /> Per gli altri tipi di backup il valore è NULL.|  
 |IsReadOnly|**bit**|**1** = Il campo è di sola lettura.|  
 |IsPresent|**bit**|**1** = Il file è incluso nel backup.|  
-|TDEThumbprint|**varbinary(32)**|Indica l'identificazione digitale della chiave di crittografia del database. L'identificazione digitale del componente di crittografia è un hash SHA-1 del certificato con cui viene crittografata la chiave. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
-|SnapshotURL|**nvarchar(360)**|URL dello snapshot Azure del file di database contenuto nel backup FILE_SNAPSHOT. Restituisce NULL se non è presente un backup FILE_SNAPSHOT.|  
+|TDEThumbprint|**varbinary(32)** NULL|Indica l'identificazione digitale della chiave di crittografia del database. L'identificazione digitale del componente di crittografia è un hash SHA-1 del certificato con cui viene crittografata la chiave. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
+|SnapshotURL|**nvarchar(360)** NULL|URL dello snapshot Azure del file di database contenuto nel backup FILE_SNAPSHOT. Restituisce NULL se non è presente un backup FILE_SNAPSHOT.|  
   
 ## <a name="security"></a>Security  
  Per un'operazione di backup è possibile specificare password per un set di supporti o un set di backup oppure per entrambi. Se è stata impostata una password per un set di supporti o un set di backup, la password o le password corrette devono essere specificate nell'istruzione RESTORE. Queste password impediscono operazioni di ripristino non autorizzate e l'aggiunta non autorizzata di set di backup ai supporti tramite gli strumenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tuttavia, la password non impedisce la sovrascrittura dei supporti tramite l'opzione FORMAT dell'istruzione BACKUP.  

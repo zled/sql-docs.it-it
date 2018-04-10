@@ -1,16 +1,16 @@
 ---
 title: RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 08/09/2016
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - RESTORE DATABASE
@@ -42,19 +42,19 @@ helpviewer_keywords:
 - transaction log backups [SQL Server], RESTORE statement
 - RESTORE LOG, see RESTORE statement
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
-caps.latest.revision: 
+caps.latest.revision: 248
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: edafff7cc70224c67ef970ca4c13e47cce113f23
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ff7514b66515dbeac88a3506723f1cdb8a2279bd
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="restore-statements-transact-sql"></a>Istruzioni RESTORE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Vengono ripristinati i backup eseguiti tramite il comando BACKUP. Questo comando consente di effettuare gli scenari di ripristino seguenti:  
   
@@ -70,6 +70,8 @@ ms.lasthandoff: 01/25/2018
   
 -   Eseguire un ripristino temporizzato di un database fino al punto nel tempo acquisito in uno snapshot del database.  
   
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+
  Per informazioni sugli scenari di ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Panoramica del ripristino e del recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md).  Per altre informazioni sulle descrizioni degli argomenti, vedere [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).   Quando si ripristina un database da un'altra istanza, vedere le informazioni in [Gestione dei metadati quando si rende disponibile un database in un'altra istanza del server (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
   
 > **NOTA:** Per altre informazioni sul ripristino dal servizio di archiviazione BLOB di Microsoft Azure, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
@@ -132,7 +134,7 @@ RESTORE DATABASE { database_name | @database_name_var }
 [;]  
   
 --To Restore a Transaction Log:  
-RESTORE LOG { database_name | @database_name_var }   
+RESTORE LOG { database_name | @database_name_var }  -- Does not apply to SQL Database Managed Instance 
  [ <file_or_filegroup_or_pages> [ ,...n ] ]  
  [ FROM <backup_device> [ ,...n ] ]   
  [ WITH   
@@ -155,7 +157,10 @@ FROM DATABASE_SNAPSHOT = database_snapshot_name
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
- | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
+ | { DISK    -- Does not apply to SQL Database Managed Instance
+     | TAPE  -- Does not apply to SQL Database Managed Instance
+     | URL   -- Applies to SQL Server and SQL Database Managed Instance
+   } = { 'physical_backup_device_name' |  
       @physical_backup_device_name_var }   
 }   
 Note: URL is the format used to specify the location and the file name for the Windows Azure Blob. Although Windows Azure storage is a service, the implementation is similar to disk and tape to allow for a consistent and seemless restore experince for all the three devices.  
@@ -194,7 +199,7 @@ Note: URL is the format used to specify the location and the file name for the W
 --Monitoring Options  
  | STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. Does not apply to SQL Database Managed Instance
  | { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
@@ -334,7 +339,32 @@ Note: URL is the format used to specify the location and the file name for the W
  Il ripristino di un database comporta la cancellazione della cache dei piani per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La cancellazione della cache dei piani comporta la ricompilazione di tutti i piani di esecuzione successivi e può causare un peggioramento improvviso e temporaneo delle prestazioni di esecuzione delle query. Il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contiene il messaggio informativo seguente per ogni archivio cache cancellato nella cache dei piani: "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha rilevato %d occorrenza/e di scaricamento dell'archivio cache '%s' (parte della cache dei piani) a causa di operazioni di manutenzione o riconfigurazione del database". Questo messaggio viene registrato ogni cinque minuti per tutta la durata dello scaricamento della cache.  
   
  Per ripristinare un database di disponibilità, ripristinare innanzitutto il database in base all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], quindi aggiungerlo al gruppo di disponibilità.  
-  
+
+## <a name="general-remarks---sql-database-managed-instance"></a>Osservazioni generali - Istanza gestita di database SQL
+
+Nel caso di un ripristino asincrono, il ripristino continua anche se la connessione client si interrompe. Se la connessione è interrotta, è possibile controllare nella visualizzazione [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) lo stato di un'operazione di ripristino (e lo stato di CREATE e DROP DATABASE). 
+
+Le seguenti opzioni di database sono impostate/sottoposte a override e non possono essere modificate in un secondo momento:
+
+- NEW_BROKER (se il broker non è abilitato nel file con estensione bak)
+- ENABLE_BROKER (se il broker non è abilitato nel file con estensione bak)
+- AUTO_CLOSE=OFF (se un database nel file con estensione bak ha l'impostazione AUTO_CLOSE=ON)
+- RECOVERY FULL (se un database nel file con estensione bak ha la modalità di ripristino SIMPLE o BULK_LOGGED)
+- Il filegroup con ottimizzazione per la memoria viene aggiunto e denominato XTP se non era presente nel file con estensione bak di origine. Qualsiasi filegroup con ottimizzazione per la memoria esistente viene rinominato come XTP
+- Le opzioni SINGLE_USER e RESTRICTED_USER vengono convertite in MULTI_USER
+
+## <a name="limitations---sql-database-managed-instance"></a>Limitazioni - Istanza gestita di database SQL
+Si applicano le seguenti limitazioni:
+
+- I file con estensione bak contenenti più set di backup non possono essere ripristinati.
+- I file con estensione bak contenenti più file di log non possono essere ripristinati.
+- Il ripristino non riesce se il file con estensione bak contiene dati FILESTREAM.
+- Attualmente non è possibile ripristinare i backup contenenti database con oggetti in memoria attivi.
+- Attualmente non è possibile ripristinare i backup contenenti database in cui sono stati presenti oggetti in memoria attivi.
+- Attualmente non è possibile ripristinare i backup contenenti database in modalità di sola lettura. Questa limitazione verrà rimossa a breve.
+
+Per altre informazioni, vedere [Istanza gestita](/azure/sql-database/sql-database-managed-instance).
+
 ## <a name="interoperability"></a>Interoperabilità  
   
 ### <a name="database-settings-and-restoring"></a>Impostazioni e ripristino del database  

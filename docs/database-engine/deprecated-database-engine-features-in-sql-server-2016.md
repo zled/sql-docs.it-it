@@ -1,31 +1,32 @@
 ---
-title: "Funzionalità del motore di database deprecate in SQL Server 2016 | Microsoft Docs"
-ms.custom: 
+title: Funzionalità del motore di database deprecate in SQL Server 2016 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-engine
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deprecated features [SQL Server]
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: "215"
+caps.latest.revision: 215
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2c85ec6c5975b8053dfd5c87a575fe79f61d5170
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: ffe97ae02f04c6ff8df04755d24ea6f771133cc6
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Funzionalità del Motore di database deprecate in SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +49,12 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |Category|Funzionalità deprecata|Sostituzione|Nome funzionalità|ID funzionalità|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|Backup e ripristino|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua a essere deprecata. BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD non sono più disponibili.|nessuna.|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE o LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
+|Backup e ripristino|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD continua a essere deprecata. BACKUP { DATABASE &#124; LOG } WITH PASSWORD e BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD non sono più disponibili.|Nessuna.|BACKUP DATABASE o LOG WITH PASSWORD<br /><br /> BACKUP DATABASE o LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
 |Livelli di compatibilità|Aggiornamento dalla versione 110 ([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)][!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]).|I livelli di compatibilità sono disponibili solo per le due ultime versioni. Per informazioni sui livelli di compatibilità supportati, vedere [Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|Livello di compatibilità del database: 100|108|  
 |Oggetti di database|Possibilità di restituire set di risultati dai trigger|None|Restituzione di risultati da un trigger|12|  
 |Crittografia|Crittografia tramite RC4 o RC4_128 deprecata. Rimozione pianificata nella prossima versione. Decrittografia RC4 e RC4_128 non deprecata.|Utilizzare un'altra crittografia, ad esempio AES.|Algoritmo di crittografia deprecata|253|  
 |Server remoti|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|Sostituire i server remoti utilizzando server collegati. sp_addserver può essere usata solo con l'opzione locale.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Server remoti|@@remserver|Sostituire i server remoti utilizzando server collegati.|None|None|  
+|Server remoti|\@\@remserver|Sostituire i server remoti utilizzando server collegati.|None|None|  
 |Server remoti|SET REMOTE_PROC_TRANSACTIONS|Sostituire i server remoti utilizzando server collegati.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Opzioni SET|**SET ROWCOUNT** per istruzioni **INSERT**, **UPDATE**e **DELETE**|Parola chiave TOP|SET ROWCOUNT|109|  
 |Hint di tabella|Hint di tabella HOLDLOCK senza parentesi|Utilizzare HOLDLOCK con parentesi.|Hint di tabella HOLDLOCK senza parentesi|167|  
@@ -70,10 +71,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Backup e ripristino|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE o LOG TO TAPE|235|  
 |Backup e ripristino|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |Backup e ripristino|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
-|Regole di confronto|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|nessuna. Queste regole di confronto sono presenti in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], ma non è possibile visualizzarle tramite fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
+|Regole di confronto|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Nessuna. Queste regole di confronto sono presenti in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], ma non è possibile visualizzarle tramite fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Regole di confronto|Hindi<br /><br /> Macedonian|Queste regole di confronto sono presenti in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] e versioni successive, ma non è possibile visualizzarle tramite fn_helpcollations. Utilizzare Macedonian_FYROM_90 e Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  
 |Regole di confronto|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|Azeri_Latin_100<br /><br /> Azeri_Cyrilllic_100|Azeri_Latin_90<br /><br /> Azeri_Cyrilllic_90|232<br /><br /> 233|  
-|Configurazione|SET ANSI_NULLS OFF e opzione di database ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF e opzione di database ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF e opzione di database CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS|nessuna.<br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL saranno sempre impostate su ON. SET OFFSETS non sarà disponibile.|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
+|Configurazione|SET ANSI_NULLS OFF e opzione di database ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF e opzione di database ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF e opzione di database CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS|Nessuna.<br /><br /> ANSI_NULLS, ANSI_PADDING e CONCAT_NULLS_YIELDS_NULL saranno sempre impostate su ON. SET OFFSETS non sarà disponibile.|SET ANSI_NULLS OFF<br /><br /> SET ANSI_PADDING OFF<br /><br /> SET CONCAT_NULL_YIELDS_NULL OFF<br /><br /> SET OFFSETS<br /><br /> ALTER DATABASE SET ANSI_NULLS OFF<br /><br /> ALTER DATABASE SET ANSI_PADDING OFF<br /><br /> ALTER DATABASE SET CONCAT_NULL_YIELDS_NULL OFF|111<br /><br /> 113<br /><br /> 112<br /><br /> 36<br /><br /> 111<br /><br /> 113<br /><br /> 112|  
 |Tipi di dati|sp_addtype<br /><br /> sp_droptype|CREATE TYPE<br /><br /> DROP TYPE|sp_addtype<br /><br /> sp_droptype|62<br /><br /> 63|  
 |Tipi di dati|Sintassi**timestamp** per il tipo di dati **rowversion** |Sintassi del tipo di dati**rowversion** |timestamp|158|  
 |Tipi di dati|Possibilità di inserire valori Null in colonne di tipo **timestamp** .|Utilizzare DEFAULT.|INSERT NULL in colonne TIMESTAMP|179|  
@@ -134,7 +135,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Classi SMO|Classe **Microsoft.SQLServer. Management.Smo.Information**<br /><br /> Classe **Microsoft.SQLServer. Management.Smo.Settings**<br /><br /> Classe **Microsoft.SQLServer.Management. Smo.DatabaseOptions**<br /><br /> Proprietà **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication**|Classe **Microsoft.SqlServer.  Management.Smo.Server**<br /><br /> Classe **Microsoft.SqlServer.  Management.Smo.Server**<br /><br /> Classe **Microsoft.SqlServer. Management.Smo.Database**<br /><br /> None|None|None|  
 |SQL Server Agent|Notifica**net send** <br /><br /> Notifica tramite cercapersone|Notifica tramite posta elettronica<br /><br /> Notifica tramite posta elettronica |None|None|  
 |[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|Integrazione di Esplora soluzioni in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||None|None|  
-|Stored procedure di sistema|sp_db_increased_partitions|nessuna. Il supporto per l'estensione del numero di partizioni è disponibile per impostazione predefinita in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
+|Stored procedure di sistema|sp_db_increased_partitions|Nessuna. Il supporto per l'estensione del numero di partizioni è disponibile per impostazione predefinita in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|sp_db_increased_partitions|253|  
 |Tabelle di sistema|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|Viste di compatibilità. Per altre informazioni, vedere [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md).<br /><br /> **\*\* Importante \*\*** Nelle viste di compatibilità non vengono esposti metadati per le funzionalità introdotte in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]. È consigliabile aggiornare le applicazioni per l'utilizzo delle viste del catalogo. Per altre informazioni, vedere [Viste del catalogo &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md).|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> None<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |Tabelle di sistema|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|None|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |Funzioni di sistema|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
@@ -150,18 +151,18 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Sequenza di chiamata di funzioni ::|Sostituita da SELECT *column_list* FROM sys.\<*function_name*>().<br /><br /> Sostituire, ad esempio, `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`.|Sintassi per la chiamata di funzioni '::'|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Riferimenti a colonne in 3 e 4 parti.|Il funzionamento conforme allo standard prevede nomi in 2 parti.|Nome di colonna in più di due parti|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Stringa racchiusa tra virgolette utilizzata come alias di colonna per un'espressione in un elenco SELECT:<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|Valori letterali stringa come alias di colonna|184|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Procedure numerate|nessuna. Non usare.|ProcNums|160|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Procedure numerate|Nessuna. Non usare.|ProcNums|160|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Sintassi*table_name.index_name* nell'istruzione DROP INDEX|Sintassi*index_name* ON *table_name* nell'istruzione DROP INDEX.|DROP INDEX con nome in due parti|163|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] che non terminano con un punto e virgola.|Terminare le istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] con un punto e virgola (;).|None|None|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|GROUP BY ALL|Utilizzare una soluzione personalizzata caso per caso con UNION o una tabella derivata.|GROUP BY ALL|169|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL come nome di colonna nelle istruzioni DML.|Utilizzare $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL come nome di colonna nelle istruzioni DML.|Utilizzare $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di # e ## come nomi di tabelle e di stored procedure temporanee.|Usare almeno un carattere aggiuntivo.|'#' e '##' come nomi di tabelle e stored procedure temporanee|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di @, @@ o @@ come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)] .|Non usare @ o @@ o nomi che iniziano con @@ come identificatori.|"@" e nomi che iniziano con "@@" come identificatori di [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Uso di \@, \@\@ o \@\@ come identificatori [!INCLUDE[tsql](../includes/tsql-md.md)].|Non usare come identificatori \@ o \@\@ o nomi che iniziano con \@\@.|"\@" e nomi che iniziano con "\@\@" come identificatori [!INCLUDE[tsql](../includes/tsql-md.md)]|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo della parola chiave DEFAULT come valore predefinito.|Non utilizzare la parola DEFAULT come valore predefinito.|Parola chiave DEFAULT come valore predefinito|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Utilizzo di uno spazio come separatore tra gli hint di tabella.|Per separare gli hint di tabella, utilizzare la virgola.|Più hint di tabella senza virgola|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|L'elenco di selezione di una vista indicizzata aggregata deve contenere COUNT_BIG(*) in modalità di compatibilità 90.|Utilizzare COUNT_BIG(*).|Elenco di selezione di una vista indicizzata senza COUNT_BIG(*)|2|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Applicazione indiretta di hint di tabella a una chiamata di una funzione con valori di tabella composta da più istruzioni tramite una vista.|nessuna.|Hint di funzione con valori di tabella indiretti|7|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Applicazione indiretta di hint di tabella a una chiamata di una funzione con valori di tabella composta da più istruzioni tramite una vista.|Nessuna.|Hint di funzione con valori di tabella indiretti|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Sintassi di ALTER DATABASE:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
 |Altro|DB-Library<br /><br /> Embedded SQL for C|Nonostante supporti connessioni da applicazioni esistenti che utilizzano le API DB-Library ed Embedded SQL, il [!INCLUDE[ssDE](../includes/ssde-md.md)] non include la documentazione o i file necessari per svolgere attività di programmazione per applicazioni che utilizzano tali API. In una versione futura del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] verrà eliminato il supporto per le connessioni da applicazioni DB-Library o Embedded SQL. Non utilizzare pertanto DB-Library o Embedded SQL per sviluppare nuove applicazioni. Quando si modificano applicazioni esistenti, rimuovere tutte le dipendenze da DB-Library o Embedded SQL. Invece di queste API, usare lo spazio dei nomi SQLClient o un'API, ad esempio ODBC. In[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] non è inclusa la DLL DB-Library necessaria per eseguire queste applicazioni. Per eseguire applicazioni DB-Library o Embedded SQL, è necessario disporre della DLL DB-Library di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versione 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 o [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)].|None|None|  
 |Strumenti|SQL Server Profiler per l'acquisizione della traccia|Utilizzare il profile degli eventi estesi incorporato in SQL Server Management Studio.|SQL Server Profiler|None|  

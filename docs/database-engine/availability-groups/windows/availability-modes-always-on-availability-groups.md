@@ -1,15 +1,16 @@
 ---
-title: "Modalità di disponibilità (gruppi di disponibilità AlwaysOn) | Microsoft Docs"
-ms.custom: 
+title: Modalità di disponibilità (gruppi di disponibilità AlwaysOn) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - asynchronous-commit availability mode
 - Availability Groups [SQL Server], availability modes
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7f1e90e1892eae4763b8afd1af575cc6b3ef16a
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fd0254134d929dd14b1bddab09cae409b999b21d
+ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modalità di disponibilità (gruppi di disponibilità AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/18/2018
 -   [Contenuto correlato](#RelatedContent)  
   
 ##  <a name="SupportedAvModes"></a> Modalità di disponibilità supportate  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta due modalità di disponibilità: modalità con commit asincrono e modalità con commit sincrono, come indicato di seguito:  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supporta tre modalità di disponibilità: con commit asincrono, con commit sincrono e di sola configurazione, come indicato di seguito:  
   
 -   La*modalità con commit asincrono* è una soluzione di ripristino di emergenza che offre risultati ottimali quando le repliche di disponibilità sono distribuite a distanze considerevoli. Se tutte le repliche secondarie vengono eseguite in modalità con commit asincrono, con la replica primaria non si attende che il log venga finalizzato dalle repliche secondarie. Bensì, subito dopo la scrittura del record del log nel file di log locale, tramite la replica primaria viene inviata la conferma della transazione al client. La replica primaria viene eseguita con una latenza della transazione minima a fronte di una replica secondaria configurata in modalità con commit asincrono.  Se la replica primaria corrente è configurata in modalità di disponibilità commit asincrono, eseguirà il commit asincrono delle transazioni per tutte le repliche secondarie indipendentemente dalle singole impostazioni della modalità di disponibilità.  
   

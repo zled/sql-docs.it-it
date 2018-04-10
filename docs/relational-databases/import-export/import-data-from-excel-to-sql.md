@@ -1,26 +1,26 @@
 ---
 title: Importare dati da Excel a SQL Server | Microsoft Docs
-ms.custom: 
-ms.date: 08/02/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158a6c72c0c172b061d79bb52a276bacc22c0fcd
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: b935bd332e5cbfa481f9400968a7c8188e2bc603
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Importare dati da Excel a SQL Server o al database SQL di Azure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ Sono disponibili vari modi per importare dati da file di Excel a SQL Server o al
     -   BCP
     -   Azure Data Factory
 
+Una descrizione completa di strumenti e servizi complessi come Azure Data Factory o SSIS esula dagli scopi di questa panoramica. Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati.
+
 > [!IMPORTANT]
-> Una descrizione completa di strumenti e servizi complessi come Azure Data Factory o SSIS esula dagli scopi di questa panoramica. Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati.
+> Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md).
 
 ## <a name="sql-server-import-and-export-wizard"></a>Importazione/Esportazione guidata SQL Server
 
@@ -209,6 +211,5 @@ Per istruzioni su come copiare dati con Azure Data Factory, vedere gli argomenti
 -   [Spostare dati con l'attività di copia](https://docs.microsoft.com/azure/data-factory/data-factory-data-movement-activities)
 -   [Tutorial: Create a pipeline with Copy Activity using Azure portal](https://docs.microsoft.com/azure/data-factory/data-factory-copy-data-from-azure-blob-storage-to-sql-database) (Esercitazione: Creare una pipeline con l'attività di copia usando il portale di Azure)
 
-## <a name="next-steps"></a>Passaggi successivi
-
-Per altre informazioni sulla soluzione a cui si è interessati, seguire i collegamenti indicati.
+## <a name="see-also"></a>Vedere anche
+[Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../../integration-services/load-data-to-from-excel-with-ssis.md)

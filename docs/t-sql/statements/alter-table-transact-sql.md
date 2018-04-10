@@ -61,16 +61,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: ''
+caps.latest.revision: 281
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b4a725960612c90a4619cf16587df0f67a68a3ba
-ms.sourcegitcommit: 6e16d1616985d65484c72f5e0f34fb2973f828f4
+ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -413,7 +413,7 @@ ALTER TABLE MyTable ALTER COLUMN NullCOl NVARCHAR(20) NOT NULL;
   
  Specifica l'aggiunta o l'eliminazione della proprietà ROWGUIDCOL nella colonna specificata. ROWGUIDCOL indica che la colonna è di tipo rowguid. È possibile designare come colonna ROWGUIDCOL una sola colonna **uniqueidentifier** per tabella e assegnare la proprietà ROWGUIDCOL solo a una colonna **uniqueidentifier**. Non è possibile assegnare ROWGUIDCOL a una colonna con un tipo di dati definito dall'utente.  
   
- ROWGUIDCOL non impone l'unicità dei valori archiviati nella colonna e non genera automaticamente valori per le nuove righe inserite nella tabella. Per generare valori univoci per ogni colonna, è necessario utilizzare la funzione NEWID con istruzioni INSERT o specificare la funzione NEWID come valore predefinito della colonna.  
+ ROWGUIDCOL non impone l'unicità dei valori archiviati nella colonna e non genera automaticamente valori per le nuove righe inserite nella tabella. Per generare valori univoci per ogni colonna, usare la funzione NEWID o la funzione NEWSEQUENTIALID nelle istruzioni INSERT oppure specificare la funzione NEWID o la funzione NEWSEQUENTIALID come valore predefinito per la colonna.  
   
  [ {ADD | DROP} PERSISTED ]  
  Specifica l'aggiunta o l'eliminazione della proprietà PERSISTED nella colonna specificata. La colonna interessata deve essere una colonna calcolata definita con un'espressione deterministica. Per le colonne specificate come PERSISTED, nel [!INCLUDE[ssDE](../../includes/ssde-md.md)] sono archiviati fisicamente i valori calcolati nella tabella e aggiornati i valori durante l'aggiornamento delle altre colonne da cui le colonne calcolate dipendono. Se si contrassegna una colonna calcolata come PERSISTED, è possibile creare indici in colonne calcolate definite in base a espressioni deterministiche ma imprecise. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md).  
@@ -492,7 +492,7 @@ WITH CHECK | WITH NOCHECK
  PERIOD FOR SYSTEM_TIME ( system_start_time_column_name, system_end_time_column_name )  
  **Si applica a** : da [!INCLUDE[ssCurrentLong](../../includes/sscurrentlong-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Specifica i nomi delle colonne che il sistema userà per registrare il periodo di validità di un record. È possibile specificare le colonne esistenti o creare nuove colonne come parte dell'argomento ADD PERIOD FOR SYSTEM_TIME. Le colonne devono avere il tipo di dati datetime2 e devono essere definite come NOT NULL. Se una colonna periodo viene definita come NULL, verrà generato un errore. È possibile definire un oggetto [column_constraint &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/o [specificare i valori predefiniti per le colonne](../../relational-databases/tables/specify-default-values-for-columns.md) per le colonne system_start_time e system_end_time. Vedere l'esempio A in [Controllo delle versioni di sistema](#system_versioning). In questi esempi viene illustrato l'uso di un valore predefinito per la colonna system_end_time.  
+ Specifica i nomi delle colonne che il sistema userà per registrare il periodo di validità di un record. È possibile specificare le colonne esistenti o creare nuove colonne come parte dell'argomento ADD PERIOD FOR SYSTEM_TIME. Le colonne devono avere il tipo di dati datetime2 e devono essere definite come NOT NULL. Se una colonna periodo viene definita come NULL, verrà generato un errore. È possibile definire un oggetto [column_constraint & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-table-column-constraint-transact-sql.md) e/o [specificare i valori predefiniti per le colonne](../../relational-databases/tables/specify-default-values-for-columns.md) per le colonne system_start_time e system_end_time. Vedere l'esempio A in [Controllo delle versioni di sistema](#system_versioning). In questi esempi viene illustrato l'uso di un valore predefinito per la colonna system_end_time.  
   
  Usare questo argomento in combinazione con l'argomento SET SYSTEM_VERSIONING per abilitare il controllo delle versioni di sistema su una tabella esistente. Per altre informazioni, vedere [Tabelle temporali](../../relational-databases/tables/temporal-tables.md) e [Introduzione alle tabelle temporali nel database SQL di Azure](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/).  
   
