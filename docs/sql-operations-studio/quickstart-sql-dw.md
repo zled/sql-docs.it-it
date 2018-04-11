@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Guida introduttiva: Connettersi ed eseguire query di Azure SQL Data Warehouse mediante SQL Operations Studio (anteprima) | Microsoft Docs'
 description: 'Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a un Azure SQL Data Warehouse ed eseguire query '
 ms.custom: tools|sos
@@ -34,7 +34,7 @@ Se non si dispone già di un'istanza di SQL Data Warehouse, vedere [Creare un'is
 Ricordare il nome del server e le credenziali di accesso.
 
 
-## <a name="connect-to-your-data-warehouse"></a>Connettersi al data warehouse
+## <a name="connect-to-your-data-warehouse"></a>Connettersi al Data Warehouse
 
 Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Azure SQL Data Warehouse.
 
@@ -63,7 +63,7 @@ Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una
 4. Dopo avere stabilito la connessione al server, quest'ultimo appare nella barra laterale *Server*.
 
 ## <a name="create-the-tutorial-data-warehouse"></a>Creare il data warehouse per l'esercitazione
-1. Fare clic con il pulsante destro sul server, in Esplora oggetti e selezionare **nuova Query.**
+1. Fare clic con il pulsante destro sul server, in Esplora oggetti e selezionare **nuova Query**.
 
 1. Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
 
@@ -145,7 +145,6 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 
 Altri articoli in questa raccolta si basano su questa guida rapida. Se si prevede di continuare con le esercitazioni successive, non pulire le risorse create in questa guida rapida. Se non si prevede di continuare, utilizzare la procedura seguente per eliminare le risorse create nel portale di Azure.
 Pulire le risorse eliminando i gruppi di risorse che non sono più necessari. Per informazioni dettagliate, vedere [Pulire le risorse](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 
