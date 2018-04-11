@@ -1,16 +1,16 @@
 ---
 title: Creare indici con colonne incluse | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index size [SQL Server]
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - designing indexes [SQL Server], included columns
 - nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
-caps.latest.revision: 
+caps.latest.revision: 29
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 2cea0215d55b75807b735a7028a79aa52bbbe7e4
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Creare indici con colonne incluse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -97,17 +97,17 @@ ms.lasthandoff: 02/23/2018
   
 7.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice.  
   
-8.  Fare clic su **OK**.  
+8.  Scegliere **OK**.  
   
 9. Nella scheda **Colonne incluse** scegliere **Aggiungi**.  
   
 10. Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne di tabella da aggiungere all'indice come colonne non chiave.  
   
-11. Fare clic su **OK**.  
+11. Scegliere **OK**.  
   
 12. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Per creare un indice con colonne non chiave  
   
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```sql  
     USE AdventureWorks2012;  

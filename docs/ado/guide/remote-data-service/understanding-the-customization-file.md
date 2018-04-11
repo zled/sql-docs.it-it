@@ -2,29 +2,29 @@
 title: Informazioni sui File di personalizzazione | Documenti Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 0597c403a9d716c155fe129ab8cb514268b27341
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sui File di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenente un parametro e tipo. I quattro tipi di sezioni sono indicati da stringhe letterali **connettersi**, **sql**, **userlist**, o **log**. Il parametro è il valore letterale stringa, il valore predefinito, un identificatore specificato dall'utente o nulla.  
@@ -61,7 +61,7 @@ identifier
   
  Una particolare sezione viene utilizzata nelle seguenti circostanze:  
   
--   A **connettersi** sezione viene utilizzata se la parte del valore del client di connettersi, parola chiave della stringa "**origine dati = * * * valore*", corrisponde a un **connettersi** identificatore sezione*.*  
+-   A **connettere** sezione viene utilizzata se la parte del valore del client di connettersi, parola chiave della stringa "**origine dati = * * * valore*", corrisponde a un **connettersi** identificatore sezione*.*  
   
 -   Un **sql** sezione viene utilizzata se la stringa di comando del client contiene una stringa che corrisponde a un **sql** identificatore di sezione.  
   

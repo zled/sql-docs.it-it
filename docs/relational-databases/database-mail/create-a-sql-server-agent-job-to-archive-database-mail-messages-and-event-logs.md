@@ -1,16 +1,16 @@
 ---
 title: Creare un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - archiving mail messages and attachments [SQL Server]
@@ -18,24 +18,24 @@ helpviewer_keywords:
 - Database Mail [SQL Server], archiving
 - saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8823296f7fd9a64fdc0d5b978a22e89e8b415d37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Creazione di un processo di SQL Server Agent per l'archiviazione di messaggi e log eventi di Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Oltre al log eventi di Posta elettronica database, nelle tabelle del database **msdb** viene mantenuta una copia dei messaggi di Posta elettronica database e dei relativi allegati. È consigliabile ridurre periodicamente le dimensioni delle tabelle e archiviare i messaggi e gli eventi non più necessari. Nelle procedure seguenti viene illustrato come creare un processo di SQL Server Agent per eseguire queste operazioni in modo automatico.  
+  Oltre al log eventi di Posta elettronica database, nelle tabelle del database **msdb** viene mantenuta una copia dei messaggi di Posta elettronica database e dei relativi allegati. È consigliabile ridurre periodicamente le dimensioni delle tabelle e archiviare i messaggi e gli eventi non più necessari. Nelle procedure seguenti viene illustrato come creare un processo di SQL Server Agent per eseguire queste operazioni in modo automatico.  
   
 -   **Prima di iniziare:** [Prerequisiti](#Prerequisites), [Raccomandazioni](#Recommendations), [Autorizzazioni](#Permissions)  
   
--   **Per archiviare messaggi e log di Posta elettronica database utilizzando:**  [SQL Server Agent](#Process_Overview)  
+-   **To Archive Database Mail messages and logs using :**  [SQL Server Agent](#Process_Overview)  
   
 ##  <a name="BeforeYouBegin"></a> Prima di iniziare  
   
@@ -46,7 +46,7 @@ Oltre al log eventi di Posta elettronica database, nelle tabelle del database **
  Nell'ambiente di produzione è consigliabile aggiungere un ulteriore controllo degli errori e inviare un messaggio di posta elettronica agli operatori se l'esecuzione del processo non viene completata.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorizzazioni  
  È necessario essere membri del ruolo predefinito del server **sysadmin** per eseguire le stored procedure descritte in questo argomento.  
   
   

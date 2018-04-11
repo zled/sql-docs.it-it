@@ -1,16 +1,16 @@
 ---
 title: sp_add_log_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_file_recover_suspect_db_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_file_recover_suspect_db
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1623d485132881e7d4df61926dc425257e3113b3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,24 +52,24 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
   
 ## <a name="arguments"></a>Argomenti  
  [ **@dbName =** ] **'***database***'**  
- Nome del database. *database* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del database. *database* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@name=** ] **'***logical_file_name***'**  
- Nome utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. Deve essere un nome univoco nel server. *nome_file_logico* è **nvarchar (260)**, non prevede alcun valore predefinito.  
+ Nome utilizzato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per fare riferimento al file. Deve essere un nome univoco nel server. *nome_file_logico* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
  [ **@filename =** ] **'***os_file_name***'**  
- Percorso e nome di file utilizzato dal sistema operativo per il file. Il file deve essere disponibile nel server in cui è installato [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* è **nvarchar (260)**, non prevede alcun valore predefinito.  
+ Percorso e nome di file utilizzato dal sistema operativo per il file. Il file deve essere disponibile nel server in cui è installato [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
  [ **@size=** ] **'***size* **'**  
- Dimensioni iniziali del file. *dimensioni* è **nvarchar (20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB. Il valore minimo è 512 KB. Se *dimensioni* non viene specificato, il valore predefinito è 1 MB.  
+ Dimensioni iniziali del file. *dimensioni* viene **nvarchar(20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB. Il valore minimo è 512 KB. Se *dimensioni* non viene specificato, il valore predefinito è 1 MB.  
   
  [ **@maxsize=** ] **'***max_size* **'**  
- Valore massimo fino a cui possono aumentare le dimensioni del file. *max_size* è **nvarchar (20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB.  
+ Valore massimo fino a cui possono aumentare le dimensioni del file. *max_size* viene **nvarchar(20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB.  
   
  Se *max_size* non viene specificato, il file aumenterà finché il disco è pieno. Prima che si verifichi questa situazione, l'amministratore riceve un avviso dal registro applicazioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  [  **@filegrowth=** ] **' * * * growth_increment* **'**  
- Quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo. *growth_increment* è **nvarchar (20)**, con un valore predefinito è NULL. Il valore 0 indica che le dimensioni non verranno aumentate. Specificare un numero intero, ovvero non includere decimali. È possibile specificare il valore in megabyte (MB) o in kilobyte (KB) oppure in forma di percentuale (%). Se si utilizza il suffisso %, l'incremento corrisponde alla percentuale specificata delle dimensioni del file quando si verifica l'incremento. Se si specifica un valore senza il suffisso MB, KB o %, il suffisso predefinito è MB.  
+ Quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo. *growth_increment* viene **nvarchar(20)**, con un valore predefinito è NULL. Il valore 0 indica che le dimensioni non verranno aumentate. Specificare un numero intero, ovvero non includere decimali. È possibile specificare il valore in megabyte (MB) o in kilobyte (KB) oppure in forma di percentuale (%). Se si utilizza il suffisso %, l'incremento corrisponde alla percentuale specificata delle dimensioni del file quando si verifica l'incremento. Se si specifica un valore senza il suffisso MB, KB o %, il suffisso predefinito è MB.  
   
  Se *growth_increment* è NULL, il valore predefinito è 10% e il valore minimo è 64 KB. Le dimensioni specificate vengono arrotondate al blocco di 64 KB più prossimo.  
   

@@ -2,35 +2,35 @@
 title: 'HelloData: Una semplice applicazione ADO | Documenti Microsoft'
 ms.prod: sql-non-specified
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 007f2842279607c722f6216d771751209ff723bc
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Una semplice applicazione ADO
 Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO principali: recupero, esame, la modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sui fondamenti di ADO e per evitare confusione codice, gestione degli errori nell'esempio è minimo.  
   
-### <a name="to-run-hellodata"></a>To run HelloData  
+### <a name="to-run-hellodata"></a>Per eseguire HelloData  
   
 1.  Creare un nuovo progetto Standard EXE Visual Basic che fa riferimento alla libreria ADO. Per ulteriori informazioni, vedere [riferimenti alle librerie ADO](../../../ado/guide/referencing-the-ado-libraries.md).  
   
@@ -49,7 +49,7 @@ Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO pr
   
  ![Mostra Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|Valore|  
+|Tipo di controllo|Proprietà|Value|  
 |------------------|--------------|-----------|  
 |Form|Nome|Form1|  
 ||Altezza|6500|  

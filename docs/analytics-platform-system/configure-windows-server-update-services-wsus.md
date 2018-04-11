@@ -17,10 +17,10 @@ ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
 caps.latest.revision: 41
 ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Configurare Windows Server Update Services (WSUS)
 Queste istruzioni consentono di eseguire i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica. È necessario configurare WSUS prima di poter applicare aggiornamenti software al dispositivo. WSUS è già installata nella macchina virtuale VMM del dispositivo.  
@@ -105,7 +105,7 @@ Per configurare WSUS, è necessario:
   
     3.  Se si tratta di un server di replica, selezionare il **si tratta di una replica del server upstream** casella di controllo. È possibile selezionare sia **Usa SSL per la sincronizzazione delle informazioni sull'aggiornamento** e **si tratta di una replica del server upstream**.  
   
-        ![Replica Server Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
+        ![WSUS Upstream Server Replica](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
     4.  A questo punto, si è finito di lavorare con configurazione del server upstream. Fare clic su **Avanti**, oppure selezionare **specificare un server proxy** nel riquadro di spostamento a sinistra.  
   
@@ -159,13 +159,13 @@ Per configurare WSUS, è necessario:
   
     Selezionare **gli aggiornamenti critici** e **gli aggiornamenti della sicurezza** per gli aggiornamenti che verranno sincronizzati per il dispositivo di sistema della piattaforma Analitica e quindi fare clic su **Avanti**.  
   
-    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Scegliere le classificazioni](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configurare la pianificazione della sincronizzazione.  
   
     Selezionare **sincronizzare manualmente**, quindi fare clic su **Avanti**.  
   
-    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Pianificazione della sincronizzazione set](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Avvia sincronizzazione iniziale.  
   

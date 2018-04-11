@@ -1,16 +1,16 @@
 ---
 title: Creare indici filtrati | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-indexes
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filtered indexes [SQL Server], about filtered indexes
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], filtered
 - indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
-caps.latest.revision: 
+caps.latest.revision: 73
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a82b906e15ced291ab440f8c4f87bc307dc6b624
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="create-filtered-indexes"></a>Creare indici filtrati
+# <a name="create-filtered-indexes"></a>Create Filtered Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si descrive come creare un indice filtrato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice filtrato è un indice non cluster ottimizzato, particolarmente indicato per coprire query per le quali i dati vengono selezionati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni delle query e di ridurre i costi di gestione e di archiviazione dell'indice stesso.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 02/23/2018
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per creare un indice filtrato tramite:**  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/23/2018
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** . Per modificare l'espressione dell'indice filtrato, utilizzare CREATE INDEX WITH DROP_EXISTING.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -124,13 +124,13 @@ ms.lasthandoff: 02/23/2018
   
 7.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
-8.  Fare clic su **OK**.  
+8.  Scegliere **OK**.  
   
 9. In **Espressione filtro** della pagina **Filtro**immettere l'espressione SQL che verrà utilizzata per creare l'indice filtrato.  
   
-10. Fare clic su **OK**.  
+10. Scegliere **OK**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Per creare un indice filtrato  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  
@@ -180,7 +180,7 @@ ms.lasthandoff: 02/23/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  
