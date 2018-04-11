@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Creare un widget insight personalizzato in SQL Operations Studio (anteprima) | Microsoft Docs'
-description: Con questa esercitazione viene mostrato come costruire un widget insight personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (anteprima).
+title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato in SQL Operations Studio (anteprima) | Microsoft Docs'
+description: Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -20,23 +20,23 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget insight personalizzato
+# <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
 
-Con questa esercitazione viene mostrato come costruire un widget insight personalizzato sfruttando le query di insight.
+Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato sfruttando le query di informazioni dettagliate.
 
 Durante questa esercitazione si apprenderà come:
 > [!div class="checklist"]
 > * Eseguire una query e visualizzarla in un grafico
-> * Costruire un widget insight personalizzato dal grafico
+> * Costruire un widget di informazioni dettagliate personalizzato dal grafico
 > * Aggiungere il grafico a una dashboard di server o database
-> * Aggiungere i dettagli per il widget
+* Aggiungere i dettagli per il widget di informazioni personalizzato
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB* su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
+Questa esercitazione richiede il database *TutorialDB* su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
 
 - [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query sul Database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query su Azure SQL Database tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Eseguire una query e visualizzare il risultato in un grafico
@@ -54,17 +54,17 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
    WHERE status = 'running'
    ```
 
-4. Salvare la query su di un file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSession.sql*.
+4. Salvare la query in un file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSession.sql*.
 
 5. Per eseguire la query, premere **F5**.
 
-6. I risultati della query vengono visualizzti. Fare clic su **visualizzazione grafico** nella barra laterale alla destra dei risultati, quindi fare clic sulla scheda **Visualizzatore grafico**.
+6. Dopo che vengono visualizzati i risultati della query, fare clic su **Visualizzazione grafico** nella barra laterale a destra dei risultati, quindi fare clic sulla scheda **Visualizzatore grafico**.
 
 7. Modifica **tipo di grafico** a **conteggio** per ottenere un grafico a conteggio.
 
-## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Aggiungere l'insight personalizzato alla dashboard del database
+## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Aggiungere le informazioni dettagliate personalizzate alla dashboard del database
 
-1. Per aprire la configurazione del widget insight, fare clic su **creare insight** nel *Visualizzatore grafico*:
+1. Per aprire la configurazione del widget di informazioni dettagliate, fare clic su **creare informazioni dettagliate** nel *Visualizzatore grafico*:
 
    ![configurazione](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
@@ -110,7 +110,7 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
 
    ![insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
-## <a name="add-details-to-custom-insight"></a>Aggiungere i dettagli all'insight personalizzato
+## <a name="add-details-to-custom-insight"></a>Aggiungere i dettagli al widget personalizzato
 
 1. Per aprire un nuovo editor, premere **Ctrl+N**.
 
@@ -124,11 +124,11 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
     WHERE status = 'running'
    ```
 
-4. Salvare la query su di un file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSessionDetail.sql*.
+4. Salvare la query in un file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSessionDetail.sql*.
 
 5. Premere **Ctrl+virgola** per aprire le *impostazioni utente*.
 
-6. Modificare il nodo *dashboard.database.widgets* nel file di impostazioni aggiungendo la sezione `details`:
+6. Modificare il nodo *dashboard.database.widgets* nel file di impostazioni:
 
    ```json
     "dashboard.database.widgets": [
@@ -169,9 +169,9 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
 
 In questa esercitazione, si è appreso come:
 > [!div class="checklist"]
-> * Eseguire una query e visualizzarla in un grafico
+> * Compilare un widget di informazioni personalizzato dal grafico
 > * Costruire un widget insight personalizzato dal grafico
-> * Aggiungere il grafico a una dashboard di server o database
+> * Aggiungere i dettagli per il widget di informazioni personalizzato. Please use LMProposed Suggestion.
 > * Aggiungere i dettagli per il widget
 
 Per informazioni su come eseguire backup e ripristino di database, completare l'esercitazione successiva:
