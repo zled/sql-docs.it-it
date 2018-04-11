@@ -1,6 +1,6 @@
 ---
-title: "Esercitazione: Aggiungere il widget delle cinque query più lente - SQL Operations Studio (anteprima) | Microsoft Docs"
-description: "Con questa esercitazione viene illustrato come abilitare il widget delle cinque query più lente nella dashboard del database."
+title: "Esercitazione: Aggiungere il widget di esempio delle cinque query più lente - SQL Operations Studio (anteprima) | 
+description: "Con questa esercitazione viene illustrato come abilitare il widget di esempio delle cinque query più lente nella dashboard del database."
 ms.custom: tools|sos
 ms.date: 11/16/2017
 ms.prod: sql-non-specified
@@ -22,22 +22,22 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiunta di *cinque query più lente* widget di esempio per il dashboard del database
 
-Con questa esercitazione viene illustrato il processo di aggiunta di uno dei widget incorporati in [!INCLUDE[name-sos](../includes/name-sos-short.md)] per la *dashboard del database* al fine di visualizzare rapidamente le cinque query più lente del database. Inoltre, viene mostrato come visualizzare i dettagli delle query lente e piani di query utilizzando le funzionalità di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Durante questa esercitazione, si apprenderà come:
+Con questa esercitazione viene illustrato il processo di aggiunta di uno dei widget di esempio incorporati in [!INCLUDE[name-sos](../includes/name-sos-short.md)] alla *dashboard del database* al fine di visualizzare rapidamente le cinque query più lente del database. Inoltre, viene mostrato come visualizzare i dettagli delle query lente e piani di query utilizzando le funzionalità di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Durante questa esercitazione, si apprenderà come:
 
 > [!div class="checklist"]
 > * Abilitare Archivio Query in un database
-> * Aggiungere un widget insight integrato al dashboard del database
+> * Aggiungere un widget integrato di informazioni dettagliate al dashboard del database
 > * Visualizzare i dettagli sulle query più lente del database
-> * Visualizzare piani di esecuzione di query
+> * Visualizzare piani di esecuzione per le query lente
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] include diversi widget insight integrati. In questa esercitazione viene illustrato come aggiungere il widget *query-data-store-db-insight*, ma i passaggi sono fondamentalmente gli stessi per l'aggiunta di altri widget.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] include diversi widget integrati di informazioni dettagliate. In questa esercitazione viene illustrato come aggiungere il widget *query-data-store-db-insight*, ma i passaggi sono fondamentalmente gli stessi per l'aggiunta di altri widget.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB*, su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
+Questa esercitazione richiede il database *TutorialDB*, su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
 
 - [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query sul Database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query su Azure SQL Database tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 
@@ -56,7 +56,7 @@ Per aggiungere un widget insight alla dashboard, modificare l'impostazione *dash
 1. Al fine di accedere al file delle **IMPOSTAZIONI UTENTE** premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
 2. Scrivere *impostazioni* nella casella di ricerca e dai file di impostazioni disponibili, selezionare **Preferenze: Apri impostazioni utente**.
 
-   ![Comando apri impostazioni utente](./media/tutorial-qds-sql-server/open-user-settings.png)
+   ![Comando Apri impostazioni utente](./media/tutorial-qds-sql-server/open-user-settings.png)
 
 3. Scrivere ora *dashboard* nella ricerca impostazioni e individuare **dashboard.database.widgets**.
 
@@ -87,7 +87,7 @@ Per aggiungere un widget insight alla dashboard, modificare l'impostazione *dash
     ...
     ```
 
-7. Premere **Ctrl+S** per salvare la modifica sulle **IMPOSTAZIONI UTENTE**.
+7. Premere **Ctrl+S** per salvare la modifica in **Impostazioni utente**.
 
 8. Tornare ora alla *dashboard del Database* selezionando **TutorialDB** nella barra laterale dei *SERVER*, premere il pulsante destro del mouse e scegliere **Gestisci**.
 
@@ -135,9 +135,9 @@ Per aggiungere un widget insight alla dashboard, modificare l'impostazione *dash
 
 5. Incollare il piano copiato nell'editor.
 
-6. Premere **Ctrl+S** per salvare il file e modificare l'estensione del file in *.sqlplan*. Per questa esercitazione, denominare il file *slowquery.sqlplan*. Se l'estensione non appare nella lista dei tipi per cui effettuare il salvataggio, scriverla manualmente.
+6. Premere **Ctrl+S** per salvare il file e modificare l'estensione del file in *.sqlplan*. Per questa esercitazione, denominare il file *slowquery.sqlplan*.
 
-7. Il piano di query viene aperto in [!INCLUDE[name-sos](../includes/name-sos-short.md)] e mostrata tramite il Visualizzatore dei piani di query:
+7. Il piano di query viene aperto nel visualizzatore dei piani di query in [!INCLUDE[name-sos](../includes/name-sos-short.md)]:
 
    ![Approfondimenti QDS piano](./media/tutorial-qds-sql-server/sqlplan.png)
 
@@ -151,7 +151,7 @@ In questa esercitazione si è appreso come:
 > * Visualizzare piani di esecuzione di query
 
 
-Per informazioni su come abilitare il widget di **spazio utilizzato per le tabelle**, completare l'esercitazione successiva:
+Per informazioni su come abilitare il widget di esempio **utilizzo dello spazio delle tabelle**, completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
-> [Abilitare il widget insight di spazio utilizzato per le tabelle](tutorial-table-space-sql-server.md)
+> [Abilitare il widget di esempio di informazioni dettagliate sullo spazio delle tabelle](tutorial-table-space-sql-server.md)
