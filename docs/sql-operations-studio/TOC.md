@@ -1,5 +1,5 @@
 # [SQL Operations Studio (anteprima)](what-is.md)
-# [Installare](download.md)
+# [Installazione](download.md)
 # [Note sulla versione](release-notes.md)
 # Guide introduttive
 ## [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
@@ -8,7 +8,7 @@
 # Esercitazioni
 ## [Editor T-SQL](tutorial-sql-editor.md) 
 ## [Widget insight di esempio: query lente](tutorial-qds-sql-server.md)
-## [Widget insight di esempio: utilizzo dello spazio delle tabelle](tutorial-table-space-sql-server.md)
+## [Widget di informazioni dettagliate di esempio: spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
 ## [Creazione di un widget insight personalizzato](tutorial-build-custom-insight-sql-server.md) 
 ## [Backup e ripristino](tutorial-backup-restore-sql-server.md)
 # Guide pratiche
