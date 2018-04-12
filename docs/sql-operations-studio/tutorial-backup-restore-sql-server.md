@@ -32,23 +32,23 @@ In questa esercitazione si apprenderà come sfruttare [!INCLUDE[name-sos](../inc
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB* su SQL Server. Per crearlo, completare la guida rapide seguente:
+Questa esercitazione richiede il database *TutorialDB* su SQL Server. Per crearlo, completare la guida rapida seguente:
 
 - [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
 ## <a name="backup-a-database"></a>Effetture il backup di un database
 
-1. Aprire la dashboard del database (aprire la barra laterale **SERVER** con **CTRL+G**, espandere il nodo **database**, premere il tasto destro del mouse su **TutorialDB** e selezionare **Gestisci**). 
+1. Aprire la dashboard del database TutorialDB (aprire la barra laterale **SERVER** con **CTRL+G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**).  
 
-2. Aprire la finestra di dialogo **Backup database** (fare clic su **Backup** sul widget **attività**).
+2. Aprire la finestra di dialogo **Backup database** (fare clic su **Backup** sul widget **Attività**).
 
    ![Widget attività](./media/tutorial-backup-restore-sql-server/tasks.png)
 
 3. In questa esercitazione utilizzeremo le opzioni predefinite per il backup. Fare clic su **Backup**.
    ![finestra di dialogo backup](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-Dopo aver fatto clic **Backup**, la finestra di dialogo **Backup database** si chiude e inizia il processo di backup.
+Dopo aver fatto clic su **Backup**, la finestra di dialogo **Backup database** si chiude e inizia il processo di backup.
 
 ## <a name="view-the-backup-status-and-view-the-backup-script"></a>Visualizzare lo stato del backup e lo script di backup
 
@@ -77,7 +77,7 @@ Dopo aver fatto clic **Backup**, la finestra di dialogo **Backup database** si c
 
 4. Fare clic su **Ripristina**
 
-5. Per visualizzare lo stato dell'operazione di ripristino, premere **CTRL+T** per aprire la **Cronologia attività**.
+5. Per visualizzare lo stato dell'operazione di ripristino, premere **CTRL+T** per aprire la barra laterale **Cronologia attività**.
 
    ![ripristino](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
 
