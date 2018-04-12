@@ -30,7 +30,7 @@ Per completare questa Guida rapida, è necessario [!INCLUDE[name-sos](../include
 
 - [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
-Se non si dispone già di un server SQL Azure, completare una delle seguenti Guide rapide a Database SQL di Azure (occorre ricordare che il nome del server e le credenziali di accesso!):
+Se non si dispone già di un server SQL Azure, completare una delle seguenti guide rapide al database SQL di Azure (ricordare che il nome del server e le credenziali di accesso):
 
 - [Creare DB - portale](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Creare DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
