@@ -1,6 +1,6 @@
 ---
-title: Creare frammenti di codice in Studio operazioni SQL (anteprima) | Documenti Microsoft
-description: Informazioni su come creare e usare i frammenti di codice SQL in Studio operazioni SQL (anteprima)
+title: Creare frammenti di codice in SQL Operations Studio (preview) | Documenti Microsoft
+description: Informazioni su come creare e usare i frammenti di codice SQL in SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -8,7 +8,7 @@ ms.prod: sql-non-specified
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

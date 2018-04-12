@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Abilitare il widget tabella spazio utilizzo esempio informazioni dettagliate in Studio operazioni SQL (anteprima) | Documenti Microsoft'
-description: Questa esercitazione viene illustrato come abilitare il widget tabella spazio utilizzo esempio informazioni dettagliate sul dashboard del database di Studio operazioni SQL (anteprima).
+title: 'Esercitazione: Abilitare il widget tabella spazio utilizzo esempio informazioni dettagliate in SQL Operations Studio (preview) | Documenti Microsoft'
+description: Questa esercitazione viene illustrato come abilitare il widget tabella spazio utilizzo esempio informazioni dettagliate sul dashboard del database di SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified

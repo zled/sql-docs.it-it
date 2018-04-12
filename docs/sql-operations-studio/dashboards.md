@@ -1,6 +1,6 @@
 ---
-title: "Accedere rapidamente alle informazioni e le attività comuni in Studio operazioni SQL (anteprima) | Documenti Microsoft"
-description: Informazioni sulla visualizzazione dei widget dettagliati in Studio operazioni SQL (anteprima).
+title: Accedere rapidamente alle informazioni e le attività comuni in SQL Operations Studio (preview) | Documenti Microsoft
+description: Informazioni sulla visualizzazione dei widget dettagliati in SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu

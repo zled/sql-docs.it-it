@@ -1,6 +1,6 @@
 ---
-title: 'Guida introduttiva: Connettersi ed eseguire query di Azure SQL Data Warehouse mediante SQL Operations Studio (anteprima) | Microsoft Docs'
-description: 'Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a un Azure SQL Data Warehouse ed eseguire query '
+title: 'Guida introduttiva: Connettersi ed eseguire query di Azure SQL Data Warehouse mediante SQL Operations Studio (preview) | Microsoft Docs'
+description: 'Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a un Azure SQL Data Warehouse ed eseguire query '
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified

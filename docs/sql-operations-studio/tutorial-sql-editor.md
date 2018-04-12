@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Usare l''editor Transact-SQL Studio operazioni SQL (anteprima) per creare oggetti di database | Documenti Microsoft'
-description: "Questa esercitazione illustra le funzionalità principali in Studio operazioni SQL (anteprima) che semplificano l'uso di T-SQL."
+title: "Esercitazione: Usare l'editor Transact-SQL SQL Operations Studio (preview) per creare oggetti di database | Documenti Microsoft"
+description: Questa esercitazione illustra le funzionalità principali in SQL Operations Studio (preview) che semplificano l'uso di T-SQL.
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang
@@ -57,13 +57,13 @@ Questa esercitazione richiede SQL Server o Database SQL di Azure *TutorialDB*. P
 
    ![widget di ricerca rapida](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. Modificare il **posta elettronica** colonna nella prima riga, di tipo  *orlando0@adventure-works.com* e premere **invio** per salvare le modifiche.
+1. Modificare il **posta elettronica** colonna nella prima riga, di tipo *orlando0@adventure-works.com*e premere **invio** per salvare le modifiche.
 
    ![modificare i dati](./media/tutorial-sql-editor/edit-data.png)
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usare i frammenti di codice T-SQL per creare stored procedure
 
-Operazioni SQL Studio fornisce diversi frammenti di codice T-SQL incorporati per la creazione rapida di istruzioni.
+SQL Operations Studio fornisce diversi frammenti di codice T-SQL incorporati per la creazione rapida di istruzioni.
 
 
 1. Aprire un nuovo editor di query premendo **Ctrl + N**.
@@ -117,7 +117,7 @@ A questo punto viene creata la stored procedure e **risultati** riquadro viene v
 
 ## <a name="use-peek-definition"></a>Utilizzare Visualizza definizione 
 
-Operazioni SQL Studio fornisce la possibilità di visualizzare una definizione di oggetti utilizzando la funzionalità di definizione della visualizzazione. In questa sezione viene creata una seconda stored procedure e utilizza finestra Visualizza definizione per vedere quali sono le colonne in una tabella per creare rapidamente il corpo della stored procedure.
+SQL Operations Studio fornisce la possibilità di visualizzare una definizione di oggetti utilizzando la funzionalità di definizione della visualizzazione. In questa sezione viene creata una seconda stored procedure e utilizza finestra Visualizza definizione per vedere quali sono le colonne in una tabella per creare rapidamente il corpo della stored procedure.
 
 1. Aprire un nuovo editor premendo **Ctrl + N**. 
 
@@ -185,7 +185,7 @@ Operazioni SQL Studio fornisce la possibilità di visualizzare una definizione d
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>Utilizzare salvare i risultati della query come JSON per testare la procedura setCustomer archiviati
 
-Il *setCustomer* stored procedure creata nella sezione precedente richiede JSON i dati di essere passati nel  *@json_val*  parametro. In questa sezione viene illustrato come ottenere un bit di JSON per passare il parametro in modo è possibile testare la stored procedure formattato correttamente.
+Il *setCustomer* stored procedure creata nella sezione precedente richiede JSON i dati di essere passati nel *@json_val* parametro. In questa sezione viene illustrato come ottenere un bit di JSON per passare il parametro in modo è possibile testare la stored procedure formattato correttamente.
 
 1. Nel **server** barra laterale destro la *dbo. I clienti* tabella e fare clic su **seleziona le prime 1000 righe**.
 

@@ -1,6 +1,6 @@
 ---
-title: Scaricare e installare Microsoft SQL Operations Studio (anteprima) | Microsoft Docs
-description: Scaricare e installare Microsoft SQL Operations Studio (anteprima per Windows, Mac OS o Linux)
+title: Scaricare e installare SQL Operations Studio (preview) | Microsoft Docs
+description: Scaricare e installare Microsoft SQL Operations Studio (preview) per Windows, Mac OS o Linux
 ms.custom: tools|sos
 ms.date: 03/28/2018
 ms.prod: sql-non-specified
@@ -20,8 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare Studio operazioni SQL (anteprima) 
-
+# <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
 
@@ -35,7 +34,7 @@ Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
-## <a name="get-sql-operations-studio-preview-for-windows"></a>Ottenere SQL Operations Studio (anteprima) per Windows
+## <a name="get-sql-operations-studio-preview-for-windows"></a>Ottenere SQL Operations Studio (preview) per Windows
 
 Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include un'installazione di Windows standard e un file ZIP: 
 
@@ -52,14 +51,14 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 3. Eseguire `\sqlops-windows\sqlops.exe`
 
 
-## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere SQL Operations Studio (anteprima) per macOS
+## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere SQL Operations Studio (preview) per macOS
 
 1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=870839).
 2. Per espandere il contenuto del file zip, fare doppio clic.
 3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *sqlops.app* sulla cartella *applicazioni*.
 
 
-## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere SQL Operations Studio (anteprima) per Linux
+## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere SQL Operations Studio (preview) per Linux
 
 1. Scaricare [! INCLUDERE[sos nome](../includes/name-sos-short.md) per Linux usando uno dei programmi di installazione o l'archivio GZ:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
@@ -117,7 +116,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
    ```
 
 
-## <a name="uninstall-sql-operations-studio-preview"></a>Disinstallare SQL Operations Studio (anteprima)
+## <a name="uninstall-sql-operations-studio-preview"></a>Disinstallare SQL Operations Studio (preview)
 
 Se [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato utilizzando il programma di installazione di Windows, disinstallare nel modo comune a tutte le applicazioni di Windows.
 

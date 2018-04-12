@@ -1,6 +1,6 @@
 ---
-title: Backup e ripristino di un database tramite SQL Operations Studio (anteprima) | Microsoft Docs
-description: Informazioni su come eseguire backup e ripristino di un database utilizzando SQL Operations Studio (anteprima)
+title: Backup e ripristino di un database tramite SQL Operations Studio (preview) | Microsoft Docs
+description: Informazioni su come eseguire backup e ripristino di un database utilizzando SQL Operations Studio (preview)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified

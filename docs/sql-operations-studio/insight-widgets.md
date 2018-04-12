@@ -1,6 +1,6 @@
 ---
-title: Usare i widget di informazioni per monitorare i server e database in Studio operazioni SQL (anteprima) | Documenti Microsoft
-description: Informazioni sui widget di informazioni dettagliate in Studio operazioni SQL (anteprima).
+title: Usare i widget di informazioni per monitorare i server e database in SQL Operations Studio (preview) | Documenti Microsoft
+description: Informazioni sui widget di informazioni dettagliate in SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article"
 author: stevestein
 ms.author: sstein
