@@ -1,16 +1,16 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE TRIGGER
@@ -31,21 +31,21 @@ helpviewer_keywords:
 - triggers [SQL Server], creating
 - database-scoped triggers [SQL Server]
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
-caps.latest.revision: 
+caps.latest.revision: 140
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21d9fd7428af28eec0d739da212887973592401c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 23cb33dffcc9753200d24116b4a6d279c8fe8db5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Crea un trigger DML, DDL o LOGON. Un trigger è un tipo speciale di stored procedure che viene eseguita automaticamente quando si verifica un evento nel server di database. I trigger DML vengono eseguiti quando un utente tenta di modificare dati tramite un evento DML (Data Manipulation Language). Gli eventi DML sono istruzioni INSERT, UPDATE o DELETE eseguite su una tabella o una vista. Questi trigger vengono attivati quando viene generato un evento valido, indipendentemente dal fatto che esistano o meno righe di tabella interessate. Per altre informazioni, vedere [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
+  Crea un trigger DML, DDL o LOGON. Un trigger è una stored procedure di tipo speciale che viene eseguita automaticamente quando si verifica un evento nel server di database. I trigger DML vengono eseguiti quando un utente tenta di modificare dati tramite un evento DML (Data Manipulation Language). Gli eventi DML sono istruzioni INSERT, UPDATE o DELETE eseguite su una tabella o una vista. Questi trigger vengono attivati quando viene generato un evento valido, indipendentemente dal fatto che esistano o meno righe di tabella interessate. Per altre informazioni, vedere [DML Triggers](../../relational-databases/triggers/dml-triggers.md).  
   
  I trigger DDL vengono eseguiti in risposta a vari eventi DDL (Data Definition Language), Questi eventi corrispondono principalmente alle istruzioni CREATE, ALTER e DROP [!INCLUDE[tsql](../../includes/tsql-md.md)] e ad alcune stored procedure di sistema che eseguono operazioni di tipo DDL. I trigger LOGON vengono attivati in risposta all'evento LOGON generato quando viene stabilita una sessione utente. Tali trigger possono essere creati direttamente dalle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] o dai metodi di assembly creati nel Common Language Runtime (CLR) di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] e caricati in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la creazione di più trigger per qualsiasi istruzione specifica.  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -81,7 +81,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME <method specifier [ ; ] > }
   
 ```  
   
-```  
+```sql  
 -- SQL Server Syntax  
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a 
 -- table (DML Trigger on memory-optimized tables)  
@@ -100,7 +100,7 @@ AS { sql_statement  [ ; ] [ ,...n ] }
   
 ```  
   
-```  
+```sql  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE or UPDATE statement (DDL Trigger)  
   
@@ -116,7 +116,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ```  
   
-```  
+```sql  
 -- Trigger on a LOGON event (Logon Trigger)  
   
 CREATE [ OR ALTER ] TRIGGER trigger_name   
@@ -133,7 +133,7 @@ AS { sql_statement  [ ; ] [ ,...n ] | EXTERNAL NAME < method specifier >  [ ; ] 
   
 ## <a name="syntax"></a>Sintassi  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax   
 -- Trigger on an INSERT, UPDATE, or DELETE statement to a table or view (DML Trigger)  
   
@@ -149,7 +149,7 @@ ON { table | view }
   
 ```  
   
-```  
+```sql  
 -- Windows Azure SQL Database Syntax  
 -- Trigger on a CREATE, ALTER, DROP, GRANT, DENY, 
 -- REVOKE, or UPDATE STATISTICS statement (DDL Trigger)   
@@ -255,7 +255,7 @@ OR ALTER
   
  I trigger DML utilizzano le tabelle logiche o concettuali Inserted e Deleted. Da un punto di vista strutturale queste tabelle sono simili alla tabella in cui viene definito il trigger, ovvero la tabella in cui si tenta di eseguire l'azione utente. Le tabelle Deleted e Inserted contengono i valori precedenti o i nuovi valori delle righe che potrebbero essere modificate dall'azione utente. Ad esempio, per recuperare tutti i valori nella tabella `deleted`, è possibile utilizzare il codice seguente:  
   
-```  
+```sql  
 SELECT * FROM deleted;  
 ```  
   
@@ -277,7 +277,7 @@ SELECT * FROM deleted;
 > [!NOTE]  
 >  Per impostazione predefinita, la capacità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di eseguire il codice CLR è disattivata. È possibile creare, modificare ed eliminare oggetti di database che fanno riferimento a moduli di codice gestito, ma tali riferimenti non verranno eseguiti in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a meno che non si abiliti l'[opzione clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) tramite [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
-## <a name="remarks-dml-triggers"></a>Trigger DML  
+## <a name="remarks-for-dml-triggers"></a>Considerazioni sui trigger DML  
  I trigger DML vengono utilizzati di frequente per applicare regole business e integrità dei dati. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'integrità referenziale dichiarativa tramite le istruzioni ALTER TABLE e CREATE TABLE. DRI, tuttavia, non supporta l'integrità referenziale tra database. L'integrità referenziale fa riferimento alle regole riguardanti le relazioni tra le chiavi primarie ed esterne delle tabelle. Per applicare l'integrità referenziale, utilizzare i vincoli PRIMARY KEY e FOREIGN KEY in ALTER TABLE e CREATE TABLE. Gli eventuali vincoli esistenti nella tabella di trigger vengono controllati dopo l'esecuzione del trigger INSTEAD OF e prima dell'esecuzione del trigger AFTER. In caso di violazione dei vincoli, viene eseguito il rollback delle azioni del trigger INSTEAD OF e il trigger AFTER non viene attivato.  
   
  È possibile specificare il primo e l'ultimo trigger AFTER che si desidera eseguire in una tabella utilizzando sp_settriggerorder. In una tabella è possibile specificare un solo trigger AFTER da eseguire per primo e un solo trigger AFTER da eseguire per ultimo per ogni operazione INSERT, UPDATE e DELETE. Se nella stessa tabella sono inclusi altri trigger AFTER, vengono eseguiti in modo casuale.  
@@ -293,7 +293,7 @@ SELECT * FROM deleted;
  Se, ad esempio, per una vista viene definito un trigger INSTEAD OF UPDATE che esegue un'istruzione UPDATE che fa riferimento alla stessa vista, l'istruzione UPDATE eseguita dal trigger INSTEAD OF non comporta una nuova chiamata del trigger. L'istruzione UPDATE eseguita dal trigger viene elaborata rispetto alla vista come se la vista non includesse un trigger INSTEAD OF. Le colonne modificate da UPDATE devono essere risolte in una singola tabella di base. Ogni modifica di una tabella di base sottostante avvia il processo di applicazione dei vincoli e di attivazione dei trigger AFTER definiti per la tabella.  
   
 ### <a name="testing-for-update-or-insert-actions-to-specific-columns"></a>Test di azioni UPDATE o INSERT eseguite su colonne specifiche  
- È possibile progettare un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo che esegua determinate azioni in base a modifiche di tipo UPDATE o INSERT in colonne specifiche. A tale scopo, usare [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) o [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) nel corpo del trigger. UPDATE() consente di verificare i tentativi di esecuzione di UPDATE o INSERT su una colonna. COLUMNS_UPDATED consente di verificare operazioni UPDATE o INSERT eseguite su più colonne e restituisce uno schema di bit che indica le colonne inserite o aggiornate.  
+ È possibile progettare un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo che esegua determinate azioni in base a modifiche di tipo UPDATE o INSERT in colonne specifiche. A tale scopo, usare [UPDATE()](../../t-sql/functions/update-trigger-functions-transact-sql.md) o [COLUMNS_UPDATED](../../t-sql/functions/columns-updated-transact-sql.md) nel corpo del trigger. UPDATE() consente di testare i tentativi di esecuzione di UPDATE o INSERT per una colonna. COLUMNS_UPDATED consente di verificare operazioni UPDATE o INSERT eseguite su più colonne e restituisce uno schema di bit che indica le colonne inserite o aggiornate.  
   
 ### <a name="trigger-limitations"></a>Limitazioni dei trigger  
  CREATE TRIGGER deve essere la prima istruzione del batch e può essere applicata a una sola tabella.  
@@ -330,9 +330,22 @@ SELECT * FROM deleted;
 |ALTER TABLE quando viene utilizzata per eseguire le operazioni seguenti:<br /><br /> Aggiungere, modificare o eliminare colonne.<br /><br /> Passare da una partizione all'altra.<br /><br /> Aggiungere o eliminare vincoli PRIMARY KEY o UNIQUE.|||  
   
 > [!NOTE]  
->  Poiché in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportata l'esecuzione di trigger definiti dall'utente su tabelle di sistema, è consigliabile evitare di creare trigger definiti dall'utente per tabelle di sistema.  
+>  Poiché in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non è supportata l'esecuzione di trigger definiti dall'utente su tabelle di sistema, è consigliabile evitare di creare trigger definiti dall'utente per tabelle di sistema. 
+
+### <a name="optimizing-dml-triggers"></a>Ottimizzazione di trigger DML
+ I trigger funzionano all'interno di transazioni (implicite o meno) e mentre sono aperti bloccano risorse. Il blocco rimane finché la transazione non viene confermata (con COMMIT) o rifiutata (con ROLLBACK). Più a lungo viene eseguito un trigger, maggiore è la probabilità che un altro processo venga bloccato. I trigger, pertanto, devono essere scritti in modo da ridurne la durata laddove possibile. Un modo per ottenere questo risultato consiste nel rilasciare un trigger quando un'istruzione DML modifica 0 righe. 
+
+Per rilasciare il trigger per un comando che non modifica alcuna riga, usare la variabile di sistema [ROWCOUNT_BIG](https://docs.microsoft.com/it-it/sql/t-sql/functions/rowcount-big-transact-sql). 
+
+Il frammento di codice T-SQL seguente esegue tale operazione e deve essere presente all'inizio di ogni trigger DML:
+
+```sql
+IF (@@ROWCOUNT_BIG = 0)
+RETURN;
+```
   
-## <a name="remarks-ddl-triggers"></a>Trigger DDL  
+  
+## <a name="remarks-for-ddl-triggers"></a>Considerazioni sui i trigger DDL  
  I trigger DDL, analogamente ai trigger standard, eseguono stored procedure in risposta a un evento. A differenza dei trigger standard, tuttavia, non vengono eseguiti in risposta a istruzioni UPDATE, INSERT o DELETE su una tabella o una vista. I trigger DDL in genere vengono eseguiti in risposta a istruzioni DDL (Data Definition Language), incluse istruzioni CREATE, ALTER, DROP, GRANT, DENY, REVOKE e UPDATE STATISTICS. Alcune stored procedure di sistema che eseguono operazioni di tipo DDL possono inoltre attivare trigger DDL.  
   
 > [!IMPORTANT]  
@@ -392,7 +405,7 @@ SELECT * FROM deleted;
 ### <a name="nested-triggers"></a>Trigger nidificati  
  I trigger possono essere nidificati fino a un massimo di 32 livelli. Se un trigger modifica una tabella che include un altro trigger, viene attivato il secondo trigger, che può chiamare a sua volta un terzo trigger e così via. Se un trigger della catena attiva un ciclo infinito, viene superato il livello massimo di nidificazione e il trigger viene annullato. Quando un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] esegue codice gestito facendo riferimento a una routine, un tipo o una funzione di aggregazione CLR, questo riferimento viene conteggiato come un livello per il calcolo del limite di nidificazione massimo pari a 32 livelli. I metodi richiamati da codice gestito non vengono inclusi nel conteggio per questo limite  
   
- Per disabilitare i trigger nidificati, impostare l'opzione nested triggers di sp_configure su 0 (off). Per impostazione predefinita, i trigger nidificati sono consentiti. Quando si imposta su off l'opzione relativa ai trigger nidificati, vengono disabilitati anche i trigger ricorsivi, indipendentemente dall'impostazione RECURSIVE_TRIGGERS attivata tramite ALTER DATABASE.  
+ Per disabilitare i trigger nidificati, impostare l'opzione nested triggers di sp_configure su 0 (off). Per impostazione predefinita, i trigger nidificati sono consentiti. Quando i trigger nidificati sono disattivati, vengono disabilitati anche i trigger ricorsivi, indipendentemente dall'impostazione RECURSIVE_TRIGGERS attivata tramite ALTER DATABASE.  
   
  Il primo trigger AFTER nidificato in un trigger INSTEAD OF viene attivato anche se l'opzione di configurazione del server **nested triggers** è impostata su 0. Tuttavia, con questa impostazione, i successivi trigger AFTER non vengono attivati. È consigliabile verificare se nelle applicazioni sono presenti trigger nidificati per determinare se tali applicazioni sono conformi alle regole business in uso, in relazione a questo comportamento quando l'opzione di configurazione del server **nested triggers** è impostata su 0, quindi apportare le modifiche eventualmente necessarie.  
   
@@ -409,7 +422,7 @@ SELECT * FROM deleted;
 ### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>A. Utilizzo di un trigger DML con un messaggio di promemoria  
  Il trigger DML seguente visualizza un messaggio nel client quando un utente tenta di aggiungere o di modificare i dati nella tabella `Customer` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER reminder1  
 ON Sales.Customer  
 AFTER INSERT, UPDATE   
@@ -420,7 +433,7 @@ GO
 ### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Utilizzo di un trigger DML con un messaggio di promemoria inviato tramite posta elettronica  
  Nell'esempio seguente viene inviato un messaggio di posta elettronica a un utente specificato (`MaryM`) quando viene apportata una modifica alla tabella `Customer`.  
   
-```  
+```sql  
 CREATE TRIGGER reminder2  
 ON Sales.Customer  
 AFTER INSERT, UPDATE, DELETE   
@@ -438,13 +451,15 @@ GO
   
  Nell'esempio seguente viene creato un trigger DML nel database AdventureWorks2012. Questo trigger verifica che la posizione creditizia del fornitore sia buona (non 5) quando viene eseguito un tentativo di inserimento di un nuovo ordine di acquisto nella tabella `PurchaseOrderHeader`. Per ottenere la posizione creditizia del fornitore, è necessario fare riferimento alla tabella `Vendor`. Se la posizione creditizia è troppo bassa, viene visualizzato un messaggio e l'operazione di inserimento non viene eseguita.  
   
-```  
+```sql  
 -- This trigger prevents a row from being inserted in the Purchasing.PurchaseOrderHeader 
 -- table when the credit rating of the specified vendor is set to 5 (below average).  
   
 CREATE TRIGGER Purchasing.LowCredit ON Purchasing.PurchaseOrderHeader  
 AFTER INSERT  
 AS  
+IF (@@ROWCOUNT_BIG  = 0)
+RETURN;
 IF EXISTS (SELECT *  
            FROM Purchasing.PurchaseOrderHeader AS p   
            JOIN inserted AS i   
@@ -485,11 +500,13 @@ GO
 ### <a name="d-using-a-database-scoped-ddl-trigger"></a>D. Utilizzo di un trigger DDL con ambito database  
  Nell'esempio seguente viene utilizzato un trigger DDL per impedire l'eliminazione di qualsiasi sinonimo in un database.  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_SYNONYM  
 AS   
+IF (@@ROWCOUNT = 0)
+RETURN;
    RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
    ROLLBACK  
 GO  
@@ -503,7 +520,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 CREATE TRIGGER ddl_trig_database   
 ON ALL SERVER   
 FOR CREATE_DATABASE   
@@ -521,7 +538,7 @@ GO
   
 **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```  
+```sql  
 USE master;  
 GO  
 CREATE LOGIN login_test WITH PASSWORD = '3KHJ6dhx(0xVYsdf' MUST_CHANGE,  
@@ -546,14 +563,16 @@ END;
 ### <a name="g-viewing-the-events-that-cause-a-trigger-to-fire"></a>G. Visualizzazione degli eventi che attivano un trigger  
  Nell'esempio seguente viene eseguita una query sulle viste del catalogo `sys.triggers` e `sys.trigger_events` per determinare gli eventi del linguaggio [!INCLUDE[tsql](../../includes/tsql-md.md)] che attivano il trigger `safety`. `safety` è stato creato nell'esempio precedente.  
   
-```  
+```sql  
 SELECT TE.*  
 FROM sys.trigger_events AS TE  
 JOIN sys.triggers AS T ON T.object_id = TE.object_id  
 WHERE T.parent_class = 0 AND T.name = 'safety';  
 GO  
 ```  
-  
+
+    
+
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   

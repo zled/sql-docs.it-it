@@ -1,16 +1,16 @@
 ---
 title: Usare sqlcmd con variabili di scripting | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -21,19 +21,20 @@ helpviewer_keywords:
 - sqlcmd utility, scripts
 - setvar command
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
-caps.latest.revision: 
+caps.latest.revision: 47
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usare con variabili di scripting
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Per variabile di scripting si intende una variabile usata negli script. Le variabili di scripting consentono di utilizzare uno script in più scenari. Se, ad esempio, si desidera eseguire uno script su più server, è possibile utilizzare una variabile di scripting per il nome del server anziché modificare lo script per ogni server. È infatti sufficiente modificare il nome del server fornito alla variabile di scripting per eseguire lo stesso script su server diversi.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Per variabile di scripting si intende una variabile utilizzata negli script. Le variabili di scripting consentono di utilizzare uno script in più scenari. Se, ad esempio, si desidera eseguire uno script su più server, è possibile utilizzare una variabile di scripting per il nome del server anziché modificare lo script per ogni server. È infatti sufficiente modificare il nome del server fornito alla variabile di scripting per eseguire lo stesso script su server diversi.  
   
  Le variabili di scripting possono essere definite in modo esplicito con il comando **setvar** oppure in modo implicito con l'opzione **sqlcmd-v** .  
   
@@ -115,24 +116,24 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
  Le variabili definite con **sqlcmd** sono note come variabili di scripting. Nella tabella seguente sono elencate le variabili di scripting di **sqlcmd** .  
   
-|        Variabile         | Opzione correlata | L/S |         Default         |
+|        Variabile         | Opzione correlata | L/S |         Valore predefinito         |
 | ----------------------- | -------------- | --- | ----------------------- |
-| SQLCMDUSER*             | -U             | R   | ""                      |
+| SQLCMDUSER*             | -U             | L   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
-| SQLCMDSERVER*           | -S             | R   | "DefaultLocalInstance"  |
-| SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
-| SQLCMDDBNAME            | -d             | R   | ""                      |
+| SQLCMDSERVER*           | -S             | L   | "DefaultLocalInstance"  |
+| SQLCMDWORKSTATION       | -H             | L   | "ComputerName"          |
+| SQLCMDDBNAME            | -d             | L   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | L/S | "8" (secondi)           |
 | SQLCMDSTATTIMEOUT       | -t             | L/S | "0" = attesa illimitata |
 | SQLCMDHEADERS           | -H             | L/S | "0"                     |
 | SQLCMDCOLSEP            | -S             | L/S | " ".                     |
 | SQLCMDCOLWIDTH          | -w             | L/S | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
+| SQLCMDPACKETSIZE        | -A             | L   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | L/S | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | L/S | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | L/S | "0" = numero illimitato         |
 | SQLCMDEDITOR            |                | L/S | "edit.com"              |
-| SQLCMDINI               |                | R   | ""                      |
+| SQLCMDINI               |                | L   | ""                      |
 
 Le variabili SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER vengono impostate quando viene usato **:Connect** .  
 

@@ -1,16 +1,16 @@
 ---
 title: Origine Excel | Microsoft Docs
-ms.custom: 
-ms.date: 03/14/2017
+ms.custom: ''
+ms.date: 04/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.excelsource.f1
@@ -21,20 +21,24 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 6a9795de30c7d4fbe2ede9a17043a916e5953cd5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="excel-source"></a>Origine Excel
   L'origine Excel consente di estrarre dati da fogli di lavoro o intervalli di una cartella di lavoro di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
-  
+
+> [!IMPORTANT]
+> Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
+## <a name="access-mode"></a>Modalità di accesso
  Sono disponibili quattro diverse modalità di accesso ai dati per l'estrazione dei dati:  
   
 -   Vista o tabella.  
@@ -44,9 +48,6 @@ ms.lasthandoff: 01/25/2018
 -   Risultato di un'istruzione SQL. La query può essere con parametri.  
   
 -   Risultato di un'istruzione SQL archiviata in una variabile.  
-  
-> [!IMPORTANT]  
->  In Excel un intervallo o un foglio di lavoro equivale a una vista o tabella. Nell'elenco delle tabelle disponibili degli editor di origine e di destinazione Excel vengono visualizzati i fogli di lavoro (riconoscibili dalla presenza del simbolo $ in fondo al nome del foglio di lavoro, ad esempio Sheet1$) e gli intervalli denominati (riconoscibili dall'assenza del simbolo $, ad esempio MyRange) esistenti. Per ulteriori informazioni, vedere la sezione Considerazioni sull'utilizzo.  
   
  Per connettersi a un'origine dei dati l'origine Excel utilizza una gestione connessione Excel che specifica il file di cartella di lavoro da utilizzare. Per altre informazioni, vedere [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md).  
   
@@ -205,13 +206,6 @@ ms.lasthandoff: 01/25/2018
  Consente di applicare l'opzione di gestione degli errori alle celle selezionate.  
   
 ## <a name="related-content"></a>Contenuto correlato  
-  
--   Intervento nel blog sull' [importazione dei dati da Excel a 64 bit in SSIS](http://go.microsoft.com/fwlink/?LinkId=217673)sul sito Web hrvoje.piasevoli.com  
-  
--   Intervento nel blog su [Excel in Integration Services, parte 1 di 3 relativa a connessioni e componenti](http://go.microsoft.com/fwlink/?LinkId=217674), su dougbert.com  
-  
--   Intervento nel blog su [Excel in Integration Services, parte 2 di 3 relativa a tabelle e tipi di dati](http://go.microsoft.com/fwlink/?LinkId=217675), su dougbert.com.  
-  
--   Intervento nel blog concernente [Excel in Integration Services, parte 3 di 3 relativa a problemi e alternative](http://go.microsoft.com/fwlink/?LinkId=217676)sul sito dougbert.com.  
-  
-  
+[Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md)
+[Destinazione Excel](excel-destination.md)  
+[Gestione connessione Excel](../connection-manager/excel-connection-manager.md)

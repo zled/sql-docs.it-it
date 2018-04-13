@@ -1,5 +1,5 @@
 ---
-title: Abilitare o disabilitare la raccolta di dati di utilizzo e di arresto anomalo del reporting per Studio operazioni SQL (anteprima) | Documenti Microsoft
+title: Abilitare o disabilitare la raccolta di dati di utilizzo e di arresto anomalo del reporting per SQL Operations Studio (preview) | Documenti Microsoft
 description: In questo articolo viene illustrato come controllare se vengono raccolti e inviate a Microsoft informazioni sull'utilizzo e dati di segnalazione arresto anomalo del sistema.
 ms.custom: tools|sos
 ms.date: 11/15/2017
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: stevestein
 ms.author: sstein

@@ -1,5 +1,5 @@
 ﻿---
-title: 'Esercitazione: Aggiungere il widget di esempio delle cinque query più lente - SQL Operations Studio (anteprima) | Microsoft Docs'
+title: 'Esercitazione: Aggiungere il widget di esempio delle cinque query più lente - SQL Operations Studio (preview) | Microsoft Docs'
 description: Con questa esercitazione viene illustrato come abilitare il widget di esempio delle cinque query più lente nella dashboard del database.
 ms.custom: tools|sos
 ms.date: 03/15/2018

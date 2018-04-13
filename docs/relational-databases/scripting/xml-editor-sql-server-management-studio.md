@@ -1,16 +1,16 @@
 ---
 title: Editor XML (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.editor.xml.f1
@@ -20,19 +20,20 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: f434c04ccf8d15d5bddd9c91ffe06bb9c6f69b40
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Offre una serie di strumenti visivi da usare con gli XML Schema, i set di dati ADO.NET e i documenti XML. Progettazione XML supporta il linguaggio XML Schema Definition (XSD) definito dal World Wide Web Consortium (WC3). Lo strumento di progettazione non supporta le definizioni DTD (Document Type Definitions) o altri linguaggi XML Schema, ad esempio XDR (XML-Data Reduced).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  Offre una serie di strumenti visivi per utilizzare gli XML Schema, i set di dati ADO.NET e i documenti XML. Progettazione XML supporta il linguaggio XML Schema Definition (XSD) definito dal World Wide Web Consortium (WC3). Lo strumento di progettazione non supporta le definizioni DTD (Document Type Definitions) o altri linguaggi XML Schema, ad esempio XDR (XML-Data Reduced).  
   
  Per visualizzare Progettazione XML, aggiungere un set di dati, un XML Schema o un file XML a un progetto o aprire uno dei tipi di file descritti nella tabella seguente.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 01/24/2018
   
  Per consentire di lavorare sui file XML, sugli XML Schema e sui set di dati, Progettazione XML dispone delle tre visualizzazioni (o modalità) seguenti:  
   
-|Vista|Description|Tipi di file supportati|  
+|Visualizza|Descrizione|Tipi di file supportati|  
 |----------|-----------------|--------------------------|  
 |**Schema**|Per la creazione e la modifica in modo visivo degli XML Schema e dei set di dati ADO.NET.|xsd|  
 |**Dati**|Per la modifica in modo visivo dei file di dati XML in una griglia dati strutturata.|xml|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 01/24/2018
   
 -   Fare clic sull'icona con il segno meno sull'elemento di livello più basso che si desidera visualizzare in Progettazione XML.  
   
-## <a name="data-view"></a>Vista dati  
+## <a name="data-view"></a>Visualizzazione dati  
  La visualizzazione dati dispone di una griglia dati che può essere utilizzata per modificare i file xml. Nella visualizzazione dati è possibile modificare solo il contenuto di un file XML, ma non i tag e la struttura.  
   
  La visualizzazione dati contiene due aree separate: **Tabelle dati** e **Dati**. L'area **Tabelle dati** è un elenco di relazioni definite nel file XML nello stesso ordine di annidamento (dalla più esterna alla più interna). L'area **Dati** è una griglia dati che visualizza i dati sulla base della selezione eseguita nell'area Tabelle dati.  
@@ -111,6 +112,6 @@ ms.lasthandoff: 01/24/2018
  I piani di query possono essere salvati in formato XML quando vengono creati con l'opzione SET SHOWPLAN_XML ON. Per aprire il piano di query, fare doppio clic su un file con estensione showplan.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Salvare un piano di esecuzione in formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
+ [Salvataggio di un piano di esecuzione in formato XML](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: Configurare Posta elettronica database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mail
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.sqlimail.profileandaccountmanagement.f1
@@ -42,22 +42,22 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
+  In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
   
--   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
 -   **Per configurare Posta elettronica database, usando:**  [Configurazione guidata Posta elettronica database](#DBWizard), [Utilizzo di modelli](#Template)  
   
@@ -148,7 +148,7 @@ In questo argomento viene illustrato come abilitare e configurare Posta elettron
  **Nome account**  
  Digitare il nome del nuovo account.  
   
- **Descrizione**  
+ **Description**  
  Digitare una descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo posta elettronica**  
@@ -198,7 +198,7 @@ In questo argomento viene illustrato come abilitare e configurare Posta elettron
  **Elimina**  
  Consente di eliminare l'account selezionato. È necessario rimuovere l'account dai profili associati, o eliminare tali profili, prima di poter eliminare l'account selezionato.  
   
- **Descrizione**  
+ **Description**  
  Consente di visualizzare o aggiornare la descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo posta elettronica**  
@@ -225,7 +225,7 @@ In questo argomento viene illustrato come abilitare e configurare Posta elettron
  **Autenticazione di base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
- **User name**  
+ **Nome utente**  
  Consente di visualizzare o aggiornare il nome utente utilizzato da Posta elettronica database per accedere al server SMTP. Il nome utente è necessario se il server SMTP richiede l'autenticazione di base.  
   
  **Password**  
@@ -247,7 +247,7 @@ In questo argomento viene illustrato come abilitare e configurare Posta elettron
  **Nome profilo**  
  Consente di digitare il nome del nuovo profilo. Il profilo verrà creato con il nome specificato. Non utilizzare il nome di un profilo esistente.  
   
- **Descrizione**  
+ **Description**  
  Consente di digitare una descrizione per il profilo. La descrizione è facoltativa.  
   
  **Account SMTP**  
@@ -278,7 +278,7 @@ In questo argomento viene illustrato come abilitare e configurare Posta elettron
  **Elimina**  
  Consente di eliminare il profilo selezionato. Verrà richiesto di scegliere **Sì** per eliminare il profilo selezionato e impostare un errore per gli eventuali messaggi non inviati oppure di scegliere **No** per eliminare il profilo selezionato solo se non sono presenti messaggi non inviati.  
   
- **Descrizione**  
+ **Description**  
  Consente di visualizzare o modificare la descrizione del profilo selezionato. La descrizione è facoltativa.  
   
  **Account SMTP**  
@@ -369,7 +369,7 @@ In questo argomento viene illustrato come abilitare e configurare Posta elettron
   
  Un profilo può essere predefinito. In questo caso, gli utenti o i ruoli possono inviare messaggi di posta elettronica utilizzando il profilo senza specificarlo esplicitamente. Se l'utente o il ruolo che invia il messaggio di posta elettronica dispone di un profilo privato predefinito, Posta elettronica database utilizzerà tale profilo. Se all'utente o ruolo non è associato alcun profilo privato predefinito, **sp_send_dbmail** usa il profilo pubblico predefinito per il database **msdb** . Se non è disponibile un profilo privato predefinito per l'utente o il ruolo oppure un profilo pubblico predefinito per il database, **sp_send_dbmail** restituisce un errore.  
   
- **User name**  
+ **Nome utente**  
  Consente di selezionare il nome di un utente o di un ruolo nel database **msdb** .  
   
  **Accesso**  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, upgrading
 - upgrading Integration Services
 ms.assetid: 04f9863c-ba0b-47c5-af91-f2d41b078a23
-caps.latest.revision: ''
+caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e7617074c17989315b75272611688f1bd77d97d2
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 56b70314f149d8eb2f8a9a0143ac43aae3d31afc
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="upgrade-integration-services"></a>Aggiornare Integration Services
   Se nel computer è installato [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] o una versione successiva, è possibile eseguire l'aggiornamento a [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/20/2018
  Prima di procedere all'aggiornamento a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], è consigliabile eseguire Preparazione aggiornamento. Preparazione aggiornamento segnala i problemi che potrebbero verificarsi se si esegue la migrazione dei pacchetti esistenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al nuovo formato dei pacchetti utilizzato da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 > [!NOTE]  
->  Il supporto per la migrazione o l'esecuzione di pacchetti DTS (Data Transformation Services) non è più disponibile nella versione corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Le seguenti funzionalità DTS non sono più utilizzate.  
+>  Il supporto per la migrazione o l'esecuzione di pacchetti di Data Transformation Services (DTS) non è più disponibile in SQL Server 2012. Le seguenti funzionalità DTS non sono più utilizzate.  
 >   
 >  -   DTS Runtime  
 > -   API DTS  
@@ -96,7 +96,7 @@ ms.lasthandoff: 03/20/2018
   
     -   Spostamento dei dati del log dalla tabella di sistema msdb.sysdtslog90 alla tabella di sistema msdb.sysssislog.  
   
--   Rimozione delle tabelle di sistema msdb.sysdts\*90 e delle stored procedure usate per accedervi in seguito allo spostamento dei dati nelle nuove tabelle msdb.sysssis\* . Tuttavia, durante l'aggiornamento la tabella sysdtslog90 viene sostituita con una vista denominata anche sysdtslog90. Questa nuova vista sysdtslog90 espone la nuova tabella di sistema msdb.sysssislog. In questo modo, l'esecuzione dei report basati sulla tabella di log continuerà senza interruzione.  
+-   Rimozione delle tabelle di sistema msdb.sysdts*90 e delle stored procedure usate per accedervi in seguito allo spostamento dei dati nelle nuove tabelle msdb.sysssis\* . Tuttavia, durante l'aggiornamento la tabella sysdtslog90 viene sostituita con una vista denominata anche sysdtslog90. Questa nuova vista sysdtslog90 espone la nuova tabella di sistema msdb.sysssislog. In questo modo, l'esecuzione dei report basati sulla tabella di log continuerà senza interruzione.  
   
 -   Creazione di tre nuovi ruoli predefiniti a livello di database, db_ssisadmin, db_ssisltduser e db_ssisoperator, per il controllo dell'accesso ai pacchetti. I ruoli db_dtsadmin, db_dtsltduser e db_dtsoperator di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] non vengono rimossi ma vengono inseriti come membri dei nuovi ruoli corrispondenti.  
   

@@ -1,16 +1,16 @@
 ---
 title: 'Issasynchstatus:: Abort (OLE DB) | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-interfaces
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - ISSAsynchStatus::Abort (OLE DB)
@@ -18,7 +18,7 @@ apitype: COM
 helpviewer_keywords:
 - Abort method
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
@@ -70,11 +70,11 @@ HRESULT Abort(
  Il *hChapter* parametro non è DB_NULL_HCHAPTER o *eOperation* non è DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **Issasynchstatus:: Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize:: Initialize** non è stato chiamato o non è stata completata.  
+ **Issasynchstatus:: Abort** è stato chiamato su un oggetto di origine dati su cui **IDBInitialize:: Initialize** non è stato chiamato o non è stata completata.  
   
- **Issasynchstatus:: Abort** è stato chiamato su un oggetto origine dati su cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduta. L'oggetto origine dati è ancora non inizializzato.  
+ **Issasynchstatus:: Abort** è stato chiamato su un oggetto di origine dati su cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduta. L'oggetto origine dati è ancora non inizializzato.  
   
- **Issasynchstatus:: Abort** è stato chiamato su un set di righe in cui **ITransaction:: commit** o **ITransaction:: Abort** è stato chiamato in precedenza, e non superano il commit o interrompere il set di righe e è in uno stato non valido.  
+ **Issasynchstatus:: Abort** è stato chiamato su un set di righe in cui **ITransaction:: commit** o **ITransaction:: Abort** è stato chiamato in precedenza, e il set di righe non sono stati restare attiva quando il commit o interrompere e in uno stato non valido.  
   
  **Issasynchstatus:: Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   

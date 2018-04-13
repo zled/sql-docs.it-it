@@ -1,37 +1,34 @@
 ---
 title: Eventi estesi | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/23/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
-ms.component: extended-events
-ms.reviewer: 
+ms.service: ''
+ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
-- xevents
-ms.tgt_pltfrm: 
+ms.technology: xevents
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-caps.latest.revision: 
+caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 12c46e8d5a1496d21f2f4b0ab40956020a8ac612
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7d0c0b825a65c72ba8d106b2e0d145760f266aa9
+ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="extended-events"></a>Eventi estesi
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono dotati di un'architettura estremamente scalabile e configurabile che consente agli utenti di raccogliere le informazioni necessarie per diagnosticare o identificare un problema legato alle prestazioni.  
+Gli eventi estesi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono dotati di un'architettura estremamente scalabile e configurabile che consente agli utenti di raccogliere le informazioni necessarie per diagnosticare o identificare un problema legato alle prestazioni.  
 
 Per altre informazioni sulle destinazioni degli eventi estesi, vedere:
 
@@ -43,7 +40,7 @@ Per altre informazioni sulle destinazioni degli eventi estesi, vedere:
  Si tratta di un sistema di monitoraggio delle prestazioni leggero in cui vengono utilizzate poche risorse per le prestazioni. Per gli eventi estesi sono disponibili due interfacce utente grafiche (**Creazione guidata nuova sessione** e **Nuova sessione**) per creare, modificare, visualizzare e analizzare i dati della sessione.  
   
 ## <a name="extended-events-concepts"></a>Concetti degli eventi estesi  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli eventi estesi basati su concetti esistenti, ad esempio un evento o un consumer di eventi, utilizzano concetti di Analisi eventi per Windows (ETW) e ne introducono di nuovi.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gli eventi estesi sono basati su concetti esistenti, ad esempio un evento o un consumer di eventi, usano concetti di Event Tracing for Windows (ETW) e ne introducono di nuovi.  
   
  Nella seguente tabella vengono descritti i concetti negli eventi estesi.  
   

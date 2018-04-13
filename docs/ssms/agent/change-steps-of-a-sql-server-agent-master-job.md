@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 8e6604550fd8d34e6a1beeff7734eb67344d1e5c
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ In questo argomento verrà descritto come apportare modifiche ai passaggi di un 
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per apportare modifiche ai passaggi di un processo master di SQL Server Agent tramite:**  
   
@@ -70,7 +70,7 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
 5.  Nella finestra di dialogo **Proprietà processo –***nome_processo* selezionare **Passaggi** in **Seleziona una pagina**.  
   
-6.  Fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà passaggio processo –***nome_passaggio_processo*. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina generale &#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) e [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina avanzate&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Fare clic su **Modifica** per aprire la finestra di dialogo **Proprietà passaggio processo –***nome_passaggio_processo*. Per altre informazioni sulle opzioni disponibili nella finestra di dialogo, vedere [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina generale & #41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) e [Proprietà passaggio processo - nuovo passaggio di processo &#40;pagina avanzate& #41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Al termine, fare clic su **OK**.  
   
@@ -84,7 +84,7 @@ Un processo master di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- changes the number of retry attempts for the first step

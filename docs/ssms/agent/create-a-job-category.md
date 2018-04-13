@@ -17,16 +17,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], categories
 - categories [SQL Server Agent jobs]
 ms.assetid: e24a6d38-d231-4f64-ab89-2d1ef6f5792c
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 2f46b6e05f402d43688ae6c11b821e7cea58b0a9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-job-category"></a>Creare una categoria di processi
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ In questo argomento si descrive come creare una categoria di processi in [!INCLU
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per creare una categoria di processi mediante:**  
   
@@ -78,7 +78,7 @@ Per informazioni dettagliate, vedere [Implement SQL Server Agent Security](../..
   
 6.  Selezionare la casella di controllo **Mostra tutti i processi** . Selezionare uno o più processi per la nuova categoria selezionando le caselle corrispondenti ai processi.  
   
-7.  Fare clic su **OK**.  
+7.  Scegliere **OK**.  
   
 8.  Nella finestra di dialogo **Gestione categorie di processi***nome_server* fare clic su **Aggiorna** per assicurarsi che la nuova categoria di processi sia attiva. Se l'aspetto è quello previsto, chiudere questa finestra di dialogo.  
   
@@ -92,7 +92,7 @@ Per altre informazioni su queste finestre di dialogo, vedere [Categorie processi
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- creates a local job category named AdminJobs   

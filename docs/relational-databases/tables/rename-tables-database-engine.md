@@ -1,16 +1,16 @@
 ---
 title: Rinominare tabelle (motore di database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/23/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-tables
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - table renaming [SQL Server]
@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 61aa8b3a739b03201e92cd81007bc1c43c6ab435
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="rename-tables-database-engine"></a>Ridenominazione di tabelle (motore di database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicurezza](#Security)  
   
 -   **Per rinominare una tabella:**  
   
@@ -58,7 +58,7 @@ Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorizzazioni  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -75,7 +75,7 @@ Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse
   
 5.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Per rinominare una tabella  
   
@@ -83,7 +83,7 @@ Per rinominare una tabella in Azure SQL Data Warehouse o Parallel Data Warehouse
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Nell'esempio seguente la tabella `SalesTerritory` viene rinominata in `SalesTerr` nello schema `Sales` . Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Nell'esempio seguente la tabella `SalesTerritory` viene rinominata in `SalesTerr` nello schema `Sales` . Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;   

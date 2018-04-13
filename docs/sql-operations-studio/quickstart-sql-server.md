@@ -1,6 +1,6 @@
 ﻿---
-title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server tramite SQL Operations Studio (anteprima) | Microsoft Docs'
-description: Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a SQL Server ed eseguire una query
+title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server tramite SQL Operations Studio (preview) | Microsoft Docs'
+description: Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a SQL Server ed eseguire una query
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified

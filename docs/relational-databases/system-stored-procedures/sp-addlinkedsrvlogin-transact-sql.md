@@ -1,16 +1,16 @@
 ---
-title: la procedura sp_addlinkedsrvlogin (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: sp_addlinkedsrvlogin (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlinkedsrvlogin_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlinkedsrvlogin
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: a4a55d2128cdba654ce9e753ac1cdcebd8f0ad8d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +50,22 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @rmtsrvname  **=**  ] **'***rmtsrvname***'**  
- Nome di un server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* è **sysname**, non prevede alcun valore predefinito.  
+ [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
+ Nome di un server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ @useself  **=**  ] **'**TRUE**'** | 'FALSE' | 'NULL'  
+ [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
  Determina se la connessione a *rmtsrvname* dalla rappresentazione di un account di accesso locali o inviando esplicitamente un account di accesso e una password. Il tipo di dati è **varchar (**8**)**, con un valore predefinito è TRUE.  
   
  Il valore TRUE specifica che gli account di accesso utilizzare le proprie credenziali per connettersi a *rmtsrvname*, con la *rmtuser* e *rmtpassword* argomenti verrà ignorati. FALSE specifica che il *rmtuser* e *rmtpassword* argomenti vengono utilizzati per connettersi a *rmtsrvname* per l'oggetto specificato *locallogin* . Se *rmtuser* e *rmtpassword* sono anche impostato su NULL, nessun account di accesso o la password viene utilizzata per connettersi al server collegato.  
   
- [ @locallogin  **=**  ] **'***locallogin***'**  
- Account di accesso per il server locale. *locallogin* è **sysname**, con un valore predefinito è NULL. NULL indica che questa voce viene applicata a tutti gli account di accesso locale che si connettono a *rmtsrvname*. Se non è NULL, *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un account di accesso di Windows. È necessario che l'account di accesso di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in seguito all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
+ [ @locallogin **=** ] **'***locallogin***'**  
+ Account di accesso per il server locale. *locallogin* viene **sysname**, con un valore predefinito è NULL. NULL indica che questa voce viene applicata a tutti gli account di accesso locale che si connettono a *rmtsrvname*. Se non è NULL, *locallogin* può essere un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso o un account di accesso di Windows. È necessario che l'account di accesso di Windows disponga dell'accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ottenuto tramite concessione diretta o in seguito all'appartenenza a un gruppo di Windows che dispone dell'accesso.  
   
- [ @rmtuser  **=**  ] **'***rmtuser***'**  
- Account di accesso remoto utilizzato per connettersi a *rmtsrvname* quando @useself è FALSE. Quando il server remoto è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non utilizza l'autenticazione di Windows, *rmtuser* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso. *rmtuser* è **sysname**, con un valore predefinito è NULL.  
+ [ @rmtuser **=** ] **'***rmtuser***'**  
+ Account di accesso remoto utilizzato per connettersi a *rmtsrvname* quando @useself è FALSE. Quando il server remoto è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che non utilizza l'autenticazione di Windows, *rmtuser* è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso. *rmtuser* viene **sysname**, con un valore predefinito è NULL.  
   
- [ @rmtpassword  **=**  ] **'***rmtpassword***'**  
- La password associata a *rmtuser*. *rmtpassword* è **sysname**, con un valore predefinito è NULL.  
+ [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ La password associata a *rmtuser*. *rmtpassword* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -74,7 +74,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Quando un utente accede al server locale ed esegue una query distribuita che accede a una tabella del server collegato, il server locale deve accedere al server collegato per parte dell'utente che desidera accedere a tale tabella. Per specificare le credenziali dell'account di accesso utilizzate nel server locale per l'accesso al server collegato, utilizzare la procedura sp_addlinkedsrvlogin.  
   
 > [!NOTE]  
->  Per creare piani di query ottimali quando si utilizza una tabella in un server collegato, è necessario che Query Processor ottenga le statistiche di distribuzione dei dati dal server collegato. Gli utenti con autorizzazioni limitate per qualsiasi colonna della tabella potrebbero non disporre delle autorizzazioni sufficienti per ottenere tutte le statistiche utili, nonché ricevere un piano di query meno efficiente e riscontrare un peggioramento delle prestazioni. Se il server collegato è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per ottenere tutte le statistiche disponibili, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner o db_ddladmin sul server collegato. In SQL Server 2012 SP1 le restrizioni delle autorizzazioni vengono modificate per ottenere le statistiche e gli utenti con l'autorizzazione SELECT possono accedere alle statistiche disponibili tramite DBCC SHOW_STATISTICS. Per ulteriori informazioni, vedere la sezione autorizzazioni [DBCC SHOW_STATISTICS &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
+>  Per creare piani di query ottimali quando si utilizza una tabella in un server collegato, è necessario che Query Processor ottenga le statistiche di distribuzione dei dati dal server collegato. Gli utenti con autorizzazioni limitate per qualsiasi colonna della tabella potrebbero non disporre delle autorizzazioni sufficienti per ottenere tutte le statistiche utili, nonché ricevere un piano di query meno efficiente e riscontrare un peggioramento delle prestazioni. Se il server collegato è un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], per ottenere tutte le statistiche disponibili, l'utente deve essere il proprietario della tabella oppure un membro del ruolo predefinito del server sysadmin o del ruolo predefinito del database db_owner o db_ddladmin sul server collegato. In SQL Server 2012 SP1 le restrizioni delle autorizzazioni vengono modificate per ottenere le statistiche e gli utenti con l'autorizzazione SELECT possono accedere alle statistiche disponibili tramite DBCC SHOW_STATISTICS. Per altre informazioni, vedere la sezione autorizzazioni [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).  
   
  Un mapping predefinito tra tutti gli account di accesso del server locale e gli account di accesso remoti del server collegato viene creato automaticamente tramite la procedura sp_addlinkedserver. In base al mapping predefinito, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono utilizzate le credenziali dell'account di accesso locale dell'utente durante la connessione al server collegato. Ciò equivale all'esecuzione della procedura sp_addlinkedsrvlogin con @useself impostato su **true** per il server collegato, senza specificare un nome utente locale. Utilizzare la procedura sp_addlinkedsrvlogin solo per modificare il mapping predefinito o per aggiungere nuovi mapping per account di accesso locali specifici. Per eliminare il mapping predefinito o qualsiasi altro mapping, utilizzare la procedura sp_droplinkedsrvlogin.  
   
@@ -93,7 +93,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
  Non è possibile eseguire la procedura sp_addlinkedsrvlogin all'interno di una transazione definita dall'utente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN nel server.  
   
 ## <a name="examples"></a>Esempi  
@@ -125,9 +125,9 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 >  In questo esempio non viene utilizzata l'autenticazione di Windows. Le password verranno trasmesse senza essere crittografate. Le password possono essere visibili nelle definizioni delle origini dei dati e negli script salvati su disco, in copie di backup e in file di log. Non utilizzare mai una password di amministratore per questo tipo di connessioni. Per ulteriori informazioni sulla sicurezza specifiche al proprio ambiente, consultare l'amministratore di rete.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste del catalogo di server collegati &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
+ [Server collegati viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [la procedura sp_droplinkedsrvlogin &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
+ [sp_droplinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

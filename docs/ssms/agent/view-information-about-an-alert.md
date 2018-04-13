@@ -19,16 +19,16 @@ helpviewer_keywords:
 - displaying alerts
 - status information [SQL Server], alerts
 ms.assetid: a0e3a8c4-e3c2-42a5-b2f8-aa06061d3fa6
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: edd9053514a593ea946a15d3d3071ad2b6e27093
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="view-information-about-an-alert"></a>Visualizzare informazioni su un avviso
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ In questo argomento viene descritto come visualizzare le infomazioni sugli avvis
   
 -   **Prima di iniziare:**  
   
-    [Security](#Security)  
+    [Sicurezza](#Security)  
   
 -   **Per visualizzare informazioni su un avviso utilizzando:**  
   
@@ -89,7 +89,7 @@ Per impostazione predefinita, i membri del ruolo predefinito del server **sysadm
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
   
     ```  
     -- reports information about the Demo: Sev. 25 Errors alert  

@@ -1,16 +1,16 @@
 ---
 title: Compressione dei backup (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], backup compression
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - backing up [SQL Server], backup compression
 - backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
-caps.latest.revision: 
+caps.latest.revision: 51
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 36e6a2f449d649da1137947b5255d025646f43b9
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d6b872e7f53e28ae0261a2672ae977218d174492
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="backup-compression-sql-server"></a>Compressione backup (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive la compressione dei backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], inclusi le restrizioni, il compromesso di prestazioni previsto dalla compressione di backup, la configurazione della compressione di backup e il rapporto di compressione.  La compressione dei backup è supportata nelle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Developer, Standard ed Enterprise.  Ogni edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e successiva è in grado di ripristinare un backup compresso. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questo argomento viene descritta la compressione dei backup di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluse le restrizioni, il compromesso di prestazioni previsto dalla compressione di backup, la configurazione della compressione di backup e il rapporto di compressione.  La compressione dei backup è supportata nelle edizioni di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Developer, Standard ed Enterprise.  Ogni edizione di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e successiva è in grado di ripristinare un backup compresso. 
  
   
 ##  <a name="Benefits"></a> Vantaggi  
@@ -73,7 +74,7 @@ ms.lasthandoff: 01/18/2018
   
  Una compressione 3:1, ad esempio, indica un risparmio approssimativo del 66% di spazio su disco. Per eseguire una query su queste colonne, è possibile utilizzare la seguente istruzione Transact-SQL:  
   
-```  
+```sql  
 SELECT backup_size/compressed_backup_size FROM msdb..backupset;  
 ```  
   
