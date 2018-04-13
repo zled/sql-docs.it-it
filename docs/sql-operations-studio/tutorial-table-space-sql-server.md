@@ -1,5 +1,5 @@
----
-title: Abilitare il widget dello spazio utilizzato per le tabelle in SQL Operations Studio (anteprima) | Microsoft Docs
+﻿---
+title: 'Esercitazione: Abilitare il widget dello spazio utilizzato per le tabelle in SQL Operations Studio (anteprima) | Microsoft Docs'
 description: Con questa esercitazione viene illustrato come abilitare il widget dello spazio utilizzato per le tabelle sulla dashboard del database in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 03/19/2018
@@ -31,22 +31,25 @@ Con questa esercitazione viene illustrato come abilitare un widget sulla dashboa
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB* su SQL Server o database SQL di Azure. Per creare il *TutorialDB* del database, completare una delle Guide rapide seguenti:
+Questa esercitazione richiede il database *TutorialDB* su SQL Server o database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
 
 - [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query sul database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
-## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Attivare una visione gestione [!INCLUDE[name-sos](../includes/name-sos-short.md)]del dashboard del database
+## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>Attivare un widget insight sulla dashboard del database su [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] offre un widget di esempio incorporato per monitorare lo spazio utilizzato dalle tabelle in un database.
 
 1. Al fine di accedere al file delle *IMPOSTAZIONI UTENTE* premere **Ctrl+MAIUSC+P** per aprire il *riquadro comandi*.
 2. Scrivere *impostazioni* nella casella di ricerca e dai file di impostazioni disponibili, selezionare **Preferenze: Apri impostazioni utente**.
+   ![Comando Apri impostazioni utente](./media/tutorial-qds-sql-server/open-user-settings.png)
+
 2. Scrivere ora *dashboard* nella ricerca impostazioni e individuare **dashboard.database.widgets**.
 
 3. Per personalizzare il **dashboard.database.widgets** impostazioni è necessario modificare il **dashboard.database.widgets** voce il **impostazioni utente** sezione (la colonna nel lato destro). Se è presente alcun **dashboard.database.widgets** nel **le impostazioni utente** sezione, passare il mouse sul **dashboard.database.widgets** testo nella colonna impostazioni predefinite e fare clic su l'icona a forma di matita visualizzata a sinistra del testo e fare clic su **copia alle impostazioni**. Se viene visualizzato il messaggio popup **sostituire nelle impostazioni**, selezionarla. Passare ai **delle impostazioni utente** colonna a destra e individuare il **dashboard.database.widgets** sezione e passare alla sezione successiva.
 
 4. Nel **dashboard.database.widgets** sezione, aggiungere le seguenti:
+Per personalizzare il **dashboard.database.widgets** impostazione mouse sull'icona della matita a sinistra del **dashboard.database.widgets** testo, fare clic su **modifica**>**Copia impostazioni**.
 
    ```json
         {
@@ -61,10 +64,11 @@ Questa esercitazione richiede il database *TutorialDB* su SQL Server o database 
         },
     ```
 Il **dashboard.database.widgets** sezione dovrebbe essere simile all'immagine seguente:
+Configurare le impostazioni tramite IntelliSense, indicando nella proprietà *name* il titolo del widget, in *gridItemConfig* la dimensione e in *widget* aggiungere **table-space-db-insight**. Il risultato dovrebbe essere simile al seguente:
 
    ![Impostazioni di ricerca](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-5. Premere **Ctrl + S** per salvare le impostazioni.
+5. Premere **Ctrl+S** per salvare le impostazioni.
 
 6. Aprire la dashboard del database facendo clic con il pulsante destro del mouse su **TutorialDB**, quindi fare clic su **Gestisci**.
 
@@ -88,10 +92,10 @@ Il **dashboard.database.widgets** sezione dovrebbe essere simile all'immagine se
 In questa esercitazione, si è appreso come:
 > [!div class="checklist"]
 > * Attivare rapidamente un widget di informazioni dettagliate utilizzando un esempio incorporato
-> * Visualizzare i dettagli sullo spazio utilizzato dalle tabelle.
+> * Visualizzare i dettagli sullo spazio utilizzato dalle tabelle
 > * Filtrare i dati e visualizzare il dettaglio dell'etichetta in un grafico di informazioni dettagliate
 
-Per informazioni su come costruire un widget di informazioni dettagliate personalizzato, completare l'esercitazione successiva:
+Per informazioni su come costruire un widget insight personalizzato, completare l'esercitazione successiva:
 
 > [!div class="nextstepaction"]
 > [Costruire un widget di informazioni dettagliate personalizzato](tutorial-build-custom-insight-sql-server.md).

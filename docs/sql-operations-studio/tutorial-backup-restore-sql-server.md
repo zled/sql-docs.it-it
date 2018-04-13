@@ -1,4 +1,4 @@
----
+﻿---
 title: Backup e ripristino di un database tramite SQL Operations Studio (preview) | Microsoft Docs
 description: Informazioni su come eseguire backup e ripristino di un database utilizzando SQL Operations Studio (preview)
 ms.custom: tools|sos
@@ -20,11 +20,11 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino mediante[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-using-includename-sosincludesname-sos-shortmd"></a>Backup e ripristino mediante [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-In questa esercitazione si apprenderà come sfruttare[!INCLUDE[name-sos](../includes/name-sos-short.md)] al fine di:
+In questa esercitazione si apprenderà come sfruttare [!INCLUDE[name-sos](../includes/name-sos-short.md)] al fine di:
 > [!div class="checklist"]
-> * Effettuare il backup di un database  
+> * Effettuare il backup di un database 
 > * Visualizzare lo stato del backup
 > * Generare lo script utilizzato per eseguire il backup
 > * Ripristinare un database
@@ -34,10 +34,10 @@ In questa esercitazione si apprenderà come sfruttare[!INCLUDE[name-sos](../incl
 
 Questa esercitazione richiede il database *TutorialDB* su SQL Server. Per crearlo, completare la guida rapida seguente:
 
-- [Connettersi ed eseguire query su SQL Server tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
 
-## <a name="backup-a-database"></a>Effettuare il backup di un database 
+## <a name="backup-a-database"></a>Effetture il backup di un database
 
 1. Aprire la dashboard del database TutorialDB (aprire la barra laterale **SERVER** con **CTRL+G**, espandere **Database**, fare clic con il pulsante destro del mouse su **TutorialDB** e selezionare **Gestisci**).  
 
@@ -63,11 +63,11 @@ Dopo aver fatto clic su **Backup**, la finestra di dialogo **Backup database** s
 ## <a name="restore-a-database-from-a-backup-file"></a>Ripristinare un database da un file di backup
 
 
-1. Aprire la barra laterale **SERVER** (**CTRL+G**), premere il tasto destro sul vostro server e scegliere **Gestisci**.  
+1. Aprire la barra laterale **SERVER** (**CTRL+G**), premere il tasto destro sul vostro server e scegliere **Gestisci**. 
 
 2. Aprire la finestra di dialogo **Ripristina database** (fare clic su **Ripristino** sul widget **attività**).
 
-2. Selezionare **file di Backup** nel campo **ripristina da**.  
+2. Selezionare **file di Backup** nel campo **ripristina da**. 
 
 3. Fare clic sui puntini di sospensione (...) nel **percorso del file di Backup** e selezionare il file di backup più recente per *TutorialDB*.
 
@@ -84,7 +84,7 @@ Dopo aver fatto clic su **Backup**, la finestra di dialogo **Backup database** s
 
 In questa esercitazione, si è appreso come:
 > [!div class="checklist"]
-> * Effettuare il backup di un database  
+> * Effettuare il backup di un database 
 > * Visualizzare lo stato del backup
 > * Generare lo script utilizzato per eseguire il backup
 > * Ripristinare un database

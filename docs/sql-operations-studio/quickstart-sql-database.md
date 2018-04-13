@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Guida introduttiva: Connettersi ed eseguire query di un database SQL di Azure mediante SQL Operations Studio (preview) | Microsoft Docs'
 description: In questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a un database SQL di Azure ed eseguire query
 ms.custom: tools|sos
@@ -30,7 +30,7 @@ Per completare questa guida rapida, è necessario [!INCLUDE[name-sos](../include
 
 - [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
-Se si dispone già di un server SQL Azure, completare una delle seguenti guide rapide a Database SQL di Azure (ricordare il nome del server e le credenziali di accesso):
+Se non si dispone già di un server SQL Azure, completare una delle seguenti guide rapide al database SQL di Azure (ricordare che il nome del server e le credenziali di accesso):
 
 - [Creare DB - portale](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 - [Creare DB - CLI](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-cli)
@@ -41,7 +41,7 @@ Se si dispone già di un server SQL Azure, completare una delle seguenti guide r
 
 Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Database SQL di Azure.
 
-1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene mostrata la pagina **connessione**. Se non viene visualizzato il **connessione** pagina, fare clic su **Aggiungi connessione**, o **nuova connessione** icona nel **server** barra laterale:
+1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene mostrata la pagina **connessione**. Se essa non appare, fare clic su **Aggiungi connessione**, o sull'icona **Nuova Connessione** nella barra laterale dei **SERVER**:
    
    ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-icon.png)
 
@@ -57,7 +57,7 @@ Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una
    | **Nome database** | *Lasciare vuoto* | Il nome del database a cui si desidera connettersi. |
    | **Gruppo di server** | Selezionare <Default> | Se è stato creato un gruppo di server, è possibile impostare per un gruppo di server specifico. | 
 
-   ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-screen.png) 
 
 3. Se il server non dispone di una regola del firewall per aprire l'accesso a SQL Operations Studio, viene mostrata la vista **Crea nuova regola firewall**. Completare il modulo per creare una nuova regola firewall. Per informazioni dettagliate, vedere [Regole del firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
@@ -90,7 +90,7 @@ Nelle sezioni seguenti viene creato il database *TutorialDB* utilizzato in diver
 
 ## <a name="create-a-table"></a>Creare una tabella
 
-L'editor di query è ancora connesso al database *master*, ma si vuole creare una tabella nel database *TutorialDB*. 
+L'editor di query è ancora connesso al database *master*, ma si vuole creare una tabella nel database *TutorialDB*.
 
 1. Impostare il contesto di connessione su **TutorialDB**:
 

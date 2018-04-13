@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Esercitazione: Aggiungere il widget di esempio delle cinque query più lente - SQL Operations Studio (preview) | Microsoft Docs'
 description: Con questa esercitazione viene illustrato come abilitare il widget di esempio delle cinque query più lente nella dashboard del database.
 ms.custom: tools|sos
@@ -146,7 +146,7 @@ Per aggiungere la *rallentamento widget query* per il dashboard, è possibile mo
 
 2. Incollare il testo della query copiato nei passaggi precedenti.
 
-3. Fare clic su **spiegare**.
+3. Fare clic su **mostra il piano**.
 
    ![Informazioni dettagliate QDS - Spiega](./media/tutorial-qds-sql-server/insight-qds-explain.png)
 
@@ -157,14 +157,14 @@ Per aggiungere la *rallentamento widget query* per il dashboard, è possibile mo
 ## <a name="save-and-open-a-query-plan"></a>Salvare e aprire un piano di query 
 
 1. Aprire la finestra di dialogo delle informazioni dettagliate.
-2. Selezionare uno degli elementi di query.
+2. Selezionare uno degli elementi tra i dati.
 2. Fare clic con il pusante destro del mouse sul valore **query_plan** e selezionare **Copia cella** 
 
    ![Approfondimenti QDS piano](./media/tutorial-qds-sql-server/insight-qds-plan.png)
 
 3. Premere **Ctrl+N** per aprire un nuovo editor.
 
-4. Incollare il piano copiato nell'editor.
+5. Incollare il piano copiato nell'editor.
 
 5. Premere **Ctrl+S** per salvare il file e modificare l'estensione del file in *.sqlplan*. *sqlplan* non è visualizzato nell'elenco a discesa estensione di file, pertanto, digitarlo in. Per questa esercitazione, denominare il file *slowquery.sqlplan*.
 
@@ -174,7 +174,7 @@ Per aggiungere la *rallentamento widget query* per il dashboard, è possibile mo
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-In questa esercitazione, si è appreso come:
+In questa esercitazione si è appreso come:
 > [!div class="checklist"]
 > * Abilitare Archivio Query in un database
 > * Aggiungere un widget di informazioni dettagliate al dashboard del database

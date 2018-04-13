@@ -1,4 +1,4 @@
-# [SQL Operations Studio (preview)](what-is.md)
+﻿# [SQL Operations Studio (preview)](what-is.md)
 # [Installazione](download.md)
 # [Note sulla versione](release-notes.md)
 # Guide introduttive
