@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Abilitare il widget tabella spazio utilizzo esempio informazioni dettagliate in SQL Operations Studio (preview) | Documenti Microsoft'
-description: Questa esercitazione viene illustrato come abilitare il widget tabella spazio utilizzo esempio informazioni dettagliate sul dashboard del database di SQL Operations Studio (preview).
+title: Abilitare il widget dello spazio utilizzato per le tabelle in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Con questa esercitazione viene illustrato come abilitare il widget dello spazio utilizzato per le tabelle sulla dashboard del database in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 03/19/2018
 ms.prod: sql-non-specified
@@ -20,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/20/2018
 ---
-# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare la tabella spazio utilizzo esempio insight widget usare [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>Esercitazione: Abilitare il widget dello spazio utilizzato per le tabelle su [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Con questa esercitazione viene illustrato come abilitare un widget sulla dashboard del database al fine di avere una panoramica sull'utilizzo dello spazio per tutte le tabelle in un database. Durante questa esercitazione, si apprenderà come:
 
@@ -31,7 +31,7 @@ Con questa esercitazione viene illustrato come abilitare un widget sulla dashboa
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB* su SQL Server o database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:**
+Questa esercitazione richiede il database *TutorialDB* su SQL Server o database SQL di Azure. Per creare il *TutorialDB* del database, completare una delle Guide rapide seguenti:
 
 - [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query sul database SQL di Azure tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
