@@ -1,4 +1,4 @@
----
+﻿---
 title: Scaricare e installare Microsoft SQL Operations Studio (anteprima) | Microsoft Docs
 description: Scaricare e installare Microsoft SQL Operations Studio (anteprima per Windows, Mac OS o Linux)
 ms.custom: tools|sos
@@ -45,7 +45,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 1. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 
-**file con estensione zip**
+**File con estensione zip**
 
 1. Scaricare lo [ZIP di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=870838).
 2. Individuare il file scaricato e decomprimerlo.
