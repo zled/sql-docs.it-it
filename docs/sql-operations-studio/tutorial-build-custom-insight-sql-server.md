@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato in SQL Operations Studio (anteprima) | Microsoft Docs'
 description: Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: erickangMSFT
 ms.author: erickang

@@ -1,31 +1,31 @@
 ---
 title: Usare il formato nativo per importare o esportare dati (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/30/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 6c979bd304e2715c587596d73c9e750b5935078b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato nativo per importare o esportare dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Il formato nativo mantiene i tipi di dati nativi di un database e viene utilizza
   
 L'utilizzo del formato nativo tra tabelle identiche consente di evitare la conversione di tipi di dati nel/dal formato carattere, risparmiando tempo e spazio. Per raggiungere la velocità di trasferimento ottimale, tuttavia, vengono eseguiti solo alcuni controlli relativi alla formattazione dei dati. Per evitare problemi relativi ai dati caricati, vedere l'elenco di restrizioni seguente.  
 
-|Contenuto dell'argomento:|
+|Contenuto dell'argomento|
 |---|
 |[Restrizioni](#restrictions)|
 |[Gestione dei dati in formato nativo mediante l'utilità bcp](#considerations)|
@@ -155,7 +155,7 @@ Notepad D:\BCP\myNative.fmt
 Gli esempi seguenti usano il database e i file di formato creati in precedenza.
 
 ### **Uso di bcp e del formato nativo per l'esportazione di dati**<a name="bcp_native_export"></a>
-**-n** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere i comandi seguenti:
+Opzione**-n** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere i comandi seguenti:
 
 ```cmd
 bcp TestDatabase.dbo.myNative OUT D:\BCP\myNative.bcp -T -n
@@ -165,7 +165,7 @@ NOTEPAD D:\BCP\myNative.bcp
 ```
 
 ### **Uso di bcp e del formato nativo per l'importazione di dati senza un file di formato**<a name="bcp_native_import"></a>
-**-n** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
+Opzione**-n** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
 
 ```cmd
 REM Truncate table (for testing)
@@ -179,7 +179,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **Uso di bcp e del formato nativo per l'importazione di dati con un file di formato non XML**<a name="bcp_native_import_fmt"></a>
-**-n** e **-f** e comando **IN** .  Al prompt dei comandi immettere i comandi seguenti:
+Opzioni**-n** e **-f** switches e **IN** comme.  Al prompt dei comandi immettere i comandi seguenti:
 
 ```cmd
 REM Truncate table (for testing)

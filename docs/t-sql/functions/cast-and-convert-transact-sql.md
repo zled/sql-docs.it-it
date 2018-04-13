@@ -1,16 +1,16 @@
 ---
 title: CAST e CONVERT (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 09/08/2017
+ms.custom: ''
+ms.date: 03/28/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CAST_TSQL
@@ -37,25 +37,32 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-caps.latest.revision: 
+caps.latest.revision: 136
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: cd868d10f9a7d6edab413341c18be9613962c981
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST e CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Converte un'espressione da un tipo di dati a un altro.  
-Ad esempio, gli esempi seguenti modificano il tipo di dati dell'input in due altri tipi di dati con livelli di precisione diversi.
+**Esempio.** Modificare il tipo di dati di input.
+
+**Cast**
 ```sql  
 SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
     CAST(9.5 AS decimal(6,4)) AS decimal;
+
+```  
+**Converti**
+```sql  
+
 SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
@@ -64,8 +71,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
-> [!TIP]
-> Numerosi [esempi](#BKMK_examples) sono disponibili più avanti in questo argomento.  
+**Molti altri [esempi](#BKMK_examples)** sono disponibili alla fine di questo argomento. 
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -426,7 +432,7 @@ WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name        UnitPrice
+Name        ListPrice
 ----------  ---------
 Long-Sleev  31.2437
 Long-Sleev  32.4935
@@ -450,7 +456,7 @@ GO
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-FirstName        LastName            SalesYTD         SalesPersonID
+FirstName        LastName            SalesYTD         BusinessEntityID
 ---------------- ------------------- ---------------- -------------
 Tsvi             Reiter              2811012.7151      279
 Syed             Abbas               219088.8836       288

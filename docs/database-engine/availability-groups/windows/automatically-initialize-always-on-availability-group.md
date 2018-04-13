@@ -1,26 +1,27 @@
 ---
-title: "Inizializzare automaticamente un gruppo di disponibilità Always On | Microsoft Docs"
-ms.custom: 
-ms.date: 08/23/2017
+title: Inizializzare automaticamente un gruppo di disponibilità Always On | Microsoft Docs
+ms.custom: ''
+ms.date: 03/26/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MikeRayMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 44ff615a44427cdf0e5ed6e06937181762deb7a0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Inizializzare automaticamente un gruppo di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -169,6 +170,12 @@ Nella replica primaria eseguire una query sulla DMV `sys.dm_hadr_physical_seedin
 ```sql
 SELECT * FROM sys.dm_hadr_physical_seeding_stats;
 ```
+
+Le due colonne *total_disk_io_wait_time_ms* e *total_network_wait_time_ms* possono essere usate per individuare colli di bottiglia delle prestazioni nel processo Seeding automatico. Le due colonne sono presenti anche nell'evento esteso *hadr_physical_seeding_progress*.
+
+**total_disk_io_wait_time_ms** rappresenta il tempo impiegato dal thread di backup/ripristino nell'attesa del disco. Questo valore è cumulativo dall'avvio dell'operazione di seeding. Se i dischi non sono pronti per la lettura o la scrittura del flusso del backup, il thread di backup/ripristino passa allo stato di sospensione e si riattiva ogni secondo per verificare se il disco è pronto.
+        
+La colonna **total_network_wait_time_ms** viene interpretata in modo diverso per il database primario e per la replica secondaria. Nella replica primaria questo contatore rappresenta la durata del controllo del flusso di rete. Nella replica secondaria rappresenta il tempo durante il quale il thread di ripristino rimane in attesa di un messaggio di disponibilità per la scrittura nel disco.
 
 ### <a name="diagnose-database-initialization-using-automatic-seeding-in-the-error-log"></a>Diagnosticare l'inizializzazione del database usando il seeding automatico nel log degli errori
 

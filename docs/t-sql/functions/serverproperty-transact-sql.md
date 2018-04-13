@@ -1,7 +1,7 @@
 ---
 title: SERVERPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/02/2017
+ms.date: 03/21/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - instances of SQL Server, property information
 - server properties [SQL Server]
 ms.assetid: 11e166fa-3dd2-42d8-ac4b-04f18c612c4a
-caps.latest.revision: ''
+caps.latest.revision: 128
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be72828789c74d599c003100c98db93b1ec937e4
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 65e2c160cddd188b91887e7ed414033c9b51c1d0
+ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="serverproperty-transact-sql"></a>SERVERPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SERVERPROPERTY ( 'propertyname' )
 |ComputerNamePhysicalNetBIOS|Nome NetBIOS del computer locale in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Per un'istanza cluster di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un cluster di failover, questo valore cambia in caso di failover dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su altri nodi del cluster di failover.<br /><br /> In un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo valore rimane costante e restituisce lo stesso valore della proprietà MachineName.<br /><br /> **Nota:** se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è inclusa in un cluster di failover e si vuole ottenere il nome dell'istanza del cluster di failover, usare la proprietà MachineName.<br /><br /> NULL = input non valido, errore o non applicabile.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |Edizione|Edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md). Nelle versioni a 64 bit del [!INCLUDE[ssDE](../../includes/ssde-md.md)] viene aggiunta la dicitura (64 bit) al nome della versione stessa.<br /><br /> Restituisce:<br /><br /> 'Enterprise Edition'<br /><br /> ‘Enterprise Edition: Core-based Licensing’<br /><br /> 'Enterprise Evaluation Edition'<br /><br /> 'Business Intelligence Edition'<br /><br /> 'Developer Edition'<br /><br /> 'Express Edition'<br /><br /> 'Express Edition with Advanced Services'<br /><br /> 'Standard Edition'<br /><br /> 'Web Edition'<br /><br /> 'SQL Azure' indica [!INCLUDE[ssSDS](../../includes/sssds-md.md)] o [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
 |EditionID|Rappresenta l'edizione del prodotto installata per l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Usare il valore di questa proprietà per determinare le funzionalità e i limiti, come ad esempio in [Limiti della capacità di calcolo per edizione di SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).<br /><br /> 1804890536 = Enterprise<br /><br /> 1872460670 = Enterprise Edition: Core-based Licensing<br /><br /> 610778273 = Enterprise Evaluation<br /><br /> 284895786 = Business Intelligence<br /><br /> -2117995310 = Developer<br /><br /> -1592396055 = Express<br /><br /> -133711905= Express with Advanced Services<br /><br /> -1534726760 = Standard<br /><br /> 1293598313 = Web<br /><br /> 1674378470 = database SQL o SQL Data Warehouse<br /><br /> Tipo di dati di base: **bigint**|  
-|EngineEdition|Edizione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nel server.<br /><br /> 1 = Personal o Desktop Engine: non disponibile in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.<br /><br /> 2 = Standard: valore restituito per le edizioni Standard, Web e Business Intelligence.<br /><br /> 3 = Enterprise: valore restituito per le edizioni Evaluation, Developer ed entrambe le edizioni Enterprise.<br /><br /> 4 = Express: valore restituito per le edizioni Express, Express with Tools ed Express with Advanced Services.<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 - [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> Tipo di dati di base: **int**|  
+|EngineEdition|Edizione del [!INCLUDE[ssDE](../../includes/ssde-md.md)] dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installata nel server.<br /><br /> 1 = Personal o Desktop Engine: non disponibile in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.<br /><br /> 2 = Standard: valore restituito per le edizioni Standard, Web e Business Intelligence.<br /><br /> 3 = Enterprise: valore restituito per le edizioni Evaluation, Developer ed entrambe le edizioni Enterprise.<br /><br /> 4 = Express: valore restituito per le edizioni Express, Express with Tools ed Express with Advanced Services.<br /><br /> 5 = [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<br /><br /> 6 - [!INCLUDE[ssDW](../../includes/ssdw-md.md)]<br /><br /> 8 = Istanza gestita<br /><br /> Tipo di dati di base: **int**|  
 |HadrManagerStatus|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica se Gestione [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] è stata avviata.<br /><br /> 0 = non avviata, comunicazione in sospeso.<br /><br /> 1 = Avviata e in esecuzione.<br /><br /> 2 = Non avviata e non riuscita.<br /><br /> NULL = input non valido, errore o non applicabile.|  
 |InstanceDefaultDataPath|**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla versione corrente con aggiornamenti a partire da fine 2015.<br /><br /> Nome del percorso predefinito per i file di dati dell'istanza.|  
 |InstanceDefaultLogPath|**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] alla versione corrente con aggiornamenti a partire da fine 2015.<br /><br /> Nome del percorso predefinito per i file di log dell'istanza.|  
@@ -123,6 +123,13 @@ GO
   
 ### <a name="version-properties"></a>Proprietà della versione  
  La funzione `SERVERPROPERTY` restituisce proprietà singole che si riferiscono alle informazioni sulla versione, mentre la funzione [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md) combina l'output in una stringa. Se l'applicazione richiede stringhe della proprietà singole, è possibile usare la funzione `SERVERPROPERTY` per restituirle anziché analizzare i risultati di [@@VERSION](../../t-sql/functions/version-transact-sql-configuration-functions.md).  
+
+> [!NOTE]  
+> Esiste un problema noto a causa del quale le proprietà della versione segnalate da SERVERPROPERTY non sono corrette per il database SQL di Azure. La versione del motore di database di SQL Server eseguita dal database SQL di Azure è sempre più avanti rispetto alla versione locale di SQL Server e include le correzioni della sicurezza più recenti. Questo significa che il livello di patch è sempre corrispondente o posteriore a quello della versione locale di SQL Serve, e che le funzionalità più recenti disponibili in SQL Server sono disponibili nel database SQL di Azure.
+>
+> Per determinare a livello di codice l'edizione del motore, usare SELECT SERVERPROPERTY('EngineEdition'). Questa query restituirà '5' per i database autonomi e '8' per le istanze gestite nel database SQL di Azure. 
+>
+> La documentazione verrà aggiornato una volta risolto il problema.
 
 ## <a name="permissions"></a>Autorizzazioni
 

@@ -1,6 +1,6 @@
 ﻿---
-title: 'Guida introduttiva: Connettersi ed eseguire query di un database SQL di Azure mediante SQL Operations Studio (anteprima) | Microsoft Docs'
-description: In questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a un database SQL di Azure ed eseguire query
+title: 'Guida introduttiva: Connettersi ed eseguire query di un database SQL di Azure mediante SQL Operations Studio (preview) | Microsoft Docs'
+description: In questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a un database SQL di Azure ed eseguire query
 ms.custom: tools|sos
 ms.date: 03/08/2018
 ms.prod: sql-non-specified

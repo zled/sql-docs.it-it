@@ -1,28 +1,28 @@
 ---
 title: Introduzione a un esempio semplice di importazione/esportazione guidata | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: ea3db39b-698b-4a74-8eb8-21dc7252dc1a
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 169ad5455571c2b0e484fc0aa153e55141cdd1fd
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata
 Informazioni sull'importazione/esportazione guidata SQL Server attraverso uno scenario comune da un foglio di calcolo di Excel a un database SQL Server. Anche se si prevede di usare un'origine diversa e una destinazione diversa, in questo argomento è illustrata la maggior parte delle operazioni da conoscere per l'esecuzione della procedura guidata.
@@ -62,9 +62,12 @@ Per visualizzare questa pagina, è possibile fare clic su **Non visualizzare pi�
 ## <a name="step-3---pick-excel-as-your-data-source"></a>Passaggio 3: Selezionare Excel come origine dati
 Nella pagina successiva **Scegliere un'origine dati**, scegliere Microsoft Excel come origine dati. Quindi, esplorare per selezionare il file di Excel. Infine specificare la versione di Excel usata per creare il file.
 
+> [!IMPORTANT]
+> Per informazioni dettagliate sulla connessione ai file di Excel, nonché sulle limitazioni e sui problemi noti del caricamento di dati da o a file di Excel, vedere [Caricare i dati da o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+
 ![Scegliere l'origine dati di Excel](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 
-Per altre informazioni sulla connessione a Excel, vedere [Connettersi a un'origine dati di Excel](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md). Per altre informazioni relative a questa pagina della procedura guidata, vedere [Scegliere un'origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
+Per altre informazioni relative a questa pagina della procedura guidata, vedere [Scegliere un'origine dati](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md).
 
 ## <a name="step-4---pick-sql-server-as-your-destination"></a>Passaggio 4: Selezionare SQL Server come destinazione
 Nella pagina successiva **Scegliere una destinazione** selezionare Microsoft SQL Server come destinazione scegliendo uno dei provider di dati nell'elenco che si connetterà a SQL Server. In questo esempio selezionare **Provider di dati .Net Framework per SQL Server**.
@@ -162,4 +165,4 @@ Altre informazioni sul funzionamento della procedura guidata.
 
 -   **Informazioni su come connettersi a origini dati e destinazioni.** Se si cercano informazioni su come connettersi ai dati, selezionare la pagina desiderata nell'elenco in [Connettersi a origini dati con l'Importazione/Esportazione guidata SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md). È disponibile una pagina di documentazione separata per ognuna delle diverse origini dati di uso comune.
 
-
+-   **Altre informazioni sul caricamento di dati da e in Excel.** Se sono necessarie informazioni sulla connessione ai file di Excel, nonché sulle limitazioni e sui problemi noti del caricamento di dati da o a file di Excel, vedere [Caricare i dati da o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

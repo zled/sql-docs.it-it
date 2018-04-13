@@ -1,16 +1,16 @@
 ---
 title: sp_update_alert (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_update_alert_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-caps.latest.revision: 
+caps.latest.revision: 34
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,31 +69,31 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name =**] **'***nome***'**  
- Nome dell'avviso da aggiornare. *nome* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@name =**] **'***name***'**  
+ Nome dell'avviso da aggiornare. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@new_name =**] **'***new_name***'**  
- Nuovo nome per l'avviso. Il nome deve essere univoco. *nuovo_nome* è **sysname**, con un valore predefinito è NULL.  
+ Nuovo nome per l'avviso. Il nome deve essere univoco. *nuovo_nome* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@enabled =**] *abilitato*  
- Specifica se l'avviso è abilitato (**1**) o non è abilitata (**0**). *abilitato* è **tinyint**, con un valore predefinito è NULL. Per consentire la generazione di un avviso, è necessario che l'avviso sia abilitato.  
+ Specifica se l'avviso è abilitato (**1**) o non è abilitata (**0**). *abilitata* viene **tinyint**, con un valore predefinito è NULL. Per consentire la generazione di un avviso, è necessario che l'avviso sia abilitato.  
   
  [ **@message_id =**] *message_id*  
- Nuovo messaggio o numero di errore per la definizione dell'avviso. In genere, *message_id* corrisponde al numero di errore nella **sysmessages** tabella. *message_id* è **int**, con un valore predefinito è NULL. Un messaggio con ID può essere utilizzato solo se l'impostazione del livello di gravità dell'avviso è **0**.  
+ Nuovo messaggio o numero di errore per la definizione dell'avviso. In genere, *message_id* corrisponde al numero di errore nella **sysmessages** tabella. *message_id* viene **int**, con un valore predefinito è NULL. Un messaggio con ID può essere utilizzato solo se l'impostazione del livello di gravità dell'avviso è **0**.  
   
- [ **@severity =**] *severity*  
- Nuovo livello di gravità (da **1** tramite **25**) per la definizione di avviso. Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'avviso verranno attivato da messaggi inviati al registro applicazioni di Windows con livello di gravità specificato. *gravità* è **int**, con un valore predefinito è NULL. Un livello di gravità può essere utilizzato solo se l'impostazione di ID di messaggio per l'avviso è **0**.  
+ [  **@severity =**] *gravità*  
+ Nuovo livello di gravità (da **1** tramite **25**) per la definizione di avviso. Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'avviso verranno attivato da messaggi inviati al registro applicazioni di Windows con livello di gravità specificato. *livello di gravità* viene **int**, con un valore predefinito è NULL. Un livello di gravità può essere utilizzato solo se l'impostazione di ID di messaggio per l'avviso è **0**.  
   
  [ **@delay_between_responses =**] *delay_between_responses*  
- Nuovo intervallo di attesa, in secondi, che intercorre tra le risposte all'avviso. *delay_between_responses* è **int**, con un valore predefinito è NULL.  
+ Nuovo intervallo di attesa, in secondi, che intercorre tra le risposte all'avviso. *delay_between_responses* viene **int**, con un valore predefinito è NULL.  
   
- [  **@notification_message =**] **'***notification_message***'**  
- Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o una notifica tramite cercapersone. *notification_message* è **nvarchar (512)**, con un valore predefinito è NULL.  
+ [ **@notification_message =**] **'***notification_message***'**  
+ Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o una notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
- Specifica se includere o meno la descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del registro applicazioni di Windows nel messaggio di notifica. *include_event_description_in* è **tinyint**, con un valore predefinito è NULL, e può essere uno o più dei valori seguenti.  
+ Specifica se includere o meno la descrizione dell'errore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del registro applicazioni di Windows nel messaggio di notifica. *include_event_description_in* viene **tinyint**, con un valore predefinito è NULL, e può essere uno o più dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Nessuno|  
 |**1**|Posta elettronica|  
@@ -105,58 +105,58 @@ sp_update_alert
  Nome del database nel quale deve verificarsi l'errore affinché l'avviso venga generato. *database* è **sysname.** I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
- Sequenza di caratteri che è necessario individuare nella descrizione dell'errore inclusa nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* è **nvarchar (100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
+ Sequenza di caratteri che è necessario individuare nella descrizione dell'errore inclusa nel log dei messaggi di errore. È possibile utilizzare i caratteri dei criteri di ricerca dell'espressione LIKE [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* viene **nvarchar(100)**, con un valore predefinito è NULL. Questo parametro è utile per filtrare i nomi degli oggetti (ad esempio, **% customer_table %**).  
   
  [ **@job_id =**] *job_id*  
- Numero di identificazione del processo. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL. Se *job_id* è specificato, *job_name* deve essere omessa.  
+ Numero di identificazione del processo. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL. Se *job_id* è specificato, *job_name* deve essere omessa.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo che viene eseguito in risposta all'avviso. *job_name* è **sysname**, con un valore predefinito è NULL. Se *job_name* è specificato, *job_id* deve essere omessa.  
+ Nome del processo che viene eseguito in risposta all'avviso. *job_name* viene **sysname**, con un valore predefinito è NULL. Se *job_name* è specificato, *job_id* deve essere omessa.  
   
  [ **@occurrence_count =** ] *occurrence_count*  
- Reimposta il numero di occorrenze dell'avviso. *numero_occorrenze* è **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
+ Reimposta il numero di occorrenze dell'avviso. *numero_occorrenze* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
  [ **@count_reset_date =**] *count_reset_date*  
- Reimposta la data dell'ultimo azzeramento del numero di occorrenze. *count_reset_date* è **int**, con un valore predefinito è NULL.  
+ Reimposta la data dell'ultimo azzeramento del numero di occorrenze. *count_reset_date* viene **int**, con un valore predefinito è NULL.  
   
- [  **@count_reset_time =**] *count_reset_time*  
- Reimposta l'ora dell'ultimo azzeramento del numero di occorrenze. *count_reset_time* è **int**, con un valore predefinito è NULL.  
+ [ **@count_reset_time =**] *count_reset_time*  
+ Reimposta l'ora dell'ultimo azzeramento del numero di occorrenze. *count_reset_time* viene **int**, con un valore predefinito è NULL.  
   
- [ **@last_occurrence_date =**] *last_occurrence_date*  
- Reimposta la data dell'ultima occorrenza dell'avviso. *last_occurrence_date* è **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
+ [  **@last_occurrence_date =**] *last_occurrence_date*  
+ Reimposta la data dell'ultima occorrenza dell'avviso. *last_occurrence_date* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
- [ **@last_occurrence_time =**] *last_occurrence_time*  
- Reimposta l'ora dell'ultima occorrenza dell'avviso. *last_occurrence_time* è **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
+ [  **@last_occurrence_time =**] *last_occurrence_time*  
+ Reimposta l'ora dell'ultima occorrenza dell'avviso. *last_occurrence_time* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
  [ **@last_response_date =**] *last_response_date*  
- Reimposta la data dell'ultima risposta all'avviso inviata dal servizio SQLServerAgent. *last_response_date* è **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
+ Reimposta la data dell'ultima risposta all'avviso inviata dal servizio SQLServerAgent. *last_response_date* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
  [ **@last_response_time =**] *last_response_time*  
- Reimposta l'ora dell'ultima risposta all'avviso inviata dal servizio SQLServerAgent. *last_response_time* è **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
+ Reimposta l'ora dell'ultima risposta all'avviso inviata dal servizio SQLServerAgent. *last_response_time* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
  [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  Riservato.  
   
- [  **@performance_condition =**] **'***performance_condition***'**  
- Un valore espresso nel formato **'***itemcomparatorvalue***'**. *performance_condition* è **nvarchar (512)**, con un valore predefinito è NULL ed è costituito da questi elementi.  
+ [ **@performance_condition =**] **'***performance_condition***'**  
+ Un valore espresso nel formato **'***itemcomparatorvalue***'**. *performance_condition* viene **nvarchar(512)**, con un valore predefinito è NULL ed è costituito da questi elementi.  
   
 |Componente del formato|Description|  
 |--------------------|-----------------|  
 |*Elemento*|Oggetto prestazioni, contatore delle prestazioni o istanza denominata del contatore|  
-|*Criterio di confronto*|Uno di questi operatori:  **>** ,  **<** ,**=**|  
+|*Criterio di confronto*|Uno degli operatori seguenti: **>**, **<**, **=**|  
 |*Valore*|Valore numerico del contatore|  
   
  [ **@category_name =**] **'***category***'**  
- Nome della categoria di avvisi. *categoria* è **sysname** con un valore predefinito è NULL.  
+ Nome della categoria di avvisi. *categoria* viene **sysname** con un valore predefinito è NULL.  
   
- [  **@wmi_namespace** =] **'***wmi_namespace***'**  
- Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* è **sysname**, con un valore predefinito è NULL.  
+ [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@wmi_query**= ] **'***wmi_query***'**  
- Query che consente di specificare l'evento WMI per l'avviso. *Wmi_query* è **nvarchar (512)**, con un valore predefinito è NULL.  
+ Query che consente di specificare l'evento WMI per l'avviso. *Wmi_query* viene **nvarchar(512)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  Solo **sysmessages** scritto il [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro applicazioni di Windows può essere generato un avviso.  

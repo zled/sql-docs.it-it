@@ -1,16 +1,16 @@
 ---
 title: Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/08/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: performance
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Performance (SQL Server)
@@ -23,27 +23,24 @@ helpviewer_keywords:
 - performance (SQL Database)
 - database performance (SQL Database)
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f17dd20a0a6c3ffd93cc89dd97140341ed893383
-ms.sourcegitcommit: 7e9380e53341755df13fce130ab3287918a8e44c
+ms.openlocfilehash: 1e3b52ab64122fab76182d355cbd5c54d2b72c39
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-In questa pagina sono riportati i collegamenti che consentono di trovare le informazioni necessarie sulle prestazioni nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+  In questa pagina sono riportati i collegamenti che consentono di trovare le informazioni necessarie sulle prestazioni nel [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] e [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
  **Legenda**  
   
  ![security-center-legend](../../relational-databases/performance/media/security-center-legend.PNG "security-center-legend")  
-  
-## <a name="this-is-a-work-in-process-does-this-performance-center-help-you-how-can-we-improve-it"></a>Questo è un lavoro in corso. Questo centro prestazioni è utile? Come si può migliorare?  
- Quali informazioni si stanno cercando? La ricerca ha restituito i risultati desiderati? Che cosa manca? Quali informazioni dovrebbero apparire qui? Microsoft incoraggia gli utenti a inviare i propri commenti per migliorare i contenuti Inviare eventuali commenti all'indirizzo [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="configuration-options-for-performance"></a>Opzioni di configurazione per le prestazioni  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offre la possibilità di influire sulle prestazioni del motore di database attraverso una serie di opzioni di configurazione al livello di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Con [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]Microsoft esegue automaticamente la maggior parte delle ottimizzazioni, ma non tutte.  

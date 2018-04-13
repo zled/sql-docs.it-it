@@ -1,16 +1,16 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 01/22/2018
+ms.custom: ''
+ms.date: 03/30/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - BACKUP_TSQL
@@ -48,21 +48,23 @@ helpviewer_keywords:
 - stripe sets [SQL Server]
 - cross-platform backups
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
-caps.latest.revision: 
+caps.latest.revision: 275
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 506cda0644c6e3d144d5b02ff208d78e7305dfcc
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ad21db12a4d147f8d999c7774a773082cbc6b1b5
+ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  Esegue il backup di un database completo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per creare un backup di database oppure di uno o più file o filegroup del database per creare un backup di file (BACKUP DATABASE). Se, inoltre, si utilizza il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, esegue il backup del log delle transazioni del database per creare un backup del log (BACKUP LOG).  
+  Esegue il backup di un database completo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per creare un backup di database oppure di uno o più file o filegroup del database per creare un backup di file (BACKUP DATABASE). Se, inoltre, si utilizza il modello di recupero con registrazione completa o il modello di recupero con registrazione minima delle operazioni bulk, esegue il backup del log delle transazioni del database per creare un backup del log (BACKUP LOG). 
+
+[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +75,8 @@ Backing Up a Whole Database
 BACKUP DATABASE { database_name | @database_name_var }   
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
-  [ WITH { DIFFERENTIAL | <general_WITH_options> [ ,...n ] } ]  
+  [ WITH { DIFFERENTIAL -- Not supporterd in SQL Database Managed Instance
+           | <general_WITH_options> [ ,...n ] } ]  
 [;]  
   
 Backing Up Specific Files or Filegroups  
@@ -93,7 +96,8 @@ BACKUP DATABASE { database_name | @database_name_var }
 [;]  
   
 Backing Up the Transaction Log (full and bulk-logged recovery models)  
-BACKUP LOG { database_name | @database_name_var }   
+BACKUP LOG -- Not supported in SQL Database Managed Instance
+  { database_name | @database_name_var }  
   TO <backup_device> [ ,...n ]   
   [ <MIRROR TO clause> ] [ next-mirror-to ]  
   [ WITH { <general_WITH_options> | \<log-specific_optionspec> } [ ,...n ] ]  
@@ -102,7 +106,9 @@ BACKUP LOG { database_name | @database_name_var }
 <backup_device>::=   
  {  
    { logical_device_name | @logical_device_name_var }   
- | { DISK | TAPE | URL} =   
+ | {   DISK -- Not supported in SQL Database Managed Instance
+     | TAPE -- Not supported in SQL Database Managed Instance
+     | URL } =   
      { 'physical_device_name' | @physical_device_name_var | 'NUL' }  
  }   
   
@@ -120,13 +126,13 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
 <general_WITH_options> [ ,...n ]::=   
 --Backup Set Options  
-   COPY_ONLY   
+   COPY_ONLY -- Only backup set option supported by SQL Database Managed Instance  
  | { COMPRESSION | NO_COMPRESSION }   
  | DESCRIPTION = { 'text' | @text_variable }   
  | NAME = { backup_set_name | @backup_set_name_var }   
  | CREDENTIAL  
  | ENCRYPTION  
- | FILE_SNAPSHOT  
+ | FILE_SNAPSHOT  --Not supported in SQL Database Managed Instance
  | { EXPIREDATE = { 'date' | @date_var }   
         | RETAINDAYS = { days | @days_var } }   
   
@@ -152,11 +158,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 --Monitoring Options  
    STATS [ = percentage ]   
   
---Tape Options  
+--Tape Options. These are not supported in SQL Database Managed Instance
    { REWIND | NOREWIND }   
  | { UNLOAD | NOUNLOAD }   
   
---Log-specific Options  
+--Log-specific Options. These are not supported in SQL Database Managed Instance 
    { NORECOVERY | STANDBY = undo_file_name }  
  | NO_TRUNCATE  
   
@@ -166,7 +172,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- DATABASE  
+
+DATABASE  
  Specifica un backup completo del database. Se viene specificato un elenco di file e di filegroup, il backup viene eseguito solo per tali file e filegroup. Durante un backup completo o differenziale del database, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito il backup di una parte del log delle transazioni sufficiente per generare un database consistente quando viene ripristinato il backup.  
   
  Quando si ripristina un backup creato da BACKUP DATABASE (*backup dei dati*), viene ripristinato l'intero backup. Solo un backup del log può essere ripristinato fino a un'ora o fino a una transazione specifica all'interno del backup.  
@@ -174,7 +181,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 > Per il database **master** è possibile eseguire solo un backup completo.  
   
- LOG  
+LOG **Si applica a:** SQL Server
+
  Specifica il backup solo del log delle transazioni. Il backup del log viene eseguito dal punto dell'ultimo backup del log completato correttamente fino alla fine corrente del log. Prima che sia possibile creare il primo backup del log, è necessario creare un backup completo.  
   
  È possibile ripristinare un backup del log fino a un'ora o fino a una transazione specifica all'interno del backup specificando `WITH STOPAT`, `STOPATMARK` o `STOPBEFOREMARK` nell'istruzione [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md).  
@@ -223,12 +231,11 @@ Nome logico di un filegroup di sola lettura o di una variabile il cui valore equ
   
 TO \<backup_device> [ **,**...*n* ] Indica che il set di [dispositivi di backup](../../relational-databases/backup-restore/backup-devices-sql-server.md) associato è un set di supporti senza mirroring oppure il primo mirror in un set di supporti con mirroring, per cui vengono dichiarate una o più clausole MIRROR TO.  
   
-\<backup_device> Specifica il dispositivo di backup logico o fisico da usare per l'operazione di backup.  
+\<backup_device> **Si applica a:** SQL Server Specifica il dispositivo di backup logico o fisico da usare per l'operazione di backup.  
   
- { *logical_device_name* | **@***logical_device_name_var* } Nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se indicato in forma di variabile (@*logical_device_name_var*), il nome del dispositivo di backup può essere specificato come costante stringa (@*logical_device_name_var***=** logical backup device name) oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
+ { *logical_device_name* | **@***logical_device_name_var* } **Si applica a:** SQL Server Nome logico del dispositivo di backup in cui viene eseguito il backup del database. Il nome logico deve essere conforme alle regole per gli identificatori. Se indicato in forma di variabile (@*logical_device_name_var*), il nome del dispositivo di backup può essere specificato come costante stringa (@*logical_device_name_var***=** logical backup device name) oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
- { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' }  
- Specifica un file su disco o su nastro o un servizio di archiviazione Blob di Windows Azure. Il formato URL viene usato per la creazione di backup nel servizio di archiviazione di Microsoft Azure. Per altre informazioni ed esempi, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per un'esercitazione, vedere [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+ { DISK | TAPE | URL} **=** { **'***physical_device_name***'** | **@***physical_device_name_var* | 'NUL' } **Si applica a:** DISK, TAPE e URL si applicano a SQL Server. Solo URL si applica a Istanza gestita di database SQL Specifica un file su disco o su nastro o un servizio di archiviazione BLOB di Microsoft Azure. Il formato URL viene usato per la creazione di backup nel servizio di archiviazione di Microsoft Azure. Per altre informazioni ed esempi, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per un'esercitazione, vedere [Esercitazione: Backup e ripristino di SQL Server nel servizio di archiviazione Blob di Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
 
 > [!NOTE] 
 > Il dispositivo del disco NUL elimina tutte le informazioni inviate al dispositivo e deve essere usato solo per i test. Non è progettato per l'uso in produzione.
@@ -236,7 +243,7 @@ TO \<backup_device> [ **,**...*n* ] Indica che il set di [dispositivi di backup]
 > [!IMPORTANT]  
 > Da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], è possibile eseguire un backup solo in un singolo dispositivo per i backup in URL. Per eseguire il backup in più dispositivi durante il backup nell'URL, è necessario usare le versioni da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ed è necessario usare i token di firma di accesso condiviso (SAS). Per esempi di creazione di una firma di accesso condiviso, vedere [Backup di SQL Server nell'URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md) e [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Semplificazione della creazione di credenziali SQL con token di firma di accesso condiviso (SAS) in Archiviazione di Azure con Powershell).  
   
-**L'URL si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**URL si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e a Istanza gestita di database SQL.  
   
  Non è necessario che un dispositivo disco sia presente prima che venga specificato in un'istruzione BACKUP. Se il dispositivo fisico è presente e si omette l'opzione INIT nell'istruzione BACKUP, il backup viene accodato al dispositivo.  
  
@@ -272,17 +279,15 @@ MIRROR TO \<backup_device> [ **,**...*n* ] Indica un set di un massimo di tre di
  Opzioni da utilizzare con un'operazione di backup.  
   
  CREDENTIAL  
+**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e a Istanza gestita di database SQL.  
  Viene utilizzata solo quando si crea un backup nel servizio di archiviazione BLOB di Windows Azure.  
   
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-  
- FILE_SNAPSHOT  
+ FILE_SNAPSHOT **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+
  Usato per creare uno snapshot di Azure dei file di database quando tutti i file di database di SQL Server vengono archiviati usando il servizio di archiviazione BLOB di Azure. Per altre informazioni, vedere [File di dati di SQL Server in Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). Il backup di snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acquisisce snapshot di Azure dei file di database (file di dati e file di log) in uno stato coerente. Un set coerente di snapshot di Azure costituisce un backup e viene registrato nel file di backup. L'unica differenza tra `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT` e `BACKUP LOG TO URL WITH FILE_SNAPSHOT` è che quest'ultimo esegue anche il troncamento del log delle transazioni mentre il primo non esegue alcun troncamento. Con il backup di snapshot di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dopo il backup completo iniziale richiesto da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire la catena di backup, è necessario un solo backup del log delle transazioni per ripristinare un database nel punto nel tempo del backup del log delle transazioni. Inoltre, sono necessari solo due backup del log delle transazioni per ripristinare un database in un punto nel tempo compreso tra i due backup del log delle transazioni.  
-  
-**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
-  
+    
  DIFFERENTIAL  
- Opzione utilizzata solo con BACKUP DATABASE, che indica che il backup del database o del file deve includere solo le parti del database o del file modificate dopo l'ultimo backup completo. Un backup differenziale occupa in genere meno spazio rispetto a un backup completo. Utilizzare questa opzione per evitare di applicare tutti i singoli backup del log eseguiti dopo l'ultimo backup completo.  
+**Si applica a:** SQL Server Opzione usata solo con BACKUP DATABASE, che indica che il backup del database o del file deve includere solo le parti del database o del file modificate dopo l'ultimo backup completo. Un backup differenziale occupa in genere meno spazio rispetto a un backup completo. Utilizzare questa opzione per evitare di applicare tutti i singoli backup del log eseguiti dopo l'ultimo backup completo.  
   
 > [!NOTE]  
 > Per impostazione predefinita, `BACKUP DATABASE` crea un backup completo.  
@@ -313,8 +318,7 @@ Queste opzioni riguardano il set di backup creato dall'operazione di backup.
 > [!NOTE]  
 > Per specificare un set di backup per un'operazione di ripristino, usare l'opzione `FILE = <backup_set_file_number>`. Per altre informazioni su come specificare un set di backup, vedere "Specifica di un set di backup" in [Argomenti dell'istruzione RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
- COPY_ONLY  
- Specifica che il backup è un *backup di sola copia* che non influisce sulla normale sequenza di backup. Un backup di sola copia viene creato indipendentemente dai normali backup pianificati regolarmente. Un backup di sola copia non ha alcun impatto sulle procedure generali di backup e ripristino per il database.  
+ COPY_ONLY **Si applica a:** SQL Server e Istanza gestita di database SQL Specifica che il backup è un *backup di sola copia* che non influisce sulla normale sequenza di backup. Un backup di sola copia viene creato indipendentemente dai normali backup pianificati regolarmente. Un backup di sola copia non ha alcun impatto sulle procedure generali di backup e ripristino per il database.  
   
  I backup di sola copia devono essere utilizzati nelle situazioni in cui un backup è necessario per uno scopo specifico, ad esempio un backup del log prima di un ripristino di file online. In genere, un backup del log di sola copia viene utilizzato una sola volta e quindi eliminato.  
   
@@ -501,15 +505,13 @@ STATS [ **=** *percentage* ]
 L'opzione STATS segnala la percentuale di completamento in base alla soglia specificata per l'intervallo successivo. Si tratta approssimativamente della percentuale specificata. Con l'impostazione STATS=10, ad esempio, se la percentuale di completamento corrisponde al 40%, potrebbe venire indicata una percentuale uguale al 43%. Per i set di backup di grandi dimensioni ciò non rappresenta un problema, perché la percentuale di completamento aumenta molto lentamente tra le varie chiamate di I/O completate.  
   
 **Opzioni dei dispositivi nastro**  
-  
+**Si applica a:** SQL Server  
 Queste opzioni vengono utilizzate solo per i dispositivi nastro. Se non si utilizza un dispositivo nastro, queste opzioni vengono ignorate.  
   
 { **REWIND** | NOREWIND }  
-REWIND  
- Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve rilasciare e riavvolgere il nastro. REWIND è l'opzione predefinita.  
+REWIND **Si applica a:** SQL Server Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve rilasciare e riavvolgere il nastro. REWIND è l'opzione predefinita.  
   
-NOREWIND  
-Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve mantenere il nastro aperto dopo l'operazione di backup. È possibile utilizzare questa opzione per migliorare le prestazioni quando si eseguono più operazioni di backup sullo stesso nastro.  
+NOREWIND **Si applica a:** SQL Server Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deve mantenere il nastro aperto dopo l'operazione di backup. È possibile utilizzare questa opzione per migliorare le prestazioni quando si eseguono più operazioni di backup sullo stesso nastro.  
   
 L'opzione NOREWIND implica l'utilizzo di NOUNLOAD e queste opzioni non sono compatibili all'interno di una singola istruzione BACKUP.  
   
@@ -517,33 +519,33 @@ L'opzione NOREWIND implica l'utilizzo di NOUNLOAD e queste opzioni non sono comp
 > Se si usa l'opzione `NOREWIND`, l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene la proprietà dell'unità nastro fino a quando un'istruzione BACKUP o RESTORE eseguita nello stesso processo non usa l'opzione `REWIND` o `UNLOAD` oppure fino alla chiusura dell'istanza del server. Ciò impedisce ad altri processi di accedere al nastro. Per informazioni sulla visualizzazione dell'elenco dei nastri aperti e sulla chiusura di un nastro aperto, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
 { **UNLOAD** | NOUNLOAD }    
-
+**Si applica a:** SQL Server 
 > [!NOTE]  
 > `UNLOAD` e `NOUNLOAD` sono impostazioni di sessione che rimangono valide per l'intera durata della sessione o finché non vengono reimpostate tramite la specifica di un'impostazione alternativa.  
   
-UNLOAD  
+UNLOAD **Si applica a:** SQL Server   
  Specifica che il nastro viene riavvolto e scaricato automaticamente al termine del backup. L'opzione UNLOAD è l'impostazione predefinita all'avvio di una sessione. 
   
-NOUNLOAD  
- Specifica che dopo l'operazione BACKUP il nastro rimane caricato sull'unità nastro.  
+NOUNLOAD **Si applica a:** Specifica che dopo l'operazione BACKUP il nastro deve rimanere caricato nell'unità nastro.  
   
 > [!NOTE]  
 > Per un backup in un dispositivo di backup su nastro, l'opzione `BLOCKSIZE` influisce sulle prestazioni dell'operazione di backup. In genere, questa opzione influisce sulle prestazioni solo durante la scrittura nei dispositivi nastro.  
   
 **Opzioni specifiche dei log**  
-  
+**Si applica a:** SQL Server  
 Queste opzioni vengono usate solo con `BACKUP LOG`.  
   
 > [!NOTE]  
 > Se non si desidera eseguire un backup del log, utilizzare il modello di recupero con registrazione minima. Per altre informazioni, vedere [Modelli di recupero &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
 { NORECOVERY | STANDBY **=** *undo_file_name* }  
-  NORECOVERY  
+  NORECOVERY **Si applica a:** SQL Server   
   Consente di eseguire il backup della parte finale del log lasciando il database nello stato RESTORING. L'opzione NORECOVERY risulta utile quando si esegue il failover in un database secondario o per salvare la parte finale del log prima di un'operazione RESTORE.  
   
   Usare insieme le opzioni `NO_TRUNCATE` e `NORECOVERY` per eseguire un backup del log senza troncamento del log e quindi portare il database nello stato RESTORING in modo atomico.  
   
-  STANDBY **=** *standby_file_name*  
+  STANDBY ** = ** *standby_file_name* 
+**Si applica a:** SQL Server   
   Consente di eseguire il backup della parte finale del log lasciando il database nello stato STANDBY e di sola lettura. La clausola STANDBY scrive i dati di standby (esecuzione del rollback ma con la possibilità di ulteriori ripristini). L'utilizzo dell'opzione STANDBY equivale all'esecuzione di BACKUP LOG WITH NORECOVERY seguita da RESTORE WITH STANDBY.  
   
   Per usare la modalità standby è necessario un file standby, specificato con *standby_file_name*, il cui percorso viene archiviato nel log del database. Se il file specificato esiste già, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] lo sovrascrive. Se il file non esiste, viene creato dal [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il file standby diventa un elemento integrante del database.  
@@ -551,6 +553,7 @@ Queste opzioni vengono usate solo con `BACKUP LOG`.
   In questo file vengono memorizzate le modifiche di cui è stato eseguito il rollback, che devono essere annullate se è necessario eseguire successivamente operazioni RESTORE LOG. Lo spazio su disco a disposizione deve essere sufficiente per contenere il file standby, le cui dimensioni aumenteranno in quanto dovrà includere tutte le pagine distinte del database modificate dal rollback delle transazioni per le quali non è stato eseguito il commit.  
   
 NO_TRUNCATE  
+**Si applica a:** SQL Server  
 Specifica che il log non deve essere troncato e determina quindi un tentativo di backup da parte del [!INCLUDE[ssDE](../../includes/ssde-md.md)] indipendentemente dallo stato del database. È pertanto possibile che un backup creato con `NO_TRUNCATE` contenga metadati incompleti. Questa opzione consente l'esecuzione del backup del log quando il database è danneggiato.  
   
 L'opzione NO_TRUNCATE per BACKUP LOG equivale a specificare sia COPY_ONLY che CONTINUE_AFTER_ERROR.  
@@ -700,7 +703,8 @@ A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'impostazione a
 
 > [!NOTE]  
 > L'algoritmo di compressione ottimizzato per i database con crittografia TDE viene usato automaticamente quando:
-> * Viene usato il backup nell'URL e il valore `MAXTRANSFERSIZE` predefinito viene modificato in 1048576 (1 MB) e non viene forzato su un valore minore.
+> * 
+>  viene usato. In questo caso il valore `MAXTRANSFERSIZE` predefinito viene modificato in 1048576 (1 MB) e non viene forzato a un valore minore.
 > * Il database include più file di dati e il valore predefinito `MAXTRANSFERSIZE` viene modificato in multipli di 65536 (64 KB) e non viene modificato in un valore minore (ad esempio `MAXTRANSFERSIZE = 65536`). 
   
 Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
@@ -715,7 +719,16 @@ Per impostazione predefinita, per ogni operazione di backup eseguita in modo cor
 -   Compattazione di database o file, incluse operazioni di compattazione automatica.  
   
 Se un'operazione di backup si sovrappone a un'operazione di compattazione o di gestione dei file, viene generato un conflitto. Indipendentemente dall'operazione iniziata per prima tra quelle in conflitto, la seconda operazione attende il timeout del blocco impostato dalla prima operazione. Il periodo di timeout dipende da un'impostazione di timeout di sessione. Se il blocco viene rilasciato entro il periodo di timeout, la seconda operazione continua. Se il periodo di timeout scade, la seconda operazione non viene eseguita.  
-  
+
+## <a name="limitations-for-sql-database-managed-instance"></a>Limitazioni di Istanza gestita di database SQL
+Istanza gestita di database SQL può eseguire il backup di un database in un backup con un massimo di 32 strisce, sufficiente per i database fino a 4 TB se viene usata la compressione dei backup.
+
+La dimensione massima della striscia di backup corrisponde a 195 GB (dimensione massima di un oggetto BLOB). Aumentare il numero di strisce nel comando di backup per ridurre la dimensione delle singole strisce e rimanere entro questo limite.
+
+> [!NOTE]
+> Per aggirare questa limitazione in locale, eseguire il backup con `DISK` anziché con `URL`, caricare il file di backup in un BLOB e quindi eseguire il ripristino. Il ripristino supporta file di maggiori dimensioni perché usa un tipo di BLOB diverso.
+
+ 
 ## <a name="metadata"></a>Metadati  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono incluse le tabelle di cronologia di backup seguenti, utilizzate per tenere traccia delle attività di backup:  
   
@@ -740,7 +753,8 @@ Quando viene eseguito un ripristino, se il set di backup non è già stato regis
   
 -   A. [Backup di un database completo](#backing_up_db)  
 -   B. [Backup del database e del log](#backing_up_db_and_log)  
--   C. [Creazione di un backup completo dei filegroup secondari](#full_file_backup)  
+-   C. [Creazione di un backup completo dei filegroup secondari](#full_
+-   file_backup)  
 -   D. [Creazione di un backup differenziale dei filegroup secondari](#differential_file_backup)  
 -   E. [Creazione di un set di supporti con mirroring con un singolo gruppo di supporti ed esecuzione di un backup in tale set](#create_single_family_mirrored_media_set)  
 -   F. [Creazione di un set di supporti con mirroring con più gruppi di supporti ed esecuzione di un backup in tale set](#create_multifamily_mirrored_media_set)  

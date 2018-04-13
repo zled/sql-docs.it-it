@@ -1,16 +1,16 @@
 ---
 title: TOP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TOP_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - TOP clause, about TOP clause
 - queries [SQL Server], results
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
-caps.latest.revision: 
+caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
 ms.openlocfilehash: 926de1152e7c1223441d9ac85da11246049e31ea
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/19/2018
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *expression*  
+ *espressione*  
  Espressione numerica che consente di specificare il numero di righe da restituire. *expression* viene implicitamente convertito in valore di tipo **float**, se è specificato PERCENT. In caso contrario, viene convertito in **bigint**.  
   
  PERCENT  
@@ -234,7 +234,7 @@ GO
 ###  <a name="DML"></a> Limitazione delle righe interessate da DELETE, INSERT o UPDATE  
   
 #### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>A. Utilizzo di TOP per limitare il numero di righe eliminate  
- Quando si usa una clausola TOP (*n*) con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di un numero *n* di righe. In altre parole, l'istruzione DELETE sceglie un numero (*n*) di righe qualsiasi che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1* luglio 2002.  
+ Quando TOP (*n*) clausola viene utilizzata con DELETE, l'operazione di eliminazione viene eseguita su una selezione non definita di *n* numero di righe. Vale a dire, l'istruzione DELETE sceglie uno (*n*) numero di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono eliminate `20` righe dalla tabella `PurchaseOrderDetail` con scadenze precedenti al 1 luglio 2002.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -300,7 +300,7 @@ GO
 ```  
   
 #### <a name="c-using-top-to-limit-the-number-of-rows-updated"></a>C. Utilizzo di TOP per limitare il numero di righe aggiornate  
- Nell'esempio seguente viene utilizzata la clausola TOP per aggiornare righe in una tabella. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su un numero non definito di righe. In altre parole, l'istruzione UPDATE sceglie un numero (*n*) di righe qualsiasi che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono assegnati 10 clienti da un venditore a un altro.  
+ Nell'esempio seguente viene utilizzata la clausola TOP per aggiornare righe in una tabella. Quando TOP (*n*) clausola viene utilizzata con l'aggiornamento, l'operazione di aggiornamento viene eseguita su un numero indefinito di righe. Vale a dire, l'istruzione UPDATE sceglie uno (*n*) numero di righe che soddisfano i criteri definiti nella clausola WHERE. Nell'esempio seguente vengono assegnati 10 clienti da un venditore a un altro.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -344,7 +344,7 @@ FROM DimEmployee ORDER BY LastName;
   
 ## <a name="see-also"></a>Vedere anche  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+ [INSERISCI &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [Clausola ORDER BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-order-by-clause-transact-sql.md)   

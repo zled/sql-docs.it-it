@@ -1,32 +1,32 @@
 ---
 title: File di formato XML (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: import-export
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-bulk-import-export
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - format files [SQL Server], XML format files
 - bulk importing [SQL Server], format files
 - XML format files [SQL Server]
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-caps.latest.revision: 
+caps.latest.revision: 45
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: d6b89e518ace2edd0e527f1908087922dabce2de
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: HT
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="xml-format-files-sql-server"></a>File in formato XML (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/23/2018
 > [!NOTE]  
 >  Sono supportati due tipi di file di formato per l'esportazione e l'importazione in blocco: *file di formato non XML* e *file di formato XML*. I file di formato XML offrono un'alternativa flessibile ed efficiente rispetto ai file di formato non XML. Per informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
- **Contenuto dell'argomento:**  
+ **Contenuto dell'argomento**  
   
 -   [Vantaggi dei file di formato XML](#BenefitsOfXmlFFs)  
   
@@ -205,9 +205,9 @@ ms.lasthandoff: 02/23/2018
   
  Ogni elemento \<FIELD> è indipendente dagli altri. Per la descrizione di un campo vengono utilizzati gli attributi seguenti:  
   
-|Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Obbligatorio|  
+|Attributo FIELD|Descrizione|Facoltativo /<br /><br /> Required|  
 |---------------------|-----------------|------------------------------|  
-|ID **="***fieldID***"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> esegue il mapping a \<COLUMN SOURCE**="***fieldID***"**/>|Obbligatorio|  
+|ID **="***fieldID***"**|Specifica il nome logico del campo nel file di dati. L'ID di un campo rappresenta la chiave utilizzata per fare riferimento al campo.<br /><br /> \<FIELD ID**="***fieldID***"**/> esegue il mapping a \<COLUMN SOURCE**="***fieldID***"**/>|Required|  
 |xsi:type **="***fieldType***"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo dell'istanza dell'elemento. Il valore di *fieldType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.|Obbligatorio, a seconda del tipo di dati|  
 |LENGTH **="***n***"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
 |PREFIX_LENGTH **="***p***"**|Definisce la lunghezza del prefisso per una rappresentazione di dati binary. Il valore PREFIX_LENGTH *p*deve essere uno dei seguenti: 1, 2, 4 o 8.|Facoltativo, a meno che non richiesto dal valore xsi:type|  
@@ -222,7 +222,7 @@ ms.lasthandoff: 02/23/2018
   
 |Valori xsi:type di \<FIELD>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------------------|---------------------------------------------------|---------------------------------------------------|  
-|**NativeFixed**|**LENGTH**|nessuna.|  
+|**NativeFixed**|**LENGTH**|Nessuno|  
 |**NativePrefix**|**PREFIX_LENGTH**|MAX_LENGTH|  
 |**CharFixed**|**LENGTH**|COLLATION|  
 |**NCharFixed**|**LENGTH**|COLLATION|  
@@ -258,10 +258,10 @@ ms.lasthandoff: 02/23/2018
   
  Per eseguire il mapping di un campo a una colonna nella tabella di destinazione vengono utilizzati gli attributi seguenti:  
   
-|Attributo COLUMN|Description|Facoltativo /<br /><br /> Obbligatorio|  
+|Attributo COLUMN|Description|Facoltativo /<br /><br /> Required|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="***fieldID***"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> esegue il mapping a \<FIELD ID**="***fieldID***"**/>|Obbligatorio|  
-|NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Obbligatorio|  
+|SOURCE **="***fieldID***"**|Specifica l'ID del campo di cui eseguire il mapping alla colonna.<br /><br /> \<COLUMN SOURCE**="***fieldID***"**/> esegue il mapping a \<FIELD ID**="***fieldID***"**/>|Required|  
+|NAME = "*columnName*"|Specifica il nome della colonna del set di righe rappresentato dal file di formato. Viene utilizzato per identificare la colonna nel set dei risultati e non corrisponde necessariamente al nome di colonna utilizzato nella tabella di destinazione.|Required|  
 |xsi**:**type **="***ColumnType***"**|Costrutto XML, utilizzato in modo simile a un attributo, che identifica il tipo di dati dell'istanza dell'elemento. Il valore di *ColumnType* determina gli attributi opzionali, riportati di seguito, necessari in un'istanza specifica.<br /><br /> Nota: i valori possibili di *ColumnType* e i relativi attributi associati sono elencati nella tabella dell'elemento \<COLUMN> nella sezione [Valori Xsi:type dell'elemento &lt;COLUMN&gt;](#XsiTypeValuesOfCOLUMN).|Facoltativo|  
 |LENGTH **="***n***"**|Definisce la lunghezza per un'istanza di un tipo di dati a lunghezza fissa. Viene utilizzato solo quanto il valore xsi:type corrisponde a un tipo di dati string.<br /><br /> Il valore di *n* deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati string)|  
 |PRECISION **="***n***"**|Indica il numero di cifre in un numero. Il numero 123,45, ad esempio, ha una precisione di 5.<br /><br /> Il valore deve essere un numero intero positivo.|Facoltativo (disponibile solo se il valore xsi:type corrisponde a un tipo di dati numerico variabile)|  
@@ -275,12 +275,12 @@ ms.lasthandoff: 02/23/2018
   
 |Categoria del tipo|Tipi di dati di \<COLUMN>|Attributi XML obbligatori<br /><br /> per il tipo di dati|Attributi XML facoltativi<br /><br /> per il tipo di dati|  
 |-------------------|---------------------------|---------------------------------------------------|---------------------------------------------------|  
-|Fisso|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|nessuna.|NULLABLE|  
-|Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|nessuna.|NULLABLE, PRECISION, SCALE|  
-|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|nessuna.|NULLABLE|  
-|Character LOB|**SQLNTEXT**|nessuna.|NULLABLE|  
-|Stringa binaria|**SQLBINARY** e **SQLVARYBIN**|nessuna.|NULLABLE, LENGTH|  
-|Stringa di caratteri|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|nessuna.|NULLABLE, LENGTH|  
+|Fisso|**SQLBIT**, **SQLTINYINT**, **SQLSMALLINT**, **SQLINT**, **SQLBIGINT**, **SQLFLT4**, **SQLFLT8**, **SQLDATETIME**, **SQLDATETIM4**, **SQLDATETIM8**, **SQLMONEY**, **SQLMONEY4**, **SQLVARIANT**e **SQLUNIQUEID**|Nessuno|NULLABLE|  
+|Numero variabile|**SQLDECIMAL** e **SQLNUMERIC**|Nessuno|NULLABLE, PRECISION, SCALE|  
+|LOB|**SQLIMAGE**, **CharLOB**, **SQLTEXT**e **SQLUDT**|Nessuno|NULLABLE|  
+|Character LOB|**SQLNTEXT**|Nessuno|NULLABLE|  
+|Stringa binaria|**SQLBINARY** e **SQLVARYBIN**|Nessuno|NULLABLE, LENGTH|  
+|Stringa di caratteri|**SQLCHAR**, **SQLVARYCHAR**, **SQLNCHAR**e **SQLNVARCHAR**|Nessuno|NULLABLE, LENGTH|  
   
 > [!IMPORTANT]  
 >  Per eseguire l'esportazione o l'importazione bulk dei dati SQLXML, utilizzare uno dei tipi di dati seguenti nel file di formato: SQLCHAR o SQLVARYCHAR (i dati vengono inviati nella tabella codici del client o nella tabella codici implicita nelle regole di confronto), SQLNCHAR o SQLNVARCHAR (i dati vengono inviati come Unicode) oppure SQLBINARY o SQLVARYBIN (i dati vengono inviati senza conversione).  
@@ -554,7 +554,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -566,7 +566,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
 -   [Utilizzo di un file di formato per escludere un campo di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
--   [Utilizzo di un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+-   [Usare un file di formato per eseguire il mapping tra le colonne della tabella e i campi del file di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
  nessuna.  

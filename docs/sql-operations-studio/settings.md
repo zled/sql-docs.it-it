@@ -1,6 +1,6 @@
 ---
-title: Studio operazioni SQL (anteprima) utente e le impostazioni dell'area di lavoro | Documenti Microsoft
-description: Come modificare Studio operazioni SQL (anteprima) utente e le impostazioni dell'area di lavoro.
+title: SQL Operations Studio (preview) utente e le impostazioni dell'area di lavoro | Documenti Microsoft
+description: Come modificare SQL Operations Studio (preview) utente e le impostazioni dell'area di lavoro.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -8,7 +8,7 @@ ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: yualan
 ms.author: alayu
@@ -55,7 +55,7 @@ Il file di impostazione dell'area di lavoro si trova sotto il `.[!INCLUDE[name-s
 
 ## <a name="hot-exit"></a>Uscita a caldo
 
-Operazioni SQL Studio verranno memorizzate le modifiche non salvate per i file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita di frequente in Visual Studio Code.
+SQL Operations Studio verranno memorizzate le modifiche non salvate per i file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita di frequente in Visual Studio Code.
 
 Per impostazione predefinita, uscita frequente è disattivata. Abilitare l'area uscita modificando il `files.hotExit` impostazione. Per informazioni dettagliate, vedere [Exit a caldo (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
