@@ -1,6 +1,6 @@
 ---
-title: Origine di controllo in SQL Operations Studio (preview) | Documenti Microsoft
-description: Informazioni su come configurare controllo del codice sorgente in SQL Operations Studio (preview).
+title: Controllo del codice sorgente in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Informazioni su come configurare il controllo del codice sorgente in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -20,37 +20,37 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 12/21/2017
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utilizzo di controllo del codice sorgente[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utilizzo del controllo del codice sorgente in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]supporta Git per il controllo della versione/origine.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta Git per il controllo della versione/sorgente.
 
 
-## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Supporto di GIT in[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Supporto di GIT in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]viene fornito con un gestore di controllo di origine Git (SCM), ma è comunque necessario [installare Git (versione 2.0.0 o versione successiva)](https://git-scm.com/download) prima di queste funzionalità sono disponibili. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] viene fornito con un manager del controllo del codice sorgente (SCM) Git, ma è comunque necessario [installare Git (versione 2.0.0 o successiva)](https://git-scm.com/download) prima che queste funzionalità siano disponibili. 
 
 
 
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 
-1. Sotto il **File** dal menu **Apri cartella...**
-2. Passare alla cartella che contiene i file rilevati da git e fare clic su **selezionare la cartella**. Le sottocartelle nel repository locale sono integri da selezionare.
+1. Nel menu **File** selezionare **Apri cartella...**
+2. Aprire la cartella che contiene i file tracciati da Git e fare clic su **Apri**. Le sottocartelle nel repository locale sono anch'esse selezionabili.
 
 
-## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository git
+## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository Git
 
-1. Selezionare **controllo del codice sorgente**, quindi selezionare l'icona di git.
+1. Selezionare **Controllo del codice sorgente** nella barra laterale sinistra, quindi selezionare l'icona di Git.
 
-   ![Icona git del controllo origine](media/source-control/source-control.png)
+   ![Icona Git del controllo del codice sorgente](media/source-control/source-control.png)
 
-1. Immettere il percorso della cartella in cui si desidera inizializzare come un repository Git e premere **invio**.
+1. Immettere il percorso della cartella in cui si desidera inizializzare un repository Git e premere **Invio**.
 
    ![inizializzare il repository Git](media/source-control/initialize-git-repository.png)
 
-## <a name="working-with-git-repositories"></a>Utilizzo di repository Git
+## <a name="working-with-git-repositories"></a>Utilizzo di un repository Git
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]eredita l'implementazione di Git dal codice di Visual Studio, ma attualmente non supporta altri provider di Gestione controllo servizi. Per i dettagli sull'uso di Git dopo avere aperto o inizializzare un repository, vedere [supporto Git in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita l'implementazione di Git da Visual Studio Code, ma attualmente non supporta altri manager del controllo del codice sorgente (SCM). Per i dettagli sull'uso di Git dopo avere aperto o inizializzato un repository, vedere [supporto Git in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-- [Documentazione di GIT](https://git-scm.com/documentation)
+- [Documentazione di Git](https://git-scm.com/documentation)
