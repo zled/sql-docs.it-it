@@ -30,7 +30,7 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 02/09/2018
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Esempio di proprietà RecordCount (VB) e di filtro
-In questo esempio viene aperto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) nella tabella Publishers il ***Pubs*** database. Viene quindi utilizzato il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare il numero di record visibili da tali server di pubblicazione in un determinato paese/regione. Il **RecordCount** proprietà viene utilizzata per mostrare la differenza tra i recordset non filtrate e filtrate.  
+In questo esempio viene aperto un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) nella tabella Publishers il ***Pubs*** database. Viene quindi utilizzato il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà per limitare il numero di record visibili da tali server di pubblicazione in un determinato paese/area geografica. Il **RecordCount** proprietà viene utilizzata per mostrare la differenza tra i recordset non filtrate e filtrate.  
   
 ```  
 'BeginFilterVB  
