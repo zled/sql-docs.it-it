@@ -1,16 +1,16 @@
 ---
 title: Componente script| Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
@@ -25,7 +25,7 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: 
+caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
@@ -211,7 +211,7 @@ ms.lasthandoff: 01/25/2018
 |valore|Description|  
 |-----------|-----------------|  
 |**Descrizione**|Consente di descrivere gli scopi della trasformazione Script.|  
-|**LocaleID**|Consente di stabilire le impostazioni locali per specificare informazioni sul paese/regione relative all'ordinamento e alla conversione di data e ora.|  
+|**LocaleID**|Consente di stabilire le impostazioni locali per specificare informazioni sul paese/area geografica relative all'ordinamento e alla conversione di data e ora.|  
 |**Nome**|Consente di digitare un nome descrittivo per il componente.|  
 |**ValidateExternalMetadata**|Consente di specificare se la trasformazione Script convalida i metadati delle colonne in fase di progettazione utilizzando origini dei dati esterne. Il valore **false** consente di ritardare la convalida fino al momento dell'esecuzione.|  
 |**ReadOnlyVariables**|Consente di digitare un elenco delimitato da virgole delle variabili per l'accesso di sola lettura da parte della trasformazione Script.<br /><br /> Nota: per i nomi delle variabili viene fatta distinzione tra maiuscole e minuscole.|  

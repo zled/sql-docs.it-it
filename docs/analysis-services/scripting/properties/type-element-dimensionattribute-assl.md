@@ -74,7 +74,7 @@ ms.lasthandoff: 01/08/2018
 |*Indirizzo*|L'attributo rappresenta un indirizzo.|  
 |*AddressBuilding*|L'attributo rappresenta un identificatore di edificio per un indirizzo.|  
 |*AddressCity*|L'attributo rappresenta la città per un indirizzo.|  
-|*AddressCountry*|L'attributo rappresenta un paese/regione per un indirizzo.|  
+|*AddressCountry*|L'attributo rappresenta un paese/area geografica per un indirizzo.|  
 |*AddressFax*|L'attributo rappresenta un numero di fax.|  
 |*AddressFloor*|L'attributo rappresenta un identificatore di piano per un indirizzo.|  
 |*AddressHouse*|L'attributo rappresenta il numero civico per un indirizzo.|  
@@ -305,8 +305,8 @@ ms.lasthandoff: 01/08/2018
  L'elemento che corrisponde all'elemento padre **tipo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DimensionAttribute>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attributi elemento &#40; ASSL &#41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
- [Elemento Dimension &#40; ASSL &#41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Attributi elemento & #40; ASSL & #41;](../../../analysis-services/scripting/collections/attributes-element-assl.md)   
+ [Elemento Dimension & #40; ASSL & #41;](../../../analysis-services/scripting/objects/dimension-element-assl.md)   
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

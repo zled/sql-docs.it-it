@@ -1,15 +1,15 @@
 ---
 title: Gerarchie utente | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.service: ''
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -29,7 +29,7 @@ helpviewer_keywords:
 - multilevel hierarchies [Analysis Services]
 - unbalanced hierarchies [Analysis Services]
 ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
-caps.latest.revision: 
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -86,7 +86,7 @@ Gerarchie definite dall'utente sono gerarchie definite dall'utente di attributi 
   
 -   Un livello denominato Province viene aggiunto tra i livelli CountryRegion e City.  
   
- Il livello Province viene popolato con i membri associati ad altri membri nel livello CountryRegion e i membri nel livello City vengono associati ai membri corrispondenti nel livello Province. Tuttavia, dato che il membro Vatican City nel livello CountryRegion non ha membri associati nel livello Province, i membri devono essere associati dal livello City direttamente al membro Vatican City nel livello CountryRegion. A causa delle modifiche, la gerarchia della dimensione ora risulta incompleta. Il membro padre della città Vatican City è il paese/regione Vatican City che non si trova nel livello immediatamente superiore al membro Vatican City nel livello City. Per altre informazioni, vedere [Gerarchie incomplete](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
+ Il livello Province viene popolato con i membri associati ad altri membri nel livello CountryRegion e i membri nel livello City vengono associati ai membri corrispondenti nel livello Province. Tuttavia, dato che il membro Vatican City nel livello CountryRegion non ha membri associati nel livello Province, i membri devono essere associati dal livello City direttamente al membro Vatican City nel livello CountryRegion. A causa delle modifiche, la gerarchia della dimensione ora risulta incompleta. Il membro padre della città Vatican City è il paese/area geografica Vatican City che non si trova nel livello immediatamente superiore al membro Vatican City nel livello City. Per altre informazioni, vedere [Gerarchie incomplete](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Gerarchie padre-figlio  
  Le gerarchie padre-figlio delle dimensioni vengono definite utilizzando un attributo speciale, denominato attributo padre, per determinare il tipo di relazione esistente tra i membri. Un attributo padre descrive una *relazione autoreferenziale*, o *self join*, in una tabella della dimensione principale. Le gerarchie padre-figlio vengono create da un unico attributo padre. A una gerarchia padre-figlio viene assegnato un solo livello, in quanto i livelli presenti nella gerarchia sono derivati dalle relazioni padre-figlio tra i membri associati all'attributo padre. Lo schema della dimensione di una gerarchia padre-figlio dipende da una relazione autoreferenziale presente nella tabella della dimensione principale. Ad esempio, il diagramma seguente illustra il **DimOrganization** nella tabella principale della dimensione di [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database di esempio.  

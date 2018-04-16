@@ -1,15 +1,15 @@
 ---
 title: Configurare i tipi di attributo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - time dimensions [Analysis Services]
@@ -19,7 +19,7 @@ helpviewer_keywords:
 - currency dimensions [Analysis Services]
 - Type property
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -54,7 +54,7 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
 |**Indirizzo**|Rappresenta un indirizzo.|  
 |**AddressBuilding**|Rappresenta l'identificatore di edificio per un indirizzo.|  
 |**AddressCity**|Rappresenta la città per un indirizzo.|  
-|**AddressCountry**|Rappresenta il paese/regione per un indirizzo.|  
+|**AddressCountry**|Rappresenta il paese/area geografica per un indirizzo.|  
 |**AddressFax**|Rappresenta un numero di fax.|  
 |**AddressFloor**|Rappresenta l'identificatore di piano per un indirizzo.|  
 |**AddressHouse**|Rappresenta il numero civico per un indirizzo.|  
@@ -72,7 +72,7 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
 |**City**|Rappresenta una città.|  
 |**Company**|Rappresenta una società.|  
 |**Continent**|Rappresenta un continente.|  
-|**Country**|Rappresenta un paese/regione.|  
+|**Country**|Rappresenta un paese/area geografica.|  
 |**Country**|Rappresenta una regione.|  
 |**CustomerGroup**|Rappresenta un gruppo di clienti.|  
 |**CustomerHousehold**|Rappresenta l'unità familiare dei clienti.|  

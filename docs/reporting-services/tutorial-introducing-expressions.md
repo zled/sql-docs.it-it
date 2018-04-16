@@ -1,20 +1,20 @@
 ---
 title: 'Esercitazione: Introduzione alle espressioni | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
+ms.service: ''
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-caps.latest.revision: 
+caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -367,7 +367,7 @@ In questa sezione viene creato un set di dati PaeseRegione e viene usata la funz
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Per cercare valori nel set di dati CountryRegion  
   
-1.  Fare clic sull'intestazione della colonna **ID Paese/Regione** ed eliminare il testo : **ID**in modo che si legga **Paese/Regione**.  
+1.  Fare clic sull'intestazione della colonna **ID Paese/Area geografica** ed eliminare il testo : **ID**in modo che si legga **Paese/Area geografica**.  
   
 2.  Fare clic con il pulsante destro del mouse sulla cella di dati per la colonna **Country Region** e scegliere **Espressione**.  
   
