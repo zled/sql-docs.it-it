@@ -1,1 +1,1 @@
-﻿<Token>SQL Operations Studio (anteprima)</Token>
+<Token>SQL Operations Studio (preview)</Token>
