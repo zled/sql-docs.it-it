@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sys.dm_exec_query_statistics_xml
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_query_statistics_xml management view
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
-caps.latest.revision: 
+caps.latest.revision: 6
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2e4547a6c0d79f56fa0f732236e16dbde409a45
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0ccdee9906de3b86aa9c3db3d3d33225c1f05c63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 ## <a name="arguments"></a>Argomenti 
 *session_id*  
- L'id di sessione è in esecuzione il batch da ricercare. *session_id* è **smallint**. *session_id* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
+ L'id di sessione è in esecuzione il batch da ricercare. *session_id* viene **smallint**. *session_id* può essere ottenuto dagli oggetti a gestione dinamica seguenti:  
   
 -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
@@ -66,12 +66,12 @@ Questa funzione di sistema è disponibile a partire da [!INCLUDE[ssSQL15](../../
 
 Questa funzione di sistema funziona in entrambi **standard** e **lightweight** infrastruttura di analisi delle statistiche di esecuzione di query.  
   
-**Standard** infrastruttura di analisi statistiche possono essere abilitate utilizzando:
-  -  [SET STATISTICS XML IN](../../t-sql/statements/set-statistics-xml-transact-sql.md)
+**Standard** le statistiche di profiling infrastruttura possono essere abilitate utilizzando:
+  -  [SET STATISTICS XML SU](../../t-sql/statements/set-statistics-xml-transact-sql.md)
   -  [SET STATISTICS PROFILE IN](../../t-sql/statements/set-statistics-profile-transact-sql.md)
   -  il `query_post_execution_showplan` eventi estesi.  
   
-**Lightweight** infrastruttura di analisi statistiche sono disponibile in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e può essere abilitata:
+**Lightweight** statistiche infrastruttura di analisi sono disponibile in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 e [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e possono essere abilitati:
   -  A livello globale tramite traccia flag 7412.
   -  Utilizzo di [ *query_thread_profile* ](http://support.microsoft.com/kb/3170113) eventi estesi.
   
@@ -115,5 +115,5 @@ GO
 ## <a name="see-also"></a>Vedere anche
   [Flag di traccia](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Viste a gestione dinamica &#40; correlati al database Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative ai database &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
 

@@ -1,16 +1,16 @@
 ---
 title: sp_control_plan_guide (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_control_plan_guide
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f093a05ebbfe14a0d9436b0b2a9503aadc5b6440
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Elimina la Guida di piano specificata in *plan_guide_name*. Dopo l'eliminazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
   
  DROP ALL  
- Elimina tutte le guide di piano nel database corrente. **N'***plan_guide_name* non può essere utilizzato quando DROP ALL è specificata.  
+ Elimina tutte le guide di piano nel database corrente. **N' * * * plan_guide_name* non può essere utilizzato quando DROP ALL è specificata.  
   
  DISABLE  
  Disabilita la Guida di piano specificata in *plan_guide_name*. Dopo la disabilitazione di una guida di piano, le future esecuzioni di una query a cui la guida di piano era in precedenza associata non saranno più influenzate dalla guida di piano.  
   
  DISABLE ALL  
- Disabilita tutte le guide di piano nel database corrente. **N'***plan_guide_name* non può essere utilizzato quando DISABLE ALL è specificata.  
+ Disabilita tutte le guide di piano nel database corrente. **N' * * * plan_guide_name* non può essere utilizzato quando DISABLE ALL è specificata.  
   
  ENABLE  
  Consente la Guida di piano specificata in *plan_guide_name*. Dopo che è stata abilitata, una guida di piano può essere associata a una query idonea. Per impostazione predefinita, le guide di piano vengono abilitate in fase di creazione.  
@@ -85,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
  Le guide di piano non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Tuttavia, è possibile eseguire **sp_control_plan_guide** con l'opzione DROP o DROP ALL in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per eseguire **sp_control_plan_guide** su una Guida di piano di tipo OBJECT (creato specificando  **@type ='**oggetto**'** ) richiede l'autorizzazione ALTER per l'oggetto che fa riferimento la Guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
 ## <a name="examples"></a>Esempi  
@@ -141,7 +141,7 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   

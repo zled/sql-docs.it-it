@@ -1,15 +1,16 @@
 ---
 title: Tipi di applicazioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - upgrading applications [ODBC], application types
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], application types
 - application compatibility issues [ODBC]
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c84327d23fba9b97bb34ff290eff06704e586df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e265ed5868e8c7d1b798aa75d343742547499aa1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="types-of-applications"></a>Tipi di applicazioni
 Le applicazioni ODBC possono essere classificate come segue:  
@@ -42,12 +43,12 @@ Le applicazioni ODBC possono essere classificate come segue:
     -   Non è stato ricompilato con le intestazioni di ODBC 3.5.  
   
 -   **Pure ODBC 2.**  
-     ***x* applicazione ricompilata** pure ODBC 2. *x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
+     ***x* applicazione ricompilate** pure ODBC 2. *x* applicazione che è stato ricompilato utilizzando i file di intestazione ODBC 3.5, impostando ODBCVER = 0x0250.  
   
 -   **Pure ODBC 2.**  
-     ***x* applicazione Unicode** pure ODBC 2. *x* ricompilare l'applicazione che è conforme a Unicode e utilizza il tipo di dati SQL_WCHAR.  
+     ***x* applicazione Unicode** pure ODBC 2. *x* ricompilate applicazione conforme a Unicode e che utilizza il tipo di dati SQL_WCHAR.  
   
--   **Pure Open Group e ISO**–**applicazioni ODBC conformi** applicazione A 32 bit che:  
+-   **Pure Open Group e ISO**–**applicazione ODBC compatibile** applicazione A 32 bit che:  
   
     -   Chiama funzioni definite negli standard Open Group o ISO CLI. (Queste funzioni possono includere 3.0 funzioni deprecate).  
   
@@ -55,7 +56,7 @@ Le applicazioni ODBC possono essere classificate come segue:
   
     -   Comportamento di ODBC 3.0 per le funzionalità che hanno subito modifiche del comportamento è previsto.  
   
--   **Applicazione di ODBC 3.0** applicazione A 32 bit che:  
+-   **Applicazione ODBC 3.0** applicazione A 32 bit che:  
   
     -   Viene compilato con le 3.0 intestazioni.  
   
@@ -63,7 +64,7 @@ Le applicazioni ODBC possono essere classificate come segue:
   
     -   Comportamento di ODBC 3.0 per le funzionalità che hanno subito modifiche del comportamento è previsto.  
   
--   **Applicazione di ODBC 3.5** A 32 o 64 bit applicazione che:  
+-   **Applicazione ODBC 3.5** A 32 o 64 bit dell'applicazione che:  
   
     -   Può utilizzare tipi di dati Unicode.  
   
@@ -71,7 +72,7 @@ Le applicazioni ODBC possono essere classificate come segue:
   
     -   Comportamento di ODBC 3.5 per le funzionalità che hanno subito modifiche del comportamento è previsto.  
   
--   **Pure applicazione ODBC 3.8 (o versioni successive)** applicazione A 32 bit o 64 bit che:  
+-   **ODBC 3.8 (o versioni successive) applicazione** applicazione A 32 bit o 64 bit che:  
   
     -   Può utilizzare tipi di dati Unicode.  
   
@@ -79,7 +80,7 @@ Le applicazioni ODBC possono essere classificate come segue:
   
     -   Comportamento di ODBC 3.8 per le funzionalità che hanno subito modifiche del comportamento è previsto.  
   
--   **Sostituito applicazione** A 32 o 64 bit applicazione che:  
+-   **Sostituito applicazione** A 32 o 64 bit dell'applicazione che:  
   
     -   Implementa nuovo comportamento per funzionalità duplicate.  
   

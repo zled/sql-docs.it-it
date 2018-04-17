@@ -1,16 +1,16 @@
 ---
 title: Sys. syslanguages (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.syslanguages
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - syslanguages system table
 - sys.syslanguages compatibility view
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 47eb77543c650a16650680435e5d0db7d395eade
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 03708a28eb0cdd1a961035f95d89cc9476cfbd63
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,12 +51,12 @@ ms.lasthandoff: 02/09/2018
 |months|**nvarchar(372)**|Elenco delimitato da virgole dei nomi completi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 20 caratteri.|  
 |shortmonths|**nvarchar(132)**|Elenco delimitato da virgole dei nomi brevi dei mesi ordinati da gennaio a dicembre. Ogni nome contiene un massimo di 9 caratteri.|  
 |days|**nvarchar(217)**|Elenco delimitato da virgole dei nomi dei giorni da lunedì a domenica. Ogni nome contiene un massimo di 30 caratteri.|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ID delle impostazioni locali di Windows relative alla lingua.|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID del gruppo di messaggi.|  
+|lcid|**int**|ID delle impostazioni locali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows relative alla lingua.|  
+|msglangid|**smallint**|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] include le lingue installate seguenti.  
   
-|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ID gruppo di messaggi|  
+|Nome in italiano|Identificatore delle impostazioni locali (LCID) di Windows|ID del gruppo di messaggi di [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |---------------------|------------------|-----------------------------------------|  
 |Inglese|1033|1033|  
 |Tedesco|1031|1031|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 02/09/2018
 |Thai|1054|1054|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste di compatibilità &#40; Transact-SQL &#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [Mapping di tabelle di sistema di viste di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [Viste di compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

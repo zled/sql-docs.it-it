@@ -1,30 +1,31 @@
 ---
 title: Programma di amministrazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d2fce2aa391f452286a15aa635e26c52ca96952
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2f4cd3ae3fd57dad914c8404e8fe9096e072771f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="administration-program"></a>Programma di amministrazione
 > [!NOTE]  
@@ -36,10 +37,10 @@ ms.lasthandoff: 12/21/2017
   
 -   **Aggiungere, modificare o eliminare le origini dati in modo interattivo.** Il programma di amministrazione è possibile chiamare **SQLManageDataSources**, **SQLCreateDataSource**, o **SQLConfigDataSource**.  
   
-     **SQLManageDataSources** Visualizza una finestra di dialogo con cui l'utente può aggiungere, modificare o eliminare le origini dati e specificare le opzioni di traccia; questa funzione viene chiamata quando viene richiamato il programma di installazione DLL direttamente dal Pannello di controllo. **SQLCreateDataSource** Visualizza una finestra di dialogo in cui l'utente è possibile aggiungere solo origini dati. **SQLConfigDataSource** passa la chiamata direttamente per la DLL di installazione del driver.  
+     **SQLManageDataSources** Visualizza una finestra di dialogo con cui l'utente può aggiungere, modificare, o eliminare le origini dati e specificare le opzioni di traccia; questa funzione viene chiamata quando viene richiamato il programma di installazione DLL direttamente dal Pannello di controllo. **SQLCreateDataSource** Visualizza una finestra di dialogo in cui l'utente è possibile aggiungere solo origini dati. **SQLConfigDataSource** passa la chiamata direttamente per la DLL di installazione del driver.  
   
      In tutti i casi, il programma di installazione DLL chiama **ConfigDSN** nella DLL per aggiungere effettivamente l'installazione del driver, modificare o eliminare l'origine dati. Il programma di installazione di driver DLL potrebbe richiedere all'utente informazioni aggiuntive.  
   
--   **Aggiungere, modificare o eliminare automaticamente le origini dati.** Il programma di amministrazione chiama **SQLConfigDataSource** nel programma di installazione DLL e passa è una null handle di finestra, il nome di un'origine dati per aggiungere, modificare o eliminare e un elenco di valori del Registro di sistema. Le chiamate DLL del programma di installazione **ConfigDSN** nella DLL per aggiungere effettivamente l'installazione del driver, modificare o eliminare l'origine dati.  
+-   **Aggiungere, modificare o eliminare le origini dati invisibile all'utente.** Il programma di amministrazione chiama **SQLConfigDataSource** nel programma di installazione DLL e passa è una null handle di finestra, il nome di un'origine dati per aggiungere, modificare o eliminare e un elenco di valori del Registro di sistema. Le chiamate DLL del programma di installazione **ConfigDSN** nella DLL per aggiungere effettivamente l'installazione del driver, modificare o eliminare l'origine dati.  
   
--   **Aggiungere, modificare o eliminare un'origine dati predefinito.** L'origine dati predefinita è lo stesso come qualsiasi altra origine dati, ad eccezione del fatto che il nome predefinito. Viene aggiunto, modificato o eliminato in modo identico a qualsiasi altra origine dati.
+-   **Aggiungere, modificare o eliminare un'origine dati predefinita.** L'origine dati predefinita è lo stesso come qualsiasi altra origine dati, ad eccezione del fatto che il nome predefinito. Viene aggiunto, modificato o eliminato in modo identico a qualsiasi altra origine dati.

@@ -1,16 +1,16 @@
 ---
 title: la procedura sp_monitor (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_monitor_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b4ef90280e72a7afd6a8787b053115a4bffa4fa
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1b54b2e5cc7918a59780e631d60b8cfc9014cfee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_monitor
 ```  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -57,21 +57,21 @@ sp_monitor
 |**secondi**|Numero di secondi trascorsi dopo **sp_monitor** è stata eseguita.|  
 |**cpu_busy**|Numero di secondi di attività della CPU del server per l'elaborazione di operazioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**io_busy**|Numero di secondi trascorsi per l'esecuzione di operazioni di input e output in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**inattività**|Numero di secondi durante i quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è rimasto inattivo.|  
+|**Inattività**|Numero di secondi durante i quali [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è rimasto inattivo.|  
 |**packets_received**|Numero di pacchetti di input letti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**packets_sent**|Numero di pacchetti di output scritti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**PACKET_ERRORS**|Numero di errori rilevati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la lettura e la scrittura di pacchetti.|  
 |**total_read**|Numero di letture eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_write**|Numero di scritture eseguite da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**total_errors**|Numero di errori rilevati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la lettura e la scrittura.|  
-|**connessioni**|Numero di accessi o tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Connessioni**|Numero di accessi o tentativi di accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="remarks"></a>Osservazioni  
  Tramite una serie di funzioni, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene tenuto traccia della quantità di operazioni eseguite. L'esecuzione di **sp_monitor** Visualizza i valori correnti restituiti da queste funzioni e Mostra la quantità sono stati modificati dall'ultima volta che è stata eseguita la procedura.  
   
  Per ogni colonna, le statistiche vengono stampate nel formato *numero*(*numero*)-*numero*% o *numero*(*numero*). Il primo *numero* indica il numero di secondi (per **cpu_busy**, **io_busy**, e **inattivo**) o il numero totale (per gli altri variabili) poiché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stato riavviato. Il *numero* tra parentesi indica il numero di secondi o il numero totale dall'ultima volta **sp_monitor** è stata eseguita. La percentuale è la percentuale di tempo trascorso dal **sp_monitor** ultima esecuzione. Ad esempio, se il report mostra **cpu_busy** 4250 (215)-68%, la CPU è stata occupata per 4250 secondi dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verso l'alto, 215 secondi dall'ultimo avvio **sp_monitor** stato ultima esecuzione e il 68% del Totale tempo trascorso dal **sp_monitor** ultima esecuzione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo predefinito del server **sysadmin** .  
   
 ## <a name="examples"></a>Esempi  
@@ -91,7 +91,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**cpu_busy**|**io_busy**|**inattività**|  
+|**cpu_busy**|**io_busy**|**Inattività**|  
 |190(0)-0%|187(0)-0%|148(556)-99%|  
   
 ||||  
@@ -101,11 +101,11 @@ EXEC sp_monitor
   
 |||||  
 |-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**connessioni**|  
+|**total_read**|**total_write**|**total_errors**|**Connessioni**|  
 |141(0)|54920(127)|0(0)|4(0)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_who &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
+ [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

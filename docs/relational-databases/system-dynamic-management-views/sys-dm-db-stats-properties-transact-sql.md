@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/18/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_stats_properties_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-caps.latest.revision: 
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3406cfffce07260fc425c2850e548d006f9d796a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 31a4637f2bdfdddc220ccb930dd4873956ddbf3a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,25 +58,25 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|ID dell'oggetto (tabella o vista indicizzata) per cui restituire le proprietà dell'oggetto statistiche.|  
 |stats_id|**int**|ID dell'oggetto statistiche. Univoco all'interno della tabella o della vista indicizzata. Per altre informazioni, vedere [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|last_updated|**datetime2**|Data e ora dell'ultimo aggiornamento dell'oggetto statistiche. Per ulteriori informazioni, vedere il [osservazioni](#Remarks) sezione in questa pagina.|  
+|last_updated|**datetime2**|Data e ora dell'ultimo aggiornamento dell'oggetto statistiche. Per altre informazioni, vedere la sezione [Osservazioni](#Remarks) più avanti nella pagina.|  
 |rows|**bigint**|Numero totale di righe della tabella o della vista indicizzata al momento dell'ultimo aggiornamento delle statistiche. Se le statistiche vengono filtrate o corrispondono a un indice filtrato, il numero di righe potrebbe essere inferiore al numero di righe della tabella.|  
 |rows_sampled|**bigint**|Numero totale di righe campionate per i calcoli statistici.|  
 |passaggi|**int**|Numero di intervalli nell'istogramma. Per altre informazioni, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Numero totale di righe nella tabella prima dell'applicazione dell'espressione di filtro (per statistiche filtrate). Se le statistiche non vengono filtrate, unfiltered_rows corrisponde al valore restituito nella colonna rows.|  
 |modification_counter|**bigint**|Numero totale di modifiche per la colonna iniziale delle statistiche, la colonna in cui viene compilato l'istogramma, dall'ultimo aggiornamento delle statistiche.<br /><br /> Le tabelle con ottimizzazione per la memoria: avvio [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] questa colonna contiene: numero totale di modifiche per la tabella poiché sono state aggiornate le statistiche temporali ultimo o il database è stato riavviato.|  
-|persisted_sample_percent|**float**|Persistente la percentuale di campionamento utilizzata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, verrà impostata alcuna percentuale di esempio persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
+|persisted_sample_percent|**float**|Percentuale di campionamento persistente usata per gli aggiornamenti delle statistiche che non specificano in modo esplicito una percentuale di campionamento. Se il valore è zero, non viene impostata alcuna percentuale di campionamento persistente per la statistica.<br /><br /> **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> Osservazioni  
- **Sys.dm db_stats_properties** restituisce un set di righe vuoto in presenza delle condizioni seguenti:  
+ **Sys.dm_db_stats_properties** restituisce un set di righe vuoto in presenza delle condizioni seguenti:  
   
--   **object_id** o **stats_id** è NULL.    
+-   **object_id** oppure **stats_id** è NULL.    
 -   L'oggetto specificato non viene trovato oppure non corrisponde a una tabella o a una vista indicizzata.    
 -   L'ID delle statistiche specificato non corrisponde alle statistiche esistenti per l'ID oggetto specificato.    
 -   L'utente corrente non dispone delle autorizzazioni per visualizzare l'oggetto statistiche.  
   
  Questo comportamento consente l'utilizzo sicuro di **Sys.dm db_stats_properties** quando tra applicato alle righe nelle viste, ad esempio **Sys. Objects** e **Sys. Stats**.  
  
-Data di aggiornamento delle statistiche viene archiviato nel [oggetto blob statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme il [istogramma](../../relational-databases/statistics/statistics.md#histogram) e [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, non viene creato il blob di statistiche, la data non è disponibile e *last_updated* colonna è NULL. Questo vale per le statistiche filtrate per cui il predicato non restituisce alcuna riga, o per le nuove tabelle vuote.
+La data di aggiornamento delle statistiche viene archiviata nell'[oggetto BLOB di statistiche](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) insieme all'[istogramma](../../relational-databases/statistics/statistics.md#histogram) e al [vettore di densità](../../relational-databases/statistics/statistics.md#density), non nei metadati. Quando viene letto alcun dato per generare i dati delle statistiche, non viene creato il blob di statistiche, la data non è disponibile e *last_updated* colonna è NULL. È il caso delle statistiche filtrate per le quali il predicato non restituisce alcuna riga o delle nuove tabelle vuote.
   
 ## <a name="permissions"></a>Autorizzazioni  
  L'utente deve avere autorizzazioni di selezione per le colonne delle statistiche o essere proprietario della tabella o membro del ruolo predefinito del server `sysadmin`, del ruolo predefinito del database `db_owner` o del ruolo predefinito del database `db_ddladmin`.  

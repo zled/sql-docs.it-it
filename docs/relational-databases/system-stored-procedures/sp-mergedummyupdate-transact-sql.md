@@ -1,16 +1,16 @@
 ---
 title: sp_mergedummyupdate (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergedummyupdate
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46c1fb620db4c4bbe4dde9872897cad07553173a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 36831e8593332441119d051a601d830f6225ab70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,20 +47,20 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@source_object=**] **'***source_object***'**  
- Nome dell'oggetto di origine. *source_object*è **nvarchar (386)**, non prevede alcun valore predefinito.  
+ Nome dell'oggetto di origine. *source_object*viene **nvarchar(386)**, non prevede alcun valore predefinito.  
   
  [  **@rowguid=**] **'***rowguid***'**  
- Identificatore di riga. *ROWGUID* è **uniqueidentifier**, non prevede alcun valore predefinito.  
+ Identificatore di riga. *ROWGUID* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_mergedummyupdate** viene utilizzata nella replica di tipo merge.  
   
  **sp_mergedummyupdate** è utile se si scrive un'alternativa per il Visualizzatore conflitti di replica (Wzcnflct.exe).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **db_owner** ruolo predefinito del database possono eseguire **sp_mergedummyupdate**.  
   
 ## <a name="see-also"></a>Vedere anche  

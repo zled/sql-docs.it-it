@@ -2,7 +2,7 @@
 title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: dmv's
@@ -27,11 +27,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c37a8f78d18a3315c188959f2f8403ef055c3155
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 55eaa65cc99bdc2e25e860be65570be6c8e32bdd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -94,7 +95,7 @@ Questo comando reimposta tutti i contatori su 0.
   
  Nella tabella seguente sono elencati i tipi di attesa rilevati dalle attività.  
 
-|tipo |Description| 
+|Tipo |Description| 
 |-------------------------- |--------------------------| 
 |ABR |Identificato solo a scopo informativo. Non supportato. Non è garantita la compatibilità con le versioni future.| | 
 |AM_INDBUILD_ALLOCATION |TBD <br />**Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -793,7 +794,7 @@ Questo comando reimposta tutti i contatori su 0.
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_CACHE_ACCESS |Si verifica durante la sincronizzazione in una cache degli articoli di replica. Durante queste attese si riscontra uno stallo nella lettura del log delle repliche e il blocco delle istruzioni DDL (Data Definition Language) per una tabella pubblicata.| 
 |REPL_HISTORYCACHE_ACCESS |TBD| 
-|REPL_SCHEMA_ACCESS |Si verifica durante la sincronizzazione delle informazioni sulla versione dello schema di replica. Questo stato esiste quando vengono eseguite istruzioni DDL sull'oggetto replicato e quando nella lettura del log viene compilato o usato uno schema con versione basato sull'occorrenza DDL.| 
+|REPL_SCHEMA_ACCESS |Si verifica durante la sincronizzazione delle informazioni sulla versione dello schema di replica. Questo stato esiste quando vengono eseguite istruzioni DDL sull'oggetto replicato e quando nella lettura del log viene compilato o usato uno schema con versione basato sull'occorrenza DDL. Possono verificarsi delle contese su questo tipo di attesa se si dispone di molti database pubblicati in un singolo server di pubblicazione con la replica transazionale e i database pubblicati molto attivi.| 
 |REPL_TRANFSINFO_ACCESS |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REPL_TRANHASHTABLE_ACCESS |TBD| 
 |REPL_TRANTEXTINFO_ACCESS |TBD <br /> **Si applica a**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

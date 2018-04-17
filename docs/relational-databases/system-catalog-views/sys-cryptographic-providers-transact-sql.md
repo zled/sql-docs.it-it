@@ -1,16 +1,16 @@
 ---
 title: Sys.cryptographic_providers (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cryptographic_providers
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.cryptographic_providers catalog view
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c453171a7378a0fb7201c8a2e577b207e5042337
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 30d84da2b80e4e9f2a65ee013cfa28356cb1078c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Numero di identificazione del provider di crittografia.|  
 |**name**|**sysname**|Nome del provider di crittografia.|  
-|**GUID**|**uniqueidentifier**|GUID univoco del provider.|  
+|**guid**|**uniqueidentifier**|GUID univoco del provider.|  
 |**version**|**nvarchar(50)**|Versione del provider nel formato '*aa.bb.cccc.dd*'.|  
 |**dll_path**|**nvarchar(512)**|Percorso della DLL che implementa l'API (Application Program Interface) dell'EKM (Extensible Key Management).|  
 |**is_enabled**|**bit**|Specifica se il provider è abilitato o meno nel server.<br /><br /> 0 = non abilitato (predefinito)<br /><br /> 1 = abilitato|  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Osservazioni  
  Il **sys.cryptographic_providers** visualizzazione è visibile al pubblico.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

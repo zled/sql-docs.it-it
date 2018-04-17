@@ -2,7 +2,7 @@
 title: Funzione SQLRemoveDSNFromIni | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d53af3854ff74a075033a787820ee868e76e667
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a547562e498257210dcab9f48033cd7aa2db4ad5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni (funzione)
 **Conformità**  
  Introdotta: versione ODBC 1.0  
   
  **Riepilogo**  
- **SQLRemoveDSNFromIni** rimuove le informazioni di sistema di un'origine dati.  
+ **SQLRemoveDSNFromIni** rimuove un'origine dati dalle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   

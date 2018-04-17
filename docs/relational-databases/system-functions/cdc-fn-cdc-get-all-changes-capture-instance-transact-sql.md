@@ -1,16 +1,16 @@
 ---
 title: cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - change data capture [SQL Server], querying metadata
 - cdc.fn_cdc_get_all_changes_<capture_instance>
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e56ac770a416d4597fd766d0d8e8612cccac262
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: dc2457099b01c10da59eeff031b6532d2b8a4ace
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,14 +55,14 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argomenti  
  *from_lsn*  
- Valore LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* è **Binary (10)**.  
+ Valore LSN che rappresenta l'endpoint inferiore dell'intervallo LSN da includere nel set di risultati. *from_lsn* viene **binary(10)**.  
   
- Solo le righe del [cdc. &#91; capture_instance &#93; CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modificare una tabella con un valore in **_ $start_lsn** maggiore o uguale a *from_lsn* vengono inclusi di set di risultati.  
+ Solo le righe della [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** maggiore o uguale a *from_lsn* sono inclusi nel set di risultati.  
   
  *to_lsn*  
- Valore LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* è **Binary (10)**.  
+ Valore LSN che rappresenta l'endpoint superiore dell'intervallo LSN da includere nel set di risultati. *to_lsn* viene **binary(10)**.  
   
- Solo le righe del [cdc. &#91; capture_instance &#93; CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modificare una tabella con un valore in **_ $start_lsn** minore o uguale a *from_lsn* o uguale a *to_lsn* sono inclusi nel set di risultati.  
+ Solo le righe della [cdc.&#91; capture_instance&#93;CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) con un valore nella tabella delle modifiche **_ $start_lsn** minore o uguale a *from_lsn* o uguale a *to_lsn* sono inclusi nel set di risultati.  
   
  <row_filter_option> ::= { all | all update old }  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati.  

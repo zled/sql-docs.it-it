@@ -1,16 +1,16 @@
 ---
-title: sys.memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: memory_optimized_tables_internal_attributes (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.memory_optimized_tables_internal_attributes
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.memory_optimized_tables_internal_attributes catalog view
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: jodebrui
 ms.author: jodebrui
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97bc9da007e21fd6f686795776b9d96ab53b3c77
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 89184c98512dcd4f4aeadc86ac4cfc8ccaff0ef7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,12 +43,12 @@ Contiene una riga per ogni tabella interna ottimizzata per la memoria usata per 
 | :------ |:----------| :-----|
 |object_id  |**int**|       ID della tabella utente. Le tabelle interne ottimizzate per la memoria presenti per supportare una tabella utente (ad esempio l'archiviazione all'esterno di righe o le righe eliminate in caso di combinazioni Hk/Columnstore) hanno lo stesso valore di object_id dell'elemento padre. |
 |xtp_object_id  |**bigint**|    ID di oggetto OLTP in memoria corrispondente alla tabella interna ottimizzata per la memoria usata per supportare la tabella utente. È univoco all'interno del database e può cambiare nel corso della durata dell'oggetto. 
-|tipo|  **int** |   Tipo di tabella interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|Tipo|  **int** |   Tipo di tabella interna.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Descrizione del tipo<br/><br/>DELETED_ROWS_TABLE -> Tabella interna che tiene traccia delle righe eliminate per un indice columnstore.<br/>USER_TABLE -> Tabella contenente i dati utente all'interno di righe.<br/>DICTIONARIES_TABLE -> Dizionari per un indice columnstore.<br/>SEGMENTS_TABLE -> Segmenti compressi per un indice columnstore.<br/>ROW_GROUPS_INFO_TABLE -> Metadati relativi ai gruppi di righe compressi di un indice columnstore.<br/>INTERNAL OFF-ROW DATA TABLE -> Tabella interna usata per l'archiviazione di una colonna all'esterno di righe. In questo caso, minor_id riflette column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Parte finale, ad accesso frequente, della tabella di cronologia basata su disco. Le righe inserite nella cronologia vengono inserite prima in questa tabella ottimizzata per la memoria interna. Viene eseguita un'attività in background che sposta in modo asincrono le righe da questa tabella interna alla tabella di cronologia basata su disco. |
 |minor_id|  **int**|    0 indica un utente o una tabella interna<br/><br/>Un valore diverso da 0 indica l'ID di una colonna archiviata all'esterno di righe. Si unisce a column_id in sys.columns.<br/><br/>Ogni colonna archiviata all'esterno di righe ha una riga corrispondente in questa vista di sistema.|
 
 ## <a name="permissions"></a>Autorizzazioni  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Esempi  
   

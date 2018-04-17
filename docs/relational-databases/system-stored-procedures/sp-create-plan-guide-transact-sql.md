@@ -2,7 +2,7 @@
 title: sp_create_plan_guide (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70caae94a352f014757bd00099b43019c08f4a2c
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d213b79938f0856d9e17b36366958a89e7ecd2be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  Nome della guida di piano. I nomi delle guide di piano vengono definiti a livello dell'ambito del database corrente. *plan_guide_name* devono essere conformi alle regole per [identificatori](../../relational-databases/databases/database-identifiers.md) e non può iniziare con il simbolo cancelletto (#). La lunghezza massima di *plan_guide_name* è 124 caratteri.  
   
- [ @stmt = ] N'*statement_text*'  
+ [ @stmt =] N'*statement_text*'  
  Istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] in cui creare una guida di piano. Quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query optimizer riconosce una query corrispondente *statement_text*, *plan_guide_name* ha effetto. Per la creazione di una Guida di piano abbia esito positivo, *statement_text* deve trovarsi nel contesto specificato per il @type, @module_or_batch, e @params parametri.  
   
  *statement_text* deve essere specificato in modo tale da consentire per query optimizer di associarlo all'istruzione corrispondente definita all'interno del batch o modulo identificato dai @module_or_batch e @params. Per ulteriori informazioni, vedere la sezione "Osservazioni". Le dimensioni di *statement_text* è limitato solo dalla memoria disponibile del server.  
   
- [@type = ]N'{ OBJECT | SQL | TEMPLATE }'  
+ [@type =] N'{OGGETTO | SQL | MODELLO}'  
  È il tipo di entità in cui *statement_text* viene visualizzato. Specifica il contesto per adeguare *statement_text* a *plan_guide_name*.  
   
  OBJECT  
@@ -85,7 +85,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  [*schema_name*.] *object_name* specifica il nome di un [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, funzione scalare, funzione con valori di tabella con istruzioni multiple o [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger DML che contiene *statement_text*. Se *schema_name* non viene specificato, *schema_name* utilizza lo schema dell'utente corrente. Se si specifica NULL e @type = 'SQL', il valore di @module_or_batch è impostata sul valore di @stmt. Se @type = ' modello**'**, @module_or_batch deve essere NULL.  
   
- [ @params = ]{ N'*@parameter_name data_type* [ ,*...n* ]' | NULL }  
+ [ @params =] {N' *@parameter_name data_type* [,*... n* ]' | NULL}  
  Specifica le definizioni di tutti i parametri incorporati in *statement_text*. @params si applica solo quando una delle seguenti è vera:  
   
 -   @type = 'SQL' o 'TEMPLATE'. Se 'TEMPLATE', @params non deve essere NULL.  
@@ -95,7 +95,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  *@parameter_name data_type* devono essere specificati nello stesso formato esatto dei viene inviato a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite l'utilizzo di sp_executesql oppure inviandolo internamente dopo la parametrizzazione. Per altre informazioni, vedere la sezione Osservazioni. Se il batch non include parametri, è necessario specificare NULL. Le dimensioni di @params è limitato solo dalla memoria disponibile del server.  
   
  [@hints = ]{ N'OPTION (*query_hint* [ ,*...n* ] )' | N'*XML_showplan*' | NULL }  
- N'OPTION (*query_hint* [ ,*...n* ] )  
+ N'Option (*query_hint* [,*... n* ])  
  Specifica una clausola OPTION da associare a una query che corrisponde a @stmt. @hints deve essere sintatticamente identica a una clausola OPTION in un'istruzione SELECT e può contenere qualsiasi sequenza valida di hint per la query.  
   
  N'*XML_showplan*'  

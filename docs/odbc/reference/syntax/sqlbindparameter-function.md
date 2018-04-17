@@ -2,7 +2,7 @@
 title: Funzione SQLBindParameter | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 299e4ced3e6047f7d3e205d384d3191d43e70ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54a22ecb571f6a6831023ee5c5d6c18149bff575
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindparameter-function"></a>Pagina relativa alla funzione SQLBindParameter
 **Conformità**  
@@ -131,7 +131,7 @@ SQLRETURN SQLBindParameter(
  Se *ParameterNumber* nella chiamata a **SQLBindParameter** è maggiore del valore di SQL_DESC_COUNT, **SQLSetDescField** viene chiamato per aumentare il valore di SQL_DESC_ CONTEGGIO su *ParameterNumber*.  
   
 ## <a name="inputoutputtype-argument"></a>Argomento InputOutputType  
- Il *InputOutputType* argomento specifica il tipo del parametro. Questo argomento imposta il campo SQL_DESC_PARAMETER_TYPE del IPD. Tutti i parametri nelle istruzioni SQL che non chiamano procedure, ad esempio **inserire** , le istruzioni sono *input**parametri*. I parametri nelle chiamate di procedura possono essere di input, input/output o i parametri di output. (Un'applicazione chiama **SQLProcedureColumns** per determinare il tipo di un parametro in una chiamata di procedura si presuppone che non è possibile determinare il cui tipo di parametri sono parametri di input.)  
+ Il *InputOutputType* argomento specifica il tipo del parametro. Questo argomento imposta il campo SQL_DESC_PARAMETER_TYPE del IPD. Tutti i parametri nelle istruzioni SQL che non chiamano le procedure, ad esempio **inserire** , le istruzioni sono *input * * parametri*. I parametri nelle chiamate di procedura possono essere di input, input/output o i parametri di output. (Un'applicazione chiama **SQLProcedureColumns** per determinare il tipo di un parametro in una chiamata di procedura si presuppone che non è possibile determinare il cui tipo di parametri sono parametri di input.)  
   
  Il *InputOutputType* argomento è uno dei valori seguenti:  
   
@@ -152,7 +152,7 @@ SQLRETURN SQLBindParameter(
   
      Dopo l'istruzione viene eseguita, il driver restituisce dati per il parametro all'applicazione, a meno che il *ParameterValuePtr* e *StrLen_or_IndPtr* gli argomenti sono entrambi puntatori null, nel qual caso il driver ignora il valore di output. Se l'origine dati non restituisce un valore per un parametro di output, il driver imposta il **StrLen_or_IndPtr* buffer su SQL_NULL_DATA.  
   
--   SQL_PARAM_INPUT_OUTPUT_STREAM. Indica che deve essere trasmesso un parametro di input/output. **SQLGetData** possono leggere i valori di parametro in parti. *BufferLength* è stato ignorato perché la lunghezza del buffer verrà determinata in corrispondenza della chiamata di **SQLGetData**. Il valore di *StrLen_or_IndPtr* buffer deve contenere il risultato della macro SQL_LEN_DATA_AT_EXEC, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC o SQL_NULL_DATA. Un parametro deve essere associato come un parametro data-at-execution (DAE) nell'input se che verrà trasmesso dall'output. *ParameterValuePtr* può essere qualsiasi valore di puntatore non null restituito dal **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr* per input e di output. Per ulteriori informazioni, vedere [il recupero dei parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+-   SQL_PARAM_INPUT_OUTPUT_STREAM. Indica che deve essere trasmesso un parametro di input/output. **SQLGetData** possono leggere i valori di parametro in parti. *BufferLength* è stato ignorato perché la lunghezza del buffer verrà determinata in corrispondenza della chiamata di **SQLGetData**. Il valore di *StrLen_or_IndPtr* buffer deve contenere il risultato della macro SQL_LEN_DATA_AT_EXEC, SQL_DEFAULT_PARAM, SQL_DATA_AT_EXEC o SQL_NULL_DATA. Un parametro deve essere associato come un parametro data-at-execution (DAE) nell'input se che verrà trasmesso dall'output. *ParameterValuePtr* può essere qualsiasi valore di puntatore non null che restituirà **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr* per input sia e output. Per ulteriori informazioni, vedere [il recupero dei parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 -   SQL_PARAM_OUTPUT_STREAM. Uguale a SQL_PARAM_INPUT_OUTPUT_STREAM, per un parametro di output. **StrLen_or_IndPtr* viene ignorato a livello di input.  
   
@@ -160,13 +160,13 @@ SQLRETURN SQLBindParameter(
   
 |*InputOutputType*|**StrLen_or_IndPtr*|Risultato|Mettere in ParameterValuePtr|  
 |-----------------------|----------------------------|-------------|---------------------------------|  
-|SQL_PARAM_INPUT|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Input in parti|*ParameterValuePtr* può essere qualsiasi valore di puntatore che verrà restituito da **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr*.|  
+|SQL_PARAM_INPUT|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Input in parti|*ParameterValuePtr* può essere qualsiasi valore di puntatore che restituirà **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT|Non SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Associare buffer di input|*ParameterValuePtr* è l'indirizzo del buffer di input.|  
 |SQL_PARAM_OUTPUT|Ignorato nell'input.|Buffer di output associato|*ParameterValuePtr* è l'indirizzo del buffer di output.|  
 |SQL_PARAM_OUTPUT_STREAM|Ignorato nell'input.|Flusso di output|*ParameterValuePtr* può essere qualsiasi valore di puntatore, verrà restituito dal **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Input in parti e buffer di output associata|*ParameterValuePtr* è l'indirizzo del buffer di output, verrà restituito anche dal **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr*.|  
 |SQL_PARAM_INPUT_OUTPUT|Non SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Associare input buffer e buffer di output associata|*ParameterValuePtr* è l'indirizzo del buffer di input/output condiviso.|  
-L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Flusso di output e di input in parti|*ParameterValuePtr* può essere qualsiasi valore di puntatore non null, che verrà restituito dal **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr* per entrambi input e output.|  
+L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Flusso di output e di input in parti|*ParameterValuePtr* può essere qualsiasi valore di puntatore non null, verrà restituito dal **SQLParamData** come definito dall'utente del token il cui valore è stato superato con *ParameterValuePtr* per input sia e di output.|  
   
 > [!NOTE]  
 >  Il driver è necessario decidere quali tipi SQL sono consentiti quando un'applicazione viene associato un output o un parametro di input-output come flusso. Gestione driver non genererà un errore per un tipo SQL non valido.  
@@ -339,7 +339,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Flus
   
     -   *ParameterType* è il tipo SQL del parametro.  
   
-    -   *ParameterValuePtr* è l'indirizzo della matrice di buffer di parametri.  
+    -   *ParameterValuePtr* è l'indirizzo della matrice di buffer del parametro.  
   
     -   *BufferLength* è la dimensione di un singolo elemento nella matrice di buffer del parametro. Il *BufferLength* argomento viene ignorato quando i dati sono dati a lunghezza fissa.  
   
@@ -365,11 +365,11 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) o SQL_DATA_AT_EXEC|Flus
   
     -   *ParameterType* è il tipo SQL del parametro.  
   
-    -   *ParameterValuePtr* è l'indirizzo del membro parametro buffer nel primo elemento della matrice.  
+    -   *ParameterValuePtr* è l'indirizzo del membro buffer parametro nel primo elemento della matrice.  
   
     -   *BufferLength* è la dimensione del membro di buffer del parametro.  
   
-    -   *StrLen_or_IndPtr* è l'indirizzo del membro di lunghezza/indicatore da associare.  
+    -   *StrLen_or_IndPtr* è l'indirizzo del membro lunghezza/indicatore da associare.  
   
  Per ulteriori informazioni sull'uso di queste informazioni, vedere "*ParameterValuePtr* argomento," più avanti in questa sezione. Per ulteriori informazioni sull'associazione per riga di parametri, vedere il [matrici di parametri di associazione](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md).  
   

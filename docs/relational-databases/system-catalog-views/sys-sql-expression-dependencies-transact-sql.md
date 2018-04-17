@@ -1,16 +1,16 @@
 ---
 title: Sys. sql_expression_dependencies (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.sql_expression_dependencies
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.sql_expression_dependencies catalog view
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 099229e10b875d738e970d8f2c4a0c9ac3e7b5e6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2e856435a18b89d9708112bd81ca2c8976371165
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Contiene una riga per ogni dipendenza in base al nome in un'entità definita dall'utente nel database corrente. Sono inclusi interdipendenze tra le funzioni compilate in modo nativo e scalari definite dall'utente e l'altra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moduli. Una dipendenza tra due entità viene creata quando un'entità, detta il *fa riferimento a entità*, viene visualizzato in base al nome in un'espressione SQL persistente di un'altra entità, detta il *entità di riferimento*. Ad esempio, quando viene fatto riferimento a una tabella nella definizione di una vista, la vista, ovvero l'entità di riferimento, dipende dalla tabella, ovvero l'entità a cui si fa riferimento. Se la tabella viene eliminata, la vista non è utilizzabile.  
   
- Per ulteriori informazioni, vedere [funzioni scalari definite dall'utente per OLTP In memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
+ Per altre informazioni, vedere [Funzioni scalari definite dall'utente per OLTP in memoria](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md).  
   
  È possibile utilizzare questa vista del catalogo per creare report relativi alle informazioni sulle dipendenze per le entità seguenti:  
   
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/21/2017
 |is_schema_bound_reference|**bit**|1 = L'entità a cui si fa riferimento è associata a schema.<br /><br /> 0 = L'entità a cui si fa riferimento non è associata a schema.<br /><br /> Non ammette i valori Null.|  
 |referenced_class|**tinyint**|Classe dell'entità con riferimenti.<br /><br /> 1 = Oggetto o colonna<br /><br /> 6 = Tipo<br /><br /> 10 = Raccolta di XML Schema<br /><br /> 21 = Funzione di partizione<br /><br /> Non ammette i valori Null.|  
 |referenced_class_desc|**nvarchar(60)**|Descrizione della classe dell'entità a cui viene fatto riferimento.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Non ammette i valori Null.|  
-|referenced_server_name|**sysname**|Nome del server dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per le dipendenze tra server eseguite specificando un nome valido composto da quattro parti. Per informazioni sui nomi composti da più parti, vedere [convenzioni della sintassi Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Valore NULL per le entità non associate a schemi per le quali è stato fatto riferimento all'entità senza specificare un nome composto da quattro parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*Object*) nome.|  
+|referenced_server_name|**sysname**|Nome del server dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per le dipendenze tra server eseguite specificando un nome valido composto da quattro parti. Per informazioni sui nomi composti da più parti, vedere [convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Valore NULL per le entità non associate a schemi per le quali è stato fatto riferimento all'entità senza specificare un nome composto da quattro parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*Object*) nome.|  
 |referenced_database_name|**sysname**|Nome del database dell'entità a cui viene fatto riferimento.<br /><br /> Questa colonna viene popolata per i riferimenti tra database o tra server eseguiti specificando un nome valido composto da tre o quattro parti.<br /><br /> Valore NULL per i riferimenti non associati a schemi che vengono specificati utilizzando un nome composto da una o due parti.<br /><br /> Valore NULL per le entità associate a schemi perché devono essere nello stesso database e pertanto possono essere definite solo utilizzando due parti (*Object*) nome.|  
 |referenced_schema_name|**sysname**|Schema a cui appartiene l'entità a cui viene fatto riferimento.<br /><br /> Valore NULL per i riferimenti non associati a schemi in cui è stato fatto riferimento all'entità senza specificare il nome dello schema.<br /><br /> Non è mai un valore NULL per i riferimenti associati a schemi perché le entità associate a schemi devono essere definite e riferite utilizzando un nome composto da due parti.|  
 |referenced_entity_name|**sysname**|Nome dell'entità a cui viene fatto riferimento. Non ammette i valori Null.|  
@@ -77,30 +78,30 @@ ms.lasthandoff: 11/21/2017
 |-----------------|------------------------|-----------------------|  
 |Tabella|Sì*|Sì|  
 |Visualizza|Sì|Sì|  
-|Indice filtrato|Sì**|No|  
-|Statistiche filtrate|Sì**|No|  
+|Indice filtrato|Sì**|no|  
+|Statistiche filtrate|Sì**|no|  
 |Stored procedure*** [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|Sì|  
-|stored procedure CLR|No|Sì|  
+|stored procedure CLR|no|Sì|  
 |Funzione [!INCLUDE[tsql](../../includes/tsql-md.md)] definita dall'utente|Sì|Sì|  
-|Funzione CLR definita dall'utente|No|Sì|  
-|Trigger CLR (DML e DDL)|No|No|  
-|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|No|  
-|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|No|  
-|Stored procedure estese|No|Sì|  
-|Coda|No|Sì|  
-|Sinonimo|No|Sì|  
-|Tipo (alias e tipo di CLR definito dall'utente)|No|Sì|  
-|Raccolta di XML Schema|No|Sì|  
-|Funzione di partizione|No|Sì|  
+|Funzione CLR definita dall'utente|no|Sì|  
+|Trigger CLR (DML e DDL)|no|no|  
+|Trigger DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sì|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di database|Sì|no|  
+|Trigger DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] a livello di server|Sì|no|  
+|Stored procedure estese|no|Sì|  
+|Coda|no|Sì|  
+|Sinonimo|no|Sì|  
+|Tipo (alias e tipo di CLR definito dall'utente)|no|Sì|  
+|Raccolta di XML Schema|no|Sì|  
+|Funzione di partizione|no|Sì|  
   
- \*Una tabella viene registrata come un'entità di riferimento solo quando fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] modulo, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
+ \* Una tabella viene registrata come un'entità di riferimento solo quando si fa riferimento a un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, tipo definito dall'utente o raccolta di XML schema nella definizione di una colonna calcolata, un vincolo CHECK o un vincolo predefinito.  
   
  ** Ogni colonna utilizzata nel predicato del filtro viene registrata come un'entità di riferimento.  
   
  *** Le stored procedure numerate con un valore intero maggiore di 1 non vengono rilevate come entità di riferimento o entità a cui si fa riferimento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Sono richieste l'autorizzazione VIEW DEFINITION sul database e l'autorizzazione SELECT su sys.sql_expression_dependencies per il database. L'autorizzazione SELECT è concessa per impostazione predefinita solo ai membri del ruolo predefinito del database di db_owner. Quando le autorizzazioni SELECT e VIEW DEFINITION vengono concesse a un altro utente, l'utente autorizzato può visualizzare tutte le dipendenze nel database.  
   
 ## <a name="examples"></a>Esempi  

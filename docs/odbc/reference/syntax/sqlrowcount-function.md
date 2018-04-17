@@ -2,7 +2,7 @@
 title: Funzione SQLRowCount | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 04a4e5061a80fec51361e82c57102df8e3fa34c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 924008a7e6df338080a0d65f550a6cb5776db6d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount Function
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLRowCount** restituisce il numero di righe interessate da un **aggiornamento**, **inserire**, o **eliminare** istruzione; un SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL _ Operazione DELETE_BY_BOOKMARK **SQLBulkOperations**; o di un'operazione SQL_UPDATE o SQL_DELETE in **SQLSetPos**.  
+ **SQLRowCount** restituisce il numero di righe interessate da un' **aggiornamento**, **inserire**, o **eliminare** istruzione; un SQL_ADD SQL_UPDATE_BY_BOOKMARK o SQL _ Operazione DELETE_BY_BOOKMARK **SQLBulkOperations**; o di un'operazione SQL_UPDATE o SQL_DELETE in **SQLSetPos**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,7 +56,7 @@ SQLRETURN SQLRowCount(
  *RowCountPtr*  
  [Output] Punta a un buffer in cui si desidera restituire un conteggio delle righe. Per **aggiornamento**, **inserire**, e **eliminare** istruzioni, per le operazioni SQL_ADD SQL_UPDATE_BY_BOOKMARK e SQL_DELETE_BY_BOOKMARK  **SQLBulkOperations**e per le operazioni SQL_UPDATE o SQL_DELETE **SQLSetPos**, il valore restituito in **RowCountPtr* è il numero di righe interessate dal richiesta o – 1 se il numero di righe interessate non è disponibile.  
   
- Quando **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos o SQLMoreResults** viene chiamato, il SQL_DIAG_ROW_COUNT campo della struttura di dati di diagnostica è impostato per il conteggio delle righe e il conteggio delle righe viene memorizzato nella cache in modo dipendente dall'implementazione. **SQLRowCount** restituisce il valore di numero di riga memorizzata nella cache. Il valore di numero di riga memorizzata nella cache è valido finché l'handle di istruzione viene impostato lo stato allocato o preparato, l'istruzione viene rieseguita, o **SQLCloseCursor** viene chiamato. Si noti che se una funzione è stata chiamata poiché il campo SQL_DIAG_ROW_COUNT è stato impostato, il valore restituito da **SQLRowCount** potrebbe essere diverso dal valore nel campo SQL_DIAG_ROW_COUNT perché il campo SQL_DIAG_ROW_COUNT viene reimpostato su 0 per qualsiasi chiamata di funzione.  
+ Quando **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos o SQLMoreResults** viene chiamato, il SQL_DIAG_ROW_COUNT campo della struttura di dati di diagnostica è impostato per il conteggio delle righe e il conteggio delle righe viene memorizzato nella cache in modo dipendente dall'implementazione. **SQLRowCount** restituisce il valore del conteggio riga memorizzata nella cache. Il valore di numero di riga memorizzata nella cache è valido finché l'handle di istruzione viene impostato lo stato allocato o preparato, l'istruzione viene rieseguita, o **SQLCloseCursor** viene chiamato. Si noti che se una funzione è stata chiamata poiché il campo SQL_DIAG_ROW_COUNT è stato impostato, il valore restituito da **SQLRowCount** potrebbe essere diverso dal valore nel campo SQL_DIAG_ROW_COUNT perché il campo SQL_DIAG_ROW_COUNT viene reimpostato su 0 per qualsiasi chiamata di funzione.  
   
  Per altre istruzioni e funzioni, il driver può definire il valore restituito in \* *RowCountPtr*. Ad esempio, alcune origini dati possono essere in grado di restituire il numero di righe restituite da una **selezionare** istruzione o una funzione di catalogo prima di recuperare le righe.  
   

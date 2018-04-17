@@ -1,16 +1,16 @@
 ---
 title: sys.dm_exec_text_query_plan (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_exec_text_query_plan
@@ -22,21 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-caps.latest.revision: 
+caps.latest.revision: 10
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 38650de120ae1c7cb80be3d279de9bfa0da37434
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8521e394e35d7762084f28c44426cd7cb25284cb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmexectextqueryplan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Restituisce il piano Showplan in formato testo per un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o per un'istruzione specifica nel batch. Il piano di query specificato tramite l'handle del piano possono essere memorizzati nella cache o attualmente in esecuzione. Questa funzione con valori di tabella è simile a [Sys.dm exec_query_plan &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), ma presenta le seguenti differenze:  
+  Restituisce il piano Showplan in formato testo per un batch [!INCLUDE[tsql](../../includes/tsql-md.md)] o per un'istruzione specifica nel batch. Il piano di query specificato tramite l'handle del piano possono essere memorizzati nella cache o attualmente in esecuzione. Questa funzione con valori di tabella è simile a [exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md), ma con le differenze seguenti:  
   
 -   L'output del piano di query viene restituito in formato testo.  
   
@@ -61,7 +62,7 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Argomenti  
 *plan_handle*  
-Identifica in modo univoco un piano di query per un batch memorizzato nella cache o in esecuzione. *plan_handle* è **varbinary(64)**.  
+Identifica in modo univoco un piano di query per un batch memorizzato nella cache o in esecuzione. *plan_handle* viene **varbinary(64)**.  
   
 È possibile ottenere l'handle del piano dagli oggetti a gestione dinamica seguenti:  
   
@@ -72,7 +73,7 @@ Identifica in modo univoco un piano di query per un batch memorizzato nella cach
 -  [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
   
 *statement_start_offset* | 0 | DEFAULT  
-Indica, in byte, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. *statement_start_offset* è **int**. Il valore 0 indica l'inizio del batch. Il valore predefinito è 0.  
+Indica, in byte, la posizione iniziale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente. *statement_start_offset* viene **int**. Il valore 0 indica l'inizio del batch. Il valore predefinito è 0.  
   
 È possibile ottenere l'offset iniziale dell'istruzione dagli oggetti a gestione dinamica seguenti:  
   
@@ -83,7 +84,7 @@ Indica, in byte, la posizione iniziale della query descritta dalla riga all'inte
 *statement_end_offset* | -1 | DEFAULT  
 Indica, in byte, la posizione finale della query descritta dalla riga all'interno del testo del batch o dell'oggetto persistente.  
   
-*statement_start_offset* è **int**.  
+*statement_start_offset* viene **int**.  
   
 Il valore -1 indica la fine del batch. Il valore predefinito è -1.  
   
@@ -94,7 +95,7 @@ Il valore -1 indica la fine del batch. Il valore predefinito è -1.
 |**dbid**|**smallint**|ID del database di contesto attivo al momento della compilazione dell'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] corrispondente a questo piano. Per istruzioni SQL ad hoc e preparate, l'ID del database in cui sono state compilate le istruzioni.<br /><br /> La colonna ammette i valori Null.|  
 |**objectid**|**int**|ID dell'oggetto (ad esempio, stored procedure o funzione definita dall'utente) per il piano della query. Per i batch ad hoc e preparate, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
 |**number**|**smallint**|Valore intero della stored procedure numerata. Ad esempio, un gruppo di procedure per la **ordini** applicazione potrebbe essere denominata **orderproc; 1**, **orderproc; 2**e così via. Per i batch ad hoc e preparate, questa colonna è **null**.<br /><br /> La colonna ammette i valori Null.|  
-|**encrypted**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
+|**Crittografato**|**bit**|Indica se la stored procedure corrispondente è crittografata.<br /><br /> 0 = non crittografata<br /><br /> 1 = crittografata<br /><br /> La colonna non ammette i valori Null.|  
 |**query_plan**|**nvarchar(max)**|Contiene la rappresentazione Showplan della fase di compilazione del piano di esecuzione di query specificato con *plan_handle*. La rappresentazione Showplan è in formato testo. Viene generato un piano per ogni batch contenente ad esempio istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, chiamate di stored procedure e chiamate di funzioni definite dall'utente.<br /><br /> La colonna ammette i valori Null.|  
   
 ## <a name="remarks"></a>Osservazioni  

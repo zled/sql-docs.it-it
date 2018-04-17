@@ -2,7 +2,7 @@
 title: sp_bindefault (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/25/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b3e23435d6c0a2db3809722856b9daa6b2d66505
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7a01ab44ac03ae5782f5983e781d21c9d32f8f0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +55,7 @@ sp_bindefault [ @defname = ] 'default' ,
  [  **@defname=** ] **'***predefinito***'**  
  Nome del valore predefinito creato tramite CREATE DEFAULT. *impostazione predefinita* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
- [ **@objname=** ] **'***object_name***'**  
+ [  **@objname=** ] **'***object_name***'**  
  Nome della tabella e della colonna o del tipo di dati alias a cui associare il valore predefinito. *object_name* viene **nvarchar(776)** non prevede alcun valore predefinito. *object_name* non può essere definita con il **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, o CLR tipi definiti dall'utente.  
   
  Se *object_name* è un nome di una sola parte, viene risolto come tipo di dati alias. Se è un nome in due o tre parti, viene prima risolto come tabella e colonna. Se la risoluzione non riesce, viene risolto come tipo di dati alias. Per impostazione predefinita, le colonne esistenti del tipo di dati alias ereditano *predefinito*, a meno che un valore predefinito è stato associato direttamente alla colonna. Valore predefinito non può essere associato a un **testo**, **ntext**, **immagine**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, o CLR colonna di tipo definito dall'utente, una colonna con la proprietà IDENTITY, una colonna calcolata o una colonna che esiste già un vincolo predefinito.  
@@ -62,7 +63,7 @@ sp_bindefault [ @defname = ] 'default' ,
 > [!NOTE]  
 >  *object_name* può contenere parentesi quadre **[]** come identificatori delimitati. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
+ [  **@futureonly=** ] **'***futureonly_flag***'**  
  Utilizzato solo quando si associa un valore predefinito a un tipo di dati alias. *futureonly_flag* viene **varchar(15)** con un valore predefinito è NULL. Quando questo parametro è impostato su **futureonly**, le colonne esistenti di tale tipo di dati non possono ereditare il nuovo valore predefinito. Questo parametro non viene mai utilizzato per l'associazione di un valore predefinito a una colonna. Se *futureonly_flag* è NULL, il nuovo valore predefinito è associato a tutte le colonne del tipo di dati alias alcun valore predefinito o che utilizzano il valore predefinito esistente del tipo di dati alias.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

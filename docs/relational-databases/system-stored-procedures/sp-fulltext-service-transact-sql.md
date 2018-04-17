@@ -1,8 +1,8 @@
 ---
-title: sp_fulltext_service (Transact-SQL) | Microsoft Docs
+title: sp_fulltext_service (Transact-SQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c51847237598fcd1e493fec3194463359198d929
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 07e4a7e1832a91ebc2acd5da19839766b83619ea
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_service [ [@action=] 'action'
  Proprietà da modificare o reimpostare. *azione* è **nvarchar(100),** prevede alcun valore predefinito. Per un elenco di un*c*ne proprietà, le relative descrizioni e i valori che è possibile impostare, vedere la tabella sotto il *valore* argomento. Questo argomento restituisce le proprietà seguenti: tipo di dati, valore corrente, valore minimo o massimo e valore che indica se l'oggetto è deprecato, se pertinente.  
   
  [  **@value=**] *valore*  
- Valore della proprietà specificata. *valore* è **sql_variant**, con un valore predefinito null. Se @value è null, **sp_fulltext_service** restituisce l'impostazione corrente. In questa tabella sono elencate le proprietà, le descrizioni e i valori che è possibile impostare.  
+ Valore della proprietà specificata. *valore* viene **sql_variant**, con valore predefinito è NULL. Se @value è null, **sp_fulltext_service** restituisce l'impostazione corrente. In questa tabella sono elencate le proprietà, le descrizioni e i valori che è possibile impostare.  
   
 > [!NOTE]  
 >  Le azioni seguenti verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**, **data_timeout**, e **resource_ utilizzo**. Evitare di utilizzare queste azioni in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui attualmente vengono utilizzate.  

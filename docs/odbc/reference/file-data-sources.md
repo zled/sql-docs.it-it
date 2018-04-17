@@ -1,33 +1,34 @@
 ---
 title: Origini dati file | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], file
 - file data sources [ODBC]
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa8f72d601130df15f73e856f676b07bf8f0e52
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 254e859c8533625cb34f7d867c62f26bea5cd04d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-data-sources"></a>Origini dati dei file
-*Origini dati del file* vengono archiviati in un file e consentire di informazioni di connessione a essere utilizzato ripetutamente per un singolo utente o condiviso da più utenti. Quando si utilizza un'origine dati file, Driver Manager esegue la connessione all'origine dati utilizzando le informazioni in un file DSN. Questo file può essere gestito come qualsiasi altro file. Un'origine dati file non dispone di un nome dell'origine dati, come non a un'origine dati macchina e non è registrato a un utente o computer.  
+*Origini dati del file* vengono archiviati in un file e consentire le informazioni di connessione da usare più volte da un singolo utente o condiviso da più utenti. Quando si utilizza un'origine dati file, Driver Manager esegue la connessione all'origine dati utilizzando le informazioni in un file DSN. Questo file può essere gestito come qualsiasi altro file. Un'origine dati file non dispone di un nome dell'origine dati, come non a un'origine dati macchina e non è registrato a un utente o computer.  
   
  Un'origine dati file semplifica il processo di connessione, perché il file DSN contiene la stringa di connessione che in caso contrario sarebbe di compilazione per una chiamata al **SQLDriverConnect** (funzione). Un altro vantaggio del file DSN è che può essere copiato da qualsiasi computer, in modo da origini di dati identici possono essere utilizzate da molte macchine, purché hanno il driver appropriato installato. Un'origine dati file può essere condivisa anche dalle applicazioni. Un'origine dati file condivisibile può essere inserita in una rete e utilizzare contemporaneamente da più applicazioni.  
   

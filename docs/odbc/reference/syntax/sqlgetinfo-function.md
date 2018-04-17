@@ -2,7 +2,7 @@
 title: Funzione SQLGetInfo | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 caps.latest.revision: 48
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ef6197247bbe50397c543a91156e0c5db294422
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e9d01c26268ee9e26a0fead54ed9975a8c405558
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo-function"></a>Funzione SQLGetInfo
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLGetInfo** restituisce le informazioni generali sull'origine dati e i driver associato a una connessione.  
+ **SQLGetInfo** restituisce informazioni generali sul driver e l'origine dati associata a una connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -101,7 +101,7 @@ SQLRETURN SQLGetInfo(
 |IM001|Driver non supporta questa funzione|(DM) il driver che corrisponde alla *ConnectionHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- Vengono visualizzati i tipi di informazioni attualmente definiti in "Tipi di informazioni," più avanti in questa sezione; è previsto che più definiti per sfruttare i vantaggi di origini dati diverse. Una gamma di tipi di informazioni è riservata da ODBC. gli sviluppatori di driver è necessario riservare i valori per l'uso di specifici del driver da Open Group. **SQLGetInfo** Nessuna conversione Unicode o *thunk* (vedere [codici di errore ODBC appendice a:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) del *riferimento per programmatori ODBC*) per definito dal driver *tipi*. Per ulteriori informazioni, vedere [tipi di dati specifici del Driver, descrittore di tipi, tipi di informazioni, tipi di diagnostica e gli attributi](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md). Il formato delle informazioni restituite \* *InfoValuePtr* dipende il *InfoType* richiesto. **SQLGetInfo** restituirà informazioni in uno dei cinque diversi formati:  
+ Vengono visualizzati i tipi di informazioni attualmente definiti in "Tipi di informazioni," più avanti in questa sezione; è previsto che più definiti per sfruttare i vantaggi di origini dati diverse. Una gamma di tipi di informazioni è riservata da ODBC. gli sviluppatori di driver è necessario riservare i valori per l'uso di specifici del driver da Open Group. **SQLGetInfo** Nessuna conversione Unicode o *thunk* (vedere [appendice a: i codici di errore ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md) del *riferimento per programmatori ODBC*) per definiti dal driver *tipi*. Per ulteriori informazioni, vedere [tipi di dati specifici del Driver, descrittore di tipi, tipi di informazioni, tipi di diagnostica e gli attributi](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md). Il formato delle informazioni restituite \* *InfoValuePtr* dipende il *InfoType* richiesto. **SQLGetInfo** restituirà informazioni in uno dei cinque diversi formati:  
   
 -   Una stringa di caratteri con terminazione null  
   
@@ -143,7 +143,7 @@ SQLRETURN SQLGetInfo(
  SQL_PROCEDURE_TERM  
  Stringa vuota  
   
- **SQLGetInfo** restituisce SQLSTATE HY096 (valore di argomento non valido) per i valori di *InfoType* che rientrano nell'intervallo dei tipi di informazioni riservati per l'utilizzo da ODBC, ma non sono definiti dalla versione di ODBC supportati dal driver. Per determinare quale versione di ODBC è un driver conforme con, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_DRIVER_ODBC_VER. **SQLGetInfo** restituisce SQLSTATE HYC00 (funzionalità facoltativa non implementata) per i valori di *InfoType* che rientrano nell'intervallo dei tipi di informazioni riservati per l'utilizzo di specifici del driver, ma non sono supportate dal driver.  
+ **SQLGetInfo** restituisce SQLSTATE HY096 (valore dell'argomento non valido) per i valori di *InfoType* che rientrano nell'intervallo dei tipi di informazioni riservati per l'utilizzo da ODBC, ma non sono definiti dalla versione di ODBC supportati dal driver. Per determinare quale versione di ODBC è un driver conforme con, un'applicazione chiama **SQLGetInfo** con il tipo di informazioni SQL_DRIVER_ODBC_VER. **SQLGetInfo** restituisce SQLSTATE HYC00 (funzionalità facoltativa non implementata) per i valori di *InfoType* che rientrano nell'intervallo dei tipi di informazioni riservati per l'uso di specifici del driver, ma non sono supportate dal driver.  
   
  Tutte le chiamate a **SQLGetInfo** richiedono una connessione aperta, tranne quando la *InfoType* è SQL_ODBC_VER, che restituisce la versione di gestione Driver.  
   
@@ -449,7 +449,7 @@ SQLRETURN SQLGetInfo(
   
 -   **SQL_ASYNC_NOTIFICATION_CAPABLE** notifica esecuzione asincrona è supportata dal driver.  
   
--   **SQL_ASYNC_NOTIFICATION_NOT_CAPABLE** notifica di esecuzione asincrona non è supportata dal driver.  
+-   **SQL_ASYNC_NOTIFICATION_NOT_CAPABLE** notifica esecuzione asincrona non è supportata dal driver.  
   
  Esistono due categorie di operazioni asincrone ODBC: operazioni asincrone di livello di istruzione e le operazioni asincrone livello di connessione.  Se un driver restituisce SQL_ASYNC_NOTIFICATION_CAPABLE, deve supportare la notifica per tutte le API che possono essere eseguite in modo asincrono.  
   
@@ -1042,7 +1042,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_GD_OUTPUT_PARAMS = **SQLGetData** può essere chiamato per restituire i valori di parametro di output. Per ulteriori informazioni, vedere [il recupero dei parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
- **SQLGetData** deve restituire dati solo da colonne che si verificano dopo l'ultima colonna, associata vengono chiamati in ordine di aumentare il numero di colonna e non sono presenti in una riga in un blocco di righe.  
+ **SQLGetData** è necessaria per restituire i dati solo da colonne che si verificano dopo l'ultima colonna, associata vengono chiamati in ordine crescente numero di colonna e non sono in una riga in un blocco di righe.  
   
  Se un driver supporta segnalibri (a lunghezza fissa o a lunghezza variabile), deve supportare la chiamata **SQLGetData** nella colonna 0. Questo supporto è richiesto indipendentemente dalla ciò che il driver restituisce per una chiamata a **SQLGetInfo** con il SQL_GETDATA_EXTENSIONS *InfoType*.  
   
@@ -1805,7 +1805,7 @@ SQLRETURN SQLGetInfo(
  SQL_BRC_EXPLICIT = i conteggi delle righe, se presente, sono disponibili quando un batch viene eseguito chiamando direttamente **SQLExecute** o **SQLExecDirect**. Se sono disponibili i conteggi delle righe, è possibile eseguire il rollback verso l'alto o singolarmente disponibile, a seconda di bit SQL_BRC_ROLLED_UP.  
   
 ## <a name="example"></a>Esempio  
- **SQLGetInfo** restituisce l'elenco delle opzioni supportate come maschera di bit SQLUINTEGER in **InfoValuePtr*. La maschera di bit per ogni opzione viene utilizzata con il flag per determinare se l'opzione è supportata.  
+ **SQLGetInfo** restituisce gli elenchi delle opzioni supportate come maschera di bit SQLUINTEGER in **InfoValuePtr*. La maschera di bit per ogni opzione viene utilizzata con il flag per determinare se l'opzione è supportata.  
   
  Ad esempio, un'applicazione può utilizzare il codice seguente per determinare se la funzione scalare SUBSTRING è supportata dal driver associato alla connessione.  
   

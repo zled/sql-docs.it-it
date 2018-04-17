@@ -1,16 +1,16 @@
 ---
 title: sp_MSchange_merge_agent_properties (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_MSchange_merge_agent_properties_TSQL
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_merge_agent_properties
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f3563086e662ceb1dbe5cb8e8ea5b96b0c9430cc
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 421b8dc45dff0124f7bc9b6ce9471102fb7b1917
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,32 +50,32 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher**  =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@publisher** =] **'***publisher***'**  
+ Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@subscriber=** ] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@subscriber_db=** ] **'***subscriber_db***'**  
- Nome del database di sottoscrizione. *subscriber_db* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del database di sottoscrizione. *subscriber_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@property =** ] **'***proprietà***'**  
- Proprietà della pubblicazione da modificare. *proprietà* è **sysname**, non prevede alcun valore predefinito.  
+ Proprietà della pubblicazione da modificare. *proprietà* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@value =** ] **'***valore***'**  
- Nuovo valore della proprietà. *valore* è **nvarchar (524)**, con un valore predefinito è NULL.  
+ Nuovo valore della proprietà. *valore* viene **nvarchar(524**, con un valore predefinito è NULL.  
   
  Nella tabella seguente vengono descritte le proprietà del processo dell'agente di merge che è possibile modificare e le limitazioni previste per i valori di tali proprietà.  
   
-|Proprietà|Valore|Description|  
+|Proprietà|Value|Description|  
 |--------------|-----------|-----------------|  
-|**Descrizione**||Breve descrizione della sottoscrizione.|  
+|**description**||Breve descrizione della sottoscrizione.|  
 |**merge_job_login**||Account di accesso per l'account di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows utilizzato per l'esecuzione dell'agente.|  
 |**merge_job_password**||Password dell'account di Windows utilizzato per l'esecuzione del processo dell'agente.|  
 |**publisher_login**||Account di accesso da utilizzare durante la connessione a un server di pubblicazione per sincronizzare la sottoscrizione.|  
@@ -91,18 +91,18 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 >  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_MSchange_merge_agent_properties** viene utilizzata nella replica di tipo merge.  
   
  Quando il server di pubblicazione viene eseguito in un'istanza di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o versione successiva, è necessario utilizzare [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) per modificare le proprietà di un processo di agente di Merge che sincronizza una sottoscrizione push eseguita nel server di distribuzione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server nel server di distribuzione possono eseguire **sp_MSchange_merge_agent_properties**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_addmergepushsubscription_agent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+ [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   

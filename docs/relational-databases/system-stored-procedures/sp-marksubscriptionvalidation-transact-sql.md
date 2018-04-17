@@ -1,16 +1,16 @@
 ---
 title: sp_marksubscriptionvalidation (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-caps.latest.revision: 
+caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b6286a062e41741145962cf123041812b6d366c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 774c796716705a61de3ab0885261a4838357902c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,23 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publication** =] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@publication**=] **'***pubblicazione***'**  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@subscriber** =] **'***sottoscrittore***'**  
+ [ **@subscriber**=] **'***sottoscrittore***'**  
  Nome del Sottoscrittore. *Sottoscrittore* è di tipo sysname e non prevede alcun valore predefinito.  
   
  [  **@destination_db=**] **'***destination_db***'**  
- Nome del database di destinazione. *destination_db* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del database di destinazione. *destination_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzato per una pubblicazione a cui appartiene un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_marksubscriptionvalidation** viene utilizzata nella replica transazionale.  
@@ -74,13 +74,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
  Per non[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione non è possibile eseguire **sp_marksubscriptionvalidation** da una transazione esplicita. perché le transazioni esplicite non sono supportate attraverso la connessione al server collegato utilizzata per l'accesso al server di pubblicazione.  
   
- **sp_marksubscriptionvalidation** deve essere utilizzata in combinazione con [sp_article_validation &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), specificando il valore **1** per *subscription_level*e può essere utilizzato con altre chiamate a **sp_marksubscriptionvalidation** per contrassegnare il transazione aperta corrente per altri sottoscrittori.  
+ **sp_marksubscriptionvalidation** deve essere utilizzata in combinazione con [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), specificando il valore **1** per  *subscription_level*e può essere utilizzato con altre chiamate a **sp_marksubscriptionvalidation** per contrassegnare la transazione aperta corrente per altri sottoscrittori.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_marksubscriptionvalidation**.  
   
 ## <a name="example"></a>Esempio  
- È possibile applicare la query seguente al database di pubblicazione per inviare comandi di convalida a livello di sottoscrizione. Tali comandi vengono quindi intercettati dagli agenti di distribuzione dei Sottoscrittori specificati. Si noti che la prima transazione convalida l'articolo '**art1**', mentre la seconda transazione convalida'**art2**'. Si noti inoltre che le chiamate a **sp_marksubscriptionvalidation** e [sp_article_validation &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) incapsulati in una transazione. È consigliabile solo una chiamata a [sp_article_validation &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) per ogni transazione. In questo modo [sp_article_validation &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) contiene un blocco condiviso sulla tabella di origine per la durata della transazione. Le transazioni brevi consentono di ottenere la massima concorrenza.  
+ È possibile applicare la query seguente al database di pubblicazione per inviare comandi di convalida a livello di sottoscrizione. Tali comandi vengono quindi intercettati dagli agenti di distribuzione dei Sottoscrittori specificati. Si noti che la prima transazione convalida l'articolo '**art1**', mentre la seconda transazione convalida'**art2**'. Si noti inoltre che le chiamate a **sp_marksubscriptionvalidation** e [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) sono state inserite in una transazione. È consigliabile solo una chiamata a [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) per ogni transazione. Infatti [sp_article_validation &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) mantiene un blocco condiviso sulla tabella di origine per la durata della transazione. Le transazioni brevi consentono di ottenere la massima concorrenza.  
   
 ```  
 begin tran  

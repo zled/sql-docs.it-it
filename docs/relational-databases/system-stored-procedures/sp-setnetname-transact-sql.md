@@ -1,16 +1,16 @@
 ---
 title: sp_setnetname (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_setnetname
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_setnetname
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e9f439854cc1d3af3ca5db09981f2eba2af7a4f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2a0cc53bb8b4ef3c5c12c7154edc57b02c07a656
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ sp_setnetname
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- **@server= '** *server* **'**  
+ **@server = '** *server* **'**  
  Nome del server remoto specificato nella sintassi di chiamata a stored procedure remote codificata dall'utente. Esattamente una riga **Sys. Servers** deve essere già esistente per utilizzare questa *server*. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
- **@netname='** *nome_rete* **'**  
- Nome di rete del computer a cui vengono effettuate chiamate a stored procedure remote. *nome_rete* è **sysname**, non prevede alcun valore predefinito.  
+ **@netname ='** *nome_rete* **'**  
+ Nome di rete del computer a cui vengono effettuate chiamate a stored procedure remote. *nome_rete* viene **sysname**, non prevede alcun valore predefinito.  
   
  Questo nome deve corrispondere al nome del computer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e può includere caratteri non consentiti negli identificatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -80,7 +80,7 @@ EXEC sp_setnetname 'rpcserv2', 'sqlserv2';
 > [!NOTE]  
 >  Utilizzando **sp_setnetname** in modo che punti a un server collegato al server locale non è supportata. I server a cui viene fatto riferimento in questo modo non possono partecipare a transazioni distribuite.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza di **sysadmin** e **setupadmin** ruoli predefiniti del server.  
   
 ## <a name="examples"></a>Esempi  
@@ -95,9 +95,9 @@ EXEC Win_1.master.dbo.sp_who;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
- [sp_addserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
+ [sp_addserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

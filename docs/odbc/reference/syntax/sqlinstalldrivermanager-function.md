@@ -2,7 +2,7 @@
 title: Funzione SQLInstallDriverManager | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1769b4951662f99cd50709b498891540fd4b9c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8cc717380a0d168ef3142d3836da63958ee43cc3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager (funzione)
 **Conformità**  
@@ -74,7 +74,7 @@ BOOL SQLInstallDriverManager(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLInstallDriverManager** viene chiamata per restituire il percorso per i componenti principali di ODBC e incremento l'utilizzo del componente conteggio nelle informazioni di sistema. Se esiste già una versione di gestione Driver, ma il conteggio di utilizzo del componente per il driver non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
+ **SQLInstallDriverManager** viene chiamata per restituire il percorso per i componenti di base di ODBC e incrementare l'utilizzo di componenti conteggio nelle informazioni di sistema. Se esiste già una versione di gestione Driver, ma il conteggio di utilizzo del componente per il driver non esiste, il nuovo valore di conteggio dell'utilizzo di componente è impostato su 2.  
   
  Il programma di installazione dell'applicazione è responsabile per copiare fisicamente i file dei componenti di base e mantenendo l'utilizzo del file vengono contati. Se un file di componente di base non è stato precedentemente installato, il programma di installazione dell'applicazione deve copiare il file e creare il conteggio di utilizzo di file. Se il file è stato installato in precedenza, il programma di installazione semplicemente incrementa il conteggio di utilizzo di file.  
   

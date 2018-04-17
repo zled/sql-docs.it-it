@@ -1,16 +1,16 @@
 ---
 title: sp_statistics (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_statistics_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_statistics
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: acb1e775a99bb3c296064a65aa9eed7be5d17745
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bed13d18bf7055bd72280cabde3fe65ce05b7b64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,24 +54,24 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@table_name=** ] **'***table_name***'**  
- Specifica la tabella utilizzata per restituire le informazioni del catalogo. *TABLE_NAME* è **sysname**, non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
+ Specifica la tabella utilizzata per restituire le informazioni del catalogo. *TABLE_NAME* viene **sysname**, non prevede alcun valore predefinito. I criteri di ricerca con caratteri jolly non sono supportati.  
   
  [  **@table_owner=** ] **'***proprietario***'**  
- Nome del proprietario della tabella utilizzata per restituire le informazioni del catalogo. *TABLE_OWNER* è **sysname**, con un valore predefinito è NULL. I criteri di ricerca con caratteri jolly non sono supportati. Se *proprietario* viene omesso, si applicano le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
+ Nome del proprietario della tabella utilizzata per restituire le informazioni del catalogo. *TABLE_OWNER* viene **sysname**, con un valore predefinito è NULL. I criteri di ricerca con caratteri jolly non sono supportati. Se *proprietario* viene omesso, si applicano le regole di visibilità della tabella predefinite del sistema DBMS sottostante.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituiti gli indici di tale tabella. Se *proprietario* viene omesso e l'utente corrente non dispone di una tabella con l'oggetto specificato *nome*, viene eseguita la ricerca per una tabella con l'oggetto specificato *nome* di proprietà di proprietario del database. Se tale tabella esiste, vengono restituiti gli indici corrispondenti.  
   
  [  **@table_qualifier=** ] **'***qualificatore***'**  
- Nome del qualificatore di tabella. *qualificatore* è **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.** *proprietario***.** *nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ Nome del qualificatore di tabella. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.*** proprietario***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [  **@index_name=** ] **'***index_name***'**  
- Nome dell'indice. *index_name* è **sysname**, con un valore predefinito è %. La ricerca con caratteri jolly è supportata.  
+ Nome dell'indice. *index_name* viene **sysname**, con un valore predefinito è %. La ricerca con caratteri jolly è supportata.  
   
  [  **@is_unique=** ] **'***is_unique***'**  
- È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* è **char (1)**, il valore predefinito è **N**.  
+ È se solo indici univoci (se **Y**) devono essere restituiti. *is_unique* viene **char(1**, il valore predefinito è **N**.  
   
  [  **@accuracy=** ] **'***accuratezza***'**  
- Livello di precisione della cardinalità e delle pagine per le statistiche. *accuratezza* è **char (1)**, il valore predefinito è **Q**. Specificare **E** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
+ Livello di precisione della cardinalità e delle pagine per le statistiche. *accuratezza* viene **char(1**, il valore predefinito è **Q**. Specificare **E** per assicurarsi che le statistiche vengono aggiornate in modo che la cardinalità e le pagine siano accurate.  
   
  Il valore **E** (SQL_ENSURE) chiede al driver di recuperare in modo non condizionale le statistiche.  
   
@@ -89,10 +90,10 @@ sp_statistics [ @table_name = ] 'table_name'
 |**TYPE**|**smallint**|Questa colonna restituisce sempre un valore:<br /><br /> 0 = Statistiche di una tabella<br /><br /> 1 = Cluster<br /><br /> 2 = Hash<br /><br /> 3 = non cluster|  
 |**SEQ_IN_INDEX**|**smallint**|Posizione della colonna all'interno dell'indice.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna per ogni colonna del **TABLE_NAME** restituito. In questa colonna viene sempre restituito un valore.|  
-|**REGOLE DI CONFRONTO**|**Char (1)**|Ordine utilizzato nelle regole di confronto. I possibili valori sono i seguenti:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile|  
+|**COLLATION**|**char(1)**|Ordine utilizzato nelle regole di confronto. I possibili valori sono i seguenti:<br /><br /> A = Crescente<br /><br /> D = Decrescente<br /><br /> NULL = Non applicabile|  
 |**CARDINALITÀ**|**int**|Numero di righe nella tabella o di valori univoci nell'indice.|  
 |**PAGINE**|**int**|Numero di pagine in cui archiviare l'indice o la tabella.|  
-|**FILTER_CONDITION**|**varchar (128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
+|**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non restituisce un valore.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nessuno  
@@ -106,10 +107,10 @@ sp_statistics [ @table_name = ] 'table_name'
   
  **sp_statistics** equivale a **SQLStatistics** in ODBC. I risultati restituiti vengono ordinati in base **NON_UNIQUE**, **tipo**, **INDEX_QUALIFIER**, **INDEX_NAME**, e **SEQ_IN_ INDICE**. Per ulteriori informazioni, vedere il [riferimento all'API ODBC](http://go.microsoft.com/fwlink/?LinkId=68323).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
-## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="example-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempio: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Nell'esempio seguente restituisce informazioni relative ai `DimEmployee` tabella.  
   
 ```  
@@ -119,7 +120,7 @@ EXEC sp_statistics DimEmployee;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Catalogo Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Stored procedure di catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

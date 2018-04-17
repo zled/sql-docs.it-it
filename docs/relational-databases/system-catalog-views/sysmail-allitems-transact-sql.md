@@ -1,16 +1,16 @@
 ---
-title: sysmail_allitems (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_allitems (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_allitems_TSQL
@@ -20,23 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb11426c67ddb253a1aa76ae3ea435e115b6fa69
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5fe6ed0c4d40cf7d4d3986c4eb5db10aeffd46d5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contiene una riga per ogni messaggio elaborato da Posta elettronica database. Utilizzare questa vista quando si desidera controllare lo stato di tutti i messaggi.  
   
- Per visualizzare solo i messaggi con lo stato non riuscito, utilizzare [sysmail_faileditems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi che sono stati inviati, utilizzare [sysmail_sentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
+ Per visualizzare solo i messaggi con lo stato non riuscito, utilizzare [sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Per visualizzare solo i messaggi non inviati, utilizzare [sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md). Per visualizzare solo i messaggi che sono stati inviati, utilizzare [sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,10 +46,10 @@ ms.lasthandoff: 02/03/2018
 |**copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio.|  
 |**blind_copy_recipients**|**ntext**|Indirizzi di posta elettronica degli utenti che ricevono una copia del messaggio, ma i cui nomi non sono indicati nell'intestazione del messaggio.|  
 |**subject**|**nvarchar(510)**|Oggetto del messaggio.|  
-|**body**|**ntext**|Corpo del messaggio.|  
+|**Corpo**|**ntext**|Corpo del messaggio.|  
 |**body_format**|**varchar(20)**|Formato del corpo del messaggio. I possibili valori sono TEXT e HTML.|  
-|**importanza**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
-|**sensitivity**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
+|**Importanza**|**varchar(6)**|Il **importanza** parametro del messaggio.|  
+|**Sensibilità**|**varchar(12)**|Il **sensibilità** parametro del messaggio.|  
 |**file_attachments**|**ntext**|Elenco delimitato da punti e virgola dei nomi dei file allegati al messaggio di posta elettronica.|  
 |**attachment_encoding**|**varchar(20)**|Tipo di allegato del messaggio di posta elettronica.|  
 |**query**|**ntext**|Query eseguita dal programma di posta elettronica.|  
@@ -58,12 +58,12 @@ ms.lasthandoff: 02/03/2018
 |**query_result_header**|**bit**|Quando il valore è 1, i risultati della query includono le intestazioni di colonna. Quando il valore è 0, i risultati della query non includono le intestazioni di colonna.|  
 |**query_result_width**|**int**|Il **query_result_width** parametro del messaggio.|  
 |**query_result_separator**|**char(1)**|Carattere utilizzato per separare le colonne nell'output della query.|  
-|**exclude_query_output**|**bit**|Il **exclude_query_output** parametro del messaggio. Per ulteriori informazioni, vedere [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**exclude_query_output**|**bit**|Il **exclude_query_output** parametro del messaggio. Per altre informazioni, vedere [sp_send_dbmail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
 |**append_query_error**|**bit**|Il **append_query_error** parametro del messaggio. 0 indica che Posta elettronica database non deve inviare il messaggio di posta elettronica se la query contiene un errore.|  
 |**send_request_date**|**datetime**|Data e ora di inserimento del messaggio nella coda della posta.|  
 |**send_request_user**|**sysname**|Utente che ha inviato il messaggio. Corrisponde al contesto utente della procedura di Posta elettronica database e non al campo Da del messaggio.|  
 |**sent_account_id**|**int**|Identificatore dell'account di Posta elettronica database utilizzato per l'invio del messaggio.|  
-|**sent_status**|**varchar(8)**|Stato del messaggio. I valori possibili sono:<br /><br /> **inviato** -è stata inviata la posta elettronica.<br /><br /> **non inviato** -posta elettronica Database sta ancora tentando di inviare il messaggio.<br /><br /> **nuovo tentativo** -Impossibile inviare il messaggio di posta elettronica Database ma sta tentando di inviare di nuovo.<br /><br /> **non è stato possibile** -Impossibile inviare il messaggio di posta elettronica Database.|  
+|**sent_status**|**varchar(8)**|Stato del messaggio. I valori possibili sono:<br /><br /> **inviato** -è stata inviata la posta elettronica.<br /><br /> **non inviato** -posta elettronica Database sta ancora tentando di inviare il messaggio.<br /><br /> **nuovo tentativo in corso** -non è riuscito a inviare il messaggio di posta elettronica Database, ma sta tentando di inviare di nuovo.<br /><br /> **non è stato possibile** -Impossibile inviare il messaggio di posta elettronica Database.|  
 |**sent_date**|**datetime**|Data e ora di invio del messaggio.|  
 |**last_mod_date**|**datetime**|Data e ora dell'ultima modifica della riga.|  
 |**last_mod_user**|**sysname**|Autore dell'ultima modifica della riga.|  

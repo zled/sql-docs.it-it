@@ -2,7 +2,7 @@
 title: Funzione SQLConfigDriver | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3af2f70156cae3427b5d22f3214f5c911af14a5d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6459e3faeafddc2faef3b69a68a1bf975ac6c3e4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver (funzione)
 **Conformità**  
@@ -105,7 +105,7 @@ BOOL SQLConfigDriver(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLConfigDriver** consente a un'applicazione di chiamare un driver **ConfigDriver** routine senza dover conoscere il nome e caricare la DLL di installazione specifici del driver. Un programma di installazione chiama questa funzione dopo l'installazione di driver che DLL è stato installato. Il programma chiamante deve tenere presente che questa funzione potrebbe non essere disponibile per tutti i driver. In tal caso, il programma chiamante deve continuare senza errori.  
+ **SQLConfigDriver** consente a un'applicazione chiamare un driver **ConfigDriver** routine senza dover ricordare il nome e caricare la DLL di installazione specifiche del driver. Un programma di installazione chiama questa funzione dopo l'installazione di driver che DLL è stato installato. Il programma chiamante deve tenere presente che questa funzione potrebbe non essere disponibile per tutti i driver. In tal caso, il programma chiamante deve continuare senza errori.  
   
 ## <a name="driver-specific-options"></a>Opzioni specifiche del driver  
  Un'applicazione può richiedere funzionalità specifiche del driver esposte dal driver tramite il *trattano* argomento. Il *trattano* per la prima opzione verrà ODBC_CONFIG_DRIVER_MAX + 1, e le opzioni aggiuntive verranno incrementate di 1 da quel valore. Eventuali argomenti richiesti dal driver per tale funzione deve essere fornita in una stringa con terminazione null passati nel *lpszArgs* argomento. I driver di tale funzionalità è necessario mantenere una tabella delle opzioni specifiche del driver. Le opzioni devono essere completamente documentate nella documentazione del driver. Gli autori di applicazioni che utilizzano opzioni specifiche del driver devono essere consapevoli che questo utilizzo effettuerà l'applicazione meno interoperativa.  
@@ -122,5 +122,5 @@ BOOL SQLConfigDriver(
   
 |Per informazioni su|Vedere|  
 |---------------------------|---------|  
-|Aggiunta, modifica o rimozione di un driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(in DLL di installazione)|  
+|Aggiunta, modifica o rimozione di un driver|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)(nel programma di installazione DLL)|  
 |Rimuovendo l'origine dati predefinito|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|

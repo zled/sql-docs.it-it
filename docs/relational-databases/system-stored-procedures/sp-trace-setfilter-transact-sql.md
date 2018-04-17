@@ -1,16 +1,16 @@
 ---
 title: sp_trace_setfilter (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 64b40b4b7970db0252a873f6b3611d57672e3da0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Applica un filtro a una traccia. **sp_trace_setfilter** può essere eseguita solo su tracce esistenti che sono state arrestate (*stato* è **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Restituisce un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* non **0**.  
+  Applica un filtro a una traccia. **sp_trace_setfilter** può essere eseguita solo su tracce esistenti arrestate (*stato* viene **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Restituisce un errore se questa stored procedure viene eseguita su una traccia che non esiste o il cui *stato* non **0**.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare Eventi estesi.  
@@ -54,18 +54,18 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 ## <a name="arguments"></a>Argomenti  
  [ **@traceid=** ] *trace_id*  
- ID della traccia a cui applicare il filtro. *trace_id* è **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore per identificare, modificare e controllare la traccia.  
+ ID della traccia a cui applicare il filtro. *trace_id* viene **int**, non prevede alcun valore predefinito. L'utente può *trace_id* valore per identificare, modificare e controllare la traccia.  
   
  [ **@columnid=** ] *column_id*  
- ID della colonna a cui applicare il filtro. *column_id* è **int**, non prevede alcun valore predefinito. Se *column_id* è NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
+ ID della colonna a cui applicare il filtro. *column_id* viene **int**, non prevede alcun valore predefinito. Se *column_id* è NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cancella tutti i filtri per la traccia specificata.  
   
- [ **@logical_operator** = ] *logical_operator*  
- Specifica se l'operazione di AND (**0**) o OR (**1**) viene applicato l'operatore. *logical_operator* è **int**, non prevede alcun valore predefinito.  
+ [ **@logical_operator** =] *logical_operator*  
+ Specifica se l'operazione di AND (**0**) o OR (**1**) viene applicato l'operatore. *logical_operator* viene **int**, non prevede alcun valore predefinito.  
   
- [ **@comparison_operator=** ] *comparison_operator*  
- Specifica il tipo di confronto da eseguire. *operatore_confronto* è **int**, non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
+ [  **@comparison_operator=** ] *operatore_confronto*  
+ Specifica il tipo di confronto da eseguire. *comparison_operator* viene **int**, non prevede alcun valore predefinito. Nella tabella seguente vengono descritti gli operatori di confronto e i valori che li rappresentano.  
   
-|Valore|Operatore di confronto|  
+|Value|Operatore di confronto|  
 |-----------|-------------------------|  
 |**0**|= (uguaglianza)|  
 |**1**|<> (disuguaglianza)|  

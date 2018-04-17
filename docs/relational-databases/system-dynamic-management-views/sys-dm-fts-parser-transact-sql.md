@@ -1,16 +1,16 @@
 ---
 title: sys.dm_fts_parser (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_fts_parser_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.dm_fts_parser dynamic management function
 - troubleshooting [SQL Server], full-text search
 ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
-caps.latest.revision: 
+caps.latest.revision: 37
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97e1eb8f7c4b37e8f1d3bb84ff7b1607712f729c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0494f1586f71d3dc475284e90721f2cc5fc8e502
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +56,14 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  Identificatore delle impostazioni locali (LCID) del word breaker da utilizzare per l'analisi *stringa_query*.  
   
  *stoplist_id*  
- ID di parole non significative, se presente, da utilizzare il word breaker identificato da *lcid*. *stoplist_id* è **int**. Se si specifica NULL, non viene utilizzato alcun elenco di parole non significative. Se si specifica 0, viene utilizzato l'elemento STOPLIST di sistema.  
+ ID di parole non significative, se presente, da utilizzare il word breaker identificato da *lcid*. *stoplist_id* viene **int**. Se si specifica NULL, non viene utilizzato alcun elenco di parole non significative. Se si specifica 0, viene utilizzato l'elemento STOPLIST di sistema.  
   
  L'ID di un elenco di parole non significative è univoco all'interno di un database. Per ottenere l'ID di parole non significative per un indice full-text in un tabella specifica, utilizzare il [fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) vista del catalogo.  
   
  *accent_sensitivity*  
- Valore booleano che controlla se la ricerca full-text supporta o meno la distinzione relativa ai segni diacritici. *accent_sensitivity* è **bit**, con uno dei valori seguenti:  
+ Valore booleano che controlla se la ricerca full-text supporta o meno la distinzione relativa ai segni diacritici. *accent_sensitivity* viene **bit**, con uno dei valori seguenti:  
   
-|Valore|Distinzione caratteri accentati/non accentati|  
+|Value|Distinzione caratteri accentati/non accentati|  
 |-----------|----------------------------|  
 |0|Non attiva<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo identico.|  
 |1|Sensibile<br /><br /> Parole del tipo "café" e "cafe" vengono considerate in modo diverso.|  
@@ -75,17 +75,17 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile, ma è utile per relative a una determinata parola chiave per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [Sys.dm fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ Sys.dm fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o un set di dati.|  
-|group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: Server<br />2: DB<br />3: DB|  
-|phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per`multi`<br />1 per`million`<br />2 per`multimillion`|  
-|occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per`SQL`<br />2 per`Server`<br />3 per`query`<br />4 per`processor`|  
+|parola chiave|**varbinary(128)**|Rappresentazione esadecimale di una parola chiave specificata restituita da un word breaker. Tale rappresentazione viene utilizzata per archiviare la parola chiave nell'indice full-text. Questo valore non è leggibile, ma è utile per relative a una determinata parola chiave per l'output restituito da altre viste a gestione dinamica che restituiscono il contenuto di un indice full-text, ad esempio [Sys.dm fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) e [ Sys.dm fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Nota:** OxFF rappresenta il carattere speciale che indica la fine di un file o set di dati.|  
+|group_id|**int**|Contiene un valore integer utile per differenziare il gruppo logico dal quale è stato generato un termine specifico. '`Server AND DB OR FORMSOF(THESAURUS, DB)"`' produce ad esempio i seguenti valori di group_id in inglese:<br /><br /> 1: server<br />2: DB<br />3: DB|  
+|phrase_id|**int**|Contiene un valore integer utile per differenziare i casi in cui il word breaker invia forme alternative di parole composte, come full-text. In presenza di parole composte, ad esempio "multi-million", a volte il word breaker invia forme alternative. In alcuni casi tali forme alternative (frasi) devono essere differenziate.<br /><br /> '`multi-million`' produce ad esempio i seguenti valori di phrase_id in inglese:<br /><br /> 1 per `multi`<br />1 per `million`<br />2 per `multimillion`|  
+|occurrence|**int**|Indica l'ordine di ogni termine nel risultato dell'analisi. Per la frase "`SQL Server query processor`", ad esempio, in occurrence sarebbero presenti i seguenti valori di occorrenza per i termini, in inglese:<br /><br /> 1 per `SQL`<br />2 per `Server`<br />3 per `query`<br />4 per `processor`|  
 |special_term|**nvarchar(4000)**|Contiene informazioni sulle caratteristiche del termine inviato dal word breaker, tra cui:<br /><br /> Corrispondenza esatta<br /><br /> Parola non significativa<br /><br /> Fine di frase<br /><br /> Fine di paragrafo<br /><br /> Fine di capitolo|  
 |display_term|**nvarchar(4000)**|Contiene la forma leggibile della parola chiave. Analogamente alle funzioni progettate per accedere al contenuto dell'indice full-text, il termine visualizzato potrebbe non essere identico al termine originale a causa della limitazione della denormalizzazione, ma dovrebbe essere tuttavia abbastanza preciso per consentire di identificarlo partendo dall'input originale.|  
 |expansion_type|**int**|Contiene informazioni sulla natura dell'espansione di un termine specificato. I valori possono essere i seguenti:<br /><br /> 0 = singola parola<br /><br /> 2 = espansione flessiva<br /><br /> 4 = espansione/sostituzione del thesaurus<br /><br /> Si consideri ad esempio un caso in cui il thesaurus definisce il termine "run" come un'espansione di `jog`:<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Il termine `FORMSOF (FREETEXT, run)` genera l'output seguente:<br /><br /> `run` con expansion_type = 0<br /><br /> `runs` con expansion_type = 2<br /><br /> `running` con expansion_type = 2<br /><br /> `ran` con expansion_type = 2<br /><br /> `jog` con expansion_type = 4|  
-|source_term|**nvarchar(4000)**|Termine o frase da cui viene generato o analizzato un termine specifico. Una query eseguita su '"`word breakers" AND stemmers'` produce ad esempio i seguenti valori di source_term in inglese:<br /><br /> `word breakers`per il display_term`word`<br />`word breakers`per il display_term`breakers`<br />`stemmers`per il display_term`stemmers`|  
+|source_term|**nvarchar(4000)**|Termine o frase da cui viene generato o analizzato un termine specifico. Una query eseguita su '"`word breakers" AND stemmers'` produce ad esempio i seguenti valori di source_term in inglese:<br /><br /> `word breakers` per il display_term`word`<br />`word breakers` per il display_term`breakers`<br />`stemmers` per il display_term`stemmers`|  
   
 ## <a name="remarks"></a>Osservazioni  
- **Sys.dm fts_parser** supporta la sintassi e le funzionalità di predicati full-text, ad esempio [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)e funzioni, ad esempio [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
+ **fts_parser** supporta la sintassi e le funzionalità di predicati full-text, ad esempio [CONTAINS](../../t-sql/queries/contains-transact-sql.md) e [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)e le funzioni, ad esempio [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md)e [FREETEXTTABLE](../../relational-databases/system-functions/freetexttable-transact-sql.md).  
   
 ## <a name="using-unicode-for-parsing-special-characters"></a>Utilizzo di Unicode per l'analisi di caratteri speciali  
  Quando si analizza una stringa di query, **Sys.dm fts_parser** utilizza le regole di confronto del database a cui si è connessi, a meno che non si specifica la stringa di query in formato Unicode. Pertanto, per una stringa non Unicode che contiene i caratteri speciali, ad esempio ü oppure ç, l'output potrebbe essere imprevisto, a seconda delle regole di confronto del database. Per elaborare una stringa di query indipendentemente dalle regole di confronto del database, la stringa di prefisso `N`, vale a dire `N'` *stringa_query*`'`.  
@@ -93,7 +93,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
  Per ulteriori informazioni, vedere "C. Visualizzazione dell'output di una stringa che contiene caratteri speciali" più avanti in questo argomento.  
   
 ## <a name="when-to-use-sysdmftsparser"></a>Utilizzo di sys.dm_fts_parser  
- **Sys.dm fts_parser** possono essere molto efficaci per scopi di debug. Di seguito vengono riportati alcuni dei principali scenari di utilizzo:  
+ **fts_parser** può risultare molto potente per scopi di debug. Di seguito vengono riportati alcuni dei principali scenari di utilizzo:  
   
 -   Comprensione del modo in cui un word breaker considera un input specificato  
   
@@ -170,13 +170,13 @@ SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ricerca full-Text e funzioni e viste a gestione dinamica della ricerca semantica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
+ [Funzioni e viste a gestione dinamica ricerca semantica e ricerca full-Text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Ricerca full-Text](../../relational-databases/search/full-text-search.md)   
  [Configurazione e gestione di word breaker e stemmer per la ricerca](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurare e gestire i file del Thesaurus per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Configurare e gestire parole non significative ed elenchi per la ricerca Full-Text](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- [Query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)   
- [Query con ricerca Full-Text](../../relational-databases/search/query-with-full-text-search.md)   
+ [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
+ [Eseguire query con ricerca full-text](../../relational-databases/search/query-with-full-text-search.md)   
  [Entità a protezione diretta](../../relational-databases/security/securables.md)  
   
   

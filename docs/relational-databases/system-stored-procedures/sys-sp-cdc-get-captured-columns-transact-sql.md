@@ -1,16 +1,16 @@
 ---
 title: Sys. sp_cdc_get_captured_columns (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_get_captured_columns
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e232446f85dabc19856913ebf2e0cc5f886dc8cb
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b83ae2c1872002f2a22663f6ac0b7dd5a8a63ddb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="arguments"></a>Argomenti  
  [ @capture_instance =] '*capture_instance*'  
- Nome dell'istanza di acquisizione associata a una tabella di origine. *capture_instance* è **sysname** e non può essere NULL.  
+ Nome dell'istanza di acquisizione associata a una tabella di origine. *capture_instance* viene **sysname** e non può essere NULL.  
   
  Per segnalare le istanze di acquisizione per la tabella, eseguire il [sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) stored procedure.  
   
@@ -81,7 +81,7 @@ sys.sp_cdc_get_captured_columns
   
  Utilizzare [sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) per ottenere informazioni sulla definizione dei dati (istruzioni DDL language) applicate a una tabella di origine. Le modifiche DDL che influiscono sulla struttura di una colonna di origine registrata vengono restituite nel set di risultati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner. Per tutti gli altri utenti, è richiesta l'autorizzazione SELECT su tutte le colonne acquisite nella tabella di origine e, se è stato definito un ruolo di controllo per l'istanza di acquisizione, l'appartenenza a tale ruolo del database. Se il chiamante non dispone delle autorizzazioni per visualizzare i dati di origine, la funzione restituisce l'errore 22981 (Oggetto inesistente o accesso negato).  
   
 ## <a name="examples"></a>Esempi  
@@ -96,6 +96,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. sp_cdc_help_change_data_capture &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [Sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

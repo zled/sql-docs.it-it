@@ -2,7 +2,7 @@
 title: Esecuzione asincrona (metodo di Polling) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 357ee77565e711e886184d803540b5745edb1f25
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f918a1fdcf40d7c772ee432edd58dd24c2c3f1c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="asynchronous-execution-polling-method"></a>Esecuzione asincrona (metodo di Polling)
 Prima di ODBC 3.8 e Windows 7 SDK, le operazioni asincrone sono state consentite solo su funzioni a istruzioni. Per ulteriori informazioni, vedere il **esecuzione asincrona delle operazioni istruzione**, più avanti in questo argomento.  
@@ -86,7 +86,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)  
   
--   [SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) (nell'handle di istruzione)  
+-   [SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) (dell'handle di istruzione)  
   
 -   [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
   
@@ -167,7 +167,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 ||||  
 |-|-|-|  
 |[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
  Per determinare se un driver supporta le operazioni asincrone in queste funzioni, un'applicazione chiama **SQLGetInfo** con SQL_ASYNC_DBC_FUNCTIONS. Se sono supportate le operazioni asincrone, viene restituito SQL_ASYNC_DBC_CAPABLE. SQL_ASYNC_DBC_NOT_CAPABLE viene restituito se non sono supportate le operazioni asincrone.  
   
@@ -205,7 +205,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
  Se una connessione viene aperta o chiusa in modo asincrono, l'operazione è completa quando l'applicazione riceve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO nella chiamata di funzione originale.  
   
- Una nuova funzione è stato aggiunto a ODBC 3.8, **SQLCancelHandle**. Questa funzione Annulla le funzioni di sei connessione (**SQLBrowseConnect**, **SQLConnect**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**, e **SQLSetConnectAttr**). Un'applicazione deve chiamare **SQLGetFunctions** per determinare se il driver supporta **SQLCancelHandle**. Come con **SQLCancel**, se **SQLCancelHandle** restituisce esito positivo, questo non significa che l'operazione è stata annullata. Un'applicazione deve chiamare la funzione originale per determinare se l'operazione è stata annullata. **SQLCancelHandle** consente di annullare le operazioni asincrone in handle di connessione o l'handle di istruzione. Utilizzando **SQLCancelHandle** handle di annullare un'operazione in un'istruzione è equivale a chiamare **SQLCancel**.  
+ Una nuova funzione è stato aggiunto a ODBC 3.8, **SQLCancelHandle**. Questa funzione Annulla le funzioni di sei connessione (**SQLBrowseConnect**, **SQLConnect**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**, e **SQLSetConnectAttr**). Un'applicazione deve chiamare **SQLGetFunctions** per determinare se il driver supporta **SQLCancelHandle**. Come con **SQLCancel**, se **SQLCancelHandle** restituisce esito positivo, questo non significa che l'operazione è stata annullata. Un'applicazione deve chiamare la funzione originale per determinare se l'operazione è stata annullata. **SQLCancelHandle** consente di annullare le operazioni asincrone in handle di connessione o handle di istruzione. Utilizzando **SQLCancelHandle** handle di annullare un'operazione in un'istruzione è equivale a chiamare **SQLCancel**.  
   
  Non è necessario supportare entrambi **SQLCancelHandle** e le operazioni di connessione asincrona nello stesso momento. Un driver può supportare operazioni di connessione asincrona, ma non **SQLCancelHandle**, o viceversa.  
   
@@ -221,7 +221,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 ### <a name="description"></a>Description  
  Nell'esempio seguente viene illustrato come utilizzare **SQLSetConnectAttr** per abilitare l'esecuzione asincrona per le funzioni correlate alla connessione.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 BOOL AsyncConnect (SQLHANDLE hdbc)   
@@ -275,7 +275,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
 ### <a name="description"></a>Description  
  Questo esempio illustra le operazioni di commit asincrono. Operazioni di rollback possono essere eseguite anche in questo modo.  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 BOOL AsyncCommit ()   

@@ -1,16 +1,16 @@
 ---
 title: srv_paramdata (API Stored procedure estesa) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramdata
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramdata
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
-caps.latest.revision: 
+caps.latest.revision: 30
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5837ecf48a6e97f5408d86f20b39e057285d64b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 7ac122c9cb4403ee90c20961b1b4d8fad624bf80
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce il valore di un parametro di chiamata a una stored procedure remota. Questa funzione è stata sostituita dalla funzione **srv_paraminfo**.  
   
@@ -62,7 +62,7 @@ n
  Indica il numero del parametro. Il primo parametro è 1.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- Puntatore al valore di parametro. Se il parametro in posizione *n* è NULL o se non è presente alcun parametro in posizione *n* o non esiste alcuna stored procedure remota, restituisce NULL. Se il valore del parametro è una stringa, potrebbe non essere con terminazione Null. Usare **srv_paramlen** per determinare la lunghezza della stringa.  
+ Puntatore al valore di parametro. Se il *n*assenza di un parametro è NULL, non esiste alcun *n*parametro in posizione o è presente alcun remoto stored procedure, restituisce NULL. Se il valore del parametro è una stringa, potrebbe non essere con terminazione Null. Usare **srv_paramlen** per determinare la lunghezza della stringa.  
   
  Questa funzione restituisce i valori seguenti, se il parametro è uno dei tipi di dati di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I dati puntatore indicano anche se il puntatore per il tipo di dati è valido (VP), NULL o non applicabile (N/A) e il contenuto dei dati a cui punta.  
   

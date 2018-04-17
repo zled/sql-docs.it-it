@@ -1,16 +1,16 @@
 ---
-title: sysmail_help_profile_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_help_profile_sp (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profile_sp_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_profile_sp
 ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
-caps.latest.revision: 
+caps.latest.revision: 41
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 486d0b8e494cd4602c519cc6659460ea6ebef5b7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6673c252203235679464950af1fdf019ecaf843e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
   
 ## <a name="arguments"></a>Argomenti  
  [ **@profile_id** = ] *profile_id*  
- ID del profilo per cui restituire informazioni. *profile_id* è **int**, con un valore predefinito è NULL.  
+ ID del profilo per cui restituire informazioni. *profile_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- Nome del profilo per cui restituire informazioni. *profile_name* è **sysname**, con un valore predefinito è NULL.  
+ [ **@profile_name** =] **'***profile_name***'**  
+ Nome del profilo per cui restituire informazioni. *profile_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -74,7 +74,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
  Autorizzazioni di esecuzione per questa routine per impostazione predefinita ai membri del **sysadmin** ruolo predefinito del server.  
   
 ## <a name="examples"></a>Esempi  
- **A. Elenco di tutti i profili**  
+ **A. Tutti i profili**  
   
  Nell'esempio seguente vengono visualizzati tutti i profili disponibili nell'istanza.  
   
@@ -110,6 +110,6 @@ profile_id  name                          description
   
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
- [Posta elettronica database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_index_operational_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_db_index_operational_stats
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_index_operational_stats dynamic management function
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
-caps.latest.revision: 
+caps.latest.revision: 61
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3866f4dfbd25fc665949455969b1546bd906462a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ed586d131f7cca843f3b43605496ab2c1ab02fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/03/2018
  Gli indici con ottimizzazione per la memoria non vengono visualizzati in questa DMV.    
     
 > [!NOTE]    
->  **Sys.dm db_index_operational_stats** non restituisce informazioni sugli indici con ottimizzazione per la memoria. Per informazioni sull'uso degli indici con ottimizzazione per la memoria, vedere [sys.dm_db_xtp_index_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
+>  **DM db_index_operational_stats** non restituisce informazioni sugli indici con ottimizzazione per la memoria. Per informazioni sull'uso degli indici con ottimizzazione per la memoria, vedere [sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md).    
         
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)    
     
@@ -58,31 +59,31 @@ sys.dm_db_index_operational_stats (
 ```    
     
 ## <a name="arguments"></a>Argomenti    
- *database_id* | NULL | 0 | DEFAULT    
- ID del database. *database_id* è **smallint**. Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
+ *database_id* | NULL | 0 | VALORE PREDEFINITO    
+ ID del database. *database_id* viene **smallint**. Gli input validi sono il numero di ID di un database, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire informazioni per tutti i database presenti nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se si specifica NULL per *database_id*, è necessario specificare NULL anche per *object_id*, *index_id*, e *numero_partizione*.    
     
  La funzione predefinita [DB_ID](../../t-sql/functions/db-id-transact-sql.md) può essere specificato.    
     
- *object_id* | NULL | 0 | DEFAULT    
+ *object_id* | NULL | 0 | VALORE PREDEFINITO    
  ID oggetto della tabella o vista in cui si trova l'indice. *object_id* è di tipo **int**.    
     
  Gli input validi sono il numero di ID di una tabella o vista, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire le informazioni memorizzate nella cache per tutte le tabelle e le viste nel database specificato. Se si specifica NULL per *object_id*, è necessario specificare NULL anche per *index_id* e *numero_partizione*.    
     
- *index_id* | 0 | NULL | -1 | IMPOSTAZIONE PREDEFINITA    
- ID dell'indice. *index_id* è **int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, NULL, -1 o DEFAULT. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.    
+ *index_id* | 0 | NULL | -1 | VALORE PREDEFINITO    
+ ID dell'indice. *index_id* viene **int**. Gli input validi sono il numero di ID di un indice, 0 se *object_id* è un heap, NULL, -1 o DEFAULT. Il valore predefinito è -1. NULL, -1 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire le informazioni memorizzate nella cache per tutti gli indici per una vista o tabella di base. Se si specifica NULL per *index_id*, è necessario specificare NULL anche per *numero_partizione*.    
     
- *numero_partizione* | NULL | 0 | IMPOSTAZIONE PREDEFINITA    
- Numero di partizione nell'oggetto. *numero_partizione* è **int**. Gli input validi sono il *partion_number* di un indice o heap, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
+ *partition_number* | NULL | 0 | VALORE PREDEFINITO    
+ Numero di partizione nell'oggetto. *partition_number* viene **int**. Gli input validi sono il *partion_number* di un indice o heap, NULL, 0 o DEFAULT. Il valore predefinito è 0. NULL, 0 e DEFAULT sono valori equivalenti in questo contesto.    
     
  Specificare NULL per restituire informazioni memorizzate nella cache per tutte le partizioni dell'indice o dell'heap.    
     
- *numero_partizione* è basato su 1. Un indice non partizionato o l'heap contiene *numero_partizione* impostato su 1.    
+ *partition_number* è basato su 1. Un indice non partizionato o l'heap contiene *numero_partizione* impostato su 1.    
     
 ## <a name="table-returned"></a>Tabella restituita    
     
@@ -91,7 +92,7 @@ sys.dm_db_index_operational_stats (
 |**database_id**|**smallint**|ID del database.|    
 |**object_id**|**int**|ID della tabella o vista.|    
 |**index_id**|**int**|ID dell'indice o dell'heap.<br /><br /> 0 = heap|    
-|**hobt_id**|**bigint**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID dell'heap di dati o set di righe dell'albero B che tiene traccia dei dati interni per un indice columnstore.<br /><br /> NULL: non si tratta di un set di righe columnstore interno.<br /><br /> Per ulteriori informazioni, vedere [sys.internal_partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
+|**hobt_id**|**bigint**|**Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] alla [versione corrente](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID dell'heap di dati o set di righe dell'albero B che tiene traccia dei dati interni per un indice columnstore.<br /><br /> NULL: non si tratta di un set di righe columnstore interno.<br /><br /> Per informazioni dettagliate, vedere [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|    
 |**partition_number**|**int**|Numero di partizione in base 1 all'interno dell'indice o heap.|    
 |**leaf_insert_count**|**bigint**|Conteggio cumulativo degli inserimenti al livello foglia.|    
 |**leaf_delete_count**|**bigint**|Conteggio cumulativo delle eliminazioni al livello foglia. leaf_delete_count viene incrementato solo per i record eliminati non contrassegnati come ghost prima. Per i record eliminati vengono innanzitutto fantasma **leaf_ghost_count** viene incrementato invece.|    
@@ -181,12 +182,12 @@ sys.dm_db_index_operational_stats (
  Il valore nelle colonne **lob_fetch_in_pages** e **lob_fetch_in_bytes** può essere maggiore di zero per indici non cluster contenenti una o più colonne LOB come colonne incluse. Per altre informazioni, vedere [Creare indici con colonne incluse](../../relational-databases/indexes/create-indexes-with-included-columns.md). Analogamente, il valore nelle colonne **row_overflow_fetch_in_pages** e **row_overflow_fetch_in_bytes** può essere maggiore di 0 per indici non cluster se l'indice include colonne che possono essere distribuite all'esterno di righe.    
     
 ## <a name="how-the-counters-in-the-metadata-cache-are-reset"></a>Procedura di ripristino dei contatori nella cache dei metadati    
- I dati restituiti da **Sys.dm db_index_operational_stats** esiste solo finché è disponibile l'oggetto cache dei metadati che rappresenta l'indice o heap. Questi dati non sono persistenti, né consistenti dal punto di vista transazionale. Ciò significa che non è possibile utilizzare questi contatori per determinare se un indice è stato utilizzato o meno oppure quando l'indice è stato utilizzato per l'ultima volta. Per ulteriori informazioni, vedere [Sys.dm db_index_usage_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
+ I dati restituiti da **Sys.dm db_index_operational_stats** esiste solo finché è disponibile l'oggetto cache dei metadati che rappresenta l'indice o heap. Questi dati non sono persistenti, né consistenti dal punto di vista transazionale. Ciò significa che non è possibile utilizzare questi contatori per determinare se un indice è stato utilizzato o meno oppure quando l'indice è stato utilizzato per l'ultima volta. Per ulteriori informazioni, vedere [db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md).    
     
  I valori di ogni colonna vengono impostati su zero ogni volta che i metadati per l'heap o l'indice vengono inseriti nella cache dei metadati e le statistiche vengono accumulate finché l'oggetto cache non viene rimosso dalla cache dei metadati. È pertanto possibile che un heap o un indice attivo disponga sempre dei relativi metadati nella cache e che il conteggio cumulativo rifletta l'attività dall'ultimo avvio dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I metadati di un heap o un indice meno attivo verranno inseriti nella e rimossi dalla cache in base al loro utilizzo. Ne consegue che i valori potrebbero non essere disponibili. L'eliminazione di un indice comporterà la rimozione delle statistiche corrispondenti dalla memoria e tali dati non verranno più rilevati dalla funzione. Altre operazioni DDL nell'indice potrebbero provocare l'azzeramento del valore delle statistiche.    
     
 ## <a name="using-system-functions-to-specify-parameter-values"></a>Utilizzo di funzioni di sistema per specificare i valori dei parametri    
- È possibile utilizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni [DB_ID](../../t-sql/functions/db-id-transact-sql.md) e [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) per specificare un valore per il *database_id* e *object_id* parametri. Se si passano valori non validi a queste funzioni, tuttavia, si potrebbero provocare risultati imprevisti. Quando si usa DB_ID o OBJECT_ID, verificare sempre che venga restituito un ID valido. Per ulteriori informazioni, vedere la sezione Osservazioni in [Sys.dm db_index_physical_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
+ È possibile utilizzare il [!INCLUDE[tsql](../../includes/tsql-md.md)] funzioni [DB_ID](../../t-sql/functions/db-id-transact-sql.md) e [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) per specificare un valore per il *database_id* e *object_id* parametri. Se si passano valori non validi a queste funzioni, tuttavia, si potrebbero provocare risultati imprevisti. Quando si usa DB_ID o OBJECT_ID, verificare sempre che venga restituito un ID valido. Per altre informazioni, vedere la sezione Osservazioni in [DM db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).    
     
 ## <a name="permissions"></a>Autorizzazioni    
  Sono richieste le autorizzazioni seguenti:    
@@ -201,7 +202,7 @@ sys.dm_db_index_operational_stats (
     
  La negazione di VIEW DATABASE STATE non consente la restituzione di tutti gli oggetti nel database, indipendentemente dalle eventuali autorizzazioni CONTROL concesse per oggetti specifici. Inoltre, quando il carattere jolly di database @*database_id*= NULL è specificato, il database viene omesso.    
     
- Per ulteriori informazioni, vedere [funzioni e viste a gestione dinamica &#40; Transact-SQL &#41; ](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
+ Per altre informazioni, vedere [funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).    
     
 ## <a name="examples"></a>Esempi    
     
@@ -209,7 +210,7 @@ sys.dm_db_index_operational_stats (
  Nell'esempio seguente vengono restituite informazioni per tutti gli indici e le partizioni della tabella `Person.Address` nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Per eseguire questa query, è necessario disporre almeno dell'autorizzazione CONTROL per la tabella `Person.Address`.    
     
 > [!IMPORTANT]    
->  In caso di utilizzo delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] DB_ID e OBJECT_ID per restituire un valore di parametro, assicurarsi sempre che venga restituito un ID valido. Se risulta impossibile trovare il nome del database o dell'oggetto, ad esempio quando tali nomi non esistono o sono stati immessi con un'ortografia errata, entrambe le funzioni restituiranno NULL. Il **Sys.dm db_index_operational_stats** funzione interpreta NULL come valore di carattere jolly che specifica tutti i database o tutti gli oggetti. Poiché può trattarsi di un'operazione accidentale, gli esempi riportati in questa sezione dimostrano la procedura sicura per determinare gli ID di database e oggetti.    
+>  In caso di utilizzo delle funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] DB_ID e OBJECT_ID per restituire un valore di parametro, assicurarsi sempre che venga restituito un ID valido. Se risulta impossibile trovare il nome del database o dell'oggetto, ad esempio quando tali nomi non esistono o sono stati immessi con un'ortografia errata, entrambe le funzioni restituiranno NULL. La funzione **sys.dm_db_index_operational_stats** interpreta NULL come un carattere jolly che specifica tutti i database o tutti gli oggetti. Poiché può trattarsi di un'operazione accidentale, gli esempi riportati in questa sezione dimostrano la procedura sicura per determinare gli ID di database e oggetti.    
     
 ```    
 DECLARE @db_id int;    

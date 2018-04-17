@@ -2,7 +2,7 @@
 title: Funzione SQLColAttribute | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 caps.latest.revision: 42
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 765cdab2b8619501a29990c9b944b3b98797b4ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute-function"></a>Funzione SQLColAttribute
 **Conformità**  
@@ -128,15 +128,15 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>Commenti  
  Per informazioni sull'utilizzano tra applicazioni e le informazioni restituite da **SQLColAttribute**, vedere [metadati dei Set di risultati](../../../odbc/reference/develop-app/result-set-metadata.md).  
   
- **SQLColAttribute** restituisce sia le informazioni in \* *NumericAttributePtr* o in \* *CharacterAttributePtr*. Vengono restituite informazioni di integer in \* *NumericAttributePtr* come valore SQLLEN; vengono restituiti tutti gli altri formati di informazioni in \* *CharacterAttributePtr*. Quando vengono restituite informazioni \* *NumericAttributePtr*, il driver ignora *CharacterAttributePtr*, *BufferLength*, e  *StringLengthPtr*. Quando vengono restituite informazioni \* *CharacterAttributePtr*, il driver ignora *NumericAttributePtr*.  
+ **SQLColAttribute** restituisce informazioni sia in \* *NumericAttributePtr* o nella \* *CharacterAttributePtr*. Vengono restituite informazioni di integer in \* *NumericAttributePtr* come valore SQLLEN; vengono restituiti tutti gli altri formati di informazioni in \* *CharacterAttributePtr*. Quando vengono restituite informazioni \* *NumericAttributePtr*, il driver ignora *CharacterAttributePtr*, *BufferLength*, e  *StringLengthPtr*. Quando vengono restituite informazioni \* *CharacterAttributePtr*, il driver ignora *NumericAttributePtr*.  
   
- **SQLColAttribute** restituisce i valori di campi di descrizione di implementazione. La funzione viene chiamata con un handle di istruzione anziché un handle descrittore. I valori restituiti da **SQLColAttribute** per il *FieldIdentifier* valori elencati più avanti in questa sezione possono anche essere recuperati chiamando **SQLGetDescField** con il handle IRD appropriato.  
+ **SQLColAttribute** restituisce valori di campi di descrizione di implementazione. La funzione viene chiamata con un handle di istruzione anziché un handle descrittore. I valori restituiti da **SQLColAttribute** per il *FieldIdentifier* valori elencati più avanti in questa sezione possono anche essere recuperati chiamando **SQLGetDescField** con il handle IRD appropriato.  
   
  Il descrittore attualmente definito campi, la versione di ODBC in cui sono state introdotte e gli argomenti in cui vengono restituite informazioni per essi vengono visualizzati in un secondo momento in questa sezione; più tipi di descrittore possono essere definiti dai driver per sfruttare i vantaggi di origini dati diverse.  
   
  Un database ODBC 3. *x* driver deve restituire un valore per ognuno dei campi di descrizione. Se un campo di descrizione non viene applicata a un'origine dati o i driver e se non diversamente specificato, il driver restituisce 0 in \* *StringLengthPtr* o una stringa vuota in **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Backward Compatibility  
+## <a name="backward-compatibility"></a>Compatibilità con le versioni precedenti  
  ODBC 3. *x* funzione **SQLColAttribute** sostituisce deprecate ODBC 2. *x* funzione **SQLColAttributes**. Quando il mapping di **SQLColAttributes** a **SQLColAttribute** (quando un ODBC 2. *x* applicazione funziona con un'applicazione ODBC 3. *x* driver), o mapping **SQLColAttribute** a **SQLColAttributes** (quando un'applicazione ODBC 3. *x* applicazione sta utilizzando un'API ODBC 2. *x* driver), gestione Driver sia passa il valore di *FieldIdentifier* tramite, ne esegue il mapping a un nuovo valore, o restituisce un errore, come indicato di seguito:  
   
 > [!NOTE]  
@@ -177,13 +177,13 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|Lo schema della tabella che contiene la colonna. Il valore restituito è definito dall'implementazione se la colonna è un'espressione o se la colonna fa parte di una vista. Se l'origine dati non supporta schemi o non è possibile determinare il nome dello schema, viene restituita una stringa vuota. Questo campo di record VARCHAR non è limitato a 128 caratteri.|  
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE se la colonna non può essere utilizzata in una clausola WHERE. (Questo è identico al valore SQL_UNSEARCHABLE in ODBC 2. *x*.)<br /><br /> SQL_PRED_CHAR se la colonna può essere utilizzata in una clausola WHERE, ma solo con il predicato LIKE. (Questo è identico al valore SQL_LIKE_ONLY in ODBC 2. *x*.)<br /><br /> SQL_PRED_BASIC se la colonna può essere utilizzata in una clausola WHERE con tutti gli operatori di confronto, ad eccezione di tipo. (Questo è identico al valore SQL_EXCEPT_LIKE in ODBC 2. *x*.)<br /><br /> SQL_PRED_SEARCHABLE se la colonna può essere utilizzata in una clausola WHERE con qualsiasi operatore di confronto.<br /><br /> Colonne di tipo SQL_LONGVARCHAR e SQL_LONGVARBINARY in genere restituito SQL_PRED_CHAR.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|Nome della tabella che contiene la colonna. Il valore restituito è definito dall'implementazione se la colonna è un'espressione o se la colonna fa parte di una vista.<br /><br /> Se non è possibile determinare il nome della tabella, viene restituita una stringa vuota.|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|Un valore numerico che specifica il tipo di dati SQL.<br /><br /> Quando *ColumnNumber* è uguale a 0, viene restituito SQL_BINARY per i segnalibri a lunghezza variabile e SQL_INTEGER viene restituito per i segnalibri di lunghezza fissa.<br /><br /> Per i tipi di dati datetime e interval, questo campo restituisce il tipo di dati dettagliati: SQL_DATETIME o SQL_INTERVAL. (Per ulteriori informazioni, vedere [gli identificatori di tipo di dati e i descrittori](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) appendice d: tipo di dati.<br /><br /> Queste informazioni vengono restituite dal campo SQL_DESC_TYPE record di implementazione. **Nota:** di lavorare con ODBC 2. *x* SQL_DESC_CONCISE_TYPE driver, utilizzare.|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|Un valore numerico che specifica il tipo di dati SQL.<br /><br /> Quando *ColumnNumber* è uguale a 0, viene restituito SQL_BINARY per i segnalibri a lunghezza variabile e SQL_INTEGER viene restituito per i segnalibri di lunghezza fissa.<br /><br /> Per i tipi di dati datetime e interval, questo campo restituisce il tipo di dati dettagliati: SQL_DATETIME o SQL_INTERVAL. (Per ulteriori informazioni, vedere [gli identificatori di tipo di dati e i descrittori](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) appendice d: tipo di dati.<br /><br /> Queste informazioni vengono restituite dal campo SQL_DESC_TYPE record di implementazione. **Nota:** funzionamento rispetto a ODBC 2. *x* driver, in alternativa, usare SQL_DESC_CONCISE_TYPE.|  
 |DESCRIZIONE SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|Nome del tipo di dati dipende dall'origine dati; ad esempio, "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" o "CHAR () FOR BIT DATA".<br /><br /> Se il tipo è sconosciuto, viene restituita una stringa vuota.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED o SQL_UNNAMED. Se il campo SQL_DESC_NAME di implementazione contiene un alias di colonna o un nome di colonna, viene restituito SQL_NAMED. Se è presente alcun nome di colonna o un alias di colonna, viene restituito SQL_UNNAMED.<br /><br /> Queste informazioni vengono restituite dal campo del record SQL_DESC_UNNAMED di implementazione.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE se la colonna è senza segno (o non numerico).<br /><br /> SQL_FALSE se la colonna è firmata.|  
 |SQL_DESC_UPDATABLE (ODBC 1.0)|*NumericAttributePtr*|Colonna verrà indicata i valori per le costanti definite:<br /><br /> SQL_ATTR_READONLY SQL_ATTR_WRITE SQL_ATTR_READWRITE_UNKNOWN<br /><br /> SQL_DESC_UPDATABLE descrive l'aggiornabilità della colonna nel set di risultati, non la colonna nella tabella di base. L'aggiornabilità della colonna di base su cui si basa la colonna del set di risultati potrebbe essere diverso dal valore in questo campo. Se una colonna è aggiornabile può basarsi sul tipo di dati, i privilegi di utente e la definizione di se stesso set di risultati. Se non è chiaro se una colonna è aggiornabile, SQL_ATTR_READWRITE_UNKNOWN deve essere restituito.|  
   
- **SQLColAttribute** è un'alternativa a extensible **SQLDescribeCol**. **SQLDescribeCol** restituisce un set fisso di informazioni sul descrittore di base in SQL ANSI-89. **SQLColAttribute** consente l'accesso per il set più completo di informazioni sul descrittore disponibili in SQL ANSI-92 e DBMS estensioni del fornitore.  
+ **SQLColAttribute** è un'alternativa a extensible **SQLDescribeCol**. **SQLDescribeCol** restituisce un set fisso di informazioni del descrittore di base in SQL ANSI-89. **SQLColAttribute** consente l'accesso per il set più completo di informazioni sul descrittore disponibili in SQL ANSI-92 e DBMS estensioni del fornitore.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   

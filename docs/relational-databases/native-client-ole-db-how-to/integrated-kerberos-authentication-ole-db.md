@@ -1,27 +1,28 @@
 ---
 title: L'autenticazione Kerberos (OLE DB) integrata | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-how-to
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eaed0b0527d89b31ab6bd55b56915d9bbf8ec419
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d8703bc159c277812d1a045179eb5ae6ce86fee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticazione Kerberos integrata (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ ms.lasthandoff: 01/24/2018
 
   Nell'esempio viene illustrato come ottenere l'autenticazione Kerberos reciproca tramite OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
   
- Per ulteriori informazioni sui nomi SPN e l'autenticazione Kerberos, vedere [Service Principal Name &#40; SPN &#41; Supporto nelle connessioni Client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per ulteriori informazioni sui nomi SPN e l'autenticazione Kerberos, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  È necessario specificare un server. Nel file con estensione cpp impostare "MyServer" su un nome di computer in cui sia presente un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  

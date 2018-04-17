@@ -2,7 +2,7 @@
 title: Funzione SQLBrowseConnect | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -22,16 +22,16 @@ f1_keywords:
 helpviewer_keywords:
 - SQLBrowseConnect function [ODBC]
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-caps.latest.revision: ''
+caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90c872da50c2d637f79bcc086bea4aaab95608b1
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
@@ -118,10 +118,10 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argomento InConnectionString  
  Una stringa di connessione richiesta Sfoglia presenta la sintassi seguente:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
- *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
- *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
- *attribute-value* ::= *character-string*<br>
+ *stringa di connessione* :: = *attributo*[`;`] &#124; *attributo* `;` *stringa di connessione*;<br>
+ *attributo* :: = *parola chiave di attributo*`=`*attributo-valore* &#124; `DRIVER=`[`{`]*attributo-valore*[`}`]<br>
+ *attributo di una parola chiave* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *-definito dall'attributo-parola chiave driver*<br>
+ *valore dell'attributo* :: = *stringhe di caratteri*<br>
  *definito dall'attributo-parola chiave driver* :: = *identificatore*<br>
   
  dove *stringa di caratteri* contiene zero o più caratteri; *identificatore* contiene uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; *attributo-valore* potrebbe essere tra maiuscole e minuscole; e il valore della **DSN** (parola chiave) non è costituito esclusivamente spazi vuoti. A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e l'attributo valori che contengono i caratteri **[] {} (),? \*=! @** deve essere evitato. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Per un database ODBC 2. *x* driver, è necessario racchiudere il valore dell'attributo per la parola chiave DRIVER tra parentesi graffe.  
@@ -133,7 +133,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>Argomento OutConnectionString  
  La stringa di connessione di risultati di ricerca è un elenco di attributi di connessione. Un attributo di connessione è costituito da una parola chiave di attributo e un valore di attributo corrispondente. La stringa di connessione del risultato Sfoglia presenta la sintassi seguente:  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
+ *stringa di connessione* :: = *attributo*[`;`] &#124; *attributo* `;` *stringa di connessione*<br>
  *attributo* :: = [`*`]*attributo-parola chiave*`=`*attributo-valore*<br>
  *attributo di una parola chiave* :: = *parola chiave di attributo ODBC* &#124; *-definito dall'attributo-parola chiave driver*<br>
  *Parola chiave di attributo ODBC* = {`UID` &#124; `PWD`} [`:`*identificatore localizzata*] *-definito dall'attributo-parola chiave driver* :: = *identificatore*[`:`*identificatore localizzata*] *attributo-valore* :: = `{` *attributo-valore dall'elenco* `}` &#124; `?` (Parentesi graffe sono valori letterali, vengono restituiti dal driver).<br>

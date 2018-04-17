@@ -1,16 +1,16 @@
 ---
 title: sp_helpdb (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpdb
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 231e911d1438a16d4b1a2db234e895f8652ea375
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@dbname=** ] **'***nome***'**  
- Nome del database per il quale vengono restituite informazioni. *nome* è **sysname**, non prevede alcun valore predefinito. Se *nome* non viene specificato, **sp_helpdb** segnala tutti i database di **Sys. Databases** vista del catalogo.  
+ [ **@dbname=** ] **'***name***'**  
+ Nome del database per il quale vengono restituite informazioni. *nome* viene **sysname**, non prevede alcun valore predefinito. Se *nome* non viene specificato, **sp_helpdb** segnala tutti i database di **Sys. Databases** vista del catalogo.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -57,12 +57,12 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome del database.|  
-|**db_size**|**nvarchar(13)**|Dimensioni totali del database.|  
+|**db_size=500**|**nvarchar(13)**|Dimensioni totali del database.|  
 |**proprietario**|**sysname**|Proprietario del database, ad esempio **sa**.|  
-|**DBID**|**smallint**|ID del database.|  
-|**creato**|**nvarchar(11)**|Data di creazione del database.|  
+|**dbid**|**smallint**|ID del database.|  
+|**created**|**nvarchar(11)**|Data di creazione del database.|  
 |**status**|**nvarchar(600)**|Elenco separato da virgola dei valori delle opzioni impostate nel database.<br /><br /> Le opzioni con valori booleani vengono elencate solo se sono abilitate. Opzioni non booleane sono elencate con i relativi valori sotto forma di *option_name*=*valore*.<br /><br /> Per altre informazioni, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**COMPATIBILITY_LEVEL**|**tinyint**|Livello di compatibilità del database (60, 65, 70, 80 o 90).|  
+|**compatibility_level**|**tinyint**|Livello di compatibilità del database (60, 65, 70, 80 o 90).|  
   
  Se *nome* è specificato, è presente un set di risultati aggiuntivo che mostra l'allocazione di file per il database specificato.  
   
@@ -73,9 +73,9 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**nome file**|**nchar(260)**|Nome del file del sistema operativo, ovvero nome fisico del file.|  
 |**filegroup**|**nvarchar(128)**|Filegroup a cui appartiene il file.<br /><br /> NULL = Il file è un file di log. Questo tipo di file non viene mai incluso in un filegroup.|  
 |**size**|**nvarchar(18)**|Dimensione del file espressa in megabyte.|  
-|**MaxSize**|**nvarchar(18)**|Dimensioni massime consentite per il file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
+|**maxsize**|**nvarchar(18)**|Dimensioni massime consentite per il file. Se questo campo include il valore UNLIMITED, le dimensioni del file possono aumentare fino a riempire il disco.|  
 |**aumento delle dimensioni**|**nvarchar(18)**|Incremento per l'aumento delle dimensioni del file. Indica la quantità di spazio aggiunta al file ogni volta che è necessario spazio aggiuntivo.|  
-|**utilizzo**|**varchar(9)**|Utilizzo del file. Per un file di dati, il valore è **'solo dati'** e per il file di log è il valore **'log solo'**.|  
+|**Utilizzo**|**varchar(9)**|Utilizzo del file. Per un file di dati, il valore è **'solo dati'** e per il file di log è il valore **'log solo'**.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il **stato** colonna nel risultato imposta le opzioni sono state impostate su ON nel database di report. Tutte le opzioni di database non vengono segnalate i **stato** colonna. Per visualizzare un elenco completo delle impostazioni del database, utilizzare il **Sys. Databases** vista del catalogo.  
@@ -103,13 +103,13 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [Sys. FileGroups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
- [Sys. master_files &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+ [sys.filegroups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filegroups-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

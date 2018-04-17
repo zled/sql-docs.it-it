@@ -1,16 +1,16 @@
 ---
-title: sp_help_fulltext_tables_cursor (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_help_fulltext_tables_cursor (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_tables_cursor
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables_cursor
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8cf322f96f6190e2a08f7c584e74574b84e20d88
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 81629e8075d85ec04bdd980f741b4ae82b706af8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   Utilizza un cursore per restituire un elenco di tabelle registrate per l'indicizzazione full-text.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare il nuovo **fulltext_indexes** vista del catalogo. Per ulteriori informazioni, vedere [fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Usare le nuove **Sys. fulltext_indexes** vista del catalogo. Per altre informazioni, vedere [Sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,14 +52,14 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@cursor_return=** ]  *@cursor_variable*  OUTPUT  
+ [  **@cursor_return=** ] *@cursor_variable* OUTPUT  
  Variabile di output di tipo **cursore**. Il cursore restituito è di tipo scorrevole, dinamico e di sola lettura.  
   
- [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- Nome del catalogo full-text. *fulltext_catalog_name* è **sysname**, con un valore predefinito è NULL. Se *fulltext_catalog_name* viene omesso oppure è NULL, vengono restituite tutte le tabelle indicizzate full-text associate al database. Se *fulltext_catalog_name* è specificato, ma *table_name* viene omesso oppure è NULL, viene recuperate le informazioni sugli indici full-text per ogni tabella indicizzata full-text associata al catalogo. Se entrambi *fulltext_catalog_name* e *table_name* specificato, viene restituita una riga se *table_name* è associata a *fulltext_catalog_name*; in caso contrario, viene generato un errore.  
+ [  **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
+ Nome del catalogo full-text. *fulltext_catalog_name* viene **sysname**, con un valore predefinito è NULL. Se *fulltext_catalog_name* viene omesso oppure è NULL, vengono restituite tutte le tabelle indicizzate full-text associate al database. Se *fulltext_catalog_name* è specificato, ma *table_name* viene omesso oppure è NULL, viene recuperate le informazioni sugli indici full-text per ogni tabella indicizzata full-text associata al catalogo. Se entrambi *fulltext_catalog_name* e *table_name* specificato, viene restituita una riga se *table_name* è associata a *fulltext_catalog_name*; in caso contrario, viene generato un errore.  
   
  [  **@table_name=**] **'***table_name***'**  
- Nome di tabella costituito da una o due parti di cui vengono richiesti i metadati full-text. *TABLE_NAME* è **nvarchar (517)**, con un valore predefinito null. Se solo *table_name* è specificato, solo la riga relativa a *table_name* viene restituito.  
+ Nome di tabella costituito da una o due parti di cui vengono richiesti i metadati full-text. *TABLE_NAME* viene **nvarchar(517)**, con valore predefinito è NULL. Se solo *table_name* è specificato, solo la riga relativa a *table_name* viene restituito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

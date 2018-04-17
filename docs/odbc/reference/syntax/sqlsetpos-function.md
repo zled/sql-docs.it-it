@@ -2,7 +2,7 @@
 title: Funzione SQLSetPos | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 310adbb9cc67ffe6982ca6838285ffe4967ab7c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 06a7c9e052b30a764579bd775ce5e1ac36287175
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetpos-function"></a>Funzione SQLSetPos
 **Conformità**  
@@ -70,7 +70,7 @@ SQLRETURN SQLSetPos(
   
  Per ulteriori informazioni, vedere "Commenti".  
   
- *Tipo di blocco*  
+ *LockType*  
  [Input] Specifica la modalità di blocco di riga dopo aver eseguito l'operazione specificata nel *operazione* argomento.  
   
  SQL_LOCK_NO_CHANGE SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK  
@@ -117,7 +117,7 @@ SQLRETURN SQLSetPos(
 |HY090|Lunghezza di stringa o di buffer non valida|Il *operazione* argomento era SQL_UPDATE, un valore di dati è un puntatore null e il valore di lunghezza di colonna non è 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, o minore o uguale a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Il *operazione* argomento è stato SQL_UPDATE; un valore di dati non è un puntatore null; è stato il tipo di dati C SQL_C_BINARY o SQL_C_CHAR; e il valore di lunghezza di colonna è minore di 0 ma non uguale a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS o SQL_NULL_DATA, o minore o uguale a SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> Il valore in un buffer di lunghezza/indicatore era SQL_DATA_AT_EXEC; il tipo SQL non SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo di dati specifici dell'origine dati di tipo long; e il tipo di informazioni SQL_NEED_LONG_DATA_LEN in **SQLGetInfo** è "Y".|  
 |HY092|Identificatore di attributo non valido|(DM) il valore specificato per il *operazione* argomento non valido.<br /><br /> (DM) il valore specificato per il *LockType* argomento non valido.<br /><br /> Il *operazione* argomento è stato SQL_UPDATE o SQL_DELETE e l'attributo di istruzione SQL_ATTR_CONCURRENCY stato SQL_ATTR_CONCUR_READ_ONLY.|  
 |HY107|Valore di riga non compreso nell'intervallo|Il valore specificato per l'argomento *RowNumber* è maggiore del numero di righe nel set di righe.|  
-|HY109|Posizione del cursore non valido|Il cursore associato di *StatementHandle* è stato definito come forward-only, pertanto non può essere posizionato il cursore all'interno del set di righe. Vedere la descrizione per l'attributo SQL_ATTR_CURSOR_TYPE in **SQLSetStmtAttr**.<br /><br /> Il *operazione* argomento è stato SQL_UPDATE, SQL_DELETE o SQL_REFRESH e identificate la riga di *RowNumber* argomento è stato eliminato o non era stata recuperata.<br /><br /> (DM) il *RowNumber* argomento è 0 e *operazione* argomento era SQL_POSITION.<br /><br /> **SQLSetPos** è stato chiamato dopo **SQLBulkOperations** è stato chiamato e prima **SQLFetchScroll** o **SQLFetch** è stato chiamato.|  
+|HY109|Posizione del cursore non valido|Il cursore associato di *StatementHandle* è stato definito come forward-only, pertanto non può essere posizionato il cursore all'interno del set di righe. Vedere la descrizione per l'attributo SQL_ATTR_CURSOR_TYPE in **SQLSetStmtAttr**.<br /><br /> Il *operazione* argomento è stato SQL_UPDATE, SQL_DELETE o SQL_REFRESH e identificate la riga di *RowNumber* argomento è stato eliminato o non era stata recuperata.<br /><br /> (DM) il *RowNumber* argomento è 0 e *operazione* argomento era SQL_POSITION.<br /><br /> **SQLSetPos** è stato chiamato dopo **SQLBulkOperations** è stato chiamato e prima **SQLFetchScroll** oppure **SQLFetch** è stato chiamato.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Funzionalità facoltativa non implementata.|L'origine dati o driver non supporta l'operazione richiesta nel *operazione* argomento o *LockType* argomento.|  
 |HYT00|Timeout|Il periodo di timeout della query è scaduto prima che l'origine dati ha restituito il set di risultati. Il periodo di timeout viene impostato tramite **SQLSetStmtAttr** con un *attributo* di SQL_ATTR_QUERY_TIMEOUT.|  
@@ -268,7 +268,7 @@ SQLRETURN SQLSetPos(
  Quando l'elenco SELECT della specifica di query associata al cursore contiene più di un riferimento alla stessa colonna, se viene generato un errore o il driver ignora i riferimenti duplicati ed esegue le operazioni richieste è definito dal driver.  
   
 ## <a name="performing-bulk-operations"></a>Esecuzione di operazioni Bulk  
- Se il *RowNumber* argomento è 0, il driver esegue l'operazione specificata nel *operazione* argomento per ogni riga nel set di righe con un valore di SQL_ROW_PROCEED nel relativo campo nell'operazione di riga matrice a cui puntava attributo dell'istruzione SQL_ATTR_ROW_OPERATION_PTR. Si tratta di un valore valido di *RowNumber* argomento per un *operazione* argomento di SQL_DELETE, SQL_REFRESH, o SQL_UPDATE, ma non SQL_POSITION. **SQLSetPos** con un *operazione* di SQL_POSITION e *RowNumber* uguale a 0 restituirà HY109 SQLSTATE (posizione del cursore non valido).  
+ Se il *RowNumber* argomento è 0, il driver esegue l'operazione specificata nel *operazione* argomento per ogni riga nel set di righe con un valore di SQL_ROW_PROCEED nel relativo campo nell'operazione di riga matrice a cui puntava attributo dell'istruzione SQL_ATTR_ROW_OPERATION_PTR. Si tratta di un valore valido di *RowNumber* argomento per un *operazione* argomento di SQL_DELETE, SQL_REFRESH, o SQL_UPDATE, ma non SQL_POSITION. **SQLSetPos** con un *operazione* di SQL_POSITION e un *RowNumber* uguale a 0 restituirà HY109 SQLSTATE (posizione del cursore non valido).  
   
  Se si verifica un errore che riguardano l'intero set di righe, ad esempio HYT00 SQLSTATE (Timeout scaduto), il driver restituisce SQL_ERROR e i codici SQLSTATE appropriati. Il contenuto del buffer di set di righe non è definito e viene modificata la posizione del cursore.  
   

@@ -1,16 +1,16 @@
 ---
-title: sp_delete_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_operator (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_operator
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_operator
 ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91dd37ec3f69d31798d8e943a7a4f0d1c4b70d31
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 60eb95bbf0f0bc3774e18a22f2e08bb2f087de3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name=** ] **'***nome***'**  
- Nome dell'operatore da eliminare. *nome* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@name=** ] **'***name***'**  
+ Nome dell'operatore da eliminare. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@reassign_to_operator=** ] **'***reassign_operator***'**  
- Nome di un operatore a cui è possibile riassegnare gli avvisi dell'operatore specificato. *reassign_operator* è **sysname**, con un valore predefinito è NULL.  
+ Nome di un operatore a cui è possibile riassegnare gli avvisi dell'operatore specificato. *reassign_operator* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

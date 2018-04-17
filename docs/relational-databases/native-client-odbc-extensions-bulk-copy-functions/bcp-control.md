@@ -1,16 +1,16 @@
 ---
 title: bcp_control | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-extensions-bulk-copy-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - bcp_control
@@ -20,16 +20,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_control function
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41d583812419f62ab7e9822fefaaac1a8b82a1f7
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 53ed8a1b6af16e36fe431a56dc32dee78c1ccf2c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -134,7 +135,7 @@ RETCODE bcp_control (
  Quando è impostato su TRUE, specifica che il file di input è un file Unicode.  
   
  *iValue*  
- Il valore per l'oggetto specificato è *eOption*. *iValue* è un valore integer (LONGLONG) eseguire il cast a un puntatore void per consentire l'espansione futura a valori a 64 bit.  
+ Il valore per l'oggetto specificato è *eOption*. *iValue* è un valore integer (LongLong con) cast a un puntatore void per consentire l'espansione futura a valori a 64 bit.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  

@@ -1,16 +1,16 @@
 ---
 title: sp_add_notification (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_notification_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_notification
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
-caps.latest.revision: 
+caps.latest.revision: 33
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 22e6f2373ba35b24d74b7045350c7cb78a504c05
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 65687af95ff4d8f608d528277e897e0cca2c70ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,22 +48,22 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 ## <a name="arguments"></a>Argomenti  
  [  **@alert_name=** ] **'***avviso***'**  
- Avviso da notificare. *avviso* è **sysname**, non prevede alcun valore predefinito.  
+ Avviso da notificare. *avviso* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@operator_name=** ] **'***operatore***'**  
- Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* è **sysname**, non prevede alcun valore predefinito.  
+ Operatore a cui inviare una notifica quando viene generato l'avviso. *operatore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@notification_method=** ] *notification_method*  
- Metodo adottato per l'invio della notifica all'operatore. *notification_method* è **tinyint**, non prevede alcun valore predefinito. *notification_method* può essere uno o più dei valori seguenti combinati con un **OR** operatore logico.  
+ Metodo adottato per l'invio della notifica all'operatore. *notification_method* viene **tinyint**, non prevede alcun valore predefinito. *notification_method* può essere uno o più dei valori seguenti combinati con un **OR** operatore logico.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**1**|Posta elettronica|  
 |**2**|Cercapersone|  
 |**4**|**net send**|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

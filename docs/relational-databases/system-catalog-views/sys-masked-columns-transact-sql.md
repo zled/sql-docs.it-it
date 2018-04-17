@@ -1,16 +1,16 @@
 ---
 title: masked_columns (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/25/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.masked_columns
@@ -20,16 +20,17 @@ f1_keywords:
 helpviewer_keywords:
 - sys.masked_columns catalog view
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
-caps.latest.revision: 
+caps.latest.revision: 9
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7855e2d4ccf46977138cff813d27266d90e0fa86
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 255ffd4a371034ba27ad1255be677f71c628d465
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ ms.lasthandoff: 11/21/2017
 |object_id|**int**|ID dell'oggetto a cui appartiene la colonna.|  
 |name|**sysname**|Nome della colonna. Valore univoco all'interno dell'oggetto.|  
 |column_id|**int**|ID della colonna. Valore univoco all'interno dell'oggetto.<br /><br /> È possibile che gli ID di colonna non siano sequenziali.|  
-|**masked_columns** restituisce colonne ereditate da **Columns**.|vari|Vedere [Columns &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) per più definizioni di colonna.|  
+|**Sys. masked_columns** restituisce molte altre colonne ereditate da **Sys. Columns**.|vari|Vedere [Sys. Columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) per altre definizioni di colonna.|  
 |is_masked|**bit**|Indica se la colonna è nascosta. 1 indica mascherato.|  
 |masking_function|**nvarchar(4000)**|Funzione di maschera per la colonna.|  
   
 ## <a name="remarks"></a>Osservazioni  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Questa vista restituisce informazioni sulle tabelle in cui l'utente disponga di autorizzazioni per la tabella o se l'utente dispone dell'autorizzazione VIEW ANY DEFINITION.  
   
 ## <a name="example"></a>Esempio  

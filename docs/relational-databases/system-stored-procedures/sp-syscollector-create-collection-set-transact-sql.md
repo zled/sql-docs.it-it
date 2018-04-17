@@ -1,16 +1,16 @@
 ---
-title: sp_syscollector_create_collection_set (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syscollector_create_collection_set (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_create_collection_set_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_create_collection_set
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50e5c77d8af3ae4ab42ef74ee18f7b49db2a7c57
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1e2aa88ff030e3fb938fdd00808d10c3c8b6cac9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ sp_syscollector_create_collection_set
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name =** ] '*nome*'  
- Nome del set di raccolta. *nome* è **sysname** e non può essere una stringa vuota o NULL.  
+ Nome del set di raccolta. *nome* viene **sysname** e non può essere una stringa vuota o NULL.  
   
- *nome* deve essere univoco. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
+ *nome* devono essere univoci. Per un elenco dei nomi dei set di raccolta correnti, eseguire una query sulla vista di sistema syscollector_collection_sets.  
   
- [ **@target =** ] '*target*'  
- Riservato per utilizzi futuri. *nome* è **nvarchar (128)** con un valore predefinito null.  
+ [  **@target =** ] '*destinazione*'  
+ Riservato per utilizzi futuri. *nome* viene **nvarchar (128)** con valore predefinito è NULL.  
   
  [  **@collection_mode =** ] *collection_mode*  
- Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* è **smallint** e può avere uno dei valori seguenti:  
+ Specifica il modo in cui i dati vengono raccolti e archiviati. *collection_mode* viene **smallint** e può avere uno dei valori seguenti:  
   
  0 - Modalità cache. La raccolta e il caricamento dei dati seguono una pianificazione differente. Specificare la modalità cache per la raccolta continua.  
   
@@ -79,25 +79,25 @@ sp_syscollector_create_collection_set
   
  Il valore predefinito per *collection_mode* è 0. Quando *collection_mode* è 0, *valore schedule_uid* o *schedule_name* deve essere specificato.  
   
- [ **@days_until_expiration =** ] *days_until_expiration*  
- Numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* è **smallint** con valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
+ [  **@days_until_expiration =** ] *days_until_expiration*  
+ Numero di giorni per cui i dati raccolti vengono salvati nel data warehouse di gestione. *days_until_expiration* viene **smallint** con valore predefinito è 730 (due anni). *days_until_expiration* deve essere 0 o un numero intero positivo.  
   
  [ **@proxy_id =** ] *proxy_id*  
- Identificatore univoco per un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* è **int** con un valore predefinito null. Se specificato, *proxy_name* deve essere NULL. Per ottenere *proxy_id*, eseguire query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per ulteriori informazioni, vedere [creare un Proxy di SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
+ Identificatore univoco per un account proxy di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. *proxy_id* viene **int** con valore predefinito è NULL. Se specificato, *proxy_name* deve essere NULL. Per ottenere *proxy_id*, eseguire query sulla tabella di sistema sysproxies. Per accedere al proxy, il ruolo predefinito del database dc_admin deve disporre dell'autorizzazione appropriata. Per ulteriori informazioni, vedere [creare un Proxy di SQL Server Agent](http://msdn.microsoft.com/library/142e0c55-a8b9-4669-be49-b9dc602d5988).  
   
- [ **@proxy_name =** ] '*proxy_name*'  
- Nome dell'account proxy. *proxy_name* è **sysname** con un valore predefinito null. Se specificato, *proxy_id* deve essere NULL. Per ottenere *proxy_name*, eseguire query sulla tabella di sistema sysproxies.  
+ [  **@proxy_name =** ] '*proxy_name*'  
+ Nome dell'account proxy. *proxy_name* viene **sysname** con valore predefinito è NULL. Se specificato, *proxy_id* deve essere NULL. Per ottenere *proxy_name*, eseguire query sulla tabella di sistema sysproxies.  
   
  [  **@schedule_uid =** ] '*valore schedule_uid*'  
- GUID che punta a una pianificazione. *valore schedule_uid* è **uniqueidentifier** con un valore predefinito null. Se specificato, *schedule_name* deve essere NULL. Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
+ GUID che punta a una pianificazione. *valore schedule_uid* viene **uniqueidentifier** con valore predefinito è NULL. Se specificato, *schedule_name* deve essere NULL. Per ottenere *valore schedule_uid*, eseguire query sulla tabella di sistema sysschedules.  
   
  Quando *collection_mode* è impostato su 0, *valore schedule_uid* o *schedule_name* deve essere specificato. Quando *collection_mode* è impostato su 1, *valore schedule_uid* o *schedule_name* viene ignorato se specificato.  
   
  [  **@schedule_name =** ] '*schedule_name*'  
- Nome della pianificazione. *schedule_name* è **sysname** con un valore predefinito null. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
+ Nome della pianificazione. *schedule_name* viene **sysname** con valore predefinito è NULL. Se specificato, *valore schedule_uid* deve essere NULL. Per ottenere *schedule_name*, eseguire query sulla tabella di sistema sysschedules.  
   
  [  **@logging_level =** ] *logging_level*  
- Livello di registrazione. *logging_level* è **smallint** con uno dei valori seguenti:  
+ Livello di registrazione. *logging_level* viene **smallint** con uno dei valori seguenti:  
   
  0 - Informazioni di esecuzione del log ed eventi [!INCLUDE[ssIS](../../includes/ssis-md.md)] che tengono traccia degli elementi seguenti:  
   
@@ -115,21 +115,21 @@ sp_syscollector_create_collection_set
   
 -   Eventi di avviso da [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
- 2 - registrazione di livello 1 e informazioni dettagliate sugli eventi da [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
+ 2 - Registrazione di livello 1 e di informazioni dettagliate sugli eventi di [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  Il valore predefinito per *logging_level* è 1.  
   
  [  **@description =** ] '*descrizione*'  
- Descrizione del set di raccolta. *Descrizione* è **nvarchar (4000)** con un valore predefinito null.  
+ Descrizione del set di raccolta. *Descrizione* viene **nvarchar(4000** con valore predefinito è NULL.  
   
  [ **@collection_set_id =** ] *collection_set_id*  
- Identificatore univoco locale del set di raccolta. *collection_set_id* è **int** con OUTPUT ed è obbligatorio.  
+ Identificatore univoco locale del set di raccolta. *collection_set_id* viene **int** con OUTPUT ed è obbligatorio.  
   
- [ **@collection_set_uid =** ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* è **uniqueidentifier** con OUTPUT e il valore predefinito NULL.  
+ [  **@collection_set_uid =** ] '*collection_set_uid*'  
+ GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier** con OUTPUT e il valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syscollector_create_collection_set nel contesto del database di sistema msdb.  

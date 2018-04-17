@@ -1,16 +1,16 @@
 ---
 title: srv_paramlen (API Stored procedure estesa) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramlen
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramlen
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c619d69e425f28c6a8416d2ef96bbc67602f311
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: ee85bd0792b31ea3d1dd759ad9effc96b0b2195b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (API delle stored procedure estese)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Restituisce la lunghezza dei dati di un parametro di chiamata a una stored procedure remota. Questa funzione è stata sostituita dalla funzione **srv_paraminfo**.  
   
@@ -62,7 +62,7 @@ n
  Indica il numero del parametro. Il primo parametro è 1.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- Lunghezza effettiva in byte dei dati del parametro. Se non esiste alcun parametro in posizione *n* o stored procedure remota, restituisce -1. Se il parametro in posizione *n* è NULL, restituisce 0.  
+ Lunghezza effettiva in byte dei dati del parametro. Se è presente alcun *n*assenza di un parametro o alcuna stored procedure remota, restituisce -1. Se il *n*assenza di un parametro è NULL, restituisce 0.  
   
  Questa funzione restituisce i valori seguenti, se il parametro è uno dei seguenti tipi di dati di sistema di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   

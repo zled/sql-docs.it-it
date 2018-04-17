@@ -2,7 +2,7 @@
 title: Supporto delle transazioni | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 87749f1401ebd435e32537bee2d721d013339ad7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-support"></a>Supporto delle transazioni
 Il livello di supporto per le transazioni è definito dal driver. ODBC è progettato per essere implementata in un database utente singolo o desktop che non è necessario che per gestire gli aggiornamenti più ai relativi dati. Inoltre, alcuni database che supportano le transazioni di eseguire in modo che solo per le istruzioni Data Manipulation Language (DML) di SQL. Esistono restrizioni o semantica delle transazioni speciali relative all'uso di Strumentazione gestione Windows (DDL, Data Definition Language) quando è attiva una transazione. Ovvero, è possibile il supporto delle transazioni per più aggiornamenti simultanei a tabelle ma non per modificare il numero e la definizione delle tabelle durante una transazione.  

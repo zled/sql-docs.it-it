@@ -2,7 +2,7 @@
 title: Funzione SQLNativeSql | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e233d9742ea7bd9aa5de56962e1d785be78b8066
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d0a18b6575d403c44fb8aa546a4ce90d3a99e6b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnativesql-function"></a>Funzione SQLNativeSql
 **Conformità**  
@@ -128,7 +128,7 @@ SELECT int2 (empid) FROM employee
  Per ulteriori informazioni, vedere [esecuzione diretta](../../../odbc/reference/develop-app/direct-execution-odbc.md) e [esecuzione preparata](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Funzioni correlate  
- nessuna.  
+ Nessuno  
   
 ## <a name="see-also"></a>Vedere anche  
  [Riferimento all'API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

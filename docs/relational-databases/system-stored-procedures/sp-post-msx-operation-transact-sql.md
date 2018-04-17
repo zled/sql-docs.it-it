@@ -1,16 +1,16 @@
 ---
 title: sp_post_msx_operation (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_post_msx_operation
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_post_msx_operation
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b54a5b8dbf5539adb2d87ef6a095f4f78f767aff
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 08cda2f3508e5c4f338c8e607654f5e41ed803f0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_post_msx_operation
   
 ## <a name="arguments"></a>Argomenti  
  [  **@operation =**] **'***operazione***'**  
- Tipo di operazione da richiedere. *operazione*è **varchar(64)**, non prevede alcun valore predefinito. Operazioni valide dipendono *object_type*.  
+ Tipo di operazione da richiedere. *operazione*viene **varchar(64)**, non prevede alcun valore predefinito. Operazioni valide dipendono *object_type*.  
   
 |Tipo oggetto|Operazione|  
 |-----------------|---------------|  
@@ -62,22 +62,22 @@ sp_post_msx_operation
 |**PIANIFICAZIONE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
  [  **@object_type =**] **'***oggetto***'**  
- Tipo di oggetto per cui richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* è **varchar(64)**, il valore predefinito è **processo**.  
+ Tipo di oggetto per cui richiedere un'operazione. I tipi validi sono **processo**, **SERVER**, e **pianificazione**. *oggetto* viene **varchar(64)**, il valore predefinito è **processo**.  
   
  [ **@job_id =**] *job_id*  
- Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* è **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetto* è **SERVER**, quindi *job_id*non è obbligatorio.  
+ Il numero di identificazione del processo a cui viene applicata l'operazione. *job_id* viene **uniqueidentifier**, non prevede alcun valore predefinito. **0x00** indica tutti i processi. Se *oggetto* è **SERVER**, quindi *job_id*non è obbligatorio.  
   
  [ **@specific_target_server =**] **'***target_server***'**  
- Nome del server di destinazione in cui l'operazione specificata viene applicata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono registrate per tutti i server di processo del processo. *target_server* è **nvarchar (30)**, con un valore predefinito è NULL.  
+ Nome del server di destinazione in cui l'operazione specificata viene applicata. Se *job_id* è specificato, ma *target_server* viene omesso, le operazioni vengono registrate per tutti i server di processo del processo. *target_server* viene **nvarchar(30)**, con un valore predefinito è NULL.  
   
  [  **@value =**] *valore*  
  L'intervallo di polling in secondi. *value* è **int**e il valore predefinito è NULL. Specificare questo parametro solo se *operazione* è **SET-POLL**.  
   
  [  **@schedule_uid=** ] *valore schedule_uid*  
- Identificatore univoco per la pianificazione a cui si riferisce l'operazione. *valore schedule_uid* è **uniqueidentifier**, non prevede alcun valore predefinito.  
+ Identificatore univoco per la pianificazione a cui si riferisce l'operazione. *valore schedule_uid* viene **uniqueidentifier**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

@@ -1,16 +1,16 @@
 ---
 title: sp_createstats (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_createstats_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-caps.latest.revision: 
+caps.latest.revision: 47
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c89f3aed714fba775e2271425fb86949e3f26ac
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 17d061eec260c1553fb03623ed392444f02ea939
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/27/2017
   
  sp_createstats è utile per applicazioni quali quelle di benchmarking quando l'ora di esecuzione delle query è critica e non è possibile attendere la generazione delle statistiche di colonna singola da parte di Query Optimizer. Nella maggior parte dei casi, non è necessario utilizzare sp_createstats; i piani di query optimizer genera le statistiche a colonna singola necessarie per migliorare le query quando il **AUTO_CREATE_STATISTICS** opzione è abilitata.  
   
- Per ulteriori informazioni sulle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md). Per ulteriori informazioni sulla generazione di statistiche di colonna singola, vedere il **AUTO_CREATE_STATISTICS** opzione [opzioni ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
+ Per ulteriori informazioni sulle statistiche, vedere [statistiche](../../relational-databases/statistics/statistics.md). Per ulteriori informazioni sulla generazione di statistiche di colonna singola, vedere la **AUTO_CREATE_STATISTICS** opzione [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,16 +56,16 @@ sp_createstats
   
 ## <a name="arguments"></a>Argomenti  
  [  **@indexonly=** ] **'indexonly'**  
- Crea statistiche solo sulle colonne presenti in un indice esistente che non sono prime colonne in una definizione dell'indice. **indexonly** è **char(9)**. e il valore predefinito è NO.  
+ Crea statistiche solo sulle colonne presenti in un indice esistente che non sono prime colonne in una definizione dell'indice. **indexonly** viene **char(9)**. e il valore predefinito è NO.  
   
  [  **@fullscan=** ] **'fullscan'**  
- Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **FULLSCAN** opzione. **FULLSCAN** è **char(9)**.  e il valore predefinito è NO.  
+ Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **FULLSCAN** opzione. **FULLSCAN** viene **char(9)**.  e il valore predefinito è NO.  
   
  [  **@norecompute=** ] **'norecompute'**  
- Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **NORECOMPUTE** opzione. **NORECOMPUTE** è **char(12)**.  e il valore predefinito è NO.  
+ Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **NORECOMPUTE** opzione. **NORECOMPUTE** viene **char(12)**.  e il valore predefinito è NO.  
   
  [  **@incremental=** ] **'incrementale'**  
- Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **INCREMENTALE = ON** opzione. **Incrementale** è **char(12)**.  e il valore predefinito è NO.  
+ Usa il [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) istruzione con il **INCREMENTALE = ON** opzione. **Incrementale** viene **char(12)**.  e il valore predefinito è NO.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -77,7 +78,7 @@ sp_createstats
   
  Quando la tabella contiene un set di colonne, sp_createstats non crea statistiche sulle colonne di tipo sparse. Per ulteriori informazioni sui set di colonne e colonne di tipo sparse, vedere [utilizzare set di colonne](../../relational-databases/tables/use-column-sets.md) e [utilizzare le colonne di tipo Sparse](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Richiede l'appartenenza al ruolo predefinito del database db_owner.  
   
 ## <a name="examples"></a>Esempi  
@@ -105,7 +106,7 @@ GO
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

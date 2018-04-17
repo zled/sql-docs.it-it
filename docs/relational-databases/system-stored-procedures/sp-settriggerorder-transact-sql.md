@@ -1,16 +1,16 @@
 ---
 title: sp_settriggerorder (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_settriggerorder
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 690831cac89e20932cbf3c8759af569e01097238
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 73a6c088b2d33c77877cadf6a80f030f8faeeaef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,28 +50,28 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@triggername=** ] **'**[ *triggerschema***.**] *nometrigger***'**  
- Nome del trigger e schema al quale appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [*triggerschema***.**] *nometrigger* è **sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. *triggerschema* non può essere specificato per i trigger DDL o logon.  
+ [  **@triggername=** ] **'**[ *triggerschema ***.**] *nometrigger * * * '**  
+ Nome del trigger e schema al quale appartiene, se applicabile, il cui ordine deve essere impostato o modificato. [*triggerschema ***.**]* nometrigger * viene **sysname**. Se il nome specificato non corrisponde a un trigger oppure corrisponde a un trigger INSTEAD OF, viene restituito un errore. *triggerschema* non può essere specificato per i trigger DDL o logon.  
   
- [ **@order=** ] **'***value***'**  
- Impostazione del nuovo ordine del trigger. *valore* è **varchar (10)** e può essere uno dei valori seguenti.  
+ [ **@order=** ] **'***valore***'**  
+ Impostazione del nuovo ordine del trigger. *valore* viene **varchar(10** e può essere uno dei valori seguenti.  
   
 > [!IMPORTANT]  
 >  Il **prima** e **ultimo** trigger devono essere due trigger distinti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Primo**|Trigger avviato per primo.|  
 |**Ultimo**|Trigger avviato per ultimo.|  
 |**Nessuno**|Il trigger viene attivato in base a un ordine non definito.|  
   
  [  **@stmttype=** ] **'***statement_type***'**  
- Specifica l'istruzione SQL che attiva il trigger. *statement_type* è **varchar (50)** e può essere INSERT, UPDATE, DELETE, LOGON o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] nell'evento dell'istruzione [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
+ Specifica l'istruzione SQL che attiva il trigger. *statement_type* viene **varchar (50)** e può essere INSERT, UPDATE, DELETE, LOGON o qualsiasi [!INCLUDE[tsql](../../includes/tsql-md.md)] evento dell'istruzione elencato [eventi DDL](../../relational-databases/triggers/ddl-events.md). Non è possibile specificare gruppi di eventi.  
   
  È possibile designare un trigger come il **prima** o **ultimo** trigger per un tipo di istruzione solo dopo che è stato definito come trigger per tale tipo di istruzione. Ad esempio, attivano **TR1** può essere definita **prima** per l'inserimento nella tabella **T1** se **TR1** è definito come trigger INSERT. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] restituisce un errore se **TR1**, che è stato definito solo come trigger INSERT, viene impostato come un **prima**, o **ultimo**, i trigger di un'istruzione UPDATE. Per altre informazioni, vedere la sezione Osservazioni.  
   
  **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL}  
- Quando *nometrigger* è un trigger DDL,  **@namespace**  specifica se *nometrigger* è stata creata con ambito database o server. Se *nometrigger* è un trigger logon, è necessario specificare SERVER. Per ulteriori informazioni sull'ambito dei trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non specificato o se si specifica NULL, *nometrigger* è un trigger DML.  
+ Quando *nometrigger* è un trigger DDL, **@namespace** specifica se *nometrigger* è stata creata con ambito database o server. Se *nometrigger* è un trigger logon, è necessario specificare SERVER. Per ulteriori informazioni sull'ambito dei trigger DDL, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md). Se non specificato o se si specifica NULL, *nometrigger* è un trigger DML.  
   
 ||  
 |-|  
@@ -108,7 +109,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Se lo stesso trigger deve essere designato come primo o l'ultimo ordine per più di un tipo di istruzione, **sp_settriggerorder** deve essere eseguita per ogni tipo di istruzione. Inoltre, il trigger deve essere prima definito per un tipo di istruzione prima che possono essere designata come il **prima** o **ultimo** trigger da attivare per tale tipo di istruzione.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Per impostare l'ordine di un trigger DDL con ambito server (creato ON ALL SERVER) o un trigger LOGON è necessaria l'autorizzazione CONTROL SERVER nel server.  
   
  Per impostare l'ordine di attivazione di un trigger DDL nell'ambito del database (creato tramite l'istruzione ON DATABASE), è necessario disporre dell'autorizzazione ALTER ANY DATABASE DDL TRIGGER.  
@@ -137,7 +138,7 @@ sp_settriggerorder @triggername= 'ddlDatabaseTriggerLog', @order='First', @stmtt
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)  
   
   

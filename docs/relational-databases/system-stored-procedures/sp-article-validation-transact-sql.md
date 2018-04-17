@@ -1,16 +1,16 @@
 ---
 title: sp_article_validation (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_article_validation
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed9bf6e4375c3b7afb18ffa938ae29e8d1e9e48e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8bfe42f440f6311bf9a2badc368b8fd13811c91e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +54,13 @@ sp_article_validation [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione che include l'articolo. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione che include l'articolo. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@article=**] **'***articolo***'**  
- Nome dell'articolo da convalidare. *articolo* è **sysname**, non prevede alcun valore predefinito.  
+ Nome dell'articolo da convalidare. *articolo* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- Indica se per la tabella viene restituito solo il conteggio delle righe. *type_of_check_requested* è **smallint**, il valore predefinito è **1**.  
+ [ **@rowcount_only=**] *type_of_check_requested*  
+ Indica se per la tabella viene restituito solo il conteggio delle righe. *type_of_check_requested* viene **smallint**, il valore predefinito è **1**.  
   
  Se **0**, eseguire un conteggio delle righe e un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 checksum compatibile.  
   
@@ -69,7 +69,7 @@ sp_article_validation [ @publication = ] 'publication'
  Se **2**, eseguire un conteggio delle righe e checksum binario.  
   
  [  **@full_or_fast=**] *full_or_fast*  
- Metodo utilizzato per il conteggio delle righe. *full_or_fast* è **tinyint**, i possibili valori sono i seguenti.  
+ Metodo utilizzato per il conteggio delle righe. *full_or_fast* viene **tinyint**, e può essere uno dei valori seguenti.  
   
 |**Valore**|**Description**|  
 |---------------|---------------------|  
@@ -78,36 +78,36 @@ sp_article_validation [ @publication = ] 'publication'
 |**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count completo.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
- Indica se l'esecuzione dell'agente di distribuzione viene interrotta immediatamente al termine della convalida. *shutdown_agent* è **bit**, il valore predefinito è **0**. Se **0**, l'agente di distribuzione non viene arrestato. Se **1**, l'agente di distribuzione viene interrotta al termine della convalida dell'articolo.  
+ Indica se l'esecuzione dell'agente di distribuzione viene interrotta immediatamente al termine della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di distribuzione non viene arrestato. Se **1**, l'agente di distribuzione viene interrotta al termine della convalida dell'articolo.  
   
- [  **@subscription_level=**] *subscription_level*  
- Indica se la convalida viene prelevata o meno da un set di Sottoscrittori. *subscription_level* è **bit**, il valore predefinito è **0**. Se **0**, la convalida viene applicata a tutti i sottoscrittori. Se **1**, la convalida viene applicata solo a un subset dei sottoscrittori specificati tramite chiamate a **sp_marksubscriptionvalidation** nella transazione aperta corrente.  
+ [ **@subscription_level=**] *subscription_level*  
+ Indica se la convalida viene prelevata o meno da un set di Sottoscrittori. *subscription_level* viene **bit**, il valore predefinito è **0**. Se **0**, la convalida viene applicata a tutti i sottoscrittori. Se **1**, la convalida viene applicata solo a un subset dei sottoscrittori specificati tramite chiamate a **sp_marksubscriptionvalidation** nella transazione aperta corrente.  
   
  [  **@reserved=**] *riservato*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@publisher** =] **'***publisher***'**  
- Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ [ **@publisher**=] **'***publisher***'**  
+ Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
->  *server di pubblicazione* non deve essere utilizzato per la richiesta di convalida su un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+>  *server di pubblicazione* non deve essere utilizzato quando si richiede la convalida in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_article_validation** viene utilizzata nella replica transazionale.  
   
- **sp_article_validation** fa sì che le informazioni di convalida per la raccolta per l'articolo specificato e invia una richiesta di convalida nel log delle transazioni. Quando l'agente di distribuzione riceve la richiesta, confronta le informazioni di convalida incluse nella richiesta con quelle della tabella del Sottoscrittore. I risultati della convalida vengono visualizzati negli avvisi di Monitoraggio replica e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
+ **sp_article_validation** fa sì che le informazioni di convalida di sull'articolo specificato e invia una richiesta di convalida nel log delle transazioni. Quando l'agente di distribuzione riceve la richiesta, confronta le informazioni di convalida incluse nella richiesta con quelle della tabella del Sottoscrittore. I risultati della convalida vengono visualizzati negli avvisi di Monitoraggio replica e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo gli utenti con autorizzazioni SELEZIONANO ALL nella tabella di origine per l'articolo convalidato può eseguire **sp_article_validation**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Convalida dei dati replicati](../../relational-databases/replication/validate-replicated-data.md)   
- [sp_marksubscriptionvalidation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+ [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

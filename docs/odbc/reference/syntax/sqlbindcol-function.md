@@ -2,7 +2,7 @@
 title: Funzione SQLBindCol | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4b2031680faefcdf0b701ad8065b9d90cd8678f8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 27b78b2b74e4990ce22d47fd433ae7147fc3d536
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlbindcol-function"></a>Funzione SQLBindCol
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLBindCol** associa i buffer di dati di applicazione per le colonne nel set di risultati.  
+ **SQLBindCol** associa i buffer di dati dell'applicazione per le colonne nel set di risultati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -68,21 +68,21 @@ SQLRETURN SQLBindCol(
  È inoltre possibile specificare un tipo di dati C esteso. Per ulteriori informazioni, vedere [tipi di dati C in ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   
  *TargetValuePtr*  
- [Input/Output posticipata] Puntatore al buffer di dati da associare alla colonna. **SQLFetch** e **SQLFetchScroll** restituire i dati in questo buffer. **SQLBulkOperations** restituisce i dati in questo buffer quando *operazione* è SQL_FETCH_BY_BOOKMARK; recupera dati da questo buffer quando *operazione* è SQL_ADD o SQL_UPDATE_BY_BOOKMARK . **SQLSetPos** restituisce i dati in questo buffer quando *operazione* è SQL_REFRESH; recupera dati da questo buffer quando *operazione* è SQL_UPDATE.  
+ [Input/Output posticipata] Puntatore al buffer di dati da associare alla colonna. **SQLFetch** e **SQLFetchScroll** restituire i dati in questo buffer. **SQLBulkOperations** restituisce i dati in questo buffer quando *operazione* è SQL_FETCH_BY_BOOKMARK; recupera dati da questo buffer quando *operazione* è SQL_ADD o SQL_UPDATE_BY_BOOKMARK. **SQLSetPos** restituisce i dati in questo buffer quando *operazione* è SQL_REFRESH; recupera dati da questo buffer quando *operazione* è SQL_UPDATE.  
   
  Se *TargetValuePtr* è un puntatore null, il driver viene disassociato il buffer dei dati per la colonna. Un'applicazione può annullare l'associazione di tutte le colonne chiamando **SQLFreeStmt** con l'opzione SQL_UNBIND. Un'applicazione è possibile separare il buffer dei dati per una colonna ma ancora un buffer di lunghezza/indicatore associato per la colonna, se il *TargetValuePtr* argomento nella chiamata a **SQLBindCol** è un puntatore null, ma il *StrLen_or_IndPtr* argomento è un valore valido.  
   
  *BufferLength*  
  [Input] Lunghezza di **TargetValuePtr* buffer in byte.  
   
- Il driver utilizza *BufferLength* per evitare di scrivere oltre la fine del \* *TargetValuePtr* nel buffer quando vengono restituiti i dati a lunghezza variabile, ad esempio carattere o dati binari. Si noti che il driver viene considerato il carattere di terminazione null al momento della restituzione dei dati di tipo carattere a \* *TargetValuePtr*. **TargetValuePtr* deve pertanto contenere spazio per il carattere di terminazione null o il driver verrà troncare i dati.  
+ Il driver utilizza *BufferLength* per evitare di scrivere oltre la fine del \* *TargetValuePtr* nel buffer quando vengono restituiti i dati a lunghezza variabile, ad esempio carattere o dati binari. Si noti che il driver viene considerato il carattere di terminazione null al momento della restituzione dei dati di tipo carattere a \* *TargetValuePtr*. **TargetValuePtr* deve pertanto contenere spazio per il carattere di terminazione null o il driver verrà troncato i dati.  
   
  Quando il driver restituisce dati a lunghezza fissa, ad esempio un numero intero o una struttura di data, il driver ignora *BufferLength* e presuppone che il buffer sia sufficientemente grande da contenere i dati. Pertanto, è importante per l'applicazione allocare un buffer sufficiente per i dati a lunghezza fissa o il driver scriverà oltre la fine del buffer.  
   
  **SQLBindCol** restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) quando *BufferLength* è minore di 0 ma non quando *BufferLength* è 0. Tuttavia, se *TargetType* specifica un tipo di carattere, un'applicazione non è consigliabile impostare *BufferLength* su 0, perché il driver conforme a ISO CLI restituisce SQLSTATE HY090 (stringa di lunghezza o non valida del buffer) in case.  
   
  *StrLen_or_IndPtr*  
- [Input/Output posticipata] Puntatore al buffer di lunghezza/indicatore da associare alla colonna. **SQLFetch** e **SQLFetchScroll** restituiscono un valore di questo buffer. **SQLBulkOperations** recupera un valore da questo buffer quando *operazione* è SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** restituisce un valore in questo buffer quando *operazione* è SQL_FETCH_BY_BOOKMARK. **SQLSetPos** restituisce un valore in questo buffer quando *operazione* SQL_REFRESH; è un valore viene recuperato da questo buffer quando *operazione* è SQL_UPDATE.  
+ [Input/Output posticipata] Puntatore al buffer di lunghezza/indicatore da associare alla colonna. **SQLFetch** e **SQLFetchScroll** restituiscono un valore di questo buffer. **SQLBulkOperations** recupera un valore da questo buffer quando *operazione* è SQL_ADD, SQL_UPDATE_BY_BOOKMARK o SQL_DELETE_BY_BOOKMARK. **SQLBulkOperations** restituisce un valore in questo buffer quando *operazione* è SQL_FETCH_BY_BOOKMARK. **SQLSetPos** restituisce un valore in questo buffer quando *operazione* è SQL_REFRESH; viene recuperato un valore da questo buffer quando *operazione* è SQL_UPDATE.  
   
  **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, e **SQLSetPos** può restituire i valori seguenti nel buffer di lunghezza/indicatore:  
   
@@ -137,7 +137,7 @@ SQLRETURN SQLBindCol(
 |IM001|Driver non supporta questa funzione|Il driver (DM) associato il *StatementHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLBindCol** viene utilizzato per associare, o *associare,* le colonne nel risultato impostate per i buffer di dati e buffer di lunghezza/indicatore nell'applicazione. Quando l'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos** per recuperare dati, il driver restituisce i dati per le colonne associate nel buffer specificato; per altre informazioni, vedere [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md). Quando l'applicazione chiama **SQLBulkOperations** per aggiornare o inserire una riga o **SQLSetPos** per aggiornare una riga, il driver recupera i dati per le colonne associate dai buffer di specificata; per ulteriori informazioni , vedere [funzione SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) o [funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md). Per ulteriori informazioni sull'associazione, vedere [il recupero dei risultati (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
+ **SQLBindCol** viene usato per associare, o *eseguire il binding,* le colonne nel risultato impostate per i buffer di dati e buffer di lunghezza/indicatore nell'applicazione. Quando l'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLSetPos** per recuperare dati, il driver restituisce i dati per le colonne associate nel buffer specificato; per altre informazioni, vedere [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md). Quando l'applicazione chiama **SQLBulkOperations** per aggiornare o inserire una riga o **SQLSetPos** per aggiornare una riga, il driver recupera i dati per le colonne associate dai buffer di specificata; per ulteriori informazioni , vedere [funzione SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md) o [funzione SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md). Per ulteriori informazioni sull'associazione, vedere [il recupero dei risultati (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md).  
   
  Si noti che le colonne non debbano essere associato a recuperare i dati da essi. Un'applicazione può anche chiamare **SQLGetData** per recuperare dati dalle colonne. Sebbene sia possibile associare alcune colonne in una riga e una chiamata **SQLGetData** per altri utenti, si tratta soggetti ad alcune restrizioni. Per ulteriori informazioni, vedere [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).  
   
@@ -229,9 +229,9 @@ SQLRETURN SQLBindCol(
   
     -   *TargetValuePtr* è l'indirizzo del membro di buffer dei dati nel primo elemento della matrice.  
   
-    -   *BufferLength* è la dimensione del membro di buffer di dati.  
+    -   *BufferLength* è la dimensione del membro dati del buffer.  
   
-    -   *StrLen_or_IndPtr* è l'indirizzo del membro di lunghezza/indicatore da associare.  
+    -   *StrLen_or_IndPtr* è l'indirizzo del membro lunghezza/indicatore da associare.  
   
  Per ulteriori informazioni sull'uso di queste informazioni, vedere "Buffer indirizzi" più avanti in questa sezione. Per ulteriori informazioni sull'associazione per colonna, vedere [associazione per riga](../../../odbc/reference/develop-app/row-wise-binding.md).  
   
@@ -244,7 +244,7 @@ SQLRETURN SQLBindCol(
   
 |Variabile|Description|  
 |--------------|-----------------|  
-|*Associare l'indirizzo*|Per i buffer di dati, l'indirizzo specificato con il *TargetValuePtr* argomento **SQLBindCol**.<br /><br /> Per i buffer di lunghezza/indicatore, l'indirizzo specificato con il *StrLen_or_IndPtr* argomento **SQLBindCol**. Per ulteriori informazioni, vedere "Commenti aggiuntivi" nella sezione "Descrittori e SQLBindCol".<br /><br /> Se l'indirizzo di binding è 0, viene restituito alcun valore di dati, anche se l'indirizzo calcolato mediante la formula precedente è diverso da zero.|  
+|*Associazione di indirizzi*|Per i buffer di dati, l'indirizzo specificato con il *TargetValuePtr* argomento **SQLBindCol**.<br /><br /> Per i buffer di lunghezza/indicatore, l'indirizzo specificato con il *StrLen_or_IndPtr* argomento **SQLBindCol**. Per ulteriori informazioni, vedere "Commenti aggiuntivi" nella sezione "Descrittori e SQLBindCol".<br /><br /> Se l'indirizzo di binding è 0, viene restituito alcun valore di dati, anche se l'indirizzo calcolato mediante la formula precedente è diverso da zero.|  
 |*Offset di associazione*|Se si utilizza l'associazione per riga, il valore archiviato in corrispondenza dell'indirizzo specificato con l'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR.<br /><br /> Se viene utilizzata l'associazione per colonna o se il valore dell'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR è un puntatore null, *associazione Offset* è 0.|  
 |*Numero di riga*|Il numero della riga nel set di righe in base 1. Per operazioni di recupero a riga singola, ovvero l'impostazione predefinita, questo è 1.|  
 |*Dimensione dell'elemento*|Le dimensioni di un elemento nella matrice associato.<br /><br /> Se viene utilizzata l'associazione per colonna, si tratta **sizeof(SQLINTEGER)** per i buffer di lunghezza/indicatore. Per i buffer di dati, è il valore di *BufferLength* argomento in **SQLBindCol** se il tipo di dati è di lunghezza variabile e la dimensione del tipo di dati se il tipo di dati è a lunghezza fissa.<br /><br /> Se viene utilizzata l'associazione per riga, questo è il valore dell'attributo di istruzione SQL_ATTR_ROW_BIND_TYPE per i buffer di dati e lunghezza/indicatore.|  
@@ -281,7 +281,7 @@ SQLRETURN SQLBindCol(
  Se la chiamata a **SQLBindCol** ha esito negativo, il contenuto dei campi di descrizione che sarebbero impostate nel ARD sono definiti e il valore del campo SQL_DESC_COUNT il ARD rimane invariato.  
   
 ## <a name="implicit-resetting-of-count-field"></a>Reimpostazione implicita del campo del conteggio  
- **SQLBindCol** imposta il valore di SQL_DESC_COUNT il *ColumnNumber* argomento solo quando si potrebbe aumentare il valore di SQL_DESC_COUNT. Se il valore di *TargetValuePtr* argomento è un puntatore null e il valore della *ColumnNumber* argomento è uguale a SQL_DESC_COUNT (vale a dire quando disassociare il più elevato colonna associata), quindi SQL_DESC_ CONTEGGIO è impostato per il numero della colonna associata rimanente più alto.  
+ **SQLBindCol** SQL_DESC_COUNT viene impostato il valore di *ColumnNumber* argomento solo quando si potrebbe far aumentare il valore di SQL_DESC_COUNT. Se il valore di *TargetValuePtr* argomento è un puntatore null e il valore della *ColumnNumber* argomento è uguale a SQL_DESC_COUNT (vale a dire quando disassociare il più elevato colonna associata), quindi SQL_DESC_ CONTEGGIO è impostato per il numero della colonna associata rimanente più alto.  
   
 ## <a name="cautions-regarding-sqldefault"></a>Precauzioni relative SQL_DEFAULT  
  Per recuperare correttamente i dati della colonna, l'applicazione deve determinare correttamente la lunghezza e il punto iniziale dei dati nel buffer dell'applicazione. Quando l'applicazione specifica esplicita *TargetType*, rilevare facilmente convinzioni erronee dell'applicazione. Tuttavia, quando l'applicazione specifica un *TargetType* di SQL_DEFAULT, **SQLBindCol** applicabile a una colonna di un tipo di dati diverse da quella desiderata dall'applicazione, da modifiche per il i metadati o applicando il codice in un'altra colonna. In questo caso, l'applicazione potrebbe non determinano l'inizio o la lunghezza dei dati della colonna di recupero. Questo può causare errori di dati non segnalati o violazioni di memoria.  

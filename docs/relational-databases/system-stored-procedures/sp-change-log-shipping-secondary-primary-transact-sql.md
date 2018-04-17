@@ -1,16 +1,16 @@
 ---
-title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_change_log_shipping_secondary_primary (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_change_log_shipping_secondary_primary
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_change_log_shipping_secondary_primary
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e82dc23da2641019fc0b6215dd633479ae0272
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 35411c46105097f343c6df8fcaab31d43951e923
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,31 +55,31 @@ sp_change_log_shipping_secondary_primary
   
 ## <a name="arguments"></a>Argomenti  
  [ **@primary_server** = ] '*primary_server*'  
- Il nome dell'istanza primaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping. *primary_server* è **sysname** e non può essere NULL.  
+ Il nome dell'istanza primaria del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nella configurazione di log shipping. *primary_server* viene **sysname** e non può essere NULL.  
   
- [  **@primary_database**  =] '*primary_database*'  
- Nome del database sul server primario. *primary_database* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@primary_database** =] '*primary_database*'  
+ Nome del database sul server primario. *primary_database* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@backup_source_directory** = ] '*backup_source_directory*'  
- Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* è **nvarchar (500)** e non può essere NULL.  
+ [ **@backup_source_directory** =] '*backup_source_directory*'  
+ Directory in cui vengono archiviati i file di backup del log delle transazioni dal server primario. *backup_source_directory* viene **nvarchar(500)** e non può essere NULL.  
   
- [  **@backup_destination_directory**  =] '*backup_destination_directory*'  
- Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* è **nvarchar (500)** e non può essere NULL.  
+ [ **@backup_destination_directory** =] '*backup_destination_directory*'  
+ Directory nel server secondario in cui vengono copiati i file di backup. *backup_destination_directory* viene **nvarchar(500)** e non può essere NULL.  
   
- [  **@file_retention_period**  =] '*file_retention_period*'  
- Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* è **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+ [ **@file_retention_period** =] '*file_retention_period*'  
+ Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* viene **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
- [ **@monitor_server_security_mode** = ] '*monitor_server_security_mode*'  
+ [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
  Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.  
   
  1 = Autenticazione di Windows  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. *monitor_server_security_mode* è **bit** e non può essere NULL.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. *monitor_server_security_mode* viene **bit** e non può essere NULL.  
   
- [ **@monitor_server_login** = ] '*monitor_server_login*'  
+ [ **@monitor_server_login** =] '*monitor_server_login*'  
  Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
- [ **@monitor_server_password** = ] '*monitor_server_password*'  
+ [ **@monitor_server_password** =] '*monitor_server_password*'  
  Password dell'account utilizzato per accedere al server di monitoraggio.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -99,7 +99,7 @@ sp_change_log_shipping_secondary_primary
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire questa procedura.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

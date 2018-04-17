@@ -2,7 +2,7 @@
 title: Funzione SQLConnect | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f2c2d3e8b60d0a73d1beba4f68148cd956431b4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e34b622b12cc4de020403eda60bdd6b5d231777d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlconnect-function"></a>Funzione SQLConnect
 **Conformità**  
@@ -151,11 +151,11 @@ SQLRETURN SQLConnect(
 ### <a name="connection-pooling"></a>Pool di connessioni  
  Il pool di connessioni consente a un'applicazione di riutilizzare una connessione che è già stata creata. Quando il pool di connessioni è abilitato e **SQLConnect** viene chiamato, gestione Driver tenta di stabilire la connessione utilizzando una connessione che fa parte di un pool di connessioni in un ambiente che è stato designato per il pool di connessioni. Questo ambiente è un ambiente condiviso utilizzato da tutte le applicazioni che utilizzano le connessioni nel pool.  
   
- Il pool di connessioni viene attivato prima che l'ambiente viene allocato chiamando **SQLSetEnvAttr** impostata SQL_ATTR_CONNECTION_POOLING su SQL_CP_ONE_PER_DRIVER (che specifica un massimo di un pool per ogni driver) o SQL_CP_ONE_PER_HENV (che specifica un massimo di un pool per ogni ambiente). **SQLSetEnvAttr** in questo caso, viene chiamato con *EnvironmentHandle* impostato su null, che rende l'attributo di un attributo a livello di processo. Se SQL_ATTR_CONNECTION_POOLING è impostata su SQL_CP_OFF, il pool di connessioni è disabilitato.  
+ Il pool di connessioni viene attivato prima che l'ambiente viene allocato chiamando **SQLSetEnvAttr** impostata SQL_ATTR_CONNECTION_POOLING su SQL_CP_ONE_PER_DRIVER (che specifica un massimo di un pool per ogni driver) o SQL_CP_ONE_PER_HENV (che specifica un massimo di un pool per ogni ambiente). **SQLSetEnvAttr** in questo caso viene chiamato con *EnvironmentHandle* impostato su null, che rende l'attributo di un attributo a livello di processo. Se SQL_ATTR_CONNECTION_POOLING è impostata su SQL_CP_OFF, il pool di connessioni è disabilitato.  
   
  Dopo aver abilitato il pool di connessioni, **SQLAllocHandle** con un *HandleType* impostato su SQL_HANDLE_ENV viene chiamata per allocare un ambiente. L'ambiente allocato da questa chiamata è un ambiente condiviso, poiché il pool di connessioni è stato abilitato. Tuttavia, l'ambiente che verrà usato viene determinata solo **SQLAllocHandle** con un *HandleType* impostato su SQL_HANDLE_DBC viene chiamato.  
   
- **SQLAllocHandle** con un *HandleType* chiamata impostato su SQL_HANDLE_DBC per allocare una connessione. Gestione Driver tenta di trovare un ambiente condiviso esistente che corrisponde agli attributi di ambiente impostati dall'applicazione. Se l'ambiente non esiste, ne viene creata come implicita *ambiente condiviso*. Se viene trovato un ambiente condiviso corrispondente, viene restituito l'handle di ambiente per l'applicazione e il conteggio dei riferimenti viene incrementato.  
+ **SQLAllocHandle** con un *HandleType* SQL_HANDLE_DBC viene chiamata per allocare una connessione. Gestione Driver tenta di trovare un ambiente condiviso esistente che corrisponde agli attributi di ambiente impostati dall'applicazione. Se l'ambiente non esiste, ne viene creata come implicita *ambiente condiviso*. Se viene trovato un ambiente condiviso corrispondente, viene restituito l'handle di ambiente per l'applicazione e il conteggio dei riferimenti viene incrementato.  
   
  Tuttavia, la connessione da utilizzare viene determinata solo **SQLConnect** viene chiamato. A questo punto, gestione Driver tenta di trovare una connessione esistente nel pool di connessioni che corrisponde ai criteri richiesti dall'applicazione. Tali criteri includono le opzioni di connessione richieste nella chiamata a **SQLConnect** (i valori del *ServerName*, *UserName*, e  *Autenticazione* parole chiave) e gli attributi di connessione impostata poiché **SQLAllocHandle** con un *HandleType* impostato su SQL_HANDLE_DBC è stato chiamato. Gestione Driver controlla i criteri contro gli attributi nel pool di connessioni e parole chiave di connessione corrispondenti. Se viene trovata una corrispondenza, viene utilizzata la connessione nel pool. Se viene trovata alcuna corrispondenza, viene creata una nuova connessione.  
   
@@ -186,9 +186,9 @@ SQLRETURN SQLConnect(
   
  Il valore restituito dal driver contiene qualsiasi combinazione dei bit seguenti:  
   
--   **SQL_DTC_ENLIST_EXPENSIVE**, quando è impostata, implica lo zero transizione diverso da zero è molto più costoso di una transizione da diverso da zero a un altro valore diverso da zero (integrazione di una connessione integrata in precedenza la transazione successiva).  
+-   **SQL_DTC_ENLIST_EXPENSIVE**, quando impostato, implica lo zero transizione diverso da zero è molto più costoso di una transizione da diverso da zero a un altro valore diverso da zero (integrazione di una connessione integrata in precedenza la transazione successiva).  
   
--   **SQL_DTC_UNENLIST_EXPENSIVE**, quando è impostata, implica diverso da zero per zero la transizione è molto più costoso rispetto all'utilizzo di una connessione il cui attributo SQL_ATTR_ENLIST_IN_DTC è già impostata su zero.  
+-   **SQL_DTC_UNENLIST_EXPENSIVE**, quando impostato, implica il diverso da zero a zero transizione è molto più costoso rispetto all'utilizzo di una connessione il cui attributo SQL_ATTR_ENLIST_IN_DTC è già impostata su zero.  
   
  È delle prestazioni rispetto a compromesso di utilizzo della connessione. Se un driver indica che uno o più di queste transizioni sono costosi, pool di connessioni di Gestione driver risponde a questo mantenendo più connessioni nel pool. Alcune delle connessioni nel pool sono preferiti per l'utilizzo non transazionale e alcuni sono preferiti per l'utilizzo di transazione. Tuttavia, se il driver indica che queste transizioni non siano onerosi, meno connessioni utilizzabile, forse alternando tra non transazionale e di utilizzare transazionale.  
   

@@ -1,31 +1,32 @@
 ---
 title: Caratteristiche del cursore e tipo di cursore | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0314dfcc66e783a48a7474b0b0656a93b1bf3822
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f54cc2f954a67d7a9cb3a4dfa6f6a006b652611d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Caratteristiche del cursore e tipo di cursore
 Un'applicazione può specificare le caratteristiche di un cursore anziché specificare il tipo di cursore (forward-only, statico, basati su keyset o dinamico). A tale scopo, l'applicazione seleziona scorrimento del cursore (impostando l'attributo di istruzione SQL_ATTR_CURSOR_SCROLLABLE) e sensibilità (impostando l'attributo di istruzione SQL_ATTR_CURSOR_SENSITIVITY) prima di aprire il cursore sull'istruzione handle. Il driver quindi sceglie il tipo di cursore che fornisce in modo più efficiente le caratteristiche che l'applicazione richiesta.  

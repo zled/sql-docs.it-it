@@ -1,16 +1,16 @@
 ---
 title: sp_reinitmergesubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitmergesubscription
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b801376850844a0e1cba0e5b53b72114c0199f7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 71090f0ffd96cf8a80c12c270c1b381c92fbd204
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,19 +50,19 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication =** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, il valore predefinito è **tutti**.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, il valore predefinito è **tutti**.  
   
  [  **@subscriber =** ] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* è **sysname**, il valore predefinito è **tutti**.  
+ Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, il valore predefinito è **tutti**.  
   
  [  **@subscriber_db =** ] **'***subscriber_db***'**  
- Nome del database Sottoscrittore. *subscriber_db* è **sysname**, il valore predefinito è **tutti**.  
+ Nome del database Sottoscrittore. *subscriber_db* viene **sysname**, il valore predefinito è **tutti**.  
   
  [  **@upload_first =** ] **'***upload_first***'**  
- Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* è **nvarchar (5)**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
+ Indica se le modifiche nel Sottoscrittore vengono caricate prima della reinizializzazione della sottoscrizione. *upload_first* viene **nvarchar(5**, con un valore predefinito è FALSE. Se **true**, le modifiche vengono caricate prima della reinizializzazione della sottoscrizione. Se **false**, le modifiche non vengono caricate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_reinitmergesubscription** viene utilizzata nella replica di tipo merge.  
@@ -77,7 +77,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinitmergepushsubwithupload](../../relational-databases/replication/codesnippet/tsql/sp-reinitmergesubscripti_2.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_reinitmergesubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  

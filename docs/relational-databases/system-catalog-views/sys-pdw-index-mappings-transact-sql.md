@@ -1,30 +1,31 @@
 ---
-title: sys.pdw_index_mappings (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.pdw_index_mappings (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-caps.latest.revision: 
+caps.latest.revision: 7
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00bef273eb4b71f28b83f1861c5293a9ecd7a901
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 7142d32577ed4f54d906af32fea834299b8e1351
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspdwindexmappings-transact-sql"></a>sys.pdw_index_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,8 +34,8 @@ ms.lasthandoff: 02/03/2018
   
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
-|object_id|**int**|L'ID di oggetto per la tabella logica in cui è presente l'indice. Vedere [Sys. Objects &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formano la chiave per la visualizzazione.||  
-|index_id|**nvarchar(32)**|ID dell'indice. Vedere [Sys. Indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
+|object_id|**int**|L'ID di oggetto per la tabella logica in cui è presente l'indice. Vedere [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).<br /><br /> **physical_name** e **object_id** formano la chiave per la visualizzazione.||  
+|index_id|**nvarchar(32)**|ID dell'indice. Vedere [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).||  
 |physical_name|**nvarchar(36)**|Il nome dell'indice nei database sui nodi di calcolo.<br /><br /> **physical_name** e **object_id** formano la chiave per la visualizzazione.||  
   
 ## <a name="see-also"></a>Vedere anche  

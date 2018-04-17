@@ -1,30 +1,31 @@
 ---
 title: SQLGetInfo | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLGetInfo function
 ms.assetid: f6215bac-ed3d-4c36-86d5-d56ffbc106aa
-caps.latest.revision: 
+caps.latest.revision: 43
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9216489cc1bb028cdf89a09339f96e1667ea9c29
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9df6979b41058f775fae8e40b47c8d857ff4cff0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/24/2018
 
   La tabella illustra i valori restituiti da **SQLGetInfo**. Questi valori potrebbero variare in base al numero di versione del server connesso.  
   
- **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è diverso da **SQLGetInfo** nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC (SQLSRV32. DLL) quando **SQLGetInfo** viene chiamato con SQL_KEYWORDS e una lunghezza di buffer 0.  Tramite il driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene restituito SQL_SUCCESS, mentre tramite il driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito SQL_SUCCESS_WITH_INFO.  Tuttavia, quando viene chiamato con una lunghezza di buffer diversa da zero che è minore di stringa della parola chiave output, **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client restituisce SQL_SUCCESS_WITH_INFO e SQLState di 01004.  
+ **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è diverso dal **SQLGetInfo** nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC (SQLSRV32. DLL) quando **SQLGetInfo** viene chiamato con SQL_KEYWORDS e una lunghezza di buffer 0.  Tramite il driver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client viene restituito SQL_SUCCESS, mentre tramite il driver ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene restituito SQL_SUCCESS_WITH_INFO.  Tuttavia, quando viene chiamato con una lunghezza di buffer diversa da zero che è minore di stringa della parola chiave output, **SQLGetInfo** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client restituisce SQL_SUCCESS_WITH_INFO e SQLState di 01004.  
   
 |fInfoType|rgbInfoValue|  
 |---------------|------------------|  

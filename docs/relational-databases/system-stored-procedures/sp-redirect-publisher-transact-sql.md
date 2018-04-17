@@ -1,16 +1,16 @@
 ---
 title: sp_redirect_publisher (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7f23102018041a34a365934935680c09691646c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7b3d858bdc28028750f481616f908239b7290473
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,33 +49,33 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@original_publisher**  =] **'***original_publisher***'**  
- Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato in origine il database. *original_publisher* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@original_publisher** =] **'***original_publisher***'**  
+ Il nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che ha pubblicato in origine il database. *original_publisher* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@publisher_db**  =] **'***publisher_db***'**  
- Il nome del database da pubblicare. *publisher_db* è **sysname**, non prevede alcun valore predefinito.  
+ [ **@publisher_db** = ] **'***publisher_db***'**  
+ Il nome del database da pubblicare. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@redirected_publisher**  =] **'***redirected_publisher***'**  
- Il nome del listener del gruppo di disponibilità associato al gruppo di disponibilità che sarà il nuovo server di pubblicazione. *redirected_publisher* è **sysname**, non prevede alcun valore predefinito. Quando il listener del gruppo di disponibilità è configurato per una porta non predefinita, specificare il numero della porta insieme al nome del listener, ad esempio `'Listenername,51433'`  
+ [ **@redirected_publisher** =] **'***redirected_publisher***'**  
+ Il nome del listener del gruppo di disponibilità associato al gruppo di disponibilità che sarà il nuovo server di pubblicazione. *redirected_publisher* viene **sysname**, non prevede alcun valore predefinito. Quando il listener del gruppo di disponibilità è configurato per una porta non predefinita, specificare il numero della porta insieme al nome del listener, ad esempio `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_redirect_publisher** viene utilizzato per consentire a un server di pubblicazione di replica essere reindirizzati alla replica primaria corrente di un gruppo di disponibilità AlwaysOn associando la coppia server di pubblicazione/database con il listener di un gruppo di disponibilità. Eseguire **sp_redirect_publisher** dopo aver configurato il listener del gruppo di disponibilità per il gruppo di disponibilità che contiene il database pubblicato.  
+ **sp_redirect_publisher** viene utilizzato per consentire un server di pubblicazione di replica essere reindirizzati alla replica primaria corrente di un gruppo di disponibilità AlwaysOn associando la coppia server di pubblicazione/database con listener di un gruppo di disponibilità. Eseguire **sp_redirect_publisher** dopo aver configurato il listener del gruppo di disponibilità per il gruppo di disponibilità che contiene il database pubblicato.  
   
- Se il database di pubblicazione nel server di pubblicazione originale viene rimosso dal gruppo di disponibilità nella replica primaria, eseguire **sp_redirect_publisher** senza specificare un valore per il  *@redirected_publisher*  parametro da rimuovere il reindirizzamento per la coppia server di pubblicazione/database. Per ulteriori informazioni sul reindirizzamento il server di pubblicazione, vedere [gestione di un Database di pubblicazione AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Se il database di pubblicazione nel server di pubblicazione originale viene rimosso dal gruppo di disponibilità nella replica primaria, eseguire **sp_redirect_publisher** senza specificare un valore per il *@redirected_publisher* parametro da rimuovere il reindirizzamento per la coppia server di pubblicazione/database. Per ulteriori informazioni sul reindirizzamento il server di pubblicazione, vedere [gestione di un Database di pubblicazione AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Chiamante deve essere un membro del **sysadmin** ruolo predefinito del server, il **db_owner** ruolo predefinito del database per il database di distribuzione o un membro di un elenco di accesso per una pubblicazione definita associato al database di pubblicazione.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Stored procedure per la replica &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sp_validate_redirected_publisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
- [sp_get_redirected_publisher &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
- [sp_validate_replica_hosts_as_publishers &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
+ [sp_validate_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
+ [sp_get_redirected_publisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
+ [sp_validate_replica_hosts_as_publishers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-replica-hosts-as-publishers-transact-sql.md)  
   
   

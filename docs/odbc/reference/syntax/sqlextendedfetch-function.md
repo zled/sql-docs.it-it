@@ -2,7 +2,7 @@
 title: Funzione SQLExtendedFetch. | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 100b877fb6adc71b0f42dd41a0bc8a8d437b1d1a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 08611c1a798f9c25ae57d518e46d94193239ca1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlextendedfetch-function"></a>Funzione SQLExtendedFetch.
 **Conformità**  
@@ -115,17 +115,17 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>Commenti  
  Il comportamento di **SQLExtendedFetch** è identico a quello di **SQLFetchScroll**, con le eccezioni seguenti:  
   
--   **SQLExtendedFetch** e **SQLFetchScroll** usare diversi metodi per restituire il numero di righe recuperate. **SQLExtendedFetch** restituisce il numero di righe recuperate  *\*RowCountPtr*; **SQLFetchScroll** restituisce il numero di righe recuperate direttamente al buffer a cui puntato SQL_ATTR_ROWS_FETCHED_PTR. Per ulteriori informazioni, vedere il *RowCountPtr* argomento.  
+-   **SQLExtendedFetch** e **SQLFetchScroll** usare diversi metodi per restituire il numero di righe recuperate. **SQLExtendedFetch** restituisce il numero di righe recuperate nel  *\*RowCountPtr*; **SQLFetchScroll** restituisce il numero di righe recuperate direttamente al buffer a cui puntato SQL_ATTR_ROWS_FETCHED_PTR. Per ulteriori informazioni, vedere il *RowCountPtr* argomento.  
   
 -   **SQLExtendedFetch** e **SQLFetchScroll** restituiscono lo stato di ogni riga in array diversi. Per ulteriori informazioni, vedere il *RowStatusArray* argomento.  
   
--   **SQLExtendedFetch** e **SQLFetchScroll** usare diversi metodi per recuperare il segnalibro quando *FetchOrientation* è impostato su SQL_FETCH_BOOKMARK. **SQLExtendedFetch** non supporta i segnalibri a lunghezza variabile o un set di righe recupero in un offset diverso da 0 da un segnalibro. Per ulteriori informazioni, vedere il *FetchOffset* argomento.  
+-   **SQLExtendedFetch** e **SQLFetchScroll** usare diversi metodi per recuperare il segnalibro quando *FetchOrientation* è impostato su SQL_FETCH_BOOKMARK. **SQLExtendedFetch** non supporta i segnalibri a lunghezza variabile o un set di righe recupero in corrispondenza di un offset diverso da 0 da un segnalibro. Per ulteriori informazioni, vedere il *FetchOffset* argomento.  
   
--   **SQLExtendedFetch** e **SQLFetchScroll** utilizza formati diversi set di righe. **SQLExtendedFetch** utilizza il valore dell'attributo di istruzione SQL_ROWSET_SIZE e **SQLFetchScroll** utilizza il valore dell'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE.  
+-   **SQLExtendedFetch** e **SQLFetchScroll** utilizza formati diversi set di righe. **SQLExtendedFetch** utilizza il valore dell'attributo di istruzione SQL_ROWSET_SIZE, e **SQLFetchScroll** utilizza il valore dell'attributo di istruzione SQL_ATTR_ROW_ARRAY_SIZE.  
   
--   **SQLExtendedFetch** ha una semantica di gestione degli errori di leggermente diverso **SQLFetchScroll**. Per ulteriori informazioni, vedere "Gestione degli errori" nella sezione "Osservazioni" di [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
+-   **SQLExtendedFetch** ha una semantica di gestione degli errori leggermente diverso **SQLFetchScroll**. Per ulteriori informazioni, vedere "Gestione degli errori" nella sezione "Osservazioni" di [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md).  
   
--   **SQLExtendedFetch** non supporta gli offset di associazione (l'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR).  
+-   **SQLExtendedFetch** non supporta gli offset di associazione (l'attributo dell'istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR).  
   
 -   Le chiamate a **SQLExtendedFetch** ReadContentAsBinHex con chiamate a **SQLFetch** o **SQLFetchScroll**e se **SQLBulkOperations** viene chiamato prima di chiamare qualsiasi funzione di recupero, **SQLExtendedFetch** non può essere chiamato finché il cursore viene chiuso e riaperto. Vale a dire **SQLExtendedFetch** può essere chiamato solo in stato di istruzione S7. Per ulteriori informazioni, vedere [istruzione transizioni](../../../odbc/reference/appendixes/statement-transitions.md) in tabelle di transizione dello stato di appendice b: ODBC.  
   

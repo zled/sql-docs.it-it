@@ -1,27 +1,28 @@
 ---
 title: Nuove caratteristiche di data e ora con precedenti versioni di SQL Server (OLE DB) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-ole-db-date-time
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
-caps.latest.revision: 
+caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63d848005d0a1745070caf209f52f49dd80db1d2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7f5e7bdd599222eb0c37f851901a59f663cc2658
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuove caratteristiche di data e ora con precedenti versioni di SQL Server (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -167,12 +168,12 @@ ms.lasthandoff: 01/25/2018
  Se è disponibile una conversione client supportata dal tipo di buffer al tipo di server per la versione del server nella connessione, è possibile utilizzare tutti i tipi di buffer client. In questo contesto, *tipo server* significa che il tipo specificato da ICommandWithParameters:: SetParameterInfo o implicite dal tipo di buffer se ICommandWithParameters:: SetParameterInfo non è stato chiamato. Di conseguenza, è possibile utilizzare DBTYPE_DBTIME2 e DBTYPE_DBTIMESTAMPOFFSET con i server legacy o quando DataTypeCompatibility=80, se la conversione client a un tipo di server supportato ha esito positivo. Se il tipo di server non è corretto, potrebbe essere segnalato un errore dal server se questo non è in grado di eseguire una conversione implicita al tipo di server effettivo.  
   
 ## <a name="sspropinitdatatypecompatibility-behavior"></a>Comportamento di SSPROP_INIT_DATATYPECOMPATIBILITY  
- Quando SSPROP_INIT_DATATYPECOMPATIBILITY è impostato su SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, i tipi di nuovo data/ora e i metadati associati vengono visualizzati ai client come vengono visualizzati per i client legacy, come descritto in [modifiche di copia Bulk per Avanzata data e ora tipi &#40; OLE DB e ODBC &#41; ](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
+ Quando SSPROP_INIT_DATATYPECOMPATIBILITY è impostato su SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000, i tipi di nuovo data/ora e i metadati associati vengono visualizzati ai client come vengono visualizzati per i client legacy, come descritto in [modifiche di copia Bulk per Enhanced tipi data e ora &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
 ## <a name="comparability-for-irowsetfind"></a>Possibilità di confronto per IRowsetFind  
  Per i nuovi tipi di data/ora sono consentiti tutti gli operatori di confronto, in quanto vengono visualizzati come tipi stringa anziché come tipi di data/ora.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+ [Data e ora miglioramenti & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

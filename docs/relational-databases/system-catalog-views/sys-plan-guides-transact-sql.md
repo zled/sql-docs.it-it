@@ -1,16 +1,16 @@
 ---
 title: plan_guides (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.planguides_TSQL
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.plan_guides catalog view
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
-caps.latest.revision: 
+caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 591bc781d6c156320dffcb06e6e541aeb5b669a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b1ae6cfc3e52e970ff4c2aecc825394fc3f975b6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +51,10 @@ ms.lasthandoff: 11/21/2017
 |**scope_type_desc**|**nvarchar(60)**|Descrizione dell'ambito della guida di piano.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**Int**|object_id dell'oggetto che definisce l'ambito della guida di piano, se l'ambito è OBJECT.<br /><br /> NULL se la guida di piano non è definita a livello di ambito di OBJECT.|  
 |**scope_batch**|**nvarchar(max)**|Testo batch, se **scope_type** è SQL.<br /><br /> NULL se il tipo di batch non è SQL.<br /><br /> Se è NULL e **scope_type** è SQL, il valore di **query_text** si applica.|  
-|**parametri**|**nvarchar(max)**|Stringa che definisce l'elenco dei parametri associati alla guida di piano.<br /><br /> NULL = Nessun elenco di parametri è associato alla guida di piano.|  
+|**parameters**|**nvarchar(max)**|Stringa che definisce l'elenco dei parametri associati alla guida di piano.<br /><br /> NULL = Nessun elenco di parametri è associato alla guida di piano.|  
 |**suggerimenti**|**nvarchar(max)**|Hint della clausola OPTION associati alla guida di piano.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

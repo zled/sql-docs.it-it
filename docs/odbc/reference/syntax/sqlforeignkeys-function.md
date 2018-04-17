@@ -2,7 +2,7 @@
 title: Funzione SQLForeignKeys | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba8f395a556d976f2698ce9646db2e830e7a69aa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlforeignkeys-function"></a>Funzione SQLForeignKeys
 **Conformità**  
@@ -71,7 +71,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Handle di istruzione.  
   
  *PKCatalogName*  
- [Input] Nome del catalogo tabella chiave primaria. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *PKCatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo tabella chiave primaria. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *PKCatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *PKCatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *PKCatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
@@ -79,7 +79,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **PKCatalogName*, in caratteri.  
   
  *PKSchemaName*  
- [Input] Nome dello schema di tabella della chiave primaria. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *PKSchemaName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema di tabella della chiave primaria. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *PKSchemaName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *PKSchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *PKSchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -87,7 +87,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **PKSchemaName*, in caratteri.  
   
  *PKTableName*  
- [Input] Nome della tabella chiave primaria. *PKTableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella chiave primaria. *PKTableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *PKTableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *PKTableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -95,7 +95,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **PKTableName*, in caratteri.  
   
  *FKCatalogName*  
- [Input] Nome del catalogo tabella chiave esterna. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *FKCatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo tabella chiave esterna. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *FKCatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *FKCatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *FKCatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -103,7 +103,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **FKCatalogName*, in caratteri.  
   
  *FKSchemaName*  
- [Input] Nome dello schema di tabella della chiave esterna. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *FKSchemaName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema di tabella della chiave esterna. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *FKSchemaName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *FKSchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *FKSchemaName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   
@@ -111,7 +111,7 @@ SQLRETURN SQLForeignKeys(
  [Input] Lunghezza di **FKSchemaName*, in caratteri.  
   
  *FKTableName*  
- [Input] Nome della tabella chiave esterna. *FKTableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella chiave esterna. *FKTableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *FKTableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *FKTableName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa.  
   

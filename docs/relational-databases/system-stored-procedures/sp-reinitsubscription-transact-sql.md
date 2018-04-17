@@ -1,16 +1,16 @@
 ---
 title: sp_reinitsubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_reinitsubscription
 ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
-caps.latest.revision: 
+caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28ed672409e115b5b7980766ee7bf078d52b3bf1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2be8faabc7645d4f9b93d84fea0977e620a13d46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,34 +54,34 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, con un valore predefinito è all.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è all.  
   
  [  **@article=**] **'***articolo***'**  
- Nome dell'articolo. *articolo* è **sysname**, con un valore predefinito è all. Per le pubblicazioni ad aggiornamento immediato, *articolo* deve essere **tutti**; in caso contrario, la stored procedure ignora la pubblicazione e segnala un errore.  
+ Nome dell'articolo. *articolo* viene **sysname**, con un valore predefinito è all. Per le pubblicazioni ad aggiornamento immediato, *articolo* deve essere **tutti**; in caso contrario, la stored procedure ignora la pubblicazione e segnala un errore.  
   
  [  **@subscriber=**] **'***sottoscrittore***'**  
- Nome del Sottoscrittore. *Sottoscrittore* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del Sottoscrittore. *Sottoscrittore* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@destination_db=**] **'***destination_db***'**  
- Nome del database di destinazione. *destination_db* è **sysname**, con un valore predefinito è all.  
+ Nome del database di destinazione. *destination_db* viene **sysname**, con un valore predefinito è all.  
   
  [  **@for_schema_change=**] **'***for_schema_change***'**  
- Specifica se viene eseguita la reinizializzazione in seguito a modifiche dello schema apportate nel database di pubblicazione. *for_schema_change* è **bit**, con un valore predefinito è 0. Se **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate a condizione l'intera pubblicazione e non solo di alcuni articoli, vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se **1**, le sottoscrizioni attive vengono riattivate fino a quando non viene eseguito l'agente Snapshot.  
+ Specifica se viene eseguita la reinizializzazione in seguito a modifiche dello schema apportate nel database di pubblicazione. *for_schema_change* viene **bit**, con un valore predefinito è 0. Se **0**, le sottoscrizioni attive per le pubblicazioni che consentono l'aggiornamento immediato vengono riattivate a condizione l'intera pubblicazione e non solo di alcuni articoli, vengono reinizializzate. Le reinizializzazione viene pertanto avviata in seguito a modifiche dello schema. Se **1**, le sottoscrizioni attive vengono riattivate fino a quando non viene eseguito l'agente Snapshot.  
   
  [  **@publisher=** ] **'***publisher***'**  
- Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL.  
+ Specifica un server di pubblicazione non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  *server di pubblicazione* non deve essere utilizzato per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] i server di pubblicazione.  
   
  [  **@ignore_distributor_failure=** ] *ignore_distributor_failure*  
- Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* è **bit**, con un valore predefinito è 0. Se **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
+ Consente la reinizializzazione anche se il server di distribuzione non esiste o è offline. *ignore_distributor_failure* viene **bit**, con un valore predefinito è 0. Se **0**, la reinizializzazione ha esito negativo se il server di distribuzione non esiste o è offline.  
   
  [  **@invalidate_snapshot=** ] *invalidate_snapshot*  
- Consente di invalidare lo snapshot della pubblicazione esistente. *invalidate_snapshot* è **bit**, con un valore predefinito è 0. Se **1**, viene generato un nuovo snapshot per la pubblicazione.  
+ Consente di invalidare lo snapshot della pubblicazione esistente. *invalidate_snapshot* viene **bit**, con un valore predefinito è 0. Se **1**, viene generato un nuovo snapshot per la pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_reinitsubscription** viene utilizzata nella replica transazionale.  
@@ -105,7 +105,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_reinittranpushsub](../../relational-databases/replication/codesnippet/tsql/sp-reinitsubscription-tr_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server, i membri del **db_owner** ruolo predefinito del database o l'autore della sottoscrizione può eseguire **sp_reinitsubscription** .  
   
 ## <a name="see-also"></a>Vedere anche  

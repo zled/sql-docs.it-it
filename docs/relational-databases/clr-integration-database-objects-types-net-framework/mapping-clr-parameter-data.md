@@ -1,15 +1,15 @@
 ---
 title: Il mapping dei dati di parametro CLR | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/01/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SqlBinary data type
@@ -28,35 +28,35 @@ helpviewer_keywords:
 - SqlChars data type
 - SqlInt32 data type
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
-caps.latest.revision: 
+caps.latest.revision: 71
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ffefa60797d41fc6660e82c208265153eacbd603
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e47f4cf6d163921b5fb6a398c61c66e217e797a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mapping-clr-parameter-data"></a>Mapping dei dati dei parametri CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-La tabella seguente elenca [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, i relativi equivalenti in common language runtime (CLR) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel **System.Data.SqlTypes** dello spazio dei nomi e gli equivalenti CLR nativi nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
+  La tabella seguente elenca [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati, i relativi equivalenti in common language runtime (CLR) per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel **System.Data.SqlTypes** dello spazio dei nomi e gli equivalenti CLR nativi nel [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET framework.  
   
 ||||  
 |-|-|-|  
 |**Tipo di dati di SQL Server**|Tipo (in System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo di dati CLR (.NET Framework)**|  
 |**bigint**|**SqlInt64**|**Int64, Nullable\<Int64 >**|  
 |**binary**|**SqlBytes, SqlBinary**|**Byte[]**|  
-|**bit**|**SqlBoolean**|**Ammette valori null, booleano\<booleano >**|  
+|**bit**|**SqlBoolean**|**Tipo booleano, che ammette valori null\<booleano >**|  
 |**char**|Nessuno|Nessuno|  
 |**cursor**|Nessuno|Nessuno|  
-|**data**|**SqlDateTime**|**Data/ora, Nullable\<DateTime >**|  
-|**datetime**|**SqlDateTime**|**Data/ora, Nullable\<DateTime >**|  
-|**datetime2**|Nessuno|**Data/ora, Nullable\<DateTime >**|  
-|**DATETIMEOFFSET**|**Nessuno**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|**data**|**SqlDateTime**|**Data/ora, che ammette valori null\<DateTime >**|  
+|**datetime**|**SqlDateTime**|**Data/ora, che ammette valori null\<DateTime >**|  
+|**datetime2**|Nessuno|**Data/ora, che ammette valori null\<DateTime >**|  
+|**DATETIMEOFFSET**|**Nessuno**|**DateTimeOffset, Nullable\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<decimale >**|  
-|**float**|**SqlDouble**|**Valore Double, ammette valori null\<Double >**|  
+|**float**|**SqlDouble**|**Double, ammette valori null\<Double >**|  
 |**geography**|**SqlGeography**<br /><br /> **SqlGeography** è definito in Microsoft.SqlServer.Types.dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack di](https://www.microsoft.com/download/details.aspx?id=52676).|Nessuno|  
 |**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** è definito in Microsoft.SqlServer.Types.dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack di](https://www.microsoft.com/download/details.aspx?id=52676).|Nessuno|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** è definito in Microsoft.SqlServer.Types.dll, che viene installato con SQL Server e può essere scaricato dal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack di](https://www.microsoft.com/download/details.aspx?id=52676).|Nessuno|  
@@ -66,22 +66,22 @@ La tabella seguente elenca [!INCLUDE[msCoName](../../includes/msconame-md.md)] [
 |**nchar**|**SqlChars, SqlString**|**String, Char[]**|  
 |**ntext**|Nessuno|Nessuno|  
 |**numeric**|**SqlDecimal**|**Decimal, Nullable\<decimale >**|  
-|**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** è una corrispondenza migliore per il trasferimento di dati e l'accesso, e **SQLString** è una corrispondenza migliore per l'esecuzione di operazioni di stringa.|**String, Char[]**|  
-|**nvarchar(1), nchar(1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char >**|  
-|**real**|**SqlSingle** (l'intervallo di **SqlSingle**, tuttavia, è maggiore di **reale**)|**Singolo, ammette valori null\<singolo >**|  
+|**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** è una corrispondenza migliore per il trasferimento di dati e l'accesso, e **SQLString** è una corrispondenza migliore per l'esecuzione di operazioni sulle stringhe.|**String, Char[]**|  
+|**nvarchar(1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char >**|  
+|**real**|**SqlSingle** (la gamma **SqlSingle**, tuttavia, è più grande **reale**)|**Singolo, ammette valori null\<singolo >**|  
 |**rowversion**|Nessuno|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, Nullable\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal, Nullable\<decimale >**|  
 |**sql_variant**|Nessuno|**Oggetto**|  
 |**table**|Nessuno|Nessuno|  
 |**text**|Nessuno|Nessuno|  
-|**time**|Nessuno|**Intervallo di tempo, Nullable\<TimeSpan >**|  
+|**time**|Nessuno|**Oggetto TimeSpan, Nullable\<TimeSpan >**|  
 |**timestamp**|Nessuno|Nessuno|  
 |**tinyint**|**SqlByte**|**Byte, che ammette valori null\<Byte >**|  
-|**uniqueidentifier**|**SqlGuid**|**GUID, Nullable\<Guid >**|  
+|**uniqueidentifier**|**SqlGuid**|**GUID, che ammette valori null\<Guid >**|  
 |**Type(UDT) definito dall'utente**|Nessuno|La stessa classe associata al tipo definito dall'utente (UDT) nello stesso assembly o un assembly dipendente.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
+|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte [], Nullable\<byte >**|  
 |**varchar**|Nessuno|Nessuno|  
 |**xml**|**SqlXml**|Nessuno|  
   

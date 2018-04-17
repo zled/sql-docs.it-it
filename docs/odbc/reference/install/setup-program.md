@@ -2,7 +2,7 @@
 title: Programma di installazione | Documenti Microsoft
 ms.custom: ''
 ms.date: 08/31/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,16 +18,16 @@ ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 615f3151212c362ad0a813ee1af9718f83398270
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 03f834f4258ccc01c551a5e59c2b27dce4a829ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setup-program"></a>Programma di installazione
-> **Nota:** a partire da Windows XP e Windows Server 2003, **ODBC è incluso nel sistema operativo Windows**. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
+> **Nota:** a partire da Windows XP e Windows Server 2003 **ODBC è incluso nel sistema operativo Windows**. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
   
  L'utente esegue il programma di installazione per avviare il processo di installazione. Il programma di installazione viene scritto dallo sviluppatore dell'applicazione o driver. Oltre a installare i componenti ODBC, è possibile installare il software. Ad esempio, gli sviluppatori di applicazioni potrebbero utilizzare lo stesso programma di installazione per installare i componenti ODBC e per installare le applicazioni.  
   

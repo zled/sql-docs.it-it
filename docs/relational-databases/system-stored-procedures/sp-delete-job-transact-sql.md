@@ -1,16 +1,16 @@
 ---
 title: sp_delete_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_job
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dc32f2328e4153f79a7eb1c7e4115e455078791c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c578243ec78605216a3cb5c640e6779e712fec46
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo da eliminare. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo da eliminare. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo da eliminare. *job_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da eliminare. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name*deve essere specificato; non è possibile specificarli entrambi.  
@@ -62,23 +62,23 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
  Per uso interno.  
   
  [  **@delete_history=** ] *delete_history*  
- Specifica se eliminare la cronologia per il processo. *delete_history* è **bit**, il valore predefinito è **1**. Quando *delete_history* è **1**, la cronologia processo per il processo viene eliminata. Quando *delete_history* è **0**, la cronologia processo non viene eliminata.  
+ Specifica se eliminare la cronologia per il processo. *delete_history* viene **bit**, il valore predefinito è **1**. Quando *delete_history* è **1**, la cronologia processo per il processo viene eliminata. Quando *delete_history* è **0**, la cronologia processo non viene eliminata.  
   
  Si noti che quando un processo viene eliminato e non viene eliminata la cronologia, le informazioni cronologiche per il processo non saranno inclusi il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Cronologia processo dell'interfaccia utente grafica agente, ma le informazioni continueranno comunque a risiedere nel **sysjobhistory**tabella il **msdb** database.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Specifica se eliminare le pianificazioni associate a questo processo se non sono associate a nessun altro processo. *delete_unused_schedule* è **bit**, il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, pianificazioni associate a questo processo vengono eliminate se nessun altro processo vi fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
+ [  **@delete_unused_schedule=** ] *delete_unused_schedule*  
+ Specifica se eliminare le pianificazioni associate a questo processo se non sono associate a nessun altro processo. *delete_unused_schedule* viene **bit**, il valore predefinito è **1**. Quando *delete_unused_schedule* è **1**, pianificazioni associate a questo processo vengono eliminate se nessun altro processo vi fanno riferimento alla pianificazione. Quando *delete_unused_schedule* è **0**, le pianificazioni non vengono eliminate.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
   
 ## <a name="remarks"></a>Osservazioni  
- Il  **@originating_server**  argomento è riservato per uso interno.  
+ Il **@originating_server** argomento è riservato per uso interno.  
   
- Il  **@delete_unused_schedule**  argomento assicura la compatibilità con le versioni precedenti di SQL Server eliminando automaticamente le pianificazioni che non sono associate ad alcun processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere le pianificazioni che non sono associate a un processo, è necessario fornire il valore **0** come il  **@delete_unused_schedule**  argomento.  
+ Il **@delete_unused_schedule** argomento assicura la compatibilità con le versioni precedenti di SQL Server eliminando automaticamente le pianificazioni che non sono associate ad alcun processo. Si noti che per impostazione predefinita questo parametro assume una funzionalità compatibile con le versioni precedenti. Per mantenere le pianificazioni che non sono associate a un processo, è necessario fornire il valore **0** come il **@delete_unused_schedule** argomento.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] è incluso un semplice strumento grafico per la gestione dei processi, che è lo strumento consigliato per la creazione e la gestione dell'infrastruttura dei processi.  
   

@@ -2,7 +2,7 @@
 title: Funzione SQLWritePrivateProfileString | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 081d91ac2c257fbaa60b93de24dd134ea698bcd9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 417dc91543a8e4a9d6d51060dee4217816eae7be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString (funzione)
 **Conformità**  
  Introdotta: versione ODBC 2.0  
   
  **Riepilogo**  
- **SQLWritePrivateProfileString** scrive un nome e i dati per la sottochiave ODBC delle informazioni di sistema.  
+ **SQLWritePrivateProfileString** scrive un nome di valore e i dati per la sottochiave ini le informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -77,7 +77,7 @@ BOOL SQLWritePrivateProfileString(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLWritePrivateProfileString** viene fornito come un modo semplice per i driver di porta e i file DLL di installazione di driver da Microsoft® Windows® per Microsoft Windows e Windows 2000. Le chiamate a **WritePrivateProfileString** che scrivere una stringa di profilo per il file Odbc.ini deve essere sostituita con chiamate a **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** chiama le funzioni nell'API Win32® per aggiungere il nome specificato e i dati alla sottochiave ODBC delle informazioni di sistema.  
+ **SQLWritePrivateProfileString** viene fornito come un modo semplice per i driver di porta e l'installazione di driver DLL da Microsoft® Windows® per Microsoft Windows/Windows 2000. Le chiamate a **WritePrivateProfileString** che scrivere una stringa di profilo per il file Odbc.ini deve essere sostituita con chiamate a **SQLWritePrivateProfileString**. **SQLWritePrivateProfileString** chiama le funzioni nell'API Win32® per aggiungere il nome del valore specificato e i dati per la sottochiave ini le informazioni di sistema.  
   
  Una modalità di configurazione indica la voce Odbc.ini Elenco valori DSN nelle informazioni di sistema. Se il DSN è un DSN utente (la variabile di stato è USERDSN_ONLY), la funzione scrive la voce di ODBC in HKEY_CURRENT_USER. Se il DSN è un DSN di sistema (SYSTEMDSN_ONLY), la funzione scrive la voce Odbc.ini nella chiave HKEY_LOCAL_MACHINE. Se la variabile di stato è BOTHDSN, viene eseguito un tentativo di HKEY_CURRENT_USER e in caso contrario, viene utilizzato HKEY_LOCAL_MACHINE.  
   

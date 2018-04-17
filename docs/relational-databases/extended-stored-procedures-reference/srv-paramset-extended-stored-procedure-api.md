@@ -1,16 +1,16 @@
 ---
 title: srv_paramset (API Stored procedure estesa) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: extended-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
 - srv_paramset
@@ -22,22 +22,22 @@ dev_langs:
 helpviewer_keywords:
 - srv_paramset
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
-caps.latest.revision: 
+caps.latest.revision: 31
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df6b781d289ec3420ff83f2cc344005627e93d0d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: c76f1dc82a04ae14150833df75fd23db83b7fecc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="srvparamset-extended-stored-procedure-api"></a>srv_paramset (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] In alternativa, usare l'integrazione con CLR.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Usare in alternativa l'integrazione CLR.  
   
  Imposta il valore di un parametro restituito di chiamata a una stored procedure remota. Questa funzione è stata sostituita dalla funzione **srv_paramsetoutput**.  
   
@@ -74,7 +74,7 @@ len
  Specifica la lunghezza effettiva dei dati da restituire. Se il tipo di dati del parametro ha una lunghezza costante e non consente valori Null (ad esempio, *srvbit* o *srvint1*), *len* viene ignorato.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- SUCCEED se il valore del parametro è stato impostato correttamente; in caso contrario, FAIL. FAIL viene restituito se non esiste una stored procedure remota corrente, in assenza del parametro in posizione *n* della stored procedure remota, quando il parametro non è un parametro restituito e quando l'argomento *len* non è valido.  
+ SUCCEED se il valore del parametro è stato impostato correttamente; in caso contrario, FAIL. FAIL viene restituito quando non è presente alcuna stored procedure remota corrente, quando è presente alcun *n*remoto th archiviati parametro della routine, quando il parametro non è un parametro restituito e quando il *len* argomento non è legali.  
   
  Se *len* è 0, restituisce NULL. L'impostazione di *len* su 0 è l'unico modo per restituire NULL al client.  
   

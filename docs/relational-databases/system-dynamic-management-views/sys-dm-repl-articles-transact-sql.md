@@ -1,16 +1,16 @@
 ---
-title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm repl_articles (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_repl_articles_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2514ef1aea1e096a1bb543e7a1a815f923afaadb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +53,15 @@ ms.lasthandoff: 02/03/2018
 |**wszArtdesttable**|**nvarchar(514)**|Nome dell'oggetto pubblicato nella destinazione.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Proprietario dell'oggetto pubblicato nella destinazione.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando o stored procedure utilizzati per gli inserimenti.|  
-|**cmdTypeIns**|**int**|Sintassi della stored procedure INSERT. I possibili valori sono i seguenti.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NESSUNO<br /><br /> **7** = SCONOSCIUTO|  
+|**cmdTypeIns**|**int**|Sintassi della stored procedure INSERT. I possibili valori sono i seguenti.<br /><br /> **1** = CHIAMATA<br /><br /> **2** = SQL<br /><br /> **3** = NESSUNO<br /><br /> **7** = SCONOSCIUTO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando o stored procedure utilizzati per le eliminazioni.|  
-|**cmdTypeDel**|**int**|Sintassi della stored procedure DELETE. I possibili valori sono i seguenti.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NESSUNO<br /><br /> **7** = SCONOSCIUTO|  
+|**cmdTypeDel**|**int**|Sintassi della stored procedure DELETE. I possibili valori sono i seguenti.<br /><br /> **0** = XCALL<br /><br /> **1** = CHIAMATA<br /><br /> **2** = SQL<br /><br /> **3** = NESSUNO<br /><br /> **7** = SCONOSCIUTO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando o stored procedure utilizzati per gli aggiornamenti.|  
-|**cmdTypeUpd**|**int**|Sintassi della stored procedure UPDATE. I possibili valori sono i seguenti.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NESSUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = SCONOSCIUTO|  
+|**cmdTypeUpd**|**int**|Sintassi della stored procedure UPDATE. I possibili valori sono i seguenti.<br /><br /> **0** = XCALL<br /><br /> **1** = CHIAMATA<br /><br /> **2** = SQL<br /><br /> **3** = NESSUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = SCONOSCIUTO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando o stored procedure utilizzati per gli aggiornamenti parziali.|  
 |**cmdTypePartialUpd**|**int**|Sintassi della stored procedure di aggiornamento parziale. I possibili valori sono i seguenti.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Numero di colonne nella partizione per un articolo filtrato in senso verticale.|  
-|**artcmdtype**|**tinyint**|Tipo di comando replicato. I possibili valori sono i seguenti.<br /><br /> **1** = INSERIMENTO<br /><br /> **2** = DELETE<br /><br /> **3** = AGGIORNAMENTO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nessuno<br /><br /> **6** = solo per uso interno<br /><br /> **7** = solo per uso interno<br /><br /> **8** = UPDATE parziale|  
+|**artcmdtype**|**tinyint**|Tipo di comando replicato. I possibili valori sono i seguenti.<br /><br /> **1** = INSERIMENTO<br /><br /> **2** = ELIMINAZIONE<br /><br /> **3** = AGGIORNAMENTO<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = nessuno<br /><br /> **6** = solo per uso interno<br /><br /> **7** = solo per uso interno<br /><br /> **8** = UPDATE parziale|  
 |**artgeninscmd**|**nvarchar(510)**|Modello di comando INSERT basato sulle colonne incluse nell'articolo.|  
 |**artgendelcmd**|**nvarchar(510)**|Modello di comando DELETE che può includere la chiave primaria o le colonne incluse nell'articolo, in base alla sintassi utilizzata.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modello di comando UPDATE che può includere la chiave primaria, le colonne aggiornate o una lista completa di colonne, in base alla sintassi utilizzata.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 02/03/2018
 |**artgendel2cmd**|**nvarchar(510)**|Modello di comando DELETE utilizzato per la riconciliazione di un articolo durante l'elaborazione di snapshot simultanei.|  
 |**fInReconcile**|**tinyint**|Indica se un articolo verrà riconciliato durante l'elaborazione di snapshot simultanei.|  
 |**fPubAllowUpdate**|**tinyint**|Indica se la pubblicazione consente sottoscrizioni aggiornabili.|  
-|**intPublicationOptions**|**bigint**|Mappa di bit che specifica opzioni di pubblicazione aggiuntive. I possibili valori delle opzioni bit per bit sono i seguenti:<br /><br /> **0x1** : abilitato per la replica peer-to-peer.<br /><br /> **0x2** -pubblicare solo modifiche locali.<br /><br /> **0x4** - enabled per sottoscrittori non SQL Server.|  
+|**intPublicationOptions**|**bigint**|Mappa di bit che specifica opzioni di pubblicazione aggiuntive. I possibili valori delle opzioni bit per bit sono i seguenti:<br /><br /> **0x1** : abilitato per la replica peer-to-peer.<br /><br /> **0x2** -pubblicare solo le modifiche locali.<br /><br /> **0x4** - enabled per sottoscrittori non SQL Server.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione VIEW DATABASE STATE nel database di pubblicazione per chiamare **dm_repl_articles**.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Relative alle repliche viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative alle repliche &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   
 

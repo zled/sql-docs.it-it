@@ -1,16 +1,16 @@
 ---
 title: sys.dm_os_virtual_address_dump (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_os_virtual_address_dump
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_virtual_address_dump dynamic management view
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
-caps.latest.revision: 
+caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 451cc209f36a16341cb76ec6ae9319473480d541
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: a0326ff840c6874a709541d25f9e8fb55ef3ba8d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmosvirtualaddressdump-transact-sql"></a>sys.dm_os_virtual_address_dump (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -48,11 +49,11 @@ ms.lasthandoff: 02/03/2018
 |-----------------|---------------|-----------------|  
 |**region_base_address**|**varbinary(8)**|Puntatore all'indirizzo di base dell'area delle pagine. Non ammette i valori Null.|  
 |**region_allocation_base_address**|**varbinary(8)**|Puntatore all'indirizzo di base di un intervallo di pagine allocate dalla funzione API Windows VirtualAlloc. La pagina a cui punta il membro BaseAddress è inclusa in questo intervallo di allocazione. Non ammette i valori Null.|  
-|**region_allocation_protection**|**varbinary(8)**|Attributi di protezione quando l'area è stata allocata per la prima volta. I possibili valori sono i seguenti:<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Non ammette i valori Null.|  
+|**region_allocation_protection**|**varbinary(8)**|Attributi di protezione quando l'area è stata allocata per la prima volta. I possibili valori sono i seguenti:<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Non ammette i valori Null.|  
 |**region_size_in_bytes**|**bigint**|Dimensioni dell'area, in byte, a partire dall'indirizzo di base in cui tutte le pagine hanno gli stessi attributi. Non ammette i valori Null.|  
-|**region_state**|**varbinary(8)**|Stato corrente dell'area. I possibili valori sono i seguenti:<br /><br /> -   MEM_COMMIT<br />-   MEM_RESERVE<br />-   MEM_FREE<br /><br /> Non ammette i valori Null.|  
-|**region_current_protection**|**varbinary(8)**|Attributi di protezione. I possibili valori sono i seguenti:<br /><br /> -   PAGE_READONLY<br />-   PAGE_READWRITE<br />-PAGE_NOACCESS<br />-   PAGE_WRITECOPY<br />-   PAGE_EXECUTE<br />-   PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Non ammette i valori Null.|  
-|**region_type**|**varbinary(8)**|Identifica i tipi di pagine nell'area. I possibili valori sono i seguenti:<br /><br /> -   MEM_PRIVATE<br />-   MEM_MAPPED<br />-   MEM_IMAGE<br /><br /> Non ammette i valori Null.|  
+|**region_state**|**varbinary(8)**|Stato corrente dell'area. I possibili valori sono i seguenti:<br /><br /> -MEM_COMMIT<br />-   MEM_RESERVE<br />-   MEM_FREE<br /><br /> Non ammette i valori Null.|  
+|**region_current_protection**|**varbinary(8)**|Attributi di protezione. I possibili valori sono i seguenti:<br /><br /> -PAGE_READONLY<br />-PAGE_READWRITE<br />-PAGE_NOACCESS<br />-PAGE_WRITECOPY<br />-PAGE_EXECUTE<br />-PAGE_EXECUTE_READ<br />-   PAGE_EXECUTE_READWRITE<br />-   PAGE_EXECUTE_WRITECOPY<br />-PAGE_GUARD<br />-PAGE_NOCACHE<br /><br /> Non ammette i valori Null.|  
+|**region_type**|**varbinary(8)**|Identifica i tipi di pagine nell'area. I possibili valori sono i seguenti:<br /><br /> -MEM_PRIVATE<br />-   MEM_MAPPED<br />-MEM_IMAGE<br /><br /> Non ammette i valori Null.|  
 |**pdw_node_id**|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
@@ -60,7 +61,7 @@ ms.lasthandoff: 02/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni e viste a gestione dinamica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Relative al sistema operativo SQL Server viste a gestione dinamica &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica relative al sistema di operativo SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   
 

@@ -2,7 +2,7 @@
 title: Funzione SQLGetStmtAttr | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10ef63cf77fc4668d9f9f80daaff8ab483d1876b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7ee7c6b895be856f6ec2023c0795cf8b8ee291e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetstmtattr-function"></a>Funzione SQLGetStmtAttr
 **Conformità**  
@@ -59,7 +59,7 @@ SQLRETURN SQLGetStmtAttr(
  *StatementHandle*  
  [Input] Handle di istruzione.  
   
- *Attribute*  
+ *Attributo*  
  [Input] Attributo da recuperare.  
   
  *ValuePtr*  
@@ -98,7 +98,7 @@ SQLRETURN SQLGetStmtAttr(
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
 |HY010|Errore nella sequenza (funzione)|(DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLGetStmtAttr** funzione è stata chiamata.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione il *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato per il  *StatementHandle* e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
-|HY090|Lunghezza di stringa o di buffer non valida|*(DM) \*ValuePtr* è una stringa di caratteri e BufferLength è minore di zero, ma non è uguale a SQL_NTS.|  
+|HY090|Lunghezza di stringa o di buffer non valida|*(DM) \*ValuePtr* è una stringa di caratteri e BufferLength era minore di zero, ma non è uguale a SQL_NTS.|  
 |HY092|Identificatore di attributo/opzione non valida|Il valore specificato per l'argomento *attributo* non valido per la versione di ODBC supportati dal driver.|  
 |HY109|Posizione del cursore non valido|Il *attributo* argomento è stato SQL_ATTR_ROW_NUMBER e la riga è stata eliminata o non può essere recuperata.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  

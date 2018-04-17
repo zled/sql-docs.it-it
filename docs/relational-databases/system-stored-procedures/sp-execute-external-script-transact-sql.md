@@ -1,8 +1,8 @@
 ---
-title: sp_execute_external_script (Transact-SQL) | Microsoft Docs
+title: sp_execute_external_script (Transact-SQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/22/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_execute_external_script
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
-caps.latest.revision: ''
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 487b669cc7d664194cd769bde564faec9454479b
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+ms.openlocfilehash: b767e69b44d8303aab12a21e942e21c9a9741da4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ sp_execute_external_script
   
  Valore predefinito è `InputDataSet`.  
   
- [ @input_data_1 =  N'*input_data_1*' ]  
+ [ @input_data_1 = N'*input_data_1*']  
  Specifica i dati di input utilizzati dallo script esterno sotto forma di un [!INCLUDE[tsql](../../includes/tsql-md.md)] query. Il tipo di dati *input_data_1* è **nvarchar (max)**.
   
- [ @output_data_1_name =  N'*output_data_1_name*' ]  
+ [ @output_data_1_name = N'*output_data_1_name*']  
  Specifica il nome della variabile nello script esterno che contiene i dati da restituire al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo il completamento della chiamata alla stored procedure. Il tipo di dati della variabile nello script esterno dipende dalla lingua. Per R, l'output deve essere un frame di dati. Per Python, l'output deve essere un frame di dati pandas. *output_data_1_name* viene **sysname**.  
   
  Valore predefinito è "OutputDataSet".  
@@ -129,7 +129,7 @@ In alternativa, **CAST** la colonna o un valore a un tipo supportato in [!INCLUD
   
 -   **timestamp**  
   
--   **datetime2**, **datetimeoffset**, **time**  
+-   **datetime2**, **datetimeoffset**, **ora**  
   
 -   **sql_variant**  
   
@@ -255,7 +255,7 @@ Per il punteggio, è anche possibile usare la funzione nativa [PREDICT](../../t-
  [Librerie di R e i tipi di dati](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [Servizi R per SQL Server](../../advanced-analytics/r/sql-server-r-services.md)   
  [Problemi noti per SQL Server apprendimento automatico servizi](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [CREARE una libreria esterna &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opzione di configurazione del server external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

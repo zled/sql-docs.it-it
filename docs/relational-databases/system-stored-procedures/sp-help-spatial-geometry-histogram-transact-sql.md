@@ -1,16 +1,16 @@
 ---
 title: sp_help_spatial_geometry_histogram (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_spatial_geometry_histogram
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_spatial_geometry_histogram
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5acd841815df5329fe79624174c00e2694e65781
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 85790a21cc513a2cb46276dca3ab918bf2db2b1c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  [  **@tabname =**] **'***tabname***'**  
  Nome qualificato o non qualificato della tabella per cui è stato specificato l'indice spaziale.  
   
- Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* è **sysname**, non prevede alcun valore predefinito.  
+ Le virgolette sono necessarie solo se viene specificata una tabella qualificata. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *TabName* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@colname =** ] **'***colname***'**  
  Nome della colonna spaziale specificata. *colname* è un **sysname**, non prevede alcun valore predefinito.  
@@ -75,7 +75,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  Proprietà del valore massimo di Y del rettangolo di selezione. *ymax* è un **float**, non prevede alcun valore predefinito.  
   
  [  **@sample =** ] **'***esempio***'**  
- Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *esempio* è un **float**. Il valore predefinito è 100.  
+ Percentuale della tabella utilizzata. I valori validi sono compresi tra 0 e 100. *campione* è un **float**. Il valore predefinito è 100.  
   
 ## <a name="property-valuereturn-value"></a>Valore proprietà/Valore restituito  
  Viene restituito un valore di tabella. Nella griglia seguente viene descritto il contenuto delle colonne della tabella.  
@@ -83,10 +83,10 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Rappresenta l'ID univoco di ciascuna cella. Il conteggio inizia da 1.|  
-|**cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
+|**Cella**|**geometry**|Poligono rettangolare che rappresenta ciascuna cella. La forma della cella è identica alla forma della cella utilizzata per l'indicizzazione spaziale.|  
 |**row_count**|**bigint**|Indica il numero di oggetti spaziali che toccano o contengono la cella.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Utente deve essere un membro del **pubblica** ruolo. È necessario disporre dell'autorizzazione READ ACCESS per il server e l'oggetto.  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -162,6 +162,6 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
  `GO`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Indice spaziale Stored procedure &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
+ [Indice spaziale Stored procedure &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)  
   
   

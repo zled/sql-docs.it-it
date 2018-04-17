@@ -1,16 +1,16 @@
 ---
 title: sys.dm_hadr_availability_replica_states (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_hadr_availability_replica_states
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_availability_replica_states dynamic management view
 ms.assetid: d2e678bb-51e8-4a61-b223-5c0b8d08b8b1
-caps.latest.revision: 
+caps.latest.revision: 65
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9adddf8b74848948bfdd45fdf93813ed7489d40a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2d5e82f9da96f1831d7f0b76b92f469ec567a508
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmhadravailabilityreplicastates-transact-sql"></a>sys.dm_hadr_availability_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 02/03/2018
 |**replica_id**|**uniqueidentifier**|Identificatore univoco della replica.|  
 |**group_id**|**uniqueidentifier**|Identificatore univoco del gruppo di disponibilità.|  
 |**is_local**|**bit**|Se la replica è locale, uno di:<br /><br /> 0 = Indica una replica secondaria remota in un gruppo di disponibilità la cui replica primaria è ospitata dall'istanza del server locale. Questo valore si verifica solo sul percorso della replica primaria.<br /><br /> 1 = indica una replica locale. Sulle repliche secondarie, è l'unico valore disponibile per il gruppo di disponibilità a cui appartiene la replica.|  
-|**role**|**tinyint**|Corrente [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ruolo di una replica locale o una replica remota connessa, uno di:<br /><br /> 0 = Risoluzione<br /><br /> 1 = Primaria<br /><br /> 2 = Secondaria<br /><br /> Per informazioni sui ruoli di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
+|**Ruolo**|**tinyint**|Corrente [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ruolo di una replica locale o una replica remota connessa, uno di:<br /><br /> 0 = Risoluzione<br /><br /> 1 = Primaria<br /><br /> 2 = Secondaria<br /><br /> Per informazioni sui ruoli di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], vedere [Panoramica di Gruppi di disponibilità Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).|  
 |**role_desc**|**nvarchar(60)**|Descrizione di **ruolo**, uno di:<br /><br /> RESOLVING<br /><br /> PRIMARY<br /><br /> SECONDARY|  
 |**operational_state**|**tinyint**|Stato operativo corrente della replica, uno di:<br /><br /> 0 = Failover in sospeso<br /><br /> 1 = in sospeso<br /><br /> 2 = Online<br /><br /> 3 = non in linea<br /><br /> 4 = operazione non riuscita<br /><br /> 5 = Non completato, nessun quorum<br /><br /> Null = La replica non è locale.<br /><br /> Per ulteriori informazioni, vedere [ruoli e stati operativi](#RolesAndOperationalStates), più avanti in questo argomento.|  
 |**operational\_state\_desc**|**nvarchar(60)**|Descrizione di **operativo\_stato**, uno di:<br /><br /> PENDING_FAILOVER<br /><br /> PENDING<br /><br /> ONLINE<br /><br /> OFFLINE<br /><br /> FAILED<br /><br /> FAILED_NO_QUORUM<br /><br /> NULL|  
-|**recovery\_health**|**tinyint**|Rollup del **database\_stato** colonna del [Sys.dm hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) vista a gestione dinamica. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: in corso.  Almeno un database unito in join lo stato di un database diverso da ONLINE (**database\_stato** è non 0).<br /><br /> 1 : Online. Tutti i database aggiunti a un sono di un database online (**database_state** è 0).<br /><br /> NULL: **is_local** = 0|  
+|**ripristino\_integrità**|**tinyint**|Rollup del **database\_stato** colonna del [Sys.dm hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) vista a gestione dinamica. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: in corso.  Almeno un database unito in join lo stato di un database diverso da ONLINE (**database\_stato** è non 0).<br /><br /> 1: online. Tutti i database aggiunti a un sono di un database online (**database_state** è 0).<br /><br /> NULL: **is_local** = 0|  
 |**recovery_health_desc**|**nvarchar(60)**|Descrizione di **recovery_health**, uno di:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**synchronization\_health**|**tinyint**|Riflette un rollup dello stato di sincronizzazione del database (**synchronization_state**) di tutti i database di disponibilità unita in join (noto anche come *repliche*) e la modalità di disponibilità del (replica modalità commit sincrono o asincrono). Il rollup rifletterà lo stato accumulato meno integro dei database nella replica. Di seguito sono i valori possibili e le relative descrizioni.<br /><br /> 0: non integro.   Almeno un database di cui è stato creato un join si trova nello stato NOT SYNCHRONIZING.<br /><br /> 1: parzialmente integro. Alcune repliche non sono nello stato di sincronizzazione di destinazione: le repliche con commit sincrono devono trovarsi nello stato Sincronizzato, mentre le repliche con commit asincrono devono trovarsi nello stato Sincronizzazione in corso.<br /><br /> 2: integro. Tutte le repliche sono nello stato di sincronizzazione di destinazione: le repliche con commit sincrono si trovano nello stato Sincronizzato, mentre le repliche con commit asincrono si trovano nello stato Sincronizzazione in corso.|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descrizione di **synchronization_health**, uno di:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 02/03/2018
 |**last_connect_error_description**|**nvarchar(1024)**|Testo del **last_connect_error_number** messaggio.|  
 |**last_connect_error_timestamp**|**datetime**|Data e ora di timestamp che indica il **last_connect_error_number** errore.|  
   
-##  <a name="RolesAndOperationalStates"></a>Ruoli e stati operativi  
+##  <a name="RolesAndOperationalStates"></a> Ruoli e stati operativi  
  Il ruolo, **ruolo**, riflette lo stato di una replica di disponibilità e lo stato operativo, **operational_state**, specifica se la replica è pronta a elaborare le richieste client per tutti i database della replica di disponibilità. Di seguito è riportato un riepilogo degli stati operativi possibili per ogni ruolo: risoluzione, primario e secondario.  
   
  **RISOLUZIONE:** quando una replica di disponibilità è il ruolo RESOLVING, gli stati operativi possibili sono illustrati nella tabella seguente.  

@@ -2,7 +2,7 @@
 title: Funzione SQLGetDescField | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 091703d14644fe24bef88c939ac4b45087113bd7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 21d22e072f1b1468ef12e52e67b5d820740050b2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdescfield-function"></a>Funzione SQLGetDescField
 **Conformità**  
@@ -104,18 +104,18 @@ SQLRETURN SQLGetDescField(
 |08S01|Errore del collegamento di comunicazione|Collegamento di comunicazione tra il driver e l'origine dati a cui era connesso il driver non è stato possibile prima dell'elaborazione della funzione è stata completata.|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver è stato in grado di allocare la memoria necessaria per supportare l'esecuzione o il completamento della funzione.|  
-|HY007|L'istruzione associata non è stato preparato|*DescriptorHandle* è stato associato un *StatementHandle* come un IRD e l'istruzione associata handle ha non stato preparato o l'esecuzione.|  
+|HY007|L'istruzione associata non è stato preparato|*DescriptorHandle* è stato associato un *StatementHandle* come un IRD e l'istruzione associata handle è non stato preparato o l'esecuzione.|  
 |HY010|Errore nella sequenza (funzione)|(DM) *DescriptorHandle* è stato associato un *StatementHandle* per i quali è stata chiamata una funzione in modo asincrono in esecuzione (non presente) ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) *DescriptorHandle* è stato associato un *StatementHandle* per il quale **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, o **SQLSetPos** è stato chiamato e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *DescriptorHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLGetDescField** funzione è stata chiamata.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY021|Informazioni del descrittore incoerenti.|I campi SQL_DESC_TYPE e SQL_DESC_DATETIME_INTERVAL_CODE non formano un tipo SQL ODBC valido, un tipo SQL specifici del driver valido (per IPD, Implementation) o un tipo di dati ODBC C valido (per Apd o ARDs).|  
 |HY090|Lunghezza di stringa o di buffer non valida|(DM)  *\*ValuePtr* è una stringa di caratteri e *BufferLength* è minore di zero.|  
-|HY091|Identificatore del campo del descrittore non valido|*FieldIdentifier* non è un campo definito ODBC e non è un valore definito dall'implementazione.<br /><br /> *FieldIdentifier* è stato definito per il *DescriptorHandle*.|  
+|HY091|Identificatore del campo del descrittore non valido|*FieldIdentifier* non è un campo definite da ODBC e non è un valore definito dall'implementazione.<br /><br /> *FieldIdentifier* non è stato definito per il *DescriptorHandle*.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Driver non supporta questa funzione|Il driver (DM) associato il *DescriptorHandle* non supporta la funzione.|  
   
 ## <a name="comments"></a>Commenti  
- Un'applicazione può chiamare **SQLGetDescField** per restituire il valore di un singolo campo di un record del descrittore. Una chiamata a **SQLGetDescField** può restituire l'impostazione di un campo in qualsiasi tipo di descrittore, inclusi i campi di intestazione, i campi del record e campi di segnalibro. Un'applicazione può ottenere le impostazioni di più campi nei descrittori di uguale o diversi, in ordine arbitrario, effettuando chiamate ripetute al **SQLGetDescField**. **SQLGetDescField** può anche essere chiamato per restituire i campi di descrizione definito dal driver.  
+ Un'applicazione può chiamare **SQLGetDescField** per restituire il valore di un singolo campo di un record del descrittore. Una chiamata a **SQLGetDescField** può restituire l'impostazione di un campo in qualsiasi tipo di descrittore, inclusi i campi di intestazione, i campi del record e campi di segnalibro. Un'applicazione può ottenere le impostazioni di più campi nei descrittori di uguale o diversi, in ordine arbitrario, effettuando chiamate ripetute al **SQLGetDescField**. **SQLGetDescField** può anche essere chiamata per restituire i campi di descrizione definiti dal driver.  
   
  Per motivi di prestazioni, un'applicazione non deve chiamare **SQLGetDescField** per un IRD prima di eseguire un'istruzione.  
   

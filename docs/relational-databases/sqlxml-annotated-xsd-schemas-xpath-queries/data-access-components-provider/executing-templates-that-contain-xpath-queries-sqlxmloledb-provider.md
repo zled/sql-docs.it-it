@@ -1,16 +1,16 @@
 ---
 title: Esecuzione di modelli che contengono query XPath (Provider SQLXMLOLEDB) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLXMLOLEDB Provider, executing template files
@@ -21,20 +21,21 @@ helpviewer_keywords:
 - Mapping Schema property
 - XML templates [SQLXML]
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 996cf6eb51bc216ce71cce41324ea53f07550823
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3eb0423a5c24fb472a13b489a4e7df25cc89ffa7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Esecuzione di modelli che contengono query XPath (provider SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-In questo esempio viene illustrato come utilizzare le proprietà specifiche del provider SQLXMLOLEDB seguenti:  
+  In questo esempio viene illustrato come utilizzare le proprietà specifiche del provider SQLXMLOLEDB seguenti:  
   
 -   ClientSideXML  
   
@@ -42,7 +43,7 @@ In questo esempio viene illustrato come utilizzare le proprietà specifiche del 
   
 -   Schema di mapping  
   
- In questa applicazione ADO di esempio, viene specificato un modello XML costituito da una query XPath (radice) sullo schema di mapping XSD (MySchema.xml) descritto in [l'esecuzione di query XPath &#40; Provider SQLXMLOLEDB &#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ In questa applicazione ADO di esempio, viene specificato un modello XML costituito da una query XPath (radice) sullo schema di mapping XSD (MySchema. XML) che è descritto nell'argomento [l'esecuzione di query XPath &#40;Provider SQLXMLOLEDB&#41; ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La proprietà dello Schema di Mapping fornisce lo schema di mapping XSD sul quale viene eseguita la query XPath. La proprietà percorso di Base fornisce il percorso del file per lo schema di mapping.  
   

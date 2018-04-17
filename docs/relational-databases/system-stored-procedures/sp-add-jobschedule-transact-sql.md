@@ -2,7 +2,7 @@
 title: sp_add_jobschedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2da9a4bf2bc1fb7e2768922b6b5dd4d93452571
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: e3e17e1cb49063da0916f04cac2a8c6a49e6e83c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**64**|All'avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent|  
 |**128**|Quando il computer è inattivo|  
   
- [ **@freq_interval=** ] *frequency_interval*  
+ [  **@freq_interval=** ] *frequency_interval*  
  Giorno di esecuzione del processo. *frequency_interval* viene **int**, con un valore predefinito è 0 e dipende dal valore di *frequency_type* come indicato nella tabella seguente:  
   
 |Value|Effetto|  
@@ -137,13 +137,13 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  [ **@active_end_date=** ] *active_end_date*  
  Data in cui l'esecuzione del processo può essere arrestata. *active_end_date* viene **int**, non prevede alcun valore predefinito. La data è nel formato AAAAMMGG.  
   
- [ **@active_start_time=** ] *active_start_time*  
+ [  **@active_start_time=** ] *active_start_time*  
  Data compresa tra *active_start_date* e *active_end_date* per iniziare l'esecuzione del processo. *active_start_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
  [ **@active_end_time=***active_end_time*  
  Data compresa tra *active_start_date* e *active_end_date* per l'esecuzione del processo finale. *active_end_time* viene **int**, non prevede alcun valore predefinito. L'ora è in formato HHMMSS a 24 ore.  
   
- [ **@schedule_id=***schedule_id***OUTPUT**  
+ [  **@schedule_id=***schedule_id***OUTPUT**  
  Numero di identificazione assegnato alla pianificazione dopo che è stata creata correttamente. *schedule_id* è una variabile di output di tipo **int**, non prevede alcun valore predefinito.  
   
  [ **@schedule_uid**= ] *schedule_uid***OUTPUT**  

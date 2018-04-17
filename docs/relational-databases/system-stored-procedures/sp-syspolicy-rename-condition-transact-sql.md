@@ -1,16 +1,16 @@
 ---
 title: sp_syspolicy_rename_condition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_condition
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_condition
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
-caps.latest.revision: 
+caps.latest.revision: 7
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01c2068335e439d5c669447d766a3a5c2a07349c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 405dcfe4f1cb049e5f73f10b4f12b3a50819250d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,17 +47,17 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name=** ] **'***nome***'**  
- Nome della condizione che si desidera rinominare. *nome* è **sysname**e deve essere specificato se *condition_id* è NULL.  
+ [ **@name=** ] **'***name***'**  
+ Nome della condizione che si desidera rinominare. *nome* viene **sysname**e deve essere specificato se *condition_id* è NULL.  
   
  [ **@condition_id=** ] *condition_id*  
- È l'identificatore per la condizione che si desidera rinominare. *condition_id* è **int**e deve essere specificato se *nome* è NULL.  
+ È l'identificatore per la condizione che si desidera rinominare. *condition_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [ **@new_name=** ] **'***new_name***'**  
- È il nuovo nome della condizione. *nuovo_nome* è **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+ [  **@new_name=** ] **'***nuovo_nome***'**  
+ È il nuovo nome della condizione. *nuovo_nome* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syspolicy_rename_condition nel contesto del database di sistema msdb.  
@@ -81,6 +81,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione basata su criteri di Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Stored procedure della gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

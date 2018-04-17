@@ -1,16 +1,16 @@
 ---
 title: sp_add_jobstep (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-caps.latest.revision: 
+caps.latest.revision: 80
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c757a3d30bae1e95a8bf7d862daf0e1f0cf6138b
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 5f3210cc635396eb391baa30cc7aa2ab85a73bfb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,26 +67,26 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =** ] *job_id*  
- Numero di identificazione del processo a cui aggiungere il passaggio. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo a cui aggiungere il passaggio. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =** ] **'***job_name***'**  
- Nome del processo a cui aggiungere il passaggio. *job_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo a cui aggiungere il passaggio. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@step_id =** ] *step_id*  
- Numero di identificazione sequenziale per il passaggio del processo. Passaggio iniziale di numeri di identificazione in **1** e aumentano in modo sequenziale. Se viene inserito un passaggio nella sequenza esistente, i numeri di sequenza vengono automaticamente adeguati. Viene fornito un valore se *step_id* non è specificato. *step_id*è **int**, con un valore predefinito è NULL.  
+ Numero di identificazione sequenziale per il passaggio del processo. Passaggio iniziale di numeri di identificazione in **1** e aumentano in modo sequenziale. Se viene inserito un passaggio nella sequenza esistente, i numeri di sequenza vengono automaticamente adeguati. Viene fornito un valore se *step_id* non è specificato. *step_id*viene **int**, con un valore predefinito è NULL.  
   
- [ **@step_name =** ] **'***step_name***'**  
- Nome del passaggio. *step_name*è **sysname**, non prevede alcun valore predefinito.  
+ [  **@step_name =** ] **'***step_name***'**  
+ Nome del passaggio. *step_name*viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@subsystem =** ] **'***sottosistema***'**  
- Sottosistema utilizzato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio agente per eseguire *comando*. *sottosistema* è **nvarchar (40)**, i possibili valori sono i seguenti.  
+ Sottosistema utilizzato dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servizio agente per eseguire *comando*. *sottosistema* viene **nvarchar (40)**, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> **\*\*Importante\*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script ActiveX<br /><br /> **\*\* Importante \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando del sistema operativo o programma eseguibile|  
 |'**DISTRIBUZIONE**'|Processo di Agente distribuzione repliche|  
 |'**SNAPSHOT**'|Processo di Agente snapshot repliche|  
@@ -97,10 +97,10 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ANALYSISCOMMAND**'|Comando di Analysis Services (XMLA).|  
 |'**Dts**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] esecuzione del pacchetto|  
 |'**PowerShell**'|Script di PowerShell|  
-|'**TSQL**' (impostazione predefinita)|[!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione|  
+|'**TSQL**' (impostazione predefinita)|[!INCLUDE[tsql](../../includes/tsql-md.md)] - istruzione|  
   
  [  **@command=** ] **'***comando***'**  
- I comandi da eseguire tramite **SQLServerAgent** servizio tramite *sottosistema*. *comando* è **nvarchar (max)**, con un valore predefinito è NULL. SQL Server Agent consente di eseguire la sostituzione dei token, che garantisce la stessa flessibilità assicurata dalle variabili durante la scrittura dei programmi software.  
+ I comandi da eseguire tramite **SQLServerAgent** servizio tramite *sottosistema*. *comando* viene **nvarchar (max)**, con un valore predefinito è NULL. SQL Server Agent consente di eseguire la sostituzione dei token, che garantisce la stessa flessibilità assicurata dalle variabili durante la scrittura dei programmi software.  
   
 > [!IMPORTANT]  
 >  È necessario inserire una macro di escape con tutti i token utilizzati nei passaggi di processo. In caso contrario, questi passaggi avranno esito negativo. È ora necessario inoltre racchiudere tra parentesi i nomi dei token e inserire il simbolo di dollaro (`$`) all'inizio della sintassi del token, Esempio:  
@@ -115,15 +115,15 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 >  Se si desidera utilizzare questi token, verificare innanzitutto che solo i membri di gruppi di sicurezza di Windows trusted, ad esempio il gruppo Administrators, dispongano delle autorizzazioni di scrittura per il registro eventi del computer in cui è installato [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A questo punto, fare clic con il pulsante destro del mouse su **SQL Server Agent** in Esplora oggetti, scegliere **Proprietà**e nella pagina **Sistema avvisi** selezionare **Sostituisci token per tutte le risposte del processo ad avvisi** per abilitare questi token.  
   
  [  **@additional_parameters=** ] **'***parametri***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *i parametri* è **ntext**, con un valore predefinito è NULL.  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *i parametri* viene **ntext**, con un valore predefinito è NULL.  
   
  [  **@cmdexec_success_code =** ] *codice*  
- Il valore restituito da un **CmdExec** comando del sottosistema per indicare che *comando* è stata eseguita correttamente. *codice*è **int**, il valore predefinito è **0**.  
+ Il valore restituito da un **CmdExec** comando del sottosistema per indicare che *comando* è stata eseguita correttamente. *codice*viene **int**, il valore predefinito è **0**.  
   
  [  **@on_success_action=** ] *success_action*  
- Azione da eseguire se il passaggio ha esito positivo. *success_action*è **tinyint**, i possibili valori sono i seguenti.  
+ Azione da eseguire se il passaggio ha esito positivo. *success_action*viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione (azione)|  
+|Value|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1** (impostazione predefinita)|Uscita in caso di esito positivo|  
 |**2**|Uscita in caso di esito negativo|  
@@ -131,46 +131,46 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |**4**|Andare al passaggio *on_success_step_id*|  
   
  [ **@on_success_step_id =** ] *success_step_id*  
- L'ID del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action*è **4**. *success_step_id*è **int**, il valore predefinito è **0**.  
+ L'ID del passaggio del processo da eseguire se il passaggio ha esito positivo e *success_action*è **4**. *success_step_id*viene **int**, il valore predefinito è **0**.  
   
  [  **@on_fail_action=** ] *fail_action*  
- Azione da eseguire se il passaggio non viene completato correttamente. *fail_action*è **tinyint**, i possibili valori sono i seguenti.  
+ Azione da eseguire se il passaggio non viene completato correttamente. *fail_action*viene **tinyint**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione (azione)|  
+|Value|Descrizione (azione)|  
 |-----------|----------------------------|  
 |**1**|Uscita in caso di esito positivo|  
 |**2** (impostazione predefinita)|Uscita in caso di esito negativo|  
 |**3**|Esecuzione del passaggio successivo|  
 |**4**|Andare al passaggio *on_fail_step_id*|  
   
- [ **@on_fail_step_id=** ] *fail_step_id*  
- L'ID del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action*è **4**. *fail_step_id*è **int**, il valore predefinito è **0**.  
+ [  **@on_fail_step_id=** ] *fail_step_id*  
+ L'ID del passaggio del processo da eseguire se il passaggio ha esito negativo e *fail_action*è **4**. *fail_step_id*viene **int**, il valore predefinito è **0**.  
   
  [ **@server =**] **'***server***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*è **nvarchar (30)**, con un valore predefinito è NULL.  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server*viene **nvarchar(30)**, con un valore predefinito è NULL.  
   
- [ **@database_name=** ] **'***database***'**  
- Nome del database in cui eseguire un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *database* è **sysname**, il valore predefinito è NULL, nel qual caso il **master** database viene utilizzato. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Per un passaggio di processo ActiveX, il *database* è il nome del linguaggio di scripting utilizzato dal passaggio.  
+ [  **@database_name=** ] **'***database***'**  
+ Nome del database in cui eseguire un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *database* viene **sysname**, con un valore predefinito è NULL, nel qual caso il **master** database viene utilizzato. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Per un passaggio di processo ActiveX, il *database* è il nome del linguaggio di scripting utilizzato dal passaggio.  
   
- [ **@database_user_name=** ] **'***user***'**  
- Nome dell'account utente da utilizzare quando viene eseguito un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utente* è **sysname**, con un valore predefinito è NULL. Quando *utente* è NULL, il passaggio viene eseguito nel contesto utente del proprietario del processo su *database*.  SQL Server Agent includerà questo parametro solo se il proprietario del processo è un sysadmin di SQL Server. In tal caso il passaggio del processo Transact-SQL specificato sarà eseguito nel contesto del nome utente di SQL Server specificato. Se il proprietario del processo non è un sysadmin di SQL Server, quindi il passaggio di Transact-SQL sarà eseguito sempre nel contesto dell'account di accesso proprietario del processo, e @database_user_name parametro verrà ignorato.  
+ [  **@database_user_name=** ] **'***utente***'**  
+ Nome dell'account utente da utilizzare quando viene eseguito un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utente* viene **sysname**, con un valore predefinito è NULL. Quando *utente* è NULL, il passaggio viene eseguito nel contesto utente del proprietario del processo su *database*.  SQL Server Agent includerà questo parametro solo se il proprietario del processo è un sysadmin di SQL Server. In tal caso il passaggio del processo Transact-SQL specificato sarà eseguito nel contesto del nome utente di SQL Server specificato. Se il proprietario del processo non è un sysadmin di SQL Server, quindi il passaggio di Transact-SQL sarà eseguito sempre nel contesto dell'account di accesso proprietario del processo, e @database_user_name parametro verrà ignorato.  
   
  [  **@retry_attempts=** ] *retry_attempts*  
- Numero di tentativi da eseguire in caso di esecuzione errata del passaggio. *retry_attempts*è **int**, il valore predefinito è **0**, che indica nessun tentativo.  
+ Numero di tentativi da eseguire in caso di esecuzione errata del passaggio. *retry_attempts*viene **int**, il valore predefinito è **0**, che indica nessun tentativo.  
   
- [ **@retry_interval=** ] *retry_interval*  
- Numero di minuti che devono trascorrere tra i tentativi. *retry_interval*è **int**, il valore predefinito è **0**, che indica un **0**-intervallo di minuti.  
+ [  **@retry_interval=** ] *retry_interval*  
+ Numero di minuti che devono trascorrere tra i tentativi. *retry_interval*viene **int**, il valore predefinito è **0**, che indica un **0**-intervallo al minuto.  
   
- [ **@os_run_priority =** ] *run_priority*  
+ [  **@os_run_priority =** ] *run_priority*  
  Riservato.  
   
- [ **@output_file_name=** ] **'***file_name***'**  
- Nome del file in cui salvare l'output del passaggio. *file_name*è **nvarchar (200)**, con un valore predefinito è NULL. *file_name*può includere uno o più token elencati per *comando*. Questo parametro è valido solo con i comandi eseguiti nel [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sottosistemi.  
+ [  **@output_file_name=** ] **'***file_name***'**  
+ Nome del file in cui salvare l'output del passaggio. *file_name*viene **nvarchar(200**, con un valore predefinito è NULL. *file_name*può includere uno o più token elencati *comando*. Questo parametro è valido solo con i comandi eseguiti nel [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sottosistemi.  
   
  [  **@flags=** ] *flag*  
- Opzione che consente di controllare il comportamento. *flag* è **int**, i possibili valori sono i seguenti.  
+ Opzione che consente di controllare il comportamento. *i flag* viene **int**, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**0** (predefinito)|Il file di output viene sovrascritto|  
 |**2**|L'output viene aggiunto alla fine del file di output.|  
@@ -183,11 +183,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  [ **@proxy_id** = ] *proxy_id*  
  ID del proxy in base al quale viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name** = ] **'***proxy_name***'**  
+ [ **@proxy_name** =] **'***proxy_name***'**  
  Nome del proxy in base al quale viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

@@ -1,16 +1,16 @@
 ---
-title: sp_delete_jobsteplog (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_delete_jobsteplog (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_jobsteplog
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c5f5bf88c8b02b51dac095dcd0445d3324e23e5e
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 83299ab01c2ec8c82b979bb2193cce1a9ca87803
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +51,29 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =**] **'***job_id***'**  
- Numero di identificazione del processo in cui è contenuto il log dei passaggi di processo da rimuovere. *job_id* è **int**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo in cui è contenuto il log dei passaggi di processo da rimuovere. *job_id* viene **int**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *job_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > **Nota:** entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@step_id =**] *step_id*  
- Numero di identificazione del passaggio del processo per cui si desidera eliminare il log dei passaggi di processo. Se viene omesso, vengono eliminati tutti i log dei passaggi del processo a meno che non  **@older_than**  o  **@larger_than**  specificati. *step_id* è **int**, con un valore predefinito è NULL.  
+ Numero di identificazione del passaggio del processo per cui si desidera eliminare il log dei passaggi di processo. Se viene omesso, vengono eliminati tutti i log dei passaggi del processo a meno che non **@older_than** o **@larger_than** specificati. *step_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
- Nome del passaggio del processo per cui è necessario eliminare il log dei passaggi di processo. *step_name* è **sysname**, con un valore predefinito è NULL.  
+ [  **@step_name =**] **'***step_name***'**  
+ Nome del passaggio del processo per cui è necessario eliminare il log dei passaggi di processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
   
 > **Nota:** entrambi *step_id* o *step_name* può essere specificato, ma non è possibile specificarli entrambi.  
   
  [  **@older_than =**] **'***data***'**  
- Data e ora del log dei passaggi di processo meno recente che si desidera mantenere. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *Data* è **datetime**, con un valore predefinito è NULL. Entrambi  **@older_than**  e  **@larger_than**  può essere specificato.  
+ Data e ora del log dei passaggi di processo meno recente che si desidera mantenere. Verranno rimossi tutti i log dei passaggi di processo antecedenti questa data e ora. *Data* viene **datetime**, con un valore predefinito è NULL. Entrambi **@older_than** e **@larger_than** può essere specificato.  
   
- [ **@larger_than =**] **'***size_in_bytes***'**  
- Dimensione in byte del log dei passaggi di processo più grande che si desidera mantenere. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. Entrambi  **@larger_than**  e  **@older_than**  può essere specificato.  
+ [  **@larger_than =**] **'***size_in_bytes***'**  
+ Dimensione in byte del log dei passaggi di processo più grande che si desidera mantenere. Vengono rimossi tutti i log dei passaggi di processo la cui dimensione è maggiore rispetto a quella indicata. Entrambi **@larger_than** e **@older_than** può essere specificato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
@@ -81,7 +81,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Osservazioni  
  **sp_delete_jobsteplog** è il **msdb** database.  
   
- Se nessun argomenti tranne che  **@job_id**  o  **@job_name**  specificato, vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
+ Se nessun argomenti tranne che **@job_id** o **@job_name** specificato, vengono eliminati tutti i log dei passaggi di processo per il processo specificato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Per impostazione predefinita, questa stored procedure può essere eseguita dai membri del ruolo predefinito del server **sysadmin** . Gli altri utenti devono essere membri di uno dei ruoli predefiniti del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent seguenti nel database **msdb** :  
@@ -139,6 +139,6 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_help_jobsteplog &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

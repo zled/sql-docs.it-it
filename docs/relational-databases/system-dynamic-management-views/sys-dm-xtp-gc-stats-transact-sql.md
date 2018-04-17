@@ -1,16 +1,16 @@
 ---
 title: sys.dm_xtp_gc_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - dm_xtp_gc_stats
@@ -22,23 +22,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_xtp_gc_stats dynamic management view
 ms.assetid: 8287d611-50e3-43e1-ba8d-3e3793d3ba0e
-caps.latest.revision: 
+caps.latest.revision: 20
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76269043863211bc0c531cea9ea9a75915e5f6d7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2440605950721a0b3a0555bebd250344b19d2cd0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmxtpgcstats-transact-sql"></a>sys.dm_xtp_gc_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Fornisce informazioni (statistiche generali) sul comportamento corrente del processo di Garbage Collection [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
   
- Le righe vengono sottoposte al Garbage Collection durante l'elaborazione delle transazioni regolare o dal thread principale di Garbage Collection a cui si fa riferimento come thread di lavoro inattivo. Quando viene eseguito il commit di una transazione utente, viene rimosso un elemento di lavoro dalla coda di garbage collection ([Sys.dm xtp_gc_queue_stats &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Le righe che sono state sottoposte a Garbage Collection ma senza accesso da parte della transazione principale dell'utente vengono sottoposte al Garbage Collection dal thread di lavoro inattivo, come parte dell'analisi di elementi nascosti (analisi per le aree dell'indice a cui si accede di meno).  
+ Le righe vengono sottoposte al Garbage Collection durante l'elaborazione delle transazioni regolare o dal thread principale di Garbage Collection a cui si fa riferimento come thread di lavoro inattivo. Quando il commit di una transazione utente, viene rimosso un elemento di lavoro dalla coda di garbage collection ([sys.dm_xtp_gc_queue_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xtp-gc-queue-stats-transact-sql.md)). Le righe che sono state sottoposte a Garbage Collection ma senza accesso da parte della transazione principale dell'utente vengono sottoposte al Garbage Collection dal thread di lavoro inattivo, come parte dell'analisi di elementi nascosti (analisi per le aree dell'indice a cui si accede di meno).  
   
  Per altre informazioni, vedere [OLTP in memoria &#40;ottimizzazione in memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
@@ -78,6 +78,6 @@ sweep_rows_expiring  sweep_rows_expired   sweep_rows_expired_removed
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste a gestione dinamica tabella con ottimizzazione per la memoria &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Viste a gestione dinamica tabella ottimizzazione della memoria &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

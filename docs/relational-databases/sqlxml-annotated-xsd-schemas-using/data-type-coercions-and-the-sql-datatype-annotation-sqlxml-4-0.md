@@ -1,16 +1,16 @@
 ---
-title: 'Coercizioni dei tipi di dati e l''annotazione SQL: DataType (SQLXML 4.0) | Documenti Microsoft'
-ms.custom: 
+title: "Coercizioni dei tipi di dati e l'annotazione SQL: DataType (SQLXML 4.0) | Documenti Microsoft"
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - mapping data types [SQLXML]
@@ -24,25 +24,26 @@ helpviewer_keywords:
 - data types [SQLXML], mapping data types
 - XSD schemas [SQLXML], mapping data types
 ms.assetid: db192105-e8aa-4392-b812-9d727918c005
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4c5d33454cebe84fb14a5bb154f7ee30a57de51
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 8a2dc2c3d91eea67e9e08a87d5aa7735a1b45b1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Coercizioni dei tipi di dati e annotazione sql:datatype (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-In uno schema XSD, il **xsd: Type** attributo specifica il tipo di dati XSD di un elemento o attributo. Quando viene utilizzato uno schema XSD per estrarre dati dal database, il tipo di dati specificato viene utilizzato per formattare i dati.  
+  In uno schema XSD, il **xsd: Type** attributo specifica il tipo di dati XSD di un elemento o attributo. Quando viene utilizzato uno schema XSD per estrarre dati dal database, il tipo di dati specificato viene utilizzato per formattare i dati.  
   
  Oltre a specificare un tipo XSD in uno schema, è inoltre possibile specificare un Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il tipo di dati utilizzando il **SQL: DataType** annotazione. Il **xsd: Type** e **SQL: DataType** controllano il mapping tra tipi di dati XSD e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi di dati.  
   
 ## <a name="xsdtype-attribute"></a>Attributo xsd:type  
- È possibile utilizzare il **xsd: Type** attributo per specificare il tipo di dati XML di un attributo o elemento che esegue il mapping a una colonna. Il **xsd: Type** influisce sul documento restituito dal server, nonché la query XPath eseguita. Quando viene eseguita una query XPath su uno schema di mapping contenente **xsd: Type**, XPath utilizza il tipo di dati specificato durante l'elaborazione della query. Per ulteriori informazioni sull'utilizzo di XPath **xsd: Type**, vedere [Mapping di tipi di dati XSD a tipi di dati XPath &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
+ È possibile utilizzare il **xsd: Type** attributo per specificare il tipo di dati XML di un attributo o elemento che esegue il mapping a una colonna. Il **xsd: Type** influisce sul documento restituito dal server, nonché la query XPath eseguita. Quando viene eseguita una query XPath su uno schema di mapping contenente **xsd: Type**, XPath utilizza il tipo di dati specificato durante l'elaborazione della query. Per ulteriori informazioni sull'utilizzo di XPath **xsd: Type**, vedere [Mapping di tipi di dati XSD ai tipi di dati XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
   
  In un documento restituito tutti i tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in rappresentazioni di stringa. Alcuni tipi di dati richiedono conversioni aggiuntive. Nella tabella seguente sono elencate le conversioni vengono utilizzate per varie **xsd: Type** valori.  
   
@@ -64,7 +65,7 @@ In uno schema XSD, il **xsd: Type** attributo specifica il tipo di dati XSD di u
   
 |Tipo di dati di SQL Server|Tipo di dati XSD|  
 |--------------------------|-------------------|  
-|**bigint**|**long**|  
+|**bigint**|**Long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
 |**char**|**string**|  
@@ -198,6 +199,6 @@ In uno schema XSD, il **xsd: Type** attributo specifica il tipo di dati XSD di u
 ```  
   
 ### <a name="b-specifying-sql-data-type-using-sqldatatype"></a>B. Definizione del tipo di dati SQL tramite sql:datatype  
- Per un esempio funzionante, vedere l'esempio G in [esempi di caricamento Bulk XML &#40; SQLXML 4.0 &#41; ](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In questo esempio viene eseguito il caricamento bulk di un valore GUID che include"{" e "}". In questo esempio lo schema specifica **SQL: DataType** per identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo di dati come **uniqueidentifier**. Questo esempio viene illustrato quando **SQL: DataType** deve essere specificato nello schema.  
+ Per un esempio funzionante, vedere l'esempio G in [esempi di caricamento Bulk XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/xml-bulk-load-examples-sqlxml-4-0.md). In questo esempio viene eseguito il caricamento bulk di un valore GUID che include"{" e "}". In questo esempio lo schema specifica **SQL: DataType** per identificare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del tipo di dati come **uniqueidentifier**. Questo esempio viene illustrato quando **SQL: DataType** deve essere specificato nello schema.  
   
   

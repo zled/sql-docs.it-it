@@ -1,16 +1,16 @@
 ---
 title: SQL Server Bulk carico modello a oggetti XML (SQLXML 4.0) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: sqlxml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - bulk load [SQLXML], object model
@@ -34,27 +34,28 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b954b9690d8e6f67995a45336296e2ff1f404f1
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b3b3798be063dd586d74cf4f44d72a48c5f39ccf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modello a oggetti per il caricamento bulk XML di SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti di caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
+  Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modello a oggetti di caricamento Bulk XML è costituito da sqlxmlbulkload-oggetto. Questo oggetto supporta i metodi e le proprietà seguenti.  
   
 ## <a name="methods"></a>Metodi  
  Execute  
  Esegue il caricamento bulk dei dati utilizzando il file dello schema e il file di dati (o flusso) forniti come parametri.  
   
 ## <a name="properties"></a>Proprietà  
- BulkLoad  
+ Caricamento BULK  
  Specifica se deve essere eseguito un caricamento bulk. Questa proprietà è utile se si desidera generare solo gli schemi (vedere la proprietà SchemaGen, SGDropTables e SGUseID che seguono) e non esegue un caricamento bulk. Si tratta di una proprietà booleana. Quando la proprietà è impostata su TRUE, viene eseguito il caricamento bulk XML. Quando la proprietà è impostata su FALSE, il caricamento bulk XML non viene eseguito.  
   
  Il valore predefinito è TRUE.  

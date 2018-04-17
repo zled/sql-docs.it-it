@@ -1,0 +1,3 @@
+La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo articolo l'anteprima è molto piccola e non può essere consultata. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
+  
+ [![Autorizzazioni del motore di database](../media/database-engine-permissions/database-engine-permissions.png)](https://aka.ms/sql-permissions-poster)

@@ -1,16 +1,16 @@
 ---
 title: sp_cursoropen (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursoropen
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: f1b18a69dfb558963f8740313d94285bd5fad36e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +51,15 @@ sp_cursoropen cursor OUTPUT, stmt
  *cursor*  
  Identificatore del cursore generato da SQL Server. *cursore* è un *gestire* valore che deve essere fornito su tutte le routine successive che comportano il cursore, ad esempio sp_cursorfetch. *cursore* è un parametro obbligatorio con un **int** valore restituito.  
   
- *cursore* consente a più cursori di essere attivi in una singola connessione di database.  
+ *cursore* consente a più cursori di essere attivi in un'unica connessione di database.  
   
- *istruzione INSERT.*  
+ *stmt*  
  Parametro obbligatorio che definisce il set di risultati del cursore. Qualsiasi stringa di query valida (sintassi e associazione) di un tipo stringa (indipendentemente da Unicode, dimensione e così via) può essere utilizzato come un valore valido *stmt* tipo di valore.  
   
  *scrollopt*  
  Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede uno dei seguenti **int** valori di input.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -81,7 +81,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opzioni del controllo della concorrenza. *ccopt* è un parametro facoltativo che richiede uno dei seguenti **int** valori di input.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (precedentemente noto come LOCKCC)|  
@@ -124,7 +124,7 @@ sp_cursoropen cursor OUTPUT, stmt
  0x0002  
  È in corso l'elaborazione di un'operazione FETCH.  
   
- Un  
+ A  
  Questo cursore è stato deallocato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e non è disponibile.  
   
  Quando viene generato un errore, è possibile che i valori restituiti siano incoerenti. L'accuratezza non può pertanto essere garantita.  
@@ -213,12 +213,12 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>Parametro bound_param  
  I parametri dopo il quinto vengono passati insieme sul piano dell'istruzione come parametri di input. Il primo parametro di questo tipo deve essere una stringa nel formato:  
   
- *{nome di variabile locale il tipo di dati} [,... n].*  
+ *{nome della variabile locale data type} [,... n].*  
   
  I parametri successivi vengono utilizzati per passare i valori con cui sostituire il *nome di variabile locale* nell'istruzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

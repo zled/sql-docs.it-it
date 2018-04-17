@@ -1,16 +1,16 @@
 ---
 title: sp_start_job (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: 
+caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 89cf8ae7b00aa917d626fd47070835690b56e1f4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,25 +53,25 @@ sp_start_job
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_name=** ] **'***job_name***'**  
- Nome del processo da avviare. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del processo da avviare. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_name* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@job_id=** ] *job_id*  
- Numero di identificazione del processo da avviare. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
+ Numero di identificazione del processo da avviare. Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
- [ **@error_flag=** ] *error_flag*  
+ [  **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
- Server di destinazione in cui avviare il processo. *nome_server* è **nvarchar (128)**, con un valore predefinito è NULL. *nome_server* deve essere uno dei server di destinazione a cui è indirizzato il processo.  
+ [  **@server_name=** ] **'***nome_server***'**  
+ Server di destinazione in cui avviare il processo. *nome_server* viene **nvarchar (128)**, con un valore predefinito è NULL. *nome_server* deve essere uno dei server di destinazione a cui è indirizzato il processo.  
   
  [  **@step_name=** ] **'***step_name***'**  
- Nome del passaggio da cui iniziare l'esecuzione del processo. Viene applicato solo ai processi locali. *step_name* è **sysname**, con un valore predefinito è NULL  
+ Nome del passaggio da cui iniziare l'esecuzione del processo. Viene applicato solo ai processi locali. *step_name* viene **sysname**, con un valore predefinito è NULL  
   
  [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  

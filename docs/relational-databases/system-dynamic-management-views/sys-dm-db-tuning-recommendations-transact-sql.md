@@ -3,7 +3,7 @@ title: sys.dm_db_tuning_recommendations (Transact-SQL) | Microsoft Docs
 description: Informazioni su come trovare i potenziali problemi di prestazioni e soluzioni consigliate in SQL Server e Database SQL di Azure
 ms.custom: ''
 ms.date: 07/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: dmv's
@@ -29,11 +29,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4f783c82d92aa0837ea9fbb90f9b3d2afc8c8d
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: fc933666e31c45fc78fb6d303ca1e7d3b5874d55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_tuning\_recommendations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,20 +49,20 @@ ms.lasthandoff: 04/05/2018
 | **type** | **nvarchar(4000)** | Il nome dell'opzione di ottimizzazione automatica che ha generato la raccomandazione, ad esempio, `FORCE_LAST_GOOD_PLAN` |
 | **reason** | **nvarchar(4000)** | Motivo fornita perché questa raccomandazione. |
 | **valido\_poiché** | **datetime2** | Questa indicazione è stata generata la prima volta. |
-| **last\_refresh** | **datetime2** | Questa indicazione è stata generata l'ultima volta. |
+| **ultimo\_Aggiorna** | **datetime2** | Questa indicazione è stata generata l'ultima volta. |
 | **state** | **nvarchar(4000)** | Documento JSON che descrive lo stato dell'indicazione. Sono disponibili i seguenti campi:<br />-   `currentValue` -stato corrente dell'indicazione.<br />-   `reason` – Costante che descrive perché la raccomandazione è nello stato corrente.|
 | **viene\_eseguibile\_azione** | **bit** | 1 = l'indicazione possa essere eseguita sul database tramite [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script.<br />0 = la raccomandazione non possa essere eseguita sul database (ad esempio: indicazione di informazioni solo o ripristinato) |
-| **is\_revertable\_action** | **bit** | 1 = le indicazioni possono essere monitorate e ripristinate dal motore di Database automaticamente.<br />0 = la raccomandazione non può essere monitorata e ripristinata automaticamente. La maggior parte delle &quot;eseguibile&quot; azioni saranno &quot;revertable&quot;. |
+| **viene\_revertable\_azione** | **bit** | 1 = le indicazioni possono essere monitorate e ripristinate dal motore di Database automaticamente.<br />0 = la raccomandazione non può essere monitorata e ripristinata automaticamente. La maggior parte delle &quot;eseguibile&quot; azioni saranno &quot;revertable&quot;. |
 | **eseguire\_azione\_avviare\_ora** | **datetime2** | Viene applicata l'indicazione di Data. |
-| **execute\_action\_duration** | **time** | Durata dell'azione di esecuzione. |
+| **eseguire\_azione\_durata** | **time** | Durata dell'azione di esecuzione. |
 | **eseguire\_azione\_avviata\_da** | **nvarchar(4000)** | `User` = Utente obbligato manualmente piano nell'indicazione. <br /> `System` = Sistema applicata automaticamente raccomandazione. |
 | **eseguire\_azione\_avviata\_ora** | **datetime2** | È stato applicato l'indicazione di Data. |
-| **revert\_action\_start\_time** | **datetime2** | Data che l'indicazione è stata annullata. |
-| **revert\_action\_duration** | **time** | Durata dell'azione di annullamento. |
+| **REVERT\_azione\_avviare\_ora** | **datetime2** | Data che l'indicazione è stata annullata. |
+| **REVERT\_azione\_durata** | **time** | Durata dell'azione di annullamento. |
 | **REVERT\_azione\_avviata\_da** | **nvarchar(4000)** | `User` = Piano consigliato manualmente unforced utente. <br /> `System` = Sistema ripristinato automaticamente raccomandazione. |
 | **REVERT\_azione\_avviata\_ora** | **datetime2** | Data che l'indicazione è stata annullata. |
-| **score** | **int** | Previsto valore/impatto di questa raccomandazione su 0-100 scala (più grande è preferibile) |
-| **details** | **nvarchar(max)** | Documento JSON che contiene ulteriori dettagli sulla raccomandazione. Sono disponibili i seguenti campi:<br /><br />`planForceDetails`<br />-    `queryId` -query\_id della query regredite.<br />-    `regressedPlanId` -plan_id del piano regredito.<br />-   `regressedPlanExecutionCount` -Numero di esecuzioni della query regredite piano prima la regressione è stata rilevata.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regredito.<br />-    `regressedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query regredite prima che venga rilevata la regressione.<br />-    `regressedPlanCpuTimeStddev` -Deviazione Standard tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br />-    `recommendedPlanId` -plan_id del piano a cui deve essere forzato.<br />-   `recommendedPlanExecutionCount`-Numero di esecuzioni della query con il piano deve essere forzato prima che venga rilevata la regressione.<br />-    `recommendedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano a cui deve essere forzato.<br />-    `recommendedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query eseguita con il piano che è necessario forzare (calcolato prima che venga rilevata la regressione).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br /><br />`implementationDetails`<br />-  `method` -Il metodo che deve essere utilizzato per correggere la regressione. Valore è sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script da eseguire per forzare l'utilizzo consigliato. |
+| **Punteggio** | **int** | Previsto valore/impatto di questa raccomandazione su 0-100 scala (più grande è preferibile) |
+| **Dettagli** | **nvarchar(max)** | Documento JSON che contiene ulteriori dettagli sulla raccomandazione. Sono disponibili i seguenti campi:<br /><br />`planForceDetails`<br />-    `queryId` -query\_id della query regredite.<br />-    `regressedPlanId` -plan_id del piano regredito.<br />-   `regressedPlanExecutionCount` -Numero di esecuzioni della query regredite piano prima la regressione è stata rilevata.<br />-    `regressedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano regredito.<br />-    `regressedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query regredite prima che venga rilevata la regressione.<br />-    `regressedPlanCpuTimeStddev` -Deviazione Standard tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br />-    `recommendedPlanId` -plan_id del piano a cui deve essere forzato.<br />-   `recommendedPlanExecutionCount`-Numero di esecuzioni della query con il piano deve essere forzato prima che venga rilevata la regressione.<br />-    `recommendedPlanAbortedCount` -Numero di errori rilevati durante l'esecuzione del piano a cui deve essere forzato.<br />-    `recommendedPlanCpuTimeAverage` -Tempo CPU medio utilizzato dalla query eseguita con il piano che è necessario forzare (calcolato prima che venga rilevata la regressione).<br />-    `recommendedPlanCpuTimeStddev` Deviazione standard tempo della CPU utilizzato dalla query regredite prima la regressione è stata rilevata.<br /><br />`implementationDetails`<br />-  `method` -Il metodo che deve essere utilizzato per correggere la regressione. Valore è sempre `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql_md.md)] script da eseguire per forzare l'utilizzo consigliato. |
   
 ## <a name="remarks"></a>Osservazioni  
  Le informazioni restituite da `sys.dm_db_tuning_recommendations` viene aggiornato quando identifica potenziali regressione delle prestazioni di query motore di database e non è persistente. Indicazioni vengono mantenute solo fino al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene riavviato. Gli amministratori di database devono periodicamente copie di backup l'indicazione di ottimizzazione se desiderano mantenere, dopo il riciclo del server. 

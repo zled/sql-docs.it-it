@@ -1,16 +1,16 @@
 ---
-title: sysmail_update_principalprofile_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_update_principalprofile_sp (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_principalprofile_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_principalprofile_sp
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
-caps.latest.revision: 
+caps.latest.revision: 46
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7539eb785bc0ae03a68b8a734b89012a29590d3d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 21479f5ae60a12165bcda38702f540dd3746fa2f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,23 +48,23 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@principal_id** = ] *principal_id*  
- L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da modificare. *principal_id* è **int**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* deve essere specificato.  
+ [ **@principal_id** =] *principal_id*  
+ L'ID dell'utente del database o del ruolo nel **msdb** database per l'associazione da modificare. *principal_id* viene **int**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* deve essere specificato.  
   
- [  **@principal_name**  =] **'***principal_name***'**  
- Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da aggiornare. *principal_name* è **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* può essere specificato.  
+ [ **@principal_name** =] **'***principal_name***'**  
+ Il nome dell'utente del database o del ruolo nel **msdb** database per l'associazione da aggiornare. *principal_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *principal_id* o *principal_name* può essere specificato.  
   
  [ **@profile_id** = ] *profile_id*  
- ID del profilo per l'associazione da modificare. *profile_id* è **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
+ ID del profilo per l'associazione da modificare. *profile_id* viene **int**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- Nome del profilo per l'associazione da modificare. *profile_name* è **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
+ [ **@profile_name** =] **'***profile_name***'**  
+ Nome del profilo per l'associazione da modificare. *profile_name* viene **sysname**, con un valore predefinito è NULL. Entrambi *profile_id* o *profile_name* deve essere specificato.  
   
- [  **@is_default**  =] **'***is_default***'**  
- Specifica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* è **bit**, non prevede alcun valore predefinito.  
+ [ **@is_default** =] **'***is_default***'**  
+ Specifica se il profilo è il profilo predefinito per l'utente del database. A un utente del database può essere associato un solo profilo predefinito. *is_default* viene **bit**, non prevede alcun valore predefinito.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
  Nessuno  
@@ -74,7 +74,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  Quando il nome dell'entità per l'associazione è **pubblica** o l'id dell'entità per l'associazione è **0**, questa stored procedure modifica il profilo pubblico. È possibile associare un solo profilo pubblico predefinito.  
   
- Quando  **@is_default**  è '**1**' e l'entità è associata a più di un profilo, il profilo specificato diventa il profilo predefinito per l'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
+ Quando **@is_default** è '**1**' e l'entità è associata a più di un profilo, il profilo specificato diventa il profilo predefinito per l'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
   
  La stored procedure **sysmail_update_principalprofile_sp** nel **msdb** database ed è di proprietà di **dbo** dello schema. La procedura deve essere eseguita con un nome in tre parti se il database corrente non è **msdb**.  
   
@@ -93,7 +93,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
     @is_default = '1';  
 ```  
   
- **B. Impostazione di un profilo per il profilo privato predefinito per un utente**  
+ **B. Impostazione di un profilo come profilo privato predefinito per un utente**  
   
  Nell'esempio seguente imposta il profilo `AdventureWorks Administrator` profilo predefinito per l'entità `ApplicationUser` nel **msdb** database. Il profilo deve essere già associato all'entità. Il profilo che in precedenza era il profilo predefinito è tuttora associato all'entità, ma non è più il profilo predefinito.  
   
@@ -107,6 +107,6 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
 ## <a name="see-also"></a>Vedere anche  
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Oggetti di configurazione di posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Posta elettronica database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

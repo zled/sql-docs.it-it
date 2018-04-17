@@ -1,31 +1,32 @@
 ---
 title: Structured Query Language (SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL [ODBC]
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f51c5b639649a3d21ce515a1d4082e84be4f7329
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: babb38e88d471cedceaa94e3c6696f9b5b59dcce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="structured-query-language-sql"></a>Structured Query Language (SQL)
 Un tipico DBMS consente agli utenti di archiviare, accedere e modificare i dati in modo efficiente, organizzato. Gli utenti del DBMS erano originariamente, i programmatori. Accesso ai dati archiviati, è necessario scrivere un programma in un linguaggio di programmazione, ad esempio COBOL. Mentre questi programmi sono stati scritti spesso per presentare un'interfaccia a un utente tecniche, i servizi di esperti programmatori necessario l'accesso ai dati. Accesso casuale ai dati non è pratico.  
@@ -38,11 +39,11 @@ Un tipico DBMS consente agli utenti di archiviare, accedere e modificare i dati 
   
  Questi programmi anche usare SQL, utilizzando uno dei tre tecniche seguenti:  
   
--   **Embedded SQL**, istruzioni SQL sono incorporate nel linguaggio host, ad esempio C o COBOL.  
+-   **Embedded SQL**, in SQL le istruzioni vengono incorporate in un linguaggio host quale C o COBOL.  
   
 -   **I moduli SQL**, quali istruzioni SQL vengono compilate nel sistema DBMS e chiamate da un linguaggio host.  
   
--   **Chiamata a livello di interfaccia**, o CLI, costituito dalle funzioni chiamate per passare le istruzioni SQL per il sistema DBMS e per recuperare i risultati da DBMS.  
+-   **Chiamata a livello di interfaccia**, o CLI, costituito dalle funzioni chiamate per passare le istruzioni SQL per il sistema DBMS e recuperare i risultati da DBMS.  
   
 > [!NOTE]  
 >  È un fatto che il termine chiamata a livello di interfaccia viene utilizzata invece di programmazione di applicazioni dell'interfaccia (API), un altro termine per la stessa cosa. Nel mondo, database API viene usata per descrivere SQL stesso: SQL è l'API per un sistema DBMS.  

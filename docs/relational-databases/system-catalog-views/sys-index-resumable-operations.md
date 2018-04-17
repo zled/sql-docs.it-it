@@ -1,16 +1,16 @@
 ---
-title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.index_resumable_operations (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: system-catalog-views
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.index_resumable_operations_TSQL
@@ -20,22 +20,23 @@ dev_langs:
 helpviewer_keywords:
 - sys.indexes
 - sys.index_resumable_operations
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: 1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53b6aad214f3d1760bb03ff340e5a5dab30c1067
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 5ab677122523c42f27aa206104911f213510d35e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**Sys.index_resumable_operations** è una vista di sistema che esegue il monitoraggio e controlla lo stato di esecuzione corrente per la ricompilazione dell'indice può essere ripristinato.  
-**Si applica a**: SQL Database SQL Server 2017 e Azure 
+**Sys.index_resumable_operations** è una vista di sistema che consente di monitorare e controlla lo stato di esecuzione corrente per la ricompilazione dell'indice può essere ripristinato.  
+**Si applica a**: SQL Server 2017 e Azure SQL Database 
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 02/03/2018
 |**state**|**tinyint**|Stato operativo per l'indice può essere ripristinato:<br /><br />0 = in esecuzione<br /><br />1=Pause|
 |**state_desc**|**nvarchar(60)**|Descrizione dello stato operativo per l'indice può essere ripristinato (in esecuzione o sospesa)|  
 |**start_time**|**datetime**|Ora di inizio operazione indice (non ammette valori null)|
-|**last_pause_time**|**datatime**| Operazione sull'indice ultimo tempo di sospensione (ammette valori null). NULL se l'operazione è in esecuzione e mai in pausa.|
+|**last_pause_time**|**DateTime**| Operazione sull'indice ultimo tempo di sospensione (ammette valori null). NULL se l'operazione è in esecuzione e mai in pausa.|
 |**total_execution_time**|**int**|Tempo totale di esecuzione dall'ora di inizio in minuti (non ammette valori null)|
 |**percent_complete**|**real**|Indice completamento lo stato di avanzamento dell'operazione nel % (non ammette valori null).|
 |**page_count**|**bigint**|Numero totale di pagine di indice allocata per l'operazione di compilazione per il nuovo indice e gli indici di mapping (non ammette valori null). 
@@ -65,7 +66,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
   
 ## <a name="see-also"></a>Vedere anche 
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [Viste del catalogo &#40; Transact-SQL &#41; ](catalog-views-transact-sql.md) [Oggetto viste del catalogo &#40; Transact-SQL &#41; ](object-catalog-views-transact-sql.md) [Sys. Indexes &#40; Transact-SQL &#41; ](sys-xml-indexes-transact-sql.md) [index_columns &#40; Transact-SQL &#41;](sys-index-columns-transact-sql.md)   
+ [Viste del catalogo &#40;Transact-SQL&#41; ](catalog-views-transact-sql.md) [viste del catalogo dell'oggetto &#40;Transact-SQL&#41; ](object-catalog-views-transact-sql.md) [Sys. Indexes &#40;Transact-SQL&#41; ](sys-xml-indexes-transact-sql.md) [index_columns &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
  [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
  [sys.key_constraints &#40;Transact-SQL&#41;](sys-key-constraints-transact-sql.md)   

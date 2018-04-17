@@ -2,7 +2,7 @@
 title: Funzione SQLFreeHandle | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96f6d2c94a6b2fb78245c83cbf989e6a707caccc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle Function
 **Conformità**  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  **SQLFreeHandle** libera le risorse associate a un handle di ambiente, connessione, istruzione o descrittore specifico.  
   
 > [!NOTE]  
->  Questa funzione è una funzione generica per liberare l'handle. Sostituisce le funzioni ODBC 2.0 **SQLFreeConnect** (per liberare un handle di connessione) e **SQLFreeEnv** (per liberare un handle di ambiente). **SQLFreeConnect** e **SQLFreeEnv** sono deprecati in ODBC 3*x*. **SQLFreeHandle** sostituisce anche la funzione ODBC 2.0 **SQLFreeStmt** (con il SQL_DROP *opzione*) per liberare un handle di istruzione. Per ulteriori informazioni, vedere "Commenti". Per ulteriori informazioni su cosa the Driver Manager esegue il mapping di questa funzione per quando un'applicazione ODBC 3*x* applicazione sta utilizzando un'API ODBC 2*x* driver, vedere [Mapping di funzioni di sostituzione per indietro Compatibilità delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Questa funzione è una funzione generica per liberare l'handle. Sostituisce le funzioni ODBC 2.0 **SQLFreeConnect** (per liberare un handle di connessione) e **SQLFreeEnv** (per liberare un handle di ambiente). **SQLFreeConnect** e **SQLFreeEnv** sono deprecati in ODBC 3*x*. **SQLFreeHandle** inoltre sostituisce la funzione ODBC 2.0 **SQLFreeStmt** (con il SQL_DROP *opzione*) per liberare un handle di istruzione. Per ulteriori informazioni, vedere "Commenti". Per ulteriori informazioni su cosa the Driver Manager esegue il mapping di questa funzione per quando un'applicazione ODBC 3*x* applicazione sta utilizzando un'API ODBC 2*x* driver, vedere [Mapping di funzioni di sostituzione per indietro Compatibilità delle applicazioni](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -85,7 +85,7 @@ SQLRETURN SQLFreeHandle(
 |--------------|-----------|-----------------|  
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
-|HY010|Errore nella sequenza (funzione)|(DM) il *HandleType* argomento sia impostato su SQL_HANDLE_ENV e almeno una connessione è in uno stato allocato o connesso. **SQLDisconnect** e **SQLFreeHandle** con un *HandleType* impostato su SQL_HANDLE_DBC deve essere chiamato per ogni connessione prima di chiamare **SQLFreeHandle** con un *HandleType* impostato su SQL_HANDLE_ENV.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_DBC e la funzione è stata chiamata prima di chiamare **SQLDisconnect** per la connessione.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_DBC. È stata chiamata una funzione in modo asincrono in esecuzione con *gestire* e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato con l'handle di istruzione e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT. Una funzione in modo asincrono in esecuzione è stata chiamata nell'handle di istruzione o dell'handle di connessione associata e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) il *HandleType* argomento era SQL_HANDLE_DESC. Una funzione in modo asincrono in esecuzione è stata chiamata sull'handle di connessione associata; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) gestisce tutti filiale e altre risorse non sono state rilasciate prima **SQLFreeHandle** è stato chiamato.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati il *gestire* e *HandleType* è stato impostato su SQL_HANDLE_STMT come o SQL_HANDLE_DESC restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
+|HY010|Errore nella sequenza (funzione)|(DM) il *HandleType* argomento sia impostato su SQL_HANDLE_ENV e almeno una connessione è in uno stato allocato o connesso. **SQLDisconnect** e **SQLFreeHandle** con un *HandleType* SQL_HANDLE_DBC deve essere chiamato per ogni connessione prima di chiamare **SQLFreeHandle** con un *HandleType* SQL_HANDLE_ENV.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_DBC e la funzione è stata chiamata prima di chiamare **SQLDisconnect** per la connessione.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_DBC. È stata chiamata una funzione in modo asincrono in esecuzione con *gestire* e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato con l'handle di istruzione e restituito SQL_NEED_DATA. Questa funzione è stata chiamata prima che sono stati inviati dati per tutti i parametri data-at-execution o colonne.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT. Una funzione in modo asincrono in esecuzione è stata chiamata nell'handle di istruzione o dell'handle di connessione associata e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) il *HandleType* argomento era SQL_HANDLE_DESC. Una funzione in modo asincrono in esecuzione è stata chiamata sull'handle di connessione associata; e la funzione era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> (DM) gestisce tutti filiale e altre risorse non sono state rilasciate prima **SQLFreeHandle** è stato chiamato.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** è stato chiamato per uno degli handle di istruzione associati il *gestire* e *HandleType* è stato impostato su SQL_HANDLE_STMT come o SQL_HANDLE_DESC restituito SQL_PARAM_DATA_AVAILABLE. Questa funzione è stata chiamata prima che i dati sono stati recuperati per tutti i parametri con flusso.|  
 |HY013|Errore di gestione della memoria|Il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT o SQL_HANDLE_DESC, e la chiamata di funzione non può essere elaborata perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY017|Utilizzo non valido di un handle di descrittore allocato automaticamente.|(DM) il *gestire* argomento è stato impostato per l'handle per un descrittore allocato automaticamente.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
@@ -93,7 +93,7 @@ SQLRETURN SQLFreeHandle(
 |IM001|Driver non supporta questa funzione|(DM) il *HandleType* argomento sia SQL_HANDLE_DESC e il driver è un'API ODBC 2*x* driver.<br /><br /> (DM) il *HandleType* argomento è stato impostato su SQL_HANDLE_STMT e il driver non è un driver ODBC valido.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLFreeHandle** viene utilizzata per liberare l'handle per gli ambienti, le connessioni, istruzioni e descrittori, come descritto nelle sezioni seguenti. Per informazioni generali sugli handle, vedere [handle](../../../odbc/reference/develop-app/handles.md).  
+ **SQLFreeHandle** viene utilizzata per liberare l'handle per gli ambienti, le connessioni, istruzioni e i descrittori, come descritto nelle sezioni seguenti. Per informazioni generali sugli handle, vedere [handle](../../../odbc/reference/develop-app/handles.md).  
   
  Un'applicazione non deve utilizzare un handle dopo che è stato liberato; Gestione Driver non verifica la validità di un handle di una chiamata di funzione.  
   
@@ -103,7 +103,7 @@ SQLRETURN SQLFreeHandle(
  Se l'ambiente è un ambiente condiviso, l'applicazione che chiama **SQLFreeHandle** con un *HandleType* impostato su SQL_HANDLE_ENV non avrà più accesso per l'ambiente dopo la chiamata, ma l'ambiente le risorse non sono necessariamente liberate. La chiamata a **SQLFreeHandle** decrementa il conteggio dei riferimenti dell'ambiente. Il conteggio dei riferimenti è gestito da Gestione Driver. Se non raggiunge lo zero, non viene liberata ambiente condiviso, perché è ancora in uso da un altro componente. Se il conteggio dei riferimenti arriva a zero, vengono liberate le risorse dell'ambiente condiviso.  
   
 ## <a name="freeing-a-connection-handle"></a>Liberare un Handle di connessione  
- Prima di chiamare **SQLFreeHandle** con un *HandleType* impostato su SQL_HANDLE_DBC, un'applicazione deve chiamare **SQLDisconnect** per la connessione solo se è disponibile una connessione su questo gestire*.* In caso contrario, la chiamata a **SQLFreeHandle** restituisce SQL_ERROR e la connessione rimane valido.  
+ Prima di chiamare **SQLFreeHandle** con un *HandleType* SQL_HANDLE_DBC, un'applicazione deve chiamare **SQLDisconnect** per la connessione se c'è una connessione su questo gestire*.* In caso contrario, la chiamata a **SQLFreeHandle** restituisce SQL_ERROR e la connessione rimane valido.  
   
  Per ulteriori informazioni, vedere [handle di connessione](../../../odbc/reference/develop-app/connection-handles.md) e [disconnessione da un'origine dati o il Driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
@@ -125,7 +125,7 @@ SQLRETURN SQLFreeHandle(
 ## <a name="code-example"></a>Esempio di codice  
  Per ulteriori esempi di codice, vedere [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) e [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
-### <a name="code"></a>codice  
+### <a name="code"></a>Codice  
   
 ```  
 // SQLFreeHandle.cpp  

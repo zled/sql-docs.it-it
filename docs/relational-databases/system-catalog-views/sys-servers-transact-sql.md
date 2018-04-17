@@ -1,16 +1,16 @@
 ---
 title: sys.servers (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - servers_TSQL
@@ -22,32 +22,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-caps.latest.revision: 
+caps.latest.revision: 53
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cc6dcb18c9961bffcf65db5f918ad54f19ca78ae
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 72c9f755ca12d9124a40bb5a05e0d1ed3e2e1b65
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale che include **server_id** = 0.  
+  Contiene una riga per ogni server collegato o remoto registrato e una riga per il server locale con **server_id** = 0.  
 
 [!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID locale del server collegato.|  
-|**name**|**sysname**|Quando si **server_id** = 0, questo è il nome del server.<br /><br /> Quando si **server_id** > 0, si tratta del nome locale del server collegato.|  
+|**name**|**sysname**|Quando **server_id** = 0, questo è il nome del server.<br /><br /> Quando **server_id** > 0, questo è il nome locale del server collegato.|  
 |**product**|**sysname**|Nome del prodotto del server collegato. "SQL Server" indica che si tratta di un'altra istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|Nome del provider OLE DB per la connessione al server collegato.|  
 |**data_source**|**nvarchar(4000)**|Proprietà di connessione dell'origine dei dati OLE DB.|  
-|**location**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
+|**Percorso**|**nvarchar(4000)**|Proprietà di connessione della posizione OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**provider_string**|**nvarchar(4000)**|Proprietà di connessione della stringa del provider OLE DB.<br /><br /> È NULL tranne nei casi in cui il chiamante dispone dell'autorizzazione ALTER ANY LINKED SERVER.|  
 |**catalog**|**sysname**|Proprietà di connessione del catalogo OLE DB. Restituisce NULL se la colonna non include alcun valore.|  
 |**connect_timeout**|**int**|Timeout della connessione espresso in secondi. Restituisce 0 se non si specifica alcun valore.|  
@@ -73,13 +74,13 @@ ms.lasthandoff: 03/21/2018
   
  Non sono richieste autorizzazioni per visualizzare il server locale (**server_id** = 0).  
   
- Quando si crea un server collegato o remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblico** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità a questi server, rimuovere il mapping predefinito degli account di accesso eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
+ Quando si crea un server collegato o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un mapping di account di accesso predefinito per il **pubblica** ruolo del server. Di conseguenza, per impostazione predefinita tutti gli account di accesso possono visualizzare tutti i server collegati e remoti. Per limitare la visibilità a questi server, rimuovere il mapping di account di accesso predefinito eseguendo [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) e specificando NULL per il *locallogin* parametro.  
   
  Se il mapping predefinito degli account di accesso viene eliminato, solo gli utenti aggiunti esplicitamente come account di accesso collegato o remoto possono visualizzare i server collegati o remoti per cui dispongono di un account di accesso. Per visualizzare tutti i server collegati e remoti in seguito all'eliminazione del mapping predefinito degli account di accesso, sono richieste le autorizzazioni seguenti:  
   
 -   ALTER ANY LINKED SERVER o ALTER ANY LOGIN ON SERVER  
   
--   L'appartenenza ai **setupadmin** oppure **sysadmin** ruoli server  
+-   L'appartenenza di **setupadmin** o **sysadmin** ruoli predefiniti del server  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

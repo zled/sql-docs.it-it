@@ -1,16 +1,16 @@
 ---
 title: sp_setreplfailovermode (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68851fb6ad9a242536cc81c6688b7caed1067a2c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 39e640d539dad66402d90fc450b5c22a1e338f89
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,35 +51,35 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publisher=**] **'***publisher***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. È necessario che la pubblicazione esista già.  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione*è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
  [**@failover_mode=**] **'***failover_mode***'**  
- Modalità di failover per la sottoscrizione. *failover_mode* è **nvarchar (10)** i possibili valori sono i seguenti.  
+ Modalità di failover per la sottoscrizione. *failover_mode* viene **nvarchar(10)** e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**controllo immediato** o **sincronizzazione**|Per le modifiche apportate ai dati nel Sottoscrittore viene eseguita la copia bulk nel server di pubblicazione a mano a mano che vengono implementate.|  
-|**in coda**|Le modifiche dei dati vengono archiviate in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coda.|  
+|**In coda**|Le modifiche dei dati vengono archiviate in un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coda.|  
   
 > [!NOTE]  
 >  L'utilizzo di MSMQ ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing) è deprecato e non è più supportato.  
   
- [  **@override** =] *eseguire l'override*  
+ [ **@override**=] *eseguire l'override*  
  Solo per uso interno.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_setreplfailovermode** viene utilizzato nella replica snapshot o transazionale per le sottoscrizioni che sono abilitate, sia per l'aggiornamento in coda con il failover all'aggiornamento immediato o per l'aggiornamento immediato con failover in coda l'aggiornamento.  
+ **sp_setreplfailovermode** consente la replica snapshot o transazionale per le sottoscrizioni sono abilitate, sia per l'aggiornamento con il failover all'aggiornamento immediato in coda o per l'aggiornamento immediato con failover in coda l'aggiornamento.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_setreplfailovermode**.  
   
 ## <a name="see-also"></a>Vedere anche  

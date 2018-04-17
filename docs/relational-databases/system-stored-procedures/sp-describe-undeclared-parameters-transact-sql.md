@@ -1,16 +1,16 @@
 ---
 title: sp_describe_undeclared_parameters (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_describe_undeclared_parameters
@@ -20,21 +20,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_undeclared_parameters
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bae5aebe0afe1861251628bd0eb447ab97b226dd
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Restituisce un set di risultati che contiene metadati sui parametri non dichiarati in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considera ogni parametro che viene utilizzata la  **@tsql**  batch, ma non dichiarato in  **@params** . Viene restituito un set di risultati che contiene una riga per ognuno di questi parametri, con le informazioni sul tipo dedotte per quel parametro. La procedura restituisce un risultato vuoto se il  **@tsql**  batch di input non ha alcun parametro, ad eccezione di quelli dichiarati in  **@params** .  
+  Restituisce un set di risultati che contiene metadati sui parametri non dichiarati in un [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considera ogni parametro che viene utilizzata la **@tsql** batch, ma non dichiarato in **@params**. Viene restituito un set di risultati che contiene una riga per ognuno di questi parametri, con le informazioni sul tipo dedotte per quel parametro. La procedura restituisce un risultato vuoto se il **@tsql** batch di input non ha alcun parametro, ad eccezione di quelli dichiarati in **@params**.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,11 +49,11 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@tsql =** ] **'***SQL_batch transact***'**  
- Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* potrebbe essere **nvarchar (***n***)** o **nvarchar (max)**.  
+ [ **@tsql =** ] **'***Transact-SQL_batch***'**  
+ Una o più istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)]. *SQL_batch Transact* potrebbe essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
   
  [  **@params =** ] **N'***parametri***'**  
- @paramsfornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, in modo simile a sp_executesql modo funziona. *I parametri* potrebbe essere **nvarchar (***n***)** o **nvarchar (max)**.  
+ @params fornisce una stringa di dichiarazione per i parametri per il [!INCLUDE[tsql](../../includes/tsql-md.md)] batch, in modo simile a sp_executesql modo funziona. *I parametri* potrebbe essere **nvarchar (***n***)** oppure **nvarchar (max)**.  
   
  Stringa che contiene le definizioni di tutti i parametri che sono stati incorporati in *Transact SQL_batch*. La stringa deve essere una costante o una variabile Unicode. Ogni definizione di parametro è costituita da un nome del parametro e da un tipo di dati. n è un segnaposto che indica definizioni di parametro aggiuntive. Se l'istruzione Transact-SQL o il batch nell'istruzione non contiene parametri, @params non è obbligatorio. Il valore predefinito per questo parametro è NULL.  
   
@@ -60,20 +61,20 @@ sp_describe_undeclared_parameters
  Tipo di dati del parametro.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **sp_describe_undeclared_parameters** restituisce restituiscono sempre lo stato pari a zero in caso di esito positivo. Se la procedura genera un errore e la routine viene chiamata come RPC, lo stato restituito viene popolato dal tipo di errore, come descritto nella colonna error_type di Sys.dm exec_describe_first_result_set. Se la procedura viene chiamata da [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è sempre zero, anche in caso di errore.  
+ **sp_describe_undeclared_parameters** restituisce restituiscono sempre lo stato pari a zero se l'operazione riesce. Se la procedura genera un errore e la routine viene chiamata come RPC, lo stato restituito viene popolato dal tipo di errore, come descritto nella colonna error_type di Sys.dm exec_describe_first_result_set. Se la procedura viene chiamata da [!INCLUDE[tsql](../../includes/tsql-md.md)], il valore restituito è sempre zero, anche in caso di errore.  
   
 ## <a name="result-sets"></a>Set di risultati  
  **sp_describe_undeclared_parameters** restituisce il set di risultati seguente.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**parameter_ordinal**|**int non NULL.**|Contiene la posizione ordinale del parametro nel set di risultati. La posizione del primo parametro viene specificata come 1.|  
-|**name**|**sysname non NULL.**|Contiene il nome del parametro.|  
-|**suggested_system_type_id**|**int non NULL.**|Contiene il **system_type_id** del tipo di dati del parametro, come specificato in sys. Types.<br /><br /> Per i tipi CLR, anche se il **system_type_name** colonna restituisce NULL, questa colonna restituisce il valore 240.|  
+|**parameter_ordinal**|**int non NULL**|Contiene la posizione ordinale del parametro nel set di risultati. La posizione del primo parametro viene specificata come 1.|  
+|**name**|**sysname non NULL**|Contiene il nome del parametro.|  
+|**suggested_system_type_id**|**int non NULL**|Contiene il **system_type_id** del tipo di dati del parametro, come specificato in sys. Types.<br /><br /> Per i tipi CLR, anche se il **system_type_name** colonna restituisce NULL, questa colonna restituisce il valore 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contiene il nome del tipo di dati. Include gli argomenti, quali lunghezza, precisione e scala, specificati per il tipo di dati del parametro. Se il tipo di dati è un tipo di alias definito dall'utente, il tipo di sistema sottostante viene specificato qui. Se il tipo di dati è un tipo CLR definito dall'utente, in questa colonna viene restituito NULL. Se non è possibile dedurre il tipo del parametro, viene restituito NULL.|  
-|**suggested_max_length**|**smallint non NULL.**|Vedere sys. Columns. per **max_length** descrizione della colonna.|  
-|**suggested_precision**|**tinyint non NULL.**|Vedere sys. Columns. per la descrizione della colonna PRECISION.|  
-|**suggested_scale**|**tinyint non NULL.**|Vedere sys. Columns. per la descrizione della colonna SCALE.|  
+|**suggested_max_length**|**Smallint non NULL**|Vedere sys. Columns. per **max_length** descrizione della colonna.|  
+|**suggested_precision**|**tinyint non NULL**|Vedere sys. Columns. per la descrizione della colonna PRECISION.|  
+|**suggested_scale**|**tinyint non NULL**|Vedere sys. Columns. per la descrizione della colonna SCALE.|  
 |**suggested_user_type_id**|**int NULL**|Per i tipi di alias e CLR, contiene il valore user_type_id del tipo di dati della colonna come specificato in sys.types. In caso contrario, è NULL.|  
 |**suggested_user_type_database**|**sysname NULL**|Per i tipi di alias e CLR, contiene il nome del database in cui è definito il tipo. In caso contrario, è NULL.|  
 |**suggested_user_type_schema**|**sysname NULL**|Per i tipi di alias e CLR, contiene il nome dello schema in cui è definito il tipo. In caso contrario, è NULL.|  
@@ -83,14 +84,14 @@ sp_describe_undeclared_parameters
 |**suggested_xml_collection_database**|**sysname NULL**|Contiene il database in cui viene definita la raccolta XML Schema associata a questo tipo. Questa colonna restituisce NULL se il tipo restituito non è associato a una raccolta XML Schema.|  
 |**suggested_xml_collection_schema**|**sysname NULL**|Contiene lo schema in cui viene definita la raccolta XML Schema associata a questo tipo. Questa colonna restituisce NULL se il tipo restituito non è associato a una raccolta XML Schema.|  
 |**suggested_xml_collection_name**|**sysname NULL**|Contiene il nome della raccolta XML Schema associata a questo tipo. Questa colonna restituisce NULL se il tipo restituito non è associato a una raccolta XML Schema.|  
-|**suggested_is_xml_document**|**bit non NULL.**|Restituisce 1 se il tipo restituito è XML ed è garantito che il tipo sia un documento XML. In caso contrario, restituisce 0.|  
-|**suggested_is_case_sensitive**|**bit non NULL.**|Restituisce 1 se la colonna è di un tipo string che fa distinzione tra maiuscole e minuscole e 0 in caso contrario.|  
-|**suggested_is_fixed_length_clr_type**|**bit non NULL.**|Restituisce 1 se la colonna è di un tipo CLR a lunghezza fissa e 0 in caso contrario.|  
-|**suggested_is_input**|**bit non NULL.**|Restituisce 1 se il parametro viene utilizzato in qualsiasi posizione, a eccezione del lato sinistro di un'assegnazione. In caso contrario, restituisce 0.|  
-|**suggested_is_output**|**bit non NULL.**|Restituisce 1 se il parametro viene utilizzato sul lato sinistro di un'assegnazione o se viene passato a un parametro di output di una stored procedure. In caso contrario, restituisce 0.|  
+|**suggested_is_xml_document**|**bit non NULL**|Restituisce 1 se il tipo restituito è XML ed è garantito che il tipo sia un documento XML. In caso contrario, restituisce 0.|  
+|**suggested_is_case_sensitive**|**bit non NULL**|Restituisce 1 se la colonna è di un tipo string che fa distinzione tra maiuscole e minuscole e 0 in caso contrario.|  
+|**suggested_is_fixed_length_clr_type**|**bit non NULL**|Restituisce 1 se la colonna è di un tipo CLR a lunghezza fissa e 0 in caso contrario.|  
+|**suggested_is_input**|**bit non NULL**|Restituisce 1 se il parametro viene utilizzato in qualsiasi posizione, a eccezione del lato sinistro di un'assegnazione. In caso contrario, restituisce 0.|  
+|**suggested_is_output**|**bit non NULL**|Restituisce 1 se il parametro viene utilizzato sul lato sinistro di un'assegnazione o se viene passato a un parametro di output di una stored procedure. In caso contrario, restituisce 0.|  
 |**formal_parameter_name**|**sysname NULL**|Se il parametro è un argomento per una stored procedure o una funzione definita dall'utente, restituisce il nome del parametro formale corrispondente. In caso contrario, viene restituito NULL.|  
-|**suggested_tds_type_id**|**int non NULL.**|Per uso interno.|  
-|**suggested_tds_length**|**int non NULL.**|Per uso interno.|  
+|**suggested_tds_type_id**|**int non NULL**|Per uso interno.|  
+|**suggested_tds_length**|**int non NULL**|Per uso interno.|  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_describe_undeclared_parameters** restituisce restituiscono sempre lo stato pari a zero.  
@@ -201,11 +202,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **Numeric (38, 19)** -non vengono considerati altri tipi di dati numerici o decimali.  
   
-    -   **varchar(8000)**, **varchar (max)**, **nvarchar (4000)**, e **nvarchar (max)** - altri tipi di dati string (ad esempio **testo**, **char (8000)**, **nvarchar (30)**e così via) non sono considerati.  
+    -   **varchar(8000)**, **varchar (max)**, **nvarchar(4000**, e **nvarchar (max)** - altri tipi di dati string (ad esempio **testo**, **char(8000)**, **nvarchar(30)**e così via) non sono considerati.  
   
-    -   **varbinary (8000)** e **varbinary (max)** -non vengono considerati altri tipi di dati binari (ad esempio **immagine**, **binary(8000)**,  **varbinary(30)**, ecc.).  
+    -   **varbinary(8000)** e **varbinary (max)** -non vengono considerati altri tipi di dati binari (ad esempio **immagine**, **binary(8000)**, **varbinary (30)** , ecc.).  
   
-    -   **Data**, **Time (7)**, **smalldatetime**, **datetime**, **datetime2 (7)**, **datetimeoffset(7)**  - Altro data e ora e tipi, ad esempio **time(4)**, non sono considerati.  
+    -   **Data**, **time(7)**, **smalldatetime**, **datetime**, **datetime2(7)**, **datetimeoffset(7)**  - Altro di data e ora i tipi, ad esempio **time(4)**, non sono considerati.  
   
     -   **sql_variant**  
   
@@ -234,7 +235,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  
     ```  
   
-     In questo caso, **int** e **smallint** producono una conversione. Ogni altro tipo di dati produce più di una conversione. Poiché **int** ha la precedenza su **smallint**, **int** viene utilizzato per @p. Per ulteriori informazioni sulla precedenza tipo di dati, vedere [precedenza tipo di dati &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
+     In questo caso, **int** e **smallint** producono una conversione. Ogni altro tipo di dati produce più di una conversione. Poiché **int** ha la precedenza su **smallint**, **int** viene utilizzato per @p. Per ulteriori informazioni sulla precedenza tipo di dati, vedere [precedenza tipo di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
      Questa regola è applicabile solo in presenza di una conversione implicita tra ogni tipo di dati con valori equivalenti in base alla regola 1 e il tipo di dati con la precedenza maggiore. In assenza di una conversione implicita, la deduzione dei tipi di dati genera un errore. Ad esempio nella query `SELECT @p FROM t`, ha esito negativo di deduzione del tipo di dati poiché qualsiasi tipo di dati per @p sarebbe ugualmente appropriato. Ad esempio, non vi è alcuna conversione implicita da **int** a **xml**.  
   
@@ -254,7 +255,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
  Come esempio finale, data una query `SELECT NULL + @p`, **int** scelto per @p perché comporta una conversione del tipo (c).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione per eseguire il @tsql argomento.  
   
 ## <a name="examples"></a>Esempi  
@@ -280,8 +281,8 @@ WHERE object_id = @id OR NAME = @name',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
- [Sys.dm exec_describe_first_result_set &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
- [Sys.dm exec_describe_first_result_set_for_object &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
+ [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
+ [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  
   
   

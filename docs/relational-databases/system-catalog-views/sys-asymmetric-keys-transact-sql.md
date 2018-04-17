@@ -1,16 +1,16 @@
 ---
 title: asymmetric_keys (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - asymmetric_keys
@@ -22,16 +22,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-caps.latest.revision: 
+caps.latest.revision: 35
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c42b7a6bcc17fff443fbbafd960baba6bc359ef
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 13e4e958d485fe7a098d3984dde2c459c6c2a042
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,21 +44,21 @@ ms.lasthandoff: 11/21/2017
 |**name**|**sysname**|Nome della chiave. Valore univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità di database proprietaria della chiave.|  
 |**asymmetric_key_id**|**int**|ID della chiave. Valore univoco all'interno del database.|  
-|**pvt_key_encryption_type**|**Char(2)**|Tipo di crittografia utilizzata per la chiave.<br /><br /> NA = Chiave non crittografata<br /><br /> MK = La chiave è crittografata tramite la chiave master<br /><br /> PW = La chiave è crittografata tramite una password definita dall'utente<br /><br /> SK = La chiave è crittografata tramite la chiave master del servizio|  
+|**pvt_key_encryption_type**|**char(2)**|Tipo di crittografia utilizzata per la chiave.<br /><br /> NA = Chiave non crittografata<br /><br /> MK = La chiave è crittografata tramite la chiave master<br /><br /> PW = La chiave è crittografata tramite una password definita dall'utente<br /><br /> SK = La chiave è crittografata tramite la chiave master del servizio|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descrizione della modalità di crittografia utilizzata per la chiave privata.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**identificazione personale**|**varbinary(32)**|Hash SHA-1 della chiave. L'hash è univoco a livello globale.|  
-|**algoritmo**|**Char(2)**|Algoritmo utilizzato con la chiave.<br /><br /> 1R = RSA a 512 bit<br /><br /> 2R = RSA a 1024 bit<br /><br /> 3R = RSA a 2048 bit|  
+|**Identificazione personale**|**varbinary(32)**|Hash SHA-1 della chiave. L'hash è univoco a livello globale.|  
+|**Algoritmo**|**char(2)**|Algoritmo utilizzato con la chiave.<br /><br /> 1R = RSA a 512 bit<br /><br /> 2R = RSA a 1024 bit<br /><br /> 3R = RSA a 2048 bit|  
 |**algorithm_desc**|**nvarchar(60)**|Descrizione dell'algoritmo utilizzato con la chiave.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**lunghezza_chiave**|**int**|Lunghezza in bit della chiave.|  
-|**SID**|**varbinary (85)**|SID dell'account di accesso della chiave. Per le chiavi EKM questo valore è NULL.|  
-|**string_sid**|**nvarchar (128)**|Rappresentazione stringa del SID dell'account di accesso della chiave. Per le chiavi EKM questo valore è NULL.|  
+|**sid**|**varbinary(85)**|SID dell'account di accesso della chiave. Per le chiavi EKM questo valore è NULL.|  
+|**string_sid**|**nvarchar(128)**|Rappresentazione stringa del SID dell'account di accesso della chiave. Per le chiavi EKM questo valore è NULL.|  
 |**public_key**|**varbinary(max)**|Chiave pubblica.|  
-|**attested_by**|**nvarchar (260)**|Riservato per l'utilizzo nel sistema.|  
+|**attested_by**|**nvarchar(260)**|Riservato per l'utilizzo nel sistema.|  
 |**provider_type**|**nvarchar(120)**|Tipo di provider del servizio di crittografia:<br /><br /> CRYPTOGRAPHIC PROVIDER = chiavi EKM<br /><br /> NULL = chiavi non EKM|  
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID del provider del servizio di crittografia. Per le chiavi non EKM questo valore è NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|ID dell'algoritmo del provider del servizio di crittografia. Per le chiavi non EKM questo valore è NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vedere anche  

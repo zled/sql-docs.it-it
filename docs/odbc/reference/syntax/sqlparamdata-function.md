@@ -2,7 +2,7 @@
 title: Funzione SQLParamData | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4449d7b0af1c8138680d11b71b0a696d5f2d65fa
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 395cf795659b47398639f30fbd863b1f2d385e55
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData-funzione
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: 92 ISO  
   
  **Riepilogo**  
- **SQLParamData** è utilizzata in combinazione con **SQLPutData** per fornire dati di parametro in fase di esecuzione di istruzione e con **SQLGetData** per recuperare i dati di parametro di flusso di output.  
+ **SQLParamData** viene utilizzata in combinazione con **SQLPutData** per fornire i dati dei parametri in fase di esecuzione di istruzione e con **SQLGetData** per recuperare i dati dei parametri di output inviati come flusso.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -73,7 +73,7 @@ SQLRETURN SQLParamData(
 |HY000|Errore generale|Si è verificato un errore per cui si è verificato alcun errore SQLSTATE specifico e per cui è stato definito alcun SQLSTATE specifici dell'implementazione. Il messaggio di errore restituito da **SQLGetDiagRec** nel  *\*MessageText* buffer viene descritto l'errore e la relativa causa.|  
 |HY001|Errore di allocazione della memoria|Il driver non è riuscito ad allocare memoria che è necessario per supportare l'esecuzione o il completamento della funzione.|  
 |HY008|Operazione annullata|L'elaborazione asincrona è stata abilitata per il *StatementHandle*. La funzione è stata chiamata e prima ha completato l'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle*; la funzione è stata chiamata quindi nuovamente su il *StatementHandle*.<br /><br /> La funzione è stata chiamata e prima ha completato l'esecuzione, **SQLCancel** o **SQLCancelHandle** è stato chiamato sul *StatementHandle* da un thread diverso in un applicazioni multithread.|  
-|HY010|Errore nella sequenza (funzione)|(DM) la chiamata di funzione precedente non è una chiamata a **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, o **SQLSetPos** in cui il codice stato SQL_NEED_DATA oppure la chiamata di funzione precedente è stata una chiamata a **SQLPutData**.<br /><br /> La chiamata di funzione precedente è stata una chiamata a **SQLParamData**.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLParamData** funzione è stata chiamata.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione (non è presente uno) di *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato per il *StatementHandle* e restituito SQL_NEED_DATA. **SQLCancel** è stato chiamato prima che i dati sono stati inviati per tutti i parametri data-at-execution o colonne.|  
+|HY010|Errore nella sequenza (funzione)|(DM) la chiamata di funzione precedente non è una chiamata a **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, o **SQLSetPos** in cui il codice stato SQL_NEED_DATA oppure la chiamata di funzione precedente è stata una chiamata a **SQLPutData**.<br /><br /> La chiamata di funzione precedente è stata una chiamata a **SQLParamData**.<br /><br /> (DM) a cui è stata chiamata per l'handle di connessione associata a una funzione in modo asincrono in esecuzione il *StatementHandle*. Questa funzione asincrona era ancora in esecuzione quando il **SQLParamData** funzione è stata chiamata.<br /><br /> (DM) a cui è stata chiamata per una funzione in modo asincrono in esecuzione (non è presente uno) di *StatementHandle* ed era ancora in esecuzione quando questa funzione è stata chiamata.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** è stato chiamato per il *StatementHandle* e restituito SQL_NEED_DATA. **SQLCancel** è stato chiamato prima dei dati è stati inviati per tutti i parametri data-at-execution o più colonne.|  
 |HY013|Errore di gestione della memoria|Impossibile elaborare la chiamata di funzione perché gli oggetti di memoria sottostante non è accessibile, probabilmente a causa di condizioni di memoria insufficiente.|  
 |HY117|Connessione viene sospesa a causa dello stato di transazione sconosciuto. Solo disconnettersi e sono consentite funzioni di sola lettura.|(DM) per ulteriori informazioni sullo stato sospeso, vedere [funzione SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
@@ -84,7 +84,7 @@ SQLRETURN SQLParamData(
  Se **SQLParamData** viene chiamato durante l'invio dei dati per un parametro in un'istruzione SQL, può restituire qualsiasi SQLSTATE che può essere restituite dalla funzione chiamata per eseguire l'istruzione (**SQLExecute** o **SQLExecDirect**). Se viene chiamato durante l'invio di dati per una colonna da aggiornare o aggiungere con **SQLBulkOperations** o che venga aggiornato con **SQLSetPos**, può restituire qualsiasi SQLSTATE che può essere restituiti da  **SQLBulkOperations** o **SQLSetPos**.  
   
 ## <a name="comments"></a>Commenti  
- **SQLParamData** può essere chiamato per fornire i dati di data-at-execution per due funzioni: dati del parametro che verranno utilizzati in una chiamata a **SQLExecute** o **SQLExecDirect**, o i dati della colonna che verranno utilizzati Quando una riga viene aggiornata o aggiunto mediante una chiamata a **SQLBulkOperations** o aggiornato da una chiamata a **SQLSetPos**. In fase di esecuzione **SQLParamData** restituisce un valore per l'applicazione richiede il driver di un indicatore di dati.  
+ **SQLParamData** può essere chiamato per fornire i dati di data-at-execution per due scopi: dati del parametro che verranno utilizzati in una chiamata a **SQLExecute** o **SQLExecDirect**, o dati della colonna che verrà utilizzato quando una riga viene aggiornata o aggiunto mediante una chiamata a **SQLBulkOperations** o aggiornati da una chiamata a **SQLSetPos**. In fase di esecuzione **SQLParamData** restituisce un valore per l'applicazione richiede il driver di un indicatore di dati.  
   
  Quando un'applicazione chiama **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos**, il driver restituisce SQL_NEED_ DATI se necessita di dati data-at-execution. Un'applicazione chiama quindi **SQLParamData** per determinare i dati da inviare. Se il driver richiede dati del parametro, il driver restituisce il  *\*ValuePtrPtr* il valore che l'applicazione inserito nel buffer di set di righe nel buffer di output. L'applicazione può utilizzare questo valore per determinare quali dati di parametro, il driver richiede. Se il driver richiede dati della colonna, il driver restituisce il  *\*ValuePtrPtr* buffer l'indirizzo che la colonna è stata associata in origine, come indicato di seguito:  
   
@@ -94,7 +94,7 @@ SQLRETURN SQLParamData(
   
 |Variabile|Description|  
 |--------------|-----------------|  
-|*Associare l'indirizzo*|L'indirizzo specificato con il *TargetValuePtr* argomento **SQLBindCol**.|  
+|*Associazione di indirizzi*|L'indirizzo specificato con il *TargetValuePtr* argomento **SQLBindCol**.|  
 |*Offset di associazione*|Il valore archiviato in corrispondenza dell'indirizzo specificato con l'attributo di istruzione SQL_ATTR_ROW_BIND_OFFSET_PTR.|  
 |*Numero di riga*|Il numero della riga nel set di righe in base 1. Per operazioni di recupero a riga singola, ovvero l'impostazione predefinita, questo è 1.|  
 |*Dimensione dell'elemento*|Il valore dell'attributo di istruzione SQL_ATTR_ROW_BIND_TYPE per i buffer di dati e lunghezza/indicatore.|  
@@ -107,7 +107,7 @@ SQLRETURN SQLParamData(
   
  Per ulteriori informazioni sui dati di parametro come data-at-execution viene passate in fase di esecuzione di istruzione, vedere "Passaggio di valori di parametro" in [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) e [l'invio di dati Long](../../../odbc/reference/develop-app/sending-long-data.md). Per ulteriori informazioni sui dati di colonna come data-at-execution sono state aggiornate o aggiunti, vedere la sezione "Utilizzo SQLSetPos" in [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "Esecuzione delle operazioni Bulk aggiornamenti mediante segnalibri" in [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), e [dati di tipo Long e SQLSetPos e SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md).  
   
- **SQLParamData** può essere chiamato per recuperare i parametri di flusso di output. Quando **SQLMoreResults**, **SQLExecute**, **SQLGetData**, o **SQLExecDirect** restituisce SQL_PARAM_DATA_AVAILABLE, chiamare **SQLParamData** per determinare quale parametro ha un valore disponibile. Per ulteriori informazioni su SQL_PARAM_DATA_AVAILABLE e parametri di flusso di output, vedere [il recupero dei parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
+ **SQLParamData** può essere chiamato per recuperare i parametri di output inviati come flusso. Quando **SQLMoreResults**, **SQLExecute**, **SQLGetData**, o **SQLExecDirect** restituisce SQL_PARAM_DATA_AVAILABLE, chiamare **SQLParamData** per determinare quale parametro ha un valore disponibile. Per ulteriori informazioni su SQL_PARAM_DATA_AVAILABLE e parametri di flusso di output, vedere [il recupero dei parametri di Output tramite SQLGetData](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
  Vedere [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md).  

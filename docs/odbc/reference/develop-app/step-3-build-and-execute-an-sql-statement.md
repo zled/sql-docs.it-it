@@ -1,30 +1,31 @@
 ---
-title: 'Passaggio 3: Compilare ed eseguire un''istruzione SQL | Documenti Microsoft'
-ms.custom: 
+title: "Passaggio 3: Compilare ed eseguire un'istruzione SQL | Documenti Microsoft"
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application process [ODBC], building and executing statements
 - SQL statements [ODBC], building and executing
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc0aebc832ff451ab302636c7621b008bec4da1d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6d2be6f4e75ebc774c17bd0d80eb37efec74499d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>Passaggio 3: Compilare ed eseguire un'istruzione SQL
 Il terzo passaggio è compilare ed eseguire un'istruzione SQL, come illustrato nella figura seguente. I metodi utilizzati per eseguire questo passaggio possono variare notevolmente. L'applicazione potrebbe richiedere all'utente di immettere un'istruzione SQL, un'istruzione SQL in base all'input di compilazione o utilizzare un'istruzione SQL a livello di codice. Per ulteriori informazioni, vedere [la costruzione di istruzioni SQL](../../../odbc/reference/develop-app/constructing-sql-statements.md).  

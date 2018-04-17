@@ -2,7 +2,7 @@
 title: Funzione SQLGetDiagField | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c202841d54e01758312c4e8388a78e583de9058c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f337b8455ba860caaf5e4a5b1bd4be1d0ee86c37
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetdiagfield-function"></a>Funzione SQLGetDiagField
 **Conformità**  
@@ -104,7 +104,7 @@ SQLRETURN SQLGetDiagField(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_NO_DATA.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- **SQLGetDiagField** non registra record di diagnostica per se stesso. Usa i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
+ **SQLGetDiagField** non invia i record di diagnostica per se stesso. Usa i seguenti valori restituiti per segnalare il risultato della propria esecuzione:  
   
 -   SQL_SUCCESS: La funzione ha restituito correttamente le informazioni di diagnostica.  
   
@@ -124,7 +124,7 @@ SQLRETURN SQLGetDiagField(
   
     -   Quando si utilizza la notifica asincrona, l'operazione asincrona dell'handle non è completo.  
   
--   SQL_NO_DATA: *RecNumber* è maggiore del numero di record di diagnostica esistenti per l'handle specificato nel *gestire.* La funzione restituisce SQL_NO_DATA per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
+-   SQL_NO_DATA: *RecNumber* era maggiore del numero dei record di diagnostica esistenti per l'handle specificato nel *gestire.* La funzione restituisce SQL_NO_DATA per qualsiasi positivo *RecNumber* se non sono presenti record di diagnostica per *gestire*.  
   
 ## <a name="comments"></a>Commenti  
  Un'applicazione chiama in genere **SQLGetDiagField** a completare una delle tre obiettivi:  
@@ -135,7 +135,7 @@ SQLRETURN SQLGetDiagField(
   
 3.  Per determinare quale funzione che è stata eseguita da una chiamata a **SQLExecDirect** o **SQLExecute** (rispetto ai campi di intestazione SQL_DIAG_DYNAMIC_FUNCTION e SQL_DIAG_DYNAMIC_FUNCTION_CODE).  
   
- Una funzione ODBC può registrare zero o più record di diagnostica ogni volta che viene chiamato, in modo un'applicazione può chiamare **SQLGetDiagField** dopo ogni chiamata di funzione ODBC. Non sussiste alcun limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento. **SQLGetDiagField** recupera solo le informazioni di diagnostica più di recente associate alla struttura di dati di diagnostica specificata nel *gestire* argomento. Se l'applicazione chiama una funzione ODBC diverso da **SQLGetDiagField** o **SQLGetDiagRec**, le informazioni di diagnostica da una chiamata precedente con lo stesso handle vengono perse.  
+ Una funzione ODBC può registrare zero o più record di diagnostica ogni volta che viene chiamato, in modo un'applicazione può chiamare **SQLGetDiagField** dopo ogni chiamata di funzione ODBC. Non sussiste alcun limite al numero di record di diagnostica che possono essere archiviati in qualsiasi momento. **SQLGetDiagField** recupera solo le informazioni di diagnostica più di recente associate alla struttura dei dati di diagnostica specificata nel *gestire* argomento. Se l'applicazione chiama una funzione ODBC diverso da **SQLGetDiagField** o **SQLGetDiagRec**, le informazioni di diagnostica da una chiamata precedente con lo stesso handle vengono perse.  
   
  Un'applicazione è possibile analizzare tutti i record di diagnostica incrementando *RecNumber*, purché **SQLGetDiagField** restituisce SQL_SUCCESS. Il numero di record di stato è indicato nel campo di intestazione SQL_DIAG_NUMBER. Le chiamate a **SQLGetDiagField** siano distruttive ai campi di intestazione e il record. L'applicazione può chiamare **SQLGetDiagField** più tardi per recuperare un campo da un record, come una funzione diversa da funzioni di diagnostica non è stata chiamata nel frattempo, che potrebbe registrare record sullo stesso handle.  
   
@@ -199,32 +199,32 @@ SQLRETURN SQLGetDiagField(
 |*ALTER-tabella-istruzione*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
 |*definizione di asserzione*|"CREAZIONE DI ASSERZIONE"|SQL_DIAG_CREATE_ASSERTION|  
 |*definizione di set di caratteri*|"CREAZIONE DI SET DI CARATTERI"|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*definizione di regole di confronto*|"CREAZIONE DI REGOLE DI CONFRONTO"|SQL_DIAG_CREATE_COLLATION|  
-|*creare-index-istruzione*|"CREAZIONE DELL'INDICE"|SQL_DIAG_CREATE_INDEX|  
-|*creare-tabella-istruzione*|"CREAZIONE DI TABELLA"|SQL_DIAG_CREATE_TABLE|  
+|*definizione delle regole di confronto*|"CREAZIONE DI REGOLE DI CONFRONTO"|SQL_DIAG_CREATE_COLLATION|  
+|*Create-index-istruzione*|"CREAZIONE DELL'INDICE"|SQL_DIAG_CREATE_INDEX|  
+|*istruzione create table*|"CREAZIONE DI TABELLA"|SQL_DIAG_CREATE_TABLE|  
 |*creare-view-istruzione*|"CREAZIONE DI VISUALIZZAZIONE"|SQL_DIAG_CREATE_VIEW|  
 |*Specifica di cursore.*|"SELECT DEL CURSORE"|SQL_DIAG_SELECT_CURSOR|  
 |*posizionato Delete-istruzione*|"CURSORE DINAMICA DI ELIMINAZIONE"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
 |*la ricerca Delete-istruzione*|"DELETE WHERE"|SQL_DIAG_DELETE_WHERE|  
 n-definizione *|"CREAZIONE DI DOMINIO"|SQL_DIAG_CREATE_DOMAIN|  
-|*istruzione di asserzione di rilascio*|"ASSERZIONE DI RILASCIO"|SQL_DIAG_DROP_ASSERTION|  
-|*DROP-carattere-set-istruzione INSERT.*|"IL SET DI CARATTERI DI RILASCIO"|SQL_DIAG_DROP_CHARACTER_SET|  
-|*DROP-regole di confronto-istruzione*|"RIEPILOGO DELLE REGOLE DI CONFRONTO"|SQL_DIAG_DROP_COLLATION|  
+|*istruzione di asserzione DROP*|"ASSERZIONE DI RILASCIO"|SQL_DIAG_DROP_ASSERTION|  
+|*DROP-carattere-set-stmt*|"IL SET DI CARATTERI DI RILASCIO"|SQL_DIAG_DROP_CHARACTER_SET|  
+|*istruzione DROP-regole di confronto*|"RIEPILOGO DELLE REGOLE DI CONFRONTO"|SQL_DIAG_DROP_COLLATION|  
 |*DROP-dominio-istruzione*|"DOMINIO DI RILASCIO"|SQL_DIAG_DROP_DOMAIN|  
-|*DROP index-istruzione*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*istruzione DROP-indice*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
 |*DROP-schema-istruzione*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
-|*DROP-tabella-istruzione*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
-|*DROP-traduzione-istruzione*|"CONVERSIONE DI RILASCIO"|SQL_DIAG_DROP_TRANSLATION|  
-|*DROP-view-istruzione*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
+|*istruzione DROP-tabella*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*istruzione DROP-traduzione*|"CONVERSIONE DI RILASCIO"|SQL_DIAG_DROP_TRANSLATION|  
+|*istruzione DROP-vista*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
 -istruzione *|"GRANT"|SQL_DIAG_GRANT|  
 |*Insert-istruzione*|"INSERT"|SQL_DIAG_INSERT|  
 |*Estensione di stored procedure ODBC*|"CHIAMATA DI|CHIAMATA DI SQL_DIAG_|  
 |*REVOKE-istruzione*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*definizione dello schema*|"CREAZIONE DI SCHEMA"|SQL_DIAG_CREATE_SCHEMA|  
 |*definizione di traduzione*|"CREAZIONE DI TRADUZIONE"|SQL_DIAG_CREATE_TRANSLATION|  
-|*posizionato Update-istruzione*|"AGGIORNAMENTO DINAMICO DI CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
+|*posizionato a Update-istruzione*|"AGGIORNAMENTO DINAMICO DI CURSOR"|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*la ricerca Update-istruzione*|"AGGIORNAMENTO WHERE"|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*stringa vuota*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Unknown|*Stringa vuota*|SQL_DIAG_UNKNOWN_STATEMENT|  
   
 ## <a name="sequence-of-status-records"></a>Sequenza di record di stato  
  Record di stato vengono posizionati in una sequenza in base a numero di riga e il tipo della diagnostica. Gestione Driver determina l'ordine finale in cui restituire i record di stato che viene generata. Il driver determina l'ordine in cui restituire i record di stato che genera finale.  
@@ -246,13 +246,13 @@ n-definizione *|"CREAZIONE DI DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
   
  Le regole seguenti vengono utilizzate per determinare il primo record all'interno di una riga. Il record con il valore più alto è il primo record. L'origine di un record (gestione Driver, driver, gateway e così via) non viene considerato quando i record di rango.  
   
--   **Errori** record di stato che descrivono gli errori sono il valore più alto. Per ordinare gli errori, vengono applicate le regole seguenti:  
+-   **Errori** record di stato che descrivono gli errori sono il rango più alto. Per ordinare gli errori, vengono applicate le regole seguenti:  
   
     -   I record che indicano un errore di transazione o di un errore di transazione possibili outrank tutti gli altri record.  
   
     -   Se due o più record di descrivere la stessa condizione di errore, definiti dalla specifica CLI di gruppo aprire (classi 03 tramite HZ) SQLSTATE outrank SQLSTATE ODBC e driver definiti.  
   
--   **I valori dei dati non definito dall'implementazione** record di stato che descrivono i valori dei dati non definito dal driver (classe 02) è il secondo valore più alto.  
+-   **I valori dei dati non definito dall'implementazione** record di stato che descrivono definiti dal driver i valori dei dati di n (classe 02) è il secondo classificazione più elevata.  
   
 -   **Avvisi** record di stato che descrivono gli avvisi (classe 01) hanno la priorità più bassa. Se due o più record descrivono la stessa condizione di avviso, quindi avviso SQLSTATE definiti dalla specifica CLI di gruppo aprire outrank SQLSTATE definite da ODBC e definito dal driver.  
   

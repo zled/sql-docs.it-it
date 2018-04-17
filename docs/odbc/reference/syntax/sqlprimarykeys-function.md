@@ -2,7 +2,7 @@
 title: SQLPrimaryKeys-funzione | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dc6e16493a91ee6d03efea376bdb0fcb5212549f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91fc4454f033cef139e50b8cd7cfbf4c21842c61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys Function
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: ODBC  
   
  **Riepilogo**  
- **SQLPrimaryKeys** restituisce i nomi delle colonne che costituiscono il database primario per una tabella della chiave. Il driver restituisce le informazioni come set di risultati. Questa funzione non supporta la restituzione di chiavi primarie da più tabelle in una singola chiamata.  
+ **SQLPrimaryKeys** restituisce i nomi delle colonne che costituiscono il database primario della chiave per una tabella. Il driver restituisce le informazioni come set di risultati. Questa funzione non supporta la restituzione di chiavi primarie da più tabelle in una singola chiamata.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -59,7 +59,7 @@ SQLRETURN SQLPrimaryKeys(
  [Input] Handle di istruzione.  
   
  *CatalogName*  
- [Input] Nome del catalogo. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome del catalogo. Se un driver supporta cataloghi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispone di cataloghi. *CatalogName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *CatalogName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *CatalogName* è un argomento normale; viene considerato letteralmente e il relativo case è significativa. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
@@ -67,7 +67,7 @@ SQLRETURN SQLPrimaryKeys(
  [Input] Lunghezza in caratteri del **CatalogName*.  
   
  *NomeSchema*  
- [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome dello schema. Se un driver supporta gli schemi per alcune tabelle ma non per altri utenti, ad esempio quando vengono recuperati i dati dai diversi DBMS, una stringa vuota ("") indica le tabelle che non dispongono di schemi. *NomeSchema* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *SchemaName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *SchemaName* è un argomento normale; viene considerato letteralmente e il relativo case non è significativa.  
   
@@ -75,7 +75,7 @@ SQLRETURN SQLPrimaryKeys(
  [Input] Lunghezza in caratteri del **SchemaName*.  
   
  *TableName*  
- [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *TableName* non può contenere un criterio di ricerca della stringa.  
+ [Input] Nome della tabella. Questo argomento non può essere un puntatore null. *TableName* non può contenere un criterio di ricerca di stringa.  
   
  Se l'attributo di istruzione SQL_ATTR_METADATA_ID è impostato su SQL_TRUE, *TableName* viene considerato come un identificatore e il relativo case non è significativa. Se è SQL_FALSE, *TableName* è un argomento normale; viene considerato letteralmente e il relativo case non è significativa.  
   

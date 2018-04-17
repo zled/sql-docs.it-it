@@ -1,16 +1,16 @@
 ---
 title: sp_getapplock (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_getapplock_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-caps.latest.revision: 
+caps.latest.revision: 34
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c7b65a7330a1b87e7ee81a4f76a715038cd3d6d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 09977560a053f883aed8ffe42f593921d3203243
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,18 +54,18 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
   
 ## <a name="arguments"></a>Argomenti  
  [ @Resource=] '*resource_name*'  
- Stringa contenente un nome che identifica la risorsa di blocco. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* è **nvarchar (255)** prevede alcun valore predefinito. Se una stringa di risorsa è più lunga di **nvarchar (255)**, verrà troncato a **nvarchar (255)**.  
+ Stringa contenente un nome che identifica la risorsa di blocco. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* viene **nvarchar(255** non prevede alcun valore predefinito. Se una stringa di risorsa è più lunga di **nvarchar (255)**, verrà troncato a **nvarchar (255)**.  
   
- *resource_name* è binario confrontati e pertanto è tra maiuscole e minuscole indipendentemente dalle impostazioni delle regole di confronto del database corrente.  
+ *resource_name* è binario confrontati e pertanto è distinzione maiuscole/minuscole indipendentemente dalle impostazioni delle regole di confronto del database corrente.  
   
 > [!NOTE]  
 >  Dopo l'acquisizione di un blocco a livello di applicazione, è possibile recuperare solo i primi 32 caratteri in testo normale. La parte rimanente viene sottoposta a hashing.  
   
  [ @LockMode=] '*lock_mode*'  
- Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è **nvarchar(32)** e nessun valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **aggiornamento**, **IntentShared**, **IntentExclusive**, o **esclusivo** .  
+ Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. Il valore può essere uno dei seguenti: **Shared**, **aggiornamento**, **IntentShared**, **IntentExclusive**, o **esclusivo** .  
   
  [ @LockOwner=] '*lock_owner*'  
- È il proprietario del blocco, ovvero il *lock_owner* valore quando è stato richiesto il blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **transazione** (impostazione predefinita) o **sessione**. Quando il *lock_owner* valore **transazione**, predefinito o specificato in modo esplicito, sp_getapplock deve essere eseguito all'interno di una transazione.  
+ Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Quando il *lock_owner* valore **transazione**, predefinito o specificato in modo esplicito, sp_getapplock deve essere eseguito all'interno di una transazione.  
   
  [ @LockTimeout=] '*valore*'  
  Valore di timeout del blocco espresso in millisecondi. Il valore predefinito è lo stesso come il valore restituito da@LOCK_TIMEOUT. Per indicare che una richiesta di blocco deve restituire un errore anziché rimanere in attesa del blocco quando non può essere soddisfatta immediatamente, specificare 0.  
@@ -75,7 +76,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valori restituiti  
  \>= 0 (esito positivo), or < 0 (esito negativo)  
   
-|Valore|Risultato|  
+|Value|Risultato|  
 |-----------|------------|  
 |0|Il blocco è stato concesso in modo sincrono.|  
 |1|Il blocco è stato concesso dopo il rilascio di altri blocchi incompatibili.|  
@@ -142,7 +143,7 @@ GO
   
  Utilizzare la vista a gestione dinamica sys.dm_tran_locks o la stored procedure sp_lock system per esaminare le informazioni di blocco oppure utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per monitorare i blocchi.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo public.  
   
 ## <a name="examples"></a>Esempi  
@@ -170,8 +171,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [APPLOCK_MODE &#40; Transact-SQL &#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
- [APPLOCK_TEST &#40; Transact-SQL &#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
+ [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

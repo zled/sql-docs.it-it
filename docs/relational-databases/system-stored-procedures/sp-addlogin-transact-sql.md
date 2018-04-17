@@ -1,16 +1,16 @@
 ---
 title: sp_addlogin (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_addlogin
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_addlogin
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 09a8425f9c3d773af00a0418ff4430839c221d87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f191cf305941d837a65708aea62527c0649b6e7f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Crea un nuovo account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a un utente di connettersi a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilizzare [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) invece.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -59,27 +59,27 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argomenti  
  [ @loginame=] '*accesso*'  
- Nome dell'account di accesso. *account di accesso* è **sysname**, non prevede alcun valore predefinito.  
+ Nome dell'account di accesso. *account di accesso* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ @passwd=] '*password*'  
- Password dell'account di accesso. *password* è **sysname**, con un valore predefinito è NULL.  
+ Password dell'account di accesso. *password* viene **sysname**, con un valore predefinito è NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
  [ @defdb=] '*database*'  
- Database predefinito dell'account di accesso, ovvero il primo database a cui viene connesso l'account dopo l'accesso. *database* è **sysname**, il valore predefinito è **master**.  
+ Database predefinito dell'account di accesso, ovvero il primo database a cui viene connesso l'account dopo l'accesso. *database* viene **sysname**, il valore predefinito è **master**.  
   
  [ @deflanguage=] '*language*'  
- Lingua predefinita dell'account di accesso. *lingua* è **sysname**, con un valore predefinito è NULL. Se *language* non viene specificato, il valore predefinito *language* del nuovo account di accesso è impostato sulla lingua predefinita corrente del server.  
+ Lingua predefinita dell'account di accesso. *linguaggio* viene **sysname**, con un valore predefinito è NULL. Se *language* non viene specificato, il valore predefinito *language* del nuovo account di accesso è impostato sulla lingua predefinita corrente del server.  
   
  [ @sid=] '*sid*'  
- ID di sicurezza (SID, Security Identification Number). *SID* è **varbinary (16)**, con un valore predefinito è NULL. Se *sid* è NULL, il sistema genera un SID per il nuovo account di accesso. Nonostante l'uso di un **varbinary** il tipo di dati, valori diversi da NULL devono contenere esattamente 16 byte di lunghezza e non deve essere già presente. Specifica di *sid* è utile, ad esempio, durante la creazione di script o lo spostamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso da un server a un altro e si desidera che gli account di accesso abbia lo stesso SID in server diversi.  
+ ID di sicurezza (SID, Security Identification Number). *SID* viene **varbinary(16)**, con un valore predefinito è NULL. Se *sid* è NULL, il sistema genera un SID per il nuovo account di accesso. Nonostante l'uso di un **varbinary** il tipo di dati, valori diversi da NULL devono contenere esattamente 16 byte di lunghezza e non deve essere già presente. Specifica di *sid* è utile, ad esempio, durante la creazione di script o lo spostamento [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gli account di accesso da un server a un altro e si desidera che gli account di accesso abbia lo stesso SID in server diversi.  
   
  [ @encryptopt=] '*encryption_option*'  
- Specifica se la password viene passata in forma non crittografata o come hash della password non crittografata. Si noti che non viene applicata alcuna crittografia. Le parole "crittografia" ed "encryption" vengono utilizzate in questa descrizione per compatibilità con le versioni precedenti. Se la password viene passata in forma non crittografata, per la password viene eseguito l'hashing. Il valore hash viene archiviato. *encryption_option* è **varchar (20)**, e può essere uno dei valori seguenti.  
+ Specifica se la password viene passata in forma non crittografata o come hash della password non crittografata. Si noti che non viene applicata alcuna crittografia. Le parole "crittografia" ed "encryption" vengono utilizzate in questa descrizione per compatibilità con le versioni precedenti. Se la password viene passata in forma non crittografata, per la password viene eseguito l'hashing. Il valore hash viene archiviato. *encryption_option* viene **varchar (20)**, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|La password viene passata in forma non crittografata. Impostazione predefinita.|  
 |**della procedura skip_encryption**|Per la password è già stato eseguito l'hashing. [!INCLUDE[ssDE](../../includes/ssde-md.md)] deve archiviare il valore senza ripetere l'hashing.|  
@@ -110,7 +110,7 @@ sp_addlogin [ @loginame = ] 'login'
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)|Modifica il database predefinito di un utente.|  
 |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md)|Modifica la lingua predefinita di un utente.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Esempi  
@@ -148,8 +148,8 @@ EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x
 ## <a name="see-also"></a>Vedere anche  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
- [sp_helpuser &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [xp_logininfo &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
+ [xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md)  
   
   

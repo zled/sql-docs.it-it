@@ -2,7 +2,7 @@
 title: sp_add_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9f83b2b206b38783e53d2fb0ccdbf724a78b17d7
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: baa693e0765a8796a4f6fbed3284d440f5a1327d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@start_step_id =** ] *step_id*  
  Numero di identificazione del primo passaggio da eseguire per il processo. *step_id*viene **int**, con un valore predefinito è 1.  
   
- [ **@category_name =** ] **'***category***'**  
+ [  **@category_name =** ] **'***categoria***'**  
  Categoria per il processo. *categoria*viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@category_id =** ] *category_id*  
@@ -82,7 +82,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [ **@owner_login_name =** ] **'***login***'**  
  Nome dell'account di accesso proprietario del processo. *account di accesso*viene **sysname**, con un valore predefinito è NULL, che viene interpretato come nome dell'account di accesso corrente. Solo i membri del **sysadmin** ruolo predefinito del server può impostare o modificare il valore per **@owner_login_name**. Se gli utenti che non sono membri del **sysadmin** ruolo impostare o modificare il valore di **@owner_login_name**, l'esecuzione della stored procedure ha esito negativo e viene restituito un errore.  
   
- [ **@notify_level_eventlog =** ] *eventlog_level*  
+ [  **@notify_level_eventlog =** ] *eventlog_level*  
  Valore che indica quando inserire una voce per il processo nel registro applicazioni di Microsoft Windows. *eventlog_level*viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione|  
@@ -110,7 +110,7 @@ sp_add_job [ @job_name = ] 'job_name'
  [  **@notify_page_operator_name =** ] **'***page_name***'**  
  Nome dell'operatore a cui inviare il messaggio sul cercapersone al termine del processo. *page_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@delete_level =** ] *delete_level*  
+ [  **@delete_level =** ] *i possibili*  
  Valore che indica quando eliminare il processo. *delete_value*viene **int**, con un valore predefinito è 0, non ovvero mai. *i possibili*utilizza gli stessi valori *eventlog_level*.  
   
 > [!NOTE]  

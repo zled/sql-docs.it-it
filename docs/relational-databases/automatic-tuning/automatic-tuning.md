@@ -3,7 +3,7 @@ title: L'ottimizzazione automatica | Documenti Microsoft
 description: Informazioni sull'ottimizzazione automatica in SQL Server e Database SQL di Azure
 ms.custom: ''
 ms.date: 08/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: automatic-tuning
@@ -21,11 +21,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2f08de0fadb8fbc237af89a3132cfd747c9d62c7
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: e49c26384d432c7a18b8c5997ac84b2ed18cc782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-tuning"></a>Ottimizzazione automatica
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -75,6 +76,8 @@ Inoltre, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] consente di automatizzar
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva automaticamente qualsiasi potenziale regressione nella scelta del piano tra il piano che deve essere utilizzato anziché il piano non corretto.
 Quando il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verrà applicata l'ultima noto del piano appropriato, automaticamente consente di monitorare le prestazioni del piano forzato. Se il piano forzato non è un vantaggio rispetto al piano regredito, il nuovo piano sarà unforced e [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verrà compilato un nuovo piano. Se [!INCLUDE[ssde_md](../../includes/ssde_md.md)] verifica che il piano forzato è preferibile rispetto a quello regredita, il piano forzato verrà conservato fino a quando la ricompilazione (ad esempio, al prossimo cambio di statistiche o schema) se è preferibile rispetto al piano regredito.
 
+Nota: Qualsiasi automaticamente piani forzato non si persit un riavvio dell'istanza di SQL Server.
+
 ### <a name="enabling-automatic-plan-choice-correction"></a>Abilitazione di correzione scelta del piano automatico
 
 È possibile abilitare l'ottimizzazione automatica per ogni database e specificare che il miglior piano più recente deve essere forzato ogni volta in cui viene rilevata una regressione della modifica del piano. L'ottimizzazione automatica viene abilitata con il comando seguente:
@@ -94,7 +97,7 @@ I piani forzati manualmente è necessario non forzare sempre, poiché il [!INCLU
 
 In [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], è possibile trovare l'utilizzo delle viste di sistema di archivio Query regressioni nella scelta del piano. In [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], il [!INCLUDE[ssde_md](../../includes/ssde_md.md)] rileva e vengono mostrati potenziali regressioni nella scelta del piano e le azioni consigliate che devono essere applicate nella [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) visualizzazione. La visualizzazione Mostra informazioni sul problema, l'importanza del problema e dettagli, ad esempio la query identificato, l'ID del piano di regredite, l'ID del piano a cui è stato utilizzato come linea di base per il confronto e [!INCLUDE[tsql_md](../../includes/tsql_md.md)] istruzione che può essere eseguito per correggere il esiste un problema.
 
-| tipo | description | datetime | score | dettagli | … |
+| Tipo | description | datetime | score | dettagli | … |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tempo di CPU, modificato da 4 ms a 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tempo di CPU, modificato da ms 37 a 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -142,6 +145,8 @@ FROM sys.dm_db_tuning_recommendations
 `estimated_gain` rappresenta il numero stimato di secondi che verrebbero salvate se verrà eseguito il piano consigliato anziché il piano corrente. Se il miglioramento è maggiore di 10 secondi, è necessario forzare il piano consigliato anziché il piano corrente. Se sono presenti più errori (ad esempio, i timeout o interrotte esecuzioni) nel piano corrente di in consigliata prevede, la colonna `error_prone` verrebbe impostato sul valore `YES`. Piano soggetta a errore è motivo di un altro motivo per cui è necessario forzare il piano consigliato anziché quello corrente.
 
 Sebbene [!INCLUDE[ssde_md](../../includes/ssde_md.md)] fornisce tutte le informazioni necessarie per identificare le regressioni nella scelta del piano; continua il monitoraggio e risoluzione dei problemi di prestazioni potrebbero essere un'operazione laboriosa. L'ottimizzazione automatica semplifica questo processo.
+
+Nota: I dati in questa DMV non vengono mantenute dopo il riavvio dell'istanza di SQL Server.
 
 ## <a name="automatic-index-management"></a>Gestione automatica degli indici
 

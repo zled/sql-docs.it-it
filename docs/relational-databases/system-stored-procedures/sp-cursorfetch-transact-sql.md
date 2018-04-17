@@ -1,16 +1,16 @@
 ---
 title: sp_cursorfetch (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorfetch
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-caps.latest.revision: 
+caps.latest.revision: 10
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9b33361094966dc180939f0cdf92ac951922139
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3a018fe2a3ebf5aaa53e1ed5f04112f0b512c712
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +48,12 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Argomenti  
  *cursor*  
- È un *gestire* valore generato tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito da sp_cursoropen. *cursore* è un parametro obbligatorio che richiede un **int** valore di input. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
+ È un *gestire* valore generato tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e restituito da sp_cursoropen. *cursore* è un parametro obbligatorio che richiede un' **int** valore di input. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  *fetchType*  
  Specifica il buffer del cursore da recuperare. *fetchType* è un parametro facoltativo che richiede uno dei valori di input interi seguenti.  
   
-|Valore|Nome|Description|  
+|Value|Nome|Description|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Recupera il primo buffer di *nrows* righe. Se *nrows* è uguale a 0, il cursore viene posizionato prima del set di risultati e viene restituita alcuna riga.|  
 |0x0002|NEXT|Recupera il buffer successivo di *nrows* righe.|  
@@ -71,8 +71,8 @@ sp_cursorfetch cursor
   
  Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
- *rowNum*  
- Parametro facoltativo utilizzato per specificare la posizione di riga per ABSOLUTE e INFO *fetchtype* valori utilizzando solo valori interi per input, output o entrambi. *rowNum* funge da offset di riga per il *fetchtype* relativo valore di bit. *rowNum* viene ignorato per tutti gli altri valori. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
+ *rownum*  
+ Parametro facoltativo utilizzato per specificare la posizione di riga per ABSOLUTE e INFO *fetchtype* valori utilizzando solo valori interi per input, output o entrambi. *rowNum* funge da offset di riga per il *fetchtype* valore relativo di bit. *rowNum* viene ignorato per tutti gli altri valori. Per ulteriori informazioni, vedere la sezione Osservazioni di seguito in questo argomento.  
   
  *nrows*  
  Parametro facoltativo utilizzato per specificare il numero di righe da recuperare. Se *nrows* non è specificato, il valore predefinito è 20 righe. Per impostare la posizione senza restituire dati, specificare un valore pari a 0. Quando *nrows* è collegato il *fetchtype* query INFO, restituisce il numero totale di righe nella query.  
@@ -140,7 +140,7 @@ sp_cursorfetch cursor
   
  Il parametro di stato di RPC viene impostato su uno dei valori mostrati nella tabella seguente.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|La routine è stata eseguita correttamente.|  
 |0x0001|La routine non è riuscita.|  
@@ -149,7 +149,7 @@ sp_cursorfetch cursor
   
  Le righe vengono restituite come set tipico di risultati, ovvero il formato della colonna (0x2a), le righe (0xd1), infine done (0xfd). I token dei metadati vengono inviati nello stesso formato specificato per sp_cursoropen, ovvero: 0x81, 0xa5 e 0xa4 per gli utenti di SQL Server 7.0 e così via. Gli indicatori di stato delle righe vengono inviati come colonne nascoste, analogamente alla modalità BROWSE, alla fine di ogni riga con nome di colonna rowstat e tipo di dati INT4. La colonna rowstat può avere uno dei valori mostrati nella tabella seguente:  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -199,7 +199,7 @@ row3 contents
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

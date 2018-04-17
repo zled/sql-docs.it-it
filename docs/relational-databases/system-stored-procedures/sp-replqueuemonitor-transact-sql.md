@@ -1,16 +1,16 @@
 ---
 title: sp_replqueuemonitor (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replqueuemonitor
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd29cdd9e22873dd7d10db99078f25ce7e15d55f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: d996f735cb105215deb6de44cc56533a42fe6c3d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,34 +50,34 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@publisher**  =] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
+ [ **@publisher** =] **'***publisher***'**  
+ Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL. Il server deve essere configurato per la pubblicazione. Il valore NULL indica tutti i server di pubblicazione.  
   
- [  **@publisherdb**  =] **'***publisher_db***'** ]  
- Nome del database di pubblicazione. *publisher_db* è **sysname**, con un valore predefinito è NULL. che indica tutti i database di pubblicazione.  
+ [ **@publisherdb** =] **'***publisher_db***'** ]  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, con un valore predefinito è NULL. che indica tutti i database di pubblicazione.  
   
- [  **@publication**  =] **'***pubblicazione***'** ]  
- Nome della pubblicazione. *pubblicazione*è **sysname**, con un valore predefinito è NULL. che indica tutte le pubblicazioni.  
+ [ **@publication** =] **'***pubblicazione***'** ]  
+ Nome della pubblicazione. *pubblicazione*viene **sysname**, con un valore predefinito è NULL. che indica tutte le pubblicazioni.  
   
- [  **@tranid**  =] **'***tranid***'** ]  
- ID transazione. *tranid*è **sysname**, con un valore predefinito è NULL. che indica tutte le transazioni.  
+ [ **@tranid** =] **'***tranid***'** ]  
+ ID transazione. *tranid*viene **sysname**, con un valore predefinito è NULL. che indica tutte le transazioni.  
   
  [**@queuetype=** ] **'***queuetype***'** ]  
- Tipo di coda in cui vengono archiviate le transazioni. *queuetype* è **tinyint** il valore predefinito è **0**, i possibili valori sono i seguenti.  
+ Tipo di coda in cui vengono archiviate le transazioni. *queuetype* viene **tinyint** con valore predefinito è **0**, e può essere uno dei valori seguenti.  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |**0**|Tutti i tipi di coda|  
 |**1**|accodamento messaggi|  
 |**2**|Coda di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_replqueuemonitor** viene utilizzata nella replica snapshot o transazionale con sottoscrizioni ad aggiornamento in coda. I messaggi in coda che non includono comandi SQL o che fanno parte di un comando SQL esteso non vengono visualizzati.  
+ **sp_replqueuemonitor** viene utilizzata per la replica snapshot o transazionale con sottoscrizioni ad aggiornamento in coda. I messaggi in coda che non includono comandi SQL o che fanno parte di un comando SQL esteso non vengono visualizzati.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_replqueuemonitor**.  
   
 ## <a name="see-also"></a>Vedere anche  

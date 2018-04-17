@@ -1,16 +1,16 @@
 ---
 title: sp_add_log_shipping_primary_database (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_shipping_primary_database
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_log_shipping_primary_database
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 24a1158b85bc9c53070c0c6cd16f2b6b36dcfe92
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 0c1655c96f5a088ac2176b5a9c421036e08b8907
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,55 +63,55 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 ## <a name="arguments"></a>Argomenti  
  [  **@database=** ] '*database*'  
- Nome del database primario per il log shipping. *database* è **sysname**, senza impostazione predefinita e non può essere NULL.  
+ Nome del database primario per il log shipping. *database* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
  [  **@backup_directory=** ] '*backup_directory*'  
- Percorso della cartella di backup nel server primario. *backup_directory* è **nvarchar (500)**, senza impostazione predefinita e non può essere NULL.  
+ Percorso della cartella di backup nel server primario. *backup_directory* viene **nvarchar(500)**, non prevede alcun valore predefinito e non può essere NULL.  
   
  [  **@backup_share=** ] '*backup_share*'  
- Percorso di rete della directory di backup nel server primario. *backup_share* è **nvarchar (500)**, senza impostazione predefinita e non può essere NULL.  
+ Percorso di rete della directory di backup nel server primario. *backup_share* viene **nvarchar(500)**, non prevede alcun valore predefinito e non può essere NULL.  
   
- [ **@backup_job_name=** ] '*backup_job_name*'  
- Nome del processo di SQL Server Agent nel server primario che copia il backup nella cartella di backup. *backup_job_name* è **sysname** e non può essere NULL.  
+ [  **@backup_job_name=** ] '*backup_job_name*'  
+ Nome del processo di SQL Server Agent nel server primario che copia il backup nella cartella di backup. *backup_job_name* viene **sysname** e non può essere NULL.  
   
  [  **@backup_retention_period=** ] *backup_retention_period*  
- Periodo di tempo, in minuti, per cui il file di backup del log deve essere mantenuto nella directory di backup nel server primario. *backup_retention_period* è **int**, senza impostazione predefinita e non può essere NULL.  
+ Periodo di tempo, in minuti, per cui il file di backup del log deve essere mantenuto nella directory di backup nel server primario. *backup_retention_period* viene **int**, non prevede alcun valore predefinito e non può essere NULL.  
   
  [ **@monitor_server=** ] '*monitor_server*'  
- Nome del server di monitoraggio. *Monitor_server* è **sysname**, senza impostazione predefinita e non può essere NULL.  
+ Nome del server di monitoraggio. *Monitor_server* viene **sysname**, non prevede alcun valore predefinito e non può essere NULL.  
   
- [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
+ [  **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
  Modalità di sicurezza utilizzata per connettersi al server di monitoraggio.  
   
  1 = Autenticazione di Windows.  
   
- 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. *monitor_server_security_mode* è **bit** e non può essere NULL.  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l'autenticazione. *monitor_server_security_mode* viene **bit** e non può essere NULL.  
   
- [ **@monitor_server_login=** ] '*monitor_server_login*'  
+ [  **@monitor_server_login=** ] '*monitor_server_login*'  
  Nome utente dell'account utilizzato per accedere al server di monitoraggio.  
   
- [ **@monitor_server_password=** ] '*monitor_server_password*'  
+ [  **@monitor_server_password=** ] '*monitor_server_password*'  
  Password dell'account utilizzato per accedere al server di monitoraggio.  
   
  [  **@backup_threshold=** ] *backup_threshold*  
- Periodo di tempo, espresso in minuti, dopo l'ultimo backup prima di un *threshold_alert* viene generato l'errore. *backup_threshold* è **int**, con un valore predefinito è 60 minuti.  
+ Periodo di tempo, espresso in minuti, dopo l'ultimo backup prima di un *threshold_alert* viene generato l'errore. *backup_threshold* viene **int**, con un valore predefinito è 60 minuti.  
   
  [  **@threshold_alert=** ] *threshold_alert*  
- Avviso da generare quando viene superata la soglia per il backup. *threshold_alert* è **int**, con valore predefinito è 14,420.  
+ Avviso da generare quando viene superata la soglia per il backup. *threshold_alert* viene **int**, con un valore predefinito è 14,420.  
   
  [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Specifica se un avviso verrà generato quando *backup_threshold* viene superato. Il valore predefinito 0 indica che l'avviso è disabilitato e non verrà generato. *threshold_alert_enabled* è **bit**.  
+ Specifica se un avviso verrà generato quando *backup_threshold* viene superato. Il valore predefinito 0 indica che l'avviso è disabilitato e non verrà generato. *threshold_alert_enabled* viene **bit**.  
   
- [ **@history_retention_period=** ] *history_retention_period*  
- Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* è **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
+ [  **@history_retention_period=** ] *history_retention_period*  
+ Periodo di memorizzazione della cronologia espresso in minuti. *history_retention_period* viene **int**, con un valore predefinito è NULL. Se non si specifica un valore, verrà utilizzato il valore 14420.  
   
- [ **@backup_job_id=** ] *backup_job_id* OUTPUT  
- ID del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associato al processo di backup nel server primario. *backup_job_id* è **uniqueidentifier** e non può essere NULL.  
+ [  **@backup_job_id=** ] *backup_job_id* OUTPUT  
+ ID del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent associato al processo di backup nel server primario. *backup_job_id* viene **uniqueidentifier** e non può essere NULL.  
   
  [  **@primary_id=** ] *primary_id* OUTPUT  
- ID del database primario nella configurazione per il log shipping. *primary_id* è **uniqueidentifier** e non può essere NULL.  
+ ID del database primario nella configurazione per il log shipping. *primary_id* viene **uniqueidentifier** e non può essere NULL.  
   
- [  **@backup_compression** =] *backup_compression_option*  
+ [ **@backup_compression**=] *backup_compression_option*  
  Specifica se una configurazione di log shipping utilizza [compressione dei backup](../../relational-databases/backup-restore/backup-compression-sql-server.md). Questo parametro è supportato solo in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] o versione successiva.  
   
  0 = disabilitati. I backup del log non vengono mai compressi.  
@@ -169,7 +169,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sul Log Shipping &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informazioni sul Log Shipping & #40; SQL Server & #41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

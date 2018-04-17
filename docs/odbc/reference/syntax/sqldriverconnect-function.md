@@ -2,7 +2,7 @@
 title: Funzione SQLDriverConnect | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,22 +25,22 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4600a76e303930e941c737313f1db4850f8d5e43
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
  Introdotta: versione ODBC standard 1.0 conformità: ODBC  
   
  **Riepilogo**  
- **SQLDriverConnect** è un'alternativa a **SQLConnect**. Supporta origini dati che richiedono più informazioni di connessione di tre argomenti in **SQLConnect**, finestre di dialogo per chiedere all'utente per tutte le origini dati che non sono definite nel sistema e informazioni di connessione informazioni.  
+ **SQLDriverConnect** costituisce un'alternativa allo **SQLConnect**. Supporta origini dati che richiedono più informazioni di connessione di tre argomenti in **SQLConnect**, finestre di dialogo per chiedere all'utente per tutte le origini dati che non sono definite nel sistema e informazioni di connessione informazioni.  
   
- **SQLDriverConnect** fornisce gli attributi di connessione seguente:  
+ **SQLDriverConnect** fornisce gli attributi di connessione seguenti:  
   
 -   Stabilire una connessione utilizzando una stringa di connessione che contiene il nome dell'origine dati, uno o più ID utente, una o più password e altre informazioni richieste dall'origine dati.  
   
@@ -151,15 +151,15 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>Commenti  
  Una stringa di connessione presenta la sintassi seguente:  
   
- *stringa di connessione* :: = *stringa vuota*[;] &#124; *attributo*[;] &#124; *attributo*; *stringa di connessione*  
+ *stringa di connessione* :: = *stringa vuoto*[;] &#124; *attributo*[;] &#124; *attributo*; *stringa di connessione*  
   
- *stringa vuota* :: =*attributo* :: = *parola chiave di attributo*=*attributo-valore* &#124; DRIVER = [{}]*attributo-valore*[}]  
+ *stringa vuota* :: =*attributo* :: = *parola chiave di attributo*=*attributo-valore* &#124; DRIVER = [{}] *valore dell'attributo*[}]  
   
- *parola chiave di attributo* :: = DSN &#124; UID &#124; PWD &#124; *-definiti-attributo-parola chiave driver*  
+ *attributo di una parola chiave* :: = DSN &#124; UID &#124; PWD &#124; *-definito dall'attributo-parola chiave driver*  
   
- *valore dell'attributo* :: = *stringa di caratteri*  
+ *valore dell'attributo* :: = *stringhe di caratteri*  
   
- *definiti-attributo-parola chiave driver* :: = *identificatore*  
+ *definito dall'attributo-parola chiave driver* :: = *identificatore*  
   
  dove *stringa di caratteri* contiene zero o più caratteri; *identificatore* contiene uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; *attributo-valore* potrebbe essere tra maiuscole e minuscole; e il valore della **DSN** (parola chiave) non è costituito esclusivamente spazi vuoti.  
   

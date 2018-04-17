@@ -1,16 +1,16 @@
 ---
 title: sys.fn_listextendedproperty (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
@@ -28,16 +28,17 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: 
+caps.latest.revision: 32
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4c9daa724fd73ab9a1da7e4f8d7bf1c510a34d7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cdd9b448d0d8e6a6c57a6bae2c9c52a94952f380
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,31 +65,31 @@ fn_listextendedproperty (
   
 ## <a name="arguments"></a>Argomenti  
  {predefinito | '*property_name*' | NULL}  
- Nome della proprietà. *property_name* è **sysname**. I possibili valori sono default, NULL o un nome di proprietà.  
+ Nome della proprietà. *property_name* viene **sysname**. I possibili valori sono default, NULL o un nome di proprietà.  
   
  {predefinito | '*level0_object_type*' | NULL}  
- Utente o tipo definito dall'utente. *level0_object_type* è **varchar (128)**, con un valore predefinito è NULL. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
+ Utente o tipo definito dall'utente. *level0_object_type* viene **varchar(128)**, con un valore predefinito è NULL. I possibili valori sono ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER e NULL.  
   
 > [!IMPORTANT]  
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
  {predefinito | '*level0_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* è **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ Nome del tipo di oggetto di livello 0 specificato. *level0_object_name* viene **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
   
  {predefinito | '*level1_object_type*' | NULL}  
- Tipo di oggetto di livello 1. *level1_object_type* è **varchar (128)** con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
 > [!NOTE]  
 >  Per il valore predefinito viene eseguito il mapping a NULL e per il parametro 'default' viene eseguito il mapping al tipo di oggetto DEFAULT.  
   
  {predefinito | '*level1_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* è **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
   
  {predefinito | '*level2_object_type*' | NULL}  
- Tipo di oggetto di livello 2. *level2_object_type* è **varchar (128)** con un valore predefinito è NULL. I possibili valori sono DEFAULT, default (con mapping a NULL) e NULL. Gli input validi per *level2_object_type* sono colonne, vincoli, notifica degli eventi, indice, parametro, TRIGGER e NULL.  
+ Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono DEFAULT, default (con mapping a NULL) e NULL. Gli input validi per *level2_object_type* sono colonne, vincoli, notifica degli eventi, indice, parametro, TRIGGER e NULL.  
   
  {predefinito | '*level2_object_name*' | NULL}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname** con un valore predefinito è NULL. I possibili valori sono default, NULL o un nome di oggetto.  
   
 ## <a name="tables-returned"></a>Tabelle restituite  
  Il formato delle tabelle restituite da fn_listextendedproperty è il seguente.  

@@ -2,7 +2,7 @@
 title: Funzione SQLDescribeParam | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df8d1653e158f19abf92eb1a650425213cbe393d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e24072d64d441540e93db3f489a218e515679c8b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldescribeparam-function"></a>Funzione SQLDescribeParam
 **Conformità**  
@@ -110,7 +110,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="comments"></a>Commenti  
  Marcatori di parametro sono numerati in ordine crescente di parametro, a partire da 1, l'ordine in cui che compaiono nell'istruzione SQL.  
   
- **SQLDescribeParam** non è stato restituito il tipo (input/output di input o output) di un parametro in un'istruzione SQL. La differenza nelle chiamate alle procedure, tutti i parametri nelle istruzioni SQL sono parametri di input. Per determinare il tipo di ogni parametro in una chiamata a una routine, un'applicazione chiama **SQLProcedureColumns**.  
+ **SQLDescribeParam** non restituisce il tipo (input, input/output, o di output) di un parametro in un'istruzione SQL. La differenza nelle chiamate alle procedure, tutti i parametri nelle istruzioni SQL sono parametri di input. Per determinare il tipo di ogni parametro in una chiamata a una routine, un'applicazione chiama **SQLProcedureColumns**.  
   
  Per ulteriori informazioni, vedere [che descrive i parametri](../../../odbc/reference/develop-app/describing-parameters.md).  
   

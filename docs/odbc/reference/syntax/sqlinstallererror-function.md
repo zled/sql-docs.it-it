@@ -2,7 +2,7 @@
 title: Funzione SQLInstallerError | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3cdc3ae1e4efe4292077851a4f457bae4af17bd
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f2f23e236da96615c08ccf3c2841da650d9d5730
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0  
   
  **Riepilogo**  
- **SQLInstallerError** restituisce le informazioni di stato o di errore per le funzioni del programma di installazione ODBC.  
+ **SQLInstallerError** restituisce le informazioni di stato o di errore per le funzioni di programma di installazione ODBC.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,7 +75,7 @@ RETCODE SQLInstallerError(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA o SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostica  
- **SQLInstallerError** non registrare i valori di errore per se stesso. **SQLInstallerError** restituisce SQL_NO_DATA quando non è in grado di recuperare le informazioni di errore (nel qual caso *pfErrorCode* è definito). Se **SQLInstallerError** non è possibile accedere ai valori di errore per qualsiasi motivo che normalmente restituisce SQL_ERROR, **SQLInstallerError** restituisce SQL_ERROR ma non tutti i valori di errore. Se non si conosce la lunghezza della stringa di avviso (*lpszErrorMsg*), è possibile impostare *lpszErrorMsg* su NULL e chiamare **SQLInstallerError**. **SQLInstallerError** verrà quindi restituito la lunghezza della stringa di avviso in *cbErrorMsgMax*. Se il buffer per il messaggio di errore è troppo breve, **SQLInstallerError** restituisce SQL_SUCCESS_WITH_INFO e corrette *pfErrorCode* valore per **SQLInstallerError**.  
+ **SQLInstallerError** non registrare i valori di errore per se stesso. **SQLInstallerError** restituisce SQL_NO_DATA quando non è possibile recuperare le informazioni di errore (nel qual caso *pfErrorCode* è definito). Se **SQLInstallerError** non è possibile accedere ai valori di errore per qualsiasi motivo che normalmente restituisce SQL_ERROR, **SQLInstallerError** restituisce SQL_ERROR ma non tutti i valori di errore. Se non si conosce la lunghezza della stringa di avviso (*lpszErrorMsg*), è possibile impostare *lpszErrorMsg* su NULL e chiamare **SQLInstallerError**. **SQLInstallerError** verrà quindi restituito la lunghezza della stringa di avviso in *cbErrorMsgMax*. Se il buffer per il messaggio di errore è troppo breve, **SQLInstallerError** restituisce SQL_SUCCESS_WITH_INFO e corrette *pfErrorCode* valore per **SQLInstallerError**.  
   
  Per determinare se un troncamento si è verificato nel messaggio di errore, un'applicazione è possibile confrontare il valore di *cbErrorMsgMax* argomento per la lunghezza effettiva del testo del messaggio scritto il *pcbErrorMsg* argomento. Se il troncamento, la lunghezza del buffer corrette deve essere allocata per *lpszErrorMsg* e **SQLInstallerError** deve essere chiamato nuovamente con il corrispondente *su iError*record.  
   

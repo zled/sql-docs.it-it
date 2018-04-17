@@ -1,30 +1,31 @@
 ---
 title: Tipi definiti dall'utente CLR di grandi dimensioni (ODBC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client|ODBC
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - ODBC, large user-defined types
 - large user-defined types [ODBC]
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4da32a24c00ca9539cca04c3886d19f73f9ab578
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ed85a2386d3d02df2af2e22805cea464cf2d130d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|Valore|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -142,7 +143,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|Supportato *|  
   
- \*Dati binari vengono convertiti in una stringa esadecimale.  
+ \* Dati binari vengono convertiti in una stringa esadecimale.  
   
  Di seguito sono riportate le conversioni supportate dai tipi di dati C ai tipi di dati SQL:  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 01/25/2018
 |SQL_C_BINARY|Supported|  
 |SQL_C_CHAR|Supportato *|  
   
- \*Si verifica la stringa esadecimale alla conversione di dati binari.  
+ \* Si verifica stringa esadecimale alla conversione di dati binari.  
   
 ## <a name="sqlvariant-support-for-udts"></a>Supporto di SQL_VARIANT per i tipi definiti dall'utente  
  I tipi definiti dall'utente non sono supportati nelle colonne SQL_VARIANT.  

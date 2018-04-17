@@ -1,15 +1,15 @@
 ---
 title: Gli aggiornamenti (ODBC) posizionati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-cursors
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQL Server Native Client ODBC driver, cursors
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - ODBC cursors, positioned updates
 ms.assetid: ff404e02-630f-474d-b5d4-06442b756991
-caps.latest.revision: 
+caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fdaa361e1113c2c1602a85af14c1bd74a16550c
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 92d914e2f9b8d30a625e6b80b7a180af15fc5119
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="positioned-updates-odbc"></a>Aggiornamenti posizionati (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +60,7 @@ ms.lasthandoff: 01/24/2018
   
  Le applicazioni possono aggiornare o eliminare qualsiasi riga nel set di righe con **SQLSetPos**. La chiamata **SQLSetPos** rappresenta un'alternativa utile alla creazione ed esecuzione di un'istruzione SQL. **SQLSetPos** opera su set di righe corrente e può essere usata solo dopo una chiamata a [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
- Dimensioni del set di righe sono impostata da una chiamata a [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) con un argomento di attributo di SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** Usa una nuova dimensione del set di righe, ma solo dopo una chiamata a **SQLFetch** o **SQLFetchScroll**. Se le dimensioni del set di righe viene modificata, ad esempio **SQLSetPos** viene chiamato e quindi **SQLFetch** o **SQLFetchScroll** viene chiamato. La chiamata a **SQLSetPos** utilizza le dimensioni del set di righe precedenti, ma **SQLFetch** o **SQLFetchScroll** utilizza le nuove dimensioni del set di righe.  
+ Dimensioni del set di righe sono impostata da una chiamata a [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) con un argomento di attributo di SQL_ATTR_ROW_ARRAY_SIZE. **SQLSetPos** utilizza nuove dimensioni del set di righe, ma solo dopo una chiamata a **SQLFetch** o **SQLFetchScroll**. Se le dimensioni del set di righe viene modificata, ad esempio **SQLSetPos** viene chiamato e quindi **SQLFetch** o **SQLFetchScroll** viene chiamato. La chiamata a **SQLSetPos** utilizza le dimensioni del set di righe precedenti, ma **SQLFetch** o **SQLFetchScroll** utilizza le nuove dimensioni del set di righe.  
   
  La prima riga nel set di righe è il numero di riga 1. L'argomento RowNumber in **SQLSetPos** deve identificare una riga nel set di righe; ovvero, il valore deve essere compreso nell'intervallo compreso tra 1 e il numero di righe recuperate più di recente. Questo valore potrebbe essere inferiore alle dimensioni del set di righe. Se RowNumber è 0, l'operazione viene applicata a ogni riga nel set di righe.  
   
@@ -85,9 +86,9 @@ ms.lasthandoff: 01/24/2018
   
  In alternativa, è possibile chiamare **SQLGetCursorName** dopo l'esecuzione dell'istruzione SELECT anziché chiamare **SQLSetCursorName** prima di eseguire l'istruzione SELECT. **SQLGetCursorName** restituisce un nome di cursore predefinito assegnato da ODBC se non si imposta un nome di cursore mediante **SQLSetCursorName**.  
   
- **SQLSetPos** è preferibile WHERE CURRENT OF quando si utilizza i cursori del server. Se si utilizza un cursore statico aggiornabile con la libreria di cursore ODBC, la libreria di cursori implementa gli aggiornamenti di WHERE CURRENT OF aggiungendo una clausola WHERE con i valori chiave per la tabella sottostante. Se le chiavi nella tabella non sono univoche, possono verificarsi aggiornamenti non desiderati.  
+ **SQLSetPos** è preferibile rispetto WHERE CURRENT OF quando si utilizza i cursori del server. Se si utilizza un cursore statico aggiornabile con la libreria di cursore ODBC, la libreria di cursori implementa gli aggiornamenti di WHERE CURRENT OF aggiungendo una clausola WHERE con i valori chiave per la tabella sottostante. Se le chiavi nella tabella non sono univoche, possono verificarsi aggiornamenti non desiderati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tramite i cursori &#40; ODBC &#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Tramite i cursori & #40; ODBC & #41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

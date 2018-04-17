@@ -1,16 +1,16 @@
 ---
 title: sp_clean_db_file_free_space (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_clean_db_file_free_space
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - ghost records
 - sp_clean_db_file_free_space
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 437b1e3887f47b3c310ca49df3033f82b85037ca
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5d03c8989061bd38ca17c459a00c6037ebc5aec5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcleandbfilefreespace-transact-sql"></a>sp_clean_db_file_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ sp_clean_db_file_free_space
   
 ## <a name="arguments"></a>Argomenti  
  [ @dbname=] '*database_name*'  
- Nome del database da pulire. *dbname* è **sysname** e non può essere NULL.  
+ Nome del database da pulire. *dbname* viene **sysname** e non può essere NULL.  
   
  [ @fileid=] '*file_number*'  
- ID del file di dati su cui eseguire la pulizia. *file_number* è **int** e non può essere NULL.  
+ ID del file di dati su cui eseguire la pulizia. *file_number* viene **int** e non può essere NULL.  
   
  [ @cleaning_delay=] '*delay_in_seconds*'  
- Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* è **int** con un valore predefinito è 0.  
+ Specifica un intervallo di ritardo tra le pulizie delle pagine per ridurre l'impatto sul sistema di I/O. *delay_in_seconds* viene **int** con un valore predefinito è 0.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -71,7 +71,7 @@ sp_clean_db_file_free_space
   
  Correlata [sp_clean_db_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md) stored procedure elimina il contenuto tutti i file nel database.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo del database db_owner.  
   
 ## <a name="examples"></a>Esempi  
@@ -85,6 +85,6 @@ EXEC sp_clean_db_file_free_space
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

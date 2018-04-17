@@ -1,16 +1,16 @@
 ---
 title: sp_rename (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/09/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_rename_TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-caps.latest.revision: 
+caps.latest.revision: 54
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3e8a506b800ebb81c1721175009c41d7f2a748d3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,24 +57,24 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*'  
  Nome corrente completo o non qualificato dell'oggetto utente o del tipo di dati. Se l'oggetto da rinominare è una colonna in una tabella, *object_name* deve essere nel formato *Table. Column* o *schema.table.column*. Se l'oggetto da rinominare è un indice, *object_name* deve essere nel formato *Table* o *schema.table.index*. Se l'oggetto da rinominare è un vincolo, *object_name* deve essere nel formato *schema.constraint*.  
   
- Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* è **nvarchar(776)**, non prevede alcun valore predefinito.  
+ Le virgolette sono necessarie solo se viene specificato un nome di oggetto completo. Nel caso di un nome completo, ovvero contenente un nome di database, il nome del database deve corrispondere a quello del database corrente. *object_name* viene **nvarchar(776)**, non prevede alcun valore predefinito.  
   
  [ @newname =] '*nuovo_nome*'  
- Nuovo nome dell'oggetto specificato. *nuovo_nome* deve essere un nome di una parte e devono essere conformi alle regole degli identificatori. *newname* è **sysname**, non prevede alcun valore predefinito.  
+ Nuovo nome dell'oggetto specificato. *nuovo_nome* deve essere un nome composto da una parte e devono rispettare le regole per gli identificatori. *newname* viene **sysname**, non prevede alcun valore predefinito.  
   
 > [!NOTE]  
 >  I nomi di trigger non possono iniziare con # o ##.  
   
  [ @objtype =] '*object_type*'  
- Tipo dell'oggetto da rinominare. *object_type* è **varchar(13)**, con un valore predefinito è NULL, i possibili valori sono i seguenti.  
+ Tipo dell'oggetto da rinominare. *object_type* viene **varchar(13)**, con un valore predefinito è NULL, e può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |COLUMN|Colonna da rinominare.|  
 |DATABASE|Database definito dall'utente. Quando si rinomina un database è necessario specificare questo tipo di oggetto.|  
 |INDEX|Indice definito dall'utente. Se si rinomina un indice con statistiche, vengono automaticamente rinominate anche le statistiche.|  
 |OBJECT|Un elemento di un tipo registrato in [Sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). È ad esempio possibile utilizzare OBJECT per rinominare oggetti che includono vincoli (CHECK, FOREIGN KEY, PRIMARY/UNIQUE KEY), tabelle utente e regole.|  
-|STATISTICS|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
+|STATISTICS|**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Statistiche create in modo esplicito da un utente o in modo implicito con un indice. Se si rinominano le statistiche di un indice, viene automaticamente rinominato anche l'indice.|  
 |USERDATATYPE|Oggetto [tipi definiti dall'utente CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) aggiunti tramite l'istruzione [CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md) o [sp_addtype](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md).|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
@@ -213,6 +214,6 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

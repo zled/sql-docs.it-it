@@ -1,16 +1,16 @@
 ---
 title: sp_changemergepullsubscription (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 361e2907d3f87103222e4cee8db69d470e101dee
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c195541281667574fb7283b368f91fc1e02bb4d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,26 +51,26 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, con un valore predefinito è %.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, con un valore predefinito è %.  
   
  [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione*è **sysname**, con un valore predefinito è %.  
+ Nome del server di pubblicazione. *server di pubblicazione*viene **sysname**, con un valore predefinito è %.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Nome del database del server di pubblicazione. *publisher_db*è **sysname**, con un valore predefinito è %.  
+ [ **@publisher_db=**] **'***publisher_db***'**  
+ Nome del database del server di pubblicazione. *publisher_db*viene **sysname**, con un valore predefinito è %.  
   
  [  **@property=**] **'***proprietà***'**  
- Nome della proprietà da modificare. *proprietà* è **sysname**, e può essere uno dei valori nella tabella.  
+ Nome della proprietà da modificare. *proprietà* viene **sysname**, e può essere uno dei valori nella tabella.  
   
  [  **@value=**] **'***valore***'**  
- Nuovo valore della proprietà specificata. *valore*è **nvarchar (255)**, e può essere uno dei valori nella tabella.  
+ Nuovo valore della proprietà specificata. *valore*viene **nvarchar(255**, e può essere uno dei valori nella tabella.  
   
-|Proprietà|Valore|Description|  
+|Proprietà|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Percorso di archiviazione della cartella snapshot, se diverso da quello predefinito o se si tratta di una cartella aggiuntiva.|  
-|**Descrizione**||Descrizione della sottoscrizione pull di tipo merge.|  
-|**server di distribuzione**||Nome del server di distribuzione.|  
-|**parametro**||ID di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**description**||Descrizione della sottoscrizione pull di tipo merge.|  
+|**Server di distribuzione**||Nome del server di distribuzione.|  
+|**distributor_login**||ID di accesso utilizzato nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Password (crittografata) utilizzata nel server di distribuzione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_security_mode**|**1**|Consente di utilizzare l'autenticazione di Windows per la connessione al server di distribuzione.|  
 ||**0**|Consente di utilizzare l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al server di distribuzione.|  
@@ -79,7 +79,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponibile per compatibilità con le versioni precedenti. Nome utente utilizzato per la connessione al servizio FTP.|  
 |**ftp_password**||Disponibile per compatibilità con le versioni precedenti. Password utente utilizzata per la connessione al servizio FTP.|  
 |**ftp_port**||Disponibile per compatibilità con le versioni precedenti. Numero di porta del servizio FTP per il database di distribuzione.|  
-|**nome host**||Specifica un valore per HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro join o di una relazione tra record logici.|  
+|**Nome host**||Specifica un valore per HOST_NAME() se questa funzione viene utilizzata nella clausola WHERE di un filtro join o di una relazione tra record logici.|  
 |**internet_login**||Account di accesso utilizzato dall'agente di merge per la connessione al server Web che ospita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_password**||Password di accesso utilizzata dall'agente di merge per la connessione al server Web in cui viene eseguita la sincronizzazione Web tramite l'autenticazione di base.|  
 |**internet_security_mode**|**1**|Utilizza l'autenticazione di Windows per la connessione al server Web in cui viene eseguita la sincronizzazione Web.|  
@@ -88,7 +88,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**internet_url**||URL che rappresenta la posizione del listener per la replica per la sincronizzazione Web.|  
 |**merge_job_login**||Account di accesso per l'account di Windows utilizzato per l'esecuzione dell'agente.|  
 |**merge_job_password**||Password dell'account di Windows utilizzato per l'esecuzione dell'agente.|  
-|**priorità**||Disponibile per compatibilità con le versioni precedenti di sola lettura. eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) nel server di pubblicazione invece per modificare la priorità di una sottoscrizione.|  
+|**priority**||Disponibile per compatibilità con le versioni precedenti di sola lettura. eseguire [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) nel server di pubblicazione invece per modificare la priorità di una sottoscrizione.|  
 |**publisher_login**||ID dell'account di accesso utilizzato nel server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**||Password (crittografata) utilizzata dal server di pubblicazione per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_security_mode**|**0**|Esegue la connessione al server di pubblicazione utilizzando l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -106,7 +106,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |NULL (predefinito)||Restituisce l'elenco di valori supportati per *proprietà*.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_changemergepullsubscription** viene utilizzata nella replica di tipo merge.  
@@ -115,14 +115,14 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
  Dopo la modifica dell'account di accesso o della password di un agente, è necessario arrestare e riavviare l'agente per rendere effettiva la modifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_changemergepullsubscription**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e modificare le proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
- [sp_addmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [Visualizzazione e modifica delle proprietà delle sottoscrizioni pull](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

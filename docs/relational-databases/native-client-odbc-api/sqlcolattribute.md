@@ -1,30 +1,31 @@
 ---
 title: SQLColAttribute | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ba0d2473ed054e9d356f84fdf5a698cae4c201a
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9645af8a1e18398b6e0861450d37ed9ab15be75e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/24/2018
 |SQL_DESC_TABLE_NAME|Disponibile nei set di risultati recuperati da istruzioni che generano cursori server o in istruzioni SELECT eseguite contenenti una clausola FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED per tutte le colonne in un set di risultati, a meno che una colonna non sia il risultato di un'espressione che non contiene un'assegnazione di etichetta come parte dell'espressione. Quando SQL_DESC_UNNAMED restituisce SQL_UNNAMED, tutti gli attributi di identificazione di colonna ODBC contengono stringhe di lunghezza zero per la colonna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC driver utilizza l'istruzione SET FMTONLY per ridurre l'overhead del server quando **SQLColAttribute** viene chiamato per ma non eseguite le istruzioni preparate.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver utilizza l'istruzione SET FMTONLY per ridurre il sovraccarico del server quando **SQLColAttribute** viene chiamato per ma non eseguite le istruzioni preparate.  
   
  Per i tipi di valori di grandi dimensioni, **SQLColAttribute** restituirà i valori seguenti:  
   
@@ -80,9 +81,9 @@ ms.lasthandoff: 01/24/2018
 |SQL_CA_SS_NUM_COMPUTES|Numero di clausole COMPUTE specificate nell'istruzione Transact-SQL SELECT corrente.|  
 |SQL_CA_SS_NUM_ORDERS|Numero di colonne specificate in una clausola ORDER BY di un'istruzione ODBC o Transact-SQL SELECT.|  
   
- \*È disponibile se l'attributo dell'istruzione SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
+ \*   L'opzione è disponibile se l'attributo dell'istruzione SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]è stato introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ha introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare il nome della raccolta XML schema, il nome dello schema e il nome del catalogo, rispettivamente. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
 |Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
@@ -104,15 +105,15 @@ ms.lasthandoff: 01/24/2018
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Supporto di SQLColAttribute per le caratteristiche avanzate di data e ora  
  Per i valori restituiti per i tipi di data/ora, vedere la sezione "Informazioni restituite nei campi IRD" in [metadati per parametri e risultato](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Per ulteriori informazioni, vedere [data e ora miglioramenti &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per ulteriori informazioni, vedere [data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Supporto di SQLColAttribute per tipi CLR definiti dall'utente di grandi dimensioni  
- **SQLColAttribute** supporta i tipi CLR grandi dimensioni definito dall'utente (UDT). Per ulteriori informazioni, vedere [Large CLR User-Defined tipi &#40; ODBC &#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** supporta grandi CLR tipi definiti dall'utente (UDT). Per ulteriori informazioni, vedere [Large CLR User-Defined tipi & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Supporto di SQLColAttribute per colonne di tipo sparse  
  Il nuovo campo implementazione riga IRD (descrittore), SQL_CA_SS_IS_COLUMN_SET, per determinare se una colonna è una query SQLColAttribute un **column_set** colonna.  
   
- Per ulteriori informazioni, vedere [supporto per colonne di tipo Sparse &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Per altre informazioni, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   

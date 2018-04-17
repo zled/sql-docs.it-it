@@ -1,16 +1,16 @@
 ---
-title: sp_notify_operator (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_notify_operator (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_notify_operator_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: 
+caps.latest.revision: 43
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7683e0150c41810c14981e0c6b6364c59ae19ae3
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: dcfa1cd158e0e853315c57581b48a1abfffd4bdf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,30 +55,30 @@ sp_notify_operator
   
 ## <a name="arguments"></a>Argomenti  
  [  **@profile_name=** ] **'***profilename***'**  
- Nome del profilo di Posta elettronica database da utilizzare per inviare il messaggio. *ProfileName* è **nvarchar (128)**. Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
+ Nome del profilo di Posta elettronica database da utilizzare per inviare il messaggio. *ProfileName* viene **nvarchar (128)**. Se *profilename* viene omesso, viene utilizzato il profilo di posta elettronica Database predefinito.  
   
- [ **@id=** ] *id*  
- Identificatore dell'operatore a cui inviare il messaggio. *ID* è **int**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
+ [  **@id=** ] *id*  
+ Identificatore dell'operatore a cui inviare il messaggio. *ID* viene **int**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
   
- [  **@name=** ] **'***nome***'**  
- Nome dell'operatore a cui inviare il messaggio. *nome* è **nvarchar (128)**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
+ [ **@name=** ] **'***name***'**  
+ Nome dell'operatore a cui inviare il messaggio. *nome* viene **nvarchar (128)**, con un valore predefinito è NULL. Uno dei *id* o *nome* deve essere specificato.  
   
-> **Nota:** indirizzo di posta elettronica deve essere definito per l'operatore per poter ricevere i messaggi.  
+> **Nota:** un indirizzo di posta elettronica deve essere definito per l'operatore prima che possano ricevere messaggi.  
   
  [  **@subject=** ] **'***soggetto***'**  
- Oggetto del messaggio di posta elettronica. *oggetto* è **nvarchar (256)** prevede alcun valore predefinito.  
+ Oggetto del messaggio di posta elettronica. *soggetto* viene **nvarchar(256)** non prevede alcun valore predefinito.  
   
  [  **@body=** ] **'***messaggio***'**  
- Corpo del messaggio di posta elettronica. *messaggio* è **nvarchar (max)** prevede alcun valore predefinito.  
+ Corpo del messaggio di posta elettronica. *messaggio* viene **nvarchar (max)** non prevede alcun valore predefinito.  
   
  [  **@file_attachments=** ] **'***allegato***'**  
- Nome del file da allegare al messaggio di posta elettronica. *allegato* è **nvarchar (512)**, non prevede alcun valore predefinito.  
+ Nome del file da allegare al messaggio di posta elettronica. *allegato* viene **nvarchar(512)**, non prevede alcun valore predefinito.  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
- Specifica il nome del computer host. *mail_host_database* è **nvarchar (128)**. Se non *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
+ [  **@mail_database=** ] **'***mail_host_database***'**  
+ Specifica il nome del computer host. *mail_host_database* viene **nvarchar (128)**. Se non *mail_host_database* è specificato, il **msdb** database viene utilizzato per impostazione predefinita.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  Invia il messaggio specificato all'indirizzo di posta elettronica dell'operatore. Se non è stato configurato un indirizzo di posta elettronica per l'operatore, viene restituito un errore.  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Agent Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [Stored procedure SQL Server Agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [sp_help_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  

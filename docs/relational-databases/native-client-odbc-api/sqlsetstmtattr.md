@@ -1,30 +1,31 @@
 ---
 title: SQLSetStmtAttr | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-api
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7cbc51d2212db08a4b3cce5d07673e96f263445d
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ccde3758ee43b69112e9d91bdaa7c26f2be01dd5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,14 +42,14 @@ ms.lasthandoff: 01/24/2018
   
  L'impostazione di SQL_SOPT_SS_PARAM_FOCUS su 0 ripristina l'accesso ai record del descrittore per i parametri.  
   
- SQLSetStmtAttr can also be used to set SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento.  
+ SQLSetStmtAttr può anche essere utilizzata per impostare SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento.  
   
  Per ulteriori informazioni, vedere [i metadati del parametro con valori di tabella per le istruzioni preparate](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md).  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlsetstmtattr-support-for-sparse-columns"></a>Supporto di SQLSetStmtAttr per colonne di tipo sparse  
- SQLSetStmtAttr può essere utilizzata per impostare SQL_SOPT_SS_NAME_SCOPE. Per ulteriori informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ SQLSetStmtAttr può essere utilizzata per impostare SQL_SOPT_SS_NAME_SCOPE. Per altre informazioni, vedere la sezione SQL_SOPT_SS_NAME_SCOPE più avanti in questo argomento. Per ulteriori informazioni sulle colonne di tipo sparse, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="statement-attributes"></a>Attributi di istruzione  
  Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client supporta anche gli attributi di istruzione seguenti specifici del driver.  
@@ -154,7 +155,7 @@ ms.lasthandoff: 01/24/2018
  Se un funzione di catalogo diversa, quindi viene chiamato SQLTables, SQLColumns o SQLPrimaryKeys quando SQL_SOPT_SS_NAME_SCOPE dispone di un valore diverso da SQL_SS_NAME_SCOPE_TABLE, viene restituito SQL_ERROR. Viene generato un record di diagnostica con SQLSTATE HY010 e il messaggio "Errore nella sequenza della funzione (SQL_SOPT_SS_NAME_SCOPE non è impostato su SQL_SS_NAME_SCOPE_TABLE)".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzione SQLGetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59355)   
+ [SQLGetStmtAttr-funzione](http://go.microsoft.com/fwlink/?LinkId=59355)   
  [Dettagli di implementazione di API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

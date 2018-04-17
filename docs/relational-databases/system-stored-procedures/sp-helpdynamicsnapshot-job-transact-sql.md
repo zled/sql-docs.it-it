@@ -2,7 +2,7 @@
 title: sp_helpdynamicsnapshot_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f9accc8ae7ffb64d82fa10c3b60a2f8fec44b8a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 82b1103e9dcf780dbc4a5be4c1a487173051f50a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 'dyn_' + <name of the standard snapshot job> + <GUID>  
 ```  
   
- [ **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
+ [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
  Identificatore di un processo di snapshot dei dati filtrati. *dynamic_snapshot_jobid*viene **uniqueidentifier**, con valore predefinito è NULL, che restituisce tutti i processi di snapshot che corrispondono alla stringa *dynamic_snapshot_jobname*.  
   
 ## <a name="result-sets"></a>Set di risultati  
@@ -78,7 +78,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**dynamic_filter_hostname**|**sysname**|Valore utilizzato per valutare il [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) funzione in un filtro di riga con parametri definito per la pubblicazione.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Percorso della cartella da cui i file di snapshot vengono letti se viene utilizzato un filtro di riga con parametri.|  
 |**frequency_type**|**int**|Frequenza pianificata per l'esecuzione dell'agente. I possibile valori sono i seguenti.<br /><br /> **1** = una sola volta<br /><br /> **2** = su richiesta<br /><br /> **4** = giornaliera<br /><br /> **8** = settimanale<br /><br /> **16** = mensile<br /><br /> **32** = mensile relativa<br /><br /> **64** = avvio automatico<br /><br /> **128** = periodica|  
-|**frequency_interval**|**int**|Giorni in cui l'agente viene eseguito. I possibili valori sono i seguenti.<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = Wednesday<br /><br /> **5** = Thursday<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = Day<br /><br /> **9** = giorni feriali<br /><br /> **10** = giorni festivi|  
+|**frequency_interval**|**int**|Giorni in cui l'agente viene eseguito. I possibili valori sono i seguenti.<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorni feriali<br /><br /> **10** = giorni festivi|  
 |**frequency_subday_type**|**int**|È il tipo che definisce la frequenza con cui viene eseguita quando l'agente *frequency_type* è **4** (giornaliero), i possibili valori sono i seguenti.<br /><br /> **1** = all'ora specificata<br /><br /> **2** = secondi<br /><br /> **4** = minuti<br /><br /> **8** = ore|  
 |**frequency_subday_interval**|**int**|Numero di intervalli di *frequency_subday_type* che si verificano tra esecuzioni pianificate dell'agente.|  
 |**frequency_relative_interval**|**int**|Settimana in cui viene eseguito l'agente in un determinato mese quando *frequency_type* è **32** (mensile relativo), i possibili valori sono i seguenti.<br /><br /> **1** = primo<br /><br /> **2** = secondi<br /><br /> **4** = terzo<br /><br /> **8** = quarto<br /><br /> **16** = ultimo|  

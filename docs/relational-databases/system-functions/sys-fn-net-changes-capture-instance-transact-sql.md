@@ -1,16 +1,16 @@
 ---
 title: sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server (starting with 2008)
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - fn_net_changes_<capture_instance>
 - sys.fn_net_changes_<capture_instance>
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d95fad7337666594aa41552a20e6ab5d4f211995
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b3155994177127d9739b9a908ab439acaf50c979
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Se viene fornito un valore NULL per questo argomento, l'endpoint superiore dell'intervallo della query corrisponderà all'endpoint superiore dell'intervallo valido per l'istanza di acquisizione.  
   
- *< row_filter_option >* :: = {tutti | all con maschera | all con merge}  
+ *< row_filter_option >* :: = {tutti | all con mask | all con merge}  
  Opzione applicata al contenuto delle colonne dei metadati e alle righe restituite nel set di risultati. Le opzioni possibili sono le seguenti:  
   
  all  
@@ -104,9 +104,9 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 |Nome colonna|Tipo di colonna|Description|  
 |-----------------|-----------------|-----------------|  
-|\<le colonne di @column_list>|**varia**|Le colonne identificate nel **column_list** argomento sp_cdc_generate_wrapper_function la funzione quando viene chiamato per generare lo script di creazione del wrapper. Se *column_list* è NULL, tutte le colonne di origine rilevate verranno visualizzati nel set di risultati.|  
+|\<le colonne da @column_list>|**Varia**|Le colonne identificate nel **column_list** argomento sp_cdc_generate_wrapper_function la funzione quando viene chiamato per generare lo script di creazione del wrapper. Se *column_list* è NULL, tutte le colonne di origine rilevate verranno visualizzati nel set di risultati.|  
 |__CDC_OPERATION|**nvarchar(2)**|Codice operativo che indica che l'operazione è necessaria per applicare la riga all'ambiente di destinazione. L'operazione varia in base al valore dell'argomento *row_filter_option* fornito nella chiamata seguente:<br /><br /> *row_filter_option* = "all", 'all with mask'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'I' - operazione di inserimento<br /><br /> 'UN' - operazione di aggiornamento<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - operazione di eliminazione<br /><br /> 'M' - operazione di inserimento oppure di aggiornamento|  
-|\<le colonne di @update_flag_list>|**bit**|Flag di bit denominato aggiungendo _uflag al nome della colonna. Il flag assume un valore non null solo quando *row_filter_option* **= 'all with mask'** e \__CDC_OPERATION **=' un' '**. È impostato su 1 se la colonna corrispondente è stata modificata all'interno della finestra di query. Altrimenti, è impostato su 0.|  
+|\<le colonne da @update_flag_list>|**bit**|Flag di bit denominato aggiungendo _uflag al nome della colonna. Il flag assume un valore non null solo quando *row_filter_option* **= 'all with mask'** e \__CDC_OPERATION **=' un' '**. È impostato su 1 se la colonna corrispondente è stata modificata all'interno della finestra di query. Altrimenti, è impostato su 0.|  
   
 ## <a name="remarks"></a>Osservazioni  
  La funzione fn_net_changes_<capture_instance> viene utilizzata come wrapper per la funzione di query cdc.fn_cdc_get_net_changes_<capture_instance>. La stored procedure sys.sp_cdc_generate_wrapper viene utilizzata per creare lo script per il wrapper.  

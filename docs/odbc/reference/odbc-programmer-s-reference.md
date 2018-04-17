@@ -1,8 +1,8 @@
 ---
-title: ODBC Programmer ' &#39; riferimento s | Documenti Microsoft
+title: I programmatori ODBC&#39;riferimento s | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,32 +18,32 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b934652505039a021d2b08c0fa5314614ce9c609
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 24f7c0aa7abcf2b35cbef34cabbe86944ddcc7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC Programmer ' &#39; s riferimento
+# <a name="odbc-programmer39s-reference"></a>I programmatori ODBC&#39;riferimento s
 Il *riferimento per programmatori ODBC* include le sezioni seguenti.  
   
--   [Novità di ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) sono elencate le nuove funzionalità ODBC che sono stati aggiunti in Windows 8 SDK.  
+-   [Novità in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) sono elencate le nuove funzionalità ODBC che sono stati aggiunti in Windows 8 SDK.  
   
--   [Esempio ODBC programma](../../odbc/reference/sample-odbc-program.md) presenta un programma di esempio ODBC.  
+-   [ODBC programma di esempio](../../odbc/reference/sample-odbc-program.md) presenta un programma di esempio ODBC.  
   
--   [Introduzione a ODBC](../../odbc/reference/introduction-to-odbc.md) fornisce una breve storia di Structured Query Language e ODBC e le informazioni di carattere generale sull'interfaccia ODBC.  
+-   [Introduzione a ODBC](../../odbc/reference/introduction-to-odbc.md) include dati cronologici breve Structured Query Language e ODBC e informazioni di carattere generale sull'interfaccia ODBC.  
   
--   [Sviluppo di applicazioni](../../odbc/reference/develop-app/developing-applications.md) contiene informazioni sullo sviluppo di applicazioni che utilizzano l'interfaccia ODBC e driver che l'implementano.  
+-   [Lo sviluppo di applicazioni](../../odbc/reference/develop-app/developing-applications.md) contiene informazioni sullo sviluppo di applicazioni che utilizzano l'interfaccia ODBC e driver che l'implementano.  
   
 -   [Installazione e configurazione Software ODBC](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md) fornisce informazioni sull'installazione e un programma di installazione di riferimento alle funzioni DLL.  
   
--   [Sviluppo di un Driver ODBC](../../odbc/reference/develop-driver/developing-an-odbc-driver.md) contiene informazioni sulla scrittura di un driver.  
+-   [Lo sviluppo di un Driver ODBC](../../odbc/reference/develop-driver/developing-an-odbc-driver.md) contiene informazioni sulla scrittura di un driver.  
   
--   [Riferimento all'API](../../odbc/reference/syntax/odbc-reference.md) contiene la sintassi e semantiche informazioni per tutte le funzioni ODBC.  
+-   [Riferimento all'API](../../odbc/reference/syntax/odbc-reference.md) contiene sintassi e semantiche informazioni per tutte le funzioni ODBC.  
   
--   [Appendici ODBC](../../odbc/reference/appendixes/odbc-appendixes.md) contengono dettagli tecnici e fanno riferimento a tabelle di codici di errore ODBC, tipi di dati e la grammatica SQL.  
+-   [ODBC appendici](../../odbc/reference/appendixes/odbc-appendixes.md) contiene i dettagli tecnici e fare riferimento alle tabelle per i codici di errore ODBC, tipi di dati e la grammatica SQL.  
   
 ## <a name="working-with-the-odbc-documentation"></a>Utilizzo con la documentazione di ODBC  
  L'interfaccia ODBC è progettato per l'utilizzo con il linguaggio di programmazione C. Utilizzo dell'interfaccia ODBC si estende su tre aree: istruzioni SQL, ODBC chiamate di funzione e programmazione C. Questa documentazione si presuppone quanto segue:  
@@ -58,11 +58,11 @@ Il *riferimento per programmatori ODBC* include le sezioni seguenti.
 |------------|--------------|  
 |SELEZIONARE * DA|Lettere maiuscole indicano le istruzioni SQL, i nomi delle macro e termini utilizzati a livello di comando del sistema operativo.|  
 |`RETCODE SQLFetch(hdbc)`|Il tipo di carattere a spaziatura fissa viene utilizzato per le righe di comando di esempio e il codice programma.|  
-|*argomento*|Le parole in corsivo indicano gli argomenti a livello di codice, informazioni che l'utente o l'applicazione deve fornire o word enfasi.|  
+|*argument*|Le parole in corsivo indicano gli argomenti a livello di codice, informazioni che l'utente o l'applicazione deve fornire o word enfasi.|  
 |**SQLEndTran**|Grassetto indica che la sintassi deve essere digitata esattamente come indicato, inclusi i nomi di funzione.|  
 |&#124;|Una barra verticale separa le due opzioni si escludono a vicenda in una riga di sintassi.|  
 |...|I puntini di sospensione indica che gli argomenti possono essere ripetuti più volte.|  
-|, , ,|Una colonna di tre punti indica mantenimento delle righe di codice precedenti.|  
+|tramite tabelle annidate. tramite tabelle annidate. tramite tabelle annidate.|Una colonna di tre punti indica mantenimento delle righe di codice precedenti.|  
   
 ## <a name="about-the-code-examples"></a>Informazioni sugli esempi di codice  
  Gli esempi di codice in questa guida sono progettati per solo scopo illustrativo. Poiché sono formulate principalmente per illustrare i concetti ODBC, l'efficienza è talvolta stato riservato a fini di chiarezza. Inoltre, intere sezioni del codice in alcuni casi sono stati omessi per maggiore chiarezza. Tra le definizioni di funzioni non ODBC (tali funzioni i cui nomi non iniziano con "SQL") e la maggior parte di gestione degli errori.  

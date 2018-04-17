@@ -2,7 +2,7 @@
 title: Perché è stato creato ODBC? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 33cc5f63c34618f51196e173e58adbac58377f29
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 82e2bd742d4736e75e5bfa3d6437304a32b289ed
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="why-was-odbc-created"></a>Perché è stato creato ODBC?
 Società utilizzato in passato, un singolo DBMS. L'accesso al database è stato eseguito il front-end del sistema o mediante le applicazioni scritte per lavorare esclusivamente con tale sistema. Tuttavia, come l'utilizzo di computer aumento delle dimensioni e ulteriori componenti hardware e software è diventato disponibile, società avviato acquisire diversi DBMS. Sono molti i motivi: persone hanno acquistate animale più economico, qual era il più veloce, quali sono già informata, ciò che è stato più recente sul mercato, cosa ha funzionato ottimale per una singola applicazione. Per altri motivi erano riorganizzazioni e fusioni, in cui i reparti che in precedenza erano un singolo DBMS era diversi.  

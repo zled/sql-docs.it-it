@@ -1,16 +1,16 @@
 ---
-title: syscollector_collection_items (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: syscollector_collection_items (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syscollector_collection_items_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - syscollector_collection_items view
 - add data collector view
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca9b8aed18c716e235d1848d7130395cf4fe7875
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 6ffeae6501c29ffff1bacba96a959189859234e7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,8 @@ ms.lasthandoff: 02/03/2018
 |**collection_item_id**|**int**|Identifica un elemento del set di raccolta. Non ammette i valori Null.|  
 |**collector_type_uid**|**uniqueidentifier**|GUID utilizzato per identificare il tipo agente di raccolta dati. Non ammette i valori Null.|  
 |**name**|**nvarchar(4000)**|Nome del set di raccolta. Ammette i valori Null.|  
-|**frequency**|**int**|La frequenza con cui i dati sono raccolti da un elemento della raccolta. Non ammette i valori Null.|  
-|**parametri**|**xml**|Descrive la parametrizzazione per il tipo di agente di raccolta associato all'elemento della raccolta. Lo schema XML per questo elemento della raccolta viene convalidato con il XML Schema (XSD) archiviato nel **parameter_schema** per un tipo di agente di raccolta specifico. Ammette i valori Null. Per ulteriori informazioni, vedere [syscollector_collector_types &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
+|**Frequenza**|**int**|La frequenza con cui i dati sono raccolti da un elemento della raccolta. Non ammette i valori Null.|  
+|**parameters**|**xml**|Descrive la parametrizzazione per il tipo di agente di raccolta associato all'elemento della raccolta. Lo schema XML per questo elemento della raccolta viene convalidato con il XML Schema (XSD) archiviato nel **parameter_schema** per un tipo di agente di raccolta specifico. Ammette i valori Null. Per altre informazioni, vedere [syscollector_collector_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collector-types-transact-sql.md).|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede SELECT per **dc_operator**, **dc_proxy**.  

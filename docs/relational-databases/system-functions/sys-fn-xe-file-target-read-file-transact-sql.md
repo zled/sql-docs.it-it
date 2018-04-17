@@ -1,16 +1,16 @@
 ---
 title: sys.fn_xe_file_target_read_file (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - fn_xe_file_target_read_file_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: 
+caps.latest.revision: 20
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6284bd7690c715ed47177b42a5a1f5beb4b4b6a3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c0e86cd808ab02710bbd8e59a3064319da62efdc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   Legge file creati dalla destinazione asincrona dei file degli eventi estesi. Viene restituito un evento per riga in formato XML.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accettare i risultati della traccia generati in formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Supporto solo per eventi estesi i risultati della traccia in formato XEL. È consigliabile utilizzare SQL Server Management Studio per leggere i risultati della traccia in formato XEL.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] accettare i risultati della traccia generati in formato XEL e XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Supporto solo per gli eventi estesi i risultati della traccia in formato XEL. È consigliabile utilizzare SQL Server Management Studio per leggere i risultati della traccia in formato XEL.    
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,22 +55,22 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argomenti  
  *path*  
- Percorso dei file da leggere. *percorso* può contenere caratteri jolly e può includere il nome di un file. *percorso* è **nvarchar (260)**. Non prevede alcun valore predefinito. Nel contesto di Database SQL di Azure, questo valore è un URL HTTP a un file nell'archiviazione di Azure.
+ Percorso dei file da leggere. *percorso* può contenere caratteri jolly e può includere il nome di un file. *percorso* viene **nvarchar(260)**. Non prevede alcun valore predefinito. Nel contesto di Database SQL di Azure, questo valore è un URL HTTP a un file nell'archiviazione di Azure.
   
  *mdpath*  
- Il percorso del file di metadati che corrisponde al file o file specificati dal *percorso* argomento. *mdpath* è **nvarchar (260)**. Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
+ Il percorso del file di metadati che corrisponde al file o file specificati dal *percorso* argomento. *mdpath* viene **nvarchar(260)**. Non prevede alcun valore predefinito. A partire da SQL Server 2016, questo parametro può essere specificato come null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] non richiede il *mdpath* parametro. È tuttavia disponibile per la compatibilità con i file di log generati in versioni precedenti di SQL Server.  
   
  *initial_file_name*  
- Il primo file da cui leggere *percorso*. *initial_file_name* è **nvarchar (260)**. Non prevede alcun valore predefinito. Se **null** è specificato come argomento di tutti i file trovati in *percorso* vengono letti.  
+ Il primo file da cui leggere *percorso*. *initial_file_name* viene **nvarchar(260)**. Non prevede alcun valore predefinito. Se **null** è specificato come argomento di tutti i file trovati in *percorso* vengono letti.  
   
 > [!NOTE]  
 >  *initial_file_name* e *initial_offset* sono argomenti accoppiati. Se si specifica un valore per uno dei due argomenti, è necessario specificare un valore anche per l'altro.  
   
  *initial_offset*  
- Utilizzato per specificare l'ultimo offset letto precedentemente e consente di ignorare tutti gli eventi fino all'offset (incluso). L'enumerazione degli eventi inizia dopo l'offset specificato. *initial_offset* è **bigint**. Se **null** viene specificato come argomento l'intero file verrà letto.  
+ Utilizzato per specificare l'ultimo offset letto precedentemente e consente di ignorare tutti gli eventi fino all'offset (incluso). L'enumerazione degli eventi inizia dopo l'offset specificato. *initial_offset* viene **bigint**. Se **null** viene specificato come argomento l'intero file verrà letto.  
   
 ## <a name="table-returned"></a>Tabella restituita  
   
@@ -81,7 +82,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |event_data|**nvarchar(max)**|Contenuto dell'evento in formato XML. Non ammette i valori Null.|  
 |file_name|**nvarchar(260)**|Nome del file che contiene l'evento. Non ammette i valori Null.|  
 |file_offset|**bigint**|Offset del blocco nel file che contiene l'evento. Non ammette i valori Null.|  
-|timestamp_utc|**datetime2**|**Si applica a**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
+|timestamp_utc|**datetime2**|**Si applica a** : da [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Data e ora (fuso orario UTC) dell'evento. Non ammette i valori Null.|  
 
   
 ## <a name="remarks"></a>Osservazioni  

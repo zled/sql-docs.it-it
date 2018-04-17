@@ -1,16 +1,16 @@
 ---
-title: sysmail_help_queue_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_help_queue_sp (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: 
+caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 7ba3b42c0ac095d4f8c0ad8f4819cd341097aef4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  In Posta elettronica database esistono due code, la coda della posta e la coda dello stato. Nella coda della posta vengono archiviati gli elementi di posta in attesa di essere inviati. Nella coda dello stato viene archiviato lo stato degli elementi già inviati. Questa stored procedure consente di visualizzare lo stato della coda della posta o dello stato. Se il parametro  **@queue_type**  non viene specificato, la stored procedure restituisce una riga per ognuna delle code.  
+  In Posta elettronica database esistono due code, la coda della posta e la coda dello stato. Nella coda della posta vengono archiviati gli elementi di posta in attesa di essere inviati. Nella coda dello stato viene archiviato lo stato degli elementi già inviati. Questa stored procedure consente di visualizzare lo stato della coda della posta o dello stato. Se il parametro **@queue_type** non viene specificato, la stored procedure restituisce una riga per ognuna delle code.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,11 +46,11 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@queue_type**  =] **'***queue_type***'**  
- Messaggi di posta elettronica del tipo specificato come argomento facoltativo che elimina il *queue_type*. *queue_type* è **nvarchar(6)** prevede alcun valore predefinito. Le voci valide sono **posta** e **stato**.  
+ [ **@queue_type** =] **'***queue_type***'**  
+ Messaggi di posta elettronica del tipo specificato come argomento facoltativo che elimina il *queue_type*. *queue_type* viene **nvarchar(6)** non prevede alcun valore predefinito. Le voci valide sono **posta** e **stato**.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-set"></a>Set di risultati  
   

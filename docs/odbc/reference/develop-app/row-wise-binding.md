@@ -1,31 +1,32 @@
 ---
 title: L'associazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - row-wise binding [ODBC]
 - result sets [ODBC], binding columns
 - binding columns [ODBC]
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf2df3b6aa74ad9e959bdebc2ffcefe32c2a3047
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="row-wise-binding"></a>L'associazione per riga
 Quando si utilizza l'associazione, un'applicazione definisce una struttura contenente uno o due, o in alcuni casi, tre gli elementi per ogni colonna per cui è possibile restituire dati. Il primo elemento contiene il valore dei dati e il secondo elemento contiene il buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza da memorizzare nel buffer separato impostando i campi di descrizione SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR su valori diversi. In tal caso, la struttura contiene un terzo elemento. L'applicazione quindi alloca una matrice di strutture, che contiene tutti gli elementi sono presenti righe nel set di righe.  
@@ -38,7 +39,7 @@ Address = Bound Address + ((Row Number - 1) * Structure Size)
   
  in cui le righe sono numerate da 1 per le dimensioni del set di righe. (Uno viene sottratto il numero di riga perché è in base zero matrice l'indicizzazione in C.) Nella figura seguente mostra l'associazione per riga funziona. In genere, solo le colonne che verranno associate vengono inclusi nella struttura. La struttura può contenere i campi che non restituiscono set di colonne correlati. Le colonne possono essere inserite nella struttura in qualsiasi ordine, ma vengono visualizzate in ordine sequenziale per maggiore chiarezza.  
   
- ![Mostra riga &#45; associazione consigliabile](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
+ ![Mostra riga&#45;associazione buona norma](../../../odbc/reference/develop-app/media/pr22.gif "pr22")  
   
  Ad esempio, il codice seguente crea una struttura con gli elementi in cui si desidera ottenere dati per le colonne OrderID, venditore e lo stato e lunghezza/indicatori per le colonne venditore e lo stato. Alloca 10 delle strutture e li associa le colonne OrderID, venditore e stato.  
   

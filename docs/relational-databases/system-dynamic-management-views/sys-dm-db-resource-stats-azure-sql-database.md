@@ -28,11 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f09cea24068fe63dd1609e26c7835662369d8f0d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: 4e67b2e698440789e954e60c25b7aaeb18d04e41
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,13 +43,13 @@ ms.lasthandoff: 04/08/2018
 |Colonne|Tipo di dati|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Ora UTC che indica la fine dell'intervallo di reporting corrente.|  
-|avg_cpu_percent|**decimal (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
-|avg_data_io_percent|**decimal (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello del servizio.|  
-|avg_log_write_percent|**decimal (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
-|avg_memory_usage_percent|**decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
-|xtp_storage_percent|**decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
-|max_worker_percent|**decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
-|max_session_percent|**decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
+|avg_cpu_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio del calcolo del limite del livello del servizio.|  
+|avg_data_io_percent|**Decimal (5,2)**|Media di dati utilizzo i/o in percentuale del limite del livello del servizio.|  
+|avg_log_write_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio delle risorse di scrittura del limite del livello del servizio.|  
+|avg_memory_usage_percent|**Decimal (5,2)**|Percentuale dell'utilizzo medio della memoria del limite del livello del servizio.<br /><br /> Ciò include la memoria utilizzata per l'archiviazione di oggetti di OLTP In memoria.|  
+|xtp_storage_percent|**Decimal (5,2)**|Utilizzo di archiviazione per OLTP In memoria in percentuale del limite del livello del servizio (alla fine dell'intervallo di reporting). Ciò include la memoria utilizzata per l'archiviazione degli oggetti OLTP In memoria: le tabelle con ottimizzazione per la memoria, indici e le variabili di tabella. Include inoltre la memoria utilizzata per l'elaborazione di operazioni ALTER TABLE.<br /><br /> Restituisce 0 se OLTP In memoria non viene utilizzato nel database.|  
+|max_worker_percent|**Decimal (5,2)**|Massimi simultanee processi di lavoro (richieste) in percentuale del limite del livello di servizio del database.|  
+|max_session_percent|**Decimal (5,2)**|Numero massimo di sessioni simultaneo espresso come percentuale del limite del livello di servizio del database.|  
 |dtu_limit|**int**|Max database DTU impostazione corrente per il database durante questo intervallo. |
 |||
   

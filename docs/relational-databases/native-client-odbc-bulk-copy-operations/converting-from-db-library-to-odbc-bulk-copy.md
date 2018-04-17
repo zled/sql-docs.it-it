@@ -1,15 +1,15 @@
 ---
 title: La conversione da DB-Library a copia Bulk ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-bulk-copy-operations
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - converting DB-Library to ODBC bulk copy
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
-caps.latest.revision: 
+caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -104,7 +105,7 @@ ms.lasthandoff: 01/25/2018
   
     -   Il formato predefinito è *mmm gg aaaa hh: mmxx* in *xx* AM o PM.  
   
-    -   **DateTime** e **smalldatetime** in qualsiasi formato supportato da DB-Library stringhe di caratteri **dbconvert** (funzione).  
+    -   **Data/ora** e **smalldatetime** stringhe in qualsiasi formato supportato da DB-Library caratteri **dbconvert** (funzione).  
   
     -   Quando il **Usa impostazioni internazionali** in DB-Library è selezionata la casella di **opzioni** scheda della finestra di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilità di rete del Client, le funzioni di copia bulk di DB-Library accettano anche le date in locale formato di data definito per le impostazioni locali del Registro di sistema di computer client.  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 01/25/2018
 -   In caso di output **money** valori in formato carattere, ODBC bulk copia funzioni forniscono quattro cifre di precisione e nessun separatore virgola; Le versioni DB-Library solo forniscono a due cifre di precisione e includono i separatori virgola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni di copia Bulk &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
+ [L'esecuzione di operazioni di copia Bulk &#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

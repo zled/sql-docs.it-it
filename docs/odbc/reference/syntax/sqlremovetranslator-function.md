@@ -2,7 +2,7 @@
 title: Funzione SQLRemoveTranslator | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: c6feda49-0359-4224-8de9-77125cf2397b
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a9b076c209964110d2253681d97252ece25610ff
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6eef32c1e9a1497294cfbfddda0449423c2c04a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovetranslator-function"></a>SQLRemoveTranslator (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0  
   
  **Riepilogo**  
- **SQLRemoveTranslator** rimuove una funzione di conversione di informazioni dalla sezione Odbcinst.ini delle informazioni di sistema e decrementa conteggio di utilizzo della funzione di conversione componente di 1.  
+ **SQLRemoveTranslator** Rimuove informazioni su una funzione di conversione dalla sezione Odbcinst le informazioni di sistema e decrementa conteggio di utilizzo della funzione di conversione componente in base 1.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -71,9 +71,9 @@ BOOL SQLRemoveTranslator(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLRemoveTranslator** integra il [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md) funzione e gli aggiornamenti di utilizzo di componenti conteggio nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
+ **SQLRemoveTranslator** si integra con il [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md) funzione e gli aggiornamenti contare l'utilizzo di componenti nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
   
- **SQLRemoveTranslator** ridurrà il conteggio di utilizzo del componente di 1. Se il conteggio di utilizzo del componente è pari a 0, verrà rimossa la voce di funzione di conversione nelle informazioni di sistema. La voce di funzione di conversione è nel seguente percorso nelle informazioni di sistema, sotto il nome della funzione di conversione:  
+ **SQLRemoveTranslator** ridurrà il conteggio di utilizzi di componente di 1. Se il conteggio di utilizzo del componente è pari a 0, verrà rimossa la voce di funzione di conversione nelle informazioni di sistema. La voce di funzione di conversione è nel seguente percorso nelle informazioni di sistema, sotto il nome della funzione di conversione:  
   
  `HKEY_LOCAL_MACHINE`  
   
@@ -85,7 +85,7 @@ BOOL SQLRemoveTranslator(
   
  **SQLRemoveTranslator** non vengono effettivamente rimossi tutti i file. Il programma chiamante è responsabile per l'eliminazione di file e mantenendo il conteggio di utilizzo di file. Solo dopo che è stato raggiunto il conteggio di utilizzo del componente sia il conteggio di utilizzo file zero è un file eliminato fisicamente. È possibile eliminare alcuni file in un componente e altri utenti non eliminato, a seconda se i file vengono utilizzati da altre applicazioni che hanno incrementa il conteggio di utilizzo di file.  
   
- **SQLRemoveTranslator** è nota anche come parte di un processo di aggiornamento. Se un'applicazione rileva che deve eseguire un aggiornamento e il driver è installato in precedenza, il driver debba essere rimossi e reinstallato. **SQLRemoveTranslator** deve innanzitutto essere chiamato per diminuire il conteggio di utilizzo del componente, quindi **SQLInstallTranslatorEx** deve essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione necessario fisicamente sostituire i vecchi file con i nuovi file. Il conteggio di utilizzo del file rimarrà invariato e altre applicazioni che utilizzano i file della versione precedenti utilizzeranno la versione più recente.  
+ **SQLRemoveTranslator** nota anche come parte di un processo di aggiornamento. Se un'applicazione rileva che deve eseguire un aggiornamento e il driver è installato in precedenza, il driver debba essere rimossi e reinstallato. **SQLRemoveTranslator** deve essere anzitutto chiamata per diminuire il conteggio di utilizzo del componente, quindi **SQLInstallTranslatorEx** deve essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione necessario fisicamente sostituire i vecchi file con i nuovi file. Il conteggio di utilizzo del file rimarrà invariato e altre applicazioni che utilizzano i file della versione precedenti utilizzeranno la versione più recente.  
   
 ## <a name="related-functions"></a>Funzioni correlate  
   

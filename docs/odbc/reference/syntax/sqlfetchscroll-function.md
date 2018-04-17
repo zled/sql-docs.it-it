@@ -2,7 +2,7 @@
 title: Funzione SQLFetchScroll | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e8b244a9b4e6923c6455ea84175ed1557ec4100a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlfetchscroll-function"></a>Funzione SQLFetchScroll
 **Conformità**  
@@ -128,12 +128,12 @@ SQLRETURN SQLFetchScroll(
 |IM018|**SQLCompleteAsync** non è stato chiamato per completare l'operazione asincrona precedente su questo handle.|Se la chiamata di funzione precedente dell'handle restituisce SQL_STILL_EXECUTING e se è abilitata la modalità di notifica, **SQLCompleteAsync** deve essere chiamato per l'handle per eseguire la post-elaborazione e completare l'operazione.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLFetchScroll** restituisce un set di righe specificato dal set di risultati. Set di righe può essere specificata in base alla posizione assoluta o relativa o dal segnalibro. **SQLFetchScroll** può essere chiamato solo quando esiste un set di risultati, vale a dire, dopo una chiamata che crea un set di risultati e prima del cursore sopra di set di risultati viene chiuso. Se tutte le colonne sono associate, restituisce i dati in tali colonne. Se l'applicazione non è specificato un puntatore a una matrice di stato di riga o di un buffer in cui restituire il numero di righe recuperate, **SQLFetchScroll** restituisce anche le informazioni. Le chiamate a **SQLFetchScroll** può essere combinato con chiamate a **SQLFetch** ma non può essere combinato con chiamate a **SQLExtendedFetch**.  
+ **SQLFetchScroll** restituisce un set di righe specificato dal set di risultati. Set di righe può essere specificata in base alla posizione assoluta o relativa o dal segnalibro. **SQLFetchScroll** può essere chiamato solo quando esiste un set di risultati, vale a dire, dopo una chiamata che crea un set di risultati e prima del cursore è chiuso over che set di risultati. Se tutte le colonne sono associate, restituisce i dati in tali colonne. Se l'applicazione non è specificato un puntatore a una matrice di stato di riga o di un buffer in cui restituire il numero di righe recuperate, **SQLFetchScroll** restituisce anche le informazioni. Le chiamate a **SQLFetchScroll** può essere combinato con chiamate a **SQLFetch** ma non può essere combinato con chiamate a **SQLExtendedFetch**.  
   
  Per ulteriori informazioni, vedere [cursori a blocchi usando](../../../odbc/reference/develop-app/using-block-cursors.md) e [utilizzando i cursori scorrevoli](../../../odbc/reference/develop-app/using-scrollable-cursors.md).  
   
 ## <a name="positioning-the-cursor"></a>Posizionando il cursore  
- Quando viene creato il set di risultati, il cursore viene posizionato prima dell'inizio del set di risultati. **SQLFetchScroll** posiziona il cursore a blocchi in base ai valori del *FetchOrientation* e *FetchOffset* argomenti, come illustrato nella tabella seguente. Le regole precise per determinare l'inizio del nuovo set di righe vengono visualizzate nella sezione successiva.  
+ Quando viene creato il set di risultati, il cursore viene posizionato prima dell'inizio del set di risultati. **SQLFetchScroll** posiziona il cursore a blocchi in base ai valori del *FetchOrientation* e *FetchOffset* argomenti come illustrato nella tabella seguente. Le regole precise per determinare l'inizio del nuovo set di righe vengono visualizzate nella sezione successiva.  
   
 |FetchOrientation|Significato|  
 |----------------------|-------------|  
@@ -217,9 +217,9 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Operazioni preliminari*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 e &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow FetchOffset + 1*|  
+|*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Operazioni preliminari*|  
+|*FetchOffset < 0 e &#124; FetchOffset &#124; > LastResultRow e &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Operazioni preliminari*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Dopo la fine*|  
@@ -235,7 +235,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condizione|Prima riga del nuovo set di righe|  
 |---------------|-----------------------------|  
-|*Qualsiasi*|*1*|  
+|*qualsiasi*|*1*|  
   
 ## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
  Le regole seguenti si applicano.  
@@ -263,7 +263,7 @@ SQLRETURN SQLFetchScroll(
   
  Se il cursore rileva le righe aggiunte al set di risultati o rimuove le righe eliminate dal set di risultati, viene visualizzato come se rileva le modifiche solo quando il recupero dei dati. Include il caso quando **SQLFetchScroll** viene chiamato con FetchOrientation impostato su SQL_FETCH_RELATIVE e FetchOffset impostato su 0 per recupera di nuovo set di righe dello stesso, ma non include il caso quando viene chiamato SQLSetPos con fOption impostato su SQL _ AGGIORNAMENTO. In quest'ultimo caso, vengono aggiornati i dati nei buffer di set di righe, ma le righe non refetched ed eliminate non vengono rimossi dal set di risultati. Pertanto, quando una riga viene eliminata da o inserita nel set di righe corrente, il cursore non modifica i buffer di set di righe. In alternativa, rileva la modifica durante il recupero qualsiasi set di righe che in precedenza, inclusa la riga eliminata o ora include la riga inserita.  
   
- Ad esempio  
+ Esempio:  
   
 ```  
 // Fetch the next rowset.  
@@ -308,15 +308,15 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  Le righe di errore (ovvero, le righe con lo stato di SQL_ROW_ERROR) non influenzano lo spostamento del cursore. Ad esempio, se il set di righe corrente inizia con la riga 11 e lo stato di riga 11 è SQL_ROW_ERROR, la chiamata **SQLFetchScroll** con FetchOrientation impostato su SQL_FETCH_RELATIVE e FetchOffset è impostato su 5 restituisce il set di righe a partire dalla riga 16, esattamente come se lo stato di riga 11 SQL_SUCCESS.  
   
 ## <a name="returning-data-in-bound-columns"></a>Restituzione di dati in colonne associate  
- **SQLFetchScroll** restituisce i dati in colonne associate in modo analogo **SQLFetch**. Per ulteriori informazioni, vedere "restituzione di dati in colonne"associate in [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
+ **SQLFetchScroll** restituisce i dati in colonne associate in quello **SQLFetch**. Per ulteriori informazioni, vedere "restituzione di dati in colonne"associate in [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
   
  Se nessuna colonna è associata, **SQLFetchScroll** non restituisce dati ma sposta il cursore a blocchi nella posizione specificata. Se i dati possono essere recuperati da colonne non associate di un cursore a blocchi con **SQLGetData** dipende dal driver. Questa funzionalità è supportata se una chiamata a **SQLGetInfo** restituisce il SQL_GD_BLOCK bit per il tipo di informazioni SQL_GETDATA_EXTENSIONS.  
   
 ## <a name="buffer-addresses"></a>Indirizzi di buffer  
- **SQLFetchScroll** utilizza la stessa formula per determinare l'indirizzo del buffer di dati e lunghezza/indicatore come **SQLFetch**. Per ulteriori informazioni, vedere "Buffer indirizzi" in [funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ **SQLFetchScroll** utilizza la stessa formula per determinare l'indirizzo dei buffer di dati e lunghezza/indicatore come **SQLFetch**. Per ulteriori informazioni, vedere "Buffer indirizzi" in [funzione SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
 ## <a name="row-status-array"></a>Matrice di stato di riga  
- **SQLFetchScroll** imposta valori della matrice di stato di riga nello stesso modo come SQLFetch. Per ulteriori informazioni, vedere "Matrice di stato di riga" in [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
+ **SQLFetchScroll** imposta i valori nella matrice di stato di riga in modo analogo SQLFetch. Per ulteriori informazioni, vedere "Matrice di stato di riga" in [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
   
 ## <a name="rows-fetched-buffer"></a>Buffer di recupero di righe  
  **SQLFetchScroll** restituisce il numero di righe recuperate nel buffer di righe recuperate in modo analogo **SQLFetch**. Per ulteriori informazioni, vedere "Buffer di recupero righe" in [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
@@ -324,7 +324,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="error-handling"></a>Gestione degli errori  
  Quando un'applicazione chiama **SQLFetchScroll** nel driver ODBC 3. x, gestione Driver chiama **SQLFetchScroll** nel driver. Quando un'applicazione chiama **SQLFetchScroll** nel driver ODBC 2. x, gestione Driver chiamate SQLExtendedFetch nel driver. Poiché **SQLFetchScroll** e SQLExtendedFetch gestire gli errori in modo leggermente diverso, l'applicazione non vede il comportamento dell'errore leggermente diverso quando viene chiamata **SQLFetchScroll** in ODBC 2. x e ODBC driver 3. x.  
   
- **SQLFetchScroll** restituisce errori e avvisi in modo analogo **SQLFetch**; per ulteriori informazioni, vedere "Gestione di errori" in **SQLFetch**. **SQLExtendedFetch** restituisce errori nello stesso modo come **SQLFetch**, con le eccezioni seguenti:  
+ **SQLFetchScroll** restituisce errori e avvisi in modo analogo **SQLFetch**; per ulteriori informazioni, vedere "Gestione degli errori" nel **SQLFetch**. **SQLExtendedFetch** restituisce errori in modo analogo **SQLFetch**, con le eccezioni seguenti:  
   
  Quando viene generato un avviso che si applica a una particolare riga nel set di righe, SQLExtendedFetch imposta la voce corrispondente nella matrice di stato di riga da SQL_ROW_SUCCESS, non SQL_ROW_SUCCESS_WITH_INFO.  
   
@@ -338,7 +338,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
 ## <a name="sqlfetchscroll-and-odbc-2x-drivers"></a>Driver di SQLFetchScroll e ODBC 2. x  
  Quando un'applicazione chiama **SQLFetchScroll** nel driver ODBC 2. x, gestione Driver esegue il mapping di questa chiamata a **SQLExtendedFetch**. Passa i valori seguenti per gli argomenti di **SQLExtendedFetch**.  
   
-|Argomento SQLExtendedFetch.|valore|  
+|Argomento SQLExtendedFetch.|Value|  
 |-------------------------------|-----------|  
 |StatementHandle|StatementHandle in **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation in **SQLFetchScroll**.|  
@@ -349,7 +349,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
  Per ulteriori informazioni, vedere [cursori a blocchi, i cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   
 ## <a name="descriptors-and-sqlfetchscroll"></a>Descrittori e SQLFetchScroll  
- **SQLFetchScroll** interagisce con descrittori nello stesso modo come **SQLFetch**. Per ulteriori informazioni, vedere la sezione "Descrittori e SQLFetchScroll" [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
+ **SQLFetchScroll** interagisce con i descrittori in modo analogo **SQLFetch**. Per ulteriori informazioni, vedere la sezione "Descrittori e SQLFetchScroll" [SQLFetch-funzione](../../../odbc/reference/syntax/sqlfetch-function.md).  
   
 ## <a name="code-example"></a>Esempio di codice  
  Vedere [associazione per colonna](../../../odbc/reference/develop-app/column-wise-binding.md), [l'associazione per riga](../../../odbc/reference/develop-app/row-wise-binding.md), [posizionato istruzioni Update e Delete](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md), e [l'aggiornamento delle righe nel set di righe con SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  

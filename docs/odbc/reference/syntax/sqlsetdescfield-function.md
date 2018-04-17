@@ -2,7 +2,7 @@
 title: Funzione SQLSetDescField | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e6a0ee843ce2b78ebc611fee30a5ee8e16fc7e1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad3a900242068f8bcfb6f532b5e272cb2afb0ac5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescfield-function"></a>Funzione SQLSetDescField
 **Conformità**  
@@ -113,7 +113,7 @@ SQLRETURN SQLSetDescField(
 > [!NOTE]  
 >  Se una chiamata a **SQLSetDescField** ha esito negativo, il contenuto del record del descrittore identificate le *RecNumber* argomento non sono definiti.  
   
- Altre funzioni possono essere chiamati per impostare più campi di descrizione con una sola chiamata della funzione. Il **SQLSetDescRec** funzione imposta vari campi che interessano il buffer e il tipo di dati associati a una colonna o un parametro (il SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL _ Campi DESC_SCALE, SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_INDICATOR_PTR). **SQLBindCol** o **SQLBindParameter** può essere utilizzata per rendere una specifica completa per l'associazione di una colonna o parametro. Queste funzioni impostano un gruppo specifico di campi di descrizione con chiamata una funzione.  
+ Altre funzioni possono essere chiamati per impostare più campi di descrizione con una sola chiamata della funzione. Il **SQLSetDescRec** funzione imposta vari campi che interessano il buffer e il tipo di dati associati a una colonna o un parametro (il SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL _ Campi DESC_SCALE, SQL_DESC_DATA_PTR, SQL_DESC_OCTET_LENGTH_PTR e SQL_DESC_INDICATOR_PTR). **SQLBindCol** oppure **SQLBindParameter** può essere usato per rendere una specifica completa per l'associazione di una colonna o parametro. Queste funzioni impostano un gruppo specifico di campi di descrizione con chiamata una funzione.  
   
  **SQLSetDescField** può essere chiamato per modificare i buffer di associazione tramite l'aggiunta di un offset per i puntatori di associazione (SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR). In questo caso, i buffer dell'associazione senza chiamare **SQLBindCol** o **SQLBindParameter**, che consente a un'applicazione modificare SQL_DESC_DATA_PTR senza modificare altri campi, ad esempio SQL_DESC_DATA_ TIPO.  
   
@@ -146,7 +146,7 @@ SQLRETURN SQLSetDescField(
   
  L'inizializzazione di campi di intestazione è descritta nella tabella che segue.  
   
-|Nome di campo di intestazione|Tipo|L/S|Default|  
+|Nome di campo di intestazione|Tipo|L/S|Valore predefinito|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|ARD: APD R: R IRD: R IPD: R|ARD: SQL_DESC_ALLOC_AUTO per implicita o SQL_DESC_ALLOC_USER per esplicita<br /><br /> APD: SQL_DESC_ALLOC_AUTO per implicita o SQL_DESC_ALLOC_USER per esplicita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|ARD: L/S APD: L/S IRD: inutilizzati IPD: inutilizzati|ARD: APD [1]: [1] IRD: inutilizzati IPD: inutilizzati|  
@@ -160,7 +160,7 @@ SQL_DESC_COUNT|SQLSMALLINT|ARD: L/S APD: IRD L/S: R IPD: L/S|ARD: APD 0: IRD 0: 
   
  L'inizializzazione di campi di record è come illustrato nella tabella seguente.  
   
-|Nome del campo di record|Tipo|L/S|Default|  
+|Nome del campo di record|Tipo|L/S|Valore predefinito|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|ARD: APD inutilizzati: IRD inutilizzato: R IPD: inutilizzati|ARD: APD inutilizzati: IRD inutilizzato: D IPD: inutilizzati|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|ARD: APD inutilizzati: IRD inutilizzato: R IPD: inutilizzati|ARD: APD inutilizzati: IRD inutilizzato: D IPD: inutilizzati|  
@@ -354,7 +354,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|ARD: APD inutilizzati: IRD inutilizzato: R IPD: R|A
   
  Se SQL_DESC_CONCISE_TYPE è impostata per il tipo di dati datetime o intervallo breve, il campo SQL_DESC_TYPE è impostato per il corrispondente tipo verbose (SQL_DATETIME o SQL_INTERVAL) e il campo SQL_DESC_DATETIME_INTERVAL_CODE è impostato per il codice appropriato secondario.  
   
- **SQL_DESC_DATA_PTR [descrittori di applicazione e IPD, Implementation]**  
+ **SQL_DESC_DATA_PTR [descrittori di applicazioni e nei]**  
  Questo campo di record SQLPOINTER punta a una variabile che conterrà il valore del parametro (per Apd) o il valore della colonna (per ARDs). Questo campo è un *campo posticipata*. Non è utilizzato al momento è impostata, ma il driver viene utilizzato in un secondo momento per recuperare i dati.  
   
  Se non è associata alla colonna specificata per il campo SQL_DESC_DATA_PTR del ARD il *TargetValuePtr* argomento in una chiamata a **SQLBindCol** è un puntatore null o se il campo di SQL_DESC_DATA_PTR il ARD viene impostata da un chiamata a **SQLSetDescField** o **SQLSetDescRec** a un puntatore null. Se il campo SQL_DESC_DATA_PTR è impostato su un puntatore null, i campi non sono interessati.  
@@ -399,7 +399,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_DATETIME_INTERVAL_PRECISION [All]**  
  Questo campo di record SQLINTEGER contiene l'intervallo di precisione iniziale, se il campo SQL_DESC_TYPE è SQL_INTERVAL. Quando il campo SQL_DESC_DATETIME_INTERVAL_CODE è impostato su un tipo di dati di intervallo, questo campo è impostato per l'intervallo predefinito di precisione iniziale.  
   
- **Colonne SQL_DESC_DISPLAY_SIZE [IRDs]**  
+ **SQL_DESC_DISPLAY_SIZE [IRDs]**  
  Questo campo di record SQLINTEGER di sola lettura contiene il numero massimo di caratteri necessari per visualizzare i dati dalla colonna.  
   
  **SQL_DESC_FIXED_PREC_SCALE [descrittori di implementazione]**  
@@ -460,7 +460,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
   
  Se la chiamata a **SQLFetch** o **SQLFetchScroll** che operazioni di inserimento nel buffer a cui fa riferimento questo campo non ha restituito SQL_SUCCESS o SQL_SUCCESS_WITH_INFO, il contenuto del buffer non è definito. Questo campo è un *campo posticipata*. Non è utilizzato al momento è impostata, ma è utilizzata in un secondo momento dal driver per determinare o indicare la lunghezza di ottetti di dati.  
   
- **SQL_DESC_PARAMETER_TYPE [IPD, Implementation]**  
+ **SQL_DESC_PARAMETER_TYPE [nei]**  
  Questo campo SQLSMALLINT di record è impostato su SQL_PARAM_INPUT per un parametro di input, SQL_PARAM_INPUT_OUTPUT per un parametro di input/output, SQL_PARAM_OUTPUT per un parametro di output, SQL_PARAM_INPUT_OUTPUT_STREAM per un parametro di flusso di input/output o SQL _ PARAM_OUTPUT_STREAM per un parametro di output di streaming. È impostata su SQL_PARAM_INPUT per impostazione predefinita.  
   
  Per un IPD, il campo è impostato su SQL_PARAM_INPUT per impostazione predefinita se il IPD non viene popolato automaticamente dal driver (l'attributo di istruzione SQL_ATTR_ENABLE_AUTO_IPD è SQL_FALSE). Un'applicazione deve impostare questo campo nel IPD per i parametri che non sono parametri di input.  

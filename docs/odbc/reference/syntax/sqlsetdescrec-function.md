@@ -2,7 +2,7 @@
 title: Funzione SQLSetDescRec | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c817bad04757820b7c8ee83905fbc0fad08b4e26
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3830cb70bee0abf557882b55af2b4787e9f3280
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetdescrec-function"></a>Funzione SQLSetDescRec
 **Conformità**  
@@ -70,7 +70,7 @@ SQLRETURN SQLSetDescRec(
  *Sottotipo*  
  [Input] Per i record il cui tipo è SQL_DATETIME o SQL_INTERVAL, questo è il valore su cui impostare il campo SQL_DESC_DATETIME_INTERVAL_CODE.  
   
- *Lunghezza*  
+ *Length*  
  [Input] Il valore su cui impostare il campo SQL_DESC_OCTET_LENGTH per il record del descrittore.  
   
  *Precisione*  

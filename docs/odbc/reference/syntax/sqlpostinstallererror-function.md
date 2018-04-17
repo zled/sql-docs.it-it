@@ -2,7 +2,7 @@
 title: Funzione SQLPostInstallerError | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e1cc79480eb9ef38529612aecb263ee2892a128f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b2b003bb923e5595d05f8697ffd710b9f4ee618b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError (funzione)
 **Conformità**  
  Introdotta: versione ODBC 3.0  
   
  **Riepilogo**  
- **SQLPostInstallerError** fornisce un meccanismo per una libreria di programma di installazione driver o funzione di conversione per segnalare gli errori di **ConfigDriver**, **ConfigDSN**, e **ConfigTranslator del**  funzioni nella coda degli errori di programma di installazione. Le applicazioni non utilizzano questa API. usano **SQLInstallerError** per recuperare l'errore.  
+ **SQLPostInstallerError** fornisce un meccanismo per una libreria di programma di installazione driver o funzione di conversione per riportare errori per il **ConfigDriver**, **ConfigDSN**, e **ConfigTranslator del**  funzioni alla coda di errore di programma di installazione. Le applicazioni non utilizzano questa API. usano **SQLInstallerError** per recuperare l'errore.  
   
 ## <a name="syntax"></a>Sintassi  
   

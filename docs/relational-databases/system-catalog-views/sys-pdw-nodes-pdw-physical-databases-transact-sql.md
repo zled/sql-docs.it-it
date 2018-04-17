@@ -1,30 +1,31 @@
 ---
-title: sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.pdw_nodes_pdw_physical_databases (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
-caps.latest.revision: 
+caps.latest.revision: 9
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61ffd5ddd2c246b3bcd8910591393779368081b5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 54e6403b566cb61425dbdd4918738e009805a8a5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -33,11 +34,11 @@ ms.lasthandoff: 02/03/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|L'ID di oggetto per il database. Si noti che questo valore non è uguale a un database nel [Sys. Databases &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) visualizzazione.|  
-|physical_name|**sysname**|Il nome fisico per il database nei nodi di calcolo di Shell /. Questo valore è uguale a un valore nella colonna physical_name il [sys.pdw_database_mappings &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) visualizzazione.|  
+|database_id|**int**|L'ID di oggetto per il database. Si noti che questo valore non è uguale a un database_id nel [Sys. Databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) visualizzazione.|  
+|physical_name|**sysname**|Il nome fisico per il database nei nodi di calcolo di Shell /. Questo valore è uguale a un valore nella colonna physical_name il [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) visualizzazione.|  
 |pdw_node_id|**int**|Id numerico univoco associato al nodo.|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="a-returning"></a>A. Restituzione  
  In ogni nodo di calcolo, la query seguente restituisce il nome e l'ID di ogni database master e il nome del database corrispondente.  

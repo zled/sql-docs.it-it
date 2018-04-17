@@ -2,7 +2,7 @@
 title: Funzione SQLNumResultCols | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: d863179f-12a9-4b55-ac6b-7d84202d3da3
 caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9210256473f8f7bb3822d7d28e4e46978e27118
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88ee7ca6c4d348d58b2cc63425086a1faec71667
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlnumresultcols-function"></a>Funzione SQLNumResultCols
 **Conformità**  
@@ -80,7 +80,7 @@ SQLRETURN SQLNumResultCols(
  **SQLNumResultCols** può restituire qualsiasi SQLSTATE che può essere restituiti da **SQLPrepare** o **SQLExecute** quando viene chiamato dopo **SQLPrepare** e prima  **SQLExecute**, a seconda di quando l'origine dati restituisce l'istruzione SQL associata all'istruzione.  
   
 ## <a name="comments"></a>Commenti  
- **SQLNumResultCols** può può essere chiamato solo quando l'istruzione si trova nello stato preparato, posizionato o eseguito.  
+ **SQLNumResultCols** possibile può essere chiamato solo quando l'istruzione si trova nello stato preparato, posizionato o eseguito.  
   
  Se l'istruzione associata a *StatementHandle* non restituisce le colonne, **SQLNumResultCols** imposta **ColumnCountPtr* su 0.  
   

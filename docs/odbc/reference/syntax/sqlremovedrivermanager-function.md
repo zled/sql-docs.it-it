@@ -2,7 +2,7 @@
 title: Funzione SQLRemoveDriverManager | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d74b3b3eda914210f8d69d6089eb9a474416318
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3dbb36481ff096f2964d597b8d215589b152bf02
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager (funzione)
 **Conformità**  
  Versione introdotto: ODBC 3.0: deprecati in Windows XP Service Pack 2, Windows Server 2003 Service Pack 1 e sistemi operativi successivi.  
   
  **Riepilogo**  
- **SQLRemoveDriverManager** modifica o rimuove la voce Odbcinst.ini nelle informazioni di sistema di informazioni sui componenti principali di ODBC.  
+ **SQLRemoveDriverManager** viene modificato o eliminato le informazioni sui componenti ODBC core dalla voce Odbcinst nelle informazioni di sistema.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -66,7 +66,7 @@ BOOL SQLRemoveDriverManager(
 |ODBC_ERROR_OUT_OF_MEM|Memoria insufficiente|Il programma di installazione: Impossibile eseguire la funzione a causa della mancanza di memoria.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLRemoveDriverManager** integra il **SQLInstallDriverManager** funzione e le informazioni di sistema l'utilizzo del componente di conteggio aggiornamenti. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
+ **SQLRemoveDriverManager** si integra con il **SQLInstallDriverManager** funzione e gli aggiornamenti contare l'utilizzo di componenti nelle informazioni di sistema. Questa funzione deve essere chiamata solo da un'applicazione di installazione.  
   
  **SQLRemoveDriverManager** ridurrà il conteggio degli utilizzi principali componenti di 1. Se il conteggio di utilizzo del componente è pari a 0, vengono rimosse le informazioni di sistema della voce. La voce di componente di base è nel seguente percorso nelle informazioni di sistema, sotto il titolo "ODBC Core":  
   
@@ -95,7 +95,7 @@ BOOL SQLRemoveDriverManager(
 |MSVCRT40. DLL|ODBCAD32. FILE EXE|  
 |ODBCCP32. NEL PANNELLO DI CONTROLLO||  
   
- **SQLRemoveDriverManager** è nota anche come parte di un processo di aggiornamento. Se un'applicazione rileva che deve eseguire un aggiornamento e il driver è installato in precedenza, il driver debba essere rimossi e reinstallato.  
+ **SQLRemoveDriverManager** nota anche come parte di un processo di aggiornamento. Se un'applicazione rileva che deve eseguire un aggiornamento e il driver è installato in precedenza, il driver debba essere rimossi e reinstallato.  
   
  **SQLRemoveDriverManager** deve innanzitutto essere chiamato per diminuire il conteggio di utilizzo del componente. **SQLInstallDriverEx** deve quindi essere chiamato per incrementare il conteggio di utilizzo del componente. Il programma di installazione dell'applicazione è necessario sostituire i file dei componenti di base precedente con i nuovi file. Il conteggio degli utilizzi il file rimarrà invariato e altre applicazioni che utilizzano i file di componente principale della versione precedenti utilizzeranno i file della versione più recenti.  
   

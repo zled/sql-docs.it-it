@@ -2,7 +2,7 @@
 title: sp_posttracertoken (Transact-SQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedur+I741es
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 79102a0a4c9e0b2122b23f01a7e7808c0d610967
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b020aa95aa4f07732843cf360048e63f1d99f7cf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spposttracertoken-transact-sql"></a>sp_posttracertoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +51,16 @@ sp_posttracertoken [ @publication = ] 'publication'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@publication**=] **'***pubblicazione***'**  
- Nome della pubblicazione di cui viene misurata la latenza. *pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione di cui viene misurata la latenza. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
- [  **@tracer_token_id=** ] *tracer_token_id***OUTPUT**  
- ID del token di traccia inserito. *tracer_token_id* è **int** con valore predefinito è NULL che è un parametro di OUTPUT. Questo valore può essere utilizzato per eseguire [sp_helptracertokenhistory &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) senza prima eseguire [sp_helptracertokens &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
+ [  **@tracer_token_id=** ] *tracer_token_id * * * OUTPUT**  
+ ID del token di traccia inserito. *tracer_token_id* viene **int** con valore NULL predefinito è un parametro di OUTPUT. Questo valore può essere utilizzato per eseguire [sp_helptracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) o [sp_deletetracertokenhistory &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) senza prima eseguire [sp_helptracertokens &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md).  
   
  [  **@publisher=** ] **'***publisher***'**  
- Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* è **sysname**, con un valore predefinito è NULL e non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
+ Specifica un non -[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione. *server di pubblicazione* viene **sysname**, con un valore predefinito è NULL e non deve essere specificato per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server di pubblicazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_posttracertoken** viene utilizzata nella replica transazionale.  
@@ -68,7 +68,7 @@ sp_posttracertoken [ @publication = ] 'publication'
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-posttracertoken-trans_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_posttracertoken**.  
   
 ## <a name="see-also"></a>Vedere anche  

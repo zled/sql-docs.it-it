@@ -1,16 +1,16 @@
 ---
-title: sys.trusted_assemblies (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.trusted_assemblies (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-catalog-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - trusted_assemblies_TSQL
@@ -21,17 +21,18 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.trusted_assemblies
-ms.assetid: 
-caps.latest.revision: 
+ms.assetid: ''
+caps.latest.revision: ''
 author: tmullaney
 ms.author: thmullan
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 71d13ae733551a3c475176343250f9ee671756f3
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 71e66e31adb43937fe4d1bfc5166b46fa5a69ba4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +44,7 @@ Contiene una riga per ogni assembly attendibile per il server.
 
 |Nome colonna |Tipo di dati |Description |
 |--- |--- |--- |
-|hash |varbinary(8000) |SHA2_512 l'hash del contenuto dell'assembly. |
+|hash |varbinary (8000) |SHA2_512 l'hash del contenuto dell'assembly. |
 |description |nvarchar(4000) |Descrizione definita dall'utente facoltativa dell'assembly. Si consiglia di utilizzare il nome canonico che consente di codificare il nome semplice, numero di versione, impostazioni cultura, chiave pubblica e l'architettura dell'assembly da considerare attendibile. Questo valore in modo univoco identifica l'assembly relativamente alla common language runtime (CLR) e corrisponde al valore clr_name nella Assemblies. |
 |create_date |datetime2 |Data che l'assembly è stato aggiunto all'elenco degli assembly attendibili. |
 |created_by |nvarchar (128) |Nome di account di accesso dell'entità che ha aggiunto l'assembly all'elenco. |

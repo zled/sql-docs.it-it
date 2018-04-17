@@ -1,16 +1,16 @@
 ---
 title: sp_helpreplfailovermode (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplfailovermode
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-caps.latest.revision: 
+caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 212775844dde7400ca3ddb17753091aa56b582f1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: dd85f6f45b7104c73b83b08d6fc434eb14e9c70b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,35 +51,35 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publisher=**] **'***publisher***'**  
- Nome del server di pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *server di pubblicazione* è **sysname**, non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
+ Nome del server di pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Il server di pubblicazione deve essere già configurato per la pubblicazione.  
   
  [  **@publisher_db =**] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publication=**] **'***pubblicazione***'**  
- Nome della pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *pubblicazione*è **sysname**, non prevede alcun valore predefinito.  
+ Nome della pubblicazione che partecipa all'aggiornamento del Sottoscrittore. *pubblicazione*viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@failover_mode_id=**] **'***failover_mode_id***' OUTPUT**  
- Restituisce il valore intero della modalità di failover e un **OUTPUT** parametro. *failover_mode_id* è un **tinyint** il valore predefinito è **0**. Restituisce **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
+ Restituisce il valore intero della modalità di failover e un **OUTPUT** parametro. *failover_mode_id* è un **tinyint** con valore predefinito è **0**. Restituisce **0** per l'aggiornamento immediato e **1** per l'aggiornamento in coda.  
   
  [**@failover_mode=**] **'***failover_mode***' OUTPUT**  
- Restituisce la modalità di implementazione delle modifiche dei dati nel Sottoscrittore. *failover_mode* è un **nvarchar (10)** con un valore predefinito è NULL. È un **OUTPUT** parametro.  
+ Restituisce la modalità di implementazione delle modifiche dei dati nel Sottoscrittore. *failover_mode* è un **nvarchar(10)** con un valore predefinito è NULL. È un **OUTPUT** parametro.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**controllo immediato**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
-|**in coda**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
+|**Controllo immediato**|Aggiornamento immediato: gli aggiornamenti implementati nel Sottoscrittore vengono propagati immediatamente al server di pubblicazione tramite il protocollo di commit in due fasi (2PC).|  
+|**In coda**|Aggiornamento in coda: gli aggiornamenti implementati nel Sottoscrittore vengono archiviati in una coda.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
- **sp_helpreplfailovermode** viene utilizzato nella replica snapshot o transazionale per le sottoscrizioni sono abilitate per l'aggiornamento immediato con aggiornamento in coda come failover, in caso di errore.  
+ **sp_helpreplfailovermode** viene utilizzata nella replica snapshot o transazionale per le sottoscrizioni sono abilitate per l'aggiornamento immediato con aggiornamento in coda come failover, in caso di errore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_helpreplfailovermode**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_setreplfailovermode &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: sp_cursorexecute (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cursorexecute
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor_execute
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
-caps.latest.revision: 
+caps.latest.revision: 7
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6dc0a358e0d62fa8a0319ab6d2ad586315f30e24
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7cc46446c64fe247eee88ae08628032793cbebb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ sp_cursorexecute prepared_handle, cursor
   
 ## <a name="arguments"></a>Argomenti  
  *prepared_handle*  
- L'istruzione preparata *gestire* valore restituito da sp_cursorprepare. *prepared_handle* è un parametro obbligatorio che richiede un **int** valore di input.  
+ L'istruzione preparata *gestire* valore restituito da sp_cursorprepare. *prepared_handle* è un parametro obbligatorio che richiede un' **int** valore di input.  
   
  *cursor*  
  Identificatore del cursore generato da SQL Server. *cursore* è un parametro obbligatorio che deve essere fornito su tutte le routine successive che agiscono sul cursore, ad esempio sp_cursorfetch  
   
  *scrollopt*  
- Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un **int** valore di input. Il sp_cursorexecute*scrollopt* parametro presenta le stesse opzioni di valore come quelle per sp_cursoropen.  
+ Opzione di scorrimento. *scrollopt* è un parametro facoltativo che richiede un' **int** valore di input. Il sp_cursorexecute*scrollopt* parametro presenta le stesse opzioni di valore come quelle per sp_cursoropen.  
   
 > [!NOTE]  
 >  Il valore PARAMETERIZED_STMT non è supportato.  
@@ -65,7 +65,7 @@ sp_cursorexecute prepared_handle, cursor
 >  Se un *scrollopt* valore non è specificato, il valore predefinito è KEYSET indipendentemente dal valore *scrollopt* valore specificato in sp_cursorprepare.  
   
  *ccopt*  
- Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un **int** valore di input. Il sp_cursorexecute*ccopt* parametro presenta le stesse opzioni di valore come quelle per sp_cursoropen.  
+ Opzione del controllo della valuta. *ccopt* è un parametro facoltativo che richiede un' **int** valore di input. Il sp_cursorexecute*ccopt* parametro presenta le stesse opzioni di valore come quelle per sp_cursoropen.  
   
 > [!IMPORTANT]  
 >  Se un *ccopt* valore non è specificato, il valore predefinito è OPTIMISTIC indipendentemente dal valore *ccopt* valore specificato in sp_cursorprepare.  
@@ -86,7 +86,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valore restituito del codice  
  *conteggio delle righe* potrebbe restituire i valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |-1|Numero di righe non note.|  
 |-n|Un popolamento asincrono è attivo.|  
@@ -94,7 +94,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="remarks"></a>Osservazioni  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>Parametri scrollopt e ccopt  
- *scrollopt* e *ccopt* sono utili quando vengono sostituiti i piani memorizzati nella cache per la cache del server, vale a dire che l'handle preparato che identifica l'istruzione deve essere ricompilato. Il *scrollopt* e *ccopt* i valori dei parametri devono corrispondere ai valori inviati nella richiesta originale a sp_cursorprepare.  
+ *scrollopt* e *ccopt* sono utili quando i piani memorizzati nella cache vengono sostituiti dalla cache del server, vale a dire che l'handle preparato che identifica l'istruzione deve essere ricompilato. Il *scrollopt* e *ccopt* i valori dei parametri devono corrispondere ai valori inviati nella richiesta originale a sp_cursorprepare.  
   
 > [!NOTE]  
 >  PARAMETERIZED_STMT non deve essere assegnato a *scrollopt*.  
@@ -105,8 +105,8 @@ sp_cursorexecute prepared_handle, cursor
  Per richiedere che vengano restituiti metadati sull'elenco di selezione del cursore nel flusso TDS, è possibile impostare il flag di input RPC RETURN_METADATA su 1.  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_cursoropen &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

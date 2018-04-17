@@ -2,7 +2,7 @@
 title: Funzione SQLDataSourceToDriver | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,16 +25,16 @@ ms.assetid: 0d87fcac-30a0-4303-ad8f-a5b53f4b428d
 caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d09d649bc53a08ff7389413882bb338d9713ffc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcdad2099be94a719333d4e0754318f7c00572df
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver (funzione)
-**SQLDataSourceToDriver** supportstranslations per driver ODBC. Questa funzione non viene chiamata dalle applicazioni basate su ODBC; le applicazioni richiedono traduzione attraverso **SQLSetConnectAttr**. Il driver associato il *ConnectionHandle* specificato in **SQLSetConnectAttr** chiama la DLL specificata per eseguire conversioni di tutti i dati che passano dall'origine dati per il driver. Una DLL di conversione predefinita può essere specificato nel file di inizializzazione di ODBC.  
+**SQLDataSourceToDriver** supportstranslations per i driver ODBC. Questa funzione non viene chiamata dalle applicazioni basate su ODBC; le applicazioni richiedono traduzione attraverso **SQLSetConnectAttr**. Il driver associato il *ConnectionHandle* specificato in **SQLSetConnectAttr** chiama la DLL specificata per eseguire conversioni di tutti i dati che passano dall'origine dati per il driver. Una DLL di conversione predefinita può essere specificato nel file di inizializzazione di ODBC.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -115,4 +115,4 @@ BOOL SQLDataSourceToDriver(
 |---------------------------|---------|  
 |Conversione di dati inviati all'origine dati|[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|  
 |Restituisce l'impostazione di un attributo di connessione|[SQLGetConnectAttr](../../../odbc/reference/syntax/sqlgetconnectattr-function.md)|  
-|L'impostazione di un attributo di connessione|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|
+|L'impostazione di un attributo di connessione|[Funzione SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|

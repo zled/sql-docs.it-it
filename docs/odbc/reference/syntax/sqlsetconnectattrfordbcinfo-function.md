@@ -2,7 +2,7 @@
 title: Funzione SQLSetConnectAttrForDbcInfo | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,20 +18,20 @@ ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ef62393ac00b7d094e6ba47613038fdf7ac2175
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b71c2d308efd74f1ec2574d20d7f14455965715d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo (funzione)
 **Conformità**  
  Introdotta: versione ODBC standard 3,81 conformità: ODBC  
   
  **Riepilogo**  
- **SQLSetConnectAttrForDbcInfo** equivale **SQLSetConnectAttr**, ma l'attributo viene impostato sul token di informazioni di connessione anziché nell'handle di connessione.  
+ **SQLSetConnectAttrForDbcInfo** corrisponde al **SQLSetConnectAttr**, ma l'attributo viene impostato sul token di informazioni di connessione anziché nell'handle di connessione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -47,13 +47,13 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  *hDbcInfoToken*  
  [Input] Handle del token.  
   
- *Attribute*  
+ *Attributo*  
  [Input] Attributo da impostare. L'elenco di attributi validi è specifico di driver e le stesse di [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
  *ValuePtr*  
  [Input] Puntatore al valore da associare a *attributo*. A seconda del valore di *attributo*, *ValuePtr* sarà un valore intero senza segno a 32 bit o farà riferimento a una stringa di caratteri con terminazione null. Si noti che se il *attributo* argomento è un valore specifico del driver, il valore in *ValuePtr* potrebbe essere un intero con segno.  
   
- *StringLength*  
+ *stringLength*  
  [Input] Se *attributo* è un attributo basato su ODBC e *ValuePtr* punta a una stringa di caratteri o di un buffer binario, la lunghezza di questo argomento deve essere **ValuePtr*. Per i dati di stringa di caratteri, questo argomento deve contenere il numero di byte nella stringa.  
   
  Se *attributo* è un attributo basato su ODBC e *ValuePtr* è un numero intero, *StringLength* viene ignorato.  
@@ -75,7 +75,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  Uguale a [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), ad eccezione del fatto che la gestione Driver utilizzerà un **HandleType** di SQL_HANDLE_DBC_INFO_TOKEN e **gestire** di *hDbcInfoToken* .  
   
 ## <a name="remarks"></a>Osservazioni  
- **SQLSetConnectAttrForDbcInfo** equivale **SQLSetConnectAttr**, ma viene impostato l'attributo per il token di informazioni di connessione, anziché dell'handle di connessione. Ad esempio, se **SQLSetConnectAttr** non riconosce un attributo, **SQLSetConnectAttrForDbcInfo** deve restituire anche SQL_ERROR per l'attributo.  
+ **SQLSetConnectAttrForDbcInfo** corrisponde al **SQLSetConnectAttr**, ma viene impostato l'attributo per il token di informazioni di connessione, anziché sull'handle di connessione. Ad esempio, se **SQLSetConnectAttr** non riconosce un attributo, **SQLSetConnectAttrForDbcInfo** deve restituire anche SQL_ERROR per l'attributo.  
   
  Ogni volta che i driver restituisce SQL_ERROR o SQL_INVALID_HANDLE, il driver deve ignorare questo attributo per calcolare l'ID del pool. Inoltre, gestione Driver otterrà le informazioni di diagnostica da *hDbcInfoToken*e restituisce SQL_SUCCESS_WITH_INFO all'applicazione in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) e [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). Pertanto, un'applicazione può recuperare informazioni dettagliate sui motivi per cui non è possibile impostare alcuni attributi.  
   
@@ -85,5 +85,5 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
   
 ## <a name="see-also"></a>Vedere anche  
  [Sviluppo di un Driver ODBC](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Il pool di connessioni compatibile con il driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Pool di connessioni compatibile con il driver](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Sviluppo del rilevamento di pool di connessioni in un driver ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

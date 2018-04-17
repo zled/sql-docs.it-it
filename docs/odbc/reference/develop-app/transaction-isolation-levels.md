@@ -1,15 +1,16 @@
 ---
-title: Livelli di isolamento delle transazioni | Documenti Microsoft
-ms.custom: 
+title: Livelli di isolamento delle transazioni | Microsoft Docs
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dirty reads [ODBC]
@@ -23,25 +24,25 @@ helpviewer_keywords:
 - repeatable reads [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d19973db310faafd97d9ab6c38848395a344100
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 28e0bd9447d5975a34e963477eceb61f654d824d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-isolation-levels"></a>Livelli di isolamento delle transazioni
 *Livelli di isolamento delle transazioni* sono una misura dell'estensione per la transazione ha esito positivo isolamento. In particolare, i livelli di isolamento delle transazioni vengono definiti dalla presenza o assenza di fenomeni di seguenti:  
   
--   **Letture dirty** A *lettura dirty* si verifica quando una transazione legge i dati che non è ancora stato eseguito il commit. Ad esempio, si supponga che gli aggiornamenti delle transazioni 1 una riga. La transazione 2 legge la riga aggiornata prima l'aggiornamento di commit della transazione 1. Se 1 rollback della transazione di modifica, la transazione 2 hanno leggerà i dati viene considerati mai esistito.  
+-   **Letture dirty** A *lettura dirty* si verifica quando una transazione legge i dati che non sono ancora stato eseguito il commit. Ad esempio, si supponga che gli aggiornamenti delle transazioni 1 una riga. La transazione 2 legge la riga aggiornata prima l'aggiornamento di commit della transazione 1. Se 1 rollback della transazione di modifica, la transazione 2 hanno leggerà i dati viene considerati mai esistito.  
   
--   **Letture non ripetibili** A *lettura non ripetibile* si verifica quando una transazione legge la stessa riga due volte, ma ottiene dati diversi ogni volta. Ad esempio, si supponga che la transazione 1 letture una riga. La transazione 2 aggiorna o elimina tale riga e viene eseguito il commit di aggiornamento o eliminazione. Se la transazione 1 consente di leggere nuovamente la riga, recupera i valori di riga diversi o individua che la riga è stata eliminata.  
+-   **Letture non ripetibili** A *lettura non ripetibile* si verifica quando una transazione legge la stessa riga due volte, ma ottiene ogni volta dati diversi. Ad esempio, si supponga che la transazione 1 letture una riga. La transazione 2 aggiorna o elimina tale riga e viene eseguito il commit di aggiornamento o eliminazione. Se la transazione 1 consente di leggere nuovamente la riga, recupera i valori di riga diversi o individua che la riga è stata eliminata.  
   
--   **Righe fantasma** A *fantasma* è una riga che corrisponde ai criteri di ricerca ma non viene inizialmente visualizzata. Si supponga, ad esempio, la transazione 1 legge un set di righe che soddisfa alcuni criteri di ricerca. La transazione 2 genera una nuova riga (tramite un aggiornamento o un'istruzione insert) che corrisponde ai criteri di ricerca per la transazione 1. Se la transazione 1 reexecutes l'istruzione che legge le righe, ottiene un set diverso di righe.  
+-   **Righe fantasma** A *fantasma* viene interpretata come riga che corrisponde ai criteri di ricerca ma non viene inizialmente visualizzata. Si supponga, ad esempio, la transazione 1 legge un set di righe che soddisfa alcuni criteri di ricerca. La transazione 2 genera una nuova riga (tramite un aggiornamento o un'istruzione insert) che corrisponde ai criteri di ricerca per la transazione 1. Se la transazione 1 reexecutes l'istruzione che legge le righe, ottiene un set diverso di righe.  
   
  I quattro livelli di isolamento (come definito da SQL-92) sono definiti in termini di fenomeni. Nella tabella seguente, "X" contrassegna ogni fenomeno che può verificarsi.  
   

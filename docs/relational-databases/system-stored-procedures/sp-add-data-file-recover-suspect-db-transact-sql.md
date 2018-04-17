@@ -2,7 +2,7 @@
 title: sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb770c0580af43309daa81a2aad56e327864bc4f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 8fb5dd0e5f06271e2af3a8e7efd66b9b1c2ddf10
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@dbName=** ] **'***database* **'**  
+ [  **@dbName=** ] **' * * * database* **'**  
  Nome del database. *database* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ **@filegroup=** ] **'***filegroup_name* **'**  
+ [  **@filegroup=** ] **' * * * filegroup_name* **'**  
  Filegroup a cui aggiungere il file. *filegroup_name* viene **nvarchar(260)**, e il valore predefinito è NULL, che indica il file primario.  
   
  [  **@name=** ] **' * * * nome_file_logico* **'**  
@@ -64,7 +64,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
  [ **@filename=** ] **'***os_file_name* **'**  
  Percorso e nome di file utilizzato dal sistema operativo per il file. Il file deve trovarsi in un'istanza di [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* viene **nvarchar(260)**, non prevede alcun valore predefinito.  
   
- [ **@size=** ] **'***size* **'**  
+ [  **@size=** ] **' * * * dimensioni* **'**  
  Dimensioni iniziali del file. *dimensioni* viene **nvarchar(20)**, con un valore predefinito è NULL. Specificare un numero intero, ovvero non includere decimali. È possibile utilizzare i suffissi MB e KB per specificare megabyte o kilobyte. Il valore predefinito è MB. Il valore minimo è 512 KB. Se *dimensioni* non viene specificato, il valore predefinito è 1 MB.  
   
  [ **@maxsize=** ] **'***max_size* **'**  

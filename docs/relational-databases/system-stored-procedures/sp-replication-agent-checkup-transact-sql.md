@@ -1,16 +1,16 @@
 ---
 title: sp_replication_agent_checkup (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replication_agent_checkup
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e580accb9fbe9506a831ca835c09e0dd6c08d364
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 84ea8f214e8e74771acb6d7fbf8634f518390079
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@heartbeat_interval**  =] **'***heartbeat_interval***'**  
- Periodo massimo in minuti durante il quale un agente può non registrare alcun messaggio sullo stato. *heartbeat_interval* è **int**, con un valore predefinito è 10 minuti.  
+ [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
+ Periodo massimo in minuti durante il quale un agente può non registrare alcun messaggio sullo stato. *heartbeat_interval* viene **int**, con un valore predefinito è 10 minuti.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **sp_replication_agent_checkup** genera l'errore 14151 per ogni agente rilevato come sospetto. Registra inoltre nella cronologia un messaggio di errore relativo agli agenti.  
@@ -55,7 +55,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ## <a name="remarks"></a>Osservazioni  
  **sp_replication_agent_checkup** viene utilizzata nella replica snapshot, transazionale e di tipo merge.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server possono eseguire **sp_replication_agent_checkup**.  
   
 ## <a name="see-also"></a>Vedere anche  

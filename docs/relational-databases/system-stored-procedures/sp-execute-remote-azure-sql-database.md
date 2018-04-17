@@ -1,16 +1,16 @@
 ---
 title: sp_execute_remote (Database SQL di Azure) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/01/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-database
 ms.component: system-stored-procedures
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sp_execute_remote
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-caps.latest.revision: 
+caps.latest.revision: 17
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a63fcd61563499894205c3cc55323480e8a805d7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: d681bdeafa6fc39a01a41f067bf9cec7a809add6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
 ## <a name="arguments"></a>Argomenti  
  [ @data_source_name =] *datasourcename*  
- Identifica l'origine dati esterna in cui viene eseguita l'istruzione. Vedere [Crea origine dati esterna &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md). L'origine dati esterna può essere di tipo "RDBMS" o "SHARD_MAP_MANAGER".  
+ Identifica l'origine dati esterna in cui viene eseguita l'istruzione. Vedere [Crea origine dati esterna &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). L'origine dati esterna può essere di tipo "RDBMS" o "SHARD_MAP_MANAGER".  
   
  [ @stmt=] *istruzione*  
  È una stringa Unicode che contiene un [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione o il batch. @stmt deve essere una costante Unicode o una variabile Unicode. Non sono consentite le espressioni Unicode più complesse, ad esempio per la concatenazione di due stringhe tramite l'operatore +. Le costanti di tipo carattere non sono consentite. Se viene specificata una costante Unicode, devono essere preceduto da un **N**. Ad esempio, la costante Unicode **n' sp_who'** è valido, ma la costante carattere **'sp_who'** non. Le dimensioni massime della stringa dipendono dalla memoria disponibile nel server di database. Nel server a 64 bit, le dimensioni della stringa sono limitata a 2 GB, la dimensione massima di **nvarchar (max)**.  
@@ -83,11 +84,11 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>Osservazioni  
  `sp_execute_remote` i parametri devono essere inseriti nell'ordine specifico, come descritto nella sezione relativa alla sintassi precedente. Se i parametri non vengono immessi in ordine, verrà visualizzato un messaggio di errore.  
   
- `sp_execute_remote` ha lo stesso comportamento come [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) per quanto riguarda i batch e l'ambito dei nomi. L'istruzione Transact-SQL o il batch nel sp_execute_remote  *@stmt*  parametro non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
+ `sp_execute_remote` ha lo stesso comportamento come [EXECUTE &#40;Transact-SQL&#41; ](../../t-sql/language-elements/execute-transact-sql.md) in relazione a batch e l'ambito dei nomi. L'istruzione Transact-SQL o il batch nel sp_execute_remote *@stmt* parametro non viene compilato finché non viene eseguita l'istruzione sp_execute_remote.  
   
  `sp_execute_remote` Aggiunge una colonna aggiuntiva al set di risultati denominato '$ShardName' che contiene il nome del database remoto che ha generato la riga.  
   
- `sp_execute_remote` può essere utilizzato come [sp_executesql &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
+ `sp_execute_remote` può essere utilizzato simile a [sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md).  
   
 ## <a name="examples"></a>Esempi  
 ### <a name="simple-example"></a>Esempio semplice  
@@ -112,5 +113,5 @@ EXEC sp_execute_remote @data_source_name  = N'PointToMaster',
 ## <a name="see-also"></a>Vedere anche:
 
 [CREARE CON AMBITO DATABASE DELLE CREDENZIALI](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)  
-[CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
+[CREARE l'origine dati esterna (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)  
     

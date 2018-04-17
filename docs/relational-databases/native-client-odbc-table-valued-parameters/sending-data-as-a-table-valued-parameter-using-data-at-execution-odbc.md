@@ -1,29 +1,30 @@
 ---
 title: Invio di dati come un parametro con valori di tabella utilizzando Data-At-Execution (ODBC) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-table-valued-parameters
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure one row at a time
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-caps.latest.revision: 
+caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 102763d09848c21902ffd2226a98d70039072ea4
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: dee56dc4d2de518c3154dd426aefc680252594a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +32,7 @@ ms.lasthandoff: 01/24/2018
 
   È simile al [tutte in memoria](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) routine, ma utilizza data-at-execution per il parametro con valori di tabella.  
   
- Per un esempio che illustra i parametri con valori di tabella, vedere [utilizzare parametri &#40; ODBC &#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Per un esempio che illustra i parametri con valori di tabella, vedere [utilizzare parametri &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
  In questo esempio, quando viene chiamata SQLExecute o SQLExecDirect, il driver restituisce SQL_NEED_DATA. L'applicazione chiama quindi SQLParamData ripetutamente fino a quando il driver restituisce un valore diverso da SQL_NEED_DATA. Il driver restituisce *ParameterValuePtr* per informare l'applicazione con il parametro che richiede dati per. L'applicazione chiama SQLPutData per fornire i dati del parametro prima della chiamata successiva a SQLParamData. Per un parametro con valori di tabella, la chiamata a SQLPutData indica il numero di righe preparate per il driver (in questo esempio sempre 1). Quando tutte le righe del valore di tabella sono state passate al driver, SQLPutData viene chiamato per indicare che sono disponibili 0 righe.  
   
@@ -76,7 +77,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  Associare i parametri. *ColumnSize* è 1, vale a dire che almeno una riga viene passata alla volta.  
+2.  Associare i parametri. *ColumnSize* è 1, vale a dire che al massimo viene passata una riga alla volta.  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  

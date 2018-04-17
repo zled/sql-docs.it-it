@@ -1,16 +1,16 @@
 ---
-title: sp_syspolicy_rename_policy (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_syspolicy_rename_policy (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_rename_policy_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_syspolicy_rename_policy
 ms.assetid: ce2b07f5-23b1-4f49-8e7b-c18cf3f3d45b
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d82827cfd7a0d7ceaf9988e4fb8fa6a26d11976
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 83e70da7cf1ee976206052e33cf2a9708b903e36
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsyspolicyrenamepolicy-transact-sql"></a>sp_syspolicy_rename_policy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +48,17 @@ sp_syspolicy_rename_policy { [ @name = ] 'name' | [ @policy_id = ] policy_id }
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@name=** ] **'***nome***'**  
- Nome dei criteri che si desidera rinominare. *nome* è **sysname**e deve essere specificato se *policy_id* è NULL.  
+ [ **@name=** ] **'***name***'**  
+ Nome dei criteri che si desidera rinominare. *nome* viene **sysname**e deve essere specificato se *policy_id* è NULL.  
   
  [ **@policy_id=** ] *policy_id*  
- Identificatore dei criteri che si desidera rinominare. *policy_id* è **int**e deve essere specificato se *nome* è NULL.  
+ Identificatore dei criteri che si desidera rinominare. *policy_id* viene **int**e deve essere specificato se *nome* è NULL.  
   
- [ **@new_name=** ] **'***new_name***'**  
- È il nuovo nome per il criterio. *nuovo_nome* è **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
+ [  **@new_name=** ] **'***nuovo_nome***'**  
+ È il nuovo nome per il criterio. *nuovo_nome* viene **sysname**ed è obbligatorio. Non può essere NULL o una stringa vuota.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  È necessario eseguire sp_syspolicy_rename_policy nel contesto del database di sistema msdb.  
@@ -82,6 +82,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gestione basata su criteri di Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
+ [Stored procedure della gestione basata su criteri &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

@@ -1,30 +1,31 @@
 ---
 title: sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: pdw
-ms.reviewer: 
-ms.service: 
+ms.reviewer: ''
+ms.service: ''
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d4fee3ad-6285-4ea5-8513-5e6eb617abb0
-caps.latest.revision: 
+caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bddbdd676ab829f1468866c09d745919d1fe97d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6c4c13a3e2db6090c400d0aaf7df0be9ce4596a7
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmpdwnetworkcredentials-transact-sql"></a>sys.dm_pdw_network_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 02/03/2018
 |pdw_node_id|**int**|Id numerico univoco associato al nodo.|  
 |target_server_name|**nvarchar(32)**|Indirizzo IP del server di destinazione che [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] accederà utilizzando le credenziali di nome utente e password.|  
 |username|**nvarchar(32)**|Nome utente per cui la password viene archiviata.|  
-|last_modified|**datetime**|Data e ora dell'ultima operazione che modifica le credenziali.|  
+|LAST_MODIFIED|**datetime**|Data e ora dell'ultima operazione che modifica le credenziali.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  Richiede VIEW SERVER STATE.  
@@ -45,6 +46,6 @@ ms.lasthandoff: 02/03/2018
  La chiave per questa vista a gestione dinamica è *pdw_node_id* più *target_server_name*.  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste a gestione dinamica Parallel Data Warehouse &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse, viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

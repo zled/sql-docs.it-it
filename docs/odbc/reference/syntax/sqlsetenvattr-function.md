@@ -2,7 +2,7 @@
 title: Funzione SQLSetEnvAttr | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0343241c-4b15-4d4b-aa2b-2e8ab5215cd2
 caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8a70e7d7de19f4f69a79db56742938ca0d61344
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ef21f18346ad21afbba42d282763db5a527029f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlsetenvattr-function"></a>SQLSetEnvAttr Function
 **Conformità**  
@@ -55,13 +55,13 @@ SQLRETURN SQLSetEnvAttr(
  *EnvironmentHandle*  
  [Input] Handle di ambiente.  
   
- *Attribute*  
+ *Attributo*  
  [Input] Attributo da impostare, elencati in "Commenti".  
   
  *ValuePtr*  
  [Input] Puntatore al valore da associare a *attributo*. A seconda del valore di *attributo*, *ValuePtr* verranno un valore integer a 32 bit o puntare a una stringa di caratteri con terminazione null.  
   
- *StringLength*  
+ *stringLength*  
  [Input] Se *ValuePtr* punta a una stringa di caratteri o di un buffer binario, la lunghezza di questo argomento deve essere **ValuePtr*. Per i dati di stringa di caratteri, questo argomento deve contenere il numero di byte nella stringa.  
   
  Se *ValuePtr* è un numero intero, *StringLength* viene ignorato.  
@@ -90,13 +90,13 @@ SQLRETURN SQLSetEnvAttr(
 ## <a name="comments"></a>Commenti  
  Un'applicazione può chiamare **SQLSetEnvAttr** solo se nessun handle di connessione è stato allocato all'ambiente. Tutti gli attributi di ambiente impostati correttamente dall'applicazione per l'ambiente mantenuta fino al **SQLFreeHandle** viene chiamato sull'ambiente. Più di un handle di ambiente può essere allocato contemporaneamente in ODBC 3*x*.  
   
- Imposta il formato delle informazioni tramite *ValuePtr* dipende specificato *attributo*. **SQLSetEnvAttr** accetterà informazioni sugli attributi in uno dei due formati: una stringa di caratteri con terminazione null o un valore integer a 32 bit. Il formato di ogni viene indicato nella descrizione dell'attributo.  
+ Imposta il formato delle informazioni tramite *ValuePtr* dipende specificato *attributo*. **SQLSetEnvAttr** accetterà informazioni sugli attributi in uno dei due formati diversi: una stringa di caratteri con terminazione null o un valore integer a 32 bit. Il formato di ogni viene indicato nella descrizione dell'attributo.  
   
  Non sono presenti attributi di ambiente specifiche del driver.  
   
  Impossibile impostare gli attributi di connessione da una chiamata a **SQLSetEnvAttr**. Tentativo di eseguire questa operazione restituirà SQLSTATE HY092 (identificatore di attributo/opzione non valida).  
   
-|*Attribute*|*ValuePtr* contenuto|  
+|*Attributo*|*ValuePtr* contenuto|  
 |-----------------|-------------------------|  
 |SQL_ATTR_CONNECTION_POOLING (ODBC 3.8)|Valore a 32 bit SQLUINTEGER che abilita o disabilita il pool di connessioni a livello di ambiente. Vengono utilizzati i valori seguenti:<br /><br /> SQL_CP_OFF = connessione pool è stato disattivata. Impostazione predefinita.<br /><br /> SQL_CP_ONE_PER_DRIVER = un singolo pool di connessioni è supportato per tutti i driver. Ogni connessione in un pool è associata a un driver.<br /><br /> SQL_CP_ONE_PER_HENV = un singolo pool di connessioni è supportato per ogni ambiente. Ogni connessione in un pool è associata a un ambiente.<br /><br /> SQL_CP_DRIVER_AWARE = utilizzano la funzionalità di riconoscimento del pool di connessioni del driver, se disponibile. Se il driver non supporta il riconoscimento di pool di connessioni, SQL_CP_DRIVER_AWARE viene ignorato e viene utilizzato SQL_CP_ONE_PER_HENV. Per ulteriori informazioni, vedere [Driver-Aware Connection Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). In un ambiente in cui alcuni driver supportano e alcuni driver non supportano la consapevolezza di pool di connessioni, SQL_CP_DRIVER_AWARE possono abilitare la funzionalità di riconoscimento di pool di connessioni su quelli che supportano il driver, ma è equivalente all'impostazione di SQL_CP_ONE_PER_HENV in i driver che non supportano la funzionalità di riconoscimento di pool di connessioni.<br /><br /> Il pool di connessioni è abilitato per la chiamata **SQLSetEnvAttr** per impostare l'attributo SQL_ATTR_CONNECTION_POOLING SQL_CP_ONE_PER_DRIVER o SQL_CP_ONE_PER_HENV. Deve essere chiamato prima che l'applicazione alloca ambiente condiviso per la connessione che il pool è necessario abilitare. L'handle di ambiente nella chiamata a **SQLSetEnvAttr** è impostato su null, che rende SQL_ATTR_CONNECTION_POOLING un attributo a livello di processo. Dopo che il pool di connessioni è abilitato, quindi l'applicazione esegue l'allocazione di un ambiente condiviso implicito chiamando **SQLAllocHandle** con il *InputHandle* argomento impostato su SQL_HANDLE_ENV.<br /><br /> Dopo che il pool di connessioni è stato abilitato ed è stato selezionato un ambiente condiviso per un'applicazione, SQL_ATTR_CONNECTION_POOLING non è possibile reimpostare l'ambiente, in quanto **SQLSetEnvAttr** viene chiamato con un ambiente null gestire quando si imposta questo attributo. Se questo attributo è impostato, mentre il pool di connessioni è già abilitato in un ambiente condiviso, l'attributo influisce solo ambienti condivisi allocati successivamente.<br /><br /> È inoltre possibile abilitare il pool di connessioni in un ambiente. Si noti quanto segue sui pool di connessioni di ambiente:<br /><br /> -Abilitazione del pool di connessioni su un handle NULL è un attributo a livello di processo. Ambienti allocati successivamente saranno un ambiente condiviso ed erediteranno il livello di processo del pool impostazione.<br />-Dopo aver allocato un ambiente, un'applicazione può ancora modificare l'impostazione del pool di connessione.<br />-Se il pool di connessioni di ambiente è abilitato e driver della connessione utilizza il pool di driver, il pool di ambiente ha preferenza.<br /><br /> SQL_ATTR_CONNECTION_POOLING viene implementato all'interno di gestione Driver. Un driver non è necessario implementare SQL_ATTR_CONNECTION_POOLING. ODBC 2.0 e 3.0 applicazioni possono impostare l'attributo di ambiente.<br /><br /> Per ulteriori informazioni, vedere [pool di connessioni ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md).|  
 |SQL_ATTR_CP_MATCH (ODBC 3.0)|Valore SQLUINTEGER 32 bit che determina la modalità di scelta di una connessione da un pool di connessioni. Quando **SQLConnect** o **SQLDriverConnect** viene chiamato, gestione Driver determina quale connessione viene riutilizzata dal pool. Gestione Driver tenta di far corrispondere le opzioni di connessione in cui la chiamata e gli attributi di connessione impostati dall'applicazione per le parole chiave e gli attributi di connessione delle connessioni nel pool. Il valore di questo attributo determina il livello di precisione dei criteri di corrispondenza.<br /><br /> Per impostare il valore di questo attributo, vengono utilizzati i valori seguenti:<br /><br /> SQL_CP_STRICT_MATCH = solo le connessioni che corrispondono esattamente le opzioni di connessione nella chiamata e la connessione vengono riutilizzati attributi impostati dall'applicazione. Impostazione predefinita.<br /><br /> SQL_CP_RELAXED_MATCH = connessioni con la stringa di connessione è possono utilizzare parole chiave corrispondenti. Devono corrispondere a parole chiave, ma non tutti gli attributi di connessione devono corrispondere.<br /><br /> Per ulteriori informazioni sulla modalità di gestione Driver esegue la corrispondenza per la connessione a una connessione in pool, vedere [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md). Per ulteriori informazioni sui pool di connessioni, vedere [pool di connessioni ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md).|  

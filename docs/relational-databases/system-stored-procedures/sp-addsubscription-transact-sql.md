@@ -1,7 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft Docs
 ms.date: 10/28/2015
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -23,11 +23,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 860f2f99457344167af9035d0a9ccc21eebc2577
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 08b375e45d672ca7f1286a8012ca0c5a6304c481
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -211,13 +211,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  È se è possibile sincronizzare la sottoscrizione tramite [!INCLUDE[msCoName](../../includes/msconame-md.md)] Gestione sincronizzazione Microsoft Windows. *enabled_for_syncmgr* viene **nvarchar(5**, con un valore predefinito è FALSE. Se il valore è false, la sottoscrizione non viene registrata con Gestione sincronizzazione Microsoft Windows. Se il valore è true, la sottoscrizione viene registrata con Gestione sincronizzazione Microsoft Windows e può essere sincronizzata senza avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Questa proprietà non è supportata per server di pubblicazione Oracle.  
   
- [ @offloadagent= ] '*remote_agent_activation*'  
+ [ @offloadagent=] '*remote_agent_activation*'  
  Specifica se è possibile o meno attivare l'agente in remoto. *remote_agent_activation* viene **bit** con un valore predefinito è 0.  
   
 > [!NOTE]  
 >  Questo parametro è deprecato ed è ancora disponibile per compatibilità con gli script di versioni precedenti.  
   
- [ @offloadserver= ] '*remote_agent_server_name*'  
+ [ @offloadserver=] '*remote_agent_server_name*'  
  Specifica il nome di rete del server da utilizzare per l'attivazione remota. *remote_agent_server_name*viene **sysname**, con un valore predefinito è NULL.  
   
  [ @dts_package_name=] '*dts_package_name*'  
@@ -255,19 +255,19 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicename=] '*backupdevicename*'  
  Specifica il nome del dispositivo utilizzato durante l'inizializzazione di un Sottoscrittore da un backup. *backupdevicename* viene **nvarchar(1000)**, con un valore predefinito è NULL.  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword=] '*mediapassword*'  
  Specifica una password per il set di supporti se durante la formattazione dei supporti è stata impostata una password. *MEDIAPASSWORD* viene **sysname**, con valore predefinito è NULL.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*password*'  
  Specifica una password per il backup se durante la creazione del backup è stata impostata una password. *password*viene **sysname**, con valore predefinito è NULL.  
   
- [ @fileidhint= ] *fileidhint*  
+ [ @fileidhint=] *fileidhint*  
  Identifica un valore ordinale del set di backup da ripristinare. *fileidhint* viene **int**, con valore predefinito è NULL.  
   
- [ @unload= ] *unload*  
+ [ @unload=] *scaricare*  
  Specifica se è necessario scaricare un dispositivo di backup su nastro dopo il completamento dell'inizializzazione dal backup. *scaricare* viene **bit**, con valore predefinito è 1. il valore 1 specifica che il nastro deve essere scaricato. *scaricare* viene utilizzato solo quando *backupdevicetype* nastro.  
   
  [ @subscriptionlsn=] *subscriptionlsn*  

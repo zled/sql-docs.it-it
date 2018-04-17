@@ -1,16 +1,16 @@
 ---
 title: sp_helpntgroup (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_helpntgroup
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpntgroup
 ms.assetid: 02b4f7c1-480a-436c-8bae-7a2488be45d2
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 512dd5980e0d80859862b071eb10f1011808950f
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 679923d8cdfe1c529a0e338c0122eadb4e4f9ed0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpntgroup-transact-sql"></a>sp_helpntgroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@ntname =** ] **'***nome***'**  
- Nome del gruppo di Windows. *nome* è **sysname**, con un valore predefinito è NULL. *nome* deve essere un gruppo di Windows valido con accesso al database corrente. Se *nome* non viene specificato, l'output vengono inclusi tutti i gruppi di Windows con accesso al database corrente.  
+ Nome del gruppo di Windows. *nome* viene **sysname**, con un valore predefinito è NULL. *nome* deve essere un gruppo di Windows valido con accesso al database corrente. Se *nome* non viene specificato, l'output vengono inclusi tutti i gruppi di Windows con accesso al database corrente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -58,13 +58,13 @@ sp_helpntgroup [ [ @ntname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**NTGroupName**|**sysname**|Nome del gruppo di Windows.|  
 |**NTGroupId**|**smallint**|Identificatore (ID) di gruppo.|  
-|**SID**|**varbinary (85)**|ID di sicurezza (SID) del **NTGroupName**.|  
+|**SID**|**varbinary(85)**|ID di sicurezza (SID) del **NTGroupName**.|  
 |**HasDbAccess**|**int**|1 = Il gruppo di Windows dispone dell'accesso al database.|  
   
 ## <a name="remarks"></a>Osservazioni  
  Per visualizzare un elenco di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ruoli nel database corrente, utilizzare **sp_helprole**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** .  
   
 ## <a name="examples"></a>Esempi  
@@ -75,9 +75,9 @@ EXEC sp_helpntgroup;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Stored procedure di sicurezza &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   
- [sp_helprole &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
+ [sp_helprole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_revokedbaccess &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokedbaccess-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -1,16 +1,16 @@
 ---
 title: sp_setsubscriptionxactseqno (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aab7bf1c5fb7653f4b61af1912af7de3454bf776
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7ec407d84267e8a2a03d2a6774e7c86cc469af94
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,34 +53,34 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@publisher=** ] **'***publisher***'**  
- Nome del server di pubblicazione. *server di pubblicazione* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del server di pubblicazione. *server di pubblicazione* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@publisher_db=** ] **'***publisher_db***'**  
- Nome del database di pubblicazione. *publisher_db* è **sysname**, non prevede alcun valore predefinito. Per un Server di pubblicazione non SQL, *publisher_db* è il nome del database di distribuzione.  
+ Nome del database di pubblicazione. *publisher_db* viene **sysname**, non prevede alcun valore predefinito. Per un Server di pubblicazione non SQL, *publisher_db* è il nome del database di distribuzione.  
   
  [  **@publication=** ] **'***pubblicazione***'**  
- Nome della pubblicazione. *pubblicazione* è **sysname**, non prevede alcun valore predefinito. Quando l'agente di distribuzione è condiviso da più di una pubblicazione, è necessario specificare un valore all per *pubblicazione*.  
+ Nome della pubblicazione. *pubblicazione* viene **sysname**, non prevede alcun valore predefinito. Quando l'agente di distribuzione è condiviso da più di una pubblicazione, è necessario specificare un valore all per *pubblicazione*.  
   
  [  **@xact_seqno=** ] *xact_seqno*  
- LSN della successiva transazione del server di distribuzione da applicare nel Sottoscrittore. *xact_seqno* è **varbinary (16)**, non prevede alcun valore predefinito.  
+ LSN della successiva transazione del server di distribuzione da applicare nel Sottoscrittore. *xact_seqno* viene **varbinary(16)**, non prevede alcun valore predefinito.  
   
 ## <a name="result-set"></a>Set di risultati  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**XACT_SEQNO ORIGINALE**|**varbinary (16)**|LSN originale della successiva transazione da applicare nel Sottoscrittore.|  
-|**XACT_SEQNO AGGIORNATO**|**varbinary (16)**|LSN aggiornato della successiva transazione da applicare nel Sottoscrittore.|  
+|**XACT_SEQNO ORIGINALE**|**varbinary(16)**|LSN originale della successiva transazione da applicare nel Sottoscrittore.|  
+|**XACT_SEQNO AGGIORNATO**|**varbinary(16)**|LSN aggiornato della successiva transazione da applicare nel Sottoscrittore.|  
 |**NUMERO DI FLUSSO DELLA SOTTOSCRIZIONE**|**int**|Numero di flussi di sottoscrizione utilizzati durante l'ultima sincronizzazione.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_setsubscriptionxactseqno** viene utilizzata nella replica transazionale.  
   
- **sp_setsubscriptionxactseqno** non può essere utilizzato in una topologia di replica transazionale peer-to-peer.  
+ **sp_setsubscriptionxactseqno** non può essere utilizzata in una topologia di replica transazionale peer-to-peer.  
   
- **sp_setsubscriptionxactseqno** può essere utilizzato per ignorare una transazione specifica che causa un errore quando viene applicato nel Sottoscrittore. Quando si verifica un errore e l'agente di distribuzione al termine, chiamare [sp_helpsubscriptionerrors &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) nel server di distribuzione per recuperare il valore xact_seqno della transazione non riuscita e quindi chiamare **sp_setsubscriptionxactseqno**, passando questo valore per *xact_seqno*. In questo modo verranno elaborati solo i comandi successivi a questo LSN.  
+ **sp_setsubscriptionxactseqno** può essere usato per ignorare una transazione specifica che sta causando un errore quando viene applicato nel Sottoscrittore. Quando si verifica un errore e dopo che l'agente di distribuzione viene arrestata, chiamare [sp_helpsubscriptionerrors &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpsubscriptionerrors-transact-sql.md) nel server di distribuzione per recuperare il valore xact_seqno della transazione non riuscita e quindi chiamare **sp_setsubscriptionxactseqno**, passando questo valore per *xact_seqno*. In questo modo verranno elaborati solo i comandi successivi a questo LSN.  
   
  Specificare un valore di **0** per *xact_seqno* per recapitare tutti i comandi in sospeso nel database di distribuzione al sottoscrittore.  
   
@@ -88,7 +88,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
  Quando si verifica questo errore, è necessario eseguire l'agente di distribuzione con un flusso di sottoscrizione singolo. Per altre informazioni, vedere [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_setsubscriptionxactseqno**.  
   
   

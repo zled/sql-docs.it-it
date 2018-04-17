@@ -2,7 +2,7 @@
 title: Che cos'è ODBC? | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: badf3a45-f941-44ae-a31d-393116f68a18
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1cb1869039572d0d6da1302f66ce64abc3f2590
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ed2f843b8b3c5da54f339d0d3e7f4602246a8d69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-odbc"></a>Che cos'è ODBC?
 Molti pregiudizi ODBC esistono nell'ambiente di elaborazione. Per l'utente finale, è un'icona nel Pannello di controllo di Microsoft® Windows®. Per il programmatore di applicazione, è una libreria che contiene la routine di accesso ai dati. In molti altri controlli, è la risposta a tutti i problemi di accesso al database possibili.  

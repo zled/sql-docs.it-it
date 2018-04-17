@@ -1,16 +1,16 @@
 ---
-title: sysmail_update_profile_sp (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sysmail_update_profile_sp (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sysmail_update_profile_sp
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_update_profile_sp
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
-caps.latest.revision: 
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1da9b999f30a31928849f5a31a2144117d94e1f7
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: f16d17779ed6c60ef91b89503f69259eb2093d74
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +48,16 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 ## <a name="arguments"></a>Argomenti  
  [ **@profile_id** = ] *profile_id*  
- ID del profilo da aggiornare. *profile_id* è **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* o *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+ ID del profilo da aggiornare. *profile_id* viene **int**, con un valore predefinito è NULL. Almeno uno dei *profile_id* o *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
- [ **@profile_name** = ] **'***profile_name***'**  
- Nome del profilo da aggiornare oppure nuovo nome del profilo. *profile_name* è **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* o *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
+ [ **@profile_name** =] **'***profile_name***'**  
+ Nome del profilo da aggiornare oppure nuovo nome del profilo. *profile_name* viene **sysname**, con un valore predefinito è NULL. Almeno uno dei *profile_id* o *profile_name* deve essere specificato. Se si specificano entrambi, la procedura modifica il nome del profilo.  
   
- [  **@description**  =] **'***descrizione***'**  
- Nuova descrizione del profilo. *Descrizione* è **nvarchar (256)**, con un valore predefinito è NULL.  
+ [ **@description** =] **'***descrizione***'**  
+ Nuova descrizione del profilo. *Descrizione* viene **nvarchar(256)**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  Se si specificano sia l'ID che il nome del profilo, la procedura modifica il nome del profilo utilizzando il nome specificato e quindi aggiorna la descrizione del profilo. Se si specifica solo uno di questi argomenti, la procedura aggiorna la descrizione del profilo.  
@@ -93,6 +93,6 @@ EXECUTE msdb.dbo.sysmail_update_profile_sp
  [Posta elettronica database](../../relational-databases/database-mail/database-mail.md)   
  [Oggetti di configurazione di posta elettronica database](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [Creare un Account di posta elettronica Database](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Posta elettronica database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Stored procedure di posta elettronica database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

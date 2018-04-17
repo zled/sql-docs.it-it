@@ -1,16 +1,16 @@
 ---
 title: core.sp_create_snapshot (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1b0ff5c71ec0516b51040c157eb517fcd0402ca3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,26 +54,26 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ @collection_set_uid = ] '*collection_set_uid*'  
- GUID per il set di raccolta. *collection_set_uid* è **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
+ [ @collection_set_uid =] '*collection_set_uid*'  
+ GUID per il set di raccolta. *collection_set_uid* viene **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collection_sets nel database msdb.  
   
  [ @collector_type_uid =] '*collector_type_uid*'  
- GUID per un tipo agente di raccolta. *collector_type_uid* è **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
+ GUID per un tipo agente di raccolta. *collector_type_uid* viene **uniqueidentifier** non prevede alcun valore predefinito. Per ottenere il GUID, eseguire una query sulla vista dbo.syscollector_collector_types nel database msdb.  
   
- [ @machine_name= ] '*machine_name*'  
- Nome del server in cui risiede l'insieme di raccolta. *nome_computer* è **sysname**, senza alcun valore predefinito.  
+ [ @machine_name=] '*nome_computer*'  
+ Nome del server in cui risiede l'insieme di raccolta. *nome_computer* viene **sysname**, senza alcun valore predefinito.  
   
  [ @named_instance=] '*named_instance*'  
- Nome dell'istanza per l'insieme di raccolta. *named_instance* è **sysname**, senza alcun valore predefinito.  
+ Nome dell'istanza per l'insieme di raccolta. *named_instance* viene **sysname**, senza alcun valore predefinito.  
   
  [ @log_id = ] *log_id*  
- Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* è **bigint** non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, query sulla vista syscollector_execution_log nel database msdb.  
+ Identificatore univoco tramite cui viene eseguito il mapping al registro eventi del set di raccolta nel server da cui sono stati raccolti i dati. *log_id* viene **bigint** non prevede alcun valore predefinito. Per ottenere il valore per *log_id*, query sulla vista syscollector_execution_log nel database msdb.  
   
  [ @snapshot_id = ] *snapshot_id*  
- Identificatore univoco per una riga inserita nella vista snapshots. *snapshot_id* è **int** e viene restituito come OUTPUT.  
+ Identificatore univoco per una riga inserita nella vista snapshots. *snapshot_id* viene **int** e viene restituito come OUTPUT.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  Ogni volta che un pacchetto di caricamento inizia a caricare i dati nel data warehouse di gestione, il componente runtime dell'agente di raccolta dati chiama core.sp_create_snapshot.  

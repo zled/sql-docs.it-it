@@ -1,15 +1,15 @@
 ---
 title: Codifica dei tipi definiti dall'utente | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: clr
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
 - VB
@@ -33,20 +33,20 @@ helpviewer_keywords:
 - validating UDT values
 - exposing UDT properties [CLR integration]
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
-caps.latest.revision: 
+caps.latest.revision: 37
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf3a762eb8e8435972d4813d8b3e852d39c8b2d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d39df3bcadebc8c6433d11563c6d628ca439f061
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-user-defined-types---coding"></a>Creazione di tipi definiti dall'utente - codice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Quando si codifica la definizione del tipo definito dall'utente (UDT), è necessario implementare varie caratteristiche a seconda che il tipo UDT venga implementato come classe o come struttura, nonché a seconda delle opzioni di formato e di serializzazione scelte.  
+  Quando si codifica la definizione del tipo definito dall'utente (UDT), è necessario implementare varie caratteristiche a seconda che il tipo UDT venga implementato come classe o come struttura, nonché a seconda delle opzioni di formato e di serializzazione scelte.  
   
  Nell'esempio riportato in questa sezione viene illustrata l'implementazione un **punto** tipo definito dall'utente come un **struct** (o **struttura** in Visual Basic). Il **punto** tipo definito dall'utente costituito X e Y coordinate implementate come routine della proprietà.  
   
@@ -72,10 +72,10 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Specifica degli attributi  
  Gli attributi consentono di determinare la modalità di utilizzo della serializzazione per costruire la rappresentazione di archiviazione dei tipi definiti dall'utente e per trasmettere tali tipi al client in base al valore.  
   
- Il **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** è obbligatorio. Il **Serializable** attributo è facoltativo. È inoltre possibile specificare il **Microsoft.SqlServer.Server.SqlFacetAttribute** per fornire informazioni relative al tipo restituito di un tipo definito dall'utente. Per ulteriori informazioni, vedere [attributi personalizzati per le routine CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ Il **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** è obbligatorio. Il **Serializable** attributo è facoltativo. È inoltre possibile specificare il **Microsoft.SqlServer.Server.SqlFacetAttribute** per fornire informazioni relative al tipo restituito di un tipo definito dall'utente. Per altre informazioni, vedere [Attributi personalizzati per routine CLR](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Attributi per il tipo definito dall'utente Point  
- Il **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** imposta il formato di archiviazione per il **punto** tipo definito dall'utente **nativo**. **IsByteOrdered** è impostato su **true**, che garantisce che i risultati dei confronti siano uguali in SQL Server come se lo stesso confronto venga eseguita nel codice gestito. Implementa il tipo definito dall'utente di **System.Data.SqlTypes.INullable** interfaccia per informare il null di tipo definito dall'utente.  
+ Il **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** imposta il formato di archiviazione per il **punto** tipo definito dall'utente **nativo**. **IsByteOrdered** è impostata su **true**, che garantisce che i risultati dei confronti siano uguali in SQL Server come se lo stesso confronto fosse stato effettuato in codice gestito. Implementa il tipo definito dall'utente di **System.Data.SqlTypes.INullable** interfaccia per informare il null di tipo definito dall'utente.  
   
  Frammento di codice seguente vengono illustrati gli attributi per il **punto** tipo definito dall'utente.  
   
@@ -500,7 +500,7 @@ public Int32 Y
  Quando si codificano i metodi UDT, è consigliabile valutare la possibilità che l'algoritmo utilizzato possa cambiare nel tempo. In questo caso è possibile creare una classe separata per i metodi utilizzati dal tipo definito dall'utente. Se l'algoritmo cambia, è possibile ricompilare la classe con il nuovo codice e caricare l'assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza influire sul tipo definito dall'utente. In molti casi i tipi definiti dall'utente possono essere ricaricati utilizzando l'istruzione ALTER ASSEMBLY [!INCLUDE[tsql](../../includes/tsql-md.md)], anche se tale operazione potrebbe provocare problemi con i dati esistenti. Ad esempio, il **valuta** UDT è inclusa la **AdventureWorks** Usa database di esempio un **ConvertCurrency** funzione per convertire i valori di valuta, che è implementata in una classe separata. È possibile che gli algoritmi di conversione cambino nel tempo in modo imprevedibile o che venga richiesta una nuova funzionalità. Separazione di **ConvertCurrency** funzione dal **valuta** implementazione UDT offre una maggiore flessibilità durante la pianificazione per le modifiche future.  
   
 ### <a name="example"></a>Esempio  
- Il **punto** classe contiene tre metodi semplici per il calcolo della distanza: **distanza**, **DistanceFrom** e **DistanceFromXY**. Ognuna restituisce un **doppie** calcola la distanza da **punto** a zero, la distanza da un punto specificato per **punto**, e la distanza specificata coordinate X e Y per **punto**. **Distanza** e **DistanceFrom** ogni chiamata **DistanceFromXY**e viene illustrato l'uso di argomenti diversi per ogni metodo.  
+ Il **punto** classe contiene tre metodi semplici per il calcolo della distanza: **distanza**, **DistanceFrom** e **DistanceFromXY**. Ognuna restituisce un **doppie** calcola la distanza da **punto** a zero, la distanza da un punto specificato per **punto**, e la distanza specificata coordinate X e Y per **punto**. **Distanza** e **DistanceFrom** ogni chiamata **DistanceFromXY**e viene illustrato come utilizzare i diversi argomenti per ogni metodo.  
   
 ```vb  
 ' Distance from 0 to Point.  

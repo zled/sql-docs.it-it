@@ -1,16 +1,16 @@
 ---
 title: sp_updateextendedproperty (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_updateextendedproperty_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_updateextendedproperty
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 284eb1e8d95ff94091df493048826e3a958ffb8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: daf6bebe67f97da599aca259396214ce0c8501a3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,31 +60,31 @@ sp_updateextendedproperty
   
 ## <a name="arguments"></a>Argomenti  
  [ @name=] {'*property_name*'}  
- Nome della proprietà da aggiornare. *property_name* è **sysname**, e non può essere NULL.  
+ Nome della proprietà da aggiornare. *property_name* viene **sysname**, e non può essere NULL.  
   
  [ @value=] {'*valore*'}  
- Valore associato alla proprietà. *valore* è **sql_variant**, con un valore predefinito è NULL. Le dimensioni di *valore* potrebbe non essere maggiori di 7.500 byte.  
+ Valore associato alla proprietà. *valore* viene **sql_variant**, con un valore predefinito è NULL. Le dimensioni di *valore* potrebbe non essere maggiori di 7.500 byte.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Utente o tipo definito dall'utente. *level0_object_type* è **varchar (128)**, con un valore predefinito è NULL. Gli input validi sono ASSEMBLY, contratto, EVENT NOTIFICATION, FILEGROUP, tipo di messaggio, la funzione di partizione, lo schema di partizione, Guida di piano, REMOTE SERVICE BINDING, ROUTE, SCHEMA, servizio, utente, TRIGGER, tipo e NULL.  
+ Utente o tipo definito dall'utente. *level0_object_type* viene **varchar(128)**, con un valore predefinito è NULL. Gli input validi sono ASSEMBLY, contratto, EVENT NOTIFICATION, FILEGROUP, tipo di messaggio, la funzione di partizione, lo schema di partizione, Guida di piano, REMOTE SERVICE BINDING, ROUTE, SCHEMA, servizio, utente, TRIGGER, tipo e NULL.  
   
 > [!IMPORTANT]  
 >  I tipi USER e TYPE come tipi di livello 0 verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate. Utilizzare SCHEMA come tipo di livello 0 anziché USER. Per TYPE utilizzare SCHEMA come tipo di livello 0 e TYPE come tipo di livello 1.  
   
  [ @level0name=] {'*level0_object_name*'}  
- Nome del tipo di oggetto di livello 1 specificato. *level0_object_name* è **sysname** con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 1 specificato. *level0_object_name* viene **sysname** con un valore predefinito è NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Tipo di oggetto di livello 1. *level1_object_type* è **varchar (128)** con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
+ Tipo di oggetto di livello 1. *level1_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono AGGREGATE, DEFAULT, FUNCTION, LOGICAL FILE NAME, PROCEDURE, QUEUE, RULE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION e NULL.  
   
  [ @level1name=] {'*level1_object_name*'}  
- Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* è **sysname** con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 1 specificato. *level1_object_name* viene **sysname** con un valore predefinito è NULL.  
   
  [ @level2type=] {'*level2_object_type*'}  
- Tipo di oggetto di livello 2. *level2_object_type* è **varchar (128)** con un valore predefinito è NULL. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
+ Tipo di oggetto di livello 2. *level2_object_type* viene **varchar(128)** con un valore predefinito è NULL. I possibili valori sono COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER e NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
- Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* è **sysname**, con un valore predefinito è NULL.  
+ Nome del tipo di oggetto di livello 2 specificato. *level2_object_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -93,7 +94,7 @@ sp_updateextendedproperty
   
  Un valore valido *property_name* e *valore*, se tutti i tipi di oggetto e i nomi sono null, la proprietà aggiornata appartiene al database corrente.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  I membri dei ruoli predefiniti del database db_owner e db_ddladmin possono aggiornare le proprietà estese di qualsiasi oggetto, anche se il ruolo db_ddladmin non può aggiungere proprietà al database stesso oppure a utenti o ruoli.  
   
  Gli utenti possono aggiornare le proprietà estese degli oggetti di cui sono proprietari oppure per i quali dispongono delle autorizzazioni ALTER o CONTROL.  
@@ -142,10 +143,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_addextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [procedure sp_addextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [Sys. extended_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

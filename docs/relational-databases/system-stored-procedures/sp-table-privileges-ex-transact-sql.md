@@ -1,16 +1,16 @@
 ---
 title: sp_table_privileges_ex (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_table_privileges_ex
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_table_privileges_ex
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
-caps.latest.revision: 
+caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0b117cb37d12eed86de59fec60eeaac84aef15e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,19 +51,19 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 ## <a name="arguments"></a>Argomenti  
  [  **@table_server =** ] **'***table_server***'**  
- Nome del server collegato per cui si desidera restituire le informazioni. *table_server* è **sysname**, non prevede alcun valore predefinito.  
+ Nome del server collegato per cui si desidera restituire le informazioni. *table_server* viene **sysname**, non prevede alcun valore predefinito.  
   
  [  **@table_name =** ] **'***table_name***'**]  
- Nome della tabella per cui si desidera ottenere informazioni sui privilegi assegnati. *TABLE_NAME* è **sysname**, con un valore predefinito è NULL.  
+ Nome della tabella per cui si desidera ottenere informazioni sui privilegi assegnati. *TABLE_NAME* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@table_schema =** ] **'***table_schema***'**  
- Schema della tabella. In alcuni ambienti DBMS corrisponde al proprietario della tabella. *TABLE_SCHEMA* è **sysname**, con un valore predefinito è NULL.  
+ Schema della tabella. In alcuni ambienti DBMS corrisponde al proprietario della tabella. *TABLE_SCHEMA* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@table_catalog =** ] **'***table_catalog***'**  
- Il nome del database in cui è specificato *table_name* risiede. *TABLE_CATALOG* è **sysname**, con un valore predefinito è NULL.  
+ Il nome del database in cui è specificato *table_name* risiede. *TABLE_CATALOG* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@fUsePattern =**] **'***fUsePattern***'**  
- Determina se i caratteri '_', '%', '[', e ']' vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* è **bit**, con un valore predefinito è 1.  
+ Determina se i caratteri '_', '%', '[', e ']' vengono interpretati come caratteri jolly. I valori validi sono 0 (utilizzo dei criteri di ricerca disattivato) e 1 (utilizzo dei criteri di ricerca attivato). *fUsePattern* viene **bit**, con un valore predefinito è 1.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  Nessuno  
@@ -72,7 +72,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.** *proprietario***.** *nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.*** proprietario***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**GRANTOR**|**sysname**|Nome utente di database che ha concesso autorizzazioni al **TABLE_NAME** per la tabella **utente autorizzato**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre lo stesso come il **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, la colonna GRANTOR può rappresentare il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
@@ -83,7 +83,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ## <a name="remarks"></a>Osservazioni  
  I risultati restituiti vengono ordinati in base **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, e **PRIVILEGIO**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per lo schema.  
   
 ## <a name="examples"></a>Esempi  
@@ -97,8 +97,8 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [sp_column_privileges_ex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
+ [sp_column_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Query distribuite Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Distributed query Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

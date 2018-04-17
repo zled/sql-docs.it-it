@@ -1,16 +1,16 @@
 ---
 title: sp_check_subset_filter (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -25,16 +25,16 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-caps.latest.revision: 
+caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3341c4f5fc6c637f74dabf913730e6c6e30dfcea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77b05fd5b606a7a25f4c6d229aa061643c7fd2b9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@filtered_table** =] **'***filtered_table***'**  
- Nome della tabella filtrata. *filtered_table* è **nvarchar (400)**, non prevede alcun valore predefinito.  
+ [ **@filtered_table**=] **'***filtered_table***'**  
+ Nome della tabella filtrata. *filtered_table* viene **nvarchar(400)**, non prevede alcun valore predefinito.  
   
- [  **@subset_filterclause**  =] **'***subset_filterclause***'**  
- Clausola di filtro sottoposta a verifica. *subset_filterclause* è **nvarchar (1000)**, non prevede alcun valore predefinito.  
+ [ **@subset_filterclause** =] **'***subset_filterclause***'**  
+ Clausola di filtro sottoposta a verifica. *subset_filterclause* viene **nvarchar(1000)**, non prevede alcun valore predefinito.  
   
- [  **@has_dynamic_filters** =] *has_dynamic_filters*  
- Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* è **bit**, con un valore predefinito è NULL ed è un parametro di output. Restituisce un valore di **1** quando la clausola di filtro è un filtro di riga con parametri.  
+ [ **@has_dynamic_filters**=] *has_dynamic_filters*  
+ Indica se la clausola di filtro è un filtro di riga con parametri. *has_dynamic_filters* viene **bit**, con un valore predefinito è NULL ed è un parametro di output. Restituisce un valore di **1** quando la clausola di filtro è un filtro di riga con parametri.  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -68,19 +68,19 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Specifica se la pubblicazione consente l'utilizzo di partizioni pre-calcolate; dove **1** significa che le partizioni calcolate possono essere utilizzate, e **0** significa che non possono essere utilizzate.|  
 |**has_dynamic_filters**|**bit**|Specifica se la clausola di filtro include almeno un filtro di riga con parametri. dove **1** significa che viene utilizzato un filtro di riga con parametri, e **0** significa che tale funzione non è stata utilizzata.|  
-|**dynamic_filters_function_list**|**nvarchar (500)**|Elenca le funzioni nella clausola di filtro che filtrano dinamicamente un articolo. Ogni funzione è separata da un punto e virgola.|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|Elenca le funzioni nella clausola di filtro che filtrano dinamicamente un articolo. Ogni funzione è separata da un punto e virgola.|  
 |**uses_host_name**|**bit**|Se il [HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** significa che questa funzione è presenta.|  
 |**uses_suser_sname**|**bit**|Se il [SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md) funzione viene utilizzata nella clausola di filtro, in cui **1** significa che questa funzione è presenta.|  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="remarks"></a>Osservazioni  
  **sp_check_subset_filter** viene utilizzata nella replica di tipo merge.  
   
  **sp_check_subset_filter** può essere eseguito su qualsiasi tabella anche se la tabella non è pubblicata. Questa stored procedure può essere utilizzata per verificare una clausola di filtro prima di definire un articolo filtrato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Solo i membri del **sysadmin** ruolo predefinito del server o **db_owner** ruolo predefinito del database possono eseguire **sp_check_subset_filter**.  
   
 ## <a name="see-also"></a>Vedere anche  

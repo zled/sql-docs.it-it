@@ -1,16 +1,16 @@
 ---
 title: sp_help_jobstep (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobstep_TSQL
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobstep
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
-caps.latest.revision: 
+caps.latest.revision: 40
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb316ee70ad1cf1f98898fd08edbb7cfb9622f56
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 1f091fbfa1183b2decb8628984dd730ac4cd2ba6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,25 +50,25 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="arguments"></a>Argomenti  
  [ **@job_id =**] **'***job_id***'**  
- ID del processo per il quale si desidera ottenere le informazioni. *job_id* è **uniqueidentifier**, con un valore predefinito è NULL.  
+ ID del processo per il quale si desidera ottenere le informazioni. *job_id* viene **uniqueidentifier**, con un valore predefinito è NULL.  
   
  [ **@job_name =**] **'***job_name***'**  
- Nome del processo. *job_name* è **sysname**, con valore predefinito è NULL.  
+ Nome del processo. *job_name* viene **sysname**, con valore predefinito è NULL.  
   
 > [!NOTE]  
 >  Entrambi *job_id* o *job_name* devono essere specificati, ma non è possibile specificarli entrambi.  
   
  [ **@step_id =**] *step_id*  
- Numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* è **int**, con un valore predefinito è NULL.  
+ Numero di identificazione del passaggio del processo. Se viene omesso, vengono inclusi tutti i passaggi del processo. *step_id* viene **int**, con un valore predefinito è NULL.  
   
- [ **@step_name =**] **'***step_name***'**  
- Nome del passaggio del processo. *step_name* è **sysname**, con un valore predefinito è NULL.  
+ [  **@step_name =**] **'***step_name***'**  
+ Nome del passaggio del processo. *step_name* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@suffix =**] *suffix*  
- Un flag che indica se aggiungere una descrizione per il **flag** colonna nell'output. *suffisso*è **bit**, con il valore predefinito di **0**. Se *suffisso* è **1**, aggiungere una descrizione.  
+ Un flag che indica se aggiungere una descrizione per il **flag** colonna nell'output. *suffisso*viene **bit**, con il valore predefinito è **0**. Se *suffisso* è **1**, aggiungere una descrizione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- **0** (esito positivo) o **1** (errore)  
+ **0** (esito positivo) o **1** (esito negativo)  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -80,7 +80,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**comando**|**nvarchar(max)**|Comando eseguito nel passaggio.|  
 |**flags**|**int**|Maschera di bit dei valori che controllano il funzionamento del passaggio.|  
 |**cmdexec_success_code**|**int**|Per un **CmdExec** passaggio, questo è il codice di uscita del processo di un comando eseguito correttamente.|  
-|**on_success_action**|**tinyint**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = termina il processo completato correttamente.<br /><br /> **2** = Quit di esito negativo.<br /><br /> **3** = andare al passaggio successivo.<br /><br /> **4** = esecuzione di un passaggio.|  
+|**on_success_action**|**tinyint**|Azione da eseguire se il passaggio viene eseguito correttamente:<br /><br /> **1** = Quit il processo completato correttamente.<br /><br /> **2** = uscita in caso di esito negativo.<br /><br /> **3** = andare al passaggio successivo.<br /><br /> **4** = esecuzione di un passaggio.|  
 |**on_success_step_id**|**int**|Se **on_success_action** è 4, indica il passaggio da eseguire.|  
 |**on_fail_action**|**tinyint**|Azione da eseguire se il passaggio non viene eseguito correttamente. I valori sono uguali a quelli **on_success_action**.|  
 |**on_fail_step_id**|**int**|Se **on_fail_action** è 4, indica il passaggio da eseguire.|  
@@ -91,7 +91,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|Intervallo in minuti che intercorre tra un tentativo e il successivo.|  
 |**os_run_priority**|**int**|Riservato.|  
 |**output_file_name**|**nvarchar(200)**|File per il comando che deve essere scritto l'output ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, e **PowerShell** solo per i passaggi).|  
-|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non riuscito<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
+|**last_run_outcome**|**int**|Risultato dell'ultima esecuzione del passaggio:<br /><br /> **0** = non è riuscita<br /><br /> **1** = ha avuto esito positivo<br /><br /> **2** = nuovo tentativo<br /><br /> **3** = annullato<br /><br /> **5** = sconosciuto|  
 |**last_run_duration**|**int**|Durata in secondi dell'ultima esecuzione del passaggio.|  
 |**last_run_retries**|**int**|Numero di tentativi di esecuzione del comando durante l'ultima esecuzione del passaggio.|  
 |**last_run_date**|**int**|Data di inizio dell'ultima esecuzione del passaggio.|  

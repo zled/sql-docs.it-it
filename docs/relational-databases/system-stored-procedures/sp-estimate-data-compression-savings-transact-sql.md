@@ -1,16 +1,16 @@
 ---
 title: sp_estimate_data_compression_savings (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_estimate_data_compression_savings_TSQL
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - compression [SQL Server], estimating
 - sp_estimate_data_compression_savings
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: acb61e6c699728902bc7ada6d5cfd7e12febb1c8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d93c3626e7177df5920cd2e8888ba75a2416fdfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,16 +64,16 @@ sp_estimate_data_compression_savings
   
 ## <a name="arguments"></a>Argomenti  
  [ @schema_name=] '*schema_name*'  
- Nome dello schema del database che contiene la tabella o la vista indicizzata. *schema_name* è **sysname**. Se *schema_name* è NULL, viene utilizzato lo schema predefinito dell'utente corrente.  
+ Nome dello schema del database che contiene la tabella o la vista indicizzata. *schema_name* viene **sysname**. Se *schema_name* è NULL, viene utilizzato lo schema predefinito dell'utente corrente.  
   
  [ @object_name=] '*object_name*'  
- Nome della tabella o della vista indicizzata su cui è basato l'indice. *object_name* è **sysname**.  
+ Nome della tabella o della vista indicizzata su cui è basato l'indice. *object_name* è di tipo **sysname**.  
   
  [ @index_id=] '*index_id*'  
- ID dell'indice. *index_id* è **int**, e può essere uno dei seguenti valori: il numero di ID di un indice, NULL o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *numero_partizione*.  
+ ID dell'indice. *index_id* viene **int**, e può essere uno dei seguenti valori: il numero di ID di un indice, NULL o 0 se *object_id* è un heap. Per restituire informazioni per tutti gli indici per una tabella di base o una vista, specificare NULL. Se si specifica NULL, è necessario specificare NULL anche per *numero_partizione*.  
   
  [ @partition_number=] '*numero_partizione*'  
- Numero di partizione nell'oggetto. *numero_partizione* è **int**, e può essere uno dei seguenti valori: il numero di partizione di un indice o heap, NULL o 1 per un heap o un indice non partizionato.  
+ Numero di partizione nell'oggetto. *partition_number* viene **int**, e può essere uno dei seguenti valori: il numero di partizione di un indice o heap, NULL o 1 per un heap o un indice non partizionato.  
   
  Per specificare la partizione, è inoltre possibile specificare il [$partition](../../t-sql/functions/partition-transact-sql.md) (funzione). Per restituire le informazioni per tutte le partizioni dell'oggetto, specificare NULL.  
   
@@ -110,7 +110,7 @@ sp_estimate_data_compression_savings
   
  Se l'ID della partizione o dell'indice non esiste, non viene restituito alcun risultato.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione SELECT per la tabella.  
   
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
@@ -129,8 +129,8 @@ GO
 ## <a name="see-also"></a>Vedere anche  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
- [Sys. Partitions &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
- [Motore di database Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
+ [Stored procedure del motore di database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Implementazione della compressione Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)  
   
   

@@ -2,7 +2,7 @@
 title: Funzione SQLTables | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 207415fc333cbc4373454b815ad27431c07c8d61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqltables-function"></a>Funzione SQLTables
 **Conformità**  
  Versione è stato introdotto: Conformità di 1.0 standard ODBC: Open Group  
   
  **Riepilogo**  
- **SQLTables** restituisce l'elenco di nomi di tabella, catalogo o schema e tipi di tabella, archiviati in un'origine dati specifica. Il driver restituisce le informazioni come set di risultati.  
+ **SQLTables** restituisce l'elenco di nomi di tabella, del catalogo o schema e i tipi di tabella, archiviati in un'origine dati specifica. Il driver restituisce le informazioni come set di risultati.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -144,7 +144,7 @@ SQLRETURN SQLTables(
   
  Se *TableType* non è una stringa vuota, deve contenere un elenco di valori delimitati da virgole per i tipi di interesse, ogni valore possono essere racchiusi tra virgolette singole (') o non racchiusi tra virgolette, ad esempio 'TABLE', 'Visualizza' o tabella, visualizzare. Un'applicazione deve specificare sempre il tipo di tabella in maiuscole. il driver deve convertire il tipo di tabella in qualsiasi caso è necessario per l'origine dati. Se l'origine dati non supporta un tipo di tabella specificata, **SQLTables** non restituirà alcun risultato per quel tipo.  
   
- **SQLTables** restituisce i risultati come set di risultati standard, ordinati in TABLE_TYPE, TABLE_CAT, TABLE_SCHEM e TABLE_NAME. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
+ **SQLTables** restituisce i risultati come set di risultati standard, ordinati in base TABLE_TYPE, TABLE_CAT, TABLE_SCHEM e TABLE_NAME. Per informazioni sulla modalità di utilizzo queste informazioni, vedere [utilizza dei dati del catalogo](../../../odbc/reference/develop-app/uses-of-catalog-data.md).  
   
  Per determinare la lunghezza effettiva delle colonne di TABLE_NAME TABLE_CAT e TABLE_SCHEM, un'applicazione può chiamare **SQLGetInfo** con le informazioni SQL_MAX_CATALOG_NAME_LEN SQL_MAX_SCHEMA_NAME_LEN e SQL_MAX_TABLE_NAME_LEN tipi.  
   

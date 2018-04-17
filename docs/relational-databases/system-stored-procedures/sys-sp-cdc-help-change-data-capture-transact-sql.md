@@ -1,16 +1,16 @@
 ---
 title: Sys. sp_cdc_help_change_data_capture (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_cdc_help_change_data_capture_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-caps.latest.revision: 
+caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d3c187f86ab51d8a96a4ea0115830963f058ff1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 637b9edcc51832e37289057e4513ca18f30ef446
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,14 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="arguments"></a>Argomenti  
  [ @source_schema =] '*source_schema*'  
- Nome dello schema a cui appartiene la tabella di origine. *source_schema* è **sysname**, con un valore predefinito è NULL. Quando *source_schema* è specificato, *source_name* deve anche essere specificato.  
+ Nome dello schema a cui appartiene la tabella di origine. *source_schema* viene **sysname**, con un valore predefinito è NULL. Quando *source_schema* è specificato, *source_name* deve anche essere specificato.  
   
  Se diverso da NULL, *source_schema* deve esistere nel database corrente.  
   
  Se *source_schema* è diverso da NULL, *source_name* deve inoltre essere non NULL.  
   
  [ @source_name =] '*source_name*'  
- Nome della tabella di origine. *source_name* è **sysname**, con un valore predefinito è NULL. Quando *source_name* è specificato, *source_schema* deve anche essere specificato.  
+ Nome della tabella di origine. *source_name* viene **sysname**, con un valore predefinito è NULL. Quando *source_name* è specificato, *source_schema* deve anche essere specificato.  
   
  Se diverso da NULL, *source_name* deve esistere nel database corrente.  
   
@@ -92,7 +92,7 @@ sys.sp_cdc_help_change_data_capture
 ## <a name="remarks"></a>Osservazioni  
  Quando entrambi *source_schema* e *source_name* NULL per impostazione predefinita, oppure vengono impostate in modo esplicito il valore NULL, questa stored procedure restituisce informazioni per tutti i database che il chiamante dispone di selezionare le istanze di acquisizione l'accesso. Quando *source_schema* e *source_name* sono non NULL, viene restituite solo le informazioni sulla tabella abilitata denominata specifica.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Quando *source_schema* e *source_name* sono NULL, l'autorizzazione del chiamante determina le tabelle abilitate che vengono inclusi nel set di risultati. I chiamanti devono disporre dell'autorizzazione SELECT in tutte le colonne acquisite dell'istanza di acquisizione nonché dell'appartenenza a qualsiasi ruolo di controllo definito per le informazioni di tabella da includere. I membri del ruolo del database db_owner possono visualizzare le informazioni su tutte le istanze di acquisizione definite. Se vengono richieste informazioni per una tabella abilitata specifica, alla tabella denominata vengono applicati gli stessi criteri SELECT e di appartenenza.  
   
 ## <a name="examples"></a>Esempi  

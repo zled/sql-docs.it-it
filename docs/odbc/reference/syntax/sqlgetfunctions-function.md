@@ -2,7 +2,7 @@
 title: SQLGetFunctions-funzione | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,13 +25,13 @@ ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 caps.latest.revision: 23
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a38bc5d8e071efee286f726d75f6949243cbb77
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 10304d56755f77a616862d97cea43bba8b4a5cad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions Function
 **Conformità**  
@@ -55,7 +55,7 @@ SQLRETURN SQLGetFunctions(
  [Input] Handle di connessione.  
   
  *FunctionId*  
- [Input] Oggetto **#define** valore che identifica la funzione ODBC degli interessi. **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** viene utilizzato da un'applicazione ODBC 3*x* applicazione per determinare il supporto di ODBC 3*x* e le funzioni precedenti. **SQL_API_ALL_FUNCTIONS** viene utilizzato un ODBC 2*x* applicazione per determinare il supporto di ODBC 2*x* e le funzioni precedenti.  
+ [Input] Oggetto **#define** valore che identifica la funzione ODBC degli interessi. **SQL_API_ODBC3_ALL_FUNCTIONS orSQL_API_ALL_FUNCTIONS**. **SQL_API_ODBC3_ALL_FUNCTIONS** viene utilizzato da un'applicazione ODBC 3*x* dell'applicazione per determinare il supporto di ODBC 3*x* e le funzioni precedenti. **SQL_API_ALL_FUNCTIONS** viene utilizzato da un 2 di ODBC*x* dell'applicazione per determinare il supporto di ODBC 2*x* e le funzioni precedenti.  
   
  Per un elenco di **#define** i valori che identificano le funzioni ODBC, vedere le tabelle in "Commenti".  
   
@@ -87,7 +87,7 @@ SQLRETURN SQLGetFunctions(
 |HYT01|Timeout di connessione scaduto|Il periodo di timeout di connessione scaduto prima che l'origine dati ha risposto alla richiesta. Il periodo di timeout di connessione viene impostato tramite **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
   
 ## <a name="comments"></a>Commenti  
- **SQLGetFunctions** restituisce sempre che **SQLGetFunctions**, **SQLDataSources**, e **SQLDrivers** sono supportati. Ciò avviene perché queste funzioni vengono implementate in Gestione Driver. Gestione Driver verrà eseguito il mapping una funzione ANSI per la funzione Unicode corrispondente se la funzione Unicode esiste e verrà eseguito il mapping una funzione Unicode alla funzione ANSI se esiste la funzione ANSI. Per informazioni sull'utilizzano di applicazioni **SQLGetFunctions**, vedere [livelli di conformità interfaccia](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
+ **SQLGetFunctions** che restituisce sempre **SQLGetFunctions**, **SQLDataSources**, e **SQLDrivers** sono supportati. Ciò avviene perché queste funzioni vengono implementate in Gestione Driver. Gestione Driver verrà eseguito il mapping una funzione ANSI per la funzione Unicode corrispondente se la funzione Unicode esiste e verrà eseguito il mapping una funzione Unicode alla funzione ANSI se esiste la funzione ANSI. Per informazioni sull'utilizzano di applicazioni **SQLGetFunctions**, vedere [livelli di conformità interfaccia](../../../odbc/reference/develop-app/interface-conformance-levels.md).  
   
  Di seguito è riportato un elenco di valori validi per *FunctionId* per le funzioni che è conforme al livello: conformità agli standard ISO 92:  
   
@@ -149,7 +149,7 @@ SQLRETURN SQLGetFunctions(
  Il SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) macro viene usata per determinare il supporto di ODBC 3*x* o le funzioni precedenti dopo **SQLGetFunctions**  è stata chiamata con un *FunctionId* argomento di SQL_API_ODBC3_ALL_FUNCTIONS. L'applicazione chiama SQL_FUNC_EXISTS con il *SupportedPtr* argomento impostato sul *SupportedPtr* passato *SQLGetFunctions*e con il  *FunctionID* argomento impostato sul **#define** per la funzione. SQL_FUNC_EXISTS restituisce SQL_TRUE se la funzione è supportata e SQL_FALSE in caso contrario.  
   
 > [!NOTE]  
->  Quando si lavora con un ODBC 2*x* driver ODBC 3*x* gestione Driver restituirà SQL_TRUE per **SQLAllocHandle** e **SQLFreeHandle**perché **SQLAllocHandle** viene eseguito il mapping a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, e Poiché **SQLFreeHandle** viene eseguito il mapping a **SQLFreeEnv**, **SQLFreeConnect**, o **SQLFreeStmt**. **SQLAllocHandle** o **SQLFreeHandle** con un *HandleType* argomento di SQL_HANDLE_DESC non è supportata, tuttavia, anche se SQL_TRUE viene restituito per le funzioni, poiché non esiste alcun ODBC 2*x* funzione per eseguire il mapping in questo caso.  
+>  Quando si lavora con un ODBC 2*x* driver ODBC 3*x* gestione Driver restituirà SQL_TRUE per **SQLAllocHandle** e **SQLFreeHandle**perché **SQLAllocHandle** viene eseguito il mapping a **SQLAllocEnv**, **SQLAllocConnect**, o **SQLAllocStmt**, e Poiché **SQLFreeHandle** viene eseguito il mapping a **SQLFreeEnv**, **SQLFreeConnect**, o **SQLFreeStmt**. **SQLAllocHandle** oppure **SQLFreeHandle** con un *HandleType* argomento di SQL_HANDLE_DESC non è supportata, tuttavia, anche se SQL_TRUE viene restituito per le funzioni, perché non esiste alcun ODBC 2*x* funzione per eseguire il mapping a in questo caso.  
   
 ## <a name="code-example"></a>Esempio di codice  
  I tre esempi seguenti mostrano come un'applicazione usa **SQLGetFunctions** per determinare se un driver supporta **SQLTables**, **SQLColumns**, e  **SQLStatistics**. Se il driver non supporta queste funzioni, l'applicazione verrà terminata dal driver. Nell'esempio viene chiamato prima **SQLGetFunctions** una volta per ogni funzione.  

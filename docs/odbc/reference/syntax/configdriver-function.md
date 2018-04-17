@@ -2,7 +2,7 @@
 title: Funzione ConfigDriver | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -25,20 +25,20 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1697b7e697760afee2b62c49bd24c2ab22c9201d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 56825fd24bd452365d5c3279c6aa68db83bd2470
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configdriver-function"></a>ConfigDriver (funzione)
 **Conformità**  
  Introdotta: versione ODBC 2.5  
   
  **Riepilogo**  
- **ConfigDriver** consente a un programma di installazione eseguire l'installazione e disinstallazione di funzioni senza il programma di chiamare **ConfigDSN**. Questa funzione eseguirà funzioni specifiche del driver, ad esempio la creazione di informazioni di sistema specifiche del driver e conversioni di DSN durante l'installazione, nonché pulizia delle modifiche del sistema di informazioni durante la disinstallazione. Questa funzione viene esposta la DLL di installazione del driver o di una DLL di installazione separato.  
+ **ConfigDriver** consente a un programma di installazione per eseguire l'installazione e disinstallazione funzioni senza il programma di chiamare **ConfigDSN**. Questa funzione eseguirà funzioni specifiche del driver, ad esempio la creazione di informazioni di sistema specifiche del driver e conversioni di DSN durante l'installazione, nonché pulizia delle modifiche del sistema di informazioni durante la disinstallazione. Questa funzione viene esposta la DLL di installazione del driver o di una DLL di installazione separato.  
   
 ## <a name="syntax"></a>Sintassi  
   

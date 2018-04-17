@@ -1,15 +1,15 @@
 ---
 title: Recupero dei dati del risultato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: native-client-odbc-results
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - SQLFetchScroll function
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, data types
 - SQLGetData function
 ms.assetid: b289c7fb-5017-4d7e-a2d3-19401e9fc4cd
-caps.latest.revision: 
+caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1514a1309ea6a88e2d9c449ed9dbf15f99388227
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 8f1c828f3e63e3167a0685f450e318055a9b71fa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetching-result-data"></a>Recupero di dati dei risultati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/25/2018
   
  La prima opzione si basa sul [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md). Prima di imposta il risultato di recupero, l'applicazione utilizza **SQLBindCol** per associare ogni colonna nel set di risultati come una variabile di programma. Dopo le colonne sono state associate, il driver trasferisce i dati della riga corrente nelle variabili associati per il set di colonne di risultati ogni volta che l'applicazione chiama **SQLFetch** o [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Il driver gestisce le conversioni di dati se la colonna del set di risultati e la variabile di programma hanno tipi di dati diversi. Se l'applicazione ha SQL_ATTR_ROW_ARRAY_SIZE imposta maggiore di 1, può associare le colonne di risultati a matrici di variabili, che verranno tutte specificate a ogni chiamata a **SQLFetchScroll**.  
   
- La seconda opzione si basa sul [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). L'applicazione non utilizza **SQLBindCol** per associare risultato impostare colonne alle variabili di programma. Dopo ogni chiamata a **SQLFetch**, l'applicazione chiama **SQLGetData** una volta per ogni colonna nel risultato impostata. **SQLGetData** indica al driver di trasferire i dati da una colonna del set di risultati specifici per una determinata variabile di programma e specifica i tipi di dati della colonna e della variabile. In questo modo il driver può convertire dati se la colonna dei risultati e la variabile di programma hanno tipi di dati diversi. **Testo**, **ntext**, e **immagine** colonne in genere sono troppo grandi per rientrare in una variabile di programma, ma può ancora essere recuperate tramite **SQLGetData**. Se il **testo**, **ntext**, o **immagine** nella colonna dei risultati sono maggiori della variabile di programma, **SQLGetData** restituisce SQL_SUCCESS_ WITH_INFO e SQLSTATE 01004 (dati string, troncati a destra). Le chiamate successive a **SQLGetData** restituiscono blocchi successivi del **testo** o **immagine** dati. Quando viene raggiunta la fine dei dati, **SQLGetData** restituisce SQL_SUCCESS. Ciascun recupero restituisce un set di righe se SQL_ATTR_ROW_ARRAY_SIZE è maggiore di 1. Prima di utilizzare **SQLGetData**, è innanzitutto necessario utilizzare **SQLSetPos** per specificare una riga specifica all'interno del set di righe come riga corrente.  
+ La seconda opzione si basa sul [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md). L'applicazione non utilizza **SQLBindCol** per associare risultato impostare colonne alle variabili di programma. Dopo ogni chiamata a **SQLFetch**, l'applicazione chiama **SQLGetData** una volta per ogni colonna nel risultato impostata. **SQLGetData** indica al driver di trasferire dati da una colonna del set di risultati specifico per una determinata variabile di programma e specifica i tipi di dati della colonna e della variabile. In questo modo il driver può convertire dati se la colonna dei risultati e la variabile di programma hanno tipi di dati diversi. **Testo**, **ntext**, e **immagine** colonne in genere sono troppo grandi per rientrare in una variabile di programma, ma può ancora essere recuperate tramite **SQLGetData**. Se il **testo**, **ntext**, o **immagine** nella colonna dei risultati sono maggiori della variabile di programma, **SQLGetData** restituisce SQL_SUCCESS_ WITH_INFO e SQLSTATE 01004 (dati string, troncati a destra). Le chiamate successive a **SQLGetData** restituiscono blocchi successivi del **testo** o **immagine** dati. Quando viene raggiunta la fine dei dati, **SQLGetData** restituisce SQL_SUCCESS. Ciascun recupero restituisce un set di righe se SQL_ATTR_ROW_ARRAY_SIZE è maggiore di 1. Prima di utilizzare **SQLGetData**, è innanzitutto necessario utilizzare **SQLSetPos** per specificare una riga specifica all'interno del set di righe come riga corrente.  
   
  La terza opzione consiste nell'utilizzare una combinazione di **SQLBindCol** e **SQLGetData**. Un'applicazione potrebbe, ad esempio, associare le prime dieci colonne di un set di risultati e quindi, per ogni operazione di recupero, chiamare **SQLGetData** tre volte per recuperare i dati da tre colonne non associate. Viene in genere è utilizzata quando un set di risultati contiene uno o più **testo** o **immagine** colonne.  
   
@@ -70,6 +71,6 @@ ms.lasthandoff: 01/25/2018
  Questa ottimizzazione può essere applicata alle applicazioni in modo che nessun **testo**, **ntext**, o **immagine** dati viene visualizzati quando un utente scorre un cursore di scorrimento. Dopo che l'utente seleziona una riga, l'applicazione può chiamare **SQLGetData** per recuperare il **testo**, **ntext**, o **immagine** dati. Questo comportamento evita la trasmissione di **testo**, **ntext**, o **immagine** dati per tutte le righe non selezionare l'utente e la trasmissione di dimensioni molto grandi quantità di dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elaborazione dei risultati &#40; ODBC &#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
+ [L'elaborazione dei risultati &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/processing-results-odbc.md)  
   
   

@@ -1,16 +1,16 @@
 ---
-title: sys.syslogins (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys. syslogins (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 09/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-compatibility-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - syslogins_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - sys.syslogins compatibility view
 - syslogins system table
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
-caps.latest.revision: 
+caps.latest.revision: 41
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1b5b0d9ec9b28236816062fefdb0d022a0c9a498
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: ccaa64cb9510c4e210a6ee6c8afee0b55a5e7009
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 02/09/2018
 |**sid**|**varbinary(85)**|Identificatore di sicurezza.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|Data in cui l'account di accesso è stato aggiunto.|  
-|**updatedate**|**datetime**|Data di aggiornamento dell'account di accesso.|  
+|**updateDate**|**datetime**|Data di aggiornamento dell'account di accesso.|  
 |**accdate**|**datetime**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totcpu**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 02/09/2018
 |**name**|**sysname**|Nome dell'account di accesso dell'utente.|  
 |**dbname**|**sysname**|Nome del database predefinito dell'utente quando viene stabilita una connessione.|  
 |**password**|**nvarchar(128)**|Restituisce NULL.|  
-|**lingua**|**sysname**|Lingua predefinita dell'utente.|  
+|**Lingua**|**sysname**|Lingua predefinita dell'utente.|  
 |**denylogin**|**int**|1 = L'account di accesso è un utente o un gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] a cui è stato negato l'accesso.|  
 |**HasAccess**|**int**|1 = L'account di accesso dispone dell'accesso al server.|  
 |**isntname**|**int**|1 = L'account di accesso è un utente o un gruppo di Windows.<br /><br /> 0 = L'account di accesso è un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -73,10 +73,10 @@ ms.lasthandoff: 02/09/2018
 |**diskadmin**|**int**|1 = account di accesso è membro il **diskadmin** ruolo predefinito del server.|  
 |**dbcreator**|**int**|1 = account di accesso è membro il **dbcreator** ruolo predefinito del server.|  
 |**bulkadmin**|**int**|1 = account di accesso è membro il **bulkadmin** ruolo predefinito del server.|  
-|**loginname**|**nvarchar(128)**|Nome dell'account di accesso dell'utente. Disponibile per compatibilità con le versioni precedenti.|  
+|**LoginName**|**nvarchar(128)**|Nome dell'account di accesso dell'utente. Disponibile per compatibilità con le versioni precedenti.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Mapping di tabelle di sistema di viste di sistema &#40; Transact-SQL &#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Mapping di tabelle di sistema a viste di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [Viste della compatibilità &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

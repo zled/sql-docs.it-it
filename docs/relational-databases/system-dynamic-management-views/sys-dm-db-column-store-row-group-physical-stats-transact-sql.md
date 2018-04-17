@@ -1,16 +1,16 @@
 ---
 title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: dmv's
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_column_store_row_group_physical_stats_TSQL
@@ -22,23 +22,24 @@ dev_langs:
 helpviewer_keywords:
 - dm_db_column_store_row_group_physical_stats
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
-caps.latest.revision: 
+caps.latest.revision: 15
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 025dc1b94158635d1543d41a430aa2a0ba716a83
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 769ef6a26a4874bfef08015bf6a41a8bd9094743
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Vengono fornite informazioni a livello di gruppo di righe corrente su tutti gli indici columnstore nel database corrente.  
   
- Estende la vista del catalogo [column_store_row_groups &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
+ Estende la vista del catalogo [column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md).  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 02/03/2018
 |**transition_to_compressed_state**|tinyint|Viene illustrato come il rowgroup è stata spostata dal deltastore in uno stato compresso nel columnstore.<br /><br /> 1- NOT_APPLICABLE<br /><br /> 2 – INDEX_BUILD<br /><br /> 3 – TUPLE_MOVER<br /><br /> 4-REORG_NORMAL<br /><br /> 5-REORG_FORCED<br /><br /> 6 - BULKLOAD<br /><br /> 7 - UNIONE|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE: l'operazione non è applicabile per il deltastore. O, il rowgroup è stato compresso prima di eseguire l'aggiornamento a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] nel qual caso non viene mantenuta la cronologia.<br /><br /> Creare un indice INDEX_BUILD – o ricostruzione dell'indice compresso il rowgroup.<br /><br /> TUPLE_MOVER: il motore di tuple in esecuzione in background compressa il rowgroup. Ciò si verifica dopo che il rowgroup stato cambia da OPEN a chiuso.<br /><br /> REORG_NORMAL: l'operazione di riorganizzazione, ALTER INDEX... RIORGANIZZA spostato il rowgroup chiuso dal deltastore nel columnstore. Questo si è verificato prima che il motore di tuple avuto tempo per spostare il gruppo di righe.<br /><br /> REORG_FORCED: questo gruppo di righe è stato aperto nel deltastore e che è stato terminato nel columnstore prima conteneva un numero di righe completo.<br /><br /> BULKLOAD-un'operazione di caricamento bulk compressi i rowgroup direttamente senza usare il deltastore.<br /><br /> MERGE: un'operazione di unione consolidati uno o più gruppi di righe in questo gruppo di righe e quindi eseguita la compressione columnstore.|  
 |**has_vertipaq_optimization**|bit|Ottimizzazione di Vertipaq la modifica dell'ordine delle righe nel gruppo di righe per ottenere la compressione maggiore migliora la compressione columnstore. Questa ottimizzazione viene eseguita automaticamente nella maggior parte dei casi. Esistono due casi Vertipaq ottimizzazione non viene utilizzato:<br/>  A. Quando un rowgroup delta viene spostato nel columnstore e sono presenti uno o più indici non cluster per l'indice columnstore, in questo caso ottimizzazione Vertipaq viene ignorata per ridurre al minimo le modifiche per l'indice di mapping;<br/> B. per gli indici columnstore nelle tabelle con ottimizzazione per la memoria. <br /><br /> 0 = No<br /><br /> 1 = Sì|  
-|**generation**|bigint|Generazione di gruppo di righe associata a questo gruppo di righe.|  
+|**generazione**|bigint|Generazione di gruppo di righe associata a questo gruppo di righe.|  
 |**created_time**|datetime2|Ora di creazione di questo gruppo di righe.<br /><br /> NULL per un indice columnstore in una tabella in memoria.|  
 |**closed_time**|datetime2|Ora di chiusura di questo gruppo di righe.<br /><br /> NULL per un indice columnstore in una tabella in memoria.|  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 02/03/2018
  Restituisce una riga per ogni gruppo di righe nel database corrente.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Queste autorizzazioni sono necessarie:  
+ Richiede le autorizzazioni seguenti:  
   
 -   Autorizzazione CONTROL per la tabella.  
   
@@ -94,9 +95,9 @@ ORDER BY object_name(i.object_id), i.name, row_group_id;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetto viste del catalogo &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+ [Viste del catalogo dell'oggetto &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Viste del catalogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [L'esecuzione di query di catalogo di sistema SQL Server domande frequenti](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [L'esecuzione di query il catalogo di sistema SQL Server domande frequenti](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
  [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   

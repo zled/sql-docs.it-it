@@ -1,30 +1,31 @@
 ---
-title: sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: Sys.dm_pdw_resource_waits (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
-caps.latest.revision: 
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1cceb10fd8f1da138c1f7ff660d4764223e9394
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 5a5d4fc8a93df931028bca874ae12fd0980758be
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,9 +35,9 @@ ms.lasthandoff: 02/03/2018
 |Nome colonna|Tipo di dati|Description|Intervallo|  
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Posizione della richiesta nella lista di attesa.|ordinale in base 0. Questo non è univoco tra tutte le voci di attesa.|  
-|session_id|**nvarchar(32)**|ID della sessione in cui si è verificato lo stato di attesa.|Vedere session_id in [sys.dm_pdw_exec_sessions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|tipo|**nvarchar(255)**|Tipo di attesa che rappresenta questa voce.|I valori possibili sono:<br /><br /> Connessione<br /><br /> Concorrenza di query locale<br /><br /> Concorrenza di query distribuite<br /><br /> Concorrenza DMS<br /><br /> Concorrenza di backup|  
-|object_type|**nvarchar(255)**|Tipo di oggetto interessato dall'attesa.|I valori possibili sono:<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SISTEMA**<br /><br /> **SCHEMA**<br /><br /> **APPLICAZIONE**|  
+|session_id|**nvarchar(32)**|ID della sessione in cui si è verificato lo stato di attesa.|Vedere session_id in [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|Tipo|**nvarchar(255)**|Tipo di attesa che rappresenta questa voce.|I valori possibili sono:<br /><br /> Connessione<br /><br /> Concorrenza di query locale<br /><br /> Concorrenza di query distribuite<br /><br /> Concorrenza DMS<br /><br /> Concorrenza di backup|  
+|object_type|**nvarchar(255)**|Tipo di oggetto interessato dall'attesa.|I valori possibili sono:<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APPLICAZIONE**|  
 |object_name|**nvarchar(386)**|Nome o il GUID dell'oggetto specificato a cui si è verificato per l'attesa.|Tabelle e viste vengono visualizzate con nomi in tre parti.<br /><br /> Gli indici e le statistiche vengono visualizzate con nomi in quattro parti.<br /><br /> I nomi di entità e i database sono nomi di stringa.|  
 |request_id|**nvarchar(32)**|ID della richiesta in cui si è verificato lo stato di attesa.|Identificatore QID della richiesta.<br /><br /> Identificatore GUID per le richieste di carico.|  
 |request_time|**datetime**|Ora in cui è stato richiesto il blocco o la risorsa.||  
@@ -47,6 +48,6 @@ ms.lasthandoff: 02/03/2018
 |resource_class|**nvarchar(20)**|Classe di risorse per questa richiesta.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Data Warehouse e viste a gestione dinamica Parallel Data Warehouse &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+ [SQL Data Warehouse e Parallel Data Warehouse, viste a gestione dinamica &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   
