@@ -1,16 +1,16 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 11/24/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: tsql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 
+caps.latest.revision: 222
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: ed76514d94521f8efefdbcc0dda4f51aaeb871fd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -185,7 +185,7 @@ ALTER INDEX { index_name | ALL }
  Nome dell'indice. I nomi di indice devono essere univoci all'interno di una tabella o di una vista, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  ALL  
- Specifica tutti gli indici associati alla tabella o alla vista indipendentemente dal tipo di indice. Se viene specificata la parola chiave ALL e uno o più indici si trovano in un filegroup offline o di sola lettura oppure se l'operazione specificata non è consentita per uno o più tipi di indice, l'istruzione ha esito negativo. Nella tabella seguente vengono elencate le operazioni sugli indici e i tipi di indice non supportati.  
+ Specifica tutti gli indici associati alla tabella o alla vista indipendentemente dal tipo di indice. Se viene specificata la parola chiave ALL e uno o più indici si trovano in un filegroup offline o di sola lettura oppure se l'operazione specificata non è consentita per uno o più tipi di indice, l'istruzione ha esito negativo. Nella tabella seguente vengono elencati le operazioni sugli indici e i tipi di indice non supportati.  
   
 |Uso della parola chiave ALL con questa operazione|Indici non supportati (l'istruzione ha esito negativo se la tabella include uno o più di questi indici)|  
 |----------------------------------------|----------------------------------------|  
@@ -887,7 +887,7 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>C. Comprimere tutti i rowgroup differenziali OPEN e CLOSED nel columnstore  
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) e [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Il comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) comprime tutti i rowgroup differenziali OPEN e CLOSED nel columnstore come rowgroup compresso. In questo modo i deltastore vengono svuotati e tutte le righe vengono forzate per essere compresse nel columnstore. Si tratta di un'operazione utile soprattutto dopo aver eseguito numerose operazioni di inserimento, in quanto tali operazioni archiviano le righe in uno o più deltastore.  
+ Il comando REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) comprime tutti i rowgroup differenziali OPEN e CLOSED nel columnstore come rowgroup compresso. In questo modo i deltastore vengono svuotati e tutte le righe vengono forzate per essere compresse nel columnstore. Si tratta di un'operazione utile soprattutto dopo aver eseguito numerose operazioni di inserimento, in quanto tali operazioni archiviano le righe in uno o più rowgroup delta.  
   
  L'operazione REORGANIZE combina i rowgroup per ottenere rowgroup contenenti fino a un numero massimo di righe \<= 1.024.576. Quando si comprimono tutti i rowgroup OPEN e CLOSED, non si ottengono pertanto tanti rowgroup compressi che contengono solo poche righe. I rowgroup devono essere il più possibile completi in modo da ridurre le dimensioni compresse e migliorare le prestazioni delle query.  
   

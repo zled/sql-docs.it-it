@@ -1,16 +1,16 @@
 ---
 title: Guida per la progettazione di indici di SQL Server | Microsoft Docs
-ms.custom: 
-ms.date: 12/1/2017
+ms.custom: ''
+ms.date: 04/03/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: relational-databases-misc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index design guide
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - sql server index design guide
 - sql server index design guidance
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
-caps.latest.revision: 
+caps.latest.revision: 3
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c11d217a3818d872071bb466ac2221e2c8adc3f7
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="sql-server-index-design-guide"></a>Guida per la progettazione di indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -276,7 +276,7 @@ Usare queste viste dei metadati per visualizzare gli attributi degli indici. In 
 
      > [!TIP]
      > Se non specificato diversamente, durante la creazione di un vincolo [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]crea un [indice cluster](#clustered_index) per supportare tale vincolo.
-     > Sebbene un  *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)*  possa essere usato per applicare una PRIMARY KEY di univocità, non si tratta di una chiave di clustering efficiente.
+     > Sebbene un *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* possa essere usato per applicare una PRIMARY KEY di univocità, non si tratta di una chiave di clustering efficiente.
      > Se si usa un valore *uniqueidentifier* come PRIMARY KEY, è consigliabile crearlo come un indice non cluster e usare un'altra colonna, ad esempio `IDENTITY`, per creare l'indice cluster.   
   
 -   Sono caratterizzate dall'accesso in modalità sequenziale.  
@@ -630,7 +630,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
 
 L' *columnstore index* è una tecnologia per l'archiviazione, il recupero e la gestione dei dati utilizzando un formato di dati in colonna, detto columnstore. Per altre informazioni, vedere [Panoramica sugli indici columnstore](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
-**Si applica a**: [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+Per informazioni sulle versioni, vedere [Indici columnstore - Novità](/sql/relational-databases/indexes/columnstore-indexes-what-s-new).
 
 ### <a name="columnstore-index-architecture"></a>Architettura degli indici columnstore
 
@@ -649,7 +649,7 @@ Un indice columnstore archivia fisicamente la maggior parte dei dati nel formato
 
 Un indice columnstore archivia inoltre fisicamente alcune righe in un formato rowstore, denominato archivio differenziale. L'archivio differenziale, detto anche rowgroup differenziale, è una posizione di archiviazione per le righe in numero troppo limitato per qualificarsi per la compressione nel columnstore. Ogni rowgroup differenziale viene implementato come indice albero B cluster. 
 
-- L'**archivio differenziale** è una posizione di archiviazione per le righe in numero troppo limitato per essere compresse nel columnstore. L'archivio differenziale è un indice rowstore. 
+- Il **deltastore** è una posizione di archiviazione per le righe in numero troppo limitato per essere compresse nel columnstore. Il deltastore archivia le righe in formato rowstore. 
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Le operazioni vengono eseguite sui rowgroup e sui segmenti di colonna
 
@@ -743,7 +743,7 @@ Il numero di bucket deve essere specificato in fase di definizione dell'indice:
 La funzione hash si applica alle colonne chiave dell'indice e il risultato della funzione determina il bucket in cui rientra la chiave. Ogni bucket ha un puntatore per righe con valori di chiave hash. Per questi valori è eseguito il mapping al bucket.
 
 La funzione di hashing utilizzata per gli indici hash presenta le caratteristiche seguenti:
-- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] include una funzione hash che viene usata per tutti gli indici hash.
+- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] è disponibile una funzione hash utilizzata per tutti gli indici hash.
 - La funzione hash è deterministica. Nell'indice hash viene sempre eseguito il mapping del valore di chiave di input allo stesso bucket.
 - È possibile che venga eseguito il mapping di più chiavi di indice allo stesso bucket di hash.
 - La funzione hash viene bilanciata, pertanto la distribuzione dei valori di chiave di indice in bucket di hash segue in genere una distribuzione di probabilità di Poisson o a campana e non una distribuzione lineare piana.

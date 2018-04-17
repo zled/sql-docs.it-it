@@ -1,28 +1,28 @@
 ---
 title: Indici columnstore - Prestazioni delle query | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: indexes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
-caps.latest.revision: 
+caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d8c18a2198e32bae0427ea286a64998ab546e3ac
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 08222b4c7af5a62040f808bee56f181ed25149dd
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="columnstore-indexes---query-performance"></a>Indici columnstore - Prestazioni delle query
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ ms.lasthandoff: 02/12/2018
 |Top Sort||no|no|sì||    
 |Window Aggregates||ND|ND|sì|Nuovo operatore in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 Premium Edition e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ¹Si applica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], ai livelli Standard e Premium del [!INCLUDE[ssSDS](../../includes/sssds-md.md)], S3 e successive, a tutti i livelli vCore e a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Distribuzione dell'aggregazione    
  Un percorso di esecuzione normale per il calcolo di aggregazione che consente di recuperare le righe idonee dal nodo SCAN e aggregare i valori in modalità batch. Questo metodo offre buone prestazioni, ma con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] è possibile eseguire il push dell'operazione di aggregazione nel nodo SCAN per migliorare le prestazioni di calcolo di aggregazione per ordini di grandezza durante l'esecuzione in modalità batch, purché vengano soddisfatte le condizioni seguenti: 

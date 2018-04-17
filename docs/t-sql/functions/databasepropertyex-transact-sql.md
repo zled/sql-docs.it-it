@@ -1,16 +1,16 @@
 ---
 title: DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
-ms.date: 07/29/2017
+ms.custom: ''
+ms.date: 04/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATABASEPROPERTYEX
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-caps.latest.revision: 
+caps.latest.revision: 84
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a67b74ad595fdf7b6f3a63dbd2ea2c9e5793f54f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a04544f76b509e1461d26574cd2179ec63ee5ad8
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,8 +60,8 @@ Espressione che rappresenta il nome della proprietà del database da restituire.
 |Proprietà|Description|Valore restituito|  
 |---|---|---|
 |Confronto|Nome delle regole di confronto predefinite per il database.|Nome delle regole di confronto.<br /><br /> NULL = Database non in linea.<br /><br /> Tipo di dati di base: **nvarchar(128)**|  
-|ComparisonStyle|Stile di confronto di Windows per le regole di confronto. ComparisonStyle è una mappa di bit calcolata usando i valori seguenti per i possibili stili.<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento: 2<br /><br /> Ignora Kana: 65536<br /><br /> Ignora larghezza: 131072<br /><br /> <br /><br /> Il valore predefinito 196609, ad esempio, è il risultato della combinazione delle opzioni Ignora maiuscole/minuscole, Ignora Kana e Ignora larghezza.|Restituisce lo stile di confronto.<br /><br /> Restituisce 0 per tutte le regole di confronto binarie.<br /><br /> Tipo di dati di base: **int**|  
-|Edizione|Edizione o livello di servizio del database.|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Web = database Web Edition<br /><br /> Business = database Business Edition<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br /> System (per il database master)<br /><br /> NULL = Database non in linea.<br /><br /> Tipo di dati di base: **nvarchar**(64)|  
+|ComparisonStyle|Stile di confronto di Windows per le regole di confronto. ComparisonStyle è una mappa di bit calcolata usando i valori seguenti per i possibili stili.<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento : 2<br /><br /> Ignora Kana : 65536<br /><br /> Ignora larghezza: 131072<br /><br /> <br /><br /> Il valore predefinito 196609, ad esempio, è il risultato della combinazione delle opzioni Ignora maiuscole/minuscole, Ignora Kana e Ignora larghezza.|Restituisce lo stile di confronto.<br /><br /> Restituisce 0 per tutte le regole di confronto binarie.<br /><br /> Tipo di dati di base: **int**|  
+|Edizione|Edizione o livello di servizio del database.|**Si applica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].<br /><br /> <br /><br /> Utilizzo generico<br /><br /> Business Critical<br /><br /> Standard<br /><br /> Standard<br /><br /> Premium<br /><br /> System (per il database master)<br /><br /> NULL = Database non in linea.<br /><br /> Tipo di dati di base: **nvarchar**(64)|  
 |IsAnsiNullDefault|Il database segue le regole ISO per il supporto dei valori Null.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Input non valido<br /><br /> Tipo di dati di base: **int**|  
 |IsAnsiNullsEnabled|Tutti i confronti con un valore Null restituiscono unknown.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Input non valido<br /><br /> Tipo di dati di base: **int**|  
 |IsAnsiPaddingEnabled|Le stringhe vengono riempite in modo che abbiano tutte la stessa lunghezza prima dell'esecuzione di confronti o inserimenti.|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = Input non valido<br /><br /> Tipo di dati di base: **int**|  

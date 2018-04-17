@@ -1,16 +1,16 @@
 ---
 title: APPLOCK_TEST (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - APPLOCK_TEST_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - testing application locks
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4009a151873bf989a39bc4fb91ec3a9963af9f2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8efc420c62031b0106c16bc25c8a8fdaa3f039a7
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="applocktest-transact-sql"></a>APPLOCK_TEST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce le informazioni relative alla possibilità o meno di concedere un blocco per una risorsa dell'applicazione specifica a un proprietario di blocchi specifico senza acquisire il blocco stesso. APPLOCK_TEST è una funzione di blocco a livello di applicazione e viene eseguita nel database corrente. L'ambito dei blocchi a livello di applicazione è il database.
+Questa funzione restituisce le informazioni relative alla possibilità o meno di concedere un blocco per una risorsa dell'applicazione specifica a un proprietario di blocchi specifico senza acquisire il blocco stesso. APPLOCK_TEST è una funzione di blocco a livello di applicazione che viene eseguita nel database corrente. L'ambito dei blocchi a livello di applicazione è il database.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -50,22 +50,22 @@ APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owne
   
 ## <a name="arguments"></a>Argomenti  
 **'** *database_principal* **'**  
-Utente, ruolo o ruolo applicazione a cui è possibile concedere autorizzazioni per gli oggetti nel database. Affinché la chiamata della funzione abbia esito positivo, è necessario che il chiamante sia un membro del ruolo predefinito del database *database_principal*, **dbo** o **db_owner**.
+Utente, ruolo o ruolo applicazione a cui è possibile concedere autorizzazioni per gli oggetti nel database. Affinché la chiamata della funzione abbia esito positivo, è necessario che il chiamante sia un membro del ruolo predefinito del database *database_principal*, dbo o db_owner.
   
 **'** *resource_name* **'**  
-Nome di una risorsa di blocco specificato nell'applicazione client. L'applicazione deve garantire che la risorsa sia univoca. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* è di tipo **nvarchar(255)** e non prevede alcun valore predefinito. Per *resource_name* viene eseguito un confronto binario ed è supportata la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto del database corrente.
+Nome di una risorsa di blocco specificato nell'applicazione client. L'applicazione deve garantire che il nome della risorsa sia univoco. Il nome specificato viene sottoposto internamente ad hashing per creare un valore che è possibile archiviare internamente in Gestione blocchi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  *resource_name* è di tipo **nvarchar(255)** e non prevede alcun valore predefinito. Per *resource_name* viene eseguito un confronto binario ed è supportata la distinzione tra maiuscole e minuscole, indipendentemente dalle impostazioni delle regole di confronto del database corrente.
   
 **'** *lock_mode* **'**  
-Modalità di blocco da acquisire per una particolare risorsa. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. I possibili valori sono i seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
+Modalità di blocco da ottenere per una risorsa specifica. *lock_mode* è di tipo **nvarchar(32)** e non dispone di valore predefinito. *lock_mode* può avere uno dei valori seguenti: **Shared**, **Update**, **IntentShared**, **IntentExclusive**, **Exclusive**.
   
 **'** *lock_owner* **'**  
-Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è **nvarchar(32)**. Il valore può essere **Transaction** (impostazione predefinita) o **Session**. Se si specifica in modo esplicito il valore predefinito o **Transaction**, è necessario eseguire APPLOCK_TEST dall'interno di una transazione.
+Proprietario del blocco, ovvero il valore di *lock_owner* al momento della richiesta del blocco. *lock_owner* è di tipo **nvarchar(32)** e il valore può essere **Transaction** (impostazione predefinita) o **Session**. Se si specifica in modo esplicito il valore predefinito o **Transaction**, è necessario eseguire APPLOCK_TEST dall'interno di una transazione.
   
 ## <a name="return-types"></a>Tipi restituiti
 **smallint**
   
 ## <a name="return-value"></a>Valore restituito
-Restituisce 0 se il blocco non può essere concesso al proprietario specificato. In caso contrario restituisce 1.
+0 se il blocco non può essere concesso al proprietario specificato. In caso contrario, restituisce 1.
   
 ## <a name="function-properties"></a>Proprietà delle funzioni
 **Nondeterministic**
@@ -75,7 +75,7 @@ Restituisce 0 se il blocco non può essere concesso al proprietario specificato.
 **Nonparallelizable**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente due utenti (**User A** e **User B**) con sessioni separate eseguono la sequenza di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente.
+Si supponga che due utenti (**User A** e **User B**) eseguano la sequenza di istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] riportata di seguito in sessioni separate.
   
 **User A** esegue:
   

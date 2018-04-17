@@ -1,16 +1,16 @@
 ---
 title: ABS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ABS_TSQL
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: e2ea7a6d-3e2f-472c-afbc-437d3b835c03
-caps.latest.revision: 
+caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9f96d651f179120fab6fabfb78d08cca84404bd1
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ab75a2147946366fba194f654a3710b32f68d626
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="abs-transact-sql"></a>ABS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ Espressione della categoria del tipo di dati numerici esatti o numerici approssi
 Restituisce lo stesso tipo di *numeric_expression*.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente vengono illustrati i risultati dell'utilizzo della funzione `ABS` in tre numeri diversi.
+L'esempio illustra i risultati dell'uso della funzione `ABS` in tre numeri diversi.
   
 ```sql
 SELECT ABS(-1.0), ABS(0.0), ABS(1.0);  
@@ -68,7 +68,7 @@ SELECT ABS(-1.0), ABS(0.0), ABS(1.0);
 1.0  .0   1.0  
 ```  
   
-La funzione `ABS` può produrre un errore di overflow quando il valore assoluto di un numero è maggiore del numero più alto che può essere rappresentato dal tipo di dati specificato. Il tipo di dati `int`, ad esempio, consente di archiviare solo valori compresi tra `-2,147,483,648` e `2,147,483,647`. Il calcolo del valore assoluto per il valore integer con segno `-2,147,483,648` provoca un errore di overflow, in quanto il valore assoluto corrispondente è maggiore dell'intervallo positivo per il tipo di dati `int`.
+La funzione `ABS` può produrre un errore di overflow quando il valore assoluto di un numero è maggiore del numero più alto che può essere rappresentato dal tipo di dati specificato. Ad esempio, il tipo di dati `int` ha intervallo di valori da `-2,147,483,648` a `2,147,483,647`. Il calcolo del valore assoluto per il valore integer con segno `-2,147,483,648` provoca un errore di overflow, in quanto il valore assoluto corrispondente è maggiore dell'intervallo positivo per il tipo di dati `int`.
   
 ```sql
 DECLARE @i int;  
@@ -77,7 +77,7 @@ SELECT ABS(@i);
 GO  
 ```  
   
-Messaggio di errore:
+Restituisce il messaggio di errore seguente:
   
 "Messaggio 8115, livello 16, stato 2, riga 3"
   

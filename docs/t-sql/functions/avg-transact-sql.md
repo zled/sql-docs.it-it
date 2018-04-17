@@ -1,16 +1,16 @@
 ---
 title: AVG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - AVG_TSQL
@@ -24,21 +24,21 @@ helpviewer_keywords:
 - values [SQL Server], average
 - average values
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-caps.latest.revision: 
+caps.latest.revision: 52
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 40240e2c06055d61eb047c319349f4869b9979df
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1d242be45c89ed55d5a1dfed3753676c90e314f3
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce la media dei valori di un gruppo. I valori Null vengono ignorati.
+Questa funzione restituisce la media dei valori di un gruppo. Ignora i valori Null.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,16 +54,16 @@ ALL
 Applica la funzione di aggregazione a tutti i valori. Il valore predefinito è ALL.
   
 DISTINCT  
-Indica che la funzione AVG deve essere eseguita solo in ogni istanza univoca di un valore, indipendentemente dal numero di occorrenze del valore.
+Specifica che la funzione AVG deve essere eseguita solo in un'istanza univoca di ogni valore, indipendentemente dal numero di occorrenze del valore.
   
 *expression*  
 [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) della categoria di tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**. Non è possibile utilizzare funzioni di aggregazione e sottoquery.
   
 OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
-*partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
+*partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).
   
 ## <a name="return-types"></a>Tipi restituiti
-Il tipo restituito dipende dal tipo del risultato valutato di *expression*.
+Il risultato valutato dell'*espressione* determina il tipo restituito.
   
 |Risultato dell'espressione|Tipo restituito|  
 |---|---|
@@ -78,14 +78,14 @@ Il tipo restituito dipende dal tipo del risultato valutato di *expression*.
 ## <a name="remarks"></a>Remarks  
 Se *expression* è di un tipo di dati alias, anche il tipo restituito è di tipo alias. Tuttavia, se il tipo di dati di base del tipo alias viene alzato di livello, ad esempio da **tinyint** a **int**, il valore restituito è del tipo di dati promosso e non del tipo alias.
   
-AVG () calcola la media di un set di valori dividendo la somma di tali valori per il numero di valori non Null. Se la somma supera il valore massimo per il tipo di dati del valore restituito, verrà restituito un errore.
+AVG () calcola la media di un set di valori dividendo la somma di tali valori per il numero di valori non Null. Se la somma supera il valore massimo per il tipo di dati del valore restituito, AVG() restituisce un errore.
   
 AVG è una funzione deterministica quando viene utilizzata senza le clausole ORDER BY e OVER. Non è deterministica quando viene specificata con le clausole ORDER BY e OVER. Per altre informazioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-using-the-sum-and-avg-functions-for-calculations"></a>A. Utilizzo delle funzioni SUM e AVG per l'esecuzione di calcoli  
-Nell'esempio seguente viene calcolata la media delle ore di ferie e la somma delle ore di malattia utilizzate dai vicepresidenti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Ogni funzione di aggregazione restituisce un singolo valore di riepilogo per tutte le righe recuperate. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+Questo esempio calcola la media delle ore di ferie e la somma delle ore di malattia usate dai vicepresidenti di [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]. Ogni funzione di aggregazione restituisce un singolo valore di riepilogo per tutte le righe recuperate. Nell'esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT AVG(VacationHours)AS 'Average vacation hours',   
@@ -105,7 +105,7 @@ Average vacation hours       Total sick leave hours
 ```
   
 ### <a name="b-using-the-sum-and-avg-functions-with-a-group-by-clause"></a>B. Utilizzo delle funzioni SUM e AVG con una clausola GROUP BY  
-Ogni funzione di aggregazione, se utilizzata con la clausola `GROUP BY`, restituisce un singolo valore per ogni gruppo anziché per l'intera tabella. Nell'esempio seguente vengono prodotti valori di riepilogo per ciascun territorio di vendita nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Nel riepilogo viene elencata la media dei premi di produttività ricevuti dai venditori in ogni area e la somma delle vendite da inizio anno per ogni area.
+Ogni funzione di aggregazione, se usata con una clausola `GROUP BY`, restituisce un singolo valore per ogni gruppo anziché per l'intera tabella. L'esempio seguente produce valori di riepilogo per ogni territorio di vendita nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Il riepilogo visualizza la media dei premi di produttività ricevuti dai venditori in ogni area e la somma delle vendite da inizio anno per ogni area.
   
 ```sql
 SELECT TerritoryID, AVG(Bonus)as 'Average bonus', SUM(SalesYTD) as 'YTD sales'  
@@ -135,7 +135,7 @@ NULL        0.00                  1252127.9471
 ```  
   
 ### <a name="c-using-avg-with-distinct"></a>C. Utilizzo di AVG con DISTINCT  
-Nell'istruzione seguente viene restituito il prezzo medio di listino dei prodotti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Se si specifica DISTINCT, nel calcolo vengono considerati solo i valori univoci.
+Questa istruzione restituisce il prezzo medio di listino dei prodotti nel database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Tramite l'uso di DISTINCT, il calcolo prende in considerazione solo valori univoci.
   
 ```sql
 SELECT AVG(DISTINCT ListPrice)  
@@ -169,7 +169,7 @@ FROM Production.Product;
 ```
   
 ### <a name="e-using-the-over-clause"></a>E. Utilizzo della clausola OVER  
-Nell'esempio seguente viene utilizzata la funzione AVG con la clausola OVER per fornire una media mobile delle vendite annuali per ogni area presente nella tabella `Sales.SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. I dati vengono partizionati in base a `TerritoryID` e ordinati logicamente in base a `SalesYTD`. La funzione AVG viene pertanto calcolata per ogni area in base all'anno di vendita. Si noti che per `TerritoryID` 1, sono presenti due righe per l'anno di vendita 2005, a indicare due venditori con vendite in tale anno. Viene calcolata la media delle vendite delle due righe e nel calcolo viene quindi inclusa la terza riga che rappresenta le vendite per l'anno 2006.
+L'esempio seguente usa la funzione AVG con la clausola OVER per fornire una media mobile delle vendite annuali per ogni area presente nella tabella `Sales.SalesPerson` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. I dati vengono partizionati in base a `TerritoryID` e ordinati logicamente in base a `SalesYTD`. La funzione AVG viene pertanto calcolata per ogni area in base all'anno di vendita. Si noti che per `TerritoryID` 1, sono presenti due righe per l'anno di vendita 2005, a indicare due venditori con vendite in tale anno. Viene calcolata la media delle vendite delle due righe e nel calcolo viene quindi inclusa la terza riga che rappresenta le vendite per l'anno 2006.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   
@@ -206,7 +206,7 @@ BusinessEntityID TerritoryID SalesYear   SalesYTD             MovingAvg         
   
 ```  
   
-In questo esempio la clausola OVER non include PARTITION BY. La funzione verrà pertanto applicata a tutte le righe restituite dalla query. La clausola ORDER BY specificata nella clausola OVER determina l'ordine logico in base al quale viene applicata la funzione AVG. La query restituisce una media mobile delle vendite annuali per tutte le aree di vendita specificate nella clausola WHERE. La clausola ORDER BY specificata nell'istruzione SELECT determina l'ordine in cui vengono visualizzate le righe della query.
+In questo esempio la clausola OVER non include PARTITION BY. La funzione viene pertanto applicata a tutte le righe restituite dalla query. La clausola ORDER BY specificata nella clausola OVER determina l'ordine logico in base al quale viene applicata la funzione AVG. La query restituisce una media mobile delle vendite annuali per tutte le aree di vendita specificate nella clausola WHERE. La clausola ORDER BY specificata nell'istruzione SELECT determina l'ordine in cui l'istruzione SELECT visualizza le righe della query.
   
 ```sql
 SELECT BusinessEntityID, TerritoryID   

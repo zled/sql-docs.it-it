@@ -1,16 +1,16 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_COLUMNSTORE_INDEX_TSQL
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: 
+caps.latest.revision: 76
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 461809bcf59b143f39d62b4cca7919a09168638f
+ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -182,7 +182,7 @@ CREATE [NONCLUSTERED] COLUMNSTORE INDEX
 Creare un indice columnstore non cluster in memoria in una tabella rowstore archiviata come heap o indice cluster. L'indice può avere una condizione filtrata e non è necessario includere tutte le colonne della tabella sottostante. L'indice columnstore richiede spazio sufficiente per archiviare una copia dei dati. È aggiornabile e viene aggiornato ogni volta che si modifica la tabella sottostante. L'indice columnstore non cluster per un indice cluster consente l'esecuzione di analisi in tempo reale.  
   
 *index_name*  
-   Specifica il nome dell'indice. *index_name* deve essere univoco all'interno della tabella, ma non è necessario che lo sia all'interno del database. Devono inoltre essere conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
+   Specifica il nome dell'indice. *index_name* deve essere univoco all'interno della tabella, ma non è necessario che lo sia all'interno del database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  **(** *column*  [ **,**...*n* ] **)**  
     Specifica le colonne da archiviare. Un indice columnstore non cluster è limitato a 1024 colonne.  
@@ -260,7 +260,7 @@ ON
 **"**default**"**  
 Crea l'indice specificato nel filegroup predefinito.  
   
-In questo contesto il termine default non rappresenta una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, ad esempio ON **"**default**"** oppure ON **[**default**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+In questo contesto il termine default non rappresenta una parola chiave, È un identificatore per il filegroup predefinito e pertanto deve essere delimitato, ad esempio ON **"**default**"** o ON **[**default**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ##  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
@@ -320,13 +320,13 @@ Le opzioni SET nella colonna Valore obbligatorio sono richieste ogni volta che s
 -   TINYINT  
 -   bit  
 -   nvarchar [ ( *n* ) ] 
--   nvarchar(max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e al database SQL di Azure al piano tariffario premium, solo negli indici columnstore cluster)   
+-   nvarchar(max)  (Si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)   
 -   nchar [ ( *n* ) ]  
 -   varchar [ ( *n* ) ]  
--   varchar(max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e al database SQL di Azure al piano tariffario premium, solo negli indici columnstore cluster)
+-   nvarchar(max)  (Si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)
 -   char [ ( *n* ) ]  
 -   varbinary [ ( *n* ) ] 
--   varbinary(max) (si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e al database SQL di Azure al piano tariffario Premium, solo negli indici columnstore cluster)
+-   varbinary (max)  (Si applica a [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e al database SQL di Azure a livello Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore, solo in indici columnstore cluster)
 -   binary [ ( *n* ) ]  
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e versioni successive)
   
@@ -349,7 +349,7 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
 -   Non può essere modificato usando l'istruzione **ALTER INDEX**. Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  
 -   Non può essere creato usando la parola chiave **INCLUDE**.  
 -   Impossibile includere le parole chiave **ASC** o **DESC** per l'ordinamento dell'indice. Gli indici columnstore vengono ordinati in base agli algoritmi di compressione. L'ordinamento comporta molti dei vantaggi a livello di prestazioni.  
--   Impossibile includere colonne LOB (Large Object) di tipo nvarchar(max), varchar(max) e varbinary(max) in indici columnstore non cluster. Solo gli indici columnstore cluster supportano i tipi LOB, a partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel database SQL di Azure configurato al piano tariffario Premium. Si noti che le versioni precedenti non supportano i tipi LOB negli indici columnstore cluster e non cluster.
+-   Impossibile includere colonne LOB (Large Object) di tipo nvarchar(max), varchar(max) e varbinary(max) in indici columnstore non cluster. Solo gli indici columnstore cluster supportano i tipi LOB, a partire dalla versione [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] e nel database SQL di Azure configurato ai livelli Premium e Standard (S3 e successive) e a tutti i livelli di offerte VCore. Si noti che le versioni precedenti non supportano i tipi LOB negli indici columnstore cluster e non cluster.
 
 
  **Non è possibile combinare gli indici columnstore con le funzionalità seguenti:**  

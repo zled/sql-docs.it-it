@@ -15,15 +15,14 @@ ms.custom: ''
 ms.component: security
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
-ms.devlang: na
 ms.topic: article
 ms.date: 04/03/2018
 ms.author: aliceku
-ms.openlocfilehash: e39e6f8957c1fc2c4f50603af213055cde84d0b6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e8e5456b1c6e8ca160e677907a97976c8f2b0374
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-preview-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key (ANTEPRIMA) per database SQL di Azure e SQL Data Warehouse
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -60,7 +59,7 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 ### <a name="general-guidelines"></a>Linee guida generali
 - Assicurarsi che Azure Key Vault e il database SQL di Azure si trovino nello stesso tenant.  Le interazioni dell'insieme di credenziali delle chiavi e del server tra tenant **non sono supportate**.
 - Definire le sottoscrizioni da usare per le risorse necessarie poiché se il server viene spostato successivamente in un'altra sottoscrizione sarà necessario eseguire una nuova impostazione di TDE con BYOK.
-- Quando si configura TDE con BYOK è importante valutare il carico che le ripetute operazioni di wrapping e annullamento del wrapping determinano sull'insieme di credenziali delle chiavi. Ad esempio, poiché tutti i database associati a un server logico usano la stessa protezione TDE, un failover del server attiverà un numero di operazioni sull'insieme di credenziali delle chiavi equivalente al numero di database presenti nel server. In base all'esperienza e ai [limiti del servizio Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentati, è consigliabile associare al massimo 500 database Standard o 200 database Premium a un'istanza di Azure Key Vault in una sottoscrizione singola al fine di garantire una disponibilità costantemente elevata durante l'accesso alla protezione TDE nell'insieme di credenziali. 
+- Quando si configura TDE con BYOK è importante valutare il carico che le ripetute operazioni di wrapping e annullamento del wrapping determinano sull'insieme di credenziali delle chiavi. Ad esempio, poiché tutti i database associati a un server logico usano la stessa protezione TDE, un failover del server attiverà un numero di operazioni sull'insieme di credenziali delle chiavi equivalente al numero di database presenti nel server. In base all'esperienza e ai [limiti del servizio Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-service-limits) documentati, è consigliabile associare al massimo 500 database Standard/Utilizzo generico o 200 database Premium/Business Critical a un'istanza di Azure Key Vault in una sottoscrizione singola al fine di garantire una disponibilità costantemente elevata durante l'accesso alla protezione TDE nell'insieme di credenziali. 
 - Consigliato: conservare una copia della protezione TDE in locale.  A tale scopo, è necessario che un modulo di protezione hardware crei una protezione TDE locale e che un sistema di deposito delle chiavi memorizzi una copia locale della protezione TDE.
 
 

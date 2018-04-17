@@ -8,9 +8,10 @@
 ## [Passaggio 4: Connettersi in modo resiliente a SQL Server con PHP](step-4-connect-resiliently-to-sql-with-php.md)
 
 # [Panoramica](overview-of-the-php-sql-driver.md)
-## [Requisiti di sistema](system-requirements-for-the-php-sql-driver.md)
+## [System Requirements](system-requirements-for-the-php-sql-driver.md)
+## [Scaricare i driver per PHP per SQL Server](download-drivers-php-sql-server.md)
 ## [Caricamento del driver](loading-the-php-sql-driver.md)
-## [Configurazione di IIS](configuring-iis-for-php-sql-driver.md)
+## [Configuring IIS](configuring-iis-for-php-sql-driver.md)
 ## [Esercitazione sull'installazione dei driver Linux e Mac per PHP](installation-tutorial-linux-mac.md)
 ## [Note sulla versione](release-notes-for-the-php-sql-driver.md)
 ## [Risorse di supporto](support-resources-for-the-php-sql-driver.md)

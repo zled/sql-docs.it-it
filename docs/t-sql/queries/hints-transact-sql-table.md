@@ -1,16 +1,16 @@
 ---
 title: Hint di tabella (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TABLE_HINT_TSQL
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-caps.latest.revision: 
+caps.latest.revision: 174
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea3f60e74aeb855a0d168646c341a1f6a8d7104c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 036b2c26536aaa1257bfbb41075d570149b04e54
+ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="hints-transact-sql---table"></a>Hint (Transact-SQL) - Tabella
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -137,13 +137,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
   
  Gli hint di tabella seguenti sono supportati sia con, sia senza la parola chiave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT e NOEXPAND. Se vengono specificati senza la parola chiave WITH, questi hint devono essere specificati da soli. Ad esempio  
   
-```  
+```sql  
 FROM t (TABLOCK)  
 ```  
   
  Se l'hint viene specificato con un'altra opzione, è necessario usare la parola chiave WITH:  
   
-```  
+```sql  
 FROM t WITH (TABLOCK, INDEX(myindex))  
 ```  
   
@@ -203,7 +203,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 |In combinazione con un hint INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|In Query Optimizer vengono considerate solo le operazioni di ricerca nell'indice per accedere alla tabella o alla vista nell'indice specificato.|  
 |Con parametri mediante la specifica di un indice e colonne di indice|`FROM dbo.MyTable WITH (FORCESEEK (MyIndex (col1, col2, col3)))`|In Query Optimizer vengono considerate solo le operazioni di ricerca nell'indice per accedere alla tabella o alla vista nell'indice specificato, utilizzando almeno le colonne dell'indice specificate.|  
   
- Quando si utilizza l'hint FORCESEEK (con o senza parametri di indice), è opportuno considerare le indicazioni generali riportate di seguito.  
+Quando si utilizza l'hint FORCESEEK (con o senza parametri di indice), è opportuno considerare le indicazioni generali riportate di seguito.  
   
 -   L'hint può essere specificato come hint di tabella o hint per la query. Per altre informazioni sull'hint per la query, vedere [Hint per la query &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
@@ -215,7 +215,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
 -   Se con FORCESEEK non viene trovato alcun piano, viene restituito l'errore 8622.  
   
- Quando si specifica FORCESEEK con parametri di indice, è opportuno considerare le indicazioni generali e le restrizioni riportate di seguito.  
+Quando si specifica FORCESEEK con parametri di indice, è opportuno considerare le indicazioni generali e le restrizioni riportate di seguito.  
   
 -   Non è possibile specificare l'hint per una tabella che rappresenta la destinazione di un'istruzione INSERT, UPDATE o DELETE.  
   
@@ -351,7 +351,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Alla tabella ottimizzata per la memoria si accede con isolamento SNAPSHOT. SNAPSHOT può essere utilizzato solo con tabelle ottimizzate per la memoria (con tabelle basate su disco). Per altre informazioni, vedere [Introduzione alle tabelle con ottimizzazione per la memoria](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md).  
   
-```  
+```sql 
 SELECT * FROM dbo.Customers AS c   
 WITH (SNAPSHOT)   
 LEFT JOIN dbo.[Order History] AS oh   
@@ -403,7 +403,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ## <a name="filtered-index-hints"></a>Hint per l'indice filtrato  
  È possibile usare un hint per l'indice filtrato come hint di tabella; se tuttavia tale indice non include tutte le righe selezionate dalla query, in Query Optimizer viene generato l'errore 8622. Di seguito viene fornito un esempio di hint per l'indice filtrato non valido. Nell'esempio viene creato l'indice filtrato `FIBillOfMaterialsWithComponentID`, che viene quindi usato come hint per l'indice per un'istruzione SELECT. Il predicato dell'indice filtrato include righe di dati per gli elementi ComponentID 533, 324 e 753. Anche il predicato della query include righe di dati per gli elementi ComponentID 533, 324 e 753, ma estende il set di risultati in modo da includere gli elementi ComponentID 855 e 924, non inclusi nell'indice filtrato. In Query Optimizer l'hint per l'indice filtrato non può pertanto essere usato e viene generato l'errore 8622. Per altre informazioni, vedere [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
-```  
+```sql  
 IF EXISTS (SELECT name FROM sys.indexes  
     WHERE name = N'FIBillOfMaterialsWithComponentID'   
     AND object_id = OBJECT_ID(N'Production.BillOfMaterials'))  
@@ -463,7 +463,7 @@ GO
 ### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>B. Utilizzo dell'hint FORCESEEK per specificare un'operazione di ricerca nell'indice  
  Nell'esempio seguente viene utilizzato l'hint FORCESEEK senza specificare un indice per forzare l'esecuzione di un'operazione Index Seek da parte di Query Optimizer nella tabella `Sales.SalesOrderDetail` del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```  
+```sql
 SELECT *  
 FROM Sales.SalesOrderHeader AS h  
 INNER JOIN Sales.SalesOrderDetail AS d WITH (FORCESEEK)  

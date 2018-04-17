@@ -1,7 +1,7 @@
-# [Driver OLE DB per SQL Server (OLE DB)](oledb-driver-for-sql-server-ole-db.md)
+# [Driver OLE DB per programmazione con SQL Server](oledb-driver-for-sql-server-programming.md)
 
 # Aree specifiche
-## [Driver OLE DB per SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
+## [Creazione di un driver OLE DB per applicazioni SQL Server +](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)
 ## [Oggetti di origine dati OLE DB +](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)
 ## [Comandi +](../../oledb/ole-db-commands/commands.md)
 ## [Set di righe +](../../oledb/ole-db-rowsets/rowsets.md)
@@ -15,13 +15,12 @@
 ## [Interfacce +](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)
 ## [Procedura +](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)
 
-# [Supporto FILESTREAM (OLE DB)](filestream-support-ole-db.md)
-# [Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)](large-clr-user-defined-types-ole-db.md)
-# [Supporto del set di righe dello schema (OLE DB)](schema-rowset-support-ole-db.md)
+# [Tipi CLR definiti dall'utente di grandi dimensioni](large-clr-user-defined-types-ole-db.md)
+# [Supporto del set di righe dello schema](schema-rowset-support-ole-db.md)
 # [Set di righe dello schema - Supporto di query distribuite](schema-rowsets-distributed-query-support.md)
 # [Set di righe dello schema - Set di righe LINKEDSERVERS](schema-rowsets-linkedservers-rowset.md)
-# [Nomi dell'entità servizio (SPN) nelle connessioni client (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)
-# [Supporto di colonne di tipo sparse (OLE DB)](sparse-columns-support-ole-db.md)
+# [Nomi di entità servizio (SPN) nelle connessioni client](service-principal-names-spns-in-client-connections-ole-db.md)
+# [Supporto per colonne di tipo sparse](sparse-columns-support-ole-db.md)
 # [Stored procedure - Chiamata](stored-procedures-calling.md)
 # [Stored procedure - Esecuzione](stored-procedures-running.md)
 # [Stored procedure](stored-procedures.md)

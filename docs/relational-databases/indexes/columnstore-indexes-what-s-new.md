@@ -16,11 +16,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f1a9ab49828410519b1aa5a36eb0804d4d7b50a5
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: f1a04505be156fcb10394e6cccb431f3c2206871
+ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Indici columnstore - Novità
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/22/2018
   Riepilogo delle funzionalità columnstore disponibili per ogni versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e per la versione più recente di [!INCLUDE[ssSDS](../../includes/sssds-md.md)], [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
  > [!NOTE]
- > Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], gli indici columnstore sono disponibili nel livello Premium e Standard per database SQL (S3 e versioni successive). Per SQL Server (2016 SP1 e versioni successive), gli indici columnstore sono disponibili in tutte le edizioni. Per SQL Server (2016 e versioni precedenti), gli indici columnstore sono disponibili solo nell'edizione Enterprise.
+ > Per [!INCLUDE[ssSDS](../../includes/sssds-md.md)], gli indici columnstore sono disponibili nei livelli Premium e Standard del database SQL (S3 e versioni successive) e in tutti i livelli vCore. Per SQL Server (2016 SP1 e versioni successive), gli indici columnstore sono disponibili in tutte le edizioni. Per SQL Server (2016 e versioni precedenti), gli indici columnstore sono disponibili solo nell'edizione Enterprise.
  
 ## <a name="feature-summary-for-product-releases"></a>Riepilogo delle funzionalità per le versioni dei prodotti  
  Questa tabella riepiloga le funzionalità principali per gli indici columnstore e i prodotti in cui sono disponibili.  
@@ -119,7 +119,8 @@ Queste DMV basate su OLTP in memoria contengono aggiornamenti per columnstore:
   
 ### <a name="limitations"></a>Limitazioni  
   
--   MERGE è disabilitata quando viene definito un indice albero B su un indice columnstore cluster.  
+
+  
 -   Per le tabelle in memoria, un indice columnstore deve includere tutte le colonne; l'indice columnstore non può avere una condizione di filtrata.  
 -   Per le tabelle in memoria, le query sugli indici columnstore vengono eseguite solo in modalità InterOP e non in modalità nativa in memoria. È supportata l'esecuzione parallela.  
   
