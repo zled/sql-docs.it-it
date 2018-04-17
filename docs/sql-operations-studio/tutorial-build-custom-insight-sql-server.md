@@ -1,6 +1,6 @@
-﻿---
-title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato in SQL Operations Studio (anteprima) | Microsoft Docs'
-description: Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (anteprima).
+---
+title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato in SQL Operations Studio (preview) | Microsoft Docs'
+description: Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (preview).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql-non-specified
@@ -27,22 +27,22 @@ Con questa esercitazione viene mostrato come costruire un widget di informazioni
 Durante questa esercitazione si apprenderà come:
 > [!div class="checklist"]
 > * Eseguire una query e visualizzarla in un grafico
-> * Costruire un widget di informazioni dettagliate personalizzato dal grafico
-> * Aggiungere il grafico a una dashboard di server o database
-* Aggiungere i dettagli per il widget di informazioni personalizzato
+> * Compilare un widget di informazioni personalizzato dal grafico
+> * Aggiungere il grafico a un dashboard di server o database
+> * Aggiungere i dettagli per il widget di informazioni personalizzato
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Questa esercitazione richiede il database *TutorialDB* su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
 
-- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query su Azure SQL Database tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query su SQL Server tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su Azure SQL Database tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>Eseguire una query e visualizzare il risultato in un grafico
 In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessioni attive.
 
-1. Per aprire un nuovo editor, premere **Ctrl+N**. 
+1. Per aprire un nuovo editor, premere **Ctrl + N**. 
 
 2. Modificare il contesto di connessione su **TutorialDB**.
 
@@ -54,13 +54,13 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
    WHERE status = 'running'
    ```
 
-4. Salvare la query in un file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSession.sql*.
+4. Salvare la query in un \*file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSession.sql*.
 
 5. Per eseguire la query, premere **F5**.
 
 6. Dopo che vengono visualizzati i risultati della query, fare clic su **Visualizzazione grafico** nella barra laterale a destra dei risultati, quindi fare clic sulla scheda **Visualizzatore grafico**.
 
-7. Modifica **tipo di grafico** a **conteggio** per ottenere un grafico a conteggio.
+7. Modifica **tipo di grafico** a **conteggio**. Queste impostazioni il rendering di un grafico di conteggio.
 
 ## <a name="add-the-custom-insight-to-the-database-dashboard"></a>Aggiungere le informazioni dettagliate personalizzate alla dashboard del database
 
@@ -68,7 +68,7 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
 
    ![configurazione](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
-2. Copiare la configurazione proposta (il JSON). 
+2. Copiare la configurazione proposta (il JSON).  
 
 3. Premere **Ctrl+virgola** per aprire le *impostazioni utente*.
 
@@ -112,11 +112,11 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
 
 ## <a name="add-details-to-custom-insight"></a>Aggiungere i dettagli al widget personalizzato
 
-1. Per aprire un nuovo editor, premere **Ctrl+N**.
+1. Per aprire un nuovo editor, premere **Ctrl + N**.
 
-2. Modificare il contesto di connessione per *TutorialDB*.
+2. Modificare il contesto di connessione su **TutorialDB**.
 
-3. Incollare la query seguente nell'editor:
+3. Incollare la query seguente nell'editor di query:
 
    ```sql
     SELECT session_id AS [SID], login_time AS [Login Time], host_name AS [Host Name], program_name AS [Program Name], login_name AS [Login Name]
@@ -124,7 +124,7 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
     WHERE status = 'running'
    ```
 
-4. Salvare la query in un file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSessionDetail.sql*.
+4. Salvare la query in un \*file con estensione `.sql`. Per questa esercitazione, salvare lo script come *activeSessionDetail.sql*.
 
 5. Premere **Ctrl+virgola** per aprire le *impostazioni utente*.
 
@@ -163,16 +163,15 @@ In questo passaggio, eseguiremo uno script sql per ottenere la lista delle sessi
 
 7. Salvare le *impostazioni utente* e aprire la dashboard di *TutorialDB*. Fare clic sul pulsante con i puntini di sospensione (...) accanto a *My Widget* per visualizzare i dettagli:
 
-    ![insight activesessiondetail](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![insight activesession](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>Passaggi successivi
-
 In questa esercitazione, si è appreso come:
 > [!div class="checklist"]
+> * Eseguire una query e visualizzarla in un grafico
 > * Compilare un widget di informazioni personalizzato dal grafico
-> * Costruire un widget insight personalizzato dal grafico
-> * Aggiungere i dettagli per il widget di informazioni personalizzato. Please use LMProposed Suggestion.
-> * Aggiungere i dettagli per il widget
+> * Aggiungere il grafico a un dashboard di server o database
+> * Aggiungere i dettagli per il widget di informazioni personalizzato
 
 Per informazioni su come eseguire backup e ripristino di database, completare l'esercitazione successiva:
 
