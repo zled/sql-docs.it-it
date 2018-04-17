@@ -1,16 +1,16 @@
 ---
 title: xp_cmdshell (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - xp_cmdshell
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - xp_cmdshell
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bb3fcd3cba2be225c4c45514b2dcbc021683c0db
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 6ca6baab6e4bb3332d48cb2e50129713aab24817
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell** opera in modo sincrono. ovvero il controllo viene restituito al chiamante solo dopo il completamento del comando della shell.  
   
- **xp_cmdshell** può essere abilitata e disabilitata tramite la gestione basata su criteri oppure eseguendo **sp_configure**. Per ulteriori informazioni, vedere [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md) e [opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+ **xp_cmdshell** possono essere abilitati e disabilitati tramite la gestione basata su criteri oppure eseguendo **sp_configure**. Per ulteriori informazioni, vedere [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md) e [opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 > [!IMPORTANT]  
 >  Se **xp_cmdshell** viene eseguita all'interno di un batch e restituisce un errore, il batch avrà esito negativo. Questa è una differenza funzionale Nelle versioni precedenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] batch continuerebbe.  
@@ -88,9 +88,9 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- Per ulteriori informazioni, vedere [sp_xp_cmdshell_proxy_account &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
+ Per altre informazioni, vedere [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorizzazioni  
  Poiché gli utenti malintenzionati talvolta tentano di elevare i propri privilegi tramite **xp_cmdshell**, **xp_cmdshell** è disabilitato per impostazione predefinita. Utilizzare **sp_configure** o **gestione basata su criteri** per abilitarlo. Per altre informazioni, vedere [Opzione di configurazione del server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
  Quando si abilita la prima volta, **xp_cmdshell** richiede l'autorizzazione CONTROL SERVER per l'esecuzione e il processo di Windows creato da **xp_cmdshell** ha lo stesso contesto di sicurezza come il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio è spesso più autorizzazioni necessarie per il lavoro eseguito dal processo creato da **xp_cmdshell**. Per migliorare la sicurezza, l'accesso a **xp_cmdshell** deve essere limitato agli utenti con privilegi elevati.  
@@ -178,9 +178,9 @@ EXEC master..xp_cmdshell @cmd;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estese generali Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
+ [Stored procedure estese generali &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [Opzione di configurazione del Server xp_cmdshell](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)   
  [Configurazione superficie di attacco](../../relational-databases/security/surface-area-configuration.md)   
- [sp_xp_cmdshell_proxy_account &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
+ [sp_xp_cmdshell_proxy_account &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)  
   
   

@@ -2,7 +2,7 @@
 title: sp_spaceused (Transact-SQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 08/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: system-stored-procedures
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-caps.latest.revision: ''
+caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: de4b451166e7b17b92ae996eddeef87b4dd8722b
-ms.sourcegitcommit: d6881107b51e1afe09c2d8b88b98d075589377de
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0f255eaa4837ac7193925265f6427706d55009b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -79,7 +80,7 @@ Se *objname* viene omesso, vengono restituiti risultati per l'intero database.
  [  **@oneresultset=**] *oneresultset*  
  Indica se restituire un singolo set di risultati. Il *oneresultset* argomento può avere i valori seguenti:  
   
-|Valore|Descrizione|  
+|Value|Descrizione|  
 |-----------|-----------------|  
 |0|Quando *@objname* è null o non è specificato, vengono restituiti due set di risultati. Due set di risultati è il comportamento predefinito.|  
 |1|Quando *@objname* = null o viene omesso, viene restituito un singolo set di risultati.|  

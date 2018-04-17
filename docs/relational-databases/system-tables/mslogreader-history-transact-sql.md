@@ -1,16 +1,16 @@
 ---
 title: MSlogreader_history (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_history system table
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 191f696f65d744b66d2aa41b8841c24097bf6434
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c1b119040efebb1724b026cdb213cfdb9389a0d8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ ms.lasthandoff: 11/21/2017
 |**start_time**|**datetime**|Ora di inizio dell'esecuzione del processo.|  
 |**time**|**datetime**|Ora di registrazione del messaggio.|  
 |**duration**|**int**|Durata espressa in secondi della sessione del messaggio.|  
-|**commenti**|**nvarchar(255)**|Testo del messaggio.|  
-|**xact_seqno**|**varbinary (16)**|Numero di sequenza dell'ultima transazione elaborata.|  
+|**Commenti**|**nvarchar(255)**|Testo del messaggio.|  
+|**xact_seqno**|**varbinary(16)**|Numero di sequenza dell'ultima transazione elaborata.|  
 |**delivery_time**|**int**|Ora in cui è stata recapitata la prima transazione.|  
 |**delivered_transactions**|**int**|Numero totale di transazioni recapitate durante la sessione.|  
 |**delivered_commands**|**int**|Numero totale di comandi recapitati durante la sessione.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/21/2017
 |**updateable_row**|**bit**|Impostare su **1** se la riga di cronologia può essere sovrascritto.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tabelle di replica &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Viste della replica &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

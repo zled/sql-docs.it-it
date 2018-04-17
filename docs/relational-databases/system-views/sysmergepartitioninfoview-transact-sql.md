@@ -1,16 +1,16 @@
 ---
 title: sysmergepartitioninfoview (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-views
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepartitioninfoview view
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee0a46b7ec48d16bb2af2d528b4e832298c36a39
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 92e3effdde5a4272094e55e7baed289d009ce275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,17 @@ ms.lasthandoff: 02/03/2018
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome dell'articolo.|  
-|**type**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **0x0a** = Table.<br /><br /> **0x20** = solo schema della procedura.<br /><br /> **0x40** = solo schema della vista o solo schema di vista indicizzata.<br /><br /> **0x80** = solo schema funzione.|  
+|**type**|**tinyint**|Specifica il tipo di articolo. I possibili valori sono i seguenti:<br /><br /> **0x0a** = Table.<br /><br /> **0x20** = solo schema della procedura.<br /><br /> **0x40** = solo schema della vista o solo schema della vista indicizzata.<br /><br /> **0x80** = solo schema funzione.|  
 |**objid**|**int**|Identificatore dell'oggetto pubblicato.|  
 |**sync_objid**|**int**|ID di oggetto della vista che rappresenta il set di dati sincronizzato.|  
-|**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non è una vista, utilizzare tutti gli dell'oggetto di base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporanea.|  
+|**view_type**|**tinyint**|Tipo di vista:<br /><br /> **0** = non una vista, utilizzare tutti gli dell'oggetto di base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporanea.|  
 |**artid**|**uniqueidentifier**|Identificatore univoco per l'articolo specificato.|  
 |**description**|**nvarchar(255)**|Breve descrizione dell'articolo.|  
-|**pre_creation_command**|**tinyint**|Azione predefinita da eseguire quando viene creato l'articolo nel database di sottoscrizione:<br /><br /> **0** = Nessuna: se la tabella esiste già nel Sottoscrittore, viene eseguita alcuna azione.<br /><br /> **1** = eliminazione: Elimina la tabella prima di ricrearla.<br /><br /> **2** = eliminazione specifica: esegue un'operazione di eliminazione in base alla clausola WHERE nel filtro di subset.<br /><br /> **3** = troncamento: equivale al 2, ma Elimina pagine anziché righe. La clausola WHERE in questo caso non viene utilizzata.|  
+|**pre_creation_command**|**tinyint**|Azione predefinita da eseguire quando viene creato l'articolo nel database di sottoscrizione:<br /><br /> **0** = Nessuna: se la tabella esiste già nel Sottoscrittore, viene eseguita alcuna azione.<br /><br /> **1** = eliminazione: Elimina la tabella prima di ricrearla.<br /><br /> **2** = eliminazione specifica: esegue un'operazione di eliminazione in base alla clausola WHERE nel filtro di subset.<br /><br /> **3** = troncamento: equivale 2, ma Elimina pagine anziché righe. La clausola WHERE in questo caso non viene utilizzata.|  
 |**pubid**|**uniqueidentifier**|ID della pubblicazione a cui appartiene l'articolo corrente.|  
-|**nickname**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
+|**Nome alternativo**|**int**|Mapping di un nome alternativo per l'identificazione dell'articolo.|  
 |**column_tracking**|**int**|Indica se viene implementato il rilevamento a livello di colonna per l'articolo.|  
-|**status**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per pubblicare la tabella verrà eseguito alla successiva esecuzione dell'agente Snapshot.<br /><br /> **2** = attivo: è stato eseguito lo script di elaborazione iniziale per pubblicare la tabella.|  
+|**status**|**tinyint**|Specifica lo stato dell'articolo. I possibili valori sono i seguenti:<br /><br /> **1** = non sincronizzato: lo script di elaborazione iniziale per pubblicare la tabella verrà eseguito alla successiva esecuzione dell'agente Snapshot.<br /><br /> **2** = attivo: lo script di elaborazione iniziale per pubblicare la tabella è stato eseguito.|  
 |**conflict_table**|**sysname**|Nome della tabella locale che include i record in conflitto per l'articolo corrente. Lo scopo di questa tabella è esclusivamente informativo. Il contenuto può essere modificato o eliminato da routine di risoluzione dei conflitti personalizzate oppure direttamente dall'amministratore.|  
 |**creation_script**|**nvarchar(255)**|Script per la creazione dell'articolo.|  
 |**conflict_script**|**nvarchar(255)**|Script dei conflitti dell'articolo.|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/03/2018
 |**select_proc**|**sysname**|Nome di una stored procedure generata automaticamente utilizzata dall'agente di merge per l'implementazione del blocco e l'individuazione delle righe e colonne per un articolo.|  
 |**metadata_select_proc**|**sysname**|Nome della stored procedure generata automaticamente utilizzata per accedere ai metadati nelle tabelle di sistema della replica di tipo merge.|  
 |**delete_proc**|**sysname**|Procedura utilizzata per eliminare le righe durante la sincronizzazione.|  
-|**schema_option**|**binary(8)**|Mappa di bit dell'opzione di creazione dello schema per l'articolo specificato. Per informazioni su supportati *schema_option* valori, vedere [sp_addmergearticle &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
+|**schema_option**|**binary(8)**|Mappa di bit dell'opzione di creazione dello schema per l'articolo specificato. Per informazioni su supportati *schema_option* valori, vedere [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Nome della tabella creata nel Sottoscrittore.|  
 |**destination_owner**|**sysname**|Nome del proprietario dell'oggetto di destinazione.|  
 |**resolver_clsid**|**nvarchar(50)**|ID del sistema di risoluzione dei conflitti personalizzato. Per un gestore della logica di business questo valore è NULL.|  
@@ -71,19 +71,19 @@ ms.lasthandoff: 02/03/2018
 |**missing_cols**|**varbinary(128)**|Mappa di bit che descrive le colonne mancanti nell'articolo.|  
 |**excluded_cols**|**varbinary(128)**|Mappa di bit delle colonne escluse dall'articolo.|  
 |**excluded_col_count**|**int**|Numero di colonne escluse dall'articolo.|  
-|**colonne**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|Mappa di bit che descrive le colonne eliminate dall'articolo.|  
 |**resolver_info**|**nvarchar(255)**|Archivio per informazioni aggiuntive necessarie per il sistema di risoluzione dei conflitti personalizzato.|  
 |**view_sel_proc**|**nvarchar(290)**|Nome di una stored procedure utilizzata dall'agente di merge per il popolamento iniziale di un articolo in una pubblicazione filtrata in modo dinamico e per l'enumerazione delle righe modificate in qualsiasi pubblicazione filtrata.|  
 |**gen_cur**|**bigint**|Genera il numero di modifica locale per la tabella di base di un articolo.|  
 |**vertical_partition**|**int**|Specifica se in un articolo di tabella il filtraggio delle colonne è abilitato. **0** non indica è presente alcun filtro verticale e pubblica tutte le colonne.|  
-|**identity_support**|**int**|Specifica se è abilitata la gestione automatica degli intervalli di valori Identity. **1** indica che la gestione degli intervalli identity è attivata, e **0** significa che non vi è alcuna identità di intervalli di valori supportati.|  
+|**identity_support**|**int**|Specifica se è abilitata la gestione automatica degli intervalli di valori Identity. **1** indica che è attivata la gestione degli intervalli identità, e **0** significa che non vi è alcuna identità intervalli di valori supportati.|  
 |**before_image_objid**|**int**|ID dell'oggetto tabella di rilevamento. La tabella di rilevamento include valori di colonna chiave specifici se per la pubblicazione sono state abilitate le ottimizzazioni delle modifiche delle partizioni.|  
 |**before_view_objid**|**int**|ID di oggetto di una tabella di vista. La vista è relativa a una tabella in cui viene tenuto traccia se una riga appartiene a un Sottoscrittore specifico prima di essere eliminata o aggiornata. Valido solo se per la pubblicazione sono state abilitate le ottimizzazioni delle modifiche delle partizioni.|  
-|**verify_resolver_signature**|**int**|Specifica se una firma digitale viene verificata o meno prima dell'utilizzo di un sistema di risoluzione dei conflitti in una replica di tipo merge:<br /><br /> **0** = firma non viene verificata.<br /><br /> **1** = firma viene verificata per stabilire se proviene da una fonte attendibile.|  
-|**allow_interactive_resolver**|**bit**|Specifica se per un articolo l'utilizzo del sistema di risoluzione dei conflitti interattivo è attivato. **1** indica che il sistema di risoluzione interattivo può essere utilizzata per l'articolo.|  
-|**fast_multicol_updateproc**|**bit**|Specifica se l'agente di merge è stato attivato per l'applicazione di modifiche a più colonne della stessa riga tramite una sola istruzione UPDATE:<br /><br /> **0** = esegue un aggiornamento separato per ogni colonna modificato.<br /><br /> **1** = rilasciato istruzione UPDATE che fa sì che gli aggiornamenti a più colonne in un'unica istruzione.|  
-|**check_permissions**|**int**|Mappa di bit delle autorizzazioni a livello di tabella che verranno verificate quando l'agente di merge applicherà le modifiche nel server di pubblicazione. *check_permissions* può avere uno dei valori seguenti:<br /><br /> **0x00** = non vengono controllate le autorizzazioni.<br /><br /> **0x10** = controlli delle autorizzazioni nel server di pubblicazione prima gli inserimenti vengono eseguiti in un sottoscrittore possono essere caricate.<br /><br /> **0x20** = le autorizzazioni vengono verificate nel server di pubblicazione prima del caricamento degli aggiornamenti eseguiti in un sottoscrittore.<br /><br /> **0x40** = le autorizzazioni vengono verificate nel server di pubblicazione prima del caricamento delle eliminazioni eseguite nel Sottoscrittore.|  
+|**verify_resolver_signature**|**int**|Specifica se una firma digitale viene verificata o meno prima dell'utilizzo di un sistema di risoluzione dei conflitti in una replica di tipo merge:<br /><br /> **0** = firma non viene verificata.<br /><br /> **1** = firma viene verificata per stabilire se deriva da una fonte attendibile.|  
+|**allow_interactive_resolver**|**bit**|Specifica se per un articolo l'utilizzo del sistema di risoluzione dei conflitti interattivo è attivato. **1** significa che il sistema di risoluzione interattivo possono essere usato nell'articolo.|  
+|**fast_multicol_updateproc**|**bit**|Specifica se l'agente di merge è stato attivato per l'applicazione di modifiche a più colonne della stessa riga tramite una sola istruzione UPDATE:<br /><br /> **0** = esegue un'istruzione UPDATE distinta per ogni colonna modificata.<br /><br /> **1** = rilasciato istruzione UPDATE che fa sì che gli aggiornamenti a più colonne in un'unica istruzione.|  
+|**check_permissions**|**int**|Mappa di bit delle autorizzazioni a livello di tabella che verranno verificate quando l'agente di merge applicherà le modifiche nel server di pubblicazione. *check_permissions* può avere uno dei valori seguenti:<br /><br /> **0x00** = le autorizzazioni non vengono controllate.<br /><br /> **0x10** = controlli delle autorizzazioni nel server di pubblicazione prima gli inserimenti vengono eseguiti in un sottoscrittore possono essere caricate.<br /><br /> **0x20** = le autorizzazioni vengono verificate nel server di pubblicazione prima del caricamento degli aggiornamenti eseguiti in un sottoscrittore.<br /><br /> **0x40** = le autorizzazioni vengono verificate nel server di pubblicazione prima del caricamento DELETE eseguite in un sottoscrittore.|  
 |**maxversion_at_cleanup**|**int**|Numero massimo di generazioni rimosse alla successiva esecuzione dell'agente di merge.|  
 |**processing_order**|**int**|Indica l'ordine di elaborazione degli articoli in una pubblicazione di tipo merge. valore **0** indica che l'articolo non è ordinato e gli articoli vengono elaborati in ordine dal valore più basso al più alto. Se due articoli hanno lo stesso valore, essi vengono elaborati simultaneamente. Per altre informazioni, vedere [Specificare l'ordine di elaborazione degli articoli di merge](../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md).|  
 |**upload_options**|**tinyint**|Specifica se è possibile apportare modifiche nel Sottoscrittore o caricare modifiche dal Sottoscrittore. I possibili valori sono i seguenti.<br /><br /> **0** = non esistono restrizioni per gli aggiornamenti eseguiti nel Sottoscrittore; tutte le modifiche vengono caricate nel server di pubblicazione.<br /><br /> **1** = sono consentite modifiche nel Sottoscrittore, ma non vengono caricate nel server di pubblicazione.<br /><br /> **2** = non sono consentite modifiche nel Sottoscrittore.|  
@@ -93,32 +93,32 @@ ms.lasthandoff: 02/03/2018
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**before_upd_view_objid**|**int**|ID della vista della tabella prima degli aggiornamenti.|  
 |**delete_tracking**|**bit**|Specifica se le eliminazioni vengono replicate.<br /><br /> **0** = le eliminazioni non vengono replicate.<br /><br /> **1** = le eliminazioni vengono replicate, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Quando il valore di *delete_tracking* è **0**, le righe eliminate nel Sottoscrittore devono essere rimosse manualmente nel server di pubblicazione e le righe eliminate nel server di pubblicazione devono essere rimosse manualmente nel Sottoscrittore.<br /><br /> Nota: Il valore **0** risultati non convergenza.|  
-|**compensate_for_errors**|**bit**|Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione.<br /><br /> **0** = Compensating azioni sono disabilitate.<br /><br /> **1** = le modifiche che non possono essere applicate in un sottoscrittore o un server di pubblicazione generano sempre azioni di compensazione per annullare queste modifiche, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Nota: Il valore **0** risultati non convergenza.|  
+|**compensate_for_errors**|**bit**|Specifica se devono essere eseguite azioni di compensazione quando vengono rilevati errori durante la sincronizzazione.<br /><br /> **0** = Compensating operazioni sono disabilitate.<br /><br /> **1** = modifiche che non possono essere applicate in un sottoscrittore o server di pubblicazione generano sempre azioni di compensazione per annullare queste modifiche, ovvero il comportamento predefinito per la replica di tipo merge.<br /><br /> Nota: Il valore **0** risultati non convergenza.|  
 |**pub_range**|**bigint**|Dimensioni dell'intervallo di valori Identity del server di pubblicazione.|  
-|**range**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
-|**threshold**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
+|**intervallo**|**bigint**|Dimensioni dei valori Identity consecutivi che verrebbero assegnati nei Sottoscrittori durante un intervento di regolazione.|  
+|**Soglia**|**int**|Percentuale di soglia dell'intervallo di valori Identity.|  
 |**stream_blob_columns**|**bit**|Indica se per le colonne BLOB (Binary Large Object) viene utilizzata l'ottimizzazione del flusso. **1** significa che viene eseguita l'ottimizzazione.|  
-|**preserve_rowguidcol**|**bit**|Specifica se per la replica viene utilizzata una colonna rowguid esistente. Il valore **1** indica che viene utilizzata una colonna ROWGUIDCOL esistente. **0** significa che la replica di aggiunta la colonna ROWGUIDCOL.|  
+|**preserve_rowguidcol**|**bit**|Specifica se per la replica viene utilizzata una colonna rowguid esistente. Il valore **1** indica che viene utilizzata una colonna ROWGUIDCOL esistente. **0** significa che la replica aggiunta la colonna ROWGUIDCOL.|  
 |**partition_view_id**|**int**|Identifica la vista che definisce una partizione del Sottoscrittore.|  
 |**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|Istruzione utilizzata all'interno di un trigger di replica di tipo merge per recuperare l'ID di partizione per ogni riga eliminata o aggiornata in base ai relativi valori di colonna precedenti.|  
-|**partition_inserted_view_rule**|**Sysname**|Istruzione utilizzata all'interno di un trigger di replica di tipo merge per recuperare l'ID di partizione per ogni riga inserita o aggiornata in base ai relativi nuovi valori di colonna.|  
-|**membership_eval_proc_name**|**sysname**|Il nome della routine che restituisce gli ID di partizione correnti delle righe [MSmerge_contents &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
+|**partition_inserted_view_rule**|**sysname**|Istruzione utilizzata all'interno di un trigger di replica di tipo merge per recuperare l'ID di partizione per ogni riga inserita o aggiornata in base ai relativi nuovi valori di colonna.|  
+|**membership_eval_proc_name**|**sysname**|Il nome della routine che restituisce gli ID di partizione correnti delle righe [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
 |**column_list**|**sysname**|Elenco separato da virgole delle colonne pubblicate in un articolo.|  
 |**column_list_blob**|**sysname**|Elenco separato da virgole delle colonne pubblicate in un articolo, comprese le colonne BLOB.|  
 |**expand_proc**|**sysname**|Nome della procedura che restituisce nuovamente gli ID di partizione per tutte le righe figlio di una riga padre appena inserita e per le righe padre sottoposte a modifica a livello di partizione oppure che sono state eliminate.|  
 |**logical_record_parent_nickname**|**int**|Nome alternativo del padre di livello principale di un articolo specifico in un record logico.|  
 |**logical_record_view**|**int**|Vista che ha come output la colonna rowguid dell'articolo padre di livello principale corrispondente a ogni colonna rowguid figlio.|  
 |**logical_record_deleted_view_rule**|**sysname**|Simile a **logical_record_view**, ad eccezione del fatto che visualizza le righe figlio nella tabella "eliminata" nei trigger update e delete.|  
-|**logical_record_level_conflict_detection**|**bit**|Indica se è necessario rilevare i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = o colonna a livello di riga viene utilizzato il rilevamento dei conflitti.<br /><br /> **1** = logico viene utilizzato il rilevamento dei conflitti di record, in cui una modifica in una riga nel server di pubblicazione e modifica in un apposito riga logica stesso record nel sottoscrittore viene gestito come un conflitto.<br /><br /> Se questo valore è 1, è possibile utilizzare solo la risoluzione dei conflitti a livello di record logico.|  
-|**logical_record_level_conflict_resolution**|**bit**|Indica se è necessario risolvere i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = o colonna a livello di riga viene utilizzata la risoluzione.<br /><br /> **1** = In caso di conflitto, l'intero record logico prevalente sovrascrive l'intero record logico nella parte interessata.<br /><br /> È possibile utilizzare il valore 1 sia con il rilevamento a livello di record logico che con il rilevamento a livello di riga o colonna.|  
-|**partition_options**|**tinyint**|Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. Il *partition_options* può essere uno dei valori seguenti.<br /><br /> **0** = il filtro per l'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, vale a dire, una partizione "sovrapposta".<br /><br /> **1** = le partizioni sono sovrapposte e gli aggiornamenti DML apportati nel Sottoscrittore non è possibile modificare la partizione a cui appartiene una riga.<br /><br /> **2** = il filtro dell'articolo restituisce partizioni non sovrapposte, ma più sottoscrittori ricevono la stessa partizione.<br /><br /> **3** = il filtro dell'articolo restituisce partizioni non sovrapposte, univoche per ogni sottoscrizione.|  
+|**logical_record_level_conflict_detection**|**bit**|Indica se è necessario rilevare i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = riga o colonna a livello di rilevamento dei conflitti viene utilizzato.<br /><br /> **1** = logico viene utilizzato il rilevamento dei conflitti record, in cui una modifica in una riga nel server di pubblicazione e modifica in una riga da quella logica record nel sottoscrittore viene gestito come un conflitto.<br /><br /> Se questo valore è 1, è possibile utilizzare solo la risoluzione dei conflitti a livello di record logico.|  
+|**logical_record_level_conflict_resolution**|**bit**|Indica se è necessario risolvere i conflitti a livello di record logico oppure a livello di riga o colonna.<br /><br /> **0** = riga o colonna a livello viene usata la risoluzione.<br /><br /> **1** = In caso di conflitto, l'intero record logico prevalente sovrascrive l'intero record logico nella parte interessata.<br /><br /> È possibile utilizzare il valore 1 sia con il rilevamento a livello di record logico che con il rilevamento a livello di riga o colonna.|  
+|**partition_options**|**tinyint**|Definisce il modo in cui vengono partizionati i dati nell'articolo. Ciò consente di ottimizzare le prestazioni se tutte le righe appartengono a un'unica partizione o a un'unica sottoscrizione. Il *partition_options* può essere uno dei valori seguenti.<br /><br /> **0** = il filtro applicato all'articolo è statico oppure non restituisce un subset univoco di dati per ogni partizione, vale a dire, una partizione "sovrapposta".<br /><br /> **1** = le partizioni sono sovrapposte e gli aggiornamenti DML apportati nel Sottoscrittore non è possibile modificare la partizione a cui appartiene una riga.<br /><br /> **2** = il filtro dell'articolo restituisce partizioni non sovrapposte, ma più sottoscrittori ricevono la stessa partizione.<br /><br /> **3** = il filtro dell'articolo restituisce partizioni non sovrapposte, univoche per ogni sottoscrizione.|  
 |**name**|**sysname**|Nome di una partizione.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione delle partizioni di una pubblicazione di tipo Merge con filtri con parametri](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [Tabelle di replica &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Viste della replica &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [Tabelle di replica &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Viste della replica di &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_helpmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md)  
   

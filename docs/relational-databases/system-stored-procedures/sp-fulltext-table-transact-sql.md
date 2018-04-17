@@ -1,16 +1,16 @@
 ---
-title: sp_fulltext_table (Transact-SQL) | Microsoft Docs
-ms.custom: 
+title: sp_fulltext_table (Transact-SQL) | Documenti Microsoft
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
-ms.service: 
+ms.service: ''
 ms.component: system-stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: 
+caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9bb3305149fac1fd1747341634f06414c76c3be3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 02/03/2018
   Contrassegna una tabella per l'indicizzazione full-text oppure elimina tale contrassegno.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilizzare [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Uso [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), e [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) invece.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +57,12 @@ sp_fulltext_table
   
 ## <a name="arguments"></a>Argomenti  
  [  **@tabname=**] **'***qualified_table_name***'**  
- Nome della tabella composto da una o due parti. La tabella deve esistere nel database corrente *qualified_table_name* è **nvarchar (517)**, non prevede alcun valore predefinito.  
+ Nome della tabella composto da una o due parti. La tabella deve esistere nel database corrente *qualified_table_name* viene **nvarchar(517)**, non prevede alcun valore predefinito.  
   
  [  **@action=**] **'***azione***'**  
- Azione da eseguire. *azione* è **nvarchar (50)**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Azione da eseguire. *azione* viene **nvarchar(50**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Create**|Crea i metadati per un indice full-text per la tabella a cui fa riferimento *qualified_table_name* e specifica che i dati dell'indice full-text per questa tabella devono trovarsi nel *fulltext_catalog_name*. Questa azione imposta inoltre l'utilizzo di *unique_index_name* come colonna chiave full-text. Questo indice univoco deve essere già presente e definito in una colonna della tabella.<br /><br /> Nella tabella sarà possibile eseguire una ricerca full-text solo dopo il popolamento del catalogo full-text.|  
 |**Drop**|Elimina i metadati dell'indice full-text per *qualified_table_name*. Se l'indice full-text è attivo, viene disattivato automaticamente prima dell'eliminazione. Non è necessario rimuovere le colonne prima di eliminare l'indice full-text.|  
@@ -77,10 +78,10 @@ sp_fulltext_table
 |**Arresta**|Arresta un popolamento completo o incrementale.|  
   
  [  **@ftcat=**] **'***fulltext_catalog_name***'**  
- È un nome di catalogo full-text esistente valido per un **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* è **sysname**, con un valore predefinito è NULL.  
+ È un nome di catalogo full-text esistente valido per un **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *fulltext_catalog_name* viene **sysname**, con un valore predefinito è NULL.  
   
  [  **@keyname=**] **'***unique_index_name***'**  
- È un indice non ammettono valori null valido a colonna singola, univoca su *qualified_table_name* per un **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *unique_index_name* è **sysname**, con un valore predefinito è NULL.  
+ È un indice non ammettono valori null valido a colonna singola, univoca su *qualified_table_name* per un **creare** azione. Per tutte le altre azioni questo parametro deve essere NULL. *unique_index_name* viene **sysname**, con un valore predefinito è NULL.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  
@@ -144,6 +145,6 @@ GO
  [sp_help_fulltext_tables_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Stored procedure di sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Ricerca full-Text e semantica Stored procedure &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
+ [Ricerca full-Text e semantica Stored procedure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)  
   
   

@@ -1,16 +1,16 @@
 ---
 title: CDC. &lt;capture_instance&gt;CT (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: system-tables
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - cdc
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - cdc.<capture_instance>_CT
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-caps.latest.revision: 
+caps.latest.revision: 27
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53f2078f3894d5db7c398b2470b4a3625320e948
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: deb54a835c5c163061b371e8629b95ed0bfcdce9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 |**__$seqval**|**binary(10)**|Valore di sequenza utilizzato per ordinare le modifiche a una riga all'interno di una transazione.|  
 |**__$operation**|**int**|Identifica l'operazione DML (Data Manipulation Language) associata alla modifica. I possibili valori sono i seguenti:<br /><br /> 1 = eliminazione<br /><br /> 2 = inserimento<br /><br /> 3 = aggiornamento (valori obsoleti)<br /><br /> I dati della colonna includono valori di riga prima dell'esecuzione dell'istruzione di aggiornamento.<br /><br /> 4 = aggiornamento (valori nuovi)<br /><br /> I dati della colonna includono valori di riga dopo l'esecuzione dell'istruzione di aggiornamento.|  
 |**__$update_mask**|**varbinary(128)**|Maschera di bit basata su numeri ordinali di colonna della tabella delle modifiche che identificano le colonne modificate.|  
-|*\<colonne di tabella di origine acquisite >*|variabile|Le colonne rimanenti della tabella delle modifiche sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, tutte le colonne della tabella di origine vengono incluse in questa tabella.|  
+|*\<colonne della tabella di origine acquisite>*|variabile|Le colonne rimanenti della tabella delle modifiche sono le colonne della tabella di origine identificate come colonne acquisite durante la creazione dell'istanza di acquisizione. Se non è stata specificata alcuna colonna nell'elenco delle colonne acquisite, tutte le colonne della tabella di origine vengono incluse in questa tabella.|  
 |**_ $command_id** |**int** |Registra l'ordine delle operazioni all'interno di una transazione. |  
   
 ## <a name="remarks"></a>Osservazioni  
@@ -57,9 +57,9 @@ Il `__$command_id` colonna è una colonna è stata introdotta in un aggiornament
 ## <a name="captured-column-data-types"></a>Tipi di dati delle colonne acquisite  
  Le colonne acquisite incluse in questa tabella hanno lo stesso tipo di dati e valore delle corrispondenti colonne di origine, con le seguenti eccezioni:  
   
--   **Timestamp** colonne sono definite come **Binary (8)**.  
+-   **Timestamp** le colonne sono definite come **binari (8)**.  
   
--   **Identità** colonne sono definite come **int** o **bigint**.  
+-   **Identità** le colonne sono definite come **int** o **bigint**.  
   
  Tuttavia, i valori in queste colonne sono uguali ai valori della colonna di origine.  
   
@@ -89,7 +89,7 @@ Il `__$command_id` colonna è una colonna è stata introdotta in un aggiornament
  Per le operazioni di inserimento ed eliminazione, sono impostati tutti i bit della maschera di aggiornamento. Per le operazioni di aggiornamento, la maschera di aggiornamento sia nelle vecchie righe aggiornate obsolete che nelle righe di nuovo aggiornamento sarà modificata per riflettere le colonne modificate durante l'aggiornamento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sys. sp_cdc_enable_table &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sp_cdc_get_ddl_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

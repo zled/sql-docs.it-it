@@ -1,4 +1,4 @@
-﻿---
+---
 title: Scaricare e installare SQL Operations Studio (preview) | Microsoft Docs
 description: Scaricare e installare Microsoft SQL Operations Studio (preview) per Windows, Mac OS o Linux
 ms.custom: tools|sos
@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5bf4e79bc1f7092ebe95ff29079f3412306cf7b1
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 836d34cdb019b7defd16736b21485a32474a8757
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare SQL Operations Studio (preview)
 
@@ -44,7 +44,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 1. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 
-**File con estensione zip**
+**file con estensione zip**
 
 1. Scaricare lo [ZIP di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=870838).
 2. Individuare il file scaricato e decomprimerlo.
@@ -60,7 +60,7 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere SQL Operations Studio (preview) per Linux
 
-1. Scaricare [! INCLUDERE[sos nome](../includes/name-sos-short.md) per Linux usando uno dei programmi di installazione o l'archivio GZ:
+1. Scaricare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux usando uno dei programmi di installazione o l'archivio GZ:
     - [.deb](https://go.microsoft.com/fwlink/?linkid=870842)
     - [.rpm](https://go.microsoft.com/fwlink/?linkid=870841)
     - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=870840)

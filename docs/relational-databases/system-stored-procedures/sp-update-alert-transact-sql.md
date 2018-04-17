@@ -2,7 +2,7 @@
 title: sp_update_alert (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d39736eed19992c5fa20bb1231aed3bcb20e3b0
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 64a669e37edf07ff897c94122e7e49d5899c1b6c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_update_alert
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@name =**] **'***name***'**  
+ [  **@name =**] **'***nome***'**  
  Nome dell'avviso da aggiornare. *nome* viene **sysname**, non prevede alcun valore predefinito.  
   
  [ **@new_name =**] **'***new_name***'**  
@@ -87,7 +87,7 @@ sp_update_alert
  [ **@delay_between_responses =**] *delay_between_responses*  
  Nuovo intervallo di attesa, in secondi, che intercorre tra le risposte all'avviso. *delay_between_responses* viene **int**, con un valore predefinito è NULL.  
   
- [ **@notification_message =**] **'***notification_message***'**  
+ [  **@notification_message =**] **'***notification_message***'**  
  Testo modificato di un messaggio aggiuntivo inviato all'operatore come parte del messaggio di posta elettronica, **net send**, o una notifica tramite cercapersone. *notification_message* viene **nvarchar(512)**, con un valore predefinito è NULL.  
   
  [ **@include_event_description_in =**] *include_event_description_in*  
@@ -101,7 +101,7 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|Tutto|  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'***database***'**  
  Nome del database nel quale deve verificarsi l'errore affinché l'avviso venga generato. *database* è **sysname.** I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
  [ **@event_description_keyword =**] **'***event_description_keyword***'**  
@@ -113,7 +113,7 @@ sp_update_alert
  [ **@job_name =**] **'***job_name***'**  
  Nome del processo che viene eseguito in risposta all'avviso. *job_name* viene **sysname**, con un valore predefinito è NULL. Se *job_name* è specificato, *job_id* deve essere omessa.  
   
- [ **@occurrence_count =** ] *occurrence_count*  
+ [  **@occurrence_count =** ] *numero_occorrenze*  
  Reimposta il numero di occorrenze dell'avviso. *numero_occorrenze* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
  [ **@count_reset_date =**] *count_reset_date*  
@@ -128,16 +128,16 @@ sp_update_alert
  [  **@last_occurrence_time =**] *last_occurrence_time*  
  Reimposta l'ora dell'ultima occorrenza dell'avviso. *last_occurrence_time* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
- [ **@last_response_date =**] *last_response_date*  
+ [  **@last_response_date =**] *last_response_date*  
  Reimposta la data dell'ultima risposta all'avviso inviata dal servizio SQLServerAgent. *last_response_date* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
- [ **@last_response_time =**] *last_response_time*  
+ [  **@last_response_time =**] *last_response_time*  
  Reimposta l'ora dell'ultima risposta all'avviso inviata dal servizio SQLServerAgent. *last_response_time* viene **int**, con un valore predefinito è NULL e può essere impostata solo su **0**.  
   
  [ **@raise_snmp_trap =**] *raise_snmp_trap*  
  Riservato.  
   
- [ **@performance_condition =**] **'***performance_condition***'**  
+ [  **@performance_condition =**] **'***performance_condition***'**  
  Un valore espresso nel formato **'***itemcomparatorvalue***'**. *performance_condition* viene **nvarchar(512)**, con un valore predefinito è NULL ed è costituito da questi elementi.  
   
 |Componente del formato|Description|  
@@ -146,10 +146,10 @@ sp_update_alert
 |*Criterio di confronto*|Uno degli operatori seguenti: **>**, **<**, **=**|  
 |*Valore*|Valore numerico del contatore|  
   
- [ **@category_name =**] **'***category***'**  
+ [  **@category_name =**] **'***categoria***'**  
  Nome della categoria di avvisi. *categoria* viene **sysname** con un valore predefinito è NULL.  
   
- [ **@wmi_namespace**= ] **'***wmi_namespace***'**  
+ [ **@wmi_namespace**=] **'***wmi_namespace***'**  
  Spazio dei nomi WMI in cui eseguire query per gli eventi. *wmi_namespace* viene **sysname**, con un valore predefinito è NULL.  
   
  [ **@wmi_query**= ] **'***wmi_query***'**  

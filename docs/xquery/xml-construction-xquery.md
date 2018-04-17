@@ -29,13 +29,13 @@ ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a3f85d368fa842f0e43eb8b0168c2d30741bfb2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4bc059b4e7da83f69180f93a8ac4b514767b2e69
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-construction-xquery"></a>Costruzione di strutture XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -553,7 +553,7 @@ test
 ### <a name="other-direct-xml-constructors"></a>Altri costruttori XML diretti  
  I costruttori per le istruzioni di elaborazione e i commenti XML utilizzano la stessa sintassi del costrutto XML corrispondente. Sono inoltre supportati costruttori calcolati per i nodi di testo, ma vengono utilizzati principalmente nel linguaggio XML DML per la costruzione di nodi di testo.  
   
- **Nota** per un esempio di utilizzo di un costruttore di nodo di testo ed esplicite, vedere l'esempio specifico in [insert &#40; Linguaggio XML DML &#41; ](../t-sql/xml/insert-xml-dml.md).  
+ **Nota** per un esempio dell'utilizzo di un costruttore di nodi di testo esplicito, vedere l'esempio specifico in [insert &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
  Nella query seguente il costrutto XML include un elemento, due attributi, un commento e un'istruzione di elaborazione. Si noti che prima di <`FirstLocation`> viene utilizzata una virgola, perché si sta costruendo una sequenza.  
   
@@ -590,7 +590,7 @@ where ProductModelID=7;
 ```  
   
 ## <a name="using-computed-constructors"></a>Utilizzo dei costruttori calcolati  
- . In questo caso si specificano le parole chiave che identificano il tipo di nodo da costruire. Sono supportate solo le parole chiave seguenti:  
+ tramite tabelle annidate. In questo caso si specificano le parole chiave che identificano il tipo di nodo da costruire. Sono supportate solo le parole chiave seguenti:  
   
 -   element  
   

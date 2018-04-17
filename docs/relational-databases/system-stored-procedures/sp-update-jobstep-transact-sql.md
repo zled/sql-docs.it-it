@@ -2,7 +2,7 @@
 title: sp_update_jobstep (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c81c22e3fb6de374b378df4ef52b316efe65fdb6
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 196ef988c33ad6b039af73e498ffba85bc1b2f7e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,10 +77,10 @@ sp_update_jobstep
  [ **@step_id =**] *step_id*  
  Numero di identificazione del passaggio del processo da modificare. Questo numero non è modificabile. *step_id*viene **int**, non prevede alcun valore predefinito.  
   
- [ **@step_name =**] **'***step_name***'**  
+ [  **@step_name =**] **'***step_name***'**  
  Nuovo nome del processo. *step_name*viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@subsystem =**] **'***subsystem***'**  
+ [  **@subsystem =**] **'***sottosistema***'**  
  Il sottosistema utilizzato da Microsoft SQL Server Agent per eseguire *comando*. *sottosistema* viene **nvarchar (40)**, con un valore predefinito è NULL.  
   
  [  **@command =**] **'***comando***'**  
@@ -121,13 +121,13 @@ sp_update_jobstep
  [ **@server =**] **'***server***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *server* viene **nvarchar (128)**, con un valore predefinito è NULL.  
   
- [ **@database_name =**] **'***database***'**  
+ [  **@database_name =**] **'***database***'**  
  Nome del database in cui eseguire un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *database*viene **sysname**. I nomi racchiusi tra parentesi quadre ([ ]) non sono ammessi. Il valore predefinito è NULL.  
   
- [ **@database_user_name =**] **'***user***'**  
+ [  **@database_user_name =**] **'***utente***'**  
  Nome dell'account utente da utilizzare quando viene eseguito un passaggio [!INCLUDE[tsql](../../includes/tsql-md.md)]. *utente*viene **sysname**, con un valore predefinito è NULL.  
   
- [ **@retry_attempts =**] *retry_attempts*  
+ [  **@retry_attempts =**] *retry_attempts*  
  Numero di tentativi da eseguire in caso di esecuzione errata del passaggio. *retry_attempts*viene **int**, con un valore predefinito è NULL.  
   
  [ **@retry_interval =**] *retry_interval*  
@@ -136,14 +136,14 @@ sp_update_jobstep
  [ **@os_run_priority =**] *run_priority*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@output_file_name =**] **'***file_name***'**  
+ [  **@output_file_name =**] **'***file_name***'**  
  Nome del file in cui salvare l'output del passaggio. *file_name* viene **nvarchar(200**, con un valore predefinito è NULL. Questo parametro è valido solo con comandi eseguiti nei sottosistemi [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
   
  Per impostare nuovamente output_file_name su NULL, è necessario impostare *output_file_name* su una stringa vuota (' ') o in una stringa di caratteri vuoti, ma è possibile utilizzare il **CHAR(32)** (funzione). Ad esempio, impostare questo argomento su una stringa vuota nel modo descritto di seguito:  
   
  **@output_file_name = ' '**  
   
- [ **@flags =**] *flags*  
+ [  **@flags =**] *flag*  
  Opzione che consente di controllare il comportamento. *i flag* viene **int**, e può essere uno dei valori seguenti.  
   
 |Value|Description|  
@@ -157,7 +157,7 @@ sp_update_jobstep
  [ **@proxy_id**= ] *proxy_id*  
  ID del proxy in base al quale viene eseguito il passaggio del processo. *proxy_id* è di tipo **int**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
+ [ **@proxy_name**=] **'***proxy_name***'**  
  Nome del proxy in base al quale viene eseguito il passaggio del processo. *proxy_name* è di tipo **sysname**, con un valore predefinito è NULL. Se non *proxy_id* è specificato, non *proxy_name* è specificato e nessun *nome_utente* viene specificata, il passaggio del processo viene eseguito come account del servizio per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valori restituiti  

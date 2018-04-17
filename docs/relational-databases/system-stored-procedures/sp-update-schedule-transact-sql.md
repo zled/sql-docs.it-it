@@ -2,7 +2,7 @@
 title: sp_update_schedule (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: system-stored-procedures
@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 23d1d4b4cfdc7fb19cffff63de8cae84b2606d6e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 5e7d510de0d66a72278cbacdbdfa9eedf49851ba
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [ **@schedule_id =** ] *schedule_id*  
+ [  **@schedule_id =** ] *schedule_id*  
  Identificatore della pianificazione da modificare. *schedule_id* viene **int**, non prevede alcun valore predefinito. Entrambi *schedule_id* o *schedule_name* deve essere specificato.  
   
  [  **@name =** ] **'***schedule_name***'**  
@@ -87,7 +87,7 @@ sp_update_schedule
 |**64**|All'avvio del servizio SQLServerAgent|  
 |**128**|Quando il computer è inattivo|  
   
- [ **@freq_interval =** ] *freq_interval*  
+ [  **@freq_interval =** ] *freq_interval*  
  Giorni in cui un processo viene eseguito. *freq_interval* viene **int**, il valore predefinito è **0**e dipende dal valore del *freq_type*.  
   
 |Value of *freq_type*|Effetto su *freq_interval*|  
@@ -96,7 +96,7 @@ sp_update_schedule
 |**4** (giornaliera)|Ogni *freq_interval* giorni.|  
 |**8** (settimanale)|*freq_interval* corrisponde a uno o più dei valori seguenti (combinato con un **OR** operatore logico):<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **4** = martedì<br /><br /> **8** = mercoledì<br /><br /> **16** = giovedì<br /><br /> **32** = venerdì<br /><br /> **64** = sabato|  
 |**16** (mensile)|Nel *freq_interval* giorno del mese.|  
-|**32** (frequenza mensile relativa)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = Wednesday<br /><br /> **5** = Thursday<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = Day<br /><br /> **9** = Weekday<br /><br /> **10** = giorno festivo|  
+|**32** (frequenza mensile relativa)|*freq_interval* è uno dei seguenti:<br /><br /> **1** = domenica<br /><br /> **2** = lunedì<br /><br /> **3** = martedì<br /><br /> **4** = mercoledì<br /><br /> **5** = giovedì<br /><br /> **6** = venerdì<br /><br /> **7** = sabato<br /><br /> **8** = giorno<br /><br /> **9** = giorno feriale<br /><br /> **10** = giorno festivo|  
 |**64** (all'avvio del servizio SQLServerAgent)|*freq_interval* è inutilizzato.|  
 |**128**|*freq_interval* è inutilizzato.|  
   
@@ -113,7 +113,7 @@ sp_update_schedule
  [ **@freq_subday_interval =** ] *freq_subday_interval*  
  Il numero di *freq_subday_type* periodi devono intercorrere tra ogni esecuzione di un processo. *freq_subday_interval*viene **int**, il valore predefinito è **0**.  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
+ [  **@freq_relative_interval =** ] *freq_relative_interval*  
  Occorrenza di un processo di *freq_interval* ogni mese, se *freq_interval* è **32** (frequenza mensile relativa). *freq_relative_interval*viene **int**, il valore predefinito è **0**, e può essere uno dei valori seguenti.  
   
 |Value|Descrizione (unità)|  
@@ -124,7 +124,7 @@ sp_update_schedule
 |**8**|Quarto|  
 |**16**|Ultimo|  
   
- [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
+ [  **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
  Numero di settimane o mesi tra le esecuzioni pianificate di un processo. *freq_recurrence_factor* viene utilizzata solo se *freq_type* viene **8**, **16**, o **32**. *freq_recurrence_factor*viene **int**, il valore predefinito è **0**.  
   
  [ **@active_start_date =** ]  *active_start_date*  
@@ -135,16 +135,16 @@ sp_update_schedule
  [ **@active_end_date =** ] *active_end_date*  
  Data dalla quale è possibile arrestare l'esecuzione del processo. *active_end_date*viene **int**, il valore predefinito è **99991231**, che indica il 31 dicembre 9999. La data è nel formato AAAAMMGG.  
   
- [ **@active_start_time =** ] *active_start_time*  
+ [  **@active_start_time =** ] *active_start_time*  
  L'ora compresa tra *active_start_date* e *active_end_date* per avviare l'esecuzione di un processo. *active_start_time*viene **int**, e il valore predefinito è 000000, che indica 12:00:00 A.M. nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
- [ **@active_end_time =** ] *active_end_time*  
+ [  **@active_end_time =** ] *active_end_time*  
  L'ora compresa tra *active_start_date* e *active_end_date* per terminare l'esecuzione di un processo. *active_end_time*viene **int**, il valore predefinito è **235959**, a indicare 11:59: le ore 23.59.59 nel formato a 24 ore e deve essere immesso nel formato HHMMSS.  
   
  [ **@owner_login_name**= ] **'***owner_login_name***'**]  
  Nome dell'entità server proprietaria della pianificazione. *owner_login_name* viene **sysname**, con un valore predefinito è NULL, a indicare che la pianificazione è di proprietà dell'autore.  
   
- [ **@automatic_post =**] *automatic_post*  
+ [  **@automatic_post =**] *automatic_post*  
  Riservato.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
