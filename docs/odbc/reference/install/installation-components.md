@@ -28,7 +28,7 @@ ms.lasthandoff: 12/21/2017
 ---
 # <a name="installation-components"></a>Componenti di installazione
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Il processo di installazione viene avviato quando l'utente esegue il programma di installazione. Il programma di installazione funziona in combinazione con il *installer DLL* e *DLL di installazione del driver* per ogni driver. Il programma di installazione sia il programma di installazione DLL utilizzare gli argomenti di **SQLInstallDriverEx** e **SQLInstallTranslatorEx** funzioni per determinare i file di copia o eliminazione per ogni componente. Nella figura seguente viene illustrata la relazione tra questi componenti di installazione.  
   
