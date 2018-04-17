@@ -1,26 +1,17 @@
 ---
 title: Machine Learning Server (Standalone) di SQL Server e R Server (Standalone) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-vms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3f6bb60e639517e458684486f36123d47a68dbf9
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 2c416049692f8860e4ba608e58f401ce527b135c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-machine-learning-server-standalone-and-r-server-standalone"></a>Machine Learning Server (Standalone) di SQL Server e R Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -74,7 +65,7 @@ Scrivere script R o Python utilizzando le funzioni da RevoScaleR revoscalepy e d
 
   + [Guida introduttiva: Un esempio di classificazione binaria con il pacchetto di Python microsoftml](https://docs.microsoft.com/machine-learning-server/python/quickstart-binary-classification-with-microsoftml): creare un modello di classificazione binaria usando le funzioni da microsoftml e noto esempio breast cancer dataset.
 
-Scegliere il linguaggio più adatto per l'attività. R è ideale per i calcoli statistici difficili da implementare con SQL. Per le operazioni sui dati basata su set, sfruttano la potenza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere prestazioni ottimali. Utilizzare il motore di database in memoria per i calcoli molto veloci applicati alle colonne.
+Scegliere il linguaggio più adatto per l'attività. R è ideale per i calcoli statistici difficili da implementare con SQL. Per le operazioni sui dati basata su set, sfruttare la potenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere prestazioni ottimali. Utilizzare il motore di database in memoria per i calcoli molto veloci su colonne.
 
 ### <a name="step-4-operationalize-your-solution"></a>Passaggio 4: Sincerarmi la soluzione
 
@@ -82,5 +73,5 @@ Server autonomi è possono usare il [rendere operativo](https://docs.microsoft.c
 
 ## <a name="see-also"></a>Vedere anche
 
- [SQL Server apprendimento Services (In-Database)](sql-server-r-services.md)
+ [Sul computer Server SQL Learning Services (In-Database)](sql-server-r-services.md)
 

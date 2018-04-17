@@ -1,31 +1,32 @@
 ---
 title: Sequenze di Escape GUID | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC escape sequences [ODBC], GUID
 - escape sequences [ODBC], guid
 - guid escape sequence [ODBC]
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 086161b4d0dd96f2da3cf12e6b88665ceeda42ae
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 40e4761c271c6ba143864d38b95440d5ac13aa43
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guid-escape-sequences"></a>Sequenze di Escape GUID
 ODBC utilizza le sequenze di escape per i valori letterali GUID. La sintassi di questa sequenza di escape è come segue:  
@@ -38,26 +39,26 @@ ODBC utilizza le sequenze di escape per i valori letterali GUID. La sintassi di 
  Nella notazione BNF, la sintassi è:  
   
  *ODBC-guid-escape* :: =  
-     *ODBC-esc-iniziatore guid* '*valore guid*' *ODBC-esc-carattere di terminazione*  
+     *Guid ODBC-esc-iniziatore* '*valore guid*' *ODBC-esc-carattere di terminazione*  
   
  *ODBC-esc-iniziatore* :: = {  
   
- *Terminatore di esc ODBC* :: =}  
+ *ODBC-esc-carattere di terminazione* :: =}  
   
- *valore GUID* :: = *nodo-valore del separatore di clock-valore guid separatore guid-intermedio-valore dell'orologio orologio di alto valore guid separatore separatore guid clock-seq-value*  
+ *valore GUID* :: = *nodo-valore del separatore di guid-low-valore dell'orologio del separatore guid-intermedio-valore dell'orologio del clock alto valore guid-separatore separatore guid-seq-valore dell'orologio*  
   
  *separatore di GUID* :: = -  
   
- *Clock-valore* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *low-valore dell'orologio* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *valore intermedio di orologio* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *valore dell'intermedio orologio* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
  *orologio di alto valore* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *clock-seq-value* :: = *hex_digit hex_digit hex_digit hex_digit*  
+ *valore dell'orologio-seq* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
  *valore di nodo clock* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 5 4 &#124; &#124; 7 6 &#124; &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
+ *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; 1!d &#124; E &#124; F  
   
  La sequenza di escape letterale GUID è supportata se il tipo di dati GUID è supportato dall'origine dati. Un'applicazione deve chiamare **SQLGetTypeInfo** per determinare se questo tipo di dati è supportato.

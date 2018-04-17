@@ -1,26 +1,19 @@
 ---
-title: Uso delle funzioni di profiling del codice R | Microsoft Docs
-ms.custom: ''
-ms.date: 11/29/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Utilizzo di funzioni (SQL Server Machine Learning) la profilatura del codice R | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 13ee1c64cf5caf9618fd8515aa467706eed331fe
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 05689ae356d415f9655b8709c619e40e6d8fa817
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="using-r-code-profiling-functions"></a>Uso delle funzioni di profiling del codice R
+# <a name="using-r-code-profiling-functions"></a>Mediante il codice R funzioni di profilatura
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Oltre a usare risorse e strumenti di SQL Server per monitorare l'esecuzione di script R, è possibile usare gli strumenti per le prestazioni forniti da altri pacchetti R per ottenere altre informazioni sulle chiamate di funzioni interne. Questo argomento contiene un elenco di alcune risorse di base per iniziare. Per linee guida per utenti esperti, è consigliabile fare riferimento al capitolo sulle [prestazioni](http://adv-r.had.co.nz/Performance.html) del libro ""Advanced R"" di Hadley Wickham.

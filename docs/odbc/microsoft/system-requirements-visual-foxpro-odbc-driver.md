@@ -1,15 +1,16 @@
 ---
 title: Requisiti di sistema (Driver ODBC di Visual FoxPro) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], accessing Visual FoxPro data
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ed926636cbfb7c31c9a6312abf296a7d1e4f0993
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d88a72ff8c871ecccf2f100e8b1472394492240e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisiti di sistema (Driver ODBC di Visual FoxPro)
 I requisiti di sistema per l'installazione specificare minima del sistema operativo e lo spazio su disco necessari per l'installazione del driver. Dopo aver installato il driver, è possibile selezionare il software specifico dell'applicazione che si desidera utilizzare per accedere ai dati di Visual FoxPro.  
@@ -54,7 +55,7 @@ I requisiti di sistema per l'installazione specificare minima del sistema operat
   
 -   Uno dei seguenti tipi di dati:  
   
-    -   Visual FoxPro [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [libero di tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   Visual FoxPro [database](../../odbc/microsoft/visual-foxpro-terminology.md) o una directory di [liberare tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
     -   FoxPro 2.0, 2.5, 2.6 [tabella](../../odbc/microsoft/visual-foxpro-terminology.md)  
   

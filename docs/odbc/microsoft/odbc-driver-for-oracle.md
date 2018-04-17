@@ -1,31 +1,32 @@
 ---
 title: Il Driver ODBC per Oracle | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], about ODBC driver for Oracle
 - Oracle data access [ODBC]
 ms.assetid: 937e0662-8b1d-44f7-b077-4015c6605b2c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 70ae9b447f0f3bcc6e70060b2f46f994ef3ea773
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1745942fff2488fe97d2860f17fc7b5239ba3942
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-driver-for-oracle"></a>Driver ODBC per Oracle
 > [!IMPORTANT]  
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Il Driver ODBC per Oracle consente a un'applicazione di accedere ai dati in un database Oracle tramite l'interfaccia ODBC. Il driver può accedere a database Oracle locali o può comunicare con la rete tramite SQL * Net. Nel diagramma seguente illustra in dettaglio l'architettura di applicazioni e driver.  
   
- ![Il Driver ODBC per Oracle app &#47; architettura driver](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
+ ![Driver ODBC per Oracle app&#47;architettura dei driver](../../odbc/microsoft/media/orcdrvsdkarch.gif "OrcDrvSDKArch")  
   
  Il Driver ODBC per Oracle è conforme a 1 livello di conformità di API e componenti di base del livello di conformità SQL. Supporta inoltre alcune funzioni in conformità di API di livello 2 e la maggior parte della grammatica nei livelli di conformità di base ed estesi di SQL. Il driver ODBC versione 2.5 conforme e supporta sistemi a 32 bit. Oracle 7.3 x è supportato completamente; Oracle8 offre supporto limitato. Il Driver ODBC per Oracle non supporta i nuovi tipi di dati Oracle8, tipi di dati Unicode, BLOB, CLOB, e così via, né il supporto per nuovo modello Oracle a oggetti relazionali. Per ulteriori informazioni sui tipi di dati supportati, vedere [Supported Data Types](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md) in questa Guida.  
   

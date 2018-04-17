@@ -1,31 +1,32 @@
 ---
 title: Codici di errore libreria di cursori ODBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cursor library [ODBC], error codes
 - error codes [ODBC], cursor library
 - ODBC cursor library [ODBC], error codes
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a182979a037ec21f7d86d907bb0f0c2a020191a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4962fe6c7dc7d7f31b23374dde98ac0bd59ea343
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="odbc-cursor-library-error-codes"></a>Codici di errore libreria di cursori ODBC
 > [!IMPORTANT]  
@@ -53,10 +54,10 @@ ms.lasthandoff: 12/21/2017
 |SL004|Set di risultati non è stato generato da un **selezionare** istruzione.|**SQLGetData**|  
 |SL005|**Selezionare** istruzione contiene una clausola GROUP BY.|**SQLGetData**|  
 |SL006|Le matrici di parametri non sono supportate con le richieste di posizione.|**SQLPrepare**<br /><br /> **SQLExecDirect**|  
-|SL008|**SQLGetData** non è consentita su un cursore forward-only (funzionalità).|**SQLGetData**|  
+|SL008|**SQLGetData** non è consentita su un cursore forward-only (senza buffer).|**SQLGetData**|  
 |SL009|Nessuna colonna associata prima di chiamare **SQLFetch** o **SQLFetchScroll**.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |SL010|**SQLBindCol** restituito SQL_ERROR durante un tentativo di associare un buffer interno.|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
 |SL011|Opzione di istruzione è valida solo dopo la chiamata **SQLFetch** o **SQLFetchScroll**.|**SQLGetStmtAttr**|  
-|SL012|Associazioni di istruzione non possono essere modificate mentre è aperto un cursore.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **SQLSetStmtAttr**|  
+|SL012|Associazioni di istruzione non possono essere modificate mentre è aperto un cursore.|**SQLBindCol**<br /><br /> **SQLFreeHandle**<br /><br /> **SQLFreeStmt**<br /><br /> **Funzione SQLSetStmtAttr**|  
 |SL014|È stata eseguita una richiesta di posizione e non tutti i campi numero di colonna sono stati memorizzati nel buffer.|**SQLExecDirect**<br /><br /> **SQLExecute**<br /><br /> **SQLPrepare**|  
-|SL015|**SQLFetch** e **SQLFetchScroll** non possono essere combinate.|**SQLExtendedFetch.**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|
+|SL015|**SQLFetch** e **SQLFetchScroll** ReadContentAsBase64 e ReadContentAsBinHex.|**SQLExtendedFetch.**<br /><br /> **SQLFetch**<br /><br /> **SQLFetchScroll**|

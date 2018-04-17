@@ -1,31 +1,32 @@
 ---
 title: Istruzione transizioni | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transitioning states [ODBC], statement
 - state transitions [ODBC], statement
 - statement transitions [ODBC]
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50a20cb922b3f608a9d16cd24d5c288b096e01ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a0566a32a2c34efca52391aea656c6908a7f8906
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statement-transitions"></a>Transizioni di istruzione
 Le istruzioni ODBC presentano gli stati seguenti.  
@@ -125,7 +126,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
 |-----------------------------|-----------------------------|  
 |S12 NS [1] [2]|S12|  
   
- [1] l'istruzione è stata temporaneamente nello stato S11 durante l'esecuzione di una funzione. **SQLCancel** è stato chiamato da un thread diverso.  
+ [1] l'istruzione è stata temporaneamente nello stato S11 durante l'esecuzione di una funzione. **SQLCancel** è stato chiamato da un altro thread.  
   
  [2] l'istruzione si trovava nello stato S11 perché una funzione chiamata in modo asincrono restituito SQL_STILL_EXECUTING.  
   
@@ -155,7 +156,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S0<br /><br /> Non allocato|S1<br /><br /> Allocato|S2 – S3<br /><br /> Prepared|S4<br /><br /> Esecuzione|S5 – S7<br /><br /> Cursore|S8 – S10<br /><br /> Dati necessari|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(QUALI)|S5 [s] S11 [x]|S1 S5 [e] [s] S11 [x]|S1 [e] e [1] S5 [s] e [1] S11 [x] e [1] 24000 [2]|Vedere la tabella successiva|HY010|O HY010 NS [c]|  
+|(IH)|S5 [s] S11 [x]|S1 S5 [e] [s] S11 [x]|S1 [e] e [1] S5 [s] e [1] S11 [x] e [1] 24000 [2]|Vedere la tabella successiva|HY010|O HY010 NS [c]|  
   
  [1] il risultato corrente è l'ultima o un solo risultato o nessun risultato corrente. Per ulteriori informazioni sui più risultati, vedere [più risultati](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -240,7 +241,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S0<br /><br /> Non allocato|S1<br /><br /> Allocato|S2 – S3<br /><br /> Prepared|S4<br /><br /> Esecuzione|S5 – S7<br /><br /> Cursore|S8 – S10<br /><br /> Dati necessari|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(QUALI)|S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e] e [1] S1 [e] e [2] S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e], [1], [3] S1 e [e], [2], S4 [3] [s] e [nr,] e [3] S5 [s], [r], S8 [3] e [d] e [3] S11 [x] e [3] 24000 [4]|Vedere la tabella successiva|HY010|HY010 NS [c] [o]|  
+|(IH)|S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e] e [1] S1 [e] e [2] S4 [s] e [nr] S5 [s] e [r] S11 S8 [d] [x]|-[e], [1], [3] S1 e [e], [2], S4 [3] [s] e [nr,] e [3] S5 [s], [r], S8 [3] e [d] e [3] S11 [x] e [3] 24000 [4]|Vedere la tabella successiva|HY010|HY010 NS [c] [o]|  
   
  [1] errore è stato restituito da Gestione Driver.  
   
@@ -262,7 +263,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S0<br /><br /> Non allocato|S1<br /><br /> Allocato|S2 – S3<br /><br /> Prepared|S4<br /><br /> Esecuzione|S5 – S7<br /><br /> Cursore|S8 – S10<br /><br /> Dati necessari|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(QUALI)|(HY010)|Vedere la tabella successiva|S2 [e], p e [1] S4 [s], [p], [nr,] e [1] S5 [s], [p], [r] e S8 [d] [p], [1] e [1] S11 [x], [p] e [1] 24000 [p] e [2] HY010 [np]|Vedere la tabella degli stati di cursore|HY010|HY010 NS [c] [o]|  
+|(IH)|(HY010)|Vedere la tabella successiva|S2 [e], p e [1] S4 [s], [p], [nr,] e [1] S5 [s], [p], [r] e S8 [d] [p], [1] e [1] S11 [x], [p] e [1] 24000 [p] e [2] HY010 [np]|Vedere la tabella degli stati di cursore|HY010|HY010 NS [c] [o]|  
   
  [1] il risultato corrente è l'ultima o un solo risultato o nessun risultato corrente. Per ulteriori informazioni sui più risultati, vedere [più risultati](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -438,7 +439,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S0<br /><br /> Non allocato|S1<br /><br /> Allocato|S2 – S3<br /><br /> Prepared|S4<br /><br /> Esecuzione|S5 – S7<br /><br /> Cursore|S8 – S10<br /><br /> Dati necessari|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(QUALI)|--[1]|--[1]|-[s] e [2] S1 [nf], [np], [4] S2 e [nf], [p], [4] S5 e [s] e [3] S11 [x]|S1 [nf], [np], [4] S3 e [nf], [p] e [4] S4 [s] e [2] S5 [s] e [3] S11 [x]|HY010|HY010 NS [c] [o]|  
+|(IH)|--[1]|--[1]|-[s] e [2] S1 [nf], [np], [4] S2 e [nf], [p], [4] S5 e [s] e [3] S11 [x]|S1 [nf], [np], [4] S3 e [nf], [p] e [4] S4 [s] e [2] S5 [s] e [3] S11 [x]|HY010|HY010 NS [c] [o]|  
   
  [1] la funzione restituisce sempre SQL_NO_DATA in questo stato.  
   
@@ -492,7 +493,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S0<br /><br /> Non allocato|S1<br /><br /> Allocato|S2 – S3<br /><br /> Prepared|S4<br /><br /> Esecuzione|S5 – S7<br /><br /> Cursore|S8 – S10<br /><br /> Dati necessari|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(QUALI)|S2 [s] e [nr] S3 [s] e [r] S11 [x]|-[s] o ([e] e [1]) S1 [e] e [2] S11 [x]|S1 [e] e [3] S2 [s], [nr,] e [3] S3 [s], [r], [3] S11 e [x] e [3] 24000 [4]|Vedere la tabella successiva|HY010|HY010 NS [c] [o]|  
+|(IH)|S2 [s] e [nr] S3 [s] e [r] S11 [x]|-[s] o ([e] e [1]) S1 [e] e [2] S11 [x]|S1 [e] e [3] S2 [s], [nr,] e [3] S3 [s], [r], [3] S11 e [x] e [3] 24000 [4]|Vedere la tabella successiva|HY010|HY010 NS [c] [o]|  
   
  [1] la preparazione non riesce per una ragione diversa dalla convalida l'istruzione (il valore SQLSTATE è HY009 [valore argomento non valido] o HY090 [stringa di lunghezza o non valida del buffer]).  
   
@@ -536,7 +537,7 @@ Le istruzioni ODBC presentano gli stati seguenti.
   
 |S0<br /><br /> Non allocato|S1<br /><br /> Allocato|S2 – S3<br /><br /> Prepared|S4<br /><br /> Esecuzione|S5 – S7<br /><br /> Cursore|S8 – S10<br /><br /> Dati necessari|S11 – S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(QUALI)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
+|(IH)|(HY010)|(HY010)|--|--|(HY010)|(HY010)|  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   

@@ -1,23 +1,17 @@
 ---
 title: Modificare il pool di account utente per l'apprendimento automatico di SQL Server | Documenti Microsoft
-ms.date: 11/03/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 7c1efa87fef881a8b88b0967716ec062cf95e64f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 77b84e3117b0a1366f3d0b5f9d74802d938bc86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modify-the-user-account-pool-for-sql-server-machine-learning"></a>Modificare il pool di account utente per l'apprendimento automatico di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +29,7 @@ Il gruppo di account Windows viene creato da [!INCLUDE[ssNoVersion](../../includ
 -   In un'istanza predefinita il nome del gruppo è **SQLRUserGroup**. Il nome è lo stesso, se si usa R, Python o entrambi.
 -   In un'istanza denominata il nome predefinito del gruppo ha un suffisso con il nome dell'istanza: ad esempio, **SQLRUserGroupNomeIstanza**.
 
-Per impostazione predefinita, il pool di account utente contiene 20 account utente. Nella maggior parte dei casi, è più che sufficiente per supportare l'attività di machine learning 20, ma è possibile modificare il numero di account.
+Per impostazione predefinita, il pool di account utente contiene 20 account utente. Nella maggior parte dei casi, è più che sufficiente per supportare l'attività di machine learning 20, ma è possibile modificare il numero di account. Il numero massimo di account è 100.
 -  In un'istanza predefinita i singoli account sono denominati da **MSSQLSERVER01** a **MSSQLSERVER20**.
 -   Per un'istanza denominata il nome dei singoli account dipende dal nome dell'istanza: ad esempio da **NomeIstanza01** a **NomeIstanza20**.
 
@@ -50,7 +44,7 @@ Le password associate a ciascun account utente vengono generate in modo casuale,
 1. Aprire Gestione configurazione SQL Server e selezionare **Servizi di SQL Server**.
 2. Fare doppio clic sul servizio Launchpad di SQL Server e arrestare il servizio, se è in esecuzione.
 3.  Nella scheda **Servizio** verificare che la modalità di avvio sia impostata come automatica. Quando la finestra di avvio non è in esecuzione, non è possibile avviare script esterni.
-4.  Fare clic sulla scheda **Avanzate** e modificare il valore di **Conteggio degli utenti esterni**, se necessario. Questa impostazione determina il numero di utenti SQL diverso possibile eseguire script esterno sessioni contemporaneamente. Il valore predefinito è 20 account.
+4.  Fare clic sulla scheda **Avanzate** e modificare il valore di **Conteggio degli utenti esterni**, se necessario. Questa impostazione determina il numero di utenti SQL diverso possibile eseguire script esterno sessioni contemporaneamente. Il valore predefinito è 20 account. Il numero massimo di utenti è 100.
 5. Facoltativamente, è possibile impostare l'opzione **Reimposta password utenti esterni** su _Sì_ se l'organizzazione ha criteri che richiedono la modifica delle password a intervalli regolari. In questo modo, le password crittografate gestite da Launchpad per gli account utente verranno rigenerate. Per altre informazioni, vedere [Applicazione dei criteri delle password](#bkmk_EnforcePolicy).
 6.  Riavviare il servizio Launchpad.
 

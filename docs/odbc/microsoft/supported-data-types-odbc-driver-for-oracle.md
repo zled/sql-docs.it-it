@@ -1,30 +1,31 @@
 ---
 title: Tipi di dati, il Driver ODBC per Oracle, supportati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], data types
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f27ad3bca1f6106c2645823b3e02bf67723dd2a1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9863c45a3667d9c6b211a0a62d7577bb3189644d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Tipi di dati supportati (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -36,19 +37,19 @@ ms.lasthandoff: 12/21/2017
 |---------------|----------------|-------------|  
 |BFILE|n/d|Non supportato|  
 |BLOB|n/d|Non supportato|  
-|CHAR|Supportato|Supportato|  
+|CHAR|Supported|Supported|  
 |CLOB|n/d|Non supportato|  
-|DATE|Supportato|Supportato|  
-|FLOAT|Supportato|Supportato|  
-|INTEGER|Supportato|Supportato|  
-|LONG|Supportato|Supportato|  
-|LONG RAW|Supportato|Supportato|  
+|DATE|Supported|Supported|  
+|FLOAT|Supported|Supported|  
+|INTEGER|Supported|Supported|  
+|LONG|Supported|Supported|  
+|LONG RAW|Supported|Supported|  
 |NCHAR|n/d|Non supportato|  
 |NCLOB|n/d|Non supportato|  
-|NUMBER|Supportato|Supportato|  
+|NUMBER|Supported|Supported|  
 |NVARCHAR2|n/d|Non supportato|  
-|RAW|Supportato|Supportato|  
-|VARCHAR2|Supportato|Supportato|  
+|RAW|Supported|Supported|  
+|VARCHAR2|Supported|Supported|  
 |MLSLABEL|Non supportato.|Non supportato.|  
   
 > [!NOTE]  

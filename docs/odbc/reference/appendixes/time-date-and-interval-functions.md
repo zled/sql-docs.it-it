@@ -1,15 +1,16 @@
 ---
 title: Funzioni di intervallo, ora e data | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], time functions
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - time functions [ODBC]
 - date functions [ODBC]
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3d32dc500c2f57919757224d64b3f5c21c6f6423
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="time-date-and-interval-functions"></a>Funzioni di data, ora e intervallo
 La tabella seguente elenca le funzioni di data e ora che sono inclusi nel set di funzioni scalari ODBC. Un'applicazione può determinare quali funzioni di data e ora sono supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_TIMEDATE_FUNCTIONS.  
@@ -43,18 +44,18 @@ La tabella seguente elenca le funzioni di data e ora che sono inclusi nel set di
   
 |Funzione|Description|  
 |--------------|-----------------|  
-|**() CURRENT_DATE** (ODBC 3.0)|Restituisce la data corrente.|  
+|**FUNZIONE CURRENT_DATE ()** (ODBC 3.0)|Restituisce la data corrente.|  
 |**CURRENT_TIME [(** *precisione temporale* **)]** (ODBC 3.0)|Restituisce l'ora locale corrente. Il *precisione temporale* argomento determina la precisione dei secondi del valore restituito.|  
-|**CURRENT_TIMESTAMP**<br /> **[(** *timestamp precisione* **)]** (ODBC 3.0)|Restituisce la data locale corrente e l'ora locale come un valore di timestamp. Il *timestamp precisione* argomento determina la precisione dei secondi del timestamp restituito.|  
-|**() CURDATE** (ODBC 1.0)|Restituisce la data corrente.|  
-|**() CURTIME** (ODBC 1.0)|Restituisce l'ora locale corrente.|  
-|**DAYNAME (** *date_exp* **)** (ODBC 2.0)|Restituisce una stringa di caratteri contenente il nome di specifici dell'origine dati del giorno (ad esempio, Sunday a Saturday o da Sun. a Sat per un'origine dati che utilizza l'inglese o da lunedì a domenica per un'origine dati che utilizza l'italiano) per la parte del giorno *date_exp*.|  
+|**CURRENT_TIMESTAMP**<br /> **[(** *timestamp e con precisione* **)]** (ODBC 3.0)|Restituisce la data locale corrente e l'ora locale come un valore di timestamp. Il *timestamp precisione* argomento determina la precisione dei secondi del timestamp restituito.|  
+|**CURDATE ()** (ODBC 1.0)|Restituisce la data corrente.|  
+|**FUNZIONE CURTIME ()** (ODBC 1.0)|Restituisce l'ora locale corrente.|  
+|**Funzione DAYNAME (** *date_exp* **)** (ODBC 2.0)|Restituisce una stringa di caratteri contenente il nome di specifici dell'origine dati del giorno (ad esempio, Sunday a Saturday o da Sun. a Sat per un'origine dati che utilizza l'inglese o da lunedì a domenica per un'origine dati che utilizza l'italiano) per la parte del giorno *date_exp*.|  
 |**DAYOFMONTH (** *date_exp* **)** (ODBC 1.0)|Restituisce il giorno del mese in base al campo del mese in *date_exp* come valore intero compreso nell'intervallo da 1 a 31.|  
 |**DAYOFWEEK (** *date_exp* **)** (ODBC 1.0)|Restituisce il giorno della settimana in base al campo della settimana in *date_exp* come valore intero compreso nell'intervallo 1-7, dove 1 corrisponde a domenica.|  
 |**DAYOFYEAR (** *date_exp* **)** (ODBC 1.0)|Restituisce il giorno dell'anno in base al campo year nella *date_exp* come valore intero compreso nell'intervallo da 1 a 366.|  
 |**ESTRARRE (** *Estrai campo FROM* *origine estrazione* **)** (ODBC 3.0)|Restituisce il *Estrai campo* parte il *origine estrazione*. Il *origine estrazione* argomento è un'espressione datetime o intervallo. Il *Estrai campo* argomento può essere una delle parole chiave seguenti:<br /><br /> ANNO MESE GIORNO ORA MINUTO SECONDO<br /><br /> La precisione del valore restituito è definito dall'implementazione. La scala è 0 se non è specificato in secondo luogo, nel qual caso la scala non è la precisione dei secondi frazionari di minore di *origine estrazione* campo.|  
 |**ORA (** *time_exp* **)** (ODBC 1.0)|Restituisce l'ora in base al campo dell'ora in *time_exp* come valore intero compreso nell'intervallo 0-23.|  
-|**MINUTO (** *time_exp* **)** (ODBC 1.0)|Restituisce i minuti in base al campo relativo ai minuti in *time_exp* come valore intero compreso nell'intervallo 0-59.|  
+|**MINUTI (** *time_exp* **)** (ODBC 1.0)|Restituisce i minuti in base al campo relativo ai minuti in *time_exp* come valore intero compreso nell'intervallo 0-59.|  
 |**MESE (** *date_exp* **)** (ODBC 1.0)|Restituisce il mese in base al campo del mese in *date_exp* come valore intero compreso nell'intervallo da 1 a 12.|  
 |**MONTHNAME (** *date_exp* **)** (ODBC 2.0)|Restituisce una stringa di caratteri contenente il nome del mese (ad esempio, da gennaio a dicembre o Jan a DEC per un'origine dati che utilizza l'inglese o da gennaio a dicembre per un'origine dati che utilizza l'italiano) specifici dell'origine di dati per la parte del mese *date_exp*.|  
 |**ORA ()** (ODBC 1.0)|Restituisce una data e ora come valore timestamp corrente.|  

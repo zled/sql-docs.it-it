@@ -1,31 +1,24 @@
 ---
 title: Cosa&#39;novità di servizi di SQL Server Machine Learning s | Documenti Microsoft
-ms.date: 03/17/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 07c21de29f41826d1314f92f77fd9277f84cb0e7
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità di servizi di SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Funzionalità di Machine learning vengono aggiunti a SQL Server in ogni versione, per continuare a espandere, estendere e approfondire l'integrazione tra la piattaforma di dati e di analisi scientifica dei dati, analitica e si desidera implementare sui dati di apprendimento supervisionato. 
 
-## <a name="new-in-sql-server-2017"></a>New in SQL Server 2017
+## <a name="new-in-sql-server-2017"></a>Novità di SQL Server 2017
 
 Questa versione aggiunto supporto Python e algoritmi di apprendimento automatico leader del settore. Rinominato in modo da riflettere il nuovo ambito, SQL Server 2017 contrassegnato l'introduzione del **SQL Server Machine Learning Services (In-Database)**, con supporto del linguaggio per Python e R. 
 
@@ -44,7 +37,7 @@ Questa versione è stata introdotta anche **Machine Learning Server (Standalone)
 | Versione iniziale | [**Rendere operativo il tramite mrsdeploy** ](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package) per la distribuzione e l'hosting di script R come servizio web. Si applica solo script R (alcun equivalente di Python). Deve essere l'opzione server (Standalone) evitare conflitti di risorse con altre operazioni di SQL Server. |
 
 
-## <a name="new-in-sql-server-2016"></a>New in SQL Server 2016
+## <a name="new-in-sql-server-2016"></a>Novità di SQL Server 2016
 
 Questa macchina versione introdotto apprendimento delle funzionalità in SQL Server tramite **R Services di SQL Server 2016**, un motore di database analitica per script di elaborazione R sui dati residenti all'interno di un'istanza del motore di database.
 

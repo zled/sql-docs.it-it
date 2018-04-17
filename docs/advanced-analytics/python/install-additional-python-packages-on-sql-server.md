@@ -1,60 +1,53 @@
 ---
-title: Installare i nuovi pacchetti Python in SQL Server | Documenti Microsoft
-ms.date: 02/20/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: python
-ms.technology:
-- r-services
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Installare i nuovi pacchetti Python in SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: dbf91e37bde5e648113ce2040f695fd41047808d
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installare i nuovi pacchetti Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo viene descritto come installare i nuovi pacchetti Python in un'istanza di SQL Server 2017.
+In questo articolo viene descritto come installare i nuovi pacchetti Python in un'istanza di SQL Server 2017 Machine Learning Services.
 
-In generale, il processo per l'installazione di nuovi pacchetti è simile a quello in un ambiente standard di Python. Tuttavia, alcuni passaggi aggiuntivi sono necessari se il server non dispone di una connessione a internet.
+In generale, il processo per l'installazione di nuovi pacchetti è simile a quello in un ambiente standard di Python. Tuttavia, alcuni passaggi aggiuntivi sono necessari se il server non dispone di una connessione internet.
 
-Per informazioni sulla immaginando in cui sono installati i pacchetti o i pacchetti installati, vedere [visualizzazione installati pacchetti R o Python](../r/determine-which-packages-are-installed-on-sql-server.md).
+Per informazioni su evincere in cui sono installati i pacchetti o i pacchetti installati, vedere [visualizzazione installati pacchetti R o Python](../r/determine-which-packages-are-installed-on-sql-server.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 + È necessario avere installato Servizi di Machine Learning (In-Database) con l'opzione di linguaggio Python. Per istruzioni, vedere [installare SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md).
 
-+ Per ogni istanza del server, è necessario installare una copia separata del pacchetto. Pacchetti non possono essere condivisi tra le istanze.
++ Per ogni istanza del server, è necessario installare una copia separata del pacchetto. Pacchetti non possono essere condivisa tra più istanze.
 
 + Determinare se il pacchetto che si intende utilizzare funzionerà con Python 3.5 e nell'ambiente di Windows. 
 
-+ Valutare se il pacchetto è una scelta ottimale per l'utilizzo nell'ambiente di SQL Server. In genere un server di database supporta più servizi e applicazioni Web e le risorse nel file system potrebbero essere limitato, nonché le connessioni al server. In molti casi l'accesso a Internet è bloccato completamente.
++ Valutare se il pacchetto è una scelta ottimale per l'utilizzo nell'ambiente di SQL Server. In genere un server di database supporta più servizi e applicazioni e risorse nel file system potrebbero essere limitato, nonché le connessioni al server. In molti casi l'accesso a Internet è bloccato completamente.
 
-    Altri problemi comuni includono l'utilizzo di funzionalità che è stata bloccata nel server o da firewall o i pacchetti con le dipendenze che non possono essere installate in un computer Windows di rete. 
+    Altri problemi comuni includono l'utilizzo di funzionalità che è stata bloccata nel server o il firewall, o i pacchetti con le dipendenze che non possono essere installate in un computer Windows di rete. 
 
-    Alcuni pacchetti Python diffusi (ad esempio pallone) eseguono attività quali lo sviluppo web che eseguono migliori in un ambiente autonomo. È consigliabile utilizzare Python nel database per le attività, ad esempio machine learning, che richiedono l'elaborazione di dati con utilizzo intensivo che traggono vantaggio da una stretta integrazione con il motore di database, anziché semplicemente una query del database.
+    Alcuni pacchetti Python diffusi (ad esempio pallone) eseguono attività quali lo sviluppo web che eseguono migliori in un ambiente autonomo. È consigliabile utilizzare Python nel database per attività quali l'apprendimento automatico, che richiedono l'elaborazione dei dati con utilizzo intensivo che traggono vantaggio da una stretta integrazione con il motore di database, anziché semplicemente una query sul database.
 
-+ L'accesso amministrativo al server è necessario installare i pacchetti.
++ Accesso amministrativo al server è necessario installare i pacchetti.
 
 ## <a name="add-a-new-python-package"></a>Aggiunge un nuovo pacchetto di Python
 
 In questo esempio si presuppone che si desidera installare un nuovo pacchetto direttamente nel computer SQL Server.
 
-Il pacchetto installato in questo esempio viene [CNTK](https://docs.microsoft.com/cognitive-toolkit/), un framework per la formazione di Microsoft che supporta la personalizzazione, set di training e la condivisione di tipi diversi di reti neurali.
+Il pacchetto installato in questo esempio è [CNTK](https://docs.microsoft.com/cognitive-toolkit/), un framework per la formazione di Microsoft che supporta la personalizzazione, set di training e la condivisione di tipi diversi di reti neurali.
 
 > [!TIP]
 > Serve aiuto per configurare gli strumenti Python? Vedere i blog:
 > 
-> [Introduzione a servizi Web di Python mediante Machine Learning Server](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
+> [Introduzione a servizi Web di Python con Server di Machine Learning](https://blogs.msdn.microsoft.com/mlserver/2017/12/13/getting-started-with-python-web-services-using-machine-learning-server/)
 > 
 > [David Crook: Microsoft cognitivi Toolkit + Visual Studio Code](http://dacrook.com/cntk-vs-code-awesome/)
 
@@ -67,7 +60,7 @@ Il pacchetto installato in questo esempio viene [CNTK](https://docs.microsoft.co
 + SQL Server 2017 Usa Python 3.5. 
 
 > [!IMPORTANT]
-> Assicurarsi ottenere la versione di Windows del pacchetto. Se il file termina .gz, probabilmente non è la versione corretta.
+> Assicurarsi che si ottiene la versione del pacchetto di Windows. Se il file termina .gz, probabilmente non è la versione corretta.
 
 Questa pagina contiene i download per più piattaforme e per più versioni di Python: [impostare CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
@@ -75,16 +68,16 @@ Questa pagina contiene i download per più piattaforme e per più versioni di Py
 
 Individuare il percorso di libreria Python predefinito utilizzato da SQL Server. Se è stato installato più istanze, individuare la cartella PYTHON_SERVICE per l'istanza in cui si desidera aggiungere il pacchetto.
 
-Ad esempio, se Machine Learning Services è stato installato utilizzando le impostazioni predefinite e apprendimento automatico è abilitato nell'istanza predefinita, il percorso sarà come segue:
+Ad esempio, se Machine Learning Services è stato installato utilizzando le impostazioni predefinite e l'apprendimento è abilitato nell'istanza predefinita, il percorso sarà come segue:
 
     `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 Aprire il prompt dei comandi di Python associato all'istanza.
 
 > [!TIP]
-> Per future debug e test, si potrebbe voler impostare un ambiente di Python specifiche per la libreria di istanza.
+> Per future, debug e test, si potrebbe voler impostare un ambiente di Python specifiche per la libreria di istanza.
 
-### <a name="step-3-install-the-package-using-pip"></a>Passaggio 3. Installare il pacchetto mediante pip
+### <a name="step-3-install-the-package-using-pip"></a>Passaggio 3. Installare il pacchetto utilizzando pip
 
 + Se si è abituati a Python dalla riga di comando, utilizzare PIP.exe per installare i nuovi pacchetti. È possibile trovare il **pip** programma di installazione di `Scripts` sottocartella. 
 
@@ -94,15 +87,15 @@ Aprire il prompt dei comandi di Python associato all'istanza.
 
     `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts`
 
-+ Se si utilizza Visual Studio 2017 o Visual Studio 2015 con le estensioni di Python, è possibile eseguire `pip install` dal **gli ambienti Python** finestra. Fare clic su **pacchetti**e nella casella di testo, specificare il nome o il percorso del pacchetto da installare. Non è necessario digitare `pip install`; quindi viene inserito automaticamente automaticamente. 
++ Se si utilizza Visual Studio 2017 o Visual Studio 2015 con le estensioni di Python, è possibile eseguire `pip install` dal **ambienti Python** finestra. Fare clic su **pacchetti**e nella casella di testo, specificare il nome o il percorso del pacchetto da installare. Non è necessario digitare `pip install`; quindi viene inserito automaticamente automaticamente. 
 
-    - Se il computer abbia accesso a Internet, fornire il nome del pacchetto o l'URL di un pacchetto specifico e una versione. 
+    - Se il computer ha accesso a Internet, fornire il nome del pacchetto o l'URL di un pacchetto specifico e una versione. 
     
-    Ad esempio, per installare la versione di CNTK supportato per Windows e 3.5 di Python, specificare l'URL di download: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
+    Ad esempio, per installare la versione di CNTK che è supportato per Windows e 3.5 di Python, specificare l'URL di download: `https://cntk.ai/PythonWheel/CPU-Only/cntk-2.1-cp35-cp35m-win_amd64.whl`
 
-    - Se il computer non ha accesso a internet, è necessario scaricare il file WHL prima di iniziare l'installazione. Quindi, specificare il nome e percorso del file locale. Ad esempio, incollare il percorso e il file per installare il file WHL scaricato dal sito seguente: `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
+    - Se il computer non ha accesso a internet, è necessario scaricare il file WHL prima di iniziare l'installazione. Quindi, specificare il percorso del file locale e il nome. Ad esempio, incollare il percorso e il file per installare il file WHL scaricato dal sito seguente: `"C:\Downloads\CNTK\cntk-2.1-cp35-cp35m-win_amd64.whl"`
 
-Verrà richiesto di elevare le autorizzazioni per completare l'installazione.
+Potrebbe essere necessario elevare le autorizzazioni per completare l'installazione.
 
 Durante l'installazione, è possibile visualizzare messaggi di stato nella finestra del prompt dei comandi:
 
@@ -133,7 +126,7 @@ cntk._version_
 
 ##  <a name="how-to-view-installed-packages-using-conda"></a>Come visualizzare i pacchetti installati utilizzando conda
 
-Esistono diversi modi in cui è possibile ottenere un elenco dei pacchetti installati. Ad esempio, è possibile visualizzare i pacchetti installati nel **gli ambienti Python** windows di Visual Studio.
+Esistono diversi modi in cui è possibile ottenere un elenco dei pacchetti installati. Ad esempio, è possibile visualizzare i pacchetti installati nel **ambienti Python** windows di Visual Studio.
 
 Se si utilizza la riga di comando di Python, è possibile utilizzare il **conda** package manager, che è incluso con l'ambiente Anaconda Python aggiunto dal programma di installazione di SQL Server.
 
@@ -143,4 +136,4 @@ Per visualizzare i pacchetti Python che sono stati installati nell'ambiente corr
 conda list
 ```
 
-Per ulteriori informazioni **conda** e come è possibile usarlo per creare e gestire più ambienti Python, vedere [la gestione di ambienti con conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).
+Per ulteriori informazioni su **conda** e come è possibile usarlo per creare e gestire più ambienti Python, vedere [la gestione di ambienti con conda](https://conda.io/docs/user-guide/tasks/manage-environments.html).

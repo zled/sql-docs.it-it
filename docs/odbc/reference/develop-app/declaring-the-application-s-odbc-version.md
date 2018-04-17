@@ -1,15 +1,16 @@
 ---
-title: La dichiarazione dell'applicazione &#39; s ODBC versione | Documenti Microsoft
-ms.custom: 
+title: Dichiarare l'applicazione&#39;s ODBC versione | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declaring ODBC version [ODBC]
@@ -19,18 +20,18 @@ helpviewer_keywords:
 - connecting to data source [ODBC], declaring ODBC version
 - version declaration [ODBC]
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c021fb123e0a8cf861fa91fe78d3882ba16111e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2753c4b75f92c2ca48e3e87b25f8c92124ddd4c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="declaring-the-application39s-odbc-version"></a>La dichiarazione dell'applicazione &#39; s versione ODBC
+# <a name="declaring-the-application39s-odbc-version"></a>Dichiarare l'applicazione&#39;s versione ODBC
 Prima di un'applicazione alloca una connessione, è necessario impostare l'attributo di ambiente SQL_ATTR_ODBC_VERSION. Questo attributo indica che l'applicazione seguente ODBC 2. *x* o ODBC 3. *x* specifica quando si utilizzano gli elementi seguenti:  
   
 -   **SQLSTATE**. Numero di valori SQLSTATE è diversi in ODBC 2. *x* e ODBC 3. *x*.  
@@ -48,7 +49,7 @@ Prima di un'applicazione alloca una connessione, è necessario impostare l'attri
     |SQL_C_TIME|SQL_C_TYPE_TIME|  
     |SQL_C_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|  
   
--   *CatalogName***argomento SQLTables**. In ODBC 2. *x*, i caratteri jolly ("%" e "_") nei *CatalogName* argomento vengono trattati letteralmente. In ODBC 3. *x*, vengono considerate come caratteri jolly. Di conseguenza, un'applicazione che segue l'API ODBC 2. *x* specifica non è possibile utilizzarle come escape non li quando vengono utilizzati come valori letterali e caratteri jolly. Un'applicazione che segue ODBC 3. *x* specifica è possibile utilizzare queste informazioni come caratteri jolly o utilizzare caratteri di escape e li utilizzi come valori letterali. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
+-   *CatalogName***argomento nella SQLTables**.   In ODBC 2. *x*, i caratteri jolly ("%" e "_") nei *CatalogName* argomento vengono trattati letteralmente. In ODBC 3. *x*, vengono considerate come caratteri jolly. Di conseguenza, un'applicazione che segue l'API ODBC 2. *x* specifica non è possibile utilizzarle come escape non li quando vengono utilizzati come valori letterali e caratteri jolly. Un'applicazione che segue ODBC 3. *x* specifica è possibile utilizzare queste informazioni come caratteri jolly o utilizzare caratteri di escape e li utilizzi come valori letterali. Per ulteriori informazioni, vedere [argomenti delle funzioni di catalogo in](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
   
  ODBC 3*x* gestione Driver e ODBC 3*x* driver controllare la versione della specifica di ODBC in cui viene scritta un'applicazione e rispondere di conseguenza. Ad esempio, se è seguito dall'applicazione ODBC 2. *x* specifica e chiama **SQLExecute** prima di chiamare **SQLPrepare**, ODBC 3*x* gestione Driver restituisce SQLSTATE S1010 ( Errore nella sequenza funzione). Se l'applicazione segue ODBC 3*x* specifica, gestione Driver restituisce SQLSTATE HY010 (funzione di errore nella sequenza). Per ulteriori informazioni, vedere [compatibilità e conformità agli standard](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   

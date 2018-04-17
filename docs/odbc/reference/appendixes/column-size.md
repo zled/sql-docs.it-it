@@ -1,15 +1,16 @@
 ---
 title: Dimensioni della colonna | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data types [ODBC], column size
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bc56113933e993b5748564a1c64ef1798ed8ef1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2178697aef549d86fedfa3d4bb70c8b45ba1f68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="column-size"></a>Dimensioni di colonna
 Le dimensioni di colonna (o parametro) dei tipi di dati numerici sono definita come il numero massimo di cifre utilizzate dal tipo di dati della colonna o parametro o la precisione dei dati. Per i tipi di carattere, si tratta della lunghezza in caratteri dei dati. per i tipi di dati binari, dimensioni della colonna sono definita come la lunghezza in byte dei dati. Per l'ora, timestamp e tutti i tipi di dati di intervallo, questo è il numero di caratteri nella rappresentazione di caratteri dei dati. La dimensione della colonna definita per ogni tipo di dati SQL conciso è illustrata nella tabella seguente.  
@@ -46,12 +47,12 @@ Le dimensioni di colonna (o parametro) dei tipi di dati numerici sono definita c
 |Tutti i tipi binari [a], [b].|La lunghezza massima o definita in byte della colonna o del parametro. Ad esempio, la lunghezza di una colonna definita come Binary (10) è 10.|  
 |Tipo SQL_TYPE_DATE [c]|10 (il numero di caratteri di *aaaa-mm-gg* formato).|  
 |SQL_TYPE_TIME [c]|8 (il numero di caratteri di *hh-mm-ss* formato), o 9 + *s* (il numero di caratteri nel *hh: mm:*formato [. fff], in cui *s*è la precisione dei secondi).|  
-|SQL_TYPE_TIMESTAMP|16 (il numero di caratteri di *aaaa-mm-gg hh.mm* formato)<br /><br /> 19 (il numero di caratteri di *aaaa-mm-gg* *hh: mm:* formato)<br /><br /> o Gestione configurazione<br /><br /> 20 + *s* (il numero di caratteri di *aaaa-mm-gg hh: mm:*formato [. fff], dove *s* è la precisione dei secondi).|  
+|SQL_TYPE_TIMESTAMP|16 (il numero di caratteri di *aaaa-mm-gg hh.mm* formato)<br /><br /> 19 (il numero di caratteri di *aaaa-mm-gg* *hh: mm:* formato)<br /><br /> o<br /><br /> 20 + *s* (il numero di caratteri di *aaaa-mm-gg hh: mm:*formato [. fff], dove *s* è la precisione dei secondi).|  
 |SQL_INTERVAL_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi, *p* (se *s*= 0) o *p* + *s*+ 1 (se *s*> 0). [ d]|  
 |SQL_INTERVAL_DAY_TO_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi 9 +*p* (se *s*= 0) o 10 +*p* + *s* (se *s*> 0). [ d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi 6 +*p* (se *s*= 0) o 7 +*p* + *s* (se *s*> 0). [ d]|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|Dove *p* è l'intervallo di precisione iniziale e *s* è la precisione dei secondi 3 +*p* (se *s*= 0) o 4 +*p* + *s* (se *s*> 0). [ d]|  
-|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, dove *p* è l'intervallo di precisione iniziale. [ d]|  
+|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, dove *p* è l'intervallo di precisione iniziale. [ 1!d]|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, dove *p* è l'intervallo di precisione iniziale. [ d]|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, dove *p* è l'intervallo di precisione iniziale. [ d]|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, dove *p* è l'intervallo di precisione iniziale. [ d]|  

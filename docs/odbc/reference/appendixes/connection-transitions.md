@@ -1,31 +1,32 @@
 ---
 title: Le transizioni di connessione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - transitioning states [ODBC], connection
 - connection transitions [ODBC]
 - state transitions [ODBC], connection
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ea7b3761e885778aae1c70ab8d22cd2ef86c1363
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a26c31885bce6d264e5d80f9f1c32a1d8fcd7c3f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-transitions"></a>Transizioni di connessione
 Connessioni ODBC presentano gli stati seguenti.  
@@ -48,8 +49,8 @@ Connessioni ODBC presentano gli stati seguenti.
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |(QUALI) [2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(QUALI) [3]|(QUALI)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(QUALI) [4]|(QUALI)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|(QUALI) [3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
+|(QUALI) [4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
  [1] questa riga vengono mostrate le transizioni quando *HandleType* è stato impostato su SQL_HANDLE_ENV.  
   
@@ -65,13 +66,13 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|C4 C3 [d] [s]|-[d] [e] C4 C2 [s]|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 C3 [d] [s]|-[d] [e] C4 C2 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|(QUALI)|--|-[1] C5 [2]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|--|-[1] C5 [2]|  
   
  [1] la connessione è in modalità di commit manuale.  
   
@@ -81,7 +82,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|(QUALI)|-[1] C6 [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|-[1] C6 [2]|--|  
   
  [1] la connessione è in modalità autocommit o l'origine dati non è iniziato una transazione.  
   
@@ -91,13 +92,13 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|C4|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField e SQLSetDescRec  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|--[1]|--|--|  
+|(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
   
  [1] in questo stato, i descrittori soli disponibili per l'applicazione vengono allocati in modo esplicito i descrittori.  
   
@@ -105,26 +106,26 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|--|--|--|--|--|--|  
+|(IH)|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(08003)|C2|C2|C2|25000|  
+|(IH)|(IH)|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|C4 s n [f]|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C4 s n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(QUALI) [1]|--[3]|--[3]|--[3]|--|--|: [4] o ([5], [6] e [8]) C4 [5] e [7] C5 [5], [6] e [9]|  
-|(QUALI) [2]|(QUALI)|(08003)|(08003)|--|--|C5|  
+|(QUALI) [2]|(IH)|(08003)|(08003)|--|--|C5|  
   
  [1] questa riga vengono mostrate le transizioni quando *HandleType* è stato impostato su SQL_HANDLE_ENV.  
   
@@ -148,7 +149,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|(QUALI)|-C6 C6 [1] [2] [3]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|-C6 C6 [1] [2] [3]|--|  
   
  [1] la connessione sia in modalità autocommit, e dell'esecuzione dell'istruzione non è un *cursore* *specifica* (ad esempio un'istruzione SELECT); o la connessione è in modalità di commit manuale e l'istruzione esecuzione non è iniziato una transazione.  
   
@@ -161,9 +162,9 @@ Connessioni ODBC presentano gli stati seguenti.
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(QUALI) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(QUALI) [2]|(QUALI)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(QUALI) [3]|(QUALI)|(QUALI)|(QUALI)|(QUALI)|C4 [5], [6]|-C4 [7] [5] e [8] C5 [6] e [8]|  
-|(QUALI) [4]|(QUALI)|(QUALI)|(QUALI)|--|--|--|  
+|(QUALI) [2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(QUALI) [3]|(IH)|(IH)|(IH)|(IH)|C4 [5], [6]|-C4 [7] [5] e [8] C5 [6] e [8]|  
+|(QUALI) [4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] questa riga vengono mostrate le transizioni quando *HandleType* è stato impostato su SQL_HANDLE_ENV.  
   
@@ -185,8 +186,8 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI) [1]|(QUALI)|(QUALI)|(QUALI)|(QUALI)|--|C5 [3]: [4]|  
-|(QUALI) [2]|(QUALI)|(QUALI)|(QUALI)|(QUALI)|--|--|  
+|(QUALI) [1]|(IH)|(IH)|(IH)|(IH)|--|C5 [3]: [4]|  
+|(QUALI) [2]|(IH)|(IH)|(IH)|(IH)|--|--|  
   
  [1] questa riga vengono visualizzate le transazioni quando il *opzione* argomento è SQL_CLOSE.  
   
@@ -211,9 +212,9 @@ Connessioni ODBC presentano gli stati seguenti.
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(QUALI) [1]|--|--|--|--|--|--|  
-|(QUALI) [2]|(QUALI)|--|--|--|--|--|  
-|(QUALI) [3]|(QUALI)|(QUALI)|(QUALI)|(QUALI)|--|--|  
-|(QUALI) [4]|(QUALI)|(QUALI)|(QUALI)|--|--|--|  
+|(QUALI) [2]|(IH)|--|--|--|--|--|  
+|(QUALI) [3]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|(QUALI) [4]|(IH)|(IH)|(IH)|--|--|--|  
   
  [1] questa riga vengono mostrate le transizioni quando *HandleType* è stato impostato su SQL_HANDLE_ENV.  
   
@@ -249,7 +250,7 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|(QUALI)|-[1] C6 [2]|-C5 [3] [1]|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|-[1] C6 [2]|-C5 [3] [1]|  
   
  [1] la connessione non è in modalità di commit automatico e la chiamata a **SQLMoreResults** l'elaborazione di un set di risultati di una specifica di cursore non è stato inizializzato.  
   
@@ -261,13 +262,13 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(08003)|(08003)|--|--|--|  
+|(IH)|(IH)|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|(QUALI)|-[1] C6 [2]|--|  
+|(IH)|(IH)|(IH)|(IH)|(IH)|-[1] C6 [2]|--|  
   
  [1] la connessione è in modalità autocommit o l'origine dati non è iniziato una transazione.  
   
@@ -299,10 +300,10 @@ Connessioni ODBC presentano gli stati seguenti.
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|--|--|(HY010)|--|--|--|  
+|(IH)|--|--|(HY010)|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>Tutte le altre funzioni ODBC  
   
 |C0<br /><br /> Nessun Env.|C1<br /><br /> Non allocato|C2<br /><br /> Allocato|C3<br /><br /> Dati necessari|C4<br /><br /> Connesso|C5<br /><br /> .|C6<br /><br /> Transazione|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(QUALI)|(QUALI)|(QUALI)|(QUALI)|(QUALI)|--|--|
+|(IH)|(IH)|(IH)|(IH)|(IH)|--|--|

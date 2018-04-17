@@ -2,7 +2,7 @@
 title: SQLGetCursorName (Driver ODBC di Visual FoxPro) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0769709d1a09c693578363d4712be0e983a72371
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3c09c00a4fcd463c1c22bbfb7c1f347202876dc6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName (Driver ODBC di Visual FoxPro)
 > [!NOTE]  
@@ -34,6 +34,6 @@ ms.lasthandoff: 12/21/2017
   
  Conformità di API ODBC: Il livello di base  
   
- Restituisce il nome del cursore associato con il determinato *hstmt*. **SQLGetCursorName** è inclusa nell'API di Visual FoxPro ODBC Driver perché è una parte della funzionalità delle API di livello principale; non può essere utilizzato con altre funzioni API perché il driver non supporta gli aggiornamenti posizionati.  
+ Restituisce il nome del cursore associato con il determinato *hstmt*. **SQLGetCursorName** fa parte delle API di Visual FoxPro ODBC Driver perché fa parte della funzionalità delle API di livello dei componenti di base, non può essere usato con altre funzioni API perché il driver non supporta gli aggiornamenti posizionati.  
   
  Per ulteriori informazioni, vedere [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) nel *riferimento per programmatori ODBC*.

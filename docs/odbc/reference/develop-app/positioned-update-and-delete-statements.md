@@ -1,16 +1,16 @@
 ---
 title: Posizionato istruzioni Update e Delete | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - positioned deletes [ODBC]
@@ -18,23 +18,23 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0c39c0081ee0cd671ee31bd7e11c02a72adc7558
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f1685fb077fbc7d5b99f0d33f58f7624d6bd23c2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="positioned-update-and-delete-statements"></a>Le istruzioni di eliminazione e aggiornamento posizionato
 Le applicazioni possono aggiornare o eliminare la riga corrente in un set di risultati con un aggiornamento posizionato o istruzione delete. Posizionato update e delete sono supportate le istruzioni per alcune origini dati, ma non tutte. Per determinare se un'origine dati supporta posizionato istruzioni update e delete, un'applicazione chiama **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ Oggetti ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (a seconda del tipo di cursore). Si noti che la libreria di cursori ODBC simula posizionato istruzioni update e delete.  
   
  Per utilizzare un aggiornamento posizionato o istruzione delete, l'applicazione deve creare un set di risultati con una **selezionare per aggiornare** istruzione. La sintassi di questa istruzione è:  
   
- **SELECT** [**ALL** &#124; **DISTINCT**] *select-list*  
+ **Selezionare** [**tutte** &#124; **DISTINCT**] *elenco select*  
   
  **DA** *elenco di riferimento di tabella*  
   
@@ -46,9 +46,9 @@ Le applicazioni possono aggiornare o eliminare la riga corrente in un set di ris
   
  **AGGIORNAMENTO** *-nome della tabella*  
   
- **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
+ **IMPOSTARE** *colonna identificatore* **=** {*espressione* &#124; **NULL**}  
   
- [**,** *colonna identificatore*  **=**  {*espressione* &#124; **NULL**}]...  
+ [**,** *colonna identificatore* **=** {*espressione* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *-nome del cursore*  
   

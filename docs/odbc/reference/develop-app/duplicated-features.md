@@ -1,15 +1,16 @@
 ---
-title: "Duplicare funzionalità | Documenti Microsoft"
-ms.custom: 
+title: Duplicare funzionalità | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - duplicated functions [ODBC]
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - functions [ODBC], duplicated functions
 - backward compatibility [ODBC], duplicated functions
 ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 911e36882d278a997126dbf0ee99bbab837c5125
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e834e0733e3f388658cf41e3a620b17f843e0c14
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="duplicated-features"></a>Funzionalità di duplicati
 Il seguente ODBC 2. *x* funzioni sono state duplicate da ODBC 3. *x* funzioni. Di conseguenza, l'API ODBC 2. *x* funzioni sono deprecate in ODBC 3. *x*. ODBC 3. *x* funzioni vengono dette funzioni di sostituzione.  
@@ -49,12 +50,12 @@ Il seguente ODBC 2. *x* funzioni sono state duplicate da ODBC 3. *x* funzioni. D
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
 |**SQLGetStmtOption**|**SQLGetStmtAttr**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**, **SQLGetStmtAttr**|  
-|**SQLSetConnectOption**|**SQLSetConnectAttr**|  
+|**SQLSetConnectOption**|**Funzione SQLSetConnectAttr**|  
 |**SQLSetParam**|**SQLBindParameter**|  
-|**SQLSetStmtOption**|**SQLSetStmtAttr**|  
+|**SQLSetStmtOption**|**Funzione SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
  [1] la funzione **SQLExtendedFetch** è una funzionalità duplicate; **SQLFetchScroll** fornisce la stessa funzionalità in ODBC 3. *x*. Tuttavia, gestione Driver non esegue il mapping **SQLExtendedFetch** a **SQLFetchScroll** quando in un'applicazione ODBC 3. *x* driver. Per ulteriori informazioni, vedere [the Driver Manager cosa](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti. Esegue il mapping di gestione Driver **SQLFetchScroll** a **SQLExtendedFetch** quando si passa un 2 di ODBC. *x* driver.  
   
 > [!NOTE]  
->  La funzione **SQLBindParam** è un caso speciale. **SQLBindParam** è una funzionalità duplicate. Non è un'API ODBC 2*x* funzione, ma una funzione che è presente negli standard Open Group e ISO. Le funzionalità offerte da questa funzione sono completamente sostituita da quello del **SQLBindParameter**. Di conseguenza, il Driver Manager esegue il mapping di una chiamata a **SQLBindParam** a **SQLBindParameter** quando il driver sottostante è un'applicazione ODBC 3. *x* driver. Tuttavia, quando il driver sottostante è un ODBC 2*x* driver, Driver Manager non esegue il mapping.
+>  La funzione **SQLBindParam** è un caso speciale. **SQLBindParam** funzionalità duplicati. Non è un'API ODBC 2*x* funzione, ma una funzione che è presente negli standard Open Group e ISO. Le funzionalità offerte da questa funzione sono completamente sostituita da quello del **SQLBindParameter**. Di conseguenza, il Driver Manager esegue il mapping di una chiamata a **SQLBindParam** a **SQLBindParameter** quando il driver sottostante è un'applicazione ODBC 3. *x* driver. Tuttavia, quando il driver sottostante è un ODBC 2*x* driver, Driver Manager non esegue il mapping.

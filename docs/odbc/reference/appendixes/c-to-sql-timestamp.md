@@ -1,31 +1,32 @@
 ---
 title: 'C a SQL: Timestamp | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from C to SQL types [ODBC], timestamp
 - timestamp data type [ODBC]
 - converting data from c to SQL types [ODBC], timestamp
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9577b649d2812ad087728b7849637f872d4a84b9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: be38d6accb796666a62324e7a6fd5aefcfa0f372
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-to-sql-timestamp"></a>C a SQL: Timestamp
 L'identificatore per il tipo di dati C ODBC timestamp è:  
@@ -46,6 +47,6 @@ L'identificatore per il tipo di dati C ODBC timestamp è:
   
  Per informazioni su quali sono i valori validi in una struttura SQL_C_TIMESTAMP, vedere [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md), più indietro in questa appendice.  
   
- Quando i dati di tipo timestamp C viene convertiti in dati SQL di tipo carattere, i dati di caratteri risultante sono nel "*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[. *f...* ] "formato.  
+ Quando i dati di tipo timestamp C viene convertiti in dati SQL di tipo carattere, i dati di caratteri risultante sono nel "*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...*] "formato.  
   
  Il driver ignora il valore di lunghezza/indicatore quando la conversione dei dati dal tipo di dati timestamp C e si presuppone che le dimensioni del buffer di dati sono la dimensione del tipo di dati timestamp C. Viene passato il valore di lunghezza/indicatore di *StrLen_or_Ind* argomento **SQLPutData** e nel buffer specificato con il *StrLen_or_IndPtr* argomento **SQLBindParameter**. Il buffer dei dati è specificato con il *DataPtr* argomento in **SQLPutData** e *ParameterValuePtr* argomento **SQLBindParameter**.

@@ -1,30 +1,31 @@
 ---
 title: Utilizzo di applicazioni a 16 Bit con driver a 32 Bit | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - 16-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 95ff3ce88daf4a508145c28ea194a97b9cbbbabe
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d389ada78e2a04b23b046f9a4c1eab8cff736227
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Utilizzo di applicazioni a 16 Bit con driver a 32 Bit
 > [!IMPORTANT]  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Architecture  
  La figura seguente mostra le applicazioni a 16 bit di comunicare con driver a 32 bit. Tra il gestore di Driver a 16 bit e il driver a 32 bit sono generiche thunk DLL che convertono le chiamate a 16 bit ODBC alle chiamate ODBC a 32 bit.  
   
- ![Come 16 &#45; bit app di comunicare con 32 &#45; bit driver](../../odbc/microsoft/media/sdka2.gif "sdka2")  
+ ![16 come&#45;comunicazione delle applicazioni di bit con 32&#45;bit driver](../../odbc/microsoft/media/sdka2.gif "sdka2")  
   
 > [!NOTE]  
 >  Ogni volta che un'applicazione a 16 bit interagisce con un driver a 32 bit, 32 bit con Driver Manager restituisce sempre "2.0" della versione di ODBC supportati dal driver.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 12/21/2017
   
  Nella figura seguente viene illustrato come un'applicazione a 16 bit chiama una DLL di installazione di driver a 32 bit. Tra il programma di installazione a 16 bit DLL e il driver a 32 bit DLL di installazione è una DLL di thunk generica che converte le chiamate DLL programma di installazione a 16 bit in chiamate DLL di installazione a 32 bit.  
   
- ![Come un 16 &#45; bit app chiama un 32 &#45; bit DLL di installazione del driver](../../odbc/microsoft/media/sdka3.gif "sdka3")  
+ ![Come un 16&#45;bit app chiama un 32&#45;bit di installazione del driver DLL](../../odbc/microsoft/media/sdka3.gif "sdka3")  
   
  In Windows on Windows (thunk di 16 bit a 32 bit), una DLL thunk aggiuntiva denominata Ds32gt converte i valori di argomento a 16 bit passati tramite un programma di installazione a 32 bit DLL eseguire il backup a 16 bit.  
   

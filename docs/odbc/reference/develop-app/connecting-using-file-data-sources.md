@@ -1,15 +1,16 @@
 ---
 title: Utilizzo di origini dati di File di connessione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to driver [ODBC], file data sources
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], file data sources
 - file data sources [ODBC]
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d64a08cc8e748efe984c8aa5acd7deac743c2ed3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 70b0f5dd8c8ff133d1eb1b1a35c5ce24a7cc7ad5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-using-file-data-sources"></a>Connessione tramite origini dati dei File
 Le informazioni di connessione per un'origine dati file viene archiviate in un file DSN. Di conseguenza, la stringa di connessione è possibile utilizzare ripetutamente a un singolo utente o condiviso da più utenti se hanno il driver appropriato installato. Il file contiene un nome di driver (o un altro nome dell'origine dati nel caso di un'origine dati file condivisibile) e, facoltativamente, una stringa di connessione che può essere utilizzata da **SQLDriverConnect**. Gestione Driver compila la stringa di connessione per la chiamata a **SQLDriverConnect** dalle parole chiave nel file DSN.  

@@ -1,25 +1,17 @@
 ---
-title: Rendere operativo il codice R (servizi di Machine Learning) | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/26/2016
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Rendere operativo il codice R in servizi di SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 460605c8cd9040cbf9586ab91227c5e09ec526cf
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: f5fa7806ad70c37c7d51c5ae2cc9606191560e58
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="operationalize-r-code-machine-learning-services"></a>Rendere operativo il codice R (servizi di Machine Learning)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +22,7 @@ In questo articolo sono riepilogati i punti chiave per lo sviluppatore del datab
 
 ## <a name="get-started-with-r-code-in-sql-server"></a>Iniziare con il codice R in SQL Server
 
-Tradizionalmente, integrazione di soluzioni di machine learning mira ricodifica esteso per supportare l'integrazione e prestazioni. Tuttavia, lo spostamento di codice R e Python per un ambiente di produzione è molto più semplice nei servizi di Microsoft Machine Learning, perché il codice può essere eseguito in SQL Server e chiamato utilizzando le stored procedure. È possibile continuare a usare strumenti comuni e non è necessario installare un ambiente di sviluppo R. 
+Tradizionalmente, integrazione di soluzioni di machine learning mira ricodifica esteso per supportare l'integrazione e prestazioni. Tuttavia, lo spostamento di codice R e Python per un ambiente di produzione è molto più semplice in SQL Server Machine Learning Services, perché il codice può essere eseguito in SQL Server e utilizzando le stored procedure. È possibile continuare a usare strumenti comuni e non è necessario installare un ambiente di sviluppo R. 
 
 Per ulteriori informazioni sulla sintassi di base, vedere:
 

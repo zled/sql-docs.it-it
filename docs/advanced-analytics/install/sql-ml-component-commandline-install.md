@@ -1,26 +1,17 @@
 ---
 title: Installazione dei componenti di SQL Server machine learning della riga di comando | Documenti Microsoft
-ms.custom: 
-ms.date: 03/15/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: c51d8299837f0eda02a07afe1ea4d34d3ecd5e31
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 1bc0cda53059b715a04d6e9a350e40d3a265d5e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-from-the-command-line"></a>Installare i componenti di SQL Server machine learning dalla riga di comando
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +55,7 @@ In caso di installazione dal prompt dei comandi, in [!INCLUDE[ssNoVersion](../..
 | / IACCEPTPYTHONLICENSETERMS | Indica che si abbia accettato le condizioni di licenza per l'utilizzo dei componenti di Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indica che si abbia accettato le condizioni di licenza per l'utilizzo di SQL Server.|
 | / MRCACHEDIRECTORY | Per l'installazione offline, imposta la cartella contenente i file CAB del componente R. |
-| /MPYCACHEDIRECTORY | Per l'installazione offline, imposta la cartella contenente i file CAB del componente Python. |
+| / MPYCACHEDIRECTORY | Per l'installazione offline, imposta la cartella contenente i file CAB del componente Python. |
 
 
 ## <a name="indb"></a> Installazioni di istanze nel database
@@ -174,11 +165,11 @@ Per aprire un comando di Python, andare a \Programmi\Microsoft SQL Server\140\PY
 
 ## <a name="get-help"></a>Supporto
 
-Assistenza sull'installazione o aggiornamento? Per le risposte alle domande più comuni e sui problemi noti, vedere l'articolo seguente:
+Assistenza sull'installazione o aggiornamento? Per le risposte alle domande più comuni e i problemi noti, vedere l'articolo seguente:
 
 * [Aggiornamento e l'installazione domande frequenti - servizi di Machine Learning](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-Per controllare lo stato di installazione dell'istanza e risolvere i problemi più comuni, provare a questi report personalizzati.
+Per controllare lo stato di installazione dell'istanza e risolvere i problemi comuni, provare a questi report personalizzati.
 
 * [Report personalizzati per SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
@@ -194,4 +185,4 @@ Gli sviluppatori di Python possono imparare a usare Python con SQL Server seguen
 + [Esercitazione: Esecuzione di Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Esercitazione: In-database analitica per sviluppatori Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Per visualizzare gli esempi di machine learning basato su scenari reali, vedere [Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).
+Per visualizzare esempi di machine learning basato su scenari reali, vedere [Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).

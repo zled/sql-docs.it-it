@@ -1,31 +1,32 @@
 ---
 title: I messaggi diagnostici | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35cf3118e503193200dec0e5e07714aa4e2a54ba
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d8820ce1c437d4bb5012a84ced5db6040cd1b552
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnostic-messages"></a>Messaggi di diagnostica
 Con ogni SQLSTATE, viene restituito un messaggio di diagnostica. Il valore stesso SQLSTATE spesso viene restituito con un numero di messaggi diversi. SQLSTATE 42000 (sintassi o violazione di accesso), ad esempio, viene restituito per la maggior parte degli errori nella sintassi SQL. Tuttavia, ogni errore di sintassi problema può essere rappresentata da un altro messaggio.  
@@ -38,11 +39,11 @@ Con ogni SQLSTATE, viene restituito un messaggio di diagnostica. Il valore stess
   
  Se l'origine dell'errore o avviso, è un componente stesso, il messaggio di diagnostica deve spiegare ciò. Pertanto, il testo dei messaggi ha due formati diversi. Per errori e avvisi che non sono presenti in un'origine dati, il messaggio di diagnostica deve utilizzare questo formato:  
   
- **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **]**  *testo immesso componente*  
+ **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **]** *testo specificato componente*  
   
  Per errori e avvisi che si verificano in un'origine dati, il messaggio di diagnostica deve utilizzare questo formato:  
   
- **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **] [**  *Identificatore dell'origine dati* **]** *dati-fornito-testo di origine*  
+ **[** *identificatore fornitore* **] [** *ODBC-componente-identifier* **] [** *identificatore dell'origine dati*  **]** *dati-fornito-testo di origine*  
   
  Nella tabella seguente viene illustrato il significato di ogni elemento.  
   

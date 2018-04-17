@@ -1,15 +1,16 @@
 ---
 title: La funzione SQLSetPos | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - compatibility [ODBC], SQLSetPos
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SqlSetPos
 - application upgrades [ODBC], SQLSetPos
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70351e468a6038a26b7b647d6bc7c64d3263f3d6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: eac0128a7919f58acc58bce793f9f765fb0d1e07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calling-sqlsetpos"></a>La funzione SQLSetPos
 In ODBC 2. *x*, il puntatore alla matrice di stato di riga è un argomento a **SQLExtendedFetch**. La matrice di stato di riga è stata aggiornata in un secondo momento da una chiamata a **SQLSetPos**. Alcuni driver si basavano sul fatto che questa matrice non viene modificato tra **SQLExtendedFetch** e **SQLSetPos**. In ODBC 3. *x*, il puntatore alla matrice di stato è un campo di descrizione e pertanto l'applicazione può facilmente modificarlo in modo che punti a un'altra matrice. Può trattarsi di un problema quando un'applicazione ODBC 3. *x* applicazione sta utilizzando un'API ODBC 2. *x* driver, ma viene eseguita la chiamata **SQLSetStmtAttr** per impostare il puntatore dello stato della matrice e chiama **SQLFetchScroll** per recuperare i dati. Gestione Driver ne esegue il mapping come una sequenza di chiamate a **SQLExtendedFetch**. Nel codice seguente, generato un errore verrebbe normalmente quando Gestione Driver viene eseguito il mapping del secondo **SQLSetStmtAttr** chiamare quando si lavora con un ODBC 2*x* driver:  

@@ -2,7 +2,7 @@
 title: Date, Time e Timestamp letterali | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 132377c8578ae4a403753d71dc82cd12b8be3c80
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9b9102d2c54c308304ea326d5a3a710a7703f275
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="date-time-and-timestamp-literals"></a>Date, Time e Timestamp letterali
 La sequenza di escape per i valori letterali data, ora e timestamp  
@@ -35,9 +35,9 @@ La sequenza di escape per i valori letterali data, ora e timestamp
   
 |*tipo di valore letterale*|Significato|Formato di *valore*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*aaaa*-*mm*-*gg*|  
+|**d**|Data|*aaaa*-*mm*-*gg*|  
 |**t**|Ora *|*hh*:*mm*:*ss*[1]|  
-|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss* [. *f...* ] [1]|  
+|**Servizi terminal**|Timestamp|*aaaa*-*mm*-*gg* *hh*:*mm*:*ss*[.*f...*] [1]|  
   
  [1] il numero di cifre a destra del separatore decimale in un intervallo di tempo o timestamp letterale contenente un componente di secondi dipende la precisione dei secondi, come contenuto nel campo SQL_DESC_PRECISION descrittore. (Per ulteriori informazioni, vedere [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

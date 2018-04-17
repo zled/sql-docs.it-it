@@ -1,24 +1,17 @@
 ---
 title: Novità di servizi di SQL Server Machine Learning? | Microsoft Docs
-ms.date: 03/07/2018
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: ''
-ms.openlocfilehash: 77642fa794493a98c56be70f4615f6401e48b3c5
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d4beafc3c5dcb19c1b46b53d727f36733884daad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Novità di servizi di SQL Server Machine Learning?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +36,7 @@ Poiché i pacchetti proprietari si basano su distribuzioni di open source R e Py
 | [RevoScaleR](r/revoscaler-overview.md) | [revoscalepy](python/what-is-revoscalepy.md)   | Funzioni queste librerie sono tra le più diffuse. Trasformazioni di dati e la modifica, riepilogo statistico, visualizzazione e molte forme di analisi e modellazione si trovano in queste librerie. Inoltre, le funzioni in queste librerie automaticamente distribuiscono i carichi di lavoro core disponibili per l'elaborazione parallela, con la possibilità di utilizzare blocchi di dati che vengono coordinati e gestiti dal motore di calcolo. |
 | [MicrosoftML](using-the-microsoftml-package.md) | [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | Leader del settore algoritmi di machine learning per immagine featurization, problemi di classificazione e altro ancora. |
 | [olapR](r/how-to-create-mdx-queries-using-olapr.md) | none | Compilare o eseguire una query MDX in uno script R.
-| [sqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Funzioni per l'inserimento di script R in T-SQL stored procedure, la registrazione di una stored procedure con un database e l'esecuzione della stored procedure da un ambiente di sviluppo R.
+| [SqlRUtils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md) | none | Funzioni per l'inserimento di script R in T-SQL stored procedure, la registrazione di una stored procedure con un database e l'esecuzione della stored procedure da un ambiente di sviluppo R.
 | [mrsdeploy](operationalization-with-mrsdeploy.md) | none | Utilizzato principalmente in un'installazione non SQL di Machine Learning Server, ad esempio il [(Standalone) versione](r/r-server-standalone.md). Utilizzare questo pacchetto per distribuire e ospitare servizi web, creare topologie di scalabilità orizzontale con web dedicato e nodi di calcolo, passare tra le sessioni locali e remote, eseguire la diagnostica e altro ancora. Per un'installazione (In-Database), utilizzare il pacchetto in una capacità di client: ad esempio, per accedere a un servizio web in un server remoto dedicato all'esecuzione di carichi di lavoro Machine Learning Services solo. |
 
 Portabilità del codice R e Python personalizzato è stato risolto tramite la distribuzione del pacchetto e interpreti incorporate in più prodotti. Gli stessi pacchetti forniti in SQL Server sono disponibili anche in diversi altri prodotti e servizi Microsoft, tra cui una versione non SQL denominata [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). I client gratuiti che includono i nostri interpreti R e Pyton includono [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) e [librerie Python](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter).
@@ -91,7 +84,7 @@ Versioni recenti di documentazione di SQL Server sono indipendente dalla version
 
 + [Macchina virtuale per operazioni di data science](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)
 
-  La versione più recente della macchina virtuale di analisi scientifica dei dati include il Machine Learning di SQL Server, e una matrice degli strumenti più comuni per machine learning, tutti preinstallato e testato. Creare Jupyter notebook, lo sviluppo di soluzioni in Julia e utilizzare le librerie abilitato GPU deep learning MXNet, CNTK e TensorFlow.
+  La versione più recente della macchina virtuale di analisi scientifica dei dati include il Machine Learning di SQL Server, e una matrice degli strumenti più comuni per machine learning, tutti preinstallato e testato. Creare server Jupyter notebook, lo sviluppo di soluzioni in Julia e utilizzare le librerie di formazione abilitato GPU come MXNet, CNTK e TensorFlow.
 
 <a name="next-steps"></a>
 

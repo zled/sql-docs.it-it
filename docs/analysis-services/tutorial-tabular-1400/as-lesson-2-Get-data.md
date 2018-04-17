@@ -1,15 +1,15 @@
 ---
-title: 'Lezione dell''esercitazione di Analysis Services 2: ottenere i dati | Documenti Microsoft'
+title: "Lezione dell'esercitazione di Analysis Services 2: ottenere i dati | Documenti Microsoft"
 description: Viene descritto come ottenere e importare i dati del progetto di Analysis Services tutorial.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 1fd06f563581d42764b5b6f29b3c22d8129f9160
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 3dd8c6e562fa1c792ff5bf9c117b687f8d77475b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-data"></a>Recuperare i dati
 
@@ -65,7 +66,7 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
   
 6.  Nel Pannello di navigazione, selezionare la casella di controllo per le tabelle seguenti: **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**, **DimProductSubcategory**, e **FactInternetSales**.  
 
-    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![come-della lezione 2-selezionare-tabelle](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Dopo aver scelto OK, verrà aperto l'Editor di Query. Nella sezione successiva, si seleziona solo i dati da importare.
 
@@ -80,14 +81,14 @@ Le tabelle nel database di esempio AdventureWorksDW sono dati che non sono neces
   
 2.  Selezione multipla (Ctrl + clic) **SpanishEducation**, **FrenchEducation**, **SpanishOccupation**, **FrenchOccupation**, quindi pulsante destro del mouse e quindi fare clic su **Rimuovi colonne**. 
 
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
+    ![come della lezione 2-remove-colonne](../tutorial-tabular-1400/media/as-lesson2-remove-columns.png)
   
     Poiché i valori per queste colonne non sono attinenti all'analisi delle vendite Internet, non è necessario importare queste colonne. Eliminazione di colonne non necessarie rende il modello più snelli ed efficienti.  
 
     > [!TIP]
     > Se si commette un errore, è possibile eseguire il backup eliminando un passaggio in **passaggi applicati**.   
     
-    ![as-lesson2-remove-columns](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
+    ![come della lezione 2-remove-colonne](../tutorial-tabular-1400/media/as-lesson2-remove-step.png)
 
   
 4.  Filtrare le tabelle restanti rimuovendo le colonne seguenti in ogni tabella:  

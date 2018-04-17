@@ -1,15 +1,16 @@
 ---
-title: "È supportato il modello di cursore, Driver ODBC di Visual FoxPro | Documenti Microsoft"
-ms.custom: 
+title: È supportato il modello di cursore, Driver ODBC di Visual FoxPro | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], cursors
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - rowset cursors [ODBC]
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 097e8a5a4156ea9a107fc7393a7b9d76bdb1a70a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 13f8c22a9c47fd4e0d83fdb7bb73ff12f8e96e93
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modello di cursore supportati (Driver ODBC di Visual FoxPro)
 Il Driver ODBC di Visual FoxPro supporta sia *blocco* (*set di righe*) e *statico* cursori. I cursori statici sono supportati per un driver conforme alla conformità di livello 1 ODBC. Il driver non supporta dynamic, basati su keyset o misto (keyset e dynamic) i cursori.  

@@ -1,15 +1,16 @@
 ---
-title: "Matrice di compatibilità | Documenti Microsoft"
-ms.custom: 
+title: Matrice di compatibilità | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver compatibility issues [ODBC]
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - application upgrades [ODBC], compatibility matrix
 - upgrading applications [ODBC], compatibility matrix
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c3a7fac17ed685680e71b329388e192ec1c9f97
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1199aab1324c086159fdbb83f111406a209a8e7b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compatibility-matrix"></a>Matrice di compatibilità
 Nella tabella seguente viene descritta la compatibilità dei tipi di applicazioni e driver definite in precedenza in questa sezione.  
@@ -72,7 +73,7 @@ Nella tabella seguente viene descritta la compatibilità dei tipi di applicazion
  Si noti che un'applicazione di 3. x ricompilata ODBC è possibile utilizzare funzioni ODBC 3.8 diversi dai tipi C specifici del driver senza specificare SQL_OV_ODBC3_80 per SQL_ATTR_ODBC_VERSION. È simile a un'applicazione di 2. x ODBC ricompilata utilizzando funzioni ODBC 3. x.  
   
 ## <a name="using-sqlcancelhandle-in-an-application-compatible-with-all-driver-managers"></a>Utilizzo di SQLCancelHandle in un'applicazione compatibile con tutti i gestori di Driver  
- Poiché [SQLCancelHandle funzione](../../../odbc/reference/syntax/sqlcancelhandle-function.md) non è supportata in Gestioni di Driver che sono stati rilasciati prima di Windows 7, non è possibile caricare un'applicazione nelle versioni precedenti di Windows se chiama **SQLCancelHandle** direttamente. L'utilizzo di tutte le versioni dei Driver Manager e utilizzare **SQLCancelHandle** nelle nuove versioni di Windows, un'applicazione deve chiamare **SQLCancelHandle** indirettamente tramite **LoadLibrary** e **GetProcAddress.**  
+ Poiché [SQLCancelHandle funzione](../../../odbc/reference/syntax/sqlcancelhandle-function.md) non è supportata in Gestioni di Driver che sono stati rilasciati prima di Windows 7, non è possibile caricare un'applicazione nelle versioni precedenti di Windows se chiama **SQLCancelHandle** direttamente. Per elaborare tutte le versioni dei Driver Manager e utilizzare **SQLCancelHandle** nelle nuove versioni di Windows, un'applicazione deve chiamare **SQLCancelHandle** indirettamente tramite **LoadLibrary** e **GetProcAddress.**  
   
 ## <a name="see-also"></a>Vedere anche  
  [Novità di ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)

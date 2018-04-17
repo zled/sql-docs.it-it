@@ -1,31 +1,32 @@
 ---
 title: Implementazione di driver di Database Desktop | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], implementing
 - ODBC desktop database drivers [ODBC], implementing
 - desktop database drivers [ODBC], implementing
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3994ed86f488748f3edd569ad80979d9871f588f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2698be76ef5be6a4b890a1c2d9f2900ed4412cc8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-desktop-database-drivers"></a>Implementazione di driver di Database Desktop
 Istruzioni e note tecniche su come implementare e configurare i driver di Database di Microsoft ODBC Desktop sono disponibili nella Guida in linea Amministrazione origine dati ODBC. Questo file è possibile accedere durante la routine di installazione di driver dal [Amministrazione origine dati ODBC di Microsoft](../../odbc/admin/odbc-data-source-administrator.md).  
@@ -38,7 +39,7 @@ Istruzioni e note tecniche su come implementare e configurare i driver di Databa
   
 -   [Requisiti hardware e software](../../odbc/microsoft/hardware-and-software-requirements-odbc.md)  
   
--   [Descrittori di driver di Database Desktop](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
+-   [Descrittori con i Database Desktop driver](../../odbc/microsoft/descriptors-and-desktop-database-drivers.md)  
   
 -   [Diagnostica per i driver di database desktop](../../odbc/microsoft/diagnostics-for-desktop-database-drivers.md)  
   

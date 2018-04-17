@@ -1,30 +1,31 @@
 ---
 title: Configurazione del Driver ODBC per Oracle | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring ODBC driver for Oracle [ODBC]
 - ODBC driver for Oracle [ODBC], configuring
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 936664563f7ef6f717b17a2e5bb34be0df4aa6a9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 4fa6cc422c1ef3e37c2bb8476af91e3994568352
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>Configurazione del Driver ODBC per Oracle
 > [!IMPORTANT]  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
  È possibile controllare le prestazioni del Driver ODBC per Oracle per conoscere l'ambiente di dati e impostare correttamente i parametri di connessione all'origine dati tramite il [Amministrazione origine dati ODBC](../../odbc/admin/odbc-data-source-administrator.md) finestra dialogo o la connessione parametri di stringa. Nella finestra di dialogo disponibili i seguenti controlli per la connessione a un'origine dati tramite la finestra di dialogo o utilizzo di stringhe di connessione:  
   
--   **Scheda DSN utente** Elenca i nomi di origine dati che sono locali nel computer.  
+-   **Scheda DSN utente** Elenca i nomi delle origini dati locali nel computer.  
   
 -   **Scheda DSN di sistema** consente di aggiungere o rimuovere un'origine dati di sistema. Origini dati di sistema sono accessibili da tutti gli utenti del computer locale.  
   
@@ -40,10 +41,10 @@ ms.lasthandoff: 12/21/2017
   
 -   **Scheda driver** sono elencati i driver ODBC installati.  
   
--   **Scheda analisi** consente di specificare la modalità di gestione Driver ODBC tracce chiamate alle funzioni ODBC. È possibile configurare la traccia separatamente per ogni applicazione ODBC installato.  
+-   **Scheda Tracing** consente di specificare la modalità gestione Driver ODBC tiene traccia di chiamate alle funzioni ODBC. È possibile configurare la traccia separatamente per ogni applicazione ODBC installato.  
   
--   **Scheda pool di connessioni** consente di selezionare le opzioni di connessione per ogni driver installato.  
+-   **Scheda connessione Pooling** consente di selezionare le opzioni di connessione per ogni driver installato.  
   
--   **Sulla scheda** sono elencati i file di componente ODBC installati.  
+-   **Sulla scheda** sono elencati i file componente ODBC installati.  
   
  Dopo avere aggiunto un'origine dati, è possibile utilizzare il **Amministrazione origine dati ODBC** la finestra di dialogo per configurare l'accesso all'origine dati. Selezionare un'origine dati e quindi fare clic su una delle schede per modificare o esaminare le informazioni.

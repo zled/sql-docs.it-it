@@ -1,15 +1,16 @@
 ---
 title: Chiedere conferma all'utente informazioni di connessione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connecting to data source [ODBC], SqlConnect
@@ -22,21 +23,21 @@ helpviewer_keywords:
 - prompting user for connection information [ODBC]
 - SQLDriverConnect function [ODBC], prompting user for connection information
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 796713fb12fe2eb70a0e7630ec558a63d7cfec4d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Chiedere conferma all'utente informazioni di connessione
 Se l'applicazione utilizza **SQLConnect** e deve richiedere all'utente le informazioni di connessione, ad esempio un nome utente e una password, è necessario usare la stessa. Mentre in questo modo l'applicazione controllare il "aspetto", potrebbe forzare l'applicazione contenente il codice specifico del driver. Questo errore si verifica quando l'applicazione deve richiedere all'utente le informazioni di connessione specifici del driver. Ciò rappresenta una situazione possibile per le applicazioni generiche, vengono progettati per funzionare con alcuni o tutti i driver, inclusi i driver che non esistono quando l'applicazione viene scritta.  
   
- **SQLDriverConnect** può richiedere all'utente le informazioni di connessione. Ad esempio, il programma personalizzato indicato in precedenza può passare la stringa di connessione seguenti per **SQLDriverConnect**:  
+ **SQLDriverConnect** può fornire all'utente le informazioni di connessione. Ad esempio, il programma personalizzato indicato in precedenza può passare la stringa di connessione seguenti per **SQLDriverConnect**:  
   
 ```  
 DSN=XYZ Corp;  
@@ -44,7 +45,7 @@ DSN=XYZ Corp;
   
  Il driver può quindi visualizzare una finestra di dialogo che richiede gli ID utente e password, simile alla figura seguente.  
   
- ![La finestra di dialogo che richiede di ID utente e password](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
+ ![Finestra di dialogo che richiede gli ID utente e password](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
   
  Il driver può richiedere informazioni di connessione è particolarmente utile per applicazioni generiche e verticale. Queste applicazioni non devono contenere informazioni specifiche del driver, e con la richiesta di driver per le informazioni che necessarie mantiene le informazioni dall'applicazione. Come illustrato negli esempi di due precedenti. Quando l'applicazione passato solo il nome dell'origine dati per il driver, l'applicazione non contiene le informazioni specifiche del driver ed è stata pertanto non è associata a un driver specifico. Quando l'applicazione passata una stringa di connessione completa per il driver, quest'ultima è stata associata al driver che è stato possibile interpretare la stringa.  
   

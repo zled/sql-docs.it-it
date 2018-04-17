@@ -1,15 +1,15 @@
 ---
-title: 'Lezione dell''esercitazione di Analysis Services 10: creare partizioni | Documenti Microsoft'
+title: "Lezione dell'esercitazione di Analysis Services 10: creare partizioni | Documenti Microsoft"
 description: Viene descritto come creare partizioni del progetto di Analysis Services tutorial.
 ms.prod_service: analysis-services, azure-analysis-services
 services: analysis-services
 ms.suite: pro-bi
-documentationcenter: 
+documentationcenter: ''
 author: Minewiskan
 manager: kfile
-editor: 
-tags: 
-ms.assetid: 
+editor: ''
+tags: ''
+ms.assetid: ''
 ms.service: analysis-services
 ms.devlang: NA
 ms.topic: get-started-article
@@ -17,11 +17,12 @@ ms.tgt_pltfrm: NA
 ms.workload: na
 ms.date: 02/20/2018
 ms.author: owend
-ms.openlocfilehash: 417bcbe36a49c44bcb5c8297968e6595d1ed3d91
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
+monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9f393e0f7100236df428dcceacf55444048fddef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partitions"></a>Creare partizioni
 
@@ -53,7 +54,7 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
 
 6.  Nella finestra di dialogo Filtra righe in **Mostra righe in cui: OrderDate**, lasciare **è dopo o uguale a**, quindi immettere nel campo Data **1/1/2010**. Lasciare il **e** operatore selezionato, quindi selezionare **prima**, quindi immettere nel campo Data, **1/1/2011**e quindi fare clic su **OK**.
 
-    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![come-lesson10-filtro-righe](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Si noti nell'Editor di Query in passaggi applicati, viene visualizzato un altro passaggio denominato righe filtrate. Questo filtro consiste nel selezionare solo le date degli ordini da 2010.
 
@@ -61,7 +62,7 @@ In questo articolo fa parte di un'esercitazione di modellazione tabulare, che de
 
     In Gestione partizioni, rilevare l'espressione di query ora una clausola di filtrare le righe aggiuntiva.
 
-    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![come query lesson10](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     Questa istruzione consente di specificare che la partizione deve includere solo i dati delle righe in cui OrderDate si nell'anno di calendario 2010 come specificato nella clausola righe filtrate.  
   
@@ -114,7 +115,7 @@ In Gestione partizioni, si noti il **elaborati ultimo** colonna per ogni della n
   
 4.  Selezionare la casella di controllo **Elabora** per ognuna delle cinque partizioni create, quindi fare clic su **OK**.  
 
-    ![as-lesson10-process-partitions](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
+    ![come-lesson10-elabora-partizioni](../tutorial-tabular-1400/media/as-lesson10-process-partitions.png)
   
     Se viene chiesto di immettere le credenziali di rappresentazione, immettere il nome utente di Windows e la password specificati nella lezione 2.  
   

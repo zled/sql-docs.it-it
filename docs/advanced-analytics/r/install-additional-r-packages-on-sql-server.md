@@ -1,23 +1,17 @@
 ---
 title: Installare pacchetti R aggiuntivi su SQL Server | Documenti Microsoft
-ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 79f62f394b31349308e9e67b3b0fe45bc57cff78
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 0ac316f4870482b15700395eb44b3adef934f2ad
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Installare pacchetti R aggiuntivi su SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +73,7 @@ Questa procedura viene descritto come installare pacchetti utilizzando RGui; Tut
 
 5. Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R automaticamente le dipendenze vengono scaricate e li installa automaticamente.
 
-6. Per ogni istanza in cui è necessario utilizzare il pacchetto di installazione separatamente. Pacchetti non possono essere condivisi tra le istanze.
+6. Per ogni istanza in cui è necessario utilizzare il pacchetto di installazione separatamente. Pacchetti non possono essere condivisa tra più istanze.
 
 ## <a name = "bkmk_offlineInstall"></a> Installazione offline utilizzando gli strumenti di R
 

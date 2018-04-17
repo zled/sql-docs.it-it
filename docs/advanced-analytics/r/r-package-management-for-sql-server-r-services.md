@@ -1,28 +1,19 @@
 ---
-title: L'installazione e la gestione dei pacchetti di machine learning in SQL Server | Documenti Microsoft
-ms.custom: ''
-ms.date: 02/19/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-dev_langs:
-- R
-ms.author: heidist
+title: Installare e gestire pacchetti di machine learning in SQL Server | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 9b2bf101674d6733c137324c9e5581647251726b
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: cbab4687dd0d5a8cb250fa38fc4c4c7dbb9d68a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="installing-and-managing-machine-learning-packages-in-sql-server"></a>L'installazione e la gestione dei pacchetti di machine learning in SQL Server
+# <a name="install-and-manage-machine-learning-packages-in-sql-server"></a>Installare e gestire pacchetti di machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo viene descritto come installare nuovi pacchetti R o Python in SQL Server 2017 e in SQL Server 2016. Vengono inoltre descritte le limitazioni per i pacchetti che è possibile installare in SQL Server.
@@ -39,7 +30,7 @@ Tuttavia, queste restrizioni necessariamente alcune modifiche in modo che gli es
 
 + In genere, è necessario l'accesso amministrativo al server. In SQL Server 2017, l'amministratore del database può utilizzare i ruoli per consentire a determinati utenti di installare i pacchetti per l'uso privato, ma l'amministratore deve abilitare questa funzionalità.
 + Numero di server non dispone dell'accesso a Internet. L'installazione di pacchetti a tali computer richiede alcune attività di preparazione aggiuntive.
-+ I pacchetti vengono installati in una libreria di istanza. Pacchetti non possono essere condivisi tra le istanze.
++ I pacchetti vengono installati in una libreria di istanza. Pacchetti non possono essere condivisa tra più istanze.
 + Gli utenti non è possibile eseguire i pacchetti che sono stato installato in una libreria di utente.
 
 ## <a name="package-installation-guides-for-r-or-python"></a>Guide all'installazione di pacchetti di R o Python

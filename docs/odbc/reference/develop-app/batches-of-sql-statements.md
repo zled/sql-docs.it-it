@@ -1,36 +1,37 @@
 ---
 title: Batch di istruzioni SQL | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - batches [ODBC]
 - SQL statements [ODBC], batches
 - batches [ODBC], about batches
 ms.assetid: 766488cc-450c-434c-9c88-467f6c57e17c
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2ae8d60d6e41536bc67bd14f9252c372fdeaa5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e7f0119110e1bc57d106163d2e187bf599a0c596
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="batches-of-sql-statements"></a>Batch di istruzioni SQL
 Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singola istruzione SQL che ha lo stesso effetto di un gruppo di due o più istruzioni SQL. In alcune implementazioni, l'istruzione dell'intero batch viene eseguito prima che i risultati siano disponibili. Questo è spesso più efficiente rispetto all'invio istruzioni separatamente, poiché il traffico di rete spesso può essere ridotto e l'origine dati in alcuni casi può ottimizzare l'esecuzione di un batch di istruzioni SQL. Nelle altre implementazioni di chiamata **SQLMoreResults** attiva l'esecuzione dell'istruzione successiva nel batch. ODBC supporta i seguenti tipi di batch:  
   
--   **Batch esplicita** un *batch esplicita* è due o più istruzioni SQL separate da punti e virgola (;). Ad esempio, il batch di istruzioni SQL seguente consente di aprire un nuovo ordine vendita. Questa operazione richiede l'inserimento di righe in tabelle Orders e di righe. Si noti che non vi sia alcun punto e virgola dopo l'ultima istruzione.  
+-   **Batch esplicita** un' *batch esplicita* è due o più istruzioni SQL separate da punti e virgola (;). Ad esempio, il batch di istruzioni SQL seguente consente di aprire un nuovo ordine vendita. Questa operazione richiede l'inserimento di righe in tabelle Orders e di righe. Si noti che non vi sia alcun punto e virgola dopo l'ultima istruzione.  
   
     ```  
     INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -45,7 +46,7 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
        VALUES (2002, 4, 412, 500)  
     ```  
   
--   **Procedure** se una stored procedure contiene più di un'istruzione SQL, è considerato un batch di istruzioni SQL. Ad esempio, l'istruzione specifici di SQL Server seguente crea una routine che restituisce un set di risultati contenente informazioni su un cliente e un elenco di tutti gli ordini di vendita aperti relativi al cliente di set di risultati:  
+-   **Procedure** se una stored procedure contiene più di un'istruzione SQL, viene considerato un batch di istruzioni SQL. Ad esempio, l'istruzione specifici di SQL Server seguente crea una routine che restituisce un set di risultati contenente informazioni su un cliente e un elenco di tutti gli ordini di vendita aperti relativi al cliente di set di risultati:  
   
     ```  
     CREATE PROCEDURE GetCustInfo (@CustomerID INT) AS  
@@ -56,7 +57,7 @@ Un batch di istruzioni SQL è un gruppo di due o più istruzioni SQL o una singo
   
      Il **CREATE PROCEDURE** istruzione stessa non è un batch di istruzioni SQL. Tuttavia, la procedura che viene creato è un batch di istruzioni SQL. Nessun punto e virgola di separare i due **selezionare** istruzioni perché il **CREATE PROCEDURE** istruzione specifiche di SQL Server e SQL Server non richiede un punto e virgola per separare più istruzioni in un  **CREATE PROCEDURE** istruzione.  
   
--   **Le matrici di parametri** matrici di parametri possono essere utilizzate con un'istruzione SQL con parametri come un metodo efficace per eseguire operazioni di massa. Ad esempio, le matrici di parametri utilizzabili con le operazioni seguenti **inserire** inserire più righe nella tabella di righe durante l'esecuzione di una singola istruzione SQL dell'istruzione:  
+-   **Le matrici di parametri** matrici di parametri possono essere utilizzate con un'istruzione SQL con parametri come un metodo efficace per eseguire le operazioni bulk. Ad esempio, le matrici di parametri utilizzabili con le operazioni seguenti **inserire** inserire più righe nella tabella di righe durante l'esecuzione di una singola istruzione SQL dell'istruzione:  
   
     ```  
     INSERT INTO Lines (OrderID, Line, PartID, Quantity)  

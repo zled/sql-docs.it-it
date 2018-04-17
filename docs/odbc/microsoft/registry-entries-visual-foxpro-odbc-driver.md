@@ -1,16 +1,16 @@
 ---
 title: Le voci del Registro di sistema (Driver ODBC di Visual FoxPro) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - registry keys [ODBC]
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - keys [ODBC]
 - FoxPro ODBC driver [ODBC], registry entries
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
-caps.latest.revision: 
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9b1ade1fb23e07a25a903b7e04beb8def84900fb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Voci del Registro di sistema (Driver ODBC di Visual FoxPro)
 Quando si installa il Driver ODBC di Visual FoxPro, il programma di installazione aggiorna il Registro di sistema nella chiave del Registro di sistema HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, per aggiungere una nuova chiave denominata driver per Microsoft Visual FoxPro. In tale chiave, vengono aggiunti i valori descritti nella tabella seguente.  
   
-|Nome del valore|Tipo valore|Valore|  
+|Nome del valore|Tipo valore|Value|  
 |----------------|----------------|-----------|  
 |APILevel|REG_SZ|"1"|  
 |ConnectFunctions|REG_SZ|"YYN"|  
@@ -45,13 +45,13 @@ Quando si installa il Driver ODBC di Visual FoxPro, il programma di installazion
   
  Il programma di installazione aggiunge anche la chiave "Visual FoxPro Files", che rappresenta il driver di Visual FoxPro predefinito, alla chiave HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini del sistema. In questa chiave, il programma di installazione aggiunge i valori descritti nella tabella seguente.  
   
-|Nome del valore|Tipo valore|Valore|  
+|Nome del valore|Tipo valore|Value|  
 |----------------|----------------|-----------|  
 |Driver|REG_SZ|Percorso di sistema per il file vfpodbc|  
   
  Ogni volta che si aggiunge un'origine dati ODBC Visual FoxPro alla configurazione di ODBC, viene aggiunta una nuova chiave per tale nome origine dati. I valori per l'origine dati corrispondono ai valori impostati il **installazione ODBC Visual FoxPro** la finestra di dialogo, come indicato nella tabella seguente.  
   
-|Nome del valore (parola chiave)|Tipo valore|Valore|  
+|Nome del valore (parola chiave)|Tipo valore|Value|  
 |----------------------------|----------------|-----------|  
 |Fascicola|REG_SQ|Sequenza di confronto supportate|  
 |Description|REG_SZ|Descrizione dell'origine dati utente|  

@@ -1,15 +1,16 @@
 ---
-title: Gestione driver &#39; s ruolo nel processo di connessione | Documenti Microsoft
-ms.custom: 
+title: Gestione driver&#39;s ruolo nel processo di connessione | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver manager [ODBC], role in connection process
@@ -17,18 +18,18 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10766d85c5e06323f534d131abfde582906fe340
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9f6b57322f96f469060db134eead3c09071e7dde
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Gestione driver &#39; s ruolo nel processo di connessione
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Gestione driver&#39;s ruolo nel processo di connessione
 Tenere presente che le applicazioni non chiamare direttamente le funzioni di driver. Invece che chiamano le funzioni di gestione Driver con lo stesso nome e di gestione Driver chiama le funzioni di driver. In genere, ciò si verifica quasi immediatamente. Ad esempio, l'applicazione chiama **SQLExecute** dopo alcuni controlli degli errori e gestione Driver, Driver Manager chiama **SQLExecute** nel driver.  
   
  Il processo di connessione è diverso. Quando l'applicazione chiama **SQLAllocHandle** con le opzioni impostato su SQL_HANDLE_ENV e impostato su SQL_HANDLE_DBC, la funzione esegue l'allocazione di handle solo in Gestione Driver. Gestione Driver non chiama questa funzione nel driver perché non conoscere il driver da chiamare. Analogamente, se l'applicazione passa l'handle di una connessione non è connessa al **SQLSetConnectAttr** o **SQLGetConnectAttr**, solo il Driver Manager esegue la funzione. Archivia o ottiene il valore dell'attributo dalla connessione gestisce e restituisce SQLSTATE 08003 (connessione non aperta) durante il recupero di un valore per un attributo non è stato impostato e per quale ODBC non definisce un valore predefinito.  

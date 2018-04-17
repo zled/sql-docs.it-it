@@ -1,26 +1,17 @@
 ---
-title: Scenari di analisi scientifica dei dati e modelli di soluzioni | Documenti Microsoft
-ms.custom: ''
-ms.date: 08/22/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+title: Scenari di analisi scientifica dei dati e modelli di soluzioni (SQL Server Machine Learning) | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: d7fb0e16b20089d9d84ef8df66c8b97cc254cda4
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d67fd15c44d188870989f2ad6498733c5901fb9d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scenari di analisi scientifica dei dati e modelli di soluzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +30,7 @@ Ogni soluzione include dati di esempio, il codice R o codice Python e le stored 
 
 ## <a name="fraud-detection"></a>Rilevamento di frodi
 
-[Modello di rilevamento di frodi online (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/FraudDetection/Introduction.md)
+[Modello di rilevamento di frodi online (SQL Server R Services)](https://github.com/Microsoft/r-server-fraud-detection)
 
 **Che cosa:** la capacità di rilevare le transazioni illecite è importante per le aziende online. Per ridurre le perdite di addebito, le aziende devono identificare rapidamente le transazioni effettuate utilizzando strumenti di pagamento rubato o le credenziali. Quando vengono rilevate transazioni illecite, le aziende in genere adottano misure per bloccare immediatamente determinati conti, al fine di evitare ulteriori perdite. In questo scenario, si imparare a utilizzare dati da transazioni di acquisto in linea per identificare le frodi probabile.
 

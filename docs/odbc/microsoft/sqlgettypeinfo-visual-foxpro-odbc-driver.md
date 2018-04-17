@@ -2,7 +2,7 @@
 title: SQLGetTypeInfo (Driver ODBC di Visual FoxPro) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e552a73289da6d78223b6416b7be7fe125e23e7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5c69f1e0c2a2dd9c67b5f36776f945d8aa06d6a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Driver ODBC di Visual FoxPro)
 > [!NOTE]  
@@ -41,19 +41,19 @@ ms.lasthandoff: 12/21/2017
 |SQL_BIGINT|Non supportato. Tipo non è a 64 bit di Visual FoxPro.|  
 |SQL_BIT|Logico|  
 |SQL_CHAR|Carattere|  
-|SQL_DATE|date|  
+|SQL_DATE|Data|  
 |SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
-|SQL_INTEGER|Valore intero|  
+|SQL_INTEGER|Integer|  
 |SQL_LONGVARBINARY|Memo (binario)|  
 |SQL_LONGVARCHAR|Memo|  
 |SQL_NUMERIC|Numerico *, valuta, Float|  
 |SQL_REAL|Double|  
-|SQL_SMALLINT|Valore intero|  
+|SQL_SMALLINT|Integer|  
 |SQL_TIME|Non supportato. Non vi è alcun Visual FoxPro *ora* tipo.|  
 |SQL_TIMESTAMP|DateTime|  
-|SQL_TINYINT|Valore intero|  
+|SQL_TINYINT|Integer|  
 |SQL_VARBINARY|Memo (binario) *, generale|  
 |SQL_VARCHAR|Carattere|  
   

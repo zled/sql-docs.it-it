@@ -1,15 +1,16 @@
 ---
 title: SET di comandi, Driver ODBC di Visual FoxPro, supportati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - set commands [ODBC]
@@ -20,23 +21,23 @@ helpviewer_keywords:
 - Visual FoxPro commands and functions
 - FoxPro ODBC driver [ODBC], SET commands
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b73d45bc940b47d99cf8777db01dacb12484bf3f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f61f179df3b268edd344019a4a3fdf8ff7feee9e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>Comandi SET supportato (Driver ODBC di Visual FoxPro)
 L'applicazione può inviare il seguente Visual FoxPro **impostare** comandi a un'origine dati:  
   
  [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
- [SET DI DIMENSIONI DEL BLOCCO](../../odbc/microsoft/set-blocksize-command.md)  
+ [BLOCKSIZE SET](../../odbc/microsoft/set-blocksize-command.md)  
   
  [SET COLLATE](../../odbc/microsoft/set-collate-command.md)  
   
@@ -50,6 +51,6 @@ L'applicazione può inviare il seguente Visual FoxPro **impostare** comandi a un
   
  [IMPOSTA PERCORSO](../../odbc/microsoft/set-path-command.md)  
   
- [SET DI RIELABORAZIONE](../../odbc/microsoft/set-reprocess-command.md)  
+ [RIELABORAZIONE SET](../../odbc/microsoft/set-reprocess-command.md)  
   
  [IMPOSTARE UNIVOCO](../../odbc/microsoft/set-unique-command.md)

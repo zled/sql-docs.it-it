@@ -1,15 +1,16 @@
 ---
 title: Effetto delle transazioni su cursori e le istruzioni preparate | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - rolling back transactions [ODBC]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - prepared statements [ODBC]
 - transactions [ODBC], cursors
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 836cef9465c2ee935628e92168b9ace7650b8e66
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23ba65d28ad9a40028ca5e02daeea11607e0c3c8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>Effetto delle transazioni su cursori e le istruzioni preparate
 Il commit o il rollback di una transazione ha l'effetto seguente su cursori e i piani di accesso:  
@@ -55,11 +56,11 @@ Il commit o il rollback di una transazione ha l'effetto seguente su cursori e i 
   
  In modalità autocommit, le funzioni diverse da **SQLEndTran** il commit delle transazioni:  
   
--   **SQLExecute** o **SQLExecDirect** nell'esempio precedente, la chiamata a **SQLExecute** nel passaggio 4 esegue il commit di una transazione. In questo modo l'origine dati chiudere i cursori nelle istruzioni 1 e 2 ed eliminare il piano di accesso su tutte le istruzioni in tale connessione.  
+-   **SQLExecute** oppure **SQLExecDirect** nell'esempio precedente, la chiamata a **SQLExecute** nel passaggio 4 esegue il commit di una transazione. In questo modo l'origine dati chiudere i cursori nelle istruzioni 1 e 2 ed eliminare il piano di accesso su tutte le istruzioni in tale connessione.  
   
--   **SQLBulkOperations** o **SQLSetPos** nell'esempio precedente, si supponga che nel passaggio 4 l'applicazione chiama **SQLSetPos** con l'opzione SQL_UPDATE istruzione 2, anziché eseguire un istruzione di aggiornamento posizionato nell'istruzione 3. Questo viene eseguito il commit di una transazione e fa sì che l'origine dati chiudere i cursori nelle istruzioni 1 e 2 ed Elimina tutti i piani di accesso su tale connessione.  
+-   **SQLBulkOperations** oppure **SQLSetPos** nell'esempio precedente, si supponga che nel passaggio 4 l'applicazione chiama **SQLSetPos** con l'opzione SQL_UPDATE nell'istruzione 2, anziché eseguire una istruzione di aggiornamento posizionato nell'istruzione 3. Questo viene eseguito il commit di una transazione e fa sì che l'origine dati chiudere i cursori nelle istruzioni 1 e 2 ed Elimina tutti i piani di accesso su tale connessione.  
   
--   **SQLCloseCursor** nell'esempio precedente, si supponga che quando si evidenzia un ordine di vendita diverso, l'applicazione chiama **SQLCloseCursor** istruzione 2 prima di creare un risultato delle righe per le nuove vendite ordine. La chiamata a **SQLCloseCursor** viene eseguito il commit di **selezionare** istruzione che creato il set di risultati delle righe e fa sì che l'origine dati chiudere il cursore sull'istruzione 1 e quindi rimuove tutti i piani di accesso su quel connessione.  
+-   **SQLCloseCursor** nell'esempio precedente, si supponga che quando si evidenzia un ordine di vendita diverso, l'applicazione chiama **SQLCloseCursor** nell'istruzione 2 prima di creare un risultato delle righe per le nuove vendite ordine. La chiamata a **SQLCloseCursor** viene eseguito il commit di **selezionare** istruzione che creato il set di risultati delle righe e fa sì che l'origine dati chiudere il cursore sull'istruzione 1 e quindi rimuove tutti i piani di accesso su quel connessione.  
   
  Le applicazioni, specialmente su schermo in cui l'utente scorre il set di risultati e gli aggiornamenti o Elimina le righe, necessario prestare attenzione al codice questo comportamento.  
   

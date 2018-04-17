@@ -1,51 +1,35 @@
 ---
-title: "Proprietà della stringa di connessione (Analysis Services) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà della stringa di connessione (Analysis Services) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 
+caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9c2daf9234b44f7108339d9a743118373b9b42c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Proprietà delle stringhe di connessione (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
+  In questo argomento vengono illustrate le proprietà delle stringhe di connessione che è possibile impostare in uno degli strumenti di progettazione o di amministrazione o trovare nelle stringhe di connessione create dalle applicazioni client che si connettono ai dati di Analysis Services ed eseguono query su di essi. Viene pertanto preso in considerazione solo un subset delle proprietà disponibili. L'elenco completo include numerose proprietà del server e del database attraverso cui è possibile personalizzare una connessione per un'applicazione specifica indipendentemente dal tipo di configurazione dell'istanza o del database nel server.  
   
  È consigliabile che gli sviluppatori responsabili della compilazione di stringhe di connessione nel codice delle applicazioni consultino la documentazione dell'API per client ADOMD.NET in cui è disponibile un elenco più dettagliato: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   
- Le proprietà descritte in questo argomento vengono usate dalle librerie client di Analysis Services, da ADOMD.NET, da AMO e dal provider OLE DB per Analysis Services. La maggior parte delle proprietà delle stringhe di connessione è utilizzabile con tutte e tre le librerie client. Le eccezioni sono indicate nella descrizione.  
-  
- In questo argomento sono contenute le sezioni seguenti:  
-  
- [Parametri di connessione di uso comune](#bkmk_common)  
-  
- [Autenticazione e sicurezza](#bkmk_auth)  
-  
- [Parametri per scopi specifici](#bkmk_special)  
-  
- [Riservate per utilizzo futuro](#bkmk_reserved)  
-  
- [Esempi di stringhe di connessione](#bkmk_examples)  
-  
- [Formati di stringa di connessione usati in Analysis Services](#bkmk_supportedstrings)  
-  
- [Crittografia di stringhe di connessione](#bkmk_encrypt)  
+ Le proprietà descritte in questo argomento vengono usate dalle librerie client di Analysis Services, da ADOMD.NET, da AMO e dal provider OLE DB per Analysis Services. La maggior parte delle proprietà delle stringhe di connessione è utilizzabile con tutte e tre le librerie client. Le eccezioni sono indicate nella descrizione.
   
 > [!NOTE]  
 >  Se durante la configurazione delle proprietà si imposta inavvertitamente la stessa proprietà due volte, nella stringa di connessione viene usato l'ultimo valore.  
@@ -191,11 +175,11 @@ In questo argomento vengono illustrate le proprietà delle stringhe di connessio
 ##  <a name="bkmk_encrypt"></a> Crittografia di stringhe di connessione  
  Analysis Services usa chiavi di crittografia specifiche per crittografare le stringhe di connessione. Non genera un certificato autofirmato.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono crittografate e archiviate le stringhe di connessione usate per la connessione a ognuna delle origini dei dati. Se la connessione a un'origine dei dati richiede un nome utente e una password, è possibile fare in modo che tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il nome e la password vengano archiviati nella stringa di connessione oppure che vengano richiesti ogni volta che è necessario eseguire una connessione all'origine dei dati. Se si configura [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la richiesta delle informazioni utente, tali informazioni non devono essere archiviate e crittografate. Se tali informazioni vengono archiviate nella stringa di connessione, devono invece essere crittografate e protette.  
+ In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono crittografate e archiviate le stringhe di connessione usate per la connessione a ognuna delle origini dei dati. Se la connessione a un'origine dei dati richiede un nome utente e una password, è possibile fare in modo che tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] il nome e la password vengano archiviati nella stringa di connessione oppure che vengano richiesti ogni volta che è necessario eseguire una connessione all'origine dei dati. Se si configura [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per la richiesta delle informazioni utente, tali informazioni non devono essere archiviate e crittografate. Se tali informazioni vengono archiviate nella stringa di connessione, devono invece essere crittografate e protette.  
   
  Per crittografare e proteggere le informazioni della stringa di connessione, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usa Data Protection API.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usata una chiave di crittografia separata per crittografare informazioni della stringa di connessione per ogni database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea questa chiave durante la creazione di un database ed esegue la crittografia delle informazioni della stringa di connessione in base all'account di avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . All'avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la chiave crittografata per ogni database viene letta, decrittografata e archiviata. In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene quindi usata la chiave decrittografata appropriata per decrittografare le informazioni della stringa di connessione all'origine dati quando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve connettersi a un'origine dati.  
+ In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene usata una chiave di crittografia separata per crittografare informazioni della stringa di connessione per ogni database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea questa chiave durante la creazione di un database ed esegue la crittografia delle informazioni della stringa di connessione in base all'account di avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . All'avvio di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] la chiave crittografata per ogni database viene letta, decrittografata e archiviata. In[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene quindi usata la chiave decrittografata appropriata per decrittografare le informazioni della stringa di connessione all'origine dati quando [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] deve connettersi a un'origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40;IIS&#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   

@@ -1,28 +1,22 @@
 ---
 title: SQL Server di Machine Learning e R Services (In-Database) | Documenti Microsoft
-ms.date: 03/16/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Active
-ms.openlocfilehash: a610ff9393f502070cca28af84418b20c90e13cc
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server di Machine Learning e R Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Un'installazione di nel database di machine learning opera all'interno del contesto di un'istanza del motore database SQL Server, fornendo il supporto di script esterni R e Python per i dati che si trovano nell'istanza di SQL Server. Poiché apprendimento è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile mantenere analitica vicino ai dati ed eliminare i costi e i rischi di sicurezza associati allo spostamento dei dati.
+Un'installazione di nel database di machine learning opera all'interno del contesto di un'istanza del motore database SQL Server, fornendo il supporto di script esterni R e Python per i dati che si trovano nell'istanza di SQL Server. Poiché l'apprendimento è integrato con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile mantenere analitica dati ed eliminare i costi e i rischi di protezione associati allo spostamento dei dati.
 
 Poiché il motore di database multi-istanza, è possibile installare più istanze di analitica nel database, o anche meno recenti e più recenti versioni-by-side. Le opzioni includono uno [SQL Server 2017 Machine Learning Services (In-Database)](../install/sql-machine-learning-standalone-windows-install.md) con R e Python, o [SQL Server 2016 R Services (In-Database)](../install/sql-r-standalone-windows-install.md) con appena R. 
 
@@ -32,7 +26,7 @@ I componenti di Machine learning possono anche essere installati come istanza in
 
 Comprendere i requisiti di sviluppo consente di scegliere tra (In-Database) e si avvicina (autonomo). Un server autonomo è più semplice da configurare e gestire se si desidera offrire la massima flessibilità nella modalità di utilizzo, o se si desidera inoltre connettersi a un'ampia gamma di origini dati all'esterno di SQL Server. 
 
-Analitica nel database è progettati per l'integrazione completa con i dati all'interno di SQL Server. È possibile scrivere query T-SQL che chiamano funzioni R o Python ed eseguire lo script in SQL Server Management Studio o qualsiasi strumento o app usata per T-SQL esterno o incorporato. Se è necessario eseguire codice R o Python [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzando le stored procedure oppure utilizzando SQL Server l'istanza come il [contesto di calcolo](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context), è necessario installare analitica nel database. Questa opzione offre protezione dei dati massima e l'integrazione con strumenti di SQL Server.
+Analitica nel database è progettati per l'integrazione completa con i dati all'interno di SQL Server. È possibile scrivere query T-SQL che chiamano funzioni R o Python ed eseguire lo script in SQL Server Management Studio o qualsiasi strumento o app usata per T-SQL esterno o incorporato. Se è necessario eseguire codice R o Python [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzando le stored procedure oppure utilizzando SQL Server l'istanza come il [contesto di calcolo](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-compute-context), è necessario installare analitica nel database. Questa opzione offre la protezione dei dati massima e l'integrazione con strumenti di SQL Server.
 
 Sia nel database e i server autonomi è possono tentare di risolvere i vincoli di memoria e l'elaborazione di R open source e Python. Entrambe le opzioni includono lo stesso pacchetti e gli strumenti, con la possibilità di caricare e di elaborare grandi quantità di dati su più core e aggregare i risultati in un singolo output consolidati. Le funzioni e gli algoritmi sono stati progettati per la scala e utilità: offrendo funzionalità analitica predittiva, modellazione statistica, le visualizzazioni dei dati e avanguardia algoritmi di machine learning in un prodotto server commerciale progettata e supportato da Microsoft. 
 
@@ -69,9 +63,9 @@ Installare una di queste versioni:
 
 Configurare gli strumenti di sviluppo per utilizzare i file binari del Server di Machine Learning. Per ulteriori informazioni su Python, vedere [i file binari Python collegamento](https://docs.microsoft.com/machine-learning-server/python/quickstart-python-tools). Per istruzioni su come connettersi in R Studio, vedere [usando versioni diverse di R](https://support.rstudio.com/hc/en-us/articles/200486138-Using-Different-Versions-of-R) e scegliere lo strumento C:\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64. È anche possibile provare [strumenti R per Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation). 
 
-Gli esperti di dati usano in genere R o Python workstation i propri computer portatile o sviluppo, per esplorare i dati e creare e ottimizzare i modelli predittivi fino a raggiungere un modello predittivo valido. 
+Gli esperti di dati usano R o Python workstation i propri computer portatile o sviluppo, per esplorare i dati e di compilazione e ottimizzare i modelli predittivi fino a raggiungere un modello predittivo soddisfacente. 
 
-Con analitica nel database in SQL Server, non è necessario modificare questo processo. Al termine dell'installazione, è possibile eseguire codice R o Python [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] localmente o in remoto:
+Con analitica nel database in SQL Server, non è necessario modificare questo processo. Al termine dell'installazione, è possibile eseguire codice R o Python [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modalità locale o remota:
 
 ![rsql_keyscenario2](media/rsql-keyscenario2.png) 
 
@@ -79,7 +73,7 @@ Con analitica nel database in SQL Server, non è necessario modificare questo pr
 
 + **Lavorare in modalità remota o locale**. Come di consueto, gli esperti possono connettersi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e aggiornare i dati nel client per l'analisi in locale. Tuttavia, una soluzione migliore consiste nell'utilizzare il **RevoScaleR** o **revoscalepy** le API per trasferire i calcoli per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer, evitando spostamenti costosi e non sicuri.
 
-+ **Incorporare script R o Python in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure**. Quando il codice è completamente ottimizzato, eseguirne il wrapping in una stored procedure per evitare lo spostamento dei dati non necessari e ottimizzare le attività di elaborazione dei dati.
++ **Incorporare script R o Python in [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure**. Quando il codice è completamente ottimizzato, eseguirne il wrapping in una stored procedure per evitare lo spostamento dei dati non necessari e ottimizzare le operazioni di elaborazione dati.
 
 ### <a name="step-3-write-your-first-script"></a>Passaggio 3: Scrivere lo script primo
 
@@ -90,7 +84,7 @@ Chiamare le funzioni R o Python all'interno dello script T-SQL:
   + [Python: Eseguire Python con T-SQL](../tutorials/run-python-using-t-sql.md)
   + [Python: analisi nel database per sviluppatori SQL](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Scegliere il linguaggio più adatto per l'attività. R è ideale per i calcoli statistici difficili da implementare con SQL. Per le operazioni sui dati basata su set, sfruttano la potenza del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere prestazioni ottimali. Utilizzare il motore di database in memoria per i calcoli molto veloci applicati alle colonne.
+Scegliere il linguaggio più adatto per l'attività. R è ideale per i calcoli statistici difficili da implementare con SQL. Per le operazioni sui dati basata su set, sfruttare la potenza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ottenere prestazioni ottimali. Utilizzare il motore di database in memoria per i calcoli molto veloci su colonne.
 
 ### <a name="step-4-optimize-your-solution"></a>Passaggio 4: Ottimizzare la soluzione
 
@@ -100,7 +94,7 @@ Quando il modello è pronto per applicare la scalabilità ai dati aziendali, l'e
 + Inserimento di dati e la trasformazione dei dati
 + Assegnazione dei punteggi
 
-In passato i data Scientist l'uso di R usavano problemi di prestazioni e scalabilità, soprattutto quando si utilizzano grandi set di dati. Ciò avviene perché l'implementazione di common runtime è a thread singolo e può gestire solo i set di dati che rientrano nella memoria disponibile nel computer locale. Integrazione con servizi di SQl Server Machine Learning fornisce più funzionalità per ottenere prestazioni migliori, con più dati:
+Gli esperti di dati con R sono sempre state problemi di prestazioni e scalabilità, soprattutto quando si utilizzano i dataset di grandi dimensioni. Ciò avviene perché l'implementazione di common runtime è a thread singolo e può gestire solo i set di dati che rientrano nella memoria disponibile nel computer locale. Integrazione con servizi di SQl Server Machine Learning fornisce più funzionalità per ottenere prestazioni migliori, con ulteriori dati:
 
 + **RevoScaleR**: R questo pacchetto contiene le implementazioni di alcune funzioni R più diffuse, riprogettate per garantire parallelismo e scalabilità. Il pacchetto include anche funzioni che incrementano scalabilità e prestazioni trasferendo i calcoli sul computer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dotato in genere di più memoria e potenza di calcolo.
 
@@ -119,12 +113,12 @@ Quando lo script o il modello è pronto per la produzione, uno sviluppatore di d
 
 + **Sicuro ed estensibile**. [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] Usa una nuova architettura di estendibilità che protegge il motore di database e isola le sessioni di R e Python. Consente inoltre di controllare gli utenti autorizzati a eseguire gli script, ed è possibile specificare quali database sono accessibili dal codice. È possibile controllare la quantità di risorse allocate al runtime, per evitare che calcoli grande da entità possano compromettere le prestazioni complessive del server.
 
-+ **Pianificazione e controllo**. Se vengono eseguiti i processi di script esterni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile controllare e controlla i dati utilizzati dagli esperti di dati. È inoltre possibile pianificare i processi e creare flussi di lavoro contenenti script R o Python esterni, esattamente come qualsiasi altro processo di T-SQL o stored procedure, è consigliabile pianificare.
++ **Pianificazione e controllo**. Se vengono eseguiti i processi di script esterni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile controllare e i dati di controllo utilizzato dagli esperti di dati. È inoltre possibile pianificare i processi e creare flussi di lavoro contenenti script R o Python esterni, esattamente come qualsiasi altro processo T-SQL o stored procedure, è consigliabile pianificare.
 
 Per sfruttare i vantaggi delle funzionalità securty e gestione delle risorse in SQL Server, il processo di distribuzione potrebbe includere queste attività:
 
 + Conversione yourcode a una funzione che può eseguire in modo ottimale in una stored procedure
-+ L'impostazione della sicurezza e il blocco dei pacchetti utilizzati da un'attività specifica
++ L'impostazione della sicurezza e il blocco di pacchetti utilizzati da un'attività specifica
 + L'abilitazione di governance delle risorse (richiede la versione Enterprise edition)
 
 **Risorse**

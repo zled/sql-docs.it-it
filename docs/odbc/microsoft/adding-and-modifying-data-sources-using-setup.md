@@ -1,15 +1,16 @@
 ---
 title: Aggiunta e modifica dati origini utilizzando il programma di installazione | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC], adding
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data sources [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], adding data sources
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d9533da991d1a50c9051b428490afacf2421efb0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f820e7790f60dc7f293b97340eea8eb228972f50
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Aggiunta e modifica di origini dati utilizzando il programma di installazione
 > [!IMPORTANT]  
@@ -63,13 +64,13 @@ ms.lasthandoff: 12/21/2017
   
 1.  Fare clic su Crea le opzioni più specifiche sul Driver ODBC per l'installazione di Oracle:  
   
-    -   **Conversione** , fare clic su Seleziona per scegliere una funzione di conversione di dati caricati. Il valore predefinito è \<Nessun convertitore >.  
+    -   **Traduzione** , fare clic su Seleziona per scegliere una funzione di conversione di dati caricati. Il valore predefinito è \<Nessun convertitore >.  
   
-    -   **Prestazioni** , ovvero il osservazioni includere nella casella di controllo di funzioni di catalogo specifica se il driver restituisce colonne note per il [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) set di risultati. Quando questo valore non è impostato, il Driver ODBC per Oracle fornisce un accesso più rapido.  
+    -   **Prestazioni** , di includere note nella casella di controllo di funzioni di catalogo specifica se il driver restituisce colonne osservazioni per il [SQLColumns](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) set di risultati. Quando questo valore non è impostato, il Driver ODBC per Oracle fornisce un accesso più rapido.  
   
-         I SINONIMI di includere nella casella di controllo delle colonne SQL specifica se il driver restituisce informazioni sulle colonne. **La dimensione del buffer** specifica la dimensione, in byte, allocata per i dati recuperati. Il driver ottimizza il recupero in modo che un recupero dal Server Oracle restituisca un numero di righe sufficiente per riempire un buffer della dimensione specificata. Valori più grandi tendono a migliorare le prestazioni durante il recupero di una grande quantità di dati.  
+         I SINONIMI di includere nella casella di controllo delle colonne SQL specifica se il driver restituisce informazioni sulle colonne. **Le dimensioni del buffer** specifica le dimensioni in byte, allocata per la ricezione dei dati recuperati. Il driver ottimizza il recupero in modo che un recupero dal Server Oracle restituisca un numero di righe sufficiente per riempire un buffer della dimensione specificata. Valori più grandi tendono a migliorare le prestazioni durante il recupero di una grande quantità di dati.  
   
-    -   **Personalizzazione** : l'applicazione ODBC DayOfWeek casella di controllo Standard consente di specificare se il set di risultati sarà conforme nel formato di giorno della settimana specificato ODBC (domenica = 1. Sabato = 7). Se questa casella di controllo è deselezionata, viene restituito il valore di Oracle specifiche delle impostazioni locali.  
+    -   **Personalizzazione** : specifica di imporre ODBC DayOfWeek casella di controllo Standard se il set di risultati sarà conforme a ODBC day of week formato specificato (domenica = 1. Sabato = 7). Se questa casella di controllo è deselezionata, viene restituito il valore di Oracle specifiche delle impostazioni locali.  
   
          Il SQLDescribeCol **restituisce sempre un valore di precisione** casella di controllo specifica se il driver deve restituire un valore diverso da zero per il *cbColDef* argomento di **SQLDescribeCol**. Questo attributo di stringa di connessione si applica solo alle colonne in cui non sono presente alcuna scala definita Oracle, ad esempio calcolata numeriche colonne e le colonne definite come numero senza una precisione o scala. Oggetto **SQLDescribeCol** chiamata restituisce 130 per la precisione quando Oracle non vengono fornite le informazioni. Se questa casella di controllo è deselezionata, il driver restituirà 0 per questi tipi di colonne.  
   

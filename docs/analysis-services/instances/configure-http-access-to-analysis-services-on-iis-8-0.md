@@ -1,31 +1,31 @@
 ---
 title: Configurare l'accesso HTTP ad Analysis Services in IIS 8.0 | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
+ms.service: ''
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf2e2c84-0a69-4cdd-90a1-fb4021936513
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5d2ac4e4346e51614787cabdf9eb6956a7c8012f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f178be3c4cdd74d0ea1a5aadbb4106a1bf7b285e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurare l'accesso HTTP ad Analysis Services in IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
+  In questo articolo viene illustrato come configurare un endpoint HTTP per l'accesso a un'istanza di Analysis Services. È possibile abilitare l'accesso HTTP configurando MSMDPUMP.dll, un'estensione ISAPI che viene eseguita in IIS (Internet Information Services) e che consente di eseguire attività di data pump da applicazioni client a un server Analysis Services e viceversa. Questo approccio fornisce un'alternativa per la connessione ad Analysis Services se per le soluzioni Business Intelligence in uso sono richieste le funzionalità seguenti:  
   
 -   L'accesso client viene eseguito tramite connessioni Internet o Extranet, con restrizioni relativamente alle porte che è possibile abilitare.  
   
@@ -42,22 +42,6 @@ In questo articolo viene illustrato come configurare un endpoint HTTP per l'acce
  L'impostazione dell'accesso HTTP è un'attività di post-installazione. Analysis Services deve essere installato prima di configurarlo per l'accesso HTTP. Come amministratore di Analysis Services, sarà necessario concedere autorizzazioni agli account di Windows prima che sia possibile eseguire l'accesso HTTP. Inoltre, è buona norma convalidare prima di tutto l'installazione, verificando che sia pienamente operativa prima di proseguire la configurazione del server. Dopo aver configurato l'accesso HTTP, è possibile usare sia l'endpoint HTTP sia il nome di rete regolare del server su TCP/IP. La configurazione dell'accesso HTTP non invalida altri approcci per l'accesso ai dati.  
   
  Proseguendo nella configurazione di MSMDPUMP, tenere presente che ci sono due connessioni da considerare: da client a IIS e da IIS a SSAS. Le istruzioni in questo articolo riguardano la connessione da IIS a SSAS. L'applicazione client potrebbe richiedere una configurazione aggiuntiva per la connessione a IIS. Le decisioni riguardanti l'uso di SSL o la configurazione delle associazioni non sono comprese nell'ambito di questo articolo. Per altre informazioni su IIS, vedere [Web Server (IIS)](http://technet.microsoft.com/library/hh831725.aspx) .  
-  
- In questo argomento sono contenute le sezioni seguenti:  
-  
--   [Panoramica](#bkmk_overview)  
-  
--   [Prerequisiti](#bkmk_prereq)  
-  
--   [Copiare il file MSMDPUMP.dll in una cartella sul server Web](#bkmk_copy)  
-  
--   [Creare un pool di applicazioni e una directory virtuale in IIS](#bkmk_appPool)  
-  
--   [Configurare l'autenticazione IIS e aggiungere l'estensione](#bkmk_auth)  
-  
--   [Modificare il file MSMDPUMP.INI per impostare il server di destinazione](#bkmk_edit)  
-  
--   [Testare la configurazione](#bkmk_test)  
   
 ##  <a name="bkmk_overview"></a> Panoramica  
  MSMDPUMP è un'estensione ISAPI che viene caricata in IIS e fornisce il reindirizzamento a un'istanza di Analysis Services locale o remota. Configurando l'estensione ISAPI, viene creato un endpoint HTTP a un'istanza di Analysis Services.  
@@ -133,7 +117,7 @@ In questo articolo viene illustrato come configurare un endpoint HTTP per l'acce
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+    -   \<unità >: \inetpub\wwwroot\OLAP\Resources  
   
 ##  <a name="bkmk_appPool"></a> Passaggio 2: Creare un pool di applicazioni e una directory virtuale in IIS  
  Successivamente, creare un pool di applicazioni e un endpoint al data pump.  
@@ -261,7 +245,7 @@ In questo articolo viene illustrato come configurare un endpoint HTTP per l'acce
 |-|-|  
 |Anonima|Aggiungere all'elenco Appartenenza l'account specificato in **Modifica credenziali di autenticazione anonima** in IIS. Per altre informazioni, vedere [Anonymous Authentication](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)(Autenticazione anonima).|  
 |Autenticazione Windows|Aggiungere all'elenco Appartenenza gli account di gruppo o utente di Windows che richiedono i dati di Analysis Services mediante la rappresentazione o la delega.<br /><br /> Supponendo che venga utilizzata la delega vincolata Kerberos, gli unici account che richiedono le autorizzazioni sono gli account di gruppo e l'utente di Windows che richiedono l'accesso. Nessuna autorizzazione è necessaria per l'identità del pool di applicazioni.|  
-|Autenticazione di base|Aggiungere all'elenco Appartenenza gli account di gruppo o utente di Windows che vengono passati nella stringa di connessione.<br /><br /> Inoltre, se si passano le credenziali tramite **EffectiveUserName** nella stringa di connessione, l'identità del pool di applicazioni deve avere i diritti di amministratore sull'istanza di Analysis Services. In SQL Server Management Studio, fare clic sull'istanza di &#124; **Proprietà** &#124; **Sicurezza** &#124; **Aggiungere**. Immettere l'identità del pool di applicazioni. Se si utilizza l'identità predefinita incorporata, l'account viene specificato come **IIS AppPool\DefaultAppPool**.<br /><br /> ![Viene illustrato come immettere l'account AppPoolIdentity](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "illustra come immettere l'account AppPoolIdentity")|  
+|Autenticazione di base|Aggiungere all'elenco Appartenenza gli account di gruppo o utente di Windows che vengono passati nella stringa di connessione.<br /><br /> Inoltre, se si passano le credenziali tramite **EffectiveUserName** nella stringa di connessione, l'identità del pool di applicazioni deve avere i diritti di amministratore sull'istanza di Analysis Services. In SSMS, fare clic sull'istanza di &#124; **delle proprietà** &#124; **sicurezza** &#124; **Aggiungi**. Immettere l'identità del pool di applicazioni. Se si utilizza l'identità predefinita incorporata, l'account viene specificato come **IIS AppPool\DefaultAppPool**.<br /><br /> ![Viene illustrato come immettere l'account AppPoolIdentity](../../analysis-services/instances/media/ssas-httpaccess-iisapppoolidentity.png "illustra come immettere l'account AppPoolIdentity")|  
   
  Per altre informazioni, vedere [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(Autenticazione a Microsoft BI e delega d'identità).  
   

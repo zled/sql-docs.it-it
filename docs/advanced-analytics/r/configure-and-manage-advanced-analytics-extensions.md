@@ -1,27 +1,19 @@
 ---
-title: Configurazione opzioni avanzate per servizi di Machine Learning | Documenti Microsoft
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+title: Configurazione avanzata per servizi di SQL Server Machine Learning | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: 6001d30a38b1362db8b259d29fffbfcc268f706c
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 5fc4e661f68a23ff2a954b832463eb60c7449057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="advanced-configuration-options-for-machine-learning-services"></a>Opzioni di configurazione avanzate per i servizi di Machine Learning
+# <a name="advanced-configuration-options-for-sql-server-machine-learning-services"></a>Opzioni di configurazione avanzate per servizi di SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Questo articolo descrive le modifiche apportate dopo l'installazione, per modificare la configurazione di runtime dello script esterno e altri servizi associati con machine learning in SQL Server.
@@ -37,7 +29,7 @@ Processi di script esterni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-
 
 Come parte del programma di installazione, una nuova finestra *pool di account utente* viene creato che contiene gli account utente locali necessari per l'esecuzione di processi di runtime esterni, ad esempio R o Python. È possibile modificare il numero di utenti in base alle esigenze per supportare l'attività di machine learning. 
 
-Inoltre, l'amministratore del database è necessario assegnare questo gruppo l'autorizzazione per connettersi a qualsiasi istanza in cui è stato attivato l'apprendimento. Per altre informazioni, vedere [modificare il pool di account utente per SQL Server Machine Learning Services](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
+Inoltre, l'amministratore del database è necessario assegnare questo gruppo l'autorizzazione per connettersi a qualsiasi istanza in cui è stato attivato l'apprendimento. Per ulteriori informazioni, vedere [modificare il pool di account utente per i servizi di SQL Server Machine Learning](../../advanced-analytics/r/modify-the-user-account-pool-for-sql-server-r-services.md).
 
 Alle risorse sensibili protext il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è possibile definire un elenco di controllo di accesso (ACL) per questo gruppo. Specificando le risorse che il gruppo viene negato l'accesso, è possibile impedire l'accesso da processi esterni, ad esempio i runtime R o Python.
 

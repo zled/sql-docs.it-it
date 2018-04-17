@@ -1,26 +1,17 @@
 ---
 title: Installare i componenti di apprendimento di SQL Server senza accesso a internet | Documenti Microsoft
-ms.custom: 
-ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 3f542786420eec8377dfe52ba3a1b73a24fbf524
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 3ba344147b5d57a1c0168fbb5be93ae24b02b179
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-components-without-internet-access"></a>Installare i componenti senza accesso a internet di apprendimento automatico SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -49,33 +40,33 @@ Versione  |Collegamento di download  |
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
 Aprire Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Server Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 CU1** |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Aprire Microsoft Python     |Nessuna modifica, Utilizzare precedente |
-Microsoft Python Server    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente |
+Server Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 CU2** |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server      |Nessuna modifica, Utilizzare precedente|
-Aprire Microsoft Python     |Nessuna modifica, Utilizzare precedente|
-Microsoft Python Server    |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server      |Nessuna modifica. Utilizzare precedente|
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
+Server Microsoft Python    |Nessuna modifica. Utilizzare precedente|
 **SQL Server 2017 CU3** |
 Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
 Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
-Aprire Microsoft Python     |Nessuna modifica, Utilizzare precedente|
-Microsoft Python Server    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
+Server Microsoft Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 **SQL Server 2017 CU4** |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
-Aprire Microsoft Python     |Nessuna modifica, Utilizzare precedente|
-Microsoft Python Server    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
+Aprire Microsoft Python     |Nessuna modifica. Utilizzare precedente|
+Server Microsoft Python    |[SPS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866213&clcid=1033)|
 
 ### <a name="bkmk_2016Installers"></a>Download di SQL Server 2016
 
 > [!IMPORTANT]
 > 
-> Quando si installa SQL Server 2016 SP1 CU4 o CU5 SP1 offline, scaricare SRO_3.2.2.16000_1033.cab. Se hai scaricato SRO_3.2.2.13000_1033.cab da FWLINK 831785 come indicato nella finestra di dialogo programma di installazione, rinominare il file come SRO_3.2.2.16000_1033.cab prima di installare l'aggiornamento cumulativo.
+> Quando si installa SQL Server 2016 SP1 CU4 o CU5 SP1 offline, è possibile scaricare SRO_3.2.2.16000_1033.cab. Se hai scaricato SRO_3.2.2.13000_1033.cab da FWLINK 831785 come indicato nella finestra di dialogo programma di installazione, rinominare il file come SRO_3.2.2.16000_1033.cab prima di installare l'aggiornamento cumulativo.
 
 Versione  |Collegamento di download  |
 ---------|---------|
@@ -89,42 +80,42 @@ Microsoft R Server     |[SRS_8.0.3.10000_1033.cab](https://go.microsoft.com/fwli
 Microsoft R Open     |[SRO_3.2.2.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827398)
 Microsoft R Server     |[SRS_8.0.3.12000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=827399)
 **SQL Server 2016 CU 3**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server     | Nessuna modifica, Utilizzare precedente |
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server     | Nessuna modifica. Utilizzare precedente |
 **SQL Server 2016 CU 4**     |
 Microsoft R Open     |[SRO_3.2.2.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831785)|
 Microsoft R Server     |[SRS_8.0.3.13000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=831676)|
 **SQL Server 2016 CU 5**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server     |Nessuna modifica. Utilizzare precedente|
 **SQL Server 2016 CU 6**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server     |[SRS_8.0.3.14000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850316)  |
 **SQL Server 2016 CU 7**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server     |Nessuna modifica, Utilizzare precedente |
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server     |Nessuna modifica. Utilizzare precedente |
 **SQL Server 2016 SP 1**     |
 Microsoft R Open     |[SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879)
 Microsoft R Server     |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881)
 **SQL Server 2016 SP 1 CU1**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server     |Nessuna modifica. Utilizzare precedente|
 **SQL Server 2016 SP 1 CU2**     |
 Microsoft R Open     |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836819)|
 Microsoft R Server    |[SRS_8.0.3.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=836818)|
 **SQL Server 2016 SP 1 CU3**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server     |Nessuna modifica. Utilizzare precedente|
 **GDR e SQL Server 2016 SP 1 CU4**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
 Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317)
 **SQL Server 2016 SP 1 CU5**     |
-Microsoft R Open     |Nessuna modifica, Utilizzare precedente|
-Microsoft R Server    |Nessuna modifica, Utilizzare precedente |
+Microsoft R Open     |Nessuna modifica. Utilizzare precedente|
+Microsoft R Server    |Nessuna modifica. Utilizzare precedente |
 
-Se si desidera visualizzare il codice sorgente per Microsoft R, è disponibile per il download come archivio in formato con estensione tar: [programmi di installazione scaricare R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
+Se si desidera visualizzare il codice sorgente per Microsoft R, è disponibile per il download come archivio in formato con estensione tar: [programmi di installazione Scarica R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-### <a name = "bkmk_OtherComponents"></a>Prerequisiti aggiuntivi
+### <a name = "bkmk_OtherComponents"></a>Requisiti aggiuntivi
 
 A seconda dell'ambiente, potrebbe essere necessario effettuare copie locali dei programmi di installazione per i prerequisiti seguenti.
 
@@ -164,19 +155,19 @@ L'installazione integrata si riferisce alla possibilità di applicare una patch 
 
 + Se il server non ha accesso a Internet, è necessario scaricare il programma di installazione di SQL Server e quindi scaricare le versioni dei programmi di installazione dei componenti R corrispondenti **prima** di iniziare il processo di aggiornamento.  I componenti di R non sono inclusi per impostazione predefinita con SQL Server.
 
-+ Se si aggiungono questi componenti a un'installazione esistente, utilizzare la versione aggiornata del programma di installazione di SQL Server e la versione aggiornata corrispondente dei componenti aggiuntivi. Quando si specifica che la funzionalità di R viene installato, il programma di installazione cerca la versione corrispondente dei programmi di installazione per l'apprendimento automatico dei componenti.
++ Se si aggiunge questi componenti a un'installazione esistente, utilizzare la versione aggiornata del programma di installazione di SQL Server e la versione aggiornata corrispondente dei componenti aggiuntivi. Quando si specifica che deve essere installato sia la funzionalità di R, il programma di installazione cerca la versione corrispondente dei programmi di installazione per il machine learning componenti.
 
 ## <a name="get-help"></a>Supporto
 
-Assistenza sull'installazione o aggiornamento? Per le risposte alle domande più comuni e sui problemi noti, vedere l'articolo seguente:
+Assistenza sull'installazione o aggiornamento? Per le risposte alle domande più comuni e i problemi noti, vedere l'articolo seguente:
 
 * [Aggiornamento e l'installazione domande frequenti - servizi di Machine Learning](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-Per controllare lo stato di installazione dell'istanza e risolvere i problemi più comuni, provare a questi report personalizzati.
+Per controllare lo stato di installazione dell'istanza e risolvere i problemi comuni, provare a questi report personalizzati.
 
 * [Report personalizzati per SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-In questo articolo dal team di supporto di servizi R viene illustrato come eseguire un'installazione automatica o un aggiornamento di R services in SQL Server 2016: [distribuzione di R Services nei computer senza accesso a Internet](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
+In questo articolo dal team di supporto dei servizi R viene illustrato come eseguire un'installazione automatica o un aggiornamento di R services in SQL Server 2016: [la distribuzione di R Services in computer senza accesso a Internet](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/).
 
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -191,5 +182,5 @@ Gli sviluppatori di Python possono imparare a usare Python con SQL Server seguen
 + [Esercitazione: Esecuzione di Python in T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Esercitazione: In-database analitica per sviluppatori Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-Per visualizzare gli esempi di machine learning basato su scenari reali, vedere [Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).
+Per visualizzare esempi di machine learning basato su scenari reali, vedere [Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).
 

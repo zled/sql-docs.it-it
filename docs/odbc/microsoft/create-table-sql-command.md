@@ -2,7 +2,7 @@
 title: Crea tabella - comando SQL | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4e4ee29a84fc739cb0f66e1e81f668c8c9598832
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table---sql-command"></a>Crea tabella - comando SQL
 Crea una tabella con i campi specificati.  
@@ -53,7 +53,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- CREARE una tabella &#124; DBF *TableName1*  
+ CREARE la tabella &#124; DBF *TableName1*  
  Specifica il nome della tabella da creare. Le opzioni di tabella e DBF sono identiche.  
   
  NOME *LongTableName*  
@@ -64,12 +64,12 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  FREE  
  Specifica che la tabella non verrà aggiunto a un database aperto. DISPONIBILE non è necessario se un database non è aperto.  
   
- *(FieldType FieldName1* [( *nFieldWidth* [, *nPrecision*])]  
+ *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  Specifica il nome del campo, il tipo di campo, larghezza del campo e precisione di campi (numero di posizioni decimali), rispettivamente.  
   
  *FieldType* è una singola lettera che indica il campo [tipo di dati](../../odbc/microsoft/visual-foxpro-field-data-types.md). Alcuni tipi di dati di campo che è necessario specificare *nFieldWidth* o *nPrecision* o entrambi.  
   
- *nFieldWidth* e *nPrecision* vengono ignorate per D, G, I, G, M, P, T e Y tipi. *nPrecision* valore predefinito è zero (senza cifre decimali) se *nPrecision* non sono incluse per i tipi di B, F e N.  
+ *nFieldWidth* e *nPrecision* vengono ignorate per D, G, I, G, M, P, T e Y tipi. *nPrecision* valore predefinito è zero (senza posizioni decimali) se *nPrecision* non sono incluse per i tipi di B, F e N.  
   
  NULL  
  Ammette valori null nel campo.  
@@ -117,17 +117,17 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
 ```  
   
  CHIAVE primaria *eExpression2* TAG *TagName2*  
- Specifica un indice primario per la creazione. *eExpression2* specifica qualsiasi campo o una combinazione di campi della tabella. TAG *TagName2 s*specifica il nome per il tag di indice primario che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ Specifica un indice primario per la creazione. *eExpression2* specifica qualsiasi campo o una combinazione dei campi nella tabella. TAG *TagName2 s*specifica il nome per il tag di indice primario che viene creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  Poiché una tabella può avere un solo indice primario, è possibile includere questa clausola se è già stato creato un indice primario per un campo. Visual FoxPro genera un errore se si include più di una clausola di chiave primaria in CREATE TABLE.  
   
  UNIVOCO *eExpression3*TAG *TagName3*  
- Crea un indice candidato. *eExpression3* specifica qualsiasi campo o una combinazione di campi della tabella. Tuttavia, se è stato creato un indice primario con una delle opzioni chiave primaria, è possibile includere il campo che è stato specificato per l'indice primario. TAG *TagName3 s*specifica un nome di tag per il tag di indice candidato creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
+ Crea un indice candidato. *eExpression3* specifica qualsiasi campo o una combinazione dei campi nella tabella. Tuttavia, se è stato creato un indice primario con una delle opzioni chiave primaria, è possibile includere il campo che è stato specificato per l'indice primario. TAG *TagName3 s*specifica un nome di tag per il tag di indice candidato creato. I nomi di tag di indice possono contenere fino a 10 caratteri.  
   
  Una tabella può avere più indici candidato.  
   
  CHIAVE esterna *eExpression4*TAG *TagName4*[NODUP]  
- Crea un indice (non primaria) esterno e stabilisce una relazione a una tabella padre. *eExpression4* specifica l'espressione di chiave esterna di indice, e *TagName4* specifica il nome del tag di chiave esterna indice creato*.* I nomi di tag di indice possono contenere fino a 10 caratteri. Includere NODUP per creare un indice esterna candidato.  
+ Crea un indice (non primaria) esterno e stabilisce una relazione a una tabella padre. *eExpression4* specifica l'espressione chiave di indice esterna, e *TagName4* specifica il nome del tag chiave indice esterna che viene creato*.* I nomi di tag di indice possono contenere fino a 10 caratteri. Includere NODUP per creare un indice esterna candidato.  
   
  È possibile creare più indici della tabella esterni, ma le espressioni di indice esterna devono specificare diversi campi nella tabella.  
   
@@ -157,7 +157,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |Sintassi ODBC|Sintassi di Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nome-tabella di base*<br /><br /> (*identificatore di colonna tipo di dati*<br /><br /> [NON NULL]<br /><br /> [,*il tipo di dati colonna identificatore*<br /><br /> [NON NULL]...)|CREARE una tabella *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NON NULL)]|  
+|CREATE TABLE *nome-tabella di base*<br /><br /> (*identificatore di colonna tipo di dati*<br /><br /> [NON NULL]<br /><br /> [,*identificatore di colonna tipo di dati*<br /><br /> [NON NULL]...)|CREARE una tabella *TableName1* [nome *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NON NULL)]|  
   
  Quando si crea una tabella utilizzando il driver, il driver chiude la tabella subito dopo la creazione di consentire l'accesso alla tabella in base ad altri utenti. Questo comportamento è diverso da Visual FoxPro, che rimane aperto esclusivamente al momento della creazione della tabella. Tuttavia, se viene eseguita una stored procedure sull'origine dati che contiene un'istruzione CREATE TABLE, la tabella viene lasciata aperta.  
   

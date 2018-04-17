@@ -1,30 +1,31 @@
 ---
-title: 'Passaggio 2: Inizializzazione dell''applicazione | Documenti Microsoft'
-ms.custom: 
+title: "Passaggio 2: Inizializzazione dell'applicazione | Documenti Microsoft"
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - initializing applications [ODBC]
 - application process [ODBC], initializing applications
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64ef3dea2a8403af43cc03a3deeee47ff16dd2b6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf8cf5a5d697b1e8c52da84d93ccf23c6e127c3b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-2-initialize-the-application"></a>Passaggio 2: Inizializzazione dell'applicazione
 Il secondo passaggio consiste nella inizializzare l'applicazione, come illustrato nella figura seguente. Esattamente ciò che viene eseguita in questo campo varia con l'applicazione.  

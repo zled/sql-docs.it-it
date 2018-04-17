@@ -1,44 +1,45 @@
 ---
 title: Diagnostica descrittore, informazioni, tipi specifici del driver, dati, | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - driver-specific diagnostic values [ODBC]
 - diagnostic information [ODBC], driver-specific values
 - ODBC drivers [ODBC], driver-specific diagnostic values
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 184ad1369e8f37def7baa2f1ed8ff4677b2a85f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 025ba90e13555eeac1db0d598cb1bf98b40c539d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>Tipi di dati specifici del driver, i tipi di descrittore, tipi di informazioni, i tipi di diagnostica e attributi
 I driver possono allocare valori specifici del driver per le operazioni seguenti:  
   
--   **Indicatori di tipo di dati SQL** questi vengono utilizzati in *ParameterType* in **SQLBindParameter** e *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
+-   **Indicatori di tipo di dati SQL** sono usati nella *ParameterType* in **SQLBindParameter** e in *DataType* in **SQLGetTypeInfo** e restituito da **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  
   
--   **I campi di descrizione** questi vengono utilizzati in *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField** .  
+-   **I campi di descrizione** sono usati nella *FieldIdentifier* in **SQLColAttribute**, **SQLGetDescField**, e **SQLSetDescField**.  
   
--   **I campi di diagnostica** questi vengono utilizzati in *DiagIdentifier* in **SQLGetDiagField** e **SQLGetDiagRec**.  
+-   **I campi di diagnostica** sono usati nella *DiagIdentifier* in **SQLGetDiagField** e **SQLGetDiagRec**.  
   
--   **Tipi di informazioni** questi vengono utilizzati in *InfoType* in **SQLGetInfo**.  
+-   **Tipi di informazioni** sono usati nella *InfoType* in **SQLGetInfo**.  
   
--   **Connessione e gli attributi di istruzione** questi vengono utilizzati in *attributo* in **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **La funzione SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
+-   **Connessione e gli attributi di istruzione** sono usati nella *attributo* in **SQLGetConnectAttr**, **SQLGetStmtAttr**,  **La funzione SQLSetConnectAttr**, e **SQLSetStmtAttr**.  
   
  Per ognuno di questi elementi, sono disponibili due set di valori: valori riservati per ODBC e valori riservati per i driver. Prima di implementare i valori specifici del driver, un writer di driver deve richiedere un valore per ogni tipo specifico del driver, un campo o attributo da Open Group. Per i nuovi sviluppi driver, utilizzare l'intervallo descritto nella tabella seguente. Gestione ODBC 3.8 Driver non genererà un errore se viene utilizzato un valore sconosciuto che non è compreso nell'intervallo descritto di seguito. Tuttavia, le versioni successive di gestione Driver potrebbero generare un errore se i valori sconosciuti ricevuti che non rientrano nell'intervallo.  
   

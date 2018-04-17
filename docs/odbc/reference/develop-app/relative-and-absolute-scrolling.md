@@ -1,15 +1,16 @@
 ---
 title: Lo scorrimento relative e assolute | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - absolute scrolling [ODBC]
@@ -17,19 +18,19 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c7ade62e1c7760b7542b1e4dd82668c11f2947c8
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 41155a5536493ba77941855e0283011ccda7d1a2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="relative-and-absolute-scrolling"></a>Relative e assolute lo scorrimento
-La maggior parte delle opzioni di scorrimento in **SQLFetchScroll** posizionare il cursore rispetto alla posizione corrente o a una posizione assoluta. **SQLFetchScroll** supporta il recupero successivo, precedente, primo e ultimo set di righe, come anche come relativo recupero (recuperare il set di righe  *n*  righe dall'inizio del set di righe corrente) e il recupero assoluto (recupero il set di righe a partire dalla riga  *n* ). Se  *n*  è negativo in un recupero assoluto, le righe vengono conteggiate dalla fine del set di risultati. Di conseguenza, un recupero assoluto della riga -1 indica il recupero di set di righe che inizia con l'ultima riga nel set di risultati.  
+La maggior parte delle opzioni di scorrimento in **SQLFetchScroll** posizionare il cursore rispetto alla posizione corrente o a una posizione assoluta. **SQLFetchScroll** supporta il recupero successivo, precedente, primo e ultimo set di righe, come anche come relativo recupero di massa (recuperare il set di righe *n* righe dall'inizio del set di righe corrente) e il recupero assoluto (recupero di inizio del set di righe alla riga *n*). Se *n* è negativo in un recupero assoluto, le righe vengono conteggiate dalla fine del set di risultati. Di conseguenza, un recupero assoluto della riga -1 indica il recupero di set di righe che inizia con l'ultima riga nel set di risultati.  
   
  I cursori dinamici rilevano righe inserito ed eliminate dal set di risultati, pertanto non sarà più semplice per i cursori dinamici recuperare la riga in corrispondenza di un numero specifico diverso da lettura dall'inizio del set di risultati, è probabile che sia lento. Inoltre, recupero assoluto non è molto utile per i cursori dinamici perché i numeri di riga è stata modificata le righe vengono inserite e soppresso. Pertanto, recupero successivamente lo stesso numero di riga consentono di ottenere righe diverse.  
   

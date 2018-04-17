@@ -1,24 +1,17 @@
 ---
-title: Installazione delle funzionalità di SQL Server machine learning in una macchina virtuale di Azure | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: Installare funzionalità di apprendimento del computer SQL Server in una macchina virtuale di Azure | Documenti Microsoft
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: bb1cd5e695e59c898a0e5dbcad279e1a8796bb63
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d2b7aefa675bc4cfe8ea6fab463053395d5f45d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-machine-learning-features-on-an-azure-virtual-machine"></a>Installare le funzionalità in una macchina virtuale Azure di apprendimento automatico SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +38,7 @@ Si consiglia di usare il [macchina virtuale di analisi scientifica dei dati](ttp
 
 6. Se si prevede di connettersi all'istanza da un client di analisi scientifica dei dati remoti, completare [passaggi aggiuntivi](#additional-steps) in base alle esigenze.
 
-### <a name="disable-machine-learning-features-on-a-sql-server-vm"></a>Disabilitare le funzionalità di machine learning in una VM SQL Server
+### <a name="disable-machine-learning-features-on-a-sql-server-vm"></a>Disabilitare le funzionalità di machine learning in una macchina virtuale di SQL Server
 
 È inoltre possibile abilitare o disabilitare la funzionalità in una macchina virtuale di SQL Server esistente in qualsiasi momento.
 
@@ -65,13 +58,13 @@ Se si crea una macchina virtuale di Azure che incluso SQL Server senza di machin
 
 ## <a name="additional-steps"></a>Passaggi aggiuntivi
 
-Se si prevede che i client remoti per accedere al server come un contesto di calcolo di SQL Server remoto, sono richiesti alcuni passaggi aggiuntivi.
+Se si prevede che i client remoti di accedere al server come un contesto di calcolo di SQL Server remoto, sono richiesti alcuni passaggi aggiuntivi.
 
 ### <a name="firewall"></a>Sbloccare il firewall
 
-Per impostazione predefinita, il firewall nella macchina virtuale di Azure include una regola che blocca rete l'accesso per gli account utente locale.
+Per impostazione predefinita, il firewall nella macchina virtuale di Azure include una regola che blocca l'accesso per gli account utente locale rete.
 
-È necessario disabilitare questa regola per assicurarsi che sia possibile accedere il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza da un client di analisi scientifica dei dati remota.  In caso contrario, non è possibile eseguire il codice di apprendimento in contesti di calcolo che utilizzano l'area di lavoro della macchina virtuale.
+È necessario disabilitare questa regola per assicurarsi che sia possibile accedere il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza da un client di analisi scientifica dei dati remota.  In caso contrario, i machine learning codice non è possibile eseguire in contesti di calcolo che utilizzano l'area di lavoro della macchina virtuale.
 
 Per abilitare l'accesso dai client di analisi scientifica dei dati remoti:
 
@@ -83,7 +76,7 @@ Per abilitare l'accesso dai client di analisi scientifica dei dati remoti:
   
 ### <a name="enable-odbc-callbacks-for-remote-clients"></a>Abilitare i callback ODBC per i client remoti
 
-Se si prevede che i client che chiamano il server saranno necessario inviare query ODBC come parte della loro soluzioni di apprendimento, è necessario assicurarsi che la finestra di avvio può effettuare chiamate ODBC per conto del client remoto. A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launchpad di accedere all'istanza.
+Se si prevede che i client che chiamano il server saranno necessario inviare query ODBC come parte del loro di machine learning solutions, è necessario assicurarsi che la finestra di avvio può effettuare chiamate ODBC per conto del client remoto. A tale scopo, è necessario consentire agli account di lavoro SQL usati da Launchpad di accedere all'istanza.
 Per altre informazioni, vedere [installare SQL Server 2016 R Services](../install/sql-r-services-windows-install.md).
 
 ### <a name="network"></a>Aggiungere protocolli di rete
@@ -94,6 +87,6 @@ Per altre informazioni, vedere [installare SQL Server 2016 R Services](../instal
   
 + Abilitare TCP/IP
 
-  È necessaria per le connessioni loopback TCP/IP. Se viene visualizzato il seguente errore, abilitare TCP/IP nella macchina virtuale che supporta l'istanza:
+  TCP/IP è obbligatorio per le connessioni loopback. Se viene visualizzato il seguente errore, abilitare TCP/IP nella macchina virtuale che supporta l'istanza:
 
   "DBNETLIB; SQL Server non esiste o accesso negato"

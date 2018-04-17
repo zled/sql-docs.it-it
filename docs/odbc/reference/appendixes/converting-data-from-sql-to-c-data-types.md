@@ -1,15 +1,16 @@
 ---
 title: Conversione di dati da SQL a tipi di dati C | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - data conversions from SQL to C types [ODBC]
@@ -22,19 +23,19 @@ helpviewer_keywords:
 - converting data from SQL to c types [ODBC], about converting
 - C data types [ODBC], converting from SQL types
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b2133c6b155b163b971f7049cdd8238f091669dc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe89608061d82cf54a16394e5ce1a8f901e23523
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversione di dati da SQL a tipi di dati C
-Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, il driver recupera i dati dall'origine dati. Se necessario, ne converte i dati dal tipo di dati in cui il driver è stato recuperato al tipo di dati specificato per il *TargetType* argomento **SQLBindCol** o **SQLGetData.** Infine, archivia i dati nella posizione a cui fa riferimento il *TargetValuePtr* argomento **SQLBindCol** o **SQLGetData** (e il campo SQL_DESC_DATA_PTR del ARD).  
+Quando un'applicazione chiama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, il driver recupera i dati dall'origine dati. Se necessario, ne converte i dati dal tipo di dati in cui il driver è stato recuperato per il tipo di dati specificato per il *TargetType* argomento nella **SQLBindCol** o **SQLGetData.** Infine, archivia i dati nella posizione a cui fa riferimento il *TargetValuePtr* argomento **SQLBindCol** o **SQLGetData** (e il campo SQL_DESC_DATA_PTR del ARD).  
   
  La tabella seguente illustra le conversioni supportate da ODBC SQL nei tipi di dati per tipi di dati C ODBC. Un cerchio pieno indica la conversione del valore predefinito per un tipo di dati SQL (tipo di dati C a cui i dati verranno convertiti quando il valore di *TargetType* è SQL_C_DEFAULT). Un cerchio vuoto indica una conversione supportata.  
   

@@ -1,30 +1,31 @@
 ---
 title: Il File INI (Driver di File di testo) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b71b742ff9c0833bd36deb256dda5169f2a51c7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 602582886c1eb02e34bad9127e5ab1e55a22a86b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schemaini-file-text-file-driver"></a>File INI (Driver di File di testo)
 Quando viene utilizzato il driver di testo, il formato del file di testo è determinato mediante un file di informazioni dello schema. Il file di informazioni dello schema è sempre denominato Schema.ini e mantenuto sempre nella stessa directory dell'origine dati di testo. Il file di informazioni dello schema fornisce il IISAM con informazioni sul formato generale del file, il nome della colonna e informazioni sul tipo di dati e diverse altre caratteristiche di dati. Un file Schema.ini è sempre necessario per l'accesso ai dati a lunghezza fissa. Quando la tabella di testo contiene DateTime, Currency, o dati Decimal o ogni volta che si desidera maggiore controllo sulla gestione dei dati nella tabella, è necessario utilizzare un file ini.  
@@ -85,14 +86,14 @@ ColNameHeader=True
 MaxScanRows=0  
 ```  
   
- La voce successiva definisce i campi in una tabella utilizzando il numero di colonna (**Col***n*) opzione, è necessario per il file di lunghezza fissa e facoltativo per i file delimitati da caratteri. L'esempio mostra le voci di file Schema.ini per due campi, un campo di testo NumeroCliente 10 caratteri e un campo di testo di 30 caratteri CustomerName:  
+ La voce successiva definisce i campi in una tabella utilizzando il numero di colonna (**Col * * * n*) opzione, ovvero per i file delimitati da caratteri facoltative e obbligatorie per i file di lunghezza fissa. L'esempio mostra le voci di file Schema.ini per due campi, un campo di testo NumeroCliente 10 caratteri e un campo di testo di 30 caratteri CustomerName:  
   
 ```  
 Col1=CustomerNumber Text Width 10  
 Col2=CustomerName Text Width 30  
 ```  
   
- La sintassi di **Col**  *n*  è:  
+ La sintassi di **Col * * * n* è:  
   
 ```  
   
@@ -100,13 +101,13 @@ n=ColumnNametype [#]
 ```  
   
 ## <a name="remarks"></a>Osservazioni  
- La tabella seguente descrive ogni parte di **Col**  *n*  voce.  
+ Nella tabella seguente descrive ogni parte del **Col * * * n* voce.  
   
 |Parametro|Description|  
 |---------------|-----------------|  
-|*Nome colonna*|Il nome della colonna di testo. Se il nome di colonna contiene spazi, è necessario racchiuderlo tra virgolette doppie.|  
-|*type*|Come indicato di seguito sono riportati i tipi di dati:<br /><br /> **Tipi di dati di Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memo<br /><br /> **Tipi di dati ODBC** Char (come testo)<br /><br /> Float (uguale a Double)<br /><br /> Integer (analogo a breve)<br /><br /> LongChar (analogo a Memo)<br /><br /> Data *formato data*|  
-|**Width**|Il valore letterale stringa `Width`. Indica che il numero seguente indica la larghezza della colonna (facoltativo per i file delimitati da caratteri, richiesto per i file di lunghezza fissa).|  
+|*ColumnName*|Il nome della colonna di testo. Se il nome di colonna contiene spazi, è necessario racchiuderlo tra virgolette doppie.|  
+|*type*|Come indicato di seguito sono riportati i tipi di dati:<br /><br /> **Tipi di dati di Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memo<br /><br /> **Tipi di dati ODBC** Char (come testo)<br /><br /> Float (uguale a Double)<br /><br /> Integer (analogo a breve)<br /><br /> LongChar (analogo a Memo)<br /><br /> Data *formato di data*|  
+|**Larghezza**|Il valore letterale stringa `Width`. Indica che il numero seguente indica la larghezza della colonna (facoltativo per i file delimitati da caratteri, richiesto per i file di lunghezza fissa).|  
 |*#*|Il valore intero che definisce la larghezza della colonna (obbligatorio se **larghezza** è specificato).|  
   
 ## <a name="selecting-a-character-set"></a>Selezione di un Set di caratteri  

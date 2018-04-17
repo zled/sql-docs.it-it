@@ -1,15 +1,16 @@
 ---
 title: Gestione delle origini dati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deleting data sources [ODBC], ODBC data source administrator
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - removing data sources [ODBC], ODBC data source administrator
 - ODBC data source administrator [ODBC], data source management
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ea157fd72ab1cc2b37ba32e198bde5ff47eff0fb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 679edbfc02628e9a78b209961b22f576f627f057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-data-sources"></a>Gestione delle origini dati
 Dopo aver installato un driver ODBC dal programma di installazione del driver, è possibile definire una o più origini dati per tale. Il nome di origine dati (DSN) deve fornire una descrizione univoca dei dati. ad esempio, *retribuzioni* o *contabilità fornitori*. Le origini dati utente e di sistema definiti per tutti i driver attualmente installati sono elencate nel **DSN utente** o **DSN di sistema** schede del **amministratore di origine dati ODBC**la finestra di dialogo. Sono elencate le origini dati di file in una directory specificata nel **DSN su File** scheda; la directory da visualizzare viene immesso nel **Cerca in** casella il **DSN su File** scheda.  

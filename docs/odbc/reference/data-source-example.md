@@ -2,7 +2,7 @@
 title: Esempio di origine dati | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29fe9b818d34f620ededd9d07eab5cfbecfbee47
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c7d80fc111164b2f32a1394f214dc09c3f61c51c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-source-example"></a>Esempio di origine dati
 Nei computer che eseguono Microsoft® Windows NT® Server e Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional o Microsoft Windows® 95/98, dati del computer, informazioni di origine vengono archiviate nel Registro di sistema. A seconda del Registro di sistema chiave vengono archiviate le informazioni in, l'origine dati è noto come un *origine dati utente* o *origine dati di sistema*. Le origini dati utente vengono archiviate nella chiave HKEY_CURRENT_USER e sono disponibili solo per l'utente corrente. Origini dati di sistema vengono archiviate nella chiave HKEY_LOCAL_MACHINE e possono essere utilizzate da più di un utente in un unico computer. Possono inoltre essere utilizzati dai servizi a livello di sistema, che possono accedere all'origine dati anche se nessun utente è connesso al computer. Per ulteriori informazioni sull'utente e origini dati di sistema, vedere [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

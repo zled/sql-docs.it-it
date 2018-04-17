@@ -1,24 +1,17 @@
 ---
 title: Componenti di SQL Server per il supporto di R | Documenti Microsoft
-ms.custom: ''
-ms.date: 04/05/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
-ms.author: heidist
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: Inactive
-ms.openlocfilehash: cc9f600d6bfce5d522abb8452800c35f41069b92
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: fa29a924b34bbe5737a89f5b111c92053b62d36b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Componenti di SQL Server per il supporto di R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -94,7 +87,7 @@ BxlServer usa SQL Satellite per queste attività:
 
     Inoltre è possono utilizzare i processi che potrebbe essere necessario lavorare in "blocchi" o trasferire i dati a un client remoto di. Formato con estensione XDF supportato da Microsoft R. effettivo trasferimento di dati è tramite BLOB codificato.
 
-## <a name="interaction-of-components"></a>Interazione dei componenti
+## <a name="interaction-of-components"></a>Interazione tra componenti
 
 L'architettura dei componenti appena descritta è stata fornita per garantire che il codice R open source possa funzionare "così com'è", offrendo prestazioni notevolmente migliorate per il codice in esecuzione in un computer [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]. Il meccanismo di interazione dei componenti con il runtime R e il motore di database di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] è diverso a seconda della modalità di avvio del codice R. Gli scenari principali sono riepilogati in questa sezione.
 
@@ -108,7 +101,7 @@ Il codice R eseguito dall'interno di [!INCLUDE[ssNoVersion_md](../../includes/ss
 2. Il servizio Launchpad avvia l'utilità di avvio appropriata, in questo caso, RLauncher.
 3. RLauncher avvia il processo R esterno.
 4. BxlServer si coordina con il runtime R per gestire gli scambi di dati con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] e l'archiviazione dei risultati.
-5. SQL Satellite che gestisce le comunicazioni sulle attività correlate ed elabora con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5. SQL Satellite gestisce le comunicazioni sulle attività correlate e i processi con [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 6. BxlServer usa SQL Satellite per comunicare lo stato e i risultati a [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 7. [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ottiene i risultati e chiude le attività e i processi correlati.
 

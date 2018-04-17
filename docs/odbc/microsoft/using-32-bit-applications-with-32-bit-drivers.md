@@ -1,30 +1,31 @@
 ---
 title: Utilizzo di applicazioni a 32 Bit con driver a 32 Bit | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 70b27a10dc14583a39870fc434b7b69fb674ab5b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 008f948580057fdaa6e59802fd6fa8395140b735
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Utilizzo di applicazioni a 32 Bit con driver a 32 Bit
 È possibile eseguire applicazioni a 32 bit con driver a 32 bit. Le applicazioni a 32 bit e il driver a 32 bit è possibile utilizzare l'API Win32®.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="architecture"></a>Architecture  
  La figura seguente mostra le applicazioni a 32 bit di comunicare con driver a 32 bit. L'applicazione chiama il gestore di Driver a 32 bit, che a sua volta chiama driver a 32 bit.  
   
- ![Modalità 32 &#45; bit app di comunicare con 32 &#45; bit driver](../../odbc/microsoft/media/sdka6.gif "sdka6")  
+ ![Modalità 32&#45;comunicazione delle applicazioni di bit con 32&#45;bit driver](../../odbc/microsoft/media/sdka6.gif "sdka6")  
   
 > [!IMPORTANT]  
 >  Non utilizzare l'installazione a 32 bit thunk DLL su Windows NT o Windows 2000. Anche se presenta lo stesso nome di file del programma di installazione a 32 bit DLL, è un'altra DLL.  

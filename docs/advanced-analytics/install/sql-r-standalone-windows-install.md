@@ -1,26 +1,17 @@
 ---
 title: Installare SQL Server 2016 R Server (Standalone) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2018
-ms.reviewer: 
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: r
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 
-caps.latest.revision: 
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
+ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 48f28b7a8d357e80e7defb6d6a8d446041380fbf
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 7562a807fd53b2148b1b7787db5efb4c3cda7134
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-sql-server-2016-r-server-standalone"></a>Installare SQL Server 2016 R Server (Standalone)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +36,7 @@ Microsoft ha rilevato un problema con una versione specifica dei file binari di 
 
 Per le installazioni locali è necessario eseguire il programma di installazione come amministratore. Se si installa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] da una condivisione remota, è necessario utilizzare un account di dominio con autorizzazioni di lettura ed esecuzione relative a tale condivisione.
 
-1. Avviare Installazione guidata di SQL Server 2016. È consigliabile installare Service Pack 1 o versione successivo.
+1. Avviare Installazione guidata di SQL Server 2016. Si consiglia di installare Service Pack 1 o versione successivo.
 
 2. Nel **installazione** scheda, fare clic su **R installazione nuovo Server (Standalone)**.
     
@@ -60,9 +51,9 @@ Per le installazioni locali è necessario eseguire il programma di installazione
     Tutte le altre opzioni possono essere ignorate. 
     
     > [!NOTE]
-    > Evitare di installare il **Caratteristiche condivise di** se si sta eseguendo l'installazione in un computer in cui R Services è già stato installato per analitica nel database di SQL Server. Crea raccolte duplicate.
+    > Evitare l'installazione di **Caratteristiche condivise di** se si esegue il programma di installazione in un computer in cui R Services è già stato installato per analitica nel database di SQL Server. Crea raccolte duplicate.
     > 
-    > Mentre gli script R in esecuzione in SQL Server sono gestiti da SQL Server a come non in conflitto con la memoria utilizzata da altri servizi motore di database, non presenta tali limiti standalone R Server e può interferire con altre operazioni di database.
+    > Mentre gli script R in esecuzione in SQL Server vengono gestiti da SQL Server a come non in conflitto con la memoria utilizzata da altri servizi motore di database, Server R autonomo non presenta tali limiti e può interferire con altre operazioni di database.
     > 
     > In genere si consiglia di installare R Server (Standalone) in un computer diverso da SQL Server R Services (In-Database).
 
@@ -74,7 +65,7 @@ Per le installazioni locali è necessario eseguire il programma di installazione
 
 ## <a name="default-installation-folders"></a>Cartelle di installazione predefinito
 
-Quando si installa R Server tramite l'installazione di SQL Server, le librerie di R vengono installate in una cartella associata alla versione di SQL Server utilizzato per l'installazione. In questa cartella si trovano anche i dati di esempio, alla documentazione per i pacchetti di base di R e documentazione di strumenti di R e runtime.
+Quando si installa R Server tramite l'installazione di SQL Server, le librerie di R vengono installate in una cartella associata alla versione di SQL Server utilizzato per l'installazione. In questa cartella, si trovano anche dati di esempio, alla documentazione per i pacchetti di base di R e documentazione di strumenti di R e runtime.
 
 Tuttavia, se è installato Microsoft R Server utilizzando il programma di installazione di Windows separato (non l'installazione di SQL) o se si esegue l'aggiornamento utilizzando il programma di installazione di Windows separato, le librerie di R vengono installate in una cartella diversa.
 
@@ -82,7 +73,7 @@ Sebbene sia consigliabile su di essa, se è installato anche un'istanza di SQL S
 
 Nella tabella seguente sono elencati i percorsi per ogni installazione.
 
-|Version| Metodo di installazione | Cartella predefinita|
+|Versione| Metodo di installazione | Cartella predefinita|
 |----|----|----|
 |R Server (Standalone) |Installazione guidata di SQL Server 2016|`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |R Server (Standalone) |Programma di installazione di Windows autonomo|`C:\Program Files\Microsoft\R Server\R_SERVER`|
@@ -95,17 +86,17 @@ Nella tabella seguente sono elencati i percorsi per ogni installazione.
 
 ## <a name="development-tools"></a>Strumenti di sviluppo
 
-Sviluppo IDE non è installato come parte del programma di installazione. Strumenti aggiuntivi non sono necessari, come tutti gli strumenti standard sono inclusi che vengono forniti con una distribuzione di R o Python.
+Sviluppo IDE non è installato come parte del programma di installazione. Strumenti aggiuntivi non sono necessari, come tutti gli strumenti standard sono inclusi che sarebbero forniti con una distribuzione di R o Python.
 
 È consigliabile provare la nuova versione di [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] oppure [Python per Visual Studio](https://docs.microsoft.com/en-us/visualstudio/python/installing-python-support-in-visual-studio). Visual Studio supporta sia R e Python, nonché strumenti di sviluppo di database, la connettività con SQL Server e strumenti di Business Intelligence. Tuttavia, è possibile utilizzare qualsiasi ambiente di sviluppo preferito tra RStudio.
   
 ## <a name="get-help"></a>Supporto
 
-Assistenza sull'installazione o aggiornamento? Per le risposte alle domande più comuni e sui problemi noti, vedere l'articolo seguente:
+Assistenza sull'installazione o aggiornamento? Per le risposte alle domande più comuni e i problemi noti, vedere l'articolo seguente:
 
 * [Aggiornamento e l'installazione domande frequenti - servizi di Machine Learning](../r/upgrade-and-installation-faq-sql-server-r-services.md)
 
-Per controllare lo stato di installazione dell'istanza e risolvere i problemi più comuni, provare a questi report personalizzati.
+Per controllare lo stato di installazione dell'istanza e risolvere i problemi comuni, provare a questi report personalizzati.
 
 * [Report personalizzati per SQL Server R Services](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
@@ -116,5 +107,5 @@ Gli sviluppatori R possono iniziare a usare alcuni semplici esempi e apprendere 
 + [Esercitazione: Esecuzione di R in T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md).
 + [Esercitazione: In-database analitica per gli sviluppatori R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Per visualizzare gli esempi di machine learning basato su scenari reali, vedere [Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).
+Per visualizzare esempi di machine learning basato su scenari reali, vedere [Machine learning esercitazioni](../tutorials/machine-learning-services-tutorials.md).
 

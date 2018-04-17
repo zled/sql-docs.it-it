@@ -1,29 +1,17 @@
 ---
 title: Analitica R nel database per gli sviluppatori SQL (esercitazione) | Documenti Microsoft
-ms.custom: ''
-ms.date: 07/26/2017
-ms.reviewer: ''
-ms.suite: sql
-ms.prod: machine-learning-services
-ms.prod_service: machine-learning-services
-ms.component: ''
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.prod: sql
+ms.technology: machine-learning
+ms.date: 04/15/2018
 ms.topic: tutorial
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
-- TSQL
-ms.author: heidist
 author: HeidiSteen
+ms.author: heidist
 manager: cgronlun
-ms.workload: On Demand
-ms.openlocfilehash: 93e272db94d2784c8d52a1a7e92ed88deaf1c9fe
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analitica R nel database per gli sviluppatori SQL (esercitazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +68,7 @@ Tuttavia, prima di iniziare l'esercitazione, è necessario completare le operazi
 - L'account di accesso utilizzato per questa esercitazione è necessario disporre delle autorizzazioni per creare database e altri oggetti, per caricare i dati, selezionano i dati, eseguono le stored procedure.
 
 > [!NOTE]
-> È consigliabile effettuare **non** utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per scrivere o testare il codice R. Se il codice che viene incorporato in una stored procedure è presenti eventuali problemi, le informazioni che viene restituite dalla stored procedure sono in genere sufficienti per comprendere la causa dell'errore.
+> È consigliabile effettuare **non** utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per scrivere o testare il codice R. Se il codice che viene incorporato in una stored procedure è presenti eventuali problemi, le informazioni che viene restituite dalla stored procedure sono in genere sufficienti per individuare la causa dell'errore.
 > 
 > Per il debug, si consiglia di usare uno strumento come [!INCLUDE[rtvs-short](../../includes/rtvs-short-md.md)], o RStudio. Gli script R contenuti in questa esercitazione sono già stati sviluppati e sottoposti a debug usando gli strumenti tradizionali di R.
 
