@@ -47,4 +47,4 @@ Per disabilitare la segnalazione di arresto anomalo del sistema, da **File** > *
 **Avviso importante**: questa opzione richiede il riavvio del [!INCLUDE[name-sos](../includes/name-sos-short.md)] diventino effettive.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-- [Area di lavoro e le impostazioni utente](settings.md)
+- [Area di lavoro e impostazioni utente](settings.md)
