@@ -1,6 +1,6 @@
 ---
-title: Aggiornato - Doc SQL Operations Studio | Documenti Microsoft
-description: Visualizzare i frammenti di contenuto aggiornato per la documentazione modificato di recente in, per le SQL Operations Studio.
+title: Articoli nuovi e aggiornati - Documentazione di SQL Operations Studio | Microsoft Docs
+description: Contenuti aggiornati nella documentazione modificati di recente in SQL Operations Studio.
 manager: craigg
 author: MightyPen
 ms.author: genemi
@@ -16,15 +16,15 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Nuovi e recentemente aggiornato: doc SQL Operations Studio
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Articoli nuovi e recentemente aggiornati: Documentazione di SQL Operations Studio
 
 
 
-Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo [Docs.Microsoft.com](http://docs.microsoft.com/) sito Web di documentazione. In questo articolo consente di visualizzare estratti dagli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
+Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo sito Web di documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). In questo articolo sono visualizzati estratti degli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
 
-In questo articolo viene generato da un programma che viene eseguito di nuovo periodicamente. In alcuni casi un estratto può apparire con formattazione perfetto, o come markdown nell'articolo di origine. Le immagini non vengono mai visualizzate qui.
+Questo articolo viene generato da un programma eseguito periodicamente. In alcuni casi un estratto può apparire con una formattazione imperfetta, o anche come markdown origine dell'articolo. Le immagini non vengono mai visualizzate qui.
 
-Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'oggetto:
+Gli aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'area di interesse:
 
 
 
@@ -38,7 +38,7 @@ Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'og
 
 ## <a name="new-articles-created-recently"></a>Nuovi articoli creati di recente
 
-I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
+I collegamenti seguenti mostrano nuovi articoli aggiunti di recente.
 
 
 1. [Note sulla versione SQL Operations Studio (preview)](release-notes.md)
@@ -51,9 +51,9 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 
 In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
-Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto semantica corretto Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che la racchiude nell'articolo effettivo. Di conseguenza questi estratti sono solo a scopo generale. Gli estratti consentono solo di sapere se i tuoi interessi garantiscono la necessità di fare clic e visitare l'articolo effettivo.
+Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto di semantica corretto. Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che lo racchiude nell'articolo effettivo. Di conseguenza, questi estratti sono generici e consentono di determinare se prendervi il tempo di una visita all'articolo effettivo o meno.
 
-Per queste e altre ragioni, non copiare da questi estratti di codice e non prendono come verità esatta qualsiasi testo estratto. In alternativa, visitare l'articolo effettivo.
+Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità esatta qualsiasi testo in essi contenuto. Piuttosto, visitare l'articolo effettivo.
 
 
 
@@ -63,7 +63,7 @@ Per queste e altre ragioni, non copiare da questi estratti di codice e non prend
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Compact elenco degli articoli aggiornato di recente
+### <a name="compact-list-of-articles-updated-recently"></a>Elenco compatto degli articoli aggiornati di recente
 
 Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
@@ -120,7 +120,7 @@ Questa versione di SQL Operations Studio (preview) include un'esperienza di inst
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili su articoli nuovi o aggiornati
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili ad articoli nuovi o aggiornati
 
 In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno del repository GitHub pubblico di Microsoft: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
