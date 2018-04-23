@@ -16,15 +16,15 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/08/2018
 ---
-# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Nuovi e recentemente aggiornato: doc SQL Operations Studio
+# <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Articoli nuovi e recentemente aggiornati: Documentazione di SQL Operations Studio
 
 
 
-Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo [Docs.Microsoft.com](http://docs.microsoft.com/) sito Web di documentazione. In questo articolo consente di visualizzare estratti dagli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
+Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo sito Web di documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). In questo articolo sono visualizzati estratti degli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
 
-In questo articolo viene generato da un programma che viene eseguito di nuovo periodicamente. In alcuni casi un estratto può apparire con formattazione perfetto, o come markdown nell'articolo di origine. Le immagini non vengono mai visualizzate qui.
+Questo articolo viene generato da un programma eseguito periodicamente. In alcuni casi un estratto può apparire con una formattazione imperfetta, o anche come markdown origine dell'articolo. Le immagini non vengono mai visualizzate qui.
 
-Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'oggetto:
+Sono indicati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 
