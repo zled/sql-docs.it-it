@@ -26,25 +26,25 @@ ms.lasthandoff: 12/21/2017
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] raccoglie dati sull'utilizzo e li invia a Microsoft per contribuire a migliorare i prodotti e i servizi. Per altre informazioni, leggere l'[informativa sulla privacy](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409).
 
-Se non si desidera inviare i dati di utilizzo a Microsoft, è possibile impostare l'opzione *telemetry.enableTelemetry* a *false*.
+Se non si desidera inviare i dati di utilizzo a Microsoft, è possibile impostare l'opzione *telemetry.enableTelemetry* su *false*.
 
-Per silenziare tutti gli eventi di telemetria di [!INCLUDE[name-sos](../includes/name-sos-short.md)], modificare **File**>**Preferenze**>**Impostazioni** (**sqlops**>**Preferenze**>**Impostazioni** su mac) con la seguente opzione:
+Per silenziare tutti gli eventi di telemetria da SQL Operations Studio (anteprima), scegliere File > Preferenze > Impostazioni e aggiungere l'opzione seguente:
 
 ```json
     "telemetry.enableTelemetry": false
 ```
 
-**Avviso importante**: questa opzione richiede il riavvio di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per far sì che le modifiche diventino effettive.
+**Avviso importante**: per rendere effettiva la modifica è necessario riavviare SQL Operations Studio [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## <a name="how-to-disable-crash-reporting"></a>Come disabilitare la segnalazione di arresto anomalo del sistema
 
-Per disabilitare la segnalazione di arresto anomalo del sistema, modificare **File**>**Preferenze**>**Impostazioni** (**sqlops**>**Preferenze**>**Impostazioni** su mac) con la seguente opzione:
+Per disabilitare la segnalazione di arresto anomalo del sistema, scegliere **File**>**Preferenze**>**Impostazioni** (**sqlops**>**Preferenze**>**Impostazioni** su mac)  e aggiungere l'opzione seguente:
 
 ```json
     "telemetry.enableCrashReporter": false
 ```
 
-**Avviso importante**: questa opzione richiede il riavvio di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per far sì che le modifiche diventino effettive.
+**Avviso importante**: per rendere effettiva la modifica è necessario riavviare SQL Operations Studio [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 - [Area di lavoro e impostazioni utente](settings.md)
