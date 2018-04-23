@@ -24,7 +24,7 @@ Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo sito
 
 Questo articolo viene generato da un programma eseguito periodicamente. In alcuni casi un estratto può apparire con una formattazione imperfetta, o anche come markdown origine dell'articolo. Le immagini non vengono mai visualizzate qui.
 
-Gli aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'area di interesse:
+Sono indicati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 
@@ -38,7 +38,7 @@ Gli aggiornamenti recenti vengono indicati per il seguente intervallo di date e 
 
 ## <a name="new-articles-created-recently"></a>Nuovi articoli creati di recente
 
-I collegamenti seguenti mostrano nuovi articoli aggiunti di recente.
+I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
 1. [Note sulla versione SQL Operations Studio (preview)](release-notes.md)
@@ -120,7 +120,7 @@ Questa versione di SQL Operations Studio (preview) include un'esperienza di inst
 
 
 
-## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili ad articoli nuovi o aggiornati
+## <a name="similar-articles-about-new-or-updated-articles"></a>Articoli simili su articoli nuovi o aggiornati
 
 In questa sezione sono elencati articoli molto simili ad articoli aggiornati di recente in altre aree di interesse all'interno del repository GitHub pubblico di Microsoft: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
