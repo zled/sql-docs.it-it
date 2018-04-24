@@ -1,15 +1,16 @@
 ---
 title: Sospensione e ripresa del mirroring del database (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - sessions [SQL Server], database mirroring
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - database mirroring [SQL Server], resuming
 - pausing database mirroring
 ms.assetid: c67802c6-ee8c-4cbd-a6d4-f7b80413a4ab
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75f700428ebe213ad7faaef691bf1460e263c268
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: c4392842fd8993cf6569918a4e28f227112ad657
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Sospensione e ripresa del mirroring del database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il proprietario del database può sospendere una sessione di mirroring del database, riprenderla in qualsiasi momento e preservare così lo stato della sessione durante la sospensione del mirroring. In caso di colli di bottiglia, la sospensione può essere utile per migliorare le prestazioni del server principale.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Il proprietario del database può sospendere una sessione di mirroring del database, riprenderla in qualsiasi momento e preservare così lo stato della sessione durante la sospensione del mirroring. In caso di colli di bottiglia, la sospensione può essere utile per migliorare le prestazioni del server principale.  
   
  Quando si sospende una sessione, il database principale resta disponibile. In caso di sospensione, lo stato della sessione di mirroring viene impostato su SUSPENDED e il database mirror perde la sincronizzazione con il database principale, che viene quindi eseguito in una condizione nota come esposizione senza mirroring.  
   

@@ -1,33 +1,35 @@
 ---
 title: Configurazione dei protocolli di rete predefiniti di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - protocols [SQL Server], default settings
 - default protocols, after install
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5549947b718e1303d1c6a065cb5790b7af5dabe7
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3121357a686d3954cdf2d1fe389f40ce0015cb2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>Configurazione dei protocolli di rete predefiniti di SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard, Evaluation o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Per una maggiore sicurezza, per alcune nuove installazioni [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] disabilita la connettività di rete. La connettività di rete che utilizza TCP/IP non viene disabilitata se si utilizza l'edizione Enterprise, Standard, Evaluation o Workgroup oppure se è presente un'installazione precedente di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] . Per tutte le installazioni è attivato il protocollo Shared Memory, che consente le connessioni locali al server. È possibile che il servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser venga arrestato, in base alle condizioni e alle opzioni di installazione.
 
 Usare il nodo Configurazione di rete [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare i protocolli di rete dopo l'installazione. Usare il nodo Servizi di [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] di Gestione configurazione [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] per configurare l'avvio automatico del servizio [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] Browser. Per altre informazioni, vedere [Abilitare o disabilitare un protocollo di rete del server](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md).
 

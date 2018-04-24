@@ -1,16 +1,16 @@
 ---
 title: Espressioni (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-caps.latest.revision: 
+caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49efa9c940ff4428747942c88259bdd58b96a658
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 5423e9db9a6f41669d4adeaa8903f3c4af4508b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="expressions-transact-sql"></a>Espressioni (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +100,7 @@ ms.lasthandoff: 01/25/2018
 |{ *unary_operator* }|Gli operatori unari possono essere applicati solo a espressioni che restituiscono un tipo di dati appartenente alla categoria dei tipi di dati numerici. Operatore con un solo operando numerico:<br /><br /> + indica un numero positivo.<br /><br /> - indica un numero negativo.<br /><br /> ~ indica l'operatore di complemento a uno.|  
 |{ *binary_operator* }|Operatore che consente di definire la modalità in base a cui due espressioni vengono unite per ottenere un unico risultato. *binary_operator* può essere un operatore aritmetico, l'operatore di assegnazione (=), un operatore bit per bit, un operatore di confronto, un operatore logico, l'operatore di concatenazione delle stringhe (+) o un operatore unario. Per altre informazioni sugli operatori, vedere [Operatori &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md).|  
 |*ranking_windowed_function*|Qualsiasi funzione di rango [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per altre informazioni, vedere [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md).|  
-|*aggregate_windowed_function*|Qualsiasi funzione di aggregazione [!INCLUDE[tsql](../../includes/tsql-md.md)] con la clausola OVER. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|*aggregate_windowed_function*|Qualsiasi funzione di aggregazione [!INCLUDE[tsql](../../includes/tsql-md.md)] con la clausola OVER. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
   
 ## <a name="expression-results"></a>Risultati dell'espressione  
  Per un'espressione semplice costituita da un'unica costante, variabile, funzione scalare o colonna, il tipo di dati, le regole di confronto, la precisione, la scala e il valore dell'espressione coincidono con quelli dell'elemento a cui viene fatto riferimento.  
@@ -121,7 +122,7 @@ ms.lasthandoff: 01/25/2018
   
  Se non sono supportate né la conversione implicita né quella esplicita, non è possibile combinare le due espressioni.  
   
- Le regole di confronto di un'espressione che restituisce una stringa di caratteri vengono impostate in base alle regole sulla precedenza delle regole di confronto. Per altre informazioni, vedere [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md) (Precedenza delle regole di confronto &#40;Transact-SQL&#41;).  
+ Le regole di confronto di un'espressione che restituisce una stringa di caratteri vengono impostate in base alle regole sulla precedenza delle regole di confronto. Per altre informazioni, vedere [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
   
  In un linguaggio di programmazione come C o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], un'espressione restituisce sempre un unico risultato. Le espressioni in un elenco di selezione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguono una variante di questa regola, in quanto vengono valutate singolarmente per ogni riga del set di risultati. Una stessa espressione può avere un valore diverso in ogni riga del set di risultati, ma ogni riga include un solo valore per l'espressione. Nell'istruzione `SELECT` seguente, ad esempio, il riferimento a `ProductID` e il termine `1+2` nell'elenco di selezione sono entrambi espressioni:  
   

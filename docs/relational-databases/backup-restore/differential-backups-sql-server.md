@@ -1,34 +1,35 @@
 ---
 title: Backup differenziali (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - differential backups
 - differential backups, about
 ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 65c3f103ad65c9726be098dde183b1302b4e5645
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: d91f6ba505e5bfc9e95086532521402691fd713e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="differential-backups-sql-server"></a>Backup differenziali [SQL Server]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento relativo a backup e ripristino è applicabile a tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Questo argomento relativo a backup e ripristino è applicabile a tutti i database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Un backup differenziale si basa sul backup dei dati completo precedente più recente. In un backup differenziale vengono acquisiti solo i dati che hanno subito modifiche dopo il backup completo. Il backup completo su cui si basa un backup differenziale è noto come *base* del backup differenziale. I backup completi, ad eccezione di backup di sola copia, possono servire come base per una serie di backup differenziali, compresi backup di database, backup parziali e backup di file. Il backup di base per un backup differenziale di file può essere contenuto in un backup completo, un backup di file o un backup parziale.  
   

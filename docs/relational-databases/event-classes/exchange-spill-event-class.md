@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Exchange Spill | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 542f3a89a81184fe78375fb987f6d7ceb9f7281f
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 6e9b8847a3bbbbeb85a3b27d8bd225eb8eb96bb2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Exchange Spill** indica che i buffer di comunicazione in un piano di query parallele sono stati inseriti temporaneamente nel database **tempdb** . Questa classe viene generata raramente e solo quando un piano di query include più analisi di intervalli.  
+  La classe di evento **Exchange Spill** indica che i buffer di comunicazione in un piano di query parallele sono stati inseriti temporaneamente nel database **tempdb** . Questa classe viene generata raramente e solo quando un piano di query include più analisi di intervalli.  
   
  In genere, la query [!INCLUDE[tsql](../../includes/tsql-md.md)] che genera tali analisi di intervalli include molti operatori BETWEEN, ognuno dei quali seleziona un intervallo di righe di una tabella o di un indice. In alternativa, è possibile ottenere più intervalli utilizzando espressioni, ad esempio (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). I piani di query richiedono inoltre che l'analisi di tali intervalli venga eseguita in ordine perché esiste una clausola ORDER BY relativa a T.a oppure perché un iteratore all'interno del piano richiede che le tuple vengano utilizzate in base all'ordinamento stabilito.  
   

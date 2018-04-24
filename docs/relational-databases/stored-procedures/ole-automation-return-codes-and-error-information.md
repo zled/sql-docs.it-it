@@ -1,36 +1,37 @@
 ---
 title: Codici restituiti e informazioni sugli errori di automazione OLE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: stored-procedures
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-ole
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - return codes [SQL Server]
 - OLE Automation [SQL Server], return codes
 - OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2621860c2090c3c3efe1fa72bbd4c9e4315c68d
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 80a4fd9b2c929d54158c39e06635818ec95b8d30
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codici restituiti e informazioni sugli errori di automazione OLE
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Le stored procedure del sistema di automazione OLE restituiscono un codice **int** che corrisponde al valore HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un valore HRESULT diverso da zero corrisponde a un codice di errore OLE nel formato esadecimale 0x800*nnnnn*. Se viene restituito come valore di tipo **int** nel codice di restituzione di una stored procedure, HRESULT viene espresso nel formato 214*nnnnnnn*.  
+  Le stored procedure del sistema di automazione OLE restituiscono un codice **int** che corrisponde al valore HRESULT restituito dall'operazione di automazione OLE sottostante. Se HRESULT è 0, l'operazione è riuscita. Un valore HRESULT diverso da zero corrisponde a un codice di errore OLE nel formato esadecimale 0x800*nnnnn*. Se viene restituito come valore di tipo **int** nel codice di restituzione di una stored procedure, HRESULT viene espresso nel formato 214*nnnnnnn*.  
   
  Se, ad esempio, si passa un nome di oggetto non valido (SQLDMO.Xyzzy) alla stored procedure sp_OACreate, viene restituito il valore HRESULT di tipo **int** 2147221005, ovvero 0x800401f3 in formato esadecimale.  
   

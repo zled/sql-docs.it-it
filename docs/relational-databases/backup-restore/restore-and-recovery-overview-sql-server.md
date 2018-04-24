@@ -1,16 +1,16 @@
 ---
 title: Panoramica del ripristino e del recupero (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - restoring tables [SQL Server]
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - restoring databases [SQL Server], about restoring databases
 - database restores [SQL Server], scenarios
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 19220b692245c3f07afb8e8a40026b44f1217ea3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bf61706f234766f240a4ef0b4385f2d60ba97893
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Panoramica del ripristino e del recupero (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/18/2018
 |Recupero dati|Recupero completo (se il log è disponibile).|Rischio parziale di perdita di dati.|Tutti i dati successivi all'ultimo backup completo o differenziale vanno perduti.|  
 |Ripristino temporizzato|Qualsiasi periodo di tempo coperto dai backup del log.|Non consentito se il backup del log contiene modifiche con registrazione minima delle operazioni bulk.|Non supportato.|  
 |File restore **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
-|Page restore **\***|Supporto completo.|In casi specifici.**\*\***|nessuna.|  
+|Page restore **\***|Supporto completo.|In casi specifici.**\*\***|Nessuna.|  
 |Ripristino a fasi (a livello di filegroup) **\***|Supporto completo.|In casi specifici.**\*\***|Disponibile solo per i file secondari di sola lettura.|  
   
  **\*** Disponibile solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
@@ -163,7 +163,7 @@ ms.lasthandoff: 01/18/2018
 -   [Pagina relativa a Recovery Advisor in cui viene illustrato l'utilizzo di SSMS per creare/ripristinare backup divisi](http://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-using-ssms-to-create-restore-split-backups.aspx)  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
- nessuna.  
+ Nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  

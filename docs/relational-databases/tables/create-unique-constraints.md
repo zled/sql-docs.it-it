@@ -2,7 +2,7 @@
 title: Creare vincoli univoci | Microsoft Docs
 ms.custom: ''
 ms.date: 10/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: tables
@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e17b48e1575ba0be09eea74cb96d8f471d67185d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 93c228ccdbf7085d5fe4d40b62a3087ec62c69cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-unique-constraints"></a>Creare vincoli univoci
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/10/2018
   
 -   **Prima di iniziare:**  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un vincolo univoco:**  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È necessario disporre dell'autorizzazione ALTER per la tabella.  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/10/2018
   
 5.  Scegliere **Salva***nome tabella* dal menu **File**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>Per creare un vincolo univoco  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creata la tabella `TransactionHistoryArchive4` e un vincolo univoco sulla colonna `TransactionID`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creata la tabella `TransactionHistoryArchive4` e un vincolo univoco sulla colonna `TransactionID`.  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creato un vincolo univoco nelle colonne `PasswordHash` e `PasswordSalt` della tabella `Person.Password`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creato un vincolo univoco nelle colonne `PasswordHash` e `PasswordSalt` della tabella `Person.Password`.  
   
     ```  
     USE AdventureWorks2012;   
@@ -113,7 +114,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**. Nell'esempio viene creata una tabella e definito un vincolo univoco nelle colonne `TransactionID`.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. Nell'esempio viene creata una tabella e definito un vincolo univoco nelle colonne `TransactionID`.  
   
     ```  
     USE AdventureWorks2012;  

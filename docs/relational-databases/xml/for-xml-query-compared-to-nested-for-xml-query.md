@@ -1,35 +1,35 @@
 ---
 title: Query FOR XML e query FOR XML annidate a confronto | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbbc80f4b96765da5cbb2e7533d5c46e80a26935
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 32ba485944056f695ed9ad0f1ddd7de82c5a1134
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Query FOR XML e query nidificata FOR XML a confronto
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-In questo argomento viene messa a confronto una query FOR XML con un solo livello con una query FOR XML nidificata. Uno dei vantaggi dell'utilizzo di query FOR XML consiste nella possibilità di specificare una combinazione di XML incentrati sia sugli attributi che sugli elementi per i risultati della query. Tutto ciò è dimostrato nell'esempio riportato di seguito.  
+  In questo argomento viene messa a confronto una query FOR XML con un solo livello con una query FOR XML nidificata. Uno dei vantaggi dell'utilizzo di query FOR XML consiste nella possibilità di specificare una combinazione di XML incentrati sia sugli attributi che sugli elementi per i risultati della query. Tutto ciò è dimostrato nell'esempio riportato di seguito.  
   
 ## <a name="example"></a>Esempio  
  La query seguente `SELECT` recupera informazioni sulla categoria e sulla sottocategoria di un prodotto dal database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La query non include istruzioni FOR XML nidificate.  

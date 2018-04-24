@@ -2,7 +2,7 @@
 title: Gruppo di disponibilità - Procedura guidata Aggiungi database a gruppo di disponibilità | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7a24cc777a0b13329c38fe4a276fae1c8b22d36
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 3a28e3c73df8e4f9e57ad7acbd5e52a913d8b782
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="availability-group---add-database-to-group-wizard"></a>Procedura guidata Aggiungi database a gruppo di disponibilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata Aggiungi database a gruppo di disponibilità per aggiungere uno o più database a un gruppo di disponibilità AlwaysOn esistente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Usare la procedura guidata Aggiungi database a gruppo di disponibilità per aggiungere uno o più database a un gruppo di disponibilità Always On esistente.  
   
 > [!NOTE]  
 >  Per informazioni sull'uso di [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell per aggiungere un database, vedere [Aggiungere un database a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/availability-group-add-a-database.md).  

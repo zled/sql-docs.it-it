@@ -2,7 +2,7 @@
 title: Dispositivi di backup (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: backup-restore
@@ -33,11 +33,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4874de4ba9df6c8bab86ca8201dff76b28f33
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 45ff0eb0fb8129ce38664540e2168ff92d5f84f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="backup-devices-sql-server"></a>Dispositivi di backup (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 04/10/2018
   
  TO DISK **=** { **'***nome_dispositivo_backup_fisico***'** | **@***var_nome_dispositivo_backup_fisico* }  
   
- Esempio:  
+ Ad esempio  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -125,7 +125,7 @@ GO
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Specificare un nome UNC (Universal Naming Convention)  
  Per specificare una condivisione di rete in un comando di backup o ripristino, è necessario usare il nome UNC (Universal Naming Convention) completo del file per il dispositivo di backup. Il formato di un nome UNC è **\\\\***NomeSistema***\\***NomeCondivisione***\\***Percorso***\\***NomeFile*.  
   
- Esempio:  
+ Ad esempio  
   
 ```sql  
 BACKUP DATABASE AdventureWorks2012   
@@ -155,7 +155,7 @@ GO
   
  TO TAPE **=** { **'***nome_dispositivo_backup_fisico***'** | **@***var_nome_dispositivo_backup_fisico* }  
   
- Esempio:  
+ Ad esempio  
   
 ```sql  
 BACKUP LOG AdventureWorks2012   

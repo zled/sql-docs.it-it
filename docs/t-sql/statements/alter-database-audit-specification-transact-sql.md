@@ -1,16 +1,16 @@
 ---
 title: ALTER DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER_DATABASE_AUDIT_SPECIFICATION_TSQL
@@ -22,16 +22,16 @@ dev_langs:
 helpviewer_keywords:
 - ALTER DATABASE AUDIT SPECIFICATION statement
 ms.assetid: 85f4e7e6-a330-4de0-9048-64f386ccc314
-caps.latest.revision: 
+caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fc9148b05ca5b7b77d149e19e937502450ea0d3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a5ca329329e12aead0f41c59e96c31067e3c44c9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-database-audit-specification-transact-sql"></a>ALTER DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
  Nome della colonna nell'entità a sicurezza diretta, se applicabile.  
   
  *principal*  
- Nome di entità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui applicare l'azione di controllo oppure il gruppo di azioni di controllo. Per altre informazioni, vedere [Principals &#40;Motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
+ Nome di entità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cui applicare l'azione di controllo oppure il gruppo di azioni di controllo. Per altre informazioni, vedere [Principals &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).  
   
  WITH **(** STATE **=** { ON | OFF } **)**  
  Abilita o disabilita la raccolta di record mediante il controllo per questa specifica del controllo. Le modifiche relative allo stato della specifica di controllo devono essere apportate all'esterno di una transazione utente e non possono contenere altre modifiche nella stessa istruzione in presenza di una transizione da ON a OFF.  
@@ -111,7 +111,7 @@ FOR SERVER AUDIT HIPPA_Audit
 GO  
 ```  
   
- Per un esempio completo delle modalità di creazione di un controllo, vedere [SQL Server Audit &#40;Motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+ Per un esempio completo delle modalità di creazione di un controllo, vedere [SQL Server Audit &#40;motore di database&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

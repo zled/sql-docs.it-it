@@ -1,16 +1,16 @@
 ---
 title: Gerarchia di crittografia | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - encryption [SQL Server], hierarchies
@@ -19,19 +19,21 @@ helpviewer_keywords:
 - security [SQL Server], encryption
 - hierarchies [SQL Server], encryption
 ms.assetid: 96c276d5-1bba-4e95-b678-10f059f1fbcf
-caps.latest.revision: 
+caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873a266bd722f6e5337abe94f615e2e82ea0e278
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7447398e55b4f3d8ad212dc506cafbb90512b15a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="encryption-hierarchy"></a>Gerarchia di crittografia
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base a una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crittografa i dati in base ad una particolare gerarchia di crittografia e infrastruttura di gestione delle chiavi. Ciascun livello crittografa il livello sottostante utilizzando una combinazione di certificati, chiavi asimmetriche e chiavi simmetriche. Le chiavi asimmetriche e simmetriche possono essere archiviate al di fuori di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un modulo EKM (Extensible Key Management).  
   
  Nella figura seguente viene indicato come nella gerarchia di crittografia ogni livello crittografi il livello sottostante e vengono visualizzate le configurazioni di crittografia più comuni. L'accesso all'inizio della gerarchia è in genere protetto da una password.  
   
@@ -109,7 +111,7 @@ ms.lasthandoff: 11/21/2017
  Una chiave simmetrica è una chiave che viene utilizzata sia per la crittografia che per decrittografia. La crittografia e la decrittografia tramite una chiave simmetrica sono veloci e sono quindi adatte per essere utilizzate in modo ricorrente per informazioni riservate contenute in database.  
   
 ### <a name="transparent-data-encryption"></a>Transparent Data Encryption  
- Transparent Data Encryption è un caso speciale di crittografia che utilizza una chiave simmetrica. Transparent Data Encryption crittografa un intero database utilizzando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta da altri certificati o chiavi, a loro volta protetti dalla chiave master del database o da una chiave asimmetrica archiviata in un modulo EKM. Per altre informazioni, vedere [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
+ Transparent Data Encryption è un caso speciale di crittografia che utilizza una chiave simmetrica. Transparent Data Encryption crittografa un intero database utilizzando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta da altri certificati o chiavi, a loro volta protetti dalla chiave master del database o da una chiave asimmetrica archiviata in un modulo EKM. Per altre informazioni sulla crittografia trasparente del database, vedere [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
 ## <a name="related-content"></a>Contenuto correlato  
  [Sicurezza di SQL Server](../../../relational-databases/security/securing-sql-server.md)  

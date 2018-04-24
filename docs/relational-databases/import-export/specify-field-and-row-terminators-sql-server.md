@@ -2,7 +2,7 @@
 title: Specificare i caratteri di terminazione del campo e della riga (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: ''
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8d596be8f4ae978a3eafe58d1cf9e8e52241f49c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ce4a92bea3af9709fadfbf4ba9b4dc356afd9fb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Impostazione dei caratteri di terminazione del campo e della riga (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,13 +47,13 @@ ms.lasthandoff: 03/20/2018
 |Carattere di nuova riga|\n<br /><br /> Questo è il carattere di terminazione della riga predefinito.|  
 |Ritorno a capo/avanzamento riga|\r|  
 |Barra rovesciata*|\\\|  
-|Carattere di terminazione Null (non visibile)\*\*|\0|  
+|Carattere di terminazione Null (non visibile)**|\0|  
 |Tutti i caratteri stampabili (i caratteri di controllo non sono stampabili, ad eccezione dei caratteri Null, di tabulazione, di nuova riga e di ritorno a capo)|(*, A, t, l e così via)|  
-|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(\*\*\t\*\*, end, !!!!!!!!!!, \t—\n e così via)|  
+|Stringa costituita da un massimo di 10 caratteri stampabili, inclusi alcuni o tutti i caratteri di terminazione descritti sopra|(**\t\*\*, end, !!!!!!!!!!, \t—\n e così via)|  
   
  *Per generare un carattere di controllo, è possibile utilizzare solo i caratteri t, n, r, 0 e '\0' in associazione al carattere di escape barra rovesciata.  
   
- \*\*Anche se il carattere di controllo Null (\0) non è visibile quando viene stampato, è un carattere distinto del file di dati. Pertanto, l'utilizzo di un carattere di controllo Null come carattere di terminazione è diverso dall'assenza di qualsiasi carattere di terminazione del campo o della riga.  
+ **Anche se il carattere di controllo Null (\0) non è visibile quando viene stampato, è un carattere distinto del file di dati. Pertanto, l'utilizzo di un carattere di controllo Null come carattere di terminazione è diverso dall'assenza di qualsiasi carattere di terminazione del campo o della riga.  
   
 > [!IMPORTANT]  
 >  Se i dati contengono un carattere di terminazione, questo viene interpretato come tale e non come un'informazione, mentre i dati che seguono tale carattere vengono interpretati come parte del campo o del record successivo. Di conseguenza, è necessario scegliere con attenzione i caratteri di terminazione per evitare che vengano visualizzati nei dati. Un carattere di terminazione del campo di surrogato basso, ad esempio, non costituisce una buona scelta per un carattere di terminazione del campo se i dati contengono tale surrogato basso.  
@@ -90,7 +91,7 @@ ms.lasthandoff: 03/20/2018
         >  Dopo l'impostazione interattiva di tutti i campi in un comando **bcp**, viene richiesto di salvare le risposte relative a ogni campo in un file di formato non XML. Per altre informazioni sui file di formato non XML, vedere [File in formato non XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Linee guida per l'utilizzo dei caratteri di terminazione  
- In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Esempio:  
+ In alcuni casi, un carattere di terminazione può essere utile per un campo dati **char** o **nchar** . Ad esempio  
   
 -   Per una colonna di dati che contiene un valore null in un file di dati da importare in un programma che non riconosce le informazioni sulla lunghezza del prefisso.  
   
@@ -105,7 +106,7 @@ ms.lasthandoff: 03/20/2018
   
  Per il comando **bcp** sono disponibili le opzioni seguenti.  
   
-|Opzione|Descrizione|  
+|Opzione|Description|  
 |------------|-----------------|  
 |**-c**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |**-t** `,`|Specifica la virgola (,) come carattere di terminazione del campo.|  
@@ -174,9 +175,9 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilizzo dell'istruzione BULK INSERT per l'impostazione interattiva dei caratteri di terminazione  
  Nell'esempio seguente viene eseguita l'importazione bulk del file di dati `Department-c-t.txt` utilizzando un'istruzione `BULK INSERT` con i qualificatori illustrati nella tabella seguente:  
   
-|Opzione|Attribute|  
+|Opzione|attribute|  
 |------------|---------------|  
-|DATAFILETYPE **='**char**'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
+|DATAFILETYPE **='** char **'**|Specifica che i campi dati devono essere caricati come dati di tipo carattere.|  
 |FIELDTERMINATOR **='**`,`**'**|Specifica la virgola (`,`) come carattere di terminazione del campo.|  
 |ROWTERMINATOR **='**`\n`**'**|Specifica il carattere di nuova riga come carattere di terminazione della riga.|  
   

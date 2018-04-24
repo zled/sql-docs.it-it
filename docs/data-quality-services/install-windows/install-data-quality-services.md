@@ -13,17 +13,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: ''
+caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 16d4773a4e54048ae8f5c90b73439f44b728615b
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c690e397688ad457970e5da1c45ce2d6b9b372d0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="install-data-quality-services"></a>Installare Data Quality Services
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) include i due componenti seguenti: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** e **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
   
 |Componente DQS|Description|  
@@ -87,7 +90,7 @@ ms.lasthandoff: 03/22/2018
   
     -   Creazione della stored procedure DQInitDQS_MAIN nel database master.  
   
-    -   Il file DQS_install.log viene creato in genere nella cartella C:\Programmi\Microsoft SQL Server\MSSQL13.*<nome_istanza>*\MSSQL\Log. Nel file sono contenute informazioni sulle azioni effettuate durante l'esecuzione del file DQSInstaller.exe.  
+    -   Il file DQS_install.log viene creato in genere nella cartella C:\Programmi\Microsoft SQL Server\MSSQL13.*<nome_istanza>* \MSSQL\Log. Nel file sono contenute informazioni sulle azioni effettuate durante l'esecuzione del file DQSInstaller.exe.  
   
     -   Se un database Master Data Services è presente nella stessa istanza di SQL Server come [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], viene creato un utente di cui è stato eseguito il mapping all'account di accesso a Master Data Services e a cui viene concesso il ruolo dqs_administrator nel database DQS_MAIN.  
   

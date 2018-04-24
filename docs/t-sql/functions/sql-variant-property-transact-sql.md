@@ -1,16 +1,16 @@
 ---
 title: SQL_VARIANT_PROPERTY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SQL_VARIANT_PROPERTY_TSQL
@@ -21,16 +21,17 @@ helpviewer_keywords:
 - SQL_VARIANT_PROPERTY function
 - sql_variant data type
 ms.assetid: 50e5c1d9-4e95-4ed0-9c92-435c872a399e
-caps.latest.revision: 
+caps.latest.revision: 42
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5947528f4e8959de1b8b4ee3679d4e3e058476d5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d9220a64ada2045691b631935aca5593ef913f64
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlvariantproperty-transact-sql"></a>SQL_VARIANT_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +51,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
  Espressione di tipo **sql_variant**.  
   
  *property*  
- Contiene il nome della proprietà **sql_variant** per la quale è necessario specificare informazioni. *property* è **varchar(**128**)**. I valori possibili sono i seguenti:  
+ Contiene il nome della proprietà **sql_variant** per la quale è necessario specificare informazioni. *property* è **varchar(** 128 **)**. I valori possibili sono i seguenti:  
   
 |valore|Description|Tipo di base di sql_variant restituito|  
 |-----------|-----------------|----------------------------------------|  
@@ -59,7 +60,7 @@ SQL_VARIANT_PROPERTY ( expression , property )
 |**Scala**|Numero di cifre a destra del separatore decimale con tipo di base numerico:<br /><br /> **decimal** (p,s) e **numeric** (p,s) = s<br /><br /> **money** e **smallmoney** = 4<br /><br /> **datetime** = 3<br /><br /> Tutti gli altri tipi = 0|**int**<br /><br /> NULL = Input non valido.|  
 |**TotalBytes**|Numero di byte necessari per l'archiviazione sia dei metadati che dei dati del valore. Questo valore risulta utile per verificare le dimensioni massime dei dati in una colonna **sql_variant**. Se il valore è maggiore di 900, la creazione dell'indice genera un errore.|**int**<br /><br /> NULL = Input non valido.|  
 |**Regole di confronto**|Regole di confronto del valore di tipo **sql_variant** specifico.|**sysname**<br /><br /> NULL = Input non valido.|  
-|**MaxLength**|Lunghezza massima del tipo di dati espressa in byte. Ad esempio, **MaxLength** di **nvarchar(**50**)** è 100, **MaxLength** di **int** è 4.|**int**<br /><br /> NULL = Input non valido.|  
+|**MaxLength**|Lunghezza massima del tipo di dati espressa in byte. Ad esempio, **MaxLength** di **nvarchar(** 50 **)** è 100, **MaxLength** di **int** è 4.|**int**<br /><br /> NULL = Input non valido.|  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **sql_variant**  

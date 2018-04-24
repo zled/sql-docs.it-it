@@ -1,33 +1,34 @@
 ---
 title: Finestra di dialogo Apri condizione, pagina Criteri dipendenti | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dmf.condition.referencingpolicies.f1
 ms.assetid: 9a715f4b-8f37-4654-85a5-bfb89c09708b
-caps.latest.revision: 
+caps.latest.revision: 21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 946ceab0604c116ded08cfd2c0aa096ead20867e
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 5369d8f3886c4652194318e9524d5998d4f5f85a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>Finestra di dialogo Apri condizione, pagina Criteri dipendenti
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento alla condizione della gestione basata su criteri corrente. Per altre informazioni sulla correlazione delle condizioni con facet e criteri, vedere [Amministrazione di server tramite la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilizzare questa finestra di dialogo per visualizzare un elenco di criteri che fanno riferimento alla condizione della gestione basata su criteri corrente. Per altre informazioni sulla correlazione delle condizioni con facet e criteri, vedere [Amministrazione di server con la gestione basata su criteri](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## <a name="options"></a>Opzioni  
  **Nome**  

@@ -1,16 +1,16 @@
 ---
 title: Popolare gli indici full-text | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: search
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-search
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - index populations [full-text search]
@@ -27,20 +27,21 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-caps.latest.revision: 
+caps.latest.revision: 78
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c139299c1613bb3d76328097fd1235f67ebe121a
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 1aaf0f00a3db140918df6988f13833251abcb9c1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="populate-full-text-indexes"></a>Popolamento degli indici full-text
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
+  La creazione e la gestione di un indice full-text comporta il popolamento dell'indice con un processo denominato *popolamento* , noto anche con il termine *ricerca per indicizzazione*.  
   
 ##  <a name="types"></a> Types of population  
 Un indice full-text supporta i tipi di popolamento seguenti:
@@ -225,7 +226,7 @@ Il file del log di tipo ricerca per indicizzazione segue lo schema di denominazi
 Di seguito sono riportate le parti variabili del nome del file del log di ricerca per indicizzazione.
 -   <**IDDatabase**>: ID di un database. <**dbid**> è un numero a cinque cifre con zeri iniziali.  
 -   <**IDCatalogoFullText**>: ID del catalogo full-text. <**catid**> è un numero a cinque cifre con zeri iniziali.  
--   <**n**>: numero intero che indica l'esistenza di uno o più log di tipo ricerca per indicizzazione per lo stesso catalogo full-text.  
+-   <**n**>: numero intero che indica l'esistenza di uno o più log di ricerca per indicizzazione per lo stesso catalogo full-text.  
   
  Ad esempio, `SQLFT0000500008.2` è il file del log di ricerca per indicizzazione per un database con ID database = 5 e ID catalogo full-text = 8. Il 2 alla fine del nome file indica che sono disponibili due file del log di tipo ricerca per indicizzazione per questa coppia di database/catalogo.  
 

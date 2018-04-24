@@ -1,15 +1,16 @@
 ---
 title: Configurazione di rete dei client | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client configuration [SQL Server], connections
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - client connections [SQL Server]
 - network connections [SQL Server], client configuration
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d2ece426d8fa9a328746e26346455f625ef8a7f5
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 29baaad2445244085045fb568e782cb38e514147
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="client-network-configuration"></a>Configurazione di rete dei client
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Il software client consente ai computer di connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile in rete. Un client è un'applicazione front-end che utilizza i servizi forniti da un server quale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il computer nel quale è installata l'applicazione viene definito *computer client*.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Il software client consente ai computer di connettersi a un'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibile in rete. Un client è un'applicazione front-end che utilizza i servizi forniti da un server quale [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Il computer nel quale è installata l'applicazione viene definito *computer client*.  
   
  Al livello più semplice, un client di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può risiedere nello stesso computer di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In genere tuttavia, un client si connette a uno o più server remoti in rete. L'architettura client/server di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente di gestire più client e server in una rete. Le configurazioni client predefinite risultano adeguate nella maggior parte dei casi.  
   

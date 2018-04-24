@@ -1,16 +1,16 @@
 ---
 title: Ridurre il carico di ottimizzazione del server di produzione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - overhead [Database Engine Tuning Advisor]
@@ -21,19 +21,21 @@ helpviewer_keywords:
 - production servers [SQL Server]
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 124c7be2ec961ff536c8b3909579176964c58c6b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Riduzione del carico di ottimizzazione del server di produzione
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] si basa su Query Optimizer per analizzare un carico di lavoro e fornire indicazioni di ottimizzazione. L'esecuzione di questa analisi sul server di produzione aumenta il carico del server e può ridurre le prestazioni del server durante la sessione di ottimizzazione. È possibile diminuire l'impatto sul carico del server durante una sessione di ottimizzazione utilizzando un server di prova oltre al server di produzione.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Ottimizzazione guidata si basa su Query Optimizer per analizzare un carico di lavoro e fornire indicazioni di ottimizzazione. L'esecuzione di questa analisi sul server di produzione aumenta il carico del server e può ridurre le prestazioni del server durante la sessione di ottimizzazione. È possibile diminuire l'impatto sul carico del server durante una sessione di ottimizzazione utilizzando un server di prova oltre al server di produzione.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Modalità di utilizzo di un server di prova da parte di Ottimizzazione guidata motore di database  
  L'utilizzo tradizionale di un server di prova consiste nel copiare tutti i dati dal server di produzione sul server di prova, ottimizzare quest'ultimo e quindi implementare l'indicazione sul server di produzione. Questo processo elimina l'effetto sulle prestazioni del server di produzione, ma non rappresenta comunque la soluzione ideale. Ad esempio, la copia di grandi quantità di dati dal server di produzione sul server di prova può richiedere notevoli quantità di tempo e risorse. Inoltre, l'hardware del server di prova raramente è potente quanto quello utilizzato per i server di produzione. Il processo di ottimizzazione si basa su Query Optimizer e le indicazioni da esso generate dipendono in parte dall'hardware sottostante. Se l'hardware del server di prova e di produzione non sono identici, la qualità delle indicazioni di Ottimizzazione guidata [!INCLUDE[ssDE](../../includes/ssde-md.md)] ne risente.  

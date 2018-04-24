@@ -1,16 +1,16 @@
 ---
 title: datetime (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime_TSQL
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - datetime data type [SQL Server]
 - data types [SQL Server], date and time
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
-caps.latest.revision: 
+caps.latest.revision: 64
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4493e165efbc0410d444f34fc41e30cc08e90307
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 84a5d0f57019067307995784a84fbcfb82e8578f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,7 +120,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-Quando la conversione viene eseguita da **time(n)**, il componente relativo all'ora viene copiato e quello relativo alla data viene impostato su "1900-01-01". Quando la precisione frazionaria del valore **time(n)** è maggiore di tre cifre, il valore verrà troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime`.  
+Quando la conversione è da **time(n)**, il componente relativo all'ora viene copiato e quello relativo alla data viene impostato su "1900-01-01". Quando la precisione frazionaria del valore **time(n)** è maggiore di tre cifre, il valore verrà troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `time(4)` in un valore `datetime`.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  

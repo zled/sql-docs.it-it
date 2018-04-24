@@ -1,15 +1,16 @@
 ---
 title: Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - parallel redo [SQL Server]
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - redo [database mirroring]
 - database mirroring [SQL Server], failover
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: ecfc3f4c066afaf535922e8144452fccdb78991c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Stimare l'interruzione del servizio durante il cambio di ruolo (mirroring del database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Durante un cambio di ruolo, l'intervallo di tempo in cui il mirroring del database sarà fuori servizio dipende dal tipo e dalla causa del cambio di ruolo.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Durante un cambio di ruolo, l'intervallo di tempo in cui il mirroring del database sarà fuori servizio dipende dal tipo e dalla causa del cambio di ruolo.  
   
 -   Per il failover automatico, i fattori che contribuiscono alla durata dell'interruzione del servizio sono due: il tempo necessario perché il server mirror individui l'errore del server principale, ovvero il rilevamento dell'errore, e il tempo necessario per eseguire il failover del database, ovvero il tempo di failover.  
   

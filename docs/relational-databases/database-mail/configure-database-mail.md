@@ -2,7 +2,7 @@
 title: Configurare Posta elettronica database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mail
@@ -47,17 +47,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3d88087b9d1142919f844155c805e2284e954e54
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 258e534b2291712f322cfb1dd611c3fb7a0c876c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-database-mail"></a>Configurare Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   In questo argomento viene illustrato come abilitare e configurare Posta elettronica database utilizzando la Configurazione guidata Posta elettronica database e come creare uno script di configurazione per Posta elettronica database utilizzando i modelli.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Prima di iniziare:**  [Limitazioni e restrizioni](#Restrictions), [Sicurezza](#Security)  
   
 -   **Per configurare Posta elettronica database, usando:**  [Configurazione guidata Posta elettronica database](#DBWizard), [Utilizzo di modelli](#Template)  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 04/10/2018
  **Nome account**  
  Digitare il nome del nuovo account.  
   
- **Description**  
+ **Descrizione**  
  Digitare una descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo posta elettronica**  
@@ -198,7 +198,7 @@ ms.lasthandoff: 04/10/2018
  **Elimina**  
  Consente di eliminare l'account selezionato. È necessario rimuovere l'account dai profili associati, o eliminare tali profili, prima di poter eliminare l'account selezionato.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare o aggiornare la descrizione dell'account. La descrizione è facoltativa.  
   
  **Indirizzo posta elettronica**  
@@ -225,7 +225,7 @@ ms.lasthandoff: 04/10/2018
  **Autenticazione di base**  
  Consente di specificare il nome utente e la password necessari per il server SMTP.  
   
- **Nome utente**  
+ **User name**  
  Consente di visualizzare o aggiornare il nome utente utilizzato da Posta elettronica database per accedere al server SMTP. Il nome utente è necessario se il server SMTP richiede l'autenticazione di base.  
   
  **Password**  
@@ -247,7 +247,7 @@ ms.lasthandoff: 04/10/2018
  **Nome profilo**  
  Consente di digitare il nome del nuovo profilo. Il profilo verrà creato con il nome specificato. Non utilizzare il nome di un profilo esistente.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione per il profilo. La descrizione è facoltativa.  
   
  **Account SMTP**  
@@ -278,7 +278,7 @@ ms.lasthandoff: 04/10/2018
  **Elimina**  
  Consente di eliminare il profilo selezionato. Verrà richiesto di scegliere **Sì** per eliminare il profilo selezionato e impostare un errore per gli eventuali messaggi non inviati oppure di scegliere **No** per eliminare il profilo selezionato solo se non sono presenti messaggi non inviati.  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare o modificare la descrizione del profilo selezionato. La descrizione è facoltativa.  
   
  **Account SMTP**  
@@ -369,7 +369,7 @@ ms.lasthandoff: 04/10/2018
   
  Un profilo può essere predefinito. In questo caso, gli utenti o i ruoli possono inviare messaggi di posta elettronica utilizzando il profilo senza specificarlo esplicitamente. Se l'utente o il ruolo che invia il messaggio di posta elettronica dispone di un profilo privato predefinito, Posta elettronica database utilizzerà tale profilo. Se all'utente o ruolo non è associato alcun profilo privato predefinito, **sp_send_dbmail** usa il profilo pubblico predefinito per il database **msdb** . Se non è disponibile un profilo privato predefinito per l'utente o il ruolo oppure un profilo pubblico predefinito per il database, **sp_send_dbmail** restituisce un errore.  
   
- **Nome utente**  
+ **User name**  
  Consente di selezionare il nome di un utente o di un ruolo nel database **msdb** .  
   
  **Accesso**  

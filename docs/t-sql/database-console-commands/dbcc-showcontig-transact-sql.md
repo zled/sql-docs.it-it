@@ -1,16 +1,16 @@
 ---
 title: DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|database-console-commands
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DBCC_SHOWCONTIG_TSQL
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-caps.latest.revision: 
+caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ebc23e00ed03e4e4cca50b4a1655c373816d563e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,8 +106,8 @@ Nella tabella seguente vengono descritte le informazioni del set di risultati.
 |**Densità di analisi [conteggio ottimale:conteggio effettivo]**|Valore percentuale. Rapporto tra **Conteggio ottimale** e **Conteggio effettivo**. Questo valore è 100 se tutti gli elementi sono contigui, è minore di 100 in presenza di frammentazioni.<br /><br /> **Conteggio ottimale** rappresenta il numero ideale di cambi di extent se tutti gli elementi fossero contigui. **Conteggio effettivo** rappresenta il numero effettivo di cambi di extent.|  
 |**Frammentazione analisi logica**|Percentuale di pagine non ordinate restituite dall'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Una pagina risulta non ordinata quando la pagina fisica successiva allocata all'indice è diversa da quella a cui fa riferimento il *puntatore di pagina successiva* nella pagina foglia corrente.|  
 |**Frammentazione analisi extent**|Percentuale di extent non ordinati rilevati durante l'analisi delle pagine foglia di un indice. Questo valore non è rilevante per gli heap. Un extent risulta non ordinato quando l'extent contenente la pagina corrente di un indice non corrisponde fisicamente all'extent successivo a quello che contiene la pagina precedente di un indice.<br /><br /> Nota: questo numero non è significativo se l'indice è esteso a più file.|  
-|**Media byte disponibili per pagina**|Numero medio di byte disponibili nelle pagine sottoposte ad analisi. Maggiore è il numero, minore sarà il livello di riempimento delle pagine. I numeri minori indicano una situazione migliore se nell'indice non verranno eseguiti numerosi inserimenti casuali. Anche le dimensioni delle righe influiscono su questo valore, che risulta maggiore per righe di grandi dimensioni.|  
-|**Media densità pagina (completa)**|Densità media della pagina, in percentuale. Questo valore tiene conto delle dimensioni delle righe e pertanto rappresenta un'indicazione più precisa dell'effettivo livello di riempimento delle pagine. Sono preferibili valori elevati.|  
+|**Byte disponibili per pagina**|Numero medio di byte disponibili nelle pagine sottoposte ad analisi. Maggiore è il numero, minore sarà il livello di riempimento delle pagine. I numeri minori indicano una situazione migliore se nell'indice non verranno eseguiti numerosi inserimenti casuali. Anche le dimensioni delle righe influiscono su questo valore, che risulta maggiore per righe di grandi dimensioni.|  
+|**Byte densità pagina (completa)**|Densità media della pagina, in percentuale. Questo valore tiene conto delle dimensioni delle righe e pertanto rappresenta un'indicazione più precisa dell'effettivo livello di riempimento delle pagine. Sono preferibili valori elevati.|  
   
 Se si specificano *table_id* e l'opzione FAST, l'istruzione DBCC SHOWCONTIG restituisce un set di risultati che include solo le colonne seguenti.
 -   **Pagine sottoposte ad analisi**  
@@ -174,7 +174,7 @@ Per ridurre il livello di frammentazione di un indice molto frammentato, è poss
 -   Ricompilare l'indice.  
      Per ricompilare l'indice, utilizzare ALTER INDEX con REBUILD. Per altre informazioni, vedere [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-Le statistiche **Media byte disponibili per pagina** e **Media densità pagina (completa)** nel set di risultati indicano il livello di riempimento delle pagine dell'indice. Il numero **Media byte disponibili per pagina** deve essere basso e il numero **Media densità pagina (completa)** deve essere elevato per un indice per cui non sono previsti numerosi inserimenti casuali. L'eliminazione e la ricostruzione di un indice con l'opzione FILLFACTOR può consentire di migliorare tali statistiche. L'istruzione ALTER INDEX con l'opzione REORGANIZE consente inoltre di compattare un indice tenendo conto del valore FILLFACTOR corrispondente, con un conseguente miglioramento delle statistiche.
+Il numero **Media byte disponibili per pagina** e **Media densità pagina (completa)** nel set di risultati indicano il livello di riempimento delle pagine dell'indice. Il numero **Media byte disponibili per pagina** deve essere basso e il numero **Media densità pagina (completa)** deve essere elevato per un indice per cui non sono previsti numerosi inserimenti casuali. L'eliminazione e la ricostruzione di un indice con l'opzione FILLFACTOR può consentire di migliorare tali statistiche. L'istruzione ALTER INDEX con l'opzione REORGANIZE consente inoltre di compattare un indice tenendo conto del valore FILLFACTOR corrispondente, con un conseguente miglioramento delle statistiche.
   
 > [!NOTE]  
 >  Per un indice con numerosi inserimenti casuali e pagine molto piene si verificherà un maggior numero di divisioni di pagina e di conseguenza una maggiore frammentazione.  

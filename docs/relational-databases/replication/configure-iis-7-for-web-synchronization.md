@@ -1,31 +1,31 @@
 ---
 title: Configurare IIS 7 per la sincronizzazione Web | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/12/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IIS 7 server configuration [SQL Server replication]
 - Web synchronization, IIS 7 servers
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b19f966b7e7c01edb4f53d3c3ff7194f1b78879a
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 9458cfe599a240719ad4f04c27c0bc13fb2a04a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurare IIS 7 per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 7.  Configurare IIS in modo da consentire l'esecuzione di replisapi.dll.  
   
-    1.  In **Gestione Internet Information Services (IIS)**fare clic su **Sito Web predefinito**.  
+    1.  In **Gestione Internet Information Services (IIS)** fare clic su **Sito Web predefinito**.  
   
     2.  Nel riquadro centrale fare clic su **Mapping gestori**.  
   
@@ -110,7 +110,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 #### <a name="to-configure-iis-authentication"></a>Per configurare l'autenticazione IIS  
   
-1.  In **Gestione Internet Information Services (IIS)**fare clic su **Sito Web predefinito**.  
+1.  In **Gestione Internet Information Services (IIS)** fare clic su **Sito Web predefinito**.  
   
 2.  Nel riquadro centrale fare doppio clic su **Autenticazione**.  
   
@@ -138,7 +138,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 #### <a name="to-require-ssl-security-for-a-web-site"></a>Per richiedere la sicurezza SSL per un sito Web  
   
-1.  In **Gestione Internet Information Services (IIS)**espandere il nodo del server locale, quindi fare clic su **Sito Web predefinito** o sul sito di sincronizzazione Web se è diverso dal sito Web predefinito.  
+1.  In **Gestione Internet Information Services (IIS)** espandere il nodo del server locale, quindi fare clic su **Sito Web predefinito** o sul sito di sincronizzazione Web se è diverso dal sito Web predefinito.  
   
 2.  Nel riquadro centrale fare doppio clic su **Impostazioni SSL**.  
   
@@ -146,7 +146,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 #### <a name="to-create-a-self-signed-certificate-for-testing"></a>Per creare un certificato autofirmato per i test  
   
-1.  In **Gestione Internet Information Services (IIS)**fare clic sul nodo del server locale, quindi fare doppio clic su **Certificati server**.  
+1.  In **Gestione Internet Information Services (IIS)** fare clic sul nodo del server locale, quindi fare doppio clic su **Certificati server**.  
   
 2.  Nel riquadro **Azioni** fare clic su **Crea certificato autofirmato**.  
   
@@ -164,7 +164,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 ###### <a name="to-test-the-certificate"></a>Per testare il certificato  
   
-1.  In **Gestione Internet Information Services (IIS)**fare clic su **Sito Web predefinito.**  
+1.  In **Gestione Internet Information Services (IIS)** fare clic su **Sito Web predefinito.**  
   
 2.  Nel riquadro **Azioni** fare clic su **Sfoglia \*:443 (https)**.  
   
@@ -248,7 +248,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 5.  Associare l'account al pool di applicazioni:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo del server locale, quindi fare clic su **Pool di applicazioni**.  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo del server locale, quindi fare clic su **Pool di applicazioni**.  
   
     2.  Fare clic con il pulsante destro del mouse sul pool di applicazioni creato, quindi scegliere **Impostazioni predefinite pool di applicazioni**.  
   
@@ -264,7 +264,7 @@ La sincronizzazione Web è supportata in IIS a partire dalla versione 5.0. La Co
   
 6.  Associare il pool di applicazioni al sito Web per la replica:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo del server locale, quindi fare clic su **Sito Web predefinito** o sul sito di sincronizzazione Web se è diverso dal sito Web predefinito.  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo del server locale, quindi fare clic su **Sito Web predefinito** o sul sito di sincronizzazione Web se è diverso dal sito Web predefinito.  
   
     2.  Nel riquadro **Azioni** , in **Gestione sito Web**fare clic su **Impostazioni avanzate**.  
   

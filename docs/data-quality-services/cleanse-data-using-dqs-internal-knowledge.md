@@ -18,18 +18,21 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ed7b80a8efa3f80ba349144afa2b931e4d255ec1
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 419f6ae4c8c7c5e19117aaeb86d730e1c625ee44
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Pulizia dei dati mediante le informazioni interne di DQS
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento viene descritto come eseguire la pulizia dei dati utilizzando un progetto Data Quality in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La pulizia dei dati viene eseguita sui dati di origine utilizzando una Knowledge Base incorporata in DQS e confrontando tali dati con un set di dati di alta qualità. Per altre informazioni, vedere [Compilazione di una Knowledge Base](../data-quality-services/building-a-knowledge-base.md).  
   
  La pulizia dei dati viene eseguita in quattro fasi: una fase di *mapping* , nel corso della quale viene identificata l'origine dati da pulire e ne viene eseguito il mapping ai domini richiesti in una Knowledge Base; una fase di *pulizia computerizzata* , in cui DQS applica la Knowledge Base ai dati da pulire e propone/effettua modifiche ai dati di origine; una fase di *pulizia interattiva* , che consente agli amministratori dei dati di analizzare, accettare o rifiutare le modifiche ai dati; infine, la fase di *esportazione* che consente di esportare i dati puliti. Ognuno di questi processi viene eseguito in una pagina separata della procedura guidata relativa all'attività di pulizia, consentendo all'utente di spostarsi da una pagina a un'altra al fine di rieseguire il processo, completare un processo di pulizia specifico e tornare nuovamente a una sua fase specifica. DQS fornisce statistiche sui dati di origine e sui risultati della pulizia che consentono di prendere decisioni informate sulla pulizia dei dati.  
@@ -220,7 +223,7 @@ ms.lasthandoff: 03/22/2018
   
  Il profiling DQS fornisce due dimensioni della qualità dei dati: *completezza* (l'entità della presenza dei dati) e *accuratezza* (la misura entro cui i dati possono essere utilizzati per gli scopi previsti). Se il profiling suggerisce che un campo è relativamente incompleto, è necessario rimuoverlo dalla Knowledge Base di un progetto Data Quality. È possibile che il profiling non fornisca statistiche di completezza affidabili per i domini compositi. Se sono necessarie statistiche di completezza, utilizzare domini singoli anziché domini compositi. Se si desidera utilizzare domini compositi, è consigliabile creare una Knowledge Base con domini singoli di cui eseguire il profiling per determinare la completezza, quindi creare un altro dominio con un dominio composito per il processo di pulizia. Ad esempio, il profiling potrebbe mostrare una completezza del 95% per record relativi a indirizzi, utilizzando un dominio composito, ma potrebbe esservi un livello di incompletezza molto più alto per una delle colonne, ad esempio una colonna relativa al codice postale (CAP). In questo esempio, è necessario misurare la completezza della colonna del CAP con un solo dominio. Il profiling fornirà probabilmente statistiche di accuratezza affidabili per i domini compositi perché è possibile misurare l'accuratezza di più colonne allo stesso tempo. Il valore di questi dati sta nell'aggregazione composta, pertanto è consigliabile misurarne l'accuratezza con un dominio composito.  
   
- Se non si utilizza un servizio dati di riferimento, le statistiche di accuratezza richiederanno probabilmente un maggior livello di interpretazione. Se si utilizza un servizio dati di riferimento per la pulizia dei dati, si otterrà un certo livello di attendibilità nelle statistiche di accuratezza. Per altre informazioni sulla pulizia dei dati mediante il servizio dati di riferimento, vedere [Pulire i dati mediante le informazioni dei dati di riferimento &#40; esterni &#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
+ Se non si utilizza un servizio dati di riferimento, le statistiche di accuratezza richiederanno probabilmente un maggior livello di interpretazione. Se si utilizza un servizio dati di riferimento per la pulizia dei dati, si otterrà un certo livello di attendibilità nelle statistiche di accuratezza. Per altre informazioni sulla pulizia dei dati mediante il servizio dati di riferimento, vedere [Pulire i dati mediante le informazioni dei dati di riferimento & #40; esterni & #41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ### <a name="cleansing-notifications"></a>Notifiche relative alla pulizia  
  Le condizioni seguenti danno luogo a notifiche:  

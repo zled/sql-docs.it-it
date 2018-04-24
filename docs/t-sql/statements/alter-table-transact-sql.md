@@ -2,7 +2,7 @@
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/07/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: t-sql|statements
@@ -66,11 +66,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20df0676d819883937884d2b6d989d9f583c7fb4
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 41908f6d675e60fb5e188cd739f8e8833e4f4d07
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -571,13 +572,13 @@ WITH CHECK | WITH NOCHECK
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [Edizioni e funzionalità supportate di SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name***(***column_name* [ 1**,** ... *n*] **)** | *filegroup* | **"**default**"** }  
+ MOVE TO { *partition_scheme_name ***(*** column_name* [ 1 **,** ... *n*] **)** | *filegroup* | **"** default **"** }  
  **Si applica a** : da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Specifica una posizione in cui spostare le righe di dati attualmente presenti a livello foglia nell'indice cluster. La tabella viene spostata nella nuova posizione. Questa opzione è valida solo per i vincoli che creano un indice cluster.  
   
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"**default**"** o MOVE TO **[**default**]**. Se si specifica "**"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica "**"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  { CHECK | NOCHECK } CONSTRAINT  
  Specifica che *constraint_name* è abilitato o disabilitato. È possibile utilizzare questa opzione solo con vincoli FOREIGN KEY e CHECK. Quando si specifica NOCHECK, il vincolo viene disabilitato e gli inserimenti o gli aggiornamenti successivi della colonna non vengono convalidati in base alle condizioni del vincolo. I vincoli DEFAULT, PRIMARY KEY e UNIQUE non possono essere disabilitati.  
@@ -637,7 +638,7 @@ Per la restrizione **SWITCH** durante la replica, vedere [Replicare tabelle e in
   
  Gli indici columnstore non cluster compilati per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1 e per il database SQL prima della versione V12 sono in un formato di sola lettura. Prima di poter eseguire un'operazione PARTITION, è necessario ricompilare gli indici columnstore non cluster nel formato corrente, vale a dire in un formato aggiornabile.  
   
- SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"**default**"** | **"**NULL**"** }**)**  
+ SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* |         **"** default **"** | **"** NULL **"** }**)**  
  **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica dove vengono archiviati i dati FILESTREAM.  
@@ -648,9 +649,9 @@ Per la restrizione **SWITCH** durante la replica, vedere [Replicare tabelle e in
   
  *filestream_filegroup_name* specifica il nome di un filegroup FILESTREAM. È necessario che per il filegroup sia definito un file tramite un'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) o [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). In caso contrario, viene generato un errore.  
   
- **"**default**"** specifica il filegroup FILESTREAM con il set di proprietà DEFAULT. Se non è presente alcun filegroup FILESTREAM, viene generato un errore.  
+ **"** default **"** specifica il filegroup FILESTREAM con il set di proprietà DEFAULT. Se non è presente alcun filegroup FILESTREAM, viene generato un errore.  
   
- **"**NULL**"** specifica che tutti i riferimenti al filegroup FILESTREAM per la tabella verranno rimossi. È necessario eliminare innanzitutto tutte le colonne FILESTREAM. È anche necessario usare SET FILESTREAM_ON**="**NULL**"** per eliminare tutti i dati FILESTREAM associati a una tabella.  
+ **"** NULL **"** specifica che tutti i riferimenti al filegroup FILESTREAM per la tabella verranno rimossi. È necessario eliminare innanzitutto tutte le colonne FILESTREAM. È anche necessario usare SET FILESTREAM_ON **="** NULL **"** per eliminare tutti i dati FILESTREAM associati a una tabella.  
   
  SET **(** SYSTEM_VERSIONING **=** { OFF | ON [ ( HISTORY_TABLE = schema_name . history_table_name [ , DATA_CONSISTENCY_CHECK = { **ON** | OFF } ]  ) ] } **)**  
  **Si applica a** : da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

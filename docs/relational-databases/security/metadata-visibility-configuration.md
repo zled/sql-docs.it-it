@@ -1,16 +1,16 @@
 ---
-title: "Configurazione della visibilità dei metadati | Microsoft Docs"
-ms.custom: 
+title: Configurazione della visibilità dei metadati | Microsoft Docs
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - subcomponents visibility [SQL Server]
@@ -22,19 +22,21 @@ helpviewer_keywords:
 - database metadata [SQL Server]
 - metadata [SQL Server], permissions
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
-caps.latest.revision: 
+caps.latest.revision: 51
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 10d93d94543bca50d57aee2647e28fadd16064a4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: df71c443adb1e598ddc083a97eb568f0fb3d90ee
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="metadata-visibility-configuration"></a>Configurazione della visibilità dei metadati
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La visibilità dei metadati è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Ad esempio, la query seguente restituisce una riga se all'utente è stata concessa un'autorizzazione SELECT o INSERT per la tabella `myTable`.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  La visibilità dei metadati è limitata alle entità a protezione diretta di cui l'utente è proprietario o per le quali dispone di autorizzazioni. Ad esempio, la query seguente restituisce una riga se all'utente è stata concessa un'autorizzazione SELECT o INSERT per la tabella `myTable`.  
   
 ```  
 SELECT name, object_id  

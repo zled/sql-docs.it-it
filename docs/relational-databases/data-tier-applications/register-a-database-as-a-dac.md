@@ -1,16 +1,16 @@
 ---
 title: Registrare un database come applicazione livello dati | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.registerdacwizard.summary.f1
@@ -23,20 +23,20 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 036bb0f6375461e5764fb92534d4d8b07e016f52
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c80a09793bae9691c25590b1c929a76f0da4e4b0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrare un database come applicazione livello dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+  Usare la procedura guidata **Registra applicazione livello dati** o uno script di Windows PowerShell per compilare una definizione di applicazione livello dati (DAC) che descrive gli oggetti contenuti in un database esistente e registrarla nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Prima di iniziare:**  [Limitazioni e restrizioni](#LimitationsRestrictions), [Autorizzazioni](#Permissions)  
   
@@ -117,7 +117,7 @@ Usare la procedura guidata **Registra applicazione livello dati** o uno script d
  [Utilizzo della procedura guidata Registra applicazione livello dati](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Convalida degli oggetti  
- **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *SchemaName***.***ObjectName* identifica l'oggetto in fase di verifica.  
+ **Controllo di**  *SchemaName* **.** *ObjectName* **.** - Consente di visualizzare un indicatore di stato durante la verifica delle dipendenze degli oggetti recuperati e della loro validità per l'applicazione livello dati. *SchemaName ***.*** ObjectName* identifica l'oggetto in fase di verifica.  
   
  **< Indietro**: consente di tornare alla pagina **Imposta proprietà** per modificare le voci selezionate.  
   

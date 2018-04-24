@@ -1,16 +1,16 @@
 ---
 title: STDEVP (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STDEVP
@@ -22,16 +22,17 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - statistical standard deviation
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: af2c89686b804e263d0a7e576a3c91e926a65644
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1e4a234c179fb4530acd3fbef5bf7beecfaa7853
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,10 +68,10 @@ STDEVP (expression) OVER ( [ partition_by_clause ] order_by_clause)
  Consente di considerare ogni valore univoco.  
   
  *expression*  
- [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) numerica. Non è possibile utilizzare funzioni di aggregazione e sottoquery. *expression*: espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**.  
+ [Espressione](../../t-sql/language-elements/expressions-transact-sql.md) numerica. Non è possibile utilizzare funzioni di aggregazione e sottoquery. *expression* è un'espressione della categoria dei tipi di dati numerici esatti o numerici approssimativi, ad eccezione del tipo di dati **bit**.  
   
  OVER **(** [ *partition_by_clause* ] *order_by_clause***)**  
- *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *partition_by_clause* suddivide il set di risultati generato dalla clausola FROM in partizioni alle quali viene applicata la funzione. Se non specificato, la funzione tratta tutte le righe del set di risultati della query come un unico gruppo. *order_by_clause* determina l'ordine logico in cui viene eseguita l'operazione. *order_by_clause* è obbligatorio. Per altre informazioni, vedere [Clausola OVER - &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipi restituiti  
  **float**  
@@ -113,7 +114,7 @@ Distinct_Values   All_Values
 ```  
   
 ### <a name="c-using-stdevp-with-over"></a>C. Uso di STDEVP con OVER  
- L'esempio seguente restitusce la `STDEVP` dei valori quota di vendite per ogni trimestre in un anno di calendario. Si noti che `ORDER BY` nella clausola `OVER` ordina `STDEVP` e che `ORDER BY` dell'istruzione `SELECT` ordina il set di risultati.  
+ L'esempio seguente restituisce l'elemento `STDEVP` dei valori degli obiettivi di vendita per ogni trimestre in un anno di calendario. Si noti che `ORDER BY` nella clausola `OVER` ordina `STDEVP` e che `ORDER BY` dell'istruzione `SELECT` ordina il set di risultati.  
   
 ```  
 -- Uses AdventureWorks  

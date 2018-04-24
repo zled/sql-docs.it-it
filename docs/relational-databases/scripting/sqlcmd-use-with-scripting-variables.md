@@ -2,7 +2,7 @@
 title: Usare sqlcmd con variabili di scripting | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-scripting
@@ -26,11 +26,12 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 50548a9c34ff3c55c22e5492b807e338bcd4ccc2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 14a86c83343b85df0aa3f7a16929d55b06d9ae1f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd - Usare con variabili di scripting
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -116,24 +117,24 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Variabili di scripting di sqlcmd  
  Le variabili definite con **sqlcmd** sono note come variabili di scripting. Nella tabella seguente sono elencate le variabili di scripting di **sqlcmd** .  
   
-|        Variabile         | Opzione correlata | L/S |         Valore predefinito         |
+|        Variabile         | Opzione correlata | L/S |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
-| SQLCMDUSER*             | -U             | L   | ""                      |
+| SQLCMDUSER*             | -U             | R   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |
-| SQLCMDSERVER*           | -S             | L   | "DefaultLocalInstance"  |
-| SQLCMDWORKSTATION       | -H             | L   | "ComputerName"          |
-| SQLCMDDBNAME            | -d             | L   | ""                      |
+| SQLCMDSERVER*           | -S             | R   | "DefaultLocalInstance"  |
+| SQLCMDWORKSTATION       | -H             | R   | "ComputerName"          |
+| SQLCMDDBNAME            | -d             | R   | ""                      |
 | SQLCMDLOGINTIMEOUT      | -l             | L/S | "8" (secondi)           |
 | SQLCMDSTATTIMEOUT       | -t             | L/S | "0" = attesa illimitata |
 | SQLCMDHEADERS           | -H             | L/S | "0"                     |
 | SQLCMDCOLSEP            | -S             | L/S | " ".                     |
 | SQLCMDCOLWIDTH          | -w             | L/S | "0"                     |
-| SQLCMDPACKETSIZE        | -A             | L   | "4096"                  |
+| SQLCMDPACKETSIZE        | -A             | R   | "4096"                  |
 | SQLCMDERRORLEVEL        | -M             | L/S | "0"                     |
 | SQLCMDMAXVARTYPEWIDTH   | -y             | L/S | "256"                   |
 | SQLCMDMAXFIXEDTYPEWIDTH | -y             | L/S | "0" = numero illimitato         |
 | SQLCMDEDITOR            |                | L/S | "edit.com"              |
-| SQLCMDINI               |                | L   | ""                      |
+| SQLCMDINI               |                | R   | ""                      |
 
 Le variabili SQLCMDUSER, SQLCMDPASSWORD e SQLCMDSERVER vengono impostate quando viene usato **:Connect** .  
 

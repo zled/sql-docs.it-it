@@ -1,34 +1,35 @@
 ---
 title: Classe di evento OLEDB DataRead | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OLEDB DataRead event class
 ms.assetid: fb6869ba-3199-4e32-a650-60a5dda2571e
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffd6ddd084fed5d839eecba0925e8efb4478104b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 04d4e7740c6e8625b04b1162979dacb1079d3baa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento OLEDB DataRead viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama un provider OLE DB per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata per una richiesta di dati al provider OLE DB.  
+  La classe di evento OLEDB DataRead viene generata quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chiama un provider OLE DB per query distribuite e stored procedure remote. Includere questa classe di evento nelle tracce che eseguono il monitoraggio quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue una chiamata per una richiesta di dati al provider OLE DB.  
   
  Quando la classe OLEDB DataRead viene inclusa in una traccia, l'overhead generato sarà elevato. È consigliabile limitare l'utilizzo di questa classe di evento alle tracce che eseguono il monitoraggio di problemi specifici per brevi periodi di tempo.  
   

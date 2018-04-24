@@ -2,7 +2,7 @@
 title: Creare indici univoci | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: indexes
@@ -25,13 +25,14 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8ec65be74b3fefe8e3da66e1952012f8598b4b3
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 652c81c2236ee63ba5ee3a61bef2026d0c9a8f49
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="create-unique-indexes"></a>Create Unique Indexes
+# <a name="create-unique-indexes"></a>Creare indici univoci
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   In questo argomento si illustra come creare un indice univoco per una tabella in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] tramite [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. Non vi sono differenze significative tra la creazione di un vincolo UNIQUE e la creazione di un indice univoco indipendente da un vincolo. La convalida dei dati viene eseguita nello stesso modo e da Query Optimizer non viene applicata alcuna distinzione tra un indice univoco creato tramite un vincolo o manualmente. Tuttavia, se si crea un vincolo UNIQUE nella colonna, l'obiettivo dell'indice è chiaro. Per ulteriori informazioni sui vincoli UNIQUE, vedere [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md).  
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/10/2018
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Per creare un indice univoco per una tabella utilizzando:**  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  È richiesta l'autorizzazione ALTER per la tabella o la vista. L'utente deve essere un membro del ruolo predefinito del server **sysadmin** o dei ruoli predefiniti del database **db_ddladmin** e **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -119,7 +120,7 @@ ms.lasthandoff: 04/10/2018
   
 6.  Selezionare il nuovo indice dalla casella di testo **Indice o chiave primari/univoci selezionati** .  
   
-7.  In **(Generale)**nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
+7.  In **(Generale)** nella griglia principale selezionare **Tipo** , quindi scegliere **Indice** dall'elenco.  
   
 8.  Selezionare **Colonne**, quindi fare clic sul pulsante con i puntini di sospensione **(…)**.  
   
@@ -127,7 +128,7 @@ ms.lasthandoff: 04/10/2018
   
 10. Una volta selezionate tutte le colonne per l'indice, fare clic su **OK**.  
   
-11. In **(Generale)**nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
+11. In **(Generale)** nella griglia principale selezionare **Univoco** , quindi scegliere **Sì** dall'elenco.  
   
 12. Facoltativo: In **Progettazione tabelle**nella griglia principale selezionare **Ignora chiavi duplicate** , quindi scegliere **Sì** dall'elenco. Eseguire questa operazione se si desidera ignorare i tentativi per aggiungere dati che comporterebbero la creazione di una chiave duplicata nell'indice univoco.  
   
@@ -153,11 +154,11 @@ ms.lasthandoff: 04/10/2018
   
 8.  Nella finestra di dialogo **Seleziona colonne da***nome_tabella* selezionare le caselle di controllo delle colonne della tabella da aggiungere all'indice univoco.  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
   
 10. Nella finestra di dialogo **Nuovo indice** fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>Per creare un indice univoco per una tabella  
   
@@ -165,7 +166,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;  

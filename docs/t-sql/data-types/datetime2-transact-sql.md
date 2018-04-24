@@ -1,16 +1,16 @@
 ---
 title: datetime2 (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - datetime2
@@ -24,16 +24,17 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - datetime2 data type [SQL Server]
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
-caps.latest.revision: 
+caps.latest.revision: 58
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 70a3f27fc59fcc904679040029e47f312017dbe3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4c49b540669ba403d2be278e25bc724b5dea7684
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,16 +79,16 @@ Nelle tabelle seguenti sono elencati i formati di valore letterale stringa ISO 8
 La conformità agli standard ANSI e ISO 8601 di [date](../../t-sql/data-types/date-transact-sql.md) e [time](../../t-sql/data-types/time-transact-sql.md) si applica a **datetime2**.
   
 ##  <a name="backward-compatibility-for-down-level-clients"></a>Compatibilità con le versioni precedenti dei client legacy  
-Alcuni client legacy non supportano i tipi di dati **time**, **date**, **datetime2** e **datetimeoffset**. Nella tabella seguente viene illustrato il mapping del tipo tra un'istanza di livello principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i client legacy.
+Alcune versioni precedenti dei client non supportano i tipi di dati **time**, **date**, **datetime2** e **datetimeoffset**. Nella tabella seguente viene illustrato il mapping del tipo tra un'istanza di livello principale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e i client legacy.
   
 |Tipo di dati [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Formato predefiniti dei valori letterali stringa passati al client legacy|ODBC delle versioni precedenti|OLEDB delle versioni precedenti|JDBC delle versioni precedenti|SQLCLIENT delle versioni precedenti|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**data**|YYYY-MM-DD|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
 |**datetime2**|AAAA-MM-GG hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
-|**datetimeoffset**|AAAA-MM-GG hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
+|**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR o SQL_VARCHAR|DBTYPE_WSTR o DBTYPE_STR|Java.sql.String|Stringa o SqString|  
   
-## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi alla data e all'ora
+## <a name="converting-date-and-time-data"></a>Conversione dei dati relativi a data e ora
 Nella conversione di tipi di dati relativi alla data e all'ora, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono rifiutati tutti i valori non riconosciuti come date o orari. Per informazioni sull'uso delle funzioni CAST e CONVERT con i dati relativi a data e ora, vedere [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime2-data-type"></a>Conversione di altri tipi di data e ora nel tipo di dati datetime2
@@ -121,7 +122,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
 --1900-01-01 12:10:16.1234567 12:10:16.1234567
 ```  
   
-Quando la conversione è da **smalldatetime**, le ore e i minuti vengono copiati, mentre i secondi e i secondi frazionari vengono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetime2`.  
+Quando la conversione viene eseguita da **smalldatetime**, le ore e i minuti vengono copiati, mentre i secondi e i secondi frazionari vengono impostati su 0. Nel codice seguente vengono illustrati i risultati della conversione di un valore `smalldatetime` in un valore `datetime2`.  
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '12-01-16 12:32';
@@ -135,7 +136,7 @@ SELECT @datetime2 AS '@datetime2', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.0000000 2016-12-01 12:32:00 
 ```  
   
-Quando la conversione è da **datetimeoffset(n)**, i componenti di data e ora vengono copiati. Il fuso orario viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(7)` in un valore `datetime2`.  
+Quando la conversione viene eseguita da **datetimeoffset(n)**, i componenti di data e ora vengono copiati. Il fuso orario viene troncato. Nell'esempio seguente vengono illustrati i risultati della conversione di un valore `datetimeoffset(7)` in un valore `datetime2`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(7) = '2016-10-23 12:45:37.1234567 +10:0';
@@ -180,7 +181,7 @@ Le conversioni da valori letterali stringa a tipi di data e ora sono consentite 
 |DATE + TIME + TIMEZONE|Verrà utilizzato DATETIME locale.|  
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente vengono confrontati i risultati dell'esecuzione del cast di una stringa in ogni tipo di dati **date** e **time**.
+Nell'esempio seguente vengono confrontati i risultati dell'esecuzione del cast di una stringa ai tipi di dati **date** e **time**.
   
 ```sql
 SELECT   

@@ -1,15 +1,16 @@
 ---
 title: Gestire il servizio Motore di database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Configuration Manager, accessing
@@ -26,19 +27,20 @@ helpviewer_keywords:
 - administering SQL Server, services
 - SQL Server services
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5de386c4e2e8525205078627bb2d3e50e0beddd3
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 64afcc7dc374d60460444887a762c49f778a2645
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-the-database-engine-services"></a>Gestire il servizio Motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nei sistemi operativi come servizio. Un servizio è un tipo di applicazione eseguito in background nel sistema. I servizi normalmente offrono funzionalità chiave del sistema operativo, ad esempio gestione di richieste Web, registrazione di eventi o gestione di file. I servizi possono essere eseguiti senza la visualizzazione di un'interfaccia utente sul desktop del computer. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e molti altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguiti come servizi. Questi servizi in genere vengono avviati insieme al sistema operativo. Questo dipende dalle opzioni specificate durante l'installazione. Alcuni servizi non vengono avviati per impostazione predefinita. In questa sezione viene descritta la gestione dei vari servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Prima di accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario sapere come avviare, arrestare, sospendere, riprendere e riavviare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo l'accesso, è possibile eseguire attività come la gestione del server o l'esecuzione di query su un database.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguito nei sistemi operativi come servizio. Un servizio è un tipo di applicazione eseguito in background nel sistema. I servizi normalmente offrono funzionalità chiave del sistema operativo, ad esempio gestione di richieste Web, registrazione di eventi o gestione di file. I servizi possono essere eseguiti senza la visualizzazione di un'interfaccia utente sul desktop del computer. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent e molti altri componenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono eseguiti come servizi. Questi servizi in genere vengono avviati insieme al sistema operativo. Questo dipende dalle opzioni specificate durante l'installazione. Alcuni servizi non vengono avviati per impostazione predefinita. In questa sezione viene descritta la gestione dei vari servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Prima di accedere a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario sapere come avviare, arrestare, sospendere, riprendere e riavviare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dopo l'accesso, è possibile eseguire attività come la gestione del server o l'esecuzione di query su un database.  
   
 ## <a name="using-the-sql-server-service"></a>Utilizzo del servizio SQL Server  
  Quando si avvia un'istanza di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], si sta avviando il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dopo aver avviato il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , gli utenti possono creare nuove connessioni al server. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può essere avviato e arrestato come servizio, in locale o in remoto. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è definito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) se rappresenta l'istanza predefinita oppure MSSQL$*\<nomeistanza>* se rappresenta un'istanza denominata.  

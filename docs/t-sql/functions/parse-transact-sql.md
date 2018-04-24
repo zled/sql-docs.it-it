@@ -1,16 +1,16 @@
 ---
 title: PARSE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - PARSE
@@ -20,16 +20,16 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3e172a7d68edc212ce4803103dc1f975e4bf89db
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 81ec31e19e4e9a2bd440c004656cd137c414d360
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
  Questa funzione non sarà eseguita in modalità remota poiché dipende dalla presenza di CLR. L'esecuzione in modalità remota di una funzione che richiede CLR provocherebbe un errore sul server remoto.  
   
- **Altre informazioni sul parametro data_type**  
+ **Ulteriori informazioni sul parametro data_type**  
   
  I valori per il parametro *data_type* sono limitati ai tipi visualizzati nella tabella seguente, insieme con gli stili. Le informazioni sugli stili vengono fornite per determinare i tipi di modelli consentiti. Per altre informazioni sugli stili, vedere la documentazione di .NET Framework relativa alle enumerazioni **System.Globalization.NumberStyles** e **DateTimeStyles**.  
   
@@ -98,7 +98,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Data e ora|datetime2|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |Data e ora|datetimeoffset|DateTimeOffset|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
   
- **Altre informazioni sul parametro culture**  
+ **Ulteriori informazioni sul parametro relativo alle impostazioni cultura**  
   
  Nella tabella seguente vengono mostrati i mapping dai linguaggi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle impostazioni cultura di .NET Framework.  
   

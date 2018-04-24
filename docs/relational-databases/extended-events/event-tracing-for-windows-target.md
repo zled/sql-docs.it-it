@@ -2,7 +2,7 @@
 title: Destinazione di Event Tracing for Windows| Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.reviewer: ''
@@ -20,11 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9e48a2aa7178e80fd44eb27e0f61400328abbadc
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 424a671a4ee42865442d92e26b68f6941775c2ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="event-tracing-for-windows-target"></a>destinazione di Event Tracing for Windows
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/06/2018
     > [!IMPORTANT]  
     >  Impossibile modificare il percorso del file dopo l'inizio della prima sessione.  
   
--   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>*\Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
+-   I file Managed Object Format (MOF) si trovano in *\<percorso di installazione>* \Microsoft SQL Server\Shared. Per altre informazioni, vedere [Managed Object Format (MOF)](http://go.microsoft.com/fwlink/?LinkId=92851) su MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Aggiunta della destinazione a una sessione  
  Per aggiungere la destinazione ETW a una sessione di Eventi estesi, è necessario includere l'istruzione seguente quando si crea o modifica una sessione eventi:  

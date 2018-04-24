@@ -1,32 +1,32 @@
 ---
 title: Configurare IIS per la sincronizzazione Web | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - IIS server configuration [SQL Server replication]
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 
+caps.latest.revision: 88
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9046b8e56a18c9393faa6807ac3f0b4d2bfc6f25
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 58937e416603bdbaa2ee33923dd783c1e1d7c228
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurazione di IIS per la sincronizzazione Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 03/08/2018
   
 3.  Eseguire la Gestione guidata certificati IIS:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** e quindi la cartella **Siti Web** .  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** e quindi la cartella **Siti Web** .  
   
     2.  Fare clic con il pulsante destro del mouse su **Sito Web predefinito**e quindi scegliere **Proprietà**.  
   
@@ -286,7 +286,7 @@ ms.lasthandoff: 03/08/2018
   
     2.  Digitare **inetmgr** nella casella **Apri**e quindi fare clic su **OK**.  
   
-    3.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** .  
+    3.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** .  
   
     4.  Fare clic con il pulsante destro del mouse su **Pool di applicazioni**, scegliere **Nuovo** e quindi **Pool di applicazioni**.  
   
@@ -294,7 +294,7 @@ ms.lasthandoff: 03/08/2018
   
 5.  Associare l'account al pool di applicazioni:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** e quindi **Pool di applicazioni**.  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** e quindi **Pool di applicazioni**.  
   
     2.  Fare clic con il pulsante destro del mouse sul pool di applicazioni creato e quindi scegliere **Proprietà**.  
   
@@ -306,7 +306,7 @@ ms.lasthandoff: 03/08/2018
   
 6.  Associare il pool di applicazioni alla directory virtuale utilizzata per la sincronizzazione Web:  
   
-    1.  In **Gestione Internet Information Services (IIS)**espandere il nodo **computer locale** e quindi **Siti Web**.  
+    1.  In **Gestione Internet Information Services (IIS)** espandere il nodo **computer locale** e quindi **Siti Web**.  
   
     2.  Espandere il sito Web utilizzato per la sincronizzazione Web, fare clic con il pulsante destro del mouse sulla directory virtuale creata per tale sincronizzazione e quindi scegliere **Proprietà**.  
   

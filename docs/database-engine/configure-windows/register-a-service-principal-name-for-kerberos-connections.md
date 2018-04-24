@@ -1,15 +1,16 @@
 ---
-title: "Registrazione di un nome dell'entità servizio per le connessioni Kerberos | Microsoft Docs"
-ms.custom: 
+title: Registrazione di un nome dell'entità servizio per le connessioni Kerberos | Microsoft Docs
+ms.custom: ''
 ms.date: 11/20/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - connections [SQL Server], SPNs
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - Server Principal Names
 - SPNs [SQL Server]
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-caps.latest.revision: "59"
+caps.latest.revision: 59
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c5937ccfd40ee959c344dd1f03f7314ce40d9fcb
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: fe8e537bb8d01784f68dd168ba84df9d6daac4db
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrazione di un nome dell'entità servizio per le connessioni Kerberos
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Per usare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che si verifichino entrambe le condizioni seguenti:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Per utilizzare l'autenticazione Kerberos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è necessario che si verifichino entrambe le seguenti condizioni:  
   
 -   I computer client e server devono fare parte dello stesso dominio Windows o di domini trusted.  
   

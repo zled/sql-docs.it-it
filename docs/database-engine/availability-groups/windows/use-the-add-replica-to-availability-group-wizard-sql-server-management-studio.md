@@ -2,7 +2,7 @@
 title: Usare la procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 769bd6348bf2b9c49990009f6ff6b6545c299f43
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: a3b4a2fdd2f4673d301e5b15628f178906684dfe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Utilizzare la procedura guidata Aggiungi replica a gruppo di disponibilità (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata **Aggiungi replica a gruppo di disponibilità** per aggiungere una nuova replica secondaria a un gruppo di disponibilità Always On esistente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Usare la procedura guidata **Aggiungi replica a gruppo di disponibilità** per aggiungere una nuova replica secondaria a un gruppo di disponibilità Always On esistente.  
   
 > [!NOTE]  
 >  Per altre informazioni sull'uso di [!INCLUDE[tsql](../../../includes/tsql-md.md)] o di PowerShell per aggiungere una replica secondaria a un gruppo di disponibilità, vedere [Aggiungere una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md).  

@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Lock:Timeout (timeout &gt; 0) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: d755833a-d7eb-4973-9352-67a2fba2442a
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 30cd2031c1ebe36385f4a7f99fea9461ef5d6a48
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: cf56ffc92a8e144945120fe9a821eae7f3d97dbf
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Classe di evento Lock:Timeout (timeout &gt; 0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Lock:Timeout (timeout > 0)** indica che una richiesta di blocco su una risorsa, ad esempio una pagina, è scaduta perché la risorsa è bloccata da un'altra transazione. Il funzionamento di questa classe di evento è identico a quello della classe **Lock:Timeout**, con l'eccezione che non vengono inclusi gli eventi con valore di timeout pari a 0.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La classe di evento **Lock:Timeout (timeout > 0)** indica che una richiesta di blocco su una risorsa, ad esempio una pagina, è scaduta perché la risorsa è bloccata da un'altra transazione. Il funzionamento di questa classe di evento è identico a quello della classe **Lock:Timeout**, con l'eccezione che non vengono inclusi gli eventi con valore di timeout pari a 0.  
   
  Includere la classe di evento **Lock:Timeout (timeout > 0)** nelle tracce in cui si usano probe per i blocchi o altri processi con valori di timeout pari a 0. In questo modo è possibile individuare solo gli effettivi timeout escludendo quelli con valore pari a zero.  
   

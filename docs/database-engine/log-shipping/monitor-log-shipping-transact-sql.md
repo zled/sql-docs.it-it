@@ -1,15 +1,16 @@
 ---
 title: Monitorare il log shipping (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], status
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4399ef7bef888655c6c69926b622612ba9bb84d8
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 60cb24f05e6c7793cea3dfd49ee7946651e129ff
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Monitorare il log shipping (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo aver configurato il log shipping, è possibile monitorare le informazioni relative allo stato di tutti i server di log shipping. La cronologia e lo stato delle operazioni di log shipping vengono salvati sempre in locale dai processi per il log shipping. La cronologia e lo stato dell'operazione di backup vengono memorizzati sul server primario, mentre la cronologia e lo stato delle operazioni di copia e ripristino sono memorizzati sul server secondario. Se è stato implementato un server di monitoraggio remoto, queste informazioni vengono memorizzate anche sul server di monitoraggio.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dopo aver configurato il log shipping, è possibile monitorare le informazioni relative allo stato di tutti i server di log shipping. La cronologia e lo stato delle operazioni di log shipping vengono salvati sempre in locale dai processi per il log shipping. La cronologia e lo stato dell'operazione di backup vengono memorizzati sul server primario, mentre la cronologia e lo stato delle operazioni di copia e ripristino sono memorizzati sul server secondario. Se è stato implementato un server di monitoraggio remoto, queste informazioni vengono memorizzate anche sul server di monitoraggio.  
   
  È possibile configurare avvisi che verranno attivati se le operazioni di log shipping non avvengono secondo la pianificazione. Gli errori sono generati da un processo per la gestione degli avvisi che controlla lo stato delle operazioni di backup e ripristino. È possibile definire avvisi che notifichino a un operatore quando si verificano questi errori. Se è configurato un server di monitoraggio, su di esso viene eseguito un processo per la gestione degli avvisi che genera errori per tutte le operazioni nella configurazione per il log shipping. Se non è specificato alcun server di monitoraggio, viene eseguito un processo per la gestione degli avvisi sull'istanza del server primario, che monitora l'operazione di backup. Se non è specificato alcun server di monitoraggio, su ogni istanza del server secondario viene eseguito un processo per la gestione degli avvisi per monitorare le operazioni di copia e ripristino locali.  
   

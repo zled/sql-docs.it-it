@@ -1,32 +1,32 @@
 ---
-title: "Proprietà database di distribuzione, Generale | Microsoft Docs"
-ms.custom: 
+title: Proprietà database di distribuzione, Generale | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.configdistwizard.distproperties.general.f1
 helpviewer_keywords:
 - Distributor Properties dialog box
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0fbc596c79b54a84f363ea57bf5a49442001bfa
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 72a19533f68de783317fbea0b8305d9f474b50bb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="distributor-properties-general"></a>Proprietà server di distribuzione, Generale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/08/2018
  **Database**  
  Nella griglia delle proprietà **Database** vengono visualizzati il nome e le proprietà di memorizzazione dei database di distribuzione nel server di distribuzione. **Periodo memorizzazione transazioni** rappresenta il periodo di tempo per cui le transazioni rimangono archiviate per la replica transazionale. Il periodo di memorizzazione della transazione è inoltre noto come periodo di memorizzazione per la distribuzione. **Periodo memorizzazione cronologia** equivale invece al periodo di tempo per cui rimangono archiviati i metadati della cronologia per ogni tipo di replica. Per altre informazioni sul periodo di memorizzazione, vedere [Scadenza e disattivazione delle sottoscrizioni](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
- Fare clic sul pulsante delle proprietà**...**nella griglia delle proprietà **Database** per aprire la finestra di dialogo **Proprietà database di distribuzione** .  
+ Fare clic sul pulsante delle proprietà **...** nella griglia delle proprietà **Database** per aprire la finestra di dialogo **Proprietà database di distribuzione** .  
   
  **Nuova**  
  Fare clic su questo pulsante per creare un nuovo database di distribuzione.  

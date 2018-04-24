@@ -1,16 +1,16 @@
 ---
 title: DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATETIME2FROMPARTS_TSQL
@@ -20,16 +20,17 @@ dev_langs:
 helpviewer_keywords:
 - DATETIME2FROMPARTS function
 ms.assetid: 632b757d-d2d1-43a5-b870-792a779ae204
-caps.latest.revision: 
+caps.latest.revision: 16
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ce109671228e82bc0f02e9920b2ef98c9bbcdb83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e2b55cdb54537bafd171c1fd2d340ea679b2bcd2
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -74,7 +75,7 @@ Valore letterale intero che specifica la precisione del valore **datetime2** da 
 ## <a name="remarks"></a>Remarks  
 **DATETIME2FROMPARTS** restituisce un valore **datetime2** completamente inizializzato. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null. Se tuttavia l'argomento *precision* è Null viene generato un errore.
   
-L'argomento *fractions* dipende dall'argomento *precision*. Se ad esempio *precision* è 7 ogni frazione rappresenta 100 nanosecondi, mentre se *precision* è 3 ogni frazione rappresenta un millisecondo. Se il valore di *precision* è zero anche il valore di *fractions* deve essere zero. In caso contrario, viene generato un errore.
+L'argomento *fractions* dipende dall'argomento *precision*. Se ad esempio *precision* è 7, ogni frazione rappresenta 100 nanosecondi, mentre se *precision* è 3 ogni frazione rappresenta un millisecondo. Se il valore di *precision* è zero, anche il valore di *fractions* deve essere zero. In caso contrario, viene generato un errore.
   
 Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
@@ -97,13 +98,13 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Esempio con frazioni di un secondo  
-Nell'esempio seguente viene illustrato l'uso dei parametri *fractions* e *precision*:
+L'esempio seguente illustra l'uso dei parametri *fractions* e *precision*:
   
-1.  Se *fractions* ha il valore 5 e *precision* ha il valore 1, il valore di *fractions* corrisponde a 5/10 di secondo.  
+1.  Se *fractions* ha valore 5 e *precision* ha valore 1, il valore di *fractions* corrisponde a 5/10 di secondo.  
   
-2.  Se *fractions* ha il valore 50 e *precision* ha il valore 2, il valore di *fractions* corrisponde a 50/100 di secondo.  
+2.  Se *fractions* ha valore 50 e *precision* ha valore 2, il valore di *fractions* corrisponde a 50/100 di secondo.  
   
-3.  Se *fractions* ha il valore 500 e *precision* ha il valore 3, il valore di *fractions* corrisponde a 500/1000 di secondo.  
+3.  Se *fractions* ha valore 500 e *precision* ha valore 3, il valore di *fractions* corrisponde a 500/1000 di secondo.  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  

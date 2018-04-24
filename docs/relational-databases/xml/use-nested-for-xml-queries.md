@@ -1,36 +1,36 @@
 ---
 title: Usare query FOR XML annidate | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - FOR XML clause, nested FOR XML queries
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53640114803f1dc03a10a0ed79edaaf09e08f638
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 59c5409b29be9b536042ded821c771ef14c7f868
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-nested-for-xml-queries"></a>Utilizzo di query FOR XML nidificate
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Il tipo di dati **xml** e la [direttiva TYPE nelle query FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) l'elaborazione dell'XML restituito dalle query FOR XML sia sul server che sul client.  
+  Il tipo di dati **xml** e la [direttiva TYPE nelle query FOR XML](../../relational-databases/xml/type-directive-in-for-xml-queries.md) l'elaborazione dell'XML restituito dalle query FOR XML sia sul server che sul client.  
   
 ## <a name="processing-with-xml-type-variables"></a>Elaborazione con variabili di tipo XML  
  È possibile assegnare il risultato di una query FOR XML a una variabile di tipo **xml** oppure usare XQuery per eseguire query sul risultato e quindi assegnare tale risultato a una variabile di tipo **xml** per un'ulteriore elaborazione.  

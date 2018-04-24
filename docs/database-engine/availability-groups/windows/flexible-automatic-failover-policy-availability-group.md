@@ -1,15 +1,16 @@
 ---
-title: "Configurare i criteri di failover automatico flessibili per il gruppo di disponibilità | Microsoft Docs"
-ms.custom: 
+title: Configurare i criteri di failover automatico flessibili per il gruppo di disponibilità | Microsoft Docs
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: availability-groups
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], flexible failover policy
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - flexible failover policy
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7860f367b7bf23aa3e2e58654633b5567625d37
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 486be04f76c4a8b3cb017a2cbd1e6ac73942aeb3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>Configurare i criteri di failover automatico flessibili per il gruppo di disponibilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Con i criteri di failover flessibili viene garantito un controllo granulare delle condizioni che causano un [failover automatico](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) per un gruppo di disponibilità. Modificando le condizioni di errore che attivano un failover automatico e la frequenza di controlli di integrità, è possibile aumentare o diminuire la probabilità di un failover automatico per supportare il Contratto di servizio per la disponibilità elevata.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Con i criteri di failover flessibili viene garantito un controllo granulare delle condizioni che causano un [failover automatico](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) per un gruppo di disponibilità. Modificando le condizioni di errore che attivano un failover automatico e la frequenza di controlli di integrità, è possibile aumentare o diminuire la probabilità di un failover automatico per supportare il Contratto di servizio per la disponibilità elevata.  
   
  I criteri di failover flessibili di un gruppo di disponibilità vengono definiti in base al relativo livello delle condizioni di errore e alla soglia di Timeout controllo integrità. Quando viene rilevato che un gruppo di disponibilità ha superato il livello di condizione di errore o la soglia di Timeout controllo integrità, la DLL risorse del gruppo di disponibilità risponde al cluster WSFC (Windows Server Failover Clustering). Tramite il cluster WSFC viene quindi iniziato un failover automatico alla replica secondaria.  
   

@@ -1,16 +1,16 @@
 ---
 title: CREATE XML INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - XML_TSQL
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - index creation [SQL Server], XML indexes
 - XML indexes [SQL Server], creating
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-caps.latest.revision: 
+caps.latest.revision: 38
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: f91e623d31626fa1063dd525f06e137ace751bc9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
  *index_name*  
- Nome dell'indice. I nomi degli indici devono essere univoci all'interno di una tabella, ma non all'interno di un database. Devono anche essere conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
+ Nome dell'indice. I nomi degli indici devono essere univoci all'interno di una tabella, ma non all'interno di un database. Devono essere anche conformi alle regole degli [identificatori](../../relational-databases/databases/database-identifiers.md).  
   
  I nomi di indici XML primari non possono iniziare con i caratteri seguenti: **#**, **##**, **@** o **@@**.  
   
@@ -150,9 +150,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Specifica il riempimento dell'indice. Il valore predefinito è OFF.  
   
  ON  
- La percentuale di spazio disponibile specificata in *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
+ La percentuale di spazio disponibile specificata da *fillfactor* viene applicata alle pagine di livello intermedio dell'indice.  
   
- OFF o *fillfactor* non specificato  
+ OFF o *fillfactor* non è specificato  
  Le pagine di livello intermedio vengono riempite poco al di sotto della capacità massima, in modo che lo spazio residuo sia sufficiente per almeno una riga della dimensione massima supportata dall'indice, in base al set di chiavi nelle pagine intermedie.  
   
  L'opzione PAD_INDEX risulta utile solo quando si specifica FILLFACTOR, in quanto PAD_INDEX usano la percentuale specificata in FILLFACTOR. Se la percentuale specificata in FILLFACTOR non consente l'inserimento di una riga, [!INCLUDE[ssDE](../../includes/ssde-md.md)] sostituisce internamente tale percentuale in modo da rendere disponibile lo spazio minimo necessario. Il numero di righe di una pagina intermedia dell'indice non è mai minore di due, indipendentemente dal valore di *fillfactor*.  
@@ -174,7 +174,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  Specifica se i risultati temporanei dell'ordinamento devono essere archiviati in **tempdb**. Il valore predefinito è OFF.  
   
  ON  
- I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. Se **tempdb** si trova in un set di dischi diverso rispetto al database utente, il tempo necessario per creare un indice potrebbe essere minore. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
+ I risultati intermedi dell'ordinamento usati per la compilazione dell'indice vengono archiviati in **tempdb**. In questo modo si può ridurre il tempo necessario per creare un indice se **tempdb** si trova in un set di dischi diverso rispetto al database utente. La quantità di spazio su disco utilizzata durante la compilazione dell'indice sarà tuttavia maggiore.  
   
  OFF  
  I risultati intermedi dell'ordinamento vengono archiviati nello stesso database dell'indice.  

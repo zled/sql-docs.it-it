@@ -1,16 +1,16 @@
 ---
 title: Monitorare l'uso della CPU | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - monitoring performance [SQL Server], CPU usage
@@ -25,19 +25,20 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 873cf5a337f18dc9faa8e095d438de79843fde7d
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 2422da83b7ac09fef52fbab3d8ca1286308c2950
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-cpu-usage"></a>Monitorare l'utilizzo della CPU
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino in intervalli normali. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  È opportuno monitorare periodicamente un'istanza di Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per verificare che i valori di utilizzo della CPU rientrino nei normali intervalli. Se la frequenza di utilizzo della CPU è costantemente elevata può essere necessario eseguire un aggiornamento della CPU o aggiungere più processori. Una valore costantemente elevato di utilizzo della CPU può inoltre indicare la presenza di un'applicazione non progettata o ottimizzata correttamente. L'ottimizzazione dell'applicazione potrebbe ridurre l'utilizzo della CPU.  
   
  Una soluzione efficiente per determinare l'utilizzo della CPU consiste nell'usare il contatore **Processore:% Tempo processore** in Monitoraggio di sistema. Questo contatore consente di monitorare la quantità di tempo utilizzata dalla CPU per l'esecuzione di un thread non inattivo. Se il valore relativo a tale stato è incluso tra l'80% e il 90%, può essere necessario eseguire un aggiornamento della CPU o aggiungere ulteriori processori. Nel caso dei sistemi multiprocessore, è necessario monitorare un'istanza del contatore per ogni processore. Il valore rappresenta il tempo totale di un processore specifico. Per determinare la media di tutti i processori, usare il contatore **Sistema: % Tempo totale processore** .  
   

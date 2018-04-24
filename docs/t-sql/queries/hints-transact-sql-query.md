@@ -2,7 +2,7 @@
 title: Hint per la query (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: t-sql|queries
@@ -57,16 +57,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: ''
+caps.latest.revision: 136
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f13c32bbc1852c06a88df7a9ab24443be9d1c4d5
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: d937872a3c00b453a58932dd127c3e3acc99c9f3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hints-transact-sql---query"></a>Hint (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -291,7 +291,7 @@ ms.lasthandoff: 03/15/2018
 > [!IMPORTANT] 
 > Alcuni hint USE HINT possono essere in conflitto con i flag di traccia abilitati a livello globale o sessione o con le impostazioni di configurazione con ambito database. In questo caso, l'hint del livello di query (USE HINT) ha sempre la precedenza. Se un hint USE HINT è in conflitto con un altro hint per la query o un flag di traccia abilitato a livello di query (ad esempio tramite QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un errore quando si tenta di eseguire la query. 
 
- USE PLAN N**'***xml_plan***'**     
+ USE PLAN N **'***xml_plan***'**     
  Forza in Query Optimizer l'utilizzo di un piano di query esistente per una query specificata da **'***xml_plan***'**. USE PLAN non può essere specificato nelle istruzioni INSERT, UPDATE, MERGE o DELETE.  
   
 TABLE HINT **(***exposed_object_name* [ **,** \<table_hint> [ [**,** ]...*n* ] ] **)** Applica l'hint di tabella specificato alla tabella o alla visualizzazione che corrisponde a *exposed_object_name*. È consigliabile usare un hint di tabella come hint per la query solo nel contesto di una [guida di piano](../../relational-databases/performance/plan-guides.md).  

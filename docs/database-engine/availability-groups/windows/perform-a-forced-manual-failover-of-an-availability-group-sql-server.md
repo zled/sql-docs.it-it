@@ -2,7 +2,7 @@
 title: Eseguire un failover manuale forzato di un gruppo di disponibilità (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: availability-groups
@@ -23,14 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae777b30e9222f32833b862bfabee2f65a5db76c
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 91c5899208288042efa2a73c13bd18a463a10693
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Eseguire un failover manuale forzato di un gruppo di disponibilità (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento illustra come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Questo argomento illustra come eseguire un failover forzato (con possibile perdita di dati) in un gruppo di disponibilità AlwaysOn tramite [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un failover forzato rappresenta un tipo di failover manuale che deve essere utilizzato esclusivamente per il ripristino di emergenza, se non è possibile eseguire un [failover manuale pianificato](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Se si forza il failover in una replica secondaria non sincronizzata, è possibile che vengano persi alcuni dati. È pertanto consigliabile forzare il failover solo se è necessario ripristinare immediatamente il servizio nel gruppo di disponibilità e si è disposti a rischiare la perdita di dati.  
   
  Dopo un failover forzato, la destinazione a cui è stato eseguito il failover del gruppo di disponibilità diventa la nuova replica primaria. I database secondari nelle repliche secondarie rimanenti vengono sospesi e dovranno essere ripresi manualmente. Quando la replica primaria precedente diventa disponibile, passa al ruolo secondario. In questo modo i database primari precedenti diventano database secondari e passano allo stato SUSPENDED. Prima di riprendere uno specifico database secondario, è possibile che si riesca a recuperare i dati perduti. Si tenga tuttavia presente che il troncamento del log delle transazioni viene ritardato in uno specifico database primario mentre i relativi database secondari sono sospesi.  
   
@@ -226,7 +227,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  Dopo un failover forzato, la replica secondaria a cui è stato eseguito il failover diventa la nuova replica primaria. Tuttavia, per rendere accessibile ai client tale replica di disponibilità, potrebbe essere necessario riconfigurare il quorum WSFC o modificare la configurazione della modalità di disponibilità del gruppo di disponibilità, nel modo seguente:  
   
-    -   **Se è stato eseguito il failover al di fuori del [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:**modificare i voti del quorum dei nodi WSFC per riflettere la nuova configurazione del gruppo di disponibilità. Se il nodo WSFC che ospita la replica secondaria di destinazione non dispone di un voto del quorum WSFC, potrebbe essere necessario forzare il quorum WSFC.  
+    -   **Se è stato eseguito il failover al di fuori del [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]:** modificare i voti del quorum dei nodi WSFC per riflettere la nuova configurazione del gruppo di disponibilità. Se il nodo WSFC che ospita la replica secondaria di destinazione non dispone di un voto del quorum WSFC, potrebbe essere necessario forzare il quorum WSFC.  
   
         > [!NOTE]  
         >  Un [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] esiste solo se due repliche di disponibilità (inclusa la replica primaria precedente) sono configurate per la modalità commit sincrono con failover automatico.  

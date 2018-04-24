@@ -1,16 +1,16 @@
 ---
 title: Estrarre un'applicazione livello dati da un database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/18/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.extractdacwizard.validationandsummary.f1
@@ -24,19 +24,20 @@ helpviewer_keywords:
 - data-tier application [SQL Server], extract
 - wizard [DAC], extract
 ms.assetid: ae52a723-91c4-43fd-bcc7-f8de1d1f90e5
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 510eb23505fde879a82d3ded7282cabd410cacaf
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 35745b0b3e167a34ceb73f8e7cee7f9af7d8d3d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extract-a-dac-from-a-database"></a>Estrarre un'applicazione livello dati da un database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata **Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Usare la **procedura guidata Estrai applicazione livello dati** o uno script di Windows PowerShell per estrarre un pacchetto di applicazione livello dati da un database di SQL Server esistente. Il processo di estrazione crea un file di pacchetto DAC che contiene le definizioni degli oggetti di database e i relativi elementi a livello di istanza. Ad esempio, un file di pacchetto di applicazione livello dati contiene tutte le tabelle di database, le stored procedure, le viste e gli utenti, nonché gli account di accesso che eseguono il mapping agli utenti del database.  
   
  
 ## <a name="before-you-begin"></a>Operazioni preliminari  
@@ -105,7 +106,7 @@ Selezionare i dati di riferimento che si vuole includere nel file del pacchetto 
 ###  <a name="ValidateSummary"></a> Validation and summary page  
  In questa pagina della procedura guidata viene verificato che tutti gli oggetti di database siano supportati da un'applicazione livello dati. Controlla inoltre le dipendenze attraverso gli oggetti di database per determinare il set di oggetti che possono essere inclusi correttamente nella DAC. Successivamente, visualizza il report di convalida e riepiloga le opzioni selezionate nella procedura guidata. Per modificare un'opzione, fare clic su **Indietro**. Per avviare l'estrazione di un'applicazione livello dati, fare clic su **Avanti**.  
   
-> **NOTA.**Se uno o più oggetti non sono supportati da un'applicazione livello dati, il pulsante **Avanti** è disabilitato e il processo di estrazione non può continuare. In tal caso, è consigliabile rimuovere gli oggetti non supportati ed eseguire nuovamente la procedura guidata.  
+> **NOTA.** Se uno o più oggetti non sono supportati da un'applicazione livello dati, il pulsante **Avanti** è disabilitato e il processo di estrazione non può continuare. In tal caso, è consigliabile rimuovere gli oggetti non supportati ed eseguire nuovamente la procedura guidata.  
   
  **Riepilogo** n riepilogo delle opzioni selezionate viene visualizzato in **Proprietà DAC**. I risultati della convalida vengono elencati in **Oggetti DAC**. La convalida può dare tre tipi di risultati:  
   

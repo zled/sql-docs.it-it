@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 50aa4f48ea862facd6863d59f47128f0376a4e12
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: c4d005d535e73ab633b97fc7202a1ebad3817a51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Aggiunta di informazioni a una Knowledge Base
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento vengono descritte le modalità mediante cui è possibile aggiungere informazioni a una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Prima che sia possibile eseguire operazioni relative alla qualità dei dati, è necessario disporre di informazioni in relazione ai dati stessi. Tali informazioni si acquisiscono compilando e gestendo una Data Quality Knowledge Base e aggiungendovi informazioni correlate a un tipo specifico di origine dati. La Knowledge Base è un repository di informazioni sui dati che consente di comprenderli e mantenerne l'integrità.  
   
  In essa sono contenuti domini di dati relativi all'origine dati. Per ogni dominio di dati, nella DQKB vengono archiviati tutti i termini identificati, gli errori di ortografia, le regole di convalida e di business e dati di riferimento che possono essere utilizzati per eseguire azioni relative alla qualità dei dati sull'origine dati. In DQS queste informazioni vengono utilizzate per identificare dati errati o non validi o per eseguire l'individuazione delle corrispondenze.  

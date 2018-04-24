@@ -2,7 +2,7 @@
 title: Specificare il tipo di archiviazione di file tramite bcp (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -19,16 +19,17 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b3ea3ad1c9c467925e50e4fdc337d2dd99c858b
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 1f8a92798377339913711e20c952ea0148cae2f1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Specifica del tipo di archiviazione di file tramite bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,11 +54,11 @@ ms.lasthandoff: 03/20/2018
     |**varchar**|**c[har]**|  
     |**nchar**|**w**|  
     |**nvarchar**|**w**|  
-    |**text**\*\*|**T**[**ext**]|  
+    |**text***\*|**T**[**ext**]|  
     |**ntext2**|**W**|  
     |**binary**|**x**|  
     |**varbinary**|**x**|  
-    |**image**\*\*|**I**[**mage**]|  
+    |**image***\*|**I**[**mage**]|  
     |**datetime**|**d[ate]**|  
     |**smalldatetime**|**D**|  
     |**time**|**te**|  
@@ -83,7 +84,7 @@ ms.lasthandoff: 03/20/2018
   
      \*L'interazione tra lunghezza del campo, lunghezza del prefisso e caratteri di terminazione determina la quantità di spazio di archiviazione allocata in un file di dati ai dati non carattere esportati come tipo di archiviazione di file **char** .  
   
-     \*\* I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. Usare in alternativa **nvarchar(max)**, **varchar(max)**e **varbinary(max)** .  
+     \*\* I tipi di dati **ntext**, **text**e **image** verranno rimossi in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in nuovi progetti di sviluppo e pianificare la modifica delle applicazioni che ne fanno uso. Usare in alternativa **nvarchar(max)**, **varchar(max)** e **varbinary(max)** .  
   
 ## <a name="native-file-storage-types"></a>Tipi di archiviazione di file nativi  
  I tipi di archiviazione di file nativi vengono registrati nel file di formato come tipo di dati del file host corrispondente.  
@@ -94,11 +95,11 @@ ms.lasthandoff: 03/20/2018
 |**varchar**|SQLCHAR|  
 |**nchar**|SQLNCHAR|  
 |**nvarchar**|SQLNCHAR|  
-|**text**\*\*|SQLCHAR|  
-|**ntext**\*\*|SQLNCHAR|  
+|**text***\*|SQLCHAR|  
+|**ntext***\*|SQLNCHAR|  
 |**binary**|SQLBINARY|  
 |**varbinary**|SQLBINARY|  
-|**image**\*\*|SQLBINARY|  
+|**image***\*|SQLBINARY|  
 |**datetime**|SQLDATETIME|  
 |**smalldatetime**|SQLDATETIM4|  
 |**decimal**|SQLDECIMAL|  
@@ -137,7 +138,7 @@ ms.lasthandoff: 03/20/2018
  [Utilità bcp](../../tools/bcp-utility.md)   
  [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Specificare la lunghezza del campo tramite bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-length-by-using-bcp-sql-server.md)   
- [Specificare caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
+ [Impostazione dei caratteri di terminazione del campo e della riga &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   
  [Specificare la lunghezza del prefisso nei file di dati con bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Lock:Released | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Released event class
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a977b5093165e7a5532f9b7312d43c272566b23b
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 43adf0086a623bc434d8214feefc05867076aa96
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="lockreleased-event-class"></a>Classe di evento Lock:Released
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Lock:Released  segnala il rilascio di un blocco su una risorsa, ad esempio una pagina.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La classe di evento Lock:Released  segnala il rilascio di un blocco su una risorsa, ad esempio una pagina.  
   
  Le classi di evento Lock:Acquired e Lock:Released consentono di monitorare i blocchi acquisiti sugli oggetti, il tipo di blocco applicato e la durata del blocco. I blocchi mantenuti per lunghi periodi di tempo possono causare problemi di contesa. Per questo è necessario esaminarli. Ad esempio, è possibile che un'applicazione acquisisca i blocchi sulle righe di una tabella e quindi rimanga in attesa dell'input utente. L'attesa dell'input utente può essere prolungata e pertanto bloccare altri utenti. In tal caso, sarà necessario riprogettare l'applicazione in modo che le richieste di blocco vengano attivate soltanto quando necessario e che al momento dell'acquisizione dei blocchi non venga richiesto l'input utente.  
   

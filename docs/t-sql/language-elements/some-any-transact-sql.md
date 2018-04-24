@@ -1,16 +1,16 @@
 ---
 title: SOME | ANY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d81a0d9fb87a11aa7bc109c003d7b723c20c8e77
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0a79c7a06edb70b694481e4c30b0244ebd39e2ef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>Valore restituito  
- SOME o ANY restituisce **TRUE** se il confronto specificato è TRUE per qualsiasi coppia (*scalar_expression***,***x*) dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce **FALSE**.  
+ SOME o ANY restituisce **TRUE** se il confronto specificato è TRUE per qualsiasi coppia (*scalar_expression ***,*** x*) dove *x* è un valore del set di valori a colonna singola. In caso contrario restituisce **FALSE**.  
   
 ## <a name="remarks"></a>Remarks  
  SOME specifica che l'argomento *scalar_expression* deve essere confrontato in modo univoco con almeno un valore restituito dalla sottoquery. Per le istruzioni che specificano che l'argomento *scalar_expression* deve essere confrontato in modo univoco con ogni valore restituito dalla sottoquery, vedere [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Se ad esempio la sottoquery restituisce i valori 2 e 3, *scalar_expression* = SOME (subquery) restituisce TRUE se il valore di *scalar_expression* è 2. Se la sottoquery restituisce i valori 2 e 3, *scalar_expression* = ALL (subquery) restituisce FALSE, in quanto alcuni valori della sottoquery (il valore 3) non soddisfano i criteri dell'espressione.  

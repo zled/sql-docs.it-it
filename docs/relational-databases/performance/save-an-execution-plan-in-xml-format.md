@@ -2,7 +2,7 @@
 title: Salvare un piano di esecuzione in formato XML | Microsoft Docs
 ms.custom: ''
 ms.date: 08/21/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: performance
@@ -24,11 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa43dba8d4ce0abdd5dc14f113a5fbfcf58d3ec
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b803fb963c72cdf59c6d195269a63b1b55cb49e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Salvataggio di un piano di esecuzione in formato XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/10/2018
   
 5.  Nella finestra di dialogo **Salva** risultati **\<griglia o testo>**, nella casella **Salva come tipo** fare clic su **Tutti i file (\*.\*)**.  
   
-6.  Nella casella **Nome file** immettere un nome nel formato \<nome**>.sqlplan** e quindi fare clic su **Salva**.  
+6.  Nella casella **Nome file** immettere un nome nel formato \<nome **>.sqlplan** e quindi fare clic su **Salva**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Per salvare un piano di esecuzione utilizzando le opzioni di SQL Server Management Studio  
   
@@ -88,7 +89,7 @@ ms.lasthandoff: 04/10/2018
   
 3.  Nella finestra di dialogo **Salva con nome** assicurarsi che **Salva come** sia impostato su **File piano di esecuzione (\*.sqlplan)**.  
   
-4.  Nella casella **Nome file** immettere un nome nel formato \<nome**>.sqlplan** e quindi fare clic su **Salva**.  
+4.  Nella casella **Nome file** immettere un nome nel formato \<nome **>.sqlplan** e quindi fare clic su **Salva**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>Per aprire un piano di query XML salvato in SQL Server Management Studio  
   

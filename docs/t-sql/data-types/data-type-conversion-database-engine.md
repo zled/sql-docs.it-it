@@ -1,16 +1,16 @@
 ---
 title: Conversione del tipo di dati (motore di database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - explicit data type conversions [SQL Server]
 - converting data types [SQL Server], about converting data types
 ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
-caps.latest.revision: 
+caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 811eacd3dc0cbbd622fc6eac6ad91a6e740554f4
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 9443c64daa514c83e6493606f961e501b26f04f6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversione del tipo di dati (motore di database)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +61,7 @@ CAST ( $157.27 AS VARCHAR(10) )
   
 Utilizzare CAST invece di CONVERT per rendere il codice di programma [!INCLUDE[tsql](../../includes/tsql-md.md)] compatibile con lo standard ISO. Utilizzare CONVERT invece di CAST per trarre vantaggio dalla funzionalità degli stili disponibile in CONVERT.
   
-Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Queste includono **xml**, **bigint** e **sql_variant**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
+Nella figura seguente vengono illustrate le conversioni di tipi di dati esplicite e implicite consentite per i tipi di dati di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questi includono **xml**, **bigint** e **sql_variant**. Non è possibile eseguire una conversione implicita in un'assegnazione dal tipo di dati **sql_variant**, ma è possibile eseguire una conversione implicita verso il tipo di dati **sql_variant**.
   
 ![Tabella di conversione dei tipi di dati](../../t-sql/data-types/media/lrdatahd.png "Tabella di conversione dei tipi di dati")
   
@@ -105,7 +106,7 @@ Nella tabella seguente vengono descritte le conversioni dei tipi di dati di [!IN
 |**datetime**, **smalldatetime**|**Data**|  
 |Qualsiasi tipo impostato su NULL|**Variant** impostato su Null|  
   
-Tutti i singoli valori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in un singolo valore di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], ad eccezione dei valori **binary**, **varbinary** e **image**. Questi valori vengono convertiti in una matrice di **Byte()** unidimensionale in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Questa matrice ha un intervallo di **Byte(**0 to *length*1**)** dove *length* è il numero di byte nei valori **binary**, **varbinary** o **image** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Tutti i singoli valori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono convertiti in un singolo valore di [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], ad eccezione dei valori **binary**, **varbinary** e **image**. Questi valori vengono convertiti in una matrice di **Byte()** unidimensionale in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Questa matrice ha un intervallo di **Byte(** 0 to *length*1 **)** dove *length* è il numero di byte nei valori **binary**, **varbinary** o **image** di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 Di seguito sono riportate le conversioni dai tipi di dati [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] nei tipi di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

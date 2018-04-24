@@ -1,32 +1,32 @@
 ---
 title: Specificare un sistema di risoluzione dei conflitti dell'articolo di merge | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - articles [SQL Server replication], conflict resolution
 - conflict resolution [SQL Server replication], merge replication
 - merge replication conflict resolution [SQL Server replication], merge article resolvers
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
-caps.latest.revision: 
+caps.latest.revision: 39
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3df23cff2cc1aab86205fabe0f81ff9aa25b0645
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 49f738f95cc01297d6df28d7626a138489ad8f95
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-a-merge-article-resolver"></a>Impostazione di un sistema di risoluzione dei conflitti dell'articolo di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 03/08/2018
   
 3.  Nella pagina **Proprietà articolo - \<Articolo>** fare clic sulla scheda **Sistema di risoluzione**.  
   
-4.  Selezionare **Usa un sistema di risoluzione personalizzato (registrato nel server di distribuzione)**e quindi fare clic sul sistema di risoluzione nell'elenco.  
+4.  Selezionare **Usa un sistema di risoluzione personalizzato (registrato nel server di distribuzione)** e quindi fare clic sul sistema di risoluzione nell'elenco.  
   
 5.  Se il sistema di risoluzione dei conflitti richiede un input, ad esempio un nome di colonna, specificarlo nella casella di testo **Immettere le informazioni necessarie per il sistema di risoluzione** .  
   

@@ -13,19 +13,22 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
-caps.latest.revision: ''
+caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 648620fc2da4fd3e033feec89531fea3ec7dceae
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 0322456ec2158fe673b59141f6ce66e4a9a3d2d6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="data-quality-services"></a>Data Quality Services
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
+ [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) è un prodotto per la qualità dei dati basato sulle informazioni. DQS consente di compilare una Knowledge Base e utilizzarla per eseguire varie attività relative alla qualità dei dati di importanza fondamentale, tra cui correzione, arricchimento, standardizzazione e deduplicazione dei dati. DQS consente di eseguire la pulizia dei dati tramite servizi dati di riferimento basati su cloud forniti dai provider di dati di riferimento. DQS offre inoltre funzioni di profiling integrate nelle attività relative alla qualità dei dati, consentendo di analizzare l'integrità dei dati stessi.  
   
  DQS è costituito da un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] e un [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], entrambi installati come parte di [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] è una funzionalità dell'istanza di SQL Server costituita da tre cataloghi di SQL Server con capacità funzionali e di archiviazione per la qualità dei dati. Il [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] è una funzionalità condivisa di SQL Server utilizzabile da utenti aziendali, Information Worker e professionisti IT per eseguire analisi assistite da computer sulla qualità dei dati in uso e gestire tale qualità in modo interattivo. È possibile eseguire processi relativi alla qualità dei dati anche tramite [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] e la funzionalità di qualità dei dati Master Data Services (MDS), entrambi basati su DQS.  
   

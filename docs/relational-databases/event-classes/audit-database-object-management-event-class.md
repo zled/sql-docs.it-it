@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Audit Database Object Management | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Audit Database Object Management event class
 ms.assetid: bc5c0be2-990b-4032-a5e6-41ce98661698
-caps.latest.revision: 
+caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e241e21a4270528803899791cd880ab76121ebd
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 604e36a7fcdac37df9a748420c33bc48e7eb1c61
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="audit-database-object-management-event-class"></a>Audit Database Object Management - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Audit Database Object Management** viene generata quando viene eseguita un'istruzione CREATE, ALTER o DROP su oggetti di database, ad esempio schemi.  
+  La classe di evento **Audit Database Object Management** viene generata quando viene eseguita un'istruzione CREATE, ALTER o DROP su oggetti di database, ad esempio schemi.  
   
 > [!NOTE]  
 >  Le azioni correlate alla chiave pubblica non vengono controllate.  

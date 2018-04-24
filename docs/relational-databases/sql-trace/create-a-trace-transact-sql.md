@@ -1,31 +1,31 @@
 ---
 title: Creare una traccia (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: sql-trace
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], example
 - traces [SQL Server], creating
 ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
-caps.latest.revision: 
+caps.latest.revision: 19
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c13c07109ae5a36c421c617227e1f7776bb7fe3c
-ms.sourcegitcommit: 0d904c23663cebafc48609671156c5ccd8521315
+ms.openlocfilehash: 655bacebe7471bc6df99480850f1fc61c1a591d0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-trace-transact-sql"></a>Creare una traccia (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/19/2018
      È possibile eseguire**sp_trace_setevent** e **sp_trace_setfilter** solo su tracce esistenti arrestate.  
   
     > [!IMPORTANT]  
-    >  A differenza di quanto avviene con le normali stored procedure, i parametri di tutte le stored procedure di SQL Server Profiler (**sp_trace_*xx***) sono rigidamente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
+    >  A differenza di quanto avviene con le normali stored procedure, i parametri di tutte le stored procedure di SQL Server Profiler (**sp_trace_* xx***) sono rigidamente tipizzati e non supportano la conversione automatica del tipo di dati. Se tali parametri non vengono chiamati con i tipi di dati corretti per i parametri di input, come indicato nella descrizione dell'argomento, la stored procedure restituisce un errore.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio di codice riportato di seguito viene illustrata la creazione di una traccia utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'esempio è costituito da tre sezioni, relative alla creazione della traccia, al popolamento del file di traccia e all'arresto della traccia. Personalizzare la traccia aggiungendo gli eventi per cui si desidera eseguirla. Per l'elenco di eventi e colonne, vedere [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  

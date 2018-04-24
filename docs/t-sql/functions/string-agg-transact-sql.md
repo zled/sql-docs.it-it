@@ -1,16 +1,16 @@
 ---
 title: STRING_AGG (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - STRING_AGG
@@ -18,16 +18,17 @@ f1_keywords:
 helpviewer_keywords:
 - STRING_AGG function
 ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 9a73ac6b2eaddccb2c7c74d3867456a27f30f444
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo `NVARCHAR` o `VARCHAR` usata come separatore per stringhe concatenate. Può essere un valore letterale o una variabile. 
 
 *expression*  
-È un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo. Le espressioni vengono convertite in tipi `NVARCHAR` o `VARCHAR` durante la concatenazione. I tipi non stringa vengono convertiti nel tipo `NVARCHAR`.
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di qualsiasi tipo. Le espressioni vengono convertite in tipi `NVARCHAR` o `VARCHAR` durante la concatenazione. I tipi non stringa vengono convertiti nel tipo `NVARCHAR`.
 
 
 <order_clause>   

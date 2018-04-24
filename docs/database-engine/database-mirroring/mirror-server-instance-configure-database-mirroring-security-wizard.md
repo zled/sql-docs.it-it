@@ -2,7 +2,7 @@
 title: Istanza server mirror (Configurazione guidata sicurezza mirroring del database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: database-mirroring
@@ -20,14 +20,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e6440acda92e77b3558cf60ba3c54cb5b8b3c042
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 725127486d64ba939a29c0b16dbf6bbddb4b776e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>Istanza server mirror (Configurazione guidata sicurezza mirroring del database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare questa pagina per specificare le informazioni relative all'istanza del server del database mirror.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Utilizzare questa pagina per specificare le informazioni relative all'istanza del server del database mirror.  
   
 > [!IMPORTANT]  
 >  L'istanza del server mirror deve essere in esecuzione nella stessa edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Standard o Enterprise, come l'istanza del server principale. È inoltre consigliabile che vengano eseguite in sistemi simili in grado di gestire carichi di lavoro identici.  

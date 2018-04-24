@@ -1,30 +1,30 @@
 ---
 title: Configurare un server di pubblicazione Oracle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
-caps.latest.revision: 
+caps.latest.revision: 60
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 115247323429a5a981fdeff76ebb4d0f6d33581f
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 047adf6cf134fabfaf3964fc620c68c68a83618c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurazione di un server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/08/2018
 > [!NOTE]  
 >  Eliminando il sinonimo pubblico **MSSQLSERVERDISTRIBUTOR** e l’utente della replica Oracle configurato con l’opzione **CASCADE** vengono rimossi tutti gli oggetti di replica dalla pubblicazione Oracle.  
   
- È disponibile uno script di esempio che consente di agevolare la configurazione dello schema utente di replica Oracle. Lo script viene incluso nella directory seguente dopo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unità>*:\\\Programmi\Microsoft SQL Server\\*\<NomeIstanza>*\MSSQL\Install\oracleadmin.sql. È inoltre descritto in [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ È disponibile uno script di esempio che consente di agevolare la configurazione dello schema utente di replica Oracle. Lo script viene incluso nella directory seguente dopo l'installazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unità>*:\\\Programmi\Microsoft SQL Server\\*\<NomeIstanza>* \MSSQL\Install\oracleadmin.sql. È inoltre descritto in [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
  Connettersi al database Oracle utilizzando un account con privilegi DBA ed eseguire lo script. Lo script richiede l'indicazione del nome utente e della password per lo schema utente di amministrazione della replica e dello spazio tabella in cui creare gli oggetti (lo spazio tabella deve essere già disponibile nel database Oracle). Per informazioni sull'impostazione di altri spazi tabella per gli oggetti, vedere [Gestire spazi di tabella Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Scegliere un nome utente e una password complessa e prenderne nota perché vanno specificati durante la configurazione del database Oracle come server di pubblicazione. È consigliabile utilizzare lo schema solo per gli oggetti necessari alla replica ed evitare di creare tabelle da pubblicare in questo schema.  
   

@@ -2,7 +2,7 @@
 title: Usare il formato carattere per importare o esportare dati (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/29/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -21,11 +21,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c3eff449d858ce95e1df141363571f73c0c5813d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f7bf18d9a0cff7b9185b66e3cfecebbcb2d5c443
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utilizzo del formato carattere per l'importazione o l'esportazione di dati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +37,7 @@ Quando si utilizza il formato carattere, in tutte le colonne viene applicato il 
 > [!NOTE]
 >  Quando si esegue il trasferimento bulk dei dati tra le istanze di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il file di dati contiene dati di tipo carattere Unicode ma nessun carattere esteso o DBCS, usare il formato carattere Unicode. Per altre informazioni, vedere [Usare il formato carattere Unicode per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).
   
-|Contenuto dell'argomento|
+|Contenuto dell'argomento:|
 |---|
 |[Considerazioni sull'utilizzo del formato carattere](#considerations)|
 |[Opzioni del comando per il formato carattere](#command_options)|
@@ -69,7 +70,7 @@ Quando si utilizza il formato carattere, è necessario tenere presenti i fattori
   
 Il formato carattere è supportato dalle opzioni di comando seguenti:  
   
-|Command|Opzione|Description|  
+|Comando|Opzione|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Determina l'uso dei dati di tipo carattere da parte dell'utilità bcp.*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Durante l'importazione bulk dei dati viene applicato il formato carattere.|  
@@ -130,7 +131,7 @@ Notepad D:\BCP\myChar.fmt
 Gli esempi seguenti usano il database e i file di formato creati in precedenza.
 
 ### **Uso di bcp e del formato carattere per l'esportazione di dati**<a name="bcp_char_export"></a>
-Opzione**-c** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere il comando seguente:
+Opzione **-c** e comando **OUT** .  Nota: il file di dati creato in questo esempio verrà usato in tutti gli esempi successivi.  Al prompt dei comandi immettere il comando seguente:
 
 ```cmd
 bcp TestDatabase.dbo.myChar OUT D:\BCP\myChar.bcp -T -c
@@ -140,7 +141,7 @@ NOTEPAD D:\BCP\myChar.bcp
 ```
 
 ### **Uso di bcp e del formato carattere per l'importazione di dati senza un file di formato**<a name="bcp_char_import"></a>
-Opzione**-c** e comando **IN** .  Al prompt dei comandi immettere il comando seguente:
+Opzione **-c** e comando **IN** .  Al prompt dei comandi immettere il comando seguente:
 
 ```cmd
 REM Truncate table (for testing)
@@ -154,7 +155,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **Uso di bcp e del formato carattere per l'importazione di dati con un file di formato non XML**<a name="bcp_char_import_fmt"></a>
-Opzioni**-c** e **-f** switches e **IN** comme.  Al prompt dei comandi immettere il comando seguente:
+Opzioni **-c** e **-f** switches e **IN** comme.  Al prompt dei comandi immettere il comando seguente:
 
 ```cmd
 REM Truncate table (for testing)

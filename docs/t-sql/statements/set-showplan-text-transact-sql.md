@@ -1,16 +1,16 @@
 ---
 title: SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/10/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SHOWPLAN_TEXT
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - stopping statement execution
 - estimated execution information [SQL Server]
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
-caps.latest.revision: 
+caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e0fd12594c0b2a4c5df3a616aeaa48746f781977
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 0ade3c22c437984724cbb7956951d85cdc17d8f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,13 +74,13 @@ SET SHOWPLAN_TEXT { ON | OFF }
 ## <a name="permissions"></a>Autorizzazioni  
  Per poter utilizzare SET SHOWPLAN_TEXT, è necessario disporre delle autorizzazioni sufficienti per eseguire le istruzioni in cui SET SHOWPLAN_TEXT viene eseguito, nonché l'autorizzazione SHOWPLAN per tutti i database contenenti oggetti di riferimento.  
   
- Per poter generare uno Showplan con le istruzioni SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* ed EXEC *user_defined_function*, l'utente deve disporre di:  
+ Per poter generare uno Showplan con le istruzioni SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure* ed EXEC *user_defined_function*, l'utente deve avere:  
   
 -   Autorizzazioni appropriate per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 -   Autorizzazione SHOWPLAN su tutti i database contenenti oggetti a cui fanno riferimento le istruzioni Transact-SQL, ad esempio tabelle, viste e così via.  
   
- Per tutte le altre istruzioni, ad esempio DDL, USE *database_name*, SET, DECLARE, SQL dinamico e così via sono necessarie soltanto le autorizzazioni appropriate per eseguire le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Per tutte le altre istruzioni, ad esempio DDL, USE *database_name*, SET, DECLARE, SQL dinamico e così via sono necessarie soltanto le autorizzazioni per l'esecuzione delle istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  In questo esempio viene illustrato l'utilizzo degli indici in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante l'elaborazione di istruzioni.  

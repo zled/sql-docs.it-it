@@ -3,17 +3,18 @@ title: Archiviare e recuperare file nelle condivisioni file in locale e in Azure
 description: In questo articolo viene descritto come usare il file system e le condivisioni file, sia a livello locale che in Azure, con SSIS
 ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-non-specified
-ms.technology: integration-services
+ms.prod: sql
+ms.technology:
+- integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b9fb260101c1f814c85360d3fe5998b6e9234101
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Archiviare e recuperare file nelle condivisioni file in locale e in Azure con SSIS
 In questo articolo viene descritto come aggiornare i pacchetti di SQL Server Integration Services (SSIS) quando si esegue la migrazione lift-and-shift dei pacchetti che usano i file system locali in SSIS in Azure.

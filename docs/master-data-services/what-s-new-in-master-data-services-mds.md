@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
-caps.latest.revision: ''
+caps.latest.revision: 85
 author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 583d8f49803b7a9d527583644540c7d93e103cf6
-ms.sourcegitcommit: 6ac1956307d8255dc544e1063922493b30907b80
+ms.openlocfilehash: 8f48092fa22f540805feefda03b02389e6544300
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>Novità in Master Data Services (MDS)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   Questo argomento riepiloga le modifiche e gli aggiornamenti disponibili nella versione [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
@@ -43,7 +46,7 @@ ms.lasthandoff: 03/05/2018
   
  I miglioramenti delle prestazioni consentono di creare modelli di dimensioni maggiori, caricare i dati in modo più efficiente e ottenere migliori prestazioni complessive. I miglioramenti riguardano anche le prestazioni del componente aggiuntivo per Microsoft Excel in cui sono stati ridotti i tempi di caricamento dei dati ed è stata abilitata la funzionalità che permette di gestire entità di dimensioni maggiori.  
   
- Per altre informazioni sul componente aggiuntivo per Microsoft Excel, vedere [Componente aggiuntivo Master Data Services per Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Per altre informazioni sul componente aggiuntivo per Microsoft Excel, vedere [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Sono inclusi i seguenti miglioramenti di funzionalità.  
   

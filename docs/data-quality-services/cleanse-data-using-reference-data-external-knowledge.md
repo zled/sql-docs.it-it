@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-caps.latest.revision: ''
+caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 684a191f93f8b83fe730dbfbd30f9874a1c0cfef
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: be9b1d3318872b1cce55b58ee6aaeaba66c6cee0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Pulire i dati mediante le informazioni dei dati di riferimento (esterni)
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento viene descritto come pulire i dati utilizzando le informazioni dei provider di dati di riferimento. Mentre tutti i passaggi per l'esecuzione di un'attività di pulizia rimangono gli stessi per la pulizia dei dati mediante le informazioni dei provider di dati di riferimento, come descritto in [Pulire i dati mediante DQS &#40;informazioni interne&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), in questo argomento vengono illustrate le informazioni specifiche per la pulizia dei dati mediante il servizio dati di riferimento in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   
  Quando in DQS si utilizza la funzionalità del servizio dati di riferimento per pulire i dati, il processo di pulizia di DQS invia i valori di dominio di cui è stato eseguito il mapping al provider del servizio dati di riferimento come richiesta batch. Il servizio dati di riferimento risponde con le informazioni seguenti:  

@@ -1,15 +1,16 @@
 ---
 title: Configurazione di rete del server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/27/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Named Pipes [SQL Server], configuring
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - ports [SQL Server], changing
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 72b4b52a2977bf5770c9e8a11e5e27fc32ab0396
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-network-configuration"></a>Configurazione di rete del server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le attività di configurazione di rete del server includono l'abilitazione dei protocolli, la modifica della porta o della pipe utilizzata da un protocollo, la configurazione della crittografia, la configurazione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, le procedure per esporre o nascondere il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in rete e la registrazione del nome SPN. Nella maggior parte dei casi non è necessario modificare la configurazione di rete del server. Riconfigurare i protocolli di rete del server solo in presenza di requisiti speciali di rete.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le attività di configurazione di rete del server includono l'abilitazione dei protocolli, la modifica della porta o della pipe utilizzata da un protocollo, la configurazione della crittografia, la configurazione del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, le procedure per esporre o nascondere il [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in rete e la registrazione del nome SPN. Nella maggior parte dei casi non è necessario modificare la configurazione di rete del server. Riconfigurare i protocolli di rete del server solo in presenza di requisiti speciali di rete.  
   
  La configurazione della rete per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per le versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare l'utilità Configurazione di rete inclusa nei singoli prodotti.  
   
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/18/2018
  Se configurata per le porte dinamiche, è possibile modificare la porta utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ogni avvio. Se la connessione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avviene tramite firewall, è necessario aprire la porta utilizzata da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in modo da utilizzare una porta specifica e configurare il firewall per consentire le comunicazioni con il server. Per altre informazioni, vedere [Configurare un server per l'attesa su una porta TCP specifica &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Modifica di una named pipe  
- È possibile configurare il protocollo Named Pipes per l'attesa su una named pipe designata. Per impostazione predefinita, l'istanza predefinita del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] resta in attesa sulla pipe \\\\.\pipe\sql\query per l'istanza predefinita e \\\\.\pipe\MSSQL$*\<nomeistanza>*\sql\query per un'istanza denominata. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può restare in attesa solo su una named pipe, ma è possibile modificare il nome della pipe. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser facilita l'identificazione della pipe alla connessione dei client. Per altre informazioni, vedere [Configurare un server per l'attesa su una pipe alternativa &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ È possibile configurare il protocollo Named Pipes per l'attesa su una named pipe designata. Per impostazione predefinita, l'istanza predefinita del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] resta in attesa sulla pipe \\\\.\pipe\sql\query per l'istanza predefinita e \\\\.\pipe\MSSQL$*\<nomeistanza>* \sql\query per un'istanza denominata. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] può restare in attesa solo su una named pipe, ma è possibile modificare il nome della pipe. Il servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser facilita l'identificazione della pipe alla connessione dei client. Per altre informazioni, vedere [Configurare un server per l'attesa su una pipe alternativa &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forza crittografia  
  È possibile configurare il [!INCLUDE[ssDE](../../includes/ssde-md.md)] in modo da richiedere la crittografia durante le comunicazioni con le applicazioni client. Per altre informazioni, vedere [Abilitare le connessioni crittografate al motore di database &#40;Gestione configurazione SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

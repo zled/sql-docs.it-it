@@ -1,33 +1,35 @@
 ---
 title: Certificati SQL Server e chiavi simmetriche | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 
+caps.latest.revision: 18
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eadfb0677c17e0c40d1b32ca01998c8079fcd238
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c4d20aa5344127303df606b8dcaeb5722ce7d2c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificati SQL Server e chiavi simmetriche
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata*. La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  La crittografia a chiave pubblica (PKI) è un sistema di tutela della segretezza dei messaggi in cui un utente crea una chiave *pubblica* e una chiave *privata* . La chiave privata viene tenuta segreta, mentre la chiave pubblica può essere distribuita ad altri. Sebbene le chiavi siano collegate da una relazione matematica, non è possibile estrapolare facilmente la chiave privata utilizzando la chiave pubblica. La chiave pubblica viene utilizzata per crittografare dati mentre quella privata viene impiegata per decrittografarli. Un messaggio crittografato con la chiave pubblica può essere decrittografato solo utilizzando la chiave privata corretta. Poiché si tratta di due chiavi diverse, queste chiavi sono *asimmetriche*.  
   
  Certificati e chiavi asimmetriche rappresentano entrambi una modalità di utilizzo della crittografia asimmetrica. I certificati vengono spesso utilizzati come contenitori delle chiavi asimmetriche perché possono contenere un maggior numero di informazioni, ad esempio date di scadenza e autorità emittenti. Non c'è differenza tra i due meccanismi per l'algoritmo di crittografia e nessuna differenza nel livello di protezione fornito a parità di lunghezza della chiave. In genere, si utilizza un certificato per crittografare gli altri tipi di chiavi di crittografia in un database o per firmare moduli di codice.  
   
@@ -49,7 +51,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-a-certificate-in-sql-server"></a>Utilizzo di un certificato in SQL Server  
  È possibile utilizzare i certificati per proteggere connessioni, eseguire il mirroring del database, firmare pacchetti e altri oggetti o crittografare dati o connessioni. Nella tabella seguente sono elencate risorse aggiuntive per i certificati presenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|Viene descritto il comando per la creazione di certificati.|  
 |[Identificazione dell'origine dei pacchetti con firme digitali](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)|Vengono fornite informazioni sull'utilizzo di certificati per la firma di pacchetti software.|  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="using-an-asymmetric-key-in-sql-server"></a>Utilizzo di una chiave asimmetrica in SQL Server  
  È possibile utilizzare chiavi asimmetriche per proteggere dati o firmare testo non crittografato. Nella tabella seguente sono elencate risorse aggiuntive per chiavi asimmetriche presenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Argomento|Descrizione|  
+|Argomento|Description|  
 |-----------|-----------------|  
 |[CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)|Viene descritto il comando per la creazione di chiavi asimmetriche.|  
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Vengono visualizzate le opzioni per la firma di oggetti.|  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/21/2017
 |[makecert](http://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Vengono creati certificati.|  
 |[sn](http://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Vengono creati nomi sicuri per le chiavi simmetriche.|  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  [Scelta di un algoritmo di crittografia](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  

@@ -1,31 +1,32 @@
 ---
 title: Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: backup-restore
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-backup-restore
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b1f6ccfb9fdcf2fa3022864159fb87e589844df
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 1f64010973cd54bee7723668c861ca515e818bce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configurare le opzioni avanzate per il backup gestito di SQL Server in Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'esercitazione seguente descrive come impostare le opzioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Queste procedure sono necessarie solo se servono le funzionalità offerte. In caso contrario, è possibile abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e affidarsi al comportamento predefinito.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'esercitazione seguente descrive come impostare le opzioni avanzate per [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Queste procedure sono necessarie solo se servono le funzionalità offerte. In caso contrario, è possibile abilitare [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] e affidarsi al comportamento predefinito.  
   
  In ogni scenario, il backup viene specificato con il parametro `database_name` . Quando `database_name` è NULL o *, le modifiche interessano le impostazioni predefinite a livello di istanza. Le impostazioni a livello di istanza influiscono anche sui nuovi database creati dopo la modifica.  
   

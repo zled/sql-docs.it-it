@@ -1,16 +1,16 @@
 ---
 title: STR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - STR
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - character data [SQL Server]
 - STR function
 ms.assetid: de03531b-d9e7-4c3c-9604-14e582ac20c6
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4eb6ae0f5cc4a669cf69140e406ad36d4d5bf11
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +62,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  **varchar**  
   
 ## <a name="remarks"></a>Remarks  
- I valori dei parametri *length* e *decimal* della funzione STR devono essere positivi. Il numero viene arrotondato a un valore intero per impostazione predefinita o se il parametro decimal è 0. La lunghezza specificata deve essere maggiore o uguale alla parte intera del numero (a sinistra del separatore decimale) più il segno del numero, se disponibile. Un argomento di tipo *float_expression* breve viene allineato a destra in base alla lunghezza specificata, mentre un argomento di tipo *float_expression* lungo viene troncato al numero di cifre decimali specificato. Ad esempio, STR(12**,**10) restituisce il risultato 12, che viene allineato a destra nel set di risultati. STR(1223**,**2) tronca invece il set di risultati a **. Le funzioni stringa possono essere nidificate.  
+ I valori dei parametri *length* e *decimal* della funzione STR devono essere positivi. Il numero viene arrotondato a un valore intero per impostazione predefinita o se il parametro decimal è 0. La lunghezza specificata deve essere maggiore o uguale alla parte intera del numero (a sinistra del separatore decimale) più il segno del numero, se disponibile. Un argomento di tipo *float_expression* breve viene allineato a destra in base alla lunghezza specificata, mentre un argomento di tipo *float_expression* lungo viene troncato al numero di cifre decimali specificato. Ad esempio, STR(12 **,** 10) restituisce il risultato 12, che viene allineato a destra nel set di risultati. STR(1223 **,** 2) tronca invece il set di risultati a **. Le funzioni stringa possono essere nidificate.  
   
 > [!NOTE]  
 >  Per eseguire la conversione in dati Unicode, usare STR in una funzione di conversione CONVERT o [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md).  

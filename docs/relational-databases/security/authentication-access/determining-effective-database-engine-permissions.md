@@ -2,7 +2,7 @@
 title: Determinare le autorizzazioni valide per il motore di database | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: security
@@ -16,16 +16,17 @@ helpviewer_keywords:
 - permissions, effective
 - effective permissions
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d93f80a8a662edd4e84309aa95803dc0e3cc57c
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7d4142a9779b689d26d775d33926496e78fec7d1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Determinare le autorizzazioni valide per il motore di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -91,9 +92,8 @@ Per informazioni sulle autorizzazioni concesse a ogni ruolo, vedere le descrizio
 
 Questo sistema è flessibile e ciò significa che può diventare complicato se gli utenti che lo configurano vogliono essere precisi. Per semplificare la configurazione può essere utile creare ruoli, assegnare autorizzazioni ai ruoli e quindi aggiungere gruppi di utenti ai ruoli. Si può semplificare ulteriormente il sistema se il team di sviluppo del database separa le attività in base allo schema e quindi concede le autorizzazioni di ruolo per un intero schema anziché per singole tabelle o stored procedure. Gli scenari reali sono complessi e, per esigenze aziendali, si possono creare requisiti di sicurezza imprevisti.   
 
-La figura seguente illustra le autorizzazioni e le relative relazioni. Alcune delle autorizzazioni di livello superiore (ad esempio `CONTROL SERVER`) sono elencate più volte. In questo articolo l'anteprima è molto piccola e non può essere consultata. Fare clic sull'immagine per scaricare il **poster relativo alle autorizzazioni del motore di database** in formato pdf.  
-  
- [![Autorizzazioni del motore di database](../../../relational-databases/security/media/database-engine-permissions.PNG)](https://aka.ms/sql-permissions-poster)
+[!INCLUDE[database-engine-permissions](../../../includes/paragraph-content/database-engine-permissions.md)]
+
 
 ### <a name="security-classes"></a>Classi di sicurezza
 

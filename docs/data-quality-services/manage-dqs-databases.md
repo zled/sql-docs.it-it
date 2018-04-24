@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-caps.latest.revision: ''
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 138fd9e68a665f2a0b793891c8a6b723f5d78ea7
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 13098ada58ea8ce0b055d7fedb3b90867f2599d7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questa sezione vengono fornite le informazioni sulle attività di gestione di database che possono essere eseguite nei database DQS, ad esempio il backup e il ripristino oppure il collegamento o lo scollegamento.  
   
 ##  <a name="BackupRestore"></a> Backup e ripristino dei database DQS  
@@ -47,7 +50,7 @@ ms.lasthandoff: 03/22/2018
   
 > [!IMPORTANT]  
 >  -   Nel modello di recupero con registrazione minima, se i record del log rimangono inattivi per molto tempo, ad esempio una transazione lunga e dispendiosa in termini di tempo, il troncamento del log può essere ritardato e pertanto può determinare il riempimento del log delle transazioni. Inoltre, il troncamento del log non comporta una riduzione delle dimensioni del file di log fisico (file con estensione ldf). Per ridurre le dimensioni di un file di log fisico, è necessario compattare il file di log. Per informazioni sulla risoluzione dei problemi riguardanti il log delle transazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) o l'articolo del Supporto tecnico Microsoft all'indirizzo [http://go.microsoft.com/fwlink/?LinkId=237446](http://go.microsoft.com/fwlink/?LinkId=237446).  
-> -   È necessario eseguire regolarmente un backup completo o differenziale dei database di DQS e un backup del log delle transazioni, nonché effettuare un recupero temporizzato dei dati. Per altre informazioni, vedere [Backup completo del database &#40; SQL Server &#41; ](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Backup di un log delle transazioni &#40; SQL Server &#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+> -   È necessario eseguire regolarmente un backup completo o differenziale dei database di DQS e un backup del log delle transazioni, nonché effettuare un recupero temporizzato dei dati. Per altre informazioni, vedere [Backup completo del database & #40; SQL Server & #41; ](../relational-databases/backup-restore/full-database-backups-sql-server.md) e [Backup di un log delle transazioni & #40; SQL Server & #41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 ##  <a name="DetachAttach"></a> Scollegare o collegare i database DQS  
  È possibile scollegare i dati e i file di log delle transazioni dei database DQS, quindi ricollegare i database alla stessa istanza o a un'altra istanza di SQL Server se si desidera impostare i database DQS su un'istanza diversa di SQL Server nello stesso computer oppure spostare il database.  

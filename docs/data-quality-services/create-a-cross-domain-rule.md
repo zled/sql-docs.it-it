@@ -16,18 +16,21 @@ f1_keywords:
 - sql13.dqs.dm.testcdrule.f1
 - sql13.dqs.dm.cdrules.f1
 ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
-caps.latest.revision: ''
+caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a9d5e5885832d83f27e061f2a54987a8c8e4f8a
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: a1199bd1bc03a29b5e2469b501bc2d9be7124abe
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-a-cross-domain-rule"></a>Creare una regola tra domini
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   In questo argomento viene descritto come creare una regola tra domini per un dominio composito in una Knowledge Base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regola tra domini consente di testare la relazione tra i valori nei singoli domini inclusi in un dominio composito. Una regola tra domini deve rimanere valida in tutto un dominio composito affinché i valori di dominio vengano considerati accurati e conformi ai requisiti aziendali. Una regola tra domini viene utilizzata per convalidare, correggere e standardizzare i valori di dominio.  
   
  Le clausole If e Then di una regola tra domini sono definite ognuna per uno dei singoli domini del dominio composito. Ogni clausola deve essere definita per un singolo dominio diverso. Una regola tra domini deve essere correlata a più singoli domini. Non è possibile definire una regola di dominio semplice (solo per un singolo dominio) per un dominio composito. Questa operazione viene effettuata definendo una regola di dominio per un singolo dominio. Le clausole If e Then possono contenere ognuna una o più condizioni.  

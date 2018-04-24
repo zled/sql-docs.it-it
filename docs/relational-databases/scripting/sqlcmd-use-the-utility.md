@@ -1,16 +1,16 @@
 ---
-title: "Usare l'utilità sqlcmd | Microsoft Docs"
-ms.custom: 
+title: Usare l'utilità sqlcmd | Microsoft Docs
+ms.custom: ''
 ms.date: 06/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - TSQL
@@ -20,19 +20,21 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-caps.latest.revision: 
+caps.latest.revision: 50
 author: mightypen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea2018f4b9b0ad9c0ef29dbacaeaa6e7639a1a34
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e11152d3dc2342bbad99be13742155422c929158
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Usare l'utilità
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] L'utilità **sqlcmd** è un'utilità della riga di comando per l'esecuzione interattiva ad hoc di istruzioni e script [!INCLUDE[tsql](../../includes/tsql-md.md)], nonché per l'automazione di attività di scripting [!INCLUDE[tsql](../../includes/tsql-md.md)]. Per usare **sqlcmd** in modo interattivo o per compilare file script da eseguire tramite **sqlcmd**, è necessario conoscere [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilità **sqlcmd** viene in genere usata nei modi seguenti:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  L'utilità **sqlcmd** è un'utilità della riga di comando per l'esecuzione interattiva ad hoc di istruzioni e script [!INCLUDE[tsql](../../includes/tsql-md.md)] , nonché per l'automazione di attività di scripting [!INCLUDE[tsql](../../includes/tsql-md.md)] . Per usare **sqlcmd** in modo interattivo o per compilare file script da eseguire tramite **sqlcmd**, è necessario conoscere [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilità **sqlcmd** viene in genere usata nei modi seguenti:  
   
 -   Gli utenti immettono istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] in modo analogo all'utilizzo del prompt dei comandi. I risultati vengono visualizzati al prompt dei comandi. Per aprire una finestra del prompt dei comandi, immettere "cmd" nella casella di ricerca di Windows e fare clic su **Prompt dei comandi** per aprirlo. Al prompt dei comandi digitare **sqlcmd** seguito da un elenco delle opzioni desiderate. Per un elenco completo delle opzioni supportate da **sqlcmd**, vedere [Utilità sqlcmd](../../tools/sqlcmd-utility.md).  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 01/24/2018
   
  Al prompt di **sqlcmd** è possibile digitare sia istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che comandi di **sqlcmd** , ad esempio **GO** ed **EXIT**. Ogni istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viene inserita in un buffer denominato cache dell'istruzione. Dopo aver digitato il comando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] GO **e premuto di INVIO, queste istruzioni vengono inviate a** . Per chiudere **sqlcmd**, digitare **EXIT** o **QUIT** all'inizio di una nuova riga.  
   
- Per cancellare il contenuto della cache delle istruzioni, digitare **:RESET**. **^C** causa la chiusura di **sqlcmd** . È anche possibile usare**^C** per arrestare l'esecuzione della cache delle istruzioni dopo l'esecuzione di un comando **GO** .  
+ Per cancellare il contenuto della cache delle istruzioni, digitare **:RESET**. **^C** causa la chiusura di **sqlcmd** . È anche possibile usare **^C** per arrestare l'esecuzione della cache delle istruzioni dopo l'esecuzione di un comando **GO** .  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] le istruzioni immesse in una sessione interattiva possono essere modificate immettendo il comando **:ED** e il prompt di **sqlcmd** . Verrà aperto l'editor. Dopo aver modificato l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] e chiuso l'editor, l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] modificata verrà visualizzata nella finestra di comando. Immettere **GO** per eseguire l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] modificata.  
   

@@ -1,15 +1,15 @@
 ---
 title: Tipi di dati (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 9/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data types [SQL Server]
 - data types [SQL Server], about data types
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
-caps.latest.revision: 
+caps.latest.revision: 45
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 397d96212851ed52020a0ac0e951e282edf6c087
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: c22a3218cf55ff934a0b74abd6e21dbb9012231e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-types-transact-sql"></a>Tipi di dati (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +39,7 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un s
   
 Quando due espressioni con tipi di dati, regole di confronto, precisione, scala o lunghezza diversi vengono combinati mediante un operatore, le caratteristiche del risultato vengono determinate come descritto di seguito.
 -   Il tipo di dati del risultato viene determinato applicando le regole sulla precedenza dei tipi di dati ai tipi di dati delle espressioni di input. Per altre informazioni, vedere [Precedenza dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
--   Le regole di confronto del risultato sono determinate dalle regole di precedenza delle regole di confronto quando il tipo di dati del risultato è **char**, **varchar**, **text**, **nchar**, **nvarchar** o **ntext**. Per altre informazioni, vedere [Collation Precedence &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md) (Precedenza delle regole di confronto &#40;Transact-SQL&#41;).  
+-   Le regole di confronto del risultato sono determinate dalle regole di precedenza delle regole di confronto quando il tipo di dati del risultato è **char**, **varchar**, **text**, **nchar**, **nvarchar** o **ntext**. Per altre informazioni, vedere [Precedenza delle regole di confronto &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md).  
 -   La precisione, la scala e la lunghezza del risultato dipendono dalla precisione, dalla scala e dalla lunghezza delle espressioni di input. Per altre informazioni, vedere [Precisione, scala e lunghezza &#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono disponibili sinonimi dei tipi di dati per la compatibilità con ISO. Per altre informazioni, vedere [Sinonimi dei tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).

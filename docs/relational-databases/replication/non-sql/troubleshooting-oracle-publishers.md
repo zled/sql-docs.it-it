@@ -1,31 +1,31 @@
 ---
 title: Risoluzione dei problemi dei server di pubblicazione Oracle | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: 
+caps.latest.revision: 62
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44c98b6b2a184c3e438a2e993adcc26a871069f3
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: f5ada9a491160ae119ac4792f26640854fcacc0f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Risoluzione dei problemi dei server di pubblicazione Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -163,7 +163,7 @@ ms.lasthandoff: 03/08/2018
   
 2.  Nella finestra di dialogo **Esegui** digitare **regedit**e quindi fare clic su **OK**.  
   
-3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>*\Providers.  
+3.  Individuare HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<NomeIstanza>* \Providers.  
   
      Nella cartella Providers dovrebbe essere presente una cartella denominata OraOLEDB.Oracle. In questa cartella dovrebbe essere incluso il nome valore DWORD **AllowInProcess**, con un valore pari a **1**.  
   
@@ -239,7 +239,7 @@ ms.lasthandoff: 03/08/2018
 ## <a name="changes-are-made-that-require-reconfiguration-of-the-publisher"></a>Le modifiche apportate richiedono la riconfigurazione del server di pubblicazione  
  Le modifiche apportate a procedure o tabelle di metadati della replica richiedono l'eliminazione e la riconfigurazione del server di pubblicazione. Per riconfigurare il server di pubblicazione, è necessario eliminarlo ed eseguirne nuovamente la configurazione mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], Transact-SQL o RMO. Per informazioni sulla configurazione del server di pubblicazione, vedere [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
- **Per eliminare un server di pubblicazione Oracle (**SQL Server Management Studio**)**  
+ **Per eliminare un server di pubblicazione Oracle (** SQL Server Management Studio **)**  
   
 1.  Connettersi al server di distribuzione per il server di pubblicazione Oracle in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ed espandere il nodo del server.  
   

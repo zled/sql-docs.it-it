@@ -1,16 +1,16 @@
 ---
-title: "Guida sensibile al contesto di Gestione Utilità | Microsoft Docs"
-ms.custom: 
+title: Guida sensibile al contesto di Gestione Utilità | Microsoft Docs
+ms.custom: ''
 ms.date: 08/19/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: maintenance-plans
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - sql13.swb.ue.navigation.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - management
 - data-tier application
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3bdce7c18b7097217152a9c57964a2f92eb02ec6
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 195806725d74efb689c14200529d6dafc6a17316
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="utility-explorer-f1-help"></a>Guida sensibile al contesto di Gestione Utilità
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le sezioni seguenti includono informazioni sulle funzionalità di Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e sulle operazioni associate.  
   
   ## <a name="utility-dashboard-sql-server-utility"></a>Dashboard Utilità (Utilità SQL Server)
  Per visualizzare i dati inclusi nel dashboard Utilità [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'albero Gestione Utilità selezionare il nodo principale, con l'etichetta "Utilità<Nome_PuntoDiControlloUtilità">\\(NomeComputer\PuntoDiControlloUtilità)". Il dashboard include i dati di riepilogo e i dettagli relativi a tutte le istanze gestite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e a tutte le applicazioni di livello dati nell'utilità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per aggiornare dati nel dashboard, fare clic con il pulsante destro del mouse sul nodo principale nell'albero Esplora utilità e selezionare **Aggiorna**.  

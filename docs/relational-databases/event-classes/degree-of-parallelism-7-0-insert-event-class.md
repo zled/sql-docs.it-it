@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Degree of Parallelism (7.0 Insert) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Degree of Parallelism event class
 ms.assetid: 6753ef30-890f-47a3-b0b6-8abb184e1d83
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 93020108e319109f6ef6016620a3d5173d207a52
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 5d7b31819c88265f3b12a7e118a795d2e4417714
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe di evento Degree of Parallelism (7.0 Insert)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Degree of Parallelism (7.0 Insert)** viene generata ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SELECT, INSERT, UPDATE o DELETE.  
+  La classe di evento **Degree of Parallelism (7.0 Insert)** viene generata ogni volta che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esegue un'istruzione SELECT, INSERT, UPDATE o DELETE.  
   
  Quando questa classe di evento viene inclusa in una traccia, la quantità di overhead conseguente potrebbe causare un peggioramento significativo delle prestazioni, se questi eventi si verificano di frequente. Per ridurre l'overhead, è consigliabile limitare l'utilizzo della classe di evento alle tracce che eseguono brevemente il monitoraggio di problemi specifici.  
   

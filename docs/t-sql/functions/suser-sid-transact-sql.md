@@ -1,16 +1,16 @@
 ---
 title: SUSER_SID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - SUSER_SID
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 77c7ab84b6fe936722f0b0c18ca889922485f1fd
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e9b5b735580429788f6e6ce20cbeba39c2df87a6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,12 +54,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>Argomenti  
  **'** *login* **'**  
-**Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Nome dell'account di accesso dell'utente. *login* è di tipo **sysname**. Il parametro facoltativo *login* può essere un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure un utente o un gruppo di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Se *login* viene omesso, vengono restituite informazioni sul contesto di sicurezza corrente. Se nel parametro è inclusa la parola NULL, verrà restituito NULL.  
   
  *Param2*  
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Specifica se il nome di accesso viene convalidato. *Param2* è di tipo **int** ed è facoltativo. Se *Param2* è 0, il nome di account di accesso non è convalidato. Se per *Param2* non è specificato 0, il nome di accesso di Windows viene considerato come identico al nome di account di accesso archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -87,7 +87,7 @@ SELECT SUSER_SID('sa');
 ### <a name="b-using-susersid-with-a-specific-login"></a>B. Utilizzo di SUSER_SID con un account di accesso specifico  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'account di accesso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa`.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('sa');  
@@ -97,7 +97,7 @@ GO
 ### <a name="c-using-susersid-with-a-windows-user-name"></a>C. Utilizzo della funzione SUSER_SID con un nome utente di Windows  
  Nell'esempio seguente viene restituito l'ID di sicurezza (SID) per l'utente di Windows `London\Workstation1`.  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
@@ -125,7 +125,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Confronto tra il nome di account di accesso di Windows e il nome di account di accesso archiviato in SQL Server  
  Nell'esempio seguente viene illustrato come usare *Param2* per ottenere il SID da Windows e usarlo come input per la funzione `SUSER_SNAME`. In questo esempio viene fornito l'account di accesso nel formato archiviato in Windows (`TestComputer\User`) e viene restituito l'account di accesso nel formato nel quale è archiviato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (`TESTCOMPUTER\User`).  
   
-**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Si applica a**: da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  

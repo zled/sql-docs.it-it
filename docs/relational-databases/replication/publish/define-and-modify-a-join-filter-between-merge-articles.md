@@ -1,16 +1,16 @@
 ---
 title: Definire e modificare un filtro di join tra articoli di merge | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server replication], join
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - modifying filters, join
 - join filters
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
-caps.latest.revision: 
+caps.latest.revision: 46
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0ad590f14e8a9c774c9108028a58fa5a7ff008e
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 1635b5e35a6056b9c44db159ae6ba4c58d4c0fbe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>Definizione e modifica di un filtro di join tra articoli di merge
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/08/2018
   
     -   Se si sceglie di utilizzare il generatore, utilizzare le colonne della griglia, ovvero**Congiunzione**, **Colonna tabella filtrata**, **Operatore**e **Colonna tabella unita in join**, per compilare un'istruzione per il join.  
   
-         In tutte le colonne della griglia è disponibile una casella combinata a discesa, che consente di selezionare due colonne e un operatore (**=**, **<>**, **<=**, **\<**, **>=**, **>**e **like**). I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join è associato a più di due colonne, selezionare una congiunzione (AND oppure OR) dalla colonna **Congiunzione** e quindi immettere altre due colonne e un operatore.  
+         In tutte le colonne della griglia è disponibile una casella combinata a discesa, che consente di selezionare due colonne e un operatore (**=**, **<>**, **<=**, **\<**, **>=**, **>** e **like**). I risultati vengono visualizzati nell'area di testo **Anteprima** . Se il join è associato a più di due colonne, selezionare una congiunzione (AND oppure OR) dalla colonna **Congiunzione** e quindi immettere altre due colonne e un operatore.  
   
     -   Se si sceglie di scrivere manualmente l'istruzione per il join, digitarla nell'area di testo **Istruzione per il join** . Utilizzare le caselle di riepilogo **Colonne tabella filtrata** e **Colonne tabella unita in join** per trascinare le colonne nell'area di testo **Istruzione per il join** .  
   

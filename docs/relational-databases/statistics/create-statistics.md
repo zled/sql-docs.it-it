@@ -2,7 +2,7 @@
 title: Creare statistiche | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: statistics
@@ -26,11 +26,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9cf772ad4cffd6d992233d4324ce270c884cb06d
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 791e92681938ee0b198f3f6524354e7412ae371a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-statistics"></a>Creare statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/10/2018
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   **Creare statistiche tramite:**  
   
@@ -62,7 +63,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  L'utente deve essere il proprietario della tabella o della vista indicizzata o un membro di uno dei seguenti ruoli: ruolo predefinito del server **sysadmin** , ruolo predefinito del database **db_owner** o ruolo predefinito del database **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo di SQL Server Management Studio  
@@ -97,10 +98,10 @@ ms.lasthandoff: 04/10/2018
      **Dimensione**  
      Consente di visualizzare le dimensioni del tipo di dati per ogni colonna.  
   
-     **Identity**  
+     **Identità**  
      Se è stata selezionata, questa opzione indica una colonna di identità.  
   
-     **Allow Nulls**  
+     **Consenti valori NULL**  
      Consente di indicare se la colonna accetta valori NULL.  
   
      **Aggiungi**  
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/10/2018
      Nella pagina **Filtro** della finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* viene visualizzata la proprietà seguente.  
   
      **Espressione filtro**  
-     Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Specifica le righe di dati da includere nelle statistiche filtrate. Ad esempio, usare `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* nella pagina **Generale** fare clic su **Aggiungi**.  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 04/10/2018
   
 7.  Nella finestra di dialogo **Nuove statistiche per Tabella***nome_tabella* fare clic su **OK**.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
   
 #### <a name="to-create-statistics"></a>Per creare statistiche  
   
@@ -157,7 +158,7 @@ ms.lasthandoff: 04/10/2018
   
 2.  Sulla barra Standard fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     USE AdventureWorks2012;   

@@ -1,16 +1,16 @@
 ---
 title: 'Esercitazione: Amministrazione di server tramite la gestione basata su criteri | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance-monitor
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - SQL Server 2016
@@ -18,19 +18,20 @@ helpviewer_keywords:
 - tutorials [Policy-Based Management]
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
-caps.latest.revision: 
+caps.latest.revision: 17
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 8e5c3011fcdcf17d52b11dd24d44c5a58a9bdf71
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Esercitazione: Amministrazione di server tramite la gestione basata su criteri
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questa esercitazione sull'amministrazione di server tramite criteri della gestione basata su criteri è destinata agli utenti che hanno familiarità con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma che non conoscono i concetti relativi alla gestione basata su criteri.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+Questa esercitazione sull'amministrazione di server tramite criteri della gestione basata su criteri è destinata agli utenti che hanno familiarità con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ma che non conoscono i concetti relativi alla gestione basata su criteri.  
   
 ## <a name="what-you-will-learn"></a>Lezioni dell'esercitazione  
 Questa esercitazione consente di creare criteri per amministrare il server e criteri che si applicano a un singolo database. I criteri vengono eseguiti su richiesta per testare la conformità. Gli altri criteri applicano la conformità successiva.  

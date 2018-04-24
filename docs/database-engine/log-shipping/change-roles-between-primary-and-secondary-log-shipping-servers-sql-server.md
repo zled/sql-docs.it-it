@@ -1,15 +1,16 @@
 ---
 title: Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: log-shipping
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - log shipping [SQL Server], role changes
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - log shipping [SQL Server], failover
 - failover [SQL Server], log shipping
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: e8b432636f4a8c51e58b67e394b81d96e6ded4ab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Modificare i ruoli tra i server primario e secondario per il log shipping (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Dopo aver eseguito il failover di una configurazione per il log shipping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un server secondario, è possibile configurare il database secondario per operare come database primario. Sarà quindi possibile scambiare il database primario e quello secondario in base alle proprie esigenze.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Dopo aver eseguito il failover di una configurazione per il log shipping [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] su un server secondario, è possibile configurare il database secondario per operare come database primario. Sarà quindi possibile scambiare il database primario e quello secondario in base alle proprie esigenze.  
   
 ## <a name="performing-the-initial-role-change"></a>Esecuzione della modifica iniziale del ruolo  
  La prima volta che si desidera eseguire il failover al database secondario e impostarlo come nuovo database primario, è necessario eseguire alcuni passaggi specifici. Dopo avere eseguito tali passaggi iniziali, sarà possibile scambiare i ruoli tra database primario e secondario in modo semplice.  

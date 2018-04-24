@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Lock:Timeout | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Timeout event class
 ms.assetid: 8492f4be-4ea9-4059-80e0-9e7b71597da9
-caps.latest.revision: 
+caps.latest.revision: 38
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f50705fbc3639cc5301a1c2c4c621cff1e14ef94
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 65d461f49ea49245fd050a004162f1c3dafb36f1
+ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="locktimeout-event-class"></a>Classe di evento Lock:Timeout
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Lock:Timeout segnala il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina, dovuto alla presenza di un blocco su tale risorsa mantenuto attivo da un'altra transazione. Il valore di timeout è determinato dalla funzione di sistema @@LOCK_TIMEOUT e può essere impostato tramite l'istruzione SET LOCK_TIMEOUT.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La classe di evento Lock:Timeout segnala il timeout di una richiesta di blocco su una risorsa, ad esempio una pagina, dovuto alla presenza di un blocco su tale risorsa mantenuto attivo da un'altra transazione. Il valore di timeout è determinato dalla funzione di sistema @@LOCK_TIMEOUT e può essere impostato tramite l'istruzione SET LOCK_TIMEOUT.  
   
  La classe di evento Lock:Timeout consente di eseguire il monitoraggio delle condizioni di timeout. In questo modo è possibile determinare se i timeout influiscono in modo significativo sulle prestazioni dell'applicazione, nonché individuare gli oggetti coinvolti. È quindi possibile esaminare il codice dell'applicazione che modifica tali oggetti per verificare se possono essere apportate modifiche che riducano i timeout.  
   

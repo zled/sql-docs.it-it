@@ -13,12 +13,12 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 caps.latest.revision: 13
 author: rothja
 ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 0d41627a8c08e2fd06a9d5fdb391f5e626599233
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+manager: craigg
+ms.openlocfilehash: 6ad77dc80e9c54dffba133e06428dca24f2f704b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Monitorare le prestazioni di Gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.lasthandoff: 04/05/2018
 |**Sequence**|**Descrizione passaggio**|**Commenti**|**Metrica utile**|  
 |1|Generazione log|I dati del log vengono scaricati su disco. Il log deve essere replicato nelle repliche secondarie. I record del log immettono la coda di invii.|[SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Acquisizione|I log di ogni database vengono acquisiti e inviati alla coda del partner corrispondente (uno per ogni coppia di replica/database). Il processo di acquisizione viene eseguito in modo continuo purché la replica di disponibilità sia connessa e lo spostamento dei dati non sia per qualche motivo sospeso. La coppia replica/database avrò lo stato Sincronizzazione in corso o Sincronizzato. Se il processo di acquisizione non esegue l'analisi e accoda i messaggi a una velocità sufficiente, si crea la coda di invii del log.|[SQL Server: Replica di disponibilità> Byte inviati alla replica/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), vale a dire un'aggregazione della somma di tutti i messaggi di database accodati per tale replica di disponibilità.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) nella replica primaria.|  
-|3|Invio|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Replica di disponibilità > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms) (Tempo acknowledgement messaggio)|  
+|3|Send|I messaggi di ogni coda della replica/database vengono rimossi dalla coda e inviati in rete alla rispettiva replica secondaria.|[SQL Server:Replica di disponibilità > Byte inviati al trasporto/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md) and [SQL Server:Replica di disponibilità > Message Acknowledgement Time](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms) (Tempo acknowledgement messaggio)|  
 |4|Ricezione e memorizzazione nella cache|Ogni replica secondaria riceve il messaggio e lo memorizza nella cache.|Contatore delle prestazioni [SQL Server:Replica di disponibilità > Byte log ricevuti/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|Finalizzazione|Il log viene scaricato nella replica secondaria per la finalizzazione. Dopo aver scaricato il log, alla replica primaria viene inviato un acknowledgement.<br /><br /> Finalizzando il log, si evita la perdita dei dati.|Contatore delle prestazioni [SQL Server:Database > Byte/sec scaricamento log](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> Tipo di attesa [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
-|6|Ripristino|Ripristinare le pagine scaricate nella replica secondaria. Le pagine vengono mantenute nella coda di rollforward in attesa del rollforward.|[SQL Server:Replica di database > Byte di cui è stato eseguito il rollforward/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo di attesa [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
+|6|Ripristinare|Ripristinare le pagine scaricate nella replica secondaria. Le pagine vengono mantenute nella coda di rollforward in attesa del rollforward.|[SQL Server:Replica di database > Byte di cui è stato eseguito il rollforward/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) e [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).<br /><br /> Tipo di attesa [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
   
 ##  <a name="BKMK_FLOW_CONTROL_GATES"></a> Controlli di flusso  
  I gruppi di disponibilità sono progettati con controlli di flusso nella replica primaria che consentono di evitare un consumo eccessivo delle risorse, ad esempio delle risorse di rete e di memoria, in tutte le repliche di disponibilità. Questi controlli non condizionano lo stato di integrità della sincronizzazione delle repliche di disponibilità, ma possono influenzare le prestazioni complessive dei database di disponibilità, incluso l'obiettivo RPO.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 04/05/2018
   
 |||||  
 |-|-|-|-|  
-|**Livello**|**Numero di controlli**|**Numero di messaggi**|**Metrica utile**|  
+|**Level**|**Numero di controlli**|**Numero di messaggi**|**Metrica utile**|  
 |Trasferimento|1 per replica di disponibilità|8192|Evento esteso **database_transport_flow_control_action**|  
 |Database|1 per database di disponibilità|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Evento esteso **hadron_database_flow_control_action**|  
   
@@ -179,7 +179,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
   
         -   **Nome**: `CustomSecondaryDatabaseRTO`  
   
-        -   **Condizione di controllo**: `RTO`  
+        -   **Condizioni di controllo**: `RTO`  
   
         -   **In base alle destinazioni**: **Ogni DatabaseReplicaState** in **IsPrimaryReplica AvailabilityGroup**  
   
@@ -235,7 +235,7 @@ Per creare i criteri, seguire le istruzioni riportate di seguito in tutte le ist
 |Scenario|Description|  
 |--------------|-----------------|  
 |[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RTO](troubleshoot-availability-group-exceeded-rto.md)|Dopo un failover automatico o un failover manuale pianificato senza perdita di dati, il tempo di failover supera l'obiettivo RTO. Oppure, quando si stima il tempo di failover di una replica secondaria con commit asincrono (ad esempio un partner di failover automatico), si scopre che supera l'obiettivo RTO.|  
-|[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Dopo aver eseguito un failover manuale forzato, la perdita dei dati supera l'obiettivo RPO. Oppure, quando si calcola la possibile perdita dei dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
+|[Risoluzione dei problemi: Il gruppo di disponibilità ha superato la soglia RPO](troubleshoot-availability-group-exceeded-rpo.md)|Dopo aver eseguito un failover manuale forzato, la perdita di dati è maggiore dell'obiettivo RPO. In alternativa, quando si calcola la potenziale perdita di dati di una replica secondaria con commit asincrono, si scopre che supera l'obiettivo RPO.|  
 |[Risoluzione dei problemi: Le modifiche nella replica primaria non vengono riflesse nella replica secondaria](troubleshoot-primary-changes-not-reflected-on-secondary.md)|L'applicazione client completa con esito positivo un aggiornamento per la replica primaria, ma l'esecuzione di query sulla replica secondaria rivela che qui la modifica non è stata eseguita.|  
   
 ##  <a name="BKMK_XEVENTS"></a> Eventi estesi utili  

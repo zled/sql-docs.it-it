@@ -1,16 +1,16 @@
 ---
 title: Creazione di un utente di database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.user.securables.f1
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - users [SQL Server], adding
 - mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
-caps.latest.revision: 
+caps.latest.revision: 31
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8603380bf11b7bcfb47cc0efe59e52feaa5292de
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2fce0eac03c6b1c68d1b6bb91637135c3bf8f13c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-user"></a>Creazione di un utente di database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +70,7 @@ ms.lasthandoff: 11/21/2017
   
  È possibile concedere autorizzazioni agli utenti, in quanto entità di sicurezza. L'ambito di un utente è il database. Affinché un account di accesso possa eseguire la connessione a un database specifico nell'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], è necessario eseguirne il mapping a un utente del database. Le autorizzazioni all'interno del database vengono concesse e negate all'utente del database, non all'account di accesso.  
   
-##  <a name="Permissions"></a> Autorizzazioni  
+##  <a name="Permissions"></a> Permissions  
  Richiede l'autorizzazione **ALTER ANY USER** per il database.  
   
 ##  <a name="SSMSProcedure"></a> Creare un utente con SSMS  
@@ -113,10 +114,10 @@ ms.lasthandoff: 11/21/2017
      Immettere lo schema che diventerà proprietario degli oggetti creati da questo utente. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona schema** . È disponibile**Schema predefinito** se si seleziona **Utente SQL con account di accesso**, **Utente SQL senza account di accesso**o **Utente di Windows** nell'elenco **Tipo di utente** .  
   
      **Nome certificato**  
-     Immettere il certificato da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato** . È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
+     Immettere il certificato da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona certificato**. È disponibile**Nome certificato** se si seleziona **Utente con mapping eseguito a un certificato** dall'elenco **Tipo di utente** .  
   
      **Nome chiave asimmetrica**  
-     Immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica** . È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
+     Immettere la chiave da usare per l'utente del database. In alternativa, fare clic sui puntini di sospensione **(...)** per aprire la finestra di dialogo **Seleziona chiave asimmetrica**. È disponibile**Nome chiave asimmetrica** se si seleziona **Utente con mapping eseguito a una chiave asimmetrica** dall'elenco **Tipo di utente** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -134,7 +135,7 @@ ms.lasthandoff: 11/21/2017
      **Database**  
      Consente di visualizzare il nome del database selezionato. Questo campo è di sola lettura.  
   
-     **Confronto**  
+     **Regole di confronto**  
      Consente di visualizzare le regole di confronto utilizzate per il database selezionato. Questo campo è di sola lettura.  
   
      **Proprietà**  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/21/2017
      **Puntini di sospensione (...)**  
      Fare clic sui puntini di sospensione **(…)** dopo **Valore** per visualizzare la finestra di dialogo **Valore per proprietà estesa** . Digitare o visualizzare il valore della proprietà estesa in questa finestra di dimensioni maggiori. Per ulteriori informazioni, vedere [Finestra di dialogo Valore per proprietà estesa](http://msdn.microsoft.com/library/ms189353.aspx).  
   
-     **Delete**  
+     **Elimina**  
      Consente di eliminare la proprietà estesa selezionata.  
   
 ##  <a name="TsqlProcedure"></a> Creare un utente mediante T-SQL  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/21/2017
   
 2.  Sulla barra **Standard** fare clic su **Nuova query**.  
   
-3.  Copiare e incollare l'esempio seguente nella finestra Query, quindi fare clic su **Esegui**.  
+3.  Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**.  
   
     ```  
     -- Creates the login AbolrousHazem with password '340$Uuxwp7Mcxo7Khy'.  

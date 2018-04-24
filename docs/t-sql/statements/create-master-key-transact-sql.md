@@ -1,16 +1,16 @@
 ---
 title: CREATE MASTER KEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_MASTER_KEY_TSQL
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - cryptography [SQL Server], Database Master Key
 - database master key [SQL Server], creating
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
-caps.latest.revision: 
+caps.latest.revision: 50
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aaec4d28dc95d792faa6406ef68df50167d0f091
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: f9c1b915ab4301fc257f14c03b33129fbb2c275b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +63,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
   
 ## <a name="arguments"></a>Argomenti  
  PASSWORD ='*password*'  
- Password utilizzata per crittografare la chiave master nel database. *password* deve soddisfare i criteri password Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* è facoltativo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
+ Password utilizzata per crittografare la chiave master nel database. *password* deve soddisfare i requisiti per i criteri password di Windows del computer che sta eseguendo l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* è facoltativo in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] e [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
 ## <a name="remarks"></a>Remarks  
  La chiave master del database è una chiave simmetrica utilizzata per proteggere le chiavi private dei certificati e le chiavi asimmetriche presenti nel database. Al momento della creazione, la chiave master viene crittografata con l'algoritmoAES_256 e una password specificata dall'utente. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] viene utilizzato l'algoritmo Triple DES. Per consentire la decrittografia automatica della chiave master, una copia della chiave viene crittografata con la chiave master del servizio e archiviata sia nel database che nel database master. La copia archiviata nel database master viene generalmente aggiornata in modo automatico in seguito a ogni modifica della chiave master. È possibile modificare questa impostazione predefinita usando l'opzione DROP ENCRYPTION BY SERVICE MASTER KEY dell'istruzione [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Per aprire una chiave master non crittografata con la chiave master del servizio, è necessario usare l'istruzione [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) e una password.  

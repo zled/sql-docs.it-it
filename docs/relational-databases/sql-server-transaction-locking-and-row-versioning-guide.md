@@ -2,7 +2,7 @@
 title: Guida per il controllo delle versioni delle righe e il blocco della transazione di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -23,11 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a34b0dcdca05996db0990722cbe0456cdab3d50b
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: d0c8e2320325a00e0729562c07aa328ef8ddafe0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guida per il controllo delle versioni delle righe e il blocco della transazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -458,7 +459,7 @@ GO
   
  Il blocco di intervalli di chiavi impedisce le letture fantasma, nonché gli inserimenti fantasma in un recordset a cui accede una transazione attraverso la protezione degli intervalli di chiavi tra le righe.  
   
- Il blocco di intervalli di chiavi viene applicato a un indice specificando i valori iniziale e finale delle chiavi. In questo modo si impedisce ogni tentativo di inserimento, aggiornamento o eliminazione di una riga con un valore di chiave che rientra nell'intervallo in quanto tali operazioni dovrebbero acquisire un blocco sull'indice. Ad esempio, una transazione serializzabile può eseguire un'istruzione SELECT che legge tutte le righe i cui valori di chiave sono compresi tra **'**AAA**'** e **'**CZZ**'**. Un blocco di intervalli di chiavi applicato ai valori di chiave compresi tra **'**AAA**'** e **'**CZZ**'** impedisce ad altre transazioni di inserire righe con valori di chiave all'interno di tale intervallo, ad esempio **'**ADG**'**, **'**BBD**'** o **'**CAL**'**.  
+ Il blocco di intervalli di chiavi viene applicato a un indice specificando i valori iniziale e finale delle chiavi. In questo modo si impedisce ogni tentativo di inserimento, aggiornamento o eliminazione di una riga con un valore di chiave che rientra nell'intervallo in quanto tali operazioni dovrebbero acquisire un blocco sull'indice. Ad esempio, una transazione serializzabile può eseguire un'istruzione SELECT che legge tutte le righe i cui valori di chiave sono compresi tra **'** AAA **'** e **'** CZZ **'**. Un blocco di intervalli di chiavi applicato ai valori di chiave compresi tra **'** AAA **'** e **'** CZZ **'** impedisce ad altre transazioni di inserire righe con valori di chiave all'interno di tale intervallo, ad esempio **'** ADG **'**, **'** BBD **'** o **'** CAL **'**.  
   
 #### <a name="key_range_modes"></a> Modalità di blocco di intervalli di chiavi  
  I blocchi di intervalli di chiavi includono sia un componente intervallo sia un componente riga nel formato intervallo-riga:  
@@ -514,7 +515,7 @@ GO
  Prima di eseguire un blocco di intervalli di chiavi, è necessario che siano soddisfatte le condizioni seguenti:  
   
 -   Il livello di isolamento della transazione deve essere impostato su SERIALIZABLE.  
--   Query Processor deve utilizzare un indice per implementare il predicato di filtro dell'intervallo. Ad esempio, la clausola WHERE in un'istruzione SELECT può stabilire una condizione di intervallo con il predicato seguente: ColumnX BETWEEN N**'**AAA**'** AND N**'**CZZ**'**. Un blocco di intervalli di chiavi può essere acquisito solo se **ColumnX** è coperto da una chiave di indice.  
+-   Query Processor deve utilizzare un indice per implementare il predicato di filtro dell'intervallo. Ad esempio, la clausola WHERE in un'istruzione SELECT può stabilire una condizione di intervallo con il predicato seguente: ColumnX BETWEEN N **'** AAA **'** AND N **'** CZZ **'**. Un blocco di intervalli di chiavi può essere acquisito solo se **ColumnX** è coperto da una chiave di indice.  
   
 #### <a name="examples"></a>Esempi  
  Gli esempi di blocco di intervalli di chiavi illustrati si basano sulla tabella e sull'indice seguenti.  

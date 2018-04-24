@@ -13,18 +13,21 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1a008cc-7e6b-4655-a869-bd429f986400
-caps.latest.revision: ''
+caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a4db9d05a6094253d629d8cae28034036942535
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+ms.openlocfilehash: 338fc9c0e8d1e445ee23e45804a75c8ca4a138ed
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="upgrade-sqlclr-assemblies-after-net-framework-update"></a>Aggiornare gli assembly SQLCLR dopo l'aggiornamento di .NET Framework
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+
   [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) è una raccolta di routine SQLCR (SQL Common Language Runtime) che fanno riferimento agli assembly Microsoft .NET Framework 4. Quando si installano aggiornamenti di .NET Framework nel computer che possono interessare un assembly .NET Framework di riferimento di questo tipo, tale operazione comporta una modifica nell'ID della versione del modulo (MVID, Module Version ID) dell'assembly nel Global Assembly Cache (GAC). Questa modifica determina una mancata corrispondenza tra i MVID dell'assembly a cui si fa riferimento nella GAC e l'assembly in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Se per l'aggiornamento di .NET Framework viene richiesto il riavvio del computer di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , gli assembly SQLCLR interessati vengono aggiornati automaticamente per correggere il problema di mancata corrispondenza di MVID al riavvio di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] . Per gli aggiornamenti di .NET Framework per cui non è richiesto il riavvio del computer di [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , si verifica tuttavia un errore a causa della mancata corrispondenza nei MVID degli assembly quando si tenta di connettersi a [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] tramite [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]:  

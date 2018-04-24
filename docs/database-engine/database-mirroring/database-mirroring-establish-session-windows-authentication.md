@@ -1,39 +1,39 @@
 ---
 title: 'Mirroring del database: stabilire una sessione - Autenticazione di Windows | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 05/17/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: database-mirroring
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-high-availability
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows authentication [SQL Server]
 - database mirroring [SQL Server], security
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
-caps.latest.revision: 
+caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c58ad04d7b1574d6954e31f8117ff23827ab1375
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 9a3f3693577ca93afe7379f3924a67b844afdc5e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="database-mirroring---establish-session---windows-authentication"></a>Mirroring del database: stabilire una sessione - Autenticazione di Windows
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Dopo la preparazione del database mirror, illustrata in [Prepare a Mirror Database for Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), è possibile stabilire una sessione di mirroring del database. È necessario che le istanze del server principale, del server mirror e del server di controllo del mirroring siano istanze di server distinte, situate in sistemi host distinti.  
+ Dopo la preparazione del database mirror, illustrata in [Preparazione di un database mirror per il mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md), è possibile stabilire una sessione di mirroring del database. È necessario che le istanze del server principale, del server mirror e del server di controllo del mirroring siano istanze di server distinte, situate in sistemi host distinti.  
   
 > [!IMPORTANT]  
 >  È consigliabile configurare il mirroring del database durante le fasce orarie di minore attività, dato che tale configurazione può influire sulle prestazioni.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/23/2018
     > [!NOTE]  
     >  La forma di autenticazione utilizzata per il mirroring del database da un'istanza del server corrisponde a una proprietà dell'endpoint del mirroring del database dell'istanza. Per il mirroring del database sono disponibili due tipi di sicurezza del trasporto: l'autenticazione di Windows o l'autenticazione basata sui certificati. Per altre informazioni, vedere [Sicurezza trasporto per il mirroring del database e i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
-     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE**=**PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
+     Assicurarsi che in ogni server partner server sia disponibile un endpoint per il mirroring del database. Indipendentemente dal numero di sessioni di mirroring da supportare, nell'istanza del server è consentito un solo endpoint del mirroring del database. Se si desidera usare questa istanza del server esclusivamente per i partner di sessioni di mirroring del database, è possibile assegnare il ruolo di partner all'endpoint (ROLE**=** PARTNER). Se si desidera utilizzare questo server anche per il server di controllo del mirroring in altre sessioni di mirroring del database, assegnare il ruolo dell'endpoint come ALL.  
   
      Per eseguire un'istruzione SET PARTNER, l'opzione STATE degli endpoint di entrambi i partner deve essere impostata su STARTED.  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 02/23/2018
   
      La sintassi per un indirizzo di rete del server presenta la seguente struttura:  
   
-     TCP**://**\<*system-address>***:**\<*port>*  
+     TCP **://**\<*system-address>***:**\<* port>*  
   
      dove \<*indirizzo-sistema>* è una stringa che identifica in maniera univoca il computer di destinazione e \<*porta>* è il numero di porta usato dall'endpoint del mirroring dell'istanza del server partner. Per altre informazioni, vedere [Specificare un indirizzo di rete del server &#40;Mirroring del database&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   

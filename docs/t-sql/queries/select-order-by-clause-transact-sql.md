@@ -1,16 +1,16 @@
 ---
 title: Clausola ORDER BY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ORDER_TSQL
@@ -41,16 +41,17 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-caps.latest.revision: 
+caps.latest.revision: 68
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 08805ce7f01b11d9b87c587e543f5dae91734e68
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7ef72a4ee2dd0ec18eef502820fe289696589776
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select---order-by-clause-transact-sql"></a>Clausola SELECT - ORDER BY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,7 +126,7 @@ ORDER BY order_by_expression
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  Specifica il numero di righe da restituire dopo l'elaborazione della clausola OFFSET. Il valore può essere un valore costante intero o un'espressione maggiore o uguale a uno.  
   
-**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  *fetch_row_count_expression* può essere una variabile, un parametro o una sottoquery scalare costante. Quando viene utilizzata una sottoquery, non è possibile fare riferimento alle colonne definite nell'ambito di query esterno. Ciò significa che non è possibile metterla in correlazione con la query esterna.  
   
@@ -362,7 +363,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> Limitazione del numero di righe restituite  
  Negli esempi seguenti vengono utilizzate le clausole OFFSET e FETCH per limitare il numero di righe restituite da una query.  
   
-**Si applica a** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
+**Si applica a** : da [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] fino a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. Specifica di valori costanti interi per OFFSET e FETCH  
  Nell'esempio seguente viene specificata una costante intera come valore per le clausole OFFSET e FETCH. La prima query restituisce tutte le righe ordinate in base alla colonna `DepartmentID`. Confrontare i risultati restituiti da questa query ai risultati delle due query che la seguono. La query successiva utilizza la clausola `OFFSET 5 ROWS` per ignorare le prime 5 righe e restituire tutte le righe rimanenti. Nella query finale viene utilizzata la clausola `OFFSET 0 ROWS` per iniziare con la prima riga, quindi `FETCH NEXT 10 ROWS ONLY` per limitare le righe restituite a 10 righe dal set di risultati ordinato.  
@@ -549,7 +550,7 @@ ORDER BY LastName, FirstName;
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
+ [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
  [Funzioni di rango &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   

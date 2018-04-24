@@ -1,16 +1,16 @@
 ---
 title: Esempi d'uso di OPENXML | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ColPattern [XML in SQL Server]
@@ -29,20 +29,20 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6e399083e8f1d12d5a762074e2f4746d452f3e75
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 0e9a46da6f60eeefced877db413a54f5f900ebb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="examples-using-openxml"></a>Esempi: utilizzo di OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
+  Negli esempi presentati in questo argomento viene illustrato come utilizzare l'istruzione OPENXML per visualizzare un documento XML come set di righe. Per informazioni sulla sintassi di OPENXML, vedere [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md). Negli esempi vengono illustrati tutti gli aspetti dell'istruzione OPENXML, ma non ne vengono specificate le metaproprietà. Per altre informazioni su come specificare le metaproprietà in OPENXML, vedere [Specificare metaproprietà in OPENXML](../../relational-databases/xml/specify-metaproperties-in-openxml.md).  
   
 ## <a name="examples"></a>Esempi  
  Durante il recupero dei dati è possibile usare il parametro *rowpattern* per identificare i nodi del documento XML che definiscono le righe. *rowpattern* viene espresso anche nel linguaggio del modello XPath usato nell'implementazione di XPath di MSXML. Se ad esempio il modello termina con un elemento o con un attributo, viene creata una riga per ogni nodo di elemento o di attributo selezionato da *rowpattern*.  
@@ -302,7 +302,7 @@ LILAS      Carlos Gonzlez
   
 -   Il valore del parametro *flags* è impostato su **1**, per indicare che il mapping è incentrato sugli attributi. Per gli attributi XML viene eseguito il mapping alle colonne del set di righe definite in *SchemaDeclaration*.  
   
--   In *SchemaDeclaration* , nella clausola WITH, i nomi delle colonne del set di righe **oid** e **amount** corrispondono ai nomi degli attributi XML associati. Di conseguenza, il parametro *ColPattern* non viene specificato. Per la colonna **comment** del set di righe, la funzione XPath **text()**viene specificata come parametro *ColPattern*. Questo parametro sovrascrive il mapping incentrato sugli attributi specificato nel parametro *flags*e la colonna contiene la stringa del valore foglia del contenuto dell'elemento.  
+-   In *SchemaDeclaration* , nella clausola WITH, i nomi delle colonne del set di righe **oid** e **amount** corrispondono ai nomi degli attributi XML associati. Di conseguenza, il parametro *ColPattern* non viene specificato. Per la colonna **comment** del set di righe, la funzione XPath **text()** viene specificata come parametro *ColPattern*. Questo parametro sovrascrive il mapping incentrato sugli attributi specificato nel parametro *flags*e la colonna contiene la stringa del valore foglia del contenuto dell'elemento.  
   
  L'istruzione SELECT recupera quindi tutte le colonne nel set di righe specificato da OPENXML.  
   
@@ -531,7 +531,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Impostazione di un documento XML con più nodi di testo  
- Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()**restituirà solo il primo, invece di tutti i nodi di testo. Ad esempio  
+ Se in un documento XML sono presenti più nodi di testo, un'istruzione SELECT con un parametro *ColPattern*di tipo **text()** restituirà solo il primo, invece di tutti i nodi di testo. Ad esempio  
   
 ```  
 DECLARE @h int  

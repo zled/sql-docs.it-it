@@ -1,16 +1,16 @@
 ---
 title: Requisiti e limitazioni per le raccolte di XML Schema nel server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: xml
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-xml
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - identifiers [XML schema collections]
@@ -27,25 +27,25 @@ helpviewer_keywords:
 - schema collections [SQL Server], guidelines
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
-caps.latest.revision: 
+caps.latest.revision: 84
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e60de9c75202dc0c5c02a8765a1c2f8d4c631498
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 572dfdb21216110b62f9b8ddcd88d21cdb2fce4e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Requisiti e limitazioni per l'utilizzo di raccolte di XML Schema nel server
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Esistono alcune limitazioni relative alla convalida del linguaggio XSD (XML Schema Definition) per le colonne SQL che usano i il tipo di dati **xml** . La tabella seguente fornisce informazioni dettagliate su tali limitazioni, nonché alcune linee guida per modificare lo schema XSD in modo che sia supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli argomenti in questa sezione forniscono informazioni aggiuntive su limiti specifici e indicazioni per il loro utilizzo.  
+  Esistono alcune limitazioni relative alla convalida del linguaggio XSD (XML Schema Definition) per le colonne SQL che usano i il tipo di dati **xml** . La tabella seguente fornisce informazioni dettagliate su tali limitazioni, nonché alcune linee guida per modificare lo schema XSD in modo che sia supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli argomenti in questa sezione forniscono informazioni aggiuntive su limiti specifici e indicazioni per il loro utilizzo.  
   
 |Elemento|Limitazione|  
 |----------|----------------|  
 |**minOccurs** e **maxOccurs**|I valori degli attributi **minOccurs** e **maxOccurs** devono essere contenibili in Integer a 4 byte. Gli schemi che non sono conformi vengono rifiutati dal server.|  
-|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta gli schemi che includono una particella **\<xsd:choice>** senza elementi figlio, a meno che la particella non sia definita con un attributo **minOccurs** di valore pari a zero.|  
+|**\<xsd:choice>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rifiuta gli schemi che includono una particella**\<xsd:choice>** senza elementi figlio, a meno che la particella non sia definita con un attributo **minOccurs** di valore pari a zero.|  
 |**\<xsd:include>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Gli elementi XML Schema che includono tale elemento vengono rifiutati dal server.<br /><br /> Per risolvere questo problema, è possibile eseguire la pre-elaborazione di XML Schema che includono la direttiva **\<xsd:include>** per copiare e unire il contenuto di tutti gli schemi inclusi in un singolo schema da caricare nel server. Per alte informazioni, vedere [Pre-elaborazione di uno schema per unire schemi inclusi](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>**, **\<xsd:keyref>** e **\<xsd:unique>**|Attualmente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questi seguenti vincoli basati su XSD per imporre l'univocità o stabilire chiavi e relativi riferimenti. Non è possibile registrare XML Schema che contengono questi elementi.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non supporta questo elemento. Per informazioni su un'altra modalità di aggiornamento degli schemi, vedere [Elemento &#60;xsd:redefine&#62;](../../relational-databases/xml/the-xsd-redefine-element.md).|  

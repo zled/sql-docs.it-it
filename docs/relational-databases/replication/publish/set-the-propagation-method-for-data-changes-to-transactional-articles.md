@@ -2,7 +2,7 @@
 title: Impostare il metodo di propagazione per le modifiche ai dati negli articoli transazionali | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: replication
@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c8d2e7c8102333283171e1477d1637f447bf08c9
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 9a70919d17a83f1592012ee0bc1064018560c17b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Impostazione del metodo di propagazione per le modifiche ai dati negli articoli transazionali
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/10/2018
   
      Dopo la generazione dello snapshot, passare alla cartella snapshot per la pubblicazione cui appartiene questo articolo e individuare il file con estensione **sch** che presenta lo stesso nome dell'articolo. Aprire il file mediante Blocco note o un altro editor di testo, individuare il comando CREATE PROCEDURE per le stored procedure di inserimento, aggiornamento o eliminazione, quindi modificare la definizione della procedura in modo da fornire qualsiasi logica personalizzata per la propagazione delle modifiche ai dati. Se lo snapshot viene rigenerato, è necessario ricreare la stored procedura personalizzata.  
   
-##  <a name="TsqlProcedure"></a> Utilizzo di Transact-SQL  
+##  <a name="TsqlProcedure"></a> Uso di Transact-SQL  
  La replica transazionale consente di controllare la modalità con cui le modifiche vengono propagate dal server di pubblicazione ai Sottoscrittori. Questo metodo di propagazione può inoltre essere impostato a livello di programmazione quando un articolo viene creato e in seguito modificato tramite le stored procedure di replica.  
   
 > [!NOTE]  
@@ -124,11 +124,11 @@ ms.lasthandoff: 04/10/2018
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, un valore per la maschera di bit **@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_*nome_articolo***, **CALL sp_MSupd_*nome_articolo***, **XCALL sp_MSupd_*nome_articolo*** o **MCALL sp_MSupd_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_* nome_articolo***, **CALL sp_MSupd_* nome_articolo***, **XCALL sp_MSupd_* nome_articolo*** o **MCALL sp_MSupd_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  
@@ -144,11 +144,11 @@ ms.lasthandoff: 04/10/2018
   
 1.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Specificare il nome della pubblicazione cui appartiene l'articolo per **@publication**, il nome dell'articolo per **@article**, l'oggetto di database da pubblicare per **@source_object**, un valore per la maschera di bit **@schema_option** che contiene il valore **0x02** (consente la generazione automatica di stored procedure personalizzate) e almeno uno dei parametri seguenti:  
   
-    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@ins_cmd**: specificare il valore **CALL sp_MSins_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@del_cmd**: specificare il valore **CALL sp_MSdel_*nome_articolo*** o **XCALL sp_MSdel_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
-    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_*nome_articolo***, **CALL sp_MSupd_*nome_articolo***, **XCALL sp_MSupd_*nome_articolo*** o **MCALL sp_MSupd_*nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
+    -   **@upd_cmd**: specificare il valore **SCALL sp_MSupd_* nome_articolo***, **CALL sp_MSupd_* nome_articolo***, **XCALL sp_MSupd_* nome_articolo*** o **MCALL sp_MSupd_* nome_articolo***, dove ***nome_articolo*** è il valore specificato per **@article**.  
   
     > [!NOTE]  
     >  Per ognuno dei parametri di comando indicati in precedenza, è possibile specificare il nome desiderato per le stored procedure generate dalla replica.  

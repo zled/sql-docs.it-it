@@ -1,32 +1,33 @@
 ---
-title: "Proprietà sottoscrizione - Sottoscrittore | Microsoft Docs"
-ms.custom: 
+title: Proprietà sottoscrizione - Sottoscrittore | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: replication
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.rep.newsubwizard.subproperties.subscriber.f1
 helpviewer_keywords:
 - Subscription Properties dialog box
 ms.assetid: bef66929-3234-4a45-8ec4-3b271519d07a
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb2d94f889cd593e07331f19fd09ef29d94479b8
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 2ae857f2686b1b41e9d235902ed4ed9826083b70
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="subscription-properties---subscriber"></a>Proprietà sottoscrizione - Sottoscrittore
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,11 +70,11 @@ ms.lasthandoff: 03/08/2018
  **Security**  
  Fare clic sulla riga **Account processo agente** , quindi sul pulsante delle proprietà (**...**) per modificare l'account con cui viene eseguito l'agente di merge o di distribuzione nel Sottoscrittore. Le opzioni di sicurezza correlate a connessioni dipendono dal tipo di sottoscrizione:  
   
--   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà**...**.  
+-   In caso di sottoscrizioni a una pubblicazione transazionale, per modificare l'account con cui l'agente di distribuzione crea connessioni al server di distribuzione, fare clic su **Connessione server di distribuzione**e quindi sul pulsante delle proprietà **...**.  
   
--   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà**...**.  
+-   In caso di sottoscrizioni ad aggiornamento immediato a una pubblicazione transazionale, oltre alla connessione al server di distribuzione descritta in precedenza, è possibile modificare il metodo utilizzato per la propagazione delle modifiche dal Sottoscrittore al server di pubblicazione facendo clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...**.  
   
--   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà**...**.  
+-   In caso di sottoscrizioni a pubblicazioni di tipo merge, fare clic su **Connessione server di pubblicazione**e quindi sul pulsante delle proprietà **...**.  
   
  Per ulteriori informazioni sulle autorizzazioni necessarie per ogni agente, vedere [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -100,7 +101,7 @@ ms.lasthandoff: 03/08/2018
   
 -   Immettere l'indirizzo completo del server IIS in **Indirizzo server Web**.  
   
--   Fare clic sulla riga **Connessione server Web** e quindi sul pulsante delle proprietà**...**per impostare o modificare l'account con cui il sottoscrittore si connette al server IIS.  
+-   Fare clic sulla riga **Connessione server Web** e quindi sul pulsante delle proprietà **...** per impostare o modificare l'account con cui il sottoscrittore si connette al server IIS.  
   
 -   Se necessario, modificare **Timeout server Web** . Il timeout rappresenta il tempo di attesa, in secondi, prima della scadenza di una richiesta di sincronizzazione Web.  
   

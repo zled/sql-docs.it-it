@@ -1,16 +1,16 @@
 ---
 title: column_definition (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - column_definition
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column definitions [SQL Server]
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
-caps.latest.revision: 
+caps.latest.revision: 78
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d50bda05bd0487a60e9a909500be2ea3d65fed92
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 40b95f6475239b533811526025dedf3055b5c09b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -141,7 +142,7 @@ FILESTREAM
  Per un esempio che illustri come usare la definizione di colonna, vedere [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
 COLLATE *collation_name*  
- Specifica le regole di confronto per la colonna. Se viene omesso, alla colonna vengono assegnate le regole di confronto predefinite del database. È possibile usare nomi di regole di confronto di Windows o SQL. Per un elenco e altre informazioni, vedere [Nome delle regole di confronto di Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
+ Specifica le regole di confronto per la colonna. Se viene omesso, alla colonna vengono assegnate le regole di confronto predefinite del database. È possibile usare nomi di regole di confronto di Windows o SQL. Per un elenco e altre informazioni, vedere [Nome delle regole di confronto di Windows; &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) e [Nome delle regole di confronto di SQL Server &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md).  
   
  La clausola COLLATE consente di specificare le regole di confronto solo delle colonne dei tipi di dati **char**, **varchar**, **nchar** e **nvarchar**.  
   
@@ -205,11 +206,11 @@ SPARSE
  Specifica la chiave di crittografia della colonna. Per altre informazioni, vedere [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md).  
   
 ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
- La**crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di ricerca tramite il confronto di uguaglianza, di raggruppamento e join di tabelle tramite join di uguaglianza che si basano su valori crittografati, ma può anche consentire a utenti non autorizzati di ipotizzare informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. È possibile eseguire il join di due tabelle in colonne crittografate in modo deterministico solo se entrambe le colonne vengono crittografate usando la stessa chiave di crittografia della colonna. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
+ La**crittografia deterministica** usa un metodo che genera sempre lo stesso valore crittografato per qualsiasi valore di testo normale specificato. L'uso della crittografia deterministica consente di eseguire operazioni di ricerca usando il confronto di uguaglianza, il raggruppamento e il join di tabelle con join di uguaglianza basati su valori crittografati, ma può anche consentire a utenti non autorizzati di ipotizzare informazioni sui valori crittografati esaminando i criteri nella colonna crittografata. È possibile creare un join di due tabelle nelle colonne crittografate in modo deterministico solo se entrambe le colonne vengono crittografate usando la stessa chiave di crittografia della colonna. La crittografia deterministica deve usare regole di confronto a livello di colonna con un ordinamento binario2 per colonne di tipo carattere.  
   
- La**crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma non consente di eseguire operazioni di ricerca di uguaglianza, raggruppamento e join in colonne crittografate. Le colonne che usano la crittografia casuale non possono essere indicizzate.  
+ La**crittografia casuale** usa un metodo di crittografia dei dati meno prevedibile. La crittografia casuale è più sicura, ma non consente di eseguire operazioni di ricerca di uguaglianza, raggruppamento e join nelle colonne crittografate. Le colonne che usano la crittografia casuale non possono essere indicizzate.  
   
- La crittografia deterministica è consigliata in colonne che saranno usate come parametri di ricerca o di raggruppamento, ad esempio un codice fiscale o una partita IVA. È invece consigliabile usare la crittografia casuale per i dati, ad esempio un numero di carta di credito, che non vengono raggruppati insieme ad altri record, o che vengono usati per il join di tabelle e che non vengono usati per la ricerca perché a tale scopo si usano altre colonne (ad esempio un numero di transazione) per trovare la riga che contiene la colonna crittografata necessaria.  
+ La crittografia deterministica è consigliata in colonne che saranno usate come parametri di ricerca o di raggruppamento, ad esempio un codice fiscale o una partita IVA. Usare la crittografia casuale per i dati, ad esempio il numero di carta di credito, che non sono raggruppati con altri record o usati per il join di tabelle e in cui non vengono eseguite ricerche perché si usano altre colonne, ad esempio un numero di transazione, per trovare la riga che contiene la colonna crittografata che interessa.  
   
  Le colonne devono essere di un tipo di dati idoneo.  
   

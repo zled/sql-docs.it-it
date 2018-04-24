@@ -1,35 +1,36 @@
 ---
 title: Guida di riferimento a errori ed eventi (motore di database) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/03/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: errors-events
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [SQL Server Database Engine]
 - Database Engine [SQL Server], errors
 - events [SQL Server Database Engine]
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
-caps.latest.revision: 
+caps.latest.revision: 15
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d421713ed83c3f73bd3d9b30f0549bceb692b40a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8ed5a2375cf1e5426f832254948064bb992114e6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] In questa sezione sono selezionati i messaggi di errore del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che necessitano di ulteriore spiegazione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questa sezione sono selezionati i messaggi di errore del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che necessitano di ulteriore spiegazione.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
  [Eventi ed errori di Motore di database](../../relational-databases/errors-events/database-engine-events-and-errors.md)  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
  Nella tabella seguente sono elencati i collegamenti a tali risorse insieme a una descrizione delle principali caratteristiche.  
   
-|Risorsa|Descrizione|  
+|Risorsa|Description|  
 |--------------|-----------------|  
 |[Community di SQL Server](http://go.microsoft.com/fwlink/?LinkId=42455)|Questo sito contiene collegamenti a newsgroup e forum monitorati dalla community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elenca inoltre le fonti di informazione della community, quali Blog e siti Web. La community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto utile per ottenere la risposta a eventuali domande. Non è tuttavia garantita una risposta.|  
 |[Community del centro per sviluppatori di SQL Server](http://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
