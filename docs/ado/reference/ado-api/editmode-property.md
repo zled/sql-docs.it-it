@@ -1,33 +1,33 @@
 ---
-title: "Proprietà EditMode | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Proprietà EditMode | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::EditMode
 helpviewer_keywords:
 - EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 759d8891929bf546d9dc81f66367c866b23c6e6c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d64f1ea25b8febe0ca9c474f76642cf1f74a9302
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="editmode-property"></a>Proprietà EditMode
 Indica lo stato di modifica del record corrente.  
@@ -43,7 +43,7 @@ Indica lo stato di modifica del record corrente.
  In *modalità di aggiornamento batch* (in cui il provider memorizza nella cache più modifiche e li scrive all'origine dati sottostante solo quando si chiama il [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) (metodo)), il valore di **EditMode**  proprietà viene modificata quando viene eseguita la prima operazione e non viene ripristinato da una chiamata al **aggiornamento** metodo. Operazioni successive non modificano il valore di **EditMode** proprietà, anche se vengono eseguite diverse operazioni. Ad esempio, se la prima operazione consiste nell'aggiungere un nuovo record, e il secondo apporta modifiche a un oggetto esistente record, la proprietà di **EditMode** saranno ancora **adEditAdd**. Il **EditMode** proprietà non viene reimpostata su **adEditNone** fino a dopo la chiamata a **UpdateBatch**. Per determinare quali operazioni siano state eseguite, impostare il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà [adFilterPending](../../../ado/reference/ado-api/filtergroupenum.md) in modo che solo i record con le modifiche in sospeso verranno visibile ed esaminare il [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà di ogni record per determinare le modifiche apportate ai dati.  
   
 > [!NOTE]
->  **EditMode** può restituire un valore valido solo se è disponibile un record corrente. **EditMode** restituirà un errore se [BOF o EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è true, o se è stato eliminato il record corrente.  
+>  **EditMode** può restituire un valore valido solo se viene rilevato un record corrente. **EditMode** restituirà un errore se [BOF o EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) è true, o se è stato eliminato il record corrente.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

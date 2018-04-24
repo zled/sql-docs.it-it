@@ -1,31 +1,31 @@
 ---
-title: "Modificare la forma di nome proprietà dinamica (ADO) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Modificare la forma di nome proprietà dinamica (ADO) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3b35a7b48c6db79b098bf20a2514fcc75038d8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8a1d81e91edfcab8b6938f5898ae4fd46cc38b67
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Modificare la forma di nome proprietà dinamica (ADO)
 Specifica un nome per il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -42,7 +42,7 @@ Specifica un nome per il [Recordset](../../../ado/reference/ado-api/recordset-ob
   
  Utilizzare il **modificare la forma di nome** proprietà quando si desidera fare riferimento a un **Recordset** in un comando Shape o quando non si conosce il nome perché è stato generato dal servizio di Data Shaping. In tal caso, è possibile generare un comando SHAPE concatenando il comando per la stringa restituita dal **modificare la forma di nome** proprietà.  
   
- **Modificare la forma di nome** è una proprietà dinamica accodata la **Recordset** dell'oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà è impostata su **adUseClient**.  
+ **Modificare la forma di nome** viene aggiunta una proprietà dinamica per il **Recordset** dell'oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

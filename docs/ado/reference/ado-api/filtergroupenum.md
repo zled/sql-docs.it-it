@@ -1,38 +1,38 @@
 ---
 title: FilterGroupEnum | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - FilterGroupEnum
 helpviewer_keywords:
 - FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64a9701680876231d0051789aec0fc43be4c0ad3
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: bf858a4fb9ed39b1895f5edd3584c3321df0bedf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Specifica il gruppo di record da filtrare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Costante|Valore|Description|  
+|Costante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|I filtri per visualizzare solo i record interessati dall'ultima [eliminare](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) chiamare.|  
 |**adFilterConflictingRecords**|5|Filtri per la visualizzazione di record che non è l'ultimo aggiornamento batch.|  

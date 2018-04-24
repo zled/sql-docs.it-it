@@ -1,33 +1,33 @@
 ---
 title: La parola chiave NEW, la funzione di calcolo e funzioni di aggregazione | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], functions
 - CALC function [ADO]
 - NEW keyword [ADO]
 - aggregate functions [ADO]
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3b7e33486bc8a5cc283a101893aec4287062c2f
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2f490ca1a9e95f92d39367c3914b5a0ea5cf0c9a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Funzioni di aggregazione, la funzione di calcolo e la parola chiave NEW
 Il data shaping supporta le funzioni seguenti. Il nome assegnato al capitolo contenente la colonna da utilizzare è il *alias capitolo*.  
@@ -42,7 +42,7 @@ Il data shaping supporta le funzioni seguenti. Il nome assegnato al capitolo con
 |MIN (*alias capitolo*. *nome della colonna*)|Calcola il valore minimo nella colonna specificata.|  
 |CONTEGGIO (*alias capitolo*[. *nome della colonna*])|Conta il numero di righe nell'alias specificato. Se viene specificata una colonna, solo le righe per cui tale colonna è non Null sono inclusi nel conteggio.|  
 |STDEV(*chapter-alias*.*column-name*)|Calcola la deviazione standard della colonna specificata.|  
-|QUALSIASI (*alias capitolo*. *nome della colonna*)|Valore della colonna specificata. UNO contiene un valore stimabile solo quando il valore della colonna è uguale per tutte le righe nel capitolo.<br /><br /> **Nota** se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando forma arbitrariamente restituisce uno dei valori per il valore della funzione qualsiasi.|  
+|QUALSIASI (*alias capitolo*. *nome della colonna*)|Valore della colonna specificata. UNO contiene un valore stimabile solo quando il valore della colonna è uguale per tutte le righe nel capitolo.<br /><br /> **Nota** se la colonna non contiene lo stesso valore per tutte le righe nel capitolo, il comando SHAPE arbitrariamente restituisce uno dei valori come valore di qualsiasi funzione.|  
   
 |Espressione calcolata|Description|  
 |---------------------------|-----------------|  
@@ -50,7 +50,7 @@ Il data shaping supporta le funzioni seguenti. Il nome assegnato al capitolo con
   
 |NUOVA parola chiave|Description|  
 |-----------------|-----------------|  
-|NUOVO *-tipo di campo* [(*larghezza* &#124; *scala* &#124; *precisione* &#124; *errore* [, *scala* &#124; *errore*])]|Aggiunge una colonna vuota per il tipo specificato di **Recordset**.|  
+|NUOVA *tipo di campo* [(*larghezza* &#124; *scala* &#124; *precisione* &#124; *errore*[, *scala* &#124; *errore*])]|Aggiunge una colonna vuota per il tipo specificato di **Recordset**.|  
   
  Il *-tipo di campo* passato con la parola chiave NEW può essere uno dei seguenti tipi di dati.  
   

@@ -1,33 +1,33 @@
 ---
 title: Provider Microsoft OLE DB per Microsoft Active Directory Service | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADSI provider [ADO]
 - Active Directory Service Interfaces provider [ADO]
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3824623cb28c6902b4a96542f149e537df41cb5d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5fbfe4b445df4375bee52a8bccc4db87d0040798
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Provider Microsoft OLE DB per Microsoft Active Directory Service
 Il Provider di Active Directory Service Interfaces (ADSI) consente di ADO per connettersi a servizi di directory eterogenei tramite ADSI. In questo modo le applicazioni ADO accesso in sola lettura per i servizi directory Microsoft Windows NT 4.0 e Microsoft Windows 2000, oltre a qualsiasi servizio di directory compatibile con LDAP e Novell Directory Services. ADSI è basato su un modello di provider, in modo che se è presente un nuovo provider che fornisce l'accesso a un'altra directory, l'applicazione ADO sarà in grado di accedervi. Il provider ADSI è a thread libero e abilitato per Unicode.  
@@ -66,7 +66,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*Root*|Indica il **ADsPath** oggetto da cui iniziare la ricerca (ovvero, la radice della ricerca).|  
 |*Filtra*|Indica il filtro di ricerca nel formato RFC 1960.|  
@@ -102,14 +102,14 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lettura/scrittura|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|Sola lettura|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
+|[Segnalibro](../../../ado/reference/ado-api/bookmark-property-ado.md)|lettura/scrittura|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lettura/scrittura|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|  
 |[Filtra](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|  
-|[Tipo di blocco](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|  
+|[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|  
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Sola lettura|  

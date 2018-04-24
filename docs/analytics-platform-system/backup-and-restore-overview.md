@@ -1,28 +1,22 @@
 ---
-title: Backup e ripristino
-author: barbkess
-ms.author: barbkess
+title: Backup e ripristino - Parallel Data Warehouse | Documenti Microsoft
+description: Viene descritto come dati di backup e ripristino eseguito per Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Viene descritto come dati di backup e ripristino works per SQL Server Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: d4669957-270a-4e50-baf3-14324ca63049
-caps.latest.revision: 50
-ms.openlocfilehash: b4ac7a3a0b9f005ac05646ad03dcf3123036462e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 118b9ced12e01ac6655d85969bb61717f2b31e0b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
-Viene descritto come dati di backup e ripristino works per SQL Server Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.  
+Viene descritto come dati di backup e ripristino eseguito per Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.  
     
 ## <a name="BackupRestoreBasics"></a>Nozioni di base di backup e ripristino  
 Un PDW *backup del database* è una copia di un database dello strumento, archiviato in un formato in modo che può essere utilizzato per ripristinare il database originale in un'applicazione.  

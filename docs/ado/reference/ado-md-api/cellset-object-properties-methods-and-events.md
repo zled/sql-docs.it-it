@@ -1,36 +1,36 @@
 ---
-title: "Le proprietà dell'oggetto set di celle, metodi ed eventi | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Le proprietà dell'oggetto set di celle, metodi ed eventi | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Cellset object [ADO MD], members
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 76687d99e803c4858d11c495e911ba18881b4b64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d00efa00ff607af2b9aa6729456e856ed49d4f4a
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Le proprietà dell'oggetto set di celle, metodi ed eventi
 ## <a name="propertiescollections"></a>Raccolte di proprietà /  
  [Proprietà ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)  
   
- [Raccolta di assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+ [Raccolta assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
   
  [Proprietà FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)  
   

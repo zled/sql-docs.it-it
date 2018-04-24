@@ -1,29 +1,29 @@
 ---
 title: Note sulla versione di SQL Server 2017 | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 10/30/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: server-general
-ms.tgt_pltfrm: 
+ms.technology: supportability
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 69f0db3da6a75c64aa331a0050be39274e01dad3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: 15e778c6b38f61905a7bf4167cf3ce65d418e942
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2017-release-notes"></a>Note sulla versione di SQL Server 2017
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)] Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017. Per informazioni correlate, vedere:
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+Questo articolo descrive le limitazioni e i problemi relativi a SQL Server 2017. Per informazioni correlate, vedere:
 - [Novità di SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Note sulla versione di SQL Server in Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-release-notes)
 - [Aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu) per informazioni sulla versione di aggiornamento cumulativo più recente
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 
 - **Soluzioni alternative:** 
   - Concedere l'autorizzazione per i nodi figlio nella visualizzazione albero anziché a livello radice.
-  - o
+  - o Gestione configurazione
   - Eseguire lo script descritto in questo blog del team MDS relativo all'[errore durante l'applicazione di autorizzazioni a livello di entità](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)
 
 ### <a name="analysis-services"></a>Analysis Services
@@ -76,7 +76,7 @@ Non sono disponibili note sulla versione di SQL Server in Windows per questa ver
 - **Problema e impatto sul cliente:** il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità.
 - **Soluzione alternativa:** se esistono script per eseguire i pacchetti in Scale Out, perché gli script funzionino nella versione RC1 è necessario modificare il nome del parametro da *runincluster* a *runinscaleout*.
 
-- **Problema e impatto sul cliente:** in SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: " *@runincluster*  non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e le versioni successive di SSMS supportano il nuovo nome di parametro ed eseguono i pacchetti in Scale Out. 
+- **Problema e impatto sul cliente:** in SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: "*@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e le versioni successive di SSMS supportano il nuovo nome di parametro ed eseguono i pacchetti in Scale Out. 
 - **Soluzione alternativa:** fino a quando non sarà disponibile SSMS versione 17.2:
   1. Usare la versione esistente di SSMS per generare lo script di esecuzione del pacchetto.
   2. Modificare il nome del parametro *runincluster* in *runinscaleout* nello script.

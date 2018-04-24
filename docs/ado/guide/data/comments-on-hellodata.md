@@ -1,30 +1,30 @@
 ---
 title: I commenti sulle HelloData | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2265e361258ee49a9d387f3cb879f138c196ba8e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d04b6f886a1f1a4583830d1afdd096b445461232
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="comments-on-hellodata"></a>Commenti sulle HelloData
 L'applicazione HelloData scorre le operazioni di base di una tipica applicazione ADO: recupero, esame, la modifica e aggiornamento dei dati. Quando si avvia l'applicazione, fare clic sul pulsante prima, **recupera dati**. Verrà eseguito il **GetData** subroutine.  
@@ -36,7 +36,7 @@ L'applicazione HelloData scorre le operazioni di base di una tipica applicazione
   
  Dopo aver aperto la connessione, è possibile assegnare una stringa SQL a una variabile (sSQL). Quindi creare un'istanza di un nuovo **Recordset** oggetto `m_oRecordset1`. Nella riga successiva del codice, aprire il **Recordset** su esistente **connessione**, passando `sSQL` come origine il **Recordset**. Consente di ADO in effettua la determinazione di stringa SQL superati come origine per il **Recordset** è una definizione di un comando testuale passando **adCmdText** nell'argomento finale per il **Apertura di un Recordset** metodo. Questa riga imposta inoltre il **LockType** e **CursorType** associato il **Recordset**.  
   
- La riga successiva del set di codice il **MarshalOptions** proprietà è uguale a **adMarshalModifiedOnly**. **MarshalOptions** indica di effettuare il marshalling dei record al livello intermedio (o al server Web). Per ulteriori informazioni sul marshalling, vedere la documentazione di COM. Quando si utilizza **adMarshalModifiedOnly** con un cursore sul lato client ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo i record che sono stati modificati sul client vengono scritte nel livello intermedio. Impostazione **MarshalOptions** a **adMarshalModifiedOnly** può migliorare le prestazioni in quanto un minor numero di righe vengono eseguito il marshalling.  
+ La riga successiva del set di codice il **MarshalOptions** proprietà è uguale a **adMarshalModifiedOnly**. **MarshalOptions** indica quali record devono essere effettuato il marshalling nel livello intermedio (o un server Web). Per ulteriori informazioni sul marshalling, vedere la documentazione di COM. Quando si utilizza **adMarshalModifiedOnly** con un cursore sul lato client ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo i record che sono stati modificati sul client vengono scritte nel livello intermedio. Impostazione **MarshalOptions** a **adMarshalModifiedOnly** può migliorare le prestazioni in quanto un minor numero di righe vengono eseguito il marshalling.  
   
  Successivamente, disconnettere il **Recordset** impostando il relativo **ActiveConnection** proprietà è uguale a **nulla**. Per ulteriori informazioni, vedere la sezione "Disconnessione e riconnessione di Recordset il" in [aggiornamento e il mantenimento dati](../../../ado/guide/data/updating-and-persisting-data.md).  
   

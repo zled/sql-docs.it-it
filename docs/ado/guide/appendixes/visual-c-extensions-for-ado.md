@@ -1,33 +1,33 @@
 ---
 title: Le estensioni di Visual C++ per ADO | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions for ADO
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2c48eff858219640bf58bcd9abd9b222e48619b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 55f76e23f032f98a4f0ede00660dff62ccd6dec4
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 Il metodo preferito di programmazione di ADO con Visual C++ che utilizza il **#import** direttiva, come descritto in [programmazione ADO in Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md). Tuttavia, le versioni precedenti di ADO dotato di un metodo alternativo di programmazione utilizzando Visual C++: estensioni di Visual C++. Questa sezione viene illustrata questa funzionalità per gli utenti che devono gestire il codice di estensioni di Visual C++, ma nuovo codice ADO deve essere scritto utilizzando #**importare**.
@@ -40,11 +40,11 @@ Il metodo preferito di programmazione di ADO con Visual C++ che utilizza il **#i
 
  Vedere gli argomenti seguenti per ulteriori informazioni sulle estensioni di Visual C++ per ADO.
 
--   [Utilizzando le estensioni di Visual C++ per ADO](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+-   [Uso delle estensioni di Visual C++ per ADO](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
 -   [Intestazione delle estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
 -   [ADO con esempio di estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
 ## <a name="see-also"></a>Vedere anche
- [Indice di sintassi di Visual C++ per COM ADO per](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [esempio di estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [utilizzando le estensioni di Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md) [intestazione delle estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Indice ADO per la sintassi di Visual C++ per COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [esempio di estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md) [uso delle estensioni di Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md) [intestazione delle estensioni di Visual C++](../../../ado/guide/appendixes/visual-c-extensions-header.md)

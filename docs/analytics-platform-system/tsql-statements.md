@@ -1,31 +1,21 @@
 ---
-title: Le istruzioni T-SQL Analitica piattaforma Parallel Data Warehouse di System | Documenti Microsoft
-author: barbkess
-ms.author: barbkess
+title: Le istruzioni T-SQL - Parallel Data Warehouse | Documenti Microsoft
+description: Istruzioni T-SQL per analitiche della piattaforma di strumenti SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
-documentationcenter: NA
-editor: ''
-ms.assetid: 0abc5934-1e67-491a-b7d7-8b520d1ae98e
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: 2109e1aaa48fb95da2b4d8b36aee7bbc86ea4ef4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 86bf74778ab78fc42ad1151a341e5c2d232da7aa
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="t-sql-topics"></a>Negli argomenti di T-SQL
+# <a name="t-sql-statements-for-parallel-data-warehouse"></a>Istruzioni T-SQL per Parallel Data Warehouse
 Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="data-definition-language-ddl-statements"></a>Istruzioni di Data Definition Language (DDL)
@@ -89,7 +79,7 @@ Istruzioni Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitic
 * [UNION](../t-sql/language-elements/set-operators-union-transact-sql.md)
 * [WHERE](../t-sql/queries/where-transact-sql.md)
 * [TOP](../t-sql/queries/top-transact-sql.md)
-* [Aliasing](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
+* [Alias](../t-sql/queries/aliasing-azure-sql-data-warehouse-parallel-data-warehouse.md)
 * [Condizione di ricerca](../t-sql/queries/search-condition-transact-sql.md)
 * [Sottoquery](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 

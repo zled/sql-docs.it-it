@@ -1,17 +1,17 @@
 ---
 title: Execute (metodo) (connessione ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::Execute
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef36e770a2321357ed0d58153ad8e0b7493a232a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05d1df49596da99bc98fba9cef7999772ea78f40
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="execute-method-ado-connection"></a>Execute (metodo) (connessione ADO)
 Esegue query specificata, istruzione SQL, stored procedure o il testo del provider.  
@@ -45,7 +45,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Restituisce un [Recordset ADO (Object)](../../../ado/reference/ado-api/recordset-object-ado.md) riferimento all'oggetto.  
   
 #### <a name="parameters"></a>Parametri  
- *CommandText*  
+ *commandText*  
  Oggetto **stringa** valore contenente l'istruzione SQL, stored procedure, un URL o il testo del provider per l'esecuzione. **Facoltativamente**, nomi di tabella possono essere utilizzati ma solo se il provider è compatibile con SQL. Per ad esempio se un nome di tabella "Customers" viene usato, ADO automaticamente anteporre la sintassi SQL Select standard per creare e passare a "SELECT * FROM Customers" come un [!INCLUDE[tsql](../../../includes/tsql_md.md)] istruzione per il provider.  
   
  *RecordsAffected*  
@@ -54,7 +54,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  *Opzioni*  
  Facoltativa. Oggetto **lungo** valore che indica la modalità con cui il provider deve valutare l'argomento CommandText. Può essere una maschera di bit di uno o più [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) o [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valori.  
   
- **Nota** utilizzare il **ExecuteOptionEnum** valore **adExecuteStream** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni che si esegue il porting da Visual Basic 6.0.  
+ **Nota** utilizzare la **ExecuteOptionEnum** valore **adExecuteStream** per migliorare le prestazioni riducendo al minimo l'elaborazione interna e per le applicazioni che si esegue il porting da Visual Basic 6.0.  
   
  Non utilizzare **adExecuteStream** con il **Execute** metodo di un **connessione** oggetto.  
   

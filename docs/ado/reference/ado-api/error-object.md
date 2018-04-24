@@ -1,33 +1,33 @@
 ---
 title: Oggetto Error | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Error
 helpviewer_keywords:
 - error object [ADO]
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 00f04d9ccdfd4547e7d207edc21db44a4e04508b
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 71609e69fa31adcaf1f336d9529ea8bd5fa62434
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-object"></a>Oggetto Error
 Contiene informazioni sugli errori di accesso ai dati relativi a una singola operazione che include il provider.  
@@ -51,7 +51,7 @@ Contiene informazioni sugli errori di accesso ai dati relativi a una singola ope
  Quando si verifica un errore del provider, viene inserito nella **errori** insieme il **connessione** oggetto. ADO supporta la restituzione di più errori da una singola operazione di ADO per la gestione delle informazioni di errore specifico del provider. Per ottenere questa informazioni complete sugli errori in un gestore degli errori, utilizzare le funzionalità di intercettazione degli errori appropriate della lingua o l'ambiente in uso, quindi utilizzare cicli annidati di enumerare le proprietà di ogni **errore** oggetto di **Errori** insieme.  
   
 > [!NOTE]
->  **Microsoft Visual Basic e gli utenti di VBScript** se non è valido non **connessione** dell'oggetto, è necessario recuperare le informazioni di errore dal **errore** oggetto.  
+>  **Microsoft Visual Basic e gli utenti di VBScript** se non è non valida **connessione** dell'oggetto, sarà necessario recuperare le informazioni sull'errore dal **errore** oggetto.  
   
  Provider come tale, ADO Cancella il **OLE Error Info** dell'oggetto prima di effettuare una chiamata che potrebbe potenzialmente generare un nuovo errore del provider. Tuttavia, il **errori** insieme nel **connessione** oggetto viene deselezionato e viene popolato solo quando il provider genera un errore di nuovo, o quando il [deselezionare](../../../ado/reference/ado-api/clear-method-ado.md) metodo viene chiamato.  
   

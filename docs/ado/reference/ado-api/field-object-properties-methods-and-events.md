@@ -1,30 +1,30 @@
 ---
-title: "Campo di proprietà, metodi ed eventi | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Campo di proprietà, metodi ed eventi | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO], members
 ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d0b888947896af5b11d9d7ce3ea8e55d43ac842
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 516985ddc0af32453daf5704e9d9776170f61b18
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="field-object-properties-methods-and-events"></a>Le proprietà dell'oggetto campo, metodi ed eventi
 ## <a name="propertiescollections"></a>Raccolte di proprietà /  
@@ -46,11 +46,11 @@ ms.lasthandoff: 02/09/2018
   
  [Proprietà Status (campo ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)  
   
- [Proprietà di tipo](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Proprietà del tipo](../../../ado/reference/ado-api/type-property-ado.md)  
   
  [Proprietà UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)  
   
- [Valore proprietà](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value (proprietà)](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
  [Metodo AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  

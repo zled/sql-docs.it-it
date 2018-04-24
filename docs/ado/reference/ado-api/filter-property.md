@@ -1,6 +1,6 @@
 ---
 title: Proprietà Filter | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
@@ -11,23 +11,23 @@ ms.date: 03/20/2018
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Recordset15::Filter
 helpviewer_keywords:
 - Filter property
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-caps.latest.revision: ''
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c3b06134dcf65ead3a97577a6d08fd46ec2f52e
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 7b8e5bfa7cce9bd808dc562a6d702a8cb28727d2
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="filter-property"></a>Proprietà filtro
 Indica un filtro per i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -52,7 +52,7 @@ La stringa di criteri è costituita da clausole nel formato *nomecampo-operatore
   
 -   Operatore deve essere uno dei seguenti: \<, >, \<=, > =, <>, =, o **come**.  
   
--   Il valore è il valore con cui si confronteranno i valori dei campi (ad esempio, 'Smith', 24/8/&#95;, 12.345 o $50,00). Utilizzare le virgolette singole con le stringhe e i segni di cancelletto (#) con le date. Per i numeri, è possibile utilizzare la notazione scientifica, segni di dollaro e decimali. Se l'operatore è **come**, il valore può utilizzare i caratteri jolly. Sono consentiti solo l'asterisco (*) e i caratteri jolly il simbolo di percentuale (%) e devono essere l'ultimo carattere nella stringa. Valore non può essere null.  
+-   Il valore è il valore con cui si confronteranno i valori dei campi (ad esempio, 'Smith', 24/8/95 #, 12.345 o $50,00). Utilizzare le virgolette singole con le stringhe e i segni di cancelletto (#) con le date. Per i numeri, è possibile utilizzare la notazione scientifica, segni di dollaro e decimali. Se l'operatore è **come**, il valore può utilizzare i caratteri jolly. Sono consentiti solo l'asterisco (*) e i caratteri jolly il simbolo di percentuale (%) e devono essere l'ultimo carattere nella stringa. Valore non può essere null.  
   
 > [!NOTE]
 >  Per includere le virgolette singole (') nel valore del filtro, utilizzare due virgolette singole per rappresentare uno. Ad esempio, per filtrare in base, la stringa di criteri deve essere `"col1 = 'O''Malley'"`. Per includere virgolette all'inizio e alla fine del valore del filtro, racchiudere la stringa con segni di cancelletto (#). Ad esempio, per filtrare '1', la stringa di criteri deve essere `"col1 = #'1'#"`.  
@@ -95,7 +95,7 @@ Solo i filtri sotto forma di stringhe di criteri influiscono sul contenuto di un
   
 -   Sono state apportate modifiche in tutti i campi in una tabella con più chiavi.  
   
-Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords** in diverse combinazioni di filtri e le modifiche. La colonna a sinistra mostra le modifiche possibili. È possibile apportare modifiche in uno qualsiasi dei campi non chiave, nel campo chiave in una tabella di chiave singola o in uno qualsiasi dei campi chiave in una tabella con più chiavi. La riga superiore viene illustrato il criterio di filtro. Filtro può essere basato su uno dei campi non chiave, il campo chiave in una tabella di chiave singola, o uno qualsiasi dei campi chiave in una tabella con più chiavi. Le celle intersecate mostrano i risultati. Un  **+**  segno indica quello applicato **adFilterPendingRecords** comporterà una non vuota **Recordset**. Un  **-**  segno meno indica un oggetto vuoto **Recordset**.  
+Nella tabella seguente sono riepilogati gli effetti di **adFilterPendingRecords** in diverse combinazioni di filtri e le modifiche. La colonna a sinistra mostra le modifiche possibili. È possibile apportare modifiche in uno qualsiasi dei campi non chiave, nel campo chiave in una tabella di chiave singola o in uno qualsiasi dei campi chiave in una tabella con più chiavi. La riga superiore viene illustrato il criterio di filtro. Filtro può essere basato su uno dei campi non chiave, il campo chiave in una tabella di chiave singola, o uno qualsiasi dei campi chiave in una tabella con più chiavi. Le celle intersecate mostrano i risultati. Un **+** segno indica quello applicato **adFilterPendingRecords** comporterà una non vuota **Recordset**. Un **-** segno meno indica un oggetto vuoto **Recordset**.  
   
 ||Chiavi non|Singola chiave|Più chiavi|
 |-|--------------|----------------|-------------------|

@@ -1,17 +1,17 @@
 ---
 title: Oggetto DataControl (RDS) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - DataControl
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d7b3e0927f902f52138cdb37091df14652845fa4
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 88fa818b04e55e7d6ad8c8c1c8d984e5cd0680bf
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="datacontrol-object-rds"></a>Oggetto DataControl (RDS)
 Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare il **Recordset** dati in una pagina Web.  
@@ -58,7 +58,7 @@ Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-o
  Tutte le proprietà di **RDS. DataControl** sono facoltativi, poiché gli oggetti di business personalizzata possono sostituire le relative funzionalità.  
   
 > [!NOTE]
->  Se si esegue una query per più risultati, solo i primi [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene restituito. Se sono necessari più set di risultati, assegnare a ognuno al relativo oggetto **DataControl**. Un esempio di una query per più risultati potrebbe essere come segue:`"Select * from Authors, Select * from Topics"`  
+>  Se si esegue una query per più risultati, solo i primi [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene restituito. Se sono necessari più set di risultati, assegnare a ognuno al relativo oggetto **DataControl**. Un esempio di una query per ottenere risultati più potrebbe essere come segue: `"Select * from Authors, Select * from Topics"`  
   
  Aggiunta di "DFMode = 20;" alla stringa di connessione quando si utilizza il **RDS. DataControl** oggetto può migliorare le prestazioni del server quando si aggiornano i dati. Con questa impostazione, il **RDSServer** oggetto sul server utilizza una modalità meno risorse. Tuttavia, le funzionalità seguenti non sono disponibili in questa configurazione:  
   
@@ -109,7 +109,7 @@ Associa una query di data [Recordset](../../../ado/reference/ado-api/recordset-o
  Con Internet Explorer 4.0 o versioni successive, è possibile associare ai dati tramite i controlli HTML e ActiveX® solo se sono contrassegnati come controlli del modello di apartment.  
   
 > [!NOTE]
->  **Gli utenti di Microsoft Visual Basic** il **RDS. DataControl** è sicuro per gli script e viene usato solo nelle applicazioni basate sul Web. Un'applicazione client di Visual Basic ha non è più necessaria.  
+>  **Gli utenti di Microsoft Visual Basic** il **RDS. Elemento DataControl** è sicuri per lo script e viene usato solo nelle applicazioni basate su Web. Un'applicazione client di Visual Basic ha non è più necessaria.  
   
  In questa sezione contiene l'argomento seguente.  
   

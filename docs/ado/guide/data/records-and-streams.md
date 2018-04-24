@@ -1,32 +1,32 @@
 ---
 title: I record e i flussi | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - streams [ADO]
 - streams [ADO], about streams
 - records [ADO]
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 68af92a054b9c891849118df1802543d79432ef1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9a107f9322758453222982b7f8ad9c1c4a5a15c7
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="records-and-streams"></a>I record e flussi
 ADO fornisce attualmente il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto come il mezzo principale per l'accesso alle informazioni nelle origini dati, ad esempio database relazionali. Tuttavia, alcuni provider supportano il [Record](../../../ado/reference/ado-api/record-object-ado.md) e [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetti come alternativi o complementari oggetti con cui i dati dai provider possono essere modificati. Per informazioni specifiche sulla **Record** comportamento, vedere la documentazione del provider.  
@@ -34,7 +34,7 @@ ADO fornisce attualmente il [Recordset](../../../ado/reference/ado-api/recordset
 ## <a name="records"></a>Record  
  **Record** gli oggetti funzionano essenzialmente come una riga **Recordset**s. Tuttavia, **record** hanno funzionalità limitate rispetto ai **recordset** e dispongono di proprietà e metodi diversi. L'origine dei dati in un **Record** oggetto può essere un comando che restituisce una riga di dati dal provider. Utilizzando **Record** oggetti anziché **Recordset** gli oggetti di ricevere i risultati da una query che restituisce una riga di dati Elimina l'overhead di un'istanza più è complessa **Recordset**  oggetto.  
   
- **Record** oggetti possono essere utilizzato un altro scopo, in particolare con provider per le origini di dati diverso da database relazionali tradizionali, ad esempio il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Molte delle informazioni che devono essere elaborate esiste, come tabelle nel database, ma come i messaggi in sistemi di posta elettronica e i file nei sistemi di file più recenti. Il **Record** e **flusso** oggetti facilitano l'accesso alle informazioni archiviate nelle origini diverso da database relazionali.  
+ **Record** oggetti possono essere utilizzato un altro scopo, in particolare con provider per le origini di dati diverso da database relazionali tradizionali, ad esempio il [Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Molte delle informazioni che devono essere elaborate esiste, come tabelle nel database, ma come i messaggi in sistemi di posta elettronica e i file nei sistemi di file più recenti. Il **Record** e **flusso** oggetti facilitano l'accesso alle informazioni archiviate nelle origini diverso da database relazionali.  
   
  Il **Record** oggetto può rappresentare e gestire i dati, ad esempio file e directory in un file system o cartelle e i messaggi in un sistema di posta elettronica. A tale scopo, l'origine per il **Record** può essere la riga corrente di un elemento aperto **Recordset**, un URL assoluto o un URL relativo in combinazione con un [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
   

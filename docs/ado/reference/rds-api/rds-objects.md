@@ -2,29 +2,29 @@
 title: Gli oggetti di servizi desktop remoto | Documenti Microsoft
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - objects [ADO], RDS
 - RDS objects [ADO]
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
-caps.latest.revision: 
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aac19cd0fadb642ba8b18550694e1b54dba46d87
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 197f186f83adef6de2b4a30fd214bbe337dd07c3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-objects"></a>Oggetti di servizi desktop remoto
 > [!IMPORTANT]
@@ -32,7 +32,7 @@ ms.lasthandoff: 02/09/2018
   
 |||  
 |-|-|  
-|[DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Associa una query di data **Recordset** a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare il **Recordset** dati in una pagina Web.<br /><br /> Il **DataControl** oggetto è sicuro per lo script.|  
+|[Elemento DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|Associa una query di data **Recordset** a uno o più controlli (ad esempio, una casella di testo, un controllo griglia o una casella combinata) per visualizzare il **Recordset** dati in una pagina Web.<br /><br /> Il **DataControl** oggetto è sicuro per lo script.|  
 |[DataFactory (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Implementa metodi che forniscono accesso ai dati di lettura/scrittura a origini dati specificate per applicazioni lato client.<br /><br /> Il **DataFactory** oggetto non è sicuro per lo scripting.|  
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|Crea proxy sul lato client per oggetti di business personalizzata che si trovano nel livello intermedio.<br /><br /> Il **DataSpace** oggetto è sicuro per lo script.|  
 |[Interfaccia IRDSService (Servizi Desktop remoto)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|Espone il [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md) metodo, che viene utilizzato per restituire un puntatore all'interfaccia richiesta in una versione più in grado di oggetto.|  

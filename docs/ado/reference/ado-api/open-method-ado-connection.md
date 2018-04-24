@@ -1,17 +1,17 @@
 ---
 title: Open (metodo) (connessione ADO) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::raw_Open
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aecc064b9030adb40347737dc68998de3eee4d64
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 980e53611f5c52e0ef426d22f3f8cc4a9294c877
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="open-method-ado-connection"></a>Open (metodo) (connessione ADO)
 Apre una connessione a un'origine dati.  
@@ -42,10 +42,10 @@ connection.Open ConnectionString, UserID, Password, Options
 ```  
   
 #### <a name="parameters"></a>Parametri  
- *ConnectionString*  
+ *connectionString*  
  Facoltativa. Oggetto **stringa** valore che contiene informazioni di connessione. Vedere il [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) proprietà per informazioni dettagliate sulle impostazioni valide.  
   
- *UserID*  
+ *ID utente*  
  Facoltativa. Oggetto **stringa** valore che contiene un nome utente da utilizzare per stabilire la connessione.  
   
  *Password*  
@@ -64,7 +64,7 @@ connection.Open ConnectionString, UserID, Password, Options
  Quando si hanno concluso le operazioni attraverso un **connessione**, utilizzare il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) metodo per liberare le risorse di sistema associate. Chiusura di un oggetto senza rimuoverlo dalla memoria. è possibile modificare le impostazioni delle proprietà e utilizzare il **aprire** metodo aprirlo più tardi. Per eliminare completamente l'oggetto dalla memoria, impostare la variabile oggetto *nulla*.  
   
 > [!NOTE]
->  **Utilizzo del servizio dati remoti** quando utilizzato sul lato client **connessione** oggetto, il **aprire** metodo non stabilisce una connessione al server fino a quando un [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md) viene aperta sul **connessione** oggetto.  
+>  **Utilizzo del servizio dati remoti** quando viene utilizzata su un lato client **connessione** oggetto, il **aprire** metodo non stabilisce una connessione al server fino un [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md) viene aperta sul **connessione** oggetto.  
   
 > [!NOTE]
 >  Gli URL che utilizzano lo schema http richiamerà automaticamente il [il Provider Microsoft OLE DB per Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Per ulteriori informazioni, vedere [URL assoluti e relativi](../../../ado/guide/data/absolute-and-relative-urls.md).  

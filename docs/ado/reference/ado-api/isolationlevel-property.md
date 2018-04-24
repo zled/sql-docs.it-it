@@ -1,33 +1,33 @@
 ---
-title: "Proprietà IsolationLevel | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Proprietà IsolationLevel | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Connection15::IsolationLevel
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b66b246ef3bc64e841ec6322de41ba0fc1e7af97
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 667838efdae694c5884552179ad366721ebd4807
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="isolationlevel-property"></a>Proprietà IsolationLevel
 Indica il livello di isolamento per una [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto.  
@@ -41,7 +41,7 @@ Indica il livello di isolamento per una [connessione](../../../ado/reference/ado
  Il **IsolationLevel** proprietà è di lettura/scrittura.  
   
 > [!NOTE]
->  **Utilizzo del servizio dati remoti** quando utilizzato sul lato client **connessione** oggetto, il **IsolationLevel** proprietà può essere impostata solo su **adXactUnspecified**. Poiché gli utenti utilizzano disconnesso **Recordset** oggetti in una cache sul lato client, è possibile riscontrare problemi. Ad esempio, quando due utenti diversi tentano di aggiornare lo stesso record, Remote Data Service semplicemente consente all'utente che ha aggiornato il record prima di "win". Richiesta di aggiornamento del secondo utente avrà esito negativo con un errore.  
+>  **Utilizzo del servizio dati remoti** quando viene utilizzata su un lato client **connessione** oggetto, il **IsolationLevel** proprietà può essere impostata solo su **adXactUnspecified**. Poiché gli utenti utilizzano disconnesso **Recordset** oggetti in una cache sul lato client, è possibile riscontrare problemi. Ad esempio, quando due utenti diversi tentano di aggiornare lo stesso record, Remote Data Service semplicemente consente all'utente che ha aggiornato il record prima di "win". Richiesta di aggiornamento del secondo utente avrà esito negativo con un errore.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  

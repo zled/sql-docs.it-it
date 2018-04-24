@@ -1,28 +1,21 @@
 ---
-title: Utilizzare un server d'inoltro DNS per risolvere i nomi DNS Non strumento (AP)
-author: barbkess
-ms.author: barbkess
+title: Utilizzare un server d'inoltro DNS nel sistema di piattaforma Analitica | Documenti di Microsoft"
+description: Utilizzare un server d'inoltro DNS per risolvere i nomi DNS non strumento nel sistema della piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 123d8a83-b7fd-4dc9-90d4-fa01af2d629d
-caps.latest.revision: 21
-ms.openlocfilehash: 1d94319bd4d9ad3c25f74ca3393031d7ab916ee2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f707d4c681c695105daf23d5fc640279bb83658
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names"></a>Utilizzare un server d'inoltro DNS per risolvere i nomi DNS Non strumento
+# <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Utilizzare un server d'inoltro DNS per risolvere i nomi DNS Non strumento nel sistema della piattaforma Analitica
 Un server d'inoltro DNS può essere configurato sui nodi servizi di dominio Active Directory (***appliance_domain *-AD01** e ***appliance_domain *-AD02**) del dispositivo di sistema della piattaforma Analitica per consentire gli script e applicazioni software per accedere a server esterni.  
   
 ## <a name="ResolveDNS"></a>Utilizzando un server d'inoltro DNS  

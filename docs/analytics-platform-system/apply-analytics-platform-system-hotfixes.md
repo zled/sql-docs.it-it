@@ -1,29 +1,22 @@
 ---
-title: Applicare aggiornamenti rapidi del sistema di Analitica piattaforma (sistema di piattaforma Analitica)
-author: barbkess
-ms.author: barbkess
+title: Applicare aggiornamenti rapidi Analitica Platform System | Documenti Microsoft
+description: In questo articolo viene descritto come applicare gli aggiornamenti rapidi per il software di sistema della piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
-caps.latest.revision: 25
-ms.openlocfilehash: 1a054ead9ef39169257eb1813ba49eae06082b96
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b3a7a31ce791fbe44c38d1d30ce408235720e241
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="apply-analytics-platform-system-hotfixes"></a>Applicare aggiornamenti rapidi del sistema di piattaforma Analitica
-In questo argomento viene descritto come applicare gli aggiornamenti rapidi per il software del sistema di piattaforma Analitica.  
+# <a name="apply-analytics-platform-system-hotfixes"></a>Applicare aggiornamenti rapidi Analitica Platform System
+In questo articolo viene descritto come applicare gli aggiornamenti rapidi per il software di sistema della piattaforma Analitica.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   

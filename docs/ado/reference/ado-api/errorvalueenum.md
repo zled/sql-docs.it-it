@@ -1,33 +1,33 @@
 ---
 title: ErrorValueEnum | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - ErrorValueEnum
 helpviewer_keywords:
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a79af3564a177da2953b053ce943a2d740e4cc7d
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: a8a543a2e8816a23d420dd7bb007ae157d676f98
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 Specifica il tipo di errore di run-time di ADO.  
@@ -43,7 +43,7 @@ Specifica il tipo di errore di run-time di ADO.
 > [!NOTE]
 >  Errori OLE DB possono essere passati all'applicazione ADO. In genere, possono essere identificati da un codice di funzionalità di Windows di *4*. Ad esempio, 0x800***4***.  
   
-|Costante|Valore|Description|  
+|Costante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|Non è possibile modificare il **ActiveConnection** proprietà di un **Recordset** oggetto che ha un **comando** oggetto come origine.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|Impossibile completare l'operazione.|  

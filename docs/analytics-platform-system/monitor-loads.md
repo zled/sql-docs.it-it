@@ -1,28 +1,22 @@
 ---
-title: Carichi di monitoraggio per Parallel Data Warehouse
-author: barbkess
-ms.author: barbkess
+title: Monitorare i caricamenti per Parallel Data Warehouse | Documenti Microsoft
+description: Monitoraggio attivo e recente carica utilizzando la Console di amministrazione Analitica Platform System (AP) o le viste di sistema di Data Warehouse (PDW) parallele."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: È possibile monitorare active e recente [dwloader](dwloader.md) carica utilizzando la Console di amministrazione Analitica piattaforma di strumenti analitici o le viste di sistema Parallel Data Warehouse (PDW).
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c0c55c16-00bc-4676-8970-a8e10b3e9408
-caps.latest.revision: 6
-ms.openlocfilehash: e520fa01eef0c25e1cf094ee412a9530afaf70b7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-loads"></a>Monitorare i caricamenti
-È possibile monitorare active e recente [dwloader](dwloader.md) carica utilizzando la Console di amministrazione Analitica piattaforma di strumenti analitici o Parallel Data Warehouse (PDW) [viste di sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorare i caricamenti in Parallel Data Warehouse
+Monitoraggio attivo e recente [dwloader](dwloader.md) carica utilizzando la Console di amministrazione di sistema della piattaforma Analitica (AP) o Parallel Data Warehouse (PDW) [viste di sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
   
 > [!TIP]  
 > Alcuni carichi vengono avviate tramite le istruzioni INSERT o strumenti di business intelligence che utilizzano istruzioni SQL per eseguire il caricamento. 

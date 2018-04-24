@@ -1,31 +1,31 @@
 ---
-title: "Risincronizzazione comando proprietà dinamica (ADO) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Risincronizzazione comando proprietà dinamica (ADO) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43e3b1fdebfeb24233e36324f1225868353d25a8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8b3434c97e9548d5b37326a967f540f5f6d3a073
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Risincronizzazione comando proprietà dinamica (ADO)
 Specifica una stringa di un comando fornito dall'utente di [Resync](../../../ado/reference/ado-api/resync-method.md) i problemi dei metodi di aggiornamento dei dati nella tabella denominata nel [tabella univoca](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) proprietà dinamiche.  
@@ -87,7 +87,7 @@ WHERE Orders.ordid  = @ordid
   
  In questo caso, il **tabella univoca** è *ordini* e la relativa chiave primaria, *OrderID*, con parametri.  
   
- **Risincronizzazione comando** è una proprietà dinamica accodata la **Recordset** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) proprietà è impostata su **adUseClient**.  
+ **Risincronizzazione comando** viene aggiunta una proprietà dinamica per il **Recordset** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta quando il [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) è impostata su **adUseClient**.  
   
 ## <a name="applies-to"></a>Si applica a  
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

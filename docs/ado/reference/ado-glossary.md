@@ -5,12 +5,12 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f24e579d2cd1802b42ce4ae2cbc2d8b5b8e447e6
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 6d53fe64298c22c145be537221aa20425bce0e51
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
@@ -53,7 +53,7 @@ In questo argomento definisce termini rilevanti per ADO.
  voce di binding  
  Un mapping tra un campo in una tabella e una variabile. Nelle estensioni di Visual C++ ADO, **Recordset** campi vengono mappati a variabili di C/C++.  
   
- bitmask  
+ maschera di bit  
  Un valore numerico è progettato per un confronto bit per bit con gli altri valori numerici, in genere per contrassegnare le opzioni di parametro o valori restituiti. In genere questo confronto viene eseguito con gli operatori logici OR bit per bit, ad esempio **e** e **o** in Visual Basic **&** e **&#124;** in C++.  
   
  Ad esempio, ADO **FieldAttributeEnum** valori possono essere utilizzati come maschere di bit per determinare gli attributi di un campo. Si supponga di che voler determinare se un campo non è aggiornabile. È possibile effettuare questa verifica con l'espressione seguente in Visual Basic:`Field.Attributes AND adFldUpdatable`  
@@ -87,7 +87,7 @@ In questo argomento definisce termini rilevanti per ADO.
  child  
  Il lato dipendente di una relazione gerarchica. Un elemento figlio è un nodo in una struttura gerarchica con un altro nodo precedente (più vicino alla radice). Vedere anche *figlio alias*, *relazione padre-figlio*, *padre*.  
   
- child-alias  
+ alias di figlio  
  Un alias che fa riferimento all'elemento figlio. Vedere anche *alias*, *figlio*.  
   
  CLSID (identificatore di classe)  
@@ -251,7 +251,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Identificatore programmatico (ProgID)  
  Nome univoco mappato al Registro di sistema di Windows da un'applicazione COM. Il ProgID per una connessione ADO è "ADODB. Connessione". Vedere anche CLSID, COM.  
   
- proxy  
+ Proxy  
  Un oggetto specifico dell'interfaccia che fornisce il marshalling dei parametri e la comunicazione richiesti da un client chiamare un oggetto di applicazione che è in esecuzione in un ambiente di esecuzione diverso, ad esempio in un thread diverso o in un altro processo. Il proxy con il client si trova e comunica con uno stub corrispondente si trova all'oggetto applicazione che viene chiamato. Vedere anche stub.  
   
 ## <a name="r"></a>L  

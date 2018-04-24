@@ -1,28 +1,21 @@
 ---
-title: Registrare gli avvisi di dispositivo (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Tenere traccia degli avvisi accessorio - Analitica Platform System | Documenti Microsoft
+description: Registrare gli avvisi di dispositivo nel sistema della piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 631345d9-4967-461a-8922-e5f8fd33f48f
-caps.latest.revision: 14
-ms.openlocfilehash: 825617eb8ff8d1e6c20bd891a53e85aba71f6100
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 82803e6f20e4a710f317e2e7a541c4a1c72ed08d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="track-appliance-alerts"></a>Avvisi dello strumento di traccia
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Avvisi accessorio traccia Analitica Platform System
 In questo argomento viene illustrato come utilizzare le Console di amministrazione e le viste di sistema per tenere traccia degli avvisi in un dispositivo di SQL Server PDW.  
   
 ## <a name="to-track-appliance-alerts"></a>Per tenere traccia degli avvisi di dispositivo  
@@ -33,7 +26,7 @@ Avvisi e registri di SQL Server PDW [sys.dm_pdw_component_health_alerts](../rela
 ### <a name="view-alerts-by-using-the-admin-console"></a>Visualizzare gli avvisi tramite la Console di amministrazione  
 È presente un **avvisi** scheda per l'area PDW, l'area HDI e per l'area dell'infrastruttura del dispositivo. Dopo che si verifica il failover, l'evento di failover è incluso nel numero di avvisi nella pagina. È una pagina per l'area PDW, l'area HDI e per l'area dell'infrastruttura del dispositivo. Ogni pagina di stato è disponibile una scheda. Per ulteriori informazioni su un avviso, fare clic su di **integrità** pagina il **avvisi** scheda e quindi fare clic su un avviso.  
   
-![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![Avvisi della Console di amministrazione PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 Nel **avvisi** pagina:  
   

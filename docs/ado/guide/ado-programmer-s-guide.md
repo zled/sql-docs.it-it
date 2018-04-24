@@ -1,29 +1,29 @@
 ---
 title: I programmatori ADO&#39;Guida s | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology: drivers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ADO, programmer's guide
 ms.assetid: e3c50eee-964a-4abd-810d-1bd51978e814
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6414a5691c89a2a399f207a3cf2059c17a00991c
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
+ms.openlocfilehash: 3fa9da99204196279491c89973846804836188b3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-programmer39s-guide-for-using-ado-objects"></a>I programmatori ADO&#39;s Guida per l'utilizzo di oggetti ADO
 Questa documentazione fornisce una panoramica su come usare gli oggetti ADO per lavorare con i dati da diverse origini dati. In primo luogo, introduzione sono riepilogate le nuove funzionalità e i requisiti per l'installazione, utilizzo e ridistribuire il componente di ADO. Nelle sezioni successive viene illustrato l'utilizzo dei vari tipi di oggetti ADO. Infine, appendici discutere di vari dati forniti da Microsoft e i provider di servizi, i messaggi di errore e suggerimenti sull'utilizzo di ADO in diversi linguaggi di programmazione, oltre a esempi e un glossario.

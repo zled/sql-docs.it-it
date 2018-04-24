@@ -17,11 +17,12 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: e4328da10d2ec51083f3b1dbc23d6b0f5fa5da21
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 6de9d9493178689a29cc90e79e228a9cb07aaace
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW installazione e configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +35,13 @@ Istruzioni di installazione e configurazione per il database WideWorldImportersD
 
 La versione più recente dell'esempio:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world-importers rilascio](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Scaricare l'esempio WideWorldImportersDW database backup/bacpac corrispondente per l'edizione di SQL Server o Database SQL di Azure.
 
 Il codice sorgente per ricreare il database di esempio è disponibile dal seguente percorso. Si noti che il popolamento di dati è basato su ETL del database OLTP (WideWorldImporters):
 
-[wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
+[Wide world-importers source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
 ## <a name="install"></a>Install
 
@@ -77,4 +78,4 @@ Il database di esempio può avvalersi di PolyBase per i file di query in Hadoop 
 1. In SQL Server Management Studio, connettersi al database WideWorldImportersDW e aprire una nuova finestra query.
 2. Eseguire il comando T-SQL seguente per abilitare l'utilizzo di PolyBase nel database:
 
-   EXECUTE [Application].[Configuration_ApplyPolyBase]
+   ESEGUIRE [applicazioni]. [Configuration_ApplyPolyBase]

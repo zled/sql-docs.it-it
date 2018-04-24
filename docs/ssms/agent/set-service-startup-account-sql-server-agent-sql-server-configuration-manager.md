@@ -22,11 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 37582f52b59a254c12b7b8981b1298d525fa31fa
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: ca3eaeb33891f605bd0cd15e834f95dad291b057
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ L'account di avvio del servizio [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
     [Limitazioni e restrizioni](#Restrictions)  
   
-    [Sicurezza](#Security)  
+    [Security](#Security)  
   
 -   [Per impostare l'account di avvio del servizio per SQL Server Agent tramite SQL Server Management Studio](#SSMSProcedure)  
   
@@ -100,7 +101,7 @@ Per altre informazioni sulle autorizzazioni di Windows necessarie per l'account 
   
         2.  Immettere nella casella **Password** la password per l'account. Immettere nuovamente la password nella casella **Conferma password** .  
   
-8.  Scegliere **OK**.  
+8.  Fare clic su **OK**.  
   
 9. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Fare clic sul pulsante **Chiudi** in Gestione configurazione.  
   

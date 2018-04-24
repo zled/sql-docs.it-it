@@ -1,30 +1,30 @@
 ---
 title: Utilizzo di tecnologie correlate con Servizi Desktop remoto | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS related technologies [ADO]
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-caps.latest.revision: 
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57452cdc7cd0542bd81308f223c559118391204c
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d6dcfb2375daefdfd55c1e5ec4beb5d4879e7eb8
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-related-technologies-with-rds"></a>Utilizzo di tecnologie correlate con Servizi Desktop remoto
 In questa sezione vengono trattati gli argomenti seguenti.  
@@ -44,11 +44,11 @@ In questa sezione vengono trattati gli argomenti seguenti.
   
  **Servizi componenti Microsoft** per ulteriori informazioni su Servizi componenti, vedere il sito Web di Microsoft Transaction Server.  
   
- **Microsoft SQL Server** per ulteriori informazioni su Microsoft SQL Server, vedere il sito Web di Microsoft SQL Server.  
+ **Microsoft SQL Server** per altre informazioni su Microsoft SQL Server, visitare il sito Web di Microsoft SQL Server.  
   
- **Microsoft Internet Explorer** per ulteriori informazioni su Microsoft Internet Explorer, vedere il sito di Microsoft Internet ExplorerWeb e il sito di MSDN Library e Workshop sul Web.  
+ **Microsoft Internet Explorer** per ulteriori informazioni su Microsoft Internet Explorer, vedere il sito di Microsoft Internet ExplorerWeb e il sito Web Workshop Web e MSDN Library.  
   
- **Microsoft Windows NT Server e Windows 2000 Server** per ulteriori informazioni sulla sicurezza in Microsoft Windows NT Server o Windows 2000 Server, visitare il sito Web Microsoft Windows.  
+ **Microsoft Windows NT Server/Windows 2000 Server** per ulteriori informazioni sulla sicurezza in Microsoft Windows NT Server o Windows 2000 Server, visitare il sito Web Microsoft Windows.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Nozioni fondamentali su RDS](../../../ado/guide/remote-data-service/rds-fundamentals.md)

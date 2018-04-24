@@ -1,35 +1,28 @@
 ---
-title: Inviare commenti e suggerimenti dati di telemetria a Microsoft (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Commenti e suggerimenti dati di telemetria - Analitica Platform System | Documenti Microsoft
+description: Inviare commenti e suggerimenti dati di telemetria a Microsoft per il sistema di piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 40a994f0-7eff-4db9-9572-401d6e1187a0
-caps.latest.revision: 18
-ms.openlocfilehash: 970533d5c0220ac651074977f7f522a480d5e2a4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 747274cd03e9cbd5dd2eab4423458700331358dd
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="send-telemetry-feedback-to-microsoft"></a>Inviare commenti e suggerimenti dati di telemetria a Microsoft
-Sistema della piattaforma Analitica dispone di una funzionalità di telemetria facoltativo che invia i dati della Console di amministrazione di Microsoft. È consigliabile abilitare questa opzione per contribuire a migliorare il prodotto.  
+# <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Inviare commenti e suggerimenti dati di telemetria a Microsoft per Analitica Platform System
+Sistema della piattaforma Analitica dispone di una funzionalità di telemetria facoltativo che invia i dati della Console di amministrazione di Microsoft. 
   
 > [!NOTE]  
 > In questa versione, Microsoft non monitora attivamente i dati di telemetria. Il dato viene raccolto solo a scopo di analisi.  
   
 ## <a name="privacy"></a>Privacy  
-Per garantire la protezione della privacy massimo, i punti di accesso viene fornito senza abilitare la telemetria. Prima di abilitare questa funzionalità, esaminare il [informativa sulla Privacy di Microsoft Analitica piattaforma System](http://go.microsoft.com/fwlink/?LinkId=400902). Quindi, per fornire il consenso esplicito eseguire lo script di PowerShell descritto di seguito.  
+Per garantire la protezione della privacy massimo, i punti di accesso viene fornito senza abilitare la telemetria. Prima di abilitare questa funzionalità, esaminare il [informativa sulla Privacy di Microsoft Analitica piattaforma System](http://go.microsoft.com/fwlink/?LinkId=400902). Per il consenso esplicito, eseguire lo script di PowerShell descritto di seguito.  
   
 ## <a name="enable"></a>Attivare la telemetria  
 **L'inoltro di DNS:** l'invio di dati di telemetria a Microsoft richiede Analitica Platform System per la connessione a internet tramite un server d'inoltro DNS. Per abilitare questa funzionalità, è necessario abilitare DNS di inoltro in tutti gli host e macchine virtuali del carico di lavoro. Richiamare il `Enable-RemoteMonitoring` comando con il `SetupDnsForwarder` opzione per configurare l'inoltro di DNS e attivare la telemetria correttamente. Richiamare il `Enable-RemoteMonitoring` comando senza il `SetupDnsForwarder` durante l'inoltro di DNS è già configurato e si desidera abilitare il monitoraggio Heartbeat.  
@@ -116,9 +109,10 @@ Se vengono visualizzati eventuali errori o informazioni che determinano a pensar
   
 Non causa problemi nell'esecuzione di `Disable-RemoteMonitoring` comando più volte.  
   
-## <a name="see-also"></a>Vedere anche  
-[Monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
-[Monitorare il dispositivo utilizzando viste di sistema &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
-[Monitorare l'accessorio tramite System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
-[Utilizzare un server d'inoltro DNS per risolvere i nomi DNS Non strumento &#40;Analitica Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+## <a name="next-steps"></a>Passaggi successivi
+Per altre informazioni, vedere:
+- [Monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+- [Monitorare il dispositivo utilizzando viste di sistema &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+- [Monitorare l'accessorio tramite System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+- [Utilizzare un server d'inoltro DNS per risolvere i nomi DNS Non strumento &#40;Analitica Platform System&#41;](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
   

@@ -1,28 +1,21 @@
 ---
-title: Alimentazione del dispositivo di punti di accesso o disattivare (Analitica piattaforma System)
-author: barbkess
-ms.author: barbkess
+title: Accendere il dispositivo o disattivare - Analitica Platform System | Documenti Microsoft
+description: Power accessorio o disattivare per Analitica Platform System
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 2258f8e3-e7a1-4455-8a5e-10d4d15775d6
-caps.latest.revision: 45
-ms.openlocfilehash: 04473682d04a5b3ff26a5dec0081300d83052f09
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 54829190d03a889ade31383662bf192516934012
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="power-the-aps-appliance-on-or-off"></a>Alimentazione del dispositivo di punti di accesso o disattivare
+# <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power accessorio o disattivare per Analitica Platform System
 In questo argomento viene descritto come accendere o spegnere il Systemappliance piattaforma Analitica che è in esecuzione Parallel Data Warehouse e, facoltativamente, in esecuzione un'area HDInsight. Dopo un'interruzione dell'alimentazione irreversibile, utilizzare questo argomento quando si sposta un dispositivo di sistema della piattaforma Analitica o alla potenza su un dispositivo.  
   
 Accensione del dispositivo e lo spegnimento non è lo stesso come l'avvio e arresto dei servizi di dispositivo. Per informazioni su tale argomento, vedere [PDW stato del servizio &#40;Analitica Platform System&#41;](pdw-services-status.md). Per informazioni su come si attiva o disattiva un SQL Server 2008 Parallel Data Warehouse, vedere il file della Guida di SQL Server 2008 Parallel Data Warehouse. Per informazioni su come si attiva o disattiva un SQL Server 2012 AU1 o AU2 Parallel Data Warehouse, vedere il file della Guida per le versioni.  

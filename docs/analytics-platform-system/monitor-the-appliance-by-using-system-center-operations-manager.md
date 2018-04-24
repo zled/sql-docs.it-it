@@ -1,29 +1,22 @@
 ---
-title: Strumento di monitoraggio con System Center Operations Manager (AP)
-author: barbkess
-ms.author: barbkess
+title: Monitoraggio con SCOM - Analitica Platform System | Documenti Microsoft
+description: Utilizzare System Center Operations Manager (SCOM) per monitorare l'accessorio Analitica Platform System (AP).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: de6cbf6e-f2e9-4877-94df-9c13b1182d56
-caps.latest.revision: 14
-ms.openlocfilehash: 02bdd22c66729ab471298e211b619e1cb1e4565c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: c2b26462ab37cf7d63960ff7db6e20c57e8290bb
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-system-center-operations-manager"></a>Monitorare l'accessorio tramite System Center Operations Manager
-Questo articolo descrive come utilizzare System Center Operations Manager per monitorare SQL Server PDW e HDInsight.  
+# <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitoraggio con System Center Operations Manager - Analitica Platform System
+Utilizzare System Center Operations Manager (SCOM) per monitorare l'accessorio Analitica Platform System (AP).
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
   
@@ -33,7 +26,7 @@ Questo articolo descrive come utilizzare System Center Operations Manager per mo
   
 2.  È necessario installare SQL Server 2008 R2 Native Client o SQL Server 2012 Native Client.  
   
-3.  I management pack per monitorare SQL Server PDW e HDInsight deve essere installato, importato e configurato. Utilizzare le seguenti operazioni per le istruzioni per eseguire queste attività.  
+3.  I management pack per monitorare SQL Server PDW e HDInsight deve essere installato, importato e configurato. Utilizzare i seguenti articoli per le istruzioni per eseguire queste attività.  
   
     -   [Installare i Management Pack SCOM &#40;Analitica Platform System&#41;](install-the-scom-management-packs.md)  
   
@@ -50,10 +43,10 @@ Dopo aver configurato i Management Pack di SCOM, fare clic su Monitoraggio riqua
 ### <a name="alerts"></a>Avvisi  
 Gli avvisi sono in cui è possibile trovare gli avvisi correnti per la gestione.  
   
-![Alerts](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
+![Gli avvisi](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
 ### <a name="appliances"></a>Strumenti  
-Dispositivi sono disponibili l'attualmente individuati e monitorati SQL Server PDW Appliance nell'ambiente in uso. Se un dispositivo non vengono visualizzati qui e aver creato la connessione ODBC per tale, può essere presente un problema con l'account PDWWatcher. Se vengono visualizzati come "Non monitorato" potrebbe esserci un problema con l'account PDWMonitor. Essere paziente SCOM non apportare modifiche in tempo reale, ma vengono periodicamente verificate le nuovi accessori monitorare e invia periodicamente query accessori per il monitoraggio.  
+Dispositivi sono disponibili l'attualmente individuati e monitorati SQL Server PDW Appliance nell'ambiente in uso. Se un dispositivo non vengono visualizzati qui e aver creato la connessione ODBC per tale, può essere presente un problema con l'account PDWWatcher. Se vengono visualizzati come "Non monitorato", potrebbe esserci un problema con il proprio account PDWMonitor. Essere paziente poiché SCOM non apporta modifiche in tempo reale, ma vengono periodicamente verificate le nuovi accessori monitorare e invia periodicamente le query con dispositivi per il monitoraggio.  
   
 ![Accessori](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
   

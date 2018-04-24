@@ -1,33 +1,33 @@
 ---
-title: "Proprietà set di caratteri (ADO) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Proprietà set di caratteri (ADO) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - _Stream::Charset
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 43d23eda107933ab659324de412db0e101f8da00
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9e02e5f26973d45b2bd4e73813824559784c9c4c
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="charset-property-ado"></a>Proprietà set di caratteri (ADO)
 Indica il set di caratteri in cui il contenuto di un testo [flusso](../../../ado/reference/ado-api/stream-object-ado.md) devono essere convertite per la memorizzazione nel buffer interno del **flusso** oggetto.  
@@ -40,7 +40,7 @@ Indica il set di caratteri in cui il contenuto di un testo [flusso](../../../ado
   
  Per un oggetto aperto **flusso**, corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) deve essere all'inizio del **flusso** (0) per essere in grado di impostare **Charset**.  
   
- **Set di caratteri** viene utilizzato solo con testo **flusso** oggetti ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**). Questa proprietà viene ignorata se **tipo** è **adTypeBinary**.  
+ **Set di caratteri** viene utilizzato solo con il testo **flusso** oggetti ([tipo](../../../ado/reference/ado-api/type-property-ado-stream.md) è **adTypeText**). Questa proprietà viene ignorata se **tipo** è **adTypeBinary**.  
   
  Per un esempio di codice, vedere [passaggio 4: popolare la casella di testo Details](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   

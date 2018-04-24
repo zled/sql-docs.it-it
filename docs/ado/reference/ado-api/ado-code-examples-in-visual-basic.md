@@ -1,32 +1,32 @@
 ---
 title: Esempi di codice ADO in Visual Basic | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
 - ADO code examples, Visual Basic
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 490b15408b3fc1864ac3f953e71f98aa27e9bd79
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 1c729d5ba18dea1f400e31f312e8dbb340ca5ff3
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Esempi di codice ADO in Visual Basic
 Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO metodi, proprietà ed eventi durante la scrittura in Visual Basic.  
@@ -38,11 +38,11 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Esempio AddNew (metodo)](../../../ado/reference/ado-api/addnew-method-example-vb.md)  
   
--   [Aggiungere CreateParameter dei metodi e](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)  
+-   [Aggiungere e CreateParameter metodi esempio](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)  
   
--   [AppendChunk e GetChunk metodi](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)  
+-   [AppendChunk e metodi GetChunk](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)  
   
--   [BeginTrans, CommitTrans e RollbackTrans metodi esempio](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)  
+-   [Esempio BeginTrans, CommitTrans e RollbackTrans metodi](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)  
   
 -   [Esempio del metodo Cancel](../../../ado/reference/ado-api/cancel-method-example-vb.md)  
   
@@ -52,15 +52,15 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Metodo ConvertToString](../../../ado/reference/ado-api/converttostring-method-example-vb.md)  
   
--   [CopyRecord, CopyTo e SaveToFile metodi esempio](../../../ado/reference/ado-api/copyrecord-copyto-and-savetofile-methods-example-vb.md)  
+-   [Esempio CopyRecord, CopyTo e SaveToFile metodi](../../../ado/reference/ado-api/copyrecord-copyto-and-savetofile-methods-example-vb.md)  
   
 -   [Metodo CreateRecordset](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)  
   
 -   [Esempio del metodo Delete](../../../ado/reference/ado-api/delete-method-example-vb.md)  
   
--   [Metodi DeleteRecord e MoveRecord](../../../ado/reference/ado-api/deleterecord-and-moverecord-methods-example-vb.md)  
+-   [Esempio di metodi MoveRecord e DeleteRecord](../../../ado/reference/ado-api/deleterecord-and-moverecord-methods-example-vb.md)  
   
--   [Execute, Requery e deselezionare l'esempio di metodi](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)  
+-   [Eseguire, Requery e cancellare esempio dei metodi](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)  
   
 -   [Esempio del metodo Find](../../../ado/reference/ado-api/find-method-example-vb.md)  
   
@@ -68,7 +68,7 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Esempio GetString (metodo)](../../../ado/reference/ado-api/getstring-method-example-vb.md)  
   
--   [Esempio di proprietà LineSeparator metodo SkipLine e fine del flusso](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
+-   [Esempio di proprietà LineSeparator, fine del flusso e SkipLine (metodo)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
 -   [Esempio di metodo Move](../../../ado/reference/ado-api/move-method-example-vb.md)  
   
@@ -80,7 +80,7 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Metodo OpenSchema](../../../ado/reference/ado-api/openschema-method-example-vb.md)  
   
--   [Esempio dei metodi di WriteText, ReadText, scrittura e lettura](../../../ado/reference/ado-api/read-readtext-write-and-writetext-methods-example-vb.md)  
+-   [Lettura, ReadText, scrittura ed esempio di metodi WriteText](../../../ado/reference/ado-api/read-readtext-write-and-writetext-methods-example-vb.md)  
   
 -   [Esempio di metodo Refresh](../../../ado/reference/ado-api/refresh-method-example-vb.md)  
   
@@ -88,17 +88,17 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Esempio di metodi di apertura e salvataggio](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)  
   
--   [Metodo Seek e esempio di proprietà indice](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)  
+-   [Metodo esempio Seek e Index proprietà](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)  
   
 -   [Esempio di metodo di supporto](../../../ado/reference/ado-api/supports-method-example-vb.md)  
   
--   [Esempio di metodi di CancelUpdate e aggiornamento](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)  
+-   [Esempio di metodi CancelUpdate e aggiornamento](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)  
   
 -   [Esempio UpdateBatch e CancelBatch metodi](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)  
   
 ## <a name="properties"></a>Proprietà  
   
--   [Esempio di proprietà PageSize AbsolutePage e PageCount](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
+-   [Esempio di proprietà PageSize, PageCount e AbsolutePage](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
   
 -   [Esempio AbsolutePosition e CursorLocation proprietà](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)  
   
@@ -106,27 +106,27 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Esempio di proprietà di direzione, CommandText, CommandTimeout, CommandType, dimensioni e ActiveConnection](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)  
   
--   [Esempio ActualSize e DefinedSize proprietà](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)  
+-   [Esempio di proprietà DefinedSize e ActualSize](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)  
   
 -   [Esempio di proprietà di nome e gli attributi](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)  
   
--   [Esempio di proprietà segnalibro BOF ed EOF](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)  
+-   [Esempio di proprietà Bookmark, EOF e BOF](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)  
   
 -   [Esempio di proprietà CacheSize](../../../ado/reference/ado-api/cachesize-property-example-vb.md)  
   
--   [Esempio di proprietà stato, ConnectionTimeout e ConnectionString](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)  
+-   [Esempio di proprietà dello stato, ConnectionTimeout e ConnectionString](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)  
   
 -   [Esempio di proprietà Count](../../../ado/reference/ado-api/count-property-example-vb.md)  
   
--   [Esempio di proprietà EditMode CursorType e LockType](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)  
+-   [Esempio di proprietà EditMode CursorType, LockType ed](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)  
   
 -   [Esempio di proprietà SQLState, HelpContext, HelpFile, NativeError, numero, origine e descrizione](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
   
 -   [Fine del flusso e le proprietà LineSeparator, esempio di metodo SkipLine](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
--   [Esempio di proprietà di RecordCount e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)  
+-   [Esempio di proprietà RecordCount e filtro](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)  
   
--   [Esempio di proprietà di modalità e IsolationLevel](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)  
+-   [Esempio di proprietà modalità e IsolationLevel](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)  
   
 -   [Esempio di proprietà Item](../../../ado/reference/ado-api/item-property-example-vb.md)  
   
@@ -138,13 +138,13 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Esempio di proprietà Optimize](../../../ado/reference/ado-api/optimize-property-example-vb.md)  
   
--   [Esempio OriginalValue e UnderlyingValue proprietà](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)  
+-   [Esempio di proprietà UnderlyingValue e OriginalValue](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)  
   
 -   [Esempio di proprietà Prepared](../../../ado/reference/ado-api/prepared-property-example-vb.md)  
   
--   [Esempio di proprietà DefaultDatabase e di provider](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)  
+-   [Esempio di proprietà DefaultDatabase e provider](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)  
   
--   [Esempio di proprietà Sort](../../../ado/reference/ado-api/sort-property-example-vb.md)  
+-   [Esempio di proprietà di ordinamento](../../../ado/reference/ado-api/sort-property-example-vb.md)  
   
 -   [Esempio di proprietà Source](../../../ado/reference/ado-api/source-property-example-vb.md)  
   
@@ -158,7 +158,7 @@ Utilizzare gli esempi di codice seguente per informazioni su come utilizzare ADO
   
 -   [Esempio di proprietà Type (proprietà)](../../../ado/reference/ado-api/type-property-example-property-vb.md)  
   
--   [Esempio di valore della proprietà](../../../ado/reference/ado-api/value-property-example-vb.md)  
+-   [Esempio di valore di proprietà](../../../ado/reference/ado-api/value-property-example-vb.md)  
   
 -   [Esempio di proprietà di versione](../../../ado/reference/ado-api/version-property-example-vb.md)  
   

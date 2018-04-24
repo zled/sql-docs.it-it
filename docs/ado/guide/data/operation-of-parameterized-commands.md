@@ -1,31 +1,31 @@
 ---
 title: Funzionamento dei comandi con parametri | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], parameterized commands
 - parameterized commands [ADO]
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d826d5407aabce4baa82b0952cff6c8344944e8
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 70049127949ecc4f0e5931339b951620b58784ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alla dimensione dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, potrebbe essere preferibile utilizzare un comando con parametri.  
@@ -42,7 +42,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Le tabelle padre e figlio dispongono un nome di colonna, cust_id*.* Il *comando figlio* ha un "?" segnaposto, a cui fa riferimento la clausola RELATE (ovvero, "... PARAMETRO 0").  
+ Le tabelle padre e figlio di un nome di colonna, cust_id*.* Il *comando figlio* ha un "?" segnaposto, a cui fa riferimento la clausola RELATE (ovvero, "... PARAMETRO 0").  
   
 > [!NOTE]
 >  La clausola di parametro relativo esclusivamente per la sintassi del comando forma. Non è associata a uno ADO [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto o [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme.  

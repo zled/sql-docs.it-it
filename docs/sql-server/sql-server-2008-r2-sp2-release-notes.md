@@ -1,33 +1,32 @@
 ---
 title: Note sulla versione di SQL Server 2008 R2 SP2 | Microsoft Docs
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-non-specified
-ms.service: 
-ms.component: sql-non-specified
-ms.technology: server-general
-ms.custom: 
+ms.technology: supportability
+ms.custom: ''
 ms.date: 01/31/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQL Server 2008 R2 SP2
 - Release Notes, SQL Server 2008 R2 SP2
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
-caps.latest.revision: "17"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a497aaec3879414fe2a7c6785a180ebf77ba25de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: = sql-server-2014 || = sqlallproducts-allversions
+ms.openlocfilehash: 08d28567a1984cae1fe5d563312caf656a31b438
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Questo documento descrive i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2008 R2 Service Pack 2. Il documento Note sulla versione è valido per tutte le edizioni di SQL Server 2008 R2 SP2 ed è disponibile solo online. Questo documento viene aggiornato periodicamente.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+Nel presente documento sono descritti i problemi noti di cui è necessario essere a conoscenza prima di installare o risolvere i problemi relativi a Microsoft SQL Server 2008 R2 Service Pack 2. Il documento Note sulla versione è valido per tutte le edizioni di SQL Server 2008 R2 SP2 ed è disponibile solo online. Questo documento viene aggiornato periodicamente.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0 Novità del Service Pack 2  
 È stata aggiunta la vista a gestione dinamica (DMV) **sys.dm_db_stats_properties**. È possibile utilizzare questa DMV per restituire le proprietà delle statistiche di una tabella o una vista indicizzata specificata nel database corrente. Questa DMV restituisce, ad esempio, il numero di righe campionate e il numero di intervalli nell'istogramma.  

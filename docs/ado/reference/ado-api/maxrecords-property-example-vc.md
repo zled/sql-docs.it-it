@@ -1,32 +1,32 @@
 ---
-title: "Esempio di proprietà MaxRecords (VC + +) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Esempio di proprietà MaxRecords (VC + +) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - MaxRecords property [ADO], VC++ example
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4ba77502023c04aac8bdb262c66314a4c0c04d12
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 49ed4343647eb7c24fc7cdc6655cb708f26ac15d
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="maxrecords-property-example-vc"></a>Esempio di proprietà MaxRecords (VC + +)
 Questo esempio viene utilizzato il [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) proprietà per aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenente i titoli più costosi 10 il ***titoli*** tabella.  
@@ -175,14 +175,14 @@ void PrintComError(_com_error &e) {
  **Le prime dieci titoli in base al prezzo:**  
 **Ma è facile? ---22.95**  
 **Computer individui un e Non un: Modifiche al comportamento---21.59**  
-**Cipolle Leeks e aglio: cucina segreti del Mediterraneo---20.95**  
+**Cipolle Leeks e il pane all'aglio: Cooking segreti del Mediterraneo---20.95**  
 **Segreti di Silicon Valley---20.00**  
-**Guida di Database della persona occupato---19,99 dollari**  
-**Direttamente in contatto sui computer---19,99 dollari**  
-**Considera Silicon Valley Gastronomic---19,99 dollari**  
-**Dati prolungata privative: Quattro Case study---19,99 dollari**  
+**Guida di Database della persona occupato---i 19,99 dollari**  
+**Retta Talk sui computer---i 19,99 dollari**  
+**Considera Silicon Valley Gastronomic---i 19,99 dollari**  
+**Dati prolungato privative: Quattro Case study---i 19,99 dollari**  
 **Sushi, tutti gli utenti? ---14,99**  
-**50 anni cucine Palace Buckingham---11.95**   
+**50 anni in Buckingham Palace cucine---11.95**   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà MaxRecords (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Oggetto Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

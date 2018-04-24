@@ -1,28 +1,21 @@
 ---
-title: Monitorare il dispositivo tramite la Console di amministrazione (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Monitoraggio con Console di amministrazione - Analitica Platform System | Documenti Microsoft
+description: Per il sistema di piattaforma Analitica, la Console di amministrazione è un'applicazione web che espone le informazioni di stato, l'integrità e prestazioni dello strumento. Gli utenti di connettersi alla Console di amministrazione tramite un browser internet.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 294ba6ac-b1ff-46ea-ba32-d8b32cb4cdc2
-caps.latest.revision: 26
-ms.openlocfilehash: 8da883797f8e9d09de0a5d160fc3383caf181590
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 5f7c6ef68a8f91121a63def8e2153a5c38873aa3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="monitor-the-appliance-by-using-the-admin-console"></a>Monitoraggio del dispositivo tramite la Console di amministrazione
+# <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Monitorare il dispositivo con la Console di amministrazione - Analitica Platform System
 La Console di amministrazione è un'applicazione web di SQL Server PDW che espone le informazioni di stato, l'integrità e prestazioni dello strumento. Gli utenti di connettersi alla Console di amministrazione tramite Internet Explorer.  
   
 ## <a name="About"></a>Sulla Console di amministrazione  

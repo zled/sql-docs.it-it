@@ -1,27 +1,21 @@
 ---
-title: Load
-author: barbkess
-ms.author: barbkess
-manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
+title: Caricamento di dati in Parallel Data Warehouse | Documenti Microsoft
 description: È possibile caricare o inserire dati in SQL Server Parallel Data Warehouse (PDW) con Integration Services, utilità bcp, dwloader o l'istruzione SQL INSERT.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: c7292108-4a48-409e-b0f4-e4ba84dce26f
-caps.latest.revision: 22
-ms.openlocfilehash: 77bb7e3ba6a3377fe63decf06a872872eaa4ee61
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+author: mzaman1
+manager: craigg
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 3fed89686683616164132cf0322e3709eab78f32
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="load-sql-server-pdw"></a>Caricare (SQL Server PDW)
+# <a name="loading-data-into-parallel-data-warehouse"></a>Caricare i dati in Parallel Data Warehouse
 È possibile caricare o inserire dati in SQL Server Parallel Data Warehouse (PDW) con Integration Services, [utilità bcp](../tools/bcp-utility.md), **dwloader** caricatore della riga di comando o l'istruzione SQL INSERT.  
 
 ## <a name="loading-environment"></a>Il caricamento di ambiente  

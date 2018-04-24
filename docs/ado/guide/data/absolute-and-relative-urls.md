@@ -1,41 +1,41 @@
 ---
 title: URL assoluto e relativo | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - relative URLs [ADO]
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3564236b7b6bee2ae21f1b78a4275fb615aa2e4e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 2482386f131b7e49134b5fdcbfaae7d0ec339b74
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="absolute-and-relative-urls"></a>URL assoluto e relativo
-Un URL specifica il percorso di una destinazione memorizzata in un computer locale o in rete. La destinazione può essere un file, directory, una pagina HTML, immagine, programma e così via*.*  
+Un URL specifica il percorso di una destinazione memorizzata in un computer locale o in rete. La destinazione può essere un file, directory, pagina HTML, immagine, programma e così via*.*  
   
  Un *URL assoluto* contiene tutte le informazioni necessarie per individuare una risorsa.  
   
  Oggetto *URL relativo* individua una risorsa utilizzando un URL assoluto come punto di partenza. In effetti, il "completamento URL" della destinazione è specificato dalla concatenazione gli URL assoluti e relativi.  
   
- Un *URL assoluto* Usa il seguente formato: *scheme://server/path/resource*  
+ Un' *URL assoluto* Usa il seguente formato: *scheme://server/path/resource*  
   
  Un URL relativo in genere è costituito solo il *percorso*e, facoltativamente, il *risorse*, ma non *schema* o *server*. Nelle tabelle seguenti definiscono le singole parti del formato di URL completo.  
   
@@ -48,7 +48,7 @@ Un URL specifica il percorso di una destinazione memorizzata in un computer loca
  *path*  
  Specifica la sequenza di directory che conduce alla destinazione. Se *risorse* viene omesso, la destinazione è l'ultima directory in *percorso*.  
   
- *resource*  
+ *Risorsa*  
  Se incluso, *risorse* è la destinazione e in genere è il nome di un file. Potrebbe essere un *file semplice,* contenente un singolo flusso binario di byte, o un *documento strutturato,* contenente uno o più flussi e archivi flussi binari di byte.  
   
 ## <a name="url-scheme-registration"></a>Registrazione dello schema URL  

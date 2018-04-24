@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.assetid: 
+ms.assetid: ''
 ms.workload: On Demand
-ms.openlocfilehash: e6d21c8f2e7636ee787bbd735b3d69b71ac20671
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 523959047c7b7cd7cce36138650b8cc52873f73e
+ms.sourcegitcommit: f3aa02a0f27cc1d3d5450f65cc114d6228dd9d49
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurare le impostazioni di SQL Server con le variabili di ambiente in Linux
 
@@ -53,6 +53,7 @@ Per configurare SQL Server 2017 in Linux, è possibile utilizzare diverse variab
 | **MSSQL_AGENT_ENABLED** | Abilitare SQL Server Agent. Ad esempio, è abilitato 'true' e 'false' è disabilitata. Per impostazione predefinita, l'agente è disabilitato.  |
 | **MSSQL_MASTER_DATA_FILE** | Imposta il percorso del file di dati del database master. |
 | **MSSQL_MASTER_LOG_FILE** | Imposta il percorso del file di log database master. |
+| **MSSQL_ERROR_LOG_FILE** | Imposta il percorso dei file di log degli errori. |
 
 
 ## <a name="example-initial-setup"></a>Esempio: la configurazione iniziale

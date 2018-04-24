@@ -2,31 +2,31 @@
 title: Servizi Desktop remoto di codice negli esempi di Visual C++ | Documenti Microsoft
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: reference
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - Visual C++ RDS examples [ADO]
 - RDS samples [ADO], Visual C++
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
-caps.latest.revision: 
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 034f55413c65799f6f7a905a3857cbfa20ee14e9
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 8d6105f873d19af36fc5e60d1ca35d909bf5bead
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Esempi di codice di servizi desktop remoto in Visual C++
 Utilizzare gli esempi di codice seguente per informazioni su come usare le proprietà di servizi desktop remoto durante la scrittura in Microsoft Visual C++.  
@@ -37,7 +37,7 @@ Utilizzare gli esempi di codice seguente per informazioni su come usare le propr
 > [!NOTE]
 >  Incollare l'esempio di codice completo, dall'inizio alla fine, nell'editor di codice. L'esempio potrebbe non essere eseguita correttamente se vengono utilizzati esempi parziali o se la formattazione di paragrafo.  
   
--   [Esempio di gestione delle proprietà](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Esempio di proprietà Handler](../../../ado/reference/rds-api/handler-property-example-vc.md)  
   
 -   [Proprietà InternetTimeout](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
 

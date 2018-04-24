@@ -1,15 +1,16 @@
 ---
 title: Risolvere i problemi relativi agli utenti isolati (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: failover-clusters
-ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - orphaned users [SQL Server]
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - database mirroring [SQL Server], metadata
 - users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1780f563d2e4f9533ebe1f82deefe7b785b6ec8c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: ba2292c8b8284b78526e0cf3c72c387c793cffab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Risolvere i problemi relativi agli utenti isolati (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Per ridurre la creazione di utenti isolati, definire utenti del database indipendente per i database che potrebbero essere spostati. Per altre informazioni, vedere [Utenti di database indipendente: rendere portabile un database](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
-## <a name="background"></a>Background  
+## <a name="background"></a>Informazioni preliminari  
  Per connettersi a un database in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un'entità di sicurezza (identità utente del database) basata su un account di accesso, l'entità deve avere un account di accesso valido nel database **master** . Tale account di accesso viene usato nel processo di autenticazione, che verifica l'identità dell'entità e determina se è autorizzata a connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gli account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un'istanza del server sono riportati nella vista del catalogo **sys.server_principals** e nella vista di compatibilità **sys.sql_logins** .  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consentono di accedere a database singoli come "utente database", che viene mappato all'account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sono previste tre eccezioni a questa regola:  

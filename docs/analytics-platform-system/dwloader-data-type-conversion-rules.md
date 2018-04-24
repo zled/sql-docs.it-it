@@ -1,27 +1,21 @@
 ---
-title: Regole di conversione per dwloader del tipo di dati
-author: barbkess
-ms.author: barbkess
+title: Tipo di dati Dwloader le regole di conversione - Parallel Data Warehouse | Documenti Microsoft
+description: Questo argomento descrive i formati di dati di input e le conversioni implicite dei dati che dwloader che caricatore della riga di comando supporta durante il caricamento dei dati in Parallel Data Warehouse (PDW)."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Questo argomento descrive i formati di dati di input e le conversioni implicite dei dati che dwloader che caricatore della riga di comando supporta quando carica i dati in PDW.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: 79c48520-b08b-4b15-a943-a551cc90a2c4
-caps.latest.revision: 30
-ms.openlocfilehash: 6910358803673c34d2381d071340e2ec7c8f2a0b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: ecfc29c92bc99827ee943ff665524ff49e82a8df
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="data-type-conversion-rules-for-dwloader"></a>Regole di conversione per dwloader del tipo di dati
+# <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Regole di conversione per dwloader - Parallel Data Warehouse del tipo di dati
 Questo argomento descrive i formati di dati di input e le conversioni implicite dei dati che [dwloader caricatore della riga di comando](dwloader.md) supporta al momento del caricamento dei dati in PDW. Le conversioni implicite dei dati si verificano quando i dati di input non corrisponde al tipo di dati nella tabella di destinazione di SQL Server PDW. Utilizzare queste informazioni quando il processo di caricamento per garantire che i dati di progettazione verrà caricato correttamente in SQL Server PDW.  
    
   
@@ -30,7 +24,7 @@ Nella tabella seguente definisce i tipi letterali accettati, formato e le regole
   
 |Tipo di dati di input|Esempi di dati di input|Conversione in binary o varbinary tipo di dati|  
 |-------------------|-----------------------|-----------------------------------------------|  
-|Valore letterale binario|[0x]*hexidecimal_string*<br /><br />Esempio: 12Ef o 0x12Ef|Il prefisso 0x è facoltativo.<br /><br />La lunghezza di origine dati non può superare il numero di byte specificati per il tipo di dati.<br /><br />Se la lunghezza di origine dati è minore di dimensioni di **binario** del tipo di dati, i dati vengano applicato un riempimento a destra con zeri per raggiungere le dimensioni di tipo di dati.|  
+|Valore letterale binario|[0x] *hexidecimal_string*<br /><br />Esempio: 12Ef o 0x12Ef|Il prefisso 0x è facoltativo.<br /><br />La lunghezza di origine dati non può superare il numero di byte specificati per il tipo di dati.<br /><br />Se la lunghezza di origine dati è minore di dimensioni di **binario** del tipo di dati, i dati vengano applicato un riempimento a destra con zeri per raggiungere le dimensioni di tipo di dati.|  
   
 ## <a name="InsertDateTimeTypes"></a>Inserimento di valori letterali in tipi data e ora  
 Valori letterali di data e ora vengono rappresentati tramite valori letterali stringa in formati specifici, racchiusi tra virgolette singole. Nelle tabelle seguenti definiscono i tipi di valore letterale consentiti, formato e le regole di conversione per il caricamento di una data o ora letterale in una colonna di tipo **datetime**, **smalldatetime**, **data**, **ora**, **datetimeoffset**, o **datetime2**. Le tabelle di definiscono il formato predefinito per il tipo di dati specificato. Altri formati che è possibile specificare sono definiti nella sezione [formati Datetime](#DateFormats). Valori letterali di data e ora non possono includere spazi iniziali o finali. **Data**, **smalldatetime**, e i valori null non possono essere caricati in modalità a larghezza fissa.  
@@ -43,7 +37,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 |Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante vengono impostate su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35 ' viene inserito come ' 2007-05-08 12:35:00.000'.|  
 |Valore letterale stringa nel **smalldatetime** formato|"aaaa-MM-gg hh: mm"<br /><br />Esempio: ' 2007-05-08:35 12'|Quando il valore viene inserito, secondi e cifre frazionarie rimanenti vengono impostate su 0.|  
 |Valore letterale stringa nel **data** formato|"yyyy-MM-dd"<br /><br />Esempio: ' 2007-05-08'|Valori di ora (ora, minuti, secondi e frazioni) sono impostati su 12:00:00.000 quando viene inserito il valore.|  
-|Valore letterale stringa nel **datetime2** formato|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare tre cifre frazionarie. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' verrà inserito, ma il valore ' 2007-05-8 12:35:29.1234567' genera un errore.|  
+|Valore letterale stringa nel **datetime2** formato|"aaaa-MM-GG fffffff"<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare tre cifre frazionarie. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' verrà inserito, ma il valore ' 2007-05-8 12:35:29.1234567' genera un errore.|  
   
 ### <a name="smalldatetime-data-type"></a>Tipo di dati smalldatetime  
 Nella tabella seguente definisce il formato predefinito e le regole per il caricamento di valori letterali in una colonna di tipo **smalldatetime**. Una stringa vuota (") viene convertita il valore predefinito ' 1900-01-01 12:00". Le stringhe che contengono solo spazi vuoti (' ') genera un errore.  
@@ -75,7 +69,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 |Valore letterale stringa nel **datetime** formato|'aaaa-MM-gg hh.mm.ss [. fff]'<br /><br />Esempio: ' 2007-05-08 12:35:29.123'|Cifre frazionarie mancante e valori di offset sono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08 12:35:29.123' viene inserito come ' 2007-05-08 12:35:29.1230000 + 00:00 ".|  
 |Valore letterale stringa nel **smalldatetime** formato|"aaaa-MM-gg hh: mm"<br /><br />Esempio: ' 2007-05-08:35 12'|Secondi, le cifre frazionarie rimanenti e i valori di offset vengono impostati su 0 quando viene inserito il valore.|  
 |Valore letterale stringa nel **data** formato|"yyyy-MM-dd"<br /><br />Esempio: ' 2007-05-08'|I valori di ora (ora, minuti, secondi e frazioni) vengono impostati su 0 quando viene inserito il valore. Ad esempio, il valore letterale ' 2007-05-08' viene inserito come ' 2007-05-08 00.00.00.0000000 + 00:00 ".|  
-|Valore letterale stringa nel **datetime2** formato|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
+|Valore letterale stringa nel **datetime2** formato|"aaaa-MM-GG fffffff"<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567'|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
 |Valore letterale stringa nel **datetimeoffset** formato|"aaaa-MM-GG: ss. fffffff {+&#124;-} hh: mm"<br /><br />Esempio: ' 2007-05-08 12:35:29.1234567 + 12:15 '|I dati di origine non possono superare il numero specificato di secondi frazionari nella colonna datetimeoffset. Se l'origine dati contiene un numero minore o uguale dei secondi frazionari, i dati verranno aggiunti a destra con zeri. Ad esempio, se il tipo di dati datetimeoffset (5), il valore letterale ' 2007-05-08 12:35:29.123 + 12:15 ' viene inserito come ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>Tipi di dati datetime2  
@@ -179,7 +173,7 @@ Nella tabella seguente definisce il formato predefinito e le regole per il caric
 |Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc '| ND |  
 |Valore letterale integer|Formato: ffffffffffn<br /><br />Esempio: 321312313123| ND |  
 |Valore letterale decimale|Formato: ffffff.fffffff<br /><br />Esempio: 12344.34455| ND |  
-|Valore letterale Money|Format: $ffffff.fffnn<br /><br />Esempio: $123456.99|Il simbolo di valuta facoltativo non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Verrà trovata corrispondenza il formato del caricatore, considera ogni valore letterale come un valore letterale stringa.<br /><br />Virgola non è consentita.<br /><br />Se il numero di cifre dopo il separatore decimale sono superiori a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si utilizza la funzione CONVERT per inserire valori letterali money, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  
+|Valore letterale Money|Formato: $ffffff.fffnn<br /><br />Esempio: $123456.99|Il simbolo di valuta facoltativo non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Verrà trovata corrispondenza il formato del caricatore, considera ogni valore letterale come un valore letterale stringa.<br /><br />Virgola non è consentita.<br /><br />Se il numero di cifre dopo il separatore decimale sono superiori a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si utilizza la funzione CONVERT per inserire valori letterali money, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  
   
 ### <a name="general-remarks"></a>Osservazioni generali  
 **dwloader** esegue le stesse conversioni implicite che SMP SQL Server vengono eseguite, ma non supporta tutte le conversioni implicite che supporta SMP SQL Server.  

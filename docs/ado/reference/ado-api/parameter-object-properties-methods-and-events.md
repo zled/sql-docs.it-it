@@ -1,30 +1,30 @@
 ---
-title: "Le proprietà dell'oggetto parametro, metodi ed eventi | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Le proprietà dell'oggetto parametro, metodi ed eventi | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Parameter object [ADO], members
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
-caps.latest.revision: 
+caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4aed60607b071183c3ba6a88ccab7a549aa9d755
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 05d7c7a87bf295a6a56a921900fdd6765446bb5b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Le proprietà dell'oggetto parametro, metodi ed eventi
 ## <a name="propertiescollections"></a>Raccolte di proprietà /  
@@ -42,9 +42,9 @@ ms.lasthandoff: 02/09/2018
   
  [Proprietà Size](../../../ado/reference/ado-api/size-property-ado-parameter.md)  
   
- [Proprietà di tipo](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Proprietà del tipo](../../../ado/reference/ado-api/type-property-ado.md)  
   
- [Valore proprietà](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value (proprietà)](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Metodi  
  [Metodo AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  

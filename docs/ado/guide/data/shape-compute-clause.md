@@ -1,32 +1,32 @@
 ---
 title: Forma clausola COMPUTE | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - shape commands [ADO]
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-caps.latest.revision: 
+caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 53ebeab9edfa1d9fc339f080d4a9de995053f77a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5a157d7d77bd6beefae7c3258039953c5e5e4995
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="shape-compute-clause"></a>Clausola COMPUTE forma
 Una clausola COMPUTE forma genera un elemento padre **Recordset**, le cui colonne sono costituiti da un riferimento al figlio **Recordset**; facoltativo colonne il cui contenuto è capitolo, nuovo, o le colonne calcolate, o risultato dell'esecuzione di funzioni di aggregazione sull'elemento figlio **Recordset** o una forma precedentemente **Recordset**; e tutte le colonne dal figlio **Recordset** elencate parametro facoltativo nella clausola.  
@@ -54,7 +54,7 @@ SHAPE child-command [AS] child-alias
 -   La parola chiave nella tabella, seguita dal nome di una tabella nel provider di dati.  
   
  *child-alias*  
- Un alias utilizzato per fare riferimento al **Recordset** restituito dal *comando figlio.* Il *figlio alias* è obbligatoria nell'elenco di colonne nella clausola COMPUTE e definisce la relazione tra padre e figlio **Recordset** oggetti.  
+ Un alias usati per fare riferimento ai **Recordset** restituito dal *comando figlio.* Il *figlio alias* è obbligatoria nell'elenco di colonne nella clausola COMPUTE e definisce la relazione tra padre e figlio **Recordset** oggetti.  
   
  *appended-column-list*  
  Un elenco in cui ogni elemento definisce una colonna nell'elemento padre generato. Ogni elemento contiene una colonna a capitoli, una nuova colonna, una colonna calcolata o un valore risultante da una funzione di aggregazione sull'elemento figlio **Recordset**.  

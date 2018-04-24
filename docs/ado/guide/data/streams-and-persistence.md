@@ -1,31 +1,31 @@
 ---
 title: Flussi e persistenza | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a0a45a32086dc3befd19e720c8d600b6b43adde
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: f252af47194986372c5fb7e098ca451d5aabe81b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="streams-and-persistence"></a>Persistenza e flussi
 Il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto [salvare](../../../ado/reference/ado-api/save-method.md) metodo archivi, o *persiste*, **Recordset** in un file e [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)metodo ripristini il **Recordset** da tale file.  
@@ -111,7 +111,7 @@ Set rs = nothing
   
  Una nuova proprietà nel servizio dati di riferimento [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), punta alla pagina ASP che genera il **Recordset**. Ciò significa un **Recordset** oggetto può essere ottenuto senza servizi desktop remoto utilizzando lato server [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto o l'utente la scrittura di un oggetto business. Questa operazione semplifica il modello di programmazione di servizi desktop remoto in modo significativo.  
   
- Codice lato server, denominato http://server/directory/recordset.asp:  
+ Sul lato server, nome in codice http://server/directory/recordset.asp:  
   
 ```  
 <%  

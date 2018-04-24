@@ -1,30 +1,30 @@
 ---
 title: 'Passaggio 6: Le modifiche vengono inviate al Server (esercitazione su RDS) | Documenti Microsoft'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], changes sent to server
 ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
-caps.latest.revision: 
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a03d6178b9a8af36dedbda242e5e809a025bf1
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 585d16d19f26bca19acb62b16cf6c48f52515677
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Passaggio 6: Le modifiche vengono inviate al Server (esercitazione di servizi desktop remoto)
 Se il **Recordset** oggetto viene modificato, tutte le modifiche (vale a dire le righe che vengono aggiunti, modificate o eliminate) possono essere inviate al server.  
@@ -41,7 +41,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Parte** considera questo caso è stata utilizzata solo la [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e che un **Recordset** oggetto è associato a questo punto il **RDS. DataControl**. Il [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) metodo aggiorna l'origine dati con tutte le modifiche di **Recordset** oggetto se la [Server](../../../ado/reference/rds-api/server-property-rds.md) e [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà vengono comunque impostate.  
+ **La parte** Presupponi per questo case che si usa solo il [RDS. Elemento DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) e che un **Recordset** oggetto è ora associato il **RDS. Elemento DataControl**. Il [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) metodo aggiorna l'origine dati con tutte le modifiche di **Recordset** oggetto se la [Server](../../../ado/reference/rds-api/server-property-rds.md) e [Connetti](../../../ado/reference/rds-api/connect-property-rds.md) proprietà vengono comunque impostate.  
   
 ```  
 Sub RDSTutorial6A()  
@@ -59,7 +59,7 @@ DC.
 ...  
 ```  
   
- **Parte B** in alternativa, è possibile aggiornare il server con il [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto specificando una connessione e un **Recordset** oggetto.  
+ **Parte B** in alternativa, è possibile aggiornare il server con il [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto, che specifica una connessione e un **Recordset** oggetto.  
   
 ```  
 Sub RDSTutorial6B()  
