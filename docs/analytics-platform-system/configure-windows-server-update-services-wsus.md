@@ -1,28 +1,21 @@
 ---
-title: Configurare Windows Server Update Services (WSUS) (sistema di piattaforma Analitica)
-author: barbkess
-ms.author: barbkess
+title: Configurare WSUS - Analitica Platform System | Documenti Microsoft
+description: Queste istruzioni consentono di eseguire i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: 41
-ms.openlocfilehash: 31427bc55017cf9c069e8cd4a467dfdb9608ca3f
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: dfddc93672dfeb5840afe4cb97e668e3c12132c3
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="configure-windows-server-update-services-wsus"></a>Configurare Windows Server Update Services (WSUS)
+# <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurare Windows Server Update Services (WSUS) nel sistema della piattaforma Analitica
 Queste istruzioni consentono di eseguire i passaggi per utilizzare la procedura guidata configurazione di Windows Server Update Services (WSUS) per configurare WSUS per il sistema di piattaforma Analitica. È necessario configurare WSUS prima di poter applicare aggiornamenti software al dispositivo. WSUS è già installata nella macchina virtuale VMM del dispositivo.  
   
 Per ulteriori informazioni sulla configurazione di WSUS, vedere il [Guida all'installazione di WSUS dettagliata](http://go.microsoft.com/fwlink/?LinkId=202417) nel sito Web WSUS. Dopo la configurazione di WSUS, vedere [scaricare e applicare gli aggiornamenti di Microsoft &#40;Analitica Platform System&#41; ](download-and-apply-microsoft-updates.md) per avviare un aggiornamento.  
@@ -81,7 +74,7 @@ Per configurare WSUS, è necessario:
   
     Verrà visualizzato il **scelta Server Upstream** pagina. Nella schermata seguente è il punto iniziale della configurazione guidata.  
   
-    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS-sincronizzazione Server Upstream](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  Scegliere il server upstream.  
   
@@ -91,7 +84,7 @@ Per configurare WSUS, è necessario:
   
     1.  Se si sceglie di eseguire la sincronizzazione con Microsoft Update, non è necessario apportare modifiche per il **scelta Server Upstream** pagina. Scegliere **Avanti**.  
   
-        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS-sincronizzazione Server Upstream](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>Per l'aggiornamento da un altro server WSUS  
   
@@ -105,7 +98,7 @@ Per configurare WSUS, è necessario:
   
     3.  Se si tratta di un server di replica, selezionare il **si tratta di una replica del server upstream** casella di controllo. È possibile selezionare sia **Usa SSL per la sincronizzazione delle informazioni sull'aggiornamento** e **si tratta di una replica del server upstream**.  
   
-        ![WSUS Upstream Server Replica](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
+        ![Replica Server Upstream WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4d.png "WSUS_Wiz4d")  
   
     4.  A questo punto, si è finito di lavorare con configurazione del server upstream. Fare clic su **Avanti**, oppure selezionare **specificare un server proxy** nel riquadro di spostamento a sinistra.  
   

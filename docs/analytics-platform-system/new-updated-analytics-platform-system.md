@@ -1,30 +1,27 @@
 ---
-title: Sistema di piattaforma Analitica per i documenti del Server SQL - aggiornato | Documenti Microsoft
+title: Aggiornato - Analitica Platform System docs | Documenti Microsoft
 description: Visualizzare i frammenti di contenuto aggiornato per modificati di recente nella documentazione, sistema di piattaforma Analitica per Microsoft SQL Server.
+author: mzaman1
 manager: craigg
-author: MightyPen
-ms.author: genemi
-ms.topic: article
-ms.custom: UpdArt.exe
-ms.suite: sql
-ms.prod_service: sql-non-specified
-ms.component: aps-pdw
-ms.date: 02/03/2018
-ms.openlocfilehash: f3a8a14c0c01ff99c8ad613bbc9f5e1e01955e7e
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 94b7666476874e610991ebf838ad259f3d0bb85a
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="new-and-recently-updated-analytics-platform-system-for-sql-server"></a>Nuovi e aggiornati: Analitica piattaforma sistema per SQL Server
 
+Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo sito Web di documentazione [Docs.Microsoft.com](http://docs.microsoft.com/). In questo articolo sono visualizzati estratti degli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
 
+Questo articolo viene generato da un programma eseguito periodicamente. In alcuni casi un estratto può apparire con una formattazione imperfetta, o anche come markdown origine dell'articolo. Le immagini non vengono mai visualizzate qui.
 
-Quasi ogni giorno Microsoft aggiorna alcuni articoli esistenti nel relativo [Docs.Microsoft.com](http://docs.microsoft.com/) sito Web di documentazione. In questo articolo consente di visualizzare estratti dagli articoli aggiornati di recente. Potrebbero anche essere elencati collegamenti a nuovi articoli.
-
-In questo articolo viene generato da un programma che viene eseguito di nuovo periodicamente. In alcuni casi un estratto può apparire con formattazione perfetto, o come markdown nell'articolo di origine. Le immagini non vengono mai visualizzate qui.
-
-Aggiornamenti recenti vengono indicati per il seguente intervallo di date e l'oggetto:
+Sono indicati gli aggiornamenti recenti per l'intervallo di date e l'area di interesse seguenti:
 
 
 

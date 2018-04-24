@@ -1,29 +1,22 @@
 ---
-title: PDW e dell'infrastruttura dello strumento componenti fisici (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Componenti fisici accessorio - Analitica Platform System | Documenti Microsoft
+description: I nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e il dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7748d3da-0b7c-4ec6-9c22-4897758ba573
-caps.latest.revision: 17
-ms.openlocfilehash: 64a594c84d7be91939362ff0886a994147b76d93
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="pdw-and-appliance-fabric-physical-components"></a>Componenti fisici PDW e dell'infrastruttura di dispositivo
-I nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e il dispositivo. L'area PDW contiene tutti questi componenti.  
+# <a name="appliance-physical-components---analytics-platform-system"></a>Componenti fisici accessorio - Analitica Platform System
+I nomi e descrizioni per i componenti fisici dell'infrastruttura PDW e il dispositivo. 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
@@ -61,7 +54,7 @@ L'host di macchine virtuali servizi di distribuzione Windows (WDS), che utilizza
   
 Il *appliance_domain*macchina virtuale - WDS viene eseguito su HST01 ed eseguire il failover a HST02. La macchina virtuale di servizi di distribuzione Windows e la macchina virtuale VMM, distribuire Windows in host fisici durante l'installazione dello strumento. Durante il ciclo di vita dello strumento, WDS e VMM eseguire operazioni quali la sostituzione di un host.  
   
-*appliance_domain*-VMM  
+*appliance_domain*- VMM  
 Virtual Machine Manager (VMM) viene eseguito in una macchina virtuale e può eseguire il failover a HST02. System Center per distribuire il sistema operativo negli host fisici ospitati da VMM. VMM offre anche Windows Server Update Services (WSUS) per applicare o rimuovere gli aggiornamenti di Windows in tutti gli host e macchine virtuali.  
   
 *appliance_domain*-AD01, *appliance_domain*-AD02  

@@ -1,36 +1,29 @@
 ---
-title: Configurazione di rete dello strumento (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Configurazione di rete accessorio - Analitica Platform System | Documenti Microsoft
+description: Il dispositivo Analitica piattaforma di strumenti compilato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili da stabilimento del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 8e2b9abe-963d-479b-a4a7-1739fcb3e249
-caps.latest.revision: 27
-ms.openlocfilehash: fcee7a037b3fbffc56e923f9be875074628398c3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2db040c63d3c31f93cd0b72e48422e806aef01e0
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-network-configuration"></a>Configurazione di rete dispositivo
-Lo strumento di SQL Server PDW è creato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili di fabbrica del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.  
+# <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configurazione di rete dello strumento per Analitica Platform System
+Il dispositivo Analitica piattaforma di strumenti compilato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili da stabilimento del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.  
   
 > [!NOTE]  
 > PDW V1 necessari 8 IP esterno (*rivolta a clienti*) gli indirizzi per fornire connettività esterna a ogni controllo rack nodi. 2012 PDW (V2) avanzata delle comunicazioni di rete tramite l'esposizione di ogni componente del dispositivo esternamente tramite gli indirizzi IP. Questo approccio fornisce una struttura più affidabile riduce i costi e aumentando la flessibilità e migliora lo spostamento dei dati, il caricamento dei dati e l'integrazione di Hadoop. Il numero di indirizzi IP necessarie dipende dal numero di nodi nel dispositivo e la presenza di funzionalità, ad esempio HDInsight. Per gestire questo blocco più grande di indirizzi IP, il cliente deve configurare una subnet distinta per PDW. All'interno della subnet, saranno presenti sufficiente spazio degli indirizzi IP (indirizzi fino a 250) per supportare i componenti del rack PDW fino a 5.  
   
 Il **configurazione di rete** pagina consente di visualizzare le impostazioni di rete accessibile pubblicamente per i nodi nel dispositivo di sistema della piattaforma Analitica. Questa pagina è di sola lettura.  
   
-![DWConfig Appliance Network](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
+![Rete dello strumento DWConfig](./media/appliance-network-configuration/SQL_Server_PDW_DWConfig_ApplTopNetwork.png "SQL_Server_PDW_DWConfig_ApplTopNetwork")  
   
 ## <a name="to-update-the-network-configuration-on-your-appliance"></a>Per aggiornare la configurazione di rete del dispositivo  
 Modificare gli indirizzi IP del dominio dell'infrastruttura, il dominio del carico di lavoro e domini di HDInsight modificando il **AplianceInfo.xml** file e quindi eseguendo il programma di installazione. Si tratta di un'operazione offline. HDInsight (se presente) sia PDW aree verranno automaticamente arrestate durante la modifica degli indirizzi IP.  

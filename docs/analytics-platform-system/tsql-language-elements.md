@@ -1,33 +1,22 @@
 ---
-title: Elementi del linguaggio T-SQL - Analitica piattaforma Parallel Data Warehouse di System | Documenti Microsoft
-author: barbkess
-ms.author: barbkess
+title: Elementi del linguaggio T-SQL - Parallel Data Warehouse | Documenti Microsoft
+description: Elementi del linguaggio T-SQL per analitiche della piattaforma di strumenti SQL Server Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
-services: sql-data-warehouse
-documentationcenter: NA
-editor: ''
-ms.assetid: ea0b9a3e-e489-458e-addc-cc153e5cc158
-ms.devlang: NA
-ms.topic: article
-ms.tgt_pltfrm: NA
-ms.workload: data-services
-ms.date: 12/15/2016
-ms.openlocfilehash: fc6d1b69896ffeef0402d0b359f3b978bf43d961
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="language-elements"></a>Elementi del linguaggio
-Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strumenti analitici SQL Server Parallel Data Warehouse (PDW).
+# <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementi del linguaggio T-SQL per Parallel Data Warehouse
+Elementi del linguaggio T-SQL per analitiche della piattaforma di strumenti SQL Server Parallel Data Warehouse (PDW).
 
 ## <a name="core-elements"></a>Elementi principali
 * [convenzioni della sintassi](../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
@@ -35,10 +24,10 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [parole chiave riservate](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Regole di confronto](https://msdn.microsoft.com/library/ff848763.aspx)
 * [Commenti](../t-sql/language-elements/comment-transact-sql.md)
-* [constants](../t-sql/data-types/constants-transact-sql.md)
+* [Costanti](../t-sql/data-types/constants-transact-sql.md)
 * [Tipi di dati](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
+* [Espressioni](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Soluzione alternativa di proprietà di identità](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -235,7 +224,7 @@ Elementi del linguaggio Transact-SQL (T-SQL) per analitiche piattaforma di strum
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
 ## <a name="transactions"></a>Transazioni
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+* [Transazioni](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sessioni di diagnostica
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

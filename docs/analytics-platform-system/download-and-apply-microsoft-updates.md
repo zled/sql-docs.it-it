@@ -1,28 +1,21 @@
 ---
-title: Scaricare e applicare gli aggiornamenti di Microsoft (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Scaricare gli aggiornamenti Microsoft - Analitica piattaforma sistema | Documenti Microsoft
+description: In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalogo di Microsoft Update per Windows Server Update Services (WSUS) e applicare gli aggiornamenti ai server accessorio Analitica Platform System. Microsoft Update installerà tutti gli aggiornamenti per Windows e SQL Server. Windows Server Update Services è installato nella macchina virtuale VMM del dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
-caps.latest.revision: 51
-ms.openlocfilehash: b1bbb32473ff89ee137c0de0fcdb0b3750c31889
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: b98a2be90f222fc2c531c1f1983f8882bdab640e
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="download-and-apply-microsoft-updates"></a>Scaricare e applicare gli aggiornamenti Microsoft
+# <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Scaricare e applicare gli aggiornamenti di Microsoft per Analitica Platform System
 In questo argomento viene illustrato come scaricare gli aggiornamenti dal catalogo di Microsoft Update per Windows Server Update Services (WSUS) e applicare gli aggiornamenti ai server accessorio Analitica Platform System. Microsoft Update installerà tutti gli aggiornamenti per Windows e SQL Server. Windows Server Update Services è installato nella macchina virtuale VMM del dispositivo.  
   
 ## <a name="TOP"></a>Prima di iniziare  

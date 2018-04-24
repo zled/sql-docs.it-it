@@ -1,28 +1,21 @@
 ---
-title: Ripristinare il Database Master (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Ripristinare il database master - Analitica Platform System | Documenti Microsoft
+description: Ripristinare il database master nel sistema della piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 7870021a-0d89-422e-b8ea-1cc95b45c139
-caps.latest.revision: 11
-ms.openlocfilehash: 0f1acb692198873897d5dc26e2074beab4517e44
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="restore-the-master-database"></a>Ripristinare il Database Master
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>Ripristinare il database master nel sistema della piattaforma Analitica
 Il **ripristino Master** pagina di Gestione configurazione SQL Server PDW consente di ripristinare il database master da un backup.  
   
 ## <a name="before-you-begin"></a>Prima di iniziare  

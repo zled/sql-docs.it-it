@@ -8,18 +8,18 @@ ms.date: 02/20/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.workload: On Demand
-ms.openlocfilehash: 7b921f563b769a1a4c6a3edb5089a04050d0df74
-ms.sourcegitcommit: 57f45ee008141ddf009b1c1195442529e0ea1508
+ms.openlocfilehash: 8ec5bd425731b296c4e15c56d654f291bd4c511b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurare SQL Server in Linux con lo strumento mssql conf
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a id="agent"></a> Abilitare SQL Server Agent
 
-Il **sqlagent.enabled** l'impostazione consente [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). Per impostazione predefinita, SQL Server Agent è disabilitato.
+Il **sqlagent.enabled** l'impostazione consente [SQL Server Agent](sql-server-linux-run-sql-server-agent-job.md). Per impostazione predefinita, SQL Server Agent è disabilitato. Se **sqlagent.enabled** non è presente nel file di impostazioni mssql.conf internamente SQL Server si presuppone che SQL Server Agent sia abilitato.
 
 Per modificare questa impostazione, utilizzare la procedura seguente:
 

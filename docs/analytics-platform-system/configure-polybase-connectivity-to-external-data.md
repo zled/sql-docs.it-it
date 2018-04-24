@@ -1,29 +1,22 @@
 ---
-title: Configurare la connettività di PolyBase ai dati esterni (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Configurare la connettività tra PolyBase - Analitica Platform System | Documenti Microsoft
+description: Viene illustrato come configurare PolyBase in Parallel Data Warehouse a cui connettersi Hadoop o in Microsoft Azure archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e Parallel Data Warehouse.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
-caps.latest.revision: 43
-ms.openlocfilehash: 42dc008855ea9de61c67365ac81927808491de13
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: d87ea2b126fde6bf0b18f7a777216f04d45d98f6
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Configurazione della connettività di PolyBase per i dati esterni
-Viene descritto come configurare PolyBase in SQL Server PDW per connettersi a Microsoft Azure o Hadoop archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e SQL Server PDW.  
+Viene illustrato come configurare PolyBase in Parallel Data Warehouse a cui connettersi Hadoop o in Microsoft Azure archiviazione blob le origini dati esterne. Usare PolyBase per eseguire query che si integrano dati da più origini, tra cui Hadoop, archiviazione blob di Azure e Parallel Data Warehouse.  
   
 ### <a name="to-configure-connectivity"></a>Per configurare la connettività  
   

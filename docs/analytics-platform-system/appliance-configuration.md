@@ -1,28 +1,21 @@
 ---
-title: Configurazione dello strumento (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Elenchi di controllo della configurazione - Analitica Platform System | Documenti Microsoft
+description: Fornisce elenchi di controllo per le attività necessarie per configurare il sistema di piattaforma Analitica per il proprio ambiente. Queste attività di configurazione sono necessari prima di poter usare il dispositivo.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 064e7485-7026-4acf-8084-f5d30757d177
-caps.latest.revision: 43
-ms.openlocfilehash: 7500c7e8b0245e1342d97190af8587bf130e6be2
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 37d07fe45768d40b74e3b48739590648867efd94
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="appliance-configuration"></a>Configurazione di dispositivo
+# <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Elenchi di controllo configurazione accessorio per Analitica Platform System
 Fornisce elenchi di controllo per le attività necessarie per configurare il sistema di piattaforma Analitica per il proprio ambiente. Queste attività di configurazione sono necessari prima di poter usare il dispositivo.  
   
 > [!WARNING]  
@@ -36,7 +29,7 @@ Fornisce elenchi di controllo per le attività necessarie per configurare il sis
   
 2.  Assicurarsi di avere le informazioni seguenti, che viene fornite per il fornitore:  
   
-    -   L'indirizzo IP esterno per il nodo controllo PDW (*PDW_region -*CTL01)  
+    -   L'indirizzo IP esterno per il nodo controllo PDW (*PDW_region -* CTL01)  
   
     -   Nome di dominio di applicazione  
   

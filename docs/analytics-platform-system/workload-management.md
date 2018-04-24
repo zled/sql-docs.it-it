@@ -1,28 +1,22 @@
 ---
-title: Gestione del carico di lavoro (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Gestione del carico di lavoro nel sistema della piattaforma Analitica | Documenti Microsoft
+description: Gestione del carico di lavoro nel sistema della piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/12/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 69063b1a-a8f3-453a-83ab-afbe7eb4f463
-caps.latest.revision: 11
-ms.openlocfilehash: 6dde6c1af7b704e5bd1ed0e03516ad94f191ad9d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="workload-management"></a>Gestione del carico di lavoro
+# <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema della piattaforma Analitica
+
 Funzionalità di gestione del SQL Server PDW carico di lavoro consentono agli utenti e agli amministratori di assegnare le richieste di pre-impostare le configurazioni di memoria e concorrenza. Gestione del carico di lavoro per migliorare le prestazioni del carico di lavoro, coerenza o mista, consentendo le richieste senza un'insufficienza delle risorse per tutte le richieste per le risorse appropriate.  
   
 Ad esempio, con le tecniche di gestione del carico di lavoro in SQL Server PDW, è possibile:  
@@ -145,7 +139,7 @@ Istruzioni SQL e operazioni di classi di risorse:
 ## <a name="Limits"></a>Limitazioni e restrizioni  
 Le classi di risorse determinano le allocazioni di memoria e concorrenza.  Non controllano le operazioni di input/output.  
   
-## <a name="Metadata"></a>Metadata  
+## <a name="Metadata"></a>Metadati  
 Viste a gestione dinamica che contengono informazioni sulle classi di risorse e i membri di classe di risorse.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  

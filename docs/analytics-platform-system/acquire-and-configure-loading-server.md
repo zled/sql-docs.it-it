@@ -1,28 +1,22 @@
 ---
-title: Acquisire e configurare un Server di caricamento (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Acquisire e configurare un server di caricamento - Parallel Data Warehouse | Documenti Microsoft
+description: In questo articolo viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Acquisire e configurare un server di caricamento come sistema di Windows non strumento per l'invio di caricamenti di dati per SQL Server Parallel Data Warehouse.
-ms.date: 10/20/2016
-ms.topic: article
-ms.assetid: a434b174-a818-4f73-b218-264619bab664
-caps.latest.revision: 19
-ms.openlocfilehash: 566153d95f2affa5b8c5857d45f53c6b43a80a39
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: a796616ad76ba62ea4174cf22c1517c489305055
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="acquire-and-configure-a-loading-server"></a>Acquisire e configurare un server di caricamento
-In questo argomento viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati di SQL Server Parallel Data Warehouse (PDW).  
+# <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Acquisire e configurare un server di caricamento per Parallel Data Warehouse
+In questo articolo viene descritto come acquisire e configurare un server durante il caricamento di un sistema di Windows non strumento per l'invio di caricamenti di dati per Parallel Data Warehouse (PDW).  
   
 ## <a name="Basics"></a>Nozioni di base  
 Il server di caricamento:  

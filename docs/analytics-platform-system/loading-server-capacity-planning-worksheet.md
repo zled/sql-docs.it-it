@@ -1,27 +1,21 @@
 ---
-title: Il caricamento di capacità pianificazione foglio di lavoro Server (SQL Server PDW)
-author: barbkess
-ms.author: barbkess
+title: Il caricamento di capacità del server pianificazione - Analitica Platform System | Documenti Microsoft
+description: Questo foglio di lavoro Pianificazione della capacità consente di determinare i requisiti per un server durante il caricamento di caricamento dei dati Analitica piattaforma Parallel Data Warehouse di System."
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.suite: sql
-ms.custom: ''
-ms.technology: mpp-data-warehouse
-description: Questo foglio di lavoro Pianificazione della capacità consente di determinare i requisiti per un server di caricamento per il caricamento dei dati in SQL Server PDW.
-ms.date: 01/05/2017
-ms.topic: article
-ms.assetid: df2155be-a624-40ba-9a85-58af708f7ce7
-caps.latest.revision: 9
-ms.openlocfilehash: 73f4b55c82f0b2b5e3c7cb73222a546d3dfc4af6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2f0efd7e0688496d5af7887431ca00ae683c874f
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="loading-server-capacity-planning-worksheet"></a>Il caricamento di foglio di lavoro di pianificazione della capacità server
+# <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Caricamento dei server capacità pianificazione foglio di lavoro per Analitica Platform System
 Questo foglio di lavoro Pianificazione della capacità consente di determinare i requisiti per un server di caricamento per il caricamento dei dati in SQL Server PDW. Consente di creare il piano per l'acquisto o provisioning esistente durante il caricamento di server.  
   
 ## <a name="worksheet-notes"></a>Note di foglio di lavoro

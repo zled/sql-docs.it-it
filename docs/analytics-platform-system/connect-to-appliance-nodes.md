@@ -1,29 +1,22 @@
 ---
-title: Connettersi a nodi dello strumento (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Connettersi al dispositivo nodi - Analitica Platform System | Documenti Microsoft
+description: Questo articolo illustra i vari modi per connettersi a ogni nodo del dispositivo di sistema della piattaforma Analitica.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: f975aa91-c816-4b29-89bf-923ab5b4abb4
-caps.latest.revision: 19
-ms.openlocfilehash: 9b95bc8285625170c9c9b4a91eeae99dcd3907a5
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d7d634023c5fc3d0a6f522b5f60933ce3b96272
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="connect-to-appliance-nodes"></a>Connettersi a nodi dello strumento
-Questo argomento illustra i vari modi per connettersi a ogni nodo del dispositivo di sistema della piattaforma Analitica.  
+# <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Connessione a appliance nodi in Analitica Platform System
+Questo articolo illustra i vari modi per connettersi a ogni nodo del dispositivo di sistema della piattaforma Analitica.  
   
 ## <a name="connecting-with-hadoop"></a>Connessione Hadoop  
 Prima di usare Hadoop con SQL Server PDW, chiedere all'amministratore di dispositivo per installare l'ambiente di Runtime Java su SQL Server PDW. Per istruzioni, vedere [configurare la connettività di PolyBase ai dati esterni &#40;Analitica Platform System&#41; ](configure-polybase-connectivity-to-external-data.md) nella Guida operativa di dispositivo.  

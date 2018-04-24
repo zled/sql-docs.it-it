@@ -1,29 +1,22 @@
 ---
-title: Determinare quale nodo del Cluster non è riuscita (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Determinare il nodo di cluster non riuscita - Analitica Platform System | Documenti Microsoft
+description: In questo articolo viene descritto come determinare il nome del nodo Analitica piattaforma di strumenti che non è riuscita dopo un failover del cluster si è verificato ed è stato generato un avviso di failover del cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 1e001117-a1b6-4357-bf25-e85aba3f1cf0
-caps.latest.revision: 21
-ms.openlocfilehash: 201d11f7c3e5e7d50e1138ab41edf4fbdb60a6b9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 031c8033e91d7a7f74ca8c4409bc02296a22ebcf
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="determine-which-cluster-node-failed"></a>Determinare il nodo del Cluster non riuscita
-In questo argomento viene descritto come determinare il nome del nodo che non è riuscita dopo un failover del cluster si è verificato e generato un avviso di failover del cluster SQL Server PDW. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.  
+# <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinare quale cluster nodo non è riuscita per Analitica Platform System
+In questo argomento viene descritto come determinare il nome del nodo Analitica piattaforma di strumenti che non è riuscita dopo un failover del cluster si è verificato ed è stato generato un avviso di failover del cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.  
   
 ## <a name="Background"></a>Sfondo  
 Per la disponibilità elevata in SQL Server PDW, il nodo di controllo e i nodi di calcolo sono configurati come componenti attivi o passivi del cluster di failover di Windows. Quando un server attivo non riesce a rispondere alle richieste di sistema critiche, il server passivo viene eseguito il failover ed esegue le funzioni del server che non è riuscita.  

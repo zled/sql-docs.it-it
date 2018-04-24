@@ -1,28 +1,21 @@
 ---
-title: Informazioni sugli avvisi della Console di amministrazione (Analitica piattaforma sistema)
-author: barbkess
-ms.author: barbkess
+title: Avvisi della Console di amministrazione - Analitica Platform System | Documenti Microsoft
+description: Informazioni sugli avvisi di Console di amministrazione in Analitica Platform System (AP).
+author: mzaman1
 manager: craigg
-ms.prod: analytics-platform-system
-ms.prod_service: mpp-data-warehouse
-ms.service: ''
-ms.component: ''
-ms.technology: mpp-data-warehouse
-ms.custom: ''
-ms.date: 01/05/2017
-ms.reviewer: na
-ms.suite: sql
-ms.tgt_pltfrm: na
-ms.topic: article
-ms.assetid: 0c4aa221-55c2-44cf-9eaa-3bf7bd55e51a
-caps.latest.revision: 10
-ms.openlocfilehash: 51e7260a3c1c920d102320bc288167001da43921
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.prod: sql
+ms.technology: data-warehouse
+ms.topic: conceptual
+ms.date: 04/17/2018
+ms.author: murshedz
+ms.reviewer: martinle
+ms.openlocfilehash: 2d1473e3ac769cd70c6985e15efdb59dfc1039ef
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="understanding-admin-console-alerts"></a>Informazioni sugli avvisi di Console di amministrazione
+# <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Informazioni sugli avvisi di Console di amministrazione in Analitica Platform System
 Gli avvisi vengono visualizzati nell'accessorio **Console di amministrazione** e **System Center Operations Manager** (SCOM). Utilizzare questo elenco di avvisi per identificare gli avvisi che richiedono un'ulteriore analisi.  
   
 Per informazioni sulla connessione per il **Console di amministrazione** utilizzando Internet Explorer, vedere [monitorare il dispositivo tramite la Console di amministrazione &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md). Per informazioni sulle **SCOM**, vedere [monitorare l'accessorio by Using System Center Operations Manager &#40;Analitica Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
