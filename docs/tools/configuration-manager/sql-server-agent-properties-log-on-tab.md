@@ -1,26 +1,26 @@
 ---
-title: "Proprietà SQL Server Agent (scheda accesso) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà SQL Server Agent (scheda accesso) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f74928db1958fbb8ec607bac83b45612a6129e46
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
 ---
@@ -36,7 +36,7 @@ Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà SQL Serv
  Specificare un account di sistema locale che non richiede una password. Tuttavia, a seconda dei privilegi concessi, l'account di sistema locale può impedire le interazioni tra il servizio e gli altri server.  
   
  **Account seguente**  
- Specificare un account utente locale o di dominio che utilizza l’autenticazione di Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)]consiglia di utilizzare un account utente di dominio con diritti minimi per i servizi. Per ulteriori informazioni sulla selezione di un account, vedere l'argomento "Impostazione di account di Windows per i servizi" nella documentazione online.  
+ Specificare un account utente locale o di dominio che utilizza l’autenticazione di Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] consiglia di utilizzare un account utente di dominio con diritti minimi. Per ulteriori informazioni sulla selezione di un account, vedere l'argomento "Impostazione di account di Windows per i servizi" nella documentazione online.  
   
  **Nome account**  
  Specificare il nome dell'account utente locale o di dominio.  

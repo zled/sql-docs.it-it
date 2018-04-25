@@ -2,7 +2,7 @@
 title: Elenco dei bug corretti | Documenti Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -20,11 +20,11 @@ author: v-makouz
 ms.author: genemi
 manager: kenvh
 ms.workload: Active
-ms.openlocfilehash: 5187e07d18c6a967ce0a8fadbac370273684c9dc
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 58da69ed6c4b7b046f8d1bc1ddf4e23b71b99a29
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-bugs-fixed"></a>Elenco di bug risolti
 
@@ -36,7 +36,7 @@ Questa pagina contiene un elenco di bug in ogni versione, a partire da [!INCLUDE
 - Fissa un arresto anomalo del sistema errore 22003 in SQLGetData quando le dimensioni del buffer passato sono minore, i dati recuperati (Windows)
 - Messaggi di errore ADAL troncati fissa
 - Correzione di un bug raro in Windows a 32 bit quando la conversione mobile numero a virgola in un intero
-- Non risolto un problema in cui verrebbe inserimento double nel campo decimale con crittografia sempre attiva in alcun errore di troncamento di dati restituito
+- Risolto un problema in cui l'inserimento di double nel campo decimale con crittografia sempre attiva in restituirebbe errore di troncamento dei dati
 - Fissa un avviso nel programma di installazione MacOS
 - Fisso l'invio di stato non corretto a SQL Server durante il tentativo di ripristino della sessione quando resilienza di connessione sia il pool di connessioni sono abilitati, causando sessione da eliminare dal Server
 

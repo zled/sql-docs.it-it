@@ -1,29 +1,30 @@
 ---
 title: Filtrare eventi in una traccia (SQL Server Profiler) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: e6d6716cfcdf8bd6ce495f8aefe0e0df34fddb1c
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 01/17/2018
   
 3.  Per applicare un filtro, fare clic sull'operatore di confronto e immettere il valore da utilizzare per il filtro.  
   
-4.  Scegliere **OK**.  
+4.  Fare clic su **OK**.  
   
  **Considerazioni:**  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 01/17/2018
   
     -   Il formato della data immessa sia uguale al seguente: `YYYY/MM/DD HH:mm:sec`.  
   
-         OPPURE  
+         oppure  
   
     -   L'opzione**Visualizza valori di data e ora in base alle impostazioni internazionali** sia selezionata nella finestra di dialogo **Opzioni generali** . Per visualizzare la finestra di dialogo **Opzioni generali** , in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **Tools** menu, click **Option**.  
   

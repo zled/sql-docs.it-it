@@ -1,26 +1,26 @@
 ---
-title: "Proprietà SQL Server Browser (scheda servizio) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà SQL Server Browser (scheda servizio) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98ace9b0-72d5-4b72-9b7b-11fbc490981a
-caps.latest.revision: 
+caps.latest.revision: 16
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: a452f7c408853994044a27de165e867449c60363
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
 ---
@@ -50,7 +50,7 @@ Il programma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser v
  Visualizza l'ID di processo di Windows.  
   
  **Tipo di servizio**  
- Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installa diversi servizi.  
+ Visualizza il tipo di servizio fornito ai processi chiamanti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono installati diversi servizi.  
   
  **Modalità di avvio**  
  Impostare una delle opzioni seguenti per il servizio:  

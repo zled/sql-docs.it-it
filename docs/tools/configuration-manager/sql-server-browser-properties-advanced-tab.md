@@ -1,26 +1,26 @@
 ---
-title: "Proprietà SQL Server Browser (scheda Avanzate) | Documenti Microsoft"
-ms.custom: 
+title: Proprietà SQL Server Browser (scheda Avanzate) | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
-caps.latest.revision: 
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 5017cfa180e81bc0b20b3cd115504a99436bba7b
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: MTE
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
 ---
