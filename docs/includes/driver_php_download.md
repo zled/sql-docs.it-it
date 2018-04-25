@@ -1,1 +1,1 @@
-![Download](../ssdt/media/download.png)[Scaricare il driver PHP](https://www.microsoft.com/download/details.aspx?id=55642)
+![Download](../ssdt/media/download.png)[Scaricare il driver PHP](https://go.microsoft.com/fwlink/?linkid=871846)
