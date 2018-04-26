@@ -24,7 +24,7 @@ ms.lasthandoff: 04/16/2018
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di febbraio*:
+Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di marzo*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
@@ -137,7 +137,7 @@ Se[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] è stato installato 
 - Windows Server 2008 R2 (64 bit)
 
 ### <a name="macos"></a>macOS
-- macOS 10.13 Sierra elevata
+- macOS 10.13 High Sierra
 - macOS 10.12 Sierra
 
 ### <a name="linux"></a>Linux
