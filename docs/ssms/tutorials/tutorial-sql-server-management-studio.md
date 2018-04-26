@@ -25,16 +25,16 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
-caps.latest.revision: ''
+caps.latest.revision: 22
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e6d1650a126991292680a40a0faa76f5ae8ffa42
-ms.sourcegitcommit: ccb05cb5a4cccaf7ffa9e85a4684fa583bab914e
+ms.openlocfilehash: 879326583f507b44a23955a42857fd6a8cea911b
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Esercitazioni per SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,24 +52,24 @@ Di seguito gli argomenti trattati dalle esercitazioni:
   
 - [Esercitazione: Connettersi ed eseguire query in SQL Server con SSMS](connect-query-sql-server.md)
 
-    In questa sezione viene illustrato come connettersi all'istanza di SQL Server. Sono disponibili anche informazioni su alcuni comandi Transact-SQL (T-SQL) di base per creare un nuovo database ed eseguire una query. 
+    In questa esercitazione si apprende come connettersi all'istanza di SQL Server. Sono disponibili anche informazioni su alcuni comandi Transact-SQL (T-SQL) di base per creare un nuovo database ed eseguire una query. 
 
 - [Esercitazione: Scripting di oggetti in SSMS](scripting-ssms.md)
 
-    In questa sezione viene illustrato come creare lo script di vari oggetti in SSMS, tra cui database e query. 
+    In questa esercitazione si apprende come creare lo script di vari oggetti in SSMS, tra cui database e query. 
 
 - [Esercitazione: Uso di modelli in SSMS](templates-ssms.md)
    
-    In questa sezione viene illustrato come usare i modelli preesistenti in SSMS. 
+    In questa esercitazione si apprende come usare i modelli preesistenti in SSMS. I modelli sono una funzionalità poco nota che consente di archiviare un certo numero di frammenti di codice Transact-SQL per varie attività di amministrazione dei database. 
 
 - [Esercitazione: Configurazione di SSMS](ssms-configuration.md)
 
-    In questa sezione vengono illustrate le nozioni di base per la configurazione dell'ambiente SSMS. 
+    In questa esercitazione si apprendono le nozioni di base sulla configurazione dell'ambiente di SQL Server Management Studio, ad esempio la modifica del layout dell'ambiente. Questa esercitazione spiega anche che cosa sono i diversi componenti di SQL Server Management Studio. 
   
 
 - [Esercitazione: Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)
 
-    In questa sezione vengono illustrati suggerimenti e consigli aggiuntivi per l'uso di SSMS. L'esercitazione include gli argomenti seguenti:
+    In questa esercitazione vengono illustrati suggerimenti e consigli aggiuntivi per l'uso di SSMS. L'esercitazione include gli argomenti seguenti:
     - Creazione di commenti e rimozione dei commenti sul testo
     - Rientro del testo
     - Filtro degli oggetti in Esplora oggetti
