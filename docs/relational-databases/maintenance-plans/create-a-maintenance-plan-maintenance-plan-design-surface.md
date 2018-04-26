@@ -2,7 +2,7 @@
 title: Creare un piano di manutenzione (area di progettazione del piano di manutenzione) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: maintenance-plans
@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30a9e1d1a02e44de418a7d6d8de4acfe694e83f2
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 738e4846e7dcead475b8c8b5924e7b8fb359f97a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Creare un piano di manutenzione (area di progettazione del piano di manutenzione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/10/2018
   
      [Limitazioni e restrizioni](#Restrictions)  
   
-     [Sicurezza](#Security)  
+     [Security](#Security)  
   
 -   [Creazione di un piano di manutenzione tramite l'area di progettazione del piano di manutenzione](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/10/2018
   
 ###  <a name="Security"></a> Sicurezza  
   
-####  <a name="Permissions"></a> Autorizzazioni  
+####  <a name="Permissions"></a> Permissions  
  Per creare o gestire piani di manutenzione, è necessario essere membro del ruolo predefinito del server **sysadmin** . In Esplora oggetti il nodo **Piani di manutenzione** viene visualizzato solo per gli utenti membri del ruolo predefinito del server **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilizzo dell'area di progettazione del piano di manutenzione  
@@ -109,7 +109,7 @@ ms.lasthandoff: 04/10/2018
      **Nome**  
      Nome del sottopiano.  
   
-     **Description**  
+     **Descrizione**  
      Breve descrizione del sottopiano.  
   
      **Pianificazione**  

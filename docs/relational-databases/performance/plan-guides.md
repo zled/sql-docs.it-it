@@ -1,16 +1,16 @@
 ---
 title: Guide di piano | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-plan-guides
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - TEMPLATE plan guide
@@ -23,19 +23,20 @@ helpviewer_keywords:
 - plan guides [SQL Server]
 - USE PLAN query hint
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
-caps.latest.revision: 
+caps.latest.revision: 52
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a0414a27a14e937e7c58ca6ba74de3b6bfd6a2b0
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 85faf3349a8b2d0e746da00b52983dc28cd7e71a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="plan-guides"></a>Guide di piano
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Le guide di piano consentono di ottimizzare le prestazioni delle query quando non è possibile o non si desidera modificare direttamente il testo della query corrente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint per la query o di un piano di query fisso. Le guide di piano risultano utili quando le prestazioni di un piccolo subset di query eseguite su un database di terze parti sono inferiori a quelle previste. In una guida di piano, viene specificata l'istruzione Transact-SQL da ottimizzare e la clausola OPTION che contiene gli hint per la query da utilizzare o un piano di query specifico da utilizzare per ottimizzare la query. Quando viene eseguita la query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associa l'istruzione Transact-SQL alla guida di piano e, in fase di esecuzione, associa la clausola OPTION alla query oppure utilizza il piano di query specificato.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Le guide di piano consentono di ottimizzare le prestazioni delle query quando non è possibile o non si desidera modificare direttamente il testo della query corrente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Le guide di piano influiscono sull'ottimizzazione delle query mediante l'aggiunta di hint per la query o di un piano di query fisso. Le guide di piano risultano utili quando le prestazioni di un piccolo subset di query eseguite su un database di terze parti sono inferiori a quelle previste. In una guida di piano, viene specificata l'istruzione Transact-SQL da ottimizzare e la clausola OPTION che contiene gli hint per la query da utilizzare o un piano di query specifico da utilizzare per ottimizzare la query. Quando viene eseguita la query, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associa l'istruzione Transact-SQL alla guida di piano e, in fase di esecuzione, associa la clausola OPTION alla query oppure utilizza il piano di query specificato.  
   
  Il numero totale di guide di piano che è possibile creare è limitato solo dalle risorse di sistema disponibili. È comunque consigliabile utilizzare le guide di piano per le sole query critiche di cui si desidera migliorare o stabilizzare le prestazioni. Le guide di piano non vanno utilizzate per modificare la maggior parte del carico di query di un'applicazione distribuita.  
   

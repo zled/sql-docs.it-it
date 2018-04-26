@@ -1,34 +1,35 @@
 ---
 title: Classe di evento CursorOpen | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - CursorOpen event class
 ms.assetid: d39262c0-0035-42fc-b989-7a16ae0c7345
-caps.latest.revision: 
+caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54a817a292004057b10b07422c4b5e4b94d5d8bf
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 7691aa24d4034bb5f931cdabfb0ec7d11b2e70e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **CursorOpen** descrive gli eventi di apertura di cursore che si verificano nei cursori API. Gli eventi di apertura di cursore si verificano quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] definisce l'istruzione SQL da associare al cursore e le opzioni di cursore e quindi popola il cursore.  
+  La classe di evento **CursorOpen** descrive gli eventi di apertura di cursore che si verificano nei cursori API. Gli eventi di apertura di cursore si verificano quando [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] definisce l'istruzione SQL da associare al cursore e le opzioni di cursore e quindi popola il cursore.  
   
  Includere la classe di evento **CursorOpen** nelle tracce che registrano le prestazioni dei cursori. Quando si include in una traccia la classe di evento **CursorOpen** , l'overhead generato dipende dalla frequenza di utilizzo dei cursori nel database durante l'esecuzione della traccia. Se si utilizzano diffusamente i cursori, l'esecuzione della traccia potrebbe ridurre in modo significativo le prestazioni.  
   

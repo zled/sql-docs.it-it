@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Blocked Process Report | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Blocked Process Report event class
 ms.assetid: e8acb408-938d-4b36-81dd-04f087410cc5
-caps.latest.revision: 
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 36d8b302c134bdb18e55f69eeeb7bb916d825929
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 96b2dd7107ce1b7de95dd74df895d22e5dfab82e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Blocked Process Report** indica che un'attività è stata bloccata per un periodo di tempo più lungo di quello specificato. Questa classe di evento non include attività di sistema o attività in attesa di risorse per le quali non sono rilevabili i deadlock.  
+  La classe di evento **Blocked Process Report** indica che un'attività è stata bloccata per un periodo di tempo più lungo di quello specificato. Questa classe di evento non include attività di sistema o attività in attesa di risorse per le quali non sono rilevabili i deadlock.  
   
  Per configurare la soglia e la frequenza relative alla generazione di report, utilizzare il comando **sp_configure** per impostare l'opzione **blocked process threshold** . Per eseguire questa operazione occorrono pochi secondi. Per impostazione predefinita, non vengono generati report relativi ai processi bloccati. Per altre informazioni sull'opzione **blocked process threshold**, vedere [Opzione di configurazione del server blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   

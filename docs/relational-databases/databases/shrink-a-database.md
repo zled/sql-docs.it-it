@@ -2,7 +2,7 @@
 title: Compattare un database | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
 ms.component: databases
@@ -26,14 +26,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6b706efb7e6a3939f89de750a80c0abe1eb2c1da
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: df353c4345de034394a11c14ead1c359db525d4f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shrink-a-database"></a>Compattare un database
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Questo argomento illustra come compattare un database mediante Esplora oggetti in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] usando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  In questo argomento si illustra come compattare un database mediante Esplora oggetti in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Compattando i file di dati si recupera spazio spostando le pagine di dati dalla fine del file allo spazio non occupato più vicino all'inizio del file. Quando alla fine del file viene creato sufficiente spazio libero, le pagine di dati possono essere deallocate e restituite al file system.  
   
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/18/2018
   
 ###  <a name="Recommendations"></a> Indicazioni  
   
--   Per visualizzare la quantità corrente di spazio disponibile, cioè non allocato, nel database. Per altre informazioni, vedere [Visualizzare le informazioni sullo spazio allocato ai dati e ai log per un database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
+-   Per visualizzare la quantità corrente di spazio disponibile, cioè non allocato, nel database. Per altre informazioni, vedere [Display Data and Log Space Information for a Database](../../relational-databases/databases/display-data-and-log-space-information-for-a-database.md)  
   
 -   Quando si pianifica la compattazione di un database, considerare le informazioni seguenti:  
   

@@ -2,7 +2,7 @@
 title: Importare dati in formato nativo e carattere da versioni precedenti di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: import-export
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b80ad93883e5ef5d1fa907116e2c4fa5b4a264f5
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e37b412b3cbb435c6e037472b6286ac3261039b1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importare dati in formato nativo e carattere da versioni precedenti di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,11 +54,11 @@ ms.lasthandoff: 03/20/2018
 |**nvarchar(max)**|**ntext**|**ntext**|**ntext**|  
 |**varbinary(max)**|**image**|**image**|**image**|  
 |XML|**ntext**|**ntext**|**ntext**|  
-|UDT\*\*|**image**|**image**|**image**|  
+|UDT**|**image**|**image**|**image**|  
   
  *Questo tipo viene supportato a livello nativo.  
   
- \*\*UDT indica un tipo definito dall'utente.  
+ **UDT indica un tipo definito dall'utente.  
   
 ## <a name="exporting-using-v-80"></a>Esportazione utilizzando –V 80  
  Quando si esportano globalmente i dati usando l'opzione **–V80** , i dati di tipo **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, XML e di tipo definito dall'utente (UDT) in modalità nativa vengono archiviati con un prefisso a 4 byte come i dati **text**, **image**e **ntext** , anziché con un prefisso a 8 byte che rappresenta l'impostazione predefinita per [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e versioni successive.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 03/20/2018
   
 -   [Utilizzo del formato carattere per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [Utilizzo del formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [Usare il formato nativo per importare o esportare dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
 -   [Utilizzo del formato carattere Unicode per l'importazione o l'esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   

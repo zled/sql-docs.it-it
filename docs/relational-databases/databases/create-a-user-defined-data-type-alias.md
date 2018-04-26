@@ -1,16 +1,16 @@
 ---
 title: Creare un alias del tipo di dati definito dall'utente | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: databases
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.userdefineddatatype.general.f1
@@ -18,20 +18,21 @@ f1_keywords:
 helpviewer_keywords:
 - alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
-caps.latest.revision: 
+caps.latest.revision: 27
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a2acca73084c6815410f9e0f151ab12c7d5e0b3
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 435137451447ffa28f95befc098e1a1eb9358571
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Creare un alias del tipo di dati definito dall'utente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-In questo argomento si illustra come creare un nuovo alias del tipo di dati definito dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+  In questo argomento si illustra come creare un nuovo alias del tipo di dati definito dall'utente in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **Contenuto dell'argomento**  
   
@@ -76,7 +77,7 @@ In questo argomento si illustra come creare un nuovo alias del tipo di dati defi
      **Lunghezza/Precisione**  
      Consente di visualizzare la lunghezza o la precisione del tipo di dati. L'opzione**Lunghezza** viene applicata ai tipi di dati carattere definiti dall'utente mentre **Precisione** solo ai tipi di dati numerici definiti dall'utente. L'etichetta varia a seconda del tipo di dati selezionato in precedenza. Se la lunghezza o la precisione del tipo di dati selezionato è fissa, la casella non è modificabile.  
   
-     La lunghezza non viene visualizzata per tipi di dati **nvarchar(max)**, **varchar(max)**o **varbinary(max)** .  
+     La lunghezza non viene visualizzata per tipi di dati **nvarchar(max)**, **varchar(max)** o **varbinary(max)** .  
   
      **Nome**  
      Se si crea un nuovo alias del tipo di dati definito dall'utente, digitare un nome univoco da utilizzare nel database per rappresentare il tipo di dati definito dall'utente. Il numero massimo di caratteri deve corrispondere al tipo di dati del sistema **sysname** . Il nome di un alias del tipo di dati definito dall'utente esistente non può essere modificato.  
@@ -102,7 +103,7 @@ In questo argomento si illustra come creare un nuovo alias del tipo di dati defi
   
      Per i tipi di dati **nchar** e **nvarchar** il valore di archiviazione è sempre il doppio del valore specificato in **Lunghezza**.  
   
-     L'archiviazione non viene visualizzata per tipi di dati **nvarchar(max)**, **varchar(max)**o **varbinary(max)** .  
+     L'archiviazione non viene visualizzata per tipi di dati **nvarchar(max)**, **varchar(max)** o **varbinary(max)** .  
   
 2.  Nella casella **Schema** della finestra di dialogo **Nuovo tipo di dati definito dall'utente** digitare lo schema proprietario per questo alias del tipo di dati oppure usare il pulsante sfoglia per selezionare lo schema.  
   

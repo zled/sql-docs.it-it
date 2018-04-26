@@ -1,34 +1,35 @@
 ---
 title: Classe di evento FT:Crawl Aborted | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Crawl Aborted event class
 ms.assetid: eead8ea6-5051-4689-ab30-4dfbfda01fb9
-caps.latest.revision: 
+caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 647278ea5005e44cad54d4023ae3bacdd9b061ca
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 473b6827cc18e4ed82ccdd46b9a18220a289e346
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ftcrawl-aborted-event-class"></a>Classe di evento FT:Crawl Aborted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **FT:Crawl Aborted** indica che si è verificata un'eccezione durante una ricerca per indicizzazione full-text. In genere, l'errore causa l'arresto della ricerca. Per ulteriori informazioni sull'errore, controllare il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows o il log di tipo ricerca per indicizzazione.  
+  La classe di evento **FT:Crawl Aborted** indica che si è verificata un'eccezione durante una ricerca per indicizzazione full-text. In genere, l'errore causa l'arresto della ricerca. Per ulteriori informazioni sull'errore, controllare il registro eventi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows o il log di tipo ricerca per indicizzazione.  
   
 ## <a name="ftcrawl-aborted-event-class-data-columns"></a>Colonne di dati della classe di evento FT:Crawl Aborted  
   

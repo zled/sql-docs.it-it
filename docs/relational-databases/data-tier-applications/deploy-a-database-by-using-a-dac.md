@@ -1,16 +1,16 @@
 ---
 title: Distribuire un database tramite un'applicazione livello dati | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: data-tier-applications
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-data-tier-apps
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.dbdeployment.settings.f1
@@ -22,19 +22,20 @@ helpviewer_keywords:
 - deploy database wizard
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
-caps.latest.revision: 
+caps.latest.revision: 12
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 576cfec0d53ea575f1a8ad70ad2b5b36dc17e5aa
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Distribuire un database tramite un'applicazione livello dati
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  Usare la procedura guidata **Distribuisci database in SQL Azure** per distribuire un database tra un'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] e un server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] o tra due server [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Prima di iniziare  
  Nella procedura guidata viene utilizzato un file di archivio BACPAC dell'applicazione livello dati per distribuire sia i dati sia le definizioni degli oggetti di database. Vengono eseguite un'operazione di esportazione dell'applicazione livello dati dal database di origine e un'importazione dell'applicazione livello dati nella destinazione.  

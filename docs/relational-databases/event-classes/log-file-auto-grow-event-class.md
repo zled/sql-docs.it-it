@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Log File Auto Grow | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Log File Auto Grow event class
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6efa82b3f566ab866969649e615d8cf09c1eea05
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9ca46bfe52bc3a6c764557ae002b63090e65b53d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **Log File Auto Grow** indica che le dimensioni del file di log sono aumentate automaticamente. L'evento non viene generato se le dimensioni del file di log vengono incrementate in modo esplicito tramite ALTER DATABASE.  
+  La classe di evento **Log File Auto Grow** indica che le dimensioni del file di log sono aumentate automaticamente. L'evento non viene generato se le dimensioni del file di log vengono incrementate in modo esplicito tramite ALTER DATABASE.  
   
  Includere la classe di evento **Log File Auto Grow** nelle tracce che eseguono il monitoraggio dell'aumento di dimensioni del file di log. Se questa classe di evento viene inclusa in una traccia, l'overhead generato sarà ridotto a meno che le dimensioni del file di log vengano aumentate automaticamente di frequente.  
   

@@ -1,34 +1,35 @@
 ---
 title: Classe di evento OLEDB Call | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - OLEDB Call event class
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
-caps.latest.revision: 
+caps.latest.revision: 37
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a5eb28eace8c8aa1e5f37e952207b6cf18543251
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: b7b7e2d268710a5df4afeed7bb352fefd41030ce
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento **OLEDB Call** viene generata quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la chiamata di un provider OLE DB per la richiesta di query distribuite e stored procedure remote.  
+  La classe di evento **OLEDB Call** viene generata quando in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita la chiamata di un provider OLE DB per la richiesta di query distribuite e stored procedure remote.  
   
  È necessario includere questa classe di evento **OLEDB Call** nelle tracce per il monitoraggio delle sole chiamate che non richiedono dati o delle chiamate di elementi diversi dal metodo **QueryInterface** . Quando la classe di evento **OLEDB Call** viene inclusa in una traccia, l'overhead generato dipende dalla frequenza delle chiamate OLE DB nel database durante l'esecuzione della traccia. Nel caso di chiamate frequenti, è possibile che durante l'esecuzione della traccia le prestazioni risultino notevolmente ridotte.  
   

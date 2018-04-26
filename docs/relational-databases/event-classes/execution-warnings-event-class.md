@@ -1,34 +1,35 @@
 ---
 title: Classe di evento Execution Warnings | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: event-classes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Execution Warnings event class
 ms.assetid: 2c69e321-dc9a-4483-886d-81350adae2be
-caps.latest.revision: 
+caps.latest.revision: 35
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fbbb94df2b55743b10061b51a0eab5d477b26719
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 62f8eaeb2aefce674b03341aecb2ecfdf7610895
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings - classe di evento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
+  La classe di evento Execution Warnings indica avvisi di concessione di memoria che sono stati generati durante l'esecuzione di un'istruzione o di una stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . È possibile monitorare questa classe di evento per determinare se per l'elaborazione delle query è stata necessaria un'attesa di un secondo o maggiore oppure se il tentativo iniziale di utilizzo della memoria non è riuscito. Le informazioni sui tempi di attesa delle query sono utili per rilevare problemi di contesa presenti nel sistema e che possono influire sulle prestazioni.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Colonne di dati della classe di evento Execution Warnings  
   
