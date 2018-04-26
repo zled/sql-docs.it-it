@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75bc2c0256697c030fa369487407483de63c0c62
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: aeab15ee29bcc56e0814d4976bcb2e5239f818ff
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,12 +54,12 @@ ms.lasthandoff: 04/16/2018
 |user_object_reserved_page_count|**bigint**|Numero totale di pagine allocate da extent uniformi per gli oggetti utente nel database. Sono incluse nel conteggio le pagine non utilizzate da un extent allocato.<br /><br /> Le pagine IAM non vengono incluse perché vengono sempre allocate dagli extent misti. Le pagine PFS vengono incluse se vengono allocate da un extent uniforme.<br /><br /> È possibile utilizzare la colonna total_pages nella [allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) vista per restituire il conteggio delle pagine riservate di ogni unità di allocazione nell'oggetto utente del catalogo. Si noti, tuttavia, che la colonna total_pages include le pagine IAM.|  
 |internal_object_reserved_page_count|**bigint**|Numero totale di pagine negli extent uniformi allocate per gli oggetti interni nel file. Sono incluse nel conteggio le pagine non utilizzate da un extent allocato.<br /><br /> Le pagine IAM non vengono incluse perché vengono sempre allocate dagli extent misti. Le pagine PFS vengono incluse se vengono allocate da un extent uniforme.<br /><br /> Non esistono viste del catalogo o oggetti a gestione dinamica che restituiscono il conteggio delle pagine di ogni oggetto interno.|  
 |mixed_extent_page_count|**bigint**|Numero totale di pagine allocate e non allocate negli extent misti allocati nel file. Gli extent misti contengono le pagine allocate a oggetti diversi. In questo conteggio sono incluse tutte le pagine IAM nel file.|
-|modified_extent_page_count|**bigint**|**A partire da**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]<br /><br />Numero totale di pagine modificate allocati extent del file dall'ultimo backup completo del database. Il conteggio delle pagine modificate è utilizzabile per tenere traccia delle modifiche differenziali del database dall'ultimo backup completo per decidere se è utile quando un backup differenziale.|
+|modified_extent_page_count|**bigint**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Numero totale di pagine modificate allocati extent del file dall'ultimo backup completo del database. Il conteggio delle pagine modificate può essere utilizzato per tenere traccia delle quantità delle modifiche differenziali del database dall'ultimo backup completo, per decidere se è necessario un backup differenziale.|
 |pdw_node_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
 |distribution_id|**int**|**Si applica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numerico univoco associata alla distribuzione.|  
   
 ## <a name="remarks"></a>Osservazioni  
- I conteggi di pagine vengono sempre eseguiti a livello di extent. I relativi valori saranno pertanto sempre multipli di otto. Agli extent contenenti le pagine di allocazione GAM (Global Allocation Map, mappa di allocazione globale) e SGAM (Shared Global Allocation Map, mappa di allocazione globale condivisa) vengono allocati extent uniformi. Non vengono inclusi nei conteggi di pagine precedentemente descritti.  
+ I conteggi di pagine vengono sempre eseguiti a livello di extent. I relativi valori saranno pertanto sempre multipli di otto. Agli extent contenenti le pagine di allocazione GAM (Global Allocation Map, mappa di allocazione globale) e SGAM (Shared Global Allocation Map, mappa di allocazione globale condivisa) vengono allocati extent uniformi. Non vengono inclusi nei conteggi di pagine precedentemente descritti. Per ulteriori informazioni sulle pagine ed extent, vedere [pagine e Guida all'architettura di extent](../../relational-databases/pages-and-extents-architecture-guide.md). 
   
  Il contenuto dell'archivio delle versioni corrente è [tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md). Viene tenuto traccia delle pagine dell'archivio delle versioni a livello di file anziché a livello di sessione o attività in quanto tali pagine sono risorse globali. Una sessione può generare versioni, ma le versioni non possono essere rimosse al termine della sessione. È necessario considerare l'operazione di pulizia dell'archivio delle versioni come la transazione con esecuzione più lunga che deve accedere alla versione precedente. La transazione in esecuzione più lunga relativa alla versione pulizia dell'archivio può essere individuata visualizzando la colonna elapsed_time_seconds in [Sys.dm tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md).  
   

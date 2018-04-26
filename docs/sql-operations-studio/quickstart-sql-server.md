@@ -1,9 +1,9 @@
-﻿---
-title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server tramite SQL Operations Studio (preview) | Microsoft Docs'
-description: Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a SQL Server ed eseguire una query
+---
+title: 'Guida introduttiva: Connettersi ed eseguire query di SQL Server tramite SQL Operations Studio (anteprima) | Microsoft Docs'
+description: Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a SQL Server ed eseguire una query
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c0f78537429026583fe970a65426bc909a46557
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: a1820cd0a69313afa2a57b6d96721f375307cb71
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Guida introduttiva: Connettersi ed eseguire query di SQL Server con[!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Con questa guida introduttiva viene illustrato come utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi a SQL Server e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
@@ -30,9 +30,9 @@ Per completare questa guida rapida, è necessario [!INCLUDE[name-sos](../include
 - [Installare [!INCLUDE[name-sos](../includes/name-sos-short.md)] ](download.md).
 
 Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai collegamenti seguenti (assicurarsi di usare l'account di accesso SQL e la password corretti):
-- [Windows - Download SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
-- [macOS - scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
-- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) - è necessario seguire i passaggi fino a *Create e eseguire query sui dati*.
+- [Windows - Scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+- [macOS - Scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker)
+- [Linux - Download SQL Server 2017 Developer Edition](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-overview#install) -è necessario seguire i passaggi fino a *Create e eseguire query sui dati*.
 
 
 ## <a name="connect-to-a-sql-server"></a>Connettersi a SQL Server
@@ -53,6 +53,7 @@ Se non si dispone di alcun SQL Server, selezionare la piattaforma usata dai coll
     - **Gruppo di server:** \<predefinito\>  
 
    ![Schermata "Nuova connessione"](media/quickstart-sql-server/new-connection-screen.png)
+
 
 
 ## <a name="create-a-database"></a>Creazione di un database
@@ -83,9 +84,9 @@ Dopo il completamento della query, il nuovo **TutorialDB** viene visualizzato ne
 
 ## <a name="create-a-table"></a>Creare una tabella
 
-L'editor di query è ancora connesso al *master* database, ma si vuole creare una tabella nel database *TutorialDB*.  
+L'editor di query è ancora connesso al *master* database, ma si vuole creare una tabella sul database *TutorialDB*. 
 
-1. Modificare il contesto di connessione per **TutorialDB**:
+1. Impostare il contesto di connessione su **TutorialDB**:
 
    ![Modifica del contesto](media/quickstart-sql-server/change-context.png)
 
@@ -94,7 +95,7 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 1. Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
 
    > [!NOTE]
-   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. 
+   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. 
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -115,7 +116,7 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 
 Dopo il completamento della query, la nuova tabella **dbo.Customers** è visualizzata nell'elenco di tabelle.  Potrebbe tuttavia essere necessario fare clic con il pulsante destro del mouse sul nodo **TutorialDB > Tabelle** e selezionare **Aggiorna**.
 
-## <a name="insert-rows"></a>Inserimento di righe
+## <a name="insert-rows"></a>Inserire righe
 
 - Incollare il frammento di codice seguente nella finestra query, quindi fare clic su **Esegui**:
 

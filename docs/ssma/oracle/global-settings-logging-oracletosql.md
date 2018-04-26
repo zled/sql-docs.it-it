@@ -1,27 +1,28 @@
 ---
 title: Impostazioni globali (registrazione) (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 12dbcd77-2b90-4fa1-9cf9-239231ea5773
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: d5e0cab604baad282c06367e3271915329d358b7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: df2e8fd5376ddf37d02380ba1a4f1c516f023e7a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-oracletosql"></a>Impostazioni globali (registrazione) (OracleToSQL)
 Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
@@ -43,7 +44,7 @@ Le opzioni seguenti sono disponibili in **livello messaggi**:
 |**Linker**|Risolve gli identificatori SQL e vengono fornite informazioni per altri componenti.|  
 |**Altro**|Tutti i messaggi che non sono presenti in qualsiasi altra categoria.|  
 |**Parser**|Analizza lo schema di origine.|  
-|**Programma di sincronizzazione**|Carica gli oggetti di database in di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|**Synchronizer**|Carica gli oggetti di database in di origine [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |**TreeConverter**|Converte gli oggetti di metadati di origine in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] metadati.|  
 |**Tester**|Messaggi che vengono visualizzati quando si utilizza il Tester di SSMA.|  
   
@@ -54,7 +55,7 @@ Per ogni opzione in **livello messaggi**, configurare uno dei seguenti livelli d
 |**Errore irreversibile**|Scrivere il log solo i messaggi di errore irreversibile.|  
 |**Errore**|Scrivere nel registro errori e messaggi di errore irreversibile.|  
 |**Avviso**|Scrivere i messaggi di errore irreversibile, errore e avviso per il log.|  
-|**Informazioni**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
+|**informazioni**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
 |**Debug**|Scrivere tutti i messaggi, compresi i messaggi, nel Registro di debug.|  
   
 **Percorso file di log**  

@@ -6,20 +6,20 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/26/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 ms.workload: On Demand
-ms.openlocfilehash: c0e602345be28c9740cae9cd610899b8b2d372f6
-ms.sourcegitcommit: 6e819406554efbd17bbf84cf210d8ebeddcf772d
+ms.openlocfilehash: 7212b1a0a5e6322a33046d09edd091c257ff6b44
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Configurare le immagini contenitore di SQL Server 2017 in Docker
 
@@ -54,7 +54,7 @@ Guida introduttiva nella sezione precedente viene eseguita l'edizione Developer 
       docker login
       ```
 
-   1. Successivamente, è necessario ottenere lo sviluppatore gratuito immagine contenitore nell'archivio di Docker. Passare a [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), fare clic su **procedere con l'estrazione**e seguire le istruzioni.
+   1. Successivamente, è necessario ottenere lo sviluppatore gratuito immagine contenitore nell'archivio di Docker. Passare a [ https://store.docker.com/images/mssql-server-linux ](https://store.docker.com/images/mssql-server-linux), fare clic su **procedere con estrazione**e seguire le istruzioni.
 
    1. Esaminare i requisiti ed eseguire le procedure nel [delle Guide rapide](quickstart-install-connect-docker.md). Tuttavia, vi sono due differenze. È necessario effettuare il pull dell'immagine **archivio/microsoft/mssql-server-linux:\<-nome del tag\>**  dall'archivio di Docker. Ed è necessario specificare l'edizione di produzione con la **MSSQL_PID** variabile di ambiente. Nell'esempio seguente viene illustrato come eseguire l'ultima immagine contenitore 2017 di SQL Server per l'edizione Enterprise:
 

@@ -1,6 +1,6 @@
 ---
 title: 'Eseguire la migrazione di database MySQL a SQL Server: database SQL di Azure | Documenti Microsoft'
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: afd5e6aee5fb59c6e3eebb11c47d04b09e37bd40
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 165dc3340aa95f420240ac3afb1cdf2f350b8e94
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="migrating-mysql-databases-to-sql-server---azure-sql-db-mysqltosql"></a>Migrazione di database MySQL a SQL Server: database SQL di Azure (MySQLToSql)
 SQL Server Migration Assistant (SSMA) per MySQL è un ambiente completo che consente di eseguire rapidamente la migrazione di database MySQL a SQL Server o SQL Azure. Tramite SSMA per MySQL, è possibile esaminare i dati e oggetti di database, valutare database per la migrazione, eseguire la migrazione di oggetti di database a SQL Server o SQL Azure e quindi la migrazione dei dati in SQL Server o SQL Azure.  
@@ -49,7 +49,7 @@ Per eseguire la migrazione dati e oggetti di database MySQL a SQL Server o SQL A
   
 7.  [Conversione dei database MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-8.  [Synchronization](http://msdn.microsoft.com/en-us/ac993a6d-0283-4823-8793-6b217677dfa3)  
+8.  [Sincronizzazione](http://msdn.microsoft.com/en-us/ac993a6d-0283-4823-8793-6b217677dfa3)  
   
 9. È possibile farlo in uno dei modi seguenti:  
   

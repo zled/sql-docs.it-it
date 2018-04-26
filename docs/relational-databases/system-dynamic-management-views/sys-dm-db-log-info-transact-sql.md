@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/11/2018
+ms.date: 04/24/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -27,15 +27,15 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c19ffdd3cdee50b12d43b70fbbb0e8f95c150bab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e180bf8257f97bbdab086b485bea0425453462c5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 Restituisce [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) informazioni del log delle transazioni. Nota di che tutti i file di log delle transazioni vengono combinati nell'output della tabella. Ogni riga nell'output rappresenta un VLF nel log delle transazioni e fornisce informazioni rilevanti per tale VLF nel log.
 
@@ -43,7 +43,8 @@ Restituisce [file di log virtuale (VLF)](../../relational-databases/sql-server-t
   
 ```  
 sys.dm_db_log_info ( database_id )  
-```  
+``` 
+
 ## <a name="arguments"></a>Argomenti  
  *database_id* | NULL | VALORE PREDEFINITO  
  ID del database. *database_id* è di tipo **int**. Gli input validi sono il numero di ID di un database, NULL o DEFAULT. Il valore predefinito è NULL. NULL e DEFAULT sono valori equivalenti nel contesto del database corrente.
@@ -68,10 +69,10 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[Sequenza numero di log (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) del Registro di record che ha creato il [file di log virtuale (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 
 ## <a name="remarks"></a>Osservazioni
- Il `sys.dm_db_log_info` funzione a gestione dinamica sostituisce il `DBCC LOGINFO` istruzione. 
+Il `sys.dm_db_log_info` funzione a gestione dinamica sostituisce il `DBCC LOGINFO` istruzione.    
  
 ## <a name="permissions"></a>Autorizzazioni  
- Richiede il `VIEW DATABASE STATE` autorizzazione per il database.  
+Richiede il `VIEW DATABASE STATE` autorizzazione per il database.  
   
 ## <a name="examples"></a>Esempi  
   

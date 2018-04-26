@@ -1,9 +1,9 @@
 ---
-title: Gruppi di server in SQL Operations Studio (preview) | Documenti Microsoft
-description: Informazioni sui gruppi di server in SQL Operations Studio (preview).
+title: Gruppi di server in Studio operazioni SQL (anteprima) | Documenti Microsoft
+description: Informazioni sui gruppi di server in Studio operazioni SQL (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eec4684b1a06e5226029a3a2409f831bffff04f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 07db639c5cd4f4b90ffa78a3d4677d9f5f17ade2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Gruppi di server in[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="server-groups-in-includename-sosincludesname-sos-shortmd"></a>Gruppi di server in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Gruppi di server consentono di organizzare le connessioni ai server e si lavora con i database. Quando si creano gruppi di server, i dettagli di configurazione vengono salvati in *impostazioni utente*.
 
@@ -41,4 +41,4 @@ Per modificare i colori del gruppo di server disponibili, modificare il *gruppi 
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-- [Area di lavoro e le impostazioni utente](settings.md)
+- [Area di lavoro e impostazioni utente](settings.md)

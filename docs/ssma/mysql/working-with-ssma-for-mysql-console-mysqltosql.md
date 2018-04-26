@@ -1,6 +1,6 @@
 ---
 title: Utilizzo di SSMA per la Console di MySQL (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5c14c4bcbe30c99794673ed4a08389e451765885
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a0419c361f32b2f57068abdbebda8b7689a46431
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>Utilizzo di SSMA per la Console di MySQL (MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per MySQL ora è accessibile tramite un'applicazione console dalla riga di comando. I file di script formano l'input per l'applicazione per l'esecuzione dei comandi. Come applicazione console, SSMA consente l'interazione a livello di script, riduce il ciclo di migrazione e scala sforzo di migrazione.  
@@ -44,9 +44,9 @@ Gli argomenti trattati in questa sezione includono:
 |[La creazione dei file di connessione del Server &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)|Viene illustrato come creare un file di connessione del server.|  
 |[L'esecuzione la Console SSMA &#40;MySQLToSQL&#41;](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md)|Vengono descritti i comandi del file di script per il funzionamento dell'applicazione console SSMA.|  
 |[Utilizzo dei file di Script di esempio della Console &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)|Viene descritta la modalità per personalizzare facilmente gli script che sono stati forniti nei file di esempio con il prodotto|  
-|[Managing Passwords &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Vengono descritti la crittografia delle password e la decrittografia e l'importazione / esportazione informazioni relative alle password.|  
+|[La gestione delle password &#40;MySQLToSQL&#41;](../../ssma/mysql/managing-passwords-mysqltosql.md)|Vengono descritti la crittografia delle password e la decrittografia e l'importazione / esportazione informazioni relative alle password.|  
 |[Generazione di report &#40;MySQLToSQL&#41;](../../ssma/mysql/generating-reports-mysqltosql.md)|Elenca i comandi per generare report.|  
-|[Troubleshooting &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Fornisce brevi istruzioni sulla risoluzione dei problemi di migrazione.|  
+|[Risoluzione dei problemi di &#40;MySQLToSQL&#41;](../../ssma/mysql/troubleshooting-mysqltosql.md)|Fornisce brevi istruzioni sulla risoluzione dei problemi di migrazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Guida introduttiva di SSMA per la Console di MySQL](http://msdn.microsoft.com/en-us/218d502c-059f-4d48-9aea-61e553d74303)  

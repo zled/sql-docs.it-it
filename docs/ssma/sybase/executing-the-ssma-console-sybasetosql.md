@@ -2,7 +2,7 @@
 title: L'esecuzione la Console SSMA (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 09/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -30,11 +30,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ffcf0158ea7f28e53addc7d8a5cb1878dbcb38
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: ae312cdb14d6e2e963fb4d967402a7209ffb8a36
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>L'esecuzione la Console SSMA (SybaseToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA. In dettaglio le sezioni che seguono lo stesso.  
@@ -45,7 +45,7 @@ L'applicazione console utilizza alcuni comandi di file di script standard come e
 ## <a name="project-commands"></a>Comandi di progetto  
 I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio e chiusura di progetti.  
   
-### <a name="create-new-project"></a>create-new-project  
+### <a name="create-new-project"></a>creare-nuovo progetto  
 Questo comando crea un nuovo progetto SSMA.  
   
 -   `project-folder` indica la cartella del progetto recupero creato.  
@@ -74,7 +74,7 @@ Attributo 'sovrascrivere-if-exists' **false** per impostazione predefinita.
   
 Attributo 'tipo di progetto' **sql-server-2008** per impostazione predefinita.  
   
-### <a name="open-project"></a>open-project  
+### <a name="open-project"></a>Apri progetto  
 Questo comando apre il progetto.
 
 -   `project-folder` indica la cartella del progetto recupero creato. Il comando non riesce se la cartella specificata non esiste.  {string}  
@@ -95,7 +95,7 @@ Questo comando apre il progetto.
 > [!NOTE]  
 > SSMA per l'applicazione Console di SAP ASE supporta la compatibilità con le versioni precedenti. È possibile usarlo per aprire i progetti creati con la versione precedente di SSMA.  
   
-### <a name="save-project"></a>save-project  
+### <a name="save-project"></a>Salva progetto  
 Questo comando Salva il progetto di migrazione.  
   
 **Esempio di sintassi:**  
@@ -104,7 +104,7 @@ Questo comando Salva il progetto di migrazione.
 <save-project/>  
 ```  
   
-### <a name="close-project"></a>close-project  
+### <a name="close-project"></a>Chiudi progetto  
 Questo comando chiude il progetto di migrazione.  
   
 **Esempio di sintassi:**  
@@ -123,7 +123,7 @@ I comandi di connessione al Database consentono di connettere al database.
 > - Il **Sfoglia** funzionalità dell'interfaccia utente non è supportata nella console.  
 > - Per ulteriori informazioni su 'Creazione di file di Script', vedere [creazione di file di Script &#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md).  
   
-### <a name="connect-source-database"></a>connect-source-database  
+### <a name="connect-source-database"></a>connessione database di origine  
 Questo comando esegue una connessione al database di origine e carica i metadati di alto livello di database di origine, ma non tutti i metadati.
   
 Se non viene stabilita la connessione all'origine, viene generato un errore e l'applicazione console interrompe l'esecuzione.
@@ -136,7 +136,7 @@ La definizione del server viene recuperata dall'attributo del nome definito per 
 <connect-source-database  server="<server-unique-name>"/>  
 ```  
   
-### <a name="force-load-sourcetarget-database"></a>force-load-source/target-database  
+### <a name="force-load-sourcetarget-database"></a>Force-carico-/ destinazione del database di origine  
 Il comando Carica i metadati di origine e risulta utile per l'utilizzo nel progetto di migrazione non in linea.  
   
 Se non viene stabilita la connessione di origine/destinazione, viene generato un errore e l'applicazione console interrompe l'esecuzione.  
@@ -192,7 +192,7 @@ Se non è possibile stabilire (ri) connessione alla destinazione, viene generato
 ## <a name="report-commands"></a>Comandi del report  
 I comandi di Report generano report sulle prestazioni di varie attività della Console di SSMA.  
   
-### <a name="generate-assessment-report"></a>generate-assessment-report  
+### <a name="generate-assessment-report"></a>generare report di valutazione  
   
 Questo comando genera il report di valutazione nel database di origine.  
   
@@ -382,7 +382,7 @@ Il comando di preparazione di migrazione avvia il mapping dello schema tra i dat
 > [!NOTE]  
 > L'output di console predefinito per i comandi di migrazione è il report di output 'Full' con Nessuna segnalazione di errore dettagliato: riepilogo solo dal nodo radice dell'albero di origine oggetto.  
   
-### <a name="map-schema"></a>map-schema  
+### <a name="map-schema"></a>schema di mapping  
 Questo comando fornisce il mapping dello schema del database di origine allo schema di destinazione.  
   
 -   `source-schema` Specifica lo schema di origine per eseguire la migrazione.  
@@ -572,7 +572,7 @@ o
 </save-as-script>  
 ```  
   
-### <a name="convert-sql-statement"></a>convert-sql-statement
+### <a name="convert-sql-statement"></a>Convert-istruzione
 Questo comando Converte l'istruzione SQL.  
   
 -   `context` Specifica il nome dello schema.  

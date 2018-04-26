@@ -1,4 +1,4 @@
-﻿---
+---
 title: Articoli nuovi e aggiornati - Documentazione di SQL Operations Studio | Microsoft Docs
 description: Contenuti aggiornati nella documentazione modificati di recente in SQL Operations Studio.
 manager: craigg
@@ -7,14 +7,14 @@ ms.author: genemi
 ms.topic: article
 ms.custom: UpdArt.exe
 ms.suite: sql
-ms.prod_service: sql-non-specified
+ms.prod_service: sql
 ms.component: ssops
 ms.date: 02/03/2018
-ms.openlocfilehash: 339cf28ac985e1614b4aaece3fb099d0144a309a
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 0b75d515624e2452c8af625bf7c31c1859786a48
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="new-and-recently-updated-sql-operations-studio-docs"></a>Articoli nuovi e recentemente aggiornati: Documentazione di SQL Operations Studio
 
@@ -29,7 +29,7 @@ Sono indicati gli aggiornamenti recenti per l'intervallo di date e l'area di int
 
 
 - *Intervallo di date degli aggiornamenti:* &nbsp; **03/12/2017** &nbsp; - &nbsp; **03/02/2018**
-- *Area di interesse:* &nbsp; **SQL Operations Studio**.
+- *Area di interesse:* &nbsp; **operazioni SQL Studio**.
 
 
 
@@ -41,7 +41,7 @@ Sono indicati gli aggiornamenti recenti per l'intervallo di date e l'area di int
 I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di recente.
 
 
-1. [Note sulla versione SQL Operations Studio (preview)](release-notes.md)
+1. [Note sulla versione Studio operazioni SQL (anteprima)](release-notes.md)
 
 
 
@@ -51,7 +51,7 @@ I collegamenti seguenti consentono di visualizzare nuovi articoli aggiunti di re
 
 In questa sezione sono visualizzati gli estratti degli aggiornamenti raccolti dagli articoli che recentemente sono stati sottoposti a un aggiornamento di grande entità.
 
-Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto di semantica corretto. Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che lo racchiude nell'articolo effettivo. Di conseguenza, questi estratti sono generici e consentono di determinare se prendervi il tempo di una visita all'articolo effettivo o meno.
+Gli estratti visualizzati qui vengono visualizzati separatamente dal relativo contesto di semantica corretto. Inoltre, talvolta un estratto è separato dalla sintassi markdown importante che lo racchiude nell'articolo effettivo. Di conseguenza questi estratti sono solo a scopo generale. Gli estratti consentono solo di sapere se i tuoi interessi garantiscono la necessità di fare clic e visitare l'articolo effettivo.
 
 Per queste e altre ragioni, non copiare codice da questi estratti e non prendere come verità esatta qualsiasi testo in essi contenuto. Piuttosto, visitare l'articolo effettivo.
 
@@ -67,7 +67,7 @@ Per queste e altre ragioni, non copiare codice da questi estratti e non prendere
 
 Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati elencati nella sezione degli estratti.
 
-1. [Scaricare e installare SQL Operations Studio (preview)](#TitleNum_1)
+1. [Scaricare e installare Studio operazioni SQL (anteprima)](#TitleNum_1)
 
 
 
@@ -78,7 +78,7 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Scaricare e installare SQL Operations Studio (preview)](download.md)
+### <a name="1-nbsp-download-and-install-sql-operations-studio-previewdownloadmd"></a>1. &nbsp; [Scaricare e installare Studio operazioni SQL (anteprima)](download.md)
 
 *Aggiornamento: 18/01/2018* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -99,20 +99,20 @@ Questo elenco compatto include i collegamenti a tutti gli articoli aggiornati el
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
-**Ottenere SQL Operations Studio (preview) per Windows**
+**Ottenere Studio operazioni SQL (anteprima) per Windows**
 
 
-Questa versione di SQL Operations Studio (preview) include un'esperienza di installazione di Windows standard e un file ZIP:
+Questa versione di Studio operazioni SQL (anteprima) include un'esperienza di installazione di Windows standard e un file ZIP:
 
 **Programma di installazione**
 
-1. Scaricare ed eseguire il [installer SQL Operations Studio (preview) per Windows](https://go.microsoft.com/fwlink/?linkid=866480).
-1. Avviare l'app SQL Operations Studio (preview).
+1. Scaricare ed eseguire il [installer Studio operazioni SQL (anteprima) per Windows](https://go.microsoft.com/fwlink/?linkid=866480).
+1. Avviare l'app Studio operazioni SQL (anteprima).
 
 
 **file con estensione zip**
 
-1. Scaricare [ZIP SQL Operations Studio (preview) per Windows](https://go.microsoft.com/fwlink/?linkid=866479).
+1. Scaricare [ZIP Studio operazioni SQL (anteprima) per Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 
 
 

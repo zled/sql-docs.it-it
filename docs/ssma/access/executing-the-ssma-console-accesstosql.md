@@ -1,6 +1,6 @@
 ---
 title: L'esecuzione la Console SSMA (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4400ab959c61b23c3a98c817c03506631a4d61af
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5f754441a32346c616e381f8d7f8929354589dcf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>L'esecuzione la Console SSMA (AccessToSQL)
 Microsoft offre una serie di comandi di file di script e le opzioni della riga di comando per eseguire e controllare le attività SSMA affidabili. In dettaglio le sezioni che seguono lo stesso.  
@@ -142,7 +142,7 @@ Per ulteriori informazioni su 'Creazione di file di Script', vedere [creazione d
   
 **Command**  
   
-connect-source-database  
+connessione database di origine  
   
 -   La connessione al database di origine e carica i metadati di livello elevato di database di origine, ma non tutti i metadati.  
   
@@ -181,7 +181,7 @@ o
 ```  
 **Command**  
   
-force-load-source/target-database  
+Force-carico-/ destinazione del database di origine  
   
 -   Carica i metadati di origine.  
   
@@ -264,7 +264,7 @@ I comandi di Report generano report sulle prestazioni di varie attività della C
   
 **Command**  
   
-generate-assessment-report  
+generare report di valutazione  
   
 -   Genera report di valutazione nel database di origine.  
   

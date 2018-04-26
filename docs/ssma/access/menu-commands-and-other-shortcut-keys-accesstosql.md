@@ -1,6 +1,6 @@
 ---
 title: I comandi di menu e altri tasti di scelta rapida (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd4c36f8542331615e6d711f6780d855db9158aa
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 8721facf7eedd8ed5a9d2f36173cd90e2e89b652
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>I comandi di menu e altri tasti di scelta rapida (AccessToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione di accesso.  

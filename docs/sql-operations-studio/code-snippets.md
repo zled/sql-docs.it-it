@@ -1,10 +1,10 @@
 ---
-title: Creare frammenti di codice in SQL Operations Studio (preview) | Documenti Microsoft
-description: Informazioni su come creare e usare i frammenti di codice SQL in SQL Operations Studio (preview)
+title: Creare frammenti di codice in Studio operazioni SQL (anteprima) | Documenti Microsoft
+description: Informazioni su come creare e usare i frammenti di codice SQL in Studio operazioni SQL (anteprima)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4670c824b1e52776c3d81d097beeb4ccd9e62e2d
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f51c14d2c3824baa1b2730d352b94d9cfdc097bc
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Creare e usare i frammenti di codice per creare rapidamente script Transact-SQL (T-SQL)[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Creare e usare i frammenti di codice per creare rapidamente script Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Frammenti di codice [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono modelli che rendono più semplice per creano database e oggetti di database. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]fornisce diversi frammenti di T-SQL che aiutino a generare rapidamente la sintassi corretta. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce diversi frammenti di T-SQL per assistenza nei generare rapidamente la sintassi corretta. 
 
 Sono anche possibile creare frammenti di codice definito dall'utente.
 
@@ -61,7 +61,7 @@ Sono anche possibile creare frammenti di codice definito dall'utente.
 1. Selezionare **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]questo articolo illustra in particolare l'utilizzo dei frammenti SQL eredita la funzionalità di frammento di codice da Visual Studio Code. Per ulteriori informazioni, vedere [creare frammenti personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le funzionalità di frammento di codice da Visual Studio Code in modo che questo articolo illustra in particolare l'utilizzo dei frammenti SQL. Per ulteriori informazioni, vedere [creare frammenti personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code. 
 
    ![Sostituire il campo di modello](media/code-snippets/select-sql.png)
 

@@ -1,6 +1,6 @@
 ---
 title: Generazione di report (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b26ed81725f95fc8c75c052cc5a45e6ad44ab5be
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f01543d6dbc13b18cc14000c4d62aebe7201f99d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-reports-db2tosql"></a>Generazione di report (DB2ToSQL)
 I report di determinate attività eseguite utilizzando i comandi vengono generati nella Console di SSMA a livello di struttura ad albero di oggetti.  
@@ -38,11 +38,11 @@ Utilizzare la procedura seguente per generare rapporti:
   
     ||||  
     |-|-|-|  
-    |**Sl. No.**|**Command**|**Titolo del report**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;. XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |**SL. No.**|**Command**|**Titolo del report**|  
+    |1|generare report di valutazione|AssessmentReport&lt;n&gt;. XML|  
+    |2|convert-schema|SchemaConversionReport&lt;n&gt;. XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;. XML|  
-    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
+    |4|Convert-istruzione|ConvertSQLReport&lt;n&gt;. XML|  
     |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;. XML|  
     |6|aggiornamento da database|SourceDBRefreshReport&lt;n&gt;. XML|  
   
@@ -55,7 +55,7 @@ Utilizzare la procedura seguente per generare rapporti:
   
     ||||  
     |-|-|-|  
-    |**Sl. No.**|**Comando e parametro**|**Descrizione di output**|  
+    |**SL. No.**|**Comando e parametro**|**Descrizione di output**|  
     |1|verbose = "false"|Genera un report di riepilogo dell'attività.|  
     |2|verbose = "true"|Genera un report di riepilogo e dettagliate sullo stato per ogni attività.|  
   
@@ -66,7 +66,7 @@ Utilizzare la procedura seguente per generare rapporti:
   
     ||||  
     |-|-|-|  
-    |**Sl. No.**|**Comando e parametro**|**Descrizione di output**|  
+    |**SL. No.**|**Comando e parametro**|**Descrizione di output**|  
     |1|report errori = "false"|Nessun dettaglio in caso di errore / avviso / i messaggi di informazioni.|  
     |2|report errori = "true"|Ulteriori informazioni sull'errore / avviso / i messaggi di informazioni.|  
   

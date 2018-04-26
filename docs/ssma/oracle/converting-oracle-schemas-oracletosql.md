@@ -1,6 +1,6 @@
 ---
 title: Conversione di schemi Oracle (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 208378f2be9ad4eea080df758616e554c1262905
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61bea3173bcb085e551c35a3c2c746626f5ba0bb
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Conversione di schemi Oracle (OracleToSQL)
 Dopo aver connesso a Oracle, connesso alla [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], e imposta il progetto e le opzioni di mapping di dati, è possibile convertire oggetti di database Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti di database.  
@@ -35,7 +35,7 @@ La conversione di oggetti di database utilizza le definizioni degli oggetti da O
 Durante la conversione, SSMA Stampa messaggi di output nel riquadro di Output e i messaggi di errore nel riquadro elenco errori. Utilizzare le informazioni di output e l'errore per determinare se è necessario modificare i database Oracle o il processo di conversione per ottenere i risultati di conversione desiderato.  
   
 ## <a name="setting-conversion-options"></a>Impostazione delle opzioni di conversione  
-Prima di convertire gli oggetti, esaminare le opzioni di conversione del progetto nel **impostazioni progetto** la finestra di dialogo. Tramite questa finestra di dialogo, è possibile impostare la modalità di conversione di funzioni e variabili globali in SSMA. Per ulteriori informazioni, vedere [impostazioni progetto &#40; Conversione &#41; &#40; OracleToSQL &#41; ](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
+Prima di convertire gli oggetti, esaminare le opzioni di conversione del progetto nel **impostazioni progetto** la finestra di dialogo. Tramite questa finestra di dialogo, è possibile impostare la modalità di conversione di funzioni e variabili globali in SSMA. Per altre informazioni, vedere [impostazioni del progetto di &#40;conversione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md).  
   
 ## <a name="conversion-results"></a>Risultati di conversione  
 Nella tabella seguente mostra gli oggetti di Oracle vengono convertiti e il valore risultante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti:  
@@ -49,10 +49,10 @@ Nella tabella seguente mostra gli oggetti di Oracle vengono convertiti e il valo
 |Sequenze|SSMA crea gli oggetti sequenza (SQL Server 2012 o SQL Server 2014) o emula sequenze di Oracle.|  
 |Tabelle con gli oggetti dipendenti, ad esempio indici e trigger|SSMA consente di creare tabelle con gli oggetti dipendenti.|  
 |Consente di visualizzare gli oggetti dipendenti, ad esempio i trigger|SSMA consente di creare visualizzazioni con gli oggetti dipendenti.|  
-|Viste materializzate|**SSMA consente di creare viste indicizzate in SQL server con alcune eccezioni. Conversione non riesce se la vista materializzata include uno o più dei seguenti costrutti:**<br /><br />Funzione definita dall'utente<br /><br />Campo non deterministica / funzione / espressione di selezione, in cui o clausole GROUP BY<br /><br />Utilizzo della colonna Float in SELECT * in o clausole GROUP BY (caso speciale di un problema precedente)<br /><br />(Inclusa nidificata tabelle) del tipo di dati personalizzati<br /><br />COUNT (distinct &lt;campo&gt;)<br /><br />FETCH<br /><br />OUTER join (LEFT, RIGHT o FULL)<br /><br />Sottoquery, altra visualizzazione<br /><br />IN, RANK, LEAD, LOG<br /><br />MIN, MAX<br /><br />UNION, SOTTRAZIONE, SI INTERSECANO<br /><br />HAVING|  
+|Viste materializzate|**SSMA consente di creare viste indicizzate in SQL server con alcune eccezioni. Conversione non riesce se la vista materializzata include uno o più costrutti indicati di seguito:**<br /><br />Funzione definita dall'utente<br /><br />Campo non deterministica / funzione / espressione di selezione, in cui o clausole GROUP BY<br /><br />Utilizzo della colonna Float in SELECT * in o clausole GROUP BY (caso speciale di un problema precedente)<br /><br />(Inclusa nidificata tabelle) del tipo di dati personalizzati<br /><br />COUNT (distinct &lt;campo&gt;)<br /><br />FETCH<br /><br />OUTER join (LEFT, RIGHT o FULL)<br /><br />Sottoquery, altra visualizzazione<br /><br />IN, RANK, LEAD, LOG<br /><br />MIN, MAX<br /><br />UNION, SOTTRAZIONE, SI INTERSECANO<br /><br />HAVING|  
 |Trigger|**SSMA consente di creare trigger in base alle regole seguenti:**<br /><br />PRIMA di convertire i trigger per trigger INSTEAD OF.<br /><br />I trigger AFTER vengono convertiti in trigger AFTER.<br /><br />I trigger INSTEAD OF vengono convertiti in trigger INSTEAD OF. Più trigger INSTEAD OF definito nella stessa operazione sono combinati in un trigger.<br /><br />I trigger a livello di riga vengono emulati utilizzano i cursori.<br /><br />Trigger di propagazione vengono convertiti in più trigger singolo.|  
-|Sinonimi|**I sinonimi vengono creati per i seguenti tipi di oggetto:**<br /><br />Le tabelle e oggetto<br /><br />Viste e le viste di oggetto<br /><br />Stored procedure<br /><br />Funzioni<br /><br />**Sinonimi per gli oggetti seguenti sono risolte e sostituiti dai riferimenti diretto all'oggetto:**<br /><br />Sequenze<br /><br />Pacchetti<br /><br />Oggetti dello schema di classe Java<br /><br />Tipi di oggetto definito dall'utente<br /><br />I sinonimi per un altro sinonimo non possono essere migrati e verranno contrassegnati come errori.<br /><br />Sinonimi non vengono creati per le viste Materialized.|  
-|Tipi definiti dall'utente|**SSMA fornisce supporto per la conversione dei tipi definiti dall'utente. Tipi definiti dall'utente, incluso il relativo utilizzo in programmi PL/SQL sono contrassegnati con errori di conversione speciali interattiva le regole seguenti:**<br /><br />Colonna della tabella di un tipo definito dall'utente viene convertita in VARCHAR(8000).<br /><br />Argomento dell'utente di tipo definito in una stored procedure o funzione viene convertita in VARCHAR(8000).<br /><br />Variabile di tipo definito dall'utente in blocco PL/SQL viene convertito in VARCHAR(8000).<br /><br />Oggetto tabella viene convertita in una tabella Standard.<br /><br />Vista dell'oggetto viene convertito in una vista Standard.|  
+|Sinonimi|**I sinonimi vengono creati per i seguenti tipi di oggetto:**<br /><br />Le tabelle e oggetto<br /><br />Viste e le viste di oggetto<br /><br />Stored procedure<br /><br />Funzioni<br /><br />**I sinonimi per gli oggetti seguenti sono risolte e sostituiti da riferimenti a oggetti direct:**<br /><br />Sequenze<br /><br />Pacchetti<br /><br />Oggetti dello schema di classe Java<br /><br />Tipi di oggetto definito dall'utente<br /><br />I sinonimi per un altro sinonimo non possono essere migrati e verranno contrassegnati come errori.<br /><br />Sinonimi non vengono creati per le viste Materialized.|  
+|Tipi definiti dall'utente|**SSMA non fornisce supporto per la conversione dei tipi definiti dall'utente. Tipi definiti dall'utente, incluso il relativo utilizzo in programmi PL/SQL sono contrassegnati con errori di conversione speciali interattiva le regole seguenti:**<br /><br />Colonna della tabella di un tipo definito dall'utente viene convertita in VARCHAR(8000).<br /><br />Argomento dell'utente di tipo definito in una stored procedure o funzione viene convertita in VARCHAR(8000).<br /><br />Variabile di tipo definito dall'utente in blocco PL/SQL viene convertito in VARCHAR(8000).<br /><br />Oggetto tabella viene convertita in una tabella Standard.<br /><br />Vista dell'oggetto viene convertito in una vista Standard.|  
   
 ## <a name="converting-oracle-database-objects"></a>La conversione di oggetti di Database Oracle  
 Per convertire gli oggetti di database Oracle, prima di selezionare gli oggetti che si desidera convertire e quindi chiedere di SSMA eseguire la conversione. Per visualizzare i messaggi di output durante la conversione nel **vista** dal menu **Output**.  
@@ -116,7 +116,7 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
   
 -   È possibile modificare il codice sorgente per le procedure nel **SQL** scheda.  
   
--   È possibile modificare l'oggetto nel database Oracle per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, è necessario aggiornare i metadati. Per ulteriori informazioni, vedere [connessione a Oracle Database &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+-   È possibile modificare l'oggetto nel database Oracle per rimuovere o modificare il codice problematico. Per caricare il codice aggiornato in SSMA, è necessario aggiornare i metadati. Per altre informazioni, vedere [connessione a Oracle Database &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
 -   È possibile escludere l'oggetto dalla migrazione. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati ed Esplora i metadati di Oracle, deselezionare la casella di controllo accanto all'elemento prima di caricare gli oggetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e la migrazione dei dati da Oracle.  
   
@@ -124,5 +124,5 @@ Per ogni elemento che non è stato possibile convertire, è necessario determina
 Il passaggio successivo del processo di migrazione consiste nel [caricare gli oggetti convertiti in SQL Server](http://msdn.microsoft.com/en-us/a8ae33b2-1883-4785-922b-ea0e31c0b37a).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Migrazione di Oracle database a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

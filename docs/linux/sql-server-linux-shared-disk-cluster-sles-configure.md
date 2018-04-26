@@ -1,25 +1,25 @@
 ---
 title: Configurare il cluster di dischi condivisi SLES per SQL Server | Documenti Microsoft
-description: "Implementare la disponibilità elevata mediante la configurazione cluster disco condiviso SUSE Linux Enterprise Server (SLES) per SQL Server."
+description: Implementare la disponibilità elevata mediante la configurazione cluster disco condiviso SUSE Linux Enterprise Server (SLES) per SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.workload: Inactive
-ms.openlocfilehash: 9ef50e606e89d1e6673806ee0d90df510c6c6a68
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: ce4bc0cec8e235abfde581a3e78b79eeee6740f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>Configurare il cluster di dischi condivisi SLES per SQL Server
 
@@ -88,7 +88,7 @@ Il primo passaggio consiste nel configurare il sistema operativo nei nodi del cl
     >```bash
     >crm_report -X "-p 3479" [...]
     >```
-    >Per ulteriori informazioni, vedere [Guida all'amministrazione]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
+    >Per altre informazioni, vedere [il manuale dell'amministratore]. (https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.misc)
 
 Nella sezione successiva verrà configurare l'archiviazione condivisa e spostare i file di database che l'archiviazione.  
 

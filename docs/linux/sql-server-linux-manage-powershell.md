@@ -6,20 +6,20 @@ ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: f7324a270323950444741cfe713ad0eb5f01aa10
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: 8869f87ec6e69844155a2bf0361a90e07b30de24
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Utilizzo di PowerShell in Windows per la gestione di SQL Server in Linux
 
@@ -76,7 +76,7 @@ Copiare e incollare i comandi seguenti al prompt di PowerShell. Quando si eseguo
 - Creare un'istanza di [Server](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) oggetto
 - Connettere il **Server** e visualizzare alcune proprietà
 
-Ricordarsi di sostituire  **\<your_server_instance\>**  con l'indirizzo IP o il nome host dell'istanza di SQL Server 2017 in Linux.
+Ricordarsi di sostituire **\<your_server_instance\>** con l'indirizzo IP o il nome host dell'istanza di SQL Server 2017 in Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -116,7 +116,7 @@ Copiare e incollare i comandi seguenti al prompt di PowerShell. Si potrebbero ri
 - Utilizzare il **Get SqlErrorLog** per connettersi all'istanza di SQL Server 2017 su Linux e recuperare l'errore registra dal **ieri**
 - Reindirizzare l'output di **Out-GridView** cmdlet
 
-Ricordarsi di sostituire  **\<your_server_instance\>**  con l'indirizzo IP o il nome host dell'istanza di SQL Server 2017 in Linux.
+Ricordarsi di sostituire **\<your_server_instance\>** con l'indirizzo IP o il nome host dell'istanza di SQL Server 2017 in Linux.
 
 ```powershell
 # Prompt for credentials to login into SQL Server

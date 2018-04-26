@@ -28,11 +28,11 @@ ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aa92fecfa13610fb5e8720238629321bfb6c62c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 727a7752eea98f778780056c0940873580e6682c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ Identifica in modo univoco un piano di query per un batch memorizzato nella cach
 |**text**|**nvarchar (max** **)**|Testo della query SQL.<br /><br /> Per gli oggetti crittografati viene restituito NULL.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È richiesta l'autorizzazione VIEW SERVER STATE per il server.  
+ È richiesta l'autorizzazione `VIEW SERVER STATE` per il server.  
   
 ## <a name="remarks"></a>Osservazioni  
 Per le query ad hoc, gli handle SQL sono valori basati sul testo SQL venga inviato al server e possono provenire da qualsiasi database. 

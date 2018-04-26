@@ -1,16 +1,16 @@
 ---
 title: Contesto di espressione e la valutazione della Query (XQuery) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -23,25 +23,25 @@ helpviewer_keywords:
 - static context
 - dynamic context [XQuery]
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
-caps.latest.revision: 
+caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b387ebe6649cca113e4974b3275498bb9b3b970e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: aa51ff95256dde4ed6d750a2dbfab5c2c44c2d41
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contesto delle espressioni e valutazione delle query (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Il contesto di un'espressione è rappresentato dalle informazioni che ne consentono l'analisi e la valutazione. Di seguito sono illustrate le due fasi della valutazione di XQuery:  
   
--   **Contesto statico** : questa è la fase di compilazione di query. A seconda delle informazioni disponibili, durante l'analisi statica della query a volte vengono generati errori.  
+-   **Contesto statico** – si tratta della fase di compilazione di query. A seconda delle informazioni disponibili, durante l'analisi statica della query a volte vengono generati errori.  
   
--   **Contesto dinamico** : questa è la fase di esecuzione di query. Anche se in una query non si verificano errori statici, ad esempio durante la compilazione, è possibile che vengano generati errori durante l'esecuzione della query.  
+-   **Contesto dinamico** – si tratta della fase di esecuzione di query. Anche se in una query non si verificano errori statici, ad esempio durante la compilazione, è possibile che vengano generati errori durante l'esecuzione della query.  
   
 ## <a name="static-context"></a>Contesto statico  
  L'inizializzazione del contesto statico prevede la raccolta di tutte le informazioni necessarie per l'analisi statica dell'espressione. Nella fase di inizializzazione vengono eseguite le operazioni seguenti:  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  Risoluzione dei nomi della funzione e del tipo specificati nell'espressione.  
   
-3.  Tipizzazione statica della query, che consente di verificare che la query sia indipendente dai tipi. Ad esempio, la query seguente restituisce un errore statico perché il  **+**  operatore richiede argomenti di tipo primitive numerico:  
+3.  Tipizzazione statica della query, che consente di verificare che la query sia indipendente dai tipi. Ad esempio, la query seguente restituisce un errore statico perché il **+** operatore richiede argomenti di tipo primitive numerico:  
   
     ```  
     declare @x xml  

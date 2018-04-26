@@ -1,9 +1,9 @@
 ---
-title: "Esercitazione: Usare l'editor Transact-SQL SQL Operations Studio (preview) per creare oggetti di database | Documenti Microsoft"
-description: Questa esercitazione illustra le funzionalità principali in SQL Operations Studio (preview) che semplificano l'uso di T-SQL.
+title: "Esercitazione: Usare l'editor Transact-SQL Studio operazioni SQL (anteprima) per creare oggetti di database | Documenti Microsoft"
+description: Questa esercitazione illustra le funzionalità principali in Studio operazioni SQL (anteprima) che semplificano l'uso di T-SQL.
 ms.custom: tools|sos
 ms.date: 03/13/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db9cc8185742980b649f9fcc11eced5687201464
-ms.sourcegitcommit: 6b1618aa3b24bf6759b00a820e09c52c4996ca10
+ms.openlocfilehash: 5fec80de2d2e86871926a36c7d1601a217b1b737
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Esercitazione: Usare l'editor Transact-SQL per creare oggetti di database- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 Creazione ed esecuzione di query, stored procedure, script, e così via sono le attività principali dei professionisti di database. Questa esercitazione illustra le funzionalità chiave nell'editor T-SQL per creare oggetti di database.
 
-In questa esercitazione imparare a usare [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] per:
+In questa esercitazione si apprenderà come sfruttare[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] al fine di:
 > [!div class="checklist"]
 > * Oggetti di database di ricerca
 > * Modificare i dati di tabella 
@@ -34,10 +34,10 @@ In questa esercitazione imparare a usare [!INCLUDE[name-sos-short](../includes/n
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede SQL Server o Database SQL di Azure *TutorialDB*. Per creare il *TutorialDB* del database, completare una delle Guide rapide seguenti:
+Questa esercitazione richiede il database *TutorialDB*, su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
 
-- [Connettersi ed eseguire query tramite SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
-- [Connettersi ed eseguire query utilizzando il Database SQL di Azure [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
+- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su Azure SQL Database tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 
 ## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>Un oggetto di database di individuare rapidamente e di eseguire un'attività comune
@@ -63,18 +63,18 @@ Questa esercitazione richiede SQL Server o Database SQL di Azure *TutorialDB*. P
 
 ## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>Usare i frammenti di codice T-SQL per creare stored procedure
 
-SQL Operations Studio fornisce diversi frammenti di codice T-SQL incorporati per la creazione rapida di istruzioni.
+Operazioni SQL Studio fornisce diversi frammenti di codice T-SQL incorporati per la creazione rapida di istruzioni.
 
 
-1. Aprire un nuovo editor di query premendo **Ctrl + N**.
+1. Aprire un nuovo editor di query premendo **Ctrl+N**.
 
 2. Tipo **sql** nell'editor, sulla freccia verso il basso per **sqlCreateStoredProcedure**e premere il *scheda* chiave (o *invio*) per caricare la creazione archiviata frammento di stored procedure.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![elenco dei frammenti](./media/tutorial-sql-editor/snippet-list.png)
 
 3. Il frammento di stored procedure crea include due campi impostato per la modifica rapida, *StoredProcedureName* e *SchemaName*. Selezionare *StoredProcedureName*, pulsante destro del mouse e selezionare **Modifica tutte le occorrenze**. A questo punto digitare *getCustomer* e tutte le *StoredProcedureName* le voci delle modifiche per *getCustomer*.
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![Frammento di codice](./media/tutorial-sql-editor/snippet.png)
 
 5. Modificare tutte le occorrenze di *SchemaName* a *dbo*. 
 6. Il frammento contiene parametri di segnaposto e testo del corpo da aggiornare. Il *EXECUTE* istruzione contiene inoltre il testo segnaposto perché non conoscere il numero di parametri avrà la procedura. Per questa esercitazione il frammento di codice di aggiornamento pertanto risulta simile al codice seguente:
@@ -117,7 +117,7 @@ A questo punto viene creata la stored procedure e **risultati** riquadro viene v
 
 ## <a name="use-peek-definition"></a>Utilizzare Visualizza definizione 
 
-SQL Operations Studio fornisce la possibilità di visualizzare una definizione di oggetti utilizzando la funzionalità di definizione della visualizzazione. In questa sezione viene creata una seconda stored procedure e utilizza finestra Visualizza definizione per vedere quali sono le colonne in una tabella per creare rapidamente il corpo della stored procedure.
+Operazioni SQL Studio fornisce la possibilità di visualizzare una definizione di oggetti utilizzando la funzionalità di definizione della visualizzazione. In questa sezione viene creata una seconda stored procedure e utilizza finestra Visualizza definizione per vedere quali sono le colonne in una tabella per creare rapidamente il corpo della stored procedure.
 
 1. Aprire un nuovo editor premendo **Ctrl + N**. 
 

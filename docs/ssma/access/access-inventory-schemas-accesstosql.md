@@ -1,6 +1,6 @@
 ---
 title: Accedere a schemi di inventario (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -48,11 +48,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d68215dd768a2fbd4e6723d7ca98ef9a5c96c72d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a279ed084f4d7dc3b2574ed71332acf9bfe61c8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di accesso (AccessToSQL)
 Nelle sezioni seguenti vengono descritte le tabelle che vengono create SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -108,7 +108,7 @@ I metadati della colonna viene esportato nel **SSMA_Access_InventoryColumns** ta
 |**DataType**|**nvarchar(4000)**|L'accesso del tipo di dati della colonna, ad esempio **testo** o **lungo**.|  
 |**IsAutoIncrement**|**bit**|Specifica se la colonna viene incrementato automaticamente i valori interi. Se il valore è 1, i numeri interi sono a incremento automatico.|  
 |**Ordinal**|**smallint**|L'ordine della colonna nella tabella, a partire da zero.|  
-|**DefaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
+|**defaultValue**|**nvarchar(4000)**|Il valore predefinito per la colonna.|  
 |**ValidationRule**|**nvarchar(4000)**|La regola viene utilizzata per convalidare i dati aggiunti o aggiornati nella colonna.|  
   
 ## <a name="indexes"></a>Indici  
@@ -170,7 +170,7 @@ Macro metadati vengono esportati nel **SSMA_Access_InventoryMacros** tabella. Qu
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene la macro.|  
 |**MacroId**|**int**|Incremento numero intero che identifica la macro. Questa colonna è la chiave primaria per la tabella.|  
-|**MacroName**|**nvarchar(4000)**|Il nome della macro.|  
+|**Nomemacro**|**nvarchar(4000)**|Il nome della macro.|  
   
 ## <a name="reports"></a>Report  
 I metadati del report viene esportato nel **SSMA_Access_InventoryReports** tabella. Questa tabella contiene le colonne seguenti:  
@@ -178,7 +178,7 @@ I metadati del report viene esportato nel **SSMA_Access_InventoryReports** tabel
 |Nome colonna|Tipo di dati|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica il database che contiene il report.|  
-|**ReportId**|**int**|Incremento numero intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
+|**Valore ReportId**|**int**|Incremento numero intero che identifica il report. Questa colonna è la chiave primaria per la tabella.|  
 |**NomeReport**|**nvarchar(4000)**|Nome del report.|  
   
 ## <a name="modules"></a>Moduli  

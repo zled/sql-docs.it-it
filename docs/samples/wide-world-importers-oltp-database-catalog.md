@@ -1,7 +1,7 @@
 ---
 title: Catalogo del database OLTP WideWorldImporters - SQL | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 9f4cabeaa5dafe2de26d760b1c03377ba10c2890
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d7240025e36f64ac6a11194d81ba563d4e7c49b0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogo del database WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Questi schemi vengono utilizzati per le applicazioni esterne che non è consenti
 |-----------------------------|---------------------|
 |Sito Web|Accesso al database dal sito Web aziendale avviene totalmente tramite questo schema.|
 |Report|Accesso al database dai report di Reporting Services avviene totalmente tramite questo schema.|
-|PowerBI|Accesso al database dal dashboard di Power BI tramite il Gateway aziendale avviene totalmente tramite questo schema.|
+|Power BI|Accesso al database dal dashboard di Power BI tramite il Gateway aziendale avviene totalmente tramite questo schema.|
 
 Si noti che i report e Power BI gli schemi non vengono utilizzati nella versione iniziale del database di esempio. Tuttavia, gli esempi di tutti i Power BI e Reporting Services basati su questo database sono incoraggiati a utilizzare questi schemi.
 

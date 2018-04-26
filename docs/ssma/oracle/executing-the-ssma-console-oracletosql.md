@@ -1,32 +1,34 @@
 ---
 title: L'esecuzione la Console SSMA (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Oracle SSMA Console
 - Script File Commands, Script Generation Commands,Manageability Commands
 - Script File Commands,Project Commands
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 9c0109ed3c675b140cbce6d780c24256c0eb2bc9
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 54055f1eb840d6c2160ac04f7713e86f05859a28
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>L'esecuzione la Console SSMA (OracleToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA. L'applicazione console utilizza alcuni comandi di file di script standard come enumerata in questa sezione.  
@@ -41,11 +43,11 @@ creare-nuovo progetto
   
 **Script**  
   
--   `project-folder`indica la cartella del progetto recupero creato.  
+-   `project-folder` indica la cartella del progetto recupero creato.  
   
--   `project-name`indica il nome del progetto. {stringa}  
+-   `project-name` indica il nome del progetto. {string}  
   
--   `overwrite-if-exists`Attributo facoltativo indica se un progetto esistente deve essere sovrascritti. {booleano}  
+-   `overwrite-if-exists`Attributo facoltativo indica se è necessario sovrascrivere un progetto esistente. {booleano}  
   
 -   `project-type:`Attributo facoltativo. Indica il tipo di progetto, ovvero "sql-server-2005" progetto o progetto "sql-server-2008" o "sql-server-2012" progetto o il progetto "sql-server-2014" o "sql azure". Valore predefinito è "sql-server-2014".  
   
@@ -74,9 +76,9 @@ Apri progetto: apre un progetto esistente.
   
 **Script**  
   
--   `project-folder`indica la cartella del progetto recupero creato. Il comando non riesce se la cartella specificata non esiste.  {stringa}  
+-   `project-folder` indica la cartella del progetto recupero creato. Il comando non riesce se la cartella specificata non esiste.  {string}  
   
--   `project-name`indica il nome del progetto. Il comando non riesce se il progetto specificato non esiste.  {stringa}  
+-   `project-name` indica il nome del progetto. Il comando non riesce se il progetto specificato non esiste.  {string}  
   
 **Esempio di sintassi:**  
   
@@ -127,7 +129,7 @@ I comandi di connessione al Database consentono di connettere al database.
   
 -   Il **Sfoglia** funzionalità dell'interfaccia utente non è supportata nella console.  
   
--   Per ulteriori informazioni su 'Creazione di file di Script', vedere [OracleToSQL creazione di file di Script &#40; &#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
+-   Per ulteriori informazioni su 'Creazione di file di Script', vedere [creazione di file di Script &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md).  
   
 **Command**  
   
@@ -167,7 +169,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <force-load>  
@@ -178,7 +180,7 @@ o Gestione configurazione
 ```  
 **Command**  
   
-ristabilire la connessione database di origine  
+reconnect-source-database  
   
 -   Ristabilisce la connessione al database di origine, ma non carica i metadati a differenza del comando di connessione database di origine.  
   
@@ -193,7 +195,7 @@ ristabilire la connessione database di origine
 ```  
 **Command**  
   
-connessione database di destinazione  
+connect-target-database  
   
 -   Si connette al database di SQL Server di destinazione e carica completamente elevato metadati a livello del database di destinazione, ma non nei metadati.  
   
@@ -210,7 +212,7 @@ Definizione del server viene recuperata dall'attributo del nome definito per ogn
 ```  
 **Command**  
   
-ristabilire la connessione database di destinazione  
+reconnect-target-database  
   
 -   Ristabilisce la connessione al database di destinazione, ma non carica i metadati, a differenza del comando di connessione database di destinazione.  
   
@@ -239,25 +241,25 @@ generare report di valutazione
   
 **Script**  
   
--   `conversion-report-folder:`Specifica una cartella in cui la relazione di valutazione può essere archiviati. (attributo facoltativo)  
+-   `conversion-report-folder:` Specifica cartella in cui il report di valutazione può da archiviare. (attributo facoltativo)  
   
--   `object-name:`Specifica gli oggetti considerati per la generazione di report di valutazione (può avere un nome di oggetto gruppo o nomi di oggetto di indivdual).  
+-   `object-name:` Specifica gli oggetti considerati per la generazione di report di valutazione (può avere un nome di oggetto gruppo o nomi di oggetto indivdual).  
   
--   `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se è specificata una categoria dell'oggetto tipo di oggetto sarà "category").  
+-   `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se si specifica categoria dell'oggetto tipo di oggetto sarà "category").  
   
--   `conversion-report-overwrite:`Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
+-   `conversion-report-overwrite:` Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
   
     **Il valore predefinito:** false. (attributo facoltativo)  
   
--   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
+-   `write-summary-report-to:` Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene specificato il percorso della cartella, solo file in base al nome **AssessmentReport&lt;n&gt;. XML** viene creato. (attributo facoltativo)  
+    Se viene specificato il percorso della cartella, solo file con nome **AssessmentReport&lt;n&gt;. XML** viene creato. (attributo facoltativo)  
   
     Creazione di report presenta due ulteriori sottocategorie:  
   
-    -   `report-errors`(= "true/false", con valore predefinito è "false" (attributi facoltativi))  
+    -   `report-errors` (= "true/false", con valore predefinito è "false" (attributi facoltativi))  
   
-    -   `verbose`(= "true/false", con valore predefinito è "false" (attributi facoltativi))  
+    -   `verbose` (= "true/false", con valore predefinito è "false" (attributi facoltativi))  
   
 **Esempio di sintassi:**  
   
@@ -280,7 +282,7 @@ generare report di valutazione
   
 />  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <generate-assessment-report  
@@ -305,7 +307,7 @@ L'output di console predefinito per i comandi di migrazione è il report di outp
   
 **Command**  
   
-Converti schema  
+convert-schema  
   
 -   Esegue la conversione dello schema di origine allo schema di destinazione.  
   
@@ -313,25 +315,25 @@ Converti schema
   
 **Script**  
   
--   `conversion-report-folder:`Specifica una cartella in cui la relazione di valutazione può essere archiviati. (attributo facoltativo)  
+-   `conversion-report-folder:` Specifica cartella in cui il report di valutazione può da archiviare. (attributo facoltativo)  
   
--   `object-name:`Specifica gli oggetti origine considerati per la conversione dello schema (può avere un nome di oggetto gruppo o nomi di oggetto di indivdual).  
+-   `object-name:` Specifica gli oggetti origine considerati per la conversione dello schema (può avere un nome di oggetto gruppo o nomi di oggetto indivdual).  
   
--   `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se è specificata una categoria dell'oggetto tipo di oggetto sarà "category").  
+-   `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se si specifica categoria dell'oggetto tipo di oggetto sarà "category").  
   
--   `conversion-report-overwrite:`Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
+-   `conversion-report-overwrite:` Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
   
     **Il valore predefinito:** false. (attributo facoltativo)  
   
--   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
+-   `write-summary-report-to:` Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene specificato il percorso della cartella, solo file in base al nome **SchemaConversionReport&lt;n&gt;. XML** viene creato. (attributo facoltativo)  
+    Se viene specificato il percorso della cartella, solo file con nome **SchemaConversionReport&lt;n&gt;. XML** viene creato. (attributo facoltativo)  
   
     Creazione di report presenta due ulteriori sottocategorie:  
   
-    -   `report-errors`(= "true/false", con valore predefinito è "false" (attributi facoltativi))  
+    -   `report-errors` (= "true/false", con valore predefinito è "false" (attributi facoltativi))  
   
-    -   `verbose`(= "true/false", con valore predefinito è "false" (attributi facoltativi))  
+    -   `verbose` (= "true/false", con valore predefinito è "false" (attributi facoltativi))  
   
 **Esempio di sintassi:**  
   
@@ -354,7 +356,7 @@ Converti schema
   
 />  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <convert-schema  
@@ -371,31 +373,31 @@ o Gestione configurazione
 ```  
 **Command**  
   
-eseguire la migrazione di dati  
+migrate-data  
   
 Esegue la migrazione di dati di origine alla destinazione.  
   
 **Script**  
   
--   `conversion-report-folder:`Specifica una cartella in cui la relazione di valutazione può essere archiviati. (attributo facoltativo)  
+-   `conversion-report-folder:` Specifica cartella in cui il report di valutazione può da archiviare. (attributo facoltativo)  
   
--   `object-name:`Specifica gli oggetti origine presi in considerazione per la migrazione di dati (può avere un nome di oggetto gruppo o nomi di oggetto di indivdual).  
+-   `object-name:` Specifica gli oggetti origine presi in considerazione per la migrazione dei dati (può avere un nome di oggetto gruppo o nomi di oggetto indivdual).  
   
--   `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se è specificata una categoria dell'oggetto tipo di oggetto sarà "category").  
+-   `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se si specifica categoria dell'oggetto tipo di oggetto sarà "category").  
   
--   `conversion-report-overwrite:`Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
+-   `conversion-report-overwrite:` Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
   
     **Il valore predefinito:** false. (attributo facoltativo)  
   
--   `write-summary-report-to:`Specifica il percorso in cui verrà generato il report di riepilogo.  
+-   `write-summary-report-to:` Specifica il percorso in cui verrà generato il report di riepilogo.  
   
-    Se viene specificato il percorso della cartella, solo file in base al nome **DataMigrationReport&lt;n&gt;. XML** viene creato. (attributo facoltativo)  
+    Se viene specificato il percorso della cartella, solo file con nome **DataMigrationReport&lt;n&gt;. XML** viene creato. (attributo facoltativo)  
   
     Creazione di report presenta due ulteriori sottocategorie:  
   
-    -   `report-errors`(= "true/false", con valore predefinito è "false" (attributi facoltativi))  
+    -   `report-errors` (= "true/false", con valore predefinito è "false" (attributi facoltativi))  
   
-    -   `verbose`(= "true/false", con valore predefinito è "false" (attributi facoltativi))  
+    -   `verbose` (= "true/false", con valore predefinito è "false" (attributi facoltativi))  
   
 **Esempio di sintassi:**  
   
@@ -422,7 +424,7 @@ Esegue la migrazione di dati di origine alla destinazione.
   
 </migrate-data>  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <migrate-data  
@@ -451,9 +453,9 @@ Esegue la migrazione di dati di origine alla destinazione.
   
 **Script**  
   
--   `source-schema`Specifica lo schema di origine che si intende eseguire la migrazione.  
+-   `source-schema` Specifica lo schema di origine che si intende eseguire la migrazione.  
   
--   `sql-server-schema`Specifica lo schema di destinazione in cui si desidera eseguire la migrazione.  
+-   `sql-server-schema` Specifica lo schema di destinazione desiderata per la migrazione.  
   
 **Esempio di sintassi:**  
   
@@ -470,7 +472,7 @@ I comandi di gestione consentono di sincronizzare gli oggetti di database di des
   
 **Command**  
   
-sincronizzare-destinazione  
+synchronize-target  
   
 -   Sincronizza gli oggetti di destinazione con il database di destinazione.  
   
@@ -480,11 +482,11 @@ sincronizzare-destinazione
   
 **Script**  
   
--   `object-name:`Specifica gli oggetti di destinazione, considerati per la sincronizzazione con il database di destinazione (può avere un nome di oggetto gruppo o nomi di oggetto di indivdual).  
+-   `object-name:` Specifica gli oggetti di destinazione presi in considerazione per la sincronizzazione con database di destinazione (può avere un nome di oggetto gruppo o nomi di oggetto indivdual).  
   
--   `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se è specificata una categoria dell'oggetto tipo di oggetto sarà "category").  
+-   `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se si specifica categoria dell'oggetto tipo di oggetto sarà "category").  
   
--   `on-error:`Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili in errore:  
+-   `on-error:` Specifica se specificare gli errori di sincronizzazione come avvisi o errori. Opzioni disponibili in errore:  
   
     -   Totale report come avviso  
   
@@ -492,7 +494,7 @@ sincronizzare-destinazione
   
     -   Errore-script  
   
--   `report-errors-to:`Specifica posizione del report di errore per l'operazione di sincronizzazione (attributo facoltativo) se viene fornito il percorso di cartella, solo file in base al nome **TargetSynchronizationReport.XML** viene creato.  
+-   `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di sincronizzazione (attributo facoltativo) se il percorso di cartella viene fornito solo, quindi di file in base al nome **TargetSynchronizationReport.XML** viene creato.  
   
 **Esempio di sintassi:**  
   
@@ -511,7 +513,7 @@ sincronizzare-destinazione
   
 />  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <synchronize-target  
@@ -520,7 +522,7 @@ o Gestione configurazione
   
    object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <synchronize-target>  
@@ -545,11 +547,11 @@ aggiornamento da database
   
 Richiede uno o più nodi di metabase come parametro della riga di comando.  
   
--   `object-name:`Specifica gli oggetti origine considerati per l'aggiornamento dal database di origine (può avere un nome di oggetto gruppo o nomi di oggetto singolo).  
+-   `object-name:` Specifica gli oggetti origine presi in considerazione per l'aggiornamento dal database di origine (può avere un nome di oggetto gruppo o nomi di oggetto singoli).  
   
--   `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se è specificata una categoria dell'oggetto tipo di oggetto sarà "category").  
+-   `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se si specifica categoria dell'oggetto tipo di oggetto sarà "category").  
   
--   `on-error:`Specifica se specificare gli errori di aggiornamento come avvisi o errori. Opzioni disponibili in errore:  
+-   `on-error:` Specifica se specificare errori di aggiornamento come avvisi o errori. Opzioni disponibili in errore:  
   
     -   Totale report come avviso  
   
@@ -557,7 +559,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
     -   Errore-script  
   
--   `report-errors-to:`Specifica posizione del report di errore per l'operazione di aggiornamento (attributo facoltativo) se viene fornito il percorso di cartella, solo file in base al nome **SourceDBRefreshReport.XML** viene creato.  
+-   `report-errors-to:` Specifica percorso di segnalazione errori per l'operazione di aggiornamento (attributo facoltativo) se il percorso di cartella viene fornito solo, quindi di file in base al nome **SourceDBRefreshReport.XML** viene creato.  
   
 **Esempio di sintassi:**  
   
@@ -576,7 +578,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <refresh-from-database  
@@ -585,7 +587,7 @@ o Gestione configurazione
   
    object-type="<object-category>"/>  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <refresh-from-database>  
@@ -608,15 +610,15 @@ Consente di salvare gli script degli oggetti in un file indicato quando metabase
   
 Richiede uno o più nodi di metabase come parametro della riga di comando.  
   
--   `object-name:`Specifica gli oggetti il cui script devono essere salvati. (Può avere un nome di oggetto gruppo o nomi di oggetto singoli)  
+-   `object-name:` Specifica gli oggetti il cui script devono essere salvati. (Può avere un nome di oggetto gruppo o nomi di oggetto singoli)  
   
--   `object-type:`Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se è specificata una categoria dell'oggetto tipo di oggetto sarà "category").  
+-   `object-type:` Specifica il tipo dell'oggetto specificato nell'attributo nome di oggetto (se si specifica categoria dell'oggetto tipo di oggetto sarà "category").  
   
--   `metabase:`Specifica se è IIl origine o di destinazione della metabase.  
+-   `metabase:` Specifica se è IIl origine o di destinazione della metabase.  
   
--   `destination:`Specifica il percorso o la cartella in cui lo script deve essere salvato, se il nome del file non è specificato quindi un nome di file in out il formato (valore di attributo object_name)  
+-   `destination:` Specifica il percorso o la cartella in cui lo script deve essere salvato, se il nome del file non è specificato quindi un nome di file in out il formato (valore dell'attributo object_name)  
   
--   `overwrite:`Se true vengono sovrascritti se lo stesso nome di file esiste. Ciò può avere i valori (true/false).  
+-   `overwrite:` Se true vengono sovrascritti se stesso nome di file esiste. Ciò può avere i valori (true/false).  
   
 **Esempio di sintassi:**  
   
@@ -635,7 +637,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o Gestione configurazione  
+o  
   
 ```xml  
 <save-as-script  
@@ -654,25 +656,25 @@ o Gestione configurazione
   
 Convert-istruzione  
   
--   `context`Specifica il nome dello schema.  
+-   `context` Specifica il nome dello schema.  
   
--   `destination`Specifica se l'output deve essere archiviata in un file.  
+-   `destination` Specifica se l'output deve essere archiviata in un file.  
   
     Se questo attributo viene omesso, l'istruzione T-SQL convertito viene visualizzato nella console. (attributo facoltativo)  
   
--   `conversion-report-folder`Specifica una cartella in cui la relazione di valutazione può essere archiviati. (attributo facoltativo)  
+-   `conversion-report-folder` Specifica cartella in cui il report di valutazione può da archiviare. (attributo facoltativo)  
   
--   `conversion-report-overwrite`Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
+-   `conversion-report-overwrite` Specifica se sovrascrivere la cartella di report di valutazione se esiste già.  
   
     **Il valore predefinito:** false. (attributo facoltativo)  
   
--   `write-converted-sql-to`Specifica il percorso di cartella in cui è archiviato il codice T-SQL convertito file (o). Quando è specificato un percorso di cartella con il `sql-files` attributo, ogni file di origine sarà necessario una file di T-SQL creata nella cartella specificata di destinazione corrispondente. Quando è specificato un percorso di cartella con il `sql` attributo, il codice T-SQL convertito viene scritto in un file denominato **Result.out** sotto la cartella specificata.  
+-   `write-converted-sql-to` Specifica il percorso di cartella in cui è archiviato il codice T-SQL convertito file (o). Quando è specificato un percorso di cartella con il `sql-files` attributo, ogni file di origine sarà necessario una file di T-SQL creata nella cartella specificata di destinazione corrispondente. Quando è specificato un percorso di cartella con il `sql` attributo, il codice T-SQL convertito viene scritto in un file denominato **Result.out** sotto la cartella specificata.  
   
--   `sql`Specifica le istruzioni sql Oracle per la conversione, una o più istruzioni possono essere separati con un ";"  
+-   `sql` Specifica le istruzioni sql Oracle per la conversione, una o più istruzioni possono essere separati con un ";"  
   
--   `sql-files`Specifica il percorso dei file sql che deve essere convertito in codice T-SQL.  
+-   `sql-files` Specifica il percorso dei file sql che deve essere convertito in codice T-SQL.  
   
--   `write-summary-report-to`Specifica il percorso in cui verrà generato il report. Se viene specificato il percorso della cartella, solo file in base al nome **ConvertSQLReport.XML** viene creato. (attributo facoltativo)  
+-   `write-summary-report-to` Specifica il percorso in cui verrà generato il report. Se viene specificato il percorso della cartella, solo file in base al nome **ConvertSQLReport.XML** viene creato. (attributo facoltativo)  
   
     Report creazione è 2 ulteriormente le sottocategorie, dei quali.:  
   
@@ -711,7 +713,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 </convert-sql-statement>  
 ```  
-o Gestione configurazione  
+o  
   
 ```  
 <convert-sql-statement  
@@ -734,7 +736,7 @@ o Gestione configurazione
   
    sql-files="<folder-name>\*.sql" />  
 ```  
-o Gestione configurazione  
+o  
   
 ```  
 <convert-sql-statement  
@@ -749,15 +751,15 @@ o Gestione configurazione
 ```  
   
 ## <a name="next-step"></a>Passaggio successivo  
-Per informazioni sulle opzioni della riga di comando, vedere [opzioni della riga di comando nella Console di SSMA &#40; OracleToSQL &#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md) .  
+Per informazioni sulle opzioni della riga di comando, vedere [opzioni della riga di comando nella Console di SSMA &#40;OracleToSQL&#41; ](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md) .  
   
-Per informazioni sui file di script di esempio console, vedere [funziona con i file di Script di esempio Console &#40; OracleToSQL &#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
+Per informazioni sui file di script di esempio della console, vedere [funziona con i file di Script di esempio della Console &#40;OracleToSQL&#41;](../../ssma/oracle/working-with-the-sample-console-script-files-oracletosql.md)  
   
 Il passaggio successivo dipende dai requisiti del progetto:  
   
--   Per specificare una password o l'esportazione / importazione per le password, vedere [OracleToSQL le password di gestione &#40; &#41;](../../ssma/oracle/managing-passwords-oracletosql.md).  
+-   Consente di specificare una password o l'esportazione / importazione per le password, vedere [la gestione delle password &#40;OracleToSQL&#41;](../../ssma/oracle/managing-passwords-oracletosql.md).  
   
--   Per la generazione di report, vedere [OracleToSQL la generazione di report &#40; &#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
+-   Per la generazione di report, vedere [la generazione di report &#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md).  
   
--   Per la risoluzione dei problemi nella console, vedere [OracleToSQL Troubleshooting &#40; &#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
+-   Per la risoluzione dei problemi nella console, vedere [Troubleshooting &#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
   

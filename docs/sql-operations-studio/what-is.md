@@ -1,9 +1,9 @@
 ---
-title: Che cos'è Microsoft SQL Operations Studio (preview)? | Microsoft Docs
-description: Microsoft SQL Operations Studio (preview) è uno strumento gratuito supportato in Windows, macOS e Linux, per la gestione di SQL Server, Database SQL di Azure e Azure SQL Data Warehouse, ovunque essi siano installati.
+title: Che cos'è Microsoft SQL Operations Studio (anteprima)? | Microsoft Docs
+description: Microsoft SQL Operations Studio (anteprima) è uno strumento gratuito supportato in Windows, macOS e Linux, per la gestione di SQL Server, Database SQL di Azure e Azure SQL Data Warehouse, ovunque essi siano installati.
 ms.custom: tools|sos
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99dbe934a5b13e983a7c796689a2956c42354af2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 730eed76bb4859ddbd1edacb47ab92ab5973d455
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what-is-includename-sosincludesname-sosmd"></a>Che cos'è [!INCLUDE[name-sos](../includes/name-sos.md)]?
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]è uno strumento gratuito supportato in Windows, macOS e Linux, per la gestione di SQL Server, Database SQL di Azure e Azure SQL Data Warehouse, ovunque essi siano installati.
 
-**[Scaricare e installare[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
+**[Scaricare e installare [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
 ## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>Editor di codice Transact-SQL (T-SQL) con IntelliSense
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/21/2017
 
 I frammenti di codice generano la sintassi T-SQL appropriata per creare database, tabelle, viste, stored procedure, utenti, account di accesso, ruoli e così via, e per aggiornare gli oggetti di database esistenti. Utilizzare i frammenti di codice smart per creare rapidamente copie del database in fase di sviluppo o test, e per generare ed eseguire script di CREATE e INSERT.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]fornisce inoltre funzionalità per creare frammenti di codice T-SQL personalizzati. Per ulteriori informazioni, vedere [creare e usare i frammenti di codice](code-snippets.md).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce inoltre funzionalità per creare frammenti di codice T-SQL personalizzati. Per ulteriori informazioni, vedere [creare e usare i frammenti di codice](code-snippets.md).
 
 
 ## <a name="customizable-server-and-database-dashboards"></a>Dashboard di server e database personalizzabili
@@ -51,6 +51,6 @@ I gruppi di server consentono di organizzare le informazioni di connessione per 
 È possibile utilizzare gli strumenti da riga di comando (ad esempio, Bash, PowerShell, sqlcmd, bcp e ssh) nella finestra del terminale integrata direttamente nell'interfaccia utente di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Per ulteriori informazioni su terminale integrato, vedere [Terminale integrato] (terminal.md integrato).
 
 ## <a name="next-steps"></a>Passaggi successivi
-- [Scaricare e installare[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
+- [Scaricare e installare [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)
 - [Connettersi ed eseguire query di SQL Server](quickstart-sql-server.md)
-- [Connettersi ed eseguire query di Database SQL di Azure](quickstart-sql-database.md)
+- [Connettersi ed eseguire query su Database SQL di Azure](quickstart-sql-database.md)

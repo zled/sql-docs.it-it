@@ -1,27 +1,28 @@
 ---
 title: Oracle schemi di mapping per gli schemi di SQL Server (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: 025f3f049b5efccb83e13d5baebacbe8b0fa2a1c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e51a3b70f585bebd353a84b9c0274180a0daf870
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Oracle schemi di mapping per gli schemi di SQL Server (OracleToSQL)
 In Oracle, ogni database dispone di uno o più schemi. Per impostazione predefinita, SSMA esegue la migrazione di tutti gli oggetti in uno schema Oracle per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] denominato per lo schema di database. Tuttavia, è possibile personalizzare il mapping tra gli schemi di Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
@@ -65,10 +66,10 @@ Se si personalizza il mapping tra uno schema di Oracle e un [!INCLUDE[ssNoVersio
   
 1.  Nella scheda mapping dello schema, selezionare una riga e fare clic su **Ripristina predefiniti** per ripristinare il database predefinito e lo schema.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Passaggi successivi  
 Se si desidera analizzare la conversione degli oggetti Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] oggetti, è possibile [creare un report di conversione](http://msdn.microsoft.com/en-us/4de9bcf6-1346-4740-87f9-7f24a8226357). In caso contrario, è possibile [convertire le definizioni degli oggetti di database Oracle](http://msdn.microsoft.com/en-us/e021182d-31da-443d-b110-937f5db27272) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] definizioni di oggetti.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Connessione a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
-[Migrazione di database Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[La connessione a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
+[Migrazione di Oracle database a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

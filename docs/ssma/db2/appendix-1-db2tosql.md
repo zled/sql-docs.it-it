@@ -1,6 +1,6 @@
 ---
-title: Appendix - 1 (DB2ToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+title: Appendice - 1 (DB2ToSQL) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,13 +21,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e06f1f7e7152bb65f6c6625c87ad3fdb7542ac7
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 7bdea6cf0d01a72215d60daa3df4bb035cd98d85
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="appendix---1-db2tosql"></a>Appendix - 1 (DB2ToSQL)
+# <a name="appendix---1-db2tosql"></a>Appendice - 1 (DB2ToSQL)
 Anteprima della Console di SSMA opzioni riga di comando:  
   
 |Sl. No.|Opzione|Obbligatorio?|Passare l'argomento|Valori consentiti|  
@@ -36,8 +36,8 @@ Anteprima della Console di SSMA opzioni riga di comando:
 |2|variabile o - v|no|variablevaluefile|Nome del file XML valido.<br /><br />Se le variabili vengono utilizzate nel file di script, è necessario specificare questo file.|  
 |3|-c/serverconnection|no|serverconnectionfile|Nome del file XML valido.<br /><br />Questo file contiene informazioni sulla connessione server.|  
 |4|-x/xmloutput|no|xmloutputfile|Questa opzione indica l'output della console in formato XML. Se questa opzione non è specificata, l'output predefinito è in formato testo.<br /><br />Se non viene specificato xmloutputfile, output XML viene indirizzato a STDOUT.<br /><br />Xmloutputfile è il nome del file in cui viene scritto l'output della console in formato XML.|  
-|5|-l/log|no|logfile|Nome file valido.|  
-|6|-e/projectenvironment|no|projectenvironmentfolder|Nome di cartella valido contenente i file dell'ambiente di progetto SSMA.|  
+|5|-l o di log|no|logfile|Nome file valido.|  
+|6|e-/ projectenvironment|no|projectenvironmentfolder|Nome di cartella valido contenente i file dell'ambiente di progetto SSMA.|  
 |7|-p/securepassword|no|-un/Aggiungi {< server_id > [,... n] &#124; tutti i} – c&#124;serverconnection < file di connessione server > [-v&#124;variabile < variabile-valore-file >] [-o/sovrascrivere]<br /><br />o<br /><br />-un/Aggiungi {< server_id > [,... n] &#124; tutti i} – s&#124;script < file di script > [-v&#124;variabile < variabile-valore-file >] [-o/sovrascrivere]<br /><br />– r/Rimuovi {< server_id > [,... n] &#124; tutti i}<br /><br />-l/elenco<br /><br />– e/esportazione {< server-id > [,... n] &#124; tutti i} < crittografato della password - file ><br /><br />-i / importazione {< server-id > [,... n] &#124; tutti i} < crittografati-password-file >|Se specificato, è necessario non combinare questa opzione con le altre opzioni.<br /><br />ID del server: specificato un ID univoco per un server {stringa}<br /><br />file di connessione server: file di definizione del server (serverconnectionfile o scriptfile).<br /><br />file di variabile-valore: è un file di definizione della variabile e usato nel file di connessione server.<br /><br />: file di password crittografata: è un file di password server crittografato con una specificata dall'utente-passphrase.|  
 |8|-?|no|Non applicabile|Non applicabile|  
   

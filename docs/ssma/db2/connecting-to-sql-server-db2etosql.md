@@ -1,6 +1,6 @@
 ---
 title: Connessione a SQL Server (DB2eToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a985f474e67c846fcb7d4b0428f8f61ba3e010e9
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 373e9e080f839a6c2ea66291118991488ac73c17
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Connessione a SQL Server (DB2eToSQL)
 Per eseguire la migrazione di database DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]database di SQL Server 2014 o Azure è necessario connettersi a uno qualsiasi di queste istanze di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e visualizza i metadati del database nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Visualizzatore metadati. SSMA archivia le informazioni sull'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si è connessi a, ma non archivia le password.  
@@ -91,11 +91,11 @@ Quando si definiscono le proprietà di connessione, è inoltre possibile specifi
   
 ||||||  
 |-|-|-|-|-|  
-|**TIPO Visual Studio versione SERVER di destinazione del progetto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
+|**TIPO Visual Studio versione SERVER di destinazione del progetto**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 <br />(Version:13.x)|Database SQL di Azure|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012|Sì|Sì|Sì||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014||Sì|Sì||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014|||Sì||  
-|Azure SQL DB||||Sì|  
+|Database SQL di Azure||||Sì|  
   
 > [!IMPORTANT]  
 > Conversione degli oggetti di database viene eseguita in base al tipo di progetto ma non per la versione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] si è connessi. In caso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database di SQL Server 2016 o Azure.  

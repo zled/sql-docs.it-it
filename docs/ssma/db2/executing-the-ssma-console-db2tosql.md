@@ -1,6 +1,6 @@
 ---
 title: L'esecuzione la Console SSMA (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f491f5afc0beea80943e976c64785afba200ad7c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 816c37c3ac9c26c80d0f3a95ed27af135b9e874c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>L'esecuzione la Console SSMA (DB2ToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA. In dettaglio le sezioni che seguono lo stesso. L'applicazione console utilizza alcuni comandi di file di script standard come enumerata in questa sezione.  
@@ -35,7 +35,7 @@ I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio
   
 **Command**  
   
-create-new-project  
+creare-nuovo progetto  
   
 Crea un nuovo progetto SSMA.  
   
@@ -70,7 +70,7 @@ Attributo 'tipo di progetto' **sql-server-2008** per impostazione predefinita.
   
 **Command**  
   
-open-project  
+Apri progetto  
   
 Apre un progetto esistente.  
   
@@ -95,7 +95,7 @@ SSMA per l'applicazione Console DB2 supporta la compatibilità con le versioni p
   
 **Command**  
   
-save-project  
+Salva progetto  
   
 Salva il progetto di migrazione.  
   
@@ -108,7 +108,7 @@ Salva il progetto di migrazione.
 ```  
 **Command**  
   
-close-project  
+Chiudi progetto  
   
 Chiude il progetto di migrazione.  
   
@@ -133,7 +133,7 @@ I comandi di connessione al Database consentono di connettere al database.
   
 **Command**  
   
-connect-source-database  
+connessione database di origine  
   
 -   La connessione al database di origine e carica i metadati di livello elevato di database di origine, ma non tutti i metadati.  
   
@@ -150,7 +150,7 @@ Definizione del server viene recuperata dall'attributo del nome definito per ogn
 ```  
 **Command**  
   
-force-load-source/target-database  
+Force-carico-/ destinazione del database di origine  
   
 -   Carica i metadati di origine.  
   
@@ -231,7 +231,7 @@ I comandi di Report generano report sulle prestazioni di varie attività della C
   
 **Command**  
   
-generate-assessment-report  
+generare report di valutazione  
   
 -   Genera report di valutazione nel database di origine.  
   
@@ -441,7 +441,7 @@ Il comando di preparazione di migrazione avvia il mapping dello schema tra i dat
   
 **Command**  
   
-map-schema  
+schema di mapping  
   
 Mapping dello schema del database di origine allo schema di destinazione.  
   
@@ -462,7 +462,7 @@ Mapping dello schema del database di origine allo schema di destinazione.
 ```  
 **Command**  
   
-map-schema  
+schema di mapping  
   
 Mapping dello schema del database di origine allo schema di destinazione.  
   
@@ -671,7 +671,7 @@ o
 ```  
 **Command**  
   
-convert-sql-statement  
+Convert-istruzione  
   
 -   `context` Specifica il nome dello schema.  
   

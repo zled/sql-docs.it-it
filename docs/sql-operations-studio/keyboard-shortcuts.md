@@ -1,9 +1,9 @@
 ---
-title: Creare e personalizzare i tasti di scelta rapida in SQL Operations Studio (preview) | Documenti Microsoft
-description: Informazioni su come creare e personalizzare i tasti di scelta rapida in SQL Operations Studio (preview).
+title: Creare e personalizzare i tasti di scelta rapida in Studio operazioni SQL (anteprima) | Documenti Microsoft
+description: Informazioni su come creare e personalizzare i tasti di scelta rapida in Studio operazioni SQL (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a96204723bd56a63ec23841ede47b5844fbad313
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 167b442388aaba9bc088648c7b070cf9c2731cbf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Tasti di scelta rapida[!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>Tasti di scelta rapida [!INCLUDE[name-sos](../includes/name-sos.md)]
 
 In questo articolo illustra la procedura per visualizzare, modificare e creare tasti di scelta rapida in [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
@@ -44,7 +44,7 @@ Per modificare il tasto di scelta rapida per un tasto di scelta rapida di esiste
    > [!TIP]
    > Cercare dalla chiave, dal comando, dall'origine e così via per restituire tutti i tasti pertinente.
 
-1. Fare clic sulla voce desiderata e selezionare **Keybinding di modifica**
+1. La voce desiderata e scegliere **Keybinding di modifica**
 
    ![modificare i tasti di scelta rapida](media/keyboard-shortcuts/change-keybinding.png)
 

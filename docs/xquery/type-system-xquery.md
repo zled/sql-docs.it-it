@@ -1,16 +1,16 @@
 ---
 title: Tipo di sistema (XQuery) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2016
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - built-in XML schema types [SQL Server]
 - xs prefix [XML in SQL Server]
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
-caps.latest.revision: 
+caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5e0c8e060eede58292de8f47a39c563059927513
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: d84021e20c56be6d889ba1936d385432a5d8e481
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system-xquery"></a>Sistema di tipi (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +52,14 @@ ms.lasthandoff: 02/09/2018
   
 -   Valore tipizzato e valore stringa di un nodo.  
   
--   Il [funzione data &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) e [stringa Function &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md).  
+-   Il [funzione data &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) e il [funzione string &#40;XQuery&#41;](../xquery/data-accessor-functions-string-xquery.md).  
   
 -   Individuazione di una corrispondenza per il tipo di sequenza restituito da un'espressione.  
   
 ## <a name="built-in-types-of-xml-schema"></a>Tipi predefiniti di XML Schema  
  I tipi predefiniti di XML Schema hanno un prefisso predefinito xs Alcuni di questi tipi includono **xs: integer** e **xs: String**. Tutti questi tipi predefiniti sono supportati ed è possibile utilizzarli per la creazione di una raccolta di XML Schema.  
   
- Quando si esegue una query su codice XML tipizzato, il tipo statico e dinamico dei nodi è determinato dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per ulteriori informazioni sui tipi statici e dinamici, vedere [contesto di espressione e valutazione della Query &#40; XQuery &#41; ](../xquery/expression-context-and-query-evaluation-xquery.md). Ad esempio, la query seguente viene eseguita su un oggetto tipizzato **xml** colonna (`Instructions`). Nell'espressione viene utilizzato l'elemento `instance of` per verificare che il valore tipizzato dell'attributo `LotSize` restituito sia di tipo `xs:decimal`.  
+ Quando si esegue una query su codice XML tipizzato, il tipo statico e dinamico dei nodi è determinato dalla raccolta di XML Schema associata alla colonna o alla variabile su cui viene eseguita la query. Per ulteriori informazioni sui tipi statici e dinamici, vedere [contesto di espressione e valutazione delle Query &#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md). Ad esempio, la query seguente viene eseguita su un oggetto tipizzato **xml** colonna (`Instructions`). Nell'espressione viene utilizzato l'elemento `instance of` per verificare che il valore tipizzato dell'attributo `LotSize` restituito sia di tipo `xs:decimal`.  
   
 ```  
 SELECT Instructions.query('  
@@ -110,9 +110,9 @@ SELECT @x.query( '/a[1] instance of element()')
   
  È possibile utilizzare il **data ()** o **String ()** funzione per recuperare il valore di un nodo:  
   
--   Il [funzione data &#40; XQuery &#41; ](../xquery/data-accessor-functions-data-xquery.md) restituisce il valore tipizzato di un nodo.  
+-   Il [funzione data &#40;XQuery&#41; ](../xquery/data-accessor-functions-data-xquery.md) restituisce il valore tipizzato di un nodo.  
   
--   Il [stringa Function &#40; XQuery &#41; ](../xquery/data-accessor-functions-string-xquery.md) restituisce il valore di stringa del nodo.  
+-   Il [funzione string &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) restituisce il valore di stringa del nodo.  
   
  Nella raccolta di XML Schema seguente, viene definito l'elemento <`root`> di tipo integer:  
   

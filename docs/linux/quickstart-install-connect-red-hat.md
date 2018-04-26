@@ -6,20 +6,20 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/22/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
-ms.openlocfilehash: 6919cdbb506ccbe36ed3e8c167be4321b5ee2a27
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+ms.openlocfilehash: 145f829b3baf5392ed3d6ed93db43b01603b9b8f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Guida introduttiva: Installare SQL Server e creare un database in Red Hat
 
@@ -34,7 +34,7 @@ In questa Guida rapida, installare innanzitutto 2017 di SQL Server su Red Hat En
 
 È necessario avere un 7.3 RHEL o 7.4 macchina con **almeno 2 GB** di memoria.
 
-Per installare Red Hat Enterprise Linux nel proprio computer, accedere a [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Vedere [creare e gestire le macchine virtuali Linux con l'interfaccia CLI di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e utilizzare `--image RHEL` nella chiamata a `az vm create`.
+Per installare Red Hat Enterprise Linux nel proprio computer, visitare [ http://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation). È anche possibile creare macchine virtuali RHEL in Azure. Vedere [creare e gestire le macchine virtuali Linux con l'interfaccia CLI di Azure](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)e utilizzare `--image RHEL` nella chiamata a `az vm create`.
 
 Per altri requisiti di sistema, vedere [requisiti di sistema per SQL Server in Linux](sql-server-linux-setup.md#system).
 

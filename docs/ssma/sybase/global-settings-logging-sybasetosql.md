@@ -2,7 +2,7 @@
 title: Impostazioni globali (registrazione) (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 943d9d640f6fe090bf0158ac23b892cdf0509aa4
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 381d85cd0b9b531c242db560f2cc59e1beb80901
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="global-settings-logging-sybasetosql"></a>Impostazioni globali (registrazione) (SybaseToSQL)
 Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni di registrazione per SSMA. In genere, è necessario modificare queste impostazioni solo quando si lavora con il supporto tecnico.  
@@ -57,7 +57,7 @@ Per ogni opzione in **livello messaggi**, configurare uno dei seguenti livelli d
 |**Errore irreversibile**|Scrivere il log solo i messaggi di errore irreversibile.|  
 |**Errore**|Scrivere nel registro errori e messaggi di errore irreversibile.|  
 |**Avviso**|Scrivere i messaggi di errore irreversibile, errore e avviso per il log.|  
-|**Info**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
+|**informazioni**|Scrivere il log informativi, avvisi, errori e i messaggi di errore irreversibile.|  
 |**Debug**|Scrivere tutti i messaggi, compresi i messaggi, nel Registro di debug.|  
   
 **Percorso File di log**  

@@ -1,6 +1,6 @@
 ---
-title: Global Settings (Editor) (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+title: Impostazioni globali (Editor) (MySQLToSQL) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,13 +21,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a4a7a0334014c7fe75f5e5d3f7f908529e2f60a
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b5f9a6243aad023de0e84d050fcf3fc950cf1537
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="global-settings-editor-mysqltosql"></a>Global Settings (Editor) (MySQLToSQL)
+# <a name="global-settings-editor-mysqltosql"></a>Impostazioni globali (Editor) (MySQLToSQL)
 Utilizzare la pagina Editor del **impostazioni globali** la finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  
   
 Per accedere a impostazioni dell'editor, scegliere il **strumenti** dal menu **impostazioni globali**, fare clic su **GUI** nella parte inferiore del riquadro sinistro, quindi scegliere **Editor**.  

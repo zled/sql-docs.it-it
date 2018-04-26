@@ -1,9 +1,9 @@
 ---
-title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato in SQL Operations Studio (preview) | Microsoft Docs'
-description: Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (preview).
+title: 'Esercitazione: Creare un widget di informazioni dettagliate personalizzato in SQL Operations Studio (anteprima) | Microsoft Docs'
+description: Con questa esercitazione viene mostrato come costruire un widget di informazioni dettagliate personalizzato e come aggiungerlo al dashboard di server e database in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: erickangMSFT
 ms.author: erickang
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 344cf021a4a0abc13fc8c531875c604095c8c0d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97a5177bf4f0dd9e5ae3ae1b097285bd7a8d42b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-build-a-custom-insight-widget"></a>Esercitazione: Creare un widget di informazioni dettagliate personalizzato
 
@@ -33,9 +33,9 @@ Durante questa esercitazione si apprenderà come:
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB* su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
+Questa esercitazione richiede il database *TutorialDB*, su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
 
-- [Connettersi ed eseguire query su SQL Server tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query su Azure SQL Database tramite[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 

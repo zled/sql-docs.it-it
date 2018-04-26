@@ -1,6 +1,6 @@
 ---
 title: Mapping tra i database MySQL e gli schemi di SQL Server (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -24,11 +24,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1369b509f815950fb1d6401e0b835a55d6263f19
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 79cbcae3c7c272f871b18ff0fc9b5a5c1acce57f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Mapping tra i database MySQL e gli schemi di SQL Server (MySQLToSQL)
 Per impostazione predefinita, SSMA per MySQL esegue la migrazione di tutti gli oggetti in uno schema di MySQL per un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o denominato per lo schema di database di SQL Azure. Tuttavia, è possibile personalizzare il mapping tra gli schemi di MySQL e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database di SQL Azure.  
@@ -80,7 +80,7 @@ Se si personalizza il mapping tra schemi di MySQL e uno schema di SQL Server, è
 Se si desidera analizzare la conversione di oggetti di MySQL in oggetti di SQL Server o SQL Azure, è possibile [creare un report di conversione](http://msdn.microsoft.com/en-us/2a56a003-3b0f-453a-963c-00c9e40933ec) in caso contrario, è possibile [convertire le definizioni degli oggetti di database MySQL](http://msdn.microsoft.com/en-us/ac21850b-fb32-4704-9985-5759b7c688c7) negli schemi di SQL Server o SQL Azure  
   
 ## <a name="see-also"></a>Vedere anche  
-[Project Settings &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
+[Le impostazioni del progetto &#40;conversione&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [La connessione al database SQL di Azure &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [Database MySQL la migrazione a SQL Server - SQL di Azure DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [La connessione a SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  

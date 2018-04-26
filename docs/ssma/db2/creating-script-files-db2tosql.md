@@ -1,6 +1,6 @@
 ---
 title: Creazione di file di Script (DB2ToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c07c232e22ba41899846f6e9cb5e6ecfa5783be
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f56d975aa2826c5e35465489d78a7bc193dc8295
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-script-files-db2tosql"></a>Creazione di file di Script (DB2ToSQL)
 Il primo passaggio prima di avviare l'applicazione console SSMA consiste nel creare il file di script e se è necessario creare il file di valore della variabile e il file di connessione del server.  
@@ -253,7 +253,7 @@ Le opzioni configurabili dall'utente includono:
   
     -   ogni 1%  
   
-    -   every-2%  
+    -   ogni 2%  
   
     -   ogni 5%  
   

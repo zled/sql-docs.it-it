@@ -1,30 +1,31 @@
 ---
 title: Il caricamento di convertire gli oggetti di Database in SQL Server (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Synchronization, Securing Objects in SQL Server
 - Synchronization,Scripting Objects
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 1de8ae1e53dfd76527987a15be62894dcae10120
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c78b59e8150dc210ab0ba35a7c6b26ace854f587
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Il caricamento di convertire gli oggetti di Database in SQL Server (OracleToSQL)
 Dopo aver convertito schemi Oracle a SQL Server, è possibile caricare gli oggetti di database risultante in SQL Server. È possibile avere SSMA creare gli oggetti, oppure è possibile creare script degli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo del database di SQL Server.  
@@ -69,7 +70,7 @@ Fare clic sul segno di azione di modifica dello stato. Sincronizzazione effettiv
 ## <a name="scripting-objects"></a>Oggetti di scripting  
 Per salvare [!INCLUDE[tsql](../../includes/tsql_md.md)] le definizioni degli oggetti di database convertito, o per modificare le definizioni degli oggetti ed eseguire gli script manualmente, è possibile salvare il database convertito definizioni di oggetto [!INCLUDE[tsql](../../includes/tsql_md.md)] script.  
   
-**Per salvare gli oggetti script**  
+**Per salvare gli oggetti come script**  
   
 1.  Dopo aver selezionato gli oggetti per salvare uno script, fare doppio clic su **database**, quindi fare clic su **salvare come Script**.  
   
@@ -116,5 +117,5 @@ Dopo aver caricato gli oggetti di database convertito in SQL Server, è possibil
 Il passaggio successivo del processo di migrazione consiste nel [la migrazione dei dati in SQL Server](http://msdn.microsoft.com/en-us/e23c5268-41ed-4e55-9fe7-a11376202a13).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database Oracle a SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+[Migrazione di Oracle database a SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

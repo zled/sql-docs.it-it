@@ -1,28 +1,28 @@
 ---
-title: "Novità di SSMA per Oracle (OracleToSQL) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Novità di SSMA per Oracle (OracleToSQL) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2018
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - sql-ssma
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63bc96b49c351d9923c5e4d4ae59056c7911ae40
-ms.sourcegitcommit: 6a5b80cac78fe5c2d2567a391daa335f9b4b3637
+ms.openlocfilehash: 39d030541bbfd12503078542f97bfc8cd780af12
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novità di SSMA per Oracle (OracleToSQL)
 Questo argomento elenca SSMA delle modifiche Oracle in ogni versione.  
@@ -86,7 +86,7 @@ La versione v7.3 di SSMA per Oracle sono incluse le modifiche seguenti:
       - Progetto di esempio per la conversione possibile scaricare questo [post di blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>Versione 7.2 SSMA
 La versione di SSMA per Oracle di versione 7.2 contiene le seguenti modifiche:
 - Metrica qualità e la conversione migliorata con le correzioni di destinazione in base ai suggerimenti dei clienti.
 - Miglioramenti di telemetria per fornire una migliore punti dati per risolvere i problemi dei clienti e migliorare il tasso di conversione di SSMA.
@@ -216,5 +216,5 @@ La versione di agosto 2007 di SSMA per Oracle sono incluse le seguenti modifiche
 -   Aggiungere che una nuova funzionalità di sincronizzazione consente di sincronizzare oggetti specifici con database di SQL Server.  
 -   Aggiunte nuove opzioni di conversione.  
   
-## <a name="april-2007"></a>April 2007  
+## <a name="april-2007"></a>Aprile 2007  
 La versione di aprile 2007 di SSMA per Oracle è la versione iniziale.

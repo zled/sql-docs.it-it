@@ -2,7 +2,7 @@
 title: Eseguire dalla riga di comando (SQL Server Data Migration Assistant) | Documenti Microsoft
 ms.custom: ''
 ms.date: 09/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: dma
 ms.service: ''
 ms.component: ''
@@ -21,11 +21,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6147d01802a363082baf27d6b909e2c98f9afef2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0bf0437354f90a03f1d1cf68be074df3f4234676
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Eseguire Data Migration Assistant dalla riga di comando
 La versione 2.1 e versioni successive, quando si installa Data Migration Assistant, verranno installati anche dmacmd.exe in *% ProgramFiles %\\Microsoft Data Migration Assistant\\*. Utilizzare dmacmd.exe per valutare i database in modalità automatica e il risultato JSON o CSV file di output. Ciò è particolarmente utile quando si verifica più database o i database di grandi dimensioni. 
@@ -68,7 +68,7 @@ DmaCmd.exe /AssessmentName="string"
 
   `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Valutazione di singolo database utilizzando regole di compatibilità autenticazione e l'esecuzione di Windows**
+**Valutazione di singolo database utilizzando le regole di compatibilità in esecuzione e l'autenticazione di Windows**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -80,7 +80,7 @@ Catalog=DatabaseName;***Integrated Security=true*"**
 
 
 
-**Valutazione di singolo database utilizzando l'indicazione di funzionalità di autenticazione e in esecuzione SQL Server**
+**Valutazione database singolo con suggerimento funzionalità di autenticazione e l'esecuzione di SQL Server**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -91,7 +91,7 @@ Catalog=DatabaseName;***User Id=myUsername;Password=myPassword;***"
 ```
 
 
-**Valutazione del singolo database per la piattaforma di destinazione SQL Server 2012 e salvare i risultati in un file con estensione JSON e CSV**
+**Valutazione di singolo database per la piattaforma di destinazione SQL Server 2012 e salvare i risultati in un file con estensione JSON e CSV**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment"
@@ -137,4 +137,4 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 ## <a name="see-also"></a>Vedere anche
 
-[Download dei dati della migrazione guidata](https://www.microsoft.com/download/details.aspx?id=53595)
+[Download di Assistente per la migrazione dei dati](https://www.microsoft.com/download/details.aspx?id=53595)

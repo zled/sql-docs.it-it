@@ -3,7 +3,7 @@ title: Abilitare o disabilitare la raccolta di dati di utilizzo e di arresto ano
 description: In questo articolo viene illustrato come controllare se vengono raccolti e inviati a Microsoft informazioni sull'utilizzo e dati di segnalazione arresto anomalo del sistema.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae620951028ba8e0e82f89c4251238c92bc614ca
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
-ms.translationtype: HT
+ms.openlocfilehash: 035195a03dea60f097a9de88ceb869fe53398c35
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Abilitare o disabilitare la raccolta di dati di utilizzo per[!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>Abilitare o disabilitare la raccolta di dati di utilizzo per [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
 ## <a name="how-to-disable-telemetry-reporting"></a>Come disabilitare la segnalazione di telemetria
 

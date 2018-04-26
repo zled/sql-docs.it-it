@@ -1,16 +1,16 @@
 ---
 title: Corrispondenza del tipo di sequenza | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - sequence type matching [XQuery]
 - XQuery, sequence type matching
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a86a8fdfbae6fb345839d281141c3606abae804
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 9cdde5fe0d26b6e3be5645377df17d7d04e8dcd0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="type-system---sequence-type-matching"></a>Tipo di sistema - corrispondenza del tipo di sequenza
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 -   È possibile stabilire se l'espressione restituisce un elemento XML o un nodo di attributo con un nome e un tipo specifico.  
   
- Per individuare una corrispondenza per il tipo di sequenza, è possibile utilizzare l'operatore booleano `instance of`. Per ulteriori informazioni sul `instance of` espressione, vedere [SequenceType-espressioni &#40; XQuery &#41; ](../xquery/sequencetype-expressions-xquery.md).  
+ Per individuare una corrispondenza per il tipo di sequenza, è possibile utilizzare l'operatore booleano `instance of`. Per ulteriori informazioni sul `instance of` espressione, vedere [sequencetype-espressioni &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Confronto del tipo del valore atomico restituito da un'espressione  
  Se un'espressione restituisce una sequenza di valori atomici, potrebbe essere necessario trovare il tipo del valore nella sequenza. Negli esempi seguenti viene illustrato l'utilizzo della sintassi del tipo di sequenza per valutare il tipo di valore atomico restituito da un'espressione.  
@@ -182,7 +182,7 @@ WHERE ProductModelID = 7
 ## <a name="comparing-the-node-type-returned-by-an-expression"></a>Confronto del tipo di nodo restituito da un'espressione  
  Se un'espressione restituisce una sequenza di nodi, è possibile che sia necessario individuare il tipo di nodo nella sequenza. Nell'esempio seguente viene illustrata la sintassi del tipo che è possibile utilizzare per valutare il tipo di nodo restituito da un'espressione. È possibile utilizzare i tipi di sequenza seguenti:  
   
--   **Item ()** : corrisponde a qualsiasi elemento nella sequenza.  
+-   **Item ()** – corrisponde a qualsiasi elemento nella sequenza.  
   
 -   **Node ()** – determina se la sequenza è un nodo.  
   
@@ -237,7 +237,7 @@ SELECT @var.query('(/node())[1] instance of processing-instruction()')
 ### <a name="implementation-limitations"></a>Limitazioni di implementazione  
  Sono valide le limitazioni seguenti:  
   
--   **document-node()** con tipo di contenuto non è supportata la sintassi.  
+-   **document-node()** con tipo di contenuto sintassi non è supportata.  
   
 -   **Processing-Instruction(Name)** sintassi non è supportata.  
   
@@ -442,6 +442,6 @@ RETURN
 -   Esecuzione di query in modo esplicito per **xsi: Type** o **xsi: nil** non è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Sistema di tipi &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

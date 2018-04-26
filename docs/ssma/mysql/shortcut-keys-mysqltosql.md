@@ -1,6 +1,6 @@
 ---
-title: Shortcut Keys (MySQLToSQL) | Microsoft Docs
-ms.prod: sql-non-specified
+title: Tasti di scelta rapida (MySQLToSQL) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,13 +21,13 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a48e4f67e1ab8b878092f420f77e24a8be125211
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 0c6e5a67f2ba96370aeab2a1c9be95b851184c83
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="shortcut-keys-mysqltosql"></a>Shortcut Keys (MySQLToSQL)
+# <a name="shortcut-keys-mysqltosql"></a>Tasti di scelta rapida (MySQLToSQL)
 È possibile utilizzare i tasti di scelta rapida per spostarsi all'interno dell'applicazione di SSMA. Per ulteriori informazioni, vedere gli argomenti seguenti.  
   
 -   [I comandi di menu e altri tasti di scelta rapida &#40;MySQLToSQL&#41;](../../ssma/mysql/menu-commands-and-other-shortcut-keys-mysqltosql.md)  

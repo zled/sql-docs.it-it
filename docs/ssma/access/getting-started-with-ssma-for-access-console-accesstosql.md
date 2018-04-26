@@ -1,6 +1,6 @@
 ---
 title: Introduzione a SSMA per la Console di accesso (AccessToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-access
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad49cf3dacefb44e86d7b752382dca62baf35827
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: abb34d1b0d6656b251c23e209af1f58b9fdb4c6b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Introduzione a SSMA per la Console di accesso (AccessToSQL)
 In questa sezione viene descritta la procedura per avviare e iniziare a usare l'applicazione console di accesso. Elencati, anche nel presente documento, vengono usate le convenzioni in una finestra di output della Console di SSMA tipico.  

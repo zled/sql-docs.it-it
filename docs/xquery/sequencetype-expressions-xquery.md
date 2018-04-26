@@ -1,16 +1,16 @@
 ---
 title: Espressioni SequenceType (XQuery) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
-ms.service: 
+ms.prod: sql
+ms.prod_service: sql
+ms.service: ''
 ms.component: xquery
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 applies_to:
 - SQL Server
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - expressions [XQuery], SequenceType
 - cast as operator
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3fa5ebb01c50823b5fe329063d9fc63023ce2478
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 0885694aa774a74d694742bf62e32efdcf3a7552
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequencetype-expressions-xquery"></a>Espressioni SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  Se il **?** indicatore di occorrenza non viene specificato, `sequence of` restituisce True solo quando il `Expression` digitare corrispondenze di `Type` specificato e `Expression` restituisce un singleton.  
   
- **Nota** il simbolo di segno più (**+**) e l'asterisco (**\***) indicatori di occorrenza non sono supportati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Nota** il segno più (**+**) e l'asterisco (**\***) gli indicatori di occorrenza non sono supportati in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Nell'esempio seguente viene illustrato l'utilizzo del**istanza** operatore XQuery.  
   
@@ -321,7 +321,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Le sequenze complete, ad esempio `(1,2) instance of xs:integer*`, non sono supportate.  
   
--   Quando si utilizza una forma del **element()** tipo che specifica un nome di tipo, ad esempio di sequenza `element(ElementName, TypeName)`, il tipo deve essere qualificato con un punto interrogativo (?). Ad esempio, `element(Title, xs:string?)` indica che l'elemento potrebbe essere null. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]non supporta il rilevamento di runtime del **xsi: nil** proprietà utilizzando `instance of`.  
+-   Quando si utilizza una forma del **element()** tipo che specifica un nome di tipo, ad esempio di sequenza `element(ElementName, TypeName)`, il tipo deve essere qualificato con un punto interrogativo (?). Ad esempio, `element(Title, xs:string?)` indica che l'elemento potrebbe essere null. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] non supporta il rilevamento di runtime del **xsi: nil** proprietà utilizzando `instance of`.  
   
 -   Se il valore in `Expression` viene da un elemento o un attributo tipizzato come unione, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] può identificare solo il tipo primitivo dal quale deriva il tipo di valore, non il tipo derivato. Ad esempio, se si specifica un tipo statico (xs:integer | xs:string) per <`e1`>, la query seguente restituirà False.  
   
@@ -417,6 +417,6 @@ select @x.query('xs:date("2000-01-01Z")')
   
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni XQuery](../xquery/xquery-expressions.md)   
- [Tipo di sistema &#40; XQuery &#41;](../xquery/type-system-xquery.md)  
+ [Sistema di tipi &#40;XQuery&#41;](../xquery/type-system-xquery.md)  
   
   

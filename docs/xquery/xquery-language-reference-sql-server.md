@@ -2,8 +2,8 @@
 title: Riferimento al linguaggio XQuery (SQL Server) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: xquery
 ms.reviewer: ''
@@ -26,16 +26,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c242348870d6b6862e02cc8d14ec1fdc184d62e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: e9ac63fb610743e540979271dd9ebac32fd6c873
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xquery-language-reference-sql-server"></a>Riferimento al linguaggio XQuery (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[tsql](../includes/tsql-md.md)] supporta un subset del linguaggio XQuery utilizzato per l'esecuzione di query di **xml** tipo di dati. Questa implementazione di XQuery è allineata con le specifiche Working Draft di XQuery del luglio 2004. Il linguaggio è sviluppato da WC3 (World Wide Web Consortium), con la partecipazione di tutti i principali fornitori di database e di Microsoft. Poiché le specifiche W3C sono soggette a modifiche prima di diventare raccomandazioni ufficiali, questa implementazione può essere diversa dalla raccomandazione W3C finale. In questo argomento vengono descritte la semantica e la sintassi del subset di XQuery supportato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  [!INCLUDE[tsql](../includes/tsql-md.md)] supporta un subset del linguaggio XQuery utilizzato per l'esecuzione di query il **xml** tipo di dati. Questa implementazione di XQuery è allineata con le specifiche Working Draft di XQuery del luglio 2004. Il linguaggio è sviluppato da WC3 (World Wide Web Consortium), con la partecipazione di tutti i principali fornitori di database e di Microsoft. Poiché le specifiche W3C sono soggette a modifiche prima di diventare raccomandazioni ufficiali, questa implementazione può essere diversa dalla raccomandazione W3C finale. In questo argomento vengono descritte la semantica e la sintassi del subset di XQuery supportato in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Per ulteriori informazioni, vedere il [specifiche del linguaggio XQuery 1.0 W3C](http://go.microsoft.com/fwlink/?LinkId=48846).  
   
@@ -74,7 +74,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  L'organizzazione di questa sezione è basata sulle specifiche W3C (World Wide Web Consortium ) per XQuery. Alcuni dei diagrammi disponibili in questa sezione provengono da questa specifica. In questa sezione l'implementazione Microsoft di XQuery viene confrontata alla specifica W3C, vengono descritte le differenze fra Microsoft XQuery e la specifica W3C e vengono illustrate le caratteristiche W3C non supportate. La specifica W3C è disponibile all'indirizzo [http://www.w3.org/TR/2004/WD-xquery-20040723](http://go.microsoft.com/fwlink/?LinkId=48846).  
+>  L'organizzazione di questa sezione è basata sulle specifiche W3C (World Wide Web Consortium ) per XQuery. Alcuni dei diagrammi disponibili in questa sezione provengono da questa specifica. In questa sezione l'implementazione Microsoft di XQuery viene confrontata alla specifica W3C, vengono descritte le differenze fra Microsoft XQuery e la specifica W3C e vengono illustrate le caratteristiche W3C non supportate. La specifica W3C è disponibile all'indirizzo [ http://www.w3.org/TR/2004/WD-xquery-20040723 ](http://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## <a name="in-this-section"></a>Contenuto della sezione  
   

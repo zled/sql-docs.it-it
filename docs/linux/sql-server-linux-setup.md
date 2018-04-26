@@ -6,7 +6,7 @@ ms.author: jroth
 manager: craigg
 ms.date: 04/06/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: ''
@@ -15,11 +15,11 @@ ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 98f7f19bbcf7ba83d74c2d4aa1e54409c2434147
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 69b56cf027a1c7d8f536b4d9ad80e5ef3b627469
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guida all'installazione per SQL Server in Linux
 
@@ -44,7 +44,7 @@ Per le risposte alle domande più frequenti, vedere il [SQL Server in domande fr
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3 o 7.4 | [Ottenere RHEL 7.4](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Ottenere SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://www.ubuntu.com/download/server)
+| **Ubuntu** | 16.04 | [Ottenere Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Motore docker** | 1.8+ | [Ottenere Docker](http://www.docker.com/products/overview)
 
 Microsoft supporta anche la distribuzione e gestione dei contenitori di SQL Server utilizzando OpenShift e Kubernetes.

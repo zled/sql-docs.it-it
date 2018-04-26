@@ -1,6 +1,6 @@
 ---
 title: I comandi di menu e altri tasti di scelta rapida (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec0bab67f16fbd67a0fe6ffaa759e578882035e1
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: a450b2cf56894bcd899ab0ec358e640b48bb9781
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>I comandi di menu e altri tasti di scelta rapida (MySQLToSQL)
 Nelle sezioni seguenti vengono descritti i tasti di scelta rapida per accedere ai comandi di menu e altri tasti di scelta rapida utilizzati in diverse finestre di dialogo di SSMA per l'applicazione di MySQL.  
@@ -191,5 +191,5 @@ Per accedere ai menu di scelta rapida per l'oggetto selezionato in Esplora ogget
 |Vai a dichiarazione.|F12|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Shortcut Keys &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
+[Tasti di scelta rapida &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

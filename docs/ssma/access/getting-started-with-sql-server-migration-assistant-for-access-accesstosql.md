@@ -1,15 +1,16 @@
 ---
 title: Introduzione a SQL Server Migration Assistant per Access | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-access
-ms.custom: 
+ms.custom: ''
 ms.date: 08/15/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 applies_to:
 - Azure SQL Database
@@ -24,24 +25,24 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
-ms.openlocfilehash: 92a7e496075cb7e42c09bd89a1f17e1b296b9946
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e61807234af431f63f3e10a612e0d4ff7d8b7d7d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Introduzione a SQL Server Migration Assistant per Access (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o gli oggetti di database SQL di Azure, caricare gli oggetti risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, e la migrazione dei dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tabelle di database SQL di Azure in modo che è possibile continuare a utilizzare le applicazioni front-end di Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per l'accesso consente di convertire rapidamente oggetti di database di Access da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o gli oggetti di database SQL di Azure, caricare gli oggetti risultanti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure e la migrazione dei dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Se necessario, è anche possibile collegare le tabelle di Access per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tabelle di database SQL di Azure in modo che è possibile continuare a utilizzare le applicazioni front-end di Access esistenti con [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure.  
   
 In questo argomento introduce il processo di installazione e consente di acquisire familiarità con l'interfaccia utente SSMA.  
   
 ## <a name="installing-ssma"></a>L'installazione di SSMA  
-Per l'utilizzo di SSMA, è innanzitutto necessario installare il programma client SSMA in un computer che possa accedere a entrambi i database che si desidera eseguire la migrazione e l'istanza di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Per istruzioni sull'installazione, vedere [l'installazione di SQL Server Migration Assistant per Access &#40; AccessToSQL &#41; ](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
+Per l'utilizzo di SSMA, è innanzitutto necessario installare il programma client SSMA in un computer che possa accedere a entrambi i database che si desidera eseguire la migrazione e l'istanza di destinazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Per istruzioni sull'installazione, vedere [installazione di SQL Server Migration Assistant per Access &#40;AccessToSQL&#41;](../../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md).  
   
 Per avviare SSMA, fare clic su **avviare**, scegliere **tutti i programmi**, scegliere **SQL Server Migration Assistant per Access**, quindi selezionare **SQL Server Migration Assistant per Access**.  
   
@@ -67,9 +68,9 @@ Per ulteriori informazioni su queste attività e su come eseguire tali operazion
   
 -   [Preparazione dei database di Access per la migrazione](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
   
--   [Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+-   [La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
--   [Il collegamento alle applicazioni di accesso di SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
+-   [Collegamento applicazioni l'accesso a SQL Server](http://msdn.microsoft.com/82374ad2-7737-4164-a489-13261ba393d4)  
   
 Nelle sezioni seguenti vengono descritte le funzionalità dell'interfaccia utente SSMA.  
   
@@ -90,7 +91,7 @@ Visualizzatore metadati accesso Mostra le informazioni sui database di Access ch
 -   Collegare e scollegare l'accesso e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tabelle.  
   
 #### <a name="sql-server-or-azure-sql-db-metadata-explorer"></a>SQL Server o Visualizzatore metadati di database SQL di Azure  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]o Visualizzatore metadati di database SQL Azure Mostra le informazioni su un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e viene memorizzato nel file di progetto.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o Visualizzatore metadati di Azure SQL database Mostra le informazioni relative a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure. Quando ci si connette a un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure, SSMA recupera i metadati relativi a tale istanza e viene memorizzato nel file di progetto.  
   
 È possibile utilizzare SQL Server o Visualizzatore metadati di database SQL Azure per selezionare oggetti di database di Access convertiti e caricare (sincronizzazione) gli oggetti nell'istanza [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o database SQL di Azure.  
   
@@ -141,5 +142,5 @@ Il **vista** menu sono disponibili comandi per attivare o disattivare la visibil
 -   Nel riquadro elenco errori Mostra messaggi di errore, avviso e informativi in un elenco che è possibile ordinare.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Migrazione di database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
+[La migrazione dei database di Access a SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   

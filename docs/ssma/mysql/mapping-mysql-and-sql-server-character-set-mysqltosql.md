@@ -1,6 +1,6 @@
 ---
 title: Mapping di caratteri SQL Server e MySQL impostare (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 793c7362024e402e52523da8c0f007f525fe2650
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: affbdb7f6e6015f440bda1b6e7aa10e22d321048
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mapping di caratteri SQL Server e MySQL impostare (MySQLToSQL)
 Per i tipi di dati carattere, espressioni e valori letterali di MySQL, è possibile specificare il set di caratteri (set di caratteri).  
@@ -90,7 +90,7 @@ Mapping di set di caratteri varia a livello di nodo diverso, vale a dire:
     ||||  
     |-|-|-|  
     |**Nome del set di caratteri**|**Descrizione set di caratteri**|**Tipo di set di caratteri di destinazione (impostazione predefinita)**|  
-    |big5|Cinese tradizionale Big5|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |BIG5|Cinese tradizionale Big5|NCHAR/NVARCHAR (impostazione predefinita)|  
     |dec8|Europa occidentale DEC|CHAR/VARCHAR (impostazione predefinita)|  
     |cp850|Europa occidentale DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |hp8|Europa occidentale HP|CHAR/VARCHAR (impostazione predefinita)|  
@@ -98,32 +98,32 @@ Mapping di set di caratteri varia a livello di nodo diverso, vale a dire:
     |alfabeto latino 1|Europa occidentale CP1252|CHAR/VARCHAR (impostazione predefinita)|  
     |Latin2|Europa centrale ISO 8859-2|CHAR/VARCHAR (impostazione predefinita)|  
     |swe7|Svedese a 7 bit|CHAR/VARCHAR (impostazione predefinita)|  
-    |ascii|US ASCII|CHAR/VARCHAR (impostazione predefinita)|  
+    |ascii|STATI UNITI ASCII|CHAR/VARCHAR (impostazione predefinita)|  
     |ujis|Giapponese EUC-JP|NCHAR/NVARCHAR (impostazione predefinita)|  
     |sjis|Giapponese Shift-JIS|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Ebraico|ISO 8859-8 Ebraico|CHAR/VARCHAR (impostazione predefinita)|  
     |tis620|TIS620 Thai|CHAR/VARCHAR (impostazione predefinita)|  
-    |euckr|Coreano EUC-KR|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |eucKR|Coreano EUC-KR|NCHAR/NVARCHAR (impostazione predefinita)|  
     |koi8u|Ucraino KOI8-U|CHAR/VARCHAR (impostazione predefinita)|  
     |gb2312|GB2312 Cinese semplificato|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Greco|ISO 8859-7 Greco|CHAR/VARCHAR (impostazione predefinita)|  
     |cp 1250|Europa centrale di Windows|CHAR/VARCHAR (impostazione predefinita)|  
-    |gbk|Cinese semplificato GBK|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |GBK|Cinese semplificato GBK|NCHAR/NVARCHAR (impostazione predefinita)|  
     |Latin5|ISO 8859-9 Turco|CHAR/VARCHAR (impostazione predefinita)|  
     |armscii8|Armeno ARMSCII-8|CHAR/VARCHAR (impostazione predefinita)|  
     |UTF8|Unicode UTF-8|NCHAR/NVARCHAR (impostazione predefinita)|  
-    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (impostazione predefinita)|  
+    |ucs2|Unicode UCS-2|NCHAR/NVARCHAR (impostazione predefinita)|  
     |cp866|Russo DOS|CHAR/VARCHAR (impostazione predefinita)|  
     |keybcs2|DOS Kamenicky ceco-slovacco|CHAR/VARCHAR (impostazione predefinita)|  
     |macce|Europa centrale Mac|CHAR/VARCHAR (impostazione predefinita)|  
     |MacRoman|Europa occidentale Mac|CHAR/VARCHAR (impostazione predefinita)|  
     |cp852|Europa centrale DOS|CHAR/VARCHAR (impostazione predefinita)|  
-    |Latin7|ISO 8859-13 Baltic|CHAR/VARCHAR (impostazione predefinita)|  
-    |cp 1251|Windows Cyrillic|CHAR/VARCHAR (impostazione predefinita)|  
-    |cp 1256|Windows Arabic|CHAR/VARCHAR (impostazione predefinita)|  
-    |cp 1257|Windows Baltic|CHAR/VARCHAR (impostazione predefinita)|  
+    |Latin7|ISO 8859-13 Baltico|CHAR/VARCHAR (impostazione predefinita)|  
+    |cp 1251|Windows cirillico|CHAR/VARCHAR (impostazione predefinita)|  
+    |cp 1256|Windows arabo|CHAR/VARCHAR (impostazione predefinita)|  
+    |cp 1257|Baltico Windows|CHAR/VARCHAR (impostazione predefinita)|  
     |BINARY|Set di caratteri binari pseudo|CHAR/VARCHAR (impostazione predefinita)|  
-    |geostd8|GEOSTD8 Georgian|CHAR/VARCHAR (impostazione predefinita)|  
+    |geostd8|Georgiano GEOSTD8|CHAR/VARCHAR (impostazione predefinita)|  
     |cp932|SJIS per il giapponese di Windows|NCHAR/NVARCHAR (impostazione predefinita)|  
     |eucjpms|UJIS per il giapponese di Windows|NCHAR/NVARCHAR (impostazione predefinita)|  
   

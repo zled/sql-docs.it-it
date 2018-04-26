@@ -1,9 +1,9 @@
 ---
-title: Utilizzare l'autenticazione di Active Directory (Kerberos) per la connessione con SQL Operations Studio (preview) | Documenti Microsoft
-description: Informazioni su come abilitare Kerberos utilizzare l'autenticazione di Active Directory per SQL Operations Studio (preview)
+title: Utilizzare l'autenticazione di Active Directory (Kerberos) per la connessione con Studio operazioni SQL (anteprima) | Documenti Microsoft
+description: Informazioni su come abilitare Kerberos utilizzare l'autenticazione di Active Directory per Studio operazioni SQL (anteprima)
 ms.custom: tools|sos
 ms.date: 11/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: meet-bhagdev
 ms.author: meetb
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dbd229a0106506f744074df760ee10f871474ebb
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
+ms.openlocfilehash: c100ce441ae9bb2285df967c35f4083ca4802ad2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Connettersi [!INCLUDE[name-sos](../includes/name-sos-short.md)] a SQL Server utilizzando l'autenticazione di Windows - Kerberos 
 

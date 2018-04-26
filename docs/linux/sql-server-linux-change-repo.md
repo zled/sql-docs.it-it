@@ -6,19 +6,19 @@ ms.author: jroth
 manager: craigg
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Active
-ms.openlocfilehash: 33f02349d10cfd0ada76325c378d0259ec931002
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f6983e361ff26f2c6a7e17b1706f414005d38a34
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurare repository per l'installazione e aggiornamento di SQL Server in Linux
 
@@ -94,7 +94,7 @@ Questo comando si presuppone che il file identificato nella sezione precedente Ã
 ### <a name="configure-new-repository-rhel"></a>Configurare di nuovo repository (RHEL)
 Configurare il nuovo repository da utilizzare per gli aggiornamenti e installazioni di SQL Server. Utilizzare uno dei comandi seguenti per configurare il repository di propria scelta.
 
-| Archivio | Command |
+| Archivio | Comando |
 |---|---|
 | **CU** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
 | **GDR** | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
@@ -125,7 +125,7 @@ Se necessario, rimuovere il repository precedente. Utilizzare uno dei comandi se
 ### <a name="configure-new-repository-sles"></a>Configurare di nuovo repository (SLES)
 Configurare il nuovo repository da utilizzare per gli aggiornamenti e installazioni di SQL Server. Utilizzare uno dei comandi seguenti per configurare il repository di propria scelta.
 
-| Archivio | Command |
+| Archivio | Comando |
 |---|---|
 | **CU** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
 | **GDR** | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
@@ -164,7 +164,7 @@ Configurare il nuovo repository da utilizzare per gli aggiornamenti e installazi
 
 2. Utilizzare uno dei comandi seguenti per configurare il repository di propria scelta.
 
-   | Archivio | Command |
+   | Archivio | Comando |
    |---|---|
    | **CU** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
    | **GDR** | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |

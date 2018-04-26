@@ -6,20 +6,20 @@ ms.author: jroth
 manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: 92b04366f3dbcba517c5c82b0e7d65e862890cc3
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: c64ea611cabe9169b5073d20b47f5f5235174608
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installare sqlcmd e bcp strumenti da riga di comando di SQL Server in Linux
 
@@ -209,7 +209,7 @@ A partire da SQL Server 2017 CTP 2.0, gli strumenti da riga di comando di SQL Se
 
 Nella tabella seguente fornisce il percorso per i pacchetti di strumenti più recenti:
 
-| Pacchetto di strumenti | Version | Scarica |
+| Pacchetto di strumenti | Versione | Scarica |
 |-----|-----|-----|
 | Pacchetto di strumenti di Red Hat RPM | 14.0.5.0-1 | [pacchetto RPM MSSQL strumenti](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Pacchetto di strumenti SLES RPM | 14.0.5.0-1 | [pacchetto RPM MSSQL strumenti](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -218,7 +218,7 @@ Nella tabella seguente fornisce il percorso per i pacchetti di strumenti più re
 
 Questi pacchetti dipendono da **ha**, che deve essere installato per primo. Il **ha** quest'ultimo ha anche una dipendenza su **esposti all'interno di unixODBC** (RPM) o **unixodbc-dev** (Debian). Il percorso del **ha** nella tabella seguente vengono elencati i pacchetti:
 
-| pacchetto ha | Version | Scarica |
+| pacchetto ha | Versione | Scarica |
 |-----|-----|-----|
 | Pacchetto ha Red Hat RPM | 13.1.6.0-1 | [pacchetto RPM ha](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Pacchetto ha SLES RPM | 13.1.6.0-1 | [pacchetto RPM ha](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 

@@ -1,7 +1,7 @@
 ---
 title: Installare e configurare il database di esempio WideWorldImporters - SQL | Documenti Microsoft
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod: sql
+ms.prod_service: sql
 ms.service: ''
 ms.component: samples
 ms.technology:
@@ -17,11 +17,11 @@ ms.author: barbkess
 manager: craigg
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: 3b2a1c4f6fc6045a25a86ea8d49290fafbc29b57
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: 04fe03ecffa717de838642006764c9b82f2341d3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="installation-and-configuration"></a>Installazione e configurazione
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Wide World Importers OLTP istruzioni di installazione e configurazione del datab
 
 La versione più recente dell'esempio:
 
-[wide-world-importers-release](http://go.microsoft.com/fwlink/?LinkID=800630)
+[Wide world-importers rilascio](http://go.microsoft.com/fwlink/?LinkID=800630)
 
 Scaricare l'esempio WideWorldImporters database backup/bacpac corrispondente per l'edizione di SQL Server o Database SQL di Azure.
 

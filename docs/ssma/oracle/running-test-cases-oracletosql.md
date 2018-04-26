@@ -1,27 +1,28 @@
 ---
 title: Esecuzione di Test case (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d9e4e71813ff5b092ba1b67db207abd9b1adc44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bff5a571a8ad60e2baa3ea1211d6aff97c01c5ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di Test case (OracleToSQL)
 Quando SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test completata. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -39,7 +40,7 @@ Una volta completato il test, viene creato il Report di Test Case. Fare clic su 
   
 ## <a name="test-case-execution-steps"></a>Passaggi per l'esecuzione dei test Case  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerequisiti  
 SSMA Tester controlla se vengono soddisfatti tutti i prerequisiti per l'esecuzione di test prima dell'inizio del test. Se alcune condizioni non vengono soddisfatti, viene visualizzato un messaggio di errore.  
   
 ### <a name="initialization"></a>Inizializzazione  
@@ -49,8 +50,8 @@ Si supponga che la tabella verificata viene denominata USER_TABLE. Per una tabel
   
 ||||  
 |-|-|-|  
-|nome|Tipo|Description|  
-|Trg $ USER_TABLE|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
+|Nome|Tipo|Description|  
+|USER_TABLE$Trg|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
 |USER_TABLE$ AUD|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
 |USER_TABLE$ AUDID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  
@@ -62,20 +63,20 @@ L'oggetto seguente viene creato nello schema della tabella verificato [!INCLUDE[
   
 ||||  
 |-|-|-|  
-|nome|Tipo|Description|  
-|Trg $ USER_TABLE|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
+|Nome|Tipo|Description|  
+|USER_TABLE$Trg|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
   
 E vengono creati gli oggetti seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]nel database ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|nome|Tipo|Description|  
-|USER_TABLE$ Aud|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
-|USER_TABLE$ AudID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
+|Nome|Tipo|Description|  
+|USER_TABLE$Aud|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
+|USER_TABLE$AudID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  
-|$ USER_TABLE nuovo|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
-|USER_TABLE$ new_id|vista|Identificazione di righe inserite e modificate.|  
-|$ USER_TABLE precedente|vista|Rappresentazione semplificata di righe eliminate o sovrascritte.|  
+|USER_TABLE$new|vista|Rappresentazione semplificata di righe inserite e sovrascritte.|  
+|USER_TABLE$new_id|vista|Identificazione di righe inserite e modificate.|  
+|USER_TABLE$old|vista|Rappresentazione semplificata di righe eliminate o sovrascritte.|  
   
 ### <a name="test-object-calls"></a>Chiamate di oggetti di test  
 In questo passaggio, il Tester di SSMA richiama ogni oggetto selezionato per il test, vengono confrontati i risultati e viene mostrato il report.  
@@ -84,10 +85,10 @@ In questo passaggio, il Tester di SSMA richiama ogni oggetto selezionato per il 
 Durante la finalizzazione SSMA Tester pulisce gli oggetti ausiliari, creati nel **inizializzazione** passaggio.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Visualizzazione di report di Test Case &#40; OracleToSQL &#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
+[Visualizzazione dei report di Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Selezione e configurazione di oggetti per Test &#40; OracleToSQL &#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
-[Selezione e configurazione interessati OracleToSQL oggetti &#40; &#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
-[Test di eseguire la migrazione di oggetti di Database &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[La selezione e configurazione di oggetti di Test &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
+[La selezione e la configurazione di oggetti interessati &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

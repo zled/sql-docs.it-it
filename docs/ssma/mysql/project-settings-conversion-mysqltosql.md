@@ -1,6 +1,6 @@
 ---
 title: Impostazioni (conversione) (MySQLToSQL) del progetto | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e731155b4adadfe8a5a05edafd97f90bd3de263b
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 47bb86d67219dd5656a6864a4603adc382a36128
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-mysqltosql"></a>Impostazioni del progetto (conversione) (MySQLToSQL)
 La pagina di conversione del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità SSMA converte sintassi MySQL alla sintassi SQL Server o SQL Azure.  
@@ -98,7 +98,7 @@ Il riquadro di conversione è disponibile nel **impostazioni progetto** e **impo
 |-|-|  
 |**Nome**|**Definizione**|  
 |**Predefinito delimitatore {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} per gli indici spaziali**|Definisce il valore predefinito per {XMAX&#124;XMIN&#124;YMAX&#124;YMIN} parametro del rettangolo utilizzate negli indici spaziali.<br /><br />**Modalità predefinita**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0<br /><br />**Modalità ottimistico**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX:  100<br /><br />YMIN: 0<br /><br />**Modalità completa**<br /><br />XMAX: 100<br /><br />XMIN: 0<br /><br />YMAX: 100<br /><br />YMIN: 0|  
-|**Densità della griglia predefinita per gli indici spaziali**|Definisce il valore predefinito per LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 di densità della griglia utilizzate negli indici spaziali.<br /><br />**Modalità predefinita**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: predefinito<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Modalità ottimistico**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: predefinito<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default<br /><br />**Modalità completa**<br /><br />LEVEL_1: Default<br /><br />LEVEL_2: predefinito<br /><br />LEVEL_3: Default<br /><br />LEVEL_4: Default|  
+|**Densità della griglia predefinita per gli indici spaziali**|Definisce il valore predefinito per LEVEL_1, LEVEL_2, LEVEL_3 e LEVEL_4 di densità della griglia utilizzate negli indici spaziali.<br /><br />**Modalità predefinita**<br /><br />LEVEL_1: predefinito<br /><br />LEVEL_2: predefinito<br /><br />LEVEL_3: predefinito<br /><br />LEVEL_4: predefinito<br /><br />**Modalità ottimistico**<br /><br />LEVEL_1: predefinito<br /><br />LEVEL_2: predefinito<br /><br />LEVEL_3: predefinito<br /><br />LEVEL_4: predefinito<br /><br />**Modalità completa**<br /><br />LEVEL_1: predefinito<br /><br />LEVEL_2: predefinito<br /><br />LEVEL_3: predefinito<br /><br />LEVEL_4: predefinito|  
   
 ### <a name="transactions"></a>Transazioni  
   

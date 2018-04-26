@@ -2,7 +2,7 @@
 title: Riferimento all'interfaccia utente (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-sybase
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0587d8217cfb51535d0bc9d0e99d7f0384eab851
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: f7fd4a94c0c08ddb2c66d0fc24f53b77c0ae6f4c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Riferimento all'interfaccia utente (SybaseToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per Sybase.  
@@ -43,10 +43,10 @@ In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../..
 |[Impostazioni di migrazione dei dati](http://msdn.microsoft.com/en-us/94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d)|Utilizzare il **esteso le impostazioni di migrazione di dati** tab per scrivere query personalizzate per la migrazione dei dati.|  
 |[Modificare il Mapping di tipo &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Utilizzare il **nuovo Mapping dei tipi** o **Mapping dei tipi di modifica** la finestra di dialogo per creare o modificare il mapping dei tipi di dati tra gli oggetti di database e il database di origine e destinazione.|  
 |[Impostazioni globali &#40;Editor&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Utilizzare la pagina Editor del **impostazioni globali** la finestra di dialogo per configurare le opzioni dell'editor di codice.|  
-|[Global Settings &#40;Dialogs&#41;  &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Utilizzare la pagina Editor del **impostazioni globali** finestra di dialogo per configurare le impostazioni di avviso e finestra di dialogo predefinita.|  
-|[Global Settings &#40;Logging&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Utilizzare la pagina di registrazione del **impostazioni globali** la finestra di dialogo per configurare la registrazione.|  
+|[Impostazioni globali &#40;finestre di dialogo&#41;&#40;SybaseToSQL  &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Utilizzare la pagina Editor del **impostazioni globali** finestra di dialogo per configurare le impostazioni di avviso e finestra di dialogo predefinita.|  
+|[Impostazioni globali &#40;registrazione&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Utilizzare la pagina di registrazione del **impostazioni globali** la finestra di dialogo per configurare la registrazione.|  
 |[Impostazioni globali &#40;registrazione&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-logging-sybasetosql.md)|Utilizzare il **impostazioni globali** finestra di dialogo per impostare le preferenze di SSMA per l'interfaccia utente di Sybase.|  
-|[Global Settings &#40;Tester&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Utilizzare la pagina Tester del **GlobalSettings** la finestra di dialogo per specificare le impostazioni per i Tester.|  
+|[Impostazioni globali &#40;Tester&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Utilizzare la pagina Tester del **GlobalSettings** la finestra di dialogo per specificare le impostazioni per i Tester.|  
 |[Nuovo progetto &#40;SybaseToSQL&#41;](../../ssma/sybase/new-project-sybasetosql.md)|Utilizzare il **nuovo progetto** la finestra di dialogo per creare un nuovo SSMA per Sybase progetto.|  
 |[Le impostazioni del progetto &#40;conversione&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-conversion-sybasetosql.md)|Utilizzare la pagina di conversione del **impostazioni progetto** la finestra di dialogo per specificare la modalità di conversione di funzioni e variabili globali in SSMA per Sybase.|  
 |[Le impostazioni del progetto &#40;interfaccia utente grafica&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-gui-sybasetosql.md)|Utilizzare la pagina dell'interfaccia utente grafica del **impostazioni progetto** finestra di dialogo per specificare la quantità di dati viene visualizzato nel **dati** scheda.|  

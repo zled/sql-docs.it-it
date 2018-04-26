@@ -1,6 +1,6 @@
 ---
 title: Personalizzazione dell'ordine delle chiamate (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-oracle
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 3b22b6355f3b711a9350298e1dbc169e442b6921
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9472b15a6a75382f46c3d9a7b522d93df2cb31f0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-calls-order-oracletosql"></a>Personalizzazione dell'ordine delle chiamate (OracleToSQL)
 In questo passaggio si seleziona l'ordine in cui gli oggetti per eseguire il test verranno richiamati.  
@@ -33,8 +33,8 @@ In questo passaggio si seleziona l'ordine in cui gli oggetti per eseguire il tes
 Utilizzare i pulsanti posizionati nella parte superiore della griglia con l'elenco di oggetti da posizionare gli oggetti nell'ordine corretto. In alternativa, è possibile utilizzare i pulsanti visualizzati su destra quando viene selezionata la riga.  
   
 ## <a name="next-step"></a>Passaggio successivo  
-[Completamento della preparazione del Test Case &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+[Completamento della preparazione del Test Case &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di eseguire la migrazione di oggetti di Database &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

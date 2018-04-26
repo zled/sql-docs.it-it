@@ -1,30 +1,31 @@
 ---
 title: La gestione dei backup (OracleToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssma-oracle
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: sql-ssma
-ms.tgt_pltfrm: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Oracle Backup Management
 - SQL Server Backup Management
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: eba65be518ebd986c6f074a1702ca72945d2fff6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ad029ca277a426b7bb49e95fff9f830b69796be4
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="managing-backups-oracletosql"></a>La gestione dei backup (OracleToSQL)
 Gestione dei Backup Oracle consente di backup e ripristino dati di tabelle, prima o dopo l'esecuzione di un test. È inoltre possibile gestire il contenuto di backup con la finestra di gestione contenuto di Backup.  
@@ -42,7 +43,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
 Per aprire la finestra di dialogo di ripristino, scegliere il menu di Tester per la gestione del Backup di Oracle, quindi fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare uno o più tabelle per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -78,7 +79,7 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
   
 -   Fare clic su di **Annulla** per chiudere la finestra di dialogo.  
   
-### <a name="restore"></a>Ripristina  
+### <a name="restore"></a>Restore  
 Per aprire la finestra di dialogo di ripristino, il Tester scegliere dal menu Gestione Backup di SQL Server, fare clic su Ripristina... Sarà possibile trovare una struttura ad albero contenente le tabelle disponibili nel backup. Selezionare almeno una tabella per ripristinare i dati.  
   
 I pulsanti seguenti sono disponibili nella finestra di dialogo:  
@@ -101,5 +102,5 @@ I pulsanti seguenti sono disponibili nella finestra di dialogo:
 -   Fare clic su di **chiudere** per chiudere la finestra di dialogo.  
   
 ## <a name="see-also"></a>Vedere anche  
-[Test di eseguire la migrazione di oggetti di Database &#40; OracleToSQL &#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+[Test di eseguire la migrazione di oggetti di Database &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

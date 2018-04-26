@@ -1,9 +1,9 @@
 ---
-title: Terminal integrata in SQL Operations Studio (preview) | Documenti Microsoft
-description: Scopri il terminale integrato in SQL Operations Studio (preview).
+title: Terminal integrata in Studio operazioni SQL (anteprima) | Documenti Microsoft
+description: Scopri il terminale integrato in Studio operazioni SQL (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,13 +14,13 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b55e86314dd075b61dac5751b29fc541fdf1e2c4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 61d74e7d8818391ca01c45ad8f9a7b2897751712
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="integrated-terminal"></a>Terminal integrata
+# <a name="integrated-terminal"></a>Terminale integrato
 
 In [!INCLUDE[name-sos](../includes/name-sos-short.md)], è possibile aprire un terminale integrato, inizialmente iniziando dalla radice dell'area di lavoro. Può risultare utile perché non è necessario passare windows o modificare lo stato di un terminale esistente per eseguire un'attività da riga di comando rapida.
 
@@ -90,7 +90,7 @@ Ad esempio, per abilitare bash in esecuzione come una shell di account di access
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>Tasti di scelta rapida terminal
+## <a id="key-bindings"></a>Terminal tasti di scelta rapida
 
 Il **Visualizza: Attiva/Disattiva integrata Terminal** comando associato a **Ctrl +'** per passare rapidamente il pannello terminal integrato rimosso dalla visualizzazione.
 
@@ -112,10 +112,10 @@ Altri comandi terminali sono disponibili e possono essere associati ai Preferiti
 
 ovvero:
 
-* `workbench.action.terminal.focus`: Lo stato attivo del terminale. Si tratta come elemento toggle, ma si concentra terminal anziché nasconderlo, se è visibile.
+* `workbench.action.terminal.focus`: Concentrare l'attenzione i servizi terminal. Si tratta come elemento toggle, ma si concentra terminal anziché nasconderlo, se è visibile.
 * `workbench.action.terminal.focusNext`: Viene illustrata l'istanza successiva terminal.
-* `workbench.action.terminal.focusPrevious`: Viene illustrata l'istanza precedente terminal.
-* `workbench.action.terminal.kill`: Rimuovere l'istanza corrente di terminale.
+* `workbench.action.terminal.focusPrevious`: Viene illustrata l'istanza terminal precedente.
+* `workbench.action.terminal.kill`: Rimuovere l'istanza terminal corrente.
 * `workbench.action.terminal.runSelectedText`: Eseguire il testo selezionato nell'istanza terminal.
 * `workbench.action.terminal.runActiveFile`: Eseguire il file attivo nell'istanza terminal.
 

@@ -6,19 +6,19 @@ ms.author: bobward
 manager: craigg
 ms.date: 09/14/2017
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
-ms.component: 
+ms.service: ''
+ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a5cc1b84780ce8b3ea471ee567a7296ab2b183b9
-ms.sourcegitcommit: f02598eb8665a9c2dc01991c36f27943701fdd2d
+ms.openlocfilehash: a0e9c5dde8f5bc9ef2e8a7ac285a8152b0c34e9c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Procedure consigliate e linee guida di configurazione per SQL Server 2017 su Linux
 
@@ -66,7 +66,7 @@ Si tratta di consigliato prestazioni correlati ad alta le impostazioni di sistem
 
 Nella tabella seguente vengono forniti consigli per le impostazioni della CPU:
 
-| Impostazione | Valore | Ulteriori informazioni |
+| Impostazione | Value | Ulteriori informazioni |
 |---|---|---|
 | Governor frequenza della CPU | prestazioni | Vedere il **cpupower** comando |
 | ENERGY_PERF_BIAS | prestazioni | Vedere il **x86_energy_perf_policy** comando |
@@ -75,7 +75,7 @@ Nella tabella seguente vengono forniti consigli per le impostazioni della CPU:
 
 Nella tabella seguente vengono forniti consigli per le impostazioni del disco:
 
-| Impostazione | Valore | Ulteriori informazioni |
+| Impostazione | Value | Ulteriori informazioni |
 |---|---|---|
 | Read-ahead disco | 4096 | Vedere il **blockdev** comando |
 | impostazioni sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Vedere il **sysctl** comando |
@@ -104,7 +104,7 @@ Utilizzare il **noatime** attributo con il file system che viene utilizzato per 
 
 La maggior parte delle installazioni di Linux devono disporre questa opzione per impostazione predefinita. È consigliabile per un'esperienza più coerenza delle prestazioni mantenere abilitata questa opzione di configurazione.
 
-### <a name="swapfile"></a>swapfile
+### <a name="swapfile"></a>file di scambio
 
 Assicurarsi di disporre di un file di scambio configurato correttamente per evitare eventuali problemi di memoria insufficiente. Consultare la documentazione di Linux per informazioni su come creare e impostare correttamente le dimensioni di un file di scambio.
 

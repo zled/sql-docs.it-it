@@ -1,9 +1,9 @@
-﻿---
-title: 'Guida introduttiva: Connettersi ed eseguire query di Azure SQL Data Warehouse mediante SQL Operations Studio (preview) | Microsoft Docs'
-description: 'Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a un Azure SQL Data Warehouse ed eseguire query '
+---
+title: 'Guida introduttiva: Connettersi ed eseguire query di Azure SQL Data Warehouse mediante SQL Operations Studio (anteprima) | Microsoft Docs'
+description: 'Con questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a un Azure SQL Data Warehouse ed eseguire query '
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3d4ed7d25abb2780c719c5b8201ecae54e8e86bf
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
+ms.openlocfilehash: 5bfa47c53b0810e5ec9002543717fbc4899dfbb5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Guida introduttiva: Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query sui dati in Azure SQL Data Warehouse
 
@@ -34,7 +34,7 @@ Se non si dispone già di un'istanza di SQL Data Warehouse, vedere [Creare un'is
 Ricordare il nome del server e le credenziali di accesso.
 
 
-## <a name="connect-to-your-data-warehouse"></a>Connettersi al Data Warehouse
+## <a name="connect-to-your-data-warehouse"></a>Connettersi al data warehouse
 
 Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Azure SQL Data Warehouse.
 
@@ -63,7 +63,7 @@ Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una
 4. Dopo avere stabilito la connessione al server, quest'ultimo appare nella barra laterale *Server*.
 
 ## <a name="create-the-tutorial-data-warehouse"></a>Creare il data warehouse per l'esercitazione
-1. Fare clic con il pulsante destro sul server, in Esplora oggetti e selezionare **nuova Query**.
+1. Fare clic con il pulsante destro sul server, in Esplora oggetti e selezionare **nuova Query.**
 
 1. Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
 
@@ -93,7 +93,7 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 1. Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
 
    > [!NOTE]
-   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. Se non è selezionato, fare clic su **eseguire** esegue tutte le query nell'editor.
+   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -113,7 +113,7 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
    ```
 
 
-## <a name="insert-rows"></a>Inserimento di righe
+## <a name="insert-rows"></a>Inserire righe
 
 1. Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
 
@@ -145,6 +145,7 @@ L'editor di query è ancora connesso al *master* database, ma si vuole creare un
 
 Altri articoli in questa raccolta si basano su questa guida rapida. Se si prevede di continuare con le esercitazioni successive, non pulire le risorse create in questa guida rapida. Se non si prevede di continuare, utilizzare la procedura seguente per eliminare le risorse create nel portale di Azure.
 Pulire le risorse eliminando i gruppi di risorse che non sono più necessari. Per informazioni dettagliate, vedere [Pulire le risorse](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 
