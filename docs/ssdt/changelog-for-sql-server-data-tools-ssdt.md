@@ -1,34 +1,66 @@
 ---
 title: Log delle modifiche per SQL Server Data Tools (SSDT) | Microsoft Docs
-ms.custom: 
-ms.date: 02/09/2018
+ms.custom: ''
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssdt
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - tools-ssdt
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 
+caps.latest.revision: 31
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cd69c5ff505f60aacd131976a5f42edef02a4d4d
-ms.sourcegitcommit: 99102cdc867a7bdc0ff45e8b9ee72d0daade1fd3
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: fc65a1f3cc8cd112309851665c847c76ca691393
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/11/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Log delle modifiche per SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questo log delle modifiche è per [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Per i post dettagliati sulle novità e le modifiche, vedere il [blog del team di SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+
+## <a name="ssdt-for-visual-studio-2017-1560"></a>SSDT per Visual Studio 2017 (15.6.0)
+Numero di build: 14.0.16162.0  
+Data di rilascio: 10 aprile 2018
+  
+### <a name="whats-new"></a>Novità
+
+**SSIS:**
+
+1.  È stato risolto il problema relativo alla mancata registrazione da parte dell'attività di elaborazione AS delle fasi di elaborazione quando la destinazione è SQLServer2016 o SQLServer2017
+2.  È stato risolto il problema della violazione di accesso che si verifica quando si apre dtsx in SSDT con nomi di attività molto lunghi non in inglese
+3.  È stato risolto il problema della scomparsa, talvolta, dell'elenco delle variabili di ScriptTask nell'interfaccia utente delle attività
+4.  È stato risolto il problema dell'impossibilità di aggiungere una copia di un pacchetto esistente se la posizione del pacchetto è SQL Server
+5.  È stato risolto il problema del blocco dello stato attivo durante l'accesso alla casella combinata nella finestra di dialogo di alcuni editor.
+6.  È stato risolto il problema della mancata modifica dello sfondo quando si cambia il tema di Visual Studio.
+7.  È stato risolto il problema dell'invisibilità delle etichette Annotazione e Caricamento con un tema scuro.
+8.  È stato risolto il problema della definizione non corretta della proprietà relativa allo stato per gli elementi disabilitati della casella degli strumenti SSIS.
+9.  È stato risolto il problema dell'impossibilità di eseguire WebServiceTask.
+10. È stato risolto il problema dell'esito negativo della distribuzione di pacchetti se la stringa di connessione è impostata su una variabile con espressione dipendente da parametri di progetto.
+
+**Programma di installazione:**
+
+1.  Aggiunta del collegamento "Analisi utilizzo software per SQL Server Data Tools" nell'informativa sulla privacy.
+2.  È stato risolto il problema della comparsa della finestra del programma di installazione di Visual Studio quando si seleziona "Installare la nuova istanza di Microsoft SQL Server Data Tools per Visual Studio 2017"
+
+### <a name="known-issues"></a>Problemi noti:
+1.  L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+
+
 
 ## <a name="ssdt-for-visual-studio-2017-1552"></a>SSDT per Visual Studio 2017 (15.5.2)
 Numero di build: 14.0.16156.0
@@ -46,10 +78,10 @@ Numero di build: 14.0.16156.0
 8.  È stato risolto un problema a causa del quale alcune stringhe vengono troncate nella finestra di Distribuzione guidata Integration Services. 
 
 **Programma di installazione**
-- È stato risolto un problema a causa del quale a volte il download del payload non riesce con l'errore "Impossibile trovare il file specificato (0x80070002)"  
+- È stato risolto un problema a causa del quale a volte il download del payload non riesce con l'errore "Impossibile trovare il file specificato (0x80070002)".  
 
 ### <a name="known-issues"></a>Problemi noti
-- L'attività di esecuzione pacchetti SSIS non supporta il debug quando ExecuteOutOfProcess è impostato su True. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
+- L'attività di esecuzione pacchetti SSIS non supporta il debug quando *ExecuteOutOfProcess* è impostato su *True*. Questo problema è limitato al debug. Il salvataggio, la distribuzione e l'esecuzione tramite DTExec.exe o il catalogo SSIS funzionano normalmente.
 
 
 

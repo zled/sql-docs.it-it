@@ -1,30 +1,30 @@
 ---
 title: Stretch Database | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/27/2016
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: stretch-database
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - dbe-stretch
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database
 ms.assetid: ce6db775-21a5-40bc-95a1-f560376d4ee2
-caps.latest.revision: 
+caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30361d4466b7495945a7dae857bbcd52fd86103a
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+ms.openlocfilehash: 5356a2578b5c5d25dba440729e4f902ecb886dc6
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stretch-database"></a>Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
  Consente di estendere in massima tranquillità e in modo sicure le applicazioni più importanti nel cloud. La Crittografia sempre attiva di SQL Server offre la crittografia dei dati in movimento. La sicurezza a livello di riga e altre funzionalità avanzate per la sicurezza di SQL Server funzionano anche con Stretch Database per proteggere i dati.  
   
 ## <a name="what-does-stretch-database-do"></a>Funzionalità di Stretch Database  
- Dopo aver abilitato Stretch Database per un'istanza di SQL Server, un database e almeno una tabella, Stretch Database avvia automaticamente la migrazione dei dati ad accesso sporadico in Azure.  
+ Dopo l'abilitazione di Stretch Database per un'istanza di SQL Server e di un database e dopo la selezione di almeno una tabella, Stretch Database avvia automaticamente la migrazione dei dati ad accesso sporadico in Azure.  
   
 -   Se i dati ad accesso sporadico vengono archiviati in una tabella separata, è possibile eseguire la migrazione dell'intera tabella.  
   

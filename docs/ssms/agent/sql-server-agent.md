@@ -16,16 +16,17 @@ helpviewer_keywords:
 - SQL Server Agent, about SQL Server Agent
 - automatic administration steps
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54d2642817bfb96f29a87535c6eda004e6a2d777
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 4d074c9d90df6065326e30de581c7b512d7affdc
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -132,7 +133,7 @@ Per inviare notifiche agli operatori usando la posta elettronica o i cercaperson
 I membri dei ruoli predefiniti del database **SQLAgentUserRole**, **SQLAgentReaderRole**e **SQLAgentOperatorRole** in **msdb**e i membri del ruolo predefinito del server **sysadmin** hanno accesso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Un utente che non appartiene a nessuno di questi ruoli non può utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent. Per altre informazioni sui ruoli usati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent, vedere [Implementazione della sicurezza di SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sottosistemi  
-Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] . [!INCLUDE[tsql](../../includes/tsql_md.md)] utilizzano il comando EXECUTE AS per impostare il contesto di sicurezza.  
+Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponibili per un passaggio di processo. Ogni proxy ha accesso a uno o più sottosistemi. I sottosistemi offrono sicurezza in quanto delimitano l'accesso alle funzionalità disponibili per un proxy. Ogni passaggio di processo viene eseguito nel contesto di un proxy, ad eccezione dei passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] . I passaggi di processo [!INCLUDE[tsql](../../includes/tsql_md.md)] usano il comando EXECUTE AS per impostare il contesto di sicurezza sul proprietario del processo.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] vengono definiti i sottosistemi inclusi nella tabella seguente:  
   

@@ -1,27 +1,27 @@
 ---
 title: Percorsi dei file per le istanze predefinite e denominate di SQL Server | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: install
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - setup-install
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
-caps.latest.revision: 
+caps.latest.revision: 16
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: b5ce1eacf023848410bf41261072adf1cd56ee43
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
+manager: craigg
+ms.openlocfilehash: db5977924f9a1b6b83817516f6ae2b1b4a916af9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Percorsi dei file per le istanze predefinite e denominate di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

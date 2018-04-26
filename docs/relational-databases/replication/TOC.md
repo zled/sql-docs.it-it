@@ -29,8 +29,10 @@
 #### [Topologie per la sincronizzazione tramite il Web](topologies-for-web-synchronization.md)  
 ### [Configurare IIS per la sincronizzazione Web](configure-iis-for-web-synchronization.md)  
 ### [Configurare IIS 7 per la sincronizzazione Web](configure-iis-7-for-web-synchronization.md)  
+
 ## [Configurare la distribuzione](configure-distribution.md)  
 ### [Configurare la pubblicazione e la distribuzione](configure-publishing-and-distribution.md)  
+### [Configurare la distribuzione in un gruppo di disponibilità](configure-distribution-availability-group.md)
 ### [Visualizzare e modificare le proprietà del server di pubblicazione e del database di distribuzione](view-and-modify-distributor-and-publisher-properties.md)  
 ### [Disabilitare la pubblicazione e la distribuzione](disable-publishing-and-distribution.md)  
 ### [Abilitare un database per la replica (SQL Server Management Studio)](enable-a-database-for-replication-sql-server-management-studio.md)  
@@ -38,6 +40,7 @@
 ### [Specificare la posizione predefinita degli snapshot (SQL Server Management Studio)](specify-the-default-snapshot-location-sql-server-management-studio.md)  
 ### [Impostare il periodo di memorizzazione per la distribuzione per le pubblicazioni transazionali (SQL Server Management Studio)](set-distribution-retention-period-for-transactional-publications.md)  
 ### [Impostare il periodo di memorizzazione della cronologia (SQL Server Management Studio)](set-the-history-retention-period-sql-server-management-studio.md)  
+
 ## [Sottoscrizione delle pubblicazioni](subscribe-to-publications.md)  
 ### [Create a Pull Subscription](create-a-pull-subscription.md)  
 ### [Create a Push Subscription](create-a-push-subscription.md)  

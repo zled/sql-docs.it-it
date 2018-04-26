@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Log delle modifiche (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/06/2018
+ms.date: 04/17/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
 ms.service: ''
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 75e8afe2561b49b2479d7b65d1c7aff9854fa420
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+ms.openlocfilehash: d44dda667b1b3cb22a1f3612132905f4cc520648
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,6 @@ Istanza gestita di database SQL di Azure:
    - Supporto per i processi di SQL Agent.
    - Supporto per i server collegati.
 - Altre informazioni sulle istanze gestite sono disponibili [qui](https://azure.microsoft.com/blog/migrate-your-databases-to-a-fully-managed-service-with-azure-sql-database-managed-instance/).
-
 
 Esplora oggetti:
 - Aggiunte impostazioni che consentono di non racchiudere i nomi tra parentesi quadre quando si trascinano e rilasciano elementi da Esplora oggetti alla finestra di query (suggerimenti utente [32911933](https://feedback.azure.com/forums/908035-sql-server/suggestions/32911933) e [32671051](https://feedback.azure.com/forums/908035-sql-server/suggestions/32671051)).
@@ -109,7 +108,8 @@ Posta elettronica database:
 
 ### <a name="known-issues"></a>Problemi noti
 
-- È attualmente presente un problema noto in cui si verifica un arresto anomalo di SSMS 17.6 quando si configura la pianificazione in un piano di manutenzione.
+> [!WARNING]
+> Si verifica il problema noto in cui SSMS 17.6 diventa instabile e si blocca quando si usano [piani di manutenzione](../relational-databases/maintenance-plans/maintenance-plans.md). Se si usano piani di manutenzione, non installare SSMS 17.6. Effettuare il downgrade a SSMS 17.5 se è già installata la versione 17.6 e si è riscontrato questo problema. 
 
 ## <a name="previous-ssms-releases"></a>Versioni precedenti di SSMS
 
