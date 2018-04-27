@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75d81e8e19e2ee1cf4efe62da164caf0e337e5ab
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: d5d6abe02569642c60023da0977af3c4e87ada8c
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configure-cluster-quorum-nodeweight-settings"></a>Configurare le impostazioni NodeWeight per il quorum del cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ ms.lasthandoff: 04/26/2018
 4.  Restituire le proprietà del nodo del cluster in un formato leggibile.  
   
 ### <a name="example-powershell"></a>Esempio (Powershell)  
- Nell'esempio seguente viene modificata l'impostazione NodeWeight per rimuovere il voto quorum per il nodo "Always OnSrv1", quindi vengono restituite le impostazioni per tutti i nodi del cluster.  
+ Nell'esempio seguente viene modificata l'impostazione NodeWeight per rimuovere il voto quorum per il nodo "AlwaysOnSrv1", quindi vengono restituite le impostazioni per tutti i nodi del cluster.  
   
 ```powershell  
 Import-Module FailoverClusters  
   
-$node = “Always OnSrv1”  
+$node = “AlwaysOnSrv1”  
 (Get-ClusterNode $node).NodeWeight = 0  
   
 $cluster = (Get-ClusterNode $node).Cluster  
@@ -92,10 +92,10 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 2.  Utilizzare **cluster.exe** per impostare valori `NodeWeight` .  
   
 ### <a name="example-clusterexe"></a>Esempio (Cluster.exe)  
- Nell'esempio seguente viene modificato il valore NodeWeight per rimuovere il voto quorum del nodo "Always OnSrv1" nel cluster "Cluster001".  
+ Nell'esempio seguente viene modificato il valore NodeWeight per rimuovere il voto quorum del nodo "AlwaysOnSrv1" nel cluster "Cluster001".  
   
 ```ms-dos  
-cluster.exe Cluster001 node Always OnSrv1 /prop NodeWeight=0  
+cluster.exe Cluster001 node AlwaysOnSrv1 /prop NodeWeight=0  
 ```  
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  

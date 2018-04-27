@@ -23,17 +23,17 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d2f03949fa0edab709dcdf14a71daad12d12022b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: b8d9a0203b8e4bce7391415c99ebeba8aafa3333
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="master-data-services-overview-mds"></a>Panoramica di Master Data Services (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
- In questo argomento sono descritte le principali funzionalità di organizzazione e gestione dei dati di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
+In questo argomento sono descritte le principali funzionalità di organizzazione e gestione dei dati di [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] consente di gestire un set di dati master dell'organizzazione. È possibile organizzare i dati in modelli, creare regole per l'aggiornamento dei dati e controllare chi aggiorna i dati. Con Excel è possibile condividere il set di dati master con altri utenti nell'organizzazione. 
   
