@@ -1,16 +1,16 @@
 ---
 title: Contenitore Ciclo Foreach | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/22/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.foreachloopcontainer.f1
@@ -33,16 +33,16 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 834bdc1febf1f066847b33f1490f076151357e98
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 9d60344e799f0c32205c5ed697d23c645523bfe9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="foreach-loop-container"></a>Contenitore Ciclo Foreach
   Il contenitore Ciclo Foreach definisce un flusso di controllo ripetuto all'interno di un pacchetto. L'implementazione del ciclo è simile alla struttura del ciclo **Foreach** nei linguaggi di programmazione. In un pacchetto per l'esecuzione del ciclo viene utilizzato un enumeratore Foreach.  Il contenitore Ciclo Foreach ripete il flusso di controllo per ogni membro di un enumeratore specificato.  
@@ -118,7 +118,7 @@ ms.lasthandoff: 03/20/2018
   
 4.  Configurare il contenitore Ciclo Foreach. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
 
-## <a name="configure-a-foreach-loop-container"></a>Configurazione di un contenitore Ciclo Foreach
+## <a name="configure-a-foreach-loop-container"></a>Configurare un contenitore Ciclo Foreach
 Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, incluse le espressioni di proprietà a livello di enumeratore e contenitore.  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aprire il progetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che contiene il pacchetto desiderato.  
@@ -177,9 +177,9 @@ Questa procedura descrive la configurazione di un contenitore Ciclo Foreach, inc
         > [!NOTE]  
         >  Il valore dell'indice indica la colonna dell'elemento su cui eseguire il mapping alla variabile. Solo l'enumeratore For Each Item può utilizzare un valore di indice diverso da 0.  
   
-8.  Facoltativamente, fare clic su **Espressioni** e, nella pagina **Espressioni** , creare espressioni di proprietà per le proprietà del contenitore Ciclo Foreach. Per altre informazioni, vedere [Aggiungere o modificare un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md).  
+8.  Facoltativamente, fare clic su **Espressioni** e, nella pagina **Espressioni** , creare espressioni di proprietà per le proprietà del contenitore Ciclo Foreach. Per altre informazioni, vedere [Aggiunta o modifica di un'espressione di proprietà](../../integration-services/expressions/add-or-change-a-property-expression.md).  
   
-9. Scegliere **OK**.  
+9. Fare clic su **OK**.  
 
 ## <a name="general-page---foreach-loop-editor"></a>Pagina Generale - Editor ciclo Foreach
 Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** per assegnare un nome e una descrizione al contenitore Ciclo Foreach che utilizza un enumeratore specificato per ripetere un flusso di lavoro per ogni membro di una raccolta.  
@@ -193,7 +193,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
 > [!NOTE]  
 >  I nomi degli oggetti devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione del contenitore Ciclo Foreach.  
 
 ## <a name="collection-page---foreach-loop-editor"></a>Pagina Raccolta - Editor ciclo Foreach
@@ -205,7 +205,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **Enumeratore**  
  Consente di selezionare il tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Enumeratore Foreach File**|Consente di enumerare i file. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
 |**Enumeratore Foreach Item**|Consente di enumerare i valori in un elemento. La selezione di questo valore determina la visualizzazione delle opzioni dinamiche nella sezione **Foreach File Enumerator**.|  
@@ -346,7 +346,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **DocumentSourceType**  
  Consente di selezionare il tipo di origine del documento XML. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -366,7 +366,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **EnumerationType**  
  Consente di selezionare un tipo di enumeratore nell'elenco. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Navigator**|Consente di eseguire l'enumerazione utilizzando uno strumento di spostamento XPathNavigator.|  
 |**Node**|Consente di enumerare i nodi restituiti da un'operazione XPath.|  
@@ -376,7 +376,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **OuterXPathStringSourceType**  
  Consente di selezionare il tipo di origine della stringa XPath. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente: 
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -399,7 +399,7 @@ Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Forea
  **InnerXPathStringSourceType**  
  Consente di selezionare il tipo di origine della stringa XPath interna. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente:  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Input diretto**|Consente di impostare l'origine su un documento XML.|  
 |**Connessione file**|Consente di selezionare un file contenente il documento XML.|  
@@ -550,7 +550,7 @@ Utilizzare la finestra di dialogo **Colonne For Each Item** per impostare le col
  Selezionare una colonna e quindi fare clic su **Rimuovi**.  
  
  ## <a name="select-smo-enumeration-dialog-box"></a>Seleziona enumerazione SMO - finestra di dialogo
-Usare la finestra di dialogo **Seleziona enumerazione SMO** per specificare l'oggetto SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui eseguire l'enumerazione e selezionare il tipo di enumerazione.  
+Usare la finestra di dialogo **Seleziona enumerazione SMO** per specificare l'oggetto SMO ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) nell'istanza specificata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] di cui eseguire l'enumerazione e selezionare il tipo di enumerazione.  
   
 ### <a name="options"></a>Opzioni  
  **Enumerazione**  
@@ -565,7 +565,7 @@ Usare la finestra di dialogo **Seleziona enumerazione SMO** per specificare l'og
  **Nomi**  
  Consente di utilizzare il tipo di enumerazione Nomi.  
   
- **Urn**  
+ **URN**  
  Consente di utilizzare il tipo di enumerazione URN.  
   
  **Percorsi**  

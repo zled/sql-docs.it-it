@@ -2,7 +2,7 @@
 title: Utilità di esecuzione pacchetti (dtexecui) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: packages
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: de1484e04318c45057213226016379326e670304
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: dd6097e9c173196466870fea63a0c1334c7a37b5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="execute-package-utility-dtexecui"></a>Utilità di esecuzione pacchetti (dtexecui.exe)
   Utilizzare l' **Utilità di esecuzione pacchetti** per eseguire i pacchetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tramite l'utilità è possibile eseguire i pacchetti archiviati in una delle tre posizioni seguenti: database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system. Questa interfaccia utente, che può essere avviata da [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oppure digitando **dtexecui** al prompt dei comandi, può essere usata in alternativa all'esecuzione di pacchetti usando lo strumento del prompt dei comandi **DTExec** .  
@@ -73,14 +73,14 @@ ms.lasthandoff: 04/10/2018
   
 |||  
 |-|-|  
-|Valore|Description|  
+|valore|Description|  
 |**SQL Server**|Selezionare questa opzione se il pacchetto si trova in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specificare un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e immettere il nome utente e la password per l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ogni nome utente e password aggiunge le opzioni **/USER** *nomeutente* e **/PASSWORD** *password* options to the comme prompt.|  
 |**File system**|Selezionare questa opzione se il pacchetto si trova nel file system.|  
 |**Archivio pacchetti SSIS**|Selezionare questa opzione se il pacchetto si trova nell'Archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] .|  
   
  Ad ognuna di queste impostazioni è associato il set di opzioni seguente.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -146,7 +146,7 @@ ms.lasthandoff: 04/10/2018
  **Rimuovi**  
  Selezionare un file di configurazione nell'elenco e quindi fare clic su **Rimuovi**.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -168,7 +168,7 @@ ms.lasthandoff: 04/10/2018
  **Rimuovi**  
  Selezionare un file di comando nella casella di testo e quindi rimuoverlo con il pulsante **Rimuovi** .  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -181,13 +181,13 @@ ms.lasthandoff: 04/10/2018
  **Gestione connessione**  
  Selezionare la casella di controllo corrispondente per rendere modificabile la colonna **Stringa di connessione** .  
   
- **Description**  
+ **Descrizione**  
  Consente di visualizzare una descrizione di ogni gestione connessione. Non è possibile modificare le descrizioni.  
   
  **Stringa di connessione**  
  Consente di modificare la stringa di connessione per una gestione connessione. Questo campo è modificabile solo quando è selezionata la casella di controllo **Gestione connessione** .  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -282,7 +282,7 @@ ms.lasthandoff: 04/10/2018
  **Ora di inizio e fine**  
  Selezionare questa opzione per segnalare l'ora di inizio e fine dell'esecuzione del pacchetto.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -301,7 +301,7 @@ ms.lasthandoff: 04/10/2018
  **Rimuovi**  
  Selezionare un provider di log e fare clic su questo pulsante per rimuoverlo.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -314,13 +314,13 @@ ms.lasthandoff: 04/10/2018
  **Percorso proprietà**  
  Consente di immettere il percorso della proprietà. La sintassi del percorso usa una barra rovesciata (\\) per indicare che l'elemento seguente è un contenitore, il punto (.) per indicare che l'elemento seguente è una proprietà e le parentesi per indicare un membro di una raccolta. Il membro può essere identificato tramite il relativo indice o nome. Ad esempio, il percorso della proprietà di una variabile di pacchetto è \Pacchetto.Variabili[Variabile].Valore.  
   
- **Valore**  
+ **Value**  
  Consente di immettere il valore della proprietà.  
   
  **Rimuovi**  
  Selezionare un percorso di proprietà e fare clic su questo pulsante per rimuoverla.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -351,7 +351,7 @@ ms.lasthandoff: 04/10/2018
  ID versione  
  Consente di specificare il numero di identificazione della versione.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
@@ -370,13 +370,13 @@ ms.lasthandoff: 04/10/2018
  **Command line**  
  Consente di visualizzare la riga di comando corrente, che risulta modificabile se si seleziona l'opzione per la modifica manuale della riga di comando.  
   
- **Execute**  
+ **Eseguire**  
  Fare clic su questo pulsante per eseguire il pacchetto.  
   
  **Chiudi**  
  Fare clic su questo pulsante per chiudere la finestra di dialogo **Utilità di esecuzione pacchetti** .  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilità DTExec](../../integration-services/packages/dtexec-utility.md)  
+ [Utilità dtexec](../../integration-services/packages/dtexec-utility.md)  
   
   

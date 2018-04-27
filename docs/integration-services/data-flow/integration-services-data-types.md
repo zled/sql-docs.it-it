@@ -1,16 +1,16 @@
 ---
 title: Tipi di dati di Integration Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - modifying data types
@@ -21,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: 
+caps.latest.revision: 98
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 929ae55c02aa0e5c5172c072c192b88902a0a07f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-data-types"></a>Tipi di dati di Integration Services
   Quando i dati entrano in un flusso di dati di un pacchetto, l'origine che estrae i dati li converte in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ai dati numerici viene assegnato un tipo di dati numeric, ai dati stringa viene assegnato un tipo di dati character e alle date viene assegnato un tipo di dati date. Agli altri dati, ad esempio GUID e BLOB (Binary Large Object), vengono assegnati i tipi dai dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] appropriati. Se i dati sono di un tipo non convertibile in un tipo di dati di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , verrà generato un errore.  

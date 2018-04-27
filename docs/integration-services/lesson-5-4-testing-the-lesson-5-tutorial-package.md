@@ -1,30 +1,30 @@
 ---
-title: 'Passaggio 4: Test del pacchetto creato nella lezione 5 dell''esercitazione | Microsoft Docs'
-ms.custom: 
+title: "Passaggio 4: Test del pacchetto creato nella lezione 5 dell'esercitazione | Microsoft Docs"
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-caps.latest.revision: 
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 600fa07aaffe0612cd87bcf33436c01481658782
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e5d5ed069617fc9e1c020ca119ad000b5d017f0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-5-4---testing-the-lesson-5-tutorial-package"></a>Lezione 5-4 - Test del pacchetto creato nella lezione 5 dell'esercitazione
 In fase di esecuzione, il pacchetto ottiene il valore della proprietà **Directory** da una variabile aggiornata in fase di esecuzione, anziché utilizzare il nome della directory originale specificato quando è stato creato il pacchetto. Il valore della variabile è popolato dal file SSISTutorial.dtsConfig file.  

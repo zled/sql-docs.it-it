@@ -1,15 +1,15 @@
 ---
 title: Sviluppo di un'interfaccia utente per un componente flusso di dati | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-custom-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 038dd21da57df8a2002d1b66766d57c39ddf4188
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bf3b65d6edc62d54cde5a9734b75be329f0427cd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Sviluppo di un'interfaccia utente per un componente del flusso di dati
   Gli sviluppatori di componenti possono fornire un'interfaccia utente personalizzata per un componente, che viene visualizzata in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando il componente viene modificato. L'implementazione di un'interfaccia utente personalizzata fornisce notifiche quando il componente viene aggiunto o eliminato da un'attività Flusso di dati e quando per il componente è richiesta la Guida.  

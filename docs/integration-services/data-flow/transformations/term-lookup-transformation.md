@@ -1,16 +1,16 @@
 ---
 title: Trasformazione Ricerca termini | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 
+caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 9b6b42af122b90a0b90b4ac35c58451023655f14
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="term-lookup-transformation"></a>Ricerca termini - trasformazione
   La trasformazione Ricerca termini rileva le corrispondenze tra i termini estratti dal testo in una colonna di input della trasformazione e quelli contenuti in una tabella di riferimento, quindi conta il numero delle occorrenze di un termine della tabella di ricerca nel set di dati di input e scrive tale numero nelle colonne di output della trasformazione, insieme al termine della tabella di riferimento. Questa trasformazione può essere utilizzata per creare un elenco di termini personalizzato basato sul testo di input, completo di statistiche sulla frequenza dei termini.  

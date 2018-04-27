@@ -1,16 +1,16 @@
 ---
-title: "Attività FTP | Microsoft Docs"
-ms.custom: 
+title: Attività FTP | Microsoft Docs
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
@@ -19,16 +19,16 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: e2ea750295bdd55129ec59eacf9a0563575e513d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ftp-task"></a>Attività FTP
   L'attività FTP consente di caricare e scaricare file di dati, nonché di gestire directory nei server. Un pacchetto può ad esempio scaricare file di dati da un server remoto o da un indirizzo Internet nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare l'attività FTP per gli scopi seguenti:  
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/20/2018
 |**FTPConnectingToServer**|Indica che l'attività ha stabilito una connessione al server FTP.|  
 |**FTPOperation**|Specifica l'inizio e il tipo dell'operazione FTP eseguita dall'attività.|  
   
-## <a name="related-tasks"></a>Attività correlate  
+## <a name="related-tasks"></a>Related Tasks  
  È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
  Per informazioni su come impostare queste proprietà nella finestra di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere [Impostare le proprietà di un'attività o di un contenitore](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
@@ -104,7 +104,7 @@ ms.lasthandoff: 03/20/2018
 > [!NOTE]  
 >  I nomi delle attività devono essere univoci all'interno di un pacchetto.  
   
- **Description**  
+ **Descrizione**  
  Consente di digitare una descrizione dell'attività FTP.  
   
 ## <a name="ftp-task-editor-file-transfer-page"></a>Editor attività FTP (pagina Trasferimento file)
@@ -114,7 +114,7 @@ ms.lasthandoff: 03/20/2018
  **IsRemotePathVariable**  
  Consente di specificare se il percorso remoto è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **RemoteVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **RemotePath**.|  
@@ -125,7 +125,7 @@ ms.lasthandoff: 03/20/2018
  **IsLocalPathVariable**  
  Consente di specificare se il percorso locale è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **LocalVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **LocalPath**.|  
@@ -133,7 +133,7 @@ ms.lasthandoff: 03/20/2018
  **Operazione**  
  Consente di selezionare l'operazione FTP da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Invia file**|Consente di inviare i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  
 |**Ricevi file**|Consente di ricevere i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  

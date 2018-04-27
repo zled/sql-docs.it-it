@@ -2,7 +2,7 @@
 title: Impostazione query di origine (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 485faeca41d64c744a091c0efd4be8a05109a6b8
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e6ac0fde9af282e3aa6c0a37ba817e5b9265bec5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="provide-a-source-query-sql-server-import-and-export-wizard"></a>Impostazione query di origine (Importazione/Esportazione guidata SQL Server)
 Se è stato specificato che si vuole fornire una query per selezionare i dati da copiare, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Impostazione query di origine**. In questa pagina è necessario scrivere e testare la query SQL che seleziona i dati da copiare dall'origine dati alla destinazione. È anche possibile impostare il testo di una query salvata o caricarlo da un file.

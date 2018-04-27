@@ -1,15 +1,15 @@
 ---
 title: Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: run-manage-packages-programmatically
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-caps.latest.revision: 
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d8a6fabc3b3b8ca1267160c716263b6366e5dcf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 7d70f21e954655cd25e4606deb96bc7240a90c0e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Caricamento ed esecuzione di un pacchetto remoto a livello di programmazione
   Per eseguire pacchetti remoti da un computer locale in cui non è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], avviare i pacchetti in modo che vengano eseguiti nel computer remoto in cui è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. A tale scopo, configurare il computer locale per l'utilizzo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, un servizio Web o un componente remoto per avviare i pacchetti nel computer remoto. Se si tenta di avviare i pacchetti remoti direttamente dal computer locale, i pacchetti verranno caricati e ne verrà effettuato il tentativo di esecuzione dal computer locale. Se nel computer locale non è installato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], i pacchetti non verranno eseguiti.  

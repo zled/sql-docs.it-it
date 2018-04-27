@@ -2,7 +2,7 @@
 title: Debug del flusso di controllo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: troubleshooting
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9aba628aa426093485d820ea4383dd04076481cd
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 09e11d948143413adfbfbef79ab4c75bfed4feba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-control-flow"></a>Debug del flusso di controllo
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includono funzionalità e strumenti che è possibile usare per la risoluzione dei problemi del flusso di controllo in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -157,7 +157,7 @@ ms.lasthandoff: 04/10/2018
  **Tipo passaggi**  
  Consente di specificare quando il punto di interruzione diventa effettivo.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Always**|L'esecuzione viene sempre sospesa al rilevamento di un punto di interruzione.|  
 |**Numero di passaggi uguale a**|L'esecuzione viene sospesa quando il punto di interruzione viene rilevato per un numero di volte uguale al numero di passaggi specificato.|  

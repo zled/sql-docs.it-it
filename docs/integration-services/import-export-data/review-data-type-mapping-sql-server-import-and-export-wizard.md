@@ -1,30 +1,30 @@
 ---
 title: Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8f9c2ddd8834d5ff3dbef2d0aff725343fae4f41
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: b7c05dcf7a4bd38a98637ecb4e9da576e74b8ab9
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
 Se nell'elenco **Mapping** della finestra di dialogo **Mapping colonne** è stato specificato un mapping tra i tipi di dati che può avere esito negativo, l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Importazione/Esportazione guidata mostra la pagina **Verifica mapping tra i tipi di dati** . In questa pagina è possibile esaminare le informazioni dettagliate sulle conversioni dei tipi di dati da eseguire tramite la procedura guidata per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi che consentono di distinguere le conversioni dei tipi di dati per cui si prevede un esito positivo da quelle che possono provocare errori o troncamenti. Per ogni conversione, decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.   

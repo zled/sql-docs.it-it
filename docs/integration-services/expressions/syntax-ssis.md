@@ -1,31 +1,31 @@
 ---
 title: Sintassi (SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: expressions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-caps.latest.revision: 
+caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 28dc10cc407a41e8ba2ec594fdacbe293dbe53a1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: ca475ed0b09541d379d227dff4df4fcc129a8e1d
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="syntax-ssis"></a>Sintassi (SSIS)
   La sintassi delle espressioni di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] è simile a quella utilizzata nei linguaggi C e C#. Le espressioni includono elementi quali identificatori (colonne e variabili), valori letterali, operatori e funzioni. In questo argomento vengono riepilogati i requisiti specifici della sintassi dell'analizzatore di espressioni, in relazione ai diversi elementi delle espressioni.  

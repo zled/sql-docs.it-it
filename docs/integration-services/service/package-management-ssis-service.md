@@ -1,16 +1,16 @@
 ---
 title: Gestione dei pacchetti (servizio SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: service
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtsserver.importpackage.f1
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 
+caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 0ef5f56d09d34fa2688fe46fdf6d7983af4e9e1f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="package-management-ssis-service"></a>Gestione dei pacchetti (servizio SSIS)
   La gestione dei pacchetti include monitoraggio, gestione, importazione ed esportazione di pacchetti.  
@@ -181,7 +181,7 @@ Per arrestare un pacchetto in esecuzione dalla cartella **Pacchetti in esecuzion
   
     -   Per esportare il pacchetto in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], selezionare l'opzione **SQL Server** , specificare il server e selezionare la modalità di autenticazione. Se si seleziona l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , specificare un nome utente e una password.  
   
-         Fare clic sul pulsante Sfoglia **(…)**ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
+         Fare clic sul pulsante Sfoglia **(…)** ed espandere la cartella **Pacchetti SSIS** per individuare la cartella in cui salvare il pacchetto. Facoltativamente, aggiornare il nome predefinito del pacchetto e quindi scegliere **OK**.  
   
     -   Per esportare il pacchetto nel file system, selezionare l'opzione **File system** .  
   

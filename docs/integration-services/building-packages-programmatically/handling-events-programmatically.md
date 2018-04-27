@@ -1,15 +1,15 @@
 ---
 title: Gestione degli eventi a livello di programmazione | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: building-packages-programmatically
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 
+caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c388f9a43859ca186a728dad641ca95d90c48372
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: e16cdfb2d8da440ab342d74a692c9bf6eb98c21a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="handling-events-programmatically"></a>Gestione degli eventi a livello di programmazione
   Il runtime di [!INCLUDE[ssIS](../../includes/ssis-md.md)] fornisce una raccolta di eventi che si verificano prima, durante e dopo la convalida e l'esecuzione di un pacchetto. Tali eventi possono essere acquisiti in due modi. Il primo metodo prevede di implementare l'interfaccia <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> in una classe e specificare la classe come parametro per i metodi **Execute** e **Validate** del pacchetto. Il secondo metodo consiste nella creazione di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> che possono contenere altri oggetti di [!INCLUDE[ssIS](../../includes/ssis-md.md)], ad esempio attività e cicli, eseguiti quando si verifica un evento in <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. In questa sezione vengono descritti questi due metodi e vengono forniti esempi di codice per dimostrarne l'utilizzo.  

@@ -2,7 +2,7 @@
 title: Introduzione a un esempio semplice di importazione/esportazione guidata | Microsoft Docs
 ms.custom: ''
 ms.date: 02/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a684f719495083d5ca4e79a2fbc0213ab83a95a6
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: e84e1bf87d657f3b72786c19d662b0f664a78d74
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata
 Informazioni sull'importazione/esportazione guidata SQL Server attraverso uno scenario comune da un foglio di calcolo di Excel a un database SQL Server. Anche se si prevede di usare un'origine diversa e una destinazione diversa, in questo argomento è illustrata la maggior parte delle operazioni da conoscere per l'esecuzione della procedura guidata.
@@ -63,7 +63,7 @@ Per visualizzare questa pagina, è possibile fare clic su **Non visualizzare pi�
 Nella pagina successiva **Scegliere un'origine dati**, scegliere Microsoft Excel come origine dati. Quindi, esplorare per selezionare il file di Excel. Infine specificare la versione di Excel usata per creare il file.
 
 > [!IMPORTANT]
-> Per informazioni dettagliate sulla connessione ai file di Excel, nonché sulle limitazioni e sui problemi noti del caricamento di dati da o a file di Excel, vedere [Caricare i dati da o a Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
+> Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).
 
 ![Scegliere l'origine dati di Excel](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
 

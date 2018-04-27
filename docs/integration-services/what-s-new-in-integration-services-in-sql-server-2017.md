@@ -1,28 +1,28 @@
 ---
-title: "Novità&#39; di Integration Services in SQL Server 2017 | Microsoft Docs"
-ms.custom: 
+title: Novità&#39; di Integration Services in SQL Server 2017 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/28/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e26d7884-e772-46fa-bfdc-38567fe976a1
-caps.latest.revision: 
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0357907777cfec8cf65c36a074cc8e91c4d0e02c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 513b790c69959b56e210259283874a48ce7a457c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novità&#39; di Integration Services in SQL Server 2017
 Questo argomento descrive le funzionalità che sono state aggiunte o aggiornate in [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
@@ -66,7 +66,7 @@ Oltre ai miglioramenti di connettività in SQL Server, in Integration Services F
 -   La gestione del failover dei log di esecuzione dai ruoli di lavoro di scalabilità orizzontale è stata migliorata. I log di esecuzione vengono resi persistenti su disco locale in caso di arresto improvviso di Scale Out Worker. Al riavvio del ruolo di lavoro, i log persistenti saranno ricaricati e salvati in SSISDB.
 -   Il parametro *runincluster* della stored procedure **[catalog].[create_execution]** è stato rinominato in *runinscaleout* per coerenza e leggibilità. Questa modifica del nome del parametro ha le conseguenze seguenti:
     -   Se esistono script che eseguono pacchetti in Scale Out, è necessario modificare il nome del parametro da *runincluster* a *runinscaleout* affinché gli script possano essere usati nella versione RC1.
-    -   In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: " *@runincluster*  non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e successiva di SSMS supportano il nuovo nome del parametro ed eseguono i pacchetti in Scale Out. Finché la versione 17.2 di SSMS sarà disponibile, è possibile usare come soluzione alternativa la versione esistente di SSMS per generare lo script che esegue i pacchetti, modificare il nome del parametro *runincluster* in *runinscaleout* nello script ed eseguire lo script.
+    -   In SQL Server Management Studio (SSMS) 17.1 e nelle versioni precedenti non è possibile eseguire i pacchetti in Scale Out nella versione RC1. Messaggio di errore: "*@runincluster* non è un parametro per la procedura **create_execution**." Questo problema viene risolto nella versione 17.2 di SSMS. La versione 17.2 e successiva di SSMS supportano il nuovo nome del parametro ed eseguono i pacchetti in Scale Out. Finché la versione 17.2 di SSMS sarà disponibile, è possibile usare come soluzione alternativa la versione esistente di SSMS per generare lo script che esegue i pacchetti, modificare il nome del parametro *runincluster* in *runinscaleout* nello script ed eseguire lo script.
 -   Il catalogo SSIS include una nuova proprietà globale che consente di specificare la modalità predefinita per l'esecuzione dei pacchetti SSIS. Questa nuova proprietà si applica quando si chiama la stored procedure **[catalog]. [ create_execution]** con il parametro *runinscaleout* impostato su Null. Questa modalità si applica anche ai processi di SQL Agent SSIS. È possibile impostare la nuova proprietà globale nella finestra di dialogo Proprietà per il nodo SSISDB in SSMS oppure con il comando seguente:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1

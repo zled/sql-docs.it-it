@@ -2,23 +2,23 @@
 title: Distribuire, eseguire e monitorare un pacchetto SSIS in Azure | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: article
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
-ms.custom: 
+ms.custom: ''
 ms.technology:
 - integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b17cdd39e1eb155581d070ef659d6c34c044b4d
-ms.sourcegitcommit: ab25b08a312d35489a2c4a6a0d29a04bbd90f64d
+ms.openlocfilehash: 2097595a90a44be6285b48be03ac9229749dd419
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire, eseguire e monitorare un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.

@@ -1,16 +1,16 @@
 ---
-title: "Utilità dtutil | Microsoft Docs"
-ms.custom: 
+title: Utilità dtutil | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: non-specific
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - verifying packages
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 
+caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5fcb9ddbd493f259341026d07a1867add85169e1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: cca41d32fe50ba017ac442f4b53355a052de3169
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dtutil-utility"></a>utilità dtutil
   L'utilità del prompt dei comandi **dtutil** viene usata per gestire i pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Utilizzare questa utility per copiare, spostare, eliminare un pacchetto oppure per verificarne l'esistenza. È possibile eseguire queste azioni in qualsiasi pacchetto di [!INCLUDE[ssIS](../includes/ssis-md.md)] archiviato in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system. Se l'utilità accede a un pacchetto archiviato in **msdb**, al prompt dei comandi può essere necessario specificare nome utente e password. Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], al prompt dei comandi sarà necessario specificare nome utente e password. Se non viene specificato il nome utente, **dtutil[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta di accedere a**  usando l'autenticazione di Windows. Il tipo di archiviazione del pacchetto è definito dalle opzioni **/SQL**, **/FILE** e **/DTS**.  

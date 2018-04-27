@@ -1,15 +1,15 @@
 ---
 title: Creazione di una trasformazione asincrona con il componente script | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: extending-packages-scripting-data-flow-script-component-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - transformation components [Integration Services]
 - Script component [Integration Services], transformation components
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
-caps.latest.revision: 
+caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7a7d607fda10fa8e3ae020e6b702867e9f8ef0a2
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: c7a8ecd16aa8ea4957b54195feb66b3b8824d6b1
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Creazione di una trasformazione asincrona con il componente script
   Utilizzare un componente di trasformazione nel flusso di dati di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per modificare e analizzare i dati quando vengono passati dall'origine alla destinazione. Una trasformazione con output sincroni elabora ogni riga di input non appena viene passata attraverso il componente. Una trasformazione con output asincroni potrebbe invece attendere di ricevere tutte le righe di input prima di completare l'elaborazione oppure inviare determinate righe all'output prima di aver ricevuto tutte le righe di input. In questo argomento viene descritta una trasformazione asincrona. Se l'elaborazione richiede una trasformazione sincrona, vedere [Creazione di una trasformazione sincrona con il componente script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md). Per altre informazioni sulle differenze tra componenti sincroni e asincroni, vedere [Informazioni sulle trasformazioni sincrone e asincrone](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/25/2018
   
  In una trasformazione asincrona è possibile usare il metodo AddRow per aggiungere righe all'output, se necessario, dall'interno dei metodi ProcessInputRow o ProcessInput. Non è necessario usare il metodo CreateNewOutputRows. Se si scrive una singola riga di risultati, ad esempio i risultati di un'aggregazione, in un determinato output, è possibile creare prima la riga di output usando il metodo CreateNewOutputRows e inserire i valori in seguito dopo l'elaborazione di tutte le righe di input. Tuttavia non è utile creare più righe nel metodo CreateNewOutputRows, perché il componente script consente di usare solo la riga corrente in un input o in un output. Il metodo CreateNewOutputRows è più importante in un componente di origine, in cui non sono presenti righe di input da elaborare.  
   
- È anche possibile eseguire l'override del metodo ProcessInput stesso, in modo da poter eseguire un'elaborazione aggiuntiva preliminare o finale prima o dopo aver eseguito il ciclo del buffer di input e aver chiamato ProcessInputRow per ogni riga. Uno degli esempi di codice di questo argomento esegue l'override di ProcessInput per contare il numero di indirizzi in una città specifica mentre ProcessInputRow esegue un ciclo sulle righe**.** L'esempio scrive il valore di riepilogo nel secondo output dopo l'elaborazione di tutte le righe. L'output dell'esempio viene completato in ProcessInput, perché quando viene chiamato PostExecute non sono più disponibili buffer di output.  
+ È anche possibile eseguire l'override del metodo ProcessInput stesso, in modo da poter eseguire un'elaborazione aggiuntiva preliminare o finale prima o dopo aver eseguito il ciclo del buffer di input e aver chiamato ProcessInputRow per ogni riga. Uno degli esempi di codice di questo argomento esegue l'override di ProcessInput per contare il numero di indirizzi in una città specifica mentre ProcessInputRow esegue un ciclo sulle righe **.** L'esempio scrive il valore di riepilogo nel secondo output dopo l'elaborazione di tutte le righe. L'output dell'esempio viene completato in ProcessInput, perché quando viene chiamato PostExecute non sono più disponibili buffer di output.  
   
  A seconda delle esigenze è anche possibile creare script nei metodi PreExecute e PostExecute, disponibili nella classe ScriptMain, per eseguire l'elaborazione preliminare o finale.  
   

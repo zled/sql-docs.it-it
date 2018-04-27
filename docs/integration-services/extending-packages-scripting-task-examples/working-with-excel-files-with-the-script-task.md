@@ -2,7 +2,7 @@
 title: Uso di file di Excel con l'attività Script | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: extending-packages-scripting-task-examples
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a533795d6d6017c885b887e35b8e996ab82493df
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 8c9816f0fb04fc7196692efc7bfa1addde5e0f53
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Uso di file di Excel con l'attività Script
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili la gestione connessione, l'origine e la destinazione Excel per l'utilizzo di dati archiviati in fogli di calcolo nel formato di file di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Per le tecniche descritte in questo argomento si utilizza l'attività Script per ottenere informazioni sui database (file di cartelle di lavoro) e sulle tabelle (fogli di lavoro e intervalli denominati) di Excel disponibili.
@@ -152,7 +152,7 @@ public class ScriptMain
   
 2.  Nella scheda **Script** di **Editor attività Script** fare clic su **ReadOnlyVariables** e immettere il valore della proprietà usando uno dei metodi seguenti:  
   
-    -   Digitare **ExcelTable** e **ExcelFile** separati da virgole**.**  
+    -   Digitare **ExcelTable** e **ExcelFile** separati da virgole **.**  
   
          oppure  
   

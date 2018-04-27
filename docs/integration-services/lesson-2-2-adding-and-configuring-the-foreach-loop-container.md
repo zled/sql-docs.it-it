@@ -1,30 +1,30 @@
 ---
 title: 'Passaggio 2: Aggiunta e configurazione del contenitore Ciclo Foreach | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: tutorial
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-caps.latest.revision: 
+caps.latest.revision: 36
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 80a4fa426a322346de99aafef393e75a67e7e82a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: dcbdf3baf515ac83a4910193ef0bd25b8f3f597a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Lezione 2-2 - Aggiunta e configurazione del contenitore Ciclo Foreach
 In questa attività verrà aggiunta la capacità di creare un ciclo in una cartella di file flat e applicare la stessa trasformazione del flusso di dati utilizzata nella lezione 1 a ognuno di questi file flat. Ciò si ottiene tramite l'aggiunta e la configurazione di un contenitore Ciclo Foreach al flusso di controllo.  
@@ -54,7 +54,7 @@ Dopo aver apportato tali modifiche al pacchetto, quando questo viene eseguito, i
   
 4.  Nella pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** digitare **Foreach File in Folder**per **Nome**. Fare clic su **OK**.  
   
-5.  Fare clic con il pulsante destro del mouse sul contenitore Ciclo Foreach, scegliere **Proprietà**e verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)**nella finestra Proprietà.  
+5.  Fare clic con il pulsante destro del mouse sul contenitore Ciclo Foreach, scegliere **Proprietà**e verificare che la proprietà **LocaleID** sia impostata su **Inglese (Stati Uniti)** nella finestra Proprietà.  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Per configurare l'enumeratore per il contenitore Ciclo Foreach  
   

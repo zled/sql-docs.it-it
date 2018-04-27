@@ -1,32 +1,32 @@
 ---
 title: Configurare gli output tramite Configurazione guidata dimensioni a modifica lenta | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: data-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0aa62acd9470c1d1d5e2764046ab3302f8edc46a
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 201a34950a0b819970a25509339d69d6143b0caf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Configurazione degli output tramite Configurazione guidata dimensioni a modifica lenta
   Configurazione guidata dimensioni a modifica lenta è l'editor per la trasformazione Dimensione a modifica lenta. La compilazione e la configurazione del flusso di dati di una dimensione a modifica lenta può risultare particolarmente complessa. Configurazione guidata dimensioni a modifica lenta rappresenta il modo più semplice per compilare il flusso di dati per gli output della trasformazione Dimensione a modifica lenta assistendo l'utente nel mapping delle colonne, nella selezione delle colonne chiave business, nell'impostazione degli attributi relativi alla modifica delle colonne e nella configurazione del supporto per i membri derivati della dimensione.  

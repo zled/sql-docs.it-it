@@ -2,7 +2,7 @@
 title: Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1796ece3b0fb24b0fb5a4026ce12a085d4744a77
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: 984beda9e79c525d45334959f0a866fcb2868080
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>Mapping tra i tipi di dati nell'Importazione/Esportazione guidata SQL Server
  Nell'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile impostare il nome, il tipo di dati e le proprietà del tipo di dati delle colonne nei nuovi file e tabelle di destinazione, ma non è possibile specificare conversioni personalizzate per i valori di colonna. Il mapping dei tipi di dati dall'origine alla destinazione risulta quindi di primaria importanza.  

@@ -2,7 +2,7 @@
 title: Attività di caricamento di Azure SQL DW | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: control-flow
@@ -16,16 +16,16 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPDWUPTASK.F1
 - sql14.dts.designer.afpdwuptask.f1
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d6c95bda5faf7f3ccf8f6b9bc4774a66d482e51
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: bff2df8d44cf8406a507fb764cb409f766f15bab
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
 L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'efficiente approccio della tecnologia PolyBase, descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Modelli e strategie di caricamento di Azure SQL Data Warehouse). In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.
@@ -36,11 +36,11 @@ Per aggiungere un' **attività di caricamento di Azure SQL DW**, trascinare l'at
 
 Nella pagina **Generale** configurare le proprietà seguenti.
 
-Campo|Descrizione
+Campo|Description
 -----|-----------
 LocalDirectory|Specifica la directory locale che contiene i file di dati da caricare.
 Recursively (Ricorsivo)|Specifica se eseguire una ricerca ricorsiva delle sottodirectory.
-FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. Ad esempio, Foglio\*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
+FileName|Specifica un filtro per nome per selezionare i file con un determinato modello di nome. Ad esempio, Foglio*.xsl\* includerà file come Foglio001.xls e FoglioABC.xlsx.
 RowDelimiter|Specifica il carattere che contrassegna la fine di ogni riga.
 ColumnDelimiter|Specifica uno o più caratteri che contrassegnano la fine di ogni colonna. Ad esempio, &#124; (barra verticale), \t (TAB), ' (virgoletta singola), " (virgoletta doppia) e 0x5c (barra rovesciata).
 IsFirstRowHeader|Specifica se la prima riga in ogni file di dati contiene nomi di colonna anziché dati effettivi.

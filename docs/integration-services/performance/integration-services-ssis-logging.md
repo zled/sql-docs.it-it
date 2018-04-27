@@ -1,16 +1,16 @@
 ---
 title: Registrazione di Integration Services (SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: performance
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.configuredtslogs.containers.f1
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-caps.latest.revision: 
+caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1082fb2dc121b3751a14b4cf1e291c8da9425ab
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 603f1d339745e83c3a16ec5b036a8c2f2cc4c980
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -345,7 +345,7 @@ ms.lasthandoff: 01/25/2018
 |**MessageText**|Messaggio associato alla voce di log.|  
 |**DataBytes**|Riservato per utilizzi futuri.|  
   
- **Basic**  
+ **Base**  
  Consente di selezionare o deselezionare gli eventi da registrare. Questa opzione può essere utilizzata per nascondere i dettagli di registrazione, ad eccezione dell'elenco di eventi. Se si seleziona un evento, per impostazione predefinita verranno selezionati anche tutti i relativi dettagli di registrazione. Fare clic su **Avanzate** per visualizzarli.  
   
  **Load**  

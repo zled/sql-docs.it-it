@@ -2,7 +2,7 @@
 title: Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/02/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: import-export-data
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b2424f3f7ad290a3ae81c7b97a39abf55f52e771
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d54bc394abb518238e6c00eb65e7b8121d9f2410
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Selezione tabelle e viste di origine (Importazione/Esportazione guidata SQL Server)
   Dopo aver specificato che si vuole copiare un'intera tabella o dopo aver specificato una query, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Seleziona tabelle e viste di origine**. In questa pagina è possibile selezionare le tabelle e le viste esistenti da copiare. Viene poi eseguito il mapping delle tabelle di origine in tabelle di destinazione nuove o esistenti. Facoltativamente, è anche possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.

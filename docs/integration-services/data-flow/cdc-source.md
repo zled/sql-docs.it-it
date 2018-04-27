@@ -2,7 +2,7 @@
 title: Origine CDC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: data-flow
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
-ms.translationtype: MT
+ms.openlocfilehash: f0552a81beb1bce6a578b058953236453bc8e47f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cdc-source"></a>Origine CDC
   Tramite l'origine CDC viene letto un intervallo di dati delle modifiche da tabelle delle modifiche di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ; queste vengono poi recapitate a valle ad altri componenti SSIS.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/10/2018
   
 -   **Error Code**: il valore è sempre -1.  
   
--   **Error Column**: colonna di origine che provoca l'errore (per gli errori di conversione).  
+-   **Error Column**(Colonna errore): colonna di origine che provoca l'errore (per gli errori di conversione).  
   
 -   **Error Row Columns**: dati del record che provocano l'errore.  
   
@@ -109,9 +109,9 @@ use <cdc-enabled-database-name>
   
 -   [Editor origine CDC &#40;pagina Gestione connessione&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
--   [Editor origine CDC & #40; Pagina colonne & #41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+-   [Editor origine CDC &#40;pagina Colonne&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
--   [Editor origine CDC & #40; Pagina Output degli errori & #41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+-   [Editor origine CDC &#40;pagina Output degli errori&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  La finestra di dialogo **Editor avanzato** contiene le proprietà che è possibile impostare a livello di codice.  
   
@@ -121,7 +121,7 @@ use <cdc-enabled-database-name>
   
  Per altre informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** , vedere [Proprietà personalizzate dell'origine CDC](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Proprietà personalizzate dell'origine CDC](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
@@ -229,7 +229,7 @@ use <cdc-enabled-database-name>
  **Troncamento**  
  Consente di selezionare il modo in cui l'origine CDC deve gestire il troncamento in un flusso: ignorare l'errore, reindirizzare la riga o interrompere il componente.  
   
- **Description**  
+ **Descrizione**  
  Non usato.  
   
  **Imposta questo valore nelle celle selezionate**  

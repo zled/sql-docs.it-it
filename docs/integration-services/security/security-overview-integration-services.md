@@ -1,16 +1,16 @@
 ---
 title: Panoramica sulla sicurezza (Integration Services) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SSIS packages, security
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-caps.latest.revision: 
+caps.latest.revision: 73
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 234895749b48f44601cddb76e4ca95783602a6e4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1bff92603483a8f2120dac95412d388c752dffbd
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-overview-integration-services"></a>Panoramica sulla sicurezza (Integration Services)
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] la sicurezza è costituita da diversi livelli che forniscono un ambiente di sicurezza protetto e flessibile. Questi livelli di sicurezza includono l'uso di firme digitali, proprietà dei pacchetti, ruoli di database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e autorizzazioni del sistema operativo. La maggior parte di queste caratteristiche di sicurezza rientra nelle categorie di identità e di controllo dell'accesso.  

@@ -1,16 +1,16 @@
 ---
 title: Ruoli di Integration Services (servizio SSIS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.dtsserver.packageroles.f1
@@ -23,16 +23,16 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: 
+caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: 79b84fc3f52cb12a77d1a2e51acbc074f810c6d0
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Ruoli Integration Services (servizio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fornisce alcuni ruoli predefiniti a livello di database per consentire l'accesso sicuro ai pacchetti archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. I ruoli disponibili sono diversi a seconda di dove si salvano i pacchetti, nel database del catalogo SSIS (SSISDB) o nel database msdb.  
@@ -52,11 +52,11 @@ ms.lasthandoff: 03/20/2018
 ### <a name="read-and-write-actions"></a>Azioni di lettura e scrittura  
  La tabella seguente descrive le azioni di lettura e scrittura di Windows e i ruoli predefiniti del database in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Ruolo|Azione di lettura|Azione di scrittura|  
+|Role|Azione di lettura|Azione di scrittura|  
 |----------|-----------------|------------------|  
-|**db_ssisadmin**<br /><br /> o<br /><br /> **sysadmin**|Enumerazione dei propri pacchetti.<br /><br /> Enumerazione di tutti i pacchetti.<br /><br /> Visualizzazione dei propri pacchetti.<br /><br /> Visualizzazione di tutti i pacchetti.<br /><br /> Esecuzione dei propri pacchetti.<br /><br /> Esecuzione di tutti i pacchetti.<br /><br /> Esportazione dei propri pacchetti.<br /><br /> Esportazione di tutti i pacchetti.<br /><br /> Esecuzione di tutti i pacchetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|Importazione di pacchetti.<br /><br /> Eliminazione dei propri pacchetti.<br /><br /> Eliminazione di tutti i pacchetti.<br /><br /> Modifica dei propri ruoli di pacchetto.<br /><br /> Modifica di tutti i ruoli di pacchetto.<br /><br /> <br /><br /> **\*\* Avviso \*\***I membri dei ruoli db_ssisadmin e dc_admin possono essere in grado di elevare i privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione dei piani di manutenzione, set di raccolta dati e altri pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri sysadmin ai ruoli db_ssisadmin e dc_admin.|  
+|**db_ssisadmin**<br /><br /> o Gestione configurazione<br /><br /> **sysadmin**|Enumerazione dei propri pacchetti.<br /><br /> Enumerazione di tutti i pacchetti.<br /><br /> Visualizzazione dei propri pacchetti.<br /><br /> Visualizzazione di tutti i pacchetti.<br /><br /> Esecuzione dei propri pacchetti.<br /><br /> Esecuzione di tutti i pacchetti.<br /><br /> Esportazione dei propri pacchetti.<br /><br /> Esportazione di tutti i pacchetti.<br /><br /> Esecuzione di tutti i pacchetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|Importazione di pacchetti.<br /><br /> Eliminazione dei propri pacchetti.<br /><br /> Eliminazione di tutti i pacchetti.<br /><br /> Modifica dei propri ruoli di pacchetto.<br /><br /> Modifica di tutti i ruoli di pacchetto.<br /><br /> <br /><br /> **\*\* Avviso \*\*** I membri dei ruoli db_ssisadmin e dc_admin possono essere in grado di elevare i privilegi a sysadmin. Questa elevazione dei privilegi può verificarsi perché tali ruoli possono modificare i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e i pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] possono essere eseguiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando il contesto di sicurezza sysadmin di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Per impedire questa elevazione dei privilegi durante l'esecuzione dei piani di manutenzione, set di raccolta dati e altri pacchetti [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configurare i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che eseguono pacchetti in modo da utilizzare un account proxy con privilegi limitati o aggiungere solo i membri sysadmin ai ruoli db_ssisadmin e dc_admin.|  
 |**db_ssisltduser**|Enumerazione dei propri pacchetti.<br /><br /> Enumerazione di tutti i pacchetti.<br /><br /> Visualizzazione dei propri pacchetti.<br /><br /> Esecuzione dei propri pacchetti.<br /><br /> Esportazione dei propri pacchetti.|Importazione di pacchetti.<br /><br /> Eliminazione dei propri pacchetti.<br /><br /> Modifica dei propri ruoli di pacchetto.|  
-|**db_ssisoperator**|Enumerazione di tutti i pacchetti.<br /><br /> Visualizzazione di tutti i pacchetti.<br /><br /> Esecuzione di tutti i pacchetti.<br /><br /> Esportazione di tutti i pacchetti.<br /><br /> Esecuzione di tutti i pacchetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|Nessuno|  
+|**db_ssisoperator**|Enumerazione di tutti i pacchetti.<br /><br /> Visualizzazione di tutti i pacchetti.<br /><br /> Esecuzione di tutti i pacchetti.<br /><br /> Esportazione di tutti i pacchetti.<br /><br /> Esecuzione di tutti i pacchetti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|None|  
 |**Amministratori di Windows**|Visualizzazione delle informazioni di esecuzione di tutti i pacchetti in esecuzione.|Arresto di tutti i pacchetti in esecuzione.|  
   
 ### <a name="sysssispackages-table"></a>Tabella Sysssispackages  
@@ -109,7 +109,7 @@ ms.lasthandoff: 03/20/2018
   
 4.  Nella finestra di dialogo **Ruoli pacchetto** selezionare un ruolo nell'elenco **Ruolo lettura** e un ruolo nell'elenco **Ruolo scrittura** .  
   
-5.  Scegliere **OK**.
+5.  Fare clic su **OK**.
 
 ## <a name="create"></a> Creazione di un ruolo definito dall'utente
     
@@ -135,10 +135,10 @@ ms.lasthandoff: 03/20/2018
   
 10. Facoltativamente, fare clic su **Proprietà estese** e configurare le proprietà estese.  
   
-11. Scegliere **OK**.
+11. Fare clic su **OK**.
 
 ## <a name="roles_dialog"></a> Riferimento all'interfaccia utente della finestra di dialogo Ruoli pacchetto
-  Usare la finestra di dialogo **Ruoli pacchetto**, disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per specificare i ruoli a livello di database che dispongono dell'accesso in lettura al pacchetto e quelli che dispongono dell'accesso in scrittura. I ruoli a livello di database si applicano solo ai pacchetti archiviati nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** .  
+  Usare la finestra di dialogo **Ruoli pacchetto** , disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], per specificare i ruoli a livello di database che dispongono dell'accesso in lettura al pacchetto e quelli che dispongono dell'accesso in scrittura. I ruoli a livello di database si applicano solo ai pacchetti archiviati nel database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** .  
   
  I ruoli elencati nella finestra di dialogo sono quelli attualmente disponibili nel database di sistema **msdb** . Se non viene selezionato alcun ruolo, viene applicato il ruolo di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] predefinito. Per impostazione predefinita, il ruolo lettura include **db_ssisadmin**, **db_ssisoperator**e l'utente che ha creato il pacchetto. Gli utenti membri di uno di questi ruoli o creatori dei pacchetti possono enumerare, visualizzare, esportare ed eseguire i pacchetti. Per impostazione predefinita, il ruolo scrittura include **db_ssisadmin** e l'utente che ha creato il pacchetto. L'utente membro di questo ruolo e il creatore dei pacchetti possono importare, eliminare e modificare i pacchetti.  
   

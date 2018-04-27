@@ -1,31 +1,31 @@
 ---
 title: Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Integration Services packages, upgrading
 - upgrading Integration Services packages
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
-caps.latest.revision: 
+caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27411b3f61efd0474313ce8de98b28fa3ebd51b1
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1ac83c874d6acd08fce41b4020009b58621ff171
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Aggiornare i pacchetti di Integration Services mediante l'Aggiornamento guidato pacchetti SSIS
   È possibile aggiornare i pacchetti creati nelle versioni precedenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilizzato in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'Aggiornamento guidato pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] che consente di semplificare il processo. Poiché è possibile configurare la procedura guidata in modo da eseguire il backup dei pacchetti originali, sarà possibile continuare a utilizzarli nel caso in cui si riscontrino difficoltà nell'aggiornamento.  
