@@ -24,7 +24,7 @@ ms.lasthandoff: 03/28/2018
 
 Le estensioni in [!INCLUDE[name-sos](../includes/name-sos-short.md)] forniscono un modo semplice per aggiungere ulteriori funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. 
 
-Sono disponibili estensioni direttamente dal team di SQL Operations Studio (Microsoft), nonché dalle community di terze parti 3rd (tu!). Per informazioni dettagliate sulla creazione di estensioni, vedere [iniziare a usare l'estendibilità](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
+Sono disponibili estensioni del team di SQL Operations Studio (Microsoft) ed estensioni delle community di terze parti (utente). Per informazioni dettagliate sulla creazione di estensioni, vedere Get started with Extensibility [Introduzione all'estendibilità](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
 
 
 ## <a name="add-sql-operations-studio-extensions"></a>Aggiungere estensioni in SQL Operations Studio
