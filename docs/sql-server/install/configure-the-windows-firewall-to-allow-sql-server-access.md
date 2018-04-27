@@ -2,7 +2,7 @@
 title: Configurare Windows Firewall per consentire l'accesso a SQL Server |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
 ms.component: install
@@ -31,11 +31,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 556084f586c5c9105e9379b302d690e785a8ce08
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 64e8f497247a0c670c4091dca5c0531ed5715cb6
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +90,7 @@ Configurare le impostazioni di Windows Firewall con **Microsoft Management Conso
   
 -   **netsh**  
   
-     Lo strumento **netsh.exe** può essere usato da un amministratore per configurare e monitorare i computer basati su Windows in un prompt dei comandi o con un file batch**.** Usando lo strumento **netsh** è possibile indirizzare i comandi contestuali all'helper adatto per far sì che questo esegua il comando desiderato. Un helper è un file DLL (Dynamic Link Library, libreria di collegamento dinamico) che estende la funzionalità dello strumento **netsh** e fornisce configurazione, monitoraggio e supporto per uno o più servizi, utilità o protocolli. Tutti i sistemi operativi che supportano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono di un helper del firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ha anche un helper del firewall avanzato denominato **advfirewall**. I dettagli sull'uso di **netsh** non vengono trattati in questo articolo. Tuttavia, molte delle opzioni di configurazione descritte possono essere configurate con **netsh**. Ad esempio, eseguire lo script seguente al prompt dei comandi per aprire la porta TCP 1433:  
+     Lo strumento **netsh.exe** può essere usato da un amministratore per configurare e monitorare i computer basati su Windows in un prompt dei comandi o con un file batch **.** Usando lo strumento **netsh** è possibile indirizzare i comandi contestuali all'helper adatto per far sì che questo esegua il comando desiderato. Un helper è un file DLL (Dynamic Link Library, libreria di collegamento dinamico) che estende la funzionalità dello strumento **netsh** e fornisce configurazione, monitoraggio e supporto per uno o più servizi, utilità o protocolli. Tutti i sistemi operativi che supportano [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispongono di un helper del firewall. [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] ha anche un helper del firewall avanzato denominato **advfirewall**. I dettagli sull'uso di **netsh** non vengono trattati in questo articolo. Tuttavia, molte delle opzioni di configurazione descritte possono essere configurate con **netsh**. Ad esempio, eseguire lo script seguente al prompt dei comandi per aprire la porta TCP 1433:  
   
     ```  
     netsh firewall set portopening protocol = TCP port = 1433 name = SQLPort mode = ENABLE scope = SUBNET profile = CURRENT  

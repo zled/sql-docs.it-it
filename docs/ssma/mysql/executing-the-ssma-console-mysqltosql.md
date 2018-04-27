@@ -1,6 +1,6 @@
 ---
 title: L'esecuzione la Console SSMA (MySQLToSQL) | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-mysql
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2fb0022b9e4dd222fd3d19ed4dc3e6d03fc740bb
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: b8946a6abdce48e55624965d1dea8b17c40760ea
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>L'esecuzione la Console SSMA (MySQLToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA.  
@@ -43,7 +43,7 @@ L'applicazione console utilizza alcuni comandi di file di script standard come e
 ## <a name="project--script-file-commands"></a>Comandi di File di progetto Script  
 **Command**  
   
-create-new-project:   
+creare-nuovo progetto:   
                    Crea un nuovo progetto SSMA.  
   
 I comandi di progetto di gestire la creazione di progetti, apertura, salvataggio e chiusura di progetti.  
@@ -115,7 +115,7 @@ progetto Salva: Salva il progetto di migrazione.
 ```  
 **Command**  
   
-close-project  
+Chiudi progetto  
                   : Consente di chiudere il progetto di migrazione.  
   
 **Script**  
@@ -127,7 +127,7 @@ close-project
 ```  
 **Command**  
   
-close-project  
+Chiudi progetto  
                   : Consente di chiudere il progetto di migrazione.  
   
 **Script**  
@@ -154,7 +154,7 @@ I comandi di connessione al Database consentono di connettere al database.
   
 **Command**  
   
-connect-source-database  
+connessione database di origine  
   
 -   La connessione al database di origine e carica i metadati di livello elevato di database di origine, ma non tutti i metadati.  
   
@@ -171,7 +171,7 @@ Definizione del server viene recuperata dall'attributo del nome definito per ogn
 ```  
 **Command**  
   
-force-load-source/target-database  
+Force-carico-/ destinazione del database di origine  
   
 -   Carica i metadati di origine.  
   
@@ -245,7 +245,7 @@ I comandi di Report generano report sulle prestazioni di varie attività della C
   
 **Command**  
   
-generate-assessment-report  
+generare report di valutazione  
   
 1.  Genera report di valutazione nel database di origine.  
   
@@ -449,7 +449,7 @@ Il comando di preparazione di migrazione avvia il mapping dello schema tra i dat
   
 **Command**  
   
-map-schema  
+schema di mapping  
   
 Mapping dello schema del database di origine allo schema di destinazione.  
   
@@ -659,7 +659,7 @@ o
 ```  
 **Command**  
   
-convert-sql-statement  
+Convert-istruzione  
   
 1.  `context` Specifica il nome dello schema.  
   

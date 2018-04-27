@@ -1,33 +1,35 @@
 ---
 title: Opzioni (Ambiente - pagina Tastiera) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-menu
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eba82fd5cbff225b5c80153036f35150de7db48a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 99f6d96c51441de7e6b079b9575d6c753e907a75
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-environment---keyboard-page"></a>Opzioni (Ambiente - pagina Tastiera)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] La finestra di dialogo **Opzioni** consente di personalizzare lo schema della tastiera per [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Utilizzare questa opzione per scegliere uno schema della tastiera. Per accedere alla pagina, scegliere **Opzioni** dal menu **Strumenti** , selezionare la cartella **Ambiente** e quindi fare clic su **Tastiera**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+La finestra di dialogo **Opzioni** consente di personalizzare lo schema della tastiera per [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. Utilizzare questa opzione per scegliere uno schema della tastiera. Per accedere alla pagina, scegliere **Opzioni** dal menu **Strumenti** , selezionare la cartella **Ambiente** e quindi fare clic su **Tastiera**.  
   
 Nell'elenco a discesa **Schema tastiera** sono incluse tutte le raccolte disponibili di tasti di scelta rapida. Selezionare uno schema specifico dall'elenco per caricarlo. Quando si è pronti a uscire dalla finestra di dialogo **Opzioni** , fare clic su **OK**. Lo schema selezionato verrà caricato in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   

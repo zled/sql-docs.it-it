@@ -1,34 +1,36 @@
 ---
 title: Comprimere i gruppi di righe (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - group collapsing [SQL Server]
 - collapsing rows
 - row collapsing [SQL Server]
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bc579ff02d58fbc4a06800af44e5eb514977aac
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 39aed7b233447bf52c0266dc08fcc5e8e1f1d769
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>Compressione di gruppi di righe (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile creare un risultato della query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali. Quando si comprimono le righe, è necessario tenere presenti alcune considerazioni:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile creare un risultato di query in cui ogni riga di risultati corrisponda a un intero gruppo di righe dei dati originali. Quando si comprimono le righe, è necessario tenere presenti alcune considerazioni:  
   
 -   **È possibile eliminare le righe duplicate** Alcune query possono creare set di risultati in cui sono presenti più righe identiche. È possibile, ad esempio, creare un set di risultati in cui ogni riga contiene la città in cui risiede un autore e il nome dello stato a cui tale città appartiene. Se però in una città risiedono più autori, esisteranno numerose righe identiche. Il codice SQL risultante potrebbe essere simile al seguente:  
   

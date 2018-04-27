@@ -2,7 +2,7 @@
 title: Salva modifiche | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8913eedde43e2e59dbae1230480bca10fe84219a
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: fda24f7e68f534572ff38460bd209b3cd9209c7f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-changes"></a>Salva modifiche
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Avvisa che le modifiche apportate agli elementi elencati non verranno salvate a meno che non si faccia clic su **Sì**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Avvisa che le modifiche apportate agli elementi elencati non verranno salvate a meno che non si faccia clic su **Sì**.  
   
 Questa finestra di dialogo può venire visualizzata alla chiusura di soluzioni, piani di manutenzione o altri file aperti.  
   

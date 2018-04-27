@@ -1,15 +1,16 @@
 ---
 title: Creare e aggiornare le tabelle (SSMS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], Table Designer
@@ -19,19 +20,20 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b693dfa57d72db69a6c4a5edd3545ad216645a0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5485964638a9f843d8c61e0556fed7c8ded0853f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-and-update-database-tables"></a>Creare e aggiornare le tabelle di database
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Progettazione tabelle è uno strumento visivo che consente di progettare e visualizzare le [tabelle di database](../../relational-databases/tables/tables.md). È possibile usare Progettazione tabelle di SQL Server Management Studio (SSMS) per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Progettazione tabelle è uno strumento visivo che consente di progettare e visualizzare le [tabelle di database](../../relational-databases/tables/tables.md). È possibile usare Progettazione tabelle di SQL Server Management Studio (SSMS) per creare, modificare o eliminare tabelle, colonne, chiavi, indici, relazioni e vincoli.  
 
   
 ## <a name="create-a-table"></a>Creare una tabella  

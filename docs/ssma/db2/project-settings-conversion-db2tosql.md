@@ -1,6 +1,6 @@
 ---
 title: Impostazioni (conversione) (DB2ToSQL) del progetto | Documenti Microsoft
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssma-db2
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 389d5da7b3940464150ca52618595fd8bd518fb8
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
+ms.openlocfilehash: 5ad3409125f4e6862304e02f05b03bcf821923ba
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Impostazioni del progetto (conversione) (DB2ToSQL)
 La pagina di conversione del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare come SSMA Converte la sintassi per DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] sintassi.  
@@ -81,7 +81,7 @@ Questa impostazione specifica la modalità di mapping degli schemi di DB2 agli s
   
 1.  **Schema per database:** In questa modalità DB2 lo schema 'sch1' verrà mappato per impostazione predefinita allo schema di SQL Server 'dbo' nel database di SQL Server 'sch1'.  
   
-2.  **Schema allo schema:**In questa modalità DB2 lo schema 'sch1' verrà mappato per impostazione predefinita allo schema di SQL Server 'sch1' nel database di SQL Server predefinito fornito nella finestra di dialogo di connessione.  
+2.  **Schema allo schema:** In questa modalità DB2 lo schema 'sch1' verrà mappato per impostazione predefinita allo schema di SQL Server 'sch1' nel database di SQL Server predefinito fornito nella finestra di dialogo di connessione.  
   
 Quando si seleziona una modalità di conversione di **modalità** casella SSMA si applica l'impostazione seguente:  
   

@@ -2,7 +2,7 @@
 title: Apri con (Nuovo File) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f7df416a20f8b8bae22e10e72fd35904c460808b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: e8241708f1748f12bfd9f701de62d7f41058dc40
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="open-with-new-file"></a>Apri con (Nuovo file)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile aprire un documento in uno o più editor scegliendo **Apri** dal menu **File** e quindi facendo clic su **File**. Nella finestra di dialogo **Apri file** selezionare il file, fare clic sulla freccia accanto al pulsante **Apri** e quindi fare clic su **Apri con**. Nella finestra di dialogo **Apri con** selezionare il programma preferito nell'elenco **Selezionare un programma dall'elenco** e quindi fare clic su **Apri**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+È possibile aprire un documento in uno o più editor scegliendo **Apri** dal menu **File** e quindi facendo clic su **File**. Nella finestra di dialogo **Apri file** selezionare il file, fare clic sulla freccia accanto al pulsante **Apri** e quindi fare clic su **Apri con**. Nella finestra di dialogo **Apri con** selezionare il programma preferito nell'elenco **Selezionare un programma dall'elenco** e quindi fare clic su **Apri**.  
   
 ## <a name="options"></a>Opzioni  
 **Selezionare un programma dall'elenco**  

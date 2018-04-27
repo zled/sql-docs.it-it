@@ -1,8 +1,8 @@
 ---
-title: Guida per la progettazione di indici di SQL Server | Microsoft Docs
+title: Architettura e guida per la progettazione degli indici di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 04/03/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: relational-databases-misc
@@ -29,16 +29,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6e1617f3ea9d4f725d2a95b9b1d55fbacf85876
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 405482e0cc8fdf8e545ee8fffab9edc678d1612e
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/18/2018
 ---
-# <a name="sql-server-index-design-guide"></a>Guida per la progettazione di indici di SQL Server
+# <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Gli indici progettati in modo non corretto e la mancanza di indici costituiscono le cause principali dei colli di bottiglia delle applicazioni di database. La progettazione di indici efficienti è fondamentale per ottenere buone prestazioni del database e dell'applicazione. In questa guida per la progettazione di indici di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sono contenute informazioni e procedure consigliate che consentono di progettare indici validi per soddisfare le esigenze dell'applicazione.  
+Gli indici progettati in modo non corretto e la mancanza di indici costituiscono le cause principali dei colli di bottiglia delle applicazioni di database. La progettazione di indici efficienti è fondamentale per ottenere buone prestazioni del database e dell'applicazione. Questa guida per la progettazione degli indici di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contiene informazioni sull'architettura degli indici e le procedure consigliate che consentono di progettare indici validi per soddisfare le esigenze dell'applicazione.  
     
 In questa guida si presuppone che il lettore conosca i tipi di indice disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una descrizione generale dei tipi di indice, vedere [Tipi di indice](../relational-databases/indexes/indexes.md).  
 
@@ -121,7 +122,7 @@ Per informazioni sugli indici full-text, vedere [Popolamento degli indici full-t
   
 -   Mantenere corta la chiave dell'indice negli indici cluster. Inoltre, è consigliabile creare gli indici cluster su colonne univoche o non Null.  
   
--   Le colonne dei tipi di dati **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**e **varbinary(max)** non possono essere specificate come colonne chiave di indice. Tuttavia, i tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**e **xml** possono essere usati in un indice non cluster come colonne di indice non chiave. Per altre informazioni, vedere la sezione " [Indice con colonne incluse](#Included_Columns)" in questa guida.  
+-   Le colonne dei tipi di dati **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** e **varbinary(max)** non possono essere specificate come colonne chiave di indice. Tuttavia, i tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)** e **xml** possono essere usati in un indice non cluster come colonne di indice non chiave. Per altre informazioni, vedere la sezione " [Indice con colonne incluse](#Included_Columns)" in questa guida.  
   
 -   Un tipo di dati **xml** può essere solo una colonna chiave esclusivamente in un indice XML. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). In SQL Server 2012 SP1 viene introdotto un nuovo tipo di indice XML noto come indice XML selettivo. Grazie al nuovo indice potranno essere migliorate le prestazioni di esecuzione delle query sui dati archiviati come XML in SQL Server, pertanto sarà possibile un'indicizzazione molto più rapida di carichi di lavoro di dati XML di grandi dimensioni, nonché un miglioramento della scalabilità riducendo i costi di archiviazione dell'indice stesso. Per altre informazioni vedere [Indici XML selettivi &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -456,7 +457,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   In una pagina rientreranno meno righe di indice. Ciò potrebbe causare più operazioni di I/O e ridurre l'efficienza della cache.  
   
--   Sarà necessario più spazio su disco per archiviare l'indice. In particolare, l'aggiunta di tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)**o **xml** come colonne non chiave dell'indice potrebbe aumentare significativamente l'utilizzo di spazio su disco. Ciò accade perché i valori delle colonne vengono copiati nel livello foglia dell'indice, risiedendo in tal modo sia nell'indice che nella tabella di base.  
+-   Sarà necessario più spazio su disco per archiviare l'indice. In particolare, l'aggiunta di tipi di dati **varchar(max)**, **nvarchar(max)**, **varbinary(max)** o **xml** come colonne non chiave dell'indice potrebbe aumentare significativamente l'utilizzo di spazio su disco. Ciò accade perché i valori delle colonne vengono copiati nel livello foglia dell'indice, risiedendo in tal modo sia nell'indice che nella tabella di base.  
   
 -   La manutenzione degli indici può aumentare il tempo necessario per eseguire modifiche, inserimenti, aggiornamenti o eliminazioni nella tabella sottostante o nella vista indicizzata.  
   

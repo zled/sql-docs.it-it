@@ -1,15 +1,16 @@
 ---
 title: Eliminare query (Visual Database Tools) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-visual-db
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - dropping queues
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - removing queries
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e9ca26d7fd7245b1d2c3d40935becb0e8a9345ae
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 8207046f91b211433a445f62ce96f117c058807f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="delete-queries-visual-database-tools"></a>Eliminazione di query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] È possibile eliminare una query rimuovendola dal progetto ed eliminandola definitivamente dal file system. Le query eliminate mediante la procedura descritta di seguito non vengono spostate nel Cestino e pertanto non possono essere recuperate.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Se una query non è più necessaria, è possibile rimuoverla dal progetto oppure eliminarla definitivamente dal file system. Le query eliminate mediante la procedura descritta di seguito non vengono spostate nel Cestino e pertanto non possono essere recuperate.  
   
 ### <a name="to-permanently-delete-a-query"></a>Per eliminare una query in modo definitivo  
   

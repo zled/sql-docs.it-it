@@ -1,15 +1,16 @@
 ---
 title: Riquadro Dettagli di Esplora oggetti | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-objects
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.summary.general.f1
@@ -20,19 +21,20 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 6bebbdf9c7827c135321b38caff9512d5efcea25
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-explorer-details-pane"></a>Riquadro Dettagli di Esplora oggetti
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Dettagli Esplora oggetti è un componente di [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] che fornisce una vista tabulare di tutti gli oggetti nel server e offre un'interfaccia utente che consente di gestire tali oggetti. Le funzionalità di Esplora oggetti variano leggermente in base al tipo di server, ma in genere comprendono le funzionalità di sviluppo per i database e di gestione per tutti i tipi di server.  
   
 Il riquadro Dettagli Esplora oggetti è visibile in [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] per impostazione predefinita. Se Esplora oggetti non è visualizzato, scegliere **Dettagli Esplora oggetti** dal menu **Visualizza** oppure premere **F7**.  
   
