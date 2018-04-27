@@ -2,7 +2,7 @@
 title: Proprietà SQL Server (scheda Avanzate) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a0b573dcb4b68c8becf86c8e847b10d5df5ed1a
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: c04ea3dff3c8d3a62a3ce8ee5bbd64506c92d8f2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Proprietà - SQL Server (scheda Avanzate)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Le proprietà descritte di seguito sono presenti nella scheda **Avanzate** per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
+  Le proprietà descritte di seguito sono presenti nella scheda **Avanzate** per impostazione predefinita. Se sono state definite proprietà personalizzate, verranno visualizzate anche in questa scheda con i rispettivi valori.  
   
 ## <a name="options"></a>Opzioni  
  **Cluster**  

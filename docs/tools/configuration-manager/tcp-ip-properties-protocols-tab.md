@@ -2,7 +2,7 @@
 title: Proprietà TCP/IP (scheda protocolli) | Documenti Microsoft
 ms.custom: ''
 ms.date: 08/24/2016
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -20,15 +20,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f83362998d192f3910a8da5da7d351a8c32ff538
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
+ms.openlocfilehash: 2f7731e5ee583c4b1356c9a538ee41a3a475c613
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tcpip-properties-protocols-tab"></a>Proprietà TCP/IP (scheda Protocolli)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-La finestra di dialogo **Proprietà - TCP/IP** consente di configurare le opzioni relative al protocollo TCP/IP. Fare clic su **TCP/IP** nel riquadro sinistro per visualizzare le configurazioni dei singoli indirizzi IP nel riquadro dei dettagli.  
+  La finestra di dialogo **Proprietà - TCP/IP** consente di configurare le opzioni relative al protocollo TCP/IP. Fare clic su **TCP/IP** nel riquadro sinistro per visualizzare le configurazioni dei singoli indirizzi IP nel riquadro dei dettagli.  
   
  Per rendere effettive le modifiche, è necessario riavviare Microsoft SQL Server.  
   
