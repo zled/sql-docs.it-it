@@ -27,17 +27,17 @@ Le estensioni in [!INCLUDE[name-sos](../includes/name-sos-short.md)] forniscono 
 Sono disponibili estensioni del team di SQL Operations Studio (Microsoft) ed estensioni delle community di terze parti (utente). Per informazioni dettagliate sulla creazione di estensioni, vedere Get started with Extensibility [Introduzione all'estendibilità](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
 
 
-## <a name="add-sql-operations-studio-extensions"></a>Aggiungere estensioni in SQL Operations Studio
+## <a name="add-sql-operations-studio-extensions"></a>Aggiungere estensioni di SQL Operations Studio
 
-1. Per aprire la *Gestione Estensioni* e accedere alle estensioni disponibili, premere sull'icona delle estensioni (sulla sinistra) oppure selezionare **Estensioni** nel menu **Visualizza**.
+1. Per aprire la gestione delle estensioni e accedere alle estensioni disponibili, selezionare l'icona delle estensioni o scegliere Estensioni dal menu Visualizza.
 2. Selezionare un'estensione disponibile per visualizzare i relativi dettagli.
 
    ![Gestione estensioni](media/extensions/extension-manager.png)
 
-1. Selezionare l'estensione desiderata e premere **Installa**.
+1. Selezionare l'estensione desiderata e scegliere **Installa**.
 2. Selezionare **Ricarica** per abilitare l'estensione (richiesto solo la prima volta in cui l'estensione viene installata).
-1. Passare alla dashboard di gestione facendo clic con il tasto destro del mouse sul server o sul database e selezionando **Gestisci**.
-2. Le estensioni installate vengono visualizzate come schede nella dashboard di gestione:
+1. Passare al dashboard di gestione facendo clic con il tasto destro del mouse sul server o sul database e selezionando **Gestisci**.
+2. Le estensioni installate vengono visualizzate come schede nel dashboard di gestione:
 
    ![Gestione estensioni](media/extensions/dashboard-extensions.png)
 
