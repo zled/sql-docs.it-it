@@ -1,30 +1,33 @@
 ---
 title: Metodo (SQLServerResultSet) updateRef | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateRef
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateRef
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1d80d9e1-4f58-4cc2-9ed6-786fdf3e2660
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5433eff9e8ba68efd73fb86b433a5194c589ed8f
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5c3af56df60bdc8a1d02c18a62b3b79ee2c7cabc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updateref-method-sqlserverresultset"></a>updateRef (metodo) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +38,8 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[updateRef (int, Java.SQL. ref)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|Aggiorna la colonna designata con un valore java.sql.Ref in base all'indice di colonna.|  
-|[updateRef (lang. String, Java.SQL. ref)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|Aggiorna la colonna designata con un valore java.sql.Ref in base al nome della colonna.|  
+|[updateRef (int, Java)](../../../connect/jdbc/reference/updateref-method-int-java-sql-ref.md)|Aggiorna la colonna designata con un valore java.sql.Ref in base all'indice di colonna.|  
+|[updateRef (lang. String, Java)](../../../connect/jdbc/reference/updateref-method-java-lang-string-java-sql-ref.md)|Aggiorna la colonna designata con un valore java.sql.Ref in base al nome della colonna.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

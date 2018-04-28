@@ -1,30 +1,33 @@
 ---
 title: Metodo getMoreResults () | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerStatement.getMoreResults ()
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerStatement.getMoreResults ()
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: df89db50-0b2f-4094-820a-30be25ad72fe
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cf885b73a0d4e0f2d5b8aa1f75255f74001c59d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2642782d0085c5d773bce97bc7fad4230439cedd
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getmoreresults-method-"></a>Metodo getMoreResults ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +53,7 @@ public final boolean getMoreResults()
  Chiamata in modo implicito il metodo getMoreResults chiude tutti gli oggetti set di risultati attualmente aperti sono ottenuti con la [getResultSet](../../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) metodo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo getMoreResults &#40; SQLServerStatement &#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
+ [Metodo getMoreResults &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)   
  [Membri di SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Classe SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

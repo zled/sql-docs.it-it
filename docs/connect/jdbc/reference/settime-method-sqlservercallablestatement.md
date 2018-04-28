@@ -1,30 +1,33 @@
 ---
 title: Metodo setTime (SQLServerCallableStatement) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerCallableStatement.setTime
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerCallableStatement.setTime
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 04ea83b2-db5e-4b46-b016-9e496363827e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f987cb9ef199c8bcd1d673ae13ff13d38f21821a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7af0450861d9244b07e71e699a30e7a126d5273
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="settime-method-sqlservercallablestatement"></a>Metodo setTime (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,8 +42,8 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[setTime (lang. String, Java.SQL. Time)](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time.md)|Imposta il parametro designato sul valore di ora specificato.|  
-|[setTime (lang. String, Java.SQL. Time, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time-java-util-calendar.md)|Imposta il parametro designato sui valori relativi all'ora e al calendario specificati.|  
+|[setTime (lang. String, Java)](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time.md)|Imposta il parametro designato sul valore di ora specificato.|  
+|[setTime (lang. String, Java, java.util.Calendar)](../../../connect/jdbc/reference/settime-method-java-lang-string-java-sql-time-java-util-calendar.md)|Imposta il parametro designato sui valori relativi all'ora e al calendario specificati.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodi di SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-methods.md)   

@@ -2,7 +2,7 @@
 title: 'Passaggio 4: Connettere in modo resiliente a SQL con ADO.NET | Documenti Microsoft'
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: ado-net
@@ -18,13 +18,13 @@ ms.assetid: 9b608b0b-6b38-42da-bb83-79df8c170cd7
 caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c95f481bdd001ff85a63db9ebcc1c4438008447
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: f7ccf61c8c1e440ed8ae9533e61cbbf74d156eb8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-adonet"></a>Passaggio 4: Connettere in modo resiliente a SQL con ADO.NET
 
@@ -45,7 +45,7 @@ Le classi ADO.NET per la connessione a Microsoft SQL Server locale possono inolt
   
 Il programma deve distinguere tra gli errori temporanei e gli errori persistenti. Gli errori temporanei sono condizioni di errore che potrebbero cancellare entro un breve periodo di tempo, ad esempio problemi di rete temporanei.  Un esempio di un errore permanente sarebbe, se il programma presenta un errore di ortografia del nome del database di destinazione: in questo caso, l'errore "Database non trovato" sarebbe ancora valide e non dispone di alcuna possibilità di cancellazione dei entro un breve periodo di tempo.  
   
-L'elenco di numeri di errore sono classificati come errori temporanei è disponibile nel [messaggi di errore per le applicazioni client di Database SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
+L'elenco di numeri di errore sono classificati come errori temporanei è disponibile nel [i messaggi di errore per le applicazioni client di Database SQL](http://docs.microsoft.com/azure/sql-database/sql-database-develop-error-messages/)  
   
 ## <a name="step-2-create-and-run-sample-application"></a>Passaggio 2: Creare ed eseguire l'applicazione di esempio  
   
@@ -276,7 +276,7 @@ Esistono diversi modi per simulare un errore temporaneo per testare la logica di
 Include il codice di esempio:  
   
 - Una classe secondo denominata **TestSqlException**, che una proprietà denominata **numero**.  
-- `//throw new TestSqlException(4060);`, che è possibile rimuovere il commento.  
+- `//throw new TestSqlException(4060);` , che è possibile rimuovere il commento.  
   
 Se si rimuove il commento, l'istruzione throw e ricompilare, la successiva esecuzione di **RetryAdo2.exe** genera un messaggio simile al seguente.  
   
@@ -323,4 +323,4 @@ Per dimostrare il codice gestisce gli errori persistenti correttamente, eseguire
   
 ## <a name="next-steps"></a>Passaggi successivi  
   
-Per esplorare altri migliore practicies e linee guida di progettazione, visitare [connessione al Database SQL: i collegamenti, procedure consigliate e linee guida di progettazione](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  
+Per esplorare altri practicies ottimali e linee guida di progettazione, visitare [la connessione al Database SQL: i collegamenti, procedure consigliate e linee guida di progettazione](http://azure.microsoft.com/documentation/articles/sql-database-connect-central-recommendations/)  

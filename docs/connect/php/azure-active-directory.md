@@ -1,28 +1,29 @@
 ---
 title: Azure Active Directory | Documenti Microsoft
 ms.date: 07/13/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: php
 ms.suite: sql
-ms.custom: 
-ms.technology: drivers
+ms.custom: ''
+ms.technology:
+- drivers
 ms.topic: article
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.workload: Inactive
-ms.openlocfilehash: eb13c1a57c63ce013a3b546572994106b8b1ffc0
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 462b141c365e0140236c78af451c73b110911765
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Connessione tramite l'autenticazione di Azure Active Directory
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) è una tecnologia di gestione di ID utente centrale che opera come alternativa alla [l'autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD consente le connessioni al Database SQL di Microsoft Azure e SQL Data Warehouse con identità federative in Azure AD utilizzando un nome utente e password, autenticazione integrata di Windows o un token di accesso di Azure AD. i driver PHP per SQL Server offrono il supporto parziale per queste funzionalità.
+[Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis) (Azure AD) è una tecnologia di gestione di ID utente centrale che funziona come un'alternativa al [autenticazione di SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md). Azure AD consente le connessioni al Database SQL di Microsoft Azure e SQL Data Warehouse con identità federative in Azure AD utilizzando un nome utente e password, autenticazione integrata di Windows o un token di accesso di Azure AD. i driver PHP per SQL Server offrono il supporto parziale per queste funzionalità.
 
 Per usare Azure AD, usare il **autenticazione** (parola chiave). I valori che **autenticazione** può accettare nella sono illustrati nella tabella seguente.
 
@@ -131,4 +132,4 @@ Nell'esempio seguente viene eseguita la stessa operazione sopra con il driver PD
     ?>
 ```
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzo di Azure Active Directory con il Driver ODBC](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)
+[Uso di Azure Active Directory con ODBC Driver](https://docs.microsoft.com/en-us/sql/connect/odbc/using-azure-active-directory)

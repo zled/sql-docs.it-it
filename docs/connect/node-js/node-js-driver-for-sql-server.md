@@ -1,8 +1,8 @@
 ---
-title: Driver di Node. js per SQL Server | Documenti Microsoft
+title: Driver di Node.js per SQL Server | Documenti Microsoft
 ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: node-js
 ms.reviewer: ''
@@ -12,24 +12,24 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5cf72af4ebd9b00c06b80a64cd6f3017d9cd4a63
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
-ms.translationtype: MT
+ms.openlocfilehash: 66682188467eaac9305a991765166532877f0050
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="nodejs-driver-for-sql-server"></a>Driver di Node. js per SQL Server
+# <a name="nodejs-driver-for-sql-server"></a>Driver di Node.js per SQL Server
 
 ![Download-FRECCIAGIÙ cerchiato](../../ssdt/media/download.png)[scaricare il driver SQL Node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 Il modulo noioso è un'implementazione javascript del protocollo TDS, supportato da tutte le versioni moderne di SQL Server. Il driver è un progetto open source, disponibile in Github.  
   
-È possibile connettersi a un Database SQL tramite Node. js in Windows, Linux o Mac.  
+È possibile connettersi a un Database di SQL utilizzando Node.js in Windows, Linux o Mac.  
   
 ## <a name="getting-started"></a>Introduzione  
 * [Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo di Node. js](step-1-configure-development-environment-for-node-js-development.md)  

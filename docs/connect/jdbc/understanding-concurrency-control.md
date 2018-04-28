@@ -1,27 +1,28 @@
 ---
 title: Informazioni sul controllo della concorrenza | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 9a414c6d5fe2ee18fb83e168fe33fef53a0ac02c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-concurrency-control"></a>Informazioni sul controllo della concorrenza
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 11/18/2017
   
 |Tipo di concorrenza|Caratteristiche|Blocchi di riga|Description|  
 |----------------------|---------------------|---------------|-----------------|  
-|CONCUR_READ_ONLY|Read Only|No|Gli aggiornamenti eseguiti tramite il cursore non sono consentiti e sulle righe del set di risultati non viene mantenuto attivo alcun blocco.|  
-|CONCUR_UPDATABLE|Ottimistica di lettura e scrittura|No|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.|  
+|CONCUR_READ_ONLY|Read Only|no|Gli aggiornamenti eseguiti tramite il cursore non sono consentiti e sulle righe del set di risultati non viene mantenuto attivo alcun blocco.|  
+|CONCUR_UPDATABLE|Ottimistica di lettura e scrittura|no|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.|  
 |CONCUR_SS_SCROLL_LOCKS|Pessimistica di lettura e scrittura|Sì|Si presuppone che le contese tra le righe nel database siano probabili. L'integrità delle righe viene assicurata tramite i blocchi di riga.|  
-|CONCUR_SS_OPTIMISTIC_CC|Ottimistica di lettura e scrittura|No|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.<br /><br /> Per [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] e versioni successive, il server modifica questa impostazione in CONCUR_SS_OPTIMISTIC_CCVAL se nella tabella non contiene una colonna timestamp.<br /><br /> Per [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], se la tabella sottostante contiene una colonna timestamp, viene utilizzato OPTIMISTIC WITH ROW VERSIONING anche se viene specificato l'opzione OPTIMISTIC WITH VALUES. Se si specifica l'opzione OPTIMISTIC WITH ROW VERSIONING e nella tabella non sono incluse colonne timestamp, viene utilizzata l'opzione OPTIMISTIC WITH VALUES.|  
-|CONCUR_SS_OPTIMISTIC_CCVAL|Ottimistica di lettura e scrittura|No|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto dei dati della riga.|  
+|CONCUR_SS_OPTIMISTIC_CC|Ottimistica di lettura e scrittura|no|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto del timestamp.<br /><br /> Per [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] e versioni successive, il server modifica questa impostazione in CONCUR_SS_OPTIMISTIC_CCVAL se nella tabella non contiene una colonna timestamp.<br /><br /> Per [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)], se la tabella sottostante contiene una colonna timestamp, viene utilizzato OPTIMISTIC WITH ROW VERSIONING anche se viene specificato l'opzione OPTIMISTIC WITH VALUES. Se si specifica l'opzione OPTIMISTIC WITH ROW VERSIONING e nella tabella non sono incluse colonne timestamp, viene utilizzata l'opzione OPTIMISTIC WITH VALUES.|  
+|CONCUR_SS_OPTIMISTIC_CCVAL|Ottimistica di lettura e scrittura|no|Si presuppone che le contese tra le righe nel database siano improbabili, ma possibili. L'integrità delle righe viene verificata tramite confronto dei dati della riga.|  
   
 ## <a name="result-sets-that-are-not-updateable"></a>Set di risultati non aggiornabili  
  Un set di risultati aggiornabile è un set di risultati in cui è possibile inserire, aggiornare ed eliminare righe. Nei casi seguenti, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non è possibile creare un cursore aggiornabile. e viene generata l'eccezione "Il set di risultati non è aggiornabile".  
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/18/2017
 |Causa|Description|Rimedio|  
 |-----------|-----------------|------------|  
 |L'istruzione non viene creata utilizzando la sintassi JDBC 2.0 (o versioni successive)|In JDBC 2.0 sono stati introdotti nuovi metodi per la creazione di istruzioni. Se viene utilizzata la sintassi JDBC 1.0, il set di risultati per impostazione predefinita è di sola lettura.|Specificare il tipo di set di risultati e la concorrenza in fase di creazione dell'istruzione.|  
-|L'istruzione viene creata utilizzando TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Crea un cursore snapshot statico. Il cursore è disconnesso dalle righe della tabella sottostante per proteggerlo dagli aggiornamenti apportati alle righe da altri utenti.|Utilizzare TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC o TYPE_FORWARD_ONLY con CONCUR_UPDATABLE per evitare di creare un cursore statico.|  
+|L'istruzione viene creata utilizzando TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Crea un cursore snapshot statico. Il cursore è disconnesso dalle righe della tabella sottostante per proteggerlo dagli aggiornamenti apportati alle righe da altri utenti.|Utilizzare TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC o TYPE_FORWARD_ONLY con CONCUR_UPDATABLE per evitare di creare un cursore statico.|  
 |La struttura della tabella non consente un cursore di tipo KEYSET o DYNAMIC|La tabella sottostante non dispone di chiavi univoche per consentire [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] per identificare in modo univoco una riga.|Aggiungere chiavi univoche alla tabella per consentire l'identificazione univoca di ogni riga.|  
   
 ## <a name="see-also"></a>Vedere anche  

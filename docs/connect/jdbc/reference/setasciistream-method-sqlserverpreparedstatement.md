@@ -1,27 +1,28 @@
 ---
 title: Metodo setAsciiStream (SQLServerPreparedStatement) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8d6ed0ebf8cad4bc58be0a580ac4f84eca518502
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 7c338198573f1f5075fe0b6a6e26da6a25fef591
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>Metodo setAsciiStream (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,9 +33,9 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[setAsciiStream metodo &#40; int, Java.IO. InputStream &#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|Imposta il numero del parametro designato sull'oggetto java.IO. InputStream specificato.|  
-|[setAsciiStream metodo &#40; int, Java.IO. InputStream, int &#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Imposta il numero del parametro designato sull'oggetto java.IO. InputStream specificato con il numero specificato di byte.|  
-|[setAsciiStream metodo &#40; int, Java.IO. InputStream, long &#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|Imposta il numero del parametro designato sull'oggetto java.IO. InputStream specificato con il numero specificato di byte.|  
+|[Metodo setAsciiStream &#40;int. InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|Imposta il numero del parametro designato sull'oggetto java.IO. InputStream specificato.|  
+|[Metodo setAsciiStream &#40;int. InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|Imposta il numero del parametro designato sull'oggetto java.IO. InputStream specificato con il numero specificato di byte.|  
+|[Metodo setAsciiStream &#40;int. InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|Imposta il numero del parametro designato sull'oggetto java.IO. InputStream specificato con il numero specificato di byte.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

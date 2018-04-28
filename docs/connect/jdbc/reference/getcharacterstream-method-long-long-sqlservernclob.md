@@ -1,27 +1,28 @@
 ---
 title: Metodo getCharacterStream (long, long) (SQLServerNClob) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ee42e6ef541b8f3c8298d467b6eb72237016efb4
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 80d1afb430aa5f6cefcf18e7927e07261e1ee6e0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>Metodo getCharacterStream (long, long) (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ public java.io.Reader getCharacterStream(long pos,
   
  Oggetto **lungo** che indica l'offset per il primo carattere del valore parziale da recuperare.  
   
- *length*  
+ *lunghezza*  
   
  Oggetto **lungo** che indica la lunghezza in caratteri del valore parziale da recuperare.  
   
@@ -55,7 +56,7 @@ public java.io.Reader getCharacterStream(long pos,
  Questo metodo getCharacterStream viene specificato dal metodo getCharacterStream nell'interfaccia Java.SQL. NClob.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Metodo getCharacterStream &#40; SQLServerNClob &#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
+ [Metodo getCharacterStream &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   
  [Metodi di SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [Membri di SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [Classe SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md)  

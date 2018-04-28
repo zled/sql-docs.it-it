@@ -1,30 +1,33 @@
 ---
 title: Metodo getTypeInfo (SQLServerDatabaseMetaData) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerDatabaseMetaData.getTypeInfo
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerDatabaseMetaData.getTypeInfo
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2424ec8f3b484272d2311ac7880cc8810561bd2e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 032ddf6a5f266fa68c6a735dd7f59cf4df02c68e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Metodo getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,20 +55,20 @@ public java.sql.ResultSet getTypeInfo()
 |Nome|Tipo|Description|  
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|Nome del tipo di dati.|  
-|DATA_TYPE|**breve**|Tipo di dati SQL da java.sql.Types.|  
+|DATA_TYPE|**short**|Tipo di dati SQL da java.sql.Types.|  
 |PRECISION|**int**|Numero totale di cifre significative.|  
 |LITERAL_PREFIX|**String**|Uno o più caratteri che precedono il nome di una costante.|  
 |LITERAL_SUFFIX|**String**|Uno o più caratteri che seguono il nome di una costante.|  
 |CREATE_PARAMS|**String**|Descrizione dei parametri di creazione per il tipo di dati.|  
-|NULLABLE|**breve**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
+|NULLABLE|**short**|Indica se la colonna può contenere un valore Null. Può essere uno dei valori seguenti:<br /><br /> typeNoNulls (0)<br /><br /> typeNullable (1)<br /><br /> typeNullableUnknown (2)|  
 |CASE_SENSITIVE|**boolean**|Indica se il tipo di dati supporta la distinzione tra maiuscole e minuscole. "**true**"se il tipo viene fatta distinzione tra maiuscole e minuscole; in caso contrario,"**false**".|  
-|SEARCHABLE|**breve**|Indica se la colonna può essere utilizzata in una clausola WHERE SQL. Può essere uno dei valori seguenti:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
+|SEARCHABLE|**short**|Indica se la colonna può essere utilizzata in una clausola WHERE SQL. Può essere uno dei valori seguenti:<br /><br /> typePredNone (0)<br /><br /> typePredChar (1)<br /><br /> typePredBasic (2)<br /><br /> typeSeachable (3)|  
 |UNSIGNED_ATTRIBUTE|**boolean**|Indica il segno del tipo di dati. "**true**"se il tipo è senza segno; in caso contrario,"**false**".|  
 |FIXED_PREC_SCALE|**boolean**|Indica se il tipo di dati può essere un valore money. "**true**" se il tipo di dati è di tipo money; in caso contrario, "**false**".|  
 |AUTO_INCREMENT|**boolean**|Indica se il tipo di dati può essere incrementato automaticamente. "**true**"se il tipo può essere incrementato automaticamente; in caso contrario,"**false**".|  
 |LOCAL_TYPE_NAME|**String**|Nome localizzato del tipo di dati.|  
-|MINIMUM_SCALE|**breve**|Numero massimo di cifre a destra del separatore decimale.|  
-|MAXIMUM_SCALE|**breve**|Numero minimo di cifre a destra del separatore decimale.|  
+|MINIMUM_SCALE|**short**|Numero massimo di cifre a destra del separatore decimale.|  
+|MAXIMUM_SCALE|**short**|Numero minimo di cifre a destra del separatore decimale.|  
 |SQL_DATA_TYPE|**int**|Non supportato dal driver JDBC.|  
 |SQL_DATETIME_SUB|**int**|Non supportato dal driver JDBC.|  
 |NUM_PREC_RADIX|**int**|Numero di bit o di cifre per il calcolo del numero massimo che una colonna può contenere.|  

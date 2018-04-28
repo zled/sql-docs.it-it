@@ -1,30 +1,33 @@
 ---
 title: Metodo (SQLServerResultSet) updateDate | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateDate
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateDate
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 494dfbde0e83de1e2e8d8922ff3b800cedb97601
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 945ee73e8d3b17c3016b20f4d582b583b5bf7833
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatedate-method-sqlserverresultset"></a>updateDate (metodo) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,8 +38,8 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[updateDate (int, Java.SQL. date)](../../../connect/jdbc/reference/updatedate-method-int-java-sql-date.md)|Aggiorna la colonna designata con un valore di data in base all'indice di colonna.|  
-|[updateDate (lang. String, Java.SQL. date)](../../../connect/jdbc/reference/updatedate-method-java-lang-string-java-sql-date.md)|Aggiorna la colonna designata con un valore di data in base al nome della colonna.|  
+|[updateDate (int, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-int-java-sql-date.md)|Aggiorna la colonna designata con un valore di data in base all'indice di colonna.|  
+|[updateDate (lang. String, java.sql.Date)](../../../connect/jdbc/reference/updatedate-method-java-lang-string-java-sql-date.md)|Aggiorna la colonna designata con un valore di data in base al nome della colonna.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

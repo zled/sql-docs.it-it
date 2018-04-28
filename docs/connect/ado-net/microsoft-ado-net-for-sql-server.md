@@ -1,27 +1,27 @@
 ---
 title: Microsoft ADO.NET per SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: ado-net
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-caps.latest.revision: 
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d43cb61fc711624a4989d37565e1a6575ccfcb17
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
-ms.translationtype: MT
+ms.openlocfilehash: feb504123320c52654088b59f290be982f0bd281
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -42,7 +42,7 @@ ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usa
   
 ## <a name="community"></a>Community  
 * [Forum dei provider gestiti ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataproviders/threads/)  
-* [ADO.NET DataSet Forum](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
+* [Forum di set di dati ADO.NET](http://social.msdn.microsoft.com/Forums/en-US/adodotnetdataset/threads)  
   
 ## <a name="more-samples"></a>Altri esempi  
 * [Esempi di codice ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
