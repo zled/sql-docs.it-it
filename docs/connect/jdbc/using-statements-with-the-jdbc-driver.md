@@ -1,27 +1,28 @@
 ---
 title: Utilizzo delle istruzioni con il Driver JDBC | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1a70518f53772a37ca9ad2354876a1ec57bea255
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Utilizzo delle istruzioni con il driver JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,15 +31,15 @@ ms.lasthandoff: 11/18/2017
   
  Il driver JDBC fornisce tre classi per il recupero di dati da un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database:  
   
-1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) - utilizzata per l'esecuzione di istruzioni SQL senza parametri.  
+1.  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) : utilizzate per l'esecuzione di istruzioni SQL senza parametri.  
   
-2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) , (ereditato da SQLServerStatement), utilizzata per in esecuzione le istruzioni SQL compilate che possono contenere parametri IN.  
+2.  [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) - (ereditato da SQLServerStatement), utilizzato per in esecuzione le istruzioni SQL compilate che possono contenere parametri IN.  
   
-3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) , (ereditato da SQLServerPreparedStatement), utilizzato per l'esecuzione di stored procedure che possono contenere parametri IN, i parametri o entrambe.  
+3.  [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) - (ereditato da SQLServerPreparedStatement), utilizzato per l'esecuzione di stored procedure che possono contenere parametri IN e parametri OUT, o entrambi.  
   
  Negli argomenti di questa sezione viene illustrato come utilizzare ciascuna delle tre classi di istruzioni per utilizzare i dati in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
 |Argomento|Description|  
 |-----------|-----------------|  

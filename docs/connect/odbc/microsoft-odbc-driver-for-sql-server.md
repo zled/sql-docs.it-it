@@ -1,27 +1,27 @@
 ---
 title: Microsoft ODBC Driver for SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 08/09/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3f890f21a9c4301e10ad11da304d6d07b31fb87f
-ms.sourcegitcommit: 8e897b44a98943dce0f7129b1c7c0e695949cc3b
-ms.translationtype: MT
+ms.openlocfilehash: a9e480bd8ab948c02be27aa82a8bcd8caa2d7015
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
 
@@ -29,11 +29,11 @@ ms.lasthandoff: 03/21/2018
 
 ODBC è l'API di accesso ai dati nativa principale per le applicazioni scritte in C e C++ per SQL Server. È un driver ODBC per la maggior parte delle origini dati. Altri linguaggi che è possono utilizzare ODBC includono COBOL, Perl, PHP e Python. ODBC viene ampiamente impiegato negli scenari di integrazione dati.
 
-Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](../../tools/sqlcmd-utility.md) e [ **bcp**](../../tools/bcp-utility.md). Il **sqlcmd** utilità consente di eseguire istruzioni Transact-SQL, procedure di sistema e gli script SQL. Il **bcp** utilità di copia bulk dei dati tra un'istanza di Microsoft SQL Server e un file di dati in un formato specificato dall'utente. È possibile utilizzare **bcp** per importare molte nuove righe in tabelle di SQL Server oppure per esportare dati dalle tabelle in file di dati.  
+Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](../../tools/sqlcmd-utility.md) e [ **bcp**](../../tools/bcp-utility.md). Il **sqlcmd** utilità consente di eseguire istruzioni Transact-SQL, procedure di sistema e gli script SQL. Il **bcp** utilità copia bulk dei dati tra un'istanza di Microsoft SQL Server e un file di dati in un formato scelto. È possibile utilizzare **bcp** per importare di nuovo numero di righe in tabelle di SQL Server oppure per esportare dati dalle tabelle in file di dati.  
 
-## <a name="code-example-in-c"></a>Nell'esempio di codice in C++
+## <a name="code-example-in-c"></a>Esempio di codice in C++
 
-È disponibile un file di piccole dimensioni con estensione zip che contiene il codice sorgente di un programma C++ che utilizza ODBC:
+Si dispone di un file di piccole dimensioni con estensione zip che contiene il codice sorgente di un programma C++ che utilizza ODBC:
 
 - [Esempio di codice C++, tramite ODBC](../../odbc/reference/sample-odbc-program.md)
 
@@ -72,7 +72,7 @@ Il driver ODBC viene fornito con strumenti quali [ **sqlcmd** ](../../tools/sqlc
 - [Esempio di esecuzione asincrona (metodo di notifica)](../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)
 - [Resilienza di connessione nel driver ODBC di Windows](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Pool di connessioni compatibile con il driver](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
-- [Le funzionalità e modifiche del comportamento](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
+- [Funzionalità e modifiche del comportamento](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
 - [Note sulla versione](../../connect/odbc/windows/release-notes.md)
 - [Requisiti di sistema, installazione e file del driver](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 

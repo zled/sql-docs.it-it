@@ -1,28 +1,28 @@
 ---
 title: I membri di SQLServerConnection | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
-caps.latest.revision: 
+caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 181df7c774bdf48b87bfb139d4fcaa272ba25a87
-ms.sourcegitcommit: 9d0467265e052b925547aafaca51e5a5e93b7e38
-ms.translationtype: MT
+ms.openlocfilehash: 15e9af6857ca3a7f4c6695835d19e4900dfbf319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverconnection-members"></a>Membri di SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/02/2018
 |Nome|Description|  
 |----------|-----------------|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverconnection.md)|Cancella tutti gli avvisi segnalati per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
-|[close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Rilascia il database per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto e le risorse JDBC immediatamente anziché attendere che vengano automaticamente rilasciate.|  
+|[Chiudere](../../../connect/jdbc/reference/close-method-sqlserverconnection.md)|Rilascia il database per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto e le risorse JDBC immediatamente anziché attendere che vengano automaticamente rilasciate.|  
 |[closeUnreferencedPreparedStatementHandles](../../../connect/jdbc/reference/closeunreferencedpreparedstatementhandles-method-sqlserverconnection.md)|Forza l'annullamento-preparare le richieste per le istruzioni preparate scartate in sospeso da eseguire.| 
 |[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md)|Rende tutte permanenti le modifiche apportate dopo il commit o rollback precedente e rilascia eventuali blocchi del database che sono correntemente utilizzati da questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
 |[createBlob](../../../connect/jdbc/reference/createblob-method-sqlserverconnection.md)|Crea un **Java.SQL** oggetto senza dati.|  
@@ -59,7 +59,7 @@ ms.lasthandoff: 03/02/2018
 |[createSQLXML](../../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md)|Crea un **Java.SQL** oggetto senza dati.|  
 |[getAutoCommit](../../../connect/jdbc/reference/getautocommit-method-sqlserverconnection.md)|Recupera la modalità autocommit corrente per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
 |[getCatalog](../../../connect/jdbc/reference/getcatalog-method-sqlserverconnection.md)|Recupera il nome del catalogo corrente per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
-|[Metodo getClientConnectionID &#40; SQLServerConnection &#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Ottiene l'ID connessione del tentativo di connessione più recente, indipendentemente dalla riuscita o meno del tentativo.|  
+|[Metodo getClientConnectionID &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/getclientconnectionid-method-sqlserverconnection.md)|Ottiene l'ID connessione del tentativo di connessione più recente, indipendentemente dalla riuscita o meno del tentativo.|  
 |[getClientInfo](../../../connect/jdbc/reference/getclientinfo-method-sqlserverconnection.md)|Recupera informazioni relative alle proprietà delle informazioni client supportate dal driver JDBC.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverconnection.md)|Restituisce il valore di **disableStatementPooling** proprietà di connessione. Questa impostazione controlla se il pool di istruzione è attivato o meno per la connessione.|
 |[getDiscardedServerPreparedStatementCount](../../../connect/jdbc/reference/getdiscardedserverpreparedstatementcount-method-sqlserverconnection.md)|Restituisce il numero di attualmente in attesa preparata istruzione unprepare azioni.|
@@ -72,7 +72,7 @@ ms.lasthandoff: 03/02/2018
 |[getTransactionIsolation](../../../connect/jdbc/reference/gettransactionisolation-method-sqlserverconnection.md)|Recupera il livello di isolamento corrente per questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
 |[getTypeMap](../../../connect/jdbc/reference/gettypemap-method-sqlserverconnection.md)|Recupera l'oggetto mappa che è associata a questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md)|Recupera il primo avviso segnalato dalle chiamate a questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto.|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|Indica se questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto è stato chiuso.|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverconnection.md)|Indica se questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto è stato chiuso.|  
 |[isReadOnly](../../../connect/jdbc/reference/isreadonly-method-sqlserverconnection.md)|Indica se questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto è in modalità di sola lettura.|  
 |[isStatementPoolingEnabled](../../../connect/jdbc/reference/isstatementpoolingenabled-method-sqlserverconnection.md)|Restituisce se il pool di istruzione è attivato o meno per la connessione.|  
 |[isValid](../../../connect/jdbc/reference/isvalid-method-sqlserverconnection.md)|Indica se questo [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) oggetto non è stato chiuso ed è ancora valido.|  

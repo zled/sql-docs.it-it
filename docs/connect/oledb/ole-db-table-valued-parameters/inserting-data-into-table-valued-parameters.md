@@ -3,7 +3,7 @@ title: Inserimento di dati in parametri con valori di tabella | Documenti Micros
 description: Tramite il Driver OLE DB per SQL Server per inserire dati in parametri con valori di tabella
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-table-valued-parameters
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0235f4652b21e81efba02b20a94604587ccab57
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 33a7b1deb545e5c5e124dbd0244f71ac518a1f1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Inserimento di dati in parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,9 +63,9 @@ ms.lasthandoff: 04/06/2018
   
 -   IRowset::GetData  
   
--   IRowset::ReleaseRows  
+-   IRowset:: ReleaseRows  
   
--   IRowset::RestartPosition  
+-   IRowset:: RestartPosition  
   
  Il Driver OLE DB per SQL Server verrà letta una o più righe alla volta dal consumer oggetto set di righe per supportare il comportamento di flusso in parametri con valori di tabella. Ad esempio, l'utente potrebbe avere i dati dei set di righe di parametri con valori di tabella su disco (non in memoria) e implementa la funzionalità per leggere i dati dal disco se richiesto dal Driver OLE DB per SQL Server.  
   

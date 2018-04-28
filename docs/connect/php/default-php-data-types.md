@@ -2,7 +2,7 @@
 title: Tipi di dati PHP predefinito | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - default data types
 - converting data types
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac611fe1d08c157dd9f6b4a67298ba318b62053f
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 7229fe738950549fb6089ba8481658228397afa6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-php-data-types"></a>Tipi di dati PHP predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,12 +65,12 @@ Nella tabella seguente sono elencati i tipi di dati di SQL Server (recuperati da
 |smallint|Integer|caratteri a 8 bit<sup>1</sup>|  
 |smallmoney|String|caratteri a 8 bit<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|caratteri a 8 bit<sup>1</sup>|  
-|text<sup>8</sup>|Stream<sup>2</sup>|caratteri a 8 bit<sup>1</sup>|  
+|testo<sup>8</sup>|Stream<sup>2</sup>|caratteri a 8 bit<sup>1</sup>|  
 |time<sup>4</sup>|DateTime|Non applicabile|  
 |TIMESTAMP|String|caratteri a 8 bit<sup>1</sup>|  
 |tinyint|Integer|caratteri a 8 bit<sup>1</sup>|  
 |UDT (tipo definito dall'utente)|Stream<sup>2</sup>|Binario<sup>3</sup>|  
-|uniqueidentifier|String<sup>9</sup>|caratteri a 8 bit<sup>1</sup>|  
+|uniqueidentifier|Stringa<sup>9</sup>|caratteri a 8 bit<sup>1</sup>|  
 |varbinary|Stream<sup>2</sup>|Binario<sup>3</sup>|  
 |varbinary(MAX)|Stream<sup>2</sup>|Binario<sup>3</sup>|  
 |varchar|String|caratteri a 8 bit<sup>1</sup>|  

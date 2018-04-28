@@ -1,8 +1,8 @@
 ---
 title: 'Pdostatement:: Bindparam | Documenti Microsoft'
 ms.custom: ''
-ms.date: 10/24/2017
-ms.prod: sql-non-specified
+ms.date: 04/11/2017
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
-caps.latest.revision: ''
+caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d4dea9ea34f0a2b41db42f641b89ea074139643
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: b8e94697c15648853f01f7fd525d7e4319ba3476
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -105,6 +105,9 @@ echo $input1;
 ?>  
 ```  
   
+> [!NOTE]
+> Quando si associa un parametro di output a un tipo bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), l'utilizzo di PDO:: param_int con PDO:: sqlsrv_param_out_default_size potrebbe generare un'eccezione di "valore non compreso nell'intervallo". Pertanto, in alternativa, usare il valore predefinito PDO:: param_str e indicano le dimensioni della stringa risulta, che è al massimo 21. È il numero massimo di cifre, incluso il segno negativo, di qualsiasi valore bigint. 
+
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come usare un parametro di input/output.  
   
@@ -125,7 +128,7 @@ In questo esempio di codice viene illustrato come usare un parametro di input/ou
 ```  
 
 > [!NOTE]
-> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](https://docs.microsoft.com/en-us/sql/t-sql/data-types/decimal-and-numeric-transact-sql) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php).
+> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php).
 
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  

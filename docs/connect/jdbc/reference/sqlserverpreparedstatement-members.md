@@ -1,27 +1,28 @@
 ---
 title: I membri di SQLServerPreparedStatement | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05f80d22f4eb968f6db9ce24a8c5e9808bd43356
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 1926d376ac2653dcc7b4d6b0481bbe968d9469d6
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverpreparedstatement-members"></a>Membri di SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -29,10 +30,10 @@ ms.lasthandoff: 11/18/2017
   Le tabelle seguenti elencano i membri esposti dal [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) classe.  
   
 ## <a name="constructors"></a>Costruttori  
- nessuna.  
+ Nessuno  
   
 ## <a name="fields"></a>Campi  
- nessuna.  
+ Nessuno  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
   
@@ -45,12 +46,12 @@ ms.lasthandoff: 11/18/2017
 |Nome|Description|  
 |----------|-----------------|  
 |[addBatch](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)|Aggiunge un set di parametri al batch di comandi per questo oggetto istruzione.|  
-|[Annulla](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Annulla l'istruzione SQL attualmente eseguita da questo oggetto istruzione.|  
+|[cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Annulla l'istruzione SQL attualmente eseguita da questo oggetto istruzione.|  
 |[clearBatch](../../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md)|Svuota l'elenco corrente di comandi SQL per questo [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) oggetto.|  
 |[clearParameters](../../../connect/jdbc/reference/clearparameters-method-sqlserverpreparedstatement.md)|Cancella immediatamente i valori di parametro correnti.|  
 |[clearWarnings](../../../connect/jdbc/reference/clearwarnings-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Cancella tutti gli avvisi segnalati su questo oggetto istruzione.|  
 |[Chiudere](../../../connect/jdbc/reference/close-method-sqlserverpreparedstatement.md)|Rilascia le risorse JDBC di questo oggetto istruzione immediatamente anziché attendere che vengano automaticamente rilasciate e di database.|  
-|[eseguire](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|Esegue l'istruzione SQL in questo oggetto istruzione, che può essere qualsiasi tipo di istruzione SQL.|  
+|[Eseguire](../../../connect/jdbc/reference/execute-method-sqlserverpreparedstatement.md)|Esegue l'istruzione SQL in questo oggetto istruzione, che può essere qualsiasi tipo di istruzione SQL.|  
 |[executeBatch](../../../connect/jdbc/reference/executebatch-method-sqlserverpreparedstatement.md)|Invia al database un batch di comandi da eseguire. Se tutti i comandi vengono eseguiti correttamente, restituisce una matrice di conteggi aggiornamenti.|  
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|Esegue la query SQL in questo oggetto istruzione e restituisce il [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto generato dalla query.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|Esegue l'istruzione SQL in questo oggetto istruzione, che deve essere un'istruzione SQL INSERT, l'istruzione UPDATE, MERGE o DELETE. o un'istruzione SQL che non restituisce nulla, quale un'istruzione DDL.|  
@@ -71,8 +72,8 @@ ms.lasthandoff: 11/18/2017
 |[getResultSetType](../../../connect/jdbc/reference/getresultsettype-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Recupera il set di risultati per tipo di [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) gli oggetti generati da questo oggetto istruzione.|  
 |[getUpdateCount](../../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md),) recupera il risultato corrente come conteggio aggiornamenti.|  
 |[getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Recupera il primo avviso segnalato dalle chiamate a questo oggetto istruzione.|  
-|[isClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Indica se questo oggetto istruzione è stata chiusa.|  
-|[isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Restituisce un valore che indica se è possibile aggiungere un'istruzione al pool di istruzioni fornito dall'utente.|  
+|[IsClosed](../../../connect/jdbc/reference/isclosed-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Indica se questo oggetto istruzione è stata chiusa.|  
+|[oggetto isPoolable](../../../connect/jdbc/reference/ispoolable-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Restituisce un valore che indica se è possibile aggiungere un'istruzione al pool di istruzioni fornito dall'utente.|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)|Indica se questo oggetto istruzione è un wrapper per l'interfaccia specificata.|  
 |[setArray](../../../connect/jdbc/reference/setarray-method-sqlserverpreparedstatement.md)|Imposta il numero di parametro designato sull'oggetto di matrice specificato.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md)|Imposta il numero di parametro designato sull'oggetto InputStream specificato.|  
@@ -81,7 +82,7 @@ ms.lasthandoff: 11/18/2017
 |[setBlob](../../../connect/jdbc/reference/setblob-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sull'oggetto Blob specificato.|  
 |[SetBoolean](../../../connect/jdbc/reference/setboolean-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sull'oggetto specificato **booleano** valore.|  
 |[setByte](../../../connect/jdbc/reference/setbyte-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sull'oggetto specificato **byte** valore.|  
-|[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sulla matrice di byte specificata.|  
+|[SetBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sulla matrice di byte specificata.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|Imposta il parametro designato per l'oggetto Reader specificato.|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sull'oggetto Clob specificato.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Imposta il nome del cursore SQL sulla stringa specificata, che sarà utilizzata dai metodi Execute successivi.|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 11/18/2017
 |[setMaxRows](../../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Imposta il limite per il numero massimo di righe da qualsiasi [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) oggetto può contenere il numero specificato.|  
 |[setNCharacterStream](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)|Imposta il parametro designato per l'oggetto Reader specificato.|  
 |[setNClob](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sull'oggetto specificato.|  
-|[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|Imposta il parametro designato su un valore Null, in base al tipo di parametro da impostare.|  
+|[SetNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|Imposta il parametro designato su un valore Null, in base al tipo di parametro da impostare.|  
 |[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|Imposta il parametro designato sull'oggetto specificato **stringa** oggetto.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|Imposta il valore del parametro designato tramite l'oggetto specificato.|  
 |[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Ereditato da [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Richiede che un'istruzione sia o meno inserita in un pool. Per impostazione predefinita, viene inserito quando crea un oggetto SQLServerPreparedStatement.|  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/18/2017
 |[setTimestamp](../../../connect/jdbc/reference/settimestamp-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sul valore timestamp specificato.|  
 |[setUnicodeStream](../../../connect/jdbc/reference/setunicodestream-method-sqlserverpreparedstatement.md)|Imposta il numero del parametro designato sul flusso di input specificato, che disporrà del numero specificato di byte.|  
 |[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverpreparedstatement.md)|Imposta il parametro designato sul valore di URL specificato.|  
-|[Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)|Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)|Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.|  
   
 ## <a name="inherited-methods"></a>Metodi ereditati  
   

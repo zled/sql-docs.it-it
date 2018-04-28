@@ -3,7 +3,7 @@ title: Supporto delle Query nei set di righe dello Schema distribuite | Document
 description: Supporto delle query nei set di righe dello schema distribuite
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -22,20 +22,20 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26cf4847d1d4f9e6799b2751e81a44e9cc4bcc72
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: aa604a66d953a4e25c3df3f20fb32218e179451b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Set di righe dello schema - supporto di Query distribuite
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Per supportare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query, il Driver OLE DB per SQL Server distribuite **IDBSchemaRowset** interfaccia restituisce metadati sui server collegati.  
   
- Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output di set di righe dello schema dal catalogo, il Driver OLE DB per SQL Server riconosce un nome in due parti che contiene il server collegato e il nome del catalogo. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti *server_collegato***.*** catalogo* limita l'output al catalogo applicabile del server collegato denominato.  
+ Se la proprietà SSPROP_QUOTEDCATALOGNAMES di DBPROPSET_SQLSERVERSESSION è VARIANT_TRUE, è possibile utilizzare un identificatore tra virgolette per specificare il nome di catalogo (ad esempio "catalogo.personale"). Quando si restringe l'output di set di righe dello schema dal catalogo, il Driver OLE DB per SQL Server riconosce un nome in due parti che contiene il server collegato e il nome del catalogo. Per i set di righe dello schema nella tabella seguente, specificando un nome di catalogo in due parti *server_collegato ***.*** catalogo* limita l'output al catalogo applicabile del server collegato denominato.  
   
 |Set di righe dello schema|Restrizione per catalogo|  
 |-------------------|-------------------------|  

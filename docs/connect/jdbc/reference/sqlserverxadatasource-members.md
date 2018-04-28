@@ -1,27 +1,28 @@
 ---
 title: I membri di SQLServerXADataSource | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04178645-915f-4569-8907-d45e299bbe7d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 257bbe29b71c558002c6d22d7d05cc01f7e24e12
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: ee5a0ea6a351a5f0bce49ff3fccd26d636048f2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sqlserverxadatasource-members"></a>Membri di SQLServerXADataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[() Di SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|Inizializza una nuova istanza di [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe.|  
+|[(SQLServerXADataSource)](../../../connect/jdbc/reference/sqlserverxadatasource-constructor.md)|Inizializza una nuova istanza di [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe.|  
   
 ## <a name="fields"></a>Campi  
- nessuna.  
+ Nessuno  
   
 ## <a name="inherited-fields"></a>Campi ereditati  
- nessuna.  
+ Nessuno  
   
 ## <a name="methods"></a>Metodi  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 11/18/2017
 |[setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md)|(Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) imposta il nome utente utilizzato per connettersi all'origine dati.|  
 |[setWorkstationID](../../../connect/jdbc/reference/setworkstationid-method-sqlserverdatasource.md)|(Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) imposta il client come nome del computer utilizzato per la connessione all'origine dati.|  
 |[setXopenStates](../../../connect/jdbc/reference/setxopenstates-method-sqlserverdatasource.md)|(Ereditato da [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)) imposta un **booleano** valore che indica se la conversione di stati SQL in stati conformi a XOpen è abilitata.|  
-|[Unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)|Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.|  
+|[unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)|Restituisce un oggetto che implementa l'interfaccia specificata per consentire l'accesso per il [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-metodi specifici.|  
   
 ## <a name="inherited-methods"></a>Metodi ereditati  
   

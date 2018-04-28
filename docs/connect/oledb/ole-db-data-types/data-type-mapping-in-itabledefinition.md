@@ -3,7 +3,7 @@ title: Mapping dei tipi di dati in ITableDefinition | Documenti Microsoft
 description: Mapping dei tipi di dati in ITableDefinition
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-data-types
@@ -23,13 +23,13 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4cdcbbc5fdb0ac5efc6e8090213dd06475695b3
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 1ef0aa17d3229188fe4b52780d9c894126d8e7f8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-mapping-in-itabledefinition"></a>Mapping dei tipi di dati in ITableDefinition
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,22 +43,24 @@ ms.lasthandoff: 04/06/2018
 |DBTYPE_BOOL|**bit**||  
 |DBTYPE_BYTES|**binario**, **varbinary**, **immagine,** o **varbinary (max)**|Controlla se il Driver OLE DB per SQL Server la *ulColumnSize* membro della struttura DBCOLUMNDESC. In, il valore e la versione di base il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dell'istanza, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **immagine**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima di un **binario** tipi di dati colonna, il Driver OLE DB per SQL Server analizza DBCOLUMNDESC *rgPropertySets*membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **binario**. Se il valore della proprietà è VARIANT_FALSE, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **varbinary**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* determina la larghezza della colonna di SQL Server creata.|  
 |DBTYPE_CY|**money**||  
-|DBTYPE_DBTIMESTAMP|**datetime**||  
+|DBTYPE_DBTIMESTAMP|**datetime2**||  
 |DBTYPE_GUID|**uniqueidentifier**||  
 |DBTYPE_I2|**smallint**||  
-|DBTYPE_I4|**Int**||  
+|DBTYPE_I4|**int**||  
+|DBTYPE_I8|**bigint**||
 |DBTYPE_NUMERIC|**numeric**|Il Driver OLE DB per SQL Server controlla la DBCOLUMDESC *bPrecision* e *bScale* membri per determinare la precisione e scala per il **numerico** colonna.|  
 |DBTYPE_R4|**real**||  
 |DBTYPE_R8|**float**||  
 |DBTYPE_STR|**Char**, **varchar**, **testo,** o **varchar (max)**|Controlla se il Driver OLE DB per SQL Server la *ulColumnSize* membro della struttura DBCOLUMNDESC. In base al valore e la versione del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dell'istanza, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **testo**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima pari a una colonna di tipo carattere multibyte, il Driver OLE DB per SQL Server analizza DBCOLUMNDESC *rgPropertySets* membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **char**. Se il valore della proprietà è VARIANT_FALSE, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **varchar**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* membro determina la larghezza del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonna creata.|  
 |DBTYPE_UDT|**UDT**|Le seguenti informazioni vengono utilizzate **DBCOLUMNDESC** strutture da **itabledefinition:: CreateTable** quando sono necessarie colonne di tipo definito dall'utente:<br /><br /> *pwSzTypeName* viene ignorato.<br /><br /> *rgPropertySets* deve includere un **DBPROPSET_SQLSERVERCOLUMN** proprietà impostata come descritto nella sezione sul **DBPROPSET_SQLSERVERCOLUMN**in [User-Defined Type ](../../oledb/features/using-user-defined-types.md).|  
 |DBTYPE_UI1|**tinyint**||  
+|DBTYPE_VARIANT|**sql_variant**||
 |DBTYPE_WSTR|**nchar**, **nvarchar**, **ntext** o **nvarchar (max)**|Controlla se il Driver OLE DB per SQL Server la *ulColumnSize* membro della struttura DBCOLUMNDESC. In base al valore, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **ntext**.<br /><br /> Se il valore di *ulColumnSize* è minore della lunghezza massima pari a una colonna di tipo di dati carattere Unicode, il Driver OLE DB per SQL Server analizza DBCOLUMNDESC *rgPropertySets* membro. Se DBPROP_COL_FIXEDLENGTH è VARIANT_TRUE, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **nchar**. Se il valore della proprietà è VARIANT_FALSE, il Driver OLE DB per SQL Server esegue il mapping di tipo su cui **nvarchar**. In entrambi i casi, DBCOLUMNDESC *ulColumnSize* membro determina la larghezza del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] colonna creata.|  
 |DBTYPE_XML|**XML**||  
-  
+
 > [!NOTE]  
 >  Quando si crea una nuova tabella, il Driver OLE DB per SQL Server esegue il mapping solo OLE DB dati tipo valori di enumerazione specificati nella tabella precedente. Il tentativo di creare una tabella con una colonna di qualsiasi altro tipo di dati OLE DB DB genera un errore.  
-  
+
 ## <a name="see-also"></a>Vedere anche  
  [Tipi di dati & #40; OLE DB & #41;](../../oledb/ole-db-data-types/data-types-ole-db.md)  
   

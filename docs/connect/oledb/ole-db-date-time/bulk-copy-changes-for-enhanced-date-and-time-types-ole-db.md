@@ -3,7 +3,7 @@ title: Modifiche apportate alla copia di massa per avanzata tipi data e ora (OLE
 description: Modifiche di copia bulk per avanzata tipi data e ora (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB, bulk copy operations
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61d04588991764edb1d470f190ebd9b3ce08636c
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: bebddc7a9ad8dc7d59f60fab73bcdca8b1192dab
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db"></a>Modifiche di copia bulk per avanzata tipi data e ora (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/06/2018
 |tipo di archiviazione di file|Tipo di dati del file host|Digitare msoledbsql.h per l'utilizzo con ibcpsession:: BCPColFmt|Value|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
-|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
+|Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIM4|0x3a|  
 |Data|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
@@ -119,17 +119,17 @@ ms.lasthandoff: 04/06/2018
 |Simbolo|Significato|  
 |------------|-------------|  
 |-|Non viene supportata alcuna conversione.<br />|  
-|1|Se i dati specificati non sono validi, viene generato un record di diagnostica ODBC con SQLSTATE 22007 e il messaggio "Formato di datetime non valido". Per i valori datetimeoffset, la parte relativa all'ora deve essere compresa nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server in genere normalizzano l'ora nei valori datetimeoffset per UTC. Di conseguenza, il client deve verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC.|  
+|1|Se i dati forniti non sono validi, viene inserito un errore. Per i valori datetimeoffset, la parte relativa all'ora deve essere compresa nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server in genere normalizzano l'ora nei valori datetimeoffset per UTC. Di conseguenza, il client deve verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC.|  
 |2|Il componente relativo all'ora viene ignorato.|  
-|3|Per ODBC, se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica con SQLSTATE 22001 e il messaggio "Troncamento a destra della stringa di dati". Il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala di 7. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito in ODBC.<br /><br /> **Tipo:** DBTIME2<br /><br /> **In cui è inclusa la scala 0** 8<br /><br /> **In cui è inclusa la scala 1..7** 10,16<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **In cui è inclusa la scala 0:** 19<br /><br /> **In cui è inclusa la scala 1..7:** 21..27<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **In cui è inclusa la scala 0:** 26<br /><br /> **In cui è inclusa la scala 1..7:** 28..34<br /><br /> Per OLE DB, se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **In cui è inclusa la scala 0** 8<br /><br /> **In cui è inclusa la scala 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **In cui è inclusa la scala 0:** 19<br /><br /> **In cui è inclusa la scala 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **In cui è inclusa la scala 0:** 26<br /><br /> **In cui è inclusa la scala 1..9:** 28..36|  
+|3|Se si verifica un troncamento con perdita di dati, viene inserito un errore. Per datetime2 il numero di cifre per i secondi frazionari, ovvero la scala, è determinato dalle dimensioni della colonna di destinazione in base alla tabella seguente. Per dimensioni di colonna maggiori dell'intervallo specificato nella tabella, si presuppone una scala 9. Questa conversione deve consentire fino a nove cifre per i secondi frazionari, il massimo consentito da OLE DB.<br /><br /> **Tipo:** DBTIME2<br /><br /> **In cui è inclusa la scala 0** 8<br /><br /> **In cui è inclusa la scala 1..9** 1..9<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMP<br /><br /> **In cui è inclusa la scala 0:** 19<br /><br /> **In cui è inclusa la scala 1..9:** 21..29<br /><br /> <br /><br /> **Tipo:** DBTIMESTAMPOFFSET<br /><br /> **In cui è inclusa la scala 0:** 26<br /><br /> **In cui è inclusa la scala 1..9:** 28..36|  
 |4|Il componente relativo alla data viene ignorato.|  
 |5|Il fuso orario è impostato su UTC, ad esempio 00:00.|  
 |6|L'ora è impostata su zero.|  
 |7|La data è impostata su 1900-01-01.|  
 |8|La differenza di fuso orario viene ignorata.|  
-|9|La stringa viene analizzata e convertita in un valore date, datetime, datetimeoffset o time a seconda del primo carattere di punteggiatura rilevato e della presenza degli altri componenti. La stringa viene quindi convertita nel tipo di destinazione, in base alle regole nella tabella alla fine di questo articolo per il tipo di origine individuato da questo processo. Se i dati forniti non possono essere analizzati senza errore o se qualsiasi componente è al di fuori dell'intervallo consentito o non vi è conversione dal tipo del valore letterale al tipo di destinazione, viene inserito un errore (OLE DB) o viene generato un record di diagnostica ODBC con SQLSTATE 22018 e il messaggio "Carattere non valido per la specifica del cast". Per i parametri datetime e smalldatetime, se l'anno non è compreso nell'intervallo supportato da questi tipi, viene inserito un errore (OLE DB) o viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".<br /><br /> Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non è compreso nell'intervallo UTC supportato, viene inserito un errore (OLE DB) o viene generato un record di diagnostica con SQLSTATE 22007 e il messaggio "Formato di datetime non valido".|  
-|10|Se si verifica un troncamento con perdita di dati in una conversione da client a server, viene inserito un errore (OLE DB) o viene generato un record di diagnostica ODBC con SQLSTATE 22008 e il messaggio "Overflow del campo Datetime". Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server. Se si verifica un troncamento dei secondi o dei secondi frazionari in una conversione da server a client, viene generato solo un avviso.|  
-|11|Se si verifica un troncamento con perdita di dati, viene generato un record di diagnostica.<br /><br /> In una conversione da server a client, il record è un avviso (ODBC SQLSTATE S1000).<br /><br /> In una conversione da client a server, il record è un errore (ODBC SQLSTATE 22001).|  
+|9|La stringa viene analizzata e convertita in un valore date, datetime, datetimeoffset o time a seconda del primo carattere di punteggiatura rilevato e della presenza degli altri componenti. La stringa viene quindi convertita nel tipo di destinazione, in base alle regole nella tabella alla fine di questo articolo per il tipo di origine individuato da questo processo. Se i dati forniti non possono essere analizzati senza errore, se qualsiasi parte del componente non è compreso nell'intervallo consentito oppure se nessuna conversione dal tipo di valore letterale di tipo di destinazione, viene inserito un errore. Per i parametri datetime e smalldatetime, se l'anno è compreso nell'intervallo che supportano questi tipi, viene inserito un errore.<br /><br /> Per datetimeoffset, il valore deve essere compreso nell'intervallo supportato in seguito alla conversione in UTC, anche se non è necessaria alcuna conversione in UTC. Ciò è dovuto al fatto che TDS e il server normalizzano sempre l'ora in valori datetimeoffset per UTC. Il client deve pertanto verificare che i componenti relativi all'ora siano compresi nell'intervallo supportato in seguito alla conversione in UTC. Se il valore non compreso nell'intervallo UTC supportato, viene inserito un errore.|  
+|10|Per client per le conversioni di server, se si verifica un troncamento con perdita di dati viene inserito un errore. Questo errore si verifica anche se il valore non è incluso nell'intervallo che può essere rappresentato dall'intervallo UTC utilizzato dal server. Se si verifica un troncamento dei secondi o dei secondi frazionari in una conversione da server a client, viene generato solo un avviso.|  
+|11|Per client per le conversioni di server, se si verifica un troncamento con perdita di dati viene inserito un errore.|
 |12|I secondi vengono impostati su zero e i secondi frazionari vengono ignorati. Non è possibile alcun errore di troncamento.|  
 |N/D|Viene mantenuto il comportamento di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] e versioni precedenti.|  
   

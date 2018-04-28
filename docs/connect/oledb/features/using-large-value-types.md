@@ -3,7 +3,7 @@ title: Utilizzo di tipi di valori di grandi dimensioni | Documenti Microsoft
 description: Utilizzo di tipi di valori di grandi dimensioni con Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, large value data types
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 252670fd1231efde3e9840ce28ab2ed2c4c42227
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 8366d4ea0b307600f2e13a456dac8a437fd6ca45
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-large-value-types"></a>Utilizzo di tipi di dati per valori di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,11 +68,11 @@ ms.lasthandoff: 04/06/2018
   
  Quando si segnalano la dimensione massima di una colonna, verrà segnalato il Driver OLE DB per SQL Server:  
   
--   Le dimensioni massime definite, ad esempio, ovvero 2000 per un **varchar (**2000**)** colonna, o  
+-   Le dimensioni massime definite, ad esempio, ovvero 2000 per un **varchar (** 2000 **)** colonna, o  
   
 -   Il valore "illimitato" che, in caso di un **varchar (max)** colonna è uguale a ~ 0. Questo valore è impostato per la proprietà dei metadati DBCOLUMN_COLUMNSIZE.  
   
- Le regole di conversione standard verranno applicate a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (**2000**)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
+ Le regole di conversione standard verranno applicate a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (** 2000 **)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
   
  In caso di recupero di tipi di dati per valori di grandi dimensioni, l'approccio più efficiente consiste nell'eseguire l'associazione come DBTYPE_IUNKNOWN e nell'impostare la proprietà del set di righe DBPROP_ACCESSORDER su DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. In questo modo il valore verrà inviato come flusso direttamente dalla rete senza alcuna memorizzazione nel buffer intermedia, come nell'esempio seguente:  
   

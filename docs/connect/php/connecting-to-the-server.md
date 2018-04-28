@@ -2,7 +2,7 @@
 title: Connessione al Server | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
-caps.latest.revision: ''
+caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 818a71b8e0bc60168602e7fc0228c21319d08a21
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: ea18d388225bd8cf217126fd6ebe685ddf12fd2d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-to-the-server"></a>Connessione al server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] possono connettersi 
 |[Procedura: Disabilitare più set di risultati attivi (MARS)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Descrive come disabilitare la funzionalità MARS (Multiple Active Resultsets) quando si stabilisce una connessione.|  
 |[Opzioni di connessione](../../connect/php/connection-options.md)|Elenca le opzioni che sono consentite nella matrice associativa contenente gli attributi di connessione.|  
 |[Supporto per LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|Descrive il supporto dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] della funzione LocalDB aggiunta in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
-|[Supporto per il ripristino di emergenza a disponibilità elevato](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Viene descritta la modalità di configurazione l'applicazione per sfruttare il ripristino di emergenza a disponibilità elevata, le funzionalità aggiunte in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
+|[Supporto per il ripristino di emergenza a disponibilità elevata](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|Viene descritta la modalità di configurazione l'applicazione per sfruttare il ripristino di emergenza a disponibilità elevata, le funzionalità aggiunte in [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)].|  
 |[Connessione al database SQL di Microsoft Azure](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Viene illustrato come connettersi a un Database di SQL Azure.|  
 |[Resilienza della connessione](../../connect/php/connection-resiliency.md)|Descrive la funzionalità di resilienza di connessione che consentano di ristabilire le connessioni interrotte.|  
 

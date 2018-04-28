@@ -3,7 +3,7 @@ title: Aggiornamento di un'applicazione OLE DB driver per SQL Server da MDAC | D
 description: Aggiornamento di un'applicazione al Driver OLE DB per SQL Server da MDAC
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -21,16 +21,18 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61056a6951176b4257856b114a512f6f81dfc33e
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aggiornamento di un'applicazione OLE DB driver per SQL Server da MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Esistono alcune differenze tra il Driver OLE DB per SQL Server e Microsoft Data Access Components (MDAC); a partire da Windows Vista, i componenti di accesso dati ora vengono chiamati Windows Data Access Components (o Windows DAC). Sebbene entrambi forniscono l'accesso ai dati nativa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, il Driver OLE DB per SQL Server è stato appositamente progettato per esporre le nuove funzionalità di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mentre nello stesso momento mantenendo la compatibilità con le versioni precedenti.   
 
@@ -96,7 +98,7 @@ ms.lasthandoff: 04/06/2018
 
 -   Quando le applicazioni MDAC si connettono a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i tipi di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] vengono visualizzati come tipi di dati compatibili con [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], come mostrato nella tabella seguente.  
 
-    |Tipo di SQL Server 2005|SQL Server 2000 type|  
+    |Tipo di SQL Server 2005|Tipo di SQL Server 2000|  
     |--------------------------|--------------------------|  
     |**ntext**|**text**|  
     |**nvarchar(max)**|**ntext**|  

@@ -3,7 +3,7 @@ title: Tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Documenti M
 description: Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f4ba8559525b2b0b7a174a7160e7d3daf138f30
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: e3aaddc3ac658c0a7d713933b6594c1c3a27e88f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/06/2018
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di righe:  
   
-|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Valore|  
+|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Value|  
 |--------------------------|----------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|DBTYPE_UDT|BYTE [] (matrice di byte\)|132 (OleDb)|  
   

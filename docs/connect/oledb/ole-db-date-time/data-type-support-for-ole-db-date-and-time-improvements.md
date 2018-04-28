@@ -3,7 +3,7 @@ title: Supporto del tipo di dati per OLE DB data e ora miglioramenti | Documenti
 description: Supporto per i miglioramenti di data e ora OLE DB del tipo di dati
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-date-time
@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 336665f67245911fa560c8ac54cad77dc9c661c6
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 08185700242e870ee58c1d0826fc41081e9d89e8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Supporto tipo di dati per OLE DB data e ora miglioramenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -183,7 +183,7 @@ enum SQLVARENUM {
 |DBTYPE_DBDATE|data||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Il Driver OLE DB per SQL Server controlla la DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
 |DBTYPE_DBTIME2|**tempo**(p)|Il Driver OLE DB per SQL Server controlla la DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|Il Driver OLE DB per SQL Server controlla la DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**DateTimeOffset**(p)|Il Driver OLE DB per SQL Server controlla la DBCOLUMDESC *bScale* membro per determinare la precisione dei secondi frazionari.|  
   
  Quando un'applicazione specifica DBTYPE_DBTIMESTAMP in *wType*, può eseguire l'override del mapping al **datetime2** fornendo un nome di tipo in *pwszTypeName*. Se **datetime** è specificato, *bScale* deve essere 3. Se **smalldatetime** è specificato, *bScale* deve essere 0. Se *bScale* non è coerente con *wType* e *pwszTypeName*, viene restituito DB_E_BADSCALE.  
   

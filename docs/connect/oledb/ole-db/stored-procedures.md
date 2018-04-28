@@ -24,14 +24,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e183abccaed16b387dd5415f72ae44b45d3d8a36
 ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MTE
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/16/2018
 ---
 # <a name="stored-procedures"></a>Stored procedure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Una stored procedure ([Stored procedure &#40;motore di Database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+  Una stored procedure ([Stored procedure & #40; motore di Database & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   Stored procedure  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Esecuzione delle stored procedure](../../oledb/ole-db/stored-procedures-running.md)  
+-   [Esecuzione della Stored procedure & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [Chiamata di una stored procedure](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [La chiamata a una Stored Procedure & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per programmazione con SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

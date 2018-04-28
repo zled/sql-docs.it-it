@@ -2,7 +2,7 @@
 title: L'installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS | Documenti Microsoft
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 caps.latest.revision: 69
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 44afb66dfdc98ea2160f54d394f48e1ce03df1cd
-ms.sourcegitcommit: 8b332c12850c283ae413e0b04b2b290ac2edb672
-ms.translationtype: MT
+ms.openlocfilehash: 9819122fd8a0ca50a31d3a97465aaa2f32e37b56
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installazione di Microsoft ODBC Driver for SQL Server in Linux e macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -62,7 +62,7 @@ source ~/.bashrc
 sudo apt-get install unixodbc-dev
 ```
 
-### <a name="redhat-enterprise-server-6-and-7"></a>RedHat Enterprise Server 6 and 7
+### <a name="redhat-enterprise-server-6-and-7"></a>Red Hat Enterprise Server versione 6 e 7
 ```
 sudo su
 
@@ -185,7 +185,7 @@ source ~/.bashrc
 sudo yum install unixODBC-devel
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -309,7 +309,7 @@ ln -sfn /opt/mssql-tools/bin/sqlcmd-13.0.1.0 /usr/bin/sqlcmd
 ln -sfn /opt/mssql-tools/bin/bcp-13.0.1.0 /usr/bin/bcp
 ```
 
-### <a name="redhat-enterprise-server-7"></a>RedHat Enterprise Server 7
+### <a name="redhat-enterprise-server-7"></a>Red Hat Enterprise Server 7
 ```
 sudo su
 curl https://packages.microsoft.com/config/rhel/7/prod.repo > /etc/yum.repos.d/mssql-release.repo
@@ -508,7 +508,7 @@ Il Driver ODBC in Linux e MacOS include i componenti seguenti:
 
 |Componente|Description|  
 |---------------|-----------------|  
-|libmsodbcsql-17.X.so.X.X or libmsodbcsql-13.X.so.X.X|L'oggetto condiviso (`so`) file di libreria dinamica che contiene tutte le funzionalità del driver. Questo file viene installato nella `/opt/microsoft/msodbcsql17/lib64/` per il Driver 17 e in `/opt/microsoft/msodbcsql/lib64/` per Driver 13.|  
+|libmsodbcsql-17. X.so.X.X o libmsodbcsql-13. X.so.X.X|L'oggetto condiviso (`so`) file di libreria dinamica che contiene tutte le funzionalità del driver. Questo file viene installato nella `/opt/microsoft/msodbcsql17/lib64/` per il Driver 17 e in `/opt/microsoft/msodbcsql/lib64/` per Driver 13.|  
 |`msodbcsqlr17.rll`o`msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato in `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|Il file di intestazione che contiene tutte le nuove definizioni necessarie per l'utilizzo del driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql. h viene installato nella `/opt/microsoft/msodbcsql17/include/` per i Driver 17 e nel `/opt/microsoft/msodbcsql/include/` per Driver 13. |
 |LICENSE.txt|File di testo che contiene i termini del contratto di licenza dell'utente finale. Questo file si trova nella `/usr/share/doc/msodbcsql17/` per i Driver 17 e nel `/usr/share/doc/msodbcsql/` per Driver 13.|
@@ -519,7 +519,7 @@ Il Driver ODBC in Linux e MacOS include i componenti seguenti:
 
 |Componente|Description|  
 |---------------|-----------------|  
-|libmsodbcsql.17.dylib or libmsodbcsql.13.dylib|Libreria di collegamento dinamico (`dylib`) file che contiene tutte le funzionalità del driver. Questo file viene installato `/usr/local/lib/`.|  
+|libmsodbcsql.17.dylib o libmsodbcsql.13.dylib|Libreria di collegamento dinamico (`dylib`) file che contiene tutte le funzionalità del driver. Questo file viene installato `/usr/local/lib/`.|  
 |`msodbcsqlr17.rll`o`msodbcsqlr13.rll`|File di risorse associato per la libreria del driver. Questo file viene installato nella `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` per i Driver 17 e nel `[driver .dylib directory]../share/msodbcsql/resources/en_US/` per Driver 13. | 
 |msodbcsql.h|Il file di intestazione che contiene tutte le nuove definizioni necessarie per l'utilizzo del driver.<br /><br /> **Nota:**  non è possibile fare riferimento a msodbcsql.h e odbcss.h nello stesso programma.<br /><br /> msodbcsql. h viene installato nella `/usr/local/include/msodbcsql17/` per i Driver 17 e nel `/usr/local/include/msodbcsql/` per Driver 13. |
 |LICENSE.txt|File di testo che contiene i termini del contratto di licenza dell'utente finale. Questo file si trova nella `/usr/local/share/doc/msodbcsql17/` per i Driver 17 e nel `/usr/local/share/doc/msodbcsql/` per Driver 13. |

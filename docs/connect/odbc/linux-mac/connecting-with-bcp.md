@@ -2,7 +2,7 @@
 title: Connessione a bcp | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 caps.latest.revision: 33
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f7e9db6a1ea636975a3f5719d9a1b3e9d5721eb6
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: badff319d1ae969d14fc14fc68d40fdd57b776eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-bcp"></a>Connessione a bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Opzioni disponibili
 Nella versione corrente, la sintassi e le opzioni seguenti sono disponibili:  
 
-[*database***.**]*schema***.***table* **in** *data_file* | **out** *data_file*
+[*database ***.**]* schema ***.*** tabella * **in** *data_file* | **out** *data_file*
 
 - -a *packet_size*  
 Specifica il numero di byte inviati al e dal server per ogni pacchetto di rete.  
@@ -149,9 +149,9 @@ Specifica il nome di un file in cui viene reindirizzato l'output dal prompt dei 
 - -V (80 | 90 | 100)  
 Utilizza i tipi di dati da una versione precedente di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)].  
   
-- -x  
+- -X  
 Se usato con le opzioni format e -f format_file, genera un file di formato basato su XML anziché un file di formato predefinito non XML.  
   
 ## <a name="see-also"></a>Vedere anche
 
-[Connessione con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[La connessione con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

@@ -5,23 +5,23 @@ author: MightyPen
 ms.service: ''
 ms.component: connect
 ms.suite: sql
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.technology: dbe-data-tier-apps
 ms.custom: ''
 ms.workload: data-management
 ms.topic: article
-ms.date: 03/29/2018
+ms.date: 04/10/2018
 ms.author: genemi
-ms.openlocfilehash: c6c459949c63dc11308ac5bf042149775950882d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 467f49e9cab080c67f96369a0eeeda9dd588726d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Moduli di connessione per i database SQL di Microsoft
 
-Questo articolo fornisce collegamenti ai moduli di connessione per il download o *driver* che i programmi client possono utilizzare per l'interazione con [Microsoft SQL Server](../index.md)e con la disponibilità di una copia nel cloud [Azure Database SQL](http://docs.microsoft.com/azure/sql-database/). Sono disponibili driver per un'ampia gamma di linguaggi di programmazione, in esecuzione in sistemi operativi seguenti:
+Questo articolo fornisce collegamenti ai moduli di connessione per il download o *driver* che i programmi client possono utilizzare per l'interazione con [Microsoft SQL Server](../relational-databases/database-features.md)e con la disponibilità di una copia nel cloud [Azure Database SQL](http://docs.microsoft.com/azure/sql-database/). Sono disponibili driver per un'ampia gamma di linguaggi di programmazione, in esecuzione in sistemi operativi seguenti:
 
 - Linux (Ubuntu)
 - MacOS
@@ -53,11 +53,11 @@ although the FWLink is less precise than is http://github.com/Microsoft/msphpsql
 
 | Lingua | Scaricare il driver SQL |
 | :------- | :---------------------- |
-| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET Core, for Linux-Ubuntu](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, per MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, per Windows](https://www.microsoft.com/net/core) |
-| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](./oledb/oledb-driver-for-sql-server-programming.md) |
+| C# | [ADO.NET](http://www.microsoft.com/net/download/)<br /><br />[.NET core, per Ubuntu Linux](https://www.microsoft.com/net/core#Ubuntu)<br />[.NET core, per MacOS](https://www.microsoft.com/net/core#macos)<br />[.NET core, per Windows](https://www.microsoft.com/net/core) |
+| C++ | [ODBC](./odbc/download-odbc-driver-for-sql-server.md)<br /><br />[OLE DB](https://go.microsoft.com/fwlink/?linkid=871294) |
 | Java | [JDBC](./jdbc/download-microsoft-jdbc-driver-for-sql-server.md) |
 | Node.js | [Node.js driver, le istruzioni di installazione](./node-js/step-1-configure-development-environment-for-node-js-development.md) |
-| PHP | *Sistema operativo:*<br /><br />[Windows PHP driver](https://www.microsoft.com/download/details.aspx?id=55642)<br />[Linux o macOS driver PHP da Github](http://github.com/Microsoft/msphpsql/) |
+| PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, le istruzioni di installazione](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Scaricare ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Driver Ruby, le istruzioni di installazione](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Pagina di download Ruby](https://rubyinstaller.org/downloads/) |
 | &nbsp; | <br /> |

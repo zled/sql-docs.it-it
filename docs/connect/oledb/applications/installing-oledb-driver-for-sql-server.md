@@ -3,7 +3,7 @@ title: Installazione del Driver OLE DB per SQL Server | Documenti Microsoft
 description: Installazione e disinstallazione di Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -26,32 +26,28 @@ helpviewer_keywords:
 - removing OLE DB Driver for SQL Server
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e31904372a2850d27a3fad9158dad6bbd763dc6d
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 154ac8409b27ee5f5fe02f7ed8e1e2aff7f61ff1
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installazione del Driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
 Per installare il Driver OLE DB per SQL Server è necessario msoledbsql.msi installer.
 Eseguire il programma di installazione e verificare le selezioni preferite. Il Driver OLE DB per SQL Server può essere installato side-by-side con versioni precedenti di provider Microsoft OLE DB.
 
-Per scaricare la versione più recente del Driver OLE DB per SQL Server, passare a [Microsoft Download Center](http://www.microsoft.com/download/details.aspx?id=56730).
-
-Il Driver OLE DB per i file di SQL Server (msoledbsql.dll, msoledbsqlr.rll) vengono installati nel percorso seguente:  
-
-`%SYSTEMROOT%\system32\`  
+Il Driver OLE DB per i file di SQL Server (msoledbsql.dll, msoledbsqlr.rll) vengono installati nella `%SYSTEMROOT%\system32\` . Inoltre, x64 msoledbsql.msi installa i file binari a 32 bit in `%SYSTEMROOT%\SysWOW64\`.
 
 > [!NOTE]  
 > Tutte le impostazioni del Registro di sistema appropriati per il Driver OLE DB per SQL Server vengono eseguite come parte del processo di installazione.  
 
-Il Driver OLE DB per SQL Server libreria file di intestazione e (msoledbsql.h e msoledbsql.lib) vengono installati nel percorso seguente:  
-
-`%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`  
+Il Driver OLE DB per SQL Server libreria file di intestazione e (msoledbsql.h e msoledbsql.lib) vengono installati nella `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`. Inoltre, x64 msoledbsql.msi installa i file stesso in `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\180\SDK`.  
 
 È possibile distribuire il Driver OLE DB per SQL Server tramite msoledbsql.msi. Potrebbe essere necessario installare il Driver OLE DB per SQL Server quando si distribuisce un'applicazione. Un modo per installare più pacchetti in un'installazione che all'utente può sembrare singola consiste nell'usare la tecnologia del chainer e del programma di avvio automatico. Per ulteriori informazioni, vedere [Authoring a Custom Bootstrapper Package for Visual Studio 2005](http://go.microsoft.com/fwlink/?LinkId=115667) e [aggiunta di prerequisiti personalizzati](http://go.microsoft.com/fwlink/?LinkId=115668).  
   
@@ -59,17 +55,18 @@ X64 msoledbsql.msi installa anche la versione a 32 bit del Driver OLE DB per SQL
 
 Quando si richiama msoledbsql.msi, solo i componenti client vengono installati per impostazione predefinita. Il client sono i componenti sono file che supportano l'esecuzione di un'applicazione sviluppata tramite il Driver OLE DB per SQL Server. Per installare i componenti SDK, specificare `ADDLOCAL=All` sulla riga di comando. Esempio:  
 
-`msiexec /i msoledbsql.msi ADDLOCAL=ALL APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
+`msiexec /i msoledbsql.msi ADDLOCAL=ALL`  
 
 ## <a name="silent-install"></a>Installazione invisibile all'utente  
  Se si utilizza il /passive, /qn, /qb o l'opzione /qr con msiexec, è necessario specificare anche IACCEPTMSOLEDBSQLLICENSETERMS = Sì, per indicare in modo esplicito si accettano le condizioni di licenza per l'utente finale. È necessario specificare questa opzione in lettere maiuscole.  
 
-## <a name="uninstalling-ole-db-driver-for-sql-server"></a>Disinstallazione di Driver OLE DB per SQL Server  
-Poiché applicazioni quali [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] server e il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] strumenti dipendono dal Driver OLE DB per SQL Server, è importante non disinstallare il Driver OLE DB per SQL Server fino a quando non tutte le applicazioni dipendenti vengono disinstallate. Per fornire agli utenti con un avviso che l'applicazione dipende dal Driver OLE DB per SQL Server, utilizzare l'opzione di installazione APPGUID in MSI, come segue:  
+## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Installazione del Driver OLE DB per SQL Server come una dipendenza  
+È importante non disinstallare il Driver OLE DB per SQL Server fino a quando non tutte le applicazioni dipendenti vengono disinstallate. Per fornire agli utenti con un avviso che l'applicazione dipende dal Driver OLE DB per SQL Server, utilizzare l'opzione di installazione APPGUID in MSI, come segue:  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  
 
-Il valore passato a APPGUID è il codice prodotto specifico. Quando si utilizza Microsoft Installer per aggregare il programma di installazione dell'applicazione, è necessario creare un codice prodotto.  
+Il valore passato a APPGUID è il codice prodotto specifico. Quando si utilizza Microsoft Installer per aggregare il programma di installazione dell'applicazione, è necessario creare un codice prodotto.
+L'opzione APPGUID richiede che esegue il programma di installazione da un prompt dei comandi con privilegi elevati.
 
 ## <a name="see-also"></a>Vedere anche  
  [Compilazione di applicazioni con il driver OLE DB per SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)   

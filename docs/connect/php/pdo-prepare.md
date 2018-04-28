@@ -2,7 +2,7 @@
 title: 'PDO:: Prepare | Documenti Microsoft'
 ms.custom: ''
 ms.date: 07/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -13,16 +13,16 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-caps.latest.revision: ''
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6fbac9059daa4af74aaeea4c6007d5ae1bf84a00
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: a5c111c4184308311af4ef93853dba1b61f55faf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="pdoprepare"></a>PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,7 +65,7 @@ array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYP
   
 nella tabella seguente vengono illustrati i valori possibili per PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE.  
   
-|Valore|Description|  
+|Value|Description|  
 |---------|---------------|  
 |PDO::SQLSRV_CURSOR_BUFFERED|Crea un cursore statico (memorizzato nel buffer) sul lato client. Per ulteriori informazioni sui cursori sul lato client, vedere [tipi di cursore &#40;Driver PDO_SQLSRV&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md).|  
 |PDO::SQLSRV_CURSOR_DYNAMIC|Crea un cursore dinamico (non memorizzato nel buffer) sul lato server che consente di accedere alle righe in qualsiasi ordine e riflette le modifiche nel database.|  

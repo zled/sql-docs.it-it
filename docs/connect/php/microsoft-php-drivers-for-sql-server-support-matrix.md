@@ -2,7 +2,7 @@
 title: Matrice di supporto di driver Microsoft per PHP per SQL Server | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -12,16 +12,16 @@ ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: ''
+caps.latest.revision: 1
 author: David-Engel
 ms.author: v-daveng
 manager: ''
 ms.workload: On Demand
-ms.openlocfilehash: 23159425e45fdc8974e0047859072654c5c77959
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 95b8e0ad1b69431e6f2266babd42f88ea2f4bfcc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Microsoft PHP driver per una matrice di supporto SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 03/28/2018
 |7.2|7.2.1+ in Windows<br/>7.2.0+ su altre piattaforme| | | | | | |
 |7.1|7.1.0+ |7.1.0+ |       |        |        |        |        |
 |7.0|7.0.0+ |7.0.0+ |7.0.0+ |        |        |        |        |
-|5.6|       |       |       |5.6.4+  |        |        |        |
+|5.6|       |       |       |5.6.4 +  |        |        |        |
 |5.5|       |       |       |5.5.16+ |5.5.16+ |        |        |
 |5.4|       |       |       |5.4.32  |5.4.32  |5.4.32  |        |
 |5.3|       |       |       |        |        |5.3.0   |5.3.0   |
@@ -111,8 +111,8 @@ ms.lasthandoff: 03/28/2018
 |Debian 8 (64 bit)                   |S  |S  |   |   |   |   |   |
 |Red Hat Enterprise Linux 7 (64 bit) |S  |S  |S  |   |   |   |   |
 |Linux SUSE Enterprise 12 (64 bit)   |S  |   |   |   |   |   |   |
-|macOS Sierra (64-bit)               |S  |S  |   |   |   |   |   |
-|macOS El Capitan (64-bit)           |S  |S  |   |   |   |   |   |
+|macOS Sierra (64 bit)               |S  |S  |   |   |   |   |   |
+|macOS montagna di El Capitan (64 bit)           |S  |S  |   |   |   |   |   |
 
 ## <a name="see-also"></a>Vedere anche  
 [Note sulla versione](../../connect/php/release-notes-for-the-php-sql-driver.md)

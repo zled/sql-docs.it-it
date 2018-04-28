@@ -3,7 +3,7 @@ title: Compilazione di applicazioni con il Driver OLE DB per SQL Server | Docume
 description: Compilazione di applicazioni con il Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -22,14 +22,16 @@ author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4bc33a78bc0f2782a7f41ff6242bc3fdcc3a7525
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b64ce2fbf1be2537ddf5a2f5c3ed91b63cd9431b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Compilazione di applicazioni con il Driver OLE DB per SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Quando si sviluppa un'applicazione che utilizza il Driver OLE DB per la libreria di SQL Server, esistono alcuni problemi che entrano in gioco. Negli argomenti di questa sezione vengono illustrati alcuni di questi problemi tra cui l'aggiornamento da MDAC a Driver OLE DB per SQL Server, usando il Driver OLE DB per SQL Server intestazione e i file di libreria e una panoramica delle varie stringhe di connessione che può essere utilizzato con il Driver OLE DB per S SQL Server.  
 
@@ -59,5 +61,5 @@ ms.lasthandoff: 04/06/2018
  Viene illustrato come le varie componenti di accesso ai dati possono essere utilizzati con versioni diverse del Driver OLE DB per SQL Server.  
 
 ## <a name="see-also"></a>Vedere anche  
- [Driver OLE DB per la programmazione di SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)     
+ [Driver OLE DB per SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
  [Procedure per OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

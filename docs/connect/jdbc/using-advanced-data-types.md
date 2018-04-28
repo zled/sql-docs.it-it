@@ -1,27 +1,28 @@
 ---
 title: Utilizzo di tipi di dati avanzati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
-caps.latest.revision: "58"
+caps.latest.revision: 58
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5ca19754f3332c1832405085ad1b04fb36380bd9
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: df610dec98d98d497b21b5e297781fa0a3375bf8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-advanced-data-types"></a>Utilizzo di tipi di dati avanzati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,12 +35,12 @@ ms.lasthandoff: 11/18/2017
 |Tipi di SQL Server|Tipi JDBC (java.sql.Types)|Tipi del linguaggio Java|  
 |----------------------|-----------------------------------|-------------------------|  
 |varbinary(max)<br /><br /> image|LONGVARBINARY|Matrice di byte \(predefinito), Blob, InputStream, stringa|  
-|text<br /><br /> varchar(max)|LONGVARCHAR|String (default), Clob, InputStream|  
+|text<br /><br /> ntext|LONGVARCHAR|String (default), Clob, InputStream|  
 |ntext<br /><br /> nvarchar(max)|LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0)|String (default), Clob, NClob (Java SE 6.0)|  
 |xml|LONGVARCHAR<br /><br /> SQLXML (Java SE 6.0)|String (default), InputStream, Clob, byte[],Blob, SQLXML (Java SE 6.0)|  
 |Tipo definito dall'utente<sup>1</sup>|VARBINARY|String (default), byte[], InputStream|  
   
- <sup>1</sup> il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'invio e recupero di tipi definiti dall'utente CLR come dati binari, ma non supporta la manipolazione dei metadati CLR.  
+ <sup>1</sup> il [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] supporta l'invio e il recupero dei tipi definiti dall'utente CLR come dati binari, ma non supporta la manipolazione dei metadati CLR.  
   
  Nelle sezioni seguenti vengono forniti esempi di come sia possibile utilizzare il driver JDBC e i tipi di dati avanzati.  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/18/2017
 >  Valori CLOB possono essere utilizzati con [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] (o versione successiva) i tipi di dati di valori di grandi dimensioni. In particolare, i tipi CLOB possono essere utilizzati con il **varchar (max)** e **nvarchar (max)** tipi di dati, i tipi BLOB possono essere utilizzati con **varbinary (max)** e **immagine**  tipi di dati, mentre i tipi NCLOB possono essere utilizzato con **ntext** e **nvarchar (max)**.  
   
 ## <a name="large-value-data-types"></a>Tipi di dati per valori di grandi dimensioni  
- Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], l'utilizzo con tipi dati di valori di grandi dimensioni richiede una gestione speciale. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]introduce un identificatore max per **varchar**, **nvarchar**, e **varbinary** tipi di dati per consentire l'archiviazione dei valori di dimensioni pari a 2 ^ 31 byte. Colonne della tabella e [!INCLUDE[tsql](../../includes/tsql_md.md)] possono specificare variabili **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipi di dati.  
+ Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], l'utilizzo con tipi dati di valori di grandi dimensioni richiede una gestione speciale. I tipi di dati per valori di grandi dimensioni sono quelli che superano le dimensioni di riga massime di 8 KB. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] introduce un identificatore max per **varchar**, **nvarchar**, e **varbinary** tipi di dati per consentire l'archiviazione dei valori di dimensioni pari a 2 ^ 31 byte. Colonne della tabella e [!INCLUDE[tsql](../../includes/tsql_md.md)] possono specificare variabili **varchar (max)**, **nvarchar (max)**, o **varbinary (max)** tipi di dati.  
   
  Gli scenari principali di utilizzo di tipi per valori di grandi dimensioni riguardano il recupero di tali tipi di dati da un database o l'aggiunta degli stessi a un database. Nelle sezioni seguenti vengono descritti i diversi approcci adottabili per eseguire queste attività.  
   
@@ -139,7 +140,7 @@ rs.updateRow();
  Per ulteriori informazioni sui tipi per valori di grandi dimensioni, vedere la sezione relativa all'utilizzo di tipi per valori di grandi dimensioni nella Documentazione online di SQL Server.  
   
 ## <a name="xml-data-type"></a>Tipo di dati XML  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]fornisce un **xml** tipo di dati che consente di archiviare documenti XML e frammenti un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Il **xml** tipo di dati è un tipo di dati incorporati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ed è simile ad altri tipi predefiniti, quali **int** e **varchar**. Come con altri tipi predefiniti, è possibile usare il **xml** tipo di dati come tipo di colonna quando si crea una tabella, come un tipo di variabile, un tipo di parametro o un tipo restituito di funzione o in [!INCLUDE[tsql](../../includes/tsql_md.md)] funzioni CAST e CONVERT.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] fornisce un **xml** tipo di dati che consente di archiviare documenti XML e frammenti un [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database. Il **xml** tipo di dati è un tipo di dati incorporati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]ed è simile ad altri tipi predefiniti, quali **int** e **varchar**. Come con altri tipi predefiniti, è possibile usare il **xml** tipo di dati come tipo di colonna quando si crea una tabella, come un tipo di variabile, un tipo di parametro o un tipo restituito di funzione o in [!INCLUDE[tsql](../../includes/tsql_md.md)] funzioni CAST e CONVERT.  
   
  Nel driver JDBC, il **xml** tipo di dati può essere eseguito come una stringa, matrice di byte, flusso, l'oggetto CLOB, BLOB oppure SQLXML. Il mapping predefinito è come stringa. A partire da Microsoft JDBC Driver versione 2.0, il driver JDBC offre il supporto per l'API di JDBC 4.0, in cui viene presentata l'interfaccia SQLXML. Tale interfaccia definisce i metodi per interagire e modificare i dati XML. Il **SQLXML** esegue il mapping al tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] **xml** tipo di dati. Per ulteriori informazioni su come leggere e scrivere dati XML da e in un database relazionale con il **SQLXML** del tipo di dati Java, vedere [supporto dati XML](../../connect/jdbc/supporting-xml-data.md).  
   
@@ -151,7 +152,7 @@ rs.updateRow();
   
 -   Accesso al codice XML come matrice di byte, con un indicatore dell'ordine di byte (BOM) iniziale in caso di codifica in formato UTF-16 per l'interscambio con altri processori e file su disco XML  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]richiede un indicatore ordine byte iniziale per il codice XML con codifica UTF-16. Questo elemento deve essere fornito dall'applicazione quando i valori dei parametri XML vengono forniti come matrici di byte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Restituisce sempre i valori XML come UTF-16 stringhe Nessun indicatore ordine byte né dichiarazione di codifica incorporata. Quando vengono recuperati valori XML come byte[], BinaryStream o Blob, un BOM UTF-16 viene anteposto al valore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] richiede un indicatore ordine byte iniziale per il codice XML con codifica UTF-16. Questo elemento deve essere fornito dall'applicazione quando i valori dei parametri XML vengono forniti come matrici di byte. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Restituisce sempre i valori XML come stringhe con Nessun indicatore ordine byte UTF-16 né dichiarazione di codifica incorporata. Quando vengono recuperati valori XML come byte[], BinaryStream o Blob, un BOM UTF-16 viene anteposto al valore.  
   
  Per ulteriori informazioni sul **xml** del tipo di dati, vedere "tipo di dati xml" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] documentazione in linea.  
   

@@ -1,27 +1,28 @@
 ---
 title: Conversioni di tipi di informazioni sui dati | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ba1a10fc33dc5e80fb300eaa31e849692c55041
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: e18bd56e110cccab17488de752ba5ab4c8666fa9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-data-type-conversions"></a>Informazioni sulle conversioni dei tipi di dati
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,9 +38,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **Senza perdita di dati (x)**: conversioni nei casi in cui il tipo di richiamo è uguale o inferiore rispetto al tipo di server sottostante. Ad esempio, quando si chiama getBigDecimal in una colonna decimale del server sottostante, non è necessaria alcuna conversione.  
   
--   **Convertito (y)**: le conversioni da tipi di server numerici nei tipi di linguaggio Java in cui la conversione è regolare e segue le regole di conversione del linguaggio Java. In tali conversioni, la precisione viene sempre troncata, mai arrotondata, e l'overflow viene gestito come modulo del tipo di destinazione inferiore. Ad esempio, la chiamata getInt su un oggetto sottostante **decimale** colonna che contiene "1,9999 il valore" restituito sarà "1", o se sottostante **decimale** valore è "3000000000", quindi il **int** valore causa un overflow in "-1294967296".  
+-   **Convertito (y)**: le conversioni dai tipi di server numerici in tipi di linguaggio Java in cui la conversione è regolare e segue le regole di conversione di linguaggio Java. In tali conversioni, la precisione viene sempre troncata, mai arrotondata, e l'overflow viene gestito come modulo del tipo di destinazione inferiore. Ad esempio, la chiamata getInt su un oggetto sottostante **decimale** colonna che contiene "1,9999 il valore" restituito sarà "1", o se sottostante **decimale** valore è "3000000000", quindi il **int** valore causa un overflow in "-1294967296".  
   
--   **Dipendente dai dati (z)**: le conversioni da tipi di caratteri sottostanti in tipi numerici richiedono che i tipi di caratteri contengano valori che possono essere convertiti in tale tipo. Non vengono eseguite altre conversioni. Se è troppo grande per il tipo di richiamo, il valore non sarà valido. Ad esempio, se getInt viene chiamato su una colonna varchar (50) che contiene "53", il valore viene restituito come un **int**; ma se il valore sottostante è "xyz" o "3000000000", viene generato un errore.  
+-   **Dipendente dai dati (z)**: le conversioni dai tipi di caratteri sottostanti in tipi numerici richiedono che i tipi di caratteri contengano valori che possono essere convertiti in quel determinato tipo. Non vengono eseguite altre conversioni. Se è troppo grande per il tipo di richiamo, il valore non sarà valido. Ad esempio, se getInt viene chiamato su una colonna varchar (50) che contiene "53", il valore viene restituito come un **int**; ma se il valore sottostante è "xyz" o "3000000000", viene generato un errore.  
   
  Se getString viene chiamato su un **binario**, **varbinary**, **varbinary (max)**, o **immagine** del tipo di dati di colonna, il valore viene restituito come un valore di stringa esadecimale.  
   
@@ -52,9 +53,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **Senza perdita di dati (x)**: conversioni nei casi in cui il tipo di aggiornamento è uguale o inferiore rispetto al tipo di server sottostante. Ad esempio, quando si esegue la chiamata a updateBigDecimal in una colonna decimale del server sottostante, la conversione non è necessaria.  
   
--   **Convertito (y)**: le conversioni da tipi di server numerici nei tipi di linguaggio Java in cui la conversione è regolare e segue le regole di conversione del linguaggio Java. In tali conversioni, la precisione viene sempre troncata, mai arrotondata, e l'overflow viene gestito come modulo del tipo di destinazione, ovvero quello inferiore. Ad esempio, la chiamata updateDecimal su un oggetto sottostante **int** colonna che contiene "1,9999 il valore" restituito sarà "1", o se sottostante **decimale** valore è "3000000000", quindi il **int**valore causa un overflow in "-1294967296".  
+-   **Convertito (y)**: le conversioni dai tipi di server numerici in tipi di linguaggio Java in cui la conversione è regolare e segue le regole di conversione di linguaggio Java. In tali conversioni, la precisione viene sempre troncata, mai arrotondata, e l'overflow viene gestito come modulo del tipo di destinazione, ovvero quello inferiore. Ad esempio, la chiamata updateDecimal su un oggetto sottostante **int** colonna che contiene "1,9999 il valore" restituito sarà "1", o se sottostante **decimale** valore è "3000000000", quindi il **int**valore causa un overflow in "-1294967296".  
   
--   **Dipendente dai dati (z)**: le conversioni dai tipi di dati di origine sottostanti in tipi di dati di destinazione richiedono che è possono convertire i valori contenuti nei tipi di destinazione. Non vengono eseguite altre conversioni. Se è troppo grande per il tipo di richiamo, il valore non sarà valido. Se, ad esempio, updateString viene chiamato su una colonna int che contiene "53", l'aggiornamento verrà eseguito. Se invece il valore String sottostante è "foo" o "3000000000", verrà generato un errore.  
+-   **Dipendente dai dati (z)**: le conversioni dai tipi di dati di origine sottostanti in tipi di dati di destinazione richiedono che i valori contenuti possano essere convertiti nei tipi di destinazione. Non vengono eseguite altre conversioni. Se è troppo grande per il tipo di richiamo, il valore non sarà valido. Se, ad esempio, updateString viene chiamato su una colonna int che contiene "53", l'aggiornamento verrà eseguito. Se invece il valore String sottostante è "foo" o "3000000000", verrà generato un errore.  
   
  Quando updateString viene chiamato su un **binario**, **varbinary**, **varbinary (max)**, o **immagine** del tipo di dati di colonna, il valore String verrà gestito come valore di stringa esadecimale.  
   
@@ -81,9 +82,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **Convertito (y)**: le conversioni da un linguaggio **numerico** tipo a un server sottostante **numerico** tipo inferiore. Questa conversione è regolare e segue [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] le convenzioni di conversione. La precisione è sempre troncata, mai arrotondata, e l'overflow genera un errore di conversione non supportata. Ad esempio, usando updateDecimal con un valore pari a "1,9999"il valore su un risultati di colonna integer sottostante "1" nella colonna di destinazione. Tuttavia, se viene passato "3000000000", il driver genera un errore.  
   
--   **Dipendente dai dati (z)**: le conversioni da un linguaggio **stringa** tipo sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati dipende dalle condizioni seguenti: il driver invia il **stringa** valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue conversioni, se necessario. Se la proprietà sendStringParametersAsUnicode è impostata su true e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non è consentita la conversione **nvarchar** a **immagine** e genera un SQLServerException. Se la proprietà sendStringParametersAsUnicode è impostata su false e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente la conversione **varchar** a **immagine**e non viene generata un'eccezione.  
+-   **Dipendente dai dati (z)**: le conversioni da un linguaggio **stringa** tipo sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati dipende dalle condizioni seguenti: il driver invia il **stringa** valore da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue le conversioni, se necessario. Se la proprietà sendStringParametersAsUnicode è impostata su true e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non è consentita la conversione **nvarchar** a **immagine** e genera un SQLServerException. Se la proprietà sendStringParametersAsUnicode è impostata su false e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente la conversione **varchar** a **immagine**e non viene generata un'eccezione.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]esegue le conversioni e restituisce gli errori al driver JDBC quando si verificano problemi.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue le conversioni e restituisce gli errori al driver JDBC quando si verificano problemi.  
   
  Quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati colonna **XML**, il valore di dati deve essere valido **XML**. Quando si chiama updateBytes o updateBinaryStream, updateBlob metodi, il valore di dati deve essere la rappresentazione di stringa esadecimale dei caratteri XML. Esempio:  
   
@@ -110,9 +111,9 @@ ms.lasthandoff: 11/18/2017
   
 -   **Convertito (y)**: le conversioni da un linguaggio **numerico** tipo a un server sottostante **numerico** tipo inferiore. Questa conversione è regolare e segue [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] le convenzioni di conversione. La precisione è sempre troncata, mai arrotondata, e l'overflow genera un errore di conversione non supportata. Ad esempio, usando updateDecimal con un valore pari a "1,9999"il valore su un risultati di colonna integer sottostante "1" nella colonna di destinazione. Tuttavia, se viene passato "3000000000", il driver genera un errore.  
   
--   **Dipendente dai dati (z)**: le conversioni da un linguaggio **stringa** tipo sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati dipende dalle condizioni seguenti: il driver invia il **stringa** valore [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue conversioni, se necessario. Se la proprietà di connessione sendStringParametersAsUnicode è impostata su true e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non è consentita la conversione **nvarchar** a **immagine** e genera un SQLServerException. Se la proprietà sendStringParametersAsUnicode è impostata su false e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente la conversione **varchar** a **immagine**e non viene generata un'eccezione.  
+-   **Dipendente dai dati (z)**: le conversioni da un linguaggio **stringa** tipo sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipo di dati dipende dalle condizioni seguenti: il driver invia il **stringa** valore da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue le conversioni, se necessario. Se la proprietà di connessione sendStringParametersAsUnicode è impostata su true e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] non è consentita la conversione **nvarchar** a **immagine** e genera un SQLServerException. Se la proprietà sendStringParametersAsUnicode è impostata su false e sottostante [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati **immagine**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] consente la conversione **varchar** a **immagine**e non viene generata un'eccezione.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]esegue la maggior parte delle conversioni set e restituisce gli errori al driver JDBC quando si verificano problemi. Le conversioni sul lato client costituiscono un'eccezione e vengono eseguite solo in caso di **data**, **ora**, **timestamp**, **booleano**e  **Stringa** valori.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] esegue la maggior parte delle conversioni set e restituisce gli errori al driver JDBC quando si verificano problemi. Le conversioni sul lato client costituiscono un'eccezione e vengono eseguite solo in caso di **data**, **ora**, **timestamp**, **booleano**e  **Stringa** valori.  
   
  Quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] è di tipo di dati colonna **XML**, il valore di dati deve essere valido **XML**. Quando si chiama il metodo setObject(byte[], SQLXML), setObject(inputStream, SQLXML) o setObject(Blob, SQLXML), il valore dei dati deve essere la rappresentazione di stringa esadecimale dei caratteri XML. Esempio:  
   

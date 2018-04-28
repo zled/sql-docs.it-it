@@ -1,7 +1,7 @@
 ---
 title: Uso di Always Encrypted con driver PHP per SQL Server | Documenti Microsoft
 ms.date: 01/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -14,11 +14,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.workload: Inactive
-ms.openlocfilehash: 588a0471866b1b33a3e485b321193edfd0c9187d
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: 2896e0d2d121219fae926bd6304cd4415e0a6214
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso di Always Encrypted con driver PHP per SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -96,7 +96,7 @@ Gli esempi seguenti illustrano come utilizzare il driver SQLSRV e PDO_SQLSRV per
    -   Impostare in modo esplicito il tipo SQL.
   -   Per il driver PDO_SQLSRV, l'utente non hanno la possibilità di impostare in modo esplicito il tipo SQL di un parametro. Il driver PDO_SQLSRV automaticamente illustrano come determinare il tipo SQL quando si associa un parametro.
  -   Per i driver determinare il tipo SQL, esistono alcune limitazioni:
-  -   SQLSRV Driver:
+  -   Driver SQLSRV:
    -   Se si desidera ottenere il driver per determinare i tipi SQL per le colonne crittografate, l'utente deve utilizzare `sqlsrv_prepare` e `sqlsrv_execute`.
    -   Se `sqlsrv_query` è si preferisce, l'utente è responsabile per specificare i tipi SQL per tutti i parametri. Il tipo SQL specificato deve includere la lunghezza della stringa per i tipi di stringa e la scala e precisione per i tipi decimali.
   -   PDO_SQLSRV Driver:

@@ -1,27 +1,28 @@
 ---
-title: "Funzionalità di Microsoft ODBC Driver for SQL Server in Windows | Documenti Microsoft"
-ms.custom: 
+title: Funzionalità di Microsoft ODBC Driver for SQL Server in Windows | Documenti Microsoft
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 204b8ba3c81bae77c6a663e93f2b541c8aca0727
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 3ed744446edb7141a8a4b3b970ad7ec866dea794
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="features-of-the-microsoft-odbc-driver-for-sql-server-on-windows"></a>Funzionalità di Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,7 +50,7 @@ L'opzione – l Specifica il numero di secondi prima che un `bcp.exe` account di
 Il Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta [Driver-Aware Connection Pooling](http://msdn.microsoft.com/library/hh405031(VS.85).aspx). Per altre informazioni, vedere [Driver-Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md).  
   
 ### <a name="asynchronous-execution-notification-method"></a>Esecuzione asincrona (metodo di notifica)  
-Il Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta [esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Per un esempio di utilizzo, vedere [esecuzione asincrona &#40; Metodo di notifica &#41; Esempio](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
+Il Driver ODBC per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] supporta [esecuzione asincrona (metodo di notifica)](http://msdn.microsoft.com/library/hh405038(VS.85).aspx). Per un esempio di utilizzo, vedere [esecuzione asincrona &#40;metodo di notifica&#41; esempio](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md).  
   
 ### <a name="connection-resiliency"></a>Resilienza della connessione
 Per garantire che le applicazioni rimangano connesse a un database SQL di Microsoft Azure, il driver ODBC in Windows può ripristinare le connessioni inattive. Per altre informazioni, vedere [Connection Resiliency in the Windows ODBC Driver](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).  
@@ -58,9 +59,9 @@ Per garantire che le applicazioni rimangano connesse a un database SQL di Micros
 
 In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client, il `-y0` opzione `sqlcmd.exe` ha generato l'output può essere troncato a 1 MB se la larghezza di visualizzazione è 0.
   
-A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], senza alcun limite sulla quantità di dati che possono essere recuperati in un'unica colonna quando `–y0` è specificato. `sqlcmd.exe`ora trasmette colonne di dimensioni pari a 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] massimo per tipo di dati).  
+A partire da ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)], senza alcun limite sulla quantità di dati che possono essere recuperati in un'unica colonna quando `–y0` è specificato. `sqlcmd.exe` ora trasmette colonne di dimensioni pari a 2 GB ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] massimo per tipo di dati).  
   
-Un'altra differenza è che se si specifica sia `-h` e `-y0` ora genera un errore di reporting, le opzioni sono incompatibili. `-h`, che specifica il numero di righe da stampare tra le intestazioni di colonna e che non è mai stato compatibile con `-y0`, anche se non venivano stampate intestazioni è stato ignorato.
+Un'altra differenza è che se si specifica sia `-h` e `-y0` ora genera un errore di reporting, le opzioni sono incompatibili. `-h`, che specifica il numero di righe da stampare tra le intestazioni di colonna e non è mai stato compatibile con `-y0`, anche se non venivano stampate intestazioni è stato ignorato.
   
 Si noti che `-y0` potrebbe causare gravi problemi di prestazioni sia nel server di rete, a seconda delle dimensioni dei dati restituiti.
 

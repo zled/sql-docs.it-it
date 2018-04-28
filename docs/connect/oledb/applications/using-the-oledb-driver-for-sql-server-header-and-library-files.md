@@ -3,7 +3,7 @@ title: Tramite il Driver OLE DB per SQL Server intestazione e i file di libreria
 description: Usa il Driver OLE DB per i file di intestazione e di libreria di SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|applications
@@ -25,22 +25,24 @@ helpviewer_keywords:
 - MSOLEDBSQL, library files
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 932a5c8d272bf975e4931326b96bea495e927a08
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Tramite il Driver OLE DB per SQL Server intestazione e i file di libreria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Il Driver OLE DB per SQL Server intestazione e i file di libreria vengono installati quando il Driver OLE DB per l'opzione di SQL Server SDK viene selezionato durante il processo di installazione. Quando si sviluppa un'applicazione, è importante copiare e installare nell'ambiente di sviluppo tutti i file necessari per lo sviluppo. Per ulteriori informazioni sull'installazione e la ridistribuzione del Driver OLE DB per SQL Server, vedere [installazione di Driver OLE DB per SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md).  
   
  Il Driver OLE DB per SQL Server intestazione e i file di libreria vengono installati nel percorso seguente:  
   
- *% PROGRAMMI %*\Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
+ *% PROGRAMMI %* \Microsoft SQL Server\Client SDK\OLEDB\180\SDK  
   
  Il Driver OLE DB per il file di intestazione di SQL Server (msoledbsql.h) utilizzabile per aggiungere Driver OLE DB per la funzionalità di accesso ai dati di SQL Server alle applicazioni personalizzate. Il Driver OLE DB per il file di intestazione di SQL Server contiene tutte le definizioni, attributi, proprietà e le interfacce necessarie per sfruttare i vantaggi delle nuove funzionalità introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   

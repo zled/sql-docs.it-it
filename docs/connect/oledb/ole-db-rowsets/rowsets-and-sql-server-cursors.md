@@ -3,7 +3,7 @@ title: Set di righe e cursori del Server SQL | Documenti Microsoft
 description: Cursori di SQL Server e i set di righe
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -21,13 +21,13 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3472cf5193f1129c74baf13bb5ffa527fde51fcf
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 94c2de4cdd2ef7edda0af15b4908781c4872c25c
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.lasthandoff: 04/06/2018
   
  Le seguenti proprietà set di righe indirizzare il Driver OLE DB per SQL Server da usare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursori. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
   
-|ID proprietà|Valore|Comportamento del set di righe|  
+|ID proprietà|Value|Comportamento del set di righe|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe è sequenziale e supporta solo lo scorrimento in avanti e il recupero. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY.|  
 |DBPROP_CANSCROLLBACKWARDS o DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta lo scorrimento e il recupero in entrambe le direzioni. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY.|  

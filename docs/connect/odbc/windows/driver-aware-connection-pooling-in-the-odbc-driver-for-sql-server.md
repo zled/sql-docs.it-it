@@ -1,27 +1,28 @@
 ---
 title: Il pool di connessioni compatibile con il driver nel Driver ODBC per SQL Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 67cb0f520c9e75606c7e1ffcae42d20d87a3d9fb
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 2567b047216edd151197446aaa79822ab19a93ca
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Pool di connessioni compatibile con il driver nel driver ODBC per SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -93,7 +94,7 @@ Se uno dei seguenti ID dell'attributo di connessione o delle seguenti parole chi
     |`SQL_COPT_SS_SERVER_SPN`|Sì|Sì|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Sì|Sì|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Sì|Sì|
-    |`SQL_COPT_SS_TNIR`|Sì|No|
+    |`SQL_COPT_SS_TNIR`|Sì|no|
  
 -   Il driver può ripristinare e modificare le seguenti parole chiave e i seguenti attributi di connessione senza effettuare una chiamata di rete aggiuntiva. Il driver reimposta i parametri seguenti per assicurarsi che la connessione non contenga informazioni non corrette.  
   

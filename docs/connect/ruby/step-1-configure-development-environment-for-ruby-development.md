@@ -1,27 +1,28 @@
 ---
-title: 'Passaggio 1: Configurare l''ambiente di sviluppo per lo sviluppo Ruby | Documenti Microsoft'
-ms.custom: 
+title: "Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby | Documenti Microsoft"
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ruby
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cdbadeb-f640-406c-977c-d2d44b7b5368
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1f50042c6ae0233b5bc39ce2879391d1d5340741
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 30a38b0a73eae053b36ccc8c2f3c30b9c8e21319
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-configure-development-environment-for-ruby-development"></a>Passaggio 1: Configurare l'ambiente di sviluppo per lo sviluppo Ruby
 È necessario configurare l'ambiente di sviluppo con i prerequisiti per sviluppare un'applicazione utilizzando il Driver Ruby per SQL Server.    
@@ -36,22 +37,22 @@ Se il computer non ha Ruby installarlo. Per i nuovi utenti ruby, è consigliabil
   
 2.  **Installare Ruby**  
 Una volta scaricato il programma di installazione, eseguire le operazioni seguenti:  
-a. Fare doppio clic sul file per avviare il programma di installazione.  
-b. Selezionare la lingua e accettare le condizioni.  
+A. Fare doppio clic sul file per avviare il programma di installazione.  
+B. Selezionare la lingua e accettare le condizioni.  
 c.  Nella schermata delle impostazioni di installazione, selezionare le caselle di controllo accanto a entrambi gli eseguibili aggiungere Ruby a percorso e associare RB .rbw file e con questa installazione Ruby.  
   
-3.  **Scaricare il kit Ruby**  
+3.  **Scaricare Ruby Kit di sviluppo**  
 Scaricare Kit dalla pagina RubyInstaller  
   
-4.  **Installare il kit Ruby**  
+4.  **Installare Ruby Kit di sviluppo**  
 Al termine dell'operazione di download, eseguire le operazioni seguenti:  
-a. Fare doppio clic sul file. Verrà richiesto la posizione in cui estrarre i file.  
-b. Fare clic sul pulsante "…" e selezionare "C:\DevKit". Probabilmente è necessario creare innanzitutto la cartella, fare clic su "Crea nuova cartella".  
+A. Fare doppio clic sul file. Verrà richiesto la posizione in cui estrarre i file.  
+B. Fare clic sul pulsante "…" e selezionare "C:\DevKit". Probabilmente è necessario creare innanzitutto la cartella, fare clic su "Crea nuova cartella".  
 c. Fare clic su "OK" e "Estrarre", per estrarre i file.  
   
 5. **Aprire cmd.exe**  
   
-6. **Inizializzare Ruby Kit**  
+6. **Inizializzare Ruby Kit di sviluppo**  
 ```  
 > chdir C:\DevKit  
 > ruby dk.rb init  
@@ -65,7 +66,7 @@ c. Fare clic su "OK" e "Estrarre", per estrarre i file.
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Aprire terminal**  
+1. **Apri terminal**  
   
 2. **Installa Gestione versione Ruby (rvm) e i prerequisiti**  
 ```  
@@ -82,7 +83,7 @@ Ad esempio, installare la versione 2.3.0 di Ruby:
 > rvm use 2.3.0 --default  
 > ruby -v  
 ```  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verificare che l'output dell'ultimo comando indichi che si esegue la versione 2.3.0.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Assicurarsi che l'output dell'ultimo comando si esegue la versione 2.3.0.  
   
 4.  **Installazione di disporre di FreeTDS**  
 ```  
@@ -98,7 +99,7 @@ Ad esempio, installare la versione 2.3.0 di Ruby:
   
 Si noti che Mac OS X già ha Ruby pre-installato, il sistema operativo con una dipendenza.    
   
-1.  **Aprire terminal**  
+1.  **Apri terminal**  
   
 2. **Installare Gestione pacchetti di Homebrew**  
 ```  

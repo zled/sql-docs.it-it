@@ -3,7 +3,7 @@ title: Driver OLE DB per SQL Server Support for High Availability, Disaster Reco
 description: Il Driver OLE DB per SQL Server il supporto per il ripristino di emergenza a disponibilità elevato
 ms.custom: ''
 ms.date: 04/04/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -15,13 +15,13 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c23f1147b525ae35050ee47fe0c6278d03b3181
-ms.sourcegitcommit: 094c46e7fa6de44735ed0040c65a40ec3d951b75
-ms.translationtype: MT
+ms.openlocfilehash: dc6bba3823e1683baa7962bd11889fbaca83dea4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>Driver OLE DB per SQL Server Support for High Availability, Disaster Recovery
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -103,7 +103,7 @@ Un Driver OLE DB per SQL Server può utilizzare uno dei metodi per specificare l
  -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize::GetDatasource** accetta una stringa di connessione di input che può contenere la parola chiave **Application Intent**.  
   
- -   **IDBProperties::SetProperties**  
+ -   **IDBProperties:: SetProperties**  
  Per impostare il valore della proprietà **ApplicationIntent**, chiamare **IDBProperties::SetProperties** passando la proprietà **SSPROP_INIT_APPLICATIONINTENT** con un valore "**ReadWrite**" o "**ReadOnly**" o la proprietà **DBPROP_INIT_PROVIDERSTRING** con un valore contenente "**ApplicationIntent=ReadOnly**" o "**ApplicationIntent=ReadWrite**".  
   
 È possibile specificare la finalità dell'applicazione nel campo delle proprietà della finalità dell’applicazione della scheda Tutte nella finestra di dialogo **Proprietà di Data Link**.  
@@ -126,7 +126,7 @@ Un Driver OLE DB per SQL Server può utilizzare uno dei metodi seguenti per impo
  -   **IDataInitialize:: GetDatasource**  
  **IDataInitialize:: GetDatasource** accetta una stringa di connessione di input che può contenere le **MultiSubnetFailover** (parola chiave).  
 
--   **IDBProperties::SetProperties**  
+-   **IDBProperties:: SetProperties**  
 Per impostare il **MultiSubnetFailover** valore della proprietà, chiamare **IDBProperties:: SetProperties** passando il **SSPROP_INIT_MULTISUBNETFAILOVER** proprietà con il valore  **VARIANT_TRUE** oppure **VARIANT_FALSE** o **DBPROP_INIT_PROVIDERSTRING** proprietà con un valore contenente "**MultiSubnetFailover = Yes** "o"**MultiSubnetFailover = No**".
 
 #### <a name="example"></a>Esempio

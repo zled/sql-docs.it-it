@@ -3,7 +3,7 @@ title: Driver OLE DB per la funzionalità di SQL Server | Documenti Microsoft
 description: Driver OLE DB per le funzionalità di SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: oledb|features
@@ -19,16 +19,18 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6c56a145ecfbb986c7ec0124202ff61e89036657
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 66f48a985dd0ddafc6f147c45b3fc3be76f7ec19
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Driver OLE DB per la funzionalità di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Oltre a esporre le funzionalità di Windows (in precedenza Microsoft) Data Access Components (WDAC), il Driver OLE DB per SQL Server implementa anche molte altre funzionalità per esporre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità.  
   
@@ -100,7 +102,7 @@ ms.lasthandoff: 04/06/2018
  Viene descritto il Driver OLE DB per il supporto di SQL Server per la funzionalità del database locale.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Driver OLE DB per la programmazione di SQL Server](../../oledb/oledb-driver-for-sql-server-programming.md)      
+ [Driver OLE DB per SQL Server](../../oledb/oledb-driver-for-sql-server.md)      
  [Argomenti relativi alle procedure di OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)   
  [Installazione del driver OLE DB per SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
   

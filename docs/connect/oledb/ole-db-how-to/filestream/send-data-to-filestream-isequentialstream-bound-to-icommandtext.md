@@ -3,7 +3,7 @@ title: Inviare i dati FILESTREAM - ISequentialStream in associazione al ICommand
 description: Inviare i dati FILESTREAM - ISequentialStream associata a ICommandText
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-how-to
@@ -15,20 +15,20 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c3443fc79379538d3bdd3ad8794477923cd645fd
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: b793bfcb5fd8024c3fcf229ef6b390c58be059fe
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>Inviare i dati FILESTREAM - ISequentialStream in associazione al ICommandText
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questo esempio viene utilizzata un'interfaccia ISequentialStream associata a un parametro ICommandText per inviare una quantità di dati compresa tra 4 MB e 4 GB a una colonna FILESTREAM.  
   
- Per ulteriori informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM &#40;OLE DB&#41;](../../../oledb/ole-db/filestream-support-ole-db.md).  
+ Per ulteriori informazioni sulla caratteristica filestream, vedere [supporto FILESTREAM](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Esempio  
  Prima di compilare ed eseguire l'esempio, abilitare il supporto FILESTREAM ([abilitare e configurare FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  

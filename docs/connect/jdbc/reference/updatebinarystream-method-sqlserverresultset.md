@@ -1,30 +1,33 @@
 ---
 title: Metodo updateBinaryStream (SQLServerResultSet) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
-apiname: SQLServerResultSet.updateBinaryStream
-apilocation: sqljdbc.jar
+apiname:
+- SQLServerResultSet.updateBinaryStream
+apilocation:
+- sqljdbc.jar
 apitype: Assembly
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0574e4fa5d7f55c7addb2698ba97a5b5574b2a92
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 5fe17bb6adcf212e095780a7804ad190070d5b2a
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>Metodo updateBinaryStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,12 +38,12 @@ ms.lasthandoff: 11/18/2017
   
 |Nome|Description|  
 |----------|-----------------|  
-|[updateBinaryStream (int, Java.IO. InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|Aggiorna la colonna designata con un valore del flusso binario.|  
-|[updateBinaryStream (int, Java.IO. InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
-|[updateBinaryStream (int, Java.IO. InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-long.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
-|[updateBinaryStream (lang. String, Java.IO. InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)|Aggiorna la colonna designata con un valore del flusso binario.|  
-|[updateBinaryStream (lang. String, Java.IO. InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
-|[updateBinaryStream (lang. String, Java.IO. InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
+|[updateBinaryStream (int,. InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream.md)|Aggiorna la colonna designata con un valore del flusso binario.|  
+|[updateBinaryStream (int,. InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-int.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
+|[updateBinaryStream (int,. InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-int-java-io-inputstream-long.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
+|[updateBinaryStream (lang. String,. InputStream)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream.md)|Aggiorna la colonna designata con un valore del flusso binario.|  
+|[updateBinaryStream (lang. String,. InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
+|[updateBinaryStream (lang. String,. InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Aggiorna la colonna designata con un valore del flusso binario, che conterrà il numero specificato di byte.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Membri di SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

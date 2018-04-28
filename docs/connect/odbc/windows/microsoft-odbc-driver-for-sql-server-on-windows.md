@@ -1,28 +1,28 @@
 ---
 title: Microsoft ODBC Driver for SQL Server in Windows | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/14/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: odbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - drivers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: 
+caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 990665bcb7091b61bc8579a1a33e30c3cc56874e
-ms.sourcegitcommit: 7ed8c61fb54e3963e451bfb7f80c6a3899d93322
-ms.translationtype: MT
+ms.openlocfilehash: 6d4d453019ffd7fcb04c1c2ba434b864ed283fa3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Microsoft ODBC Driver for SQL Server in Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -33,7 +33,7 @@ Il Driver ODBC di Microsoft per SQL Server consente di creare nuove applicazioni
 
 ## <a name="summary"></a>Riepilogo
 
-| Version       | Funzionalità supportate      |
+| Versione       | Funzionalità supportate      |
 | ------------- |---------------| 
 | Microsoft ODBC Driver 17 per SQL Server | <ul><li>Always Encrypted supporto per API BCP</li><li>Nuovo attributo di stringa di connessione UseFMTONLY causa del driver per l'uso di metadati legacy in casi particolari richiede che le tabelle temporanee</li>
 | Microsoft ODBC Driver 13.1 for SQL Server     | <ul><li>Crittografia sempre attiva</li><li>Autenticazione di Azure AD</li><li>Gruppi di disponibilità AlwaysOn</li></ul>   | 
@@ -50,7 +50,7 @@ Questa documentazione per Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../..
 -   [Asynchronous Execution &#40;Notification Method&#41; Sample (Esempio di esecuzione asincrona - metodo di notifica)](../../../connect/odbc/windows/asynchronous-execution-notification-method-sample.md)  
 -   [Resilienza di connessione nel driver ODBC di Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)  
 -   [Utilizzo di Always Encrypted con il Driver ODBC](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
--   [Utilizzo di Azure Active Directory con il Driver ODBC](../../../connect/odbc/using-azure-active-directory.md) 
+-   [Uso di Azure Active Directory con ODBC Driver](../../../connect/odbc/using-azure-active-directory.md) 
 -   [Utilizzando la risoluzione IP di rete Transparent](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
 
 ## <a name="community"></a>Community  

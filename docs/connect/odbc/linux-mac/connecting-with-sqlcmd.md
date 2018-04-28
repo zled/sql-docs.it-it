@@ -2,7 +2,7 @@
 title: Connessione con sqlcmd | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: odbc
@@ -18,13 +18,13 @@ ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 caps.latest.revision: 45
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c08f390860a35ccbd5dd743317a52df80c05ef52
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: a1f7b720841ac3392af027a6bc23869ff832ba48
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connecting-with-sqlcmd"></a>Connessione con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -70,7 +70,7 @@ Nella versione corrente, sono disponibili le opzioni seguenti:
   
 - -k rimuovere o sostituire i caratteri di controllo.  
   
-- **-K***application_intent*  
+- **-K * * * application_intent*  
 Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. L'unico valore attualmente supportato è **ReadOnly**. Se **-K** non viene specificato, `sqlcmd` non supporta la connettività a una replica secondaria in un gruppo di disponibilità AlwaysOn. Per ulteriori informazioni, vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
@@ -80,8 +80,8 @@ Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a 
 
 - -m *error_level* controllo i messaggi di errore vengono inviati a stdout.  
   
-- **-M***multisubnet_failover*  
-Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** prevede un rilevamento più veloce di failover e di connessione al server attualmente attivo. Se non si specifica **–M** , significa che l'opzione **-M** è disattivata. Per ulteriori informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+- **-M * * * multisubnet_failover*  
+Specificare sempre **-M** in caso di connessione al listener di un gruppo di disponibilità di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)] o a un'istanza del cluster di failover di [!INCLUDE[ssSQL11](../../../includes/sssql11_md.md)]. **-M** fornisce per rilevamento più veloce di failover e connessione al server attualmente attivo. Se non si specifica **–M** , significa che l'opzione **-M** è disattivata. Per ulteriori informazioni su [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)], vedere [Driver ODBC in Linux e macOS - disponibilità elevata e ripristino di emergenza](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** non è supportata in CTP per SUSE Linux. Tuttavia, è possibile specificare il **MultiSubnetFailover = Yes** parola chiave in un file DSN passato a `sqlcmd`. Per ulteriori informazioni, vedere "supporto DSN in `sqlcmd` e `bcp`" alla fine di questo argomento.  
@@ -96,7 +96,7 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
   
 - -q *commandline_query* eseguire una query quando `sqlcmd` viene avviata, ma non viene chiuso al termine dell'esecuzione della query.  
 
-- -Q *commandline_query* eseguire una query quando `sqlcmd` viene avviato. `sqlcmd`verrà chiuso al termine della query.  
+- -Q *commandline_query* eseguire una query quando `sqlcmd` viene avviato. `sqlcmd` si interromperà al termine della query.  
 
 - -r reindirizza i messaggi di errore a stderr.
 
@@ -104,7 +104,7 @@ Specificare sempre **-M** in caso di connessione al listener di un gruppo di dis
   
 - -s *column_separator_char* specificare il carattere separatore di colonna.  
 
-- -S [*protocol*:] *server*[**,***port*]  
+- -S [*protocollo*:] *server*[**, * * * porta*]  
 Specificare l'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] a cui connettersi, o se -D viene utilizzato, un DSN. Il driver ODBC in Linux e macOS richiede - S. Si noti che **tcp** è l'unico protocollo valido.  
   
 - -t *query_timeout* specificare il numero di secondi prima del timeout di un comando (o l'istruzione SQL).  
@@ -216,13 +216,13 @@ In un DSN in Linux o macOS sono supportate le seguenti voci:
 
 -   **ApplicationIntent = ReadOnly**  
 
--   **Database =***database_name*  
+-   **Database = * * * database_name*  
   
 -   **Driver = ODBC Driver 11 for SQL Server** o **Driver = ODBC Driver 13 for SQL Server**
   
 -   **MultiSubnetFailover = Yes**  
   
--   **Server =***server_name_or_IP_address*  
+-   **Server = * * * server_name_or_IP_address*  
   
 -   **Trusted_Connection=yes**|**no**  
   
@@ -233,5 +233,5 @@ Se è specificata l'opzione stessa in entrambi i DSN e `sqlcmd` o `bcp` riga di 
 Gli script esistenti che richiamano `isql` può essere modificato per utilizzare `sqlcmd` definendo l'alias seguente: `alias isql="sqlcmd –D"`.  
 
 ## <a name="see-also"></a>Vedere anche  
-[Connessione con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[La connessione con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
  

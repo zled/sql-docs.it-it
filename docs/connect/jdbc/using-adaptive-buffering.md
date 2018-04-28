@@ -1,27 +1,28 @@
 ---
 title: Utilizzo del buffer adattivo | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: jdbc
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
-ms.tgt_pltfrm: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
-caps.latest.revision: "53"
+caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4743d48d09625dd4ce1840b61abb58497057789d
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
-ms.translationtype: MT
+ms.openlocfilehash: 194301cbaa751beedb3ba70bfb78bc6062b0841f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-adaptive-buffering"></a>Utilizzo del buffer adattivo
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +35,7 @@ ms.lasthandoff: 11/18/2017
   
 -   **La query produce un set di risultati molto grandi:** l'applicazione può eseguire un'istruzione SELECT che produce più righe di quante possano essere archiviate in memoria. Nelle versioni precedenti, l'applicazione deve utilizzare un cursore server per evitare un OutOfMemoryError. Il buffer adattivo consente di passare in modalità forward-only di sola lettura un set di risultati anche molto grande senza che sia necessario un cursore server.  
   
--   **La query produce grandi**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonne o**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**i valori di parametro:**  L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione. Il buffer adattivo consente all'applicazione client di recuperare tale valore come flusso, utilizzando il getAsciiStream, il getBinaryStream o i metodi getCharacterStream. L'applicazione recupera il valore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] durante la lettura dal flusso.  
+-   **La query produce valori delle colonne**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**colonne oppure**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**i valori di parametro:** L'applicazione può recuperare un singolo valore (colonna o parametro OUT) troppo grande per essere caricato interamente nella memoria dell'applicazione. Il buffer adattivo consente all'applicazione client di recuperare tale valore come flusso, utilizzando il getAsciiStream, il getBinaryStream o i metodi getCharacterStream. L'applicazione recupera il valore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] durante la lettura dal flusso.  
   
 > [!NOTE]  
 >  Con il buffer adattivo il driver JDBC memorizza nel buffer solo la quantità di dati necessaria e non fornisce alcun metodo pubblico per controllare o limitare le dimensioni del buffer.  

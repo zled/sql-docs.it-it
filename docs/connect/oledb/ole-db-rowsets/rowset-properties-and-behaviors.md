@@ -3,7 +3,7 @@ title: Proprietà set di righe e i comportamenti | Documenti Microsoft
 description: Proprietà set di righe e i comportamenti nel Driver OLE DB per SQL Server
 ms.custom: ''
 ms.date: 03/26/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: ''
 ms.component: ole-db-rowsets
@@ -20,13 +20,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: Pedro.Lopes
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6724a1f7123be2040fd87d4a14ca4b45b7eb99ee
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 09b5ad3e392be5ae28511a94068d030eb6c50aaf
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Proprietà e comportamenti dei set di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/06/2018
   
 |ID proprietà|Description|  
 |-----------------|-----------------|  
-|SSPROP_COLUMN_ID|Colonna: ColumnID<br /><br /> L/S: Sola lettura<br /><br /> Type: VT_U12 &#124; VT_ARRAY<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Descrizione: matrice di valori integer che rappresenta la posizione ordinale (base 1) di una colonna di risultati della clausola COMPUTE all'interno dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT. Questo è il Driver OLE DB per equivalente a SQL Server dell'attributo ODBC SQL_CA_SS_COLUMN_ID.|  
+|SSPROP_COLUMN_ID|Colonna: ColumnID<br /><br /> L/S: Sola lettura<br /><br /> Tipo: VT_U12 &#124; VT_ARRAY<br /><br /> Impostazione predefinita: VT_EMPTY<br /><br /> Descrizione: matrice di valori integer che rappresenta la posizione ordinale (base 1) di una colonna di risultati della clausola COMPUTE all'interno dell'istruzione [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT. Questo è il Driver OLE DB per equivalente a SQL Server dell'attributo ODBC SQL_CA_SS_COLUMN_ID.|  
 |SSPROP_DEFERPREPARE|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_TRUE<br /><br /> Descrizione: VARIANT_TRUE: In esecuzione preparata, la preparazione del comando viene posticipata fino alla **ICommand:: Execute** viene chiamato o viene eseguita un'operazione di metaproprietà. Se la proprietà è impostata su<br /><br /> VARIANT_FALSE: L'istruzione viene preparata quando **ICommandPrepare:: Prepare** viene eseguita.|  
 |SSPROP_IRowsetFastLoad|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostare questa proprietà su VARIANT_TRUE per aprire un set di righe di caricamento rapido tramite **IOpenRowset:: OPENROWSET**. È possibile impostare questa proprietà **ICommandProperties:: SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Colonna: nessuna<br /><br /> L/S: Lettura/Scrittura<br /><br /> Tipo: VT_BOOL<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: Impostare questa proprietà su VARIANT_TRUE per consentire operazioni asincrone mediante il [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) interfaccia.|  

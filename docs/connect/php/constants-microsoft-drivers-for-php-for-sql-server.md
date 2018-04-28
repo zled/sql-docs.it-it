@@ -2,7 +2,7 @@
 title: Costanti (driver Microsoft per PHP per SQL Server) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: drivers
 ms.service: ''
 ms.component: php
@@ -15,16 +15,16 @@ ms.topic: article
 helpviewer_keywords:
 - constants
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
-caps.latest.revision: ''
+caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a7af0c51e115aae2fb8319a847d16b272001f93
-ms.sourcegitcommit: 2e130e9f3ce8a7ffe373d7fba8b09e937c216386
-ms.translationtype: MT
+ms.openlocfilehash: a54937aab5ffad32eb4e2531234485058ecb6af5
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -81,7 +81,7 @@ Nelle sezioni seguenti sono elencate le costanti usate dal driver SQLSRV.
 ### <a name="err-constants"></a>Costanti ERR  
 Nella tabella seguente sono elencate le costanti che vengono utilizzate per specificare se [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) restituisce errori, avvisi o entrambi.  
   
-|Valore|Description|  
+|Value|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** . Si tratta del valore predefinito.|  
 |SQLSRV_ERR_ERRORS|Vengono restituiti gli errori generati nell'ultima chiamata di funzione **sqlsrv** .|  
@@ -183,7 +183,7 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
-|SQLSRV_SQLTYPE_NUMERIC|numeric<sup>5</sup>|
+|SQLSRV_SQLTYPE_NUMERIC|numerico<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
 |SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
