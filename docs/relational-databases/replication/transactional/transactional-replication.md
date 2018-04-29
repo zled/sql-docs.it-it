@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3d6753d2ea8943cc00123dfd7f56328fc5fbe998
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1df3d126c25ab02e5d6be4f9f73347500b3607c4
+ms.sourcegitcommit: 9f61aa4d556bb5726b1e49d619ae2bbccf1590e3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/29/2018
 ---
 # <a name="transactional-replication"></a>Replica transazionale
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,6 @@ ms.lasthandoff: 04/16/2018
 -   Il server di pubblicazione o il Sottoscrittore è un database non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ad esempio Oracle.  
   
  Per impostazione predefinita, i Sottoscrittori di pubblicazioni transazionali devono essere considerati di sola lettura poiché le modifiche non vengono trasferite al server di pubblicazione. La replica transazionale offre tuttavia opzioni che consentono aggiornamenti nel Sottoscrittore.  
-  
- **Contenuto dell'argomento**  
-  
- [Funzionamento della replica transazionale](#HowWorks)  
-  
- [Set di dati iniziale](#Dataset)  
-  
- [agente snapshot](#SnapshotAgent)  
-  
- [Agente di lettura log](#LogReaderAgent)  
-  
- [Agente di distribuzione](#DistributionAgent)  
   
 ##  <a name="HowWorks"></a> Funzionamento della replica transazionale  
  La replica transazionale viene implementata dall'agente snapshot, dall'agente di lettura log e dall'agente di distribuzione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'agente snapshot prepara i file di snapshot contenenti lo schema e i dati delle tabelle pubblicate e degli oggetti di database, archivia i file nella cartella snapshot e registra i processi di sincronizzazione nel database di distribuzione sul server di distribuzione.  
