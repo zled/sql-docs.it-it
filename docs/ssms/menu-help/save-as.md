@@ -2,7 +2,7 @@
 title: Salva con nome | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: ssms-menu
@@ -22,14 +22,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 16e9002516156238be7eac9faa203b64f0d23318
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: d3414012f6873feba14c1701ea72cdd9f998ff2b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-as"></a>Save As
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Questa finestra di dialogo viene usata per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Fare clic su **Salva** *<file>* **come** nel menu **File** (in cui *<file>* è il nome dell'elemento corrente) oppure premere ALT+F, A nell'editor del codice.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+Questa finestra di dialogo viene usata per salvare un'istanza dell'elemento corrente nel percorso e nel formato di file specificati. Fare clic su **Salva** *<file>* **come** nel menu **File** (in cui *<file>* è il nome dell'elemento corrente) oppure premere ALT+F, A nell'editor del codice.  
   
 ## <a name="central-panel"></a>Pannello centrale  
 **Salva in**  
@@ -39,7 +40,7 @@ Consente di individuare la cartella progetto esistente utilizzando il menu a dis
 Utilizzare questa opzione per visualizzare il nome del file corrente, modificare il nome del file oppure filtrare i file e le cartelle visualizzati. Per filtrare i file e le cartelle visualizzati, immettere un nome di file completo o parziale in base al quale filtrare. È possibile utilizzare l'asterisco (`*`) come carattere jolly.  
   
 > [!TIP]  
-> Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Se, ad esempio, si digita "http://mywebsite" verranno visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\\\myserver\myshare" verranno visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
+> Per visualizzare file contenuti in percorsi di rete o Web, specificare un URL o un percorso di rete nella casella **Nome file** . Ad esempio, se si digita "http://mywebsite" vengono visualizzati i file disponibili nel percorso Web "mywebsite", mentre se si digita "\\" vengono visualizzati i file disponibili nel percorso "myshare" del server "myserver".  
   
 **Salva come**  
 Utilizzare questa opzione per selezionare un nuovo tipo di file per l'elemento selezionato. I tipi di file visualizzati comprendono tutti i tipi di file disponibili in cui è possibile convertire l'elemento selezionato.  

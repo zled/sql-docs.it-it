@@ -1,6 +1,6 @@
-﻿---
-title: Gruppi di server in Studio operazioni SQL (anteprima) | Documenti Microsoft
-description: Informazioni sui gruppi di server in Studio operazioni SQL (anteprima).
+---
+title: Gruppi di server in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Informazioni sui gruppi di server in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
@@ -33,7 +33,7 @@ I gruppi di server consentono di organizzare le connessioni ai server e ai datab
 
 Per modificare un gruppo di server esistente, scegliere il gruppo, premere il tasto destro del mouse e selezionare **Modifica gruppo di Server**.
 
-Per modificare i colori disponibili per i *gruppi di server*, modificare i valori Gruppi di server *serverGroup.colors* in [impostazioni utente](settings.md).
+Per modificare i colori disponibili per i gruppi di server, modificare i valori  *Gruppi di server* in [Impostazioni utente](settings.md).
 
 > [!TIP]
 > È possibile spostare i server tra i diversi gruppi di server tramite trascinamento.

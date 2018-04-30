@@ -1,4 +1,4 @@
-﻿---
+---
 title: Scaricare e installare SQL Operations Studio (preview) | Microsoft Docs
 description: Scaricare e installare Microsoft SQL Operations Studio (preview) per Windows, Mac OS o Linux
 ms.custom: tools|sos
@@ -24,7 +24,7 @@ ms.lasthandoff: 04/26/2018
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente, il *anteprima pubblica di aprile*:
+Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di marzo*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|

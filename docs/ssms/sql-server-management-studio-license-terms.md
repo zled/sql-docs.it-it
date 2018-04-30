@@ -1,27 +1,28 @@
 ---
 title: SQL Server Management Studio - Condizioni di licenza | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: tools-ssms
-ms.tgt_pltfrm: 
+ms.technology:
+- tools-ssms
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8f3d273c-c663-4341-aa2f-5ed8ebcba5b0
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c718bbcd3df4d304f0e14cb1a5a01f46d77fe857
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3690381b8c1b539bf4f30c8508cd927964e40f1e
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-management-studio---license-terms"></a>SQL Server Management Studio - Condizioni di Licenza
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +79,7 @@ per il presente software, a meno che a tali prodotti non siano associate condizi
   
 **3.    SERVIZI BASATI SU INTERNET.** Microsoft fornisce servizi basati su Internet insieme al software. Microsoft potrà cambiare o annullare i servizi in qualsiasi momento.  
   
-&nbsp;&nbsp;**a.    Consenso all'utilizzo dei servizi basati su Internet.** Le funzionalità del software descritte di seguito e nell'Informativa sulla Privacy di Microsoft SQL Server si connettono ai sistemi informatici di Microsoft o del provider di servizi tramite Internet. In alcuni casi il licenziatario non riceverà alcuna comunicazione separata riguardante la connessione. Il licenziatario può disattivare questa funzionalità oppure non utilizzarla. Per altre informazioni su questa funzionalità, il licenziatario potrà visitare la pagina [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **Usando tale funzionalità il licenziatario acconsente alla trasmissione di queste informazioni**. Microsoft non utilizza tali informazioni per individuare o contattare il licenziatario.  
+&nbsp;&nbsp;**a.    Consenso all'utilizzo dei servizi basati su Internet.** Le funzionalità del software descritte di seguito e nell'Informativa sulla Privacy di Microsoft SQL Server si connettono ai sistemi informatici di Microsoft o del provider di servizi tramite Internet. In alcuni casi il licenziatario non riceverà alcuna comunicazione separata riguardante la connessione. Il licenziatario può disattivare questa funzionalità oppure non utilizzarla. Per altre informazioni su questa funzionalità, vedere [http://go.microsoft.com/fwlink/?LinkID=398120](http://go.microsoft.com/fwlink/?LinkID=398120). **Usando tale funzionalità il licenziatario acconsente alla trasmissione di queste informazioni**. Microsoft non utilizza tali informazioni per individuare o contattare il licenziatario.  
   
 &nbsp;&nbsp;**i.    Informazioni relative al computer.** La seguente funzionalità utilizza protocolli Internet che comunicano ai sistemi appropriati informazioni relative al computer, quali l'indirizzo IP, il tipo di sistema operativo, il browser, il nome e la versione del software in uso, nonché il codice della lingua del dispositivo su cui il licenziatario ha installato il software. Microsoft utilizza queste informazioni per rendere disponibile al licenziatario il servizio basato su Internet.  
   

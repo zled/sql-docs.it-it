@@ -3,15 +3,16 @@
 
 # [Guide di SQL Server](sql-server-guides.md)
 ## Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
-## [Progettazione degli indici](sql-server-index-design-guide.md)
+## [Architettura e progettazione di indici](sql-server-index-design-guide.md)
 ## [Architettura di gestione della memoria](memory-management-architecture-guide.md)
 ### [Lettura di pagine](reading-pages.md)  
 ### [Scrittura di pagine](writing-pages.md)
 ## [Architettura di pagine ed extent](pages-and-extents-architecture-guide.md)
 ## [Ottimizzazione e convalida post-migrazione](post-migration-validation-and-optimization-guide.md)
+## [Prestazioni](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md) 
 ## [Architettura di elaborazione delle query](query-processing-architecture-guide.md)
 ## [Architettura dei thread e delle attività](thread-and-task-architecture-guide.md)
-## [Architettura e gestione del log delle transazioni](sql-server-transaction-log-architecture-and-management-guide.md)
+## [Guida all'architettura e alla gestione del log delle transazioni](sql-server-transaction-log-architecture-and-management-guide.md)
 ## [Guida per il controllo delle versioni delle righe e il blocco della transazione](sql-server-transaction-locking-and-row-versioning-guide.md)
 
 # [Backup e ripristino](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
@@ -57,7 +58,6 @@
 
 # [Join](../relational-databases/performance/joins.md)
 # [Partizioni](../relational-databases/partitions/partitioned-tables-and-indexes.md)
-# [Prestazioni](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 # [Gestione basata su criteri](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
 # [Replica](../relational-databases/replication/sql-server-replication.md)
