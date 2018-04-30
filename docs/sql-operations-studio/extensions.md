@@ -1,4 +1,4 @@
-﻿---
+---
 title: Estendere le funzionalità di SQL Operations Studio (anteprima) | Microsoft Docs
 description: Aggiungere estensioni a SQL Operations Studio (anteprima)
 ms.custom: tools|sos
@@ -24,17 +24,17 @@ ms.lasthandoff: 04/26/2018
 
 Le estensioni in [!INCLUDE[name-sos](../includes/name-sos-short.md)] forniscono un modo semplice per aggiungere ulteriori funzionalità all'installazione di base di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. 
 
-Sono disponibili estensioni del team di SQL Operations Studio (Microsoft) ed estensioni delle community di terze parti (utente). Per informazioni dettagliate sulla creazione di estensioni, vedere Get started with Extensibility [Introduzione all'estendibilità](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
+Sono disponibili estensioni del team di SQL Operations Studio (Microsoft) ed estensioni delle community di terze parti (utente).  Per informazioni dettagliate sulla creazione di estensioni, vedere [Get started with Extensibility (Introduzione all'estendibilità)](https://github.com/Microsoft/sqlopsstudio/wiki/Getting-started-with-Extensibility).
 
 
-## <a name="add-sql-operations-studio-extensions"></a>Aggiungere estensioni di SQL Operations Studio
+## <a name="add-sql-operations-studio-extensions"></a>Aggiungere le estensioni di operazioni SQL Studio
 
-1. Per aprire la gestione delle estensioni e accedere alle estensioni disponibili, selezionare l'icona delle estensioni o scegliere Estensioni dal menu Visualizza.
+1. Per aprire Gestione estensioni e accedervi le estensioni disponibili, selezionare l'icona di estensioni o selezionare **estensioni** nel **vista** menu.
 2. Selezionare un'estensione disponibile per visualizzare i relativi dettagli.
 
    ![Gestione estensioni](media/extensions/extension-manager.png)
 
-1. Selezionare l'estensione desiderata e scegliere **Installa**.
+1. Selezionare l'estensione desiderata e **installare** è.
 2. Selezionare **Ricarica** per abilitare l'estensione (richiesto solo la prima volta in cui l'estensione viene installata).
 1. Passare al dashboard di gestione facendo clic con il tasto destro del mouse sul server o sul database e selezionando **Gestisci**.
 2. Le estensioni installate vengono visualizzate come schede nel dashboard di gestione:
