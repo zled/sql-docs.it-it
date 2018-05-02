@@ -1,15 +1,16 @@
 ---
 title: Analizzare deadlock con SQL Server Profiler | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - process nodes [SQL Server Profiler]
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - events [SQL Server], deadlocks
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: 2fc7e2adc786982611e58ca4083c575902e5aca3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizzare deadlock con SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Utilizzare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per identificare la causa di un deadlock. I deadlock si verificano in caso di dipendenza ciclica tra due o più thread o processi per alcuni set di risorse in SQL Server. Tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile creare una traccia che registra, riproduce e visualizza gli eventi deadlock da analizzare.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Usare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per identificare la causa di un deadlock. I deadlock si verificano in caso di dipendenza ciclica tra due o più thread o processi per alcuni set di risorse in SQL Server. Tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], è possibile creare una traccia che registra, riproduce e visualizza gli eventi deadlock da analizzare.  
   
  Per tracciare gli eventi deadlock, aggiungere la classe di evento **Deadlock graph** a una traccia. Questa classe di evento consente di popolare la colonna di dati **TextData** nella traccia con dati XML sul processo e gli oggetti coinvolti nel deadlock. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] può estrarre il documento XML in un file XML del deadlock (con estensione xdl) visualizzabile in un secondo momento in SQL Server Management Studio. È possibile configurare [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] per estrarre gli eventi **Deadlock graph** in un singolo file contenente tutti gli eventi **Deadlock graph** oppure in file distinti. È possibile eseguire l'estrazione in uno dei modi seguenti:  
   

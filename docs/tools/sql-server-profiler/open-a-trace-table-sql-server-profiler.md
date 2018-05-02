@@ -22,12 +22,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: f251fd08716dcacef95f5af1f5dffcb2788243c3
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Aprire una tabella di traccia (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]In questo argomento viene descritto come aprire una tabella di traccia esistente utilizzando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Questo argomento descrive come aprire una tabella di traccia esistente tramite [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
   
 ### <a name="to-open-a-trace-table"></a>Per aprire una tabella di traccia  
   
@@ -37,10 +37,10 @@ ms.lasthandoff: 01/17/2018
   
 3.  Nella finestra di dialogo **Tabella di origine** selezionare il database che contiene la tabella di traccia salvata nell'elenco **Database** .  
   
-4.  Nell'elenco **Tabella** selezionare il nome della tabella. Scegliere **OK**.  
+4.  Nell'elenco **Tabella** selezionare il nome della tabella. Fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare e analizzare tracce con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
+ [Visualizzare e analizzare le tracce con SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)   
  [Salvare tracce e modelli di traccia](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

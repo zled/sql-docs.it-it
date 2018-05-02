@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 1: Ottimizzazione guidata motore di navigazione di base nel Database | Documenti Microsoft'
+title: 'Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: On Demand
 ms.openlocfilehash: ce3acbca50968e72a1890f554c239d30e3632445
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Lezione 1: Navigazione di base in Ottimizzazione guidata motore di database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Ottimizzazione guidata motore di database offre modalità per visualizzare le sessioni di ottimizzazione e i report delle indicazioni di ottimizzazione basata su un'interfaccia utente grafica (GUI). In questa lezione viene illustrato come avviare lo strumento e configurare la visualizzazione. Questa lezione consente di apprendere i diversi metodi per avviare lo strumento e per configurare la visualizzazione in modo da supportare le attività di ottimizzazione eseguite regolarmente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Ottimizzazione guidata motore di database offre una modalità basata su un'interfaccia utente grafica per visualizzare le sessioni di ottimizzazione e i report delle indicazioni di ottimizzazione. In questa lezione viene illustrato come avviare lo strumento e configurare la visualizzazione. Questa lezione consente di apprendere i diversi metodi per avviare lo strumento e per configurare la visualizzazione in modo da supportare le attività di ottimizzazione eseguite regolarmente.  
   
 In questa lezione sono inclusi gli argomenti seguenti:  
   
@@ -38,7 +38,7 @@ In questa lezione sono inclusi gli argomenti seguenti:
 -   Impostazione del layout e delle opzioni dello strumento  
   
 ## <a name="next-task-in-this-lesson"></a>Attività successiva della lezione  
-[Avviare Ottimizzazione guidata motore di Database](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)  
+[Avvio dello strumento Ottimizzazione guidata motore di database](../../tools/dta/lesson-1-1-launching-database-engine-tuning-advisor.md)  
   
   
   

@@ -1,34 +1,35 @@
 ---
 title: Riprodurre dati di traccia | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 1b63690aadee587a51f910cfc43915a04aa39bf4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-trace-data"></a>Riproduzione di dati di traccia
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È possibile avviare una riproduzione distribuita con il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità riesecuzione distribuita dopo aver preparato i dati di traccia di input. Per altre informazioni, vedere [Preparazione dei dati di traccia di input](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile avviare una riproduzione distribuita con la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dopo aver preparato i dati di traccia di input. Per altre informazioni, vedere [Preparazione dei dati di traccia di input](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
   
  Usare l'opzione **replay** dello strumento di amministrazione per avviare la fase di riproduzione dell'evento della riesecuzione distribuita. Questa fase è costituita da due parti: il recapito dei dati di traccia e l'avvio e la sincronizzazione della riproduzione distribuita.  
   
- ![Distributed Replay evento](../../tools/distributed-replay/media/eventreplay.gif "evento riesecuzione distribuita")  
+ ![Evento riesecuzione distribuita](../../tools/distributed-replay/media/eventreplay.gif "evento riesecuzione distribuita")  
   
  È possibile riprodurre i dati di traccia in una delle due modalità di sequenza disponibili, ovvero la modalità di stress o la modalità di sincronizzazione. Il comportamento predefinito consiste nel riprodurre i dati di traccia in modalità di stress. Per altre informazioni sulla fase di riproduzione dell'evento e sulle modalità di sequenza, vedere [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   
@@ -72,8 +73,8 @@ ms.lasthandoff: 01/17/2018
 3.  Al termine della riproduzione distribuita, lo strumento di amministrazione restituisce informazioni di riepilogo. Se è stata specificata l'opzione **-o** , l'attività di riproduzione è stata salvata in file di traccia dei risultati in ciascun client. Per altre informazioni sui file di traccia dei risultati, vedere [Controllo dei risultati della riproduzione](../../tools/distributed-replay/review-the-replay-results.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Requisiti relativi a riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opzioni della riga di comando dello strumento di amministrazione &#40; utilità riesecuzione distribuita &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurare Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
+ [Requisiti relativi a Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Opzioni della riga di comando dello strumento di amministrazione &#40;Utilità Riesecuzione distribuita&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Configurare Riesecuzione distribuita](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

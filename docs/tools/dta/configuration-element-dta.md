@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e9e3fbf76ffab1eea6baf7ea5cc8d2f6972379a5
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuration-element-dta"></a>Elemento Configuration (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica una configurazione specificata dall'utente costituita da strutture di progettazione fisica esistenti e ipotetiche per il motore di ottimizzazione guidata Database per l'analisi durante l'ottimizzazione di un carico di lavoro.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Definisce una configurazione specificata dall'utente costituita da strutture di progettazione fisica esistenti e ipotetiche da analizzare in Ottimizzazione guidata motore di database durante l'ottimizzazione di un carico di lavoro.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -49,27 +49,27 @@ ms.lasthandoff: 01/17/2018
   
 |Attributo di configurazione|Description|  
 |-----------------------------|-----------------|  
-|**SpecificationMode**|Facoltativa. Indica se Ottimizzazione guidata motore di database deve analizzare la configurazione specificata in relazione alla configurazione esistente corrente o come configurazione autonoma completamente nuova. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:<br /><br /> **Relative**:<br />                  Valuta la configurazione specificata in relazione alla configurazione esistente corrente delle strutture di progettazione fisica (indici, viste indicizzate, partizionamento) nel database sottoposto a ottimizzazione. Esempio:<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Valuta la configurazione specificata come configurazione autonoma. Se viene specificato Absolute, Ottimizzazione guidata motore di database non prende in considerazione la configurazione esistente. Esempio:<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
+|**SpecificationMode**|Facoltativo. Indica se Ottimizzazione guidata motore di database deve analizzare la configurazione specificata in relazione alla configurazione esistente corrente o come configurazione autonoma completamente nuova. Usare un tipo di dati **string** per specificare questo attributo con uno dei valori consentiti seguenti:<br /><br /> **Relative**:<br />                  Valuta la configurazione specificata in relazione alla configurazione esistente corrente delle strutture di progettazione fisica (indici, viste indicizzate, partizionamento) nel database sottoposto a ottimizzazione. Ad esempio<br /><br /> `<Configuration SpecificationMode="Relative">`<br /><br /> **Absolute**:<br />                  Valuta la configurazione specificata come configurazione autonoma. Se viene specificato Absolute, Ottimizzazione guidata motore di database non prende in considerazione la configurazione esistente. Ad esempio<br /><br /> `<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuno|  
-|**Valore predefinito**|Nessuno|  
-|**Occorrenza**|Facoltativa. Consentito una sola volta per ogni elemento **DTAInput** .|  
+|**Tipo di dati e lunghezza**|Nessuna.|  
+|**Valore predefinito**|Nessuna.|  
+|**Occorrenza**|Facoltativo. Consentito una sola volta per ogni elemento **DTAInput** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento DTAInput &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)|  
-|**Elementi figlio**|[Elemento server per Configuration &#40; DTA &#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
+|**Elemento padre**|[Elemento DTAInput &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)|  
+|**Elementi figlio**|[Elemento Server per Configuration &#40;DTA&#41;](../../tools/dta/server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

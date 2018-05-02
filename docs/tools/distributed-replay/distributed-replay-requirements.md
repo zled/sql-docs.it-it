@@ -1,30 +1,31 @@
 ---
 title: Requisiti per la riproduzione distribuita | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: setup-install
-ms.tgt_pltfrm: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
-caps.latest.revision: "36"
+caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: ondemand
 ms.openlocfilehash: 3267939b053be638ae40ab33e0e7e02776bf918c
 ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributed-replay-requirements"></a>Requisiti relativi a Riesecuzione distribuita
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Prima di utilizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] riesecuzione distribuita di funzionalità, considerare i requisiti del prodotto indicati in questo argomento.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Prima di usare la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], prendere in considerazione i requisiti del prodotto indicati in questo argomento.  
   
 ## <a name="input-trace-requirements"></a>Requisiti della traccia di input  
  Affinché possano essere riprodotti correttamente, i dati di traccia devono soddisfare i requisiti per la versione e il formato e contenere le colonne e gli eventi necessari.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 01/18/2018
 ### <a name="input-trace-versions"></a>Versioni della traccia di input  
  Riesecuzione distribuita supporta dati di traccia di input raccolti nelle versioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seguenti:  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]Aggiornamento cumulativo 1 e versioni successiva. Vedere - [aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu).
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  Aggiornamento cumulativo 1 e versioni successiva. Vedere - [aggiornamenti cumulativi di SQL Server 2017](http://aka.ms/sql2017cu).
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
@@ -164,8 +165,8 @@ ms.lasthandoff: 01/18/2018
  La riproduzione degli eventi associati ad account di accesso mancanti o non corretti genera errori di riproduzione, ma l'operazione non viene interrotta.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Sicurezza di Distributed Replay](../../tools/distributed-replay/distributed-replay-security.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [Sicurezza di Riesecuzione distribuita](../../tools/distributed-replay/distributed-replay-security.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

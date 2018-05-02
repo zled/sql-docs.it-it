@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 68a4c894fb4defe848b146c59b3ad159ac3da287
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
-# <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lezione 1-2-Layout e impostazione delle opzioni dello strumento
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]È possibile impostare opzioni che consentono di configurare gli oggetti visualizzati l'interfaccia utente grafica di ottimizzazione guidata motore di Database (GUI) all'avvio, il carattere utilizzato e altre funzionalità dello strumento migliore supporta la modalità di utilizzo. Le procedure contenute in questa pagina illustrano le opzioni che è possibile impostare e in che modo impostarle.  
+# <a name="lesson-1-2---setting-tool-options-and-layout"></a>Lezione 1-2: Impostazione del layout e delle opzioni dello strumento
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] All'avvio è possibile impostare nella maniera più appropriata alla modalità di utilizzo le opzioni che configurano l'interfaccia utente grafica (GUI) dello strumento Ottimizzazione guidata motore di database, il carattere utilizzato e altre funzionalità. Le procedure contenute in questa pagina illustrano le opzioni che è possibile impostare e in che modo impostarle.  
   
 ### <a name="set-the-tool-options"></a>Impostazione delle opzioni dello strumento  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/17/2018
     -   Per impostazione predefinita, l'opzione **Chiedi conferma prima di arrestare l'analisi della sessione** è selezionata, per evitare l'arresto accidentale di una sessione di ottimizzazione prima che Ottimizzazione guidata motore di database abbia concluso l'analisi di un carico di lavoro.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 2: Utilizzo di ottimizzazione guidata motore di Database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lezione 2: Uso dello strumento Ottimizzazione guidata motore di database](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: bf1209f51e3952439b3a9d28fa170c0684bce1a4
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="name-element-for-table-dta"></a>Elemento Name per Table (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica un nome di tabella per l'ottimizzazione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Specifica il nome di una tabella da ottimizzare.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,23 +42,23 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, tra 1 e 255 caratteri.|  
-|**Valore predefinito**|Nessuno|  
+|**Valore predefinito**|Nessuna.|  
 |**Occorrenza**|Obbligatorio. Una volta per ogni elemento **Table** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento TABLE per Schema &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
-|**Elementi figlio**|Nessuno|  
+|**Elemento padre**|[Elemento Table per Schema &#40;DTA&#41;](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Elementi figlio**|Nessuna.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio d'uso, vedere [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

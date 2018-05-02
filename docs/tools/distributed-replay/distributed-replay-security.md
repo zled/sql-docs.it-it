@@ -1,30 +1,31 @@
 ---
 title: Distributed Replay Security | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: distributed-replay
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Sicurezza di Distributed Replay
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Prima di installare e utilizzare il [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] funzionalità di riesecuzione distribuita, è necessario rivedere le informazioni di sicurezza importanti in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Prima di installare e usare la funzionalità Riesecuzione distribuita di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario leggere le importanti informazioni sulla sicurezza riportate in questo argomento. In questo argomento vengono descritti i passaggi per la configurazione della sicurezza post-installazione che è necessario eseguire prima di poter utilizzare Distributed Replay. Questo argomento illustra anche considerazioni importanti sulla protezione dei dati e importanti passaggi relativi alla rimozione.  
   
 ## <a name="user-and-service-accounts"></a>Account utente e di servizio  
  Nella tabella seguente vengono descritti gli account utilizzati per Distributed Replay. Dopo l'installazione di Distributed Replay, è necessario assegnare le entità di sicurezza con cui verranno eseguiti gli account dei servizi controller e client. È pertanto consigliabile configurare gli account utente di dominio corrispondenti prima di installare le funzionalità di Distributed Replay.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 01/17/2018
 -   Eliminare qualsiasi file di traccia, intermedio, di recapito e di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzati per i test. I file intermedi e di recapito vengono archiviati nella directory di lavoro rispettivamente nel controller e nel client.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riesecuzione distribuita di SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
+ [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

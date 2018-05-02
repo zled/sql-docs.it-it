@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 6c30ec1f3a06e0bb2142dd889852ddb071b68d96
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="droponlymode-element-dta"></a>Elemento DropOnlyMode (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica che Ottimizzazione guidata motore di Database deve considerare la rimozione solo gli indici esistenti, le viste indicizzate o partizioni durante la sessione di ottimizzazione. Se è specificata questa opzione di ottimizzazione non viene considerata alcuna nuova struttura di progettazione fisica.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Specifica che Ottimizzazione guidata motore di database deve considerare la rimozione degli indici, delle viste indicizzate o delle partizioni esistenti solo durante la sessione di ottimizzazione. Se è specificata questa opzione di ottimizzazione non viene considerata alcuna nuova struttura di progettazione fisica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 01/17/2018
   
  **Occorrenza**: facoltativo. È possibile usarlo solo una volta per ogni elemento **TuningOptions** . Non è possibile usarlo se nell'elemento **TuningOptions** sono specificati gli elementi seguenti:  
   
--   [Elemento FeatureSet &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
+-   [Elemento FeatureSet &#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partizionamento elemento &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [Elemento Partitioning &#40;DTA&#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   [Elemento KeepExisting &#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md) impostato su **ALL**  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 01/17/2018
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

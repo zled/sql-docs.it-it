@@ -1,26 +1,26 @@
 ---
-title: Servizi SQL Server | Documenti Microsoft
-ms.custom: 
+title: Servizi di SQL Server | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: configuration-manager
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 97193ac4-aa97-489c-9e81-6fcbdf88aebf
-caps.latest.revision: 
+caps.latest.revision: 22
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: b932a110e49ededd17a3895eb7aeb3efee3e106c
 ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 02/03/2018
 ---
@@ -32,9 +32,9 @@ In questa sezione sono disponibili gli argomenti della Guida sensibile al contes
 >  Se si apre **Gestione configurazione SQL Server** in un nodo di un cluster che non ospita le risorse, i servizi risultano arrestati.  
   
 > [!NOTE]  
->  Se i nodi di Servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono popolati con i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili sul computer, è possibile che non si disponga di autorizzazioni sufficienti per accedere a Strumentazione gestione Windows (WMI). Per configurare le autorizzazioni per WMI, cercare l'argomento "Procedura: Configurazione di WMI per mostrare lo stato del server in Strumenti SQL Server" nella documentazione online.  
+>  Se i nodi di Servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non vengono popolati con i servizi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibili sul computer, è possibile che non si disponga di autorizzazioni sufficienti per accedere a Strumentazione gestione Windows (WMI). Per configurare le autorizzazioni su WMI, cercare la documentazione online sull'argomento, "Procedura: Configurazione di WMI per mostrare lo stato del server in Strumenti di SQL Server".  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida SQL Server Configuration Manager](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
+ [Guida di Gestione configurazione SQL Server](../../tools/configuration-manager/sql-server-configuration-manager-help.md)  
   
   

@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec9be70ff9d3605159bd47c4a4fd77f5bb1c6111
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="column-element-for-index-dta"></a>Elemento Column per Index (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica le colonne in cui viene creato l'indice per una configurazione specificata dall'utente.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Specifica le colonne sulle quali viene creato l'indice per una configurazione specificata dall'utente.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -75,23 +75,23 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|**Tipo di dati e lunghezza**|Nessuno|  
-|**Valore predefinito**|Nessuno|  
+|**Tipo di dati e lunghezza**|Nessuna.|  
+|**Valore predefinito**|Nessuna.|  
 |**Occorrenza**|È possibile specificare un massimo di 1024 colonne per l'elemento **Index** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento index &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
-|**Elementi figlio**|[Elemento Name per Column &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**Elemento padre**|[Elemento Index &#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
+|**Elementi figlio**|[Elemento Name per Column &#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con configurazione specificata dall'utente &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

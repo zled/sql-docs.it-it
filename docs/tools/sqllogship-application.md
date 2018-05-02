@@ -22,14 +22,14 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>Applicazione sqllogship
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Il **sqllogship** applicazione esegue un backup, copia, o l'operazione di ripristino e le attività di pulizia associate per una configurazione di log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'applicazione **sqllogship** esegue un'operazione di backup, copia o ripristino e le attività di pulizia associate per una configurazione per il log shipping. L'operazione viene eseguita su una specifica istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per un database specifico.  
   
- ![Icona di collegamento argomento](../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") per le convenzioni della sintassi, vedere [riferimento utilità prompt dei comandi &#40; motore di Database &#41;](../tools/command-prompt-utility-reference-database-engine.md).  
+ ![Icona collegamento dell'argomento](../database-engine/configure-windows/media/topic-link.gif "icona Collegamento argomento") per le convenzioni della sintassi, vedere [prompt dei comandi riferimento utilità &#40;motore di Database&#41;](../tools/command-prompt-utility-reference-database-engine.md).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,12 +69,12 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|L'output include tutti i messaggi di debug e di traccia.|  
   
  **–logintimeout** *timeout_value*  
- Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* è **int * * *.*  
+ Specifica la quantità di tempo assegnata per un tentativo di accesso all'istanza del server prima del timeout. Il valore predefinito è 15 secondi. *timeout_value* corrisponde a **int****  
   
  **-querytimeout** *timeout_value*  
- Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* è **int * * *.*  
+ Specifica la quantità di tempo assegnata per l'avvio dell'operazione specificata prima del timeout del tentativo. Il valore predefinito non prevede un periodo di timeout. *timeout_value* corrisponde a **int****  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È consigliabile utilizzare i processi di backup, copia e ripristino per eseguire le operazioni corrispondenti, quando possibile. Per avviare questi processi da un'operazione batch o un'altra applicazione, chiamare la stored procedure [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
  La cronologia di log shipping creata da **sqllogship** è intercalata dalla cronologia creata dai processi di backup, copia e ripristino del log shipping. Se si prevede di usare ripetutamente **sqllogship** per eseguire operazioni di backup, copia o ripristino per una configurazione per il log shipping, prendere in considerazione di disabilitare il processo o i processi per il log shipping corrispondenti. Per altre informazioni, vedere [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd).  

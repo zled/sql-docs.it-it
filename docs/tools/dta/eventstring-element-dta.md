@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 93b5886a489f4570dd62249f8620d11b868ee663
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="eventstring-element-dta"></a>Elemento EventString (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica un [!INCLUDE[tsql](../../includes/tsql-md.md)] carico di lavoro di script direttamente nel file di input XML.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Specifica il carico di lavoro di uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] direttamente nel file di input XML.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,29 +44,29 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-attributes"></a>Attributi elemento  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**Weight**|Facoltativa. Specifica il fattore di ponderazione, o fattore di importanza, della query per l'evento specificato. Per specificare il fattore di ponderazione, utilizzare un tipo di dati **float** . Ad esempio, **Weight**="100.01". Il valore minimo che è possibile specificare per **Weight** è "0".|  
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**string**, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuno|  
+|**Valore predefinito**|Nessuna.|  
 |**Occorrenza**|Obbligatorio una sola volta se non viene specificato un altro tipo di carico di lavoro. È necessario specificare un elemento figlio **EventString**, **File**o **Database** per l'elemento padre **Workload** , ma è possibile utilizzare un solo tipo. Se ad esempio si specifica un carico di lavoro con l'elemento **EventString** , non sarà possibile specificare anche un carico di lavoro con l'elemento **File** nello stesso file di input XML.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
-|**Elementi figlio**|Nessuno|  
+|**Elemento padre**|[Elemento Workload &#40;DTA&#41;](../../tools/dta/workload-element-dta.md)|  
+|**Elementi figlio**|Nessuna.|  
   
 ## <a name="example"></a>Esempio  
  Per un esempio di utilizzo di questo elemento, vedere [Esempio di file di input XML con carico di lavoro inline &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-inline-workload-dta.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

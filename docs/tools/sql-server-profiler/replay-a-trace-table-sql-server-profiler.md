@@ -1,33 +1,34 @@
 ---
 title: Riprodurre una tabella di traccia (SQL Server Profiler) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: sql-server-profiler
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: 59809ee9bb39c3056804a78b4744e4f832881646
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Riprodurre una tabella di traccia (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Riproduzione è la possibilità di aprire una traccia salvata e riprodurla nuovamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Quando si identifica il problema e si implementano le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La riproduzione è la capacità di aprire una traccia salvata e riprodurla nuovamente. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] include un motore di riproduzione a thread multipli in grado di simulare le connessioni utente e l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La funzionalità di riproduzione risulta utile per la risoluzione dei problemi a livello di applicazione o di processo. Quando si identifica il problema e si implementano le correzioni adeguate, eseguire nell'applicazione o nel processo la traccia con cui è stato rilevato il possibile problema. Riprodurre quindi la traccia originale e confrontare i risultati.  
   
  Per consentire la riproduzione è necessario acquisire classi di evento specifiche oltre alle classi di evento che si desidera monitorare. Questi eventi vengono acquisiti per impostazione predefinita se si usa il modello di traccia **TSQL_Replay** . Per altre informazioni, vedere [Requisiti per la riproduzione](../../tools/sql-server-profiler/replay-requirements.md).  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 01/17/2018
   
 5.  Selezionare **Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**oppure **Riproduci gli eventi usando più thread**. Nella tabella seguente viene spiegata la differenza tra queste impostazioni.  
   
-    |Opzione|Descrizione|  
+    |Opzione|Description|  
     |------------|-----------------|  
     |**Riproduci gli eventi nell'ordine in cui sono stati inseriti nella traccia**|Gli eventi vengono riprodotti nell'ordine in cui sono stati inseriti nella traccia. Questa opzione consente il debug.|  
     |**Riproduci gli eventi usando più thread**|Vengono utilizzati più thread per riprodurre i vari eventi, indipendentemente dalla sequenza. Questa opzione consente di ottimizzare le prestazioni.|  
@@ -65,9 +66,9 @@ ms.lasthandoff: 01/17/2018
     -   Per controllare la modalità di gestione dei processi da parte di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la riproduzione, configurare le **Opzioni Health Monitor**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Autorizzazioni necessarie per eseguire SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
+ [Autorizzazioni necessarie per l'esecuzione di SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Riprodurre le tracce](../../tools/sql-server-profiler/replay-traces.md)   
- [Aprire una tabella di traccia &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [Aprire una tabella di traccia &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

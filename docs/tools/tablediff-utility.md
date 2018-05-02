@@ -1,15 +1,16 @@
 ---
-title: "Utilità tablediff | Documenti Microsoft"
-ms.custom: 
+title: Utilità tablediff | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: tabledif
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.technology: database-engine
-ms.tgt_pltfrm: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - comparing data
@@ -20,19 +21,21 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b397ef06f491da3d7b74de11c21f0f64dc7f5814
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: bd5ad1c414a290478277a1ffc1136299c26aecf3
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tablediff-utility"></a>utilità tablediff
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Il **tablediff** utilità viene utilizzato per confrontare i dati in due tabelle per la convergenza e risulta particolarmente utile per la risoluzione dei problemi non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  L'utilità **tablediff** viene usata per confrontare i dati in due tabelle per rilevarne l'eventuale non convergenza e risulta particolarmente utile per la risoluzione dei problemi relativi alla non convergenza in una topologia di replica. Questa utilità può essere utilizzata dal prompt dei comandi oppure in un file batch per eseguire le attività seguenti:  
   
 -   Confronto riga per riga tra una tabella di origine in un'istanza di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che funge da server di pubblicazione per la replica e una tabella di destinazione in una o più istanze di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] che fungono da Sottoscrittori della replica.  
   
@@ -85,7 +88,7 @@ tablediff
  Restituisce l'elenco dei parametri supportati.  
   
  **-sourceserver** *source_server_name*[**\\***instance_name*]  
- Nome del server di origine. Specificare *source_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *source_server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Nome del server di origine. Specificare *source_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *source_server_name***\\*** instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** *source_database*  
  Nome del database di origine.  
@@ -109,7 +112,7 @@ tablediff
  La tabella di origine viene bloccata durante il confronto mediante gli hint di tabella TABLOCK e HOLDLOCK.  
   
  **-destinationserver** *destination_server_name*[**\\***instance_name*]  
- Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *destination_server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Nome del server di destinazione. Specificare *destination_server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *destination_server_name***\\*** instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** *subscription_database*  
  Nome del database di destinazione.  
@@ -170,13 +173,13 @@ tablediff
   
 ## <a name="return-value"></a>Valore restituito  
   
-|Valore|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |**0**|Esito positivo|  
 |**1**|Errore critico|  
 |**2**|Differenze tra tabelle|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'utilità **tablediff** non può essere usata con server non[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Le tabelle contenenti colonne con il tipo di dati **sql_variant** non sono supportate.  

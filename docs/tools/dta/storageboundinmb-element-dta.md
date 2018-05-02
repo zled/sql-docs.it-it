@@ -24,12 +24,12 @@ manager: craigg
 ms.workload: Inactive
 ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
 ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>Elemento StorageBoundInMB (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Specifica lo spazio massimo in megabyte che possono essere utilizzate per l'indicazione di ottimizzazione di ottimizzazione guidata motore di Database (indice e partizionamento set).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Specifica lo spazio massimo in megabyte che è possibile riservare all'Ottimizzazione guidata motore di database per le indicazioni di ottimizzazione, ovvero il set di indice e partizionamento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -43,20 +43,20 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |**Tipo di dati e lunghezza**|**unsignedInt**, lunghezza illimitata.|  
-|**Valore predefinito**|Nessuno|  
-|**Occorrenza**|Facoltativa. Può essere utilizzato una sola volta per l'elemento **TuningOptions** .|  
+|**Valore predefinito**|Nessuna.|  
+|**Occorrenza**|Facoltativo. Può essere utilizzato una sola volta per l'elemento **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elementi|  
 |------------------|--------------|  
-|**Elemento padre**|[Elemento TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Elementi figlio**|Nessuno|  
+|**Elemento padre**|[Elemento TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Elementi figlio**|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se si ottimizzano più database, per il calcolo dello spazio vengono considerate le indicazioni per tutti i database. Per impostazione predefinita, nell'Ottimizzazione guidata motore di database vengono utilizzate le dimensioni minori tra gli spazi di archiviazione seguenti:  
   
 -   Tre volte le dimensioni dei dati non elaborati correnti nei quali sono incluse le dimensioni totali di heap e indici cluster nelle tabelle.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 01/17/2018
   
 ## <a name="example"></a>Esempio  
   
-## <a name="description"></a>Descrizione  
+## <a name="description"></a>Description  
  Nell'esempio di codice seguente viene illustrata la procedura per impostare un limite di 1500 megabyte per lo spazio massimo su disco utilizzabile da un'indicazione di ottimizzazione:  
   
 ## <a name="code"></a>codice  
@@ -85,6 +85,6 @@ ms.lasthandoff: 01/17/2018
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Guida di riferimento ai file di input XML &#40;Ottimizzazione guidata motore di database&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
+ [Guida di riferimento ai file di input XML&#40; (Ottimizzazione guidata motore di database)&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   
