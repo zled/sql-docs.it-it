@@ -2,7 +2,7 @@
 title: NS$&lt;nome servizio&gt; proprietà (scheda accesso) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: configuration-manager
@@ -18,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 512d1281ca516256631845d0283b50f8f58f82d5
-ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
-ms.translationtype: HT
+ms.openlocfilehash: bfe2aa22e110339e84403c6bbef2807ff0275076
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Proprietà NS$&lt;nome servizio&gt; (scheda Accesso)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
-Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà - Notification Services** per specificare l'account utilizzato dal servizio [!INCLUDE[ssNS](../../includes/ssns-md.md)] e avviare e arrestare il servizio.  
+  Utilizzare la scheda **Accesso** della finestra di dialogo **Proprietà - Notification Services** per specificare l'account utilizzato dal servizio [!INCLUDE[ssNS](../../includes/ssns-md.md)] e avviare e arrestare il servizio.  
   
 ## <a name="options"></a>Opzioni  
  **Account di sistema locale**  

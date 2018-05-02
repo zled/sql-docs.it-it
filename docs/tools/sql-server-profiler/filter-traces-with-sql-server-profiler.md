@@ -2,7 +2,7 @@
 title: Filtrare le tracce con SQL Server Profiler | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -25,14 +25,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac087c079ca461875d148a9c9bedcab77fe7852b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 13dcd642f65cc2896efdd160151985e486216cde
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="filter-traces-with-sql-server-profiler"></a>Filtrare le tracce tramite SQL Server Profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] È possibile definire filtri per le colonne di dati per gli eventi di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in modo che le informazioni vengano acquisite solo per gli eventi di interesse. I filtri di traccia consentono di ridurre l'impatto della traccia sulle prestazioni del sistema dal momento che vengono acquisiti meno eventi nella traccia. I filtri possono inoltre semplificare la lettura del risultato della traccia, in quanto è presente una quantità minore di eventi in cui eseguire la ricerca.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  È possibile definire filtri sulle colonne di dati per gli eventi di traccia di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in modo che le informazioni vengano acquisite solo per quegli eventi a cui si è interessati. I filtri di traccia consentono di ridurre l'impatto della traccia sulle prestazioni del sistema dal momento che vengono acquisiti meno eventi nella traccia. I filtri possono inoltre semplificare la lettura del risultato della traccia, in quanto è presente una quantità minore di eventi in cui eseguire la ricerca.  
   
  **Per filtrare le tracce tramite SQL Server Profiler**  
   

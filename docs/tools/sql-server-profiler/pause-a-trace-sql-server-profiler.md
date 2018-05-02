@@ -2,7 +2,7 @@
 title: Sospendere una traccia (SQL Server Profiler) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
 ms.service: ''
 ms.component: sql-server-profiler
@@ -23,14 +23,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cbf301c5d846a42e1aed2571b60c0b88f638631b
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 32395111b85ce6326620b4fec6ee0951b1bbd039
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>Sospendere una traccia (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] La sospensione di una traccia consente di impedire l'acquisizione di altri dati evento fino al riavvio della traccia stessa.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  La sospensione di una traccia consente di impedire l'ulteriore acquisizione dei dati evento fino al riavvio della traccia.  
   
  Quando si sospende una traccia, è possibile impedire l'acquisizione dei dati evento fino al riavvio della traccia. Il riavvio di una traccia consente di riprendere le operazioni di acquisizione. Dopo il riavvio, gli eventuali dati acquisiti in precedenza non andranno perduti. Quando si riavvia la traccia, l'acquisizione dei dati riprende dal momento del riavvio. Durante la sospensione di una traccia è possibile modificarne il nome, gli eventi, le colonne e i filtri. Non è invece possibile modificare le destinazioni di invio dei dati della traccia o la connessione al server.  
   
