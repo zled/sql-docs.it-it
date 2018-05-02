@@ -1,9 +1,9 @@
 ---
-title: SQL Operations Studio (preview) utente e le impostazioni dell'area di lavoro | Documenti Microsoft
-description: Come modificare SQL Operations Studio (preview) utente e le impostazioni dell'area di lavoro.
+title: Studio operazioni SQL (anteprima) utente e le impostazioni dell'area di lavoro | Documenti Microsoft
+description: Come modificare Studio operazioni SQL (anteprima) utente e le impostazioni dell'area di lavoro.
 ms.custom: tools|sos
 ms.date: 11/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,20 +14,20 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: MT
+ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="user-and-workspace-settings"></a>Impostazioni utente e dell'area di lavoro
 
 È facile da configurare [!INCLUDE[name-sos](../includes/name-sos-short.md)] alle proprie esigenze tramite le impostazioni. Quasi tutte le parti di [!INCLUDE[name-sos](../includes/name-sos-short.md)]dell'editor, interfaccia utente e un comportamento funzionale sono disponibili opzioni è possibile modificare.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]fornisce due ambiti diversi per le impostazioni:
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce due ambiti diversi per le impostazioni:
 
 * **Utente** queste impostazioni si applicano globalmente a qualsiasi istanza di [!INCLUDE[name-sos](../includes/name-sos-short.md)] si apre.
-* **Area di lavoro** le impostazioni dell'area sono impostazioni specifiche di una cartella nel computer in uso e sono disponibili solo quando la cartella è aperta nella barra laterale di Explorer. Le impostazioni definite in questo ambito di eseguire l'override l'ambito dell'utente.
+* **Area di lavoro** le impostazioni dell'area sono impostazioni specifiche per una cartella nel computer in uso e sono disponibili solo quando la cartella è aperta nella barra laterale di Explorer. Le impostazioni definite in questo ambito di eseguire l'override l'ambito dell'utente.
 
 ## <a name="creating-user-and-workspace-settings"></a>Creazione di utenti e le impostazioni dell'area di lavoro
 
@@ -55,7 +55,7 @@ Il file di impostazione dell'area di lavoro si trova sotto il `.[!INCLUDE[name-s
 
 ## <a name="hot-exit"></a>Uscita a caldo
 
-SQL Operations Studio verranno memorizzate le modifiche non salvate per i file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita di frequente in Visual Studio Code.
+Operazioni SQL Studio verranno memorizzate le modifiche non salvate per i file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita di frequente in Visual Studio Code.
 
 Per impostazione predefinita, uscita frequente è disattivata. Abilitare l'area uscita modificando il `files.hotExit` impostazione. Per informazioni dettagliate, vedere [Exit a caldo (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
