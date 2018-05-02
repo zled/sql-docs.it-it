@@ -1,16 +1,16 @@
 ---
 title: BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CONVERSATION
@@ -35,16 +35,16 @@ helpviewer_keywords:
 - starting timers [Service Broker]
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-caps.latest.revision: 
+caps.latest.revision: 28
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6f85695e3d8263936d053979074a92b52fba7259
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 1b8a88a664b5e89882a60b478a1f3444c6115073
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  È possibile, ad esempio, utilizzare il timer di conversazione per evitare che un'applicazione attenda troppo a lungo una risposta scaduta. Se si prevede che un'applicazione completi un dialogo in 30 secondi, è possibile impostare il timer di conversazione per tale dialogo su 60 secondi (30 secondi più altri 30 secondi di tolleranza). Se il dialogo è ancora aperto dopo 60 secondi, l'applicazione riceve un messaggio di timeout nella coda.  
   
- In alternativa un'applicazione può utilizzare un timer di conversazione per richiedere l'attivazione in un determinato momento. Si potrebbe, ad esempio, creare un servizio che segnali il numero di connessioni attive a intervalli di pochi minuti oppure un servizio che segnali il numero di ordini di acquisto aperti ogni sera. Il servizio imposta la scadenza desiderata per un timer di conversazione. Alla scadenza, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio **DialogTimer**, che **** determina l'avvio della stored procedure di attivazione per la coda da parte di [!INCLUDE[ssSB](../../includes/sssb-md.md)]. La stored procedure invia un messaggio al servizio remoto e riavvia il timer di conversazione.  
+ In alternativa un'applicazione può utilizzare un timer di conversazione per richiedere l'attivazione in un determinato momento. Si potrebbe, ad esempio, creare un servizio che segnali il numero di connessioni attive a intervalli di pochi minuti oppure un servizio che segnali il numero di ordini di acquisto aperti ogni sera. Il servizio imposta la scadenza desiderata per un timer di conversazione. Alla scadenza, [!INCLUDE[ssSB](../../includes/sssb-md.md)] invia un messaggio **DialogTimer**, Il messaggio **DialogTimer** fa in modo che [!INCLUDE[ssSB](../../includes/sssb-md.md)] avvii la stored procedure di attivazione per la coda. La stored procedure invia un messaggio al servizio remoto e riavvia il timer di conversazione.  
   
  BEGIN CONVERSATION TIMER non è valida in una funzione definita dall'utente.  
   

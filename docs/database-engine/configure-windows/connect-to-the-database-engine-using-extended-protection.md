@@ -1,16 +1,16 @@
 ---
 title: Connessione al motore di database mediante la protezione estesa | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: configure-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - spoofing attacks
@@ -20,19 +20,20 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-caps.latest.revision: 
+caps.latest.revision: 22
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5bf850e985baccb1d16d77697ea7cd2611af222
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: bbcd2fcb55fabd3c8b9f4828f205c6017547e151
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Connessione al motore di database mediante la protezione estesa
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la **protezione estesa** a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] il supporto per la **protezione estesa** è disponibile a partire da [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protezione estesa per l'autenticazione** è una funzionalità dei componenti di rete implementata dal sistema operativo. La**protezione estesa** è supportata in Windows 7 e in Windows Server 2008 R2 La**protezione estesa** è inclusa nei Service Pack per i sistemi operativi [!INCLUDE[msCoName](../../includes/msconame-md.md)] meno recenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è più sicuro quando le connessioni vengono effettuate tramite **protezione estesa**.  
   
 > [!IMPORTANT]  
 >  Per impostazione predefinita, in Windows la **protezione estesa** non è abilitata. Per informazioni su come abilitare la **protezione estesa** in Windows, vedere la pagina relativa alla [protezione estesa per l'autenticazione](http://support.microsoft.com/kb/968389).  
@@ -92,7 +93,7 @@ ms.lasthandoff: 01/18/2018
   
 1.  Dal menu **Start** scegliere **Tutti i programmi**, **Microsoft SQL Server** , quindi fare clic su **Gestione configurazione SQL Server**.  
   
-2.  Espandere **Configurazione di rete SQL Server**e quindi fare clic con il pulsante destro del mouse su **Protocolli** *\<*NomeIstanza*>*e scegliere **Proprietà**.  
+2.  Espandere **Configurazione di rete SQL Server**e quindi fare clic con il pulsante destro del mouse su **Protocolli** *\<* NomeIstanza*>* e scegliere **Proprietà**.  
   
 3.  Sia per l'associazione di canale che per l'associazione al servizio, nella scheda **Avanzate** configurare l'impostazione adatta per **Protezione estesa** .  
   

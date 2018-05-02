@@ -1,33 +1,33 @@
 ---
-title: "Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati) | Microsoft Docs"
-ms.custom: 
+title: Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: 
+caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 20b24a20f3139e4758d9b0f25566e482222ec924
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opzioni di Richiesta profilo Criteri di ricerca colonna (Attività Profiling dati)
-  Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali degli Stati Uniti, ad esempio, può generare le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
+  Usare il riquadro **Proprietà richiesta** della pagina **Richieste profilo** per impostare le opzioni per la **Richiesta profilo Criteri di ricerca colonna** selezionata nel riquadro delle richieste. Un profilo Criteri di ricerca colonna segnala un set di espressioni regolari che analizzano la percentuale specificata di valori in una colonna stringa. Questo profilo consente di identificare eventuali problemi nei dati, ad esempio le stringhe non valide, e può indicare le possibili espressioni regolari da utilizzare in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente i codici postali ZIP (Stati Uniti), ad esempio, può produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.  
   
 > [!NOTE]  
 >  Le opzioni descritte in questo argomento vengono visualizzate nella pagina **Richieste profilo** in **Editor attività Profiling dati**. Per altre informazioni su questa pagina dell'editor, vedere [Editor attività Profiling dati &#40;pagina Richieste profilo&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md).  
