@@ -1,0 +1,121 @@
+---
+title: Esempio di proprietà ReadyState (VBScript) | Documenti Microsoft
+ms.technology:
+- drivers
+ms.custom: ''
+ms.date: 01/19/2017
+ms.reviewer: ''
+ms.suite: sql
+ms.prod: sql
+ms.prod_service: drivers
+ms.component: reference
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+dev_langs:
+- VB
+helpviewer_keywords:
+- ReadyState property [ADO], VBScript example
+ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
+caps.latest.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: d0c34362dfec239d7a2f46f2786a8ad7c8b09137
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/03/2018
+---
+# <a name="readystate-property-example-vbscript"></a>Esempio di proprietà ReadyState (VBScript)
+> [!IMPORTANT]
+>  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
+  
+ Nell'esempio seguente viene illustrato come leggere il [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) proprietà del [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto in fase di esecuzione nel codice VBScript. **ReadyState** è una proprietà di sola lettura.  
+  
+ Per testare questo esempio, tagliare e incollare questo codice tra le \<corpo > e \</Body > del documento e assegnargli il nome di tag in HTML un normale **RDSReadySt**. Utilizzare **trovare** per individuare il file Adovbs. inc e inserirlo nella directory di cui si intende utilizzare. Lo script identificherà il server.  
+  
+```  
+<!-- BeginReadyStateVBS -->  
+<%@ Language=VBScript %>  
+<!--#include file="adovbs.inc"-->  
+<html>  
+<head>  
+    <meta name="VI60_DefaultClientScript"  content=VBScript>  
+    <meta name="GENERATOR" content="Microsoft Visual Studio 6.0">  
+    <title>RDS.DataControl ReadyState Property</title>  
+<style>  
+<!--  
+body {  
+   font-family: 'Verdana','Arial','Helvetica',sans-serif;  
+   BACKGROUND-COLOR:white;  
+   COLOR:black;  
+    }  
+.thead {  
+   background-color: #008080;   
+   font-family: 'Verdana','Arial','Helvetica',sans-serif;   
+   font-size: x-small;  
+   color: white;  
+   }  
+.thead2 {  
+   background-color: #800000;   
+   font-family: 'Verdana','Arial','Helvetica',sans-serif;   
+   font-size: x-small;  
+   color: white;  
+   }  
+.tbody {   
+   text-align: center;  
+   background-color: #f7efde;  
+   font-family: 'Verdana','Arial','Helvetica',sans-serif;   
+   font-size: x-small;  
+    }  
+-->  
+</style>  
+</head>  
+  
+<body>  
+<H1>RDS.DataControl ReadyState Property</H1>  
+<H2>RDS API Code Examples </H2>  
+<HR>  
+<!-- RDS.DataControl with parameters set at design time -->  
+<OBJECT classid="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID=RDS>  
+   <PARAM NAME="SQL" VALUE="Select * from Orders">  
+   <PARAM NAME="SERVER" VALUE="http://<%=Request.ServerVariables("SERVER_NAME")%>">  
+   <PARAM NAME="CONNECT" VALUE="Provider=SQLOLEDB;Integrated Security=SSPI;Initial Catalog=Northwind">  
+   <PARAM NAME="ExecuteOptions" VALUE="2">   
+   <PARAM NAME="FetchOptions" VALUE="3">  
+</OBJECT>  
+  
+<TABLE DATASRC=#RDS>  
+<TBODY>  
+  <TR>  
+    <TD><SPAN DATAFLD="OrderID"></SPAN></TD>  
+  </TR>  
+</TBODY>  
+</TABLE>  
+  
+<Script Language="VBScript">  
+  
+   Sub Window_OnLoad  
+  
+      Select Case RDS.ReadyState  
+         case 2   'adcReadyStateLoaded  
+          MsgBox "Executing Query"  
+         case 3   'adcReadyStateInteractive  
+          MsgBox "Fetching records in background"  
+         case 4   'adcReadyStateComplete  
+          MsgBox "All records fetched"  
+      End Select  
+  
+   End Sub  
+</Script>  
+  
+</body>  
+</html>  
+<!-- EndReadyStateVBS -->  
+```  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Oggetto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
+ [Proprietà ReadyState (Servizi Desktop remoto)](../../../ado/reference/rds-api/readystate-property-rds.md)
+
+
