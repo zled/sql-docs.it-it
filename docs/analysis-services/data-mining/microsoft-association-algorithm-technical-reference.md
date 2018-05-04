@@ -1,16 +1,15 @@
 ---
 title: Riferimento tecnico per l'algoritmo Microsoft Association Rules | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - MINIMUM_ITEMSET_SIZE parameter
 - MAXIMUM_SUPPORT parameter
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - MAXIMUM_ITEMSET_SIZE parameter
 - MINIMUM_PROBABILITY parameter
 ms.assetid: 50a22202-e936-4995-ae1d-4ff974002e88
-caps.latest.revision: 
+caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c8f6fca5071577e70d334e1b6184ed0ac7bb74ad
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: fb0f074871ee4c6f1e24eb02664a66fb512aeba4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Riferimento tecnico per l'algoritmo Microsoft Association Rules
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
+  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules è un'implementazione semplice del noto algoritmo Apriori.  
   
  Sia l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees che l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules possono essere usati per analizzare associazioni, ma le regole individuate da ognuno di essi possono essere diverse. In un modello di albero delle decisioni le divisioni che portano a regole specifiche sono basate su Information Gain, mentre in un modello di associazione le regole sono interamente basate sulla confidenza. Pertanto, in un modello di associazione una regola efficace o caratterizzata da una confidenza elevata può non essere necessariamente interessante, in quanto non fornisce nuove informazioni.  
   
@@ -80,7 +78,7 @@ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rule
  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules supporta vari parametri che influiscono sul comportamento, sulle prestazioni e sull'accuratezza del modello di data mining risultante.  
   
 ### <a name="setting-algorithm-parameters"></a>Impostazione dei parametri dell'algoritmo  
- È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice utilizzando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> insieme in AMO oppure utilizzando il [elemento MiningModels &#40; ASSL &#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) in XMLA. Nella tabella seguente viene descritto ogni parametro.  
+ È possibile modificare in qualsiasi momento i parametri per un modello di data mining usando Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile modificare i parametri a livello di codice utilizzando il <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> insieme in AMO oppure utilizzando il [elemento MiningModels &#40;ASSL&#41; ](../../analysis-services/scripting/collections/miningmodels-element-assl.md) XMLA. Nella tabella seguente viene descritto ogni parametro.  
   
 > [!NOTE]  
 >  Non è possibile modificare i parametri in un modello esistente usando un'istruzione DMX. È necessario specificare i parametri nell'istruzione DMX CREATE MODEL o ALTER STRUCTURE… ADD MODEL quando si crea il modello.  
@@ -171,6 +169,6 @@ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rule
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Association Rules](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Esempi di Query sul modello Association](../../analysis-services/data-mining/association-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli di associazione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di associazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

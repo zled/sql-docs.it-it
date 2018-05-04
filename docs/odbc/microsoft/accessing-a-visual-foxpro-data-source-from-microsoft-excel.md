@@ -3,15 +3,12 @@ title: Accesso a un'origine dati di Visual FoxPro da Microsoft Excel | Documenti
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], Excel
 - Visual FoxPro data [ODBC], Excel
@@ -22,12 +19,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ba64814f954ab9c689f5f452f24a6ab36f73cc1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 2519467ff807e40d1ec63414690d45ad8cde8f4b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Accesso a un'origine dati di Visual FoxPro da Microsoft Excel
 Se si dispone di Query Microsoft installato, è possibile creare un'origine dati in Microsoft Excel che si connette ai dati di Visual FoxPro.  

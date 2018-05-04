@@ -3,15 +3,12 @@ title: Mapping dei tipi di dati, il Driver ODBC per Oracle | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping data types [ODBC]
 - data types [ODBC], ODBC driver for Oracle
@@ -21,12 +18,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a87220ab330cc7dab4337aa6592ee9f08443d431
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 92e8df65faf6be2cbe7d63d00e922ac1c4ed3af2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>Mapping dei tipi di dati (Driver ODBC per Oracle)
 > [!IMPORTANT]  

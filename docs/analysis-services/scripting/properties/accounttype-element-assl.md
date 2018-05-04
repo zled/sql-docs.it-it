@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5225a1f9ee45754c60c46f8cc9c3fea3d2af0ec1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 348f0f0ef96ad1e0421e903f25f5494ce50c79a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accounttype-element-assl"></a>Elemento AccountType (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene il nome del tipo di conto definito in un [Database](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene il nome del tipo di conto definito in un [Database](../../../analysis-services/scripting/objects/database-element-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -61,25 +60,25 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Account](../../../analysis-services/scripting/objects/account-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
-|*Reddito*|Il conto è di tipo reddito.|  
-|*Nota spese*|Il conto è di tipo spesa.|  
-|*Flusso*|Il conto è di tipo flusso di cassa.|  
-|*Saldo*|Il conto è di tipo collettivo.|  
+|*Income*|Il conto è di tipo reddito.|  
+|*Expense*|Il conto è di tipo spesa.|  
+|*Flow*|Il conto è di tipo flusso di cassa.|  
+|*Balance*|Il conto è di tipo collettivo.|  
 |*Asset*|Il conto è di tipo cespite.|  
-|*Responsabilità*|Il conto è di tipo passività.|  
+|*Liability*|Il conto è di tipo passività.|  
 |*Statistiche*|Il conto è di tipo statistico.|  
   
  L'enumerazione che corrisponde ai valori consentiti per **AccountType** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.AccountTypes>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Elemento account &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

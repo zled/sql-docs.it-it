@@ -1,33 +1,31 @@
 ---
 title: Interfaccia IMDEmbeddedData | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
-caps.latest.revision: 
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 645f672d00fe685cbb19d6494a6f0f37a61c174b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData Interface
+# <a name="imdembeddeddata-interface"></a>Interfaccia IMDEmbeddedData
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'interfaccia IMDEmbeddedData è un'interfaccia pubblica utilizzata per gestire incorporato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database o un database modello tabulare. L'interfaccia eredita il **IPersistStream** interfaccia. e consente di effettuare le operazioni seguenti:  
+  L'interfaccia IMDEmbeddedData è un'interfaccia pubblica utilizzata per gestire incorporato [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] database o un database modello tabulare. L'interfaccia eredita il **IPersistStream** interfaccia. e consente di effettuare le operazioni seguenti:  
   
 -   Ottenere un identificatore per il flusso incorporato nel documento contenitore.  
   

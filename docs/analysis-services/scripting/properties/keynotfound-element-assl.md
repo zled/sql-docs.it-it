@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 387e6fe29fb01be462350c0d79d63e450e9b1125
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 65d337bce196f7af2fe740683b8da3d7ab9d5b54
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="keynotfound-element-assl"></a>Elemento KeyNotFound (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Specifica la modalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] risponde quando viene rilevato un errore di integrità referenziale.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Specifica la modalità [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] risponde quando viene rilevato un errore di integrità referenziale.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*ReportAndContinue*|  
@@ -61,14 +60,14 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[ErrorConfiguration](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Si verificano errori di integrità referenziale quando per un valore di chiave esterna in una tabella dipendente non è presente una voce corrispondente nella tabella padre. Questo errore si verifica quando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elabora una dimensione in cui la tabella dei fatti fa riferimento a un valore di chiave esterna che non è presente nella tabella delle dimensioni per la dimensione oppure quando [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] elabora una partizione quando la tabella principale delle dimensioni per una dimensione inclusa nella partizione fa riferimento a un valore di chiave che non è presente in un'altra tabella delle dimensioni associata. Nel caso di gerarchie padre-figlio e di attributi padre, questo errore può inoltre verificarsi quando la tabella principale delle dimensioni per una dimensione inclusa nella partizione fa riferimento a un valore di chiave che non è presente nella stessa tabella delle dimensioni.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*IgnoreError*|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |*ReportAndContinue*|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -77,6 +76,6 @@ ms.lasthandoff: 01/08/2018
  L'enumerazione che corrisponde ai valori consentiti per **KeyNotFound** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ErrorOption>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

@@ -3,15 +3,12 @@ title: È supportata la grammatica SQL ODBC (Driver ODBC di Visual FoxPro) | Doc
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - native Visual FoxPro language syntax [ODBC]
 - FoxPro ODBC driver [ODBC], SQL grammar
@@ -25,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: beabfae6f19f4d425a830489591e321373dfed95
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7eccb1bbdb86ded6b949756b4e5762a83a59fc0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammatica SQL ODBC supportate (Visual FoxPro ODBC Driver)
 Il Driver ODBC Microsoft Visual FoxPro supporta le operazioni seguenti:  

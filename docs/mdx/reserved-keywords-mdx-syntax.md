@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,17 +21,16 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0fed4b46d2ed14a45073d7c25ace252c427fba3d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 93d2de2f24bcdc99ea9739f0fbb87fb520af1111
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Parole chiave riservate (sintassi MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] riserva determinate parole chiave per l'utilizzo esclusivo. Per un elenco di parole chiave riservate, vedere [parole riservate MDX](../mdx/mdx-reserved-words.md).  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] riserva determinate parole chiave per un uso esclusivo. Per un elenco di parole chiave riservate, vedere [parole riservate MDX](../mdx/mdx-reserved-words.md).  
   
  Di seguito sono riportate le linee guida per l'utilizzo delle parole chiave riservate:  
   
@@ -43,6 +41,6 @@ ms.lasthandoff: 01/08/2018
 -   Adottare una convenzione di denominazione che evita l'utilizzo di parole chiave riservate. Se è necessario attribuire a un oggetto un nome simile a una parola chiave riservata, eliminare le consonanti o le vocali da tale parola.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Gli elementi della sintassi MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Gli elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

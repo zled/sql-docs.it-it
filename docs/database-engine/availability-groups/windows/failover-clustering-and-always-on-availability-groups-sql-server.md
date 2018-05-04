@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 20cd2f3d0b8a034a1f7f1d689f106216b161ec38
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9b7cccf79efb654ddb9c49a6ed43751f00654908
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering di failover e gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +60,6 @@ ms.lasthandoff: 04/16/2018
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sono sottochiavi del cluster WSFC. Se si elimina e si ricrea un cluster WSFC, è necessario disabilitare e riabilitare la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in ogni istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in cui è ospitata una replica di disponibilità nel cluster WSFC originale.  
   
  Per informazioni sull'esecuzione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nei nodi WSFC (Windows Server Failover Clustering) e sul quorum WSFC, vedere [WSFC &#40;Windows Server Failover Clustering&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
-  
-### <a name="cross-cluster-migration-of-always-on-availability-groups-for-os-upgrade"></a>Migrazione tra cluster di gruppi di disponibilità Always On per l'aggiornamento del sistema operativo  
- A partire da [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] è supportata migrazione tra cluster di gruppi di disponibilità per distribuzioni in un nuovo cluster WSFC (Windows Server Failover Clustering). In una migrazione tra cluster un gruppo o un batch di gruppi di disponibilità viene spostato nel nuovo cluster WSFC di destinazione con tempi di inattività minimi. Il processo di migrazione tra cluster consente di gestire i contratti di servizio (SLA, Service Level Agreement) durante l'aggiornamento a un cluster [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] . [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] (o versioni successive) deve essere installato e abilitato per Always On nel cluster WSFC di destinazione. L'esito positivo della migrazione tra cluster dipende da una pianificazione e una preparazione dettagliate del cluster WSFC di destinazione.  
-  
- Per altre informazioni, vedere [Migrazione tra cluster di gruppi di disponibilità Always On per l'aggiornamento del sistema operativo](http://msdn.microsoft.com/library/jj873730.aspx).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] - Istanze del cluster di failover e gruppi di disponibilità  
  È possibile configurare un secondo livello di failover a livello di istanza del server implementando il clustering di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insieme al cluster WSFC. Una replica di disponibilità può essere ospitata da un'istanza autonoma di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o da un'istanza FCI. Solo un partner di un'istanza del cluster di failover può ospitare una replica per un gruppo di disponibilità. Quando una replica di disponibilità viene eseguita in un'istanza del cluster di failover, l'elenco dei possibili proprietari per il gruppo di disponibilità conterrà solo il nodo FCI attivo.  
