@@ -1,16 +1,16 @@
 ---
 title: CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE PARTITION SCHEME
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - partitioned tables [SQL Server], filegroups
 - mapping partitions [SQL Server]
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
-ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
+ms.openlocfilehash: e3f3c52b3fca1326d9cc73203ff46285a2da2b76
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,16 +69,16 @@ AS PARTITION partition_function_name
  Nome della funzione di partizione che usano lo schema di partizione. Sulle partizioni create dalla funzione di partizione viene eseguito il mapping ai filegroup specificati nello schema di partizione. *partition_function_name* deve essere già presente nel database. In una singola partizione non possono essere presenti sia filegroup FILESTREAM che filegroup non FILESTREAM.  
   
  ALL  
- Specifica che viene eseguito il mapping di tutte le partizioni al filegroup specificato in *file_group_name* o al filegroup primario se viene specificato **[**PRIMARY**]**. Se si specifica ALL, è possibile specificare un solo *file_group_name*.  
+ Specifica che viene eseguito il mapping di tutte le partizioni al filegroup specificato in *file_group_name* o al filegroup primario se viene specificato **[** PRIMARY **]**. Se si specifica ALL, è possibile specificare un solo *file_group_name*.  
   
  *file_group_name* | **[** PRIMARY **]** [ **,***...n*]  
  Specifica i nomi dei filegroup che conterranno le partizioni specificate da *partition_function_name*. *file_group_name* deve essere già presente nel database.  
   
- Se si specifica **[**PRIMARY**]**, la partizione viene archiviata nel filegroup primario. Se si specifica ALL, è possibile specificare un solo *file_group_name*. Le partizioni vengono assegnate ai filegroup, a partire dalla partizione 1, nell'ordine in cui i filegroup sono elencati in [**,***...n*]. È possibile specificare lo stesso *file_group_name* più volte in [**,***...n*]. Se il valore specificato per *n* non è sufficiente per contenere il numero di partizioni specificate in *partition_function_name*, l'istruzione CREATE PARTITION SCHEME ha esito negativo e restituisce un errore.  
+ Se si specifica **[** PRIMARY **]**, la partizione viene archiviata nel filegroup primario. Se si specifica ALL, è possibile specificare un solo *file_group_name*. Le partizioni vengono assegnate ai filegroup, a partire dalla partizione 1, nell'ordine in cui i filegroup sono elencati in [**,***...n*]. È possibile specificare lo stesso *file_group_name* più volte in [**,***...n*]. Se il valore specificato per *n* non è sufficiente per contenere il numero di partizioni specificate in *partition_function_name*, l'istruzione CREATE PARTITION SCHEME ha esito negativo e restituisce un errore.  
   
  Se *partition_function_name* genera un numero di partizioni inferiore ai filegroup disponibili, il primo filegroup non assegnato viene contrassegnato come NEXT USED e viene visualizzato un messaggio informativo indicante il filegroup NEXT USED. Se si specifica ALL, solo *file_group_name* manterrà la proprietà NEXT USED per *partition_function_name*. Il filegroup NEXT USED riceverà una partizione aggiuntiva se ne viene creata una in un'istruzione ALTER PARTITION FUNCTION. Per creare filegroup non assegnati aggiuntivi per contenere le nuove partizioni, usare ALTER PARTITION SCHEME.  
   
- Quando si specifica il filegroup primario in *file_group_name* [ 1**,***...n*], è necessario delimitare PRIMARY, ad esempio **[**PRIMARY**]**, perché è una parola chiave.  
+ Quando si specifica il filegroup primario in *file_group_name* [ 1 **,***...n*], è necessario delimitare PRIMARY, ad esempio **[** PRIMARY**]** perché è una parola chiave.  
   
  L'unico valore supportato per [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] è PRIMARY. Vedere l'esempio E riportato di seguito. 
   

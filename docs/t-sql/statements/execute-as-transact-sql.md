@@ -1,16 +1,16 @@
 ---
 title: EXECUTE AS (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - EXECUTE AS
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b89c78d286feaace6ec6bb2c85e854cb0ddbb5e0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a86213e0bb3cde0ef673c3366250a474ea2473eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.lasthandoff: 11/21/2017
  Per altre informazioni sul ripristino del contesto precedente, vedere [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md).  
   
  COOKIE INTO **@***varbinary_variable*  
- Specifica che è possibile ripristinare il contesto di esecuzione precedente solo se l'istruzione REVERT WITH COOKIE chiamante include il valore corretto per **@***varbinary_variable*. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a **@***varbinary_variable*. L'opzione **COOKIE INTO** può essere usata solo a livello ad hoc.  
+ Specifica che è possibile ripristinare il contesto di esecuzione precedente solo se l'istruzione REVERT WITH COOKIE chiamante include il valore corretto per **@***varbinary_variable*. [!INCLUDE[ssDE](../../includes/ssde-md.md)] passa il cookie a **@***varbinary_variable*. L'opzione **COOKIE INTO** può essere usata solo a livello ad hoc.  
   
  **@** *varbinary_variable* è **varbinary(8000)**.  
   

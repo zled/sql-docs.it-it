@@ -1,16 +1,16 @@
 ---
 title: DROP INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DROP_INDEX_TSQL
@@ -34,16 +34,17 @@ helpviewer_keywords:
 - XML indexes [SQL Server], dropping
 - DROP INDEX statement
 ms.assetid: 2b1464c8-934c-405f-8ef7-2949346b5372
-caps.latest.revision: 
+caps.latest.revision: 99
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 821782102f7c9c6014c3ec46c5e9f9223eca98a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 042a2baab09ef96e1f89b71359e50ce6c933ea8f
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-index-transact-sql"></a>DROP INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -136,7 +137,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *table_or_view_name*  
  Nome della tabella o della vista associata all'indice. Gli indici spaziali sono supportati solo nelle tabelle.  
   
- Per visualizzare un report degli indici in un oggetto, usare la vista del catalogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
+ Per visualizzare un report degli indici di un oggetto, usare la vista del catalogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).  
   
  Il database SQL di Windows Azure supporta il formato del nome in tre parti, nome_database.[nome_schema].nome_oggetto, quando nome_database è il database corrente oppure nome_database è tempdb e nome_oggetto inizia con #.  
   
@@ -148,7 +149,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  MAXDOP = *max_degree_of_parallelism*  
  **Si applica a**: da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (solo livelli di prestazioni P2 e P3).  
   
- Esegue l'override dell'opzione di configurazione **max degree of parallelism** per la durata dell'operazione sugli indici. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
+ Sostituisce l'opzione di configurazione **max degree of parallelism** per la durata dell'operazione sull'indice. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilizzare MAXDOP per limitare il numero di processori utilizzati durante l'esecuzione di un piano parallelo. Il valore massimo è 64 processori.  
   
 > [!IMPORTANT]  
 >  MAXDOP non è consentito per indici spaziali o XML.  
@@ -185,7 +186,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 > [!NOTE]  
 >  Le operazioni sugli indici online sono disponibili solo in alcune edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MOVE TO { *partition_scheme_name***(***column_name***)** | *filegroup_name* | **"**default**"**  
+ MOVE TO { *partition_scheme_name ***(*** column_name***)** | *filegroup_name* | **"** default **"**  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Il [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] supporta "default" come nome del filegroup.  
   
  Specifica una posizione in cui spostare le righe dei dati attualmente nel livello foglia dell'indice cluster. I dati vengono spostati nella nuova posizione sotto forma di heap. È possibile specificare come nuova posizione uno schema di partizione o un filegroup, ma questo deve essere già esistente. MOVE TO non può essere utilizzata per viste indicizzate o indici non cluster. Se uno schema di partizione o filegroup non viene specificato, la tabella risultante si troverà nello stesso schema di partizione o filegroup definito per l'indice cluster.  
@@ -204,13 +205,13 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Specifica un filegroup come posizione per la tabella risultante. Se non viene specificata una posizione e la tabella non è partizionata, la tabella risultante viene inclusa nello stesso filegroup dell'indice cluster. Il filegroup deve essere già esistente.  
   
- **"**default**"**  
+ **"** default **"**  
  Specifica la posizione predefinita per la tabella risultante.  
   
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"**default**"** o MOVE TO **[**default**]**. Se si specifica **"**default**"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica **"** default **"**, l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
  **Si applica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Specifica una posizione in cui spostare la tabella FILESTREAM che attualmente si trova al livello foglia dell'indice cluster. I dati vengono spostati nella nuova posizione sotto forma di heap. È possibile specificare come nuova posizione uno schema di partizione o un filegroup, ma questo deve essere già esistente. FILESTREAM ON non è valido per viste indicizzate o indici non cluster. Se non viene specificato uno schema di partizione, i dati verranno inclusi nello stesso schema di partizione definito per l'indice cluster.  
@@ -223,11 +224,11 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
  *filestream_filegroup_name*  
  Specifica un filegroup FILESTREAM per i dati FILESTREAM. Se non viene specificata una posizione e la tabella non è partizionata, i dati vengono inclusi nel filegroup FILESTREAM predefinito.  
   
- **"**default**"**  
+ **"** default **"**  
  Specifica la posizione predefinita dei dati FILESTREAM.  
   
 > [!NOTE]  
->  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"**default**"** o MOVE TO **[**default**]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  In questo contesto, default non è una parola chiave, ma un identificatore per il filegroup predefinito e deve essere delimitato, come in MOVE TO **"** default **"** o MOVE TO **[** default **]**. Se si specifica "default", l'opzione QUOTED_IDENTIFIER deve essere impostata su ON per la sessione corrente. Si tratta dell'impostazione predefinita. Per altre informazioni, vedere [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 ## <a name="remarks"></a>Remarks  
  Quando si elimina un indice non cluster, la definizione dell'indice viene rimossa dai metadati e le pagine dei dati dell'indice (albero B) vengono rimosse dai file del database. Quando viene eliminato un indice cluster, la definizione dell'indice viene rimossa dai metadati e le righe di dati precedentemente archiviate nel livello foglia dell'indice cluster vengono archiviate nella tabella non ordinata risultante, o heap. Tutto lo spazio occupato in precedenza dall'indice viene recuperato, e può essere quindi utilizzato per qualsiasi oggetto di database.  
@@ -236,7 +237,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
   
  Quando si elimina l'indice cluster di una vista indicizzata, tutte le statistiche create automaticamente e tutti gli indici non cluster della stessa vista vengono eliminati automaticamente. Le statistiche create manualmente non vengono eliminate.  
   
- La sintassi *table_or_view_name***.***index_name* è stata mantenuta per la compatibilità con le versioni precedenti. Non è possibile eliminare un indice XML o spaziale tramite la sintassi compatibile con le versioni precedenti.  
+ La sintassi *table_or_view_name ***.*** index_name* è stata mantenuta per la compatibilità con le versioni precedenti. Non è possibile eliminare un indice XML o spaziale tramite la sintassi compatibile con le versioni precedenti.  
   
  Quando vengono eliminati gli indici con 128 o più extent, [!INCLUDE[ssDE](../../includes/ssde-md.md)] posticipa le deallocazioni effettive delle pagine e dei relativi blocchi associati fino al termine dell'esecuzione del commit della transazione.  
   
@@ -266,7 +267,7 @@ DROP INDEX index_name ON [ database_name . [schema_name ] . | schema_name . ] ta
 Quando un indice cluster viene eliminato offline, vengono rimossi solo i livelli superiori degli indici cluster, pertanto l'operazione è piuttosto veloce. Quando un indice cluster viene eliminato ONLINE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ricompila l'heap due volte, una volta per l'operazione descritta nel passaggio 1 e una volta per quella descritta nel passaggio 2. Per altre informazioni sulla compressione dei dati, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).  
   
 ## <a name="xml-indexes"></a>Indici XML  
- Quando si elimina un indice XML non è possibile specificare opzioni né usare la sintassi *table_or_view_name***.***index_name*. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
+ Quando si elimina un indice XML non è possibile specificare opzioni né usare la sintassi *table_or_view_name ***.*** index_name*. Quando viene eliminato un indice XML primario, tutti gli indici XML secondari associati vengono eliminati automaticamente. Per altre informazioni, vedere [Indici XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).  
   
 ## <a name="spatial-indexes"></a>Indici spaziali  
  Gli indici spaziali sono supportati solo nelle tabelle. Quando si elimina un indice spaziale non è possibile specificare alcuna opzione o usare **.***index_name*. La sintassi corretta è la seguente:  

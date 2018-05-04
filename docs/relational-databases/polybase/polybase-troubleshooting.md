@@ -1,16 +1,16 @@
 ---
 title: Risoluzione dei problemi di PolyBase | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 8/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - PolyBase, monitoring
@@ -18,20 +18,20 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-caps.latest.revision: 
+caps.latest.revision: 22
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 94e965bdb0b407759b078e4fb75838888f9a3b37
-ms.sourcegitcommit: 37f0b59e648251be673389fa486b0a984ce22c81
+ms.openlocfilehash: 7f75c81eb0b2cdcf8fdc68ba5ac1a21ba62481eb
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-troubleshooting"></a>Risoluzione dei problemi di PolyBase
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Per risolvere i problemi relativi a PolyBase, usare le tecniche illustrate in questo argomento.  
+  Per risolvere i problemi relativi a PolyBase, usare le tecniche illustrate in questo argomento.  
   
 ## <a name="catalog-views"></a>Viste del catalogo  
  Usare le viste del catalogo elencate di seguito per gestire le operazioni di PolyBase.  
@@ -243,7 +243,7 @@ Soluzione alternativa: utilizzare il nome DNS per reindirizzare le connessioni a
 
 ## <a name="error-messages-and-possible-solutions"></a>Messaggi di errore e possibili soluzioni
 
-Per risolvere gli errori delle tabelle esterne, vedere il post [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "sugli errori e le possibili soluzioni relativi all'installazione di PolyBase")nel blog di Zaman Murshed.
+Per risolvere gli errori delle tabelle esterne, vedere il blog di Murshed Zaman [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions") (Errori di installazione di PolyBase e possibili soluzioni).
 
 ## <a name="see-also"></a>Vedere anche
 [Risolvere i problemi di connettività di PolyBase Kerberos](polybase-troubleshoot-connectivity.md)

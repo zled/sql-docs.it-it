@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - ConfigDSN
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dec94050079f41415983a63eac0669070145b2fa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2d7ae36927ef95bcfb96846b5f266da56e5f3bec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configdsn-function"></a>Funzione ConfigDSN
 **Conformità**  
@@ -88,7 +87,7 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Commenti  
  **ConfigDSN** riceve le informazioni di connessione dal programma di installazione DLL come un elenco di attributi in forma di coppie parola chiave / valore. Ogni coppia è terminato con un byte null e l'intero elenco è terminata con un byte null. (Ovvero, due byte null contrassegnano la fine dell'elenco.) Racchiudere il segno di uguale nella coppia valore-parola chiave non sono consentiti spazi. **ConfigDSN** possibile accettare parole chiave che non sono parole chiave valide **SQLBrowseConnect** e **SQLDriverConnect**. **ConfigDSN** non necessariamente supporto tutte le parole chiave sono parole chiave valide **SQLBrowseConnect** e **SQLDriverConnect**. (**ConfigDSN** non accetta il **DRIVER** (parola chiave).) Parole chiave utilizzate la **ConfigDSN** funzione deve supportare tutte le opzioni necessarie per ricreare l'origine dati tramite la funzionalità di installazione automatica del programma di installazione. Quando gli utilizzi del **ConfigDSN** valori e i valori di stringa di connessione sono uguali, è necessario usare le stesse parole chiave.  
   
- Come in **SQLBrowseConnect** e **SQLDriverConnect**, le parole chiave e i relativi valori non devono contenere il **[] {} (),? \*=! @** caratteri e il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti. A causa di grammatica del Registro di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
+ Come in **SQLBrowseConnect** e **SQLDriverConnect**, le parole chiave e i relativi valori non devono contenere il **[]{}(),? \*=! @** caratteri e il valore di **DSN** parola chiave non può essere composto solo da spazi vuoti. A causa di grammatica del Registro di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
   
  **ConfigDSN** chiami **SQLValidDSN** per controllare la lunghezza del nome dell'origine dati e per verificare che non sono inclusi caratteri validi nel nome. Se il nome dell'origine dati è più lungo di SQL_MAX_DSN_LENGTH o include caratteri non validi, **SQLValidDSN** restituisce un errore e **ConfigDSN** restituisce un errore. Inoltre viene verificata la lunghezza del nome dell'origine dati da **SQLWriteDSNToIni**.  
   

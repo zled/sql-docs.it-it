@@ -1,16 +1,16 @@
 ---
 title: FETCH (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FETCH
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - SCROLL option
 - row fetching [SQL Server]
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
-caps.latest.revision: 
+caps.latest.revision: 43
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fae1e085c26c2bcbc6b2605187b4554dba414642
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 5102a72cd08af6627a8954fe12b4a696618cea1d
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,10 +73,10 @@ FETCH
  Restituisce l'ultima riga nel cursore, che diventa la riga corrente.  
   
  ABSOLUTE { *n*| @*nvar*}  
- Se *n* o @*nvar* è un valore positivo, restituisce la riga che si trova a *n* righe dall'inizio del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è un valore negativo, restituisce la riga che si trova a *n* righe prima della fine del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0 non viene restituita nessuna riga. *n* deve essere una costante Integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
+ Se *n* o @*nvar* è un valore positivo, restituisce la riga corrispondente a *n* righe dall'inizio del cursore e imposta la riga restituita come nuova riga corrente. Se*n* o @*nvar* è un valore negativo, restituisce la riga corrispondente a *n* righe prima della fine del cursore e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0 non vengono restituite righe. *n* deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
   
  RELATIVE { *n*| @*nvar*}  
- Se *n* o @*nvar* è un valore positivo, restituisce la riga che si trova a *n* righe dopo la riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è un valore negativo, restituisce la riga che si trova a *n* righe prima della riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è uguale a 0, restituisce la riga corrente. Se si specifica FETCH RELATIVE con l'argomento *n* o @*nvar* impostato su numeri negativi o su 0 per la prima operazione di recupero eseguita in un cursore, non viene restituita alcuna riga. *n* deve essere una costante Integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
+ Se *n* o @*nvar* è un valore positivo, restituisce la riga corrispondente a *n* righe successive alla riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è un valore negativo, restituisce la riga corrispondente a *n* righe precedenti alla riga corrente e imposta la riga restituita come nuova riga corrente. Se *n* o @*nvar* è 0, restituisce la riga corrente. Se si specifica FETCH RELATIVE con *n* o @*nvar* impostato su numeri negativi o su 0 per la prima operazione di recupero eseguita in un cursore, non viene restituita alcuna riga. *n* deve essere una costante integer e @*nvar* deve essere **smallint**, **tinyint** o **int**.  
   
  GLOBAL  
  Specifica che *cursor_name* fa riferimento a un cursore globale.  

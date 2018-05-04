@@ -1,16 +1,16 @@
 ---
 title: UPDATE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|queries
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_TSQL
@@ -40,16 +40,17 @@ helpviewer_keywords:
 - FROM clause, UPDATE statement
 - WHERE clause, UPDATE statement
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
-caps.latest.revision: 
+caps.latest.revision: 91
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 227cafdd68eddac2ff6a515853f0fcded0c07f63
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4e9de41bb284045477426e6044f2449f62f1d58b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -145,7 +146,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *schema_name*  
  Nome dello schema a cui appartiene la tabella o la vista.  
   
- *table_name o view_name*  
+ *table_or view_name*  
  Nome della tabella o della vista da cui devono essere aggiornate le righe. È necessario che la vista a cui viene fatto riferimento in *table_or_view_name* sia aggiornabile e includa un riferimento esatto a una tabella di base nella clausola FROM della definizione della vista. Per altre informazioni sulle viste aggiornabili, vedere [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
  *rowset_function_limited*  
@@ -189,10 +190,10 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *property_name* | *field_name*  
  Proprietà pubblica o membro pubblico di dati di un tipo definito dall'utente.  
   
- *method_name* **(** *argument* [ **,**... *n* ] **)**  
+ *method_name* **(** *argument* [ **,**... *n*] **)**  
  Metodo mutatore pubblico non statico di *udt_column_name* che accetta uno o più argomenti.  
   
- **.**WRITE **(***expression***,***@Offset***,***@Length***)**  
+ **.** WRITE **(***expression***,***@Offset***,***@Length***)**  
  Specifica che è necessario modificare una sezione del valore di *column_name*. *expression* sostituisce unità *@Length* a partire da *@Offset* di *column_name*. È possibile specificare con questa clausola solo colonne di tipo **varchar(max)**, **nvarchar(max)** o **varbinary(max)**. *column_name* non può essere NULL e non può essere qualificato con un nome di tabella o un alias di tabella.  
   
  *expression* è il valore copiato in *column_name*. *expression* deve restituire il tipo di *column_name* oppure deve essere possibile eseguirne il cast implicito a tale tipo. Se il valore di *expression* è impostato su NULL, *@Length* viene ignorato e il valore in *column_name* viene troncato in corrispondenza dell'offset specificato in *@Offset*.  
@@ -336,21 +337,21 @@ GO
 >  I tipi di dati **ntext**, **text** e **image** verranno rimossi in una versione futura di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare di utilizzare questi tipi di dati in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni che attualmente li utilizzano. Usare in alternativa [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)e [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) .  
   
 ### <a name="updating-large-value-data-types"></a>Aggiornamento dei tipi di dati per valori di grandi dimensioni  
- Usare la clausola **.**WRITE (*expression***,** *@Offset***,***@Length*) per eseguire un aggiornamento parziale o completo dei tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Un aggiornamento parziale di una colonna di tipo **varchar(max)**, ad esempio, può eliminare o modificare solo i primi 200 caratteri della colonna, mentre un aggiornamento completo elimina o modifica tutti i dati nella colonna. Gli aggiornamenti **.**WRITE che inseriscono o accodano nuovi dati vengono registrati in maniera minima se il modello di recupero del database è impostato su registrazione minima delle operazioni bulk oppure su registrazione minima. La registrazione minima non viene utilizzata in caso di aggiornamento di valori esistenti. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Usare la clausola **.** WRITE (*expression***,** *@Offset ***,***@Length*) per eseguire un aggiornamento parziale o completo dei tipi di dati **varchar(max)**, **nvarchar(max)** e **varbinary(max)**. Un aggiornamento parziale di una colonna di tipo **varchar(max)**, ad esempio, può eliminare o modificare solo i primi 200 caratteri della colonna, mentre un aggiornamento completo elimina o modifica tutti i dati nella colonna. Gli aggiornamenti **.** WRITE che inseriscono o accodano nuovi dati vengono registrati in maniera minima se il modello di recupero del database è impostato su registrazione minima delle operazioni bulk oppure su registrazione minima. La registrazione minima non viene utilizzata in caso di aggiornamento di valori esistenti. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
  In [!INCLUDE[ssDE](../../includes/ssde-md.md)] un aggiornamento parziale viene convertito in aggiornamento completo quando l'istruzione UPDATE provoca una di queste azioni:  
 -   modifica una colonna chiave della vista o tabella partizionata  
 -   modifica più di una riga e allo stesso tempo aggiorna la chiave di un indice cluster non univoco ad un valore non costante.  
   
-Non è possibile usare la clausola **.**WRITE per aggiornare una colonna NULL o impostare il valore di *column_name* su NULL.  
+Non è possibile usare la clausola **.** WRITE per aggiornare una colonna NULL o impostare il valore di *column_name* su NULL.  
   
 I valori di *@Offset* e *@Length* vengono specificati in byte per i tipi di dati **varbinary** e **varchar** e in caratteri per il tipo di dati **nvarchar**. Gli offset appropriati vengono calcolati per le regole di confronto DBCS (Double-Byte Character Set).  
   
 Per prestazioni ottimali, è consigliabile inserire o aggiornare i dati in dimensioni di blocco multiple di 8040 byte.  
   
-Se in una clausola OUTPUT si fa riferimento alla colonna modificata dalla clausola **.**WRITE, il valore completo della colonna, ovvero l'immagine precedente all'aggiornamento in **deleted.***column_name* oppure l'immagine successiva all'aggiornamento in **inserted.***column_name*, viene restituito nella colonna specificata nella variabile di tabella. Vedere l'esempio R seguente.  
+Se in una clausola OUTPUT si fa riferimento alla colonna modificata dalla clausola **.** WRITE, il valore completo della colonna, ovvero l'immagine precedente all'aggiornamento in **deleted.***column_name* oppure l'immagine successiva all'aggiornamento in **inserted.***column_name*, viene restituito nella colonna specificata nella variabile di tabella. Vedere l'esempio R seguente.  
   
-Per raggiungere la stessa funzionalità di **.**WRITE con altri tipi di dati character o binary, usare [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
+Per raggiungere la stessa funzionalità di **.** WRITE con altri tipi di dati character o binary, usare [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md).  
   
 ### <a name="updating-user-defined-type-columns"></a>Aggiornamento delle colonne di tipo definito dall'utente  
  L'aggiornamento dei valori nelle colonne di tipo definito dall'utente può essere eseguito in uno dei modi seguenti:  
@@ -464,7 +465,7 @@ ID     Value
  Un'istruzione UPDATE acquisisce sempre un blocco esclusivo (X) sulla tabella che modifica e mantiene tale blocco fino al completamento della transazione. Con un blocco esclusivo, nessuna altra transazione può modificare dati. È possibile specificare hint di tabella per eseguire l'override di questo comportamento predefinito per la durata dell'istruzione UPDATE specificando un altro metodo di blocco. Gli hint dovrebbero comunque essere utilizzati solo se strettamente necessario ed esclusivamente da sviluppatori e amministratori di database esperti. Per altre informazioni, vedere [Hint di tabella &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
- L'istruzione UPDATE viene registrata; tuttavia, per gli aggiornamenti parziali a tipi di dati per valori di grandi dimensioni tramite la clausola **.**WRITE viene eseguita una registrazione minima. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  
+ L'istruzione UPDATE viene registrata; tuttavia, per gli aggiornamenti parziali a tipi di dati per valori di grandi dimensioni tramite la clausola **.** WRITE viene eseguita una registrazione minima. Per altre informazioni, vedere "Aggiornamento dei tipi di dati per valori di grandi dimensioni" nella sezione precedente "Tipi di dati".  
   
 ## <a name="security"></a>Security  
   
@@ -529,7 +530,7 @@ GO
 ```  
   
 #### <a name="d-using-the-top-clause"></a>D. Utilizzo della clausola TOP  
- Negli esempi seguenti viene utilizzata la clausola TOP per limitare il numero di righe modificate in un'istruzione UPDATE. Quando si usa una clausola TOP (*n*) con l'istruzione UPDATE, l'operazione di aggiornamento viene eseguita su una selezione casuale di un numero '*n*' di righe. Nell'esempio seguente viene aggiornata la colonna `VacationHours` del 25% per 10 righe casuali nella tabella `Employee`.  
+ Negli esempi seguenti viene utilizzata la clausola TOP per limitare il numero di righe modificate in un'istruzione UPDATE. Quando si usa una clausola TOP (*n*) con UPDATE, l'operazione di aggiornamento viene eseguita su una selezione casuale di un numero '*n*' di righe. Nell'esempio seguente viene aggiornata la colonna `VacationHours` del 25% per 10 righe casuali nella tabella `Employee`.  
   
 ```sql  
 USE AdventureWorks2012;

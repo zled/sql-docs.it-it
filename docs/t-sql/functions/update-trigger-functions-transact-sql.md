@@ -1,16 +1,16 @@
 ---
-title: UPDATE () (Transact-SQL) | Documenti Microsoft
-ms.custom: 
+title: UPDATE() (Transact-SQL) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE()_TSQL
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6d5b93a4f98e382ccb6504e1d20d6e974a031f86
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b91d175788e3f67e8a4e4cc1484e9648072c4cef
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="update---trigger-functions-transact-sql"></a>UPDATE - funzioni Trigger (Transact-SQL)
+# <a name="update---trigger-functions-transact-sql"></a>UPDATE - Funzioni di trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Restituisce un valore booleano che indica se sono stati effettuati tentativi di esecuzione dell'operazione INSERT o UPDATE su una colonna specifica di una tabella o vista. UPDATE() viene utilizzata in qualsiasi punto all'interno del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT o UPDATE per controllare se il trigger deve eseguire operazioni specifiche.  
@@ -54,23 +54,23 @@ UPDATE ( column )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *colonna*  
- Nome della colonna in cui verificare se viene eseguita un'operazione INSERT o UPDATE. Poiché il nome della tabella viene specificato nella clausola ON del trigger, non includere il nome della tabella prima del nome della colonna. La colonna può essere di qualsiasi [tipo di dati](../../t-sql/data-types/data-types-transact-sql.md) supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo contesto non è tuttavia possibile utilizzare colonne calcolate.  
+ *column*  
+ Nome della colonna in cui verificare se viene eseguita un'operazione INSERT o UPDATE. Poiché il nome della tabella viene specificato nella clausola ON del trigger, non includere il nome della tabella prima del nome della colonna. Il [tipo di dati](../../t-sql/data-types/data-types-transact-sql.md) della colonna può essere uno dei tipi supportati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In questo contesto non è tuttavia possibile utilizzare colonne calcolate.  
   
 ## <a name="return-types"></a>Tipi restituiti  
  Boolean  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  UPDATE() restituisce TRUE indipendentemente dall'esito del tentativo di esecuzione dell'operazione INSERT o UPDATE.  
   
- Per testare un'azione di inserimento o aggiornamento per più di una colonna, specificare un aggiornamento separato (*colonna*) dopo la prima clausola. In alternativa, è possibile eseguire la stessa verifica utilizzando COLUMNS_UPDATED. In questo caso viene restituito uno schema di bit che indica le colonne inserite o aggiornate.  
+ Per eseguire la verifica di un'azione INSERT o UPDATE in più di una colonna, specificare una clausola UPDATE(*column*) separata a partire dalla prima colonna. In alternativa, è possibile eseguire la stessa verifica utilizzando COLUMNS_UPDATED. In questo caso viene restituito uno schema di bit che indica le colonne inserite o aggiornate.  
   
  In operazioni INSERT l'opzione IF UPDATE restituisce il valore TRUE in quanto nelle colonne vengono inseriti valori espliciti o impliciti (NULL).  
   
 > [!NOTE]  
->  La clausola IF UPDATE (*colonne*n) clausola funziona nello stesso modo, un se se... ELSE o WHILE e può utilizzare il blocco BEGIN... Blocco finale. Per ulteriori informazioni, vedere [del flusso di controllo Language &#40; Transact-SQL &#41; ](~/t-sql/language-elements/control-of-flow.md).  
+>  La clausola IF UPDATE(*column*) funziona esattamente come un'istruzione IF, IF...ELSE o WHILE e può usare il blocco BEGIN...END. Per altre informazioni, vedere [Elementi del linguaggio per il controllo di flusso &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   
- AGGIORNAMENTO (*colonna*) possono essere utilizzati ovunque all'interno del corpo di un [!INCLUDE[tsql](../../includes/tsql-md.md)] trigger.  
+ UPDATE(*column*) può essere usata in qualsiasi punto del corpo di un trigger [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene creato un trigger che stampa un messaggio nel client in corrispondenza di un tentativo di aggiornamento della la colonna `StateProvinceID` o `PostalCode` della tabella `Address`.  
@@ -99,7 +99,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [COLUMNS_UPDATED &#40; Transact-SQL &#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
+ [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  
   
   

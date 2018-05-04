@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2b0f249f4c70ec6892ca6cb576dad0d70c60527b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 37d5ec660480bad1bc93fadafaeb80e5006c4399
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
   
 ## <a name="arguments"></a>Argomenti  
  [ **@type** =] **'***tipo***'**  
- Tipo di stored procedure personalizzata o script da registrare. *tipo di* viene **varchar(16)**e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
+ Tipo di stored procedure personalizzata o script da registrare. *tipo di* viene **varchar(16)** e non prevede alcun valore predefinito può essere uno dei valori seguenti.  
   
 |Value|Description|  
 |-----------|-----------------|  

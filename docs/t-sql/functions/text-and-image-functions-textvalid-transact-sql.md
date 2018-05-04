@@ -1,16 +1,16 @@
 ---
 title: TEXTVALID (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - TEXTVALID_TSQL
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-caps.latest.revision: 
+caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d64916b441c65dc00e0e387e08c2967124721514
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5ab9180b4699314a2fe8dce24779b5742665a826
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>Funzioni per i valori text e image - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +73,9 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |Funzione o istruzione|Description|  
 |---------------------------|-----------------|  
-|PATINDEX**(**'*%pattern%**'***,** *expression***)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** e **ntext**.|  
-|DATALENGTH**(***expression***)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
-|SET TEXTSIZE|Restituisce il limite, espresso in byte, dei dati di tipo **text**, **ntext** o **image** da restituire con un'istruzione SELECT.|  
+|PATINDEX **(**'*%pattern%**'***,** *expression***)**|Restituisce la posizione dei caratteri di una determinata stringa di caratteri nelle colonne di tipo **text** e **ntext**.|  
+|DATALENGTH **(***expression***)**|Restituisce la lunghezza dei dati nelle colonne **text**, **ntext** e **image**.|  
+|SET TEXTSIZE|Restituisce il limite in byte dei dati di tipo **text**, **ntext** o **image** da restituire con un'istruzione SELECT.|  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene stabilito se esiste un puntatore di testo valido per ogni valore della colonna `logo` della tabella `pub_info`.  

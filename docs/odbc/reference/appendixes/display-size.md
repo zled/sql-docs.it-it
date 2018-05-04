@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - display size of data types [ODBC]
 - size of data types [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8f0cd835b31863fa8427f4cb175c66ded5f7e308
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9a4735e4e05c4ffe3b9f22f94149c027c1da1034
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="display-size"></a>Dimensioni di visualizzazione
 Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratteri necessari per visualizzare i dati in formato carattere. Nella tabella seguente definisce le dimensioni di visualizzazione per ogni tipo di dati SQL ODBC.  
@@ -46,7 +45,7 @@ Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratt
 |Tutti i tipi binari [a]|Il definito o massimo (per i tipi di variabile) 2 di tempi di lunghezza della colonna. (Ogni byte binario è rappresentato da un numero esadecimale a 2 cifre).|  
 |SQL_TYPE_DATE|10 (una data nel formato *aaaa-mm-gg*).|  
 |SQL_TYPE_TIME|8 (un'ora nel formato *hh: mm:*)<br /><br /> - oppure -<br /><br /> 9 + *s* (un'ora nel formato *hh: mm:*[. fff...], dove *s* è la precisione dei secondi frazionari).|  
-|SQL_TYPE_TIMESTAMP|19 (per un timestamp di *aaaa-mm-gg hh: mm:* formato)<br /><br /> - oppure -<br /><br /> 20 + *s* (per un timestamp nel *aaaa-mm-gg hh: mm:*formato [. fff], dove *s* è la precisione dei secondi frazionari).|  
+|SQL_TYPE_TIMESTAMP|19 (per un timestamp di *aaaa-mm-gg hh: mm:* formato)<br /><br /> - oppure -<br /><br /> 20 + *s* (per un timestamp nel *aaaa-mm-gg hh: mm:* formato [. fff], dove *s* è la precisione dei secondi frazionari).|  
 |Tutti i tipi di dati di intervallo|Vedere [lunghezza del tipo di dati di intervallo](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (il numero di caratteri di *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  
   

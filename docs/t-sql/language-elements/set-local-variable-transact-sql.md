@@ -1,16 +1,16 @@
 ---
 title: SET @local_variable (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|language-elements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -20,16 +20,17 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-caps.latest.revision: 
+caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 56f38e166249f13bb50d1bf0188a5066da52ea78
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 7e7444d8e65bb040bfde68ba4cb7a0a10c35b113
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -143,7 +144,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
  KEYSET  
  Specifica che all'apertura del cursore l'appartenenza e l'ordine delle righe nel cursore sono fissi. Il set di chiavi che identifica le righe in modo univoco è incluso nella tabella keyset di tempdb. Le modifiche di valori non chiave delle tabelle di base che sono state apportate dal proprietario del cursore o di cui è stato eseguito il commit da altri utenti sono visibili quando il proprietario scorre il cursore. Gli inserimenti eseguiti da altri utenti non sono visibili e non è possibile eseguire inserimenti tramite un cursore [!INCLUDE[tsql](../../includes/tsql-md.md)] del server.  
   
- Se viene eliminata una riga, i tentativi di recupero di tale riga provocano la restituzione del valore -2 per la funzione @@FETCH_STATUS. Le operazioni di aggiornamento di valori di chiave dall'esterno del cursore sono simili a un'operazione di eliminazione della riga precedente seguita da un'operazione di inserimento della nuova riga. La riga contenente i nuovi valori non è visibile e i tentativi di recupero della riga contenente i valori precedenti provocano la restituzione del valore -2 per la funzione @@FETCH_STATUS. I nuovi valori sono visibili se l'aggiornamento viene eseguito tramite il cursore con l'aggiunta della clausola WHERE CURRENT OF.  
+ Se una riga viene eliminata, il tentativo di recuperarla restituirà un valore -2 per la funzione @@FETCH_STATUS. Le operazioni di aggiornamento di valori di chiave dall'esterno del cursore sono simili a un'operazione di eliminazione della riga precedente seguita da un'operazione di inserimento della nuova riga. La riga contenente i nuovi valori non è visibile e i tentativi di recupero della riga contenente i valori precedenti provocano la restituzione del valore -2 per la funzione @@FETCH_STATUS. I nuovi valori sono visibili se l'aggiornamento viene eseguito tramite il cursore con l'aggiunta della clausola WHERE CURRENT OF.  
   
  DYNAMIC  
  Definisce un cursore che visualizza nel set di risultati tutte le modifiche apportate ai dati delle righe quando il proprietario scorre il cursore. I valori dei dati, l'ordine e l'appartenenza delle righe possono cambiare a ogni operazione di recupero. I cursori dinamici non supportano le opzioni di recupero assoluto e relativo.  

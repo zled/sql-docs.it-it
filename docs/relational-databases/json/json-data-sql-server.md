@@ -2,10 +2,10 @@
 title: Usare i dati JSON in SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 02/19/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: json
-ms.reviewer: ''
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - dbe-json
@@ -15,16 +15,17 @@ helpviewer_keywords:
 - JSON
 - JSON, built-in support
 ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
-caps.latest.revision: ''
-author: douglaslMS
-ms.author: douglasl
+caps.latest.revision: 47
+author: jovanpop-msft
+ms.author: jovanpop
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1e4e9f4a26b2d5ad3ee12975fa16d0442766f7e9
-ms.sourcegitcommit: 34766933e3832ca36181641db4493a0d2f4d05c6
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 3da48d5cad4e246ba57a162e7693ae4952b2c995
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="json-data-in-sql-server"></a>Dati JSON in SQL Server
 [!INCLUDE[appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -65,11 +66,11 @@ Le sezioni successive illustrano le principali funzionalità offerte da SQL Serv
 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>Estrarre valori dal testo JSON e usarli nelle query
 Se un testo JSON viene archiviato in tabelle di database, è possibile leggere o modificare i valori nel testo JSON usando le funzioni predefinite seguenti:  
-  
--   **JSON_VALUE** estrae un valore scalare da una stringa JSON.
--   **JSON_QUERY** estrae un oggetto o una matrice da una stringa JSON.
--   **ISJSON** verifica se una stringa include contenuto JSON valido.
--   **JSON_MODIFY** modifica un valore in una stringa JSON.
+    
+-   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) estrae un valore scalare da una stringa JSON.
+-   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) estrae un oggetto o una matrice da una stringa JSON.
+-   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) verifica se una stringa include contenuto JSON valido.
+-   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) modifica un valore in una stringa JSON.
 
 **Esempio**
   
@@ -93,13 +94,19 @@ Strumenti e applicazioni non rilevano alcuna differenza tra i valori ricavati da
 Per altre informazioni, vedere [Convalidare, eseguire query e modificare i dati JSON con funzioni predefinite (SQL Server)](../../relational-databases/json/validate-query-and-change-json-data-with-built-in-functions-sql-server.md), [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)e [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md).  
   
 ### <a name="change-json-values"></a>Modificare valori JSON
-Se è necessario modificare parti di testo JSON, è possibile usare la funzione **JSON_MODIFY** per aggiornare il valore di una proprietà in una stringa JSON e restituire la stringa JSON aggiornata. L'esempio seguente aggiorna il valore di una proprietà in una variabile che include contenuto JSON:  
+Se è necessario modificare parti di testo JSON, è possibile usare la funzione [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) per aggiornare il valore di una proprietà in una stringa JSON e restituire la stringa JSON aggiornata. L'esempio seguente aggiorna il valore di una proprietà in una variabile che include contenuto JSON:  
   
 ```sql  
-DECLARE @jsonInfo NVARCHAR(MAX)
-
-SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
+DECLARE @json NVARCHAR(MAX);
+SET @json = '{"info":{"address":[{"town":"Belgrade"},{"town":"Paris"},{"town":"Madrid"}]}';
+SET @json = JSON_MODIFY(@jsonInfo,'$.info.address[1].town','London');
+SELECT modifiedJson = @json;
 ```  
+**Risultati**  
+
+|modifiedJson|  
+|--------|  
+|{"info":{"address":[{"town":"Belgrade"},{"town":"London"},{"town":"Madrid"}]}|  
   
 ### <a name="convert-json-collections-to-a-rowset"></a>Convertire raccolte JSON in un set di righe
 Non è necessario un linguaggio di query personalizzato per eseguire query JSON in SQL Server. Per eseguire query sui dati JSON, si può usare il linguaggio T-SQL standard. Se è necessario creare una query o un report sui dati JSON, è possibile convertire facilmente i dati JSON in righe e colonne chiamando la funzione **OPENJSON** del set di righe. Per altre informazioni, vedere [Convertire dati JSON in righe e colonne con la funzione OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md).  
@@ -137,7 +144,41 @@ FROM OPENJSON(@json)
 - Il prefisso **strict** facoltativo nel percorso specifica che i valori per le proprietà specificate devono esistere nel testo JSON.
 
 Per altre informazioni, vedere [Convertire dati JSON in righe e colonne con la funzione OPENJSON (SQL Server)](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md) e [OPENJSON (Transact-SQL)](../../t-sql/functions/openjson-transact-sql.md).  
+
+È possibile che i documenti JSON abbiano sottoelementi e dati gerarchici che non possano essere mappati direttamente nelle colonne relazionali standard. In questo caso, è possibile rendere flat la gerarchia JSON unendo l'entità padre alle sottomatrici.
+
+Nell'esempio seguente il secondo oggetto della matrice include una sottomatrice in cui sono rappresentate le competenze delle persone. Ogni oggetto secondario può essere analizzato tramite una chiamata di funzione `OPENJSON` aggiuntiva: 
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json =  
+N'[  
+       { "id" : 2,"info": { "name": "John", "surname": "Smith" }, "age": 25 },  
+       { "id" : 5,"info": { "name": "Jane", "surname": "Smith", "skills": ["SQL", "C#", "Azure"] }, "dob": "2005-11-04T12:00:00" }  
+ ]'  
+   
+SELECT *  
+FROM OPENJSON(@json)  
+  WITH (id int 'strict $.id',  
+        firstName nvarchar(50) '$.info.name', lastName nvarchar(50) '$.info.surname',  
+        age int, dateOfBirth datetime2 '$.dob',
+    skills nvarchar(max) '$.skills' as json) 
+    outer apply openjson( a.skills ) 
+                     with ( skill nvarchar(8) '$' ) as b
+```  
+La matrice **skills** (competenze) viene restituita nella prima funzione `OPENJSON` come frammento di testo JSON originale e passata a un'altra funzione `OPENJSON` tramite l'operatore `APPLY`. La seconda funzione `OPENJSON` analizza la matrice JSON e restituisce i valori stringa come singolo set di righe di colonna che viene poi unito al risultato della prima funzione `OPENJSON`. Il risultato di questa query è illustrato nella tabella seguente:
+
+**Risultati**  
   
+|id|firstName|lastName|age|dateOfBirth|skill|  
+|--------|---------------|--------------|---------|-----------------|----------|  
+|2|John|Smith|25|||  
+|5|Jane|Smith||2005-11-04T12:00:00|SQL| 
+|5|Jane|Smith||2005-11-04T12:00:00|C#|
+|5|Jane|Smith||2005-11-04T12:00:00|Azure|
+
+`OUTER APPLY OPENJSON` unisce l'entità di primo livello alla sottomatrice e restituisce un set di risultati flat. Dato il join, la seconda riga sarà ripetuta per ogni competenza.
+
 ### <a name="convert-sql-server-data-to-json-or-export-json"></a>Convertire dati di SQL Server in formato JSON o esportare JSON
 Formattare i dati SQL Server o i risultati delle query JSON in formato JSON aggiungendo la clausola **FOR JSON** a un'istruzione **SELECT** . Usare la clausola **FOR JSON** per delegare la formattazione dell'output JSON dalle applicazioni client a SQL Server. Per altre informazioni, vedere [Formattare i risultati delle query in formato JSON con FOR JSON (SQL Server)](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md).  
   
@@ -208,12 +249,15 @@ Ecco alcuni casi d'uso che mostrano come usare il supporto JSON integrato in [!I
 
 ## <a name="store-and-index-json-data-in-sql-server"></a>Archiviare e indicizzare dati JSON in SQL Server
 
+Essendo JSON un formato testuale, i documenti JSON possono essere archiviati in colonne `NVARCHAR` nel database SQL. Poiché il tipo `NVARCHAR` è supportato in tutti i sottosistemi di SQL Server, è possibile inserire i documenti JSON in tabelle con indici **CLUSTERED COLUMNSTORE**, tabelle **ottimizzate per la memoria** o file esterni che possono essere letti tramite OPENROWSET o PolyBase.
+
 Per altre informazioni sulle opzioni per l'archiviazione, l'indicizzazione e l'ottimizzazione dei dati JSON in SQL Server, vedere gli articoli seguenti:
 -   [Archiviare documenti JSON in SQL Server o nel database SQL](store-json-documents-in-sql-tables.md)
 -   [Indicizzazione dei dati JSON](index-json-data.md)
 -   [Ottimizzare l'elaborazione JSON con OLTP in memoria](optimize-json-processing-with-in-memory-oltp.md)
 
 ### <a name="load-json-files-into-sql-server"></a>Caricare file JSON in SQL Server  
+
 È possibile formattare le informazioni archiviate nei file come JSON standard o JSON delimitato da righe. SQL Server può importare il contenuto di file JSON, analizzarlo usando le funzioni **OPENJSON** e **JSON_VALUE** e caricarlo nelle tabelle.  
   
 -   Se i documenti JSON vengono archiviati in file locali, unità di rete condivise o posizioni di File di Azure accessibili da SQL Server, è possibile usare l'importazione in blocco per caricare i dati JSON in SQL Server. Per altre informazioni su questo scenario, vedere [Importing JSON files into SQL Server using OPENROWSET (BULK)](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2015/10/07/importing-json-files-into-sql-server-using-openrowset-bulk.aspx)(Importazione di file JSON in SQL Server usando OPENROWSET - BULK).  

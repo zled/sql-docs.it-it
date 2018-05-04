@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLTables
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a318503cfc5efb5aa39dd93de76f3811b0a65aa4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ca0e5379079c735b7dd0f5b6770818e5f930f51d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqltables-function"></a>Funzione SQLTables
 **Conformità**  
@@ -129,7 +128,7 @@ SQLRETURN SQLTables(
   
  In caso contrario, l'applicazione deve essere in grado di gestire una situazione in cui l'utente seleziona una tabella per cui **selezionare** non vengono concessi privilegi.  
   
- Il *SchemaName* e *TableName* argomenti accettano i criteri di ricerca. Il *CatalogName* argomento accetta i criteri di ricerca se l'attributo di ambiente SQL_ODBC_VERSION SQL_OV_ODBC3; non accetta modelli di ricerca se SQL_OV_ODBC2 è impostata. Se è impostato SQL_OV_ODBC3, un'applicazione ODBC 3*. x* driver richiederà di caratteri che con caratteri jolly di *CatalogName* argomento usare caratteri di escape per essere considerate letteralmente. Per ulteriori informazioni sui pattern di ricerca validi, vedere [argomenti di modello valore](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
+ Il *SchemaName* e *TableName* argomenti accettano i criteri di ricerca. Il *CatalogName* argomento accetta i criteri di ricerca se l'attributo di ambiente SQL_ODBC_VERSION SQL_OV_ODBC3; non accetta modelli di ricerca se SQL_OV_ODBC2 è impostata. Se è impostato SQL_OV_ODBC3, un'applicazione ODBC 3 *. x* driver richiederà di caratteri che con caratteri jolly di *CatalogName* argomento usare caratteri di escape per essere considerate letteralmente. Per ulteriori informazioni sui pattern di ricerca validi, vedere [argomenti di modello valore](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   
 > [!NOTE]  
 >  Per ulteriori informazioni sull'utilizzo generale, gli argomenti e i dati restituiti delle funzioni di catalogo ODBC, vedere [funzioni di catalogo](../../../odbc/reference/develop-app/catalog-functions.md).  

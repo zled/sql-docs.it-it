@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [ODBC], standards compliance
 - compatibility [ODBC], standards compliance
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 796491fa284113d350cd7f0233ce95a4f3ceb37a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9eb141c5754bf6cd7d5dd52324d784ee2a87b6ac
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backward-compatibility-and-standards-compliance"></a>Compatibilità e conformità agli standard
 Compatibilità con le versioni precedenti è la possibilità di componenti ODBC più recenti per lavorare con componenti ODBC precedenti. Le sezioni seguenti illustrano come questi componenti sono interessati dalle modifiche in ODBC 3*x*. Le informazioni in essi contenute principalmente risolve la scrittura di un'applicazione ODBC 3*x* applicazione e come indietro problemi di compatibilità vengono gestiti dal driver ODBC. Per indicazioni specifiche sulla modalità di compatibilità problemi riguardano la scrittura di un'applicazione ODBC 3*x* driver, vedere [appendice g: Driver le linee guida per la compatibilità](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md).  

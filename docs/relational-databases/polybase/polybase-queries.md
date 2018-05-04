@@ -1,16 +1,16 @@
 ---
 title: Query di PolyBase | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 12/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: polybase
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-polybase
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 keywords:
 - PolyBase
@@ -21,21 +21,21 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 332661e69cde4a1ca8ec55c4082e1b3a23077571
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b6544e06a8b0d07e4a2eda1f8371cd0440c172f9
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Questo articolo propone alcuni esempi di query che usano la funzionalità [PolyBase](../../relational-databases/polybase/polybase-guide.md) di SQL Server 2016. Prima di usare questi esempi è necessario comprendere anche le istruzioni T-SQL necessarie per configurare PolyBase (vedere [Oggetti T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
+  Questo articolo propone alcuni esempi di query che usano la funzionalità [PolyBase](../../relational-databases/polybase/polybase-guide.md) di SQL Server (a partire dalla versione 2016). Prima di usare questi esempi è necessario comprendere anche le istruzioni T-SQL necessarie per configurare PolyBase (vedere [Oggetti T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md)).
   
 ## <a name="queries"></a>Query  
  Eseguire istruzioni Transact-SQL su tabelle esterne oppure usare gli strumenti di Business Intelligence per eseguire query su tabelle esterne.
@@ -156,9 +156,10 @@ CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;
 
 Esportare dati da SQL Server in Hadoop o Archiviazione di Azure. 
 
-Per prima cosa abilitare la funzionalità di esportazione impostando il valore `sp_configure` di 'allow polybase export' su 1. Creare quindi una tabella esterna che punta alla directory di destinazione. Usare quindi INSERT INTO per esportare i dati da una tabella di SQL Server locale a un'origine dati esterna. 
+Per prima cosa abilitare la funzionalità di esportazione impostando il valore `sp_configure` di 'allow polybase export' su 1. Creare quindi una tabella esterna che punta alla directory di destinazione. L'istruzione CREATE EXTERNAL TABLE crea la directory di destinazione, se non esiste già. Usare quindi INSERT INTO per esportare i dati da una tabella di SQL Server locale a un'origine dati esterna. 
 
-L'istruzione INSERT INTO crea la directory di destinazione, se non esiste, e i risultati dell'istruzione SELECT vengono esportati nel percorso specificato nel formato di file specificato. I file esterni sono denominati *QueryID_date_time_ID.format*, dove *ID* è un identificatore incrementale e *format* è il formato dei dati esportati. Ad esempio, un nome di file potrebbe essere QID776_20160130_182739_0.orc.
+I risultati dell'istruzione SELECT vengono esportati nel percorso specificato usando il formato di file specificato. I file esterni sono denominati *QueryID_date_time_ID.format*, dove *ID* è un identificatore incrementale e *format* è il formato dei dati esportati. Ad esempio, un nome di file potrebbe essere QID776_20160130_182739_0.orc.
+
 
 > [!NOTE]
 > Quando si esportano dati in Hadoop o in Archiviazione BLOB di Azure tramite PolyBase, vengono esportati solo i dati e non i nomi di colonne (metadati) definiti nel comando CREATE EXTERNAL TABLE.

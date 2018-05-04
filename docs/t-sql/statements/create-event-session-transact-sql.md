@@ -1,16 +1,16 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE EVENT SESSION
@@ -25,16 +25,16 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - CREATE EVENT SESSION statement
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-caps.latest.revision: 
+caps.latest.revision: 65
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ede0fb6715067bba3bafb1e77863483590d5f6a7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b5d8b3267ca7021d3d713a33bf66a77d664790c4
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ON SERVER
  Gli eventi vengono visualizzati nella vista sys.dm_xe_objects come object_type "event".  
   
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
- Consente gli attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable ' e object_name = *event_name*.  
+ Consente gli attributi personalizzabili per l'evento da impostare. Gli attributi personalizzabili vengono visualizzati nella vista sys.dm_xe_object_columns come column_type 'customizable' e object_name = *event_name*.  
   
  ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
  Azione da associare alla sessione dell'evento, dove:  
@@ -185,7 +185,7 @@ ON SERVER
 > [!IMPORTANT]  
 >  Se si utilizza il buffer circolare come destinazione, si consiglia di impostare il parametro di destinazione max_memory su 2048 kilobyte (KB) per evitare il possibile troncamento dei dati dell'output XML. Per altre informazioni sull'uso dei diversi tipi di destinazione, vedere [Destinazioni degli eventi estesi di SQL Server](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384).  
   
- WITH ( \<event_session_options> [ ,...*n*] ) specifica le opzioni da usare con la sessione dell'evento.  
+ WITH ( \<event_session_options> [ ,...*n*] ) Specifica le opzioni da usare con la sessione dell'evento.  
   
  MAX_MEMORY =*size* [ KB | **MB** ]  
  La quantità di memoria allocata alla sessione per la memorizzazione degli eventi nel buffer. Il valore predefinito è 4 MB. *size* è un numero intero e può essere espresso in kilobyte (KB) o megabyte (MB).  

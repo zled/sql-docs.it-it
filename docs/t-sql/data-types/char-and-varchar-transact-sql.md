@@ -1,16 +1,16 @@
 ---
 title: char e varchar (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 7/23/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|data-types
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - varchar
@@ -25,16 +25,17 @@ helpviewer_keywords:
 - variable-length data types [SQL Server]
 - varchar data type
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
-caps.latest.revision: 
+caps.latest.revision: 48
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4c383e3b3ff5b79604454f80443c9042633797bf
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2147de81da2779ecec2369e59a4a67db49e8dc0b
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="char-and-varchar-transact-sql"></a>char and varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
 Questi tipi di dati sono a lunghezza fissa o variabile.  
   
 ## <a name="arguments"></a>Argomenti  
-**char** [ ( *n* ) ] Dati di stringa a lunghezza fissa, non-Unicode. *n* definisce la lunghezza della stringa e deve essere un valore compreso tra 1 e 8.000. Le dimensioni della risorsa di archiviazione corrispondono a *n* byte. Il sinonimo ISO per **char** è **character**.
+**char** [ ( *n* ) ] Dati di stringa a lunghezza fissa, non-Unicode. *n* definisce la lunghezza della stringa e deve essere un valore compreso tra 1 e 8.000. Le dimensioni di archiviazione corrispondono a *n* byte. Il sinonimo ISO per **char** è **character**.
   
 **varchar** [ ( *n* | **max** ) ] Dati di stringa a lunghezza variabile, non-Unicode. *n* definisce la lunghezza della stringa e può essere un valore compreso tra 1 e 8.000. **max** indica che le dimensioni massime della risorsa di archiviazione sono di 2^31-1 byte (2 GB). Le dimensioni dello spazio di archiviazione corrispondono alla lunghezza effettiva dei dati immessi + 2 byte. I sinonimi ISO per **varchar** sono **charvarying** o **charactervarying**.
   
@@ -58,7 +59,7 @@ Nel caso di siti che supportano più lingue, è consigliabile usare i tipi di da
   
 Se l'opzione SET ANSI_PADDING è impostata su OFF quando si esegue l'istruzione CREATE TABLE o ALTER TABLE, le colonne di tipo **char** definite come NULL vengono gestite come colonne di tipo **varchar**.
   
-Quando la tabella codici delle regole di confronto usa caratteri a doppio byte, le dimensioni della risorsa di archiviazione risultano comunque pari a *n* byte. A seconda della stringa di caratteri, le dimensioni della risorsa di archiviazione di *n* byte possono corrispondere a meno di *n* caratteri.
+Quando la tabella codici delle regole di confronto usa caratteri a doppio byte, le dimensioni di archiviazione risultano comunque pari a *n* byte. In base alla stringa di caratteri, le dimensioni della risorsa di archiviazione di *n* byte possono corrispondere a meno di *n* caratteri.
 
 > [!WARNING]
 > Ogni colonna non Null varchar(max) o nvarchar(max) richiede 24 byte di allocazione fissa aggiuntiva che concorre al raggiungimento del limite delle righe di 8.060 byte durante un'operazione di ordinamento. Ciò può creare un limite implicito per il numero di colonne non Null varchar(max) o nvarchar(max) che è possibile creare in una tabella.  
@@ -81,7 +82,7 @@ Le espressioni di caratteri che vengono convertite nel tipo di dati **money** o 
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>A. Visualizzazione del valore predefinito di n se utilizzato per la dichiarazione di variabili.  
-Nell'esempio seguente viene illustrato che il valore predefinito di *n* è 1 per i tipi di dati `char` e `varchar` quando vengono usati per la dichiarazione di variabili.
+L'esempio seguente indica che il valore predefinito di *n* è 1 per i tipi di dati `char` e `varchar` quando vengono usati per la dichiarazione di variabili.
   
 ```sql
 DECLARE @myVariable AS varchar = 'abc';  
@@ -92,7 +93,7 @@ GO
 ```  
   
 ### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>B. Visualizzazione del valore predefinito di n se varchar viene utilizzato con CAST e CONVERT.  
-Nell'esempio seguente viene illustrato che il valore predefinito di *n* è 30 quando i tipi di dati `char` e `varchar` vengono usati con le funzioni `CAST` e `CONVERT`.
+L'esempio seguente indica che il valore predefinito di *n* è 30 quando i tipi di dati `char` e `varchar` vengono usati con le funzioni `CAST` e `CONVERT`.
   
 ```sql
 DECLARE @myVariable AS varchar(40);  
@@ -161,7 +162,7 @@ String                                       TruncatedValue
 [nchar e nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)  
 [CAST e CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [COLLATE &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)  
-[Conversione di tipi di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[Conversione del tipo di dati &#40;motore di database&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [Tipi di dati &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [Stima delle dimensioni di un database](../../relational-databases/databases/estimate-the-size-of-a-database.md)
   

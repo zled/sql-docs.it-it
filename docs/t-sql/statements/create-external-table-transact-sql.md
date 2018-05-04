@@ -1,16 +1,16 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CREATE_EXTERNAL_TABLE
@@ -23,16 +23,17 @@ helpviewer_keywords:
 - External, table create
 - PolyBase, external table
 ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
-caps.latest.revision: 
+caps.latest.revision: 30
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 146fd91bfab0ceb5d9b289ef9be6c7446c77f073
-ms.sourcegitcommit: f0c5e37c138be5fb2cbb93e9f2ded307665b54ea
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 352bdf39861d8874f1e7b535c2ef954e65d48339
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -43,7 +44,7 @@ ms.lasthandoff: 02/24/2018
 >  PolyBase è supportata solo in SQL Server 2016 (o versioni successive), Azure SQL Data Warehouse e Parallel Data Warehouse. Le query di database elastico sono supportate solo nel database SQL di Azure v12 o versioni successive.  
 
 
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le tabelle esterne vengono usate per accedere ai dati archiviati in un cluster Hadoop o un'archiviazione BLOB di Azure. Una tabella esterna PolyBase che fa riferimento ai dati archiviati in un cluster Hadoop o un'archiviazione BLOB di Azure può essere usata anche per creare una tabella esterna per le [query di database elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa le tabelle esterne per accedere ai dati archiviati in un cluster Hadoop o un'archiviazione BLOB di Azure. Una tabella esterna PolyBase che fa riferimento ai dati archiviati in un cluster Hadoop o un'archiviazione BLOB di Azure può essere usata anche per creare una tabella esterna per le [query di database elastico](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
  Usare una tabella esterna per:  
   
@@ -182,6 +183,12 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  LOCATION =  '*folder_or_filepath*'  
  Specifica la cartella o il percorso e il nome del file per i dati effettivi in Hadoop o nell'archiviazione BLOB di Azure. Il percorso inizia dalla directory radice, ovvero la posizione dei dati specificata nell'origine dati esterna.  
+
+
+In SQL Server l'istruzione CREATE EXTERNAL TABLE crea il percorso e la cartella, se non esiste già. Quindi è possibile usare INSERT INTO per esportare i dati da una tabella di SQL Server locale a un'origine dati esterna. Per altre informazioni, vedere l'articolo relativo alle [query di PolyBase](/sql/relational-databases/polybase/polybase-queries). 
+
+In SQL Data Warehouse e nella piattaforma di sistemi analitici l'istruzione [CREATE EXTERNAL TABLE AS SELECT](create-external-table-as-select-transact-sql.md) crea il percorso e la cartella, se non esiste. In questi due prodotti CREATE EXTERNAL TABLE non crea il percorso e la cartella.
+
   
  Se si specifica che LOCATION deve essere una cartella, una query PolyBase che effettua selezioni dalla tabella esterna recupererà i file dalla cartella e da tutte le relative sottocartelle. Proprio come Hadoop, PolyBase non restituisce le cartelle nascoste. Inoltre, non restituisce i file per cui il nome del file inizia con un carattere di sottolineatura (_) o un punto (.).  
   

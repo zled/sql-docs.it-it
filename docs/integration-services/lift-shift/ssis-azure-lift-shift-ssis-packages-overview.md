@@ -1,6 +1,6 @@
 ---
 title: Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud | Microsoft Docs
-ms.date: 10/31/2017
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82a6ab09504edd0a5df17a05de62ae5fd44a1c18
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: 8fb064a5efe77b9b273234f8ccd4f9760a128d92
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud
 È ora possibile spostare pacchetti e i carichi di lavoro di SQL Server Integration Services (SSIS) nel cloud di Azure.
@@ -85,7 +85,7 @@ Per informazioni su come connettersi ai file e alle condivisioni file, vedere [A
 
 Quando si esegue il provisioning di un'istanza del database SQL per ospitare SSISDB, vengono installati anche Azure Feature Pack per SSIS e le funzionalità di accesso ridistribuibili. Questi componenti offrono la connettività a varie origini dati di **Azure** e ai file di **Excel e Access**, oltre che alle origini dati supportate dai componenti predefiniti.
 
-Al momento non è possibile installare o usare **componenti di terze parti** per SSIS, inclusi i componenti di terze parti di Microsoft, come i componenti Oracle e Teradata di Attunity e SAP BI.
+È anche possibile installare componenti aggiuntivi. Per altre informazioni, vedere [Custom setup for the Azure-SSIS integration runtime](/azure/articles/data-factory/how-to-configure-azure-ssis-ir-custom-setup.md) (Configurazione personalizzata del runtime di integrazione SSIS di Azure).
 
 ## <a name="deploy-and-run-packages"></a>Distribuire ed eseguire i pacchetti
 Per la distribuzione di progetti a SSISDB in Azure è necessario usare il **modello di distribuzione dei progetti** e non il modello di distribuzione dei pacchetti.

@@ -1,9 +1,9 @@
 ---
-title: 'Guida introduttiva: Connettersi ed eseguire query di un database SQL di Azure mediante SQL Operations Studio (preview) | Microsoft Docs'
-description: In questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (preview) per connettersi a un database SQL di Azure ed eseguire query
+title: 'Guida introduttiva: Connettersi ed eseguire query di un database SQL di Azure mediante SQL Operations Studio (anteprima) | Microsoft Docs'
+description: In questa guida introduttiva viene illustrato come utilizzare SQL Operations Studio (anteprima) per connettersi a un database SQL di Azure ed eseguire query
 ms.custom: tools|sos
 ms.date: 03/08/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
@@ -14,15 +14,15 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82fbe7376d762940815c7739311e69672b7fbff6
-ms.sourcegitcommit: 6c06267f3eeeb3f0d6fc4c57e1387621720ca8bf
-ms.translationtype: MT
+ms.openlocfilehash: 5ecee0879282a31f08fb98bceb0241a5faf0ca2f
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Guida introduttiva: Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per connettersi ed eseguire query di database SQL di Azure
 
-Questa Guida introduttiva viene illustrato come utilizzare *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* per connettersi a un database SQL di Azure e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
+In questa guida introduttiva viene illustrato come utilizzare *[!INCLUDE[name-sos](../includes/name-sos-short.md)]* per connettersi a un database SQL di Azure e quindi utilizzare istruzioni Transact-SQL (T-SQL) per creare il *TutorialDB* utilizzato [!INCLUDE[name-sos](../includes/name-sos-short.md)] esercitazioni.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -41,11 +41,11 @@ Se non si dispone già di un server SQL Azure, completare una delle seguenti gui
 
 Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una connessione al server di Database SQL di Azure.
 
-1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene mostrata la pagina **connessione**. Se non viene visualizzato il **connessione** pagina, fare clic su **Aggiungi connessione**, o **nuova connessione** icona nel **server** barra laterale:
+1. Alla prima esecuzione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] viene mostrata la pagina **connessione**. Se essa non appare, fare clic sull'icona **Nuova connessione** nella barra laterale **SERVER**: 
    
-   ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-icon.png)
+   ![Nuova connessione](media/quickstart-sql-database/new-connection-icon.png)
 
-2. Questo articolo usa *account di accesso SQL*, ma l'accesso tramite *autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito utilizzando il nome del server, nome utente e password per *il vostro* server SQL di Azure:
+2. Questo articolo usa *Account di accesso SQL*, ma l'accesso tramite *Autenticazione di Windows* è comunque supportato. Compilare i campi come indicato di seguito, specificando il nome del server, il nome utente e la password per il server Azure SQL usato: 
 
    | Impostazione       | Valore suggerito | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
@@ -57,9 +57,9 @@ Utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per stabilire una
    | **Nome database** | *Lasciare vuoto* | Il nome del database a cui si desidera connettersi. |
    | **Gruppo di server** | Selezionare <Default> | Se è stato creato un gruppo di server, è possibile impostare per un gruppo di server specifico. | 
 
-   ![Icona "Nuova connessione"](media/quickstart-sql-database/new-connection-screen.png)  
+   ![Nuova connessione](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Se il server non dispone di una regola del firewall per aprire l'accesso a SQL Operations Studio, viene mostrata la vista **Crea nuova regola firewall**. Completare il modulo per creare una nuova regola firewall. Per informazioni dettagliate, vedere [Regole del firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. Se il server non dispone di una regola del firewall per aprire l'accesso a SQL Operations Studio, viene mostrata automaticamente la vista **Crea nuova regola firewall**.  Completare il modulo per creare una nuova regola firewall. Per informazioni dettagliate, vedere [Regole del firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nuova regola del firewall](media/quickstart-sql-database/firewall.png)  
 
@@ -90,7 +90,7 @@ Nelle sezioni seguenti viene creato il database *TutorialDB* utilizzato in diver
 
 ## <a name="create-a-table"></a>Creare una tabella
 
-L'editor di query è ancora connesso al database *master*, ma si vuole creare una tabella nel database *TutorialDB*. 
+L'editor di query è ancora connesso al *master* database, ma si vuole creare una tabella sul database *TutorialDB*. 
 
 1. Impostare il contesto di connessione su **TutorialDB**:
 
@@ -101,7 +101,7 @@ L'editor di query è ancora connesso al database *master*, ma si vuole creare un
 1. Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
 
    > [!NOTE]
-   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite.
+   > È possibile aggiungere lo script o sovrascrivere la query precedente nell'editor. Si noti che il clic su **Esegui** esegue solo la query selezionata. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite. Se nulla è selezionato, tutte le query presenti nel foglio vengono eseguite.
 
    ```sql
    -- Create a new table called 'Customers' in schema 'dbo'
@@ -121,7 +121,7 @@ L'editor di query è ancora connesso al database *master*, ma si vuole creare un
    ```
 
 
-## <a name="insert-rows"></a>Inserimento di righe
+## <a name="insert-rows"></a>Inserire righe
 
 - Incollare il seguente frammento di codice nell'editor di query, quindi fare clic su **Esegui**:
 

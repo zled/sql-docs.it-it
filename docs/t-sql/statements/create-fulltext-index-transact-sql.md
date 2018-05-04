@@ -1,16 +1,16 @@
 ---
 title: CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 04/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - FULLTEXT_INDEX_TSQL
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - index creation [SQL Server], CREATE FULLTEXT INDEX statement
 - CREATE FULLTEXT INDEX statement
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
-caps.latest.revision: 
+caps.latest.revision: 110
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 47808b1214157b393cae5cfcc193f5b482b53601
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5ac9e0f05e639e74dd83cdea7c8f7030e6249b8e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -97,11 +97,11 @@ CREATE FULLTEXT INDEX ON table_name
   
  Se *language_term* è specificato, la lingua rappresentata verrà usata per indicizzare i dati archiviati nelle colonne **char**, **nchar**, **varchar**, **nvarchar**, **text** e **ntext**. Questa lingua corrisponde alla lingua predefinita usata in fase di query se non viene specificato *language_term* in un predicato full-text per la colonna.  
   
- Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna alias nella tabella di sistema syslanguages. La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'**. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale di LCID. Il valore esadecimale deve essere composto al massimo da otto cifre, zero iniziali inclusi.  
+ Se l'argomento *language_term* viene specificato come stringa, corrisponde al valore della colonna alias nella tabella di sistema syslanguages. La stringa deve essere racchiusa tra virgolette singole, come in **'***language_term***'**. Se l'argomento *language_term* viene specificato come valore intero, corrisponde all'LCID effettivo che identifica la lingua. Se si specifica un valore esadecimale, *language_term* è 0x seguito dal valore esadecimale dell'LCID. Il valore esadecimale deve essere composto al massimo da otto cifre, zero iniziali inclusi.  
   
  Se il valore è in formato DBCS (Double-Byte Character Set), verrà convertito in Unicode da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- È necessario abilitare per la lingua specificata in *language_term* le risorse quali il word breaker e lo stemmer. Se tali risorse non supportano la lingua specificata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un errore.  
+ Per la lingua specificata in *language_term* è necessario abilitare risorse quali word breaker e stemmer. Se tali risorse non supportano la lingua specificata, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituirà un errore.  
   
  Utilizzare la stored procedure sp_configure per accedere alle informazioni sulla lingua full-text predefinita dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per altre informazioni, vedere [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
@@ -127,10 +127,10 @@ CREATE FULLTEXT INDEX ON table_name
  Specifica se le modifiche (aggiornamenti, eliminazioni o inserimenti) apportate alle colonne della tabella coperte dall'indice full-text verranno propagate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] all'indice full-text. Le modifiche apportate ai dati tramite WRITETEXT e UPDATETEXT non vengono riflesse nell'indice full-text, pertanto non vengono registrate dalla funzione di rilevamento delle modifiche.  
   
  MANUAL  
- Specifica che le modifiche rilevate devono essere propagate manualmente chiamando l'istruzione ALTER FULLTEXT INDEX... START UPDATE POPULATION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) (*popolamento manuale*). Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
+ Specifica che le modifiche rilevate devono essere propagate manualmente chiamando l'istruzione ALTER FULLTEXT INDEX... START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] (*popolamento manuale*). Per chiamare questa istruzione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodicamente, è possibile utilizzare [!INCLUDE[tsql](../../includes/tsql-md.md)] Agent.  
   
  **AUTO**  
- Specifica che le modifiche rilevate verranno propagate automaticamente quando vengono modificati i dati nella tabella di base (*popolamento automatico*). Sebbene le modifiche vengano propagate automaticamente, tali modifiche potrebbero non risultare immediatamente nell'indice full-text. AUTO è l'impostazione predefinita.  
+ Specifica che le modifiche rilevate verranno propagate automaticamente quando i dati nella tabella di base vengono modificati (*popolamento automatico*). Sebbene le modifiche vengano propagate automaticamente, tali modifiche potrebbero non risultare immediatamente nell'indice full-text. AUTO è l'impostazione predefinita.  
   
  OFF [ `,` NO POPULATION]  
  Specifica che [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non mantiene un elenco delle modifiche apportate ai dati indicizzati. Se non si specifica NO POPULATION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] popola l'indice completamente dopo che è stato creato.  

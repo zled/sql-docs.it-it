@@ -1,16 +1,16 @@
 ---
 title: CHAR (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - char_TSQL
@@ -29,21 +29,22 @@ helpviewer_keywords:
 - line feed
 - printing ASCII values
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-caps.latest.revision: 
+caps.latest.revision: 39
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5dd3a4f8b6fd308560ddcf2db3c6940625dc6ee3
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 46b448a5d464cf0de9f9bf70373103da10f46b4d
+ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="char-transact-sql"></a>CHAR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Converte un codice ASCII di tipo **int** in un carattere.
+Questa funzione converte un codice ASCII di tipo **int** in un valore di carattere.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -55,13 +56,13 @@ CHAR ( integer_expression )
   
 ## <a name="arguments"></a>Argomenti  
 *integer_expression*  
-Valore intero compreso tra 0 e 255. Viene restituito `NULL` se l'espressione Integer non è compresa in questo intervallo.
+Valore intero compreso tra 0 e 255. `CHAR` restituisce un valore `NULL` per le espressioni integer esterne all'intervallo.
   
 ## <a name="return-types"></a>Tipi restituiti
 **char(1)**
   
 ## <a name="remarks"></a>Remarks  
-È possibile usare la funzione `CHAR` per inserire caratteri di controllo nelle stringhe di caratteri. Nella tabella seguente vengono descritti i caratteri di controllo più comunemente utilizzati.
+Usare la funzione `CHAR` per inserire caratteri di controllo nelle stringhe di caratteri. In questa tabella sono elencati i caratteri di controllo usati più di frequente.
   
 |Carattere di controllo|valore|  
 |---|---|
@@ -113,7 +114,7 @@ GO
 ```
   
 ### <a name="b-using-char-to-insert-a-control-character"></a>B. Utilizzo della funzione CHAR per inserire un carattere di controllo  
-Nell'esempio seguente viene utilizzato `CHAR(13)` per stampare nome e indirizzo di posta elettronica di un dipendente su righe diverse quando i risultati vengono restituiti in formato testo. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
+In questo esempio si usa `CHAR(13)` per stampare nome e indirizzo di posta elettronica di un dipendente su righe diverse quando i risultati della query vengono restituiti in formato testo. In questo esempio viene utilizzato il database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].
   
 ```sql
 SELECT p.FirstName + ' ' + p.LastName, + CHAR(13)  + pe.EmailAddress   
@@ -135,7 +136,7 @@ ken0@adventure-works.com
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Esempi: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-using-ascii-and-char-to-print-ascii-values-from-a-string"></a>C. Utilizzo di ASCII e CHAR per stampare valori ASCII da una stringa  
-Nell'esempio seguente, che presuppone l'uso del set di caratteri ASCII, viene restituito il valore di carattere per 6 numeri di carattere ASCII.
+Questo esempio presuppone che si usi un set di caratteri ASCII. Restituisce il valore del carattere per sei diversi valori numerici ASCII.
   
 ```sql
 SELECT CHAR(65) AS [65], CHAR(66) AS [66],   
@@ -152,7 +153,7 @@ A    B    a    b    1    2
 ```
   
 ### <a name="d-using-char-to-insert-a-control-character"></a>D. Utilizzo della funzione CHAR per inserire un carattere di controllo  
-Nell'esempio seguente viene usato `CHAR(13)` per restituire informazioni sui database su righe diverse quando i risultati vengono restituiti in formato testo.
+In questo esempio viene usato `CHAR(13)` per restituire le informazioni di sys.databases su righe separate quando la query restituisce i risultati in formato testo.
   
 ```sql
 SELECT name, 'was created on ', create_date, CHAR(13), name, 'is currently ', state_desc   

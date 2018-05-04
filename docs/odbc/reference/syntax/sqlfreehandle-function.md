@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFreeHandle
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 601d1257b99e3c3a9713730ef1ea110905d0143f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41ed0af53844edfe55203e8310ce326fb2c4e2b8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle Function
 **Conformità**  
@@ -103,7 +102,7 @@ SQLRETURN SQLFreeHandle(
  Se l'ambiente è un ambiente condiviso, l'applicazione che chiama **SQLFreeHandle** con un *HandleType* impostato su SQL_HANDLE_ENV non avrà più accesso per l'ambiente dopo la chiamata, ma l'ambiente le risorse non sono necessariamente liberate. La chiamata a **SQLFreeHandle** decrementa il conteggio dei riferimenti dell'ambiente. Il conteggio dei riferimenti è gestito da Gestione Driver. Se non raggiunge lo zero, non viene liberata ambiente condiviso, perché è ancora in uso da un altro componente. Se il conteggio dei riferimenti arriva a zero, vengono liberate le risorse dell'ambiente condiviso.  
   
 ## <a name="freeing-a-connection-handle"></a>Liberare un Handle di connessione  
- Prima di chiamare **SQLFreeHandle** con un *HandleType* SQL_HANDLE_DBC, un'applicazione deve chiamare **SQLDisconnect** per la connessione se c'è una connessione su questo gestire*.* In caso contrario, la chiamata a **SQLFreeHandle** restituisce SQL_ERROR e la connessione rimane valido.  
+ Prima di chiamare **SQLFreeHandle** con un *HandleType* SQL_HANDLE_DBC, un'applicazione deve chiamare **SQLDisconnect** per la connessione se c'è una connessione su questo gestire *.* In caso contrario, la chiamata a **SQLFreeHandle** restituisce SQL_ERROR e la connessione rimane valido.  
   
  Per ulteriori informazioni, vedere [handle di connessione](../../../odbc/reference/develop-app/connection-handles.md) e [disconnessione da un'origine dati o il Driver](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   

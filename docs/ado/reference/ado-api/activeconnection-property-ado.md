@@ -1,17 +1,17 @@
 ---
-title: "Proprietà ActiveConnection (ADO) | Documenti Microsoft"
-ms.prod: sql-non-specified
+title: Proprietà ActiveConnection (ADO) | Documenti Microsoft
+ms.prod: sql
 ms.prod_service: drivers
-ms.service: 
+ms.service: ''
 ms.component: ado
 ms.technology:
 - drivers
-ms.custom: 
+ms.custom: ''
 ms.date: 01/19/2017
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 apitype: COM
 f1_keywords:
 - Command15::ActiveConnection
@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADO]
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-caps.latest.revision: 
+caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2bbd6ba28209df50d8956c784d0ef25f9ac73728
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: 00ca9b4b45deb31f3b0f4d233a452b58e9f8e40f
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="activeconnection-property-ado"></a>Proprietà ActiveConnection (ADO)
 Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto specificato [comando](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), o [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto attualmente appartiene.  
@@ -40,7 +40,7 @@ Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.
 ## <a name="remarks"></a>Osservazioni  
  Utilizzare il **ActiveConnection** proprietà per determinare il **connessione** oggetto su cui specificato **comando** verrà eseguito l'oggetto o specificato  **Recordset** verrà aperto.  
   
-## <a name="command"></a>Command  
+## <a name="command"></a>Comando  
  Per **comando** oggetti, il **ActiveConnection** proprietà è di lettura/scrittura.  
   
  Se si tenta di chiamare il [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) metodo su un **comando** oggetto prima di impostare questa proprietà su un oggetto aperto **connessione** oggetto o stringa di connessione valida, si verifica un errore.  
@@ -48,23 +48,23 @@ Indica a cui [connessione](../../../ado/reference/ado-api/connection-object-ado.
  Se un **connessione** oggetto è assegnato il **ActiveConnection** proprietà, l'oggetto deve essere aperto. L'assegnazione di un oggetto connessione chiuso causa un errore.  
   
 ### <a name="note"></a>Nota  
- **Microsoft Visual Basic** impostazione di **ActiveConnection** proprietà *nulla* rimuove l'associazione di **comando** oggetto dall'oggetto corrente **Connessione** e fa sì che il provider di rilasciare le risorse associate all'origine dati. È quindi possibile associare il **comando** oggetto con lo stesso o in un altro **connessione** oggetto. Alcuni provider consentono di modificare l'impostazione della proprietà da uno **connessione** a un altro, senza dover prima di impostare la proprietà su *nulla*.  
+ **Microsoft Visual Basic** impostazione il **ActiveConnection** proprietà *Nothing* rimuove l'associazione e il **comando** oggetto dall'oggetto corrente **Connessione** e fa sì che il provider di rilasciare le risorse associate nell'origine dati. È quindi possibile associare il **comando** oggetto con lo stesso o in un altro **connessione** oggetto. Alcuni provider consentono di modificare l'impostazione della proprietà da uno **connessione** a un altro, senza dover prima di impostare la proprietà su *nulla*.  
   
  Se il [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) insieme il **comando** oggetto contiene i parametri forniti dal provider, la raccolta viene cancellata se si imposta la **ActiveConnection** proprietà *nulla* o a un altro **connessione** oggetto. Se si creano manualmente [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetti e usarli per riempire il **parametri** insieme del **comando** oggetto impostando il **ActiveConnection**  proprietà *nulla* o a un altro **connessione** oggetto lascia il **parametri** raccolta intatto.  
   
- Chiusura di **connessione** oggetto con cui un **comando** oggetto è set associati il **ActiveConnection** proprietà *nulla*. Impostando questa proprietà su un oggetto chiuso **connessione** oggetto genera un errore.  
+ Se il **Record** viene aperto da un oggetto esistente **Record** o **Recordset**, quindi è automaticamente associato a tale *Record* o  Recordset dell'oggetto connessione oggetto. Gli URL che utilizzano lo schema http richiamerà automaticamente il **il Provider Microsoft OLE DB per Internet Publishing**.  
   
 ## <a name="recordset"></a>recordset  
- Per aprire **Recordset** oggetti o per **Recordset** oggetti la cui proprietà [origine](../../../ado/reference/ado-api/source-property-ado-recordset.md) proprietà è impostata su un valore valido **comando** oggetto, il **ActiveConnection** proprietà è di sola lettura. In caso contrario, è di lettura/scrittura.  
+ Per aprire **Recordset** oggetti o per **Recordset** oggetti la cui proprietà [origine](../../../ado/reference/ado-api/source-property-ado-recordset.md) proprietà è impostata su un valore valido **comando** oggetto, il **ActiveConnection** proprietà è di sola lettura. Esempio di proprietà direzione (VB), CommandText, CommandTimeout, CommandType, dimensioni e ActiveConnection  
   
- È possibile impostare questa proprietà su un valore valido **connessione** oggetto o a una stringa di connessione valida. In questo caso, il provider crea un nuovo **connessione** utilizzando questa definizione dell'oggetto e viene aperta la connessione. Inoltre, il provider può impostare questa proprietà per il nuovo **connessione** oggetto per fornire un modo per accedere il **connessione** per informazioni dettagliate sull'errore o per eseguire altri comandi dell'oggetto.  
+ Esempio di proprietà direzione (VC + +), CommandText, CommandTimeout, CommandType, dimensioni e ActiveConnection ActiveConnection, CommandText, CommandTimeout, CommandType, dimensioni e direzione proprietà esempio (JScript) Inoltre, il provider può impostare questa proprietà per il nuovo **connessione** oggetto per fornire un modo per accedere il **connessione** per informazioni dettagliate sull'errore o per eseguire altri comandi dell'oggetto.  
   
  Se si utilizza il *ActiveConnection* argomento del [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) per aprire un **Recordset** oggetto, il **ActiveConnection** proprietà ereditare il valore dell'argomento.  
   
  Se si imposta la **origine** proprietà del **Recordset** oggetto su un valore valido **comando** variabile oggetto, il **ActiveConnection** proprietà di il **Recordset** eredita l'impostazione del **comando** dell'oggetto **ActiveConnection** proprietà.  
   
 > [!NOTE]
->  **Utilizzo del servizio dati remoti** quando utilizzato sul lato client **Recordset** oggetto, questa proprietà può essere impostata solo in una stringa di connessione o (in Microsoft Visual Basic o Visual Basic, Scripting Edition) *Nothing* .  
+>  **Utilizzo del servizio dati remoti** quando viene utilizzata su un lato client **Recordset** dell'oggetto, questa proprietà può essere impostata solo su una stringa di connessione o (in Microsoft Visual Basic o Visual Basic, Scripting Edition) a *Nothing* .  
   
 ## <a name="record"></a>Record  
  Questa proprietà è di lettura/scrittura quando il **Record** oggetto viene chiuso e può contenere una stringa di connessione o un riferimento a un oggetto aperto **connessione** oggetto. Questa proprietà è di sola lettura quando il **Record** oggetto è aperto e contiene un riferimento a un oggetto aperto **connessione** oggetto.  

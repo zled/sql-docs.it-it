@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tracing options [ODBC], about tracing
 - driver manager [ODBC], tracing
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e7511981cfe9ec533455ee61c4cf75d33ec020cb
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7549f0790aa13882dc04ead78f097cf0035993e6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tracing"></a>Traccia
 Gestione Driver ODBC è una funzionalità di traccia che consente la sequenza di chiamate di funzione effettuate da un'applicazione ODBC per eseguire la registrazione e trascritta in un file di log. Questa operazione viene eseguita da una DLL che acquisisce le chiamate tra l'applicazione e di gestione Driver e tra gestione Driver e il driver di traccia. Questo metodo di traccia sostituisce la traccia eseguita da ODBC 2*x* gestione Driver e le analisi eseguite in ODBC 2*x* da ODBC Spy.  
