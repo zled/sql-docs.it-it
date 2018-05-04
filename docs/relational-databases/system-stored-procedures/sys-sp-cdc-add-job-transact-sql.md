@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 58f17196962c2ca05ebf1c2e56ce78621dbb9ac7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ec45242bef3e7ad510a97d422bf05499b764c9c1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Poiché i processi di pulizia e di acquisizione vengono creati per impostazione predefinita, questa stored procedure è necessaria solo quando un processo è stato eliminato in modo esplicito e deve essere ricreato.  
   
- Il nome del processo viene **cdc. ***< nome_database >***Cleanup** oppure **cdc. ***< nome_database >***Capture**, dove *< nome_database >* è il nome del database corrente. Se un processo con lo stesso nome esiste già, il nome viene aggiunto un punto (**.**) seguito da un identificatore univoco, ad esempio: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Il nome del processo viene **cdc. ***< nome_database >*** Cleanup** oppure **cdc. ***< nome_database >*** Capture**, dove *< nome_database >* è il nome del database corrente. Se un processo con lo stesso nome esiste già, il nome viene aggiunto un punto (**.**) seguito da un identificatore univoco, ad esempio: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Per visualizzare la configurazione corrente di un processo di pulizia o di acquisizione, utilizzare [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Per modificare la configurazione di un processo, utilizzare [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

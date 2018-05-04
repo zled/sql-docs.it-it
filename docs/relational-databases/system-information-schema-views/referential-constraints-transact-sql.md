@@ -25,13 +25,12 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 135a7ccb48def6dd6b0bd257ea858f883980484b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e166d0150e37483225a6854fa416fbcd769eb3f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="referentialconstraints-transact-sql"></a>REFERENTIAL_CONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ ms.lasthandoff: 04/16/2018
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar (**128**)**|Qualificatore del vincolo.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (**128**)**|Nome dello schema che contiene il vincolo.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificatore del vincolo.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene il vincolo.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**CONSTRAINT_NAME**|**sysname**|Nome del vincolo.|  
-|**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar (**128**)**|Qualificatore del vincolo UNIQUE.|  
-|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (**128**)**|Nome dello schema che contiene il vincolo UNIQUE.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
+|**UNIQUE_CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Qualificatore del vincolo UNIQUE.|  
+|**UNIQUE_CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nome dello schema che contiene il vincolo UNIQUE.<br /><br /> **\*\* Importante \* \***  non utilizzare viste INFORMATION_SCHEMA per determinare lo schema di un oggetto. L'unica modalità affidabile per cercare lo schema di un oggetto consiste nell'eseguire una query sulla vista del catalogo sys.objects.|  
 |**UNIQUE_CONSTRAINT_NAME**|**sysname**|Vincolo UNIQUE.|  
-|**MATCH_OPTION**|**varchar (**7**)**|Condizioni referenziali di corrispondenza con il vincolo. Restituisce sempre SIMPLE, a indicare che non è definita alcuna corrispondenza. La condizione viene considerata una corrispondenza se si verifica una delle situazioni seguenti:<br /><br /> Almeno un valore della colonna chiave esterna è NULL.<br /><br /> Tutti i valori della colonna chiave esterna sono diversi da NULL e una riga della tabella della chiave primaria include la stessa chiave.|  
-|**UPDATE_RULE**|**varchar (**11**)**|Azione eseguita se un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viola l'integrità referenziale definita dal vincolo. Restituisce una delle operazioni seguenti: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se nell'opzione ON UPDATE si specifica NO ACTION per il vincolo, l'aggiornamento della chiave primaria a cui viene fatto riferimento nel vincolo non viene propagato alla chiave esterna. Se l'aggiornamento di una chiave primaria comporta una violazione dell'integrità referenziale perché almeno una chiave esterna contiene lo stesso valore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non modifica le tabelle padre e di riferimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genererà inoltre un errore.<br /><br /> Se nell'opzione ON UPDATE si specifica CASCADE per il vincolo, tutte le modifiche apportate al valore della chiave primaria vengono propagate automaticamente al valore della chiave esterna.|  
-|**DELETE_RULE**|**varchar (**11**)**|Azione eseguita se un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viola l'integrità referenziale definita dal vincolo. Restituisce una delle operazioni seguenti: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se in ON DELETE si specifica NO ACTION per il vincolo, l'eliminazione nella chiave primaria a cui viene fatto riferimento nel vincolo non viene propagata alla chiave esterna. Se l'eliminazione di una chiave primaria comporta una violazione dell'integrità referenziale perché almeno una chiave esterna contiene lo stesso valore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non modifica le tabelle padre e di riferimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genererà inoltre un errore.<br /><br /> Se nell'opzione ON DELETE si specifica CASCADE per il vincolo, tutte le modifiche apportate al valore della chiave primaria vengono propagate automaticamente al valore della chiave esterna.|  
+|**MATCH_OPTION**|**varchar (** 7 **)**|Condizioni referenziali di corrispondenza con il vincolo. Restituisce sempre SIMPLE, a indicare che non è definita alcuna corrispondenza. La condizione viene considerata una corrispondenza se si verifica una delle situazioni seguenti:<br /><br /> Almeno un valore della colonna chiave esterna è NULL.<br /><br /> Tutti i valori della colonna chiave esterna sono diversi da NULL e una riga della tabella della chiave primaria include la stessa chiave.|  
+|**UPDATE_RULE**|**varchar (** 11 **)**|Azione eseguita se un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viola l'integrità referenziale definita dal vincolo. Restituisce una delle operazioni seguenti: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se nell'opzione ON UPDATE si specifica NO ACTION per il vincolo, l'aggiornamento della chiave primaria a cui viene fatto riferimento nel vincolo non viene propagato alla chiave esterna. Se l'aggiornamento di una chiave primaria comporta una violazione dell'integrità referenziale perché almeno una chiave esterna contiene lo stesso valore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non modifica le tabelle padre e di riferimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genererà inoltre un errore.<br /><br /> Se nell'opzione ON UPDATE si specifica CASCADE per il vincolo, tutte le modifiche apportate al valore della chiave primaria vengono propagate automaticamente al valore della chiave esterna.|  
+|**DELETE_RULE**|**varchar (** 11 **)**|Azione eseguita se un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] viola l'integrità referenziale definita dal vincolo. Restituisce una delle operazioni seguenti: <br />NO ACTION<br />CASCADE<br />SET NULL<br />SET DEFAULT<br /><br /> Se in ON DELETE si specifica NO ACTION per il vincolo, l'eliminazione nella chiave primaria a cui viene fatto riferimento nel vincolo non viene propagata alla chiave esterna. Se l'eliminazione di una chiave primaria comporta una violazione dell'integrità referenziale perché almeno una chiave esterna contiene lo stesso valore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non modifica le tabelle padre e di riferimento. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genererà inoltre un errore.<br /><br /> Se nell'opzione ON DELETE si specifica CASCADE per il vincolo, tutte le modifiche apportate al valore della chiave primaria vengono propagate automaticamente al valore della chiave esterna.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Viste di sistema &#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

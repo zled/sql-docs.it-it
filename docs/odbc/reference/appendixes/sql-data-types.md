@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL data types [ODBC]
 - SQL data types [ODBC], about SQL data types
@@ -21,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2c1bb7ad5ce2523f4ee4e5404608e1359b216178
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3c2022f1a0e034741a7259cef2613ce69361285a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-types"></a>Tipi di dati SQL
 Ogni sistema DBMS definisce i proprio tipi SQL. Ogni driver ODBC espone solo i tipi di dati SQL che definisce il sistema DBMS associato. Informazioni sulle modalità di mapping di un driver SQL DBMS tipi per gli identificatori di tipo definite da ODBC SQL e come un driver esegue il mapping di tipi SQL DBMS per i proprio identificatori di tipo specifici del driver SQL viene restituito tramite una chiamata a **SQLGetTypeInfo**. Un driver restituisce inoltre i tipi di dati SQL quando si descrivono i tipi di dati di colonne e parametri mediante chiamate a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, e **SQLSpecialColumns**.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], backward compatibility
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7e25e546b359dd7178739e074664c3239fcfbdba
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c22ef4ebf761b647f4b0e6bb8c65ccd3457fe694
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility"></a>Cursori a blocchi, i cursori scorrevoli e compatibilità con le versioni precedenti
 L'esistenza di entrambi **SQLFetchScroll** e **SQLExtendedFetch** rappresenta il primo clear suddiviso in ODBC tra l'interfaccia API (Application Programming), ovvero il set di funzioni di le chiamate dell'applicazione e il servizio Provider interfaccia SPI (), ovvero il set di funzioni il driver implementa. La divisione è necessaria in modo che ODBC 3. *x*, che usa **SQLFetchScroll**, bealigned con gli standard e anche essere compatibile con ODBC 2. *x*, che usa **SQLExtendedFetch**.  

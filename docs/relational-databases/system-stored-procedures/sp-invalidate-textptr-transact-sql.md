@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 77b48427c017b543d73bf93e03a09fd7c4d50c78
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4accd3ad0e5a57b709c7dece8a8c65f0ff38722f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@TextPtrValue=** ] *textptr_value*  
- Puntatore di testo all'interno di righe da invalidare. *textptr_value* viene **varbinary (**16**)**, con un valore predefinito è NULL. Se NULL, **sp_invalidate_textptr** invalida tutti i puntatori di testo nelle righe nella transazione.  
+ Puntatore di testo all'interno di righe da invalidare. *textptr_value* viene **varbinary (** 16 **)**, con un valore predefinito è NULL. Se NULL, **sp_invalidate_textptr** invalida tutti i puntatori di testo nelle righe nella transazione.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  0 (esito positivo) o 1 (esito negativo)  

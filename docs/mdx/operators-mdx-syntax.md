@@ -23,12 +23,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 87304b4a33daa7d9460983a403136974c46c1f81
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 8b849cf1a9c87e91c2104217d8b435adfeef6efc
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="operators-mdx-syntax"></a>Operatori (sintassi MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -90,14 +89,14 @@ ms.lasthandoff: 01/08/2018
   
 -   XOR  
   
--   o  
+-   OPPURE  
   
- Per ulteriori informazioni sugli operatori in MDX, vedere [riferimento agli operatori MDX &#40; MDX &#41; ](../mdx/mdx-operator-reference-mdx.md).  
+ Per ulteriori informazioni sugli operatori in MDX, vedere [di riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Determinazione dei risultati  
  Quando si combinano più espressioni semplici in modo da formare un'espressione complessa, il tipo di dati del valore risultante viene ottenuto combinando le regole degli operatori con le regole relative alla precedenza dei tipi di dati.  
   
- Se il risultato è un carattere o un valore Unicode, le regole di confronto verranno determinate combinando le regole degli operatori con le regole sulla precedenza delle regole di confronto. Per ulteriori informazioni sulle regole di confronto, vedere [lingue e regole di confronto &#40; Analysis Services &#41; ](../analysis-services/languages-and-collations-analysis-services.md).  
+ Se il risultato è un carattere o un valore Unicode, le regole di confronto verranno determinate combinando le regole degli operatori con le regole sulla precedenza delle regole di confronto. Per ulteriori informazioni sulle regole di confronto, vedere [lingue e regole di confronto &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md).  
   
  Sono previste inoltre regole per determinare precisione, scala e lunghezza del risultato in base alla precisione, alla scala e alla lunghezza delle varie espressioni semplici.  
   
@@ -106,14 +105,14 @@ ms.lasthandoff: 01/08/2018
   
 |Tipo originale|Tipo necessario|Conversione|  
 |-------------------|-----------------|----------------|  
-|Level|Impostare|\<livello >. Members|  
+|Level|Impostare|\<livello > Members|  
 |Gerarchia|Membro|\<gerarchia > .defaultmember|  
 |Membro|Tupla|(\<Membro >)|  
 |Tupla|Membro|\<tupla > .item(0)|  
-|Tupla|Scalare|\<tupla >. Value|  
+|Tupla|Scalare|\<tupla > Value|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Gli elementi della sintassi MDX &#40; MDX &#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Gli elementi della sintassi MDX &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

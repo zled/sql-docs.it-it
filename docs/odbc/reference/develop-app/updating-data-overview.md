@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - updating data [ODBC], about updating data
 - data updates [ODBC]
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e5accaa3a443f7cc850fd6b4012430043d402203
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: ce36f2467ce4da80f726c0f9370180422edddf49
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-data-overview"></a>Panoramica di aggiornamento dati
 Le applicazioni possono aggiornare i dati tramite l'esecuzione di istruzioni SQL o chiamando **SQLSetPos** o **SQLBulkOperations**. **AGGIORNAMENTO**, **eliminare**, e **inserire** istruzioni agire direttamente sull'origine dati e in genere sono supportate dal driver. La ricerca di aggiornamenti e le istruzioni delete contengono una specifica della riga da modificare. Aggiornamento posizionato e istruzioni delete e **SQLSetPos** agire sull'origine dati tramite un cursore e meno ampiamente supportati.  

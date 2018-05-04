@@ -24,12 +24,11 @@ caps.latest.revision: 41
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef468f7ea427e2e7226bccf45e1192c9a6abcc4b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 62b73908bc65698cc6f84124a76214398f75fa4a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  [ @rmtsrvname **=** ] **'***rmtsrvname***'**  
  Nome di un server collegato a cui viene applicato il mapping dell'account di accesso. *rmtsrvname* viene **sysname**, non prevede alcun valore predefinito.  
   
- [ @useself **=** ] **'**TRUE**'** | 'FALSE' | 'NULL'  
- Determina se la connessione a *rmtsrvname* dalla rappresentazione di un account di accesso locali o inviando esplicitamente un account di accesso e una password. Il tipo di dati è **varchar (**8**)**, con un valore predefinito è TRUE.  
+ [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ Determina se la connessione a *rmtsrvname* dalla rappresentazione di un account di accesso locali o inviando esplicitamente un account di accesso e una password. Il tipo di dati è **varchar (** 8 **)**, con un valore predefinito è TRUE.  
   
  Il valore TRUE specifica che gli account di accesso utilizzare le proprie credenziali per connettersi a *rmtsrvname*, con la *rmtuser* e *rmtpassword* argomenti verrà ignorati. FALSE specifica che il *rmtuser* e *rmtpassword* argomenti vengono utilizzati per connettersi a *rmtsrvname* per l'oggetto specificato *locallogin* . Se *rmtuser* e *rmtpassword* sono anche impostato su NULL, nessun account di accesso o la password viene utilizzata per connettersi al server collegato.  
   

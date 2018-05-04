@@ -24,12 +24,11 @@ caps.latest.revision: 24
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3e0942b8d2b66a76db9e50616f63d6d7a3cc959e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0c92f72b54b5b3d420e2e4cbdbfe616f9e6f090f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="arguments"></a>Argomenti  
  [  **@name =** ] **'***object_statement***'**  
- Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* viene **nvarchar(776)**, con un valore predefinito è NULL, che restituisce tutte le autorizzazioni oggetto e l'istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato *proprietario***.*** oggetto*.  
+ Nome dell'oggetto nel database corrente, o di un'istruzione, a cui sono associate le autorizzazioni di cui si desidera ottenere informazioni. *object_statement* viene **nvarchar(776)**, con un valore predefinito è NULL, che restituisce tutte le autorizzazioni oggetto e l'istruzione. Se il valore è un oggetto, quale una tabella, una vista, una stored procedure o una stored procedure estesa, deve essere un oggetto valido nel database corrente. Il nome dell'oggetto può includere un qualificatore del proprietario nel formato *proprietario ***.*** oggetto*.  
   
  Se *object_statement* è un'istruzione, può essere un'istruzione CREATE.  
   

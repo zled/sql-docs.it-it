@@ -24,12 +24,11 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6c0d246c2ed8ea670f2d8c2fc05bca828ce152ca
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: dc7dde2cbd3ec6b3361785b7d9f02931f812b730
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nome logico del file.|  
-|**fileid**|**smallint**|Identificatore numerico del file. Non viene restituito se *nome* è specificato*.*|  
+|**fileid**|**smallint**|Identificatore numerico del file. Non viene restituito se *nome* è specificato *.*|  
 |**nome file**|**nchar(260)**|Nome fisico del file.|  
 |**filegroup**|**sysname**|Filegroup a cui appartiene il file.<br /><br /> NULL = Il file è un file di log. Questo tipo di file non viene mai incluso in un filegroup.|  
 |**size**|**nvarchar(15)**|Dimensione del file in kilobyte.|  

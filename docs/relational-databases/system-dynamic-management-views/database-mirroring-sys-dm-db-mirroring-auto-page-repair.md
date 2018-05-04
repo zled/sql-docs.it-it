@@ -28,12 +28,11 @@ caps.latest.revision: 17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d71ed7405b896a4e8542a66f445a7b6ed9376092
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: c4c86f019ed7b34ceab785c8f78205c5aed2d709
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="database-mirroring---sysdmdbmirroringautopagerepair"></a>Database Mirroring - Sys.dm db_mirroring_auto_page_repair
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.lasthandoff: 04/16/2018
 |**database_id**|**int**|ID del database al quale corrisponde questa riga.|  
 |**file_id**|**int**|ID del file in cui si trova la pagina.|  
 |**page_id**|**bigint**|ID della pagina nel file.|  
-|**error_type**|**int**|Tipo di errore. I valori possibili sono i seguenti.<br /><br /> **-**1 = tutti gli errori hardware 823<br /><br /> 1 = 824 errori diversi da un errore nel checksum o di una pagina incompleta (ad esempio un ID pagina errato)<br /><br /> 2 = Errore nel checksum<br /><br /> 3 = Pagina incompleta|  
+|**error_type**|**int**|Tipo di errore. I valori possibili sono i seguenti.<br /><br /> **-** 1 = tutti gli errori hardware 823<br /><br /> 1 = 824 errori diversi da un errore nel checksum o di una pagina incompleta (ad esempio un ID pagina errato)<br /><br /> 2 = Errore nel checksum<br /><br /> 3 = Pagina incompleta|  
 |**page_status**|**int**|La stato del tentativo di ripristino della pagina:<br /><br /> 2 = in coda per la richiesta dal partner.<br /><br /> 3 = richiesta inviata al partner.<br /><br /> 4 = in coda per il ripristino automatico della pagina (risposta ricevuta dal partner).<br /><br /> 5 = il ripristino automatico della pagina è stato completato e la pagina può essere utilizzata.<br /><br /> 6 = irreparabile. Indica che si è verificato un errore durante il tentativo di ripristino della pagina, ad esempio perché la pagina è danneggiata anche per il partner, il partner è disconnesso o si è verificato un problema di rete. Questo stato non è finale; se il danno si verifica nuovamente nella pagina, questa verrà nuovamente richiesta dal partner.|  
 |**modification_time**|**datetime**|Ora dell'ultima modifica dello stato della pagina.|  
   

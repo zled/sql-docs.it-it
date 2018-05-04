@@ -24,13 +24,12 @@ caps.latest.revision: 26
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f176d3f6be7f48920bee35ceae38977e6b947623
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6ecbe398a303b7e4cb75fd0eeedc4e7951cfb4fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,10 +53,10 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="arguments"></a>Argomenti  
  [  **@procedure_name =** ] **'***nome***'**  
- Nome della procedura utilizzata per restituire informazioni sul catalogo. *nome* viene **nvarchar (**390**)**, con un valore predefinito è %, ovvero tutte le tabelle nel database corrente. La ricerca con caratteri jolly è supportata.  
+ Nome della procedura utilizzata per restituire informazioni sul catalogo. *nome* viene **nvarchar (** 390 **)**, con un valore predefinito è %, ovvero tutte le tabelle nel database corrente. La ricerca con caratteri jolly è supportata.  
   
  [  **@procedure_owner =**] **'***proprietario***'**  
- Nome del proprietario della procedura. *proprietario*viene **nvarchar (**384**)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* viene omesso, si applicano le regole di visibilità procedure predefinite del sistema DBMS sottostante.  
+ Nome del proprietario della procedura. *proprietario*viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se *proprietario* viene omesso, si applicano le regole di visibilità procedure predefinite del sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di una procedura avente il nome specificato, vengono restituite informazioni su tale procedura. Se *proprietario*viene omesso e l'utente corrente non dispone di una procedura con il nome specificato, **sp_sproc_columns** ricerca di una procedura con il nome specificato è di proprietà dal proprietario del database. Se tale procedura viene individuata, vengono restituite informazioni sulle colonne corrispondenti.  
   
@@ -65,7 +64,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
  Nome del qualificatore della procedura. *qualificatore* viene **sysname**, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*composti*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questo parametro rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [  **@column_name =**] **'***nome_colonna***'**  
- Colonna singola utilizzata quando si desidera recuperare una sola colonna di informazioni di catalogo. *column_name* viene **nvarchar (**384**)**, con un valore predefinito è NULL. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
+ Colonna singola utilizzata quando si desidera recuperare una sola colonna di informazioni di catalogo. *column_name* viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. Se *column_name* viene omesso, vengono restituite tutte le colonne. La ricerca con caratteri jolly è supportata. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
   
  [  **@ODBCVer =**] **'***ODBCVer***'**  
  Versione di ODBC in uso. *ODBCVer* viene **int**, e il valore predefinito è 2, che indica ODBC versione 2.0. Per ulteriori informazioni sulla differenza tra la versione 2.0 e ODBC versione 3.0, fare riferimento a ODBC **SQLProcedureColumns** specifica per ODBC versione 3.0  
@@ -82,7 +81,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nome di qualificatore della procedura. Questa colonna può essere NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nome del proprietario della procedura. In questa colonna viene sempre restituito un valore.|  
-|**PROCEDURE_NAME**|**nvarchar (**134**)**|Nome della procedura. In questa colonna viene sempre restituito un valore.|  
+|**PROCEDURE_NAME**|**nvarchar (** 134 **)**|Nome della procedura. In questa colonna viene sempre restituito un valore.|  
 |**COLUMN_NAME**|**sysname**|Nome della colonna per ogni colonna del **TABLE_NAME** restituito. In questa colonna viene sempre restituito un valore.|  
 |**COLUMN_TYPE**|**smallint**|In questo campo viene sempre restituito un valore.<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_INPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE|  
 |**DATA_TYPE**|**smallint**|Codice integer di un tipo di dati ODBC. Se non è possibile effettuare il mapping di questo tipo di dati a un tipo ISO, il valore è NULL. Cui viene restituito il nome del tipo di dati nativi di **TYPE_NAME** colonna.|  
@@ -92,8 +91,8 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**SCALA**|**smallint**|Numero di cifre a destra del separatore decimale.|  
 |**RADIX**|**smallint**|Base per i tipi di dati numerici.|  
 |**AMMETTE VALORI NULL**|**smallint**|Specifica se i valori Null sono supportati o meno:<br /><br /> 1 = È possibile creare il tipo di dati con supporto per valori Null.<br /><br /> 0 = I valori Null non sono supportati.|  
-|**SEZIONE OSSERVAZIONI**|**varchar (**254**)**|Descrizione della colonna della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
-|**COLUMN_DEF**|**nvarchar (**4000**)**|Valore predefinito della colonna.|  
+|**SEZIONE OSSERVAZIONI**|**varchar (** 254 **)**|Descrizione della colonna della procedura. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non viene restituito alcun valore per questa colonna.|  
+|**COLUMN_DEF**|**nvarchar (** 4000 **)**|Valore predefinito della colonna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valore del tipo di dati SQL visualizzato nel **tipo** campo del descrittore. Questa colonna corrisponde alla **DATA_TYPE** colonna, tranne che per il **datetime** e ISO **intervallo** tipi di dati. In questa colonna viene sempre restituito un valore.|  
 |**SQL_DATETIME_SUB**|**smallint**|Il **datetime** ISO **intervallo** sottocodice se il valore di **SQL_DATA_TYPE** è **SQL_DATETIME** o **SQL_INTERVAL**. Per i dati di tipi diversi da **datetime** e ISO **intervallo**, questo campo è NULL.|  
 |**CHAR_OCTET_LENGTH**|**int**|Lunghezza massima in byte di un **carattere** o **binario** colonna tipo di dati. Per gli tutti gli altri tipi di dati, il valore di questa colonna è NULL.|  

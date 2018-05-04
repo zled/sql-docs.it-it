@@ -24,12 +24,11 @@ caps.latest.revision: 70
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 52b40d4e2c995d00c357295fc1787fce579eed04
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e3e466fe12371b18f11e8746f2649d0272e9114
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  Nome del server collegato da creare. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
  [  **@srvproduct=** ] **'***product_name***'**  
- Nome del prodotto dell'origine dati OLE DB da aggiungere come server collegato. *product_name* viene **nvarchar (**128**)**, con un valore predefinito è NULL. Se **SQL Server**, *provider_name*, *data_source*, *percorso*, *provider_string*, e *catalogo* non è necessario specificare.  
+ Nome del prodotto dell'origine dati OLE DB da aggiungere come server collegato. *product_name* viene **nvarchar (** 128 **)**, con un valore predefinito è NULL. Se **SQL Server**, *provider_name*, *data_source*, *percorso*, *provider_string*, e *catalogo* non è necessario specificare.  
   
  [  **@provider=** ] **'***provider_name***'**  
- ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provider_name* deve essere univoco per il provider OLE DB specificato installato nel computer corrente. *provider_name* viene **nvarchar (**128**)**, con un valore predefinito è NULL; tuttavia, se *provider_name* viene omesso, viene utilizzato SQLNCLI. (L'utilizzo di SQLNCLI e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reindirizza alla versione più recente del provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Il provider OLE DB deve essere registrato nel Registro di configurazione con il valore PROGID specificato.  
+ ProgID univoco del provider OLE DB che corrisponde a questa origine dati. *provider_name* deve essere univoco per il provider OLE DB specificato installato nel computer corrente. *provider_name* viene **nvarchar (** 128 **)**, con un valore predefinito è NULL; tuttavia, se *provider_name* viene omesso, viene utilizzato SQLNCLI. (L'utilizzo di SQLNCLI e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reindirizza alla versione più recente del provider OLE DB per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.) Il provider OLE DB deve essere registrato nel Registro di configurazione con il valore PROGID specificato.  
   
  [  **@datasrc=** ] **'***data_source***'**  
- Nome dell'origine dati secondo la modalità di interpretazione del provider OLE DB. *data_source* viene **nvarchar (**4000**)**. *data_source* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider OLE DB.  
+ Nome dell'origine dati secondo la modalità di interpretazione del provider OLE DB. *data_source* viene **nvarchar (** 4000 **)**. *data_source* viene passato come proprietà DBPROP_INIT_DATASOURCE per inizializzare il provider OLE DB.  
   
  [  **@location=** ] **'***percorso***'**  
- Posizione del database secondo la modalità di interpretazione del provider OLE DB. *percorso* viene **nvarchar (**4000**)**, con un valore predefinito è NULL. *percorso* viene passato come proprietà DBPROP_INIT_LOCATION per inizializzare il provider OLE DB.  
+ Posizione del database secondo la modalità di interpretazione del provider OLE DB. *percorso* viene **nvarchar (** 4000 **)**, con un valore predefinito è NULL. *percorso* viene passato come proprietà DBPROP_INIT_LOCATION per inizializzare il provider OLE DB.  
   
  [  **@provstr=** ] **'***provider_string***'**  
- Stringa di connessione specifica del provider OLE DB che consente di identificare un'origine dati univoca. *provider_string* viene **nvarchar (**4000**)**, con un valore predefinito è NULL. *provstr* viene passato a IDataInitialize o impostato come proprietà DBPROP_INIT_PROVIDERSTRING per inizializzare il provider OLE DB.  
+ Stringa di connessione specifica del provider OLE DB che consente di identificare un'origine dati univoca. *provider_string* viene **nvarchar (** 4000 **)**, con un valore predefinito è NULL. *provstr* viene passato a IDataInitialize o impostato come proprietà DBPROP_INIT_PROVIDERSTRING per inizializzare il provider OLE DB.  
   
  Quando il server collegato viene creato mediante il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, l'istanza può essere specificata utilizzando la parola chiave SERVER come SERVER =*servername*\\*instancename*per specificare un'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ServerName* è il nome del computer in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è in esecuzione, e *NomeIstanza* è il nome dell'istanza specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a cui verrà connesso l'utente.  
   

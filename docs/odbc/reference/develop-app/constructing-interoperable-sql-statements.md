@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL statements [ODBC], interoperability
 - interoperability of SQL statements [ODBC], constructing statements
@@ -20,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9419a3e242510a0c65ac87f2c1601c59fdafbd8
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 647efb94415c056ea091791e3f789fdbc3ce05f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Creazione di istruzioni SQL interoperabili
 Come indicato nelle sezioni precedenti, le applicazioni interoperabili devono utilizzare la grammatica SQL ODBC. Oltre a utilizzare questa grammatica, tuttavia, un numero di ulteriori problemi è riscontrato da applicazioni interoperative. Ad esempio, come un'applicazione vengono se desidera utilizzare una funzionalità, ad esempio gli outer join, che non è supportata da tutte le origini dati?  

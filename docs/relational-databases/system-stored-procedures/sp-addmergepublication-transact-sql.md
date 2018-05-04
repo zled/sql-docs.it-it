@@ -24,12 +24,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 350bb858beee315e45a63cb5d72ab05f45d70848
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 26eb846b1744fcf8616228ca1bf95b80c4e4d33c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spaddmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -283,7 +282,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
  Per [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori, il valore di *alternate_snapshot_folder* viene utilizzato solo quando il valore di *snapshot_in_default_folder* è **false**.  
   
- Con abilitata la replica DDL (* * replicate_ddl**= 1**) per una pubblicazione, per facilitare la DDL da non replicare le modifiche della pubblicazione [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)devono essere eseguiti prima per impostare *replicate_ddl* alla **0**. Dopo le istruzioni DDL non di replica sono stati emessi, **sp_changemergepublication** può essere eseguito nuovamente per riattivare la replica DDL.  
+ Con abilitata la replica DDL (* * replicate_ddl **= 1**) per una pubblicazione, per facilitare la DDL da non replicare le modifiche della pubblicazione [sp_changemergepublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)devono essere eseguiti prima per impostare *replicate_ddl* alla **0**. Dopo le istruzioni DDL non di replica sono stati emessi, **sp_changemergepublication** può essere eseguito nuovamente per riattivare la replica DDL.  
   
 ## <a name="example"></a>Esempio  
  [!code-sql[HowTo#sp_AddMergePub](../../relational-databases/replication/codesnippet/tsql/sp-addmergepublication-t_1.sql)]  

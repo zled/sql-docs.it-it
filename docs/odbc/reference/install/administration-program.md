@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administration program [ODBC]
 - ODBC administrator [ODBC]
@@ -20,16 +20,15 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2f4cd3ae3fd57dad914c8404e8fe9096e072771f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 6f7b3f0420fa7f0ed2226201d06a339341f5f734
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="administration-program"></a>Programma di amministrazione
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Un programma di amministrazione, l'amministratore ODBC, è incluso in Windows SDK o MDAC SDK. Questo programma e può essere ridistribuito dagli utenti del SDK. Inoltre, gli sviluppatori possono scrivere i propri programmi di amministrazione. In genere, gli sviluppatori di scrivono i propri programmi di amministrazione solo se desiderano mantenere il controllo completo sulla configurazione dell'origine dati o se si configurano le origini dati direttamente da un'applicazione che funge da un programma di amministrazione. Ad esempio, un foglio di calcolo potrebbe consentire agli utenti di aggiungere e quindi utilizzare origini dati in fase di esecuzione.  
   

@@ -24,13 +24,12 @@ caps.latest.revision: 60
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 81e174922753ed4a40111caba8aa34efd359e866
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7aec930d639bd5f1e2549ef5d49fd76963667b0e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/t-sql-appliesto-ss-asdbmi-xxxx-pwd-md.md)]
@@ -70,7 +69,7 @@ RECONFIGURE
   
 ## <a name="arguments"></a>Argomenti  
  [ **@configname=** ] **'***nome_opzione***'**  
- Nome di un'opzione di configurazione. *option_name* è **varchar(35)**e il valore predefinito è NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] riconosce qualsiasi stringa univoca che faccia parte del nome della configurazione. Se non si specifica alcun nome di opzione, viene restituito l'elenco completo delle opzioni.  
+ Nome di un'opzione di configurazione. *option_name* è **varchar(35)** e il valore predefinito è NULL. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] riconosce qualsiasi stringa univoca che faccia parte del nome della configurazione. Se non si specifica alcun nome di opzione, viene restituito l'elenco completo delle opzioni.  
   
  Per informazioni sulle opzioni di configurazione disponibili e le relative impostazioni, vedere [opzioni di configurazione del Server &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - usage counts [ODBC]
 - file usage counts [ODBC]
@@ -22,16 +22,15 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 066c96d8b4ab6617216f5e4b3f924386b42d7f60
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: fd0d07195dfb0f3ece3cc6f574b5cc1544cf8104
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usage-counting"></a>Il conteggio di utilizzo
 > [!NOTE]  
->  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo in modo esplicito, è necessario installare ODBC nelle versioni precedenti di Windows.  
+>  A partire da Windows XP e Windows Server 2003, ODBC è incluso nel sistema operativo Windows. Solo nelle versioni precedenti di Windows è necessario installare ODBC in modo esplicito.  
   
  Due tipi di conteggi dell'utilizzo vengono mantenuti nel Registro di sistema per ogni componente: un conteggio di utilizzo del componente e uno o più conteggi dell'utilizzo di file facoltativo. Il conteggio di utilizzo del componente consente l'installazione DLL mantenere le voci del Registro di sistema. Viene archiviato nel valore UsageCount in ODBC Core, driver e le sottochiavi di funzione di conversione. Per il formato del valore di UsageCount e ulteriori informazioni su queste sottochiavi, vedere [le voci del Registro di sistema per i componenti ODBC](../../../odbc/reference/install/registry-entries-for-odbc-components.md).  
   

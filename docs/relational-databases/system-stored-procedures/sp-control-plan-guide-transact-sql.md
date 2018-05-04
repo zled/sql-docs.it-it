@@ -24,12 +24,11 @@ caps.latest.revision: 29
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bcc6de242dba546858ecedc4690a736c0c1d1447
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 9f1e9e78020787bcec4f6b3a04efbdc4ba466023
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Consente la Guida di piano specificata in *plan_guide_name*. Dopo che è stata abilitata, una guida di piano può essere associata a una query idonea. Per impostazione predefinita, le guide di piano vengono abilitate in fase di creazione.  
   
  ENABLE ALL  
- Abilita tutte le guide di piano nel database corrente. **N'***plan_guide_name***'**non può essere utilizzato quando ENABLE ALL è specificata.  
+ Abilita tutte le guide di piano nel database corrente. **N'***plan_guide_name***'** non può essere utilizzato quando ENABLE ALL è specificata.  
   
 ## <a name="remarks"></a>Osservazioni  
  Se si tenta di eliminare o modificare una funzione, una stored procedure o un trigger DML a cui viene fatto riferimento in una guida di piano abilitata o disabilitata, viene generato un errore.  
@@ -86,7 +85,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Le guide di piano non sono disponibili in ogni edizione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Edizioni e funzionalità supportate per SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Tuttavia, è possibile eseguire **sp_control_plan_guide** con l'opzione DROP o DROP ALL in qualsiasi edizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Autorizzazioni  
- Per eseguire **sp_control_plan_guide** su una Guida di piano di tipo OBJECT (creato specificando  **@type ='**oggetto**'** ) richiede l'autorizzazione ALTER per l'oggetto che fa riferimento la Guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
+ Per eseguire **sp_control_plan_guide** su una Guida di piano di tipo OBJECT (creato specificando  **@type ='** oggetto **'** ) richiede l'autorizzazione ALTER per l'oggetto che fa riferimento la Guida di piano. Per tutte le altre guide di piano è necessario disporre dell'autorizzazione ALTER DATABASE.  
   
 ## <a name="examples"></a>Esempi  
   

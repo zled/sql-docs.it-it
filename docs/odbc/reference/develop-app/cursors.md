@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - forward-only cursors [ODBC]
 - scrollable cursors [ODBC]
@@ -25,12 +25,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: c0c6ae5b9bda276bcd1296fcb475063fea6db204
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0e83efd6239d49af2066bd39d244665a50fa7030
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cursors"></a>Cursori
 Un'applicazione recupera i dati con un *cursore*. Un cursore è diverso da un set di risultati: un set di risultati è il set di righe che soddisfa i criteri di ricerca particolare, mentre un cursore è il software che restituisce le righe per l'applicazione. Il nome *cursore,* applicato ai database, probabilmente ha avuto origine il cursore in un computer terminal lampeggiante. Come tale cursore indica la posizione sullo schermo e in cui le parole tipizzate apparirà successive, un cursore su un set di risultati indica la posizione corrente nel set di risultati e la riga verrà restituita accanto.  

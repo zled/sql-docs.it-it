@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], numeric data types
 - numeric data type [ODBC], literals
@@ -22,12 +22,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 33b180e63bf3f0c38c930f46e3b4a74a7ab66754
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: b4b5a40b9cda29b528280b6bb873a8fda747d9ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
 Quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri, vengono utilizzati valori letterali numerici. Per la conversione di dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati numerici di C in una stringa SQL_CHAR o SQL_VARCHAR, sintassi del valore letterale numerica viene utilizzata per specificare il contenuto archiviato nel database di destinazione. Per la conversione di numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o numerico archiviato sotto forma di stringa a dati C numerici SQL_CHAR, questa sintassi è utilizzata per convalidare il contenuto archiviato nell'origine.  

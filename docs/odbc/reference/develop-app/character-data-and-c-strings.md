@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data buffers [ODBC], length
 - data buffers [ODBC], character data
@@ -27,12 +27,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ef94062373af41fe662194b707dbdde1d85b438d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: d8bdba6134e53a7e3913c0255fe709a8a891eeae
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="character-data-and-c-strings"></a>Dati di tipo carattere e le stringhe C
 Parametri di input che fanno riferimento a dati di tipo carattere a lunghezza variabile (ad esempio i nomi delle colonne, i parametri dinamici e i valori di attributo di stringa) hanno un parametro di lunghezza associato. Se l'applicazione termina le stringhe con il carattere null, come avviene in C, viene fornito come argomento la lunghezza in byte della stringa (escluso il carattere di terminazione null) o SQL_NTS (Null-Terminated stringa). Un argomento non negativo lunghezza specifica la lunghezza effettiva della stringa associata. L'argomento length può essere 0 per specificare una stringa di lunghezza zero, che è diverso da un valore NULL. Il valore negativo SQL_NTS indica al driver per determinare la lunghezza della stringa individuando il carattere di terminazione null.  

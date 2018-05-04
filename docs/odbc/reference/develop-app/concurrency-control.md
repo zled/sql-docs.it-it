@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca6003893c767cf7fe3a5649097d816c96b6f064
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 3d0a9065248139fe3d2e369062301b76b4839955
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concurrency-control"></a>Controllo della concorrenza
 *Concorrenza* è la possibilità di due transazioni utilizzano gli stessi dati nello stesso momento e delle transazioni isolamento in genere comporta una riduzione. In questo modo l'isolamento delle transazioni viene in genere implementata da blocco di righe e come vengono bloccate altre righe, numero di transazioni può essere completato senza almeno temporaneamente bloccate da una riga bloccata. Mentre una riduzione della concorrenza è generalmente considerato come un compromesso per i livelli di isolamento delle transazioni superiore necessari a mantenere l'integrità del database, può diventare un problema di applicazioni interattive con attività di lettura/scrittura elevata che utilizzano i cursori.  

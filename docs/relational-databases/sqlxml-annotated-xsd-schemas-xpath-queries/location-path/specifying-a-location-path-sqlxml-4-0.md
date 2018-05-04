@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,13 +22,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7261e153c988a0764327e3d247a3da31d7463af3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e433aea6a3ecc401ba85080d1c1b25d053ce3089
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Definizione di un percorso (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 04/16/2018
   
      Un test di nodo specifica il tipo di nodo selezionato dal passo. Ogni asse (**figlio**, **padre**, **attributo**, e **self**) è un tipo di nodo principale. Per il **attributo** è il tipo di nodo principale dell'asse,  **\<attributo >**. Per il **padre**, **figlio**, e **self** assi, il tipo di nodo principale è  **\<elemento >**.  
   
-     Ad esempio, se il percorso specifica **child::**,  **\<cliente >** vengono selezionati gli elementi figlio del nodo di contesto. Poiché il **figlio** asse ha  **\<elemento >** come tipo di nodo principale, il test di nodo Customer è TRUE se Customer è un  **\<elemento >**nodo.  
+     Ad esempio, se il percorso specifica **child::**,  **\<cliente >** vengono selezionati gli elementi figlio del nodo di contesto. Poiché il **figlio** asse ha  **\<elemento >** come tipo di nodo principale, il test di nodo Customer è TRUE se Customer è un  **\<elemento >** nodo.  
   
 -   **Predicati di selezione (zero o più)**  
   

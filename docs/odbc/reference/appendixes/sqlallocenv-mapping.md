@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLAllocEnv function [ODBC], mapping
 - mapping deprecated functions [ODBC], SQLAllocEnv
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 01618081862172fb951cfc21c0c7cc5675bb1062
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 75c17775183ba1bcb3164015679adf49a76f6828
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlallocenv-mapping"></a>Mapping di SQLAllocEnv
 Quando un'applicazione chiama **SQLAllocEnv** tramite un'applicazione ODBC 3*x* driver, la chiamata a **SQLAllocEnv**(*phenv*) viene eseguito il mapping a **SQLAllocHandle** come indicato di seguito:  

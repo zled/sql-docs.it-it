@@ -25,12 +25,11 @@ caps.latest.revision: 21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9f6a86d97bd56cc85758b955327900d6c830d232
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 43c6455c5db50ea2df8dffbda3096135e79f5008
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spsyscollectorsetwarehouseinstancename-transact-sql"></a>sp_syscollector_set_warehouse_instance_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_syscollector_set_warehouse_instance_name [ @instance_name = ] 'instance_name'
  [ @instance_name =] '*instance_name*'  
  Nome dell'istanza. *nome_istanza* viene **sysname** e i valori predefiniti per l'istanza locale se NULL.  
   
-> **Nota:***nome_istanza* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *NomeIstanza*.    
+> **Nota:***nome_istanza* deve essere il nome, nome completo dell'istanza che include il nome del computer e il nome dell'istanza nel formato *computerName* \\ *NomeIstanza*.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  

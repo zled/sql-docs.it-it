@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLInstallDriverEx
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 85c6bcc740743473e8563fc3c3c25e967caff095
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 427a72ebdf63df7bb8d3d1ef93f306c9167782d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx (funzione)
 **Conformità**  
@@ -106,9 +105,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>Commenti  
  Il *lpszDriver* argomento è un elenco di attributi in forma di coppie valore-parola chiave. Ogni coppia è terminato con un byte null e l'intero elenco è terminata con un byte null. (Ovvero, due byte null contrassegnano la fine dell'elenco.) Il formato di questo elenco è come segue:  
   
- *driver desc* **\\**0Driver**=***driver-DLL-filename***\\**0 [installazione **= ***programma di installazione-DLL-filename***\\**0]  
+ *driver desc* **\\** 0Driver**=***driver-DLL-filename***\\** 0 [installazione **= ***programma di installazione-DLL-filename***\\** 0]  
   
- [*driver-attr-keyword1***=***value1 ***\\**0] [*driver-attr-keyword2***=*** Value2 ***\\**0]... **\\**0  
+ [*driver-attr-keyword1***=*** value1 ***\\** 0] [* driver-attr-keyword2***=*** Value2 ***\\** 0]... **\\** 0  
   
  dove \0 è un byte null e *driver-attr-keywordn* qualsiasi parola chiave attributo driver. Le parole chiave devono essere visualizzati nell'ordine specificato. Ad esempio, si supponga che un driver per i file di testo formattato dispone di driver separato e file DLL di installazione e può utilizzare un file con estensione txt e CSV. Il *lpszDriver* argomento per questo driver potrebbe essere come segue:  
   

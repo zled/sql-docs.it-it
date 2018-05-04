@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
@@ -20,12 +20,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bf8654f4851f2d0ed93437be884057112c26a968
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a38b4c3ce271661373fb7b809fdf8c80e7ff19ec
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="string-functions"></a>Funzioni per i valori stringa
 La tabella seguente elenca le funzioni di modifica di stringa. Un'applicazione può determinare le funzioni di stringa supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_STRING_FUNCTIONS.  
@@ -64,5 +63,5 @@ La tabella seguente elenca le funzioni di modifica di stringa. Un'applicazione p
 |**RTRIM (** *string_exp* **)** (ODBC 1.0)|Restituisce i caratteri di *string_exp* rimossi gli spazi vuoti finali.|  
 |**SOUNDEX (** *string_exp* **)** (ODBC 2.0)|Restituisce una stringa di caratteri dipende dall'origine dati che rappresenta il suono delle parole nella *string_exp*. Ad esempio, SQL Server restituisce un codice SOUNDEX di 4 cifre; Oracle restituisce una rappresentazione fonetica di ogni parola.|  
 |**Lo spazio (** *conteggio* **)** (ODBC 2.0)|Restituisce una stringa di caratteri costituito *conteggio* spazi.|  
-|**SUBSTRING (** *string_exp*, *start*, lunghezza**)** (ODBC 1.0)|Restituisce una stringa di caratteri che è derivata da *string_exp*, a partire dalla posizione del carattere specificata da *avviare* per *lunghezza* caratteri.|  
+|**SUBSTRING (** *string_exp*, *start*, lunghezza **)** (ODBC 1.0)|Restituisce una stringa di caratteri che è derivata da *string_exp*, a partire dalla posizione del carattere specificata da *avviare* per *lunghezza* caratteri.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|Restituisce una stringa uguale a quello in *string_exp*, con tutti minuscoli convertiti in caratteri maiuscoli.|

@@ -19,12 +19,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7c24a84e24498003d5c08af60f81707c43d11091
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 7dec4bdcb8cef10a371c7456954208cd34861c52
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Passaggio 3: Server Ottiene un Recordset (esercitazione di servizi desktop remoto)
 Il programma server utilizza il testo di stringa e un comando di connessione per eseguire query sull'origine dati per le righe desiderate. ADO viene generalmente utilizzato per recuperare il **Recordset**, anche se altri dati di Microsoft interfacce di accesso, ad esempio OLE DB, potrebbe essere utilizzato.  

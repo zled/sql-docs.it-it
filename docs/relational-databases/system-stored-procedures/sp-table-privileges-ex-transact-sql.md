@@ -24,12 +24,11 @@ caps.latest.revision: 33
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db5dad55a4dfb5cef1c1e98c0e5209cff92a724d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2ad7d7746c1bd436a6473d7d25921c7a3437e75a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,13 +71,13 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.*** proprietario***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
+|**TABLE_CAT**|**sysname**|Nome del qualificatore della tabella. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella. Questo campo può essere NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nome del proprietario della tabella. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome dell'utente del database che ha creato la tabella. Questo campo restituisce sempre un valore.|  
 |**TABLE_NAME**|**sysname**|Nome della tabella. Questo campo restituisce sempre un valore.|  
 |**GRANTOR**|**sysname**|Nome utente di database che ha concesso autorizzazioni al **TABLE_NAME** per la tabella **utente autorizzato**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], questa colonna è sempre lo stesso come il **TABLE_OWNER**. Questo campo restituisce sempre un valore. Inoltre, la colonna GRANTOR può rappresentare il proprietario del database (**TABLE_OWNER**) o un utente a cui il proprietario del database concesso autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
 |**UTENTE AUTORIZZATO**|**sysname**|Nome utente di database che ha concesso autorizzazioni al **TABLE_NAME** da elencato **GRANTOR**. Questo campo restituisce sempre un valore.|  
-|**CON PRIVILEGI**|**varchar (**32**)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> Selezionare = **utente autorizzato** può recuperare dati per uno o più colonne.<br /><br /> INSERT = **utente autorizzato** può fornire dati per le nuove righe per uno o più colonne.<br /><br /> UPDATE = **utente autorizzato** può modificare i dati per uno o più colonne.<br /><br /> ELIMINARE = **utente autorizzato** può rimuovere righe dalla tabella.<br /><br /> RIFERIMENTI = **utente autorizzato** possono fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna chiave. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione ottenuto il **utente autorizzato** da una tabella specifica privilegio è dipendente dall'origine dati. Ad esempio, l'autorizzazione UPDATE è stato possibile abilitare il **utente autorizzato** per aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per cui il **GRANTOR** dispone di autorizzazioni per un'altra origine dati.|  
-|**IS_GRANTABLE**|**varchar (**3**)**|Indica se il **utente autorizzato** può concedere autorizzazioni ad altri utenti. Questa autorizzazione spesso viene denominata "autorizzazione per la concessione di autorizzazioni". I possibili valori sono YES, NO e NULL. Il valore sconosciuto, o NULL, indica un'origine dei dati per la quale l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
+|**CON PRIVILEGI**|**varchar (** 32 **)**|Una delle autorizzazioni di tabella disponibili. I possibili valori delle autorizzazioni di tabella sono i seguenti. È inoltre possibile utilizzare altri valori supportati dall'origine dei dati al momento della definizione dell'implementazione.<br /><br /> Selezionare = **utente autorizzato** può recuperare dati per uno o più colonne.<br /><br /> INSERT = **utente autorizzato** può fornire dati per le nuove righe per uno o più colonne.<br /><br /> UPDATE = **utente autorizzato** può modificare i dati per uno o più colonne.<br /><br /> ELIMINARE = **utente autorizzato** può rimuovere righe dalla tabella.<br /><br /> RIFERIMENTI = **utente autorizzato** possono fare riferimento a una colonna in una tabella esterna in una relazione chiave primaria/esterna chiave. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le relazioni tra chiave primaria e chiave esterna vengono definite tramite l'utilizzo di vincoli di tabella.<br /><br /> L'ambito di azione ottenuto il **utente autorizzato** da una tabella specifica privilegio è dipendente dall'origine dati. Ad esempio, l'autorizzazione UPDATE è stato possibile abilitare il **utente autorizzato** per aggiornare tutte le colonne di una tabella in un'origine dati e solo le colonne per cui il **GRANTOR** dispone di autorizzazioni per un'altra origine dati.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Indica se il **utente autorizzato** può concedere autorizzazioni ad altri utenti. Questa autorizzazione spesso viene denominata "autorizzazione per la concessione di autorizzazioni". I possibili valori sono YES, NO e NULL. Il valore sconosciuto, o NULL, indica un'origine dei dati per la quale l'autorizzazione per la concessione di autorizzazioni non è applicabile.|  
   
 ## <a name="remarks"></a>Osservazioni  
  I risultati restituiti vengono ordinati in base **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, e **PRIVILEGIO**.  

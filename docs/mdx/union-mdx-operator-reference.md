@@ -23,12 +23,11 @@ caps.latest.revision: 43
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a936895822b842d2d08672c4c05bd8c1a416064c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bd4cad291b909a0ed2b86d56f2df489b6de8e6f2
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="union---mdx-operator-reference"></a>Union - riferimento agli operatori MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ Set_Expression + Set_Expression
  Set che include i membri di entrambi i set specificati.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il **+ (unione)** è funzionalmente equivalente all'operatore di [unione &#40; MDX &#41; ](../mdx/union-mdx.md) (funzione).  
+ Il **+ (Union)** è funzionalmente equivalente all'operatore il [unione &#40;MDX&#41; ](../mdx/union-mdx.md) (funzione).  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene illustrato l'utilizzo di questo operatore.  
@@ -68,6 +67,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

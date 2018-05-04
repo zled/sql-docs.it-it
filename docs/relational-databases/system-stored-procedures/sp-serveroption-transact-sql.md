@@ -25,12 +25,11 @@ caps.latest.revision: 40
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 688f63fb4dd2ecbd1594dd0750343d08a594f7b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 7bc3948044bbfd37d5ddb5a4dad32f3dc9e09725
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_serveroption [@server = ] 'server'
  Nome del server per il quale impostare l'opzione. *server* è di tipo **sysname**e non prevede alcun valore predefinito.  
   
  [  **@optname =** ] **'***option_name***'**  
- Opzione da impostare per il server specificato. *option_name* viene **varchar (**35**)**, non prevede alcun valore predefinito. *option_name* può essere uno dei valori seguenti.  
+ Opzione da impostare per il server specificato. *option_name* viene **varchar (** 35 **)**, non prevede alcun valore predefinito. *option_name* può essere uno dei valori seguenti.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_serveroption [@server = ] 'server'
 |**promozione delle transazioni remote proc**|Questa opzione consente di proteggere le azioni di una procedura da server a server tramite una transazione MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Quando questa opzione è impostata su TRUE (o ON) chiama una stored procedure remota viene avviata una transazione distribuita e integrazione della transazione in MS DTC. L'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui viene chiamata la stored procedure remota corrisponde all'origine della transazione e ne controlla il completamento. Quando per la connessione viene successivamente eseguita un'istruzione COMMIT TRANSACTION o ROLLBACK TRANSACTION, l'istanza di controllo richiede che il completamento della transazione distribuita nei computer interessati venga gestito da MS DTC.<br /><br /> Dopo l'avvio di una transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)], è possibile chiamare stored procedure remote in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definite come server collegati. Tutti i server collegati sono integrati nella transazione distribuita [!INCLUDE[tsql](../../includes/tsql-md.md)]. MS DTC garantisce inoltre che la transazione venga completata in ogni server collegato.<br /><br /> Se questa opzione è impostata su FALSE (o OFF), una transazione locale non sarà promossa a transazione distribuita durante una chiamata di procedura remota in un server collegato.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server la transazione è già una transazione distribuita, questa opzione non ha alcun effetto. La chiamata di procedura nel server collegato verrà eseguita nella stessa transazione distribuita.<br /><br /> Se prima di effettuare una chiamata di una procedura da server a server non vi sono transazioni attive nella connessione, questa opzione non ha alcun effetto. La procedura viene quindi eseguita nel server collegato senza transazioni attive.<br /><br /> Il valore predefinito per questa opzione è TRUE (o ON).|  
   
  [  **@optvalue =**] **'***option_value***'**  
- Specifica o meno il *option_name* deve essere abilitato (**TRUE** o **su**) o disabilitato (**FALSE** o **off**). *option_value* viene **varchar (**10**)**, non prevede alcun valore predefinito.  
+ Specifica o meno il *option_name* deve essere abilitato (**TRUE** o **su**) o disabilitato (**FALSE** o **off**). *option_value* viene **varchar (** 10 **)**, non prevede alcun valore predefinito.  
   
  *option_value* può essere un numero intero non negativo per il **timeout connessione** e **timeout query** opzioni. Per il **nome regole di confronto** opzione *option_value* può essere un nome regole di confronto o NULL.  
   

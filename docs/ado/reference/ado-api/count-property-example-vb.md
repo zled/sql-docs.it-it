@@ -21,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: dac5210691ea6a0bfdb8f4e1d51661b65bfe68ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: 5aa94eefa37e1d60234e4503fb234d66b9ead067
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="count-property-example-vb"></a>Esempio di proprietà Count (VB)
 Questo esempio viene illustrato il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà con due raccolte nel ***dipendente*** database. La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano questi insiemi. Un altro modo per enumerare le raccolte senza il **conteggio** proprietà potrebbe consistere nell'utilizzare `For Each...Next` istruzioni.  

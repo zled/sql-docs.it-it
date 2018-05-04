@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - automatically populating ipd [ODBC]
 - descriptors [ODBC], automatically populating ipd
@@ -23,12 +23,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9ff41c33a308b6e1645f81a0f62e311939d971b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 473594a879fe3bc6ab66937d2cd4e35f1975ecf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="automatic-population-of-the-ipd"></a>Popolamento automatico il IPD
 Alcuni driver sono in grado di impostare i campi del IPD dopo che è stata preparata una query con parametri. I campi di descrizione vengono automaticamente popolati con informazioni sul parametro, inclusi il tipo di dati, precisione, scala e altre caratteristiche. Ciò equivale a supporto **SQLDescribeParam**. Queste informazioni possono rivelarsi particolarmente utile per un'applicazione non dispone di alcun altro modo per individuare, ad esempio quando una query ad hoc viene eseguita con parametri che l'applicazione non conosce.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1691020070667876d56414b3d93dee384538ae8f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 1bd4d07e87af049ac59bc63faf119e84872bbc45
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="statement-handles"></a>Handle di istruzione
 Oggetto *istruzione* è più facilmente considerato come un'istruzione SQL, ad esempio **selezionare \* dipendente da**. Tuttavia, un'istruzione è molto più di un'istruzione SQL, è costituito da tutte le informazioni associate a tale istruzione SQL, ad esempio qualsiasi set di risultati creati tramite l'istruzione e i parametri utilizzati durante l'esecuzione dell'istruzione. Un'istruzione non è nemmeno necessario disporre di un'istruzione SQL definita dall'applicazione. Ad esempio, quando una funzione di catalogo, ad esempio **SQLTables** viene eseguita in un'istruzione, viene eseguita un'istruzione SQL predefinita che restituisce un elenco di nomi di tabella.  

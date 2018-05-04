@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - diagnostic information [ODBC], diagnostic messages messages
 - error messages [ODBC], diagnostic messages
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d8820ce1c437d4bb5012a84ced5db6040cd1b552
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 829d6528f9743d8b5dab5d378eb798a40a994631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="diagnostic-messages"></a>Messaggi di diagnostica
 Con ogni SQLSTATE, viene restituito un messaggio di diagnostica. Il valore stesso SQLSTATE spesso viene restituito con un numero di messaggi diversi. SQLSTATE 42000 (sintassi o violazione di accesso), ad esempio, viene restituito per la maggior parte degli errori nella sintassi SQL. Tuttavia, ogni errore di sintassi problema può essere rappresentata da un altro messaggio.  

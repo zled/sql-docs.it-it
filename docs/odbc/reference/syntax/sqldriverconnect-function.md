@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLDriverConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 50
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ab13d8ad4f2bf16cd7b7c0dc8d352363bb89a5b7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 367a265c33f3c4520b4885524627fca4261829a4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect Function
 **Conformità**  
@@ -163,11 +162,11 @@ SQLRETURN SQLDriverConnect(
   
  dove *stringa di caratteri* contiene zero o più caratteri; *identificatore* contiene uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; *attributo-valore* potrebbe essere tra maiuscole e minuscole; e il valore della **DSN** (parola chiave) non è costituito esclusivamente spazi vuoti.  
   
- A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e l'attributo valori che contengono i caratteri **[] {} (),? \*=! @** non racchiusi tra parentesi graffe. Il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa di grammatica delle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
+ A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e attributo valori che contengono i caratteri **[]{}(),? \*=! @** non racchiusi tra parentesi graffe devono essere evitate. Il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa di grammatica delle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
   
  Le applicazioni non è necessario aggiungere le parentesi graffe per il valore dell'attributo dopo il **DRIVER** (parola chiave), a meno che l'attributo contiene un punto e virgola (;), nel qual caso sono necessarie le parentesi graffe. Se il valore dell'attributo che il driver riceve include parentesi graffe, il driver non necessario rimuoverli ma dovrebbero far parte della stringa di connessione restituito.  
   
- Un valore di stringa di connessione o DSN tra parentesi graffe ({}) contenente i caratteri **[] {} (),? \*=! @** passati invariati al driver. Tuttavia, quando si utilizza questi caratteri in una parola chiave, gestione Driver restituisce un errore quando si lavora con i DSN su file, ma passa la stringa di connessione per il driver per le stringhe di connessione normale. Evitare di usare parentesi graffe incorporate in un valore della parola chiave.  
+ Un valore di stringa di connessione o DSN tra parentesi graffe ({}) che contiene i caratteri **[]{}(),? \*=! @** passati invariati al driver. Tuttavia, quando si utilizza questi caratteri in una parola chiave, gestione Driver restituisce un errore quando si lavora con i DSN su file, ma passa la stringa di connessione per il driver per le stringhe di connessione normale. Evitare di usare parentesi graffe incorporate in un valore della parola chiave.  
   
  La stringa di connessione può includere qualsiasi numero di parole chiave definito dal driver. Poiché il **DRIVER** parola chiave non utilizza informazioni dalle informazioni di sistema, il driver deve definire sufficiente parole chiave in modo da potersi connettere a un'origine dati utilizzando solo le informazioni nella stringa di connessione. (Per ulteriori informazioni, vedere "Driver linee guida," più avanti in questa sezione). Il driver definisce le parole chiave sono necessarie per connettersi all'origine dati.  
   

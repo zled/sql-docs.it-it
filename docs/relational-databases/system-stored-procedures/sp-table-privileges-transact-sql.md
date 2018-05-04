@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2eb872a8ca079bbde96ad3667d687618cba7414a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4ca9192b53e2fa1e6b8eaeb66b4cddd923dd7631
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argomenti  
  [ @table_name=] '*table_name*'  
- Tabella utilizzata per restituire informazioni del catalogo. *TABLE_NAME* viene **nvarchar (**384**)**, non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
+ Tabella utilizzata per restituire informazioni del catalogo. *TABLE_NAME* viene **nvarchar (** 384 **)**, non prevede alcun valore predefinito. La ricerca con caratteri jolly è supportata.  
   
  [ @table_owner=] '*table_owner*'  
- Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *TABLE_OWNER*viene **nvarchar (**384**)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
+ Proprietario della tabella utilizzata per restituire informazioni sul catalogo. *TABLE_OWNER*viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. La ricerca con caratteri jolly è supportata. Se owner viene omesso, vengono applicate le regole di visibilità della tabella predefinite nel sistema DBMS sottostante.  
   
  Se l'utente corrente è il proprietario di una tabella con il nome specificato, vengono restituite le colonne di tale tabella. Se *proprietario* viene omesso e l'utente corrente non dispone di una tabella con l'oggetto specificato *nome*, viene eseguita la ricerca per una tabella con l'oggetto specificato *table_name* di proprietà di proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   

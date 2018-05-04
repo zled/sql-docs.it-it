@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQLConnect function [ODBC], driver-specific connection information
 - connecting to driver [ODBC], SQLConnect
@@ -25,12 +25,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 8d7ba512382963e45a10ba360df29626dd81f2aa
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 21b67f1fdbf609aa8564a6b95a0e60382a0b97a5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="driver-specific-connection-information"></a>Informazioni di connessione specifici del driver
 **SQLConnect** si presuppone che un nome dell'origine dati, l'ID utente e password siano sufficienti per connettersi a un'origine dati e che tutte le altre informazioni di connessione possono essere archiviate nel sistema. Non si tratta spesso il caso. Ad esempio, un driver potrebbe essere necessario un ID utente e password per accedere a un server e un ID utente diverso e una password per accedere a un sistema DBMS. Poiché **SQLConnect** accetta un ID utente singolo e una password, ciò significa che l'altro ID utente e password devono essere archiviati con le informazioni di origine dati nel sistema se **SQLConnect** deve essere utilizzato. Si tratta di una potenziale violazione della sicurezza e deve essere evitato, a meno che la password è crittografata.  
@@ -46,6 +45,6 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
   
  Il **DSN** (parola chiave) (nome dell'origine dati) indica l'origine dati, il **UID** e **PWD** parole chiave specificano l'ID utente e password per il server e **UIDDBMS**  e **PWDDBMS** parole chiave specificano l'ID utente e password per il sistema DBMS. Si noti che il punto e virgola finale è facoltativo. **SQLDriverConnect** analizza la stringa; utilizza il nome dell'origine dati XYZ Corp per recuperare le informazioni di connessione aggiuntive dal sistema, ad esempio l'indirizzo del server; e accede al server e DBMS utilizzando l'ID utente specificato e una password.  
   
- Le coppie parola chiave / valore **SQLDriverConnect** deve seguire determinate regole di sintassi. Le parole chiave e i relativi valori non devono contenere il **[] {} (),? \*=! @** caratteri. Il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa di grammatica del Registro di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Racchiudere il segno di uguale nella coppia valore-parola chiave non sono consentiti spazi.  
+ Le coppie parola chiave / valore **SQLDriverConnect** deve seguire determinate regole di sintassi. Le parole chiave e i relativi valori non devono contenere il **[]{}(),? \*=! @** caratteri. Il valore di **DSN** parola chiave non può essere costituito solo da spazi vuoti e non deve contenere spazi vuoti iniziali. A causa di grammatica del Registro di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Racchiudere il segno di uguale nella coppia valore-parola chiave non sono consentiti spazi.  
   
  Il **FILEDSN** parola chiave può essere utilizzata in una chiamata a **SQLDriverConnect** per specificare il nome di un file che contiene informazioni sull'origine dati (vedere [la connessione utilizzando le origini dati](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), più avanti in questa sezione). Il **SAVEFILE** (parola chiave) consente di specificare il nome di un file DSN in cui le coppie parola chiave / valore di una connessione ha esito positivo eseguite dalla chiamata a **SQLDriverConnect** verranno salvate. Per ulteriori informazioni sulle origini dati di file, vedere il [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) descrizione della funzione.

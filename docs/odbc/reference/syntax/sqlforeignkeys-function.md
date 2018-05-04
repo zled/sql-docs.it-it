@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLForeignKeys
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 935c3236085794ef0d9cb4acb18568c4309fd191
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 02608a02190062b3530d27466d6ec319cf71b8f1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlforeignkeys-function"></a>Funzione SQLForeignKeys
 **Conformità**  
@@ -164,7 +163,7 @@ SQLRETURN SQLForeignKeys(
   
  La lunghezza delle colonne VARCHAR non viene visualizzata nella tabella. le lunghezze effettivi variano a seconda dell'origine dati. Per determinare la lunghezza effettiva del PKTABLE_CAT o FKTABLE_CAT, PKTABLE_SCHEM o FKTABLE_SCHEM, colonne PKTABLE_NAME o FKTABLE_NAME e PKCOLUMN_NAME o FKCOLUMN_NAME, un'applicazione può chiamare **SQLGetInfo** con il SQL_MAX_ Opzioni CATALOG_NAME_LEN, SQL_MAX_SCHEMA_NAME_LEN, SQL_MAX_TABLE_NAME_LEN e SQL_MAX_COLUMN_NAME_LEN.  
   
- Le colonne seguenti sono state rinominate per ODBC 3*. x.* Le modifiche ai nomi di colonna non influiscono sulla compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
+ Le colonne seguenti sono state rinominate per ODBC 3 *. x.* Le modifiche ai nomi di colonna non influiscono sulla compatibilità con le versioni precedenti poiché nelle applicazioni associati dal numero di colonna.  
   
 |Colonna ODBC 2.0|ODBC 3*x* colonna|  
 |---------------------|-----------------------|  

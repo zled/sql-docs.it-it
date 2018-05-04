@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mapping replacement functions [ODBC]
 - upgrading applications [ODBC], mapping replacement functions
@@ -25,12 +25,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 400f1fd18788f361b3eada813a414077e62de1e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 0283ca10e19e1a75e5a3d497c33ab57866b3b27e
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mapping di funzioni di sostituzione per la compatibilità delle applicazioni
 Un'applicazione ODBC 3*x* applicazione utilizzo tramite ODBC 3*x* gestione Driver funzionerà con un ODBC 2. *x* driver, purché non nuove funzionalità vengono utilizzati. Entrambi duplicati funzionalità e modifiche del comportamento, tuttavia, influiscono sulla modalità che ODBC 3. *x* applicazione funziona su un ODBC 2. *x* driver. Quando si lavora con un ODBC 2. *x* driver, Driver Manager viene eseguito il mapping seguente ODBC 3. *x* funzioni, che sono sostituiti uno o più ODBC 2. *x* funzioni, nel corrispondente ODBC 2. *x* funzioni.  

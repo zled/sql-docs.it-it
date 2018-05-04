@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLBrowseConnect
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3bbe32ab3098b0e3e7b6ea5ec284a2a86d4f7752
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 34fbd05bcdec421ee9a00474f939d54219f7b321
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlbrowseconnect-function"></a>Funzione SQLBrowseConnect
 **Conformità**  
@@ -124,7 +123,7 @@ SQLRETURN SQLBrowseConnect(
  *valore dell'attributo* :: = *stringhe di caratteri*<br>
  *definito dall'attributo-parola chiave driver* :: = *identificatore*<br>
   
- dove *stringa di caratteri* contiene zero o più caratteri; *identificatore* contiene uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; *attributo-valore* potrebbe essere tra maiuscole e minuscole; e il valore della **DSN** (parola chiave) non è costituito esclusivamente spazi vuoti. A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e l'attributo valori che contengono i caratteri **[] {} (),? \*=! @** deve essere evitato. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Per un database ODBC 2. *x* driver, è necessario racchiudere il valore dell'attributo per la parola chiave DRIVER tra parentesi graffe.  
+ dove *stringa di caratteri* contiene zero o più caratteri; *identificatore* contiene uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; *attributo-valore* potrebbe essere tra maiuscole e minuscole; e il valore della **DSN** (parola chiave) non è costituito esclusivamente spazi vuoti. A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave e attributo valori che contengono i caratteri **[]{}(),? \*=! @** deve essere evitato. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri. Per un database ODBC 2. *x* driver, è necessario racchiudere il valore dell'attributo per la parola chiave DRIVER tra parentesi graffe.  
   
  Se le parole chiave vengono ripetute nella stringa di connessione richiesta Sfoglia, il driver utilizza il valore associato alla prima occorrenza della parola chiave. Se il **DSN** e **DRIVER** parole chiave sono inclusi nella stessa stringa di connessione richiesta Sfoglia, il gestore dei Driver e il driver utilizza la parola chiave che viene visualizzata per prima.  
   
@@ -139,7 +138,7 @@ SQLRETURN SQLBrowseConnect(
  *Parola chiave di attributo ODBC* = {`UID` &#124; `PWD`} [`:`*identificatore localizzata*] *-definito dall'attributo-parola chiave driver* :: = *identificatore*[`:`*identificatore localizzata*] *attributo-valore* :: = `{` *attributo-valore dall'elenco* `}` &#124; `?` (Parentesi graffe sono valori letterali, vengono restituiti dal driver).<br>
  *attributo-valore-list* :: = *stringa di caratteri* [`:`*stringa di caratteri localizzati*] &#124; *stringa di caratteri* [`:` *stringa di caratteri localizzati*] `,` *attributo-valore dall'elenco*<br>
   
- dove *stringa di caratteri* e *stringa di caratteri localizzati* avere zero o più caratteri; *identificatore* e *identificatore localizzata* dispone di uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; e *attributo-valore* potrebbe essere tra maiuscole e minuscole. A causa di connessione file grammatica, parole chiave, gli identificatori localizzati, stringa e l'inizializzazione e i valori che contengono i caratteri di attributo **[] {} (),? \*=! @** deve essere evitato. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
+ dove *stringa di caratteri* e *stringa di caratteri localizzati* avere zero o più caratteri; *identificatore* e *identificatore localizzata* dispone di uno o più caratteri; *parola chiave di attributo* non è tra maiuscole e minuscole; e *attributo-valore* potrebbe essere tra maiuscole e minuscole. A causa di connessione stringa e l'inizializzazione file grammatica, parole chiave, localizzati identificatori, valori degli attributi e che contengono i caratteri **[]{}(),? \*=! @** deve essere evitato. A causa di grammatica nelle informazioni di sistema, i nomi delle origini dati e le parole chiave non può contenere la barra rovesciata (\\) caratteri.  
   
  La sintassi della stringa di connessione risultato Sfoglia viene utilizzato secondo le regole semantiche seguenti:  
   
@@ -151,7 +150,7 @@ SQLRETURN SQLBrowseConnect(
   
 -   *Parole chiave di attributo ODBC* e *driver--attributo-parole chiave definite* includono una versione localizzata o intuitiva della parola chiave. Questo potrebbe essere utilizzato da applicazioni come un'etichetta in una finestra di dialogo. Tuttavia, **UID**, **PWD**, o *identificatore* autonoma deve essere utilizzato quando si passa una stringa di richiesta di ricerca per il driver.  
   
--   Il {*elenco di valori di attributo*} è un'enumerazione dei valori effettivi valido per il corrispondente *parola chiave di attributo*. Si noti che le parentesi graffe ({}) non indicano un elenco di scelte; vengono restituiti dal driver. Ad esempio, potrebbe essere un elenco di nomi di server o un elenco di nomi di database.  
+-   Il {*elenco di valori di attributo*} è un'enumerazione dei valori effettivi valido per il corrispondente *parola chiave di attributo*. Si noti che le parentesi graffe ({}) non corrispondono a un elenco di scelte; vengono restituiti dal driver. Ad esempio, potrebbe essere un elenco di nomi di server o un elenco di nomi di database.  
   
 -   Se il *attributo-valore* è un singolo punto interrogativo (?), un singolo valore corrisponde alla *parola chiave di attributo*. Ad esempio UID = JohnS; PWD = pieno.  
   

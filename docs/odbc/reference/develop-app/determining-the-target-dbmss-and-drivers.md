@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - target DBMSs and drivers in interoperability [ODBC]
 - interoperability [ODBC], target dbmss and drivers
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 904383158c521cad2e29889020d35bf2374ad517
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f275e344b49f62f1ecc55430c603c0f31f333aa6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinare il DBMS di destinazione e i driver
 Domanda successiva da considerare è, quali sono il DBMS di destinazione per l'applicazione e i driver sono disponibili che supportano tali DBMS? Poiché le applicazioni generiche tendono a essere estremamente interoperativi, la domanda di DBMS di destinazione è più applicabile alle applicazioni personalizzate e verticale. Tuttavia, la domanda di driver di destinazione si applica a tutte le applicazioni, poiché i driver variano notevolmente in velocità, la qualità, supporto delle funzionalità e disponibilità. Inoltre, se i driver devono essere ridistribuito con l'applicazione, il costo e la disponibilità di piani di contratti multilicenza necessario essere considerato.  

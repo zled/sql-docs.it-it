@@ -24,12 +24,11 @@ caps.latest.revision: 36
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95410b08fca279b65b1c8a119504e248f19084e7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 71608242267079dff50cfd5f77722e9f29746b5b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 >  Entrambi *job_id* o *job_name* deve essere specificato; non è possibile specificarli entrambi.  
   
  [ **@server_name=** ] **'***server***'**  
- Nome del server di destinazione da cui rimuovere il processo specificato. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito. *server* può essere **(LOCAL)**o il nome di un server di destinazione remoto.  
+ Nome del server di destinazione da cui rimuovere il processo specificato. *server* viene **nvarchar(30)**, non prevede alcun valore predefinito. *server* può essere **(LOCAL)** o il nome di un server di destinazione remoto.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  **0** (esito positivo) o **1** (esito negativo)  

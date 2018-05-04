@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - result sets [ODBC], about result sets
 - data sources [ODBC], result sets
@@ -21,12 +21,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c7b9dc4f399a5fe95bd2450574eb03509b2bbb4c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 22969a69bf70e862335d48abae41bf9e37f6c24a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-results-basic"></a>Il recupero dei risultati (Basic)
 Oggetto *set di risultati* è un set di righe nell'origine dati che soddisfa determinati criteri. È una tabella concettuale che nei risultati di una query e che sia disponibile per un'applicazione in formato tabulare. **Selezionare** istruzioni, funzioni di catalogo e alcune procedure creano set di risultati. Nell'esempio seguente, la prima istruzione SQL crea un set di risultati contenente tutte le righe e tutte le colonne nella tabella Orders e la seconda istruzione SQL crea un set di risultati contenente le colonne OrderID, venditore e stato per le righe nella tabella Orders in cui lo stato è aperto:  

@@ -24,12 +24,11 @@ caps.latest.revision: 44
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d6182a83fce79b3940b4137345d24d14d259c7db
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: e17a010a96c669e7f8363634a135bdaa9e7be892
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**compress_snapshot**|**true**|Lo snapshot in una cartella snapshot alternativa viene compresso nel formato CAB. Non è possibile comprimere lo snapshot all'interno della cartella snapshot predefinita. Se si modifica questa proprietà, è necessario un nuovo snapshot.|  
 ||**false**|Per impostazione predefinita, lo snapshot non viene compresso. Se si modifica questa proprietà, è necessario un nuovo snapshot.|  
 |**conflict_logging**|**publisher**|I record con conflitti vengono archiviati nel server di pubblicazione.|  
-||**subscriber**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori*.*|  
+||**subscriber**|I record con conflitti vengono archiviati nel Sottoscrittore che ha causato il conflitto. Non supportato per [!INCLUDE[ssEW](../../includes/ssew-md.md)] sottoscrittori *.*|  
 ||**both**|I record con conflitti vengono archiviati nel server di pubblicazione e nel Sottoscrittore.|  
 |**conflict_retention**||Un **int** che specifica il periodo di memorizzazione, espresso in giorni, per cui è in conflitto. Impostazione *conflict_retention* a **0** significa che non è necessaria alcuna operazione di rimozione dei conflitti.|  
 |**description**||Descrizione della pubblicazione.|  

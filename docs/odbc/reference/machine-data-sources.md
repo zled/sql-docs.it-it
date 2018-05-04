@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - machine data sources [ODBC]
 - data sources [ODBC], machine
@@ -20,12 +20,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 44c163254f23aae90caf24b5be05341cbcc4016b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 51b95411978ced9466d23283b9c99bb2ab2dd614
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="machine-data-sources"></a>Origini dati macchina
 *Origini dati del computer* vengono archiviati in un sistema con un nome definito dall'utente. Tutte le informazioni associate al nome dell'origine dati è la necessità di gestione Driver e driver per la connessione all'origine dati. Per un'origine dati Xbase, questo potrebbe essere il nome del driver Xbase, il percorso completo della directory contenente i file Xbase e alcune opzioni che indicano il driver illustrato come utilizzare tali file, ad esempio la modalità utente singolo o sola lettura. Per un'origine dati Oracle, questa potrebbe essere il nome del driver Oracle, il server in cui si trova, il sistema DBMS Oracle SQL * Net stringa di connessione che identifica l'istruzione SQL\*Net driver da utilizzare e l'ID del database nel server di sistema.

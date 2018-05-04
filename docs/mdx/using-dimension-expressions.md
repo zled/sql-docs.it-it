@@ -21,19 +21,18 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1417fd747df92c84fe66e2c69996f57ab51875e1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: bf316e56eeb7ad3b463ea73609d215364ae5a371
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-expressions"></a>Utilizzo delle espressioni di dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   In genere le espressioni di dimensione e di gerarchia vengono utilizzate per passare parametri a funzioni nelle espressioni MDX al fine di ottenere membri, set o tuple da una gerarchia.  
   
- Le espressioni di dimensione possono essere solo espressioni semplici perché rappresentano identificatori di oggetto. Vedere [espressioni &#40; MDX &#41; ](../mdx/expressions-mdx.md) per una spiegazione delle espressioni semplici e complesse.  
+ Le espressioni di dimensione possono essere solo espressioni semplici perché rappresentano identificatori di oggetto. Vedere [espressioni &#40;MDX&#41; ](../mdx/expressions-mdx.md) per una spiegazione delle espressioni semplici e complesse.  
   
 ## <a name="dimension-expressions"></a>Espressioni di dimensione  
  Un'espressione di dimensione contiene un identificatore di dimensione o una funzione per le dimensioni.  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
   
  `FROM [Adventure Works]`  
   
- Un identificatore di gerarchia viene visualizzato come *Dimension_Name**.* *Hierarchy_Name* nella notazione BNF utilizzata per descrivere le istruzioni MDX.  
+ Un identificatore di gerarchia viene visualizzato come *Dimension_Name **.** Hierarchy_Name* nella notazione BNF utilizzata per descrivere le istruzioni MDX.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

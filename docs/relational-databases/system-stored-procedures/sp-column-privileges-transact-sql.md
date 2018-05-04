@@ -24,13 +24,12 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8f3791722797f9c735e7801c989bc155fa9aafc0
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 41f6cc18687e6491295e2843632e0bd6badbc95a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spcolumnprivileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,10 +58,10 @@ sp_column_privileges [ @table_name = ] 'table_name'
  Se l'utente corrente è il proprietario di una tabella avente il nome specificato, vengono restituite le colonne di tale tabella. Se *table_owner* viene omesso e l'utente corrente non dispone di una tabella con l'oggetto specificato *table_name*, sp_column privilegi Cerca una tabella con l'oggetto specificato *table_name* il proprietario del database. Se viene individuata, vengono restituite le colonne di tale tabella.  
   
  [ @table_qualifier=] '*table_qualifier*'  
- Nome del qualificatore di tabella. *TABLE_QUALIFIER* viene *sysname*, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore***.*** proprietario***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
+ Nome del qualificatore di tabella. *TABLE_QUALIFIER* viene *sysname*, con un valore predefinito è NULL. Vari prodotti DBMS supportano nomi in tre parti per le tabelle (*qualificatore ***.*** proprietario ***.*** nome*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna rappresenta il nome del database. In altri prodotti rappresenta il nome del server dell'ambiente di database della tabella.  
   
  [ @column_name=] '*colonna*'  
- Colonna utilizzata quando si desidera ottenere una sola colonna di informazioni del catalogo. *colonna* viene **nvarchar (**384**)**, con un valore predefinito è NULL. Se *colonna* viene omesso, vengono restituite tutte le colonne. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonna* rappresenta il nome di colonna elencato nella tabella sys. Columns. *colonna* possono includere caratteri jolly che utilizzano i criteri del sistema DBMS sottostante di corrispondenza. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
+ Colonna utilizzata quando si desidera ottenere una sola colonna di informazioni del catalogo. *colonna* viene **nvarchar (** 384 **)**, con un valore predefinito è NULL. Se *colonna* viene omesso, vengono restituite tutte le colonne. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonna* rappresenta il nome di colonna elencato nella tabella sys. Columns. *colonna* possono includere caratteri jolly che utilizzano i criteri del sistema DBMS sottostante di corrispondenza. Per ottenere la massima interoperabilità, è consigliabile che nel client del gateway vengano utilizzati solo i caratteri jolly dello standard ISO, ovvero i caratteri % e _.  
   
 ## <a name="result-sets"></a>Set di risultati  
  sp_datatype_privileges corrisponde a SQLColumnPrivileges in ODBC. I risultati restituiti sono ordinati per TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME, COLUMN_NAME e PRIVILEGE.  
@@ -75,8 +74,8 @@ sp_column_privileges [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|Nome di ogni colonna della tabella TABLE_NAME restituita. Questo campo restituisce sempre un valore.|  
 |GRANTOR|**sysname**|Nome dell'utente del database che ha concesso le autorizzazioni per la colonna COLUMN_NAME all'utente GRANTEE specificato. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna corrisponde sempre a TABLE_OWNER. Questo campo restituisce sempre un valore.<br /><br /> La colonna GRANTOR può rappresentare il proprietario del database (TABLE_OWNER) o un utente a cui il proprietario del database ha concesso le autorizzazioni tramite la clausola WITH GRANT OPTION dell'istruzione GRANT.|  
 |GRANTEE|**sysname**|Nome dell'utente del database a cui l'utente GRANTOR specificato ha concesso le autorizzazioni per la colonna COLUMN_NAME. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] questa colonna include sempre un utente di database della tabella sysusers. Questo campo restituisce sempre un valore.|  
-|PRIVILEGE|**varchar (**32**)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> SELECT = l'utente GRANTEE può recuperare dati per le colonne.<br /><br /> INSERT = l'utente GRANTEE può fornire dati per la colonna specificata quando inserisce nuove righe nella tabella.<br /><br /> UPDATE = l'utente GRANTEE può modificare i dati della colonna.<br /><br /> REFERENCES = l'utente GRANTEE può fare riferimento a una colonna di una tabella esterna in una relazione chiave primaria/chiave esterna. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
-|IS_GRANTABLE|**varchar (**3**)**|Indica se l'utente GRANTEE può concedere autorizzazioni ad altri utenti (autorizzazione per la concessione di autorizzazioni). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, fa riferimento a un'origine dei dati per la quale questo tipo di assegnazione indiretta delle autorizzazioni non è consentito.|  
+|PRIVILEGE|**varchar (** 32 **)**|Una delle autorizzazioni di colonna disponibili. Le autorizzazioni di colonna possono essere rappresentate da uno dei valori riportati di seguito o da altri valori supportati dall'origine dei dati in fase di definizione dell'implementazione:<br /><br /> SELECT = l'utente GRANTEE può recuperare dati per le colonne.<br /><br /> INSERT = l'utente GRANTEE può fornire dati per la colonna specificata quando inserisce nuove righe nella tabella.<br /><br /> UPDATE = l'utente GRANTEE può modificare i dati della colonna.<br /><br /> REFERENCES = l'utente GRANTEE può fare riferimento a una colonna di una tabella esterna in una relazione chiave primaria/chiave esterna. Questo tipo di relazione viene definito tramite vincoli di tabella.|  
+|IS_GRANTABLE|**varchar (** 3 **)**|Indica se l'utente GRANTEE può concedere autorizzazioni ad altri utenti (autorizzazione per la concessione di autorizzazioni). I possibili valori sono YES, NO e NULL. Un valore sconosciuto, o NULL, fa riferimento a un'origine dei dati per la quale questo tipo di assegnazione indiretta delle autorizzazioni non è consentito.|  
   
 ## <a name="remarks"></a>Osservazioni  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le autorizzazioni vengono concesse tramite l'istruzione GRANT e rimosse tramite l'istruzione REVOKE.  

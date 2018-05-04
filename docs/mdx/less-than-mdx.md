@@ -1,5 +1,5 @@
 ---
-title: '&lt;(Minore di) (MDX) | Documenti Microsoft'
+title: '&lt; (Minore di) (MDX) | Documenti Microsoft'
 ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
@@ -23,14 +23,13 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 99be3c9f3896f84dbee770859c14725f299b63ff
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 4f1b4b0698461f04c3bddd7ce60195cbba2a7508
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="lt-less-than-mdx"></a>&lt;(Minore di) (MDX)
+# <a name="lt-less-than-mdx"></a>&lt; (Minore di) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Esegue un'operazione di confronto che determina se il valore di un'espressione MDX (Multidimensional Expression) è minore di quello di un'altra espressione MDX.  
@@ -51,7 +50,7 @@ MDX_Expression < MDX_Expression
   
 -   **true** se entrambi i parametri sono non null e il primo parametro è un valore che è inferiore al valore del secondo parametro.  
   
--   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale a o maggiore del valore del secondo parametro.  
+-   **false** se entrambi i parametri sono non null e il primo parametro è un valore che è uguale o maggiore del valore del secondo parametro.  
   
 -   Null se uno o entrambi i parametri restituiscono un valore Null.  
   
@@ -76,6 +75,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

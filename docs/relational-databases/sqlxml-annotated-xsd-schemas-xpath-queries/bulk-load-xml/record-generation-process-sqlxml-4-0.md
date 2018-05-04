@@ -8,8 +8,7 @@ ms.service: ''
 ms.component: sqlxml
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: xml
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -28,13 +27,12 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e72388a753b1003c259f20371b34ffb3c269a2e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 75d372bcd162fda196333d62acaf68c3d5cd5d1f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processo di generazione di record (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -155,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
  I dati XML di esempio e la procedura per creare un esempio reale vengono forniti di seguito.  
   
--   Quando un  **\<cliente >** nodo di elemento nel file di dati XML entra nell'ambito, il caricamento Bulk XML genera un record per la tabella Cust. Caricamento Bulk XML copia quindi i valori di colonna necessari (CustomerID, CompanyName e City) dal  **\<CustomerID >**,  **\<CompanyName >**e  **\<City >** gli elementi figlio mentre gli elementi entrano nell'ambito.  
+-   Quando un  **\<cliente >** nodo di elemento nel file di dati XML entra nell'ambito, il caricamento Bulk XML genera un record per la tabella Cust. Caricamento Bulk XML copia quindi i valori di colonna necessari (CustomerID, CompanyName e City) dal  **\<CustomerID >**,  **\<CompanyName >** e  **\<City >** gli elementi figlio mentre gli elementi entrano nell'ambito.  
   
 -   Quando un  **\<ordine >** nodo elemento entra nell'ambito, il caricamento Bulk XML genera un record per la tabella CustOrder. Caricamento Bulk XML copia il valore della **OrderID** attributo a questo record. Il valore richiesto per la colonna CustomerID viene ottenuta dal  **\<CustomerID >** elemento figlio dell'elemento di  **\<cliente >** elemento. Caricamento Bulk XML utilizza le informazioni specificate nel  **\<SQL: Relationship >** per ottenere il valore di chiave esterna CustomerID per il record, a meno che il **CustomerID** attributo specificato nella  **\<ordine >** elemento. La regola generale è che, se l'elemento figlio specificato in modo esplicito un valore per l'attributo di chiave esterna, il caricamento Bulk XML utilizza tale valore e non ottiene il valore dall'elemento padre utilizzando l'oggetto specificato **\<SQL: Relationship >**. Come si  **\<ordine >** nodo elemento abbandona l'ambito, il caricamento Bulk XML invia il record a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e quindi elabora tutti i successivi  **\<ordine >** nodi elemento allo stesso modo.  
   

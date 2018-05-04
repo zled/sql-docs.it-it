@@ -20,12 +20,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: db51630bf9629920ce91af22fc731f3a5c919fd0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: a211eb8ffbcd8aa2bf517fb47c81a26bf66156ff
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Passaggio di parametri a un comando denominato
 Analogamente a come il risultato del comando viene passato come un *out* variabili del comando denominato, parametri per un comando con parametri è stato passato come *in* variabili per il comando specificato.  

@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 apiname:
 - SQLFetch
 apilocation:
@@ -26,12 +26,11 @@ caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: f1d87bc952852df3301d095203f6c94794de795d
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: f386bd758a9b8c247197418448914904560cd1b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sqlfetch-function"></a>SQLFetch-funzione
 **Conformità**  
@@ -97,7 +96,7 @@ SQLRETURN SQLFetch(
 ## <a name="comments"></a>Commenti  
  **SQLFetch** restituisce il successivo set di righe nel set di risultati. Può essere chiamato solo quando esiste un set di risultati: ovvero, dopo una chiamata che crea un set di risultati e prima del cursore sopra di set di risultati viene chiuso. Se tutte le colonne sono associate, restituisce i dati in tali colonne. Se l'applicazione non è specificato un puntatore a una matrice di stato di riga o di un buffer in cui restituire il numero di righe recuperate, **SQLFetch** anche restituisce queste informazioni. Le chiamate a **SQLFetch** può essere combinato con chiamate a **SQLFetchScroll** ma non può essere combinato con chiamate a **SQLExtendedFetch**. Per ulteriori informazioni, vedere [il recupero di una riga di dati](../../../odbc/reference/develop-app/fetching-a-row-of-data.md).  
   
- Se un'applicazione ODBC 3*x* applicazione funziona con un'API ODBC 2*x* esegue il mapping di driver, Driver Manager **SQLFetch** le chiamate a **SQLExtendedFetch** per un ODBC 2*x* driver che supporta **SQLExtendedFetch**. Se l'API ODBC 2*. x* driver non supporta **SQLExtendedFetch**, viene eseguito il mapping di gestione Driver **SQLFetch** le chiamate a **SQLFetch** in ODBC 2 *x* driver, che è possibile recuperare una sola riga.  
+ Se un'applicazione ODBC 3*x* applicazione funziona con un'API ODBC 2*x* esegue il mapping di driver, Driver Manager **SQLFetch** le chiamate a **SQLExtendedFetch** per un ODBC 2*x* driver che supporta **SQLExtendedFetch**. Se l'API ODBC 2 *. x* driver non supporta **SQLExtendedFetch**, viene eseguito il mapping di gestione Driver **SQLFetch** le chiamate a **SQLFetch** in ODBC 2 *x* driver, che è possibile recuperare una sola riga.  
   
  Per ulteriori informazioni, vedere [cursori a blocchi, i cursori scorrevoli e compatibilità con le versioni precedenti](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) nell'appendice g: Driver le linee guida per la compatibilità con le versioni precedenti.  
   

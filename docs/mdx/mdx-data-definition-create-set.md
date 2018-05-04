@@ -26,12 +26,11 @@ caps.latest.revision: 42
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c709890d1c9e9ff3b1e6351fc4b62e067e12a864
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 0b7c9464085c99ff9d04be0c7c6a27d6f216c22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-set"></a>Definizione dei dati MDX - creare impostato
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,12 +63,12 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  Espressione scalare valida che definisce il valore della proprietà del set.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Un set denominato è un set di membri di dimensioni, o un'espressione che definisce un set, che è possibile creare per un riutilizzo successivo. Un set denominato, ad esempio, consente di definire un set di membri di dimensioni costituito dal set dei primi dieci punti vendita per fatturato. Questo set può essere definito in modo statico, o tramite una funzione come [TopCount](../mdx/topcount-mdx.md). Il set denominato potrà quindi essere utilizzato ogni volta che sarà necessario recuperare il set dei primi 10 punti vendita.  
   
- L'istruzione CREATE SET crea un set denominato che rimane disponibile per tutta la sessione e può pertanto essere utilizzato in più query durante la sessione. Per ulteriori informazioni, vedere [membri calcolati Creating Session-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ L'istruzione CREATE SET crea un set denominato che rimane disponibile per tutta la sessione e può pertanto essere utilizzato in più query durante la sessione. Per altre informazioni, vedere [membri calcolati Creating Session-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- È inoltre possibile definire un set denominato da utilizzare in un'unica query. Per definire un set di questo tipo, utilizzare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni sulla clausola WITH, vedere [Creating Query-Scoped denominati &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ È inoltre possibile definire un set denominato da utilizzare in un'unica query. Per definire un set di questo tipo, utilizzare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni sulla clausola WITH, vedere [Creating Query-Scoped denominati &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Il *Set_Expression* clausola può contenere qualsiasi funzione che supporta la sintassi MDX. L'ambito dei set creati con l'istruzione CREATE SET che non specificano la clausola SESSION è sessione. Utilizzare la clausola WITH per creare un set con l'ambito query.  
   
@@ -79,7 +78,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  Un set definito dall'utente può trovarsi all'interno di uno degli ambiti elencati nella tabella seguente.  
   
  Ambito query  
- La visibilità e la durata del set sono limitate alla query. Il set è definito in un'unica query. L'ambito query prevale sull'ambito sessione. Per ulteriori informazioni, vedere [Creating Query-Scoped denominati &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
+ La visibilità e la durata del set sono limitate alla query. Il set è definito in un'unica query. L'ambito query prevale sull'ambito sessione. Per altre informazioni, vedere [Creating Query-Scoped denominati &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-query-scoped-named-sets.md).  
   
  Ambito sessione  
  La visibilità e la durata del set sono limitate alla sessione in cui è stato creato. La durata è inferiore alla durata della sessione se viene utilizzata l'istruzione DROP SET sul set. L'istruzione CREATE SET crea un set con ambito sessione. Utilizzare la clausola WITH per creare un set con l'ambito query.  
@@ -118,7 +117,7 @@ SELECT [Core Products] ON 0
 |DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrare il set. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barra rovesciata (\\) è il separatore di livello. Per fornire più cartelle di visualizzazione per un set definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [ELIMINARE l'istruzione SET &#40; MDX &#41;](../mdx/mdx-data-definition-drop-set.md)   
- [Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzione DROP SET &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)   
+ [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

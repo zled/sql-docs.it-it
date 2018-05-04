@@ -22,13 +22,12 @@ caps.latest.revision: 30
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c5ef54d6c9d0eee2481941f8dc6c77fab737d3fc
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 8732727cda17efddabfbb68eb1ebc7f3e415e911
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Conversione della copia bulk da DB-Library a ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ ms.lasthandoff: 04/16/2018
   
      In DB-Library, un *varlen* valore -1 indica che vengono forniti dati di lunghezza variabile, in ODBC *cbData* viene interpretato in modo da indicare che vengono forniti solo valori NULL. Modificare qualsiasi DB-Library *varlen* specifiche di -1 su SQL_VARLEN_DATA e qualsiasi *varlen* specifiche 0 su SQL_NULL_DATA.  
   
--   DB-Library  **bcp_colfmt * * * file_collen* e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * presentano lo stesso problema come il **bcp_bind * * * varlen*e *cbData* parametri indicati in precedenza. Modificare qualsiasi DB-Library *file_collen* specifiche di -1 su SQL_VARLEN_DATA e qualsiasi *file_collen* specifiche 0 su SQL_NULL_DATA.  
+-   DB-Library  **bcp_colfmt * * * file_collen* e ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)* cbUserData * presentano lo stesso problema come il **bcp_bind * * * varlen*e *cbData* parametri indicati in precedenza. Modificare qualsiasi DB-Library *file_collen* specifiche di -1 su SQL_VARLEN_DATA e qualsiasi *file_collen* specifiche 0 su SQL_NULL_DATA.  
   
 -   Il *iValue* parametro di ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) funzione è un puntatore void. In DB-Library, *iValue* è un numero intero. Il cast dei valori per ODBC *iValue* a void *.  
   
