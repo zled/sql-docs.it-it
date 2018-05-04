@@ -1,31 +1,29 @@
 ---
 title: Ruoli | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
-caps.latest.revision: 
+caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 15030b1b2c5345d3072ff188356aaa532857c90b
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: d1bb19f3220da7300a7a7329ae55e859bf86334a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="roles"></a>Ruoli
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
+  I ruoli, nei modelli tabulari, consentono di definire le autorizzazioni dei membri per un modello. I membri del ruolo possono eseguire azioni sul modello, come definito dall'autorizzazione del ruolo. I ruoli definiti con autorizzazioni di lettura possono garantire inoltre sicurezza aggiuntiva a livello di riga tramite i relativi filtri. 
   
  Per SQL Server Analysis Services, i ruoli contengono membri di un utente dal nome utente di Windows o dal gruppo di Windows e le autorizzazioni (lettura, process, amministratore). Per Azure Analysis Services, gli utenti devono essere in Azure Active Directory e i nomi utente e i gruppi specificati devono essere dall'indirizzo di posta elettronica aziendale o UPN. 
   

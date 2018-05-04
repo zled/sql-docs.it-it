@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -21,12 +20,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 37b91bc83640a10c9905726fdabb49c7816d77a1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2dda44151b465d31cc6b3a88232f6843cf868eb5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="working-with-empty-values"></a>Utilizzo di valori vuoti
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -126,7 +124,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  `FROM [Adventure Works]`  
   
- Per ulteriori informazioni, vedere [NonEmpty &#40; MDX &#41; ](../mdx/nonempty-mdx.md).  
+ Per altre informazioni, vedere [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md).  
   
 ## <a name="empty-values-and-comparison-operators"></a>Valori vuoti e operatori di confronto  
  Se i dati includono valori vuoti, oltre a TRUE e FALSE gli operatori logici e di confronto possono restituire un terzo valore, EMPTY. Questa logica a tre valori è necessaria, ma causa numerosi errori nelle applicazioni. Nelle tabelle seguenti vengono indicati i risultati ottenuti quando si includono valori vuoti in un confronto.  
@@ -141,7 +139,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  Nella tabella seguente vengono indicati i risultati ottenuti quando si applica l'operatore OR a due operandi booleani.  
   
-|o|TRUE|FALSE|  
+|OPPURE|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**VUOTO**|TRUE|TRUE|  
@@ -156,8 +154,8 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 |FALSE|TRUE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)   
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Espressioni &#40; MDX &#41;](../mdx/expressions-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

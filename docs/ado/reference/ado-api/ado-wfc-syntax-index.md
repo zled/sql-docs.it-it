@@ -1,7 +1,6 @@
 ---
 title: ADO - indice sintassi WFC | Documenti Microsoft
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
 ms.reviewer: ''
@@ -20,11 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da1bb017eb98b63fa4fa6a3e445c9e95f9a812c7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 128e34bad797477fdeadbb18e241fc4d5981e3a2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC sintassi indice
 Riferimenti al linguaggio ADO utilizza il linguaggio di programmazione Microsoft Visual Basic per illustrare la sintassi di metodi e proprietà ADO. Questo indice è un riferimento incrociato per gli argomenti di riferimento al linguaggio ADO, in base a ADO per Windows Foundation Classes (ADO/WFC). Quando si verificano differenze di sintassi, è possibile utilizzare le firme di funzione nell'indice, anziché le voci della sintassi nella Guida di riferimento del linguaggio.  

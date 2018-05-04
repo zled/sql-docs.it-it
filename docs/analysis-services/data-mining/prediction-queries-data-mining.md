@@ -1,31 +1,29 @@
 ---
 title: Query di stima (Data Mining) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 89a8d2a3edf4cf3d875f582918d714c2e6dc72e5
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 28a123a9c3cfd3770ae7c156bc4d2c836d393723
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'obiettivo di un progetto di data mining tipico consiste nell'utilizzare il modello di data mining per eseguire stime. Ad esempio, potrebbe essere necessario stimare la quantità di tempo di inattività prevista per un determinato cluster di server o generare un punteggio che indichi se è probabile che segmenti di clienti rispondano a una campagna pubblicitaria. Per effettuare tutte queste operazioni, è necessario creare una query di stima.  
+  L'obiettivo di un progetto di data mining tipico consiste nell'utilizzare il modello di data mining per eseguire stime. Ad esempio, potrebbe essere necessario stimare la quantità di tempo di inattività prevista per un determinato cluster di server o generare un punteggio che indichi se è probabile che segmenti di clienti rispondano a una campagna pubblicitaria. Per effettuare tutte queste operazioni, è necessario creare una query di stima.  
   
  A livello funzionale esistono diversi tipi di query di stima supportati in SQL Server, a seconda del tipo di input per la query:  
   
@@ -155,7 +153,7 @@ FROM
  Se il provider non è in grado di gestire i set di righe gerarchici, è possibile fare in modo che i risultati vengano restituiti in formato flat utilizzando la parola chiave FLATTEN nella query di stima. Per altre informazioni, inclusi esempi di set di righe bidimensionali, vedere [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto di Data Mining query &#40; &#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
- [Query di definizione dei dati &#40; Data Mining &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Contenuto di Data Mining query & #40; & #41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
+ [Query di definizione dei dati & #40; Data Mining & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   

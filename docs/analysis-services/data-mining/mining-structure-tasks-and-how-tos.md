@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 ms.assetid: 085962c2-b50b-4a3b-8176-a0b920e2593a
@@ -18,31 +17,31 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a9b949aa861e9db20c60f64c75d5edd41e9247c9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 718c171105c347beab18cbd26d73518ab9285850
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Attività e procedure relative alla struttura di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il **struttura di Data Mining** scheda della finestra di progettazione Data Mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene strumenti che è possibile utilizzare per creare, modificare ed elaborare una struttura di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La scheda **Struttura di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene strumenti che consentono di creare, modificare ed elaborare una struttura di data mining.  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
   
--   [Creare una nuova struttura di data mining relazionale](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
+-   [Creare una nuova struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
--   [Creare una nuova struttura di data mining OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
+-   [Creare una nuova struttura di Data Mining OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
--   [Aggiungere colonne a una struttura di data mining](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
+-   [Aggiungere colonne a una struttura di Data Mining](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
--   [Rimuovere colonne da una struttura di data mining](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
+-   [Rimuovere le colonne da una struttura di Data Mining](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
--   [Aggiungere una tabella nidificata a una struttura di data mining](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
+-   [Aggiungere una tabella nidificata a una struttura di Data Mining](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
--   [Modificare le proprietà di una struttura di data mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [Modificare le proprietà di una struttura di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Modificare la vista origine dati usata per una struttura di data mining](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modificare la vista origine dati utilizzata per una struttura di Data Mining](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [Elaborare una struttura di data mining](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

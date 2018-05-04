@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31127a642891b317118a8ce3995d198fb6426e6e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 909f64d8cc9f676e83a3bbaa4ee53975218962f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene uno o più elementi di Analysis Services Scripting Language (ASSL), utilizzati per creare o modificare oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene uno o più elementi di Analysis Services Scripting Language (ASSL), utilizzati per creare o modificare oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,10 +53,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|None|  
-|Valore predefinito|None|  
+|Tipo di dati e lunghezza|Nessuno|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -65,9 +64,9 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[ALTER](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [creare](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
-|Elementi figlio|Elementi ASSL obbligatori. Uno o più elementi ASSL, utilizzati per definire oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Per ulteriori informazioni su ASSL, vedere [proprietà &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
+|Elementi figlio|Elementi ASSL obbligatori. Uno o più elementi ASSL, utilizzati per definire oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Per ulteriori informazioni su ASSL, vedere [proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea un database vuoto denominato **Database di prova** su un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -85,6 +84,6 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

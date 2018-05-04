@@ -1,16 +1,15 @@
 ---
 title: Grafico profitti (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - charts [Analysis Services]
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e1bfda7f42bdc4423ee1ea1bc0ad2d59abe26347
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 4f536ce8835e0ceb72a043dbce046987baea3062
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Grafico profitti (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In un grafico dei profitti viene visualizzata la redditività associata all'utilizzo di un modello di data mining. Si supponga, ad esempio, che il modello preveda quali sono i clienti che una società dovrebbe contattare in uno scenario aziendale. In tal caso, sarebbe necessario aggiungere le informazioni del grafico dei profitti in merito al costo della campagna di mailing diretto. Successivamente, nel grafico completato verrà visualizzato il profitto stimato della campagna indirizzata ai clienti corretti, rispetto a quello di una campagna con clienti contattati casualmente.  
+  In un grafico dei profitti viene visualizzata la redditività associata all'utilizzo di un modello di data mining. Si supponga, ad esempio, che il modello preveda quali sono i clienti che una società dovrebbe contattare in uno scenario aziendale. In tal caso, sarebbe necessario aggiungere le informazioni del grafico dei profitti in merito al costo della campagna di mailing diretto. Successivamente, nel grafico completato verrà visualizzato il profitto stimato della campagna indirizzata ai clienti corretti, rispetto a quello di una campagna con clienti contattati casualmente.  
   
 ## <a name="build-a-profit-chart"></a>Creare un grafico dei profitti  
  Un grafico dei profitti è simile a uno di accuratezza. Iniziare creando un grafico di accuratezza e quindi aggiungere le informazioni sui costi e i profitti.  
@@ -98,13 +96,13 @@ In un grafico dei profitti viene visualizzata la redditività associata all'util
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base di Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40; Esercitazione di base di Data Mining &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Viene descritta la convalida incrociata per modelli e strutture di data mining.|[La convalida incrociata &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Test e convalida le attività e procedure relative alla &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base di Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza & #40; Esercitazione di base di Data Mining & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Viene descritta la convalida incrociata per modelli e strutture di data mining.|[La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [Test dell'accuratezza con i grafici di accuratezza &#40; Esercitazione di base di Data Mining &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
+ [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [Test dell'accuratezza con i grafici di accuratezza & #40; Esercitazione di base di Data Mining & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 8f9d95aca057801c924ceec962f818c7e6f27869
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: faa73bc865ef1a4228232783854e136dfa8c2bae
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se un'espressione di membro non è specificata, il valore predefinito è il membro corrente della prima gerarchia con un livello di tipo *anni* nella prima dimensione di tipo *ora* nel gruppo di misure.  
   
  Il **Ytd** è una funzione di scelta rapida per il [PeriodsToDate](../mdx/periodstodate-mdx.md) in cui la proprietà Type della gerarchia dell'attributo in cui si basa il livello è impostato su *anni*. In altre parole, `Ytd(Member_Expression)` equivale a `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Si noti che questa funzione non funziona quando la proprietà Type è impostata su *FiscalYears*.  
@@ -67,7 +65,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **YTD** spesso viene utilizzata in combinazione con nessun parametro specificato, il che significa che il [CurrentMember &#40; MDX &#41; ](../mdx/currentmember-mdx.md) funzione visualizzerà un totale cumulativo di year-to-date in un report, come illustrato nella query seguente:  
+ **YTD** spesso viene utilizzata in combinazione con nessun parametro specificato, il che significa che il [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) funzione visualizzerà un totale cumulativo year-to-date in un report, come illustrato di query seguente:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -80,6 +78,6 @@ WHERE
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

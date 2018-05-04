@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,15 +17,15 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8b9f228245b45c1b474189683080c4cd0ed5def7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="session-events-data-columns"></a>Colonne di dati degli eventi di sessione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria degli eventi di sessione include la classe di evento seguente:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria di eventi Eventi di sessione include la classe di evento seguente:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
 |------------------|--------------------|---------------------------|  
@@ -57,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Duration|5|2|Durata dell'evento in millisecondi.|  
+|Durata|5|2|Durata dell'evento in millisecondi.|  
 |CPUTime|6|2|Tempo della CPU in millisecondi utilizzato dall'evento.|  
 |ConnectionID|25|1|ID connessione univoco.|  
 |DatabaseName|28|8|Nome del database in cui è in esecuzione l'istruzione dell'utente.|  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 1931694b7054dec03c45617867ccf4a68575fd09
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 17d866d9a98c4ca7cc3fb3ce4586e54ab0439d72
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +47,7 @@ Member_Expression.Properties(Property_Name [, TYPED])
  Espressione stringa valida del nome della proprietà di un membro.  
   
 ## <a name="remarks"></a>Osservazioni  
- Il **proprietà** funzione restituisce il valore del membro specificato per la proprietà di membro specificato. La proprietà del membro può essere ad esempio le proprietà intrinseche dei membri, **nome**, **ID**, **chiave**, o **DIDASCALIA**, oppure può essere una proprietà del membro definita dall'utente. Per ulteriori informazioni, vedere [proprietà intrinseche dei membri &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [le proprietà dei membri definite dall'utente &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ Il **proprietà** funzione restituisce il valore del membro specificato per la proprietà di membro specificato. La proprietà del membro può essere ad esempio le proprietà intrinseche dei membri, **nome**, **ID**, **chiave**, o **DIDASCALIA**, oppure può essere una proprietà del membro definita dall'utente. Per altre informazioni, vedere [proprietà intrinseche dei membri &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) e [proprietà dei membri definite dall'utente &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
   
  Per impostazione predefinita, il valore è impostato forzatamente su una stringa. Se **TIPIZZATO** viene specificato, il valore restituito deve essere fortemente tipizzato.  
   
@@ -119,7 +117,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzando le proprietà del membro &#40; MDX &#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Utilizzando le proprietà del membro & #40; MDX & #41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

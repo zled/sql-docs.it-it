@@ -1,33 +1,32 @@
 ---
 title: Oggetto di relazioni (TMSL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c41594e9e4ef5776a4e170ba3d9895d5799e9bd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77fc17b6a92976452b3f94a88aafbb115a3167ed
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relationships-object-tmsl"></a>Oggetto di relazioni (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce una relazione tra una tabella di origine e di destinazione, con la possibilità di specificare la cardinalità e la direzione di filtri di query e sicurezza.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definisce una relazione tra una tabella di origine e di destinazione, con la possibilità di specificare la cardinalità e la direzione di filtri di query e sicurezza.  
   
 ## <a name="object-definition"></a>Definizione dell'oggetto  
- Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Relazione** gli oggetti dispongono anche le proprietà seguenti.  
+ Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Relazione** oggetti hanno anche le proprietà seguenti.  
   
  isActive  
  Valore booleano che indica se la relazione è contrassegnata come attivo o inattivo. Una relazione attiva viene usata automaticamente per il filtro tra tabelle. Una relazione inattiva può essere usata in modo esplicito nei calcoli DAX con la funzione USERELATIONSHIP.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/08/2018
 -   BothDirections (2) - filtri alle estremità della relazione filtrano automaticamente l'altra tabella.  
   
 ## <a name="usage"></a>Utilizzo  
- Gli oggetti relazione vengono utilizzati [Alter comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Creare comandi &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), e [eliminare comandi &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
+ Gli oggetti relazione vengono utilizzati [Alter-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [creare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), e [eliminare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md).  
   
  Durante la creazione, la sostituzione o modifica di un oggetto di relazione, specificare tutte le proprietà di sola lettura della definizione dell'oggetto. Omissione di una proprietà di lettura / scrittura è considerata un'operazione di eliminazione.  
   

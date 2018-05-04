@@ -3,15 +3,12 @@ title: Utilizzo di applicazioni a 32 Bit con driver a 32 Bit | Documenti Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 32-bit applications
 - 32-bit applications with 32-bit drivers [ODBC]
@@ -20,12 +17,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 008f948580057fdaa6e59802fd6fa8395140b735
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 7a07dae46125ce9ea04bfc36156d8855192396f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Utilizzo di applicazioni a 32 Bit con driver a 32 Bit
 È possibile eseguire applicazioni a 32 bit con driver a 32 bit. Le applicazioni a 32 bit e il driver a 32 bit è possibile utilizzare l'API Win32®.  

@@ -1,16 +1,15 @@
 ---
 title: Algoritmo Microsoft Time Series | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
 - time series algorithms [Analysis Services]
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 
+caps.latest.revision: 75
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 27903370d69462107dffb0aecf56c4312f60a2d1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3a6b85445b9d0a8d93cecf36124b2b145032f76c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo Microsoft Time Series
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series rende disponibili numerosi algoritmi ottimizzati per prevedere valori continui, ad esempio vendite di prodotti, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
+  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series rende disponibili numerosi algoritmi ottimizzati per prevedere valori continui, ad esempio vendite di prodotti, nel corso del tempo. Altri algoritmi [!INCLUDE[msCoName](../../includes/msconame-md.md)] , come ad esempio gli alberi delle decisioni, richiedono colonne aggiuntive di nuove informazioni come input per stimare una tendenza contrariamente a quanto accade con un modello Time Series. Un modello Time Series può stimare le tendenze basate solo sul set di dati originale utilizzato per creare il modello. È anche possibile aggiungere nuovi dati al modello quando viene eseguita una stima e vengono incorporati automaticamente i nuovi dati nell'analisi della tendenza.  
   
  Nel diagramma seguente viene illustrato un modello tipico per la previsione delle vendite di un prodotto nel tempo, in quattro diverse regioni di vendita. Il modello visualizzato nel diagramma illustra le vendite di ogni regione rappresentate con righe rosse, gialle, viola e blu. La riga per ogni regione è composta da due parti:  
   
@@ -160,10 +158,10 @@ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series rend
 -   Supporta il drill-through.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Visualizzare un modello utilizzando il visualizzatore Microsoft Time Series](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Riferimento tecnico per algoritmo Microsoft Time Series](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Tempo Series Model Query Examples](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenuto del modello di data mining per i modelli Time Series &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli Time Series & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

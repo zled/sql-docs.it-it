@@ -3,15 +3,12 @@ title: Creazione di etichette in Microsoft Word utilizzando i dati di Visual Fox
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual FoxPro data [ODBC], mailing labels
 - Visual FoxPro data [ODBC], Word
@@ -23,12 +20,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 03626b343bfe43d46e44947fb6cfa6fcb8f2a3e1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 858379b3aa670a4e6bb8776303e2d16c85c9d30b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data"></a>Creazione di etichette in Microsoft Word utilizzando i dati di Visual FoxPro
 È possibile utilizzare i dati di Visual FoxPro in un Microsoft Word per Windows 95 o Windows 98 documento. Potrebbe ad esempio, si desidera creare etichette dalle informazioni del cliente archiviate in una tabella di Visual FoxPro.  

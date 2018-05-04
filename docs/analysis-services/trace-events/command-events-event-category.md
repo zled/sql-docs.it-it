@@ -1,35 +1,33 @@
 ---
 title: Categoria di eventi eventi di comando | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - command events [Analysis Services]
 - Command Events event category
 - event classes [Analysis Services], command events
 ms.assetid: 23140c9f-3f5b-4755-920e-1246cbf0d1a3
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 71c30e6d930f6dbe7dfcc09d9c8647acff5eb7aa
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 76f7bb30678339c8c911f23c67439cc30854dcf9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-events-event-category"></a>Eventi di comando - categoria di eventi
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La categoria di eventi Eventi di comando include le classi di eventi descritte nella tabella seguente.  
+  La categoria di eventi Eventi di comando include le classi di eventi descritte nella tabella seguente.  
   
 |Event Class|ID evento|Description|  
 |-----------------|--------------|-----------------|  

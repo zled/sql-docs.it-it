@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -26,12 +25,11 @@ caps.latest.revision: 55
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: bdffb139f9a2870a454c3cdec1318df9dcf4070f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c5aa9107e834cfbd8dcdd4b5e0cd3c0828b8c4a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-member"></a>Definizione dei dati MDX - creare membro
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,9 +63,9 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  Espressione scalare valida che definisce il valore della proprietà di un membro calcolato.  
   
 ## <a name="remarks"></a>Osservazioni  
- L'istruzione CREATE MEMBER definisce membri calcolati che rimangono disponibili per tutta la sessione e possono essere pertanto utilizzati in più query durante la sessione. Per ulteriori informazioni, vedere [membri calcolati Creating Session-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
+ L'istruzione CREATE MEMBER definisce membri calcolati che rimangono disponibili per tutta la sessione e possono essere pertanto utilizzati in più query durante la sessione. Per altre informazioni, vedere [membri calcolati Creating Session-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md).  
   
- È inoltre possibile definire un membro calcolato da usare in un'unica query. Per definire un membro calcolato limitato a una singola query, è possibile usare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni, vedere [membri calcolati Creating Query-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ È inoltre possibile definire un membro calcolato da usare in un'unica query. Per definire un membro calcolato limitato a una singola query, è possibile usare la clausola WITH nell'istruzione SELECT. Per altre informazioni, vedere [membri calcolati Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
   
  *Property_name* può fare riferimento a una proprietà standard o facoltative membro calcolato. Le proprietà standard dei membri sono elencate di seguito in questo argomento. I membri calcolati creati con CREATE MEMBER senza un **sessione** valore hanno ambito sessione. Le stringhe contenute nelle definizioni dei membri calcolati sono delimitate da virgolette doppie, a differenza di quanto avviene con il metodo definito da OLE DB, che specifica che le stringhe devono essere delimitate da virgolette singole.  
   
@@ -79,7 +77,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
  I possibili ambiti di un membro calcolato sono elencati nella tabella seguente.  
   
  Ambito query  
- La visibilità e la durata del membro calcolato sono limitate alla query. Il membro calcolato è definito in una singola query. L'ambito query prevale sull'ambito sessione. Per ulteriori informazioni, vedere [membri calcolati Creating Query-Scoped &#40; MDX &#41; ](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
+ La visibilità e la durata del membro calcolato sono limitate alla query. Il membro calcolato è definito in una singola query. L'ambito query prevale sull'ambito sessione. Per altre informazioni, vedere [membri calcolati Creating Query-Scoped &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md).  
   
  Ambito sessione  
  La visibilità e la durata del membro calcolato sono limitate alla sessione in cui è stato creato. Se sul membro calcolato viene utilizzata l'istruzione DROP MEMBER, la durata sarà inferiore alla durata della sessione. L'istruzione CREATE MEMBER crea un membro calcolato con ambito sessione.  
@@ -132,14 +130,14 @@ WHERE ProfitRatio
 |SOLVE_ORDER|L'ordine con cui deve essere risolto il membro calcolato nel caso in cui un membro calcolato faccia riferimento a un altro membro calcolato, ovvero, quando i membri calcolati si intersecano.|  
 |FORMAT_STRING|Una stringa di formato in stile [!INCLUDE[msCoName](../includes/msconame-md.md)] Office che può essere utilizzata dall'applicazione client per la visualizzazione dei valori delle celle.|  
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. Visible calcolati i membri possono essere aggiunti a un set con il [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (funzione). Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *Visible*.<br /><br /> I membri calcolati non visibili, per cui il valore è impostato su zero, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
-|NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> **\*\*Avviso \* \***  questa proprietà è deprecata. Evitare di impostarla. Per informazioni dettagliate, vedere [Funzionalità di Analysis Services deprecate in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).|  
+|NON_EMPTY_BEHAVIOR|La misura o il set utilizzato per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.<br /><br /> **\*\* Avviso \* \***  questa proprietà è deprecata. Evitare di impostarla. Per informazioni dettagliate, vedere [Funzionalità di Analysis Services deprecate in SQL Server 2016](../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md).|  
 |CAPTION|Una stringa che l'applicazione client utilizza come didascalia per il membro.|  
 |DISPLAY_FOLDER|Una stringa che identifica il percorso della cartella di visualizzazione che l'applicazione client utilizza per mostrarla al membro. Il separatore di livello delle cartelle è definito dall'applicazione client. Per gli strumenti e i client forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barra rovesciata (\\) è il separatore di livello. Per fornire più cartelle di visualizzazione per un membro definito, utilizzare un punto e virgola (;) per separare le cartelle.|  
 |ASSOCIATED_MEASURE_GROUP|Il nome del gruppo di misure al quale questo membro è associato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [DROP MEMBER-istruzione &#40; MDX &#41;](../mdx/mdx-data-definition-drop-member.md)   
- [Istruzione membro UPDATE &#40; MDX &#41;](../mdx/mdx-data-definition-update-member.md)   
- [Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzione DROP membro &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [Istruzione UPDATE membro &#40;MDX&#41;](../mdx/mdx-data-definition-update-member.md)   
+ [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

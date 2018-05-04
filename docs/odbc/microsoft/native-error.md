@@ -3,15 +3,12 @@ title: Errore nativo | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - negative error codes [ODBC]
 - native error codes [ODBC]
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 10637783728f8f86f99b294bc0ebd3b542b38b9f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: eee01ee91910f0cb17375cbc385040fa54e2d0f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="native-error"></a>Errore nativo
 Codici di errore nativo positivi vengono generati dal driver di Database Desktop. Codici di errore negativi vengono generati da Microsoft Jet. Per ulteriori informazioni, vedere il *manuale del programmatore di Microsoft Jet Database Engine*.

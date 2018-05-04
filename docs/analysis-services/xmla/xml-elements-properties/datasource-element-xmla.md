@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 63251b3f372e54ca55df6bd2c9f0d84b036e4fce
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 34027a8a91b4113bb2c52e05cc50b57d1bf0d308
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="datasource-element-xmla"></a>Elemento DataSource (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene un'associazione all'origine dati out-of-line per l'elemento padre [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) o [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene un'associazione all'origine dati out-of-line per l'elemento padre [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) o [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -55,10 +54,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|None|  
-|Valore predefinito|None|  
+|Tipo di dati e lunghezza|Nessuno|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -71,9 +70,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="remarks"></a>Osservazioni  
  Il **DataSource** elemento rappresenta un'associazione out-of-line a un'origine dati, utilizzata per la **Batch** o **processo** comando per eseguire temporaneamente l'override di associazione all'origine dei dati per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] oggetti elaborati dal comando.  
   
- Per ulteriori informazioni sulle associazioni out-of-line, vedere [origini dati e associazioni &#40; SSAS multidimensionale &#41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per ulteriori informazioni sulle associazioni out-of-line, vedere [origini dati e associazioni & #40; SSAS multidimensionale & #41; ](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

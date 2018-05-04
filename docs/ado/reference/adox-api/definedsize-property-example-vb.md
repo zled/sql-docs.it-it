@@ -1,11 +1,9 @@
 ---
 title: Esempio di proprietà DefinedSize (VB) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f3ce672d532062e93c6e6e758d7cd8b296655ae9
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: fcc6b8902f55945f41cfe380e522389055cf961c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="definedsize-property-example-vb"></a>Esempio di proprietà DefinedSize (VB)
 Questo esempio viene illustrato il [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md). Il codice verrà ridefinire le dimensioni della colonna FirstName del **dipendenti** sommario il *Northwind* database. Quindi, la modifica i valori di nome [campo](../../../ado/reference/ado-api/field-object.md) di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in base il **dipendenti** tabella viene visualizzata. Si noti che per impostazione predefinita, il campo FirstName verranno aggiunti spazi dopo si ridefinisce il **DefinedSize** proprietà.  

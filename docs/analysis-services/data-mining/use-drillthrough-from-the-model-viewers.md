@@ -1,31 +1,29 @@
 ---
 title: Utilizzare il drill-through dai visualizzatori modello | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: 
+caps.latest.revision: 6
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3c1cea79210cd5b8e90be2228cba31c714dbf9dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Utilizzare il drill-through dai visualizzatori modello
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-A seconda del tipo di modello, è possibile utilizzare il drill-through dai visualizzatori nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining per esplorare i case utilizzati nel modello di data mining o per visualizzare colonne aggiuntive nella struttura di data mining. Sebbene molti tipi di modello non supportino il drill-through perché gli schemi del modello non possono essere collegati direttamente a case specifici, i tipi di modello seguenti supportano il drill-through.  
+  A seconda del tipo di modello, è possibile utilizzare il drill-through dai visualizzatori nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining per esplorare i case utilizzati nel modello di data mining o per visualizzare colonne aggiuntive nella struttura di data mining. Sebbene molti tipi di modello non supportino il drill-through perché gli schemi del modello non possono essere collegati direttamente a case specifici, i tipi di modello seguenti supportano il drill-through.  
   
  Ricordare che è necessario abilitare il drill-through per il modello e disporre delle autorizzazioni appropriate. L'opzione di drill-through deve invece essere disabilitata se il modello si trova in uno stato non elaborato, indipendentemente dal fatto che il modello sia stato elaborato o meno in precedenza e disponga di contenuto. Per recuperare i dati del case del modello tramite il drill-through, la cache della struttura e del modello deve essere quella corrente.  
   

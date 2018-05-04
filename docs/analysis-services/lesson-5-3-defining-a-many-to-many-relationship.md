@@ -1,29 +1,27 @@
 ---
 title: Definizione di una relazione molti-a-molti | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: ec51909c0d333ead023cf695b5d63cbdb734f276
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 40bbfb602aadc6e30b58f9f44417b892b4f5b003
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lezione 5-3-definizione di una relazione molti-a-molti
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +65,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
   
     Si noti che i tipi di dati delle altre due colonne della tabella sono tipi di dati numerici.  
   
-10. Nel riquadro **Tabelle** fare clic con il pulsante destro del mouse su **InternetSalesReason (dbo.FactInternetSalesReason)**e quindi scegliere **Esplora dati**.  
+10. Nel riquadro **Tabelle** fare clic con il pulsante destro del mouse su **InternetSalesReason (dbo.FactInternetSalesReason)** e quindi scegliere **Esplora dati**.  
   
     Si noti che per ogni numero di riga all'interno di ogni ordine un valore chiave identifica il motivo della vendita per l'acquisto di quell'elemento di riga, come illustrato nella figura seguente.  
   
@@ -183,7 +181,7 @@ Nelle attività di questo argomento vengono definiti la dimensione Sales Reasons
 [Definizione di granularità della dimensione all'interno di un gruppo di misure](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
 ## <a name="see-also"></a>Vedere anche  
-[Utilizzare diagrammi in Progettazione vista origine dati &#40; Analysis Services &#41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+[Utilizzare diagrammi in Progettazione vista origine dati & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
 [Relazioni tra dimensioni](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Definire una relazione molti-a-molti e le relative proprietà](../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: dd738d665a8dd94758d665828174b244622a3190
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d37e1c1e7eb210a9486decc57d232c9ed719eaea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,9 +49,9 @@ Wtd( [ Member_Expression ] )
  Il **Wtd** è una funzione di scelta rapida per il [PeriodsToDate](../mdx/periodstodate-mdx.md) funzione in cui il livello è impostato su *settimane*. In altre parole, `Wtd(Member_Expression)` equivale a `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
 ## <a name="see-also"></a>Vedere anche  
- [QTD &#40; MDX &#41;](../mdx/qtd-mdx.md)   
- [MTd &#40; MDX &#41;](../mdx/mtd-mdx.md)   
- [YTD &#40; MDX &#41;](../mdx/ytd-mdx.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)   
+ [/MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

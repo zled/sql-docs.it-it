@@ -1,11 +1,9 @@
 ---
 title: Data Shaping Panoramica | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 34d9ee09d74ca1907f293dab73189b172db73de0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: ba1b8acd52c86c0bffa19ec22658008a3b8f5601
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-shaping-overview"></a>Data Shaping Panoramica
 *Il data shaping* la creazione di relazioni gerarchiche tra due o più entità logiche in una query. La gerarchia può essere visualizzata in relazioni padre-figlio tra un record di uno [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)e uno o più record (noto anche come un capitolo) di un altro **Recordset**. In una relazione padre-figlio, l'elemento padre **Recordset** contiene l'elemento figlio **Recordset**. Un esempio di tale relazione gerarchica è customers e orders. Per ogni cliente in un database, possono essere presenti zero o più ordini. La relazione gerarchica può essere ricorsivo, vale a dire che i record nipote possono essere annidati in un record figlio. In sostanza, un record gerarchico può essere annidato a qualsiasi profondità. In pratica, ADO limita la ricorsione a un massimo di 512 **Recordset**s.  

@@ -3,15 +3,12 @@ title: Limitazioni di istruzione DROP INDEX | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DROP INDEX statement limitations [ODBC]
 - ODBC SQL grammar, DROP INDEX statement limitations
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f0824d7f7ebfffcf96195dbc7de4044ff1077d85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 79d0d11d4a6e0a801c81ddb8dbea5dcf9692c634
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drop-index-statement-limitations"></a>Limitazioni di istruzione DROP INDEX
 L'istruzione DROP INDEX non è supportata per il driver Microsoft Excel o testo.

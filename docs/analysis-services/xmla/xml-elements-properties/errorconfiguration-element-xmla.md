@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f3c041ccbfb567e164f6fe41b992b1d2bc39dbb5
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 191b33cd011d461b27c431833404560493584f39
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="errorconfiguration-element-xmla"></a>Elemento ErrorConfiguration  (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Specifica le impostazioni per la gestione degli errori che possono verificarsi durante un [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) o [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operazione.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Specifica le impostazioni per la gestione degli errori che possono verificarsi durante un [Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) o [processo](../../../analysis-services/xmla/xml-elements-commands/process-element-xmla.md) operazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,10 +60,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|None|  
-|Valore predefinito|None|  
+|Tipo di dati e lunghezza|Nessuno|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -75,9 +74,9 @@ ms.lasthandoff: 01/08/2018
 |Elementi figlio|[KeyDuplicate](../../../analysis-services/scripting/properties/keyduplicate-element-assl.md), [KeyErrorAction](../../../analysis-services/scripting/properties/keyerroraction-element-assl.md), [KeyErrorLimit](../../../analysis-services/scripting/properties/keyerrorlimit-element-assl.md), [KeyErrorLimitAction](../../../analysis-services/scripting/properties/keyerrorlimitaction-element-assl.md), [KeyErrorLogFile](../../../analysis-services/scripting/properties/keyerrorlogfile-element-assl.md), [ KeyNotFound](../../../analysis-services/scripting/properties/keynotfound-element-assl.md), [NullKeyConvertedToUnknown](../../../analysis-services/scripting/properties/nullkeyconvertedtounknown-element-assl.md), [NullKeyNotAllowed](../../../analysis-services/scripting/properties/nullkeynotallowed-element-assl.md)|  
   
 ## <a name="remarks"></a>Osservazioni  
- La struttura di questo elemento è identica alla struttura del **ErrorConfiguration** elemento in Analysis Services Scripting Language (ASSL). Per ulteriori informazioni sul **ErrorConfiguration** elemento, vedere [ErrorConfiguration elemento &#40; ASSL &#41; ](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md).  
+ La struttura di questo elemento è identica alla struttura del **ErrorConfiguration** elemento in Analysis Services Scripting Language (ASSL). Per ulteriori informazioni sul **ErrorConfiguration** elemento, vedere [ErrorConfiguration elemento &#40;ASSL&#41;](../../../analysis-services/scripting/objects/errorconfiguration-element-assl.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

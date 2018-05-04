@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 95264cc1e894fdd2acd43b4f49807968ea9ce587
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ee0b18ebe3b72da6d417763be12f2d803eaf9c8c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Utilizzo di funzioni per dimensioni, gerarchie e livelli
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,9 +55,9 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Dimensione &#40; MDX &#41;](../mdx/dimension-mdx.md)   
- [Funzioni &#40; La sintassi MDX &#41;](../mdx/functions-mdx-syntax.md)   
- [Gerarchia &#40; MDX &#41;](../mdx/hierarchy-mdx.md)   
- [Livello &#40; MDX &#41;](../mdx/level-mdx.md)  
+ [Dimensione &#40;MDX&#41;](../mdx/dimension-mdx.md)   
+ [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
+ [Gerarchia di &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
+ [Livello di &#40;MDX&#41;](../mdx/level-mdx.md)  
   
   

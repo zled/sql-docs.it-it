@@ -3,15 +3,12 @@ title: Riferimenti al linguaggio Visual FoxPro | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - commands for FoxPro ODBC driver [ODBC]
 - Visual FoxPro ODBC driver [ODBC], commands
@@ -20,12 +17,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9a02342d7833c0988d1fa2ff6ce759434f2aa545
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 02098f607a8dfb0d080389e908421d6e541ccca8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-foxpro-language-reference"></a>Riferimenti al linguaggio Visual FoxPro
 In questa sezione vengono trattati gli argomenti seguenti.  

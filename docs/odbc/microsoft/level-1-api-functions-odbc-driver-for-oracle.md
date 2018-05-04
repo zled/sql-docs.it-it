@@ -3,15 +3,12 @@ title: Funzioni API di livello 1, il Driver ODBC per Oracle | Documenti Microsof
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
 - ODBC level 1 API functions [ODBC]
@@ -23,12 +20,11 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ca3209029a1ac82e469c93299ecd284db44d8f4a
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e4329f1dc0a22c9bcea27df908bb0ce567fdca7c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello 1 (Driver ODBC per Oracle)
 > [!IMPORTANT]  

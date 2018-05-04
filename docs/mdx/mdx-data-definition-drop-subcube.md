@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,12 +28,11 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: de5bf7aa07600c15372f70b0a868637e12c704d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b47c50df58dd29a655472c1f5dbaad75b4498a51
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---drop-subcube"></a>Definizione dei dati MDX - rilascio SOTTOCUBO
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +51,7 @@ DROP SUBCUBE Subcube_Name
  Espressione stringa valida che specifica il nome di un sottocubo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Istruzioni di Scripting MDX &#40; MDX &#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [CREATE SUBCUBE-istruzione &#40; MDX &#41;](../mdx/mdx-data-definition-create-subcube.md)  
+ [Istruzioni di Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [Istruzione CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)  
   
   

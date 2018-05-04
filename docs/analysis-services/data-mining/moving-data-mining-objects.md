@@ -1,16 +1,15 @@
 ---
 title: Lo spostamento di oggetti di Data Mining | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - data mining [Analysis Services], models
 - data mining editor [Analysis Services]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - Data Mining Designer
 - mining models [Analysis Services], modifying
 ms.assetid: bc108407-2603-4387-b930-b5bb9df78069
-caps.latest.revision: 
+caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c43da2044b4f3231d947c88626cb43081fb29f6a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: af5fab1c549b2a4bcc8ed3bc9f670ac80444856e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="moving-data-mining-objects"></a>Spostamento di oggetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Gli scenari più comuni per lo spostamento di oggetti di data mining sono la distribuzione di un modello da un ambiente di test o analisi a un ambiente di produzione o la condivisione di modelli con altri utenti.  
+  Gli scenari più comuni per lo spostamento di oggetti di data mining sono la distribuzione di un modello da un ambiente di test o analisi a un ambiente di produzione o la condivisione di modelli con altri utenti.  
   
  Questo argomento descrive come usare gli strumenti e i linguaggi di scripting forniti da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], per lo spostamento di oggetti di data mining.  
   
@@ -54,7 +52,7 @@ Gli scenari più comuni per lo spostamento di oggetti di data mining sono la dis
  Per altre informazioni sulla distribuzione di Analysis Services, vedere [Distribuire progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
 ### <a name="scripting"></a>Generazione di script  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diversi linguaggi che è possibile usare per generare script di oggetti.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sono disponibili diversi linguaggi che è possibile utilizzare per generare script di oggetti.  
   
 -   **XMLA**: è possibile generare script di oggetti usando XMLA facendo clic con il pulsante destro del mouse sugli oggetti in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per eseguire lo script, aprirlo in una finestra **Query XMLA** nel server di destinazione.  
   
@@ -80,9 +78,9 @@ Gli scenari più comuni per lo spostamento di oggetti di data mining sono la dis
 ### <a name="exporting-and-importing"></a>Esportazione e importazione  
  Le operazioni di esportazione e reimportazione di modelli e strutture di data mining mediante le istruzioni DMX costituiscono il modo più semplice per spostare o eseguire il backup di singoli oggetti di data mining relazionali. Per ulteriori informazioni sulla sintassi DMX per queste operazioni, vedere i seguenti argomenti:  
   
--   [ESPORTAZIONE &#40; DMX &#41;](../../dmx/export-dmx.md)  
+-   [ESPORTAZIONE & #40; DMX & #41;](../../dmx/export-dmx.md)  
   
--   [DMX IMPORTAZIONE &#40; &#41;](../../dmx/import-dmx.md)  
+-   [DMX IMPORTAZIONE & #40; & #41;](../../dmx/import-dmx.md)  
   
  Se si specifica l'opzione INCLUDE DEPENDENCIES, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esporterà anche la definizione di eventuali viste origine dati obbligatorie e, durante l'importazione del modello o della struttura, verrà ricreata la vista origine dati nel server di destinazione. Al termine dell'importazione del modello, assicurarsi di impostare le autorizzazioni di data mining necessarie per l'oggetto.  
   

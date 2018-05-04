@@ -1,30 +1,29 @@
 ---
 title: Creare tabelle, le partizioni e le colonne in un modello tabulare | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cf0e4791-ad3b-41a8-81ce-509d4cf223f8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2017fa20a68222bf577cc68284882ac15a22f95f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3246c04b8aa995442a71ddc49a2282945c829fa6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-tables-partitions-and-columns-in-a-tabular-model"></a>Creare tabelle, le partizioni e le colonne in un modello tabulare
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]In un modello tabulare, una tabella è costituita da righe e colonne. Le righe sono organizzate in partizioni per supportare l'aggiornamento dei dati incrementali. Una soluzione tabulare può supportare diversi tipi di tabelle, a seconda di dove i dati provenienti da:  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+In un modello tabulare, una tabella è costituita da righe e colonne. Le righe sono organizzate in partizioni per supportare l'aggiornamento dei dati incrementali. Una soluzione tabulare può supportare diversi tipi di tabelle, a seconda di dove i dati provenienti da:  
 
 * Tabelle normali, in cui i dati provengano da un'origine dati relazionale, tramite il provider di dati. 
 

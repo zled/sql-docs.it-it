@@ -1,11 +1,9 @@
 ---
 title: Recupero dei set di risultati in flussi | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 16d1518d2ddbe5accc6b55fdc0b778a6381e1a5f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cc99c234d810aef48f4c01bdc83229e55d9c5886
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recupero dei set di risultati in flussi
 Invece di ricezione dei risultati in tradizionale **Recordset** oggetto ADO può invece di recuperare i risultati di query in un flusso. ADO **flusso** oggetto (o altri oggetti che supportano il modello COM **IStream** interfaccia, ad esempio ASP **richiesta** e **risposta** oggetti ) può essere usato per contenere questi risultati. È possibile utilizzare questa funzionalità consiste nel recuperare i risultati in formato XML. Con SQL Server, ad esempio, i risultati XML possono essere restituiti in più modi, ad esempio utilizzando la clausola FOR XML con una query SQL SELECT o una query XPath.  

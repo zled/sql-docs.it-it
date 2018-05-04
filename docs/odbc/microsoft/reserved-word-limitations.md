@@ -1,17 +1,14 @@
 ---
 title: Limitazioni di Word riservati | Documenti Microsoft
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/01/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC desktop database drivers [ODBC]
 - desktop database drivers [ODBC]
@@ -20,12 +17,21 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 14229cd0487b8beb663be255ce54f76f4fb6b5b2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 010546fe5d0d987443fb4deebc4409cb5e867085
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="reserved-word-limitations"></a>Limitazioni di Word riservato
-Non utilizzare parole riservate elencate nella grammatica SQL nell'appendice C del *riferimento per programmatori ODBC* (o la forma abbreviata delle parole riservate) come identificatori (vale a dire, tabella o colonna nomi), a meno che non si racchiudono la parola indietro virgolette (').
+# <a name="reserved-keyword-limitations"></a>Parola chiave riservata limitazioni
+
+Evitare l'utilizzo delle parole chiave riservate di ODBC come identificatori nel tabelle SQL o gli oggetti correlati. Se un caso dispari in cui è necessario utilizzare una parola chiave riservata come identificatore, è necessario racchiudere l'identificatore con una coppia di *creare righe ininterrotte* ('). Un altro nome per *apice inverso* viene *virgolette inverse*.
+
+La limitazione della parola chiave riservata si applica anche a qualsiasi forma abbreviata delle parole chiave riservate.
+
+Un elenco delle parole chiave riservate di ODBC è disponibile all'indirizzo:
+
+- [Parole chiave riservate di ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
+
+- Nel *Guida di riferimento per programmatori ODBC*, vedere [grammatica SQL di appendice c:](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+

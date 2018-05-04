@@ -1,9 +1,8 @@
 ---
 title: Compatibilità con le versioni precedenti di Analysis Services di SQL Server 2017 | Documenti Microsoft
-ms.date: 07/11/2017
+ms.date: 04/27/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,13 +22,12 @@ ms.assetid: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
 monikerRange: '>= sql-analysis-services-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c353b84213516227980763b2a3c7e68d83e78a68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e3ce7f9d39c8e07a4e3d002a00343f821b0cbbeb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Compatibilità con le versioni precedenti di Analysis Services (2017 SQL)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -48,6 +46,9 @@ Le funzionalità seguenti sono deprecate in questa versione:
 |Multidimensionale|Gruppi di misure collegati remoti|
 |Tabella|Modelli a livello di compatibilità 1100 e 1103|
 |Tabella|Proprietà di modello a oggetti tabulare: Column.IsDefaultImage Column.TableDetailPosition, Column.IsDefaultLabel,|
+|Strumenti|SQL Server Profiler per l'acquisizione della traccia<br /><br /> La sostituzione prevede l'uso del profiler di eventi estesi incorporato in SQL Server Management Studio.  <br /> Vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
+|Strumenti|Server Profiler per la riproduzione della traccia <br />Sostituzione. Non è prevista alcuna sostituzione.|  
+|Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura di traccia: Microsoft.SqlServer.XEvent.Linq<br />-   Riproduzione della traccia: nessuna|  
 
 
 ## <a name="discontinued-features"></a>Funzionalità non più supportate
@@ -63,9 +64,7 @@ Le funzionalità seguenti sono state deprecate in una versione precedente e non 
 |Multidimensionale|Gruppi di misure collegati remoti|  
 |Multidimensionale|Writeback dimensionale|  
 |Multidimensionale|Dimensioni collegate|
-|Strumenti|SQL Server Profiler per l'acquisizione della traccia<br /><br /> La sostituzione prevede l'uso del profiler di eventi estesi incorporato in SQL Server Management Studio.  <br /> Vedere [Monitorare Analysis Services con eventi estesi di SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Strumenti|Server Profiler per la riproduzione della traccia <br />Sostituzione. Non è prevista alcuna sostituzione.|  
-|Trace Management Objects e API di traccia|Oggetti Microsoft.AnalysisServices.Trace (contiene le API per gli oggetti Analysis Services Trace e Replay). La sostituzione è multiparte:<br /><br /> -Configurazione della traccia: Microsoft.SqlServer.Management.XEvent<br />-Lettura di traccia: Microsoft.SqlServer.XEvent.Linq<br />-   Riproduzione della traccia: nessuna|  
+
 
 ## <a name="breaking-changes"></a>Modifiche di rilievo
 Oggetto *modifica di rilievo* causa una funzionalità, modello di dati, il codice dell'applicazione o script non corretto dopo l'aggiornamento alla versione corrente.

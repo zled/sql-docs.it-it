@@ -3,15 +3,12 @@ title: Funzioni di ora e data (Driver ODBC di Visual FoxPro) | Documenti Microso
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC date functions [ODBC]
 - Visual FoxPro ODBC driver [ODBC], time and date functions
@@ -24,30 +21,29 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5ba661df5c57c9611164889126eab9572743c8e4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f795e12cb2a88bfa1b7e17371745a841a3e6f854
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Funzioni di ora e data (Driver ODBC di Visual FoxPro)
 Nella tabella seguente sono elencate le funzioni di data e ora ODBC supportate dal Driver ODBC di Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencata l'equivalente di Visual FoxPro.  
   
 |Grammatica ODBC|Grammatica di Visual FoxPro|  
 |------------------|---------------------------|  
-|CURDATE*)*|DATA*)*|  
-|FUNZIONE CURTIME*)*|TEMPO*)*|  
-|Funzione DAYNAME*(date_exp)*|CDOW*(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|GIORNO*)*|  
-|ORA*(time_exp)*||  
-|MINUTO*(time_exp)*||  
-|MESE*(time_exp)*||  
-|MONTHNAME*(date_exp)*|CMONTH*(date_exp)*|  
-|ORA*)*|DATA/ORA*)*|  
-|SECONDO*(time_exp)*|SEC*(time_exp)*|  
-|SETTIMANA*(date_exp)*||  
-|ANNO*(date_exp)*||  
+|CURDATE *)*|DATA *)*|  
+|FUNZIONE CURTIME *)*|TEMPO *)*|  
+|Funzione DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
+|DAYOFMONTH (*date_exp)*|GIORNO *)*|  
+|ORA *(time_exp)*||  
+|MINUTO *(time_exp)*||  
+|MESE *(time_exp)*||  
+|MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
+|ORA *)*|DATA/ORA *)*|  
+|SECONDO *(time_exp)*|SEC *(time_exp)*|  
+|SETTIMANA *(date_exp)*||  
+|ANNO *(date_exp)*||  
   
  Le funzioni di data e ora seguenti non sono supportate:  
   

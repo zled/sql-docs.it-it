@@ -1,31 +1,29 @@
 ---
 title: Accesso ai dati di modello tabulare | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 
+caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 4c1fa9b4e4f9003b193628d114ad6832436a7c8f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 52f00f6e7be210c9c45fa5973fd9d8b8ff019bad
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tabular-model-data-access"></a>Accesso ai dati di modello tabulare
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-L'accesso a database modello tabulare in Analysis Services può essere eseguito dalla maggior parte dei client, delle interfacce e dei linguaggi che si utilizzano per recuperare dati o metadati da un modello multidimensionale. Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
+  L'accesso a database modello tabulare in Analysis Services può essere eseguito dalla maggior parte dei client, delle interfacce e dei linguaggi che si utilizzano per recuperare dati o metadati da un modello multidimensionale. Per altre informazioni, vedere [Accesso ai dati di modelli multidimensionali &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
   
  In questo articolo viene descritto il client, linguaggi di query e le interfacce programmatiche che funzionano con i modelli tabulari.  
   
@@ -91,7 +89,7 @@ L'accesso a database modello tabulare in Analysis Services può essere eseguito 
 ### <a name="data-and-metadata"></a>Dati e metadati  
  È possibile recuperare dati e metadati dai modelli tabulari in applicazioni gestite utilizzando ADOMD.NET. 
   
--   [Usare dinamica viste a Gestione &#40; viste a gestione dinamica &#41; per monitorare Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Usare dinamica viste a Gestione & #40; viste a gestione dinamica & #41; per monitorare Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Per supportare l'accesso OLE DB ai modelli tabulari, è possibile utilizzare il provider OLE DB per Analysis Services 9.0 in applicazioni client non gestite. Per abilitare l'accesso ai modelli tabulari, è necessaria una versione aggiornata del provider OLE DB di Analysis Services. Per altre informazioni sui provider usati con i modelli tabulari, vedere [Installazione del provider OLE DB di Analysis Services nei server di SharePoint](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) .  
   

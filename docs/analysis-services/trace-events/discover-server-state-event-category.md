@@ -1,15 +1,14 @@
 ---
 title: Individuare la categoria di eventi dello stato di Server | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Discover Server State event category
@@ -17,20 +16,19 @@ helpviewer_keywords:
 - discover server state events
 - event classes [Analysis Services], discover server state
 ms.assetid: b62ebf66-d090-4f74-8c83-11ed518b2018
-caps.latest.revision: 
+caps.latest.revision: 25
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 38da7056ebdb294516ea8f88125ddb13c118d297
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: be6fb98d3f4a7dcb710e81ff5e0410ac43ec958f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="discover-server-state-event-category"></a>Individuazione stato del server - categoria di eventi
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La categoria di eventi Individuazione stato del server include le classi di evento descritte nella tabella seguente.  
+  La categoria di eventi Individuazione stato del server include le classi di evento descritte nella tabella seguente.  
   
 |Event Class|ID evento|Description|  
 |-----------------|--------------|-----------------|  

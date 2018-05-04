@@ -1,16 +1,16 @@
 ---
 title: CERTPRIVATEKEY (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTPRIVATEKEY
@@ -20,26 +20,26 @@ dev_langs:
 helpviewer_keywords:
 - CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-caps.latest.revision: 
+caps.latest.revision: 13
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df513e6ce63ff49e31ad05e5a4dca0372de69c83
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1a08058fbc27aa8f8996ca8d3b15e98cb20d4e59
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce la chiave privata di un certificato in formato binario. Questa funzione accetta tre argomenti.
+Questa funzione restituisce la chiave privata di un certificato in formato binario. Questa funzione accetta tre argomenti.
 -   ID certificato.  
--   Password di crittografia utilizzata per crittografare i bit delle chiavi private quando vengono restituiti dalla funzione, in modo che le chiavi non vengano esposte in testo non crittografato agli utenti.  
--   Password di decrittografia facoltativa. Se viene specificata una password di decrittografia, viene utilizzata per decrittografare la chiave privata del certificato, in caso contrario viene utilizzata la chiave master del database.  
+-   Password di crittografia, usata per crittografare i bit della chiave privata restituiti dalla funzione. Questo approccio non espone le chiavi come testo non crittografato agli utenti.  
+-   Password di decrittografia facoltativa. Per decrittografare la chiave privata del certificato viene usata una password di decrittografia specifica. Altrimenti viene usata la chiave master del database.  
   
-Solo gli utenti che dispongono dell'accesso alla chiave privata del certificato saranno in grado di utilizzare questa funzione. Questa funzione restituisce la chiave privata nel formato PVK.
+Solo gli utenti con accesso alla chiave privata del certificato possono usare questa funzione. Questa funzione restituisce la chiave privata nel formato PVK.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -54,7 +54,7 @@ CERTPRIVATEKEY
   
 ## <a name="arguments"></a>Argomenti  
 *certificate_ID*  
-**certificate_id** del certificato. Disponibile da sys.certificates o tramite la funzione [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* è di tipo **int**
+**certificate_id** del certificato. Ottenere questo valore da sys.certificates o dalla funzione [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* è un tipo di dati **int**.
   
 *encryption_password*  
 Password utilizzata per crittografare il valore binario restituito.
@@ -66,10 +66,10 @@ Password utilizzata per decrittografare il valore binario restituito.
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-**CERTENCODED** e **CERTPRIVATEKEY** sono usati insieme per restituire parti diverse di un certificato in formato binario.
+Usare **CERTENCODED** e **CERTPRIVATEKEY** insieme per restituire parti diverse di un certificato in formato binario.
   
 ## <a name="permissions"></a>Autorizzazioni  
-**CERTPRIVATEKEY** è disponibile per il ruolo public.
+**CERTPRIVATEKEY** è disponibile pubblicamente.
   
 ## <a name="examples"></a>Esempi  
   
@@ -81,12 +81,12 @@ CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'Use 5tr0ng P^55Words'
 GO  
 CREATE CERTIFICATE Shipping04   
 WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20141031';  
+EXPIRY_DATE = '20401031';  
 GO  
 SELECT CERTPRIVATEKEY(CERT_ID('Shipping04'), 'jklalkaa/; uia3dd');  
 ```  
   
-Per un esempio più complesso che usa **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato in un altro database, vedere l'esempio B nell'argomento [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md).
+Vedere [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md), esempio B, per un esempio più complesso che usa **CERTPRIVATEKEY** e **CERTENCODED** per copiare un certificato in un altro database.
   
 ## <a name="see-also"></a>Vedere anche
 [Funzioni di sicurezza &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  

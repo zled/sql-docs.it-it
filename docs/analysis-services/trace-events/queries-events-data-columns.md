@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,15 +17,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f329c73f2fbfd0b99e45c2012fb90b90ec52f879
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 56d1a00189416a8fbc96a256a3ba428385f8660e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="queries-events-data-columns"></a>Colonne di dati degli eventi di query
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La categoria di eventi eventi di query include le classi di evento seguenti:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La categoria di eventi Eventi di query include le classi di eventi seguenti:  
   
 |**ID evento**|**Nome evento**|**Descrizione evento**|  
 |------------------|--------------------|---------------------------|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 |CurrentTime|2|5|Contiene l'ora corrente dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |StartTime|3|5|Contiene l'ora di inizio dell'evento, se disponibile. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
 |EndTime|4|5|Contiene l'ora di fine dell'evento. Questa colonna non viene popolata per le classi degli eventi di avvio, ad esempio SQL:BatchStarting o SP:Starting. I formati previsti per l'applicazione di filtri sono "YYYY-MM-DD" e "YYYY-MM-DD HH:MM:SS".|  
-|Duration|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
+|Durata|5|2|Contiene la quantità di tempo trascorso in millisecondi richiesta dall'evento.|  
 |CPUTime|6|2|Contiene il tempo della CPU in millisecondi utilizzato dall'evento.|  
 |Severity|22|1|Contiene il livello di gravità di un'eccezione associata all'evento di query. I valori possibili sono:<br /><br /> 0 = Esito positivo<br /><br /> 1 = Messaggio informativo<br /><br /> 2 = Avviso<br /><br /> 3 = Errore|  
 |Operazione completata|23|1|Contiene informazioni sull'esito positivo o negativo dell'evento di query. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
@@ -84,6 +83,6 @@ ms.lasthandoff: 01/08/2018
 |ServerName|43|8|Contiene il nome dell'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di query.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Categoria degli eventi di query](../../analysis-services/trace-events/queries-events-category.md)  
+ [Categoria di eventi di query](../../analysis-services/trace-events/queries-events-category.md)  
   
   

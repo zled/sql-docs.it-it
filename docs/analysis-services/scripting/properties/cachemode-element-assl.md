@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 81eecc814c5c891e26ed3db80deb0b3163db7e05
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 714d82f7f7577df44d376518e35466f2c9095030
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cachemode-element-assl"></a>Elemento CacheMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina il meccanismo di memorizzazione nella cache usato per il training dei dati recuperati durante l'elaborazione di una struttura di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Determina il meccanismo di memorizzazione nella cache usato per i dati di training recuperato durante l'elaborazione di una struttura di data mining.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*KeepTrainingCases*|  
@@ -59,12 +58,12 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*KeepTrainingCases*|I case di training vengono memorizzati nella cache durante e dopo l'elaborazione.|  
 |*ClearAfterProcessing*|I casi di training vengono memorizzati nella cache durante l’elaborazione, ma vengono eliminati dopo l’elaborazione.|  
@@ -73,6 +72,6 @@ ms.lasthandoff: 01/08/2018
  L'elemento che corrisponde all'elemento padre **CacheMode** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MiningStructure>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

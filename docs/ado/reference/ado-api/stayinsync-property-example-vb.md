@@ -1,11 +1,9 @@
 ---
 title: Esempio di proprietà StayInSync (VB) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 6330252f69b9d847fe85d28864b967ca14d75b3f
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: cad6d7a6187430e8243695a07fe1b0752074a6df
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="stayinsync-property-example-vb"></a>Esempio di proprietà StayInSync (VB)
 Questo esempio viene illustrato come la [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) proprietà semplifica l'accesso alle righe in un modello gerarchico [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

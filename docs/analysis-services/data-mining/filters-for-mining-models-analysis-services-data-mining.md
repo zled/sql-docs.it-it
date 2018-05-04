@@ -1,16 +1,15 @@
 ---
 title: Filtri per i modelli di Data Mining (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - filter syntax [data mining]
@@ -18,20 +17,19 @@ helpviewer_keywords:
 - filters [data mining]
 - filtering data [Analysis Services]
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 83c491408707f1a7107a3bb6d485418189d9eb1c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 83f507f3839a7ca0f40b820ded0e1d0f30da0ffc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtri per i modelli di data mining (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
+  I filtri dei modelli basati sui dati consentono di creare modelli di data mining che utilizzano subset di dati in una struttura di data mining. I filtri garantiscono grande flessibilità per la progettazione di strutture di data mining e origini dati, poiché è possibile creare una sola struttura di data mining sulla base di una vista origine dati completa. Sarà quindi possibile creare filtri per utilizzare solo una parte dei dati per il training e il testing di una varietà di modelli, anziché compilare una struttura diversa e i relativi modelli per ciascun subset di dati.  
   
  Ad esempio, definire la vista origine dati nella tabella Customers e nelle tabelle correlate. Quindi, definire una sola struttura di data mining che include tutti i campi necessari. Infine, creare un modello filtrato su un determinato attributo del cliente, ad esempio la regione. È quindi possibile creare facilmente una copia di quel modello e modificare solo la condizione di filtro per generare un nuovo modello basato su una regione diversa.  
   
@@ -57,7 +55,7 @@ I filtri dei modelli basati sui dati consentono di creare modelli di data mining
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Creazione di filtri dei modelli utilizzando la Progettazione modelli di data mining  
  Filtrare un modello nella Progettazione modelli di data mining modificando la proprietà **Filter** del modello di data mining. È possibile digitare direttamente un'espressione di filtro nel riquadro **Proprietà** oppure è possibile aprire una finestra di dialogo del filtro per compilare le condizioni.  
   
- Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando gli operatori **AND**/**OR** . Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile usare gli operatori **maggiore di** e **minore di** . Per i valori discreti, tuttavia, è possibile usare soltanto gli operatori **= (uguale a)**, **!= (non uguale a)**e **is null** .  
+ Sono disponibili due finestre di dialogo del filtro. La prima consente di creare le condizioni applicate alla tabella del case. Se l'origine dati contiene più tabelle, selezionare in primo luogo una tabella, quindi selezionare una colonna e specificare gli operatori e le condizioni applicabili alla colonna. È possibile collegare più condizioni usando gli operatori **AND**/**OR** . Gli operatori disponibili per la definizione dei valori variano a seconda che la colonna contenga valori discreti o continui. Con i valori continui, ad esempio, è possibile usare gli operatori **maggiore di** e **minore di** . Per i valori discreti, tuttavia, è possibile usare soltanto gli operatori **= (uguale a)**, **!= (non uguale a)** e **is null** .  
   
 > [!NOTE]  
 >  La parola chiave **LIKE** non è supportata. Se si vuole includere più attributi discreti, è necessario creare condizioni distinte e collegarle usando l'operatore **OR** .  
@@ -129,6 +127,6 @@ I filtri dei modelli basati sui dati consentono di creare modelli di data mining
   
 ## <a name="see-also"></a>Vedere anche  
  [Sintassi ed esempi di filtri dei modelli &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -1,33 +1,31 @@
 ---
-title: "La modalità DirectQuery | Documenti Microsoft"
-ms.custom: 
+title: La modalità DirectQuery | Documenti Microsoft
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.realtime.f1
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
-caps.latest.revision: 
+caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 13c60b58664d87cf23ea76069a6c68eb00870927
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: fd7eea172e333bb38d5e014a5dffe32fa4d9a8d5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="directquery-mode"></a>Modalità DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Questo articolo descrive *modalità DirectQuery* di modelli tabulari di Analysis Services con i livelli di compatibilità 1200 e versioni successive. È possibile attivare la modalità DirectQuery per i modelli realizzati in SSDT o, per i modelli tabulari già distribuiti, è possibile passare alla modalità DirectQuery in SSMS. Prima di scegliere la modalità DirectQuery, è importante comprendere i vantaggi e restrizioni.
+  Questo articolo descrive *modalità DirectQuery* di modelli tabulari di Analysis Services con i livelli di compatibilità 1200 e versioni successive. È possibile attivare la modalità DirectQuery per i modelli realizzati in SSDT o, per i modelli tabulari già distribuiti, è possibile passare alla modalità DirectQuery in SSMS. Prima di scegliere la modalità DirectQuery, è importante comprendere i vantaggi e restrizioni.
   
 ##  <a name="bkmk_Benefits"></a> Vantaggi
  Per impostazione predefinita, i modelli tabulari utilizzano una cache in memoria per l'archiviazione dei dati e l'esecuzione di query. Se i modelli tabulari eseguono query sui dati residenti in memoria, anche le query più complesse possono essere molto veloci. Esistono tuttavia alcune limitazioni legate all'uso dei dati memorizzati nella cache. In particolare, i set di dati di grandi dimensioni possono superare la memoria disponibile e i requisiti di aggiornamento dei dati possono essere difficili se non impossibili da soddisfare sulla base di una pianificazione di elaborazione regolare.  

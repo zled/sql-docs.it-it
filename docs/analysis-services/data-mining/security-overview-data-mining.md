@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
@@ -18,26 +17,26 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5907b147aa4e06adfadaa2b56820088846d3fdd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4f558e19ded6fa97f195f19b72c3db4810cf7ac7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="security-overview-data-mining"></a>Panoramica della sicurezza (data mining)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Il processo di protezione [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si verifica a più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Il processo di protezione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] avviene su più livelli. È necessario proteggere ogni istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e le relative origini dati in modo che solo gli utenti autorizzati dispongano di autorizzazioni di lettura o di lettura/scrittura per le dimensioni, i modelli di data mining e le origini dati selezionati. È inoltre necessario proteggere le origini dati sottostanti per evitare che utenti non autorizzati danneggino le informazioni aziendali riservate. Il processo di protezione di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è descritto negli argomenti seguenti.  
   
 ##  <a name="bkmk_Architecture"></a> Architettura di sicurezza  
  Per ulteriori informazioni sull'architettura di sicurezza di base di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluso il modo in cui in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene utilizzata l'autenticazione di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows per autenticare l'accesso utente, vedere le risorse seguenti.  
   
--   [Ruoli di sicurezza &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Ruoli di sicurezza & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Proprietà di sicurezza](../../analysis-services/server-properties/security-properties.md)  
   
--   [Configurare gli account del servizio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [Configurare gli account del servizio & #40; Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [Autorizzazione dell'accesso a oggetti e operazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Per l'autorizzazione di accesso per gli oggetti e operazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configurazione dell'account di accesso per Analysis Services  
  È necessario selezionare un account di accesso appropriato per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e specificare le autorizzazioni per questo account. È necessario verificare che l'account di accesso di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] disponga solo delle autorizzazioni necessarie per eseguire determinate attività, incluse le autorizzazioni appropriate per le origini dati sottostanti.  
@@ -62,6 +61,6 @@ ms.lasthandoff: 01/08/2018
  Se si utilizzano pacchetti di Integration Services per pulire i dati, aggiornare modelli di data mining o eseguire stime, è necessario assicurarsi che il servizio Integration Services disponga delle autorizzazioni appropriate per il database in cui è archiviato il modello e delle autorizzazioni appropriate per i dati di origine.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Ruoli e autorizzazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

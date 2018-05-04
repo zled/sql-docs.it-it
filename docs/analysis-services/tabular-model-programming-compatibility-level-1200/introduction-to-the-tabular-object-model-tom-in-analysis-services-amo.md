@@ -1,36 +1,34 @@
 ---
 title: Introduzione al modello a oggetti tabulare (TOM) in Analysis Services AMO | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 57a4a934-ecd0-4365-8147-d36899d86751
-caps.latest.revision: 
+caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7efb5e145bbc4b481f73624a4c0d08d9698dc24c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e8b2c640bf61a323aeb3e8a04dadd5fe47626a98
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Introduzione al modello a oggetti tabulare (TOM) in Analysis Services AMO
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Il modello a oggetti tabulare (TOM) è un'estensione della libreria client servizi oggetto AMO (Analysis Management), creata per supportare scenari di programmazione per modelli tabulari compilati a livello di compatibilità 1200 e versioni successiva. Come con gli oggetti AMO, TOM fornisce un modo programmatico per gestire le funzioni amministrative quali la creazione di modelli, importazione e aggiornamento dei dati e l'assegnazione di ruoli e autorizzazioni.  
+  Il modello a oggetti tabulare (TOM) è un'estensione della libreria client servizi oggetto AMO (Analysis Management), creata per supportare scenari di programmazione per modelli tabulari compilati a livello di compatibilità 1200 e versioni successiva. Come con gli oggetti AMO, TOM fornisce un modo programmatico per gestire le funzioni amministrative quali la creazione di modelli, importazione e aggiornamento dei dati e l'assegnazione di ruoli e autorizzazioni.  
   
 TOM espone metadati tabulari nativo, ad esempio **modello**, **tabelle**, **colonne**, e **relazioni** oggetti.  Una vista di alto livello dell'albero del modello oggetto riportata di seguito viene illustrato come correlazione tra le parti componenti.  
   
  Poiché TOM è un'estensione della libreria AMO, tutte le classi che rappresentano nuovi oggetti tabulari, introdotti in SQL Server 2016 vengono implementate in un nuovo assembly Microsoft.AnalysisServices.Tabular.dll. Classi di uso generale di AMO sono state spostate all'assembly AnalysisServices. Il codice sarà necessario fare riferimento a entrambi gli assembly.
-Vedere [installare, distribuire e fare riferimento al modello a oggetti tabulare &#40; Microsoft.AnalysisServices.Tabular &#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) per informazioni dettagliate.  
+Vedere [installare, distribuire e fare riferimento al modello a oggetti tabulare &#40;Microsoft.AnalysisServices.Tabular&#41; ](../../analysis-services/tabular-model-programming-compatibility-level-1200/install-distribute-and-reference-the-tabular-object-model.md) per informazioni dettagliate.  
   
  Attualmente, l'API è disponibile solo per codice gestito in .NET framework. Per esaminare l'elenco completo di programmazione di opzioni, incluso il supporto del linguaggio di script e query, vedere [di programmazione del modello tabulare per 1200 a livello di compatibilità](../../analysis-services/tabular-model-programming-compatibility-level-1200/tabular-model-programming-for-compatibility-level-1200.md).  
   

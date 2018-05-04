@@ -3,15 +3,12 @@ title: Comando esclusivo SET | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SET EXCLUSIVE command [ODBC]
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
@@ -19,12 +16,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: cd877a854c1be02365b338829cc28f1db9d44dee
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 3a5ab2ccf22c7322fa0e35cd281a8953b7685a02
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-exclusive-command"></a>Comando esclusivo SET
 Specifica se aprire o meno i file di tabella per l'utilizzo esclusiva o condivisa in rete.  

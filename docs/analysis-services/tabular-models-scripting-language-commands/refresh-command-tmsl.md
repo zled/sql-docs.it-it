@@ -1,31 +1,30 @@
 ---
 title: Aggiornamento di comando (TMSL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 97ff6ba8-c236-4ba6-8220-b0fcb9e1dc5c
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77bef111f20a6ccc72347b8e02bd967ef2d316b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e3bf58b33d8e0fe72264d50e177cd6678200c006
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="refresh-command-tmsl"></a>Aggiornamento di comando (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Elabora oggetti nel database corrente.   
-**Aggiorna** viene sempre eseguito in parallelo a meno che non si limita a [sequenza comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Elabora oggetti nel database corrente.   
+**Aggiornare** viene sempre eseguito in parallelo a meno che non si limita a [sequenza comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/sequence-command-tmsl.md).  
   
  È possibile eseguire l'override di alcune proprietà di alcuni oggetti durante un'operazione di aggiornamento dati:  
   
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 
   
 ## <a name="request"></a>Richiesta  
- **Aggiorna** accetta una definizione di parametro e l'oggetto di tipo.  
+ **Aggiorna** accetta una definizione di parametro e oggetto tipo.  
   
 ```  
     {  
@@ -66,7 +65,7 @@ ms.lasthandoff: 01/08/2018
   
 ||||  
 |-|-|-|  
-|**Tipo di aggiornamento**|**Si applica a**|**Descrizione**|  
+|**Tipo di aggiornamento**|**Si applica a**|**Description**|  
 |completi|Database,<br />tavolo<br />Partition|Per tutte le partizioni della partizione, della tabella o del database specificati, aggiornare i dati e ricalcolare tutti i dipendenti. Per una partizione di calcolo, ricalcolare la partizione e tutti i relativi dipendenti.|  
 |clearValues|Database,<br />tavolo<br />Partition|Cancellare i valori in questo oggetto e tutti i relativi dipendenti.|  
 |calcolare|Database,<br />tavolo<br />Partition|Ricalcolare questo oggetto e tutti i relativi dipendenti, ma solo se necessario. Questo valore non forza il ricalcolo, se non per le formule volatili.|  
@@ -77,7 +76,7 @@ ms.lasthandoff: 01/08/2018
   
  È possibile aggiornare gli oggetti seguenti:  
   
- [Oggetto di database &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) Elaborare un database.  
+ [Oggetto di database &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md) elaborare un database.  
   
 ```  
 {  
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Oggetto tabelle &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) Elaborare una singola tabella.  
+ [Oggetto tabelle &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) elaborare una singola tabella.  
   
 ```  
 {  
@@ -108,7 +107,7 @@ ms.lasthandoff: 01/08/2018
 }  
 ```  
   
- [Oggetto partizioni &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) Elaborare una singola partizione all'interno di una tabella.  
+ [Oggetto di partizioni &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md) elaborare una singola partizione all'interno di una tabella.  
   
 ```  
 {  
@@ -222,7 +221,7 @@ ms.lasthandoff: 01/08/2018
 ```  
   
 ## <a name="usage-endpoints"></a>Utilizzo (endpoint)  
- Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
+ Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
   
 -   Come una finestra XMLA in SQL Server Management Studio (SSMS)  
   
@@ -232,10 +231,10 @@ ms.lasthandoff: 01/08/2018
   
  È possibile generare uno script già pronto per questo comando da SSMS.  Ad esempio, è possibile scegliere di **Script** in una finestra di dialogo di elaborazione.  
   
- Il [ \[SSAS-MS-T\]: QL Server tabulare di Analysis Services (SQL Server tecniche Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON. Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento ([tabulare Model Scripting Language &#40; TMSL &#41; Fare riferimento a](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) per chiarimenti sui quali è supportata.  
+ Il [ \[SSAS-MS-T\]: QL Server tabulare di Analysis Services (SQL Server tecniche Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON. Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento ([linguaggio di Scripting del modello tabulare &#40;TMSL&#41; riferimento](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)) per chiarimenti sui quali è supportata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento a Tabular Model Scripting Language &#40;TMSL&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)   
- [Le opzioni di elaborazione e le impostazioni di &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
+ [Opzioni di elaborazione e le impostazioni di &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)  
   
   

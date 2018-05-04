@@ -1,31 +1,30 @@
 ---
 title: Sicurezza a livello di oggetto del modello tabulare | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: multidimensional-tabular
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: 
-ms.assetid: 
-caps.latest.revision: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
+f1_keywords: ''
+ms.assetid: ''
+caps.latest.revision: ''
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73424406508608226cbf30fa0271aa747dbf9101
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 64084e6c4272a916d4260b766232d95e83f1b80e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="object-level-security"></a>Sicurezza a livello di oggetto
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Protezione del modello di dati inizia con l'implementazione in modo efficace [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtri a livello di riga per definire le autorizzazioni utente per gli oggetti del modello di dati e i dati. A partire da modelli tabulari di 1400, è inoltre possibile definire la sicurezza a livello di oggetto, che include la sicurezza a livello di tabella e la sicurezza a livello di colonna nel [oggetto ruoli](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Protezione del modello di dati inizia con l'implementazione in modo efficace [ruoli](../../analysis-services/tabular-models/roles-ssas-tabular.md) e filtri a livello di riga per definire le autorizzazioni utente per gli oggetti del modello di dati e i dati. A partire da modelli tabulari di 1400, è inoltre possibile definire la sicurezza a livello di oggetto, che include la sicurezza a livello di tabella e la sicurezza a livello di colonna nel [oggetto ruoli](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md).
 
 ## <a name="table-level-security"></a>Sicurezza a livello di tabella
 
@@ -78,7 +77,7 @@ In questo esempio, la proprietà metadataPermission della classe per la colonna 
   }
 ```
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>Restrizioni
 
 *  Impossibile impostare la sicurezza a livello di tabella per un modello se si interrompe una catena di relazioni. Viene generato un errore in fase di progettazione.
  Ad esempio, se esistono relazioni tra le tabelle A e B, B e C, è possibile proteggere tabella B. Se nella tabella B è protetto, una query in una tabella non è di transito le relazioni tra la tabella A e B, B e C. In questo caso, potrebbe essere configurata una relazione separata tra le tabelle A e B.

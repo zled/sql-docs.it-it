@@ -1,33 +1,32 @@
 ---
 title: Oggetto tabelle (TMSL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 98da08fc-8744-4d0f-bc62-e63f1e9e6b08
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a8da10beb14c0cf376a73cb2416af7e78d42bac4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: befd3f17f034151924cc962eb5355bd7543ffddb
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables-object-tmsl"></a>Oggetto tabelle (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce le tabelle contenute in un modello. Tabelle in un modello utente sono associate a tabelle in un database esterno da cui i dati vengono importati o eseguire una query o una tabella calcolata costruita da un'espressione DAX. All'interno di una tabella, una o più **partizione** oggetti descrivono l'origine dei dati.  Tra le tabelle, una **relazione** oggetto specifica la cardinalità, direzione filtro e altre proprietà della relazione.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definisce le tabelle contenute in un modello. Tabelle in un modello utente sono associate a tabelle in un database esterno da cui i dati vengono importati o eseguire una query o una tabella calcolata costruita da un'espressione DAX. All'interno di una tabella, una o più **partizione** oggetti descrivono l'origine dei dati.  Tra le tabelle, una **relazione** oggetto specifica la cardinalità, direzione filtro e altre proprietà della relazione.  
   
 ## <a name="object-definition"></a>Definizione di oggetto  
- Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Tabella** gli oggetti dispongono anche le proprietà seguenti.  
+ Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Tabella** oggetti hanno anche le proprietà seguenti.  
   
  dataCategory  
  Specifica il tipo di tabella, in genere a sinistra non specificato. I valori validi sono 0 - sconosciuto, 1 - ora, 2 - misura, - 3, 5 - quantitativa, 6-account, 7 - clienti, prodotti-8, 9 - SCENARIO 10: utilità, valuta - 11, 12 - velocità, 4 - innalzamento di livello, 15 - 16 organizzazione - 13 - canale distinta base, 17: GEOGRAPHY.  
@@ -46,7 +45,7 @@ True se l'oggetto Table viene considerato come nascosto; in caso contrario, fals
  Rappresenta una raccolta di livelli che forniscono un percorso di drill-down gerarchico logico per le applicazioni client. È un elemento figlio di un oggetto Table.  
   
 ## <a name="usage"></a>Utilizzo  
- Tabella oggetti vengono utilizzati [Alter comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Creare comandi &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Eliminare comandi &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Aggiornare comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), e [MergePartitions comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ Tabella oggetti vengono utilizzati negli [Alter-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [creare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Eliminare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), e [comando MergePartitions &#40;&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  Durante la creazione, la sostituzione o modifica di un oggetto tabella, specificare tutte le proprietà di sola lettura della definizione dell'oggetto. Omissione di una proprietà di lettura / scrittura è considerata un'operazione di eliminazione.  
   
@@ -71,7 +70,7 @@ True se l'oggetto Table viene considerato come nascosto; in caso contrario, fals
 ```  
   
 ## <a name="full-syntax"></a>Sintassi completa  
- Di seguito è la rappresentazione dello schema di un oggetto di tabelle di un modello. Per ridurre le dimensioni di questa definizione, gli oggetti di partizione sono descritti in un' posizione. Vedere [partizioni oggetto &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
+ Di seguito è la rappresentazione dello schema di un oggetto di tabelle di un modello. Per ridurre le dimensioni di questa definizione, gli oggetti di partizione sono descritti in un' posizione. Vedere [oggetto partizioni &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md).  
   
 ```  
 "tables": {  

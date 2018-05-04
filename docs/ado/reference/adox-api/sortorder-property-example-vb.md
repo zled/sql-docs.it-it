@@ -1,11 +1,9 @@
 ---
 title: Esempio di proprietà SortOrder (VB) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4dfd5e5dc612813bd97722a3ce9f7ca49c5044bd
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 22c3955934e7e3030251bbb80165edaa6fee159f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sortorder-property-example-vb"></a>Esempio di proprietà SortOrder (VB)
 Questo esempio viene illustrato il [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) proprietà di un [colonna](../../../ado/reference/adox-api/column-object-adox.md) che è stato accodato per il [colonne](../../../ado/reference/adox-api/columns-collection-adox.md) raccolta di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Il codice aggiunge un indice crescente alla colonna paese di **dipendenti** tabella, quindi Visualizza i record. Quindi il codice aggiunge un indice decrescente alla colonna paese di **dipendenti** tabella e visualizza nuovamente i record. È illustrata la differenza tra crescente e decrescente gli indici.  

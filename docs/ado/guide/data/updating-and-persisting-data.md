@@ -1,11 +1,9 @@
 ---
 title: L'aggiornamento e salvataggio di dati | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5331ee16d67159c67c40fcca328b011dfd9a0462
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 40e92067564f56eb7bc30739c0abd0d758a3b9c4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-and-persisting-data"></a>L'aggiornamento e il mantenimento dei dati
 Capitoli precedenti hanno illustrato come utilizzare ADO per recuperare i dati in un'origine dati, come spostarsi all'interno dei dati e anche come modificare i dati. Naturalmente, se l'obiettivo dell'applicazione è consentire agli utenti di apportare modifiche ai dati, è necessario conoscere le modalità salvare le modifiche. È possibile mantenere sia il **Recordset** cambia in un file utilizzando il **salvare** metodo oppure è possibile inviare di nuovo le modifiche all'origine dati per l'utilizzo di archiviazione il **aggiornamento** o  **UpdateBatch** metodi.  

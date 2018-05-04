@@ -1,11 +1,9 @@
 ---
 title: Esempio del metodo Clone (VC + +) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ae0127126af623b63e6f1ca4d6f68d7d47fc2467
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1d470f46bca9a022b55d50870a8db406bd918d79
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clone-method-example-vc"></a>Esempio del metodo Clone (VC + +)
 Questo esempio viene utilizzato il [Clone](../../../ado/reference/ado-api/clone-method-ado.md) metodo per creare copie di un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e consente all'utente posiziona il puntatore del record di ogni copia in modo indipendente.  

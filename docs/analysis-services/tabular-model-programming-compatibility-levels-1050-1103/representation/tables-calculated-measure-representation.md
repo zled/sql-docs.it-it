@@ -1,33 +1,31 @@
 ---
 title: Rappresentazione della misura (tabulare) calcolato | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 4cb9fea5-1616-467b-a539-d051e5833aea
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c0b0d371298d083d23d2ecf6549a8954b8665657
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: d301be79e3d433c325b1546a5a244e4ac3083045
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables---calculated-measure-representation"></a>Tabelle - rappresentazione della misura calcolata
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Una misura calcolata è un'espressione DAX denominata che viene valutata ogni volta che viene utilizzata.  
+  Una misura calcolata è un'espressione DAX denominata che viene valutata ogni volta che viene utilizzata.  
   
 ## <a name="calculated-measure-representation"></a>Rappresentazione della misura calcolata  
   

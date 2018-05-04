@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 382c3badf6b31e99c707c9adce011c278df82280
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6b3fb82c79fd352df012a5fb5f800139f67a43be
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mddataset-data-type-xmla"></a>Tipo di dati MDDataSet (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Definisce un tipo di dati derivato che rappresenta dati multidimensionali restituiti dal [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definisce un tipo di dati derivato che rappresenta dati multidimensionali restituiti dal [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
   
  **Namespace** urn: schemas-microsoft-com: XML-analysis: mddataset  
   
@@ -56,25 +55,25 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipi di dati di base|[Set di risultati](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipi di dati derivati|None|  
+|Tipi di dati derivati|Nessuno|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|None|  
+|Elementi padre|Nessuno|  
 |Elementi figlio|[Assi](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md), [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md), [OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
-|Elementi derivati|None|  
+|Elementi derivati|Nessuno|  
   
-## <a name="remarks"></a>Remarks  
- Il **MDDataSet** tipo di dati è orientato a OLAP set di righe (o set di dati) necessari per rappresentare dati OLAP in XML. Il contenuto di questo set di righe può variare a seconda dei valori del **contenuto** e **formato** proprietà presenti nel [proprietà](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) insieme il  **Eseguire** metodo. Per ulteriori informazioni sul **contenuto** e **formato** proprietà, vedere [supportate proprietà XMLA &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+## <a name="remarks"></a>Osservazioni  
+ Il **MDDataSet** tipo di dati è orientato a OLAP set di righe (o set di dati) necessari per rappresentare dati OLAP in XML. Il contenuto di questo set di righe può variare a seconda dei valori del **contenuto** e **formato** proprietà presenti nel [proprietà](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) insieme il  **Eseguire** metodo. Per ulteriori informazioni sul **contenuto** e **formato** delle proprietà, vedere [proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  Per informazioni di base sulle strutture di set di dati OLE DB per OLAP, fare riferimento alla sezione relativa al mapping tra il tipo di dati MDDataSet e OLE DB nella specifica XML for Analysis 1.1. Per un esempio di XML Schema definition language (XSD) completo del **MDDataSet** del tipo di dati, fare riferimento a "Appendice d: MDDataSet ad esempio" la specifica XML for Analysis 1.1.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi di dati XML &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [Tipi di dati XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

@@ -1,15 +1,14 @@
 ---
 title: Supporto delle traduzioni in Analysis Services | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - attribute translations [Analysis Services]
 - translations [Analysis Services]
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 8b1428374e50b2f6aa13a8f8da412e1f1e782b6e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Supporto delle traduzioni in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -53,8 +51,8 @@ ms.lasthandoff: 01/22/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Scenari di globalizzazione per Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Lingue e regole di confronto &#40; Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)   
+ [Lingue e regole di confronto & #40; Analysis Services & #41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Impostare o modificare le regole di confronto delle colonne](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Suggerimenti per la globalizzazione e procedure consigliate &#40; Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
+ [Suggerimenti per la globalizzazione e procedure consigliate & #40; Analysis Services & #41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)  
   
   

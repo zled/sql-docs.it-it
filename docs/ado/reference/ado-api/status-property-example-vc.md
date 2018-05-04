@@ -1,11 +1,9 @@
 ---
 title: Esempio di proprietà Status (VC + +) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fa5dcd9c68fce287a4b274ccf68c9f260909792b
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 22844a67458b93767008727e531e9e22cd7bdb10
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-vc"></a>Esempio di proprietà Status (VC + +)
 Questo esempio viene utilizzato il [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà per visualizzare i record che sono stati modificati in un'operazione batch prima che si è verificato un aggiornamento batch.  

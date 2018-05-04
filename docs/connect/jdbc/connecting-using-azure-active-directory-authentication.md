@@ -6,23 +6,19 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: jdbc
-ms.technology:
-- drivers
-ms.topic: article
+ms.prod_service: connectivity
+ms.technology: connectivity
+ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: ef69bb70de8af6b6dc56df66e652f7f4dae7529c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d6df50936da3d8b31ec3bc7ecd62212fa6987c4d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Connessione tramite autenticazione di Azure Active Directory
 
@@ -222,9 +218,9 @@ Nell'esempio seguente contiene una semplice applicazione Java che si connette al
     7. Fare clic su "Crea" nella parte inferiore.
     9. Nel portale di Azure, fare clic sulla scheda "Impostazioni" dell'applicazione e aprire la scheda "Proprietà".
     10. Trovare il valore "ID applicazione" (noto anche come ID Client) e copiarlo riservato, necessaria in fase di configurazione dell'applicazione (ad esempio, 1846943b-ad04-4808-aa13-4702d908b5c1). Vedere il seguente snapshot.
-    11. Trovare il valore "URL ID App" e copiarlo, si tratta dell'URL di servizio token di sicurezza.
-    12. Nella sezione "Chiavi", creare una chiave per la compilazione nel campo nome, selezionando la durata della chiave e il salvataggio della configurazione (lasciare vuoto il campo valore). Dopo il salvataggio, il campo valore deve essere compilato automaticamente, copiare il valore generato. Questo è il segreto client.
-
+    11. Nella sezione "Chiavi", creare una chiave per la compilazione nel campo nome, selezionando la durata della chiave e il salvataggio della configurazione (lasciare vuoto il campo valore). Dopo il salvataggio, il campo valore deve essere compilato automaticamente, copiare il valore generato. Questo è il segreto client.
+    12. Nel Pannello di sinistra, fare clic su Azure Active Directory. In "Registrazioni di App", trovare la scheda "Punti di fine". Copiare l'URL in "OATH 2.0 ENDPOINT TOKEN", questo è l'URL del servizio token di sicurezza.
+    
     ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
 2. Accedere al database del Server SQL Azure come un amministratore di Azure Active Directory e l'utilizzo di un utente del database indipendente una disposizione di comando T-SQL per l'applicazione principale. Vedere il [la connessione al Database SQL o Data Warehouse da usando Azure Active Directory l'autenticazione di SQL](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/) per ulteriori informazioni su come creare un amministratore di Azure Active Directory e un utente del database indipendente.
 
@@ -255,7 +251,7 @@ public class TokenBasedExample {
 
         // Retrieve the access token from the AD.
         String spn = "https://database.windows.net/";
-        String stsurl = "https://microsoft.onmicrosoft.com/..."; // Replace with your STS URL.
+        String stsurl = "https://login.microsoftonline.com/..."; // Replace with your STS URL.
         String clientId = "1846943b-ad04-4808-aa13-4702d908b5c1"; // Replace with your client ID.
         String clientSecret = "..."; // Replace with your client secret.
 

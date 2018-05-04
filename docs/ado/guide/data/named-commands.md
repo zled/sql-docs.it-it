@@ -1,11 +1,9 @@
 ---
 title: I comandi denominato | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4e9f82cc25d589d222b312e362252e4447f3bea0
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 823ee61431555d978fb33aa0f9a58264af1ce2c1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="named-commands"></a>Comandi denominati
 [Per creare ed eseguire un comando semplice](../../../ado/guide/data/creating-and-executing-a-simple-command.md) viene illustrato un modo per eseguire un comando. È possibile: è possibile renderlo un comando denominato e quindi chiamare il comando direttamente sulla denominato il **connessione** oggetto (assegnato per il **ActiveConnection** proprietà del **comando** oggetto). Denominazione di un comando significa assegnare un nome per il **nome** proprietà di un **comando** oggetto. Ad esempio,  

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -24,12 +23,11 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 659b1047984e58395097a15446b2860ed37a7371
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fba6675213e513806f27c85fe881fc3efdeb0166
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-expressions"></a>Utilizzo delle espressioni di tupla
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/08/2018
  Se l'espressione di tupla ha un solo membro, per valutare l'espressione MDX convertirà il membro in una tupla con un solo membro. In altre parole, l'utilizzo dell'espressione di membro `[Measures].[TestMeasure]` al posto di un'espressione di tupla è equivalente, dal punto di vista funzionale, a utilizzare l'espressione di tupla `( [Measures].[TestMeasure] ).`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni &#40; MDX &#41;](../mdx/expressions-mdx.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Le espressioni &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

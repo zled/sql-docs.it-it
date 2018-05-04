@@ -1,16 +1,15 @@
 ---
 title: L'elaborazione di oggetti di Data Mining | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - processing objects [Analysis Services]
 - mining structures [Analysis Services]
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - mining structures [Analysis Services], how-to topics
 - mining structures [Analysis Services], processing
 ms.assetid: 0f6993c0-0917-4935-82f9-7b8a8a7cc627
-caps.latest.revision: 
+caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e4726de9acf90a805ff15791d6ab8d76fa20adc6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 73b88832b2cf7aa2eb419c9cbc6231ee34dc90e1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="processing-data-mining-objects"></a>Elaborazione di oggetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un oggetto di data mining è soltanto un contenitore vuoto finché non viene elaborato. L'*elaborazione* di un modello di data mining viene anche definita *training*.  
+  Un oggetto di data mining è soltanto un contenitore vuoto finché non viene elaborato. L'*elaborazione* di un modello di data mining viene anche definita *training*.  
   
  **Elaborazione di strutture di data mining:** una struttura di data mining ottiene i dati da un'origine dati esterna, secondo quanto definito dalle associazioni delle colonne e dai metadati di utilizzo, dopodiché li legge. Questi dati vengono letti completamente e successivamente analizzati per estrarre diverse statistiche. In Analysis Services una rappresentazione compressa dei dati, ideale per l'analisi basata sugli algoritmi di data mining, viene archiviata in una cache locale. È possibile conservare questa cache oppure eliminarla dopo l'elaborazione dei modelli. Per impostazione predefinita, la cache viene archiviata. Per altre informazioni, vedere [Elaborare una struttura di data mining](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
@@ -53,7 +51,7 @@ Un oggetto di data mining è soltanto un contenitore vuoto finché non viene ela
   
  Dopo essere stato elaborato, un modello di data mining contiene solo gli schemi derivati dall'analisi e i mapping dei risultati del modello ai dati di training memorizzati nella cache. È possibile esplorare o eseguire una query sui risultati del modello, definiti *contenuto del modello*, oppure è possibile eseguire una query sui case del modello e della struttura, purché siano stati memorizzati nella cache.  
   
- Il contenuto di ciascun modello di data mining dipende dall'algoritmo utilizzato per creare il modello stesso. Ad esempio, se un modello è un modello di clustering e un altro è un modello di albero delle decisioni, il contenuto del modello è molto diverso anche se i modelli utilizzano esattamente gli stessi dati. Per altre informazioni, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+ Il contenuto di ciascun modello di data mining dipende dall'algoritmo utilizzato per creare il modello stesso. Ad esempio, se un modello è un modello di clustering e un altro è un modello di albero delle decisioni, il contenuto del modello è molto diverso anche se i modelli utilizzano esattamente gli stessi dati. Per altre informazioni, vedere [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&41#;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="processing-requirements"></a>Requisiti per l'elaborazione  
  È possibile che i requisiti per l'elaborazione siano diversi a seconda che i modelli di data mining siano basati solamente su dati relazionali o su un'origine dati multidimensionale.  
@@ -63,9 +61,9 @@ Un oggetto di data mining è soltanto un contenitore vuoto finché non viene ela
  Per altre informazioni, vedere [Requisiti e considerazioni sull'elaborazione &#40;data mining&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining query drill-through &#40; &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Strutture di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Modelli di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Architettura logica &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Data Mining query drill-through & #40; & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modelli di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Architettura logica & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

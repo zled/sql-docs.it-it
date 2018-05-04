@@ -1,11 +1,9 @@
 ---
 title: Esempio di proprietà Status (campo) (VB) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b9c931092b6fea724d3be747cf8c6e69dd8517e6
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 84d9ed89afc18f87898e5636163e6fde16345602
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="status-property-example-field-vb"></a>Esempio di proprietà Status (campo) (VB)
 Nell'esempio seguente viene aperto un documento da una cartella di lettura/scrittura con la [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Il [stato](../../../ado/reference/ado-api/status-property-ado-field.md) proprietà di un [campo](../../../ado/reference/ado-api/field-object.md) oggetto del [Record](../../../ado/reference/ado-api/record-object-ado.md) verrà impostata innanzitutto **adFieldPendingInsert**, quindi verrà aggiornata al **adFieldOk**.  

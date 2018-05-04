@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: extended-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
@@ -26,12 +25,11 @@ caps.latest.revision: 33
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1feb6b6071958b6bbf73bcb2b50d785dffc1a87e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4812174e3a736a05475ceaf901bc86bf7949436d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +94,7 @@ destlen
 ## <a name="returns"></a>Valori di codice restituiti  
  La lunghezza dei dati convertiti, espressa in byte, se la conversione del tipo di dati viene eseguita correttamente. Quando **srv_convert** rileva una richiesta di conversione non supportata, chiama il gestore degli errori specificato dallo sviluppatore, se disponibile, imposta un numero di errore globale e restituisce -1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La funzione **srv_willconvert** determina se una specifica conversione è consentita.  
   
  La conversione in tipi di dati numerici approssimati SRVFLT4 o SRVFLT8 può causare una perdita di precisione. Lo stesso problema può verificarsi durante la conversione da tipi di dati numerici approssimati SRVFLT4 o SRVFLT8 in SRVCHAR o SRVTEXT.  

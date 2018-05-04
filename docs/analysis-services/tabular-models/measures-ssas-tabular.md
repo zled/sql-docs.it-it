@@ -1,30 +1,29 @@
 ---
 title: Le misure | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0b994ddc834317db4c0cb10c55ccd8ef33441473
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="measures"></a>Misure
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Nei modelli tabulari, una misura è un calcolo creato utilizzando una formula DAX per l'utilizzo in un client di creazione report. Le misure vengono valutate in base ai campi, ai filtri e ai filtri dei dati selezionati dagli utenti nell'applicazione client di creazione report.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Nei modelli tabulari una misura è un calcolo creato utilizzando una formula DAX per l'utilizzo in un client di creazione report. Le misure vengono valutate in base ai campi, ai filtri e ai filtri dei dati selezionati dagli utenti nell'applicazione client di creazione report.  
   
 ##  <a name="bkmk_understanding"></a> Vantaggi  
  Le misure possono essere basate sulle funzioni di aggregazione standard, ad esempio AVERAGE, COUNT o SUM. In alternativa, è possibile definire formule personalizzate tramite DAX. Oltre alla formula, ogni misura dispone di proprietà definite dal tipo di dati della misura, ad esempio Nome, Dettagli tabella, Formato e Cifre decimali.  
@@ -78,7 +77,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Proprietà|Impostazione predefinita|Description|  
 |--------------|---------------------|-----------------|  
-|**Descrizione**|Vuoto|Descrizione della misura. La descrizione non verrà visualizzata con la misura in uno strumento client di creazione report.|  
+|**Description**|Vuoto|Descrizione della misura. La descrizione non verrà visualizzata con la misura in uno strumento client di creazione report.|  
 |**Formato**|Determinato automaticamente in base al tipo di dati della colonna a cui viene fatto riferimento nell'espressione della formula.|Formato della misura, ad esempio, valuta o percentuale.|  
 |**Formula**|Formula immessa nella relativa barra quando è stata creata la misura.|Formula della misura.|  
 |**Nome misura**|Se viene utilizzata la somma automatica, il nome della misura precederà il nome della colonna seguito da due punti. Se viene immessa una formula personalizzata, digitare un nome seguito da due punti, quindi la formula.|Nome della misura come viene visualizzato nell'elenco dei campi di uno strumento client di creazione report.|  

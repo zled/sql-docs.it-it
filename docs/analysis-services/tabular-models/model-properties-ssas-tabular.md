@@ -1,34 +1,32 @@
 ---
-title: "Proprietà del modello | Documenti Microsoft"
-ms.custom: 
+title: Proprietà del modello | Documenti Microsoft
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.asvs.bidtoolset.wspacedbconfig.f1
 - sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
-caps.latest.revision: 
+caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a2f2478c92ba44040c8377f6957896d233bf9ce2
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: ef8ecd9e2c5b3d2da37229cbf22fd8684dd43ac9
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-properties"></a>Proprietà del modello 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-Questo articolo descrive le proprietà del modello tabulare. Ogni progetto di modello tabulare ha proprietà del modello che influiscono su come viene eseguito il backup e su come viene compilato il modello durante la creazione in Strumenti di sviluppo di SQL Server, nonché su come viene archiviato il database dell'area di lavoro. Le proprietà del modello descritte in questo argomento non vengono applicate ai modelli che sono già stati distribuiti.  
+  Questo articolo descrive le proprietà del modello tabulare. Ogni progetto di modello tabulare ha proprietà del modello che influiscono su come viene eseguito il backup e su come viene compilato il modello durante la creazione in Strumenti di sviluppo di SQL Server, nonché su come viene archiviato il database dell'area di lavoro. Le proprietà del modello descritte in questo argomento non vengono applicate ai modelli che sono già stati distribuiti.  
   
  Sezioni dell'argomento:  
   

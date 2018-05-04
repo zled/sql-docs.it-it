@@ -1,30 +1,29 @@
 ---
 title: Eliminazione di comando (TMSL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 05d3fb14-ea03-4596-ac2e-9ae5bab27b4d
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: edb54bdecdabdfccac8664d3bb8a5e98633f8ddb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e191e16686737ce3e92091b44ad07789833fee5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="delete-command-tmsl"></a>Eliminazione di comando (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Elimina un database o un oggetto nel database corrente.   
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Elimina un database o un oggetto nel database corrente.   
 Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggetto non esiste, il comando genera un errore.  
   
 ## <a name="request"></a>Richiesta  
@@ -44,7 +43,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
   
  È possibile eliminare gli oggetti seguenti:  
   
- [Oggetto di database &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
+ [Oggetto di database &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/database-object-tmsl.md)  
   
 ```  
 {   
@@ -56,7 +55,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
 }   
 ```  
   
- [Oggetto di origini dati &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
+ [Oggetto di origini dati &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md)  
   
 ```  
 {  
@@ -69,7 +68,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
 }  
 ```  
   
- [Oggetto tabelle &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)  
+ [Oggetto tabelle &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md)  
   
 ```  
 {   
@@ -82,7 +81,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
 }   
 ```  
   
- [Oggetto partizioni &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
+ [Oggetto di partizioni &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/partitions-object-tmsl.md)  
   
 ```  
 {   
@@ -96,7 +95,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
 }   
 ```  
   
- [Oggetto ruoli &#40; TMSL &#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
+ [Oggetto di ruoli &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/roles-object-tmsl.md)  
   
 ```  
 {   
@@ -139,7 +138,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
 ```  
   
 ## <a name="usage-endpoints"></a>Utilizzo (endpoint)  
- Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40; XMLA &#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
+ Questo elemento di comando viene utilizzato in un'istruzione del [metodo Execute &#40;XMLA&#41; ](../../analysis-services/xmla/xml-elements-methods-execute.md) chiamata su un endpoint XMLA, esposto nei modi seguenti:  
   
 -   Come una finestra XMLA in SQL Server Management Studio (SSMS)  
   
@@ -149,7 +148,7 @@ Elimina l'oggetto specificato e tutti gli oggetti figlio e raccolte. Se l'oggett
   
  È possibile generare uno script già pronto per questo comando da SSMS.  Ad esempio, è possibile fare doppio clic su un database esistente > **Script** > **crea Script per Database** > **eliminare per**.  
   
- Il [ \[SSAS-MS-T\]: QL Server tabulare di Analysis Services (SQL Server tecniche Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON. Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento [tabulare Model Scripting Language &#40; TMSL &#41; Riferimento](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) per chiarimenti sui quali è supportata.  
+ Il [ \[SSAS-MS-T\]: QL Server tabulare di Analysis Services (SQL Server tecniche Protocol)](http://go.microsoft.com/fwlink/p/?LinkId=784855) documento include una sezione 3.1.5.2.2 che descrive la struttura di oggetti e i comandi di metadati tabulari JSON. Attualmente, tale documento vengono illustrati i comandi e le funzionalità non ancora implementata nello script TMSL. Vedere l'argomento [Tabular Model Scripting Language &#40;TMSL&#41; riferimento](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md) per chiarimenti sui quali è supportata.  
 
 ## <a name="see-also"></a>Vedere anche  
  [Tabular Model Scripting Language &#40;TMSL&#41; Reference (Riferimento al linguaggio di scripting per modelli tabulari &#40;TMSL&#41;)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  

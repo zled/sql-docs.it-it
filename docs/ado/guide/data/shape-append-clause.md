@@ -1,11 +1,9 @@
 ---
 title: Forma clausola APPEND | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb0275048d5afbe1bb13adc74eb5d2cba14e2a9e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 78a1b524d54f77fc5bdcc894c4948ca3139cf334
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="shape-append-clause"></a>Clausola APPEND forma
 La clausola APPEND del comando forma aggiunge una o più colonne per un **Recordset**. Spesso, queste colonne sono colonne a capitoli, che fanno riferimento a un elemento figlio **Recordset**.  
@@ -43,7 +40,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *parent-command*  
  Zero o uno dei seguenti (è possibile omettere il *comando padre* completamente):  
   
--   Un comando del provider racchiuso tra parentesi graffe ("{") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
+-   Un comando del provider racchiuso tra parentesi graffe ("{}") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
   
 -   Un altro comando shape incorporati tra parentesi.  
   
@@ -73,7 +70,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Osservazioni  
  *child-recordset*  
- -   Un comando del provider racchiuso tra parentesi graffe ("{") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
+ -   Un comando del provider racchiuso tra parentesi graffe ("{}") che restituisce un **Recordset** oggetto. Il comando viene immesso al provider di dati sottostante e la relativa sintassi dipende dai requisiti del provider. Ciò corrisponderà in genere il linguaggio SQL, anche se ADO non richieda qualsiasi linguaggio di query specifico.  
   
 -   Un altro comando shape incorporati tra parentesi.  
   

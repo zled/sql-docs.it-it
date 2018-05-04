@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -29,15 +28,15 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 402d03a39b1eb4711b338c8e3bc0ff29de11437a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 505b80b7a7e884dc9af76ae6a6f72447ff26d3d2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="root-element-xmla"></a>Elemento radice (XMLA)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Contiene un risultato restituito dal [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo o un comando XML for Analysis (XMLA) eseguito utilizzando il [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
+  Contiene un risultato restituito dal [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) metodo o un comando XML for Analysis (XMLA) eseguito utilizzando il [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) metodo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -56,10 +55,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Vedere la tabella riportata di seguito.|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|1-n: elemento obbligatorio che può presentarsi più di una volta.|  
   
 |Ancestor|Tipo di dati|  
@@ -72,12 +71,12 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[risultati](../../../analysis-services/xmla/xml-elements-properties/results-element-xmla.md), [restituire](../../../analysis-services/xmla/xml-elements-properties/return-element-xmla.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il **radice** elemento contiene le informazioni restituite in uno di [DiscoverResponse](../../../analysis-services/xmla/xml-elements-objects-discoverresponse.md) elemento restituito da una sola **Discover** chiamata al metodo, o nel [ExecuteResponse](../../../analysis-services/xmla/xml-elements-objects-executeresponse.md) elemento restituito da un singolo comando XMLA eseguito da una sola **Execute** chiamata al metodo.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+ [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

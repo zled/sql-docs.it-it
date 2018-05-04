@@ -1,29 +1,27 @@
 ---
 title: 'Lezione 6: Definizione di calcoli | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
-caps.latest.revision: 
+caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: baad90c825fe642849b4e799ad2a0c30c2935216
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>Lezione 6: Definizione di calcoli
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,11 +60,11 @@ In questa attività vengono definiti i membri calcolati.
 In questa procedura vengono definiti i set denominati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
-[Lezione 7: Definizione di indicatori di prestazioni chiave &#40; Gli indicatori KPI &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Lezione 7: Definizione di indicatori di prestazioni chiave & #40; Gli indicatori KPI & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Vedere anche  
 [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Modellazione multidimensionale & #40; Esercitazione di AdventureWorks & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Creazione di set denominati](../analysis-services/multidimensional-models/create-named-sets.md)  
 [Creare membri calcolati](../analysis-services/multidimensional-models/create-calculated-members.md)  
   

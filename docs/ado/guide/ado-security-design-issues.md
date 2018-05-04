@@ -6,10 +6,9 @@ ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology: drivers
+ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
 - ADO, security
@@ -18,12 +17,11 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 13855f4f485386dacf52c9a37c4d686cefbf1877
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: f6b8cf26515276ce4dd9338d64746a2b7a017d99
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ado-security-design-features"></a>Funzionalità di progettazione sicurezza ADO
 Le sezioni seguenti descrivono le funzionalità di progettazione della protezione in oggetti ADO (ActiveX Data) 2.8 e versioni successive. Queste modifiche sono state apportate in ADO 2.8 per migliorare la sicurezza. ADO 6.0, incluso in Windows DAC 6.0 in Windows Vista, è funzionalmente equivalente al ADO 2.8, è stato incluso in MDAC 2.8 in Windows XP e Windows Server 2003. In questo argomento vengono fornite informazioni su come proteggere meglio le applicazioni ADO 2.8 o versioni successive.

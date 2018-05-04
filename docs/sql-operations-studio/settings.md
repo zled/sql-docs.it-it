@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ec3ddc85512f0ae071865f4806358a5da28ff09
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="user-and-workspace-settings"></a>Impostazioni utente e dell'area di lavoro
 
@@ -35,7 +35,7 @@ Il comando di menu **File** > **preferenze** > **impostazioni** (**codice**  >  
 
 È inoltre possibile aprire le impostazioni utente e dell'area di lavoro dal **comando tavolozza** (**Ctrl + MAIUSC + P**) con **preferenze: aprire le impostazioni utente** e  **Preferenze: Aprire le impostazioni dell'area** o utilizzare il tasto di scelta rapida (**Ctrl +**).
 
-Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le righe di testo a capo automaticamente in base alla dimensione dell'editor.
+Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le righe di codice per essere rientrate automaticamente.
 
 ![Impostazioni di esempio](media/settings/sample-settings.png)
 

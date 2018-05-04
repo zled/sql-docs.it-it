@@ -1,11 +1,9 @@
 ---
 title: Utilizzo di servizi desktop remoto con connessione ODBC pool | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 25baa1ee860ac1f36cdf2f6e1e7541d970976594
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: d38a0d41ae5cdf0c1f40db21420fd39edca72237
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Utilizzo di servizi desktop remoto con connessione ODBC pool
 Se si utilizza un'origine dati ODBC, è possibile utilizzare il pool di connessioni opzione in Internet Information Services (IIS) per ottenere una gestione ad alte prestazioni del carico del client. Il pool di connessioni è un gestore delle risorse per le connessioni, mantenere lo stato aperto per le connessioni utilizzate di frequente.  

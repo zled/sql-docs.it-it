@@ -1,16 +1,15 @@
 ---
 title: I valori mancanti (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - MISSING_VALUE_SUBSTITUTION
@@ -19,20 +18,19 @@ helpviewer_keywords:
 - null values [Analysis Services]
 - coding [Data Mining]
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78f57e86acdbcf9292e462854c97ebf4c91f79b1
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 9703fb1b4f491f01a698582af7190974cc7afe33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valori mancanti (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una gestione corretta dei  *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
+  Una gestione corretta dei  *valori mancanti* è fondamentale per ottenere una modellazione efficace. In questa sezione vengono illustrati i valori mancanti e descritte le caratteristiche fornite in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per gestire i valori mancanti durante la compilazione di strutture e modelli di data mining.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Definizione dei valori mancanti nel data mining  
  Un valore mancante può avere diversi significati. È possibile che il campo non fosse applicabile, che l'evento non si sia verificato o che i dati non fossero disponibili. Potrebbe essere accaduto che la persona che ha immesso i dati non conoscesse il valore corretto o non abbia verificato l'effettiva compilazione di un campo.  
@@ -115,13 +113,13 @@ L'algoritmo Decision Trees fornisce un'ulteriore regolazione che consente di com
   
 |Attività|Collegamenti|  
 |-----------|-----------|  
-|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare modello di Data Mining flag &#40; &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Aggiungere flag alle singole colonne del modello per controllare la gestione dei valori mancanti|[Visualizzare o modificare modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Impostare le proprietà su un modello di data mining per controllare la gestione dei valori mancanti|[Modificare le proprietà di un modello di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)|  
-|Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione &#40; DMX &#41;](../../dmx/modeling-flags-dmx.md)|  
+|Informazioni sulla specificazione di flag di modellazione in DMX|[Flag di modellazione & #40; DMX & #41;](../../dmx/modeling-flags-dmx.md)|  
 |Modificare la modalità di gestione dei valori mancanti da parte della struttura di data mining|[Modificare le proprietà di una struttura di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Modello di Data Mining flag &#40; &#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

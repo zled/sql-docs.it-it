@@ -1,11 +1,9 @@
 ---
 title: Fine del flusso e proprietà di LineSeparator ed esempio di metodo SkipLine (VB) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -23,12 +21,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f8377a1fc877856de2ee9fcb97f1cd2e3e23ff14
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 30574dbeff5b8dded6f1f5ae7b7b01082962749d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>Fine del flusso e proprietà di LineSeparator ed esempio di metodo SkipLine (VB)
 In questo esempio viene illustrato come modificare le dei righe flussi di testo alla volta. L'effetto della modifica del separatore di riga dal ritorno predefinito ritorno a capo/avanzamento riga (**adCRLF**) per semplicemente avanzamento riga (**adLF**) o ritorno a capo (**adCR**) viene visualizzato.  

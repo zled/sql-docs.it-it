@@ -1,16 +1,16 @@
 ---
 title: Argomenti dell'istruzione RESTORE (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/05/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-caps.latest.revision: 
+caps.latest.revision: 154
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db010db48a42113c147751021404ac0dbc29ecaf
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d97ddc0e186a4234fcebf895734e00cc37d36ec0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Istruzioni RESTORE: argomenti (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ms.lasthandoff: 01/25/2018
  { *database_name* | **@***database_name_var*}  
  **Supportato da:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Database in cui viene ripristinato il log o il database completo. Se indicato in forma di variabile (**@***database_name_var*), questo nome può essere specificato come costante stringa (**@***database_name_var* = *database*_*name*) oppure come variabile di tipo stringa di caratteri, ad eccezione del tipo di dati **ntext** o **text**.  
+ Database in cui viene ripristinato il log o il database completo. Se indicato in forma di variabile (**@***database_name_var*), questo nome può essere specificato come costante stringa (**@***database_name_var* = *database*_* name*) oppure come variabile di tipo stringa di caratteri, ad eccezione del tipo di dati **ntext** o **text**.  
   
  \<file_or_filegroup_or_page> [ **,**...*n* ]  
  **Supportato da:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -98,7 +98,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@***logical_filegroup_name_var* }
 READ_WRITE_FILEGROUPS  
  Seleziona tutti i filegroup di lettura/scrittura. Questa opzione risulta particolarmente utile quando sono presenti filegroup di sola lettura che si desidera ripristinare dopo i filegroup di lettura/scrittura.  
   
-PAGE = **'***file***:***page* [ **,**...*n* ]**'**  
+PAGE = **'***file***:***page* [ **,**...* n* ]**'**  
  Specifica un elenco di una o più pagine per un ripristino della pagina, supportato solo nei database che utilizzano i modelli di recupero con registrazione completa o con registrazione minima delle operazioni bulk. Sono disponibili i valori seguenti:  
   
 PAGE  
@@ -135,7 +135,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } In genere, speci
   
  { *logical_backup_device_name* | **@***logical_backup_device_name_var* } Nome logico, conforme alle regole per gli identificatori, del dispositivo o dei dispositivi di backup creati tramite **sp_addumpdevice** da cui viene ripristinato il database. Se indicato in forma di variabile (**@***logical_backup_device_name_var*), il nome del dispositivo di backup può essere specificato come costante stringa (**@***logical_backup_device_name_var* = *logical_backup_device_name*) oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
- {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo (ad esempio percorso completo e nome di file) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Se indicato in forma di variabile (**@***phyal_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa (***@***physical_backup_device_name_var* = '*physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
+ {DISK | TAPE } **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* } Consente di ripristinare i backup dal dispositivo disco o nastro specificato. I tipi di dispositivo disco e nastro devono essere specificati con il nome effettivo (ad esempio percorso completo e nome di file) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Se indicato in forma di variabile (**@***phyal_backup_device_name_var*), il nome del dispositivo può essere specificato come costante stringa (***@***physical_backup_device_name_var* = '* physical_backup_device_name*') oppure come variabile con tipo di dati stringa di caratteri, ad eccezione dei tipi di dati **ntext** o **text**.  
   
  Se si utilizza un server di rete avente un nome UNC (che deve contenere il nome del server), specificare un dispositivo disco. Per altre informazioni su come usare i nomi UNC, vedere [Dispositivi di backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -354,7 +354,7 @@ FILE **=**{ *backup_set_file_number* | **@***backup_set_file_number* }
   
  Specifica il numero totale di buffer di I/O da utilizzare per l'operazione di ripristino. È possibile specificare qualsiasi numero intero positivo. Un numero elevato di buffer può tuttavia causare errori di memoria insufficiente dovuti a spazio degli indirizzi virtuali non adeguato nel processo Sqlservr.exe.  
   
- Lo spazio totale usato dai buffer viene determinato da *buffercount***\****maxtransfersize*.  
+ Lo spazio totale usato dai buffer viene determinato da *buffercount***\**** maxtransfersize*.  
   
  MAXTRANSFERSIZE **=** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  **Supportato da:** [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
@@ -511,7 +511,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
   
  Per altre informazioni, vedere [Ripristino di un database di SQL Server fino a un punto specifico all'interno di un backup &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- STOPATMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPATMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Specifica il recupero fino a un punto di recupero specificato. La transazione specificata viene inclusa nel recupero. Il commit della transazione viene eseguito solo se è stato eseguito al momento della generazione effettiva della transazione.  
   
  Sia RESTORE DATABASE che RESTORE LOG supportano il parametro *lsn_number*. che specifica un numero di sequenza del file di log (LSN).  
@@ -525,7 +525,7 @@ Quando si configura la replica per l'uso del log shipping, è consigliabile usar
   
  Per altre informazioni, vedere [Usare transazioni contrassegnate per recuperare coerentemente i database correlati &#40;modello di recupero con registrazione completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) e [Recupero fino a un numero di sequenza del file di log &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK **=** { **'***mark_name***'** | **'**lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
+ STOPBEFOREMARK **=** { **'***mark_name***'** | **'** lsn:*lsn_number***'** } [ AFTER **'***datetime***'** ]  
  Specifica il recupero fino a un punto di recupero specificato. La transazione specificata non viene inclusa nel recupero. Il rollback della transazione viene eseguito quando si utilizza WITH RECOVERY.  
   
  Sia RESTORE DATABASE che RESTORE LOG supportano il parametro *lsn_number*. che specifica un numero di sequenza del file di log (LSN).  

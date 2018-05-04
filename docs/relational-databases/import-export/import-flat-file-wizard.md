@@ -1,16 +1,16 @@
 ---
 title: Importare file flat in SQL | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.swb.importflatfile.f1
@@ -18,11 +18,12 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: c018165f4e64605efc0b22b6fa2a3f566787453b
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Procedura guidata per l'importazione di file flat in SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ Per comprendere meglio il miglioramento dell'esperienza utente della procedura g
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
-## <a name="prerequisites"></a>Prerequisiti
+## <a name="prerequisites"></a>Prerequisites
 Questa funzionalità è disponibile solo in SQL Server Management Studio (SSMS) v17.3 o versioni successive. Verificare che sia in uso la versione più recente. La versione più recente è disponibile [qui](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
  
 ## <a id="started"></a>Introduzione
@@ -51,7 +52,7 @@ Per accedere alla procedura guidata per l'importazione di file flat, procedere c
 
 ![Menu della procedura guidata](media/import-flat-file-wizard/importffmenu.png)
 
-Per altre informazioni sulle diverse funzioni della procedura guidata, vedere l'esercitazione seguente.
+Per altre informazioni sulle diverse funzioni della procedura guidata, vedere l'esercitazione seguente:
 
 ## <a name="tutorial"></a>Esercitazione
 Ai fini di questa esercitazione, è possibile usare il proprio file flat. In caso contrario, servirsi del file CSV seguente da Excel, che può essere copiato liberamente. Se si usa questo CSV, denominarlo **esempio.csv** e salvarlo con l'estensione csv in un percorso semplice come ad esempio il desktop.
@@ -94,10 +95,15 @@ Questa pagina indica se l'importazione è riuscita. Se viene visualizzato un seg
 
 ![Risultati della procedura guidata](media/import-flat-file-wizard/importffresults.png)
 
+## <a name="reporting-import-flat-file-failures"></a>Segnalazione di errori di importazione di file flat
+In caso di errori, inviare un messaggio di posta elettronica a sqltoolsprosesupport@microsoft.com
+
+Per altre informazioni, [vedere queste istruzioni](reporting-import-flat-file-failures.md).
+
 ## <a name="learn-more"></a>Ulteriori informazioni
 
 Altre informazioni sulla procedura guidata.
-
+ 
 - **Altre informazioni sull'importazione di altre origini**. Se si sta cercando di importare più file flat, vedere la pagina relativa all'[Importazione/Esportazione guidata SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Altre informazioni su come connettersi alle origini dei file flat**. Se sono necessarie altre informazioni sulla connessione alle origini dei file flat, vedere [Connettersi a un'origine dati file flat](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Altre informazioni su PROSE**. Se si sta cercando una panoramica del framework intelligente usato da questa procedura guidata, vedere la pagina relativa all'[SDK PROSE](https://microsoft.github.io/prose/).

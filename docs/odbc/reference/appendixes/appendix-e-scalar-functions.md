@@ -3,15 +3,12 @@ title: 'Appendice e: funzioni scalari | Documenti Microsoft'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL-92 functions [ODBC]
 - scalar functions [ODBC]
@@ -21,12 +18,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4ee9e2ab75f22ae3090d87d5c232f88423df9360
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: acaab68fab32c25ab101f65ccd196abe7ebceef2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="appendix-e-scalar-functions"></a>Appendice e: funzioni scalari
 ODBC specifica i tipi seguenti di funzioni scalari, con informazioni dettagliate su ognuno di questi tipi di funzione forniti nelle sezioni corrispondenti di questa appendice. Descrizioni delle funzioni includono sintassi associata.  

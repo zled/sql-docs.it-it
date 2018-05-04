@@ -1,11 +1,9 @@
 ---
 title: Che cos'è un blocco? | Microsoft Docs
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 7a19bfeb08976eb1922123b81972f398cb261be4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 97d36e1fdfa054de01862d8978c8efdae8cadb86
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-a-lock"></a>Che cos'è un blocco?
 Il blocco è il processo mediante il quale un DBMS limita l'accesso a una riga in un ambiente multiutente. Quando una riga o colonna è bloccata in modo esclusivo, altri utenti non sono consentiti per accedere ai dati bloccati finché il blocco viene rilasciato. In questo modo si garantisce che due utenti non è possibile aggiornare contemporaneamente la stessa colonna in una riga.  

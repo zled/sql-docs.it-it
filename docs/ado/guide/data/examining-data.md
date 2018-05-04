@@ -1,11 +1,9 @@
 ---
 title: Analisi dei dati | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,12 +20,11 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 963b6846aeb4622bda9383046424620f695ac9dc
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: af64d26a296d53c94fa5ac99496ef591c8180d81
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="examining-data"></a>Analisi dei dati
 Il [acquisizione dei dati](../../../ado/guide/data/getting-data.md) sezione viene spiegato come recuperare dati da un'origine dati come uno o più **Recordset** oggetti. In questa sezione verrà illustrate **Recordset** in modo più dettagliato, ad esempio come spostarsi tra le **Recordset** e visualizzarne i dati.  

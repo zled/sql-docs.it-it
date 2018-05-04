@@ -1,11 +1,9 @@
 ---
 title: Gestione degli aggiornamenti non riusciti | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: a3ca859e2e8d7a4948a1fb38567500c44daff4ba
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 1cd4088f20c949cd3a732b43cd5d9312c04387ef
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dealing-with-failed-updates"></a>Gestione degli aggiornamenti non riusciti
 Quando un aggiornamento si conclude con errori, come si risolve gli errori dipende la natura e il livello di gravità degli errori e la logica dell'applicazione. Tuttavia, se il database è condiviso con altri utenti, è un tipico errore che un altro utente modifica il campo prima di procedere. Questo tipo di errore viene chiamato un conflitto. ADO rileva questa condizione e segnala un errore.  

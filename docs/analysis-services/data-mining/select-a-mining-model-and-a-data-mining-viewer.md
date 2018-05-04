@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
@@ -18,15 +17,15 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 66c80a12bb03635d48078f5be284e6718dc33e9e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: eceb95bd030b67f7bf09403d0c09af49bbcd3249
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Selezionare un modello di data mining e un visualizzatore data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile esplorare un modello di data mining utilizzando uno dei visualizzatori disponibili nella **visualizzatore modello di Data Mining** scheda Progettazione modelli di Data Mining. È facile passare tra i modelli o modificare il visualizzatore utilizzato.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  È possibile esplorare il contenuto di un modello di data mining usando uno dei visualizzatori disponibili nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining. È facile passare tra i modelli o modificare il visualizzatore utilizzato.  
   
 -   L'elenco a discesa **Modello di data mining** nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contiene un elenco di tutti i modelli di data mining presenti nella struttura di data mining corrente.  
   
@@ -47,6 +46,6 @@ ms.lasthandoff: 01/08/2018
  Il modello di data mining selezionato verrà aperto nel visualizzatore fornito per il tipo di modello.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Attività e procedure relative al visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Procedure dettagliate e attività del visualizzatore modello di data mining](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

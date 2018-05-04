@@ -3,15 +3,12 @@ title: Funzioni API di livello, il Driver ODBC per Oracle, di base | Documenti M
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - functions [ODBC], ODBC driver for Oracle
 - ODBC driver for Oracle [ODBC], functions
@@ -22,12 +19,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 3b04102f149c96792f769a84535783c235832e2b
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 4135e192a2a97944ff455c72c76c136faaac4652
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funzioni API di livello principale (Driver ODBC per Oracle)
 > [!IMPORTANT]  
@@ -44,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 |**SQLCancel**|Annulla l'elaborazione su un handle di istruzione, hstmt. In alcuni casi, Oracle non consente l'annullamento di un'istruzione in esecuzione. Ciò significa che un'istruzione in esecuzione continua fino al Oracle completa il processo, nel qual caso i risultati dalle istruzioni vengono annullati dal Driver ODBC per Oracle.|  
 |**SQLColAttributes**|Restituisce informazioni sul descrittore per una colonna in un set di risultati. Informazioni del descrittore viene restituite come una stringa di caratteri, un dipendente dal descrittore di valore a 32 bit o un valore intero.|  
 |**SQLConnect**|Si connette a un'origine dati. Per utilizzare l'autenticazione del sistema operativo di Oracle, specificare "/" come il *szUID* parametro e "" come il *szAuthStr* parametro.|  
-|**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.  |  
+|**SQLDescribeCol**|Restituisce il nome, tipo, precisione, scala e supporto di valori null della colonna di risultati specificato. **Nota:****SQLDescribeCol** riporta le colonne calcolate come SQL_VARCHAR.|  
 |**SQLDisconnect**|Chiude una connessione. Se il pool di connessioni è abilitato per un ambiente condiviso e un'applicazione chiama **SQLDisconnect** su una connessione in tale ambiente, la connessione viene restituita al pool di connessioni ed è ancora disponibile per altri componenti utilizzando lo stesso ambiente condiviso.|  
 |**SQLError**|Restituisce le informazioni di stato o di errore sull'ultimo errore. Il driver gestisce un stack o un elenco di errori che possono essere restituite per il *hstmt*, *hdbc*, e *henv* argomenti, a seconda di come la chiamata a **SQLError**  viene eseguita. La coda di errore viene svuotata dopo ogni istruzione. In genere recupera un messaggio di errore Oracle e in caso contrario è vuoto.|  
 |**SQLExecDirect**|Esegue un'istruzione SQL nuovo, non preparata. Il driver utilizza i valori correnti delle variabili di marcatore di parametro, se sono presenti parametri nell'istruzione. La tabella, vista o i nomi dei campi contengono spazi, racchiudere i nomi di backup offerta contrassegni. Ad esempio, se il database contiene una tabella denominata *tabella personale* e il campo *My Field*, racchiudere ogni elemento dell'identificatore in questo modo:<br /><br /> Selezionare \`tabella\`. \`My Field1\`, \`Della tabella\`.\` My Field2\` FROM \`la tabella '|  

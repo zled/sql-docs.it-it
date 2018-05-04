@@ -1,33 +1,31 @@
 ---
 title: Elemento AssociationSet (CSDLBI) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 93e5ac4d-d7e8-490e-b775-28263a48cfcc
-caps.latest.revision: 
+caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 91bb1eaf83d6de450d90c873b899467559cba451
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Elemento AssociationSet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-L'elemento **AssociationSet** è un tipo complesso che definisce un'associazione. Nei modelli di dati CSDLBI, un'associazione è una relazione tra due tabelle.  
+  L'elemento **AssociationSet** è un tipo complesso che definisce un'associazione. Nei modelli di dati CSDLBI, un'associazione è una relazione tra due tabelle.  
   
  Per ogni relazione univoca in un modello, è necessario specificare un elemento **AssociationSet**. Per definire gli endpoint, **AssociationSet** usa l'elemento **Association**. L'elemento **AssociationSet** definisce inoltre i metadati sulla relazione e sul relativo utilizzo nel modello di dati.  
   
@@ -46,7 +44,7 @@ L'elemento **AssociationSet** è un tipo complesso che definisce un'associazione
   
  Nella tabella seguente vengono elencati i valori dell'elemento **State**.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Attiva|L'associazione è attiva.|  
 |Inactive|L'associazione è attiva.|  

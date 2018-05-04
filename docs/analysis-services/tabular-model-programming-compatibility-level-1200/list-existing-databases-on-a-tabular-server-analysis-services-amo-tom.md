@@ -1,30 +1,29 @@
 ---
 title: Elenco dei database esistenti in un server tabulare (Analysis Services AMO-TOM) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: ab5eb4b8-6254-442d-a42e-2372c346d260
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3864da736ccdeca7ffa9d6c024748e5cd60b7a5a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5386b96d66de38d29909eb4fbf5fb3498c01daec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="list-existing-databases-on-a-tabular-server-analysis-services-amo-tom"></a>Elenco dei database esistenti in un server tabulare (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Quando si dispone di un **Server** oggetto che è connesso a un'istanza di Analysis Services, è possibile scorrere **Server.Databases** insieme per elencare tutti i database ospitati dall'istanza di servizi di analisi. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Quando si dispone di un **Server** oggetto che è connesso a un'istanza di Analysis Services, è possibile scorrere **Server.Databases** insieme per elencare tutti i database ospitati dall'istanza di servizi di analisi. 
 
 Il **Server.Databases** raccolta contiene un **Database** oggetto per ogni database ospitato nel server, indipendentemente dalla modalità del server (multidimensionale o tabulare) o il tipo di database (multidimensionale, Pre-modello tabulare 1200 o tabulare 1200 e versioni successive). 
 

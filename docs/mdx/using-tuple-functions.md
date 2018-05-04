@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 23
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 23af14ed67fb78fc24873528dddf4b67197f4be0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 50d014de5f5f99102014beef044cb34a3b3dc139
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-tuple-functions"></a>Utilizzo delle funzioni di tupla
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +32,7 @@ ms.lasthandoff: 01/08/2018
   
  Le funzioni di tupla, come le funzioni membro e le funzioni sui set, sono essenziali per la negoziazione delle strutture multidimensionali che si trovano in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- Esistono tre funzioni di tupla MDX, [corrente &#40; MDX &#41; ](../mdx/current-mdx.md), [Elemento &#40; Tupla &#41; &#40; MDX &#41; ](../mdx/item-tuple-mdx.md) e [StrToTuple &#40; MDX &#41; ](../mdx/strtotuple-mdx.md). Nell'esempio di query seguente viene illustrato l'utilizzo di ciascuna di queste funzioni:  
+ Esistono tre funzioni di tupla in MDX [corrente &#40;MDX&#41;](../mdx/current-mdx.md), [elemento &#40;tupla&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) e [StrToTuple &#40;&#41;](../mdx/strtotuple-mdx.md). Nell'esempio di query seguente viene illustrato l'utilizzo di ciascuna di queste funzioni:  
   
  `WITH`  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/08/2018
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzioni &#40; La sintassi MDX &#41;](../mdx/functions-mdx-syntax.md)   
+ [Le funzioni &#40;sintassi MDX&#41;](../mdx/functions-mdx-syntax.md)   
  [Utilizzo delle funzioni membro](../mdx/using-member-functions.md)   
  [Uso delle funzioni sui set](../mdx/using-set-functions.md)  
   

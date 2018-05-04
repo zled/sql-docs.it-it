@@ -1,15 +1,14 @@
 ---
 title: Istruzione UPDATE MEMBER (MDX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - UPDATE_MEMBER
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - calculated members [MDX]
 - UPDATE MEMBER statement
 ms.assetid: 07ab708d-d165-4fb1-a9f9-fb8197ff0dab
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e126f34be1f1cecd1a793b71ff4b64069c1802c3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ce4205db398dd7a61d7d9def31dccdaf93d78672
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---update-member"></a>Definizione dei dati MDX - UPDATE MEMBER
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -84,8 +82,8 @@ UPDATE MEMBER Cube_Name.Member_Name
 |ASSOCIATED_MEASURE_GROUP|Il nome del gruppo di misure al quale questo membro è associato.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [DROP MEMBER-istruzione &#40; MDX &#41;](../mdx/mdx-data-definition-drop-member.md)   
- [CREARE l'istruzione MEMBER &#40; MDX &#41;](../mdx/mdx-data-definition-create-member.md)   
- [Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzione DROP membro &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
+ [CREARE l'istruzione MEMBER & #40; MDX & #41;](../mdx/mdx-data-definition-create-member.md)   
+ [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

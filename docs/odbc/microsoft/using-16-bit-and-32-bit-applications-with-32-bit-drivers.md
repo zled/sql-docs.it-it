@@ -3,15 +3,12 @@ title: Utilizzare le applicazioni a 16 Bit e a 32 Bit con driver a 32 Bit | Docu
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - ODBC drivers [ODBC], 16-bit applications
 - ODBC drivers [ODBC], 32-bit applications
@@ -22,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: eb1f002c566a419046b1bf726102f31c801f8529
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 97f4224967cd0c54b134d118533ed66f6043762c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Utilizzare le applicazioni a 16 Bit e a 32 Bit con driver a 32 Bit
 > [!IMPORTANT]  

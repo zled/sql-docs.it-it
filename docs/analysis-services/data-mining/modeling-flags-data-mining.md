@@ -1,16 +1,15 @@
 ---
 title: Flag di modellazione (Data Mining) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - attributes [data mining]
 - data types [data mining]
@@ -24,16 +23,15 @@ helpviewer_keywords:
 - MODEL_EXISTENCE_ONLY column
 - coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
-caps.latest.revision: 
+caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: 0d3a03026bc08535db7f2dc64ef9a7fda5844650
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Flag di modellazione (data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,13 +109,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Attività|Argomento|  
 |----------|-----------|  
-|Modificare i flag di modellazione tramite Progettazione modelli di data mining|[Visualizzare o modificare modello di Data Mining flag &#40; &#41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
+|Modificare i flag di modellazione tramite Progettazione modelli di data mining|[Visualizzare o modificare modello di Data Mining flag & #40; & #41;](../../analysis-services/data-mining/view-or-change-modeling-flags-data-mining.md)|  
 |Specificare un hint all'algoritmo per segnalare i probabili regressori|[Specificare una colonna da utilizzare come regressore in un modello](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Vedere i flag di modellazione supportati da algoritmi specifici nella sezione Flag di modellazione dell'argomento di riferimento per ogni algoritmo|[Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
 |Vengono fornite ulteriori informazioni sulle colonne della struttura di data mining e sulle proprietà che è possibile impostare su di esse|[Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)|  
 |Vengono fornite ulteriori informazioni sulle colonne del modello di data mining e sui flag di modellazione che è possibile applicare a livello del modello|[Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)|  
 |Vedere la sintassi per l'utilizzo dei flag di modellazione nelle istruzioni DMX|[Flag di modellazione &#40;DMX&#41;](../../dmx/modeling-flags-dmx.md)|  
-|Vengono illustrati i valori mancanti e la relativa modalità di utilizzo|[I valori mancanti &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
+|Vengono illustrati i valori mancanti e la relativa modalità di utilizzo|[I valori mancanti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)|  
 |Vengono fornite informazioni sulla gestione di modelli e strutture e sull'impostazione delle proprietà di utilizzo|[Spostamento di oggetti di data mining](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   

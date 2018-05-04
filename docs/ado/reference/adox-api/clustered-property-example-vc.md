@@ -1,11 +1,9 @@
 ---
 title: Esempio di proprietà (VC + +) in cluster | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 4190a747f371c5d5517d794a26011f651b9db92e
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 5c8fcc028770a7d2d2b0c64b1f9f0630c4679071
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustered-property-example-vc"></a>Esempio di proprietà Clustered (VC + +)
 Questo esempio viene illustrato il [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) proprietà di un [indice](../../../ado/reference/adox-api/index-object-adox.md). Si noti che i database Microsoft Jet non supporta gli indici cluster, pertanto in questo esempio restituirà **False** per il **Clustered** proprietà di tutti gli indici di *Northwind* database.  

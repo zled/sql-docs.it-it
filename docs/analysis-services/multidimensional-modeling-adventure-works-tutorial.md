@@ -1,15 +1,14 @@
 ---
 title: Modellazione multidimensionale (esercitazione di Adventure Works) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - tutorials [Analysis Services]
 - Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
-caps.latest.revision: 
+caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: af9371e71223eedc44b7b7ec8cbeb3ab20423da8
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: ec76d00ee0c2c63a65db9e1c96d8ba6764edcd63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Modellazione multidimensionale (esercitazione di AdventureWorks)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +64,7 @@ L'esercitazione include le lezioni seguenti.
 |[Lezione 4: Definizione di attributo avanzato e proprietà dimensione](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minuti|  
 |[Lezione 5: Definizione delle relazioni tra dimensioni e gruppi di misure](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minuti|  
 |[Lezione 6: Definizione di calcoli](../analysis-services/lesson-6-defining-calculations.md)|45 minuti|  
-|[Lezione 7: Definizione di indicatori di prestazioni chiave &#40; Gli indicatori KPI &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
+|[Lezione 7: Definizione di indicatori di prestazioni chiave & #40; Gli indicatori KPI & #41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)|30 minuti|  
 |[Lezione 8: Definizione di azioni](../analysis-services/lesson-8-defining-actions.md)|30 minuti|  
 |[Lezione 9: Definizione di prospettive e traduzioni](../analysis-services/lesson-9-defining-perspectives-and-translations.md)|30 minuti|  
 |[Lezione 10: Definizione dei ruoli amministrativi](../analysis-services/lesson-10-defining-administrative-roles.md)|15 minuti|  

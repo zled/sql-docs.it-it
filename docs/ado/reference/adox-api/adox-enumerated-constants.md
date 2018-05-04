@@ -1,11 +1,9 @@
 ---
 title: Costanti enumerate ADOX | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b622f8cda931a0c15c1ff97dbf33ffdb9a9441be
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 0ba95b08ddaa4a75a8243f6830b0f9ce9637d819
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="adox-enumerated-constants"></a>Costanti enumerate ADOX
 Per agevolare il debug, le costanti enumerate ADOX elenco un valore per ciascuna costante. Tuttavia, questo valore è puramente indicativo e può variare da una versione di ADOX a un altro. Il codice deve dipendere esclusivamente il nome, non il valore effettivo di costanti enumerate.  

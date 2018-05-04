@@ -1,36 +1,34 @@
 ---
-title: "Configurare le proprietà di modellazione e distribuzione dei dati predefinite | Documenti Microsoft"
-ms.custom: 
+title: Configurare le proprietà di modellazione e distribuzione dei dati predefinite | Documenti Microsoft
+ms.custom: ''
 ms.date: 02/21/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
 - sql13.asvs.bidtoolset.deployment.f1
 - sql13.asvs.bidtoolset.asoptions.f1
 - VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 95406a20ad71e7ed95d1d83b2a8cda44fbba3a8c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: 1d499f04939ed3db6d308ad5bbbd8fee893ba991
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-default-data-modeling-and-deployment-properties"></a>Configurare le proprietà di modellazione e distribuzione dei dati predefinite 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-In questo articolo viene descritto come configurare il livello di compatibilità predefinito, la distribuzione e impostazioni di proprietà del database dell'area di lavoro, possono essere predefinite per ogni nuovo modello tabulare di progetti è creano in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato un nuovo progetto, queste proprietà possono comunque essere modificate in base a requisiti specifici.  
+  In questo articolo viene descritto come configurare il livello di compatibilità predefinito, la distribuzione e impostazioni di proprietà del database dell'area di lavoro, possono essere predefinite per ogni nuovo modello tabulare di progetti è creano in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dopo aver creato un nuovo progetto, queste proprietà possono comunque essere modificate in base a requisiti specifici.  
   
 #### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>Per configurare l'impostazione della proprietà del livello di compatibilità predefinito per nuovi progetti di modello  
   

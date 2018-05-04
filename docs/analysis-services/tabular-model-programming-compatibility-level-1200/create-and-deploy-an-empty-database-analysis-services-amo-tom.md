@@ -1,30 +1,29 @@
 ---
 title: Creare e distribuire un database vuoto (Analysis Services AMO-TOM) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: dcb916e9-97c5-47e0-922a-404891423b2a
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9f2529d4f7cb3e4912b3d0b6d0ee0879c46d83ec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88d505db25d797d2224857bcf128efdcaadc8a63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-and-deploy-an-empty-database-analysis-services-amo-tom"></a>Creare e distribuire un database vuoto (Analysis Services AMO-TOM)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Uno scenario di programmazione comune per gli oggetti AMO TOM consiste nel generare modelli in tempo reale e database. Questo articolo illustra i passaggi della creazione di un database. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+Uno scenario di programmazione comune per gli oggetti AMO TOM consiste nel generare modelli in tempo reale e database. Questo articolo illustra i passaggi della creazione di un database. 
 
 Per le soluzioni tabulari, è disponibile una corrispondenza tra un database e un modello, con un modello per ogni database. È possibile specificare in genere uno o l'altro e il motore dedurrà oggetto mancante. 
 

@@ -1,30 +1,29 @@
 ---
 title: Oggetto del modello (TMSL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dadb4807613b23449fd87dfea35acc0d6d201615
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4bbc2865e6a6bd46f7111cc8c9656909e5855069
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="model-object-tmsl"></a>Oggetto del modello (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce un modello tabulare. È disponibile un modello per ogni database e un solo database che può essere specificato in qualsiasi comando specificato. Un oggetto di Database è l'oggetto padre.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definisce un modello tabulare. È disponibile un modello per ogni database e un solo database che può essere specificato in qualsiasi comando specificato. Un oggetto di Database è l'oggetto padre.  
   
  Le definizioni di modello sono troppo grandi per riprodurre la sintassi intera in un argomento. Per questo motivo, una le parti principali di evidenziazione della sintassi parziale può trovarsi sotto, con collegamenti agli oggetti figlio.  
   
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 > Analogamente, è possibile lasciare il modello, impostandone le proprietà nel Database.  
   
 ## <a name="object-definition"></a>Definizione dell'oggetto  
- Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Modello** gli oggetti dispongono anche le proprietà seguenti.  
+ Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Modello** oggetti hanno anche le proprietà seguenti.  
   
  storageLocation  
  Percorso su disco in cui inserire il modello.  
@@ -53,24 +52,24 @@ ms.lasthandoff: 01/08/2018
  La sequenza di regole di confronto. Vedere [scenari di globalizzazione per Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) per ulteriori informazioni.  
   
  tables  
- L'insieme completo di tabelle del modello, incluse le partizioni, colonne, misure, indicatori KPI e annotazioni. Vedere [tabelle oggetto &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) per informazioni dettagliate.  
+ L'insieme completo di tabelle del modello, incluse le partizioni, colonne, misure, indicatori KPI e annotazioni. Vedere [oggetto tabelle &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) per informazioni dettagliate.  
   
  relazioni  
- Specifica la relazione tra ogni coppia di tabelle, incluse le proprietà che impostano la direzione del filtro e sicurezza. Vedere [oggetto relazioni &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) per informazioni dettagliate.  
+ Specifica la relazione tra ogni coppia di tabelle, incluse le proprietà che impostano la direzione del filtro e sicurezza. Vedere [oggetto relazioni &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/relationships-object-tmsl.md) per informazioni dettagliate.  
   
  origini dati  
- Una o più connessioni a database esterni che forniscono dati al modello o utilizzato per passano attraverso le query. Vedere [origini dati oggetto &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) per informazioni dettagliate.  
+ Una o più connessioni a database esterni che forniscono dati al modello o utilizzato per passano attraverso le query. Vedere [origini dati oggetto &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md) per informazioni dettagliate.  
   
  ruoli  
  Oggetti associati a un database l'autorizzazione, gli account dei membri e, facoltativamente, i filtri di sicurezza in DAX per il controllo di accesso personalizzati.  
   
 ## <a name="usage"></a>Utilizzo  
- **Modello** gli oggetti contengono un intero modello. È necessario specificare un modello e/o il relativo oggetto di Database padre nella maggior parte dei comandi.  
+ **Modello** oggetti contengono un modello intero. È necessario specificare un modello e/o il relativo oggetto di Database padre nella maggior parte dei comandi.  
   
  Durante la creazione, la sostituzione o modifica di un oggetto modello, specificare tutte le proprietà di sola lettura della definizione dell'oggetto. Omissione di una proprietà di lettura / scrittura è considerata un'operazione di eliminazione.  
   
 ## <a name="partial-syntax"></a>Sintassi parziale  
- Poiché questa definizione di oggetto è elevata, sono elencate solo le proprietà di primo livello. Vedere [le definizioni degli oggetti nella tabella del modello Scripting Language &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) per un elenco di oggetti figlio.  
+ Poiché questa definizione di oggetto è elevata, sono elencate solo le proprietà di primo livello. Vedere [le definizioni degli oggetti in Tabular Model Scripting Language &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-objects/tmsl-reference-tabular-objects.md) per un elenco di oggetti figlio.  
   
 ```  
     "model": {  

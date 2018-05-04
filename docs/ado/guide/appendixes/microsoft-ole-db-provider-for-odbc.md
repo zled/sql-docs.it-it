@@ -1,11 +1,9 @@
 ---
 title: Provider Microsoft OLE DB per ODBC | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,12 +18,11 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: a05ee69c7b22365dd6acbbaf6ff15d078279c5ee
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o RDS, un mondo ideale sarebbe uno in cui ogni tipo di dati origine espone un'interfaccia OLE DB, in modo che ADO è possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database siano implementando le interfacce OLE DB, alcune origini dati non sono ancora esposte in questo modo. Tuttavia, è possano accedere la maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
@@ -71,7 +68,7 @@ MSDASQL
 
  Il provider non supporta parametri di connessione specifici oltre a quelli definiti da ADO. Tuttavia, il provider passerà eventuali parametri di connessione non ADO a Gestione driver ODBC.
 
- Poiché è possibile omettere il **Provider** parametro, pertanto è possibile comporre una stringa di connessione ADO è identica alla stringa di connessione ODBC per la stessa origine dati. Utilizzare gli stessi nomi di parametro (**DRIVER =**, **DATABASE =**, **DSN =**e così via), i valori e la stessa sintassi è valida per la composizione di una stringa di connessione ODBC. È possibile connettersi con o senza un nome di origine di dati predefiniti (DSN) o FileDSN.
+ Poiché è possibile omettere il **Provider** parametro, pertanto è possibile comporre una stringa di connessione ADO è identica alla stringa di connessione ODBC per la stessa origine dati. Utilizzare gli stessi nomi di parametro (**DRIVER =**, **DATABASE =**, **DSN =** e così via), i valori e la stessa sintassi è valida per la composizione di una stringa di connessione ODBC. È possibile connettersi con o senza un nome di origine di dati predefiniti (DSN) o FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintassi con un DSN o FileDSN:
 

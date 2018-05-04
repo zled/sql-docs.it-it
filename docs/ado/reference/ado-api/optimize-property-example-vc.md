@@ -1,11 +1,9 @@
 ---
 title: Ottimizzare l'esempio di proprietà (VC + +) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,12 +19,11 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: e4cceefba08de84b95e7563daeddb32a6c6ecc8d
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: dd78e57693ccd87cd04bb389a119f7a274d2b1e5
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="optimize-property-example-vc"></a>Ottimizzare l'esempio di proprietà (VC + +)
 Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) oggetto dinamico **Ottimizza** proprietà. Il **zip** campo il **autori** tabella il **Pubs** database non è indicizzato. Impostazione di [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul **zip** campo autorizza ADO a creare un indice che migliora le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  

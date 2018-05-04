@@ -1,29 +1,27 @@
 ---
-title: 'Lezione 1: Definizione di una vista origine dati all''interno di un''analisi di progetto di servizi | Documenti Microsoft'
-ms.custom: 
+title: "Lezione 1: Definizione di una vista origine dati all'interno di un'analisi di progetto di servizi | Documenti Microsoft"
+ms.custom: ''
 ms.date: 02/13/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: 
+caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 840d9f3ad39c2c3488833bdbba3f38e9998fc0b2
-ms.sourcegitcommit: 4edac878b4751efa57601fe263c6b787b391bc7c
+ms.openlocfilehash: b841b55ed660f8cce57db10f3d0f537a535f9886
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lezione 1: Definizione di una vista origine dati in un progetto di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,5 +49,5 @@ In questa attività, modificare i nomi delle tabelle nella vista origine dati, i
 ## <a name="see-also"></a>Vedere anche  
 [Viste origine dati nei modelli multidimensionali](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
 
-[Modellazione multidimensionale &#40; Esercitazione di AdventureWorks &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
+[Modellazione multidimensionale & #40; Esercitazione di AdventureWorks & #41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
   

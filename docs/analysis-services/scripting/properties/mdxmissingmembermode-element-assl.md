@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,15 +24,15 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 02ede17b0011ed3eceecf35feaa93fc42c55da3c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7bb8564f9951ca06578430b98b9df28ef8fcf283
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdxmissingmembermode-element-assl"></a>Elemento MdxMissingMemberMode (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Determina i membri mancanti come vengono gestiti per le istruzioni MDX (Multidimensional Expressions).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Determina la modalità di gestione dei membri mancanti per le istruzioni MDX (Multidimensional Expressions).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|*Valore predefinito*|  
@@ -58,13 +57,13 @@ ms.lasthandoff: 01/08/2018
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[Dimension](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
-|Elementi figlio|None|  
+|Elemento padre|[Dimensione](../../../analysis-services/scripting/data-type/dimension-data-type-assl.md)|  
+|Elementi figlio|Nessuno|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*Ignorare*|I membri mancanti vengono ignorati.|  
 |*Errore*|Viene generato un errore se vengono rilevati membri mancanti.|  
@@ -73,7 +72,7 @@ ms.lasthandoff: 01/08/2018
  L'elemento che corrisponde all'elemento padre **MdxMissingMemberMode** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Dimension>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressioni MDX &#40; MDX &#41; Riferimento](../../../mdx/multidimensional-expressions-mdx-reference.md)   
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Espressioni MDX & #40; MDX & #41; Riferimento](../../../mdx/multidimensional-expressions-mdx-reference.md)   
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

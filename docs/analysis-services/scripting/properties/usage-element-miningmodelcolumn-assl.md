@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -27,15 +26,15 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a0e49b1156817f720b0c7db3205a8d1697ae6b8f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 644fd56a11284ffddba388d0d9c1757d99af4512
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="usage-element-miningmodelcolumn-assl"></a>Elemento Usage (MiningModelColumn) (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Viene descritto come la colonna associata nel padre [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) viene utilizzato.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Viene descritto come la colonna associata nel padre [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) viene utilizzato.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -50,10 +49,10 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
-|Valore predefinito|None|  
+|Valore predefinito|Nessuno|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -61,22 +60,22 @@ ms.lasthandoff: 01/08/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elemento padre|[MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md)|  
-|Elementi figlio|None|  
+|Elementi figlio|Nessuno|  
   
 ## <a name="remarks"></a>Osservazioni  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|valore|Description|  
+|Valore|Description|  
 |-----------|-----------------|  
 |*Key*|La colonna è una colonna chiave.|  
 |*Input*|La colonna è una colonna di input.|  
 |*Predict*|La colonna è una colonna di stima.|  
 |*PredictOnly*|La colonna è solo una colonna di stima.|  
-|*Nessuno*|La colonna non viene utilizzata dal modello.<br /><br /> **\*\*Avviso \* \***  quando il valore di utilizzo è "None", Analysis Services non invia alcun valore per il server per impostazione predefinita; pertanto, l'attributo Usage non è incluso nella richiesta/risposta.|  
+|*Nessuno*|La colonna non viene utilizzata dal modello.<br /><br /> **\*\* Avviso \* \***  quando il valore di utilizzo è "None", Analysis Services non invia alcun valore per il server per impostazione predefinita; pertanto, l'attributo Usage non è incluso nella richiesta/risposta.|  
   
  L'enumerazione che corrisponde ai valori consentiti per **utilizzo** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MiningModelColumnUsages>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Proprietà &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
+ [Proprietà & #40; ASSL & #41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   

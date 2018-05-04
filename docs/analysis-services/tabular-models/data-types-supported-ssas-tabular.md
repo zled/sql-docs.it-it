@@ -1,31 +1,29 @@
 ---
 title: Tipi di dati supportati nei modelli tabulari di Analysis Services | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 02/22/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
-caps.latest.revision: 
+caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 79cb9eb46d0561ab6dd94ba6e001b97fe3ae801f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: e6abf28f71db46d89ee33a91d92940d2c8f8aa90
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipi di dati supportati nei modelli tabulari
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-In questo articolo vengono descritti i tipi di dati che possono essere utilizzati nei modelli tabulari e viene illustrata la conversione implicita dei tipi di dati quando i dati vengono calcolati o utilizzati in una formula DAX (Data Analysis Expressions).  
+  In questo articolo vengono descritti i tipi di dati che possono essere utilizzati nei modelli tabulari e viene illustrata la conversione implicita dei tipi di dati quando i dati vengono calcolati o utilizzati in una formula DAX (Data Analysis Expressions).  
 
   
 ##  <a name="bkmk_data_types"></a> Tipi di dati utilizzati nei modelli tabulari  
@@ -54,7 +52,7 @@ Quando si importano i dati o si utilizza un valore in una formula, anche se nell
   
 ||  
 |-|  
-|Valore|  
+|Value|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  

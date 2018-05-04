@@ -3,15 +3,12 @@ title: Esecuzione di query e aggiornamento dei dati di Visual FoxPro da Microsof
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - querying Visual FoxPro data [ODBC]
 - FoxPro ODBC driver [ODBC], Access
@@ -24,12 +21,11 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c146461739eaac399dad54f02397858dbc6abae9
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 6704fb70b7c8764e0299c7334aa384410c45a0a7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Esecuzione di query e aggiornamento dei dati di Visual FoxPro da Microsoft Access
 È possibile eseguire una query e aggiornare i dati archiviati in un database di Visual FoxPro da un database Microsoft Access utilizzando l'opzione di tabella di collegamento.  

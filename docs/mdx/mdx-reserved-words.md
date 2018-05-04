@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 22201d4c387a5f76d2ec66066d8bdd767a036fc2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6146638812b42553aceee2819d9ceb6d86cd898f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-reserved-words"></a>Parole riservate MDX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +52,7 @@ ms.lasthandoff: 01/08/2018
 |BASC|DROP|MEMBERTOSTR|STRTOVAL|  
 |BDESC|EMPTY|MIN|STRTOVALUE|  
 |BEFORE|END|MTD|SUBSET|  
-|BEFORE_AND_AFTER|error|NAME|SUM|  
+|BEFORE_AND_AFTER|ERROR|NAME|SUM|  
 |BOTTOMCOUNT|EXCEPT|NAMETOSET|TAIL|  
 |BOTTOMPERCENT|EXCLUDEEMPTY|NEST|THIS|  
 |BOTTOMSUM|EXTRACT|NEXTMEMBER|TOGGLEDRILLSTATE|  
@@ -66,7 +64,7 @@ ms.lasthandoff: 01/08/2018
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|o|UNION|  
+|CELL|GLOBAL|OPPURE|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  
@@ -76,9 +74,9 @@ ms.lasthandoff: 01/08/2018
 |COLUMN|IGNORE|PREDICT|USE_WEIGHTED_INCREMENT|  
 |COLUMNS|IIF|PREVMEMBER|USERNAME|  
 |CORRELATION|INCLUDEEMPTY|PROPERTIES|VALIDMEASURE|  
-|COUNT|INDEX|PROPERTY|Value|  
+|COUNT|INDEX|PROPERTY|VALUE|  
 |COUSIN|INTERSECT|QTD|VAR|  
-|COVARIANCE|IS|RANK|variance|  
+|COVARIANCE|IS|RANK|VARIANCE|  
 |COVARIANCEN|ISANCESTOR|RECURSIVE|VARIANCEP|  
 |CREATE|ISEMPTY|RELATIVE|VARP|  
 |CREATEPROPERTYSET|ISGENERATION|ROLLUPCHILDREN|VISUAL|  
@@ -92,7 +90,7 @@ ms.lasthandoff: 01/08/2018
 |DEFAULTMEMBER|LEAD|SELF_AND_BEFORE||  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parole chiave riservate &#40; La sintassi MDX &#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [Riferimenti al linguaggio MDX &#40; MDX &#41;](../mdx/mdx-language-reference-mdx.md)  
+ [Parole chiave riservate &#40;sintassi MDX&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
+ [Riferimenti al linguaggio MDX & #40; MDX & #41;](../mdx/mdx-language-reference-mdx.md)  
   
   

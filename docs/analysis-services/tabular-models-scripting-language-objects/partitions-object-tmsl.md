@@ -1,35 +1,34 @@
 ---
 title: Oggetto di partizioni (TMSL) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 05/30/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: df1da0d2-d824-42ba-b9dc-47fbd8edc10f
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 756101dba74f227c295b61a7f8a640f78055b037
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 782b480475e9174f21121b43fbba46660ba4ace1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-object-tmsl"></a>Oggetto di partizioni (TMSL)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Definisce una partizione o logica, nella segmentazione del set di righe di tabella. Una partizione è costituito da una query SQL utilizzata per l'importazione di dati, dati di esempio nell'ambiente di modellazione, o come una query di dati completo per pass-through l'esecuzione di query tramite DirectQuery.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Definisce una partizione o logica, nella segmentazione del set di righe di tabella. Una partizione è costituito da una query SQL utilizzata per l'importazione di dati, dati di esempio nell'ambiente di modellazione, o come una query di dati completo per pass-through l'esecuzione di query tramite DirectQuery.  
   
  Come può essere recuperati i dati per la tabella è determinata dalle proprietà della partizione.  Nella gerarchia di oggetti, l'oggetto padre di una partizione è un oggetto table.  
   
 ## <a name="object-definition"></a>Definizione dell'oggetto  
- Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Partizione** gli oggetti dispongono anche le proprietà seguenti.  
+ Tutti gli oggetti hanno un set comune di proprietà, inclusi nome, tipo, descrizione, una raccolta di proprietà e le annotazioni. **Partizione** oggetti hanno anche le proprietà seguenti.  
   
  Tipo  
  Il tipo di partizione. I valori validi sono di tipo numerici e includono quanto segue:  
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |-|-|  
 |**Importa**|Indica a query, le richieste vengono eseguite il motore in memoria analitica l'archiviazione dei dati importati.|  
 |**DirectQuery**|Pass-through l'esecuzione di query a un database relazionale esterno. La modalità DirectQuery utilizza partizioni per fornire dati di esempio utilizzati durante la progettazione del modello. Se distribuiti in un server di produzione, è necessario passare alla visualizzazione di dati completo. Tenere presente che la modalità DirectQuery richiede una partizione per ogni tabella e un'origine dati per ogni modello.|  
-|**impostazione predefinita**|Impostare se si desidera cambiare la modalità più in alto l'albero degli oggetti, a livello di modello o un database. Quando si sceglie l'impostazione predefinita, la modalità query sarà import o DirectQuery.|  
+|**default**|Impostare se si desidera cambiare la modalità più in alto l'albero degli oggetti, a livello di modello o un database. Quando si sceglie l'impostazione predefinita, la modalità query sarà import o DirectQuery.|  
   
  origine  
  Identifica la posizione dei dati da recuperare. I valori validi sono **query, calcolato**, o **Nessuno**. Questo valore è obbligatorio.  
@@ -55,19 +54,19 @@ ms.lasthandoff: 01/08/2018
 |||  
 |-|-|  
 |**Nessuno**|Utilizzato per la modalità di importazione, in cui i dati vengono caricati e archiviati in memoria.|  
-|**query**|Per la modalità DirectQuery, si tratta di una query SQL eseguita nel database relazionale specificato con il modello **DataSource**. Vedere [origini dati oggetto &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
-|**calcolata**|Le tabelle calcolate vengono originate da un'espressione specificata quando viene creata la tabella. Questa espressione viene considerata l'origine della partizione creata per la tabella calcolata.|  
+|**query**|Per la modalità DirectQuery, si tratta di una query SQL eseguita nel database relazionale specificato con il modello **DataSource**. Vedere [origini dati oggetto &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-objects/datasources-object-tmsl.md).|  
+|**Calcolata**|Le tabelle calcolate vengono originate da un'espressione specificata quando viene creata la tabella. Questa espressione viene considerata l'origine della partizione creata per la tabella calcolata.|  
   
  DataView  
  Per le partizioni DirectQuery, una proprietà aggiuntive dataView ulteriormente specifica se la query che recupera i dati è un campione o set di dati completo. I valori validi sono **completo**, **esempio**, o **predefinito** (ereditato). Come già indicato, esempi vengono utilizzati solo durante il test e modellazione di dati. Vedere [aggiungere dati di esempio per un modello DirectQuery in modalità progettazione](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) per ulteriori informazioni.  
   
 ## <a name="usage"></a>Utilizzo  
- Gli oggetti partizione vengono utilizzati [Alter comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [Creare comandi &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [CreateOrReplace comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Eliminare comandi &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [Aggiornare comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), e [MergePartitions comando &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
+ Vengono utilizzati oggetti partizione [Alter-comando &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/alter-command-tmsl.md), [creare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/create-command-tmsl.md), [comando CreateOrReplace &#40;TMSL&#41; ](../../analysis-services/tabular-models-scripting-language-commands/createorreplace-command-tmsl.md), [Eliminare comandi &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/delete-command-tmsl.md), [comando Refresh &#40;TMSL&#41;](../../analysis-services/tabular-models-scripting-language-commands/refresh-command-tmsl.md), e [comando MergePartitions &#40;&#41;](../../analysis-services/tabular-models-scripting-language-commands/mergepartitions-command-tmsl.md).  
   
  Durante la creazione, la sostituzione o modifica di un oggetto partizione, specificare tutte le proprietà di sola lettura della definizione dell'oggetto. Omissione di una proprietà di lettura / scrittura è considerata un'operazione di eliminazione. Proprietà di lettura / scrittura includono nome, descrizione, la modalità e origine.  
   
 ## <a name="examples"></a>Esempi  
- **Esempio 1** -una struttura semplice partizione di una tabella (non una tabella dei fatti).  
+ **Esempio 1** -una struttura di partizione semplice di una tabella (non una tabella dei fatti).  
   
 ```  
 "partitions": [  
