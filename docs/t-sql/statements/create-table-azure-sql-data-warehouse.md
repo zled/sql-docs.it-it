@@ -1,30 +1,31 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/14/2017
-ms.prod: 
+ms.prod: ''
 ms.prod_service: sql-data-warehouse, pdw
-ms.reviewer: 
+ms.reviewer: ''
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: 
+caps.latest.revision: 59
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
+ms.openlocfilehash: 8ec342637bfea8b611fb79800da9f04f58a621bc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -174,12 +175,12 @@ Crea una o più partizioni di tabella. Si tratta di porzioni orizzontali della t
 Per una tabella delle conversioni di tipi di dati, vedere la sezione relativa alle conversioni implicite in [CAST e CONVERT (Transact-SQL)](http://msdn.microsoft.com/library/ms187928/).
 
 `datetimeoffset` [ ( *n* ) ]  
- Il valore predefinito per *n* è 7.  
+ Il valore predefinito di *n* è 7.  
   
  `datetime2` [ ( *n* ) ]  
-Come per `datetime`, ad eccezione del fatto che è possibile specificare il numero di secondi frazionari. Il valore predefinito per *n* è `7`.  
+Come per `datetime`, ad eccezione del fatto che è possibile specificare il numero di secondi frazionari. Il valore predefinito di *n* è `7`.  
   
-|*nValore* |Precisione|Scala|  
+|Valore *n*|Precisione|Scala|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -200,17 +201,17 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  Archivia una data usando un massimo di 10 caratteri per anno, mese e giorno in base al calendario gregoriano. La dimensione dello spazio di archiviazione è 3 byte. La data viene archiviata come numero intero.  
   
  `time` [ ( *n* ) ]  
- Il valore predefinito per *n* è `7`.  
+ Il valore predefinito di *n* è `7`.  
   
  `float` [ ( *n* ) ]  
- Tipo di dati numerici approssimati da usare con dati numerici a virgola mobile. I dati a virgola mobile sono approssimati, ovvero non tutti i valori nell'intervallo del tipo di dati possono essere rappresentati in modo esatto. *n* specifica il numero di bit usati per archiviare la mantissa di `float` in notazione scientifica. Pertanto, *n* determina la precisione e la dimensione dello spazio di archiviazione. Se si specifica *n*, il valore deve essere compreso tra `1` e `53`. Il valore predefinito di *n* è `53`.  
+ Tipo di dati numerici approssimati da usare con dati numerici a virgola mobile. I dati a virgola mobile sono approssimati, ovvero non tutti i valori nell'intervallo del tipo di dati possono essere rappresentati in modo esatto. *n* specifica il numero di bit usati per archiviare la mantissa di `float` in notazione scientifica. *n* determina quindi la precisione e le dimensioni di archiviazione. Se si specifica *n*, il valore deve essere compreso tra `1` e `53`. Il valore predefinito di *n* è `53`.  
   
-| *nValore*  | Precisione | Dimensioni dello spazio di archiviazione |  
+| Valore *n* | Precisione | Dimensioni dello spazio di archiviazione |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 cifre  | 4 byte      |  
 | 25-53  | 15 cifre | 8 byte      |  
   
- [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] interpreta *n* come uno di due possibili valori. Se `1`<= *n* <= `24`, *n* viene interpretato come `24`. Se `25` <= *n* <= `53`, *n* viene interpretato come `53`.  
+ [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] interpreta *n* come uno dei due valori possibili. Se `1`<= *n* <= `24`, *n* viene interpretato come `24`. Se `25` <= *n* <= `53`, *n* viene interpretato come `53`.  
   
  Il tipo di dati [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] `float` è conforme allo standard ISO per tutti i valori di *n* da `1` a `53`. Il sinonimo per double precision è `float(53)`.  
   
@@ -255,22 +256,22 @@ Come per `datetime`, ad eccezione del fatto che è possibile specificare il nume
  Tipo di dati integer che può accettare un valore di `1`, `0` o NULL. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ottimizza l'archiviazione delle colonne di tipo bit. Se una tabella contiene al massimo 8 colonne di tipo bit, le colonne vengono archiviate come singolo byte. Se la tabella contiene da 9 a 16 colonne di tipo bit, le colonne vengono archiviate come due byte e così via.  
   
  `nvarchar` [ ( *n* | `max` ) ]  -- `max` si applica solo a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
- Dati Unicode di tipo carattere a lunghezza variabile. *n* può essere un valore compreso tra 1 e 4.000. Tramite `max` viene indicato che la capacità di memorizzazione massima è di 2^31-1 byte (2 GB). Le dimensioni in byte dello spazio di archiviazione sono pari al doppio del numero di caratteri immessi + 2 byte. La lunghezza dei dati immessi può essere uguale a 0 caratteri.  
+ Dati Unicode di tipo carattere a lunghezza variabile. *n* può essere un valore compreso tra 1 e 4000. Tramite `max` viene indicato che la capacità di memorizzazione massima è di 2^31-1 byte (2 GB). Le dimensioni in byte dello spazio di archiviazione sono pari al doppio del numero di caratteri immessi + 2 byte. La lunghezza dei dati immessi può essere uguale a 0 caratteri.  
   
  `nchar` [ ( *n* ) ]  
- Dati di tipo carattere Unicode a lunghezza fissa con una lunghezza di *n* caratteri. *n* deve essere un valore compreso tra `1` e `4000`. Le dimensioni dello spazio di archiviazione sono pari al doppio di *n* byte.  
+ Dati di tipo carattere Unicode a lunghezza fissa con una lunghezza di *n* caratteri. *n* deve essere un valore compreso tra `1` e `4000`. Le dimensioni di archiviazione, espresse in byte, sono pari al doppio di *n*.  
   
  `varchar` [ ( *n*  | `max` ) ]  -- `max` si applica solo a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
- Dati di tipo carattere non Unicode a lunghezza fissa con lunghezza *n* byte. *n* deve essere un valore compreso tra `1` e `8000`. `max` indica che le dimensioni massime dello spazio di archiviazione sono 2^31-1 byte (2 GB). Le dimensioni dello spazio di archiviazione sono la lunghezza effettiva dei dati immessi + 2 byte.  
+ Dati di tipo carattere non Unicode a lunghezza variabile con una lunghezza di *n* byte. *n*deve essere un valore compreso tra `1` e `8000`. `max` indica che le dimensioni massime dello spazio di archiviazione sono 2^31-1 byte (2 GB). Le dimensioni dello spazio di archiviazione sono la lunghezza effettiva dei dati immessi + 2 byte.  
   
  `char` [ ( *n* ) ]  
- Dati di tipo carattere non Unicode a lunghezza fissa con lunghezza *n* byte. *n* deve essere un valore compreso tra `1` e `8000`. Le dimensioni dello spazio di archiviazione sono *n* byte. L'impostazione predefinita per *n* è `1`.  
+ Dati di tipo carattere non Unicode a lunghezza fissa con una lunghezza di *n* byte. *n*deve essere un valore compreso tra `1` e `8000`. Le dimensioni di archiviazione corrispondono a *n* byte. L'impostazione predefinita per *n* è `1`.  
   
  `varbinary` [ ( *n*  | `max` ) ]  -- `max` si applica solo a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
- Dati binary a lunghezza variabile. *n* può essere un valore compreso tra `1` e `8000`. Tramite `max` viene indicato che la capacità di memorizzazione massima è di 2^31-1 byte (2 GB). Le dimensioni di archiviazione sono pari all'effettiva lunghezza dei dati immessi + 2 byte. Il valore predefinito per *n* è 7.  
+ Dati binary a lunghezza variabile. *n* può essere un valore compreso tra `1` e `8000`. Tramite `max` viene indicato che la capacità di memorizzazione massima è di 2^31-1 byte (2 GB). Le dimensioni di archiviazione sono pari all'effettiva lunghezza dei dati immessi + 2 byte. Il valore predefinito di *n* è 7.  
   
  `binary` [ ( *n* ) ]  
- Dati binari a lunghezza fissa con lunghezza *n* byte. *n* può essere un valore compreso tra `1` e `8000`. Le dimensioni dello spazio di archiviazione sono *n* byte. Il valore predefinito per *n* è `7`.  
+ Dati binari a lunghezza fissa con lunghezza di *n* byte. *n* può essere un valore compreso tra `1` e `8000`. Le dimensioni di archiviazione corrispondono a *n* byte. Il valore predefinito di *n* è `7`.  
   
  `uniqueidentifier`  
  GUID a 16 byte.  

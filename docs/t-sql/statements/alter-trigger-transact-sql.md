@@ -1,16 +1,16 @@
 ---
 title: ALTER TRIGGER (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 05/08/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|statements
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - ALTER TRIGGER
@@ -24,16 +24,16 @@ helpviewer_keywords:
 - ALTER TRIGGER statement
 - DML triggers, modifying
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-caps.latest.revision: 
+caps.latest.revision: 74
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 29808a6c96bfcdef3bc892463604a474b567878f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 22022df96f4ea0093bc5353a8384a54bc79e148e
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="alter-trigger-transact-sql"></a>ALTER TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -144,7 +144,7 @@ AS { sql_statement
   
 ## <a name="arguments"></a>Argomenti  
  *schema_name*  
- Nome dello schema a cui appartiene un trigger DML. L'ambito dei trigger DML è definito nello schema della tabella o della vista in cui sono i trigger stessi creati. *schema**_name* è facoltativo solo se il trigger DML e la tabella o la vista corrispondente appartengono allo schema predefinito. *schema_name* non può essere specificato per i trigger DDL o i trigger di accesso.  
+ Nome dello schema a cui appartiene un trigger DML. L'ambito dei trigger DML è definito nello schema della tabella o della vista in cui sono i trigger stessi creati. *schema**_name* è facoltativo solo se il trigger DML e la tabella o la vista corrispondente appartengono allo schema predefinito. *schema_name* non può essere specificato per i trigger DDL o LOGON.  
   
  *trigger_name*  
  Trigger esistente da modificare.  
@@ -241,7 +241,7 @@ AS { sql_statement
  Quando un'operazione DELETE in una tabella figlio o di riferimento è il risultato di un'operazione CASCADE su un'operazione DELETE eseguita dalla tabella padre e viene definito un trigger INSTEAD OF per DELETE nella tabella figlio, il trigger viene ignorato mentre l'operazione DELETE viene eseguita.  
   
 ## <a name="ddl-triggers"></a>Trigger DDL  
- Diversamente dai trigger DML, i trigger DDL non sono definiti a livello di ambito di schema. Pertanto, non è possibile utilizzare OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTY(EX) durante l'esecuzione di query sui metadati relativi ai trigger DDL. Utilizzare in alternativa le viste del catalogo. Per altre informazioni, vedere [Recuperare informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
+ Diversamente dai trigger DML, i trigger DDL non sono definiti a livello di ambito di schema. Pertanto, non è possibile utilizzare OBJECT_ID, OBJECT_NAME, OBJECTPROPERTY e OBJECTPROPERTY(EX) durante l'esecuzione di query sui metadati relativi ai trigger DDL. Utilizzare in alternativa le viste del catalogo. Per altre informazioni, vedere [Ottenere informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md).  
   
 ## <a name="logon-triggers"></a>Trigger LOGON  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] non supporta i trigger sugli eventi di accesso.  
@@ -280,7 +280,7 @@ GO
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [Transazioni](../../relational-databases/native-client-ole-db-transactions/transactions.md)   
  [Ottieni informazioni sui trigger DML](../../relational-databases/triggers/get-information-about-dml-triggers.md)   
- [Recuperare informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
+ [Ottenere informazioni sui trigger DDL](../../relational-databases/triggers/get-information-about-ddl-triggers.md)   
  [sys.triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md)   
  [sys.trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-trigger-events-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   

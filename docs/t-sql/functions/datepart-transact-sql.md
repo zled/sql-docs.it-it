@@ -1,16 +1,16 @@
 ---
 title: DATEPART (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/29/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - DATEPART_TSQL
@@ -29,23 +29,24 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-caps.latest.revision: 
+caps.latest.revision: 57
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a972e0646d68620b915fe441e35ebfb617d06859
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: af3b28322a1d0080202cfc42c3381f8d82d0f535
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Restituisce un intero che rappresenta il valore *datepart* indicato della *data* specificata.
   
-Per una panoramica di tutti i tipi di dati e le funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Per una panoramica di tutti i tipi di dati e delle funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -111,9 +112,9 @@ Nella tabella seguente sono elencati tutti gli argomenti *datepart* con i corris
 ## <a name="week-and-weekday-datepart-arguments"></a>Argomenti datepart per settimana e giorno feriale
 Quando *datepart* è **week** (**wk**, **ww**) o **weekday** (**dw**), il valore restituito dipende dal valore impostato usando [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md).
   
-Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week***datepart*, ad esempio DATEPART (**wk**, '1 gen, *xxx*x') = 1, dove *xxxx* è qualsiasi anno.
+Il 1° gennaio di qualsiasi anno definisce il numero iniziale per **week***datepart*, ad esempio DATEPART (** wk**, '1 gen, *xxx*x') = 1, dove *xxxx* è qualsiasi anno.
   
-Nella tabella seguente è elencato il valore restituito per **week** e **weekday***datepart* per '2007-04-21' per ogni argomento SET DATEFIRST. Il 1° gennaio è un lunedì nell'anno 2007. Il 21 aprile dell'anno 2007 è sabato. SET DATEFIRST 7, domenica è l'impostazione predefinita per gli Stati Uniti. Regno Unito,
+Nella tabella seguente è elencato il valore restituito per **week** e **weekday***datepart* per '2007-04-21 ' per ogni argomento SET DATEFIRST. Il 1° gennaio è un lunedì nell'anno 2007. Il 21 aprile dell'anno 2007 è sabato. SET DATEFIRST 7, domenica è l'impostazione predefinita per gli Stati Uniti. Regno Unito,
   
 |SET DATEFIRST<br /><br /> argomento|week<br /><br /> restituito|giorno feriale<br /><br /> restituito|  
 |---|---|---|

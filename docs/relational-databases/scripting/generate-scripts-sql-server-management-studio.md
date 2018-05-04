@@ -1,35 +1,36 @@
 ---
 title: Generare script (SQL Server Management Studio) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: 
+ms.service: ''
 ms.component: ssms-scripting
-ms.reviewer: 
+ms.reviewer: mathoma
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 
+caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d1afb1297566bb7f203956d24b0ea62b56817d28
-ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
+monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: e85cf27b84317c2d942a4a5e42bf619504a1cee0
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generazione di script (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)]. È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.  
-  
-1.  **Scegliere un metodo:**  [Procedura guidata Genera e pubblica script](#GenPubScriptWiz), [Menu Crea script per in Esplora oggetti](#OEScriptAsMenu)  
-  
-2.  **Per usare il menu Crea script per:**  [Creare uno script per un solo oggetto](#ScriptSingleObject), [Creare uno script per due oggetti con Esplora oggetti](#ScriptTwoObjectsOE), [Creare uno script per due oggetti usando Dettagli esplora oggetti](#ScriptTwoObjectsOED)  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce due meccanismi per la generazione di script [!INCLUDE[tsql](../../includes/tsql-md.md)] . È possibile creare script per più oggetti usando la **Procedura guidata Genera e pubblica script**. È anche possibile generare uno script per un singolo oggetto o per più oggetti usando il menu **Crea script per** in **Esplora oggetti**.  
+
+Per un'esercitazione dettagliata sulla creazione di script per diversi oggetti tramite SQL Server Management Studio (SSMS), vedere [Esercitazione: eseguire script per oggetti in SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/tutorials/scripting-ssms).
+
   
 ## <a name="before-you-begin"></a>Prima di iniziare  
  Scegliere il meccanismo che soddisfa maggiormente i requisiti.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 01/24/2018
  Usare la **Procedura guidata Genera e pubblica script** per creare uno script [!INCLUDE[tsql](../../includes/tsql-md.md)] per molti oggetti. Durante la procedura guidata viene generato uno script di tutti gli oggetti contenuti in un database o un subset degli oggetti selezionati. La procedura guidata dispone di numerose opzioni per gli script, che consentono ad esempio di includere autorizzazioni, regole di confronto, vincoli e così via. Per istruzioni sull'uso della procedura guidata, vedere [Genera e pubblica script](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md).  
   
 ###  <a name="OEScriptAsMenu"></a> Menu Crea script per in Esplora oggetti  
- Il menu **Crea script per in Esplora oggetti** consente di creare uno script per un solo oggetto, più oggetti o più istruzioni per un singolo oggetto. È possibile scegliere tra diversi tipi di script, per ad esempio creare, modificare o eliminare l'oggetto. È possibile salvare lo script in una finestra dell'editor di query, in un file o negli Appunti. Lo script viene creato in formato Unicode.  
+ Il menu **Script come** in Esplora oggetti consente di creare uno script per un solo oggetto, per più oggetti o per più istruzioni per un singolo oggetto. È possibile scegliere tra diversi tipi di script, per ad esempio creare, modificare o eliminare l'oggetto. È possibile salvare lo script in una finestra dell'editor di query, in un file o negli Appunti. Lo script viene creato in formato Unicode.  
   
 ##  <a name="ScriptSingleObject"></a> Per generare uno script per un singolo oggetto  
  **Per generare uno script per un singolo oggetto**  
@@ -54,26 +55,9 @@ ms.lasthandoff: 01/24/2018
 5.  Scegliere il tipo di script, ad esempio **Genera codice per istruzione CREATE** o **Genera codice per istruzione ALTER**.  
   
 6.  Selezionare il percorso in cui salvare lo script, ad esempio **Nuova finestra editor di query** o **Appunti**.  
+
+    ![Tabella script](media/generate-scripts-sql-server-management-studio/scripttable.png)
   
-##  <a name="ScriptTwoObjectsOE"></a> Per generare uno script per due oggetti tramite Esplora oggetti  
- **Per generare uno script per due oggetti tramite Esplora oggetti**  
-  
- Talvolta può essere necessario creare uno script con più opzioni, ad esempio per eliminare una procedura e successivamente crearne un'altra o per creare e quindi modificare una tabella. I processi riportati di seguito per la generazione di script di più oggetti, possono essere utilizzato anche quando è necessario creare uno script che fa riferimento a tipi diversi di oggetti, quali tabelle, viste e stored procedure.  
-  
-1.  In Esplora oggetti connettersi a un'istanza del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , quindi espandere questa istanza.  
-  
-2.  Espandere **Database**, quindi espandere il database che contiene gli oggetti per cui creare lo script.  
-  
-3.  Fare clic con il pulsante destro del mouse sul primo oggetto per cui generare lo script, scegliere **Crea per script per \<tipo di oggetto>** e nelle selezioni **Salva con nome** scegliere **Nuova finestra editor di query** come destinazione dell'output.  
-  
-4.  Passare al secondo oggetto per cui si desidera creare lo script.  
-  
-5.  Fare clic con il pulsante destro del mouse sull'oggetto, scegliere **Crea script per \<tipo di oggetto>** e nelle selezioni **Salva con nome** scegliere **Appunti** come destinazione dell'output.  
-  
-6.  Nella finestra dell'editor di query aperta per il primo oggetto incollare lo script per il secondo oggetto dagli Appunti.  
-  
-##  <a name="ScriptTwoObjectsOED"></a> Per generare uno script per due oggetti tramite Dettagli Esplora oggetti  
- **Per generare uno script per due oggetti tramite Dettagli Esplora oggetti**  
   
  È possibile usare il riquadro **Dettagli Esplora oggetti** per generare uno script per più oggetti della stessa categoria.  
   
@@ -87,8 +71,10 @@ ms.lasthandoff: 01/24/2018
   
 5.  Fare clic su uno degli oggetti per cui si desidera creare lo script.  
   
-6.  Tenendo premuto il tasto Crtl fare clic sul secondo oggetto per cui si desidera creare lo script.  
+6.  Tenendo premuto CTRL fare clic sul secondo oggetto per cui si vuole creare lo script.  
   
 7.  Fare clic con il pulsante destro del mouse su uno degli oggetti selezionati e scegliere **Crea script per \<tipo di oggetto>**.  
+
+    ![Esplora oggetti](media/generate-scripts-sql-server-management-studio/objectexplorerdetails.png)
   
   

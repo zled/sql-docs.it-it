@@ -18,20 +18,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42af9f992c293f9872080a69cf6a7a4890ff205f
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: d9cbf7499236daba8ab87e46a6f7cea39016e672
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati Excel (Importazione/Esportazione guidata SQL Server)
-Questo argomento illustra come connettersi a un'origine dati **Microsoft Excel** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server.
+Questo articolo illustra come connettersi a un'origine dati **Microsoft Excel** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata di SQL Server.
 
 La schermata seguente mostra una connessione di esempio a una cartella di lavoro di Microsoft Excel.
 
 ![Connessione di Excel](../../integration-services/import-export-data/media/excel-connection.png) 
 
-Per connettersi ai file Excel, può essere necessario scaricare e installare file aggiuntivi. Per altre informazioni, vedere [Ottenere i file necessari per connettersi a Excel](../load-data-to-from-excel-with-ssis.md#get-the-files-you-need-to-connect-to-excel).
+Per connettersi ai file Excel, può essere necessario scaricare e installare file aggiuntivi. Per altre informazioni, vedere [Ottenere i file necessari per connettersi a Excel](../load-data-to-from-excel-with-ssis.md#files-you-need).
 
 > [!IMPORTANT]
 > Per informazioni dettagliate sulla connessione ai file di Excel e sulle limitazioni e i problemi noti per il caricamento di dati da o a file di Excel, vedere [Caricare i dati da o in Excel con SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md).

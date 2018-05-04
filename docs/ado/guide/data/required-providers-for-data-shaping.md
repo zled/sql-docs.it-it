@@ -20,12 +20,11 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: ce88a316a1ef31baf083032e31023d36a3e3fff4
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
-ms.translationtype: MT
+ms.openlocfilehash: c30bf74788ba7fe1bd27edbc814aa0277867ac13
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="required-providers-for-data-shaping"></a>Provider desiderati per il Data Shaping
 Il data shaping in genere richiede due provider. Il provider del servizio, [Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fornisce i dati di data shaping, funzionalità e un provider di dati, ad esempio il Provider OLE DB per SQL Server, che include le righe di dati per popolare il data shaping [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -34,7 +33,7 @@ Il data shaping in genere richiede due provider. Il provider del servizio, [Data
   
  Il nome del provider di dati può essere specificato come valore della **Provider di dati** proprietà dinamiche, che viene aggiunto al **connessione** oggetto [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) raccolta da il Data shaping per OLE DB o parola chiave della stringa di connessione "**Provider di dati = * * * provider*".  
   
- Nessun provider di dati è necessario se il **Recordset** non è popolata (ad esempio, come un creato **Recordset** in cui le colonne vengono create con la parola chiave NEW). In tal caso, specificare "**Provider di dati =**none;".  
+ Nessun provider di dati è necessario se il **Recordset** non è popolata (ad esempio, come un creato **Recordset** in cui le colonne vengono create con la parola chiave NEW). In tal caso, specificare "**Provider di dati =** none;".  
   
 ## <a name="example"></a>Esempio  
   

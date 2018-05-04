@@ -1,16 +1,16 @@
 ---
 title: CERTENCODED (Transact-SQL) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/24/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: 
+ms.service: ''
 ms.component: t-sql|functions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - CERTENCODED
@@ -20,21 +20,21 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-caps.latest.revision: 
+caps.latest.revision: 14
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 635720f8ed9c3d2aa48d2f5cbf03438171b1fe78
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f6068562cf6694acc99c1e303dbd4ff10ff583ce
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-Restituisce la parte pubblica di un certificato in formato binario. Questa funzione accetta un ID certificato e restituisce il certificato codificato. Il risultato binario può essere passato a **CREATE CERTIFICATE … WITH BINARY** per creare un nuovo certificato.
+Questa funzione restituisce la parte pubblica di un certificato in formato binario. Questa funzione accetta un ID certificato come argomento e restituisce il certificato codificato. Per creare un nuovo certificato passare il risultato binario a **CREATE CERTIFICATE … WITH BINARY**.
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -44,13 +44,13 @@ CERTENCODED ( cert_id )
   
 ## <a name="arguments"></a>Argomenti  
 *cert_id*  
-**certificate_id** del certificato. Disponibile da sys.certificates o tramite la funzione [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* è di tipo **int**
+**certificate_id** del certificato. Questo valore è disponibile in sys.certificates; viene restituito anche dalla funzione [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md). *cert_id* è un tipo di dati **int**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **varbinary**
   
 ## <a name="remarks"></a>Remarks  
-**CERTENCODED** e **CERTPRIVATEKEY** sono usati insieme per restituire parti diverse di un certificato in formato binario.
+Usare **CERTENCODED** e **CERTPRIVATEKEY** insieme per restituire parti diverse di un certificato in formato binario.
   
 ## <a name="permissions"></a>Autorizzazioni  
 **CERTENCODED** è disponibile pubblicamente.
@@ -58,23 +58,23 @@ CERTENCODED ( cert_id )
 ## <a name="examples"></a>Esempi  
   
 ### <a name="simple-example"></a>Esempio semplice  
-Nell'esempio seguente viene creato un certificato denominato `Shipping04` e viene usata la funzione **CERTENCODED** per restituire la codifica binaria del certificato.
+In questo esempio viene creato un certificato denominato `Shipping04` e viene usata la funzione **CERTENCODED** per restituire la codifica binaria del certificato. La data di scadenza del certificato viene impostata al 31 ottobre 2040.
   
 ```sql
-CREATE DATABASE TEST1;  
-GO  
-USE TEST1  
-CREATE CERTIFICATE Shipping04   
-ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
-WITH SUBJECT = 'Sammamish Shipping Records',   
-EXPIRY_DATE = '20161031';  
-GO  
-SELECT CERTENCODED(CERT_ID('Shipping04'));  
+CREATE DATABASE TEST1;
+GO
+USE TEST1
+CREATE CERTIFICATE Shipping04
+ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'
+WITH SUBJECT = 'Sammamish Shipping Records',
+EXPIRY_DATE = '20401031';
+GO
+SELECT CERTENCODED(CERT_ID('Shipping04'));
   
 ```  
   
 ### <a name="b-copying-a-certificate-to-another-database"></a>B. Copia di un certificato in un altro database  
-Nell'esempio più complesso seguente vengono creati due database `SOURCE_DB` e `TARGET_DB`. L'obiettivo consiste nel creare un certificato in `SOURCE_DB` e nel copiarlo in `TARGET_DB` e quindi nel dimostrare che è possibile decrittografare i dati crittografati in `SOURCE_DB` in `TARGET_DB` utilizzando la copia del certificato.
+Nell'esempio più complesso vengono creati due database: `SOURCE_DB` e `TARGET_DB`. Viene quindi creato un certificato in `SOURCE_DB` che viene poi copiato in `TARGET_DB`. Si dimostrerà infine come i dati crittografati in `SOURCE_DB` possano essere decrittografati in `TARGET_DB` usando la copia del certificato.
   
 Per creare l'ambiente di esempio, creare i database `SOURCE_DB` e `TARGET_DB` e una chiave master in ognuno. Creare quindi un certificato in `SOURCE_DB`.
   
@@ -101,7 +101,7 @@ CREATE CERTIFICATE SOURCE_CERT WITH SUBJECT = 'SOURCE_CERTIFICATE';
 GO  
 ```  
   
-Estrarre ora la descrizione binaria del certificato.
+Estrarre la descrizione binaria del certificato.
   
 ```sql
 DECLARE @CERTENC VARBINARY(MAX);  
@@ -114,7 +114,7 @@ SELECT @CERTPVK AS EncryptedBinaryCertificate;
 GO  
 ```  
   
-Creare il certificato duplicato nel database `TARGET_DB`. È necessario modificare il codice seguente, inserendo i due valori binari restituiti nel passaggio precedente.
+Creare quindi il certificato duplicato nel database `TARGET_DB`. Per il corretto funzionamento, modificare il codice seguente inserendo i due valori binari @CERTENC e @CERTPVK restituiti nel passaggio precedente. Non racchiudere questi valori tra virgolette.
   
 ```sql
 -- Create the duplicate certificate in the TARGET_DB database  
@@ -133,7 +133,7 @@ UNION
 SELECT * FROM TARGET_DB.sys.certificates;  
 ```  
   
-Il codice seguente eseguito come singolo batch dimostra che è possibile decrittografare i dati crittografati in `SOURCE_DB` in `TARGET_DB`.
+Questo codice, eseguito come singolo batch, dimostra che `TARGET_DB` è in grado di decrittografare i dati originariamente crittografati in `SOURCE_DB`.
   
 ```sql
 USE SOURCE_DB;  

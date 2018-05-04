@@ -1,36 +1,36 @@
 ---
 title: Informazioni su Change Data Capture (SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: database-engine
-ms.service: 
+ms.service: ''
 ms.component: track-changes
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - change data capture [SQL Server], about
 - change data capture [SQL Server]
 - 22832 (Database Engine error)
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rothja
 ms.author: jroth
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a56878e9a37195e63e03b04b84c4a8d296844ff2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: b6347faf1a4de6590063f892cf44f5d58c90cdc0
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="about-change-data-capture-sql-server"></a>Informazioni su Change Data Capture (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
+  Change Data Capture consente di registrare le attività di inserimento, aggiornamento ed eliminazione applicate a una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , rendendo disponibili i dettagli delle modifiche in un formato relazionale facilmente utilizzabile. Le informazioni sulla colonna e i metadati necessari per applicare le modifiche a un ambiente di destinazione vengono acquisiti per le righe modificate e archiviati in tabelle delle modifiche che riflettono la struttura della colonna delle tabelle di origine con rilevamento. Per consentire ai consumer di accedere in modo sistematico ai dati delle modifiche, sono disponibili funzioni con valori di tabella.  
   
  Un buon esempio di consumer di dati cui questa tecnologia è destinata è un'applicazione ETL di estrazione, trasformazione e caricamento. Un'applicazione di questo tipo carica incrementalmente dati delle modifiche dalle tabelle di origine di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un data warehouse oppure in un data mart. Anche se la rappresentazione delle tabelle di origine all'interno del data warehouse deve riflettere le modifiche in tali tabelle, una tecnologia end-to-end che aggiorna una replica dell'origine non è appropriata. È necessario invece un flusso affidabile di dati delle modifiche strutturato in modo che i consumer possano applicarlo a rappresentazioni di destinazione dei dati diverse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Change Data Capture fornisce questa tecnologia.  
   
@@ -113,7 +113,33 @@ Change Data Capture consente di registrare le attività di inserimento, aggiorna
  Entrambi i processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent sono stati progettati per essere sufficientemente flessibili e configurabili in modo da soddisfare le esigenze di base degli ambienti in cui viene usata la funzionalità Change Data Capture. In entrambi casi, tuttavia, le stored procedure sottostanti che forniscono le funzionalità di base sono state esposte per poter applicare ulteriore personalizzazione.  
   
  Change Data Capture non funziona correttamente quando il servizio Motore di database o SQL Server Agent è in esecuzione con l'account NETWORK SERVICE. Questa situazione può generare l'errore 22832.  
-  
+ 
+## <a name="working-with-database-and-table-collation-differences"></a>Uso di regole di confronto diverse tra database e tabella
+
+È importante sapere che può accadere che alcune regole di confronto siano diverse tra il database e le colonne di una tabella configurata per Change Data Capture. CDC usa l'archiviazione provvisoria per popolare tabelle laterali. Se una tabella contiene colonne CHAR o VARCHAR con regole di confronto diverse dalle regole di confronto del database e se tali colonne archiviano caratteri non ASCII (ad esempio caratteri DBCS), è possibile che CDC non salvi in modo permanente i dati modificati coerentemente con i dati nelle tabelle di base. Ciò è dovuto al fatto che alle variabili dell'archiviazione provvisoria non possono essere associate regole di confronto.
+
+Considerare uno degli approcci seguenti per verificare che i dati modificati acquisiti siano coerenti con le tabelle di base:
+
+- Usare il tipo di dati NCHAR o NVARCHAR per colonne contenenti dati non ASCII.
+
+- In alternativa, usare le stesse regole di confronto per le colonne e per il database.
+
+Ad esempio, se un database usa le regole di confronto di SQL_Latin1_General_CP1_CI_AS, considerare la tabella seguente:
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 VARCHAR(10) collate Chinese_PRC_CI_AI)
+```
+
+CDC potrebbe non acquisire i dati binari per la colonna C2, perché le regole di confronto sono diverse (Chinese_PRC_CI_AI). Per evitare questo problema, usare NVARCHAR:
+
+```tsql
+CREATE TABLE T1( 
+     C1 INT PRIMARY KEY, 
+     C2 NVARCHAR(10) collate Chinese_PRC_CI_AI --Unicode data type, CDC works well with this data type)
+```
+
 ## <a name="see-also"></a>Vedere anche  
  [Rilevare le modifiche ai dati &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Abilitare e disabilitare Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

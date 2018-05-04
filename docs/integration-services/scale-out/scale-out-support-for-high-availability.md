@@ -1,36 +1,38 @@
 ---
-title: "Supporto della disponibilità elevata in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
+title: Supporto della disponibilità elevata in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
-ms.custom: 
+ms.custom: ''
 ms.date: 12/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: 
+caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 906edbe80e7c762cdd9a271218d790edc9da8f5b
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: a1f0f7f06da7032049496a2c2820fbe5c8abe6a8
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
 In SSIS Scale Out la disponibilità elevata sul lato Scale Out Worker viene assicurata attraverso l'esecuzione di pacchetti con più istanze di Scale Out Worker.
 
-La disponibilità elevata sul lato Scale Out Master è invece garantita dalla soluzione [Always On per il catalogo SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) e dal servizio clustering di failover di Windows. In questa soluzione più istanze di Scale Out Master sono ospitate in un cluster di failover di Windows. Quando il servizio Scale Out Master o il database SSISDB è inattivo nel nodo primario, il servizio o il database SSISDB nel nodo secondario continua ad accettare le richieste degli utenti e a comunicare con le istanze di Scale Out Worker. 
+La disponibilità elevata sul lato Scale Out Master si ottiene con [Always On per il catalogo SSIS](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb) e il clustering di failover Windows. In questa soluzione vengono ospitate più istanze di Scale Out Master nel cluster di failover di Windows. Quando il servizio Scale Out Master o il database SSISDB è inattivo nel nodo primario, il servizio o il database SSISDB nel nodo secondario continua ad accettare le richieste degli utenti e a comunicare con le istanze di Scale Out Worker.
 
-Per configurare la disponibilità elevata sul lato Scale Out Master, eseguire le operazioni seguenti:
+In alternativa, la disponibilità elevata sul lato Scale Out Master può essere ottenuta con l'istanza del cluster di failover di SQL Server. Vedere [Supporto di Scale Out per disponibilità elevata tramite istanza del cluster di failover di SQL Server](scale-out-failover-cluster-instance.md).
+
+Per configurare la disponibilità elevata sul lato Scale Out Master con Always On per il catalogo SSIS, eseguire le operazioni seguenti:
 
 ## <a name="1-prerequisites"></a>1. Prerequisites
 Configurare un cluster di failover di Windows Vedere il post di blog [Installing the Failover Cluster Feature and Tools for Windows Server 2012](http://blogs.msdn.com/b/clustering/archive/2012/04/06/10291601.aspx) (Installazione della funzionalità di clustering di failover e degli strumenti per Windows Server 2012) per le istruzioni. Installare la funzionalità e gli strumenti in tutti i nodi del cluster.

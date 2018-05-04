@@ -1,7 +1,7 @@
 ---
 title: Caricare dati da o in Excel con SSIS | Microsoft Docs
 ms.description: Describes how to import data from Excel or export data to Excel with SQL Server Integration Services (SSIS). Also describes prerequisites, known issues, and limitations.
-ms.date: 03/27/2018
+ms.date: 04/10/2018
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: ''
@@ -16,11 +16,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8d7cb51f585055eefa1deff52b8cb25469bdb9ca
-ms.sourcegitcommit: 059fc64ba858ea2adaad2db39f306a8bff9649c2
+ms.openlocfilehash: 00e3c7b22555404654a381911a7812af666a03cc
+ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-data-from-or-to-excel-with-sql-server-integration-services-ssis"></a>Caricare dati da o in Excel con SQL Server Integration Services (SSIS)
 
@@ -28,7 +28,20 @@ Questo articolo descrive come importare i dati da Excel o esportare i dati in Ex
 
 È possibile importare dati da Excel o esportare dati in Excel creando un pacchetto SSIS e usando Gestione connessione Excel e l'Origine Excel o la Destinazione Excel. È anche possibile usare l'Importazione/Esportazione guidata SQL Server, che si basa su SSIS.
 
-## <a name="get-the-files-you-need-to-connect-to-excel"></a>Ottenere i file necessari per connettersi a Excel
+Questo articolo contiene tre tipi di informazioni necessarie per usare Excel correttamente da SSIS o comprendere e risolvere i problemi comuni:
+-   [I file necessari](#files-you-need).
+-   Le informazioni da specificare quando i dati vengono caricati da o in Excel.
+    -   [Specificare Excel](#specify-excel) come origine dati.
+    -   Specificare il [percorso e il nome del file di Excel](#excel-file).
+    -   Selezionare la [versione di Excel](#excel-version).
+    -   Specificare se la [prima riga contiene nomi di colonna](#first-row).
+    -   Specificare il [foglio di lavoro o un intervallo contenente i dati](#sheets-ranges).
+-   Problemi noti e limitazioni.
+    -   Problemi relativi ai [tipi di dati](#issues-types).
+    -   Problemi di [importazione](#issues-importing).
+    -   Problemi di [esportazione](#issues-exporting).
+
+## <a name="files-you-need"></a> Ottenere i file necessari per connettersi a Excel
 
 Per poter importare dati da Excel o esportare dati in Excel, può essere necessario scaricare i componenti di connettività per Excel se non sono già installati. I componenti di connettività per Excel non sono installati per impostazione predefinita.
 
@@ -46,7 +59,7 @@ Se si ha una sottoscrizione di Office 365, è possibile che appaia un messaggio 
 
 In caso di problemi durante l'installazione della versione 2016 Redistributable, installare la versione 2010 Redistributable da qui: [Microsoft Access Database Engine 2010 Redistributable](https://www.microsoft.com/download/details.aspx?id=13255). Non esiste un componente ridistribuibile per Excel 2013.
 
-## <a name="get-started"></a>Introduzione
+## <a name="specify-excel"></a> Introduzione
 
 Il primo passaggio è indicare che si vuole eseguire la connessione a Excel.
 
@@ -64,7 +77,7 @@ Nella pagina **Scegliere un'origine dati** o **Scegliere una destinazione** dell
 
 Se Excel non è incluso nell'elenco delle origini dati, verificare se è in esecuzione la procedura guidata a 32 bit. I componenti di connettività di Excel in genere sono file a 32 bit e non sono visibili nella procedura guidata a 64 bit.
 
-## <a name="excel-file-and-file-path"></a>File e percorso file di Excel
+## <a name="excel-file"></a> Percorso e file di Excel
 
 La prima parte di informazioni da specificare è costituita dal percorso e dal nome del file di Excel. Queste informazioni devono essere specificate nell'**Editor di gestione connessioni Excel** in un pacchetto SSIS o nella pagina **Scegliere un'origine dati** o **Scegliere una destinazione** dell'Importazione/Esportazione guidata.
 
@@ -79,7 +92,7 @@ Oppure fare clic su **Sfoglia** per individuare il foglio di calcolo usando la f
 > [!IMPORTANT]
 > Non è possibile connettersi a un file di Excel protetto da password.
 
-## <a name="excel-version"></a>Versione di Excel
+## <a name="excel-version"></a> Versione di Excel
 
 Nella seconda parte di informazioni si specifica la versione del file di Excel. Queste informazioni devono essere specificate nell'**Editor di gestione connessioni Excel** in un pacchetto SSIS o nella pagina **Scegliere un'origine dati** o **Scegliere una destinazione** dell'Importazione/Esportazione guidata.
 
@@ -87,7 +100,7 @@ Selezionare la versione di Microsoft Excel usata per creare il file o un'altra v
 
 Può non essere possibile selezionare le versioni più recenti di Excel presenti nell'elenco se sono installate solo le versioni precedenti dei componenti di connettività. L'elenco **Versione di Excel** include tutte le versioni di Excel supportate da SSIS. La presenza di elementi in questo elenco non indica che i componenti di connettività necessari siano installati. Ad esempio, **Microsoft Excel 2016** appare nell'elenco anche se non sono installati i componenti di connettività 2016.
 
-## <a name="first-row-has-column-names"></a>Nomi di colonna nella prima riga
+## <a name="first-row"></a> Nomi di colonna nella prima riga
 
 Se si importano i dati da Excel, il passaggio successivo è indicare se la prima riga di dati contiene nomi di colonna. Specificare queste informazioni nell'**Editor di gestione connessioni Excel** in un pacchetto SSIS o nella pagina **Scegliere un'origine dati** dell'Importazione/Esportazione guidata.
 
@@ -97,7 +110,7 @@ Se si importano i dati da Excel, il passaggio successivo è indicare se la prima
 
 Se si esportano dati da Excel e si abilita questa opzione, la prima riga di dati esportati include i nomi di colonna.
 
-## <a name="worksheets-and-ranges"></a>Fogli di lavoro e intervalli
+## <a name="sheets-ranges"></a> Fogli di lavoro e intervalli
 
 Esistono tre tipi di oggetti di Excel che si possono usare come origine o destinazione per i dati: un foglio di lavoro, un intervallo denominato o un intervallo di celle senza nome specificato con il relativo indirizzo.
 
@@ -146,7 +159,7 @@ Dopo aver selezionato o immesso gli oggetti di Excel da importare o esportare, �
 
 -   Visualizzare in anteprima i dati di esempio per verificare che siano quelli previsti selezionando **Anteprima**.
 
-## <a name="issues-with-data-types"></a>Problemi relativi ai tipi di dati
+## <a name="issues-types"></a> Problemi relativi ai tipi di dati
 
 ### <a name="data-types"></a>Tipi di dati
 
@@ -179,7 +192,7 @@ Di seguito sono riportati alcuni esempi delle conversioni che possono rendersi n
 > [!TIP]
 > Se si usa l'Importazione/Esportazione guidata e i dati richiedono alcune di queste conversioni, la procedura guidata configura automaticamente le conversioni necessarie. Di conseguenza, anche se si usa un pacchetto SSIS, può essere utile creare il pacchetto iniziale usando l'Importazione/Esportazione guidata. Consentire alla procedura guidata di creare e configurare automaticamente gestioni connessioni, origini, trasformazioni e destinazioni.
 
-## <a name="issues-with-importing"></a>Problemi di importazione
+## <a name="issues-importing"></a> Problemi di importazione
 
 ### <a name="empty-rows"></a>Righe vuote
 
@@ -209,7 +222,7 @@ Per importare dati da una colonna di tipo memo senza troncamenti, sono disponibi
 | Excel 2010 | HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Office\14.0\Access Connectivity Engine\Engines\Excel |
 | | |
 
-## <a name="issues-with-exporting"></a>Problemi di esportazione
+## <a name="issues-exporting"></a> Problemi di esportazione
 
 ### <a name="create-a-new-destination-file"></a>Creare un nuovo file di destinazione
 

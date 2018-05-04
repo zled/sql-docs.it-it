@@ -15,16 +15,17 @@ ms.custom: ''
 ms.workload: On Demand
 ms.tgt_pltfrm: ''
 ms.topic: article
-ms.date: 08/07/2017
+ms.date: 04/10/2018
 ms.author: rebeccaz
-ms.openlocfilehash: 45e4c702e2f08ce6e7c39463ac49c98701646f37
-ms.sourcegitcommit: d6b1695c8cbc70279b7d85ec4dfb66a4271cdb10
+monikerRange: = azuresqldb-current || = sqlallproducts-allversions
+ms.openlocfilehash: fd5186e4a069b76108ad0c8cd4e91497e618a195
+ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparent Data Encryption per database e data warehouse SQL
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Transparent Data Encryption contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione.
 
@@ -44,9 +45,9 @@ Microsoft inoltre sposta e gestisce le chiavi in base alle esigenze per la repli
 > Tutti i nuovi database SQL vengono crittografati per impostazione predefinita usando la funzionalità Transparent Data Encryption gestita dal servizio. I database esistenti prima di maggio 2017 e quelli creati con una procedura di ripristino, replica geografica e copia del database non vengono crittografati per impostazione predefinita.
 >
 
-## <a name="bring-your-own-key-preview"></a>Bring Your Own Key (anteprima)
+## <a name="bring-your-own-key"></a>Bring Your Own Key
 
-Il supporto Bring Your Own Key (nell'anteprima) consente all'utente di assumere il controllo delle proprie chiavi di Transparent Data Encryption e di stabilire chi può accedervi e quando. Key Vault, ovvero il sistema di gestione delle chiavi esterne basato sul cloud di Azure, è il primo servizio di gestione delle chiavi con cui è stato integrato Transparent Data Encryption per il supporto Bring Your Own Key. Con il supporto Bring Your Own Key, la chiave di crittografia del database è protetta da una chiave asimmetrica archiviata in Key Vault. La chiave asimmetrica non viene mai rimossa da Key Vault. Quando il server ottiene le autorizzazioni per un insieme di credenziali delle chiavi, invia a tale insieme le richieste di operazioni di base relative alle chiavi attraverso Key Vault. La chiave asimmetrica viene impostata a livello di server ed ereditata da tutti i database presenti nel server.
+Il supporto Bring Your Own Key consente all'utente di assumere il controllo delle proprie chiavi di Transparent Data Encryption e di stabilire chi può accedervi e quando. Key Vault, ovvero il sistema di gestione delle chiavi esterne basato sul cloud di Azure, è il primo servizio di gestione delle chiavi con cui è stato integrato Transparent Data Encryption per il supporto Bring Your Own Key. Con il supporto Bring Your Own Key, la chiave di crittografia del database è protetta da una chiave asimmetrica archiviata in Key Vault. La chiave asimmetrica non viene mai rimossa da Key Vault. Quando il server ottiene le autorizzazioni per un insieme di credenziali delle chiavi, invia a tale insieme le richieste di operazioni di base relative alle chiavi attraverso Key Vault. La chiave asimmetrica viene impostata a livello di server ed ereditata da tutti i database presenti nel server.
 
 Con il supporto Bring Your Own Key ora è possibile controllare le attività di gestione delle chiavi, ad esempio le rotazioni delle chiavi e le autorizzazioni dell'insieme di credenziali delle chiavi. È anche possibile eliminare le chiavi e abilitare il controllo o il reporting per tutte le chiavi di crittografia. Key Vault offre una gestione centrale delle chiavi e usa moduli di protezione hardware accuratamente monitorati. Key Vault alza di livello la separazione della gestione delle chiavi e dei dati per consentire il rispetto delle conformità alle normative. Per altre informazioni su Key Vault, vedere la [pagina della documentazione di Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
 

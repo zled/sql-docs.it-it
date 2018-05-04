@@ -11,7 +11,7 @@ ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data types [ODBC], identifiers
 - identifiers [ODBC], data types
@@ -24,12 +24,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f9d36c0308ae7afb12541a0f33f4d2b417dfb15e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: cd203d13a38dc892ff0aa98a55814bfa8bfd5b03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Gli identificatori di tipo di dati e i descrittori
 I tipi di dati elencati nella [tipi di dati SQL](../../../odbc/reference/appendixes/sql-data-types.md) e [tipi di dati C](../../../odbc/reference/appendixes/c-data-types.md) sezioni in questa appendice sono tipi di dati "concise": ogni identificatore fa riferimento a un singolo tipo di dati. È una corrispondenza tra l'identificatore e il tipo di dati. Descrittori, tuttavia, eseguire non in tutti i casi usare un singolo valore per identificare i tipi di dati. In alcuni casi, vengono utilizzati un tipo di dati "verbose" e un codice secondario di tipo. Per tutti i tipi di dati tranne i tipi di dati datetime e interval, l'identificatore di tipo dettagliato è lo stesso come l'identificatore del tipo conciso e il valore in SQL_DESC_DATETIME_INTERVAL_CODE è uguale a 0. Per i tipi di dati datetime e interval, tuttavia, un tipo verbose (SQL_DATETIME o SQL_INTERVAL) è archiviato in SQL_DESC_TYPE, un tipo conciso è archiviato in SQL_DESC_CONCISE_TYPE e un codice secondario per ogni tipo conciso viene archiviato in SQL_DESC_DATETIME_INTERVAL_CODE. L'impostazione di uno di questi campi interessa gli altri. Per ulteriori informazioni su questi campi, vedere il [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) descrizione della funzione.  

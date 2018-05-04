@@ -24,13 +24,12 @@ caps.latest.revision: 22
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 55becb87f41fdc54aa4e618dc5be80d5292b1ea3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: a455bfe51ac57408c075a20128054574b86962f8
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -202,7 +201,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **Numeric (38, 19)** -non vengono considerati altri tipi di dati numerici o decimali.  
   
-    -   **varchar(8000)**, **varchar (max)**, **nvarchar(4000**, e **nvarchar (max)** - altri tipi di dati string (ad esempio **testo**, **char(8000)**, **nvarchar(30)**e così via) non sono considerati.  
+    -   **varchar(8000)**, **varchar (max)**, **nvarchar(4000**, e **nvarchar (max)** - altri tipi di dati string (ad esempio **testo**, **char(8000)**, **nvarchar(30)** e così via) non sono considerati.  
   
     -   **varbinary(8000)** e **varbinary (max)** -non vengono considerati altri tipi di dati binari (ad esempio **immagine**, **binary(8000)**, **varbinary (30)** , ecc.).  
   

@@ -23,13 +23,12 @@ caps.latest.revision: 36
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ff184bbcfc3e638bf15badc98a060e88cac3e0d1
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 4f3d67861c36339500106b924a28e05dc8324745
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-catalog-functions"></a>Utilizzo delle funzioni di catalogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +52,7 @@ ms.lasthandoff: 04/16/2018
   
      Restituisce un elenco dei cataloghi presenti in un server collegato.  
   
- Dopo aver creato un server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti di *linked_server_name***.*** catalogo* per *CatalogName* in ODBC seguenti funzioni di catalogo:  
+ Dopo aver creato un server collegato e un nome di catalogo, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta il recupero di informazioni dal catalogo utilizzando un nome in due parti di *linked_server_name ***.*** catalogo* per *CatalogName* in ODBC seguenti funzioni di catalogo:  
   
 -   **SQLColumnPrivileges**  
   
@@ -67,7 +66,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **SQLTables**  
   
- Le due parti *linked_server_name***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* su [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ Le due parti *linked_server_name ***.*** catalogo* è supportata anche per *FKCatalogName* e *PKCatalogName* su [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilizzo di SQLLinkedServers e SQLLinkedCatalogs richiede i file seguenti:  
   
