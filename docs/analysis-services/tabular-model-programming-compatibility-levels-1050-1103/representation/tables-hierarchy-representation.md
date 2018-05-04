@@ -1,33 +1,31 @@
 ---
 title: Rappresentazione della gerarchia (tabulare) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
 - SQL Server 2016 Preview
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
-caps.latest.revision: 
+caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 411491544f01c1aad7655a692b7542269f5c0844
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 87311cce7491929ab432a72aa0f10d8d99f477b8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="tables---hierarchy-representation"></a>Tabelle - rappresentazione della gerarchia
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Nei modelli tabulari una gerarchia è il percorso di navigazione da un attributo a un altro, in base a valori selezionati dall'utente.  
+  Nei modelli tabulari una gerarchia è il percorso di navigazione da un attributo a un altro, in base a valori selezionati dall'utente.  
   
 ## <a name="hierarchy-representation"></a>Rappresentazione della gerarchia  
   

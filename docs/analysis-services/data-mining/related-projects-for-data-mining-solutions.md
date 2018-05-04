@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8093acbb0886699bcb9c781c636b37f249f96bee
-ms.sourcegitcommit: 8f1d1363e18e0c32ff250617ab6cb2da2147bf8e
+ms.openlocfilehash: ad03c455c6ee0b623fca0544901ee4c6c6e397d0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Progetti correlati per soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +107,11 @@ ms.lasthandoff: 04/03/2018
   
  Per ulteriori informazioni sull'utilizzo di Reporting Services con query DMX come origine dati, vedere i collegamenti seguenti:  
   
- [Recuperare dati da un modello di Data Mining &#40; DMX &#41; &#40; SSRS &#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Recuperare dati da un modello di Data Mining & #40; DMX & #41; & #40; SSRS & #41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Interfaccia utente di progettazione di Query DMX di Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Tipo di connessione di Analysis Services per DMX &#40; SSRS &#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Tipo di connessione di Analysis Services per DMX & #40; SSRS & #41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Tuttavia, non è necessario utilizzare DMX come origine dati. I componenti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per il data mining supportano inoltre il salvataggio dei risultati di una query di stima in un database relazionale. Se si dispone di un flusso di lavoro stabilito per l'aggiornamento di modelli tramite [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l'impostazione della persistenza di stime e altri risultati di query di data mining in SQL Server consente di utilizzare [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] per la creazione di report, nonché altri strumenti non interfacciati con DMX.  
   

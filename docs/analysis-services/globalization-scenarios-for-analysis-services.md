@@ -1,15 +1,14 @@
 ---
 title: Scenari di globalizzazione per Analysis Services | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -20,16 +19,15 @@ helpviewer_keywords:
 - SQL Server Analysis Services, international considerations
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f577134d61829f5c491462901c96f69f0f1e9973
-ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
+ms.openlocfilehash: 23e578f770182e53b66e32833b8eaa8e5268bc17
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Scenari di globalizzazione per Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -78,8 +76,8 @@ ms.lasthandoff: 01/22/2018
 ## <a name="see-also"></a>Vedere anche  
  [Supporto delle traduzioni in Analysis Services](../analysis-services/translation-support-in-analysis-services.md)   
  [Internazionalizzazione delle applicazioni Windows](http://msdn.microsoft.com/library/windows/desktop/dd318661%28v=vs.85%29.aspx)   
- [Passare Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
- [Applicazioni Windows Store di scrittura con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
- [Sviluppo di applicazioni Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
+ [Vai Developer Center sulla globalizzazione](http://msdn.microsoft.com/goglobal/bb871628.aspx)   
+ [Scrittura Windows di App Store con progettazione adattiva basata sulle impostazioni locali](https://blogs.windows.com/buildingapps/2014/03/06/writing-windows-store-apps-with-locale-based-adaptive-design/)   
+ [Lo sviluppo di applicazioni Windows universali con c# e XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   

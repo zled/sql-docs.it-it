@@ -1,29 +1,27 @@
 ---
 title: 'Lezione 1: Creare un nuovo progetto di modello tabulare | Documenti Microsoft'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
-caps.latest.revision: 
+caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: fe1c808d84bac0c14e1cf46c4613464e04bbea0c
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
+ms.openlocfilehash: f0c3761c88fa38ceaa4258bd6576b986c6bc94fd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Lezione 1: Creare un nuovo modello di progetto tabulare
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -33,7 +31,7 @@ In questa lezione verrà creato un nuovo progetto di modello tabulare in [!INCLU
 Tempo stimato per il completamento della lezione: **10 minuti**  
   
 ## <a name="prerequisites"></a>Prerequisiti  
-Questo argomento è la prima lezione di un'esercitazione sulla creazione di modelli tabulari. Per completare questa lezione, è necessario disporre di database di esempio AdventureWorksDW installato in un'istanza di SQL Server. Per ulteriori informazioni, vedere [modellazione tabulare &#40; Esercitazione di AdventureWorks &#41; ](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
+Questo argomento è la prima lezione di un'esercitazione sulla creazione di modelli tabulari. Per completare questa lezione, è necessario disporre di database di esempio AdventureWorksDW installato in un'istanza di SQL Server. Per altre informazioni, vedere [modellazione tabulare &#40;esercitazione di AdventureWorks&#41;](../analysis-services/tabular-modeling-adventure-works-tutorial.md).  
   
 ## <a name="create-a-new-tabular-model-project"></a>Creare un nuovo modello di progetto tabulare  
   

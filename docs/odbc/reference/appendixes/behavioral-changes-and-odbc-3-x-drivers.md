@@ -3,15 +3,12 @@ title: Modifiche del comportamento e i driver ODBC 3. x | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sql_attr_odbc_version [ODBC]
 - backward compatibility [ODBC], behavioral changes
@@ -21,12 +18,11 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 2fe50cf12ce72ad3da5f9f2cb1f180d5875ef875
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f5eed90b0cfea267e2184018251d7a42da8bf670
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="behavioral-changes-and-odbc-3x-drivers"></a>Modifiche del comportamento e i driver ODBC 3. x
 L'attributo di ambiente SQL_ATTR_ODBC_VERSION indica al driver se è necessario presentare ODBC 2. *x* comportamento o ODBC 3*x* comportamento. La modalità in cui è impostato l'attributo di ambiente SQL_ATTR_ODBC_VERSION dipende dall'applicazione. ODBC 3*x* le applicazioni devono chiamare **SQLSetEnvAttr** per impostare questo attributo dopo che chiamano **SQLAllocHandle** per allocare un handle di ambiente e prima di chiamare  **SQLAllocHandle** per allocare un handle di connessione. In caso di eseguire questa operazione, gestione Driver restituisce SQLSTATE HY010 (funzione di errore nella sequenza) alla chiamata a quest'ultimo **SQLAllocHandle**.  

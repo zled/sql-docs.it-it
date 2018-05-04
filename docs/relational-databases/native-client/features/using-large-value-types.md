@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
@@ -23,13 +22,12 @@ caps.latest.revision: 53
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 420c4456970a2dcc0605bdc6d2f5ad3409298aec
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: ac75426f9d3f965d85ba9005b95726b71299b33c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-large-value-types"></a>Utilizzo di tipi di dati per valori di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,11 +69,11 @@ ms.lasthandoff: 04/16/2018
   
  Quando si segnalano la dimensione massima di una colonna, il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] segnalerà il provider OLE DB Native Client:  
   
--   Le dimensioni massime definite, ovvero 2000, ad esempio, per un **varchar (**2000**)** colonna, o  
+-   Le dimensioni massime definite, ovvero 2000, ad esempio, per un **varchar (** 2000 **)** colonna, o  
   
 -   Il valore "illimitato" che, in caso di un **varchar (max)** colonna è uguale a ~ 0. Questo valore è impostato per la proprietà dei metadati DBCOLUMN_COLUMNSIZE.  
   
- Le regole di conversione standard verranno applicate a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (**2000**)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
+ Le regole di conversione standard verranno applicate a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (** 2000 **)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
   
  In caso di recupero di tipi di dati per valori di grandi dimensioni, l'approccio più efficiente consiste nell'eseguire l'associazione come DBTYPE_IUNKNOWN e nell'impostare la proprietà del set di righe DBPROP_ACCESSORDER su DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS. In questo modo il valore verrà inviato come flusso direttamente dalla rete senza alcuna memorizzazione nel buffer intermedia, come nell'esempio seguente:  
   
@@ -708,7 +706,7 @@ _ExitProcessResultSet:
   
 -   Il valore "illimitato" che, in caso di un **varchar (max)** colonna è uguale a 0.  
   
- Le regole di conversione standard si applicano a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (**2000**)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
+ Le regole di conversione standard si applicano a un **varchar (max)** colonna, il che significa che qualsiasi conversione valida per un **varchar (** 2000 **)** colonna inoltre sarà valido per un **varchar (max)** colonna. Lo stesso vale per **nvarchar (max)** e **varbinary (max)** colonne.  
   
  L'elenco seguente riporta le funzioni API ODBC migliorate per l'utilizzo di tipi di dati per valori di grandi dimensioni:  
   
