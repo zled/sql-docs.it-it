@@ -3,15 +3,12 @@ title: Conteggio delle righe di SQL (Driver ODBC di Visual FoxPro) | Documenti M
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL row count [ODBC]
 ms.assetid: 9d851f8d-94ca-47ae-a4ad-53863be2d404
@@ -19,12 +16,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: fbcca83a8729f4cfa048a46db319f87e24176474
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 91cf4cc25ee394d02ccf899022613f6d4786c2e7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-row-count-visual-foxpro-odbc-driver"></a>Conteggio delle righe di SQL (Visual FoxPro ODBC Driver)
 > [!NOTE]  

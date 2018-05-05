@@ -1,16 +1,15 @@
 ---
 title: Algoritmo Microsoft Clustering | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
 ms.component: data-mining
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
 - nearest neighbor [Data Mining]
@@ -22,20 +21,19 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 
+caps.latest.revision: 62
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: d9511055469bea3bbd5e090ecb14c22e8c043789
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 74a6989ebbf0a0d60f4708da667d5ea339512a92
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algoritmo Microsoft Clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un algoritmo di *segmentazione* o *clustering* che esegue l'iterazione dei case in un set di dati per raggrupparli in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
+  L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un algoritmo di *segmentazione* o *clustering* che esegue l'iterazione dei case in un set di dati per raggrupparli in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
   
  I modelli di clustering identificano in un set di dati le relazioni che non è possibile derivare mediante l'osservazione casuale. Ad esempio, è possibile desumere per logica che le persone che si recano sul posto di lavoro in bicicletta in genere non abitano lontano. Tuttavia l'algoritmo può individuare altre caratteristiche non altrettanto ovvie sulle persone che si recano a lavoro in bicicletta. Nel diagramma seguente, il cluster A rappresenta i dati relativi alla persone che tendono a usare l'automobile per recarsi a lavoro, mentre il cluster B rappresenta i dati relativi alle persone che tendono a recarsi a lavoro in bicicletta.  
   
@@ -89,9 +87,9 @@ L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering è un
 -   Supporta l'utilizzo di modelli di data mining OLAP e la creazione di dimensioni di data mining.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Riferimento tecnico per Microsoft Clustering algoritmo](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per il Clustering modelli &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Contenuto del modello di data mining per il Clustering modelli & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Esempi di Query sul modello di clustering](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   

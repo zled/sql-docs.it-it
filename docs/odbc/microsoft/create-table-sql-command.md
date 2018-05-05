@@ -3,15 +3,12 @@ title: Crea tabella - comando SQL | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - CREATE TABLE [ODBC]
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
@@ -19,12 +16,11 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: b0e3fa9e8bfd3385988435670e9714f48ef44164
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 35a23b8c648b5ffbf2a2000c949f1cb097ba91ca
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-table---sql-command"></a>Crea tabella - comando SQL
 Crea una tabella con i campi specificati.  
@@ -127,7 +123,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Una tabella può avere più indici candidato.  
   
  CHIAVE esterna *eExpression4*TAG *TagName4*[NODUP]  
- Crea un indice (non primaria) esterno e stabilisce una relazione a una tabella padre. *eExpression4* specifica l'espressione chiave di indice esterna, e *TagName4* specifica il nome del tag chiave indice esterna che viene creato*.* I nomi di tag di indice possono contenere fino a 10 caratteri. Includere NODUP per creare un indice esterna candidato.  
+ Crea un indice (non primaria) esterno e stabilisce una relazione a una tabella padre. *eExpression4* specifica l'espressione chiave di indice esterna, e *TagName4* specifica il nome del tag chiave indice esterna che viene creato *.* I nomi di tag di indice possono contenere fino a 10 caratteri. Includere NODUP per creare un indice esterna candidato.  
   
  È possibile creare più indici della tabella esterni, ma le espressioni di indice esterna devono specificare diversi campi nella tabella.  
   

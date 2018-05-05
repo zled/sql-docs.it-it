@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -18,15 +17,15 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f3c3be311e1f0ce7b53bd35b90fb94dfc03f07b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 47c9385177fd02266b7814e08cde5e6a33b55418
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="command-events-data-columns"></a>Colonne di dati degli eventi di comando
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]La tabella seguente elenca le colonne di dati per ogni classe di evento di **eventi di comando** categoria di eventi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Nella tabella seguente vengono descritte le colonne di dati per ogni classe di evento della categoria di eventi **Eventi di comando** .  
   
  La categoria di eventi **Eventi di comando** include le classi di eventi seguenti:  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 01/08/2018
 |ServerName|Contiene il nome dell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stato generato l'evento di comando.|  
 |CurrentTime|Contiene l'ora corrente dell'evento di comando. Per il filtro, i formati sono *AAAA*-*MM*-*GG* e *AAAA*-*MM*-*GG HH*:*MM*:*SS*.|  
 |DatabaseName|Contiene il nome del database in cui è in esecuzione il comando.|  
-|Duration|Contiene un valore approssimativo dell'intervallo di tempo tra l'evento di inizio comando e l'evento di fine comando.|  
+|Durata|Contiene un valore approssimativo dell'intervallo di tempo tra l'evento di inizio comando e l'evento di fine comando.|  
 |EndTime|Contiene l'ora di fine dell'evento di comando. Per il filtro, i formati sono *AAAA*-*MM*-*GG* e *AAAA*-*MM*-*GG HH*:*MM*:*SS*.|  
 |EventSubclass|Contiene la classe di evento dell'evento di comando. I valori supportati sono:<br /><br /> 0: Create<br /><br /> 1: Alter<br /><br /> 2: Delete<br /><br /> 3: Process<br /><br /> 4: DesignAggregations<br /><br /> 5: WBInsert<br /><br /> 6: WBUpdate<br /><br /> 7: WBDelete<br /><br /> 8: Backup<br /><br /> 9: Restore<br /><br /> 10: MergePartitions<br /><br /> 11: Subscribe<br /><br /> 12: Batch<br /><br /> 13: BeginTransaction<br /><br /> 14: CommitTransaction<br /><br /> 15: RollbackTransaction<br /><br /> 16: GetTransactionState<br /><br /> 17: Cancel<br /><br /> 18: Synchronize<br /><br /> 19: Import80MiningModels<br /><br /> 20: Attach<br /><br /> 21: Detach<br /><br /> 22: SetAuthContext<br /><br /> 23: ImageLoad<br /><br /> 24: ImageSave<br /><br /> 10000: Altro|  
 |NTCanonicalUserName|Contiene il nome utente di Windows associato all'evento di comando. Il nome utente è in forma canonica. Ad esempio, engineering.microsoft.com/software/user.|  
@@ -73,12 +72,12 @@ ms.lasthandoff: 01/08/2018
 |CPUTime|Contiene la quantità di tempo CPU, in millisecondi, utilizzata dal processo tra l'evento di inizio comando e quello di fine comando.|  
 |Errore|Contiene il numero di errore di eventuali errori associati all'evento di comando.|  
 |Severity|Contiene il livello di gravità di un'eccezione associata all'evento di comando. I valori possibili sono:<br /><br /> 0 = Esito positivo<br /><br /> 1 = Messaggio informativo<br /><br /> 2 = Avviso<br /><br /> 3 = Errore|  
-|Esito positivo|Contiene informazioni sull'esito positivo o negativo dell'evento di comando. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
+|Operazione completata|Contiene informazioni sull'esito positivo o negativo dell'evento di comando. I valori possibili sono:<br /><br /> 0 = esito negativo<br /><br /> 1 = esito positivo|  
 |SessionType|Contiene l'entità che ha provocato l'operazione associata all'evento di fine comando.|  
 |NTDomainName|Contiene l'account di dominio di Windows associato all'evento di comando.|  
 |ClientProcessID|Contiene l'ID del processo client univoco associato all'evento di comando.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
+ [Categoria di eventi eventi di comando](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

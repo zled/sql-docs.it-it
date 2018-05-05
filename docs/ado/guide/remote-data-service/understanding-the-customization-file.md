@@ -1,11 +1,9 @@
 ---
 title: Informazioni sui File di personalizzazione | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: ado
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -19,12 +17,11 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 72d44f46f3f6f1a349a2dabf7a0c7576d55fdfe7
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: 99a565fe6ee25f1fb8d0911b80c0b629c02b3cdf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="understanding-the-customization-file"></a>Informazioni sui File di personalizzazione
 Ogni intestazione di sezione nel file di personalizzazione è costituita da parentesi quadre (**[]**) contenente un parametro e tipo. I quattro tipi di sezioni sono indicati da stringhe letterali **connettersi**, **sql**, **userlist**, o **log**. Il parametro è il valore letterale stringa, il valore predefinito, un identificatore specificato dall'utente o nulla.  
@@ -61,7 +58,7 @@ identifier
   
  Una particolare sezione viene utilizzata nelle seguenti circostanze:  
   
--   A **connettere** sezione viene utilizzata se la parte del valore del client di connettersi, parola chiave della stringa "**origine dati = * * * valore*", corrisponde a un **connettersi** identificatore sezione*.*  
+-   A **connettere** sezione viene utilizzata se la parte del valore del client di connettersi, parola chiave della stringa "**origine dati = * * * valore*", corrisponde a un **connettersi** identificatore sezione *.*  
   
 -   Un **sql** sezione viene utilizzata se la stringa di comando del client contiene una stringa che corrisponde a un **sql** identificatore di sezione.  
   
