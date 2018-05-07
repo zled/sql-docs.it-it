@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 0a3f0d8b9167a399249cce2183b5a03ae0995473
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 03e85862a5fc8a1a9daae56282294d9addad53f0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,13 +61,13 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="related-prediction-functions"></a>Funzioni di stima correlate  
  In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sono disponibili le seguenti funzioni aggiuntive per l'esecuzione di query sui modelli di clustering:  
   
--   Utilizzare il [DMX Cluster &#40; &#41;](../dmx/cluster-dmx.md) funzione per restituire il cluster più probabile.  
+-   Usare la [Cluster &#40;DMX&#41; ](../dmx/cluster-dmx.md) funzione per restituire il cluster più probabile.  
   
--   Utilizzare il [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md) funzione per ottenere la probabilità che un case appartenga a un cluster specifico. Questo valore viene utilizzato come valore inverso della distanza del cluster.  
+-   Usare la [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md) funzione per ottenere la probabilità che un case appartenga a un cluster specifico. Questo valore viene utilizzato come valore inverso della distanza del cluster.  
   
--   Utilizzare il [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) funzione per restituire un istogramma della probabilità del case di input in ogni cluster del modello.  
+-   Usare la [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) funzione per restituire un istogramma della probabilità del case di input in ognuno dei cluster del modello.  
   
--   Utilizzare il [PredictCaseLikelihood &#40; DMX &#41;](../dmx/predictcaselikelihood-dmx.md) funzione per restituire una misura da 0 a 1 che indica la probabilità un case di input è presente prendendo in considerazione il modello appreso dall'algoritmo.  
+-   Usare la [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md) funzione per restituire una misura da 0 a 1 che indica la probabilità un case di input è presente prendendo in considerazione il modello appreso dall'algoritmo.  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Esempio 1: Acquisizione della distanza del cluster rispetto al cluster più probabile  
  Nell'esempio seguente viene restituita la distanza dal case specificato al cluster a cui appartiene il case più probabile.  
@@ -139,9 +137,9 @@ NATURAL PREDICTION JOIN
 |0.97008209236394|  
   
 ## <a name="see-also"></a>Vedere anche  
- [DMX cluster &#40; &#41;](../dmx/cluster-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Contenuto del modello di data mining per il Clustering modelli &#40; Analysis Services - Data Mining &#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Contenuto del modello di data mining per il Clustering modelli & #40; Analysis Services - Data Mining & #41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

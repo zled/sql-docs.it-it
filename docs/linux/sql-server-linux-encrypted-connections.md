@@ -8,7 +8,6 @@ manager: craigg
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
@@ -16,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.workload: Inactive
-ms.openlocfilehash: b60ded8bde38413ccc2818efd2ca3852d88f235c
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 933a3d2b59af1c9f794b286d535386fbeac31f73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Crittografia delle connessioni a SQL Server in Linux
 

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -32,17 +31,16 @@ caps.latest.revision: 49
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 70b2acdd5370be93f4fca9a5270a5b9951305248
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f76a649664d5240d31b1fa5b69a5d3045a59de26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Consente di elaborare l'oggetto di data mining specificato. Per ulteriori informazioni sull'elaborazione dei modelli di data mining e strutture di data mining, vedere [l'elaborazione di requisiti e considerazioni &#40; Data Mining &#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
+  Consente di elaborare l'oggetto di data mining specificato. Per ulteriori informazioni sull'elaborazione dei modelli di data mining e strutture di data mining, vedere [considerazioni e requisiti di elaborazione &#40;Data Mining&#41;](../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
  Se è specificata una struttura di data mining, l'istruzione elabora la struttura e tutti i modelli di data mining associati. Se è specificato un modello di data mining, l'istruzione elabora solo tale modello.  
   
@@ -72,7 +70,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
   
  Tramite la seconda forma della sintassi, INSERT INTO*\<oggetto >*. COLUMN_VALUES è possibile inserire dati direttamente nelle colonne del modello senza training del modello. Questo metodo consente di fornire dati di colonna al modello in un modo ordinato e conciso, che risulta utile quando si utilizzano set di dati che contengono gerarchie o colonne ordinate.  
   
- Se si utilizza **INSERT INTO** con un modello di data mining o una struttura di data mining e lasciare disattivato il \<il mapping delle colonne del modello di > e \<query di origine dati > argomenti, l'istruzione si comporta come **ProcessDefault**, utilizzando associazioni già esistenti. Se le associazioni non esistono, l'istruzione restituirà un errore. Per ulteriori informazioni su **ProcessDefault**, vedere [opzioni di elaborazione e le impostazioni di &#40; Analysis Services &#41; ](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). La sintassi è illustrata nell'esempio seguente:  
+ Se si utilizza **INSERT INTO** con un modello di data mining o una struttura di data mining e lasciare disattivato il \<il mapping delle colonne del modello di > e \<query di origine dati > argomenti, l'istruzione si comporta come **ProcessDefault**, utilizzando associazioni già esistenti. Se le associazioni non esistono, l'istruzione restituirà un errore. Per ulteriori informazioni **ProcessDefault**, vedere [opzioni di elaborazione e le impostazioni &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). La sintassi è illustrata nell'esempio seguente:  
   
 ```  
 INSERT INTO [MINING MODEL] <model>  
@@ -88,7 +86,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La struttura di data mining non è elaborata.|Vengono elaborati il modello e la struttura di data mining.|  
 ||La struttura di data mining contiene modelli di data mining aggiuntivi.|L'elaborazione non riesce. È necessario rielaborare la struttura e i modelli di data mining associati.|  
 |INSERT INTO MINING STRUCTURE*\<struttura >*|La struttura di data mining viene elaborata o non elaborata.|La struttura di data mining e i modelli di data mining associati vengono elaborati.|  
-|INSERT INTO MINING MODEL*\<modello >* che contiene una query di origine<br /><br /> o Gestione configurazione<br /><br /> INSERT INTO MINING STRUCTURE*\<struttura >* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [DMX DELETE &#40; &#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL*\<modello >* che contiene una query di origine<br /><br /> o<br /><br /> INSERT INTO MINING STRUCTURE*\<struttura >* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [Elimina &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Elemento mapped model columns  
  Tramite il \<il mapping delle colonne del modello > elemento, è possibile eseguire il mapping di colonne dall'origine dati e le colonne del modello di data mining. Il \<il mapping delle colonne del modello > elemento ha il formato seguente:  
@@ -114,7 +112,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   Qualsiasi query di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] che restituisce un set di righe.  
   
- Per ulteriori informazioni sui tipi di origini dati, vedere [&#60; query di origine dati &#62;](../dmx/source-data-query.md).  
+ Per ulteriori informazioni sui tipi di origini dati, vedere [ &#60;query di origine dati&#62;](../dmx/source-data-query.md).  
   
 ## <a name="basic-example"></a>Esempio di base  
  L'esempio seguente usa **OPENQUERY** per il training di un modello Naive Bayes basato sui dati destinazione mailing diretto nel [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] database.  
@@ -144,8 +142,8 @@ AS [Models]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

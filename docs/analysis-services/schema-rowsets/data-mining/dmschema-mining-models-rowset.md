@@ -1,39 +1,25 @@
 ---
 title: Set di righe DMSCHEMA_MINING_MODELS | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_MODELS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_MODELS rowset
-ms.assetid: 1636f4cf-b342-4e2e-93b4-04136e2d41ef
-caps.latest.revision: 41
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: cd9f66d6fc8155c8390f45130f1354f9d223bc81
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Set di righe DMSCHEMA_MINING_MODELS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Enumera i modelli di data mining nel catalogo corrente. Il **DMSCHEMA_MINING_MODELS** set di righe include informazioni quali i nomi di modello, data di elaborazione e l'algoritmo di data mining associato a ogni modello di data mining.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Enumera i modelli di data mining nel catalogo corrente. Il **DMSCHEMA_MINING_MODELS** set di righe include informazioni quali i nomi di modello, data di elaborazione e l'algoritmo di data mining associato a ogni modello di data mining.  
   
- , Il **DMSCHEMA_MINING_MODELS** è molto simile a set di righe dello schema di [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato nello stesso modo.  
+ tramite tabelle annidate. Il **DMSCHEMA_MINING_MODELS** è molto simile a set di righe dello schema di [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) set di righe dello schema e può essere usato nello stesso modo.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_MODELS** set di righe contiene le colonne seguenti.  
@@ -66,17 +52,17 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Facoltativo.|  
-|**SERVICE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facoltativo.|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Facoltativa.|  
+|**SERVICE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Facoltativa.|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Facoltativa.|  
   
  Per esempi di come eseguire una query di questo set di righe, vedere [parametri utilizzati per creare un modello di Data Mining di Query](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Set di righe dello Schema di Data Mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

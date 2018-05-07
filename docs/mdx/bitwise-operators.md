@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 884b83ae8d893aa9004c978e4023a3329aebddc9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2d28555db8a175cc7b131cab7ab75a0bca135f7a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bitwise-operators"></a>Operatori bit per bit
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +35,13 @@ ms.lasthandoff: 01/08/2018
 |Operatore|Description|  
 |--------------|-----------------|  
 |[AND](../mdx/and-mdx.md)|Esegue la congiunzione logica di due espressioni numeriche.|  
-|[IS](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
+|[È](../mdx/is-mdx.md)|Esegue un confronto logico tra due espressioni di oggetto.|  
 |[NOT](../mdx/not-mdx.md)|Esegue la negazione logica di un'espressione numerica.|  
-|[O](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
+|[OPPURE](../mdx/or-mdx.md)|Esegue la disgiunzione logica di due espressioni numeriche.|  
 |[XOR](../mdx/xor-mdx.md)|Esegue un'operazione di esclusione logica tra due espressioni numeriche.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Operatori &#40; La sintassi MDX &#41;](../mdx/operators-mdx-syntax.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Gli operatori &#40;sintassi MDX&#41;](../mdx/operators-mdx-syntax.md)  
   
   

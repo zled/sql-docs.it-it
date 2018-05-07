@@ -1,41 +1,23 @@
 ---
 title: Elemento alias (ASSL) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: assl
 ms.topic: reference
-apiname:
-- Aliases Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
-apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- Aliases
-helpviewer_keywords:
-- Aliases element
-ms.assetid: 9de9e683-d30d-4d61-b32d-c5a946825742
-caps.latest.revision: 35
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e0e3a5c5cabfdc4396257d72aac9ff08e3d0ba43
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2ecac1cba39971411af3fe18a6ead9fd4e8a3ea8
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="aliases-element-assl"></a>Elemento Alias (ASSL)
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Contiene la raccolta di [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) gli elementi associati a un [Account](../../../analysis-services/scripting/objects/account-element-assl.md) elemento  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Contiene la raccolta di [Alias](../../../analysis-services/scripting/properties/alias-element-assl.md) gli elementi associati a un [Account](../../../analysis-services/scripting/objects/account-element-assl.md) elemento  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -52,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Description|  
+|Caratteristica|Descrizione|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|Nessuno (raccolta)|  
 |Valore predefinito|Nessuno (raccolta)|  
@@ -69,8 +51,8 @@ ms.lasthandoff: 01/08/2018
  L'elemento corrispondente dell'elemento padre del **alias** nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Account>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento Accounts &#40; ASSL &#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
- [Elemento database &#40; ASSL &#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
- [Raccolte &#40; ASSL &#41;](../../../analysis-services/scripting/collections/collections-assl.md)  
+ [Elemento account &#40;ASSL&#41;](../../../analysis-services/scripting/collections/accounts-element-assl.md)   
+ [Elemento database &#40;ASSL&#41;](../../../analysis-services/scripting/objects/database-element-assl.md)   
+ [Raccolte & #40; ASSL & #41;](../../../analysis-services/scripting/collections/collections-assl.md)  
   
   

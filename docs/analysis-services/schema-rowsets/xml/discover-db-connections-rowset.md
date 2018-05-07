@@ -1,39 +1,28 @@
 ---
 title: Set di righe DISCOVER_DB_CONNECTIONS | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_DB_CONNECTIONS rowset
-ms.assetid: 12a51a4e-5f3d-4449-9d94-7836fea1bc8b
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8a932cfa872e0cceed0b132f486349716ba4210b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3ccdd4496b075c976bfaecb4d7eb9db43560f3c3
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discoverdbconnections-rowset"></a>Set di righe DISCOVER_DB_CONNECTIONS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Fornisce informazioni di utilizzo e l'attività di risorse su connessioni attualmente aperte dal server a un database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Fornisce informazioni sull'utilizzo delle risorse e sulle attività relative alle connessioni attualmente aperte dal server a un database.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DISCOVER_DB_CONNECTIONS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Length|Description|  
+|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CONNECTION_CATALOG_NAME**|**DBTYPE_WSTR**||Nome del database attualmente connesso.|  
 |**CONNECTION_ID**|**DBTYPE_I4**||Numero univoco che identifica la connessione.|  
@@ -56,13 +45,13 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|CONNECTION_ID|DBTYPE_I4|Facoltativo.|  
-|CONNECTION_IN_USE|DBTYPE_I4|Facoltativo.|  
-|CONNECTION_SERVER_NAME|DBTYPE_WSTR|Facoltativo.|  
+|CONNECTION_ID|DBTYPE_I4|Facoltativa.|  
+|CONNECTION_IN_USE|DBTYPE_I4|Facoltativa.|  
+|CONNECTION_SERVER_NAME|DBTYPE_WSTR|Facoltativa.|  
 |CONNECTION_CATALOG_NAME|DBTYPE_WSTR|Obbligatorio.|  
-|CONNECTION_SPID|DBTYPE_I4|Facoltativo.|  
+|CONNECTION_SPID|DBTYPE_I4|Facoltativa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [XML per set di righe dello schema di analisi](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
+ [XML for Analysis i rowset dello Schema](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  
   
   

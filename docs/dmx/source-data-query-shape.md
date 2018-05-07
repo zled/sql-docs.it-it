@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,12 +22,11 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 3156c9110567763d1566de58b6d08304b464e094
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0c31d8d4725d90200f7f2811f974ffd9b98bcaa2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;query di dati di origine&gt; -forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,14 +64,14 @@ APPEND ({ <child table query> }
  *colonna figlio*  
  Colonna della tabella figlio utilizzata per identificare le righe padre tra i risultati di una query che restituisce la tabella padre.  
   
- *Nome colonna della tabella*  
+ *nome della colonna tabella*  
  Nome della colonna appena aggiunta nella tabella padre per creare la tabella figlio.  
   
 ## <a name="remarks"></a>Osservazioni  
  Le query devono essere ordinate in base alla colonna che definisce la correlazione tra la tabella padre e la tabella figlio.  
   
 ## <a name="examples"></a>Esempi  
- È possibile utilizzare l'esempio seguente all'interno di un [DMX INSERT INTO &#40; &#41;](../dmx/insert-into-dmx.md) istruzione per il training di un modello contenente una tabella nidificata. Le due tabelle all'interno di **forma** istruzione sono correlate tramite il **OrderNumber** colonna.  
+ È possibile utilizzare l'esempio seguente all'interno di un' [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) istruzione per il training di un modello contenente una tabella nidificata. Le due tabelle all'interno di **forma** istruzione sono correlate tramite il **OrderNumber** colonna.  
   
 ```  
 SHAPE {  
@@ -86,9 +84,9 @@ SHAPE {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [&#60; query di origine dati &#62;](../dmx/source-data-query.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [&#60;query di origine dati&#62;](../dmx/source-data-query.md)   
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

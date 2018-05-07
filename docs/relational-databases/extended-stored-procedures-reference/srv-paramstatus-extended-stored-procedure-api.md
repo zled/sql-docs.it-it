@@ -26,12 +26,11 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: f091544fe79d09664350a312973e9d26a1a90cab
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d24024156d54b6db4b74331861fa316618dc74fe
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (API Stored procedure estesa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,9 +61,9 @@ n
  Indica il numero del parametro. Il primo parametro è 1.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
- **int** contenente flag di stato per il parametro. Attualmente è disponibile un solo flag: se il bit 0 è impostato su 1, il parametro è un parametro restituito. Se è presente alcun *n*assenza di un parametro o se non è presente alcuna stored procedure remota, restituisce -1.  
+ **int** contenente flag di stato per il parametro. Attualmente è disponibile un solo flag: se il bit 0 è impostato su 1, il parametro è un parametro restituito. Se non è presente nessun parametro *n* o nessuna stored procedure remota, restituisce -1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa routine restituisce i flag di stato per un determinato parametro di chiamata a una stored procedure remota.  
   
  I parametri contengono i dati passati tra i client e l'applicazione con stored procedure remote. Il client può specificare determinati parametri come parametri restituiti. Questi parametri restituiti possono contenere valori che l'applicazione passa nuovamente al client.  

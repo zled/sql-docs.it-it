@@ -1,27 +1,25 @@
 ---
 title: Istruzione CREATE MEASURE (MDX) | Documenti Microsoft
-ms.custom: 
+ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
+ms.component: ''
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: f264ba96-cbbe-488b-8ac9-b3056a6e997b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4a87da849a5e142f0d521ddea870c2c04e041686
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8868863d2bba43ba8f9a0fff9f9f2aa5f5331bc4
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-data-definition---create-measure"></a>Definizione dei dati MDX - creare misure
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,11 +48,11 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
 ## <a name="remarks"></a>Osservazioni  
  Il *Measure_Name* deve essere racchiuso tra parentesi quadre.  
   
- L'istruzione CREATE MEASURE può essere utilizzato solo all'interno di una definizione di script MDX. vedere [elemento MdxScript &#40; ASSL &#41; ](../analysis-services/scripting/objects/mdxscript-element-assl.md).  
+ L'istruzione CREATE MEASURE può essere utilizzato solo all'interno di una definizione di script MDX. vedere [elemento MdxScript &#40;ASSL&#41;](../analysis-services/scripting/objects/mdxscript-element-assl.md).  
   
  È inoltre possibile definire un membro calcolato da usare in un'unica query. Per definire un membro calcolato limitato a una singola query, è possibile usare la clausola WITH nell'istruzione SELECT. Per ulteriori informazioni, vedere [compilazione di misure in MDX](../analysis-services/multidimensional-models/mdx/mdx-building-measures.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le istruzioni di definizione dei dati MDX &#40; MDX &#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Istruzioni di definizione dei dati MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

@@ -4,22 +4,20 @@ description: Vengono forniti suggerimenti sulla risoluzione dei problemi per l'u
 author: annashres
 ms.author: anshrest
 manager: craigg
-ms.date: 02/22/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
-ms.workload: On Demand
-ms.openlocfilehash: 2be739569e240bfecd7e18fecae52a6f15d24e0f
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: ec2fac2c39097fa4091c9cddfe78ae949cd25953
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Risolvere i problemi relativi a SQL Server in Linux
 
@@ -160,6 +158,41 @@ Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessari
    chown -R mssql:mssql /var/opt/mssql/
    ```
 
+## <a name="rebuild-system-databases"></a>Ricompilare database di sistema
+Come ultima risorsa, è possibile scegliere di rigenerare il master ed eseguire il modello di database per le versioni predefinite.
+
+> [!WARNING]
+> Questi passaggi verranno **eliminare tutti i dati di sistema di SQL Server** che è stata configurata. Sono incluse informazioni sui database utente (ma non i database utente). Verranno eliminate anche altre informazioni archiviate nei database di sistema, inclusi i seguenti: le informazioni chiave master, tutti i certificati caricati nel database master, la password di account di accesso SA e informazioni relative ai processi da msdb, le informazioni di posta elettronica database msdb e opzioni di sp_configure. Utilizzare solo se si comprendono le implicazioni!
+
+1. Arrestare SQL Server.
+
+   ```bash
+   sudo systemctl stop mssql-server
+   ```
+
+1. Eseguire **sqlservr** con il **force-setup** parametro. 
+
+   ```bash
+   sudo -u mssql /opt/mssql/bin/sqlservr --force-setup
+   ```
+   
+   > [!WARNING]
+   > Vedere l'avviso precedente! Inoltre, è necessario eseguire questo elemento come il **mssql** utente, come illustrato di seguito.
+
+1. Dopo aver visualizzato il messaggio "Ripristino è stato completato", preme CTRL + C. Verrà arrestato SQL Server
+
+1. Riconfigurare le password dell'account SA.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf set-sa-password
+   ```
+   
+1. Avvio di SQL Server e riconfigurare il server. Ciò include il ripristino o ricollegare tutti i database utente.
+
+   ```bash
+   sudo systemctl start mssql-server
+   ```
+
 ## <a name="common-issues"></a>Problemi comuni
 
 1. È possibile connettersi all'istanza di SQL Server remoto.
@@ -186,7 +219,7 @@ Se si è iniziato a accidentalmente SQL Server con un altro utente, è necessari
 
 4. Utilizzo di caratteri speciali nella password.
 
-   Se si usano alcuni caratteri della password di account di accesso di SQL Server occorre relativa sequenza di escape quando vengono utilizzati i servizi terminal di Linux. È necessario eseguire l'escape di $ in qualsiasi momento utilizzando il carattere barra rovesciata in uso in uno script shell dei comandi/terminal:
+   Se si usano alcuni caratteri della password di account di accesso di SQL Server, potrebbe essere necessario utilizzare caratteri di escape con una barra rovesciata quando vengono utilizzati in un comando di Linux nei Servizi terminal. Ad esempio, è necessario eseguire l'escape del dollaro ($) ogni volta che si usa in uno script shell dei comandi/terminal:
 
    Non funziona:
 

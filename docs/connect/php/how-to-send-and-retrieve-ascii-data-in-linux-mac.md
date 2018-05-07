@@ -3,14 +3,12 @@ title: 'Procedura: invio e recupero di dati ASCII in Linux e macOS (SQL) | Docum
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - retrieving data, ASCII data
 - sending data
@@ -19,12 +17,11 @@ helpviewer_keywords:
 author: yitam
 ms.author: v-yitam
 manager: mbarwin
-ms.workload: On Demand
-ms.openlocfilehash: 7f4fae285dbda78011f5e56d6c063fb402ae856f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 6fc7e9ad59182c2dede32917b7e54cd353119826
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Procedura: invio e recupero di dati ASCII in Linux e macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

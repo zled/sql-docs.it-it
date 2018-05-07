@@ -1,6 +1,6 @@
 ---
-title: Creare frammenti di codice in Studio operazioni SQL (anteprima) | Documenti Microsoft
-description: Informazioni su come creare e usare i frammenti di codice SQL in Studio operazioni SQL (anteprima)
+title: Creare frammenti di codice in SQL Operations Studio (anteprima) | Documentazione Microsoft
+description: Informazioni su come creare e usare i frammenti di codice SQL in SQL Operations Studio (anteprima)
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.reviewer: alayu; erickang; sstein
@@ -19,13 +19,14 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Creare e usare i frammenti di codice per creare rapidamente script Transact-SQL (T-SQL) [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>Creare e usare i frammenti di codice per creare rapidamente script Transact-SQL (T-SQL) in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Frammenti di codice [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono modelli che rendono più semplice per creano database e oggetti di database. 
+I frammenti di codice in [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono modelli che rendono più semplice la creazione di database e oggetti di database.
+ 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce diversi frammenti di T-SQL per assistenza nei generare rapidamente la sintassi corretta. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce diversi frammenti di T-SQL che aiutano a generare rapidamente la sintassi corretta. 
 
-Sono anche possibile creare frammenti di codice definito dall'utente.
+È anche possibile creare frammenti di codice definiti dall'utente.
 
 ## <a name="using-built-in-t-sql-code-snippets"></a>Utilizzo di frammenti di codice T-SQL incorporati
 
@@ -33,36 +34,36 @@ Sono anche possibile creare frammenti di codice definito dall'utente.
 
    ![frammenti](media/code-snippets/sql-snippets.png)
 
-1. Selezionare il frammento di codice che si desidera utilizzare e genera lo script T-SQL. Ad esempio, selezionare *sqlCreateTable*:
+1. Selezionare il frammento di codice che si desidera utilizzare e generare lo script T-SQL. Ad esempio, selezionare *sqlCreateTable*:
 
-   ![tabella di frammenti](media/code-snippets/create-table.png)
+   ![Lista di frammenti di codice](media/code-snippets/create-table.png)
 
-1. Aggiornare i campi evidenziati con i valori specifici. Ad esempio, sostituire *TableName* e *Schema* con i valori per il database:
+1. Aggiornare i campi evidenziati con valori specifici. Ad esempio, sostituire *TableName* e *Schema* con i valori per il vostro database:
 
-   ![Sostituire il campo di modello](media/code-snippets/table-from-snippet.png)
+   ![Sostituire il campo nel modello](media/code-snippets/table-from-snippet.png)
 
-   Se il campo che si desidera modificare non è evidenziato (questo avviene quando si sposta il cursore nell'Editor), fare doppio clic sulla parola che si desidera modificare, quindi scegliere **modificare tutte le occorrenze**:
+   Se il campo che si desidera modificare non è più evidenziato (ciò avviene quando si sposta il cursore nell'editor), premere il tasto destro del mouse sulla parola che si desidera aggiornare, quindi scegliere **Cambia tutte le occorrenze**:
 
-   ![Sostituire il campo di modello](media/code-snippets/change-all.png)
+   ![Sostituire il campo nel modello](media/code-snippets/change-all.png)
 
-1. Aggiornare o aggiungere eventuali ulteriori T-SQL è necessario per il frammento di codice selezionato. Ad esempio, aggiornare *Column1*, *Column2*e aggiungere altre colonne.
+1. Aggiornare o aggiungere eventuali ulteriori parti di T-SQL per il frammento di codice selezionato. Ad esempio, aggiornare *Column1*, *Column2* e aggiungere altre colonne.
 
 
  
 ## <a name="creating-sql-code-snippets"></a>Creazione di frammenti di codice SQL 
 
-È possibile definire frammenti personalizzati. Per aprire il file di frammento di codice SQL per la modifica:
+È possibile definire frammenti personalizzati. Per aprire il file del frammento di codice SQL per la modifica:
 
-1. Aprire il *comando tavolozza* (**Maiusc + Ctrl + P**) e il tipo *cattura*e selezionare **preferenze: Apri frammenti di codice utente**:
+1. Aprire il *riquadro comandi* (**Maiusc+Ctrl+P**), scrivere *snip* e selezionare **Preferenze: Apri frammenti di codice utente**:
 
-   ![Sostituire il campo di modello](media/code-snippets/user-snippets.png)
+   ![Sostituire il campo nel modello](media/code-snippets/user-snippets.png)
 
 1. Selezionare **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le funzionalità di frammento di codice da Visual Studio Code in modo che questo articolo illustra in particolare l'utilizzo dei frammenti SQL. Per ulteriori informazioni, vedere [creare frammenti personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita la funzionalità dei frammento di codice da Visual Studio Code. Questo articolo illustra in particolare l'utilizzo dei frammenti SQL. Per ulteriori informazioni, vedere [Creare frammenti personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code. 
 
-   ![Sostituire il campo di modello](media/code-snippets/select-sql.png)
+   ![Sostituire il campo nel modello](media/code-snippets/select-sql.png)
 
 1. Incollare il codice seguente nel *sql.json*:
 
@@ -95,10 +96,10 @@ Sono anche possibile creare frammenti di codice definito dall'utente.
    ```
 
 1. Salvare il file sql.json.
-1. Aprire una nuova finestra editor di query, fare clic su **Ctrl + N**.
-2. Tipo **sql**, visualizzare i frammenti di codice di due utente appena aggiunto; *sqlCreateTable2* e *sqlSelectTop5*.
+1. Aprire una nuova finestra editor di query premendo **Ctrl+N**.
+2. Digitare **sql** per visualizzare i frammenti di codice dei due utenti appena aggiunti: *sqlCreateTable2* e *sqlSelectTop5*.
 
-Selezionare uno dei nuovi frammenti di codice e assegnargli un'esecuzione dei test.
+Selezionare uno dei nuovi frammenti di codice e avviare un'esecuzione di prova.
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive

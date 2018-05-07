@@ -1,38 +1,28 @@
 ---
 title: Set di righe DISCOVER_MEMORYUSAGE | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-ms.assetid: e416ea61-9615-468c-a96f-bbf731f803b1
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd97d1b2eb02dda3f8add861e6767b7a495a821d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: abca3c8dc426e380b20c40db5a78d8300748aa0c
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="discovermemoryusage-rowset"></a>Set di righe DISCOVER_MEMORYUSAGE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Restituisce le statistiche di DISCOVER_MEMORYUSAGE per vari oggetti allocati dal server.  
+  Restituisce le statistiche di DISCOVER_MEMORYUSAGE per vari oggetti allocati dal server.  
   
 > [!WARNING]  
 >  Questo set di righe può produrre set di risultati molto grandi. Se non è possibile visualizzare i risultati perché richiedono una quantità di memoria di visualizzazione maggiore di quella consentita da SQL Server Management Studio, i risultati vengono scritti in un file temporaneo, nel percorso predefinito seguente:  
 >   
->  '\<drive>:\Users\\<username\>\AppData\Local\Temp\\<fileID\>.xml'.  
+>  '\<unità >: \Users\\< nome utente\>\AppData\Local\Temp\\< fileID\>XML '.  
   
  **Si applica a:** modelli tabulari, modelli multidimensionali  
   

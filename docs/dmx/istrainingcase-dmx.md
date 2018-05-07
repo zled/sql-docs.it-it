@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: b58b0d983008fadb96ce5b527ec2283a5dd34367
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37a61a78e2706d0125e341819b8e829bd9602564
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="istrainingcase-dmx"></a>IsTrainingCase (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +50,7 @@ IsTrainingCase()
 > [!NOTE]  
 >  Se si desidera utilizzare le funzioni IsTrainingCase o IsTestCase per restituire i dettagli sui case nel modello, è necessario attivare il drill-through sul modello. Per altre informazioni, vedere [Abilitazione del drill-through per un modello di data mining](../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md).  
   
- Per restituire i case che fanno parte del set di dati di test, utilizzare la funzione [IsTestCase &#40; DMX &#41;](../dmx/istestcase-dmx.md).  
+ Per restituire i case che fanno parte del set di dati di test, utilizzare la funzione [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md).  
   
 ## <a name="examples"></a>Esempi  
  L'esempio seguente usa il modello di data mining clustering dallo scenario di mailing diretto di destinazione nel [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). Nella query vengono restituiti solo i case utilizzati per il training del modello di data mining. Inoltre, i case di training sono limitati ai clienti di età inferiore a 40 anni.  
@@ -64,11 +62,11 @@ WHERE IsTrainingCase()
 AND [Age] <40  
 ```  
   
- Per altri esempi di query sui case utilizzati nel data mining, vedere [modello SELECT FROM &#60; &#62;. DMX casi &#40; &#41; ](../dmx/select-from-model-cases-dmx.md) e [struttura SELECT FROM &#60; &#62;. CASI](../dmx/select-from-structure-cases.md).  
+ Per altri esempi di query sui case utilizzati nel data mining, vedere [SELECT FROM &#60;modello&#62;. CASI &#40;DMX&#41; ](../dmx/select-from-model-cases-dmx.md) e [SELECT FROM &#60;struttura&#62;. CASI](../dmx/select-from-structure-cases.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di training e set di dati di Testing](../analysis-services/data-mining/training-and-testing-data-sets.md)   
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Query di Data Mining](../analysis-services/data-mining/data-mining-queries.md)  
   
   

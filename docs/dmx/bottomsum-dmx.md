@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 6fa897bdaf0ebccf356603eaf0bfd3b4dafa1de6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b7bb5ede61f9ddb95c5f9d76ea09ef2667811bc7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -109,11 +107,11 @@ NATURAL PREDICTION JOIN
 |Road Bottle Cage|1195|0.08…|0.07…|  
 |Mountain Bottle Cage|1367|0.09…|0.08…|  
   
- **Nota** in questo esempio viene fornito solo per illustrare l'utilizzo di BottomSum. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
+ **Nota** questo esempio viene fornito solo per illustrare l'utilizzo di BottomSum. A seconda della dimensione del set di dati, questa query potrebbe impiegare molto tempo per l'esecuzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
- [DMX BottomPercent &#40; &#41;](../dmx/bottompercent-dmx.md)  
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
   
   

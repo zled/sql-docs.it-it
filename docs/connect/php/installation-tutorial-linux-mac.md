@@ -2,23 +2,20 @@
 title: Linux e macOS esercitazione di installazione di Microsoft Drivers for PHP per SQL Server | Documenti Microsoft
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
+ms.prod_service: connectivity
 ms.component: php
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- drivers
-ms.topic: article
+ms.technology: connectivity
+ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.workload: Inactive
-ms.openlocfilehash: 4ab3f815063a537b25b776b6b98fd26e74b7d2c4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 0874b2aa4d526f8a283e8e54b5c7f101ac1f1c45
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Linux e macOS esercitazione di installazione di Microsoft Drivers for PHP per SQL Server
 Le istruzioni seguenti si presuppongono un ambiente pulito e viene illustrato come installare PHP 7.x, il driver ODBC di Microsoft, Apache e Microsoft Drivers for PHP per SQL Server in Ubuntu 16.04 e 17.10, RedHat 7, Debian 8 e 9, Suse 12 e macOS X 10.11 e 10.12. Queste istruzioni consigliare installare i driver mediante PECL, ma è anche possibile scaricare i file binari predefiniti dal [Microsoft Drivers for PHP per SQL Server](https://github.com/Microsoft/msphpsql/releases) Github pagina del progetto e installarli seguendo le istruzioni nella [ Caricamento dei driver Microsoft per PHP per SQL Server](../../connect/php/loading-the-php-sql-driver.md). Per una spiegazione del caricamento di estensione e perché è non aggiungere le estensioni di PHP. ini, vedere la sezione sul [caricamento dei driver](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).

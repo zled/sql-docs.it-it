@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 46
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: a8a7eee3ad6767c0a40dedb8f334c9767778e0d7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2bf6945868b889f31762476d1cd50bc87637c7f7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +50,14 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un livello.  
   
- *Distanza*  
+ *distanza*  
  Espressione numerica valida che specifica la distanza dal membro specificato.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Con il **predecessore** funzione, si specifica la funzione con un'espressione di membro MDX e quindi un'espressione MDX di un livello è un predecessore del membro oppure un'espressione numerica che rappresenta il numero di livelli di sopra di tale membro. Con queste informazioni, il **predecessori** funzione restituisce il membro predecessore a tale livello.  
   
 > [!NOTE]  
->  Per restituire un set contenente il membro predecessore, anziché il solo membro predecessore, utilizzare il [predecessori &#40; MDX &#41; ](../mdx/ancestors-mdx.md) (funzione).  
+>  Per restituire un set contenente il membro predecessore, anziché il solo membro predecessore, utilizzare il [predecessori &#40;MDX&#41; ](../mdx/ancestors-mdx.md) (funzione).  
   
  Se si specifica un'espressione di livello il **predecessore** funzione restituisce il predecessore del membro specificato al livello specificato. Se il membro specificato non è incluso nella stessa gerarchia del livello specificato, la funzione restituisce un errore.  
   
@@ -113,6 +111,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

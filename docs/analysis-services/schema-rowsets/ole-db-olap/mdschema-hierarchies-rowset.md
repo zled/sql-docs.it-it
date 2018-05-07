@@ -1,37 +1,23 @@
 ---
 title: Set di righe MDSCHEMA_HIERARCHIES | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_HIERARCHIES
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_HIERARCHIES rowset
-ms.assetid: 2e5b2a81-366e-4d5b-af1e-1d372bf596d9
-caps.latest.revision: 34
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7ecdc6817c5a2d7e1e88b909080a3156c55f40eb
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 213d6899267c4397ecb33d078f33fee661ae2067
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemahierarchies-rowset"></a>Set di righe MDSCHEMA_HIERARCHIES
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Descrive ogni gerarchia all'interno di una dimensione specifica.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descrive ogni gerarchia all'interno di una determinata dimensione.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **MDSCHEMA_HIERARCHIES** set di righe contiene le colonne seguenti.  
@@ -60,7 +46,7 @@ ms.lasthandoff: 01/08/2018
 |**HIERARCHY_ORDINAL**|**DBTYPE_UI4**|Numero ordinale della gerarchia tra tutte le gerarchie del cubo.|  
 |**DIMENSION_IS_SHARED**|**DBTYPE_BOOL**|Restituisce sempre **TRUE**.|  
 |**HIERARCHY_IS_VISIBLE**|**DBTYPE_BOOL**|Valore booleano che indica se la gerarchia è visibile.<br /><br /> Restituisce **TRUE** se la gerarchia è visibile; in caso contrario, **FALSE**.|  
-|**HIERARCHY_ORIGIN**|**DBTYPE_UI2**|Maschera di bit che determina l'origine della gerarchia:<br /><br /> **MD_USER_DEFINED** identifica le gerarchie definite dall'utente e ha un valore di **0x0000001**.<br /><br /> **MD_SYSTEM_ENABLED** identifica le gerarchie di attributi e ha un valore di **0x0000002**.<br /><br /> **MD_SYSTEM_INTERNAL** identifica gli attributi senza gerarchie e ha un valore di **0x0000004**.<br /><br /> <br /><br /> Si noti che una gerarchia dell'attributo padre/figlio è sia **MD_USER_DEFINED** e **MD_SYSTEM_ENABLED**.|  
+|**HIERARCHY_ORIGIN**|**DBTYPE_UI2**|Maschera di bit che determina l'origine della gerarchia:<br /><br /> **MD_USER_DEFINED** identifica le gerarchie definite dall'utente e ha un valore di **0x0000001**.<br /><br /> **MD_SYSTEM_ENABLED** identifica le gerarchie di attributi e ha il valore **0x0000002**.<br /><br /> **MD_SYSTEM_INTERNAL** identifica gli attributi senza gerarchie e ha il valore **0x0000004**.<br /><br /> <br /><br /> Si noti che una gerarchia dell'attributo padre/figlio è sia **MD_USER_DEFINED** e **MD_SYSTEM_ENABLED**.|  
 |**HIERARCHY_DISPLAY_FOLDER**|**DBTYPE_WSTR**|Il percorso da utilizzare durante la visualizzazione della gerarchia nell'interfaccia utente. I nomi delle cartelle saranno separati da un punto e virgola (;). Cartelle nidificate sono indicate da una barra rovesciata (\\).|  
 |**INSTANCE_SELECTION**|**DBTYPE_UI2**|Hint per l'applicazione client relativo alla modalità di visualizzazione della gerarchia. Tra i valori validi sono inclusi i seguenti:<br /><br /> **MD_INSTANCE_SELECTION_NONE**<br /><br /> **MD_INSTANCE_SELECTION_DROPDOWN**<br /><br /> **MD_INSTANCE_SELECTION_LIST**<br /><br /> **MD_INSTANCE_SELECTION_FILTEREDLIST**<br /><br /> **MD_INSTANCE_SELECTION_MANDATORYFILTER**|  
 |**GROUPING_BEHAVIOR**|**DBTYPE_I2**|Enumerazione tramite cui viene specificato il comportamento di raggruppamento previsto dei client per questa gerarchia. Di seguito sono indicati i valori possibili:<br /><br /> **EncourageGrouping** (1)<br /><br /> **DiscourageGrouping** (2)|  
@@ -73,17 +59,17 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**HIERARCHY_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**HIERARCHY_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
 |**HIERARCHY_ORIGIN**|**DBTYPE_UI2**|(Facoltativo) Una restrizione predefinita è attiva su MD_USER_DEFINED e MD_SYSTEM_ENABLED.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno dei valori validi seguenti:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIONE|  
 |**HIERARCHY_VISIBILITY**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno dei valori validi seguenti:<br /><br /> 1 Visibile<br /><br /> 2 Non visibile|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema OLE DB per OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB per OLAP i rowset dello Schema](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

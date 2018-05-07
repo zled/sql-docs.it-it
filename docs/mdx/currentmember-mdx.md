@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 2c8ff1f7343017b3c7870f963fe2006699f88e9d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a8fd9a63b00a41d12645124a8e9dfe5f2a2ceef3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -88,7 +86,7 @@ Hierarchy_Expression.CurrentMember
   
  `WHERE([Customer].[Customer Geography].[Country].&[Australia])`  
   
- Il membro corrente cambia su una gerarchia utilizzata su un asse in una query. Pertanto, il membro corrente sulle altre gerarchie sulla stessa dimensione che non vengono utilizzati su un asse è inoltre possibile modificare; Questo comportamento viene chiamato 'auto EXIST' e altri dettagli sono disponibili [concetti chiave di MDX &#40; Analysis Services &#41; ](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Ad esempio, nella query seguente viene illustrato come il membro corrente sulla gerarchia di Calendar Year della dimensione Date cambia con il membro corrente sulla gerarchia Calendar, quando quest'ultimo viene visualizzato sull'asse delle righe:  
+ Il membro corrente cambia su una gerarchia utilizzata su un asse in una query. Può pertanto cambiare anche il membro corrente sulle altre gerarchie sulla stessa dimensione che non vengono utilizzati su un asse; Questo comportamento viene chiamato 'auto EXIST' e altri dettagli sono disponibili [concetti chiave di MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md). Ad esempio, nella query seguente viene illustrato come il membro corrente sulla gerarchia di Calendar Year della dimensione Date cambia con il membro corrente sulla gerarchia Calendar, quando quest'ultimo viene visualizzato sull'asse delle righe:  
   
  `WITH MEMBER MEASURES.CURRENTYEAR AS`  
   
@@ -131,6 +129,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

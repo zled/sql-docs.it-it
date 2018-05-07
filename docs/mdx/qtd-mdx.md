@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 767da32ea9001be53b4418fae2cfecb26d3cc842
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 016e41ebb0531fc37a9f74c40259ede376b99549
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="qtd-mdx"></a>Qtd (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +46,7 @@ Qtd( [ Member_Expression ] )
 ## <a name="remarks"></a>Osservazioni  
  Se expressionis di membro non è specificato, il valore predefinito è il membro corrente della prima gerarchia con un livello di tipo *trimestri* nella prima dimensione di tipo *ora* nel gruppo di misure.  
   
- Il **Qtd** è una funzione di scelta rapida per il [PeriodsToDate &#40; MDX &#41; ](../mdx/periodstodate-mdx.md) funzione il cui argomento di espressione di livello è impostato su *trimestre*. In altre parole, dal punto di vista funzionale `Qtd(Member_Expression)` equivale a `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
+ Il **Qtd** è una funzione di scelta rapida per il [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md) funzione il cui argomento di espressione di livello è impostato su *trimestre*. In altre parole, dal punto di vista funzionale `Qtd(Member_Expression)` equivale a `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente restituisce la somma del `Measures.[Order Quantity]` membro, aggregato sui primi due mesi del terzo trimestre dell'anno di calendario 2003 contenuti nel `Date` dimensione, dal **Adventure Works** cubo.  
@@ -68,6 +66,6 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

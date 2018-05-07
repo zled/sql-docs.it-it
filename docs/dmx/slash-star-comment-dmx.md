@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 900b602a00e11cc58cd6500cafc99eb90dcca62d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 37858f818ec35e6eb68c13034fc8ca7e56dc0150
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="slash-star-comment-dmx"></a>Barre a stella (commento) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,16 +44,16 @@ ms.lasthandoff: 01/08/2018
  Stringa contenente il testo del commento.  
   
 ## <a name="remarks"></a>Osservazioni  
- Commenti su più righe devono essere contrassegnati da / * e \*/.  
+ I commenti su più righe devono essere contrassegnati da /* e \*/.  
   
  I commenti possono essere di qualsiasi lunghezza.  
   
- Per ulteriori informazioni sull'utilizzo di diversi tipi di commenti in DMX, vedere [DMX commenti &#40; &#41;](../dmx/comments-dmx.md).  
+ Per ulteriori informazioni su come usare diversi tipi di commenti in DMX, vedere [commenti &#40;DMX&#41;](../dmx/comments-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Doppia barra &#40; Commento &#41; &#40; DMX &#41;](../dmx/double-slash-comment-dmx.md)   
- [-&#40; Commento &#41; &#40; DMX &#41; Riepilogo](../dmx/comment-dmx-summary.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operatori &#40; DMX &#41;](../dmx/operators-dmx.md)  
+ [Doppia barra &#40;commento&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
+ [- &#40;Commento&#41; &#40;DMX&#41; riepilogo](../dmx/comment-dmx-summary.md)   
+ [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Gli operatori &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

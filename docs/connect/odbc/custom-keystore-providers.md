@@ -3,26 +3,22 @@ title: I provider di archivio chiavi personalizzato | Documenti Microsoft
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 caps.latest.revision: 1
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.workload: Inactive
-ms.openlocfilehash: 5bde3f699c1db9156e9e4fdfc96d2098d15413d4
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 0d3a3b25ca2ead96d23b0d367ab633d900951de8
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="custom-keystore-providers"></a>Provider di archivio chiavi personalizzato
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]

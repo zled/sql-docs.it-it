@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,12 +24,11 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: c5726b7550b0c7a9b1dab63344631502b2fa06b7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4db8e03ca5267941cca1f909e88afa7ceec7e96c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="identifiers-dmx"></a>Identificatori (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/08/2018
   
  L'identificatore di un oggetto viene creato al momento della sua definizione e viene quindi utilizzato per farvi riferimento. Gli identificatori devono contenere al massimo 100 caratteri.  
   
-##  <a name="RegularIdentifiers"></a>Identificatori regolari  
+##  <a name="RegularIdentifiers"></a> Identificatori regolari  
  Gli identificatori regolari in DMX sono conformi alle regole di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] per il formato degli identificatori. In DMX gli identificatori regolari non richiedono delimitatori. Di seguito è riportato un esempio di istruzione DMX che utilizza un identificatore regolare, non delimitato:  
   
 ```  
@@ -69,13 +67,13 @@ SELECT * FROM Clustering.CONTENT;
   
     -   Un carattere di sottolineatura (_).  
   
-3.  L'identificatore non deve coincidere con una parola riservata DMX. In DMX per le parole riservate non viene fatta distinzione tra maiuscole e minuscole. Per ulteriori informazioni, vedere [DMX parole chiave riservate &#40; &#41;](../dmx/reserved-keywords-dmx.md).  
+3.  L'identificatore non deve coincidere con una parola riservata DMX. In DMX per le parole riservate non viene fatta distinzione tra maiuscole e minuscole. Per altre informazioni, vedere [le parole chiave riservate &#40;DMX&#41;](../dmx/reserved-keywords-dmx.md).  
   
 4.  Gli identificatori non possono contenere spazi o caratteri speciali incorporati.  
   
  Se in un'istruzione DMX si utilizza un identificatore che non rispetta queste regole, sarà necessario racchiuderlo tra parentesi quadre.  
   
-##  <a name="DelimitedIdentifiers"></a>Identificatori delimitati  
+##  <a name="DelimitedIdentifiers"></a> Identificatori delimitati  
  Gli identificatori delimitati sono racchiusi tra parentesi quadre ([ ]).  Di seguito è riportato un esempio di istruzione DMX con un identificatore delimitato conforme alle regole indicate.  
   
 ```  
@@ -113,13 +111,13 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  Quando si utilizzano nomi di oggetti qualificati può essere necessario delimitare più identificatori che compongono il nome dell'oggetto. Tali identificatori devono essere delimitati singolarmente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; Convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

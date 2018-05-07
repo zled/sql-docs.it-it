@@ -1,37 +1,23 @@
 ---
 title: Set di righe DMSCHEMA_MINING_COLUMNS | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- DMSCHEMA_MINING_COLUMNS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DMSCHEMA_MINING_COLUMNS rowset
-ms.assetid: ae35ccde-4438-46f4-8611-40b2b1a42fce
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e37841617289eaa71af4d7c2c091459f32a745b6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 73c0ad513c6665355c98a40409ecd694b19adffb
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dmschemaminingcolumns-rowset"></a>Set di righe DMSCHEMA_MINING_COLUMNS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono descritte le singole colonne di tutti i modelli di data mining in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Questo set di righe è limitato al catalogo corrente.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Vengono descritte le singole colonne di tutti i modelli di data mining in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Questo set di righe è limitato al catalogo corrente.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **DMSCHEMA_MINING_COLUMNS** set di righe contiene le colonne seguenti.  
@@ -48,7 +34,7 @@ ms.lasthandoff: 01/08/2018
 |**COLUMN_HAS_DEFAULT**|**DBTYPE_BOOL**|Valore booleano che indica se la colonna dispone di un valore predefinito.<br /><br /> **TRUE** se la colonna contiene un valore predefinito, in caso contrario **FALSE**.|  
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**|Valore predefinito della colonna.<br /><br /> Se il valore predefinito è il **NULL** valore **COLUMN_HASDEFAULT** contiene **TRUE**, e questa colonna contiene **NULL**.|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**|Maschera di bit che descrive le caratteristiche della colonna. Il **DBCOLUMNFLAGS** tipo enumerato specifica i bit nella maschera di bit. Questa colonna non è mai vuota.|  
-|**IS_NULLABLE**|**DBTYPE_BOOL**|Valore booleano che indica se la colonna ammette valori Null.<br /><br /> **FALSE** se la colonna è notoriamente non ammette valori null; in caso contrario, **TRUE**.|  
+|**IS_NULLABLE**|**DBTYPE_BOOL**|Valore booleano che indica se la colonna ammette valori Null.<br /><br /> **FALSE** se la colonna è sicuramente non ammette valori null; in caso contrario, **TRUE**.|  
 |**DATA_TYPE**|**DBTYPE_UI2**|Indicatore del tipo di dati della colonna. Nell'elenco seguente vengono illustrati alcuni esempi di tipi di marcatori restituiti.<br /><br /> "**Tabella**" restituirebbe **DBTYPE_HCHAPTER**.<br /><br /> "**Testo**" restituirebbe **DBTYPE_WCHAR**.<br /><br /> "**Lungo**" restituirebbe **DBTYPE_I8**.<br /><br /> "**DOPPIE**" restituirebbe **DBTYPE_R8**.<br /><br /> "**Data**" restituirebbe **DBTYPE_DATE**.|  
 |**TYPE_GUID**|**DBTYPE_GUID**|GUID del tipo di dati della colonna. Questa colonna non è supportata da [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]; contiene sempre **VT_NULL**.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**|Lunghezza massima possibile di un valore nella colonna. Per le colonne di tipo carattere, binario o bit, i valori possibili sono i seguenti:<br /><br /> Lunghezza massima della colonna in caratteri, byte o bit, rispetto al tipo di colonna, se è definita una lunghezza. Ad esempio, un **char (5)** colonna in una tabella SQL ha una lunghezza massima di 5.<br /><br /> Lunghezza massima del tipo di dati in caratteri, byte o bit, rispetto al tipo di colonna, se la colonna non dispone di una lunghezza definita.<br /><br /> È zero (0) se né la colonna né il tipo di dati dispongono di una lunghezza massima definita.<br /><br /> **NULL** per tutti gli altri tipi di colonne|  
@@ -85,12 +71,12 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**COLUMN_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema di data mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Set di righe dello Schema di Data Mining](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   

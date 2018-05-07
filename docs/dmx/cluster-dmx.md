@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: cec73e5b3c182073cfad14c3605183fe72732d72
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8a847f60134abd44fa5fc9da2deb4e9a53532960
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cluster-dmx"></a>Cluster (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,10 +48,10 @@ Cluster()
  Il **Cluster** funzione restituisce un valore scalare di un nome di cluster. Tuttavia, se si utilizza questa funzione come argomento di un'altra funzione, è necessario considerare come un \<cluster riferimento di colonna >.  
   
 ## <a name="remarks"></a>Osservazioni  
- **Cluster** può anche essere utilizzato come un `<`riferimento a colonna cluster`>` per un **PredictHistogram** (funzione).  
+ **Cluster** può essere utilizzato anche come un `<`riferimento a una colonna del cluster`>` per un **PredictHistogram** (funzione).  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene utilizzata una query singleton con il [PredictHistogram &#40; DMX &#41;](../dmx/predicthistogram-dmx.md) e funzioni per restituire la distanza del singolo case da ogni cluster del modello di data mining TM Clustering e la probabilità che il singolo case esista in ogni cluster del Cluster.  
+ Nell'esempio seguente viene utilizzata una query singleton con il [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) e funzioni per restituire la distanza del singolo case da ogni cluster del modello di data mining TM Clustering del Cluster e il probabilità che il singolo case esista in ogni cluster.  
   
 ```  
 SELECT  
@@ -69,9 +67,9 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [ClusterProbability &#40; DMX &#41;](../dmx/clusterprobability-dmx.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento (funzione)](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [DMX funzioni &#40; &#41;](../dmx/functions-dmx.md)   
- [Funzioni di stima generale &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)  
+ [ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Le funzioni &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

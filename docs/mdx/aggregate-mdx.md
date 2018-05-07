@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: On Demand
-ms.openlocfilehash: 9ae3eb300df4b0dccd02e6e3ec7034feaa8913e7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2954ccb1ff3affbdd9471ec91629d31b80433faf
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -136,15 +134,15 @@ WHERE ([Geography].[State-Province].x,
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [PeriodsToDate &#40; MDX &#41;](../mdx/periodstodate-mdx.md)   
- [Gli elementi figlio &#40; MDX &#41;](../mdx/children-mdx.md)   
- [HIERARCHIZE &#40; MDX &#41;](../mdx/hierarchize-mdx.md)   
- [Numero &#40; Set &#41; &#40; MDX &#41;](../mdx/count-set-mdx.md)   
- [Filtro &#40; MDX &#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40; MDX &#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40; MDX &#41;](../mdx/drilldownlevel-mdx.md)   
- [Proprietà &#40; MDX &#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40; MDX &#41;](../mdx/prevmember-mdx.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
+ [Gli elementi figlio &#40;MDX&#41;](../mdx/children-mdx.md)   
+ [HIERARCHIZE & #40; MDX & #41;](../mdx/hierarchize-mdx.md)   
+ [Numero & #40; Set & #41; & #40; MDX & #41;](../mdx/count-set-mdx.md)   
+ [Filtro & #40; MDX & #41;](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers & #40; MDX & #41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel & #40; MDX & #41;](../mdx/drilldownlevel-mdx.md)   
+ [Proprietà & #40; MDX & #41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

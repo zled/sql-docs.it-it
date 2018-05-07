@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -20,12 +19,11 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 67376067c26a3eae41d0c090a141367fcf5cc396
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ffe88aae91e19f0f4e55d104a323870caf4e67b7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="mdx-scripting---if"></a>Creazione di script MDX - IF
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,14 +38,14 @@ IF expression THEN assignment END IF
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *expression*  
+ *espressione*  
  Espressione MDX (Multidimensional Expression) che restituisce un valore booleano, true o false.  
   
- *assegnazione*  
+ *Assegnazione*  
  Espressione MDX che assegna un valore a un sottocubo o a una proprietà calcolata.  
   
 ## <a name="remarks"></a>Osservazioni  
- Utilizzare l'istruzione IF per flusso di controllo, ovvero a differenza di [IIf &#40; MDX &#41; ](../mdx/iif-mdx.md) funzione e [istruzione CASE &#40; MDX &#41; ](../mdx/case-statement-mdx.md) che può essere utilizzato solo per restituire oggetti o valori.  
+ Utilizzare l'istruzione IF per flusso di controllo, ovvero a differenza di [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) (funzione) e il [istruzione CASE &#40;MDX&#41; ](../mdx/case-statement-mdx.md) che può essere utilizzato solo per restituire oggetti o valori.  
   
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente l'ambito è limitato al livello Country della gerarchia Geography nella dimensione Customers. Se la misura corrente è Internet Sales Amount, Internet Sales Amount viene impostato su 10:  
@@ -59,6 +57,6 @@ IF expression THEN assignment END IF
  `END SCOPE`;  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   

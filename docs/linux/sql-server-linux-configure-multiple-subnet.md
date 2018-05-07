@@ -8,17 +8,15 @@ ms.date: 12/1/2017
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: database-engine
-ms.workload: On Demand
-ms.openlocfilehash: 7d939a93e3a2ba9e2c2c59efa560d557842fde17
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 9f4acc559912e613af87ce2a5d5c1f13baa22e19
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurare più subnet gruppi di disponibilità AlwaysOn e istanze del cluster di failover
 

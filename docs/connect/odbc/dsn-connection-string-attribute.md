@@ -3,23 +3,20 @@ title: DSN e stringa di connessione parole chiave e gli attributi utilizzati nel
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
-ms.prod_service: drivers
-ms.service: ''
-ms.component: odbc
+ms.prod_service: connectivity
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: b5494a24e48b1d3e997079aba77682dddae7bda7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d78b22eeb64d621c71e9339dd243d3ccd10ccc25
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN e parole chiave delle stringhe di connessione e gli attributi
 

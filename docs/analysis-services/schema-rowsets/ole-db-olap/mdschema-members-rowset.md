@@ -1,42 +1,28 @@
 ---
 title: Set di righe mdschema_members | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/03/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: schema-rowsets
 ms.topic: reference
-apiname:
-- MDSCHEMA_MEMBERS
-apitype: NA
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- MDSCHEMA_MEMBERS rowset
-ms.assetid: 0b1aada0-67f8-4ef6-81b2-0100b65e0c2f
-caps.latest.revision: 36
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8ee6e7231d4a3a3696de68e3c22b8cad7eb05a92
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 53a6314cd2c74640305d0c4f382d032887a0754d
+ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="mdschemamembers-rowset"></a>Set di righe MDSCHEMA_MEMBERS
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Vengono descritti i membri all'interno di un database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  Descrive i membri all'interno di un database.  
   
 ## <a name="rowset-columns"></a>Colonne del set di righe  
  Il **MDSCHEMA_MEMBERS** set di righe contiene le colonne seguenti.  
   
-|Nome colonna|Indicatore del tipo|Length|Description|  
+|Nome colonna|Indicatore del tipo|Lunghezza|Description|  
 |-----------------|--------------------|------------|-----------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**||Nome del database a cui appartiene il membro.|  
 |**SCHEMA_NAME**|**DBTYPE_WSTR**||Nome dello schema a cui appartiene il membro.|  
@@ -48,8 +34,8 @@ ms.lasthandoff: 01/08/2018
 |**MEMBER_ORDINAL**|**DBTYPE_UI4**||(Obsoleto) Restituisce sempre **0**.|  
 |**MEMBER_NAME**|**DBTYPE_WSTR**||Nome del membro.|  
 |**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**||Nome univoco del membro.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**||Tipo del membro:<br /><br /> **MDMEMBER_TYPE_UNKNOWN** (**0**)<br /><br /> **MDMEMBER_TYPE_REGULAR** (**1**)<br /><br /> **MDMEMBER_TYPE_ALL** (**2**)<br /><br /> **MDMEMBER_TYPE_MEASURE** (**3**)<br /><br /> **MDMEMBER_TYPE_FORMULA** (**4**)<br /><br /> <br /><br /> Si noti che <br />                    **MDMEMBER_TYPE_FORMULA**ha la precedenza su **MDMEMBER_TYPE_MEASURE**. Ad esempio, se è formula (calcolato) membro nella dimensione Measures, è elencato come **MDMEMBER_TYPE_FORMULA**.|  
-|**MEMBER_GUID**|**DBTYPE_GUID**||GUID del membro. **NULL** se non esiste alcun GUID.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**||Tipo del membro:<br /><br /> **MDMEMBER_TYPE_UNKNOWN** (**0**)<br /><br /> **MDMEMBER_TYPE_REGULAR** (**1**)<br /><br /> **MDMEMBER_TYPE_ALL** (**2**)<br /><br /> **A MDMEMBER_TYPE_MEASURE** (**3**)<br /><br /> **MDMEMBER_TYPE_FORMULA** (**4**)<br /><br /> <br /><br /> Si noti che <br />                    **MDMEMBER_TYPE_FORMULA**ha la precedenza su **MDMEMBER_TYPE_MEASURE**. Ad esempio, se è formula (calcolato) membro nella dimensione Measures, è elencato come **MDMEMBER_TYPE_FORMULA**.|  
+|**MEMBER_GUID**|**DBTYPE_GUID**||GUID del membro. **NULL** se è presente alcuna GUID.|  
 |**MEMBER_CAPTION**|**DBTYPE_WSTR**||Etichetta o didascalia associata al membro. Utilizzata principalmente a scopo di visualizzazione. Se non esiste una didascalia, **MEMBER_NAME** viene restituito.|  
 |**CHILDREN_CARDINALITY**|**DBTYPE_UI4**||Numero di elementi figlio del membro. Poiché può trattarsi di una stima, è necessario che i consumer non considerino questo valore come il conteggio esatto. I provider restituiscono la migliore stima possibile.|  
 |**PARENT_LEVEL**|**DBTYPE_UI4**||Distanza dell'elemento padre del membro dal livello radice della gerarchia. Il livello radice è zero (0).|  
@@ -70,21 +56,21 @@ ms.lasthandoff: 01/08/2018
   
 |Nome colonna|Indicatore del tipo|Stato della restrizione|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**LEVEL_NUMBER**|**DBTYPE_UI4**|Facoltativo.|  
-|**MEMBER_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Facoltativo.|  
-|**MEMBER_TYPE**|**DBTYPE_I4**|Facoltativo.|  
-|**TREE_OP**|**DBTYPE_I4**|(Facoltativo) Si applica solo a un singolo membro:<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) restituisce tutti i relativi predecessori.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) restituisce solo gli elementi figlio immediati.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) restituisce i membri allo stesso livello.<br /><br /> **MDTREEOP_PARENT** (**0x04**) restituisce solo l'oggetto padre.<br /><br /> **MDTREEOP_SELF** (**0x08**) restituisce se stesso nell'elenco di righe restituite.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) restituisce tutti i discendenti.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**DIMENSION_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**LEVEL_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**LEVEL_NUMBER**|**DBTYPE_UI4**|Facoltativa.|  
+|**MEMBER_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MEMBER_UNIQUE_NAME**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MEMBER_CAPTION**|**DBTYPE_WSTR**|Facoltativa.|  
+|**MEMBER_TYPE**|**DBTYPE_I4**|Facoltativa.|  
+|**TREE_OP**|**DBTYPE_I4**|(Facoltativo) Si applica solo a un singolo membro:<br /><br /> **MDTREEOP_ANCESTORS** (**0x20**) restituisce tutti i predecessori.<br /><br /> **MDTREEOP_CHILDREN** (**0x01**) restituisce solo i figli immediati.<br /><br /> **MDTREEOP_SIBLINGS** (**0x02**) restituisce i membri allo stesso livello.<br /><br /> **MDTREEOP_PARENT** (**0x04**) restituisce solo l'oggetto padre.<br /><br /> **MDTREEOP_SELF** (**0x08**) restituisce se stesso nell'elenco di righe restituite.<br /><br /> **MDTREEOP_DESCENDANTS** (**0x10**) restituisce tutti i discendenti.|  
 |**CUBE_SOURCE**|**DBTYPE_UI2**|(Facoltativo) Restrizione predefinita è un valore pari a 1. Una bitmap con uno dei valori validi seguenti:<br /><br /> 1 CUBO<br /><br /> 2 DIMENSIONE|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Set di righe dello schema OLE DB per OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
+ [OLE DB per OLAP i rowset dello Schema](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  
   
   

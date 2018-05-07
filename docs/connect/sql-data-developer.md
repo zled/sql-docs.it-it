@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 03/28/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: connect
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: 47c3e90100b7b4fa12c47acd98333e10e15603d7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 9d02eb4c8fd8d1e3ff115c8ed1273183802f1d06
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="sql-data-developer"></a>Sviluppatori di dati SQL
 Utilizzare piattaforma dati SQL di Microsoft per creare soluzioni incentrate sui dati tra dispositivi mobili e desktop per server web, i server dell'organizzazione e nel cloud.  

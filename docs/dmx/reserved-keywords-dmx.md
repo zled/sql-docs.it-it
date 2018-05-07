@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,17 +21,16 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 53598a178d8b11e03feb81634d76a46974aedfe2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4ecb52157dd3368a0ca29ce21f5c5f79c61872fa
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reserved-keywords-dmx"></a>Parole chiave riservate (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] riserva determinate parole chiave per l'utilizzo esclusivo. Tali parole chiave non possono essere utilizzate liberamente nelle istruzioni DMX (Data Mining Extensions), ma solo nelle posizioni definite da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nelle informazioni di riferimento al linguaggio DMX. Queste parole chiave DMX con restrizioni includono i membri seguenti:  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] riserva determinate parole chiave per un uso esclusivo. Tali parole chiave non possono essere utilizzate liberamente nelle istruzioni DMX (Data Mining Extensions), ma solo nelle posizioni definite da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nelle informazioni di riferimento al linguaggio DMX. Queste parole chiave DMX con restrizioni includono i membri seguenti:  
   
 -   Tutte le istruzioni di definizione dati elencate nell'argomento [istruzioni di definizione dati DMX](../dmx/dmx-statements-data-definition.md).  
   
@@ -46,13 +44,13 @@ ms.lasthandoff: 01/08/2018
   
  Quando si assegnano nomi agli oggetti di un database, è consigliabile utilizzare una convenzione di denominazione che eviti l'utilizzo delle parole chiave riservate.  
   
- Se il database contiene nomi che corrispondono a parole chiave riservate, sarà necessario utilizzare identificatori delimitati per fare riferimento a tali oggetti. Per ulteriori informazioni, vedere [DMX gli identificatori &#40; &#41;](../dmx/identifiers-dmx.md).  
+ Se il database contiene nomi che corrispondono a parole chiave riservate, sarà necessario utilizzare identificatori delimitati per fare riferimento a tali oggetti. Per altre informazioni, vedere [identificatori &#40;DMX&#41;](../dmx/identifiers-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40; DMX &#41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40; DMX &#41; Convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions &#40; DMX &#41; Elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Informazioni sull'istruzione DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   
   

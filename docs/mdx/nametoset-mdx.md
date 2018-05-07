@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -22,12 +21,11 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: f7b9f52f494665d00f7a75811b839d543c3da5ea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fc2c46574f8283f48a63c7b2e7fe29926972dd61
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,11 +43,11 @@ NameToSet(Member_Name)
  *Member_Name*  
  Espressione stringa valida che rappresenta il nome di un membro.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Osservazioni  
  Se il nome di membro specificato esiste, il **NameToSet** funzione restituisce un set contenente tale membro. In caso contrario, la funzione restituisce un set vuoto.  
   
 > [!NOTE]  
->  Il nome del membro specificato deve essere costituito esclusivamente da un nome di membro e non può corrispondere a un'espressione di membro. Per utilizzare un'espressione di membro, vedere [StrToSet &#40; MDX &#41; ](../mdx/strtoset-mdx.md).  
+>  Il nome del membro specificato deve essere costituito esclusivamente da un nome di membro e non può corrispondere a un'espressione di membro. Per usare un'espressione di membro, vedere [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md).  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene restituito il valore predefinito della misura per il nome del membro specificato.  
@@ -60,6 +58,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX &#40; MDX &#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
   
   
