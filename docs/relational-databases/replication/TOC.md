@@ -293,3 +293,6 @@
 ## [Configurare la replica transazionale](tutorial-replicating-data-between-continuously-connected-servers.md)  
 ## [Configurare la replica di tipo merge](tutorial-replicating-data-with-mobile-clients.md)  
 
+# Strumenti di risoluzione dei problemi
+## [Errori con replica transazionale](../../troubleshooters/replication/troubleshoot-tran-repl-errors.md)
+
