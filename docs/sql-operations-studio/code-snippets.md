@@ -1,5 +1,5 @@
 ---
-title: Creare frammenti di codice in SQL Operations Studio (anteprima) | Documenti Microsoft
+title: Creare frammenti di codice in SQL Operations Studio (anteprima) | Documentazione Microsoft
 description: Informazioni su come creare e usare i frammenti di codice SQL in SQL Operations Studio (anteprima)
 ms.custom: tools|sos
 ms.date: 11/15/2017
@@ -24,7 +24,7 @@ ms.lasthandoff: 12/21/2017
 
 I frammenti di codice in [!INCLUDE[name-sos](../includes/name-sos-short.md)] sono modelli che rendono più semplice la creazione di database e oggetti di database. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce diversi frammenti di T-SQL che aiutano a generare rapidamente le sintassi corrette. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce diversi frammenti di T-SQL che aiutano a generare rapidamente la sintassi corretta.
 
 È anche possibile creare frammenti di codice definiti dall'utente.
 
@@ -54,16 +54,16 @@ I frammenti di codice in [!INCLUDE[name-sos](../includes/name-sos-short.md)] son
 
 È possibile definire frammenti personalizzati. Per aprire il file del frammento di codice SQL per la modifica:
 
-1. Aprire il *riquadro comandi* (**Maiusc+Ctrl+P**), scrivere *fram* e selezionare **Preferenze: Apri frammenti di codice utente**:
+1. Aprire il *riquadro comandi* (**Maiusc+Ctrl+P**), scrivere *snip* e selezionare **Preferenze: Apri frammenti di codice utente**:
 
    ![Sostituire i campi nel modello](media/code-snippets/user-snippets.png)
 
 1. Selezionare **SQL**:
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita la funzionalità dei frammento di codice da Visual Studio Code. Questo articolo illustra in particolare l'utilizzo dei frammenti SQL. Per ulteriori informazioni, vedere [creare frammenti personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code.
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita la funzionalità dei frammento di codice da Visual Studio Code. Questo articolo illustra in particolare l'utilizzo dei frammenti SQL. Per ulteriori informazioni, vedere [Creare frammenti personalizzati](https://code.visualstudio.com/docs/editor/userdefinedsnippets) nella documentazione di Visual Studio Code.
 
-   ![Sostituire i campo nel modello](media/code-snippets/select-sql.png)
+   ![Sostituire il campo nel modello](media/code-snippets/select-sql.png)
 
 1. Incollare il codice seguente nel *sql.json*:
 
@@ -97,9 +97,9 @@ I frammenti di codice in [!INCLUDE[name-sos](../includes/name-sos-short.md)] son
 
 1. Salvare il file *sql.json*.
 1. Aprire una nuova finestra editor di query premendo **Ctrl+N**.
-1. Scrivere **sql**, visualizzare i due frammenti di codice appena aggiunti; *sqlCreateTable2* e *sqlSelectTop5*.
+1. Digitare **sql** per visualizzare i frammenti di codice dei due utenti appena aggiunti: *sqlCreateTable2* e *sqlSelectTop5*.
 
-Selezionare uno dei nuovi frammenti di codice e provare un esecuzione!
+Selezionare uno dei nuovi frammenti di codice e avviare un'esecuzione di prova.
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
