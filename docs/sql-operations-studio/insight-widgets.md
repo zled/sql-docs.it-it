@@ -1,6 +1,6 @@
----
-title: Utilizzare i widget di Insight per monitorare server e database in SQL Operations Studio (anteprima) | Microsoft Docs
-description: Informazioni dettagliate sui widget di Insight in SQL Operations Studio (anteprima).
+﻿---
+title: Utilizzare i widget di insight per monitorare i server e database in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Informazioni sui widget di insight dettagliate in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
@@ -49,13 +49,13 @@ I wdget Insight sono costituiti da una o due query T-SQL:
 
 Una query di widget insight definisce un set di dati che viene presentata sotto forma di un numero o di un grafico. Una query di dettaglio del widget insight viene utilizzata per elencare le informazioni dettagliate rilevanti in un formato tabulare nel riquadro dei dettagli del widget. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] esegue una visione widget query e il set di risultati di query viene eseguito il mapping a set di dati del grafico, quindi ne esegue il rendering. Quando gli utenti aprono i dettagli di un'informazione, esegue la query di dettagli informazioni dettagliate e stampa il risultato in una visualizzazione griglia nella finestra di dialogo.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] esegue la query del widget insight ed effettua il mapping dei risultati al set dei dati del grafico, quindi ne esegue il rendering. Quando gli utenti richiedono i dettagli, esegue la query del dettaglio del widget e presenta il risultato in una visualizzazione a griglia nella finestra di dialogo.
 
-L'idea di base consiste nello scrivere una query T-SQL in modo pertanto può essere utilizzato come un set di dati di un conteggio, grafico e widget grafico. 
+L'idea di base consiste pertanto nello scrivere una query T-SQL da utilizzare come set di dati di un conteggio o di un grafico. 
 
 ## <a name="summary"></a>Riepilogo
 
-La query T-SQL e il set di risultati determinano il comportamento di widget informazioni dettagliate. Scrittura di una query per un tipo di grafico o un tipo di grafico a destra per query esistenti di mapping è la considerazione chiave per compilare un widget insight effettivo.
+La query T-SQL e il relativo set di risultati determinano il comportamento del widget di Insight. Scrivere una query per un particolare tipo di grafico o determinare il miglior tipo di grafico da mappare a una query esistente è la chiave per costruire un widget di Insight efficace.
 
 
 
