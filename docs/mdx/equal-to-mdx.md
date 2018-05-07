@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: ''
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -23,12 +22,11 @@ caps.latest.revision: 36
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 51df250577d539c48acb55e26e9906cf1d5a15d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b033e376604e75cee244a965da6656b109e340e2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="-equal-to-mdx"></a>= (uguale a) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/08/2018
   Esegue un'operazione di confronto che determina se il valore di un'espressione MDX (Multidimensional Expression) è uguale a quello di un'altra espressione MDX.  
   
 > [!NOTE]  
->  Per confrontare gli oggetti, utilizzare il [IS &#40; MDX &#41; ](../mdx/is-mdx.md) operatore. Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
+>  Per confrontare gli oggetti, utilizzare il [IS &#40;MDX&#41; ](../mdx/is-mdx.md) operatore. Ad esempio, utilizzare l'operatore IS per controllare se il membro corrente su un asse della query è un membro specifico.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -90,6 +88,6 @@ MDX_Expression = MDX_Expression
  `From [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento agli operatori MDX &#40; MDX &#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [Riferimento agli operatori MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -5,12 +5,10 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -26,12 +24,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: d518924d129beef40ec4f24dce0cc01b7de25977
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: d958d4b1f12f5a109c5727832eb764fd2b497d70
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Tramite il Driver OLE DB per SQL Server intestazione e i file di libreria
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +43,7 @@ ms.lasthandoff: 04/16/2018
   
  Il Driver OLE DB per il file di intestazione di SQL Server (msoledbsql.h) utilizzabile per aggiungere Driver OLE DB per la funzionalità di accesso ai dati di SQL Server alle applicazioni personalizzate. Il Driver OLE DB per il file di intestazione di SQL Server contiene tutte le definizioni, attributi, proprietà e le interfacce necessarie per sfruttare i vantaggi delle nuove funzionalità introdotte in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Oltre al Driver OLE DB per il file di intestazione di SQL Server, è inoltre disponibile un file di libreria msoledbsql.lib che rappresenta la libreria di esportazione per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] funzionalità del programma di copia Bulk (BCP).  
+ Oltre al Driver OLE DB per il file di intestazione di SQL Server, è inoltre disponibile un file di libreria msoledbsql.lib che rappresenta la libreria di esportazione per [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) funzionalità.  
   
  Il Driver OLE DB per il file di intestazione di SQL Server è compatibile con il file di intestazione SQLOLEDB. h utilizzato con Microsoft Data Access Components (MDAC), ma non contiene i CLSID per SQLOLEDB (il provider OLE DB per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluso con MDAC) o simboli per Funzionalità XML (che non è supportata dal Driver OLE DB per SQL Server).    
   

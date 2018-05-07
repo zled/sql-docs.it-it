@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
-ms.service: ''
 ms.component: data-mining
 ms.reviewer: ''
 ms.suite: pro-bi
@@ -25,17 +24,16 @@ caps.latest.revision: 45
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: e7c12fe48c10b0fac4a89e2aa9a8e2b2ea0dce2f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Crea una nuova struttura di data mining in un database e facoltativamente definisce le partizioni di training e test. Dopo aver creato la struttura di data mining, è possibile utilizzare il [DMX ALTER MINING STRUCTURE &#40; &#41;](../dmx/alter-mining-structure-dmx.md) istruzione per aggiungere modelli alla struttura di data mining.  
+  Crea una nuova struttura di data mining in un database e facoltativamente definisce le partizioni di training e test. Dopo aver creato la struttura di data mining, è possibile usare il [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md) istruzione per aggiungere modelli alla struttura di data mining.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -112,18 +110,18 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire le colonne di una struttura, vedere gli argomenti seguenti:  
   
--   [Tipi di dati &#40; Data Mining &#41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipi di dati & #40; Data Mining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenuto di Data Mining tipi &#40; &#41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [Contenuto di Data Mining tipi & #40; & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
--   [Distribuzioni delle colonne &#40; Data Mining &#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [Distribuzioni delle colonne &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modello di Data Mining flag &#40; &#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [Modello di Data Mining flag & #40; & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
 ### <a name="column-relationships"></a>Relazioni tra colonne  
- Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]supporta l'utilizzo delle operazioni seguenti \<relazione della colonna > clausola.  
+ Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola a qualsiasi istruzione per la definizione di colonna. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo delle operazioni seguenti \<relazione a colonna > clausola.  
   
  **CORRELATI A**  
  Indica una gerarchia di valori. La destinazione di una colonna con clausola RELATED TO può essere una colonna chiave in una tabella nidificata, una colonna con valori discreti nella riga dei case oppure un'altra colonna con una clausola RELATED TO, che indica una gerarchia con più livelli.  
@@ -154,7 +152,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  Negli esempi seguenti viene illustrato come creare una struttura di data mining con controllo mediante DMX.  
   
 ### <a name="example-1-adding-a-structure-with-no-training-set"></a>Esempio 1: Aggiunta di un struttura priva di set di training  
- Nell'esempio seguente viene creata una nuova struttura di data mining denominata `New Mailing` senza creare alcun modello di data mining associato e senza utilizzare alcun controllo. Per informazioni su come aggiungere un modello di data mining alla struttura, vedere [DMX ALTER MINING STRUCTURE &#40; &#41;](../dmx/alter-mining-structure-dmx.md).  
+ Nell'esempio seguente viene creata una nuova struttura di data mining denominata `New Mailing` senza creare alcun modello di data mining associato e senza utilizzare alcun controllo. Per informazioni su come aggiungere un modello di data mining alla struttura, vedere [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
 CREATE MINING STRUCTURE [New Mailing]  
@@ -195,8 +193,8 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
- [Data Mining Extensions &#40; DMX &#41; Istruzioni di manipolazione dei dati](../dmx/dmx-statements-data-manipulation.md)   
- [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
+ [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

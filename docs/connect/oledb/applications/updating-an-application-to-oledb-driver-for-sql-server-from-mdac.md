@@ -5,12 +5,10 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: oledb|applications
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +20,11 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: d7754d3db286c69245c626f9af018749c38592b5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: HT
+ms.openlocfilehash: 907e1c08f422809a04d3e3c8846d91f7982bb7ea
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Aggiornamento di un'applicazione OLE DB driver per SQL Server da MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +56,6 @@ ms.lasthandoff: 04/16/2018
 -   Il Driver OLE DB per SQL Server non include l'integrazione XML. Il Driver OLE DB per SQL Server supporta la selezione... PER una query di XML, ma non supporta altre funzionalità XML. Tuttavia, il Driver OLE DB per SQL Server supporta il **xml** tipo di dati introdotti in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
 
 -   Il Driver OLE DB per SQL Server supporta la configurazione delle librerie di rete sul lato client utilizzando solo gli attributi di stringa di connessione. Per una configurazione delle libreria di rete più completa, è necessario utilizzare Gestione configurazione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
-
--   Il Driver OLE DB per SQL Server non è compatibile con Odbcbcp. dll. Per creare un collegamento con msoledbsql.lib per poter utilizzare il Driver OLE DB per SQL Server, è necessario ricompilare le applicazioni.    
 
 -   Le stringhe di connessione MDAC consentono a un valore booleano (**true**) per il **Trusted_Connection** (parola chiave). Un Driver OLE DB per la stringa di connessione SQL Server deve utilizzare **yes** oppure **nessun**.  
 

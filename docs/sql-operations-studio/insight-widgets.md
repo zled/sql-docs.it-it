@@ -21,32 +21,33 @@ ms.lasthandoff: 05/03/2018
 ---
 # <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>Gestire server e database con i widget di Insight in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-Widget Insight eseguire le query Transact-SQL (T-SQL) consentono di monitorare i server e database e trasformarli in visualizzazioni dettagliate. 
+I widget di Insight trasformano le query Transact-SQL (T-SQL) utilizzate per monitorare i server e i database in visualizzazioni dettagliate. 
 
-Informazioni dettagliate sono personalizzabili grafici e aggiunti al server e i dashboard di monitoraggio del database. Visualizza informazioni dettagliate in generale del server e database, quindi esaminare ulteriori dettagli, quindi avviare azioni di gestione che definiscono. 
+Gli insight sono grafici personalizzabili da aggiungere ai dashboard di monitoraggio di server e database. Con essi è possibile visualizzare informazioni generali sui server e sui database, esaminare ulteriori dettagli ed eseguire azioni di gestione definite dall'utente. 
 
-È possibile compilare straordinario server e database di gestione dashboard simile all'esempio seguente:
+È possibile costruire accattivanti dashboard di gestione server e database simili all'esempio seguente:
 
 ![dashboard del database](media/insight-widgets/database-dashboard.png)
 
 
-Per passare e iniziare a creare tipi diversi di widget informazioni dettagliate, vedere le esercitazioni seguenti:
+Per iniziare a comprendere e creare i tipi diversi di widget Insight, vedere le esercitazioni seguenti:
 
-- [Compilare un widget di informazioni approfondite personalizzate](tutorial-build-custom-insight-sql-server.md)
+
+- [Costruire un widget Insight personalizzato](tutorial-build-custom-insight-sql-server.md)
 - *Abilitare i widget predefiniti informazioni dettagliate*
-   - [Abilitare il monitoraggio delle informazioni dettagliate prestazioni](tutorial-qds-sql-server.md)
-   - [Abilitare le informazioni di utilizzo dello spazio di tabella](tutorial-table-space-sql-server.md)
+   - [Abilitare l'insight di monitoraggio delle prestazioni](tutorial-qds-sql-server.md)
+   - [Abilitare l'insight di spazio utilizzato dalle tabelle](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>Query SQL 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] tenta di evitare di introdurre ancora un altro utente di lingua o elevati in termini di interfaccia in modo che si tenta di utilizzare T-SQL quanto possibile con la configurazione minima di JSON. Configurazione widget insight con T-SQL sfrutta l'innumerevoli numero di origini esistenti di query T-SQL utili che possono essere attivate nel widget dettagliati.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] cerca di evitare l'introduzione di un nuovo linguaggio e di un'interfaccia complessa, lasciando spazio alla scrittura T-SQL e a configurazioni minimali basate su JSON. La configurazione dei widget Insight tramite T-SQL sfrutta le innumerevoli utili query T-SQL che possono essere convertite in widget dettagliati.
 
-Widget di informazioni dettagliate sono costituiti da uno o due query T-SQL:
-* *Query sui widget di informazioni approfondite* è obbligatorio ed è la query che restituisce i dati visualizzati all'interno del widget.
-* *Query di dettagli Insight* è necessaria solo se si sta creando una pagina di dettagli di una visione.
+I wdget Insight sono costituiti da una o due query T-SQL:
+* La *query del widget Insight* è obbligatoria ed è la query che restituisce i dati visualizzati all'interno del widget.
+* La *query del dettaglio del widget Insight* è richiesta solo se si sta creando una pagina di dettaglio
 
-Una query di widget insight definisce un set di dati che esegue il rendering di un numero, un grafico o un grafico. Query di analisi dei dettagli viene utilizzato per elencare le informazioni di dettaglio informazioni rilevanti in un formato tabulare nel riquadro dei dettagli informazioni dettagliate. 
+Una query di widget insight definisce un set di dati che viene presentata sotto forma di un numero o di un grafico. Una query di dettaglio del widget insight viene utilizzata per elencare le informazioni dettagliate rilevanti in un formato tabulare nel riquadro dei dettagli del widget. 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] esegue una visione widget query e il set di risultati di query viene eseguito il mapping a set di dati del grafico, quindi ne esegue il rendering. Quando gli utenti aprono i dettagli di un'informazione, esegue la query di dettagli informazioni dettagliate e stampa il risultato in una visualizzazione griglia nella finestra di dialogo.
 
