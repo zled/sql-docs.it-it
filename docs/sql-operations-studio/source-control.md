@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 
 1. Nel menu **File** selezionare **Apri cartella...**
-2. Aprire la cartella che contiene i file tracciati da Git e fare clic su **Apri**. Le sottocartelle nel repository locale sono anch'esse selezionabili.
+2. Passare alla cartella contenente i file tracciati da Git e fare clic su Seleziona cartella. È possibile selezionare anche le sottocartelle del repository locale.
 
 
 ## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository Git
