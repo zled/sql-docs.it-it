@@ -1,4 +1,4 @@
----
+﻿---
 title: Origine di controllo in Studio operazioni SQL (anteprima) | Documenti Microsoft
 description: Informazioni su come configurare controllo del codice sorgente in Studio operazioni SQL (anteprima).
 ms.custom: tools|sos
@@ -32,24 +32,24 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 
-1. Sotto il **File** dal menu **Apri cartella...**
-2. Passare alla cartella che contiene i file rilevati da git e fare clic su **selezionare la cartella**. Le sottocartelle nel repository locale sono integri da selezionare.
+1. Nel menu **File** selezionare **Apri cartella...**
+2. Passare alla cartella contenente i file tracciati da Git e fare clic su Seleziona cartella. È possibile selezionare anche le sottocartelle del repository locale.
 
 
-## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository git
+## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository Git
 
-1. Selezionare **controllo del codice sorgente**, quindi selezionare l'icona di git.
+1. Selezionare **Controllo del codice sorgente** nella barra laterale sinistra, quindi selezionare l'icona di Git.
 
-   ![Icona git del controllo origine](media/source-control/source-control.png)
+   ![Icona Git del controllo del codice sorgente](media/source-control/source-control.png)
 
-1. Immettere il percorso della cartella in cui si desidera inizializzare come un repository Git e premere **invio**.
+1. Immettere il percorso della cartella in cui si desidera inizializzare un repository Git e premere **Invio**.
 
    ![inizializzare il repository Git](media/source-control/initialize-git-repository.png)
 
-## <a name="working-with-git-repositories"></a>Utilizzo di repository Git
+## <a name="working-with-git-repositories"></a>Utilizzo di un repository Git
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita l'implementazione di Git da Visual Studio Code, ma attualmente non supporta altri provider di Gestione controllo servizi. Per i dettagli sull'uso di Git dopo avere aperto o inizializzare un repository, vedere [supporto Git in Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_git-support).
 
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
-- [Documentazione di GIT](https://git-scm.com/documentation)
+- [Documentazione di Git](https://git-scm.com/documentation)
