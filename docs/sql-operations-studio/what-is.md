@@ -32,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="smart-t-sql-code-snippets"></a>Frammenti di codice T-SQL smart
 
-E' possibile generare in automatico frammenti di codice T-SQL  per creare database, tabelle, viste, stored procedure, utenti, account di accesso, ruoli ecc, e per aggiornare gli oggetti in database già esistenti. E' possibile utilizzare i frammenti di codice smart per creare rapidamente copie del database in fase di sviluppo o test, e per generare ed eseguire script di CREATE e INSERT.
+E' possibile generare frammenti di codice T-SQL  per creare database, tabelle, viste, stored procedure, utenti, account di accesso, ruoli ecc, e per aggiornare gli oggetti in database già esistenti. E' possibile utilizzare i frammenti di codice smart per creare rapidamente copie del database in fase di sviluppo o test, e per generare ed eseguire script di CREATE e INSERT.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce inoltre funzionalità per creare frammenti di codice T-SQL personalizzati. Per ulteriori informazioni, vedere [creare e usare i frammenti di codice](code-snippets.md).
 
