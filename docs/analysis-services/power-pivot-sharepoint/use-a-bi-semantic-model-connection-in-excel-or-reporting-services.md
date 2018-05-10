@@ -1,31 +1,23 @@
 ---
 title: Utilizzare una connessione BI Semantic Model in Excel o Reporting Services | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 8fc3d2ae19c9b8237593d1b4e1b559f22c5da1ed
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 5f7141cb88a69df946fc7ae1d344cf0a2723bd7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utilizzare una connessione BISM (BI Semantic Model) in Excel o Reporting Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In questo argomento viene illustrato come utilizzare le connessioni BISM create utilizzando le istruzioni in altri argomenti. Se non è ancora stato creato un modello BI Semantic Model, vedere [Creare una connessione BI Semantic Model a una cartella di lavoro di](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [Creare una connessione BI Semantic Model a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+  In questo argomento viene illustrato come utilizzare le connessioni BISM create utilizzando le istruzioni in altri argomenti. Se non è ancora stato creato un modello BI Semantic Model, vedere [Creare una connessione BI Semantic Model a una cartella di lavoro di](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) e [Creare una connessione BI Semantic Model a un database modello tabulare](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
 ##  <a name="bkmk_connect"></a> Connessione da Excel  
  È possibile specificare una connessione BISM come origine dati in Excel o in qualsiasi altra applicazione business in cui vengono utilizzati dati del modello tabulare di Analysis Services. In questa sezione vengono illustrati i due approcci per la connessione ai dati BISM utilizzando Excel.  

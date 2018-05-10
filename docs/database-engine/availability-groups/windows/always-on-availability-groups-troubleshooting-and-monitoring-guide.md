@@ -2,23 +2,22 @@
 title: Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 05/10/2016
-ms.prod: sql-server-2016
+ms.prod: sql
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 caps.latest.revision: 8
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b78d697f5e8359580e8ebbf602587584964b017c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e82c43cbca60f1804c2a5b2becfcdbaaf734fd26
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Guida alla risoluzione dei problemi e al monitoraggio dei gruppi di disponibilità Always On
  Questa guida consente di iniziare rapidamente a monitorare i gruppi di disponibilità Always On e a risolvere alcuni problemi più comuni dei gruppi di disponibilità. Riporta contenuto originale nonché una pagina di destinazione con informazioni utili pubblicate anche altrove. Sebbene in questa guida non sia possibile trattare in modo approfondito tutti i problemi che possono verificarsi nell'ambito dei gruppi di disponibilità, l'utente troverà un'indicazione della direzione da seguire per l'analisi della causa principale e la risoluzione dei problemi. 

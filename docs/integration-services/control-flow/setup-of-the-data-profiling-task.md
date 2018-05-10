@@ -1,30 +1,28 @@
 ---
-title: "Impostazione dell'attività Profiling dati | Microsoft Docs"
-ms.custom: 
+title: Impostazione dell'attività Profiling dati | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c32f01f1da74bf83f2c38b889934a37ea85d5817
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Impostazione dell'attività Profiling dati
   Prima di poter esaminare un profilo dei dati di origine, configurare ed eseguire l'attività Profiling dati. È necessario creare questa attività all'interno di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'attività Profiling dati, utilizzare lo strumento Editor attività Profiling dati. Questo editor consente di selezionare la destinazione dell'output dei profili e i profili da calcolare. Dopo avere configurato l'attività, è necessario eseguire il pacchetto per calcolare i profili dati.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 01/25/2018
 |Elementi da calcolare|Valori identificati|Profilo da utilizzare|  
 |----------------|-------------------------|----------------------|  
 |Tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe della tabella rappresentata da ogni lunghezza.|**Valori stringa non validi**: si analizza, ad esempio, una colonna che dovrebbe usare due caratteri per i codici di stato negli Stati Uniti, ma in cui si individua la presenza di valori più lunghi di due caratteri.|**Distribuzione lunghezze di colonna**: valido per una colonna con uno dei tipi di dati di tipo carattere indicati di seguito:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
-|Set di espressioni regolari relative alla percentuale specificata di valori in una colonna stringa.<br /><br /> Inoltre, espressioni regolari da utilizzare in futuro per convalidare nuovi valori.|**Valori stringa non validi o in formato non corretto**: un profilo di criteri di ricerca di una colonna Zip Code/Postal Code, ad esempio, può produrre le espressioni regolari \d\{5\}-\d\{4\}, \d\{5\} e \d\{9\}. Se l'output contiene altre espressioni regolari, i dati contengono valori non validi o in formato non corretto.|**Profilo Criteri di ricerca colonna**: valido per una colonna con uno dei tipi di dati di tipo carattere seguenti:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
+|Set di espressioni regolari relative alla percentuale specificata di valori in una colonna stringa.<br /><br /> Inoltre, espressioni regolari da utilizzare in futuro per convalidare nuovi valori.|**Valori stringa non validi o in formato non corretto**: un profilo di criteri di ricerca di una colonna Codice postale, ad esempio, potrebbe produrre le espressioni regolari \d{5}-\d{4}, \d{5} e \d{9}. Se l'output contiene altre espressioni regolari, i dati contengono valori non validi o in formato non corretto.|**Profilo Criteri di ricerca colonna**: valido per una colonna con uno dei tipi di dati di tipo carattere seguenti:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |Percentuale di valori Null nella colonna selezionata.|**Rapporto inaspettatamente elevato di valori Null in una colonna**: si analizza, ad esempio, una colonna che dovrebbe contenere i codici postali ZIP (Stati Uniti) ma si individua una percentuale troppo elevata di codici postali mancanti.|**Rapporto di valori Null nella colonna**: valido per una colonna con uno dei tipi di dati di tipo carattere seguenti:<br /><br /> **image**<br /><br /> **text**<br /><br /> **xml**<br /><br /> tipi definiti dall'utente<br /><br /> tipi variant|  
 |Segnala le statistiche, ad esempio la deviazione minima, massima, media e standard per le colonne numeriche e minima e massima per le colonne di tipo **datetime** .|**Valori numerici e date non validi**: si analizza, ad esempio, una colonna di date storiche, ma si individua una data massima successiva a quella corrente.|**Profilo Statistiche di colonna**: valido per una colonna con uno dei tipi di dati indicati di seguito.<br /><br /> Tipi di dati numerici:<br /><br /> tipi integer (tranne **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Tipi di dati di data e ora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **data**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> Nota: per una colonna con un tipo di dati di data e ora, il profilo calcola esclusivamente il minimo e il massimo.|  
 |Tutti i valori distinct nella colonna selezionata e percentuale di righe della tabella rappresentata da ciascun valore. In alternativa, valori che rappresentano più di una percentuale specificata nella tabella.|**Numero non corretto di valori distinct in un colonna**: si analizza, ad esempio, una colonna contenente gli stati degli Stati Uniti ma si individuano più di 50 valori distinct.|**Distribuzione valori di colonna**: valido per una colonna con uno dei tipi di dati seguenti.<br /><br /> Tipi di dati numerici:<br /><br /> tipi integer (tranne **bit**<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> Tipi di dati di tipo carattere:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> Tipi di dati di data e ora:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **data**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
@@ -104,7 +102,7 @@ ms.lasthandoff: 01/25/2018
   
 -   Compilazione di strumenti personalizzati da utilizzare con le informazioni sulla qualità dei dati.  
   
- Lo spazio dei nomi di destinazione è identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ Lo spazio dei nomi di destinazione viene identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="next-step"></a>Passaggio successivo  
  [Visualizzatore profilo dati](../../integration-services/control-flow/data-profile-viewer.md).  

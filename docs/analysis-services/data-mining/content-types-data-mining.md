@@ -1,47 +1,23 @@
 ---
 title: Contenuto di tipi (Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- columns [data mining], content types
-- KEY SEQUENCE column
-- content types [data mining]
-- attributes [data mining]
-- DISCRETIZED column
-- CONTINUOUS column
-- CYCLICAL column
-- ORDERED column
-- discretized columns [data mining]
-- discrete columns [Analysis Services]
-- DISCRETE column
-- KEY column
-- KEY TIME column
-- continuous columns
-- coding [Data Mining]
-ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 96e31d399527ffa81cd1a9d47bcb117ac7cfa170
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
   
  Il *tipo di dati* determina il modo in cui gli algoritmi elaborano i dati in tali colonne quando si creano modelli di data mining. La definizione del tipo di dati di una colonna indica all'algoritmo le informazioni sul tipo di dati delle colonne e le modalità di elaborazione dei dati. Ogni tipo di dati in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta uno o più tipi di contenuto per il data mining.  
   
@@ -119,9 +95,9 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
  Oltre ai tipi di contenuto precedenti che sono di uso comune con tutti i modelli, per alcuni tipi di dati è possibile utilizzare le colonne classificate per definire i tipi di contenuto. Per altre informazioni sulle colonne classificate, vedere [Colonne classificate &#40;Data mining&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto DMX tipi &#40; &#41;](../../dmx/content-types-dmx.md)   
- [Tipi di dati &#40; Data Mining &#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Tipi di dati &#40; DMX &#41;](../../dmx/data-types-dmx.md)   
+ [Contenuto DMX tipi & #40; & #41;](../../dmx/content-types-dmx.md)   
+ [Tipi di dati & #40; Data Mining & #41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Tipi di dati & #40; DMX & #41;](../../dmx/data-types-dmx.md)   
  [Modificare le proprietà di una struttura di Data Mining](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)   
  [Colonne della struttura di data mining](../../analysis-services/data-mining/mining-structure-columns.md)  
   

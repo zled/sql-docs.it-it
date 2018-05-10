@@ -1,32 +1,30 @@
 ---
 title: Log di traccia del servizio del server di report | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
 - traces [Reporting Services]
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b3afbb9788926f78a732bb42fb01ea646d9b5147
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: df621b94f8fecf5587cead165b88875b8d7dd4c2
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Il log di traccia del server di report di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è un file di testo ASCII che contiene informazioni dettagliate relative alle operazioni del servizio del server di report.  Le informazioni nel file includono le operazioni eseguite dal servizio Web ReportServer, dal portale Web e dall'elaborazione in background. Nel file di log di traccia sono contenute inoltre informazioni ridondanti, che vengono registrate in altri file di log, e informazioni aggiuntive non disponibili altrove. Le informazioni contenute nel log di traccia sono utili se si esegue il debug di un'applicazione che include un server di report o se è necessario analizzare un problema specifico scritto nel log eventi o nel log di esecuzione, ad esempio durante la risoluzione dei problemi relativi alle sottoscrizioni.  

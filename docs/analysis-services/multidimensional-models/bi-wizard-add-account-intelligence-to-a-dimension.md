@@ -1,35 +1,23 @@
 ---
-title: "Aggiungere funzionalità di Business Intelligence a una dimensione | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+title: Aggiungere funzionalità di Business Intelligence a una dimensione | Documenti Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- dimensions [Analysis Services], Business Intelligence enhancements
-- Business Intelligence enhancements [Analysis Services], account intelligence
-- account intelligence [Analysis Services]
-ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 970daabf89244a93719e273b4bff7f322cb23fe6
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6f8d62ccc2fe1a5ec8983c406f7c47153744eeed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Creazione guidata BI - aggiungere funzionalità di Business Intelligence a una dimensione
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono utilizzare le classificazioni per aggregare i conti nel tempo.  
+  È possibile aggiungere la funzionalità di Business Intelligence per la contabilità a un cubo o una dimensione per assegnare classificazioni standard, ad esempio entrate e uscite, ai membri di un attributo di tipo Conto. Questa funzionalità consente inoltre di identificare i tipi di conto, ad esempio Asset e Liability, e di assegnare l'aggregazione appropriata a ogni tipo di conto. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] possono utilizzare le classificazioni per aggregare i conti nel tempo.  
   
 > [!NOTE]  
 >  La funzionalità di Business Intelligence per la contabilità è disponibile solo per le dimensioni basate su origini dei dati esistenti. Per le dimensioni create senza utilizzare un'origine dei dati, prima di aggiungere questa funzionalità è necessario eseguire la Generazione guidata schema per creare una vista origine dati.  

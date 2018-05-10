@@ -1,31 +1,23 @@
 ---
 title: Remoto elaborazione (Analysis Services) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498a045c82630fdcd89ca857877d37d07b8b3dd2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e59011361e6dad623fa5f5cab71d262eb5eb8338
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remote-processing-analysis-services"></a>Elaborazione remota (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-È possibile eseguire l'elaborazione pianificata o automatica in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dove la richiesta di elaborazione proviene da un computer ma viene eseguita in un computer diverso nella stessa rete.  
+  È possibile eseguire l'elaborazione pianificata o automatica in un'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dove la richiesta di elaborazione proviene da un computer ma viene eseguita in un computer diverso nella stessa rete.  
   
 ## <a name="prerequisites"></a>Prerequisiti  
   
@@ -38,7 +30,7 @@ ms.lasthandoff: 02/15/2018
 -   Risolvere tutti gli errori di elaborazione locale esistenti prima di tentare l'elaborazione remota. Verificare che quando la richiesta di elaborazione è locale, i dati possono essere recuperati correttamente dall'origine dati relazionale esterna. Vedere [Impostare opzioni di rappresentazione &#40;SSAS - multidimensionale&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md) per istruzioni su come specificare le credenziali usate per recuperare i dati.  
   
 ## <a name="on-demand-remote-processing"></a>Elaborazione remota su richiesta  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vengono accettate richieste di elaborazione da account utente o applicazione che dispongono di autorizzazioni di amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se si è un amministratore, verificare che sia possibile connettersi all'istanza remota ed elaborare il database manualmente tramite la connessione remota.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]accetta richieste di elaborazione da account utente o applicazione che hanno [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] le autorizzazioni di amministratore. Se si è un amministratore, verificare che sia possibile connettersi all'istanza remota ed elaborare il database manualmente tramite la connessione remota.  
   
 1.  Nel computer che sarà usato per pianificare l'elaborazione, avviare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] e connettersi all'istanza remota di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

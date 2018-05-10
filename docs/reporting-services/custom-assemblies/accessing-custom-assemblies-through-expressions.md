@@ -1,17 +1,17 @@
 ---
 title: Accesso agli assembly personalizzati tramite espressioni | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: custom-assemblies
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
 - static member calls
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 4fbeded846679fc6925175f7c833e8c9b0c55e8c
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 726f21d764504fc72fc833dbff10acd380f4087d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accesso agli assembly personalizzati tramite espressioni
   Dopo aver creato un assembly personalizzato, averlo reso disponibile in Progettazione report o nel server di report, aver aggiunto i criteri di sicurezza appropriati e aver aggiunto un riferimento all'assembly personalizzato nella definizione del report, è possibile accedere ai membri delle classi nell'assembly utilizzando le espressioni di report. Per fare riferimento al codice personalizzato in un'espressione, è necessario chiamare il membro di una classe nell'assembly. La modalità di esecuzione di tale operazione dipende dal tipo di metodo, ovvero statico o basato su istanze.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Chiamata a membri di istanza da un file di definizione del report  
  Se l'assembly personalizzato contiene membri di istanza a cui è necessario accedere in una definizione del report, è necessario aggiungere al report un nome di istanza per la classe. È possibile aggiungere un nome di istanza per una classe usando la scheda **Codice** della finestra di dialogo **Proprietà report**. Per altre informazioni sull'aggiunta di istanze di classi a un report, vedere [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Per chiamare un membro statico, è necessario farvi riferimento come espressione nel formato =Code*.NomeIstanza.Metodo*.  
+ Per chiamare un membro statico, è necessario farvi riferimento come espressione nel formato =Code *.NomeIstanza.Metodo*.  
   
 #### <a name="to-call-instance-members"></a>Per chiamare i membri dell'istanza  
   

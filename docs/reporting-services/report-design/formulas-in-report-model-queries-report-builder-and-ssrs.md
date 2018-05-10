@@ -1,29 +1,27 @@
 ---
 title: Formule nelle query del modello di report (Generatore report e SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 
+caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 498047a984da8c40cc7b935bf134ee2af2a648f3
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: f2cfbf236eb77cd97f53f0104889f7872177d32c
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formule nelle query del modello di report (Generatore report e SSRS)
   Le formule sono calcoli eseguiti su valori in un report che utilizzano un modello di report come origine dati. Le formule vengono definite nella finestra di dialogo **Definisci formula** in Progettazione query modelli di report quando si definisce una query per un'origine dati dei modelli di report. Una formula può includere funzioni, operatori, costanti e riferimenti a campi oppure entità. Le formule consentono di combinare, aggregare, filtrare e restituire dati sia numerici sia di testo. È possibile creare formule e salvarle come nuovi campi oppure modificare quelle esistenti.  

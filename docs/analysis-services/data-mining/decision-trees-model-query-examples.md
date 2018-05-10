@@ -1,35 +1,23 @@
 ---
 title: Esempi di Query del modello Decision Trees | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- decision tree algorithms [Analysis Services]
-- content queries [DMX]
-- decision trees [Analysis Services]
-ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: be3c1ddd743204b18823ef4d77c054504328fc3c
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 123de8ac0fd3b29be624528b063056caca12a650
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="decision-trees-model-query-examples"></a>Esempi di query sul modello di alberi delle decisioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello Decision Trees, ad esempio, può fornire statistiche sul numero di case a ogni livello dell'albero o le regole che consentono di distinguere i case. In alternativa, una query di stima esegue il mapping del modello ai nuovi dati per generare indicazioni, classificazioni e così via. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
+  Quando si crea una query su un modello di data mining, è possibile creare una query sul contenuto, che fornisce dettagli sui criteri individuati durante l'analisi, oppure una query di stima, che utilizza i criteri presenti nel modello di data mining per eseguire stime relative a nuovi dati. Una query sul contenuto per un modello Decision Trees, ad esempio, può fornire statistiche sul numero di case a ogni livello dell'albero o le regole che consentono di distinguere i case. In alternativa, una query di stima esegue il mapping del modello ai nuovi dati per generare indicazioni, classificazioni e così via. Utilizzando una query è inoltre possibile recuperare metadati relativi al modello.  
   
  In questa sezione viene illustrato come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees.  
   
@@ -196,7 +184,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
 |0|1460|0.364984174579377|0.00661336932550915|0|0|  
 ||0|0.000166583374979177|0.000166583374979177|0|0|  
   
- Se il provider non supporta set di righe gerarchici, ad esempio quelli illustrati in questo esempio, è possibile utilizzare la parola chiave FLATTENED nella query per restituire i risultati come tabella contenente valori Null al posto dei valori di colonna ripetuti. Per altre informazioni, vedere [Tabelle annidate &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) o [Informazioni sull'istruzione DMX Select](../../dmx/understanding-the-dmx-select-statement.md).  
+ Se il provider non supporta set di righe gerarchici, ad esempio quelli illustrati in questo esempio, è possibile utilizzare la parola chiave FLATTENED nella query per restituire i risultati come tabella contenente valori Null al posto dei valori di colonna ripetuti. Per altre informazioni, vedere [Tabelle annidate &40#;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) o [Informazioni sull'istruzione DMX Select](../../dmx/understanding-the-dmx-select-statement.md).  
   
 ###  <a name="bkmk_Query5"></a> Esempio di query 5: Stima delle associazioni da un modello Decision Trees  
  La query di esempio seguente si basa sulla struttura di data mining di associazione. Per proseguire con l'esempio, è possibile aggiungere un nuovo modello a questa struttura di data mining e selezionare Microsoft Decision Trees come algoritmo. Per altre informazioni su come creare la struttura di data mining di associazione, vedere [Lezione 3: Compilazione di uno scenario Market Basket &#40;Esercitazione intermedia sul data mining&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a).  
@@ -265,16 +253,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |Funzione di stima|Utilizzo|  
-|[DMX IsDescendant &#40; &#41;](../../dmx/isdescendant-dmx.md)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
-|[DMX IsInNode &#40; &#41;](../../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case corrente.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità ponderata.|  
-|[DMX PredictAssociation &#40; &#41;](../../dmx/predictassociation-dmx.md)|Viene stimata l'appartenenza a un set di dati associativo.|  
-|[DMX PredictHistogram &#40; &#41;](../../dmx/predicthistogram-dmx.md)|Viene restituita una tabella di valori correlati ai valori stimati correnti.|  
-|[DMX PredictNodeId &#40; &#41;](../../dmx/predictnodeid-dmx.md)|Viene restituito l'oggetto Node_ID per ogni case.|  
-|[DMX PredictProbability &#40; &#41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per il valore stimato.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard stimata per la colonna specificata.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
+|[DMX IsDescendant & #40; & #41;](../../dmx/isdescendant-dmx.md)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
+|[DMX IsInNode & #40; & #41;](../../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case corrente.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità ponderata.|  
+|[DMX PredictAssociation & #40; & #41;](../../dmx/predictassociation-dmx.md)|Viene stimata l'appartenenza a un set di dati associativo.|  
+|[DMX PredictHistogram & #40; & #41;](../../dmx/predicthistogram-dmx.md)|Viene restituita una tabella di valori correlati ai valori stimati correnti.|  
+|[DMX PredictNodeId & #40; & #41;](../../dmx/predictnodeid-dmx.md)|Viene restituito l'oggetto Node_ID per ogni case.|  
+|[DMX PredictProbability & #40; & #41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per il valore stimato.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard stimata per la colonna specificata.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
   
  Per un elenco delle funzioni comuni a tutti gli algoritmi di [!INCLUDE[msCoName](../../includes/msconame-md.md)], vedere [Funzioni di stima correlate &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md). Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
@@ -282,6 +270,6 @@ WHERE NODE_TYPE = 25
  [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo Microsoft Decision Trees](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft Decision Trees riferimento tecnico per l'algoritmo](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
- [Contenuto del modello di data mining per i modelli di albero delle decisioni &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Contenuto del modello di data mining per i modelli di albero delle decisioni & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

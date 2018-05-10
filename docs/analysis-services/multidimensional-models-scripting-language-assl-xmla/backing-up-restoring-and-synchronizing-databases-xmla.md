@@ -1,35 +1,19 @@
 ---
 title: Il backup, ripristino e la sincronizzazione dei database (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- restoring databases [XML for Analysis]
-- backing up databases [XML for Analysis]
-- database backups [XML for Analysis]
-- synchronization [XML for Analysis]
-- database restores [XML for Analysis]
-ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 33fc95e7b34b28c4233ede68927e60eada8bf5df
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6a7b9d3c850052cf1d6a4548764482a287bf671c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Backup, ripristino e sincronizzazione di database (XMLA)
   In XML for Analysis sono disponibili i tre comandi seguenti per l'esecuzione del backup, del ripristino e della sincronizzazione dei database:  
@@ -67,7 +51,7 @@ ms.lasthandoff: 02/15/2018
   
  Il valore di **sicurezza** proprietà è limitata a una delle stringhe elencate nella tabella seguente.  
   
-|Valore|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |*SkipMembership*|Include nel file di backup le definizioni di sicurezza, ma ne esclude le informazioni sull'appartenenza.|  
 |*CopyAll*|Include nel file di backup le definizioni di sicurezza e le informazioni sull'appartenenza.|  
@@ -154,9 +138,9 @@ ms.lasthandoff: 02/15/2018
  È possibile utilizzare il **percorso** elemento in un comando di sincronizzazione per sincronizzare oggetti ROLAP. Per ogni **percorso** elemento utilizzato per rilocare un'origine dati, il **DataSourceType** proprietà deve essere impostata in modo esplicito su *locale*. tramite tabelle annidate. Inoltre necessario impostare il **ConnectionString** proprietà del **percorso** elemento alla stringa di connessione della nuova posizione. Durante la sincronizzazione, il **Sincronizza** comando sostituirà la stringa di connessione per l'origine dati identificata dal **DataSourceID** proprietà del **percorso** elemento con il valore della **ConnectionString** proprietà del **percorso** elemento.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Elemento backup &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
- [Ripristinare l'elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
- [Sincronizzare elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
+ [Elemento backup & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   
+ [Ripristinare l'elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md)   
+ [Sincronizzare elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [Backup e ripristino di database di Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

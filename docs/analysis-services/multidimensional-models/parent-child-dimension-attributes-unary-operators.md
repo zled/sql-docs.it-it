@@ -1,35 +1,23 @@
 ---
 title: Operatori unari nelle dimensioni padre-figlio | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- UnaryOperatorColumn property
-- attributes [Analysis Services], unary operators
-- unary operators
-ms.assetid: b8ef549c-5458-458a-bf1a-fd743a1417fd
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4646fd5e9a58ba275c10549aa5a9ae0600c41070
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Attributi della dimensione padre-figlio, gli operatori unari
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In una dimensione contenente una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificare una colonna dell'operatore unario (o di rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
+  In una dimensione contenente una relazione padre-figlio in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] specificare una colonna dell'operatore unario (o di rollup personalizzato) che determina il rollup personalizzato per tutti i membri non calcolati dell'attributo padre. L'operatore unario viene applicato ai membri ogni volta che i valori dei membri padre vengono valutati. La proprietà **UnaryOperatorColumn** in un attributo padre (**Usage**=Parent) specifica la colonna di una tabella nella vista origine dati contenente gli operatori unari. I valori per gli operatori di rollup personalizzato archiviati in questa colonna vengono applicati a ogni membro dell'attributo.  
   
  È possibile creare e specificare un calcolo denominato in una tabella della dimensione nella vista origine dati come colonna dell'operatore unario. L'espressione più semplice, ad esempio '+', restituisce lo stesso operatore per tutti i membri. È tuttavia possibile utilizzare qualsiasi espressione a condizione che restituisca un operatore per ogni membro.  
   

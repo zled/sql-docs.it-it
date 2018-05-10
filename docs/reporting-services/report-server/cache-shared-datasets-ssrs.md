@@ -1,27 +1,25 @@
 ---
 title: Memorizzare nella cache set di dati condivisi (SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e9da23f9036255a3b12bbb9af3a09c981f76b3de
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 1190043f72b862e83a8ef39d6a9f0b1940c896ce
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Memorizzare nella cache set di dati condivisi (SSRS)
   I risultati della query per un set di dati condiviso possono essere copiati in una cache per fornire dati coerenti per più report e migliorare il tempo di risposta per la query del set di dati. In modo analogo ai report, è possibile configurare un set di dati condiviso da memorizzare nella cache al momento del primo utilizzo o specificando una pianificazione.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
  Durante la permanenza nella cache dei risultati della query per una combinazione di parametri specifica, ogni report avviato per l'elaborazione che include un riferimento al set di dati condiviso con tali valori dei parametri utilizzerà i dati memorizzati nella cache.  
   
- È possibile specificare la quantità di tempo in cui mantenere i dati nella la cache prima che scadano. Per altre informazioni, vedere [Pagina Memorizzazione nella cache, set di dati condivisi &&#40;Gestione report&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ È possibile specificare la quantità di tempo in cui mantenere i dati nella la cache prima che scadano. Per altre informazioni, vedere [Pagina Memorizzazione nella cache, set di dati condivisi &40 #;Gestione report&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
   
 ## <a name="preloading-the-cache"></a>Precaricamento della cache  
  È possibile precaricare la cache creando un piano di aggiornamento che consente di specificare la frequenza di aggiornamento della cache tramite una pianificazione condivisa o specifica per l'elemento. Per evitare che per uno stesso elemento siano presenti più voci nella cache, è necessario specificare una pianificazione in base alla quale il tempo per l'elaborazione della query sull'origine dati esterna sia sufficiente. Se ad esempio il tempo necessario per l'esecuzione della query è di 20 minuti, l'aggiornamento deve essere pianificato con frequenza maggiore di 20 minuti. Per altre informazioni, vedere [Schedules](../../reporting-services/subscriptions/schedules.md).  

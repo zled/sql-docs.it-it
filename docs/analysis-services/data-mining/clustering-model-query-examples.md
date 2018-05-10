@@ -1,35 +1,23 @@
 ---
 title: Esempi di Query sul modello di clustering | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- clustering [Data Mining]
-- content queries [DMX]
-- clustering algorithms [Analysis Services]
-ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a3a59f8e64dcdefc69c70c3025ed2af3dea0767b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="clustering-model-query-examples"></a>Esempi di query sul modello di clustering
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
+  Quando si crea una query su un modello di data mining, è possibile recuperare i metadati sul modello oppure creare una query contenuto che fornisca dettagli sui modelli individuati nell'analisi. In alternativa, è possibile creare una query di stima che utilizza i modelli nel modello per eseguire stime per i nuovi dati. Ogni tipo di query fornirà informazioni diverse. Ad esempio, tramite una query contenuto potrebbero essere forniti dettagli aggiuntivi sui cluster trovati, mentre tramite una query di stima potrebbe venir indicato a quale cluster è più probabile che appartenga un nuovo punto dati.  
   
  Questa sezione illustra come creare query per i modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering.  
   
@@ -380,17 +368,17 @@ NATURAL PREDICTION JOIN
 |[Cluster &#40;DMX&#41;](../../dmx/cluster-dmx.md)|Restituisce il cluster che con maggiore probabilità contiene il case di input.|  
 |[ClusterDistance &#40;DMX&#41;](../../dmx/clusterdistance-dmx.md)|Viene restituita la distanza del case di input dal cluster specificato o la distanza del case di input dal cluster più probabile, se non viene specificato alcun cluster.<br /><br /> Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
 |[ClusterProbability &#40;DMX&#41;](../../dmx/clusterprobability-dmx.md)|Restituisce la probabilità che il case di input appartenga al cluster specificato.|  
-|[DMX IsDescendant &#40; &#41;](../../dmx/isdescendant-dmx.md)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
-|[DMX IsInNode &#40; &#41;](../../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case corrente.|  
-|[PredictAdjustedProbability &#40; DMX &#41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità ponderata.|  
-|[DMX PredictAssociation &#40; &#41;](../../dmx/predictassociation-dmx.md)|Viene stimata l'appartenenza a un set di dati associativo.|  
+|[DMX IsDescendant & #40; & #41;](../../dmx/isdescendant-dmx.md)|Viene determinato se un nodo è figlio di un altro nodo nel modello.|  
+|[DMX IsInNode & #40; & #41;](../../dmx/isinnode-dmx.md)|Indica se il nodo specificato contiene o meno il case corrente.|  
+|[PredictAdjustedProbability & #40; DMX & #41;](../../dmx/predictadjustedprobability-dmx.md)|Viene restituita la probabilità ponderata.|  
+|[DMX PredictAssociation & #40; & #41;](../../dmx/predictassociation-dmx.md)|Viene stimata l'appartenenza a un set di dati associativo.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md)|Viene restituita la probabilità che un case di input risulti adatto al modello esistente.|  
 |[PredictHistogram &#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)|Viene restituita una tabella di valori correlati ai valori stimati correnti.|  
-|[DMX PredictNodeId &#40; &#41;](../../dmx/predictnodeid-dmx.md)|Viene restituito l'oggetto Node_ID per ogni case.|  
-|[DMX PredictProbability &#40; &#41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per il valore stimato.|  
-|[PredictStdev &#40; DMX &#41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard stimata per la colonna specificata.|  
-|[PredictSupport &#40; DMX &#41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
-|[PredictVariance &#40; DMX &#41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
+|[DMX PredictNodeId & #40; & #41;](../../dmx/predictnodeid-dmx.md)|Viene restituito l'oggetto Node_ID per ogni case.|  
+|[DMX PredictProbability & #40; & #41;](../../dmx/predictprobability-dmx.md)|Viene restituita la probabilità per il valore stimato.|  
+|[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|Restituisce la deviazione standard stimata per la colonna specificata.|  
+|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|Viene restituito il valore di supporto per uno stato specificato.|  
+|[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|Restituisce la varianza di una colonna specificata.|  
   
  Per la sintassi di funzioni specifiche, vedere [Guida di riferimento alle funzioni DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   

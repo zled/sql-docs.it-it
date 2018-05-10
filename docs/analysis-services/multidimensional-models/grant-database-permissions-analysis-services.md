@@ -1,34 +1,23 @@
 ---
 title: Concedere le autorizzazioni di database (Analysis Services) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- permissions [Analysis Services], full control
-- full control permissions [Analysis Services]
-ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: b05b035f530318759f0b2eb4b20bd9bd5edd4d01
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e3b51e9b5a0571be3050b89c80e376d2510eee7a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Concedere le autorizzazioni per il database (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Se si affronta l'amministrazione del database di Analysis Services avendo già esperienza con i database relazionali, il primo aspetto da comprendere è che, per quanto riguarda l'accesso ai dati, il database non è l'oggetto principale a protezione diretta in Analysis Services.  
+  Se si affronta l'amministrazione del database di Analysis Services avendo già esperienza con i database relazionali, il primo aspetto da comprendere è che, per quanto riguarda l'accesso ai dati, il database non è l'oggetto principale a protezione diretta in Analysis Services.  
   
  La struttura di query primaria in Analysis Services è rappresentata da un cubo (o un modello tabulare), con le autorizzazioni utente impostate per specifici oggetti. A differenza del motore di database relazionale, in cui gli account di accesso al database e le autorizzazioni utente (spesso **db_datareader**) vengono impostati nel database stesso, un database di Analysis Services è per lo più un contenitore per gli oggetti query principali in un modello di dati. Se l'obiettivo immediato è consentire l'accesso ai dati per un cubo o un modello tabulare, per ora è possibile ignorare le autorizzazioni di database e passare direttamente all'argomento: [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -86,6 +75,6 @@ Se si affronta l'amministrazione del database di Analysis Services avendo già e
   
 ## <a name="see-also"></a>Vedere anche  
  [Concedere i diritti di amministratore del server a un'istanza di Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Concedere le autorizzazioni di elaborazione &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Concedere le autorizzazioni di elaborazione & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

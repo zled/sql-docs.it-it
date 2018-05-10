@@ -3,29 +3,27 @@ title: Analysis Services con i gruppi di disponibilità AlwaysOn | Microsoft Doc
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.service: ''
-ms.component: availability-groups
+ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.workload: Inactive
-ms.openlocfilehash: 4340ed907ffac7f4f0e53540061907a391362ed2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+monikerRange: '>= sql-server-2016 || = sqlallproducts-allversions'
+ms.openlocfilehash: 4a5bb795ae4d5c772e34f3ef4483934994799cb0
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con i gruppi di disponibilità AlwaysOn
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   Un gruppo di disponibilità AlwaysOn è una raccolta predefinita di database relazionali di SQL Server per cui è previsto un failover reciproco quando le condizioni attivano un failover in uno dei database, reindirizzando le richieste a un database con mirroring su un'altra istanza nello stesso gruppo di disponibilità. Se i gruppi di disponibilità vengono utilizzati come soluzione di disponibilità elevata, è possibile utilizzare un database di questo gruppo come origine dati in una soluzione multidimensionale o tabulare di Analysis Services. Tutte le operazioni di Analysis Services elencate di seguito funzionano nel modo previsto quando si utilizza un database di disponibilità: elaborazione o importazione di dati, query dirette su dati relazionali (utilizzando la modalità DirectQuery o l'archiviazione ROLAP) e writeback.  
   

@@ -1,29 +1,27 @@
 ---
 title: 'Lesson 2: Specifying Connection Information (Reporting Services) (Lezione 2: Specifica delle informazioni di connessione (Reporting Services)) | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 applies_to:
 - SQL Server 2016
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-caps.latest.revision: 
+caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 4e27b92cf3bd62059f1b54897d95d87cfd288dc5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: e1c62880fd94706f9f034d86fecd587700019b6f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lezione 2: Specifica delle informazioni di connessione (Reporting Services)
 Dopo aver aggiunto un report impaginato [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] al progetto dell'esercitazione nella Lezione 1, è necessario definire un'*origine dati*, vale a dire informazioni di connessione usate dal report per accedere ai dati da un database relazionale, multidimensionale o da un'altra risorsa.  
@@ -56,7 +54,7 @@ Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** da
     >  
     >`Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2014`  
     >  
-    >Per altre informazioni sulle stringhe di connessione, vedere: [Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+    >Per altre informazioni sulle stringhe di connessione, vedere: [Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
      
   
 6.  Fare clic su **Credenziali** nel riquadro sinistro e selezionare **Usa autenticazione di Windows (sicurezza integrata)**.  
@@ -67,7 +65,7 @@ Se il riquadro **Dati report** non è visualizzato, scegliere **Dati report** da
 È stata definita correttamente una connessione al database di esempio [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Verrà successivamente creato il report. Vedere [Lezione 3: Definizione di un set di dati per il report tabella &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
-[Connessioni dati, origini dati e stringhe di connessione in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
+[Data Connections, Data Sources, and Connection Strings in Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
   

@@ -1,30 +1,23 @@
 ---
 title: Invoke-ProcessASDatabase | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services, azure-analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 66d5d154-88ce-4c2e-b1ef-e2d2f6fb1c44
-caps.latest.revision: "11"
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 73155507a34f955d390bfb86f160755753ee7763
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 08d7ab5ef918b64fb7570ce5a407c23718fc6f03
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="invoke-processasdatabase"></a>Invoke-ProcessASDatabase
-[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Esegue il **processo** operazione su un oggetto specificato **Database** con uno specifico **ProcessType** o **RefreshType** a seconda di tipo dei metadati sottostanti.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
+  Esegue l'operazione **Process** su un **Database** specificato con un valore **ProcessType** o **RefreshType** specifico a seconda dei valori dei metadati sottostanti.  
   
  Usare **ProcessType** per i database con metadati multidimensionali. Sono inclusi i database tabulari con livello di compatibilità 1050, 1100 o 1103.  
   
@@ -60,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server >  
+### <a name="-servermicrosoftanalysissevicesserver"></a>-Server\<Microsoft.AnalysisSevices.Server>  
  Specifica facoltativamente l'istanza del server a cui connettersi se non si usa la directory del provider **SQLAS** per il contesto.  
   
 |||  
@@ -82,7 +75,7 @@ ms.lasthandoff: 01/08/2018
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType >  
+### <a name="-processtype-microsoftanalysisservicesprocesstype"></a>-ProcessType \<Microsoft.AnalysisServices.ProcessType>  
  Specifica il tipo di elaborazione per un database multidimensionale con livello di compatibilità da 1050 a 1103. I valori validi sono ProcessFull, ProcessAdd, ProcessUpdate, ProcessIndexes, ProcessData, ProcessDefault, ProcessClear, ProcessStructure, ProcessCelarStructureOnly, ProcessScriptCache o ProcessRecalc. Per descrizioni e indicazioni, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
 |||  

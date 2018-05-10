@@ -1,32 +1,19 @@
 ---
 title: La convalida incrociata (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- stored procedures [Analysis Services], data mining
-- cross-validation [data mining]
-- scoring [data mining]
-- accuracy testing [data mining]
-ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 3cac76036969ad837035a69a12b108623bb6f248
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Convalida incrociata (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,9 +40,9 @@ ms.lasthandoff: 02/15/2018
   
     -   Numero di riduzioni in cui partizionare i dati della struttura o del modello.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea un numero di modelli equivalente al numero di riduzioni e ne esegue il training.  
+-   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene creato un numero di modelli equivalente al numero di riduzioni e ne viene eseguito il training.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] restituisce un set di metriche di accuratezza per ogni riduzione di ogni modello o per l'intero set di dati.  
+-   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene quindi restituito un set di metriche di accuratezza per ogni riduzione di ogni modello o per l'intero set di dati.  
   
 ## <a name="configuring-cross-validation"></a>Configurazione della convalida incrociata  
  È possibile personalizzare la modalità di funzionamento della convalida incrociata per controllare il numero di sezioni incrociate, i modelli testati e la barra di accuratezza per le stime. Se si utilizzano le stored procedure della convalida incrociata, è anche possibile specificare il set di dati utilizzato per la convalida dei modelli. Queste numerose possibilità indicano che è possibile produrre facilmente molti set di risultati differenti che devono quindi essere confrontati e analizzati.  
@@ -118,17 +105,17 @@ ms.lasthandoff: 02/15/2018
   
  Per la prima fase, viene chiamata una stored procedure di sistema che crea tante partizioni quante specificate nel set di dati e restituisce i risultati di accuratezza per ciascuna partizione. Per ciascuna metrica, viene quindi calcolata la media e la deviazione standard per le partizioni.  
   
--   [SystemGetCrossValidationResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetCrossValidationResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterCrossValidationResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterCrossValidationResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)  
   
  **Generazione delle metriche per l'intero set di dati**  
   
  Nella seconda fase, viene chiamato un set diverso di stored procedure. Queste stored procedure non partizionano il set di dati, bensì generano risultati di accuratezza per l'intero set di dati specificato. Se una struttura di data mining è già stata partizionata ed elaborata, è possibile chiamare questo secondo set di stored procedure per ottenere i risultati.  
   
--   [SystemGetAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetAccuracyResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)  
   
--   [SystemGetClusterAccuracyResults &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+-   [SystemGetClusterAccuracyResults & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
 #### <a name="defining-the-testing-data"></a>Definizione dei dati di testing  
  Quando si eseguono le stored procedure di convalida incrociata che calcolano l'accuratezza, SystemGetAccuracyResults o SystemGetClusterAccuracyResults, è possibile specificare l'origine dei dati utilizzata per il testing durante la convalida incrociata. Questa opzione non è disponibile nell'interfaccia utente.  
@@ -188,16 +175,16 @@ ms.lasthandoff: 02/15/2018
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene descritto come impostare i parametri di convalida incrociata in SQL Server Sviluppo Studio.|[Scheda convalida incrociata &#40; Visualizzazione Grafico accuratezza &#41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
+|Viene descritto come impostare i parametri di convalida incrociata in SQL Server Sviluppo Studio.|[Scheda convalida incrociata & #40; Visualizzazione Grafico accuratezza & #41;](http://msdn.microsoft.com/library/bd215a68-1ad7-4046-9c44-ec8e2be13a64)|  
 |Viene descritta la metrica fornita dalla convalida incrociata.|[Formule di convalida incrociata](../../analysis-services/data-mining/cross-validation-formulas.md)|  
 |Viene illustrato il formato del report di convalida incrociata e vengono definite le misure statistiche fornite per ogni tipo di modello.|[Misure nel Report di convalida incrociata](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)|  
-|Vengono elencate le stored procedure per il calcolo delle statistiche di convalida incrociata.|[Stored procedure &#40; di Data Mining Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
+|Vengono elencate le stored procedure per il calcolo delle statistiche di convalida incrociata.|[Stored procedure & #40; di Data Mining Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)|  
 |||  
 |Viene descritto come creare un set di dati di testing per le strutture di data mining e i modelli correlati.|[Set di training e set di dati di Testing](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Vedere gli esempi di altri tipi di grafici di accuratezza.|[Matrice di classificazione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico di accuratezza &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di vari grafici di accuratezza.|[Test e convalida le attività e procedure relative alla &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Vedere gli esempi di altri tipi di grafici di accuratezza.|[Matrice di classificazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di vari grafici di accuratezza.|[Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

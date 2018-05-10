@@ -1,32 +1,30 @@
 ---
 title: Eseguire l'aggiornamento e la migrazione di Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
 ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
-caps.latest.revision: "92"
+caps.latest.revision: 92
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: f67b915820ae2d458ff6e43c7c3b0bbe7fdf1f98
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 19c902b31503b91c11a2d976e695507c1e2d2e5a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **Migrazione**: viene installato e configurato un nuovo ambiente SharePoint, vengono copiate risorse ed elementi di report nel nuovo ambiente che viene configurato in modo da usare il contesto esistente. Un tipo di migrazione di livello inferiore consiste nel copiare i database di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , i file di configurazione e, se si utilizza la modalità SharePoint, i database di contenuto di SharePoint.  
     
-> **[!INCLUDE[applies](../../includes/applies-md.md)]**Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+> **[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
   
 ##  <a name="bkmk_known_issues"></a> Problemi di aggiornamento noti e procedure consigliate  
  Per un elenco dettagliato delle edizioni e delle versioni supportate che è possibile aggiornare, vedere [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  

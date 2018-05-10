@@ -1,31 +1,23 @@
 ---
 title: Servizi di Data Mining e origini dati | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 78e67d346c451c258e806e6f888aef096e7d4256
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: ad48f9f2f3a769dad964fb47cae33618f3b4ecb4
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-services-and-data-sources"></a>Servizi di data mining e origini dati
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+  Il data mining richiede una connessione a un'istanza di SQL Server Analysis Services. I dati di un cubo non sono necessari per il data mining, pertanto è consigliabile l'uso di origini relazionali. Tuttavia, il data mining usa i componenti forniti dal motore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  In questo argomento vengono fornite informazioni necessarie per la connessione a un'istanza di SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per creare, elaborare, distribuire modelli di data mining o eseguire query su di essi.  
   
@@ -95,7 +87,7 @@ Il data mining richiede una connessione a un'istanza di SQL Server Analysis Serv
  È inoltre possibile impostare proprietà che consentono di ottimizzare il server e controllare la sicurezza per l'utilizzo client. Per altre informazioni, vedere [Proprietà di funzionalità](../../analysis-services/server-properties/feature-properties.md).  
   
 > [!NOTE]  
->  Per altre informazioni sul supporto per algoritmi plug-in delle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+>  Per ulteriori informazioni sul supporto per algoritmi plug-in dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzionalità supportate dalle edizioni di SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ## <a name="programmatic-access-to-data-mining-objects"></a>Accesso a livello di codice agli oggetti di data mining  
  Per creare una connessione a un database di Analysis Services e utilizzare oggetti di data mining, è possibile utilizzare i modelli a oggetti seguenti:  

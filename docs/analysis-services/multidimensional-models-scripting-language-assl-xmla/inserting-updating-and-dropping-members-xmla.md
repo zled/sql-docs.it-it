@@ -1,38 +1,19 @@
 ---
 title: Inserimento, aggiornamento ed eliminazione di membri (XMLA) | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- inserting dimension members
-- XML for Analysis, members
-- removing dimension members
-- dropping dimension members
-- write-enabled dimensions [Analysis Services]
-- XMLA, members
-- deleting dimension members
-- dimensions [Analysis Services], XML for Analysis
-ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: xmla
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 55572d91ab28593f17cda8ce400fcf7301e52c17
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f80756cb147b33b7caede48093fb69e17eb4a263
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Inserimento, aggiornamento ed eliminazione di membri (XMLA)
   È possibile utilizzare il [inserire](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [aggiornare](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), e [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) comandi XML for Analysis (XMLA) consentono rispettivamente di inserire, aggiornare o eliminare membri da una dimensione abilitata per la scrittura. Per ulteriori informazioni sulle dimensioni abilitate per la scrittura, vedere [dimensioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
@@ -118,10 +99,10 @@ ms.lasthandoff: 02/15/2018
 >  Per eliminare sia il membro padre che i relativi discendenti, è sufficiente che un utente disponga delle autorizzazioni per l'eliminazione del solo membro padre e non è necessario che disponga delle autorizzazioni per l'eliminazione dei discendenti.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Eliminare l'elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
- [Inserisci elemento &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
- [Elemento Update &#40; XMLA &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
- [Definizione e identificazione di oggetti &#40; XMLA &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
+ [Eliminare l'elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md)   
+ [Inserisci elemento & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
+ [Elemento Update & #40; XMLA & #41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
+ [Definizione e identificazione di oggetti &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
  [Sviluppo con XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   

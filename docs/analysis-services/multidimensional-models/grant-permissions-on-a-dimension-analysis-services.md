@@ -1,37 +1,23 @@
 ---
 title: Concedere le autorizzazioni per una dimensione (Analysis Services) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.dimensions.f1
-helpviewer_keywords:
-- dimensions [Analysis Services], security
-- read/write permissions
-- user access rights [Analysis Services], dimensions
-- permissions [Analysis Services], dimensions
-ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
-caps.latest.revision: 39
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dba9778b626da43a404c773eaeb1745b3bcd3528
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 79894aabd721017897db2bbd9c5aab4b2410bd57
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Concedere le autorizzazioni per una dimensione (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sicurezza delle dimensioni viene utilizzata per impostare le autorizzazioni per un oggetto dimensione, non i relativi dati. In genere, consentire o negare l'accesso alle operazioni di elaborazione rappresenta l'obiettivo principale quando si impostano le autorizzazioni su una dimensione.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La sicurezza delle dimensioni viene usata per impostare le autorizzazioni su un oggetto dimensione e non sui relativi dati. In genere, consentire o negare l'accesso alle operazioni di elaborazione rappresenta l'obiettivo principale quando si impostano le autorizzazioni su una dimensione.  
   
  Probabilmente però l'obiettivo non è controllare le operazioni di elaborazione, bensì l'accesso dei dati a una dimensione o gli attributi e le gerarchie in essa contenuti. Si supponga, ad esempio, che una società con divisioni di vendita regionali non desideri autorizzare l'accesso alle informazioni sulle prestazioni di vendita agli utenti esterni alla divisione. Per consentire o negare l'accesso a parti di dati della dimensione per diversi elementi costituenti, è possibile impostare le autorizzazioni sugli attributi della dimensione e sui membri della dimensione. Si noti che non è possibile negare l'accesso a un singolo oggetto dimensione, ma solo ai relativi dati. Se l'obiettivo immediato è consentire o negare l'accesso ai membri di una dimensione, compresi i diritti di accesso alle singole gerarchie di attributi, vedere [Concedere l'accesso personalizzato ai dati della dimensione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) per altre informazioni.  
   
@@ -75,9 +61,9 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Ruoli e autorizzazioni &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)   
- [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Concedere le autorizzazioni per strutture di data mining e modelli &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Concedere l'accesso personalizzato alla dimensione dei dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Concedere l'accesso personalizzato ai dati delle celle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [Concedere al cubo o modello autorizzazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni per modelli e strutture di data mining &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Concedere l'accesso personalizzato alla dimensione dei dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Concedere l'accesso personalizzato a una cella di dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

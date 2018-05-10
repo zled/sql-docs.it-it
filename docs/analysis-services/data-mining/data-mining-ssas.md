@@ -1,32 +1,23 @@
 ---
 title: Data Mining (SSAS) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
-ms.assetid: b1c912da-72f6-4d96-89c8-55a2c4f19e88
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 82b5649d8893714b72aa38be381f8d2fbd0833fb
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-ssas"></a>Data mining (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è stata leader analitica predittiva dopo la versione 2000, fornendo il data mining [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La combinazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e Data Mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce una piattaforma integrata per le analisi predittive che comprende la pulizia e la preparazione dei dati, il Machine Learning e la creazione di report. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il data mining include più algoritmi standard, inclusi modelli di clustering EM e K-medie, reti neurali, regressione logistica e regressione lineare, alberi delle decisioni e classificatori Naive Bayes. Tutti i modelli dispongono di visualizzazioni integrate che consentono di sviluppare, ridefinire e valutare i modelli.  L'integrazione del data mining nella soluzione di business intelligence consente di prendere decisioni intelligenti sui problemi complessi.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un avanzato sistema per le analisi predittive fin dalla versione 2000 e offre funzionalità di data mining in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La combinazione di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e Data Mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce una piattaforma integrata per le analisi predittive che comprende la pulizia e la preparazione dei dati, il Machine Learning e la creazione di report. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Il data mining include più algoritmi standard, inclusi modelli di clustering EM e K-medie, reti neurali, regressione logistica e regressione lineare, alberi delle decisioni e classificatori Naive Bayes. Tutti i modelli dispongono di visualizzazioni integrate che consentono di sviluppare, ridefinire e valutare i modelli.  L'integrazione del data mining nella soluzione di business intelligence consente di prendere decisioni intelligenti sui problemi complessi.  
   
 ## <a name="benefits-of-data-mining"></a>Vantaggi del data mining  
  Il data mining (anche denominato analisi predittiva e Machine Learning) usa consolidati principi statistici per individuare modelli nei dati. Applicando gli algoritmi di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ai dati, è possibile prevedere tendenze, identificare modelli, creare regole e indicazioni, analizzare la sequenza di eventi in set di dati complessi e acquisire nuovi approfondimenti.  
@@ -52,28 +43,28 @@ ms.lasthandoff: 01/08/2018
   
 -   Sicurezza e distribuzione: tramite [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]viene fornita la sicurezza basata su ruoli, incluse autorizzazioni separate relative al drill-through per i dati del modello e della struttura. Distribuzione semplice di modelli agli altri server, in modo che gli utenti possano accedere agli schemi o effettuare stime  
   
-## <a name="in-this-section"></a>Argomenti della sezione  
+## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti di questa sezione sono illustrate le caratteristiche principali di Data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e le attività correlate.  
   
 -   [Concetti di data mining](../../analysis-services/data-mining/data-mining-concepts.md)  
   
--   [Algoritmi di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Strutture di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+-   [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 -   [Modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
--   [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+-   [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
--   [Query di data mining](../../analysis-services/data-mining/data-mining-queries.md)  
+-   [Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)  
   
 -   [Soluzioni di data mining](../../analysis-services/data-mining/data-mining-solutions.md)  
   
--   [Strumenti di data mining](../../analysis-services/data-mining/data-mining-tools.md)  
+-   [Strumenti di Data Mining](../../analysis-services/data-mining/data-mining-tools.md)  
   
 -   [Architettura di data mining](../../analysis-services/data-mining/data-mining-architecture.md)  
   
--   [Panoramica della sicurezza &#40;data mining&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
+-   [Cenni preliminari sulla sicurezza & #40; Data Mining & #41;](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)  

@@ -1,35 +1,26 @@
 ---
 title: Power Pivot con privilegi minimi esempio - SharePoint 2013 | Documenti Microsoft
-ms.custom: 
-ms.date: 03/07/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology:
-- setup-install
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: aa7ce279e968322d9e1ffd80d9a277d27b18c9f7
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 9f30e9b8b997a4fefd39acd9797de5d19d2a7d29
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot con privilegi minimi esempio - SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Questo argomento mostra una configurazione di esempio di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
+  Questo argomento mostra una configurazione di esempio di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013 con privilegi minimi. Nella configurazione viene utilizzato un account diverso per ognuno dei tre componenti e ogni account dispone del livello minimo di privilegi.  
   
 ## <a name="summary-of-accounts"></a>Riepilogo degli account  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013 supporta l'uso dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per altre informazioni sugli account di servizio, vedere [Configurare account di servizio e autorizzazioni di Windows](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013 supporta l'uso dell'account Servizio di rete per l'account del servizio Analysis Services. L'account Servizio di rete non è supportato con SharePoint 2010. Per ulteriori informazioni sugli account di servizio, vedere [configurare account di servizio Windows e le autorizzazioni](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  Nella tabella seguente sono riepilogati i tre account utilizzati nell'esempio di configurazione con privilegi minimi.  
   

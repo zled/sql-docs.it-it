@@ -1,40 +1,23 @@
 ---
 title: Partizioni abilitate la scrittura | Documenti Microsoft
-ms.custom: 
-ms.date: 03/03/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- write-enabled partitions [Analysis Services]
-- partitions [Analysis Services], write-enabled
-- partitions [Analysis Services], storage
-- writeback [Analysis Services], partitions
-- storing data [Analysis Services], partitions
-ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 71bc0c4663cb33b57408e6f79ddd35dfa1c71438
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Partizioni - partizioni abilitate per scrittura
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-I dati di un cubo sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una partizione per la scrittura. Le partizioni abilitate per la scrittura vengono utilizzate per consentire agli utenti aziendali di sperimentare vari scenari modificando i valori delle celle e analizzando gli effetti delle modifiche sui dati del cubo. Quando si abilita per la scrittura una partizione, le applicazioni client potranno registrare modifiche ai dati nella partizione. Tali modifiche, note come dati writeback, vengono archiviate in una tabella separata e non sovrascrivono i dati esistenti in un gruppo di misure. Vengono però incorporate nei risultati delle query come se facessero parte dei dati del cubo.  
+  I dati di un cubo sono in genere di sola lettura. In determinati scenari, tuttavia, può rivelarsi utile abilitare una partizione per la scrittura. Le partizioni abilitate per la scrittura vengono utilizzate per consentire agli utenti aziendali di sperimentare vari scenari modificando i valori delle celle e analizzando gli effetti delle modifiche sui dati del cubo. Quando si abilita per la scrittura una partizione, le applicazioni client potranno registrare modifiche ai dati nella partizione. Tali modifiche, note come dati writeback, vengono archiviate in una tabella separata e non sovrascrivono i dati esistenti in un gruppo di misure. Vengono però incorporate nei risultati delle query come se facessero parte dei dati del cubo.  
   
  È possibile abilitare per la scrittura un intero cubo o soltanto determinate partizioni nel cubo. Le dimensioni abilitate per la scrittura sono diverse ma complementari. Una partizione abilitata per la scrittura consente agli utenti di aggiornare le celle della partizione, mentre una dimensione abilitata per la scrittura consente agli utenti di aggiornare i membri della dimensione. È inoltre possibile utilizzare queste due caratteristiche in combinazione. Una partizione o un cubo abilitato per la scrittura, ad esempio, non deve necessariamente includere dimensioni abilitate per la scrittura. **Argomento correlato:**[dimensioni abilitate per la scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
   
@@ -46,7 +29,7 @@ I dati di un cubo sono in genere di sola lettura. In determinati scenari, tuttav
 ## <a name="writeback-storage"></a>Archiviazione writeback  
  Qualsiasi modifica apportata dall'utente aziendale viene archiviata nella tabella writeback come differenza rispetto al valore attualmente visualizzato. Ad esempio, se un utente finale modifica un valore di cella da 90 a 100, il valore **+ 10** viene archiviato nella tabella writeback, insieme all'ora della modifica e alle informazioni relative all'utente di business che l'ha apportata. Alle applicazioni client viene visualizzato il risultato finale delle modifiche cumulative. In questo modo, il valore originale del cubo viene mantenuto e nella tabella writeback viene memorizzata un itinerario di controllo delle modifiche.  
   
- Le modifiche apportate a celle foglia e non foglia vengono gestite in modo diverso. Una cella foglia rappresenta un'intersezione di una misura e un membro foglia di ogni dimensione a cui fa riferimento il gruppo di misure. Il valore di una cella foglia viene recuperato direttamente dalla tabella dei fatti e non può essere suddiviso ulteriormente tramite il drill-down. Se qualsiasi partizione o un cubo è abilitato per la scrittura, possono essere apportate modifiche alle celle foglia. Le celle non foglia possono essere modificate solo se l'applicazione client consente di distribuire le modifiche tra le celle foglia che compongono la cella non foglia. Questo processo, denominato allocazione, viene gestito tramite l'utilizzo dell'istruzione UPDATE CUBE in espressioni MDX (MultiDimensional Expression). Gli sviluppatori di applicazioni di Business Intelligence possono utilizzare l'istruzione UPDATE CUBE per includere funzionalità di allocazione. Per ulteriori informazioni, vedere [istruzione UPDATE CUBE &#40; MDX &#41; ](../../mdx/mdx-data-manipulation-update-cube.md).  
+ Le modifiche apportate a celle foglia e non foglia vengono gestite in modo diverso. Una cella foglia rappresenta un'intersezione di una misura e un membro foglia di ogni dimensione a cui fa riferimento il gruppo di misure. Il valore di una cella foglia viene recuperato direttamente dalla tabella dei fatti e non può essere suddiviso ulteriormente tramite il drill-down. Se qualsiasi partizione o un cubo è abilitato per la scrittura, possono essere apportate modifiche alle celle foglia. Le celle non foglia possono essere modificate solo se l'applicazione client consente di distribuire le modifiche tra le celle foglia che compongono la cella non foglia. Questo processo, denominato allocazione, viene gestito tramite l'utilizzo dell'istruzione UPDATE CUBE in espressioni MDX (MultiDimensional Expression). Gli sviluppatori di applicazioni di Business Intelligence possono utilizzare l'istruzione UPDATE CUBE per includere funzionalità di allocazione. Per altre informazioni, vedere [istruzione UPDATE CUBE &#40;MDX&#41;](../../mdx/mdx-data-manipulation-update-cube.md).  
   
 > [!IMPORTANT]  
 >  Quando le celle aggiornate non si sovrappongono, la proprietà della stringa di connessione **Update Isolation Level** può essere usata per migliorare le prestazioni di UPDATE CUBE. Per altre informazioni, vedere <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
@@ -60,12 +43,12 @@ I dati di un cubo sono in genere di sola lettura. In determinati scenari, tuttav
 -   Ignorata in modo da ripristinare lo stato originale della partizione. La partizione verrà impostata automaticamente come di sola lettura.  
   
 ## <a name="security"></a>Sicurezza  
- Un utente aziendale è autorizzato a registrare modifiche nella tabella writeback di un cubo solo se appartiene a un ruolo con autorizzazione in lettura/scrittura per le celle del cubo. È possibile determinare le singole celle del cubo aggiornabili per ogni ruolo. Per ulteriori informazioni, vedere [concedere cubo o modello autorizzazioni &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ Un utente aziendale è autorizzato a registrare modifiche nella tabella writeback di un cubo solo se appartiene a un ruolo con autorizzazione in lettura/scrittura per le celle del cubo. È possibile determinare le singole celle del cubo aggiornabili per ogni ruolo. Per altre informazioni, vedere [concedere le autorizzazioni del cubo o modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Dimensioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)   
  [Le aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
- [Le partizioni &#40; Analysis Services - dati multidimensionali &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Le partizioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Dimensioni abilitate per scrittura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   

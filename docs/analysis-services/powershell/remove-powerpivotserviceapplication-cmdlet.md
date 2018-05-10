@@ -1,31 +1,23 @@
 ---
 title: Il cmdlet Remove-PowerPivotServiceApplication | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 2742b2a3-927c-4e7c-bd7d-43c072fa01ab
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7078a7733c7764b77667628071c66c8313aae85a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: ddd179e82dc7c0170e99ece2a8018c0a8454c11d
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="remove-powerpivotserviceapplication-cmdlet"></a>Cmdlet Remove-PowerPivotServiceApplication
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Elimina un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  Elimina un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
@@ -56,7 +48,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |Accettare input da pipeline?|true|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>-Confirm \<passare >  
  Richiede la conferma dell'utente prima dell'esecuzione del comando. Questo valore è abilitato per impostazione predefinita. Per ignorare la risposta di conferma in un comando, specificare Confirm:$false nel comando.  
   
 |||  
@@ -78,7 +70,7 @@ Remove-PowerPivotServiceApplication [-Identity <SPGeminiServiceApplicationPipeBi
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-removedata-switch"></a>-RemoveData \<switch>  
+### <a name="-removedata-switch"></a>-RemoveData \<passare >  
  Consente di rimuovere il database dell'applicazione di servizio contenente le pianificazioni di aggiornamento dati, i dati di utilizzo delle cartelle di lavoro, le mappe dell'istanza utilizzate per tenere traccia dei database caricati e altri dati interni.  
   
 |||  

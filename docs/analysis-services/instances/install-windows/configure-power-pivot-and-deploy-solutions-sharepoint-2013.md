@@ -1,32 +1,23 @@
 ---
 title: Configurare PowerPivot e distribuire soluzioni (SharePoint 2013) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology:
-- power-view
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a815c21f442c615217fdc863448f18b49fdb3588
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c0977d23490b9d721b96361e36ef006807e128bd
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Configurare Power Pivot e distribuire soluzioni (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Questo argomento descrive la distribuzione e la configurazione di miglioramenti di livello intermedio alle funzionalità di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , tra cui la raccolta [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la pianificazione dell'aggiornamento dei dati, il dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013** per eseguire queste operazioni:  
+  Questo argomento descrive la distribuzione e la configurazione di miglioramenti di livello intermedio alle funzionalità di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] in [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , tra cui la raccolta [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , la pianificazione dell'aggiornamento dei dati, il dashboard di gestione e i provider di dati. Eseguire lo strumento di **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2013** per eseguire queste operazioni:  
   
 -   Distribuire i file di soluzione SharePoint.  
   
@@ -126,15 +117,15 @@ Questo argomento descrive la distribuzione e la configurazione di miglioramenti 
   
     -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] - Utilizzo dati di caricamento  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] - Utilizzo query  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Utilizzo query  
   
-    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] - Utilizzo dati di scaricamento  
+    -   [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Utilizzo dati di scaricamento  
   
 4.  Verificare che l'opzione **Abilita raccolta dati integrità** sia selezionata.  
   
 5.  Scegliere **OK**.  
   
- Per altre informazioni sulla risoluzione dei problemi relativi all'aggiornamento dei dati, vedere [Troubleshooting Power Pivot Data Refresh (Risoluzione dei problemi di aggiornamento dei dati di Power Pivot)](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+ Per ulteriori informazioni sulla risoluzione dei problemi dei dati aggiornamento, vedere [risoluzione dei problemi di aggiornamento dati Power Pivot](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) (http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  Per altre informazioni sullo strumento di configurazione, vedere [Strumenti di configurazione di Power Pivot](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

@@ -1,32 +1,23 @@
 ---
 title: Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/20/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- Mining Accuracy Chart [Analysis Services], mining structures
-ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
-caps.latest.revision: 20
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: b16770ad1bf8ca0052f7b8b6af22df02d4e4392f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a136b9e3fe14b742a6c73c20ea0cd354bba3a106
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-lift-chart-profit-chart-or-classification-matrix"></a>Creare un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile creare un grafico di accuratezza per un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modello di data mining in cinque passaggi fondamentali:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  È possibile creare un grafico di accuratezza per un modello di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cinque passaggi fondamentali:  
   
 -   Selezionare la struttura di data mining che contiene i modelli di data mining da confrontare.  
   
@@ -117,7 +108,7 @@ ms.lasthandoff: 01/08/2018
      Importo dei ricavi associati a ogni vendita effettuata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Grafico di accuratezza &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
- [Matrice di classificazione &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
+ [Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)   
+ [Matrice di classificazione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)  
   
   

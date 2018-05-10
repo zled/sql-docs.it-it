@@ -1,32 +1,23 @@
 ---
 title: Creare una Query sul contenuto su un modello di Data Mining | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords:
-- content queries [DMX]
-ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
-caps.latest.revision: 17
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 77cca4b8462befde098dc522067b44131a009fc8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: e1a41f83a2fb2f4f12c781adbd04a00f706f3e19
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Creare una query sul contenuto di un modello di data mining
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]È possibile eseguire una query contenuto del modello di data mining a livello di programmazione tramite AMO o XML/A, ma è più facile creare query mediante DMX. È anche possibile creare query sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e creando una query tramite le viste a gestione dinamica fornite da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  È possibile eseguire una query a livello di codice sul contenuto del modello di data mining utilizzando AMO o XML/A, ma è più facile creare query mediante DMX. È anche possibile creare query sui set di righe dello schema di data mining stabilendo una connessione all'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e creando una query tramite le viste a gestione dinamica fornite da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
  Nelle procedure riportate di seguito viene illustrato come creare le query su un modello di data mining utilizzando DMX e come eseguire una query sui set di righe dello schema di data mining.  
   
@@ -50,7 +41,7 @@ ms.lasthandoff: 01/08/2018
   
      Se non si vuole digitare il nome, è possibile selezionare un modello di data mining in **Esplora oggetti** e trascinarlo nel modello.  
   
-6.  Nella riga, `SELECT`  *\<Seleziona elenco, expr, \* >* , digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
+6.  Nella riga, `SELECT` *\<Seleziona elenco, expr, \* >*, digitare i nomi delle colonne nel set di righe dello schema del contenuto del modello data mining.  
   
      Per visualizzare un elenco di colonne che è possibile restituire nelle query del contenuto del modello di data mining, vedere [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -84,7 +75,7 @@ ms.lasthandoff: 01/08/2018
     >  Per visualizzare un elenco di tutti i set di righe dello schema su cui è possibile eseguire una query nell'istanza corrente, utilizzare la query `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. In alternativa, per un elenco di set di righe dello schema specifici del data mining, vedere [Set di righe dello schema di data mining](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
- [Set di righe dello schema di data mining](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
+ [Contenuto del modello di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Set di righe dello Schema di Data Mining](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  
   
   
