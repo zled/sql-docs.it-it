@@ -1,39 +1,23 @@
 ---
 title: Calcoli | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- calculations [Analysis Services]
-- OLAP objects [Analysis Services], calculations
-- MDX [Analysis Services], calculations
-- calculations [Analysis Services], about calculations
-- cubes [Analysis Services], calculations
-ms.assetid: 6be84916-fd05-4efc-ab98-6adbbad80154
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: dd006ee1a6896e4b9bdd6264d16a8406786f8d39
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: c71a931814e28a28ccfffd810deff15d7f126f6f
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="calculations"></a>Calcoli
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un calcolo è un'espressione MDX (Multidimensional Expressions) o script che viene utilizzato per definire un membro calcolato, un set denominato o un'assegnazione di ambito di un cubo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di aggiungere oggetti definiti non dai dati del cubo, ma da espressioni che possono fare riferimento ad altre parti del cubo, ad altri cubi o persino a informazioni esterne al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di estendere le funzionalità di un cubo, aggiungendo flessibilità e potenza alle applicazioni di Business Intelligence. Per ulteriori informazioni sui calcoli di script, vedere [Introduzione alla creazione di script MDX in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Per ulteriori informazioni sui problemi di prestazioni relativi alle query e calcoli MDX, vedere il [Guida alle prestazioni di SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+  Un calcolo è un'espressione MDX (Multidimensional Expressions) o script che viene utilizzato per definire un membro calcolato, un set denominato o un'assegnazione di ambito di un cubo in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di aggiungere oggetti definiti non dai dati del cubo, ma da espressioni che possono fare riferimento ad altre parti del cubo, ad altri cubi o persino a informazioni esterne al database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. I calcoli consentono di estendere le funzionalità di un cubo, aggiungendo flessibilità e potenza alle applicazioni di Business Intelligence. Per ulteriori informazioni sui calcoli di script, vedere [Introduzione alla creazione di script MDX in Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Per ulteriori informazioni sui problemi di prestazioni relativi alle query e calcoli MDX, vedere il [Guida alle prestazioni di SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Membri calcolati  
  Un membro calcolato è un membro il cui valore viene calcolato in fase di esecuzione utilizzando un'espressione MDX (Multidimensional Expressions) specificata dall'utente durante la definizione del membro stesso. Un membro calcolato è disponibile per le applicazioni di Business Intelligence come qualsiasi altro membro. I membri calcolati non aumentano le dimensioni del cubo dato che solo le definizioni vengono archiviate nel cubo, mentre il calcolo dei valori, necessario per rispondere alle query, viene eseguito in memoria.  

@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f867d3c994187afaa411a19687eda36a039557f4
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: 53467f6dfcab26fa4fded8a9b32086417c8c0af6
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -80,9 +80,9 @@ ms.lasthandoff: 05/04/2018
 |**sql_memory_model**|**int**|**Si applica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il modello di memoria utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ad allocare la memoria. Non ammette i valori NULL.<br /><br />1 = modello di memoria convenzionale<br />2 = blocco di pagine in memoria<br /> 3 = pagine di grandi dimensioni in memoria|
 |**sql_memory_model_desc**|**nvarchar(120)**|**Si applica a:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il modello di memoria utilizzato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ad allocare la memoria. Non ammette i valori NULL.<br /><br />**CONVENZIONALE**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza il modello di memoria convenzionale per allocare memoria. Si tratta di memoria di sql predefinita del modello quando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account del servizio non dispone Lock Pages nei privilegi di memoria durante l'avvio.<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza blocco di pagine in memoria per allocare memoria. Questo è il gestore della memoria di sql predefinita quando l'account del servizio SQL Server disporre di privilegi di memoria di blocco di pagine durante l'avvio di SQL Server.<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizza pagine di grandi dimensioni in memoria per allocare memoria. SQL Server utilizza l'allocatore di pagine di grandi dimensioni di allocazione della memoria solo con Enterprise edition quando l'account del servizio SQL Server possedere Lock Pages in privilegio di memoria durante l'avvio del server e quando 834 Flag di traccia è attivata.|
 |**pdw_node_id**|**int**|**Si applica a:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L'identificatore per il nodo che utilizza questo tipo di distribuzione.|  
-|**socket_count** |**int** | **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il numero di socket di processore disponibile nel sistema. |  
-|**cores_per_socket** |**int** | **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il numero di processori per ogni socket disponibile nel sistema. |  
-|**numa_node_count** |**int** | **Si applica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il numero di nodi numa disponibili nel sistema. Questa colonna include nodi numa fisici, nonché i nodi soft-numa. |  
+|**socket_count** |**int** | **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il numero di socket di processore disponibile nel sistema. |  
+|**cores_per_socket** |**int** | **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il numero di processori per ogni socket disponibile nel sistema. |  
+|**numa_node_count** |**int** | **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Specifica il numero di nodi numa disponibili nel sistema. Questa colonna include nodi numa fisici, nonché i nodi soft-numa. |  
   
 ## <a name="permissions"></a>Autorizzazioni
 

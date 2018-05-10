@@ -1,30 +1,28 @@
 ---
 title: Recapito tramite condivisione file in Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: subscriptions
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], file share delivery
 - file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
-caps.latest.revision: "54"
+caps.latest.revision: 54
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: cfdf980d2d9ed24f18c29771920bcf16b34aebd5
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: bad4004a0bd151256397df94c329ae11fca1955b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Recapito tramite condivisione file in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] include un'estensione per il recapito tramite condivisione file che consente di recapitare un report a una cartella. L'estensione per il recapito tramite condivisione file è disponibile per impostazione predefinita e non richiede alcuna operazione di configurazione. Per fare in modo che il recapito dei file abbia esito positivo, è necessario impostare autorizzazioni di accesso in scrittura sulla cartella condivisa. L'account che richiede le autorizzazioni di scrittura può avere credenziali configurate nella sottoscrizione o un **account di condivisione file** configurato per il server di report. Per altre informazioni sull'account di condivisione file, vedere [Impostazioni di sottoscrizione e un account di condivisione file &#40;Gestione configurazione&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). Inoltre, gli utenti che richiedono l'accesso ai report devono disporre di autorizzazioni in lettura per la cartella condivisa.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 01/09/2018
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** Modalità nativa di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modalità SharePoint di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
   
  **Contenuto dell'argomento:**  
   

@@ -1,16 +1,16 @@
 ---
-title: "Attività Profiling dati | Microsoft Docs"
-ms.custom: 
+title: Attività Profiling dati | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: control-flow
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataprofilingtask.f1
@@ -19,16 +19,16 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-caps.latest.revision: 
+caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 62c240d11e15eea39fb7246d147680b39370c7a6
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
-ms.translationtype: MT
+ms.openlocfilehash: f13b87b12f22b05984574a41b4b74d9ef1c748cf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-profiling-task"></a>Attività Profiling dati
   L'attività Profiling dati calcola i diversi profili che consentono di familiarizzare con un'origine dati e identificare i problemi nei dati che devono essere corretti.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/20/2018
 |----------------------------------------------|-----------------|  
 |Profilo Distribuzione lunghezze di colonna|Segnala tutte le singole lunghezze dei valori stringa nella colonna selezionata e la percentuale di righe nella tabella che ogni lunghezza rappresenta.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio valori non validi. Si analizza, ad esempio, una colonna che contiene i codici degli stati degli Stati Uniti a due caratteri e si individuano valori con lunghezza superiore a due caratteri.|  
 |Profilo Rapporto di valori Null nella colonna|Segnala la percentuale di valori Null nella colonna selezionata.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un rapporto di valori di colonna Null inaspettatamente elevato. Si analizza, ad esempio, una colonna contenente CAP e si individua una percentuale eccessivamente elevata di codici mancanti.|  
-|Profilo Criteri di ricerca colonna|Segnala un set di espressioni regolari che coprono la percentuale specificata di valori in una colonna stringa.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio stringhe non valide. Questo profilo può inoltre indicare espressioni regolari che possono essere utilizzate in futuro per convalidare nuovi valori. Ad esempio, un profilo di criteri di ricerca di una colonna Codice postale (Stati Uniti) può produrre le espressioni regolari seguenti: \d{5}-\d{4}, \d{5}, and \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.|  
+|Profilo Criteri di ricerca colonna|Segnala un set di espressioni regolari che coprono la percentuale specificata di valori in una colonna stringa.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio stringhe non valide. Questo profilo può inoltre indicare espressioni regolari che possono essere utilizzate in futuro per convalidare nuovi valori. Un profilo di criteri di ricerca di una colonna contenente codici postali ZIP (Stati Uniti) potrebbe ad esempio produrre le seguenti espressioni regolari: \d{5}-\d{4}, \d{5} e \d{9}. Se vengono visualizzate altre espressioni regolari, è probabile che i dati contengano valori non validi o in formato non corretto.|  
 |Profilo Statistiche di colonna|Segnala le statistiche, ad esempio la deviazione minima, massima, media e standard per le colonne numeriche e minima e massima per le colonne di tipo **datetime** .<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio date non valide. Si analizza, ad esempio, una colonna di date cronologiche e si individua una data massima successiva alla data corrente.|  
 |Profilo Distribuzione valori di colonna|Segnala tutti i valori distinct nella colonna selezionata e la percentuale di righe nella tabella che ogni valore rappresenta. Può inoltre segnalare valori che rappresentano più di una percentuale specificata di righe nella tabella.<br /><br /> Questo profilo consente di identificare problemi nei dati, ad esempio un numero non corretto di valori distinct in una colonna. Si analizza, ad esempio, una colonna che si suppone contenga gli stati degli Stati Uniti e si individuano più di 50 valori distinct.|  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 03/20/2018
 |**DataProfilingTaskTrace**|Fornisce informazioni descrittive sullo stato dell'attività. I messaggi includono le informazioni seguenti:<br /><br /> Avvio elaborazione richieste<br /><br /> Inizio query<br /><br /> Query End<br /><br /> Fine calcolo richiesta|  
   
 ## <a name="output-and-its-schema"></a>Output e relativo schema  
- L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
+ L'attività Profiling dati restituisce i profili selezionati in un formato XML strutturato in base allo schema DataProfile.xsd. È possibile specificare se questo output XML è salvato in un file o in una variabile del pacchetto. È possibile visualizzare questo schema online all'indirizzo [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/). Nella pagina Web è possibile salvare una copia locale dello schema. È quindi possibile visualizzare la copia locale dello schema in Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] o in un altro editor di schemi, in un editor XML o in un editor di testo come Blocco note.  
   
  Questo schema per informazioni sulla qualità dei dati può essere utile per:  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 03/20/2018
   
 -   Compilazione di strumenti personalizzati da utilizzare con le informazioni sulla qualità dei dati.  
   
- Lo spazio dei nomi di destinazione è identificato nello schema come [ http://schemas.microsoft.com/sqlserver/2008/DataDebugger/ ](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
+ Lo spazio dei nomi di destinazione viene identificato nello schema come [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/).  
   
 ## <a name="output-in-the-conditional-workflow-of-a-package"></a>Output nel flusso di lavoro condizionale di un pacchetto  
  I componenti di profiling dei dati non includono la funzionalità predefinita per implementare la logica condizionale nel flusso di lavoro del pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] basata sull'output dell'attività Profiling dati. È tuttavia facile aggiungere questa logica con una programmazione minima in un'attività Script. Con questo codice verrebbe eseguita una query XPath sull'output XML e quindi il risultato verrebbe salvato in una variabile del pacchetto. I vincoli di precedenza che collegano l'attività Script alle attività successive possono utilizzare un'espressione per determinare il flusso di lavoro. Ad esempio, l'attività Script rileva che la percentuale di valori Null in una colonna supera una determinata soglia. Quando questa condizione è vera, potrebbe essere necessario interrompere il pacchetto e risolvere il problema prima di continuare.  
@@ -145,7 +145,7 @@ ms.lasthandoff: 03/20/2018
  [Pagina Richieste del profilo](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  Nella pagina **Richieste profilo** specificare l'origine dati e quindi selezionare e configurare i profili dei dati che si vogliono calcolare. Per ulteriori informazioni sui diversi profili che è possibile configurare, vedere gli argomenti seguenti:  
   
--   [Opzioni di richiesta profilo chiave candidata &#40; i dati di profilatura attività &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Opzioni di Richiesta profilo Chiave candidata &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
 -   [Opzioni di Richiesta profilo Distribuzione lunghezze di colonna &#40;Attività Profiling dati&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   

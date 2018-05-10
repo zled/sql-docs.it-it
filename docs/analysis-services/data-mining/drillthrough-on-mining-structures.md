@@ -1,33 +1,25 @@
 ---
 title: Drill-through sulle strutture di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f2337e47bccd3d8dbfd07174f3628e887344e068
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>Drill-through sulle strutture di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Il termine *drill-through* indica la possibilità di eseguire query su un modello o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
+  Il termine*drill-through* indica la possibilità di eseguire query su un modello o una struttura di data mining e di ottenere dati dettagliati non esposti nel modello.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] offre due diverse opzioni per il drill-through dei dati del case. È possibile eseguire il drill-through dei dati utilizzati per compilare il modello di data mining o dei dati di origine nella struttura di data mining.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]fornisce due opzioni diverse per il drill-through dei dati del case. È possibile eseguire il drill-through dei dati utilizzati per compilare il modello di data mining o dei dati di origine nella struttura di data mining.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Drill-through nei case del modello e drill-through nella struttura  
  Il drill-through nei **case del modello** è utile per trovare dettagli aggiuntivi su regole, schemi o cluster in un modello.  
@@ -62,7 +54,7 @@ ms.lasthandoff: 02/15/2018
 |-|-|  
 |Utilizzo del drill-through per la struttura dai visualizzatori del modello di data mining|[Utilizzare il drill-through dai visualizzatori modello](../../analysis-services/data-mining/use-drillthrough-from-the-model-viewers.md)|  
 |Per tipi di modelli specifici, vedere gli esempi di query drill-through.|[Query di Data Mining](../../analysis-services/data-mining/data-mining-queries.md)|  
-|Ottenere informazioni sulle autorizzazioni applicabili a strutture e modelli di data mining specifici.|[Concedere le autorizzazioni per strutture di data mining e modelli &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Ottenere informazioni sulle autorizzazioni applicabili a strutture e modelli di data mining specifici.|[Concedere le autorizzazioni per strutture di data mining e modelli & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Drill-through sui modelli di Data Mining](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
