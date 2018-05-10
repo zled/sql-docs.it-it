@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.pivottrans.f1
 helpviewer_keywords:
@@ -25,12 +24,11 @@ caps.latest.revision: 55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: befe1a3cf4056076d97715015a9e0f6d4bdd49e5
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: f67b7eca9e4d3c5adbe20021784dfb82a6b96e69
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="pivot-transformation"></a>Pivot - trasformazione
   La trasformazione Pivot consente di convertire un set di dati normalizzato in una versione meno normalizzata ma più compatta, trasformando i dati di input tramite Pivot in base a un valore di colonna. Un set di dati normalizzato di nome **Orders** che elenca nomi di clienti, prodotti e quantità vendute, ad esempio, include in genere più righe per ogni cliente che ha acquistato più prodotti, indicando su ogni riga i dettagli dell'ordine di un prodotto specifico. Trasformando il set di dati tramite Pivot in base alla colonna dei prodotti, la trasformazione Pivot può restituire in output un set di dati con una singola riga per cliente, nella quale sono elencati tutti gli acquisti effettuati dal cliente, utilizzando i nomi dei prodotti come nomi delle colonne e visualizzando le quantità come valori nelle colonne dei prodotti. Poiché non tutti i clienti acquistano tutti i prodotti, molte colonne possono contenere valori Null.  

@@ -2,16 +2,16 @@
 title: Cosa&#39;novità di servizi di SQL Server Machine Learning s | Documenti Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/02/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0f0487d26e602504fc776b1262414488e24c8336
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 45cfb2f67cbd575913739b118e21626448b80866
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novità di servizi di SQL Server Machine Learning 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +25,9 @@ Questa versione aggiunto supporto Python e algoritmi di apprendimento automatico
 Questa versione è stata introdotta anche **Machine Learning Server (Standalone) di SQL Server**completamente indipendente di SQL Server, per carichi di lavoro R e Python che si desidera eseguire in un sistema dedicato. Con il server autonomo, è possibile distribuire e scalare le soluzioni R o Python senza l'utilizzo di SQL Server.
 
 | Versione | Aggiornamento delle funzionalità |
-|---------|---------------|
+|---------|----------------|
+| AGGIORNAMENTO CUMULATIVO 6 | Correzioni di bug e l'aggiornamento del pacchetto, ma non nuove funzionalità di annunci. Correzioni includono il supporto per i tipi di dati DateTime in query SPEES per Python e messaggi di errore migliorata microsoftml quando non sono presenti modelli con training preliminare. |
+| AGGIORNAMENTO CUMULATIVO 5 | Correzioni di bug e l'aggiornamento del pacchetto, ma non nuove funzionalità di annunci. Correzioni sono stati introdotti miglioramenti per trasformare le funzioni e variabili in revoscalepy, la correzione di errori di tempo relativo al percorso in rxInstallPackages, correzione di connessioni in un loopback per RxExec e rx_exec funzioni e le revisioni per i messaggi di avviso. |
 | CU 4 | Correzioni di bug e l'aggiornamento del pacchetto, ma non nuove funzionalità di annunci. |
 | CU 3 | Serializzazione in revoscalepy, Python del modello utilizzando il [rx_serialize_model funzione](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model).<br/><br/>[Punteggio native](sql-native-scoring.md) più miglioramenti apportati a [assegnazione dei punteggi in tempo reale](real-time-scoring.md). Con l'assegnazione dei punteggi nel database, velocità effettiva è un milione di righe al secondo tramite modelli R. In questo aggiornamento, assegnazione dei punteggi in tempo reale e i punteggi native offrono anche prestazioni migliori in una singola riga e dell'assegnazione punteggio batch. Native punteggio utilizza una funzione di T-SQL per il punteggio veloce che può essere eseguita in qualsiasi edizione di SQL Server, anche in Linux. La funzione non richiede alcuna installazione di R o configurazione aggiuntiva. Ciò significa che è possibile eseguire il training di un modello in un' posizione, salvarlo in SQL Server e quindi eseguire l'assegnazione dei punteggi senza mai chiamare R. Per ulteriori informazioni sulle metodologie di punteggio, vedere [come eseguire l'assegnazione dei punteggi in tempo reale o punteggio nativo](r/how-to-do-realtime-scoring.md). |
 | CU 2 | Correzioni di bug e l'aggiornamento del pacchetto, ma non nuove funzionalità di annunci. |
@@ -45,7 +47,7 @@ Inoltre, **SQL Server 2016 R Server (Standalone)** è stato rilasciato come un m
 
 | Versione |Aggiornamento delle funzionalità |
 |---------|----------------|
-| CU | [**Assegnazione dei punteggi in tempo reale** ](real-time-scoring.md) si basa su librerie native di C++ per leggere un modello archiviato in un formato binario ottimizzato e quindi generare stime senza necessità di chiamare il runtime di R. Ciò rende le operazioni di assegnazione dei punteggi molto più veloce. Con l'assegnazione dei punteggi in tempo reale, è possibile eseguire una stored procedure o eseguire in tempo reale dal codice R di punteggio. Assegnazione dei punteggi in tempo reale è disponibile anche per SQL Server 2016, se l'istanza viene aggiornato alla versione più recente di [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
+| Aggiunte CU | [**Assegnazione dei punteggi in tempo reale** ](real-time-scoring.md) si basa su librerie native di C++ per leggere un modello archiviato in un formato binario ottimizzato e quindi generare stime senza necessità di chiamare il runtime di R. Ciò rende le operazioni di assegnazione dei punteggi molto più veloce. Con l'assegnazione dei punteggi in tempo reale, è possibile eseguire una stored procedure o eseguire in tempo reale dal codice R di punteggio. Assegnazione dei punteggi in tempo reale è disponibile anche per SQL Server 2016, se l'istanza viene aggiornato alla versione più recente di [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Versione iniziale | [**Integrazione di R per analitica nel database**](r/sql-server-r-services.md). <br/><br/> Pacchetti R per R chiamante funziona in T-SQL e viceversa. Le funzioni RevoScaleR forniscono analitica R a livello di scalabilità per la suddivisione in blocchi di dati in parti di componente, il coordinamento e gestione di elaborazione distribuita e l'aggregazione dei risultati. In SQL Server 2016 R Services (In-Database), il motore RevoScaleR è integrato con un'istanza di motore di database, salamoia insieme nello stesso contesto di elaborazione analitica e dati. <br/><br/>Integrazione di T-SQL e R tramite [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). È possibile chiamare qualsiasi codice R tramite questa stored procedure. Questa infrastruttura sicura consente una distribuzione aziendale di Rn modelli e gli script che possono essere chiamati da un'applicazione che utilizza una stored procedure semplice. Ulteriori miglioramenti delle prestazioni si ottengono dal flussi dati da SQL a processi R e la parallelizzazione anello MPI. <br/><br/>È possibile utilizzare l'istruzione T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) funzione per eseguire [punteggio native](sql-native-scoring.md) su un modello con training preliminare che è stato salvato in precedenza nel formato binario richiesto.|
 
 ## <a name="linux-support-roadmap"></a>Guida di orientamento per il supporto Linux
@@ -53,6 +55,12 @@ Inoltre, **SQL Server 2016 R Server (Standalone)** è stato rilasciato come un m
 Machine learning che usano R o Python nel database non è attualmente supportato in SQL Server in Linux. Cercare gli annunci in una versione successiva.
 
 In Linux, tuttavia, è possibile eseguire [punteggio native](sql-native-scoring.md) utilizzando la funzione di stima di T-SQL. Punteggio nativa consente di assegnare un punteggio da un modello con training preliminare molto veloce, senza chiamare o anche un runtime di R. Ciò significa che è possibile utilizzare SQL Server in Linux per generare stime molto veloci, per gestire le applicazioni client.
+
+<a name="azure-sql-database-roadmap"></a>
+
+## <a name="azure-sql-database-roadmap"></a>Guida di orientamento per Database SQL Azure
+
+Il supporto è limitato per R in Database SQL di Azure: disponibile solo in occidentale degli Stati Uniti, nei servizi creati al livello Premium. Code coverage espanso, incluso il supporto di Python, è probabile che seguono in una versione futura. Tuttavia, non vi è Nessuna data di rilascio prevista in questo momento.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

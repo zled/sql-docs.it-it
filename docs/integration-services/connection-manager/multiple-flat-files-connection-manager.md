@@ -2,16 +2,15 @@
 title: Gestione connessione per più file flat | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.multifile.advanced.f1
 - sql13.dts.designer.multifile.columns.f1
@@ -25,16 +24,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], Multiple Flat Files
 - multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
-caps.latest.revision: ''
+caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 53e7c263916e9a07504fea6b9756f034e8e570fd
-ms.sourcegitcommit: 6bd21109abedf64445bdb3478eea5aaa7553fa46
+ms.openlocfilehash: ba43dd74558a2e4506adb516183bc004aee718d3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multiple-flat-files-connection-manager"></a>gestione connessione per più file flat
   Una gestione connessione per più file flat consente a un pacchetto di accedere a dati contenuti in più file flat. Ad esempio, un'origine file flat può utilizzare una gestione connessione per più file quando l'attività Flusso di dati si trova in un contenitore Ciclo, ad esempio il contenitore Ciclo For. In ogni ciclo del contenitore, l'origine file flat carica dati dal nome file successivo fornito dalla gestione connessione per più file.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 03/20/2018
   
  \<*percorso*>|\<*percorso*>  
   
- Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\\*.txt.  
+ Per specificare più file è inoltre possibile utilizzare caratteri jolly. Per fare riferimento, ad esempio, a tutti i file di testo sull'unità C è possibile impostare il valore della proprietà **ConnectionString** su C:\\*.txt.  
   
  Se una gestione connessione per più file flat fa riferimento a più file, tutti i file devono avere lo stesso formato.  
   
@@ -83,11 +81,11 @@ ms.lasthandoff: 03/20/2018
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione per più file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Nomi file**  
- Consente di digitare il percorso e i nomi dei file da utilizzare nella connessione per più flat file. È possibile specificare più file usando caratteri jolly, ad esempio "C:\\\*.txt", oppure il carattere barra verticale (|) per separare più nomi di file. Tutti i file devono avere lo stesso formato data.  
+ Consente di digitare il percorso e i nomi dei file da utilizzare nella connessione per più flat file. È possibile specificare più file usando caratteri jolly, ad esempio "C:\\*.txt", oppure il carattere barra verticale (|) per separare più nomi di file. Tutti i file devono avere lo stesso formato data.  
   
  **Sfoglia**  
  Consente di cercare i nomi dei file da utilizzare nella connessione per più file flat. È possibile selezionare più file. Tutti i file devono avere lo stesso formato data.  
@@ -104,7 +102,7 @@ ms.lasthandoff: 03/20/2018
  **Formato**  
  Consente di indicare se utilizzare la formattazione non allineata a destra, a larghezza fissa o delimitata. Tutti i file devono avere lo stesso formato data.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa, specificata trascinando le linee dei marcatori nella pagina **Colonne** .|  
@@ -116,7 +114,7 @@ ms.lasthandoff: 03/20/2018
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -142,7 +140,7 @@ ms.lasthandoff: 03/20/2018
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione per più file flat nel flusso di lavoro. Il nome specificato verrà visualizzato in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
 ### <a name="flat-file-format-dynamic-options"></a>Opzioni dinamiche relative al formato file flat  
@@ -151,7 +149,7 @@ ms.lasthandoff: 03/20/2018
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -165,7 +163,7 @@ ms.lasthandoff: 03/20/2018
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -206,7 +204,7 @@ ms.lasthandoff: 03/20/2018
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -231,7 +229,7 @@ ms.lasthandoff: 03/20/2018
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la gestione connessione per più file flat nel flusso di lavoro. Il nome specificato verrà visualizzato nell'area **Gestioni connessioni** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la gestione connessione. È consigliabile includere nella descrizione informazioni sugli scopi della gestione connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Configurare le proprietà delle singole colonne**  
@@ -245,14 +243,14 @@ ms.lasthandoff: 03/20/2018
 |**TextQualified**|Consente di specificare se i dati di testo sono qualificati usando un carattere qualificatore di testo:<br /><br /> **True**: i dati di tipo testo nel file flat sono qualificati.<br /><br /> **False**: i dati di tipo testo nel file flat non sono qualificati.|  
 |**Nome**|Consente di specificare un nome per la colonna. Per impostazione predefinita, si tratta di un elenco numerato di colonne. È comunque possibile scegliere qualsiasi nome descrittivo univoco.|  
 |**DataScale**|Consente di specificare la scala dei dati numerici. Per scala si intende il numero di posizioni decimali. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}** : le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga<br /><br /> **{CR}** : le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}** : le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}** : le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}** : le colonne sono delimitate da due punti<br /><br /> **Virgola {,}** : le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}**: le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}**: le colonne sono delimitate da una barra verticale|  
+|**ColumnDelimiter**|Consente di selezionare i delimitatori di colonna disponibili nell'apposito elenco. Scegliere come delimitatori caratteri che non siano già presenti nel testo. Questo valore viene ignorato per le colonne a larghezza fissa.<br /><br /> **{CR}{LF}** : le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga<br /><br /> **{CR}** : le colonne sono delimitate da un ritorno a capo<br /><br /> **{LF}** : le colonne sono delimitate da un avanzamento riga<br /><br /> **Punto e virgola {;}** : le colonne sono delimitate da un punto e virgola<br /><br /> **Due punti {:}** : le colonne sono delimitate da due punti<br /><br /> **Virgola {,}**: le colonne sono delimitate da una virgola<br /><br /> **Tabulazione {t}**: le colonne sono delimitate da una tabulazione<br /><br /> **Barra verticale {&#124;}**: le colonne sono delimitate da una barra verticale|  
 |**DataPrecision**|Consente di specificare la precisione dei dati numerici. Per precisione si intende il numero di cifre. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore verrà visualizzato come conteggio di caratteri. Questo valore viene ignorato nelle colonne delimitate.<br /><br /> **Nota** : nel modello a oggetti il nome di questa proprietà è ColumnWidth.|  
   
  **Nuova**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante offre inoltre le opzioni seguenti che è possibile selezionare dall'elenco a discesa.  
   
-|Valore|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  
@@ -273,7 +271,7 @@ ms.lasthandoff: 03/20/2018
  **Nome gestione connessione**  
  Consente di specificare un nome univoco per la connessione per più file flat nel flusso di lavoro. Il nome specificato verrà visualizzato nell'area **Gestioni connessioni** in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Descrizione**  
  Consente di aggiungere una descrizione per la connessione. È consigliabile includere nella descrizione informazioni sugli scopi della connessione, in modo da ottenere pacchetti autodocumentati e semplificarne quindi la gestione.  
   
  **Righe di dati da ignorare**  
@@ -285,6 +283,6 @@ ms.lasthandoff: 03/20/2018
 ## <a name="see-also"></a>Vedere anche  
  [Origine file flat](../../integration-services/data-flow/flat-file-source.md)   
  [Destinazione file flat](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services &#40; SSIS &#41; Connessioni](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Connessioni in Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

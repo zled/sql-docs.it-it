@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 25c80c8239653415486d18d0773c45076668ca18
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
-ms.translationtype: HT
+ms.openlocfilehash: f0b56475c29c5df9ce925db115a5ac0566f059a2
+ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ sys.dm_sql_referenced_entities (
 |is_select_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1= Oggetto utilizzato in una clausola SELECT * (solo a livello di oggetto).|  
 |is_all_columns_found|**bit**|**Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = È possibile trovare tutte le dipendenze delle colonne per l'oggetto.<br /><br /> 0 = Impossibile trovare le dipendenze delle colonne per l'oggetto.|
 |is_insert_all|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = l'oggetto viene utilizzato in un'istruzione INSERT senza un elenco di colonne (a livello di oggetto solo).|  
-|is_incomplete|**bit**|**Si applica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = oggetto o colonna presenta un errore di associazione ed è pertanto incompleta.|
+|is_incomplete|**bit**|**Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = oggetto o colonna presenta un errore di associazione ed è pertanto incompleta.|
   
 ## <a name="exceptions"></a>Eccezioni  
  In una delle seguenti condizioni, restituisce un set di risultati vuoto:  

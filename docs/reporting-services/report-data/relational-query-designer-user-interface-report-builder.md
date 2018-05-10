@@ -4,13 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: ''
 ms.component: report-data
 ms.reviewer: ''
 ms.suite: pro-bi
 ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10012"
 helpviewer_keywords:
@@ -22,12 +21,11 @@ caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 23924ef7630d41ea1d60d34a4a131d004b2d8aa7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Interfaccia utente di Progettazione query relazionale (Generatore report)
   Generatore report e Progettazione report in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]forniscono entrambi una finestra Progettazione query con interfaccia grafica e una finestra Progettazione query basata su testo che semplificano la creazione di una query per specificare i dati da recuperare dai database relazionali di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] per un set di dati di report. Utilizzare la finestra Progettazione query con interfaccia grafica per esplorare i metadati, compilare in modo interattivo una query e visualizzarne i risultati. Utilizzare Progettazione query basata su testo per visualizzare la query compilata nella finestra Progettazione query con interfaccia grafica o per modificare una query. È inoltre possibile importare una query esistente da un file o un report.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 01/09/2018
   
      Utilizzare il riquadro dei dati del report per visualizzare la raccolta di campi di un set di dati del report. Questi campi rappresentano i dati che si possono visualizzare in tabelle, grafici e altri elementi del report quando si visualizza un report.  
   
--   **Raggruppa e aggrega** Attiva e disattiva l'uso del raggruppamento e delle aggregazioni nella query. Se la funzionalità in questione viene disabilitata dopo avere aggiunto raggruppamento e aggregazioni, questi vengono rimossi. Il testo **(nessuno)**indica che non vengono usati raggruppamenti e aggregazioni. Se questa funzionalità viene riattivata, il raggruppamento e le aggregazioni precedenti vengono ripristinati.  
+-   **Raggruppa e aggrega** Attiva e disattiva l'uso del raggruppamento e delle aggregazioni nella query. Se la funzionalità in questione viene disabilitata dopo avere aggiunto raggruppamento e aggregazioni, questi vengono rimossi. Il testo **(nessuno)** indica che non vengono usati raggruppamenti e aggregazioni. Se questa funzionalità viene riattivata, il raggruppamento e le aggregazioni precedenti vengono ripristinati.  
   
 -   **Elimina campo** Elimina il campo selezionato.  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 01/09/2018
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa [!INCLUDE[tsql](../../includes/tsql-md.md)] e [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] usa [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Entrambi i dialetti del linguaggio SQL supportano la clausola, la parola chiave e le aggregazioni fornite dalla finestra Progettazione query.  
   
- Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database&#41;](../../t-sql/transact-sql-reference-database-engine.md) nella [Documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
+ Per altre informazioni su [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere la [Guida di riferimento a Transact-SQL &#40;Motore di database& #41;](../../t-sql/transact-sql-reference-database-engine.md) nella [Documentazione online](http://go.microsoft.com/fwlink/?LinkId=141687) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sul sito msdn.microsoft.com.  
   
  Nella tabella seguente sono elencate le aggregazioni per le quali vengono fornite brevi descrizioni.  
   
@@ -153,7 +151,7 @@ ms.lasthandoff: 01/09/2018
   
 -   **Modifica campi** Apre la finestra di dialogo **Modifica campi correlati** in cui è possibile aggiungere e modificare le relazioni tra tabelle. È possibile scegliere i campi di cui creare un join nelle tabelle a destra e a sinistra. È possibile creare un join di più campi delle tabelle a sinistra e a destra per specificare più condizioni di join in una relazione. I due campi che uniscono in join le tabelle a sinistra e a destra non devono presentare lo stesso nome. I campi di join devono presentare tipi di dati compatibili.  
   
--   **Elimina relazione**  Elimina la relazione selezionata**.**  
+-   **Elimina relazione**  Elimina la relazione selezionata **.**  
   
 -   **Sposta su** e **Sposta giù** Consentono di spostare le relazioni verso l'alto o il basso nell'elenco **Relazione** . La sequenza di inserimento delle relazioni nella query può avere un impatto sui risultati della query. Le relazioni vengono aggiunte alla query nell'ordine in cui sono visualizzate nell'elenco **Relazione** .  
   

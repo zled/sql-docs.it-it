@@ -28,16 +28,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d0342940a8fb5155439d7ea58640666aa1c5bf85
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 9e7ff86386eac4bdc30680cc763a2b11e522076c
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce la lunghezza definita di una colonna, espressa in byte.
+La funzione restituisce la lunghezza di una colonna, definita in byte.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,24 +49,24 @@ COL_LENGTH ( 'table' , 'column' )
   
 ## <a name="arguments"></a>Argomenti  
 **'** *table* **'**  
-Nome della tabella per cui si desidera ottenere informazioni sulla lunghezza delle colonne. *table* è un'espressione di tipo **nvarchar**.
+Nome della tabella per cui si vuole ottenere informazioni sulla lunghezza delle colonne. *table* è un'espressione di tipo **nvarchar**.
   
 **'** *colonna* **'**  
-Nome della colonna per cui si desidera ottenere informazioni sulla lunghezza. *column* è un'espressione di tipo **nvarchar**.
+Nome della colonna di cui si vuole determinare la lunghezza. *column* è un'espressione di tipo **nvarchar**.
   
 ## <a name="return-type"></a>Tipo restituito
 **smallint**
   
 ## <a name="exceptions"></a>Eccezioni  
-Restituisce NULL in caso di errore o se un chiamante non dispone dell'autorizzazione necessaria per visualizzare l'oggetto.
+Restituisce NULL in caso di errore o se un chiamante non ha l'autorizzazione corretta per visualizzare l'oggetto.
   
-In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a sicurezza diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come COL_LENGTH possono restituire NULL se l'utente non dispone di alcuna autorizzazione per l'oggetto. Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un utente può visualizzare esclusivamente i metadati delle entità a protezione diretta di cui è proprietario o per cui ha ricevuto un'autorizzazione. Di conseguenza, le funzioni predefinite di creazione dei metadati come COL_LENGTH possono restituire NULL se l'utente non ha l'autorizzazione corretta per l'oggetto. Per altre informazioni, vedere [Configurazione della visibilità dei metadati](../../relational-databases/security/metadata-visibility-configuration.md).
   
 ## <a name="remarks"></a>Remarks  
 Per le colonne di tipo **varchar** dichiarate con l'identificatore **max** (**varchar(max)**), COL_LENGTH restituisce il valore -1.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente vengono illustrati i valori restituiti per una colonna di tipo `varchar(40)` e una colonna di tipo `nvarchar(40)`.
+Nell'esempio seguente vengono illustrati i valori restituiti per una colonna di tipo `varchar(40)` e una colonna di tipo `nvarchar(40)`:
   
 ```sql
 USE AdventureWorks2012;  

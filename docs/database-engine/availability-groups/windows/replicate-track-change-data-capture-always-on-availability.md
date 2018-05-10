@@ -1,7 +1,7 @@
 ---
 title: Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità | Microsoft Docs
 ms.custom: ''
-ms.date: 05/02/2017
+ms.date: 04/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.service: ''
@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 39f67dedc8724fdff327229fc39d0985e4843cb7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1036f577a72aa66fd2e91a9ac956fb8d30cbbd35
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Replica, rilevamento modifiche e Change Data Capture per i gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.lasthandoff: 04/16/2018
   
      Nell'esempio seguente viene creato il processo di acquisizione.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'capture';  
     ```  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 04/16/2018
   
      Per assicurare l'esecuzione della pulizia appropriata nel nuovo database primario, è necessario creare sempre un processo di pulizia locale. Nell'esempio seguente viene creato il processo di pulizia.  
   
-    ```  
+    ```sql  
     EXEC sys.sp_cdc_add_job @job_type = 'cleanup';  
     ```  
   
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/16/2018
   
      Usare la query seguente per determinare se un nome del listener del gruppo di disponibilità è stato definito per il gruppo di disponibilità che ospita un database CDC. La query restituirà il nome del listener del gruppo di disponibilità se ne è stato creato uno.  
   
-    ```  
+    ```sql  
     SELECT dns_name   
     FROM sys.availability_group_listeners AS l  
     INNER JOIN sys.availability_databases_cluster AS d  
@@ -153,7 +153,7 @@ ms.lasthandoff: 04/16/2018
   
      La query seguente può essere usata per determinare se la finalità di sola lettura è necessaria per connettersi a una replica secondaria leggibile.  
   
-    ```  
+    ```sql  
     SELECT g.name AS AG, replica_server_name, secondary_role_allow_connections_desc  
     FROM sys.availability_replicas AS r  
     JOIN sys.availability_groups AS g  
@@ -165,7 +165,7 @@ ms.lasthandoff: 04/16/2018
   
      Quando si usa **sp_addlinkedserver** per creare un server collegato per accedere al database secondario, il parametro *@datasrc* viene usato per il nome del listener del gruppo di disponibilità o il nome del server esplicito e il parametro *@provstr* viene usato per specificare la finalità di sola lettura.  
   
-    ```  
+    ```sql  
     EXEC sp_addlinkedserver   
     @server = N'linked_svr',   
     @srvproduct=N'SqlServer',  
@@ -207,8 +207,6 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
   
     -   Sottoscrizione pull: il server di pubblicazione, il server di distribuzione e i database sottoscrittore devono essere presenti almeno in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Ciò è dovuto al fatto che l'agente di merge nel sottoscrittore deve comprendere il modo in cui in un gruppo di disponibilità può essere eseguito il failover sul secondario.  
   
--   L'inserimento del database di distribuzione in un gruppo di disponibilità non è supportato.  
-  
 -   Le istanze del server di pubblicazione soddisfano tutti i prerequisiti richiesti per fare parte di un gruppo di disponibilità AlwaysOn. Per altre informazioni, vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
 ### <a name="restrictions"></a>Restrictions  
@@ -224,7 +222,7 @@ Se Change Data Capture deve essere disabilitato in un database che fa parte di u
   
  *Il failover sul database della replica è una procedura manuale. Il failover automatico non è fornito.  
   
- **Non è supportato l'uso del database di distribuzione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] o il mirroring del database.  
+ **Non è supportato l'uso del database di distribuzione con il mirroring del database.  
   
 ### <a name="considerations"></a>Considerazioni  
   

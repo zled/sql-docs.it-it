@@ -1,34 +1,23 @@
 ---
 title: Impostare le proprietà di origine dati (SSAS multidimensionale) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/04/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.datasourceproperties.f1
-helpviewer_keywords:
-- Data Source Properties dialog box
-ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
-caps.latest.revision: 25
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6b9db08a099e78744f89e184882d21c3d066e6c0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 2dde88aed74f71bda5dc4178ae558dd6aa953eee
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-data-source-properties-ssas-multidimensional"></a>Impostare proprietà origine dati (SSAS multidimensionale)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], un oggetto origine dati specifica una connessione a un data warehouse esterno o di un database relazionale che fornisce dati a un modello multidimensionale. Le proprietà sull'origine dati determinano la stringa di connessione, un intervallo di timeout, il numero massimo di connessioni e il livello di isolamento delle transazioni.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un'origine dati consente di specificare una connessione a un data warehouse esterno o a un database relazionale che fornisce dati a un modello multidimensionale. Le proprietà sull'origine dati determinano la stringa di connessione, un intervallo di timeout, il numero massimo di connessioni e il livello di isolamento delle transazioni.  
   
 ## <a name="set-data-source-properties-in-sql-server-data-tools"></a>Impostare le proprietà dell'origine dati in SQL Server Data Tools  
   
@@ -58,6 +47,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati nei modelli multidimensionali](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Creare un'origine dati & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

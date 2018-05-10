@@ -26,20 +26,20 @@ ms.author: edmaca
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 750bb88b8446858f4253d072fef829623e70511f
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e376fccb023a862a71e61a1437a19028758ad200
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregate-functions-transact-sql"></a>Funzioni di aggregazione (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Le funzioni di aggregazione eseguono un calcolo su un set di valori e restituiscono un singolo valore. Ad eccezione della funzione COUNT, le funzioni di aggregazione ignorano i valori Null. Vengono spesso utilizzate con la clausola GROUP BY dell'istruzione SELECT.
+Le funzioni di aggregazione eseguono un calcolo in un set di valori e restituiscono un singolo valore. Ad eccezione di `COUNT`, le funzioni di aggregazione ignorano i valori Null. Le funzioni di aggregazione vengono spesso usate con la clausola GROUP BY dell'istruzione SELECT.
   
-Tutte le funzioni di aggregazione sono deterministiche. Ciò significa che le funzioni di aggregazione restituiscono lo stesso valore ogni volta che vengono chiamate con un set specifico di valori di input. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [clausola OVER](../../t-sql/queries/select-over-clause-transact-sql.md) può seguire tutte le funzioni di aggregazione, ad eccezione di GROUPING e GROUPING_ID.
+Tutte le funzioni di aggregazione sono deterministiche. In altre parole, le funzioni di aggregazione restituiscono lo stesso valore ogni volta che vengono chiamate con un set specifico di valori di input. Per altre informazioni sul determinismo delle funzioni, vedere [Funzioni deterministiche e non deterministiche](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md). La [clausola OVER](../../t-sql/queries/select-over-clause-transact-sql.md) può seguire tutte le funzioni di aggregazione, ad eccezione di GROUPING e GROUPING_ID.
   
-È possibile utilizzare le funzioni di aggregazione come espressioni solo nei casi seguenti:
+Usare le funzioni di aggregazione come espressioni solo nei casi seguenti:
 -   Nell'elenco di selezione di un'istruzione SELECT (una sottoquery o una query esterna).  
 -   Nella clausola HAVING.  
   

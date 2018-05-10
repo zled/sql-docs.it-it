@@ -1,31 +1,23 @@
 ---
 title: Il cmdlet Set-PowerPivotServiceApplication | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: reference
-ms.assetid: 16d10e2d-d7e1-40f1-bc9d-a4e10c61af95
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 39d00b432101560c5cf5075a0e60e445e670a28d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 0b25a6f38a4de815ee3d8b39defcc95f0ad065b6
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-powerpivotserviceapplication-cmdlet"></a>Cmdlet Set-PowerPivotServiceApplication
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Imposta le proprietà di un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  Imposta le proprietà di un'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
 
 >[!NOTE] 
 >In questo articolo può contenere esempi e informazioni non aggiornate. Usare il cmdlet Get-Help per la versione più recente.
@@ -56,7 +48,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|true|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-administrationconnectionpoolsize-int"></a>-AdministrationConnectionPoolSize \<int>  
+### <a name="-administrationconnectionpoolsize-int"></a>-AdministrationConnectionPoolSize \<int >  
  Specifica il numero di connessioni aperte in un pool di connessioni creato per una connessione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ad Analysis Services. In ogni istanza del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] viene aperta una connessione amministrativa separata all'istanza di Analysis Services sullo stesso computer. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] consente di creare un pool separato per riutilizzare le connessioni amministrative allo scopo di verificare la presenza di connessioni inattive e monitorare l'integrità del server. Il valore predefinito è 200 connessioni. I valori validi sono -1 (senza limiti), 0 (pool di connessioni amministrative disabilitati) oppure un valore compreso tra 1 e 10000. Se si seleziona 0, ogni connessione verrà creata da zero.  
   
 |||  
@@ -67,7 +59,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-allowcustomwindowscredentials-switchparameter"></a>-AllowCustomWindowsCredentials [\<SwitchParameter>]  
+### <a name="-allowcustomwindowscredentials-switchparameter"></a>-AllowCustomWindowsCredentials [\<SwitchParameter >]  
  Specifica se i proprietari della pianificazione possono immettere credenziali di Windows arbitrarie per eseguire una pianificazione dell'aggiornamento dati. Se si seleziona questa casella di controllo, l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creerà e gestirà un'applicazione di destinazione per ciascun set di credenziali archiviate. L'impostazione predefinita è true. Per disabilitare questa funzionalità, impostare AllowCustomWindowsCredentials:$false.  
   
 |||  
@@ -115,7 +107,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-confirm-switch"></a>-Confirm \<switch>  
+### <a name="-confirm-switch"></a>-Confirm \<passare >  
  Richiede la conferma dell'utente prima dell'esecuzione del comando. Questo valore è abilitato per impostazione predefinita. Per ignorare la risposta di conferma in un comando, specificare Confirm:$false nel comando.  
   
 |||  
@@ -137,7 +129,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-connectionpooltimeout-int"></a>-ConnectionPoolTimeout \<int>  
+### <a name="-connectionpooltimeout-int"></a>-ConnectionPoolTimeout \<int >  
  Specifica per quanti minuti rimane aperta una connessione dati inattiva. Il valore predefinito è 1800 secondi (o 30 minuti). Durante questo periodo, l'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] riutilizzerà una connessione dati inattiva per le richieste di sola lettura provenienti dallo stesso utente di SharePoint per gli stessi dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se non vengono ricevute ulteriori richieste di dati durante il periodo specificato, la connessione viene rimossa dal pool. I valori validi sono compresi tra 1 e 3600 secondi.  
   
 |||  
@@ -148,7 +140,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-dataloadtimeout-int"></a>-DataLoadTimeout \<int>  
+### <a name="-dataloadtimeout-int"></a>-DataLoadTimeout \<int >  
  Specifica il tempo di attesa da parte dell'applicazione del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per una risposta dall'istanza di SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) a cui è stata inoltrata una richiesta di caricamento dati. Poiché lo spostamento di set di dati di dimensioni molto elevate richiede tempo, è necessario consentire un tempo sufficiente all'istanza del servizio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per recuperare la cartella di lavoro di Excel e spostare i dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un'istanza di Analysis Services per l'elaborazione delle query. Il valore predefinito è 1800 secondi (o 30 minuti). I valori validi sono compresi tra 1 e 3600 secondi.  
   
 |||  
@@ -170,7 +162,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-datarefreshinactiveworkbooksthreshold-int"></a>-DataRefreshInactiveWorkbooksThreshold \<int>  
+### <a name="-datarefreshinactiveworkbooksthreshold-int"></a>-DataRefreshInactiveWorkbooksThreshold \<int >  
  Specifica il numero di cicli di aggiornamento dati dopo cui una pianificazione viene disabilitata oppure immettere 0 per non disabilitare mai una pianificazione a causa dell'inattività. Il valore predefinito è 10 cicli.  
   
  L'inattività della cartella di lavoro viene misurata come assenza di eventi di connessione in più cicli di aggiornamento dati. Un ciclo di aggiornamento dati viene contato ogni volta che viene attivata un'operazione di aggiornamento dati (dalla pianificazione o da un'operazione Esegui ora), indipendentemente dall'esito positivo o negativo dell'operazione. Se un certo numero di cicli (10 per impostazione predefinita) passa senza alcuna richiesta di connessione per la cartella di lavoro, la pianificazione di aggiornamento dati viene disabilitata a causa dell'inattività.  
@@ -183,7 +175,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-datarefreshmaxhistory-int"></a>-DataRefreshMaxHistory \<int>  
+### <a name="-datarefreshmaxhistory-int"></a>-DataRefreshMaxHistory \<int >  
  Specifica per quanto tempo mantenere un record cronologico di elaborazione dell'aggiornamento dati. Queste informazioni vengono visualizzate nelle pagine della cronologia dell'aggiornamento dati mantenute per ogni cartella di lavoro per cui viene utilizzato l'aggiornamento dati. Sono visualizzate anche nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Il valore predefinito è 365 giorni.  
   
 |||  
@@ -194,7 +186,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-healthbasedallocation-switch"></a>-HealthBasedAllocation \<switch>  
+### <a name="-healthbasedallocation-switch"></a>-HealthBasedAllocation \<passare >  
  Specifica l'algoritmo di allocazione basato sull'integrità che inoltra le richieste di connessione al server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint in cui sono disponibili maggiori risorse di memoria e CPU. Si tratta dell'algoritmo di allocazione predefinito. HealthBasedAllocation e RoundRobinBasedAllocation si escludono a vicenda. È necessario specificare uno o l'altro. Se si impostano entrambi su false, viene utilizzato HealthBasedAllocation, in quanto corrisponde al valore predefinito. Se si impostano entrambi su true, viene generato un errore di convalida. La sintassi per questi parametri prevede l'immissione solo del nome del parametro oppure parameter:$true o parameter:$false.  
   
 |||  
@@ -205,7 +197,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-loadstoconnectionsratiocollectioninterval-int"></a>-LoadsToConnectionsRatioCollectionInterval \<int>  
+### <a name="-loadstoconnectionsratiocollectioninterval-int"></a>-LoadsToConnectionsRatioCollectionInterval \<int >  
  Specifica l'intervallo (in ore) per il conteggio di eventi di caricamento e di connessione al fine di calcolare il rapporto carico/connessioni. Per impostazione predefinita, nel sistema viene calcolato un nuovo rapporto ogni 4 ore. I valori validi sono compresi tra 1 e 24.  
   
 |||  
@@ -249,7 +241,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-roundrobinallocation-switch"></a>-RoundRobinAllocation \<switch>  
+### <a name="-roundrobinallocation-switch"></a>-RoundRobinAllocation \<passare >  
  Specifica l'algoritmo di allocazione round robin che inoltra le richieste di connessione al server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint successivo, alternando le richieste in modo equivalente tra i server disponibili, indipendentemente dal carico del server. HealthBasedAllocation e RoundRobinBasedAllocation si escludono a vicenda. È necessario specificare uno o l'altro. Se si impostano entrambi su false, viene utilizzato HealthBasedAllocation, in quanto corrisponde al valore predefinito. Se si impostano entrambi su true, viene generato un errore di convalida. La sintassi per questi parametri prevede l'immissione solo del nome del parametro oppure parameter:$true o parameter:$false.  
   
 |||  
@@ -260,7 +252,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-unattendedaccount-string"></a>-UnattendedAccount \<string>  
+### <a name="-unattendedaccount-string"></a>-UnattendedAccount \<stringa >  
  Specifica il nome dell'applicazione di destinazione di un'applicazione del servizio di archiviazione sicura che archivia un account predefinito per l'esecuzione dei processi di aggiornamento dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 |||  
@@ -293,7 +285,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-usagelongresponseupperlimit-int"></a>-UsageLongResponseUpperLimit \<int>  
+### <a name="-usagelongresponseupperlimit-int"></a>-UsageLongResponseUpperLimit \<int >  
  Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata.  Il limite massimo è 10000 millisecondi. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.  
   
 |||  
@@ -304,7 +296,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-usagequickresponseupperlimit-int"></a>-UsageQuickResponseUpperLimit \<int>  
+### <a name="-usagequickresponseupperlimit-int"></a>-UsageQuickResponseUpperLimit \<int >  
  Imposta un limite massimo che definisce uno scambio richiesta-risposta rapido. Il valore predefinito è 1000 millisecondi. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 500 e 1000 millisecondi viene considerata una risposta rapida ai fini del report.  
   
 |||  
@@ -315,7 +307,7 @@ Set-PowerPivotServiceApplication [-Identity] <SPGeminiServiceApplicationPipeBind
 |Accettare input da pipeline?|false|  
 |Accettare caratteri jolly?|false|  
   
-### <a name="-usagetrivialresponseupperlimit-int"></a>-UsageTrivialResponseUpperLimit \<int>  
+### <a name="-usagetrivialresponseupperlimit-int"></a>-UsageTrivialResponseUpperLimit \<int >  
  Specifica una categoria di tempi di risposta che sono troppo piccoli per essere considerati rilevanti ai fini della raccolta dati. La maggior parte delle risposte che rientrano in questa categoria è costituita da comunicazioni tra server. Il valore predefinito è 500 millisecondi. Qualsiasi richiesta completata entro un intervallo di tempo compreso tra 0 e 500 millisecondi viene considerata una richiesta semplice e ignorata ai fini del report.  
   
 |||  

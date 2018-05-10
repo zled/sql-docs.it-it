@@ -1,32 +1,23 @@
 ---
 title: Impostare le proprietà di Database multidimensionale (Analysis Services) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- properties [Analysis Services], databases
-ms.assetid: a8be5b3f-3148-448a-976c-7222705155d9
-caps.latest.revision: 24
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 6585737ac1f796b7e9e6e8834d6ca5b5c1c11612
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: a564077dba3035d725d838d9242b528ad7021b7c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>Impostare le proprietà dei database multidimensionali (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Esistono una serie di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proprietà che è possibile configurare nel database di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Progettazione database.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Sono disponibili numerose proprietà di database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che possono essere configurate in Progettazione database di [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  In questa finestra di progettazione è possibile eseguire i tipi di attività seguenti:  
   
@@ -47,11 +38,11 @@ ms.lasthandoff: 01/08/2018
 |Confronto|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Regole di confronto del server a meno che non venga specificato un valore diverso in questa finestra.|  
 |DataSourceImpersonationInfo|Specifica la modalità di rappresentazione predefinita per tutti gli oggetti origine dei dati nel database. Tale modalità viene usata dal servizio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante l'elaborazione degli oggetti, la sincronizzazione dei server e l'esecuzione delle istruzioni di data mining OpenQuery e SystemOpenSchema.|  
 |Dimensioni stimate|Fornisce una dimensione stimata dei file di database su disco. Se i dati vengono archiviati in più percorsi, questa stima sarà limitata solo ai file di dati archiviati nella cartella del database.<br /><br /> Il valore**EstimatedSize** può essere usato anche come base per stimare la memoria. In genere i requisiti di memoria sono maggiori delle dimensioni dei dati su disco, a causa di strutture di dati aggiuntive create quando il database tabulare viene caricato in memoria.<br /><br /> Per stimare ulteriormente i requisiti di memoria, è inoltre possibile utilizzare Gestione attività per analizzare la memoria del processo di Analysis Services prima e dopo avere l'elaborazione del database e osservare la memoria utilizzata come metodo per capire i requisiti di memoria del database.|  
-|Linguaggio|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Lingua del server a meno che non venga specificato un valore diverso in questa finestra.|  
+|Lingua|Quando il progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] viene distribuito in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , il database eredita la proprietà Lingua del server a meno che non venga specificato un valore diverso in questa finestra.|  
 |MasterDataSourceID|Utilizzata con le partizioni remote. Per altre informazioni, vedere [Partizioni remote](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Finestra di dialogo Proprietà database &#40;SSAS - Multidimensionale&#41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
- [Configurare proprietà di progetti di Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [Finestra di dialogo Proprietà database & #40; SSAS - multidimensionale & #41;](http://msdn.microsoft.com/library/70f000b7-917f-4699-b142-7a0d13ff767c)   
+ [Configurare le proprietà di progetto di Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

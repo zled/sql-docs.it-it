@@ -19,11 +19,11 @@ ms.topic: article
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 77dee541f04218f8e84fc0428a0d8e34001e829a
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
+ms.openlocfilehash: 1ca79d0f6c4bc501e7b03cd0c5b710eba2b50adf
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key per i database e data warehouse SQL di Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -66,9 +66,10 @@ Quando TDE viene configurato per la prima volta per l'uso di una protezione TDE 
 
 ### <a name="guidelines-for-configuring-azure-key-vault"></a>Linee guida per la configurazione di Azure Key Vault
 
-- Configurare un insieme di credenziali delle chiavi con [eliminazione temporanea](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) abilitata per evitare la perdita di dati in caso di eliminazione accidentale o intenzionale della chiave o dell'insieme di credenziali delle chiavi.  Questo è un **requisito obbligatorio** per TDE con BYOK:  
-  - Le risorse eliminate temporaneamente vengono conservate per 90 giorni, a meno che non vengano recuperate o ripulite.
-  - Per le azioni di **recupero** e **pulizia** è possibile definire autorizzazioni specifiche nei criteri di accesso dell'insieme di credenziali delle chiavi. 
+- Creare un insieme di credenziali delle chiavi con l'[eliminazione temporanea](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete) abilitata per evitare la perdita di dati in caso di eliminazione accidentale della chiave o dell'insieme di credenziali delle chiavi.  Usare [PowerShell per abilitare la proprietà di "eliminazione temporanea"](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-soft-delete-powershell) per gli insiemi di credenziali delle chiavi. Questa opzione non è ancora disponibile nel portale di Azure Key Vault, ma è richiesta da SQL:  
+  - Le risorse eliminate temporaneamente vengono conservate per un periodo di tempo di 90 giorni, a meno che non vengano recuperate o ripulite.
+  - Alle azioni di **recupero** e **pulizia** sono associate autorizzazioni specifiche nei criteri di accesso dell'insieme di credenziali delle chiavi. 
+
 - Concedere al server logico l'accesso all'insieme di credenziali delle chiavi usando la relativa identità di Azure Active Directory (Azure AD).  Quando viene usata l'interfaccia utente del portale, l'identità Azure AD creata automaticamente e le autorizzazioni di accesso all'insieme di credenziali delle chiavi vengono concesse al server.  Se si usa PowerShell per configurare TDE con BYOK, è necessario creare l'identità Azure AD e verificare il completamento. Per istruzioni passo passo dettagliate per l'uso di PowerShell, vedere [Configurare TDE con BYOK](transparent-data-encryption-byok-azure-sql-configure.md).
 
   >[!NOTE]

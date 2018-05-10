@@ -1,28 +1,28 @@
 ---
 title: Connettersi a un'origine dati file flat (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 02/17/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
+ms.service: ''
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8ab77d362f9758e21a1bce78c31bc066d39f51c
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 57326cdaab173fa0ab3255da4b336eb4b294e19b
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati file flat (Importazione/Esportazione guidata SQL Server)
 Questo argomento illustra come connettersi a un'origine dati **file flat** (file di testo) dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server. Poiché per i file flat queste due pagine della procedura guidata visualizzano set di opzioni diversi, questo argomento descrive l'origine file flat e la destinazione file flat separatamente.

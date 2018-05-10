@@ -23,16 +23,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51324f00da71597a8a2dd37d8f0077c4b3bc8b55
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 0d4c7392b58f3277317e3bf9b8077239510bb0c3
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Comprime l'espressione di input usando l'algoritmo GZIP. Il risultato della compressione è una matrice di byte di tipo **varbinary(max)**.
+Questa funzione comprime l'espressione di input usando l'algoritmo GZIP. La funzione restituisce una matrice di byte di tipo **varbinary (max)**.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,20 +44,35 @@ COMPRESS ( expression )
   
 ## <a name="arguments"></a>Argomenti  
 *expression*  
-Espressione **nvarchar(***n***)**, **nvarchar(max)**, **varchar(***n***)**, **varchar(max)**, **varbinary(***n***)**, **varbinary(max)**, **char(***n***)**, **nchar(***n***)** o **binary(***n***)**. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+Un
+
+* **binary(***n***)**
+* **char(***n***)**
+* **nchar(***n***)**
+* **nvarchar(max)**
+* **nvarchar(***n***)**
+* **varbinary(max)**
+* **varbinary(***n***)**
+* **ntext**
+
+o Gestione configurazione
+
+* **varchar(***n***)**
+
+expression. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="return-types"></a>Tipi restituiti
-Restituisce il tipo di dati di **varbinary(max)** che rappresenta il contenuto compresso di input.
+**varbinary (max)** che rappresenta il contenuto compresso dell'input.
   
 ## <a name="remarks"></a>Remarks  
 I dati compressi non possono essere indicizzati.
   
-La funzione COMPRESS comprime i dati specificati come espressione di input e deve essere chiamata per ogni sezione di dati da comprimere. Per la compressione automatica a livello di riga o di pagina durante l'archiviazione, vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md).
+La funzione `COMPRESS` comprime i dati di espressione dell'input. Richiamare questa funzione per ogni sezione di dati da comprimere. Vedere [Compressione dei dati](../../relational-databases/data-compression/data-compression.md) per altre informazioni sulla compressione automatica dei dati durante l'archiviazione a livello di riga o pagina.
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-compress-data-during-the-table-insert"></a>A. Comprimere i dati durante l'inserimento nella tabella  
-L'esempio seguente illustra come comprimere i dati inseriti nella tabella:
+L'esempio illustra come comprimere i dati inseriti in una tabella:
   
 ```sql
 INSERT INTO player (name, surname, info )  
@@ -69,7 +84,7 @@ VALUES (N'Michael', N'Raheem', compress(@info));
 ```  
   
 ### <a name="b-archive-compressed-version-of-deleted-rows"></a>B. Archiviare la versione compressa di righe eliminate  
-L'istruzione seguente elimina vecchi record player dalla tabella `player` e archivia i record nella tabella `inactivePlayer` in un formato compresso per risparmiare spazio.
+Questa istruzione elimina i record obsoleti Player (Giocatore) dalla tabella `player`, dopo di ché, per risparmiare spazio, archivia i record nella tabella `inactivePlayer` usando un formato compresso.
   
 ```sql
 DELETE player  

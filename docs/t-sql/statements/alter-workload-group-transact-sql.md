@@ -1,7 +1,7 @@
 ---
 title: ALTER WORKLOAD GROUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/04/2018
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: sql-database
 ms.service: ''
@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bdc49a57b8b864284fa4411ddb0b970bed1c704
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 78e3660935d5969e2a67afed85f295998e496153
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -108,13 +108,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > Per impostazione predefinita, Resource Governor non impedirà la continuazione di una richiesta se viene superato il tempo massimo, ma verrà generato un evento. Per altre informazioni, vedere [Classe di evento CPU Threshold Exceeded](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md). 
 
 > [!IMPORTANT]
-> A partire da [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interromperà una richiesta se viene superato il tempo massimo.
+> A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 e [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 e usando il [flag di traccia 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), Resource Governor interrompe una richiesta se viene superato il tempo massimo.
   
  REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Specifica il tempo massimo, in secondi, che una query può attendere prima che una concessione di memoria (memoria buffer di lavoro) diventi disponibile.  
   
 > [!NOTE]  
->  L'esecuzione della query può riuscire anche in caso di timeout relativo alla concessione di memoria. L'esito negativo di una query si verifica solo se sono in esecuzione più query simultaneamente. In caso contrario, la query può ottenere solo la minima concessione di memoria, con una conseguente riduzione delle prestazioni.  
+> L'esecuzione della query può riuscire anche in caso di timeout relativo alla concessione di memoria. L'esito negativo di una query si verifica solo se sono in esecuzione più query simultaneamente. In caso contrario, la query può ottenere solo la minima concessione di memoria, con una conseguente riduzione delle prestazioni.  
   
  *value* deve essere un numero intero positivo. L'impostazione predefinita per *value*, 0, usa un calcolo interno basato sul costo della query per determinare il tempo massimo.  
   
@@ -122,10 +122,10 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Viene specificato il grado massimo di parallelismo (DOP) per le richieste parallele. *value* deve essere 0 o un numero intero positivo, da 1 a 255. Quando *value* è 0, il server sceglie il grado massimo di parallelismo. Si tratta dell'impostazione predefinita e consigliata.  
   
 > [!NOTE]  
->  Il valore effettivo impostato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per MAX_DOP potrebbe essere inferiore al valore specificato. Il valore finale è determinato dalla formula min(255, *numero di CPU)*.  
+> Il valore effettivo impostato da [!INCLUDE[ssDE](../../includes/ssde-md.md)] per MAX_DOP potrebbe essere inferiore al valore specificato. Il valore finale è determinato dalla formula min(255, *numero di CPU)*.  
   
 > [!CAUTION]  
->  La modifica di MAX_DOP può influire negativamente sulle prestazioni di un server. Se è necessario modificare MAX_DOP, si consiglia di impostarlo a un valore minore o uguale al numero massimo di utilità di pianificazione dell'hardware che sono presenti in un singolo nodo NUMA. Si consiglia di non impostare MAX_DOP a un valore maggiore di 8.  
+> La modifica di MAX_DOP può influire negativamente sulle prestazioni di un server. Se è necessario modificare MAX_DOP, si consiglia di impostarlo a un valore minore o uguale al numero massimo di utilità di pianificazione dell'hardware che sono presenti in un singolo nodo NUMA. Si consiglia di non impostare MAX_DOP a un valore maggiore di 8.  
   
  MAX_DOP viene gestito nel modo seguente:  
   
@@ -148,7 +148,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  Se utilizzata con ALTER WORKLOAD GROUP, l'opzione "default" deve essere delimitata da virgolette ("") o parentesi quadrate ([]) per evitare conflitti con DEFAULT, una parola riservata di sistema. Per altre informazioni, vedere [Identificatori del database](../../relational-databases/databases/database-identifiers.md).  
   
 > [!NOTE]  
->  Per l'opzione "default" si applica la distinzione tra maiuscole e minuscole.  
+> Per l'opzione "default" si applica la distinzione tra maiuscole e minuscole.  
   
 ## <a name="remarks"></a>Remarks  
  ALTER WORKLOAD GROUP è consentito nel gruppo predefinito.  
@@ -160,7 +160,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 -   Se si modifica MAX_DOP da 1 in 0 o in un valore maggiore di 1, non è necessario eseguire DBCC FREEPROCCACHE. I piani seriali non possono però essere eseguiti in parallelo. È quindi necessario cancellare la cache corrispondente in modo che i nuovi piani possano essere potenzialmente compilati tramite il parallelismo.  
   
 > [!CAUTION]  
->  La cancellazione dei piani memorizzati nella cache da un pool di risorse associato a più di un gruppo del carico di lavoro avrà effetto su tutti i gruppi di carico di lavoro che hanno il pool di risorse definito dall'utente identificato da *pool_name*.  
+> La cancellazione dei piani memorizzati nella cache da un pool di risorse associato a più di un gruppo del carico di lavoro avrà effetto su tutti i gruppi di carico di lavoro che hanno il pool di risorse definito dall'utente identificato da *pool_name*.  
   
  Per l'esecuzione di istruzioni DDL, è consigliabile avere familiarità con gli stati di Resource Governor. Per altre informazioni, vedere [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
@@ -176,7 +176,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 ## <a name="examples"></a>Esempi  
  Nell'esempio seguente viene indicato come modificare l'importanza delle richieste nel gruppo predefinito da `MEDIUM` a `LOW`.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP "default"  
 WITH (IMPORTANCE = LOW);  
 GO  
@@ -186,7 +186,7 @@ GO
   
  Nell'esempio seguente viene indicato come spostare un gruppo di carico di lavoro dal pool in cui si trova al pool predefinito.  
   
-```  
+```sql  
 ALTER WORKLOAD GROUP adHoc  
 USING [default];  
 GO  

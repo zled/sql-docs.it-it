@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
@@ -21,12 +19,11 @@ caps.latest.revision: 62
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 2ca7c9fb5f326f8813b2ed62e1d3463a3752b5c2
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 00ed2233653ea5a98fdc389bbfc470f65c817f3f
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +73,8 @@ column_name AS computed_column_expression
     >  Poiché valori delle colonne coinvolte in una colonna calcolata possono essere diversi in ogni riga di una tabella, è possibile che nelle varie righe il risultato della colonna calcolata sia diverso.  
   
 PERSISTED  
- Specifica che [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivierà fisicamente i valori calcolati nella tabella e aggiornerà i valori in caso di aggiornamento di eventuali altre colonne da cui dipende la colonna calcolata. Se si contrassegna una colonna calcolata come PERSISTED, sarà possibile creare un indice in una colonna calcolata deterministica, ma non precisa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md). Le colonne calcolate utilizzate come colonne di partizionamento di una tabella partizionata devono essere contrassegnate con PERSISTED in modo esplicito. Se è specificato PERSISTED, il valore di *computed_column_expression* deve essere deterministico.  
+ Specifica che [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivierà fisicamente i valori calcolati nella tabella e aggiornerà i valori in caso di aggiornamento di eventuali altre colonne da cui dipende la colonna calcolata. Se si contrassegna una colonna calcolata come PERSISTED, sarà possibile creare un indice in una colonna calcolata deterministica, ma non precisa. Per altre informazioni, vedere [Indici per le colonne calcolate](../../relational-databases/indexes/indexes-on-computed-columns.md). Le colonne calcolate utilizzate come colonne di partizionamento di una tabella partizionata devono essere contrassegnate con PERSISTED in modo esplicito. Se è specificato PERSISTED, il valore di *computed_column_expression* deve essere deterministico. 
+
 NULL | NOT NULL  
  Specifica se i valori NULL sono supportati. L'opzione NULL non è esattamente un vincolo, ma può essere specificata allo stesso modo di NOT NULL. È possibile specificare NOT NULL per le colonne calcolate solo se è specificato PERSISTED.  
   
@@ -116,7 +114,8 @@ ON DELETE { **NO ACTION** | CASCADE }
  Specifica l'azione eseguita nelle righe della tabella se tali righe includono una relazione referenziale e se la riga a cui viene fatto riferimento viene eliminata dalla tabella principale. Il valore predefinito è NO ACTION.  
   
 NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore e viene eseguito il rollback dell'azione di eliminazione della riga nella tabella padre.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un errore e viene eseguito il rollback dell'azione di eliminazione della riga nella tabella padre.
+
 CASCADE  
  Le righe corrispondenti vengono eliminate dalla tabella di riferimento se la riga viene eliminata dalla tabella padre.  
   
@@ -155,5 +154,3 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
   
 ## <a name="see-also"></a>Vedere anche  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
-  

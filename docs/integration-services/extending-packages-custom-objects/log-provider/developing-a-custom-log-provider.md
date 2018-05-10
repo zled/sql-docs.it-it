@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -25,12 +24,11 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 5758d7ee78ea1c06bfaf1e4aa15b9065fc597460
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 8153378f073254bbab3a9f1261dd90223c5f00ec
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-a-custom-log-provider"></a>Sviluppo di un provider di log personalizzato
   In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] sono disponibili funzionalità di registrazione estese che consentono di acquisire eventi che si verificano durante l'esecuzione dei pacchetti. In [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] è inclusa una varietà di provider di log che consentono di creare e archiviare log in formati quali XML, testo, database o nel registro eventi di Windows. Se i provider di log e i formati di output disponibili non soddisfano completamente specifici requisiti, è possibile creare un provider di log personalizzato.  

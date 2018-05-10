@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
@@ -29,12 +28,11 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c2b9dc422bdb6ae5d944b58201f724d1ab09f42b
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: aacecfc425af980274435584a191614a0f9536a1
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="developing-a-user-interface-for-a-custom-task"></a>Sviluppo di un'interfaccia utente per un'attività personalizzata
   Il modello a oggetti di [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] offre agli sviluppatori di attività la possibilità di creare facilmente un'interfaccia utente personalizzata per un'attività da integrare e visualizzare in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. L'interfaccia utente può fornire informazioni utili all'utente in Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)] oltre a indicazioni su come configurare correttamente le proprietà e le impostazioni dell'attività personalizzata.  
