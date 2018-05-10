@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.maintenancecleanuptask.f1
 helpviewer_keywords:
@@ -23,12 +22,11 @@ caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: de563ef93a5187600c58da72bb384fb373b0577a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 99d7f969bb826570210c7bdc74542ce6a6d8ae33
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="maintenance-cleanup-task"></a>Pulizia file manutenzione - attività
   L'attività Pulizia file manutenzione consente di rimuovere i file correlati ai piani di manutenzione, inclusi i file di backup dei database e i report creati dai piani di manutenzione. Per altre informazioni, vedere [Piani di manutenzione](../../relational-databases/maintenance-plans/maintenance-plans.md) e [Backup e ripristino di database SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
@@ -42,7 +40,7 @@ ms.lasthandoff: 04/26/2018
  Diversamente dalle precedenti versioni dell'attività Pulizia file manutenzione, la versione disponibile in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non elimina automaticamente i file presenti nelle sottodirectory della directory specificata. Questo vincolo riduce la superficie esposta a qualsiasi attacco che potrebbe sfruttare le funzionalità dell'attività Pulizia file manutenzione per eliminare file senza disporre della relativa autorizzazione. Per eliminare le sottocartelle di primo livello è necessario scegliere esplicitamente di eseguire l'operazione selezionando l'opzione **Includi sottocartelle di primo livello** nella finestra di dialogo **Attività Pulizia file manutenzione** .  
   
 ## <a name="configuration-of-the-maintenance-cleanup-task"></a>Configurazione dell'attività Pulizia file manutenzione  
- È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Questa attività è disponibile nella sezione **Attività di manutenzione** della **casella degli strumenti** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ È possibile impostare le proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Questa attività è disponibile nella sezione **Attività di manutenzione** della **casella degli strumenti** di Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , fare clic sull'argomento seguente:  
   

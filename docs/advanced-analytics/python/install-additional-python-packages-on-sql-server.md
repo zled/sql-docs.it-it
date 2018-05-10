@@ -1,17 +1,18 @@
 ---
 title: Installare i nuovi pacchetti Python in SQL Server Machine Learning | Documenti Microsoft
+description: Aggiunta di nuovi pacchetti Python a SQL Server 2017 Machine Learning Services (In-Database) e Machine Learning Server (Standalone)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/10/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 927d34755dbe291d1b208d968b13d36baf90bc15
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
-ms.translationtype: MT
+ms.openlocfilehash: 2db7792c8c7a69647c0525c3d34bf94b090dd524
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installare i nuovi pacchetti Python in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

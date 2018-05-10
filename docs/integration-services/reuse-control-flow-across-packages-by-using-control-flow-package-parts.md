@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.toolboxcontrolflowtemplate.f1
 - sql13.dts.designer.addcopyexistingtemplate.f1
@@ -22,12 +21,11 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 228db331a34b05c7450f1460dd8014f15d571987
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: f9272ce373bbd59b76104b4437f55a98ec89d429
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>Riusare il flusso di controllo dei pacchetti tramite le parti del pacchetto del flusso di controllo
   Salvare un'attività o un contenitore di flusso di controllo di uso comune in un file di parte autonomo (file con estensione dtsxp) e riusarli più volte in uno o più pacchetti usando le parti del flusso di controllo. Questa riusabilità semplifica la progettazione e la manutenzione dei pacchetti SSIS.  
