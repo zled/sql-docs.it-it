@@ -1,45 +1,23 @@
 ---
 title: Concetti di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQL Server Analysis Services, data mining
-- cleaning data
-- predictive analytics
-- learning algorithms
-- data mining [Analysis Services], concepts
-- inductive learning
-- data mining [Analysis Services], about data mining
-- mining models [Analysis Services]
-- data access [Analysis Services]
-- machine learning algorithms [Analysis Services]
-- mining models [Analysis Services], about data mining
-- SSAS, data mining
-- Analysis Services, data mining
-ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 7a625cb7ec0aa187a825dbc02b742d82afa83065
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-concepts"></a>Concetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
+  Il data mining è il processo di individuazione di informazioni utilizzabili da grandi set di dati. Nel data mining viene usata l'analisi matematica per dedurre modelli e tendenze esistenti nei dati. In genere, questi modelli non possono essere individuati tramite l'esplorazione tradizionale dei dati perché le relazioni sono troppo complesse o perché sono presenti troppi dati.  
   
  I modelli e le tendenze possono essere raccolti e definiti in un *modello di data mining*. È possibile applicare i modelli di data mining a scenari specifici, ad esempio:  
   
@@ -156,7 +134,7 @@ Il data mining è il processo di individuazione di informazioni utilizzabili da 
   
  Prima di distribuire un modello in un ambiente di produzione, è opportuno verificarne le prestazioni. Inoltre, quando si compila un modello, in genere si creano più modelli con configurazioni diverse e si testano tutti per stabilire quale di questi produce i migliori risultati per il problema e i dati.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili strumenti che consentono di separare i dati in set di dati di training e di testing in modo da poter valutare accuratamente le prestazioni di tutti i modelli sugli stessi dati. Il set di dati di training viene usato per compilare il modello, mentre il set di dati di testing viene usato per verificare l'accuratezza del modello creando query di stima. Questo partizionamento può essere eseguito automaticamente durante la compilazione del modello di data mining. Per altre informazioni, vedere [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fornisce strumenti che consentono di separano i dati in set di training e testing set di dati in modo da poter valutare accuratamente le prestazioni di tutti i modelli sugli stessi dati. Il set di dati di training viene usato per compilare il modello, mentre il set di dati di testing viene usato per verificare l'accuratezza del modello creando query di stima. Questo partizionamento può essere eseguito automaticamente durante la compilazione del modello di data mining. Per altre informazioni, vedere [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   
  È possibile esplorare le tendenze e gli schemi individuati dagli algoritmi tramite i visualizzatori di Progettazione modelli di data mining disponibili in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Per altre informazioni, vedere [Visualizzatori modello di data mining](../../analysis-services/data-mining/data-mining-model-viewers.md). È inoltre possibile verificare l'accuratezza delle stime create dai modelli mediante gli strumenti della finestra di progettazione, ad esempio il grafico di accuratezza e la matrice di classificazione. Per verificare se il modello è specifico per i dati o se può essere usato per creare inferenze sul popolamento generale, è possibile usare la tecnica statistica chiamata *convalida incrociata* per creare automaticamente subset dei dati ed eseguire il test del modello rispetto a ogni subset. Per altre informazioni, vedere [Test e convalida &#40;Data mining&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md).  
   

@@ -1,6 +1,6 @@
-﻿---
-title: Origine di controllo in Studio operazioni SQL (anteprima) | Documenti Microsoft
-description: Informazioni su come configurare controllo del codice sorgente in Studio operazioni SQL (anteprima).
+---
+title: Controllo del codice sorgente in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Informazioni su come configurare il controllo del codice sorgente in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
@@ -19,9 +19,9 @@ ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
 ---
-#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utilizzo di controllo del codice sorgente in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+#  <a name="using-source-control-in-includename-sosincludesname-sos-shortmd"></a>Utilizzo del controllo del codice sorgente in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta Git per il controllo della versione/origine.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta Git per il controllo della versione/sorgente.
 
 
 ## <a name="git-support-in-includename-sosincludesname-sos-shortmd"></a>Supporto di GIT in [!INCLUDE[name-sos](../includes/name-sos-short.md)]
@@ -33,12 +33,13 @@ ms.lasthandoff: 05/03/2018
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 
 1. Nel menu **File** selezionare **Apri cartella...**
-2. Passare alla cartella contenente i file tracciati da Git e fare clic su Seleziona cartella. È possibile selezionare anche le sottocartelle del repository locale.
+2. Passare alla cartella che contiene i file rilevati da git e fare clic su **selezionare la cartella**. Le sottocartelle nel repository locale sono integri da selezionare.
 
 
 ## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository Git
 
 1. Selezionare **Controllo del codice sorgente** nella barra laterale sinistra, quindi selezionare l'icona di Git.
+
 
    ![Icona Git del controllo del codice sorgente](media/source-control/source-control.png)
 

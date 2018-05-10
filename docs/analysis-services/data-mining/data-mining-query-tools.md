@@ -1,39 +1,23 @@
 ---
 title: Strumenti Query di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- predictions [Analysis Services], DMX prediction queries
-- predictions [DMX]
-- DMX [Analysis Services], prediction queries
-- prediction queries [DMX]
-- predictions [Analysis Services]
-- queries [DMX], prediction queries
-- mining models [Analysis Services], DMX
-ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 71337bc66abab8e91fd997cd2cde635945b0ef82
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 23aba314c819afa8eac6f62f2db70012967f842a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-query-tools"></a>Strumenti query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Tutte le query di data mining usano il linguaggio DMX (Data Mining Extensions). Il linguaggio DMX può essere usato per creare modelli per tutti i tipi di attività di apprendimento automatico, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È anche possibile scrivere query DMX per recuperare informazioni sui modelli e le statistiche generati durante l'elaborazione del modello.  
+  Tutte le query di data mining usano il linguaggio DMX (Data Mining Extensions). Il linguaggio DMX può essere usato per creare modelli per tutti i tipi di attività di apprendimento automatico, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È anche possibile scrivere query DMX per recuperare informazioni sui modelli e le statistiche generati durante l'elaborazione del modello.  
   
  Si possono scrivere query DMX oppure è possibile compilare query DMX di base usando uno strumento come il **generatore delle query di stima** e quindi modificarle. Sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] che in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] sono disponibili strumenti che consentono di compilare query di stima DMX. Questo argomento descrive come creare ed eseguire query di data mining usando questi strumenti.  
   
@@ -56,7 +40,7 @@ Tutte le query di data mining usano il linguaggio DMX (Data Mining Extensions). 
  L'editor di query disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] consente anche di compilare ed eseguire query DMX. È possibile connettersi a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]e selezionare un database, le colonne della struttura di data mining e un modello di data mining. **Visualizzatore metadati** contiene un elenco di funzioni di stima che è possibile esplorare.  
   
 ##  <a name="bkmk_Templates"></a> Modelli DMX  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli di query DMX interattivi che consentono di compilare query di questo tipo. Se l'elenco di modelli non è visualizzato, fare clic su **Visualizza** sulla barra degli strumenti e selezionare **Esplora modelli**. Per visualizzare tutti i modelli di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , inclusi i modelli per DMX, MDX e XMLA, fare clic sull'icona del cubo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]fornisce modelli di query DMX interattivi che è possibile utilizzare per compilare le query DMX. Se l'elenco di modelli non è visualizzato, fare clic su **Visualizza** sulla barra degli strumenti e selezionare **Esplora modelli**. Per visualizzare tutti i modelli di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , inclusi i modelli per DMX, MDX e XMLA, fare clic sull'icona del cubo.  
   
  Per compilare una query utilizzando un modello, è possibile trascinare il modello in una finestra Query aperta o fare doppio clic sul modello per aprire una nuova connessione e un nuovo riquadro query.  
   
@@ -83,7 +67,7 @@ Tutte le query di data mining usano il linguaggio DMX (Data Mining Extensions). 
 -   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-methods-discover.md) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions &#40; DMX &#41; Riferimento](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; Riferimento](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Soluzioni di Data Mining](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Informazioni sull'istruzione Select di DMX](../../dmx/understanding-the-dmx-select-statement.md)   
  [Struttura e l'utilizzo di query di stima DMX](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   

@@ -1,32 +1,23 @@
 ---
 title: Connettersi ad Analysis Services | Documenti Microsoft
-ms.custom: ''
-ms.date: 01/23/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ''
 ms.topic: article
-helpviewer_keywords:
-- instances of Analysis Services, connections
-ms.assetid: 73ee8171-3379-4384-bfc8-071b3eebbc8f
-caps.latest.revision: 46
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7dbadb28b56be49197f530e735f68238d13bc101
-ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
-ms.translationtype: MT
+ms.openlocfilehash: a7874a45b8cd11ed288448ff025b6c3918251539
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-analysis-services"></a>Connetti ad Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Usare le informazioni in questa sezione per informazioni sulle proprietà della stringa di connessione, le librerie client utilizzate per le connessioni, i metodi di autenticazione supportati da Analysis Services e come impostare o cancellare le connessioni prima di portare offline un server.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  In questa sezione sono contenute le informazioni sulle proprietà della stringa di connessione, sulle librerie client usate per le connessioni, quali metodi di autenticazione sono supportati da Analysis Services e come impostare o cancellare le connessioni prima di disconnettere un server.  
 
 Per ulteriori informazioni sulla connessione ad Azure Analysis Services, vedere [Connetti a un server](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect).
   
@@ -39,17 +30,17 @@ Per ulteriori informazioni sulla connessione ad Azure Analysis Services, vedere 
   
 |Collegamento|Descrizione dell'attività|  
 |----------|----------------------|  
-|[Connettersi da applicazioni client &#40; Analysis Services &#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|Se non si ha familiarità con Analysis Services, leggere questo argomento per un'introduzione agli strumenti e alle applicazioni di uso più comune con Analysis Services.|  
-|[Proprietà della stringa di connessione &#40; Analysis Services &#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|Analysis Services include numerose proprietà di server e database che consentono di personalizzare una connessione per un'applicazione specifica indipendentemente dalla configurazione dell'istanza o del database.|  
+|[Connettersi da applicazioni client & #40; Analysis Services & #41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)|Se non si ha familiarità con Analysis Services, leggere questo argomento per un'introduzione agli strumenti e alle applicazioni di uso più comune con Analysis Services.|  
+|[Proprietà della stringa di connessione & #40; Analysis Services & #41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)|Analysis Services include numerose proprietà di server e database che consentono di personalizzare una connessione per un'applicazione specifica indipendentemente dalla configurazione dell'istanza o del database.|  
 |[Metodologie di autenticazione supportate da Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)|Questo argomento offre una sintetica introduzione ai metodi di autenticazione utilizzati da Analysis Services.|  
 |[Configurare Analysis Services per la delega vincolata Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)|Per molte soluzioni di Business Intelligence è necessaria la rappresentazione per assicurare che a ogni utente vengano restituiti solo dati autorizzati. In questo argomento sono disponibili informazioni sull'utilizzo della rappresentazione. In questo argomento vengono inoltre descritti i passaggi per configurare Analysis Services per la delega vincolata Kerberos.|  
 |[Registrazione del nome SPN per un'istanza di Analysis Services](../../analysis-services/instances/spn-registration-for-an-analysis-services-instance.md)|L'autenticazione Kerberos richiede un nome SPN valido per i servizi che rappresentano o delegano le identità utente in soluzioni multiserver. Utilizzare le informazioni contenute in questo argomento per apprendere la costruzione e i passaggi per la registrazione del nome SPN per Analysis Services.|  
-|[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|L'autenticazione di base e i limiti tra domini rappresentano due motivi importanti per configurare Analysis Services per l'accesso HTTP.|  
+|[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|L'autenticazione di base e i limiti tra domini rappresentano due motivi importanti per configurare Analysis Services per l'accesso HTTP.|  
 |[Provider di dati utilizzati per le connessioni di Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)|Analysis Services offre tre librerie client per accedere alle operazioni server o ai dati di Analysis Services. Questo argomento offre una sintetica introduzione ad ADOMD.NET, agli oggetti di gestione di Analysis Services (AMO) e al provider OLE DB di Analysis Services (MSOLAP).|  
 |[Disconnettere utenti e sessioni sul Server Analysis Services](../../analysis-services/instances/disconnect-users-and-sessions-on-analysis-services-server.md)|Cancellare le connessioni e le sessioni esistenti prima di portare un server offline o eseguire test delle prestazioni di base.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurazione post-installazione &#40; Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
+ [Configurazione post-installazione & #40; Analysis Services & #41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
  [Proprietà del server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   
   

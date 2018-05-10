@@ -1,32 +1,31 @@
 ---
 title: Documentazione per gli sviluppatori di Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
-ms.service: 
 ms.component: reporting-services
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
 ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 508253c11026074dc19ce93f173c036ae2751786
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: d11e62a8a0a1f90d894c32c82aef938f89a61851
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-developer-documentation"></a>Documentazione per gli sviluppatori di Reporting Services
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre diverse interfacce di programmazione che è possibile usare nelle proprie applicazioni. È possibile utilizzare le caratteristiche e le funzionalità esistenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per compilare strumenti di gestione e di creazione di report personalizzati nei siti Web e nelle applicazioni Windows oppure per estendere la piattaforma [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -40,9 +39,12 @@ ms.lasthandoff: 01/09/2018
  [Integrazione di Reporting Services nelle applicazioni](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)  
  Viene fornita una panoramica sull'utilizzo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per l'integrazione dei report nelle applicazioni personalizzate. Viene descritto come utilizzare l'accesso con URL diretto e quando utilizzare il servizio Web per accedere al server di report.  
   
- [Servizio Web ReportServer](../reporting-services/report-server-web-service/report-server-web-service.md)  
+ [Servizio Web ReportServer per applicazioni ASP.net e tradizionali](../reporting-services/report-server-web-service/report-server-web-service.md)  
  Il servizio Web ReportServer consente di accedere alle funzionalità complete del server di report. Il servizio Web utilizza SOAP tramite HTTP e funge da interfaccia di comunicazione tra i programmi client e il server di report. Il servizio Web e i relativi metodi espongono le funzionalità del server di report e consentono di creare strumenti personalizzati per qualsiasi parte del ciclo di vita del report, dalla gestione all'esecuzione.  
-  
+ 
+ [Sviluppare con le API REST per applicazioni moderne](developer/rest-api.md)</br>
+ Le API REST di Reporting Services consentono l'accesso programmatico agli oggetti contenuti nel catalogo di un server di report di Reporting Services. Tramite le API REST è possibile esplorare la gerarchia di cartelle, individuare il contenuto di una cartella o scaricare la definizione di un report. È anche possibile creare, aggiornare ed eliminare oggetti.
+
  [Accesso con URL &#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta un set completo di richieste basate su URL che è possibile utilizzare come punto di accesso semplice e rapido per la navigazione e la visualizzazione dei report. È possibile utilizzare questa tecnologia insieme al servizio Web ReportServer per integrare una soluzione completa di creazione di report nelle applicazioni aziendali personalizzate. L'accesso con URL è particolarmente utile in caso di integrazione dei report come parte di un portale Web o in caso di visualizzazione dei report da un browser.  
   

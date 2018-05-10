@@ -1,34 +1,19 @@
 ---
 title: Programmazione di oggetti di base OLAP in AMO | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- programming [AMO]
-- Analysis Management Objects, OLAP
-- OLAP [AMO]
-- AMO, OLAP
-ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1f3b03ad50bf5921217c4313909c050a5afe6acf
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 6df874fb1819f2360991d19557090aa30dec1a42
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Programmazione di oggetti di base OLAP in AMO
   La creazione di oggetti di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] complessi è un'operazione estremamente semplice per cui è necessario tuttavia prestare attenzione ai dettagli. In questo argomento vengono descritti i dettagli relativi alla programmazione di oggetti di base OLAP. In questo argomento sono incluse le sezioni seguenti:  
@@ -168,7 +153,7 @@ static DataItem CreateDataItem(DataSourceView dsv, string tableName, string colu
 ### <a name="processing-a-dimension"></a>Elaborazione di una dimensione  
  L'elaborazione di una dimensione è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Dimension>.  
   
- L'elaborazione di una dimensione può influire su tutti i cubi che utilizzano la dimensione stessa. Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ L'elaborazione di una dimensione può influire su tutti i cubi che utilizzano la dimensione stessa. Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice seguente viene eseguito un aggiornamento incrementale in tutte le dimensioni di un database specificato:  
   
@@ -255,7 +240,7 @@ static void CreateAdventureWorksCube(Database db, string datasourceName)
 ### <a name="processing-a-cube"></a>Elaborazione di un cubo  
  L'elaborazione di un cubo è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Cube>. L'elaborazione di un cubo comporta l'elaborazione di tutti i gruppi di misure del cubo e di tutte le partizioni del gruppo di misure. In un cubo le partizioni costituiscono gli unici oggetti che possono essere elaborati. Ai fini dell'elaborazione i gruppi di misure sono solo contenitori di partizioni. Il tipo specificato di elaborazione per il cubo viene propagato alle partizioni. L'elaborazione di un cubo e di un gruppo di misure viene risolta internamente nell'elaborazione di dimensioni e di partizioni.  
   
- Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), e [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), e [l'elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice seguente verrà eseguita un'elaborazione completa di tutti i cubi in un database specificato:  
   
@@ -265,7 +250,7 @@ foreach (Cube cube in db.Cubes)
      }  
 ```  
   
-##  <a name="MG">Oggetti MeasureGroup</a>  
+##  <a name="MG"></a> Oggetti MeasureGroup  
  Per amministrare o elaborare un gruppo di misure, programmare l'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ### <a name="creating-dropping-and-finding-a-measuregroup"></a>Creazione, eliminazione e individuazione di un oggetto MeasureGroup  
@@ -422,7 +407,7 @@ static void CreateInternetSalesMeasureGroup(Cube cube)
 ### <a name="processing-a-measure-group"></a>Elaborazione di un gruppo di misure  
  L'elaborazione di un gruppo di misure è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.MeasureGroup>. L'elaborazione di un gruppo di misure comporta l'elaborazione di tutte le partizioni che appartengono al gruppo di misure. L'elaborazione di un gruppo di misure viene risolta internamente nell'elaborazione di dimensioni e di partizioni. Vedere [l'elaborazione di una partizione](#ProcPart) in questo documento.  
   
- Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), e [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md), e [l'elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Nel codice seguente verrà eseguita un'elaborazione completa di tutti i gruppi di misure di un cubo specificato:  
   
@@ -434,7 +419,7 @@ static void FullProcessAllMeasureGroups(Cube cube)
 }  
 ```  
   
-##  <a name="Part">Oggetti Partition</a>  
+##  <a name="Part"></a> Oggetti Partition  
  Per amministrare o elaborare una partizione, programmare un oggetto <xref:Microsoft.AnalysisServices.Partition>.  
   
 ### <a name="creating-dropping-and-finding-a-partition"></a>Creazione, eliminazione e individuazione di una partizione  
@@ -488,7 +473,7 @@ static void CreateInternetSalesMeasureGroupPartitions(MeasureGroup mg)
 ###  <a name="ProcPart"></a> Elaborazione di una partizione  
  L'elaborazione di una dimensione è semplice come l'utilizzo del metodo Process dell'oggetto <xref:Microsoft.AnalysisServices.Partition>.  
   
- Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40; XMLA &#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) e [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Per ulteriori informazioni sulle opzioni di elaborazione, vedere [l'elaborazione di oggetti &#40;XMLA&#41; ](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md) e [l'elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
  Nell'esempio di codice seguente viene eseguita un'elaborazione completa di tutte le partizioni di un gruppo di misure specificato.  
   
@@ -533,7 +518,7 @@ static void MergeAllPartitions(MeasureGroup mg)
     }  
 ```  
   
-##  <a name="AD">Oggetti Aggregation</a>  
+##  <a name="AD"></a> Oggetti Aggregation  
  Per progettare un'aggregazione e applicarla a una o più a partizioni, programmare l'oggetto <xref:Microsoft.AnalysisServices.Aggregation>.  
   
 ### <a name="creating-and-dropping-aggregations"></a>Creazione ed eliminazione di aggregazioni  
@@ -573,9 +558,9 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  <xref:Microsoft.AnalysisServices>   
  [Introduzione a classi AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
  [Classi OLAP in AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)   
- [Architettura logica &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Gli oggetti di database &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [L'elaborazione di un modello multidimensionale &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
+ [Architettura logica & #40; Analysis Services - dati multidimensionali & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Gli oggetti di database & #40; Analysis Services - dati multidimensionali & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Installare dati di esempio e progetti per l'esercitazione di modellazione multidimensionale di Analysis Services](../../../analysis-services/install-sample-data-and-projects.md)  
   
   

@@ -1,6 +1,6 @@
-﻿---
-title: Utilizzare i widget di insight per monitorare i server e database in SQL Operations Studio (anteprima) | Microsoft Docs
-description: Informazioni sui widget di insight dettagliate in SQL Operations Studio (anteprima).
+---
+title: Utilizzare i widget di Insight per monitorare server e database in SQL Operations Studio (anteprima) | Microsoft Docs
+description: Informazioni dettagliate sui widget di Insight in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql

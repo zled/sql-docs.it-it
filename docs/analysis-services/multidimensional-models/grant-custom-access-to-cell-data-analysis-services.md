@@ -1,39 +1,23 @@
 ---
 title: Concedere l'accesso personalizzato ai dati delle celle (Analysis Services) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.celldata.f1
-helpviewer_keywords:
-- user access rights [Analysis Services], cell data
-- permissions [Analysis Services], cells
-- read contingent permissions
-- read permissions
-- cells [Analysis Services]
-- custom cell data access [Analysis Services]
-ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
-caps.latest.revision: 31
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7f4c45a7e342a11fa7d235654581cad5b462877a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 10cb80b39117fcd5ec10bb773672e8b984846566
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Concedere l'accesso personalizzato ai dati delle celle (Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Sicurezza della cella viene utilizzata per consentire o negare l'accesso a misurare i dati all'interno di un cubo. La figura seguente mostra una combinazione di misure consentite e negate in una tabella pivot quando il ruolo dell'utente connesso consente l'accesso a determinate misure. In questo esempio, **Reseller Sales Amount** e **Reseller Total Product Cost** sono le uniche misure disponibili tramite questo ruolo. Tutte le altre misure vengono negate in modo implicito. I passaggi usati per ottenere tale risultato vengono forniti nella sezione "Consentire l'accesso a misure specifiche" riportata di seguito.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  La sicurezza della cella viene usata per consentire o negare l'accesso ai dati di misura all'interno di un cubo. La figura seguente mostra una combinazione di misure consentite e negate in una tabella pivot quando il ruolo dell'utente connesso consente l'accesso a determinate misure. In questo esempio, **Reseller Sales Amount** e **Reseller Total Product Cost** sono le uniche misure disponibili tramite questo ruolo. Tutte le altre misure vengono negate in modo implicito. I passaggi usati per ottenere tale risultato vengono forniti nella sezione "Consentire l'accesso a misure specifiche" riportata di seguito.  
   
  ![Tabella pivot con celle consentite e negate](../../analysis-services/multidimensional-models/media/ssas-permscellsallowed.png "tabella pivot con celle consentite e negate")  
   
@@ -89,7 +73,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
  In Excel, connettersi al cubo usando il ruolo corrente e scegliere tutte e tre le misure per osservare gli effetti della sicurezza della cella. Si noti che le misure nel set negato non sono disponibili, mentre è visibile la misura calcolata.  
   
- ![Tabella di Excel con cellls disponibili e non](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "tabella di Excel con cellls disponibili e non disponibile")  
+ ![Tabella di Excel con disponibili e non cellls](../../analysis-services/multidimensional-models/media/ssas-permscalculatedcells.png "tabella di Excel con cellls disponibili e non disponibile")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Impostare le autorizzazioni di lettura condizionale nelle misure calcolate  
  La sicurezza della cella offre un'alternativa, ovvero l'impostazione delle autorizzazioni di lettura condizionale nelle celle correlate che fanno parte di un calcolo. Usare anche in questo caso l'esempio **Reseller Gross Profit** . Quando si immette la stessa espressione MDX fornita nella sezione precedente, questa volta inserita nella seconda area di testo della finestra di dialogo **Crea ruolo** | **Dati delle celle** (nell'area di testo che si trova al di sotto di **Consenti lettura contenuto cella in base a sicurezza cella**), il risultato è evidente quando viene visualizzato in Excel. Poiché **Reseller Gross Profit** dipende da **Reseller Sales Amount** e **Reseller Total Product Cost**, il profitto lordo sarà ora inaccessibile perché le parti che lo costituiscono sono inaccessibili.  
@@ -104,10 +88,10 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
   
 ## <a name="see-also"></a>Vedere anche  
  [Generatore MDX &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)   
- [Script MDX di base &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Concedere le autorizzazioni di elaborazione &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
- [Concedere le autorizzazioni per una dimensione &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
- [Concedere l'accesso personalizzato alla dimensione dei dati &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [Concedere le autorizzazioni per un cubo o un modello &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
+ [Lo Script MDX di base & #40; MDX & #41;](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Concedere le autorizzazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)   
+ [Concedere le autorizzazioni su una dimensione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-dimension-analysis-services.md)   
+ [Concedere l'accesso personalizzato alla dimensione dei dati & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Concedere al cubo o modello autorizzazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)  
   
   

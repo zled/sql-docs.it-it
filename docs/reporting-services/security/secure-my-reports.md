@@ -1,16 +1,15 @@
 ---
 title: Proteggere i report personali | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - denying My Reports folder access
 - private folders [Reporting Services]
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 1777c84f25373806c3aab4f1c05a0a676b78097f
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: db7ab6718c89132a0aabbfdda826db786628dc68
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="secure-my-reports"></a>Proteggere i report personali
   La caratteristica Report personali è un'area di lavoro gestita dall'utente nella quale è possibile eseguire varie operazioni sui report. Per garantire che la cartella Report personali possa essere utilizzata in base alle caratteristiche per cui è stata progettata, le autorizzazioni necessarie per questa cartella sono meno restrittive rispetto a quelle di altre cartelle disponibili a livello generale. Per gli utenti con autorizzazioni di sola visualizzazione ed esecuzione di report in altre cartelle, potrebbe essere necessario un set di autorizzazioni più ampio che consenta di gestire le cartelle Report personali e il contenuto di cui sono proprietari. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili un'assegnazione e una definizione di ruoli specifici per questo scopo.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/09/2018
   
  Un'assegnazione di ruolo per la funzionalità **Report personali** è costituita dai componenti seguenti:  
   
--   La cartella Report personali dell'utente, che si trova nel percorso Cartelle utenti\\*\<nomeutente>*\Report personali.  
+-   La cartella Report personali dell'utente, che si trova nel percorso Cartelle utenti\\*\<nomeutente>* \Report personali.  
   
 -   L'account utente, che viene determinato quando la cartella Report personali viene attivata. La cartella viene attivata quando un utente fa clic su una cartella Report personali in Gestione report oppure quando viene eseguita la pubblicazione di un report in una cartella Report personali da Progettazione report. La cartella viene inoltre attivata quando un utente richiede proprietà tramite il collegamento Report personali.  
   

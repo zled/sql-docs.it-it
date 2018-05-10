@@ -1,6 +1,6 @@
-﻿---
-title: Le impostazioni utente e dell'area di lavoro in SQL Operations Studio (anteprima) | Microsoft Docs
-description: Come modificare le impostazioni utente e dell'area di lavoro in SQL Operations Studio (anteprima).
+---
+title: Studio operazioni SQL (anteprima) utente e le impostazioni dell'area di lavoro | Documenti Microsoft
+description: Come modificare Studio operazioni SQL (anteprima) utente e le impostazioni dell'area di lavoro.
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
@@ -9,61 +9,60 @@ ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: bbabb96b46a7054ed22daf034413df05c903e553
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
-ms.translationtype: HT
+ms.openlocfilehash: 93dd73b9ba77e45f284062e8a768c3f035bcac1b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-and-workspace-settings"></a>Impostazioni utente e dell'area di lavoro
 
-È facile configurare [!INCLUDE[name-sos](../includes/name-sos-short.md)] in base alle proprie esigenze tramite le impostazioni. Quasi tutte le parti dell'editor di [!INCLUDE[name-sos](../includes/name-sos-short.md)], l'interfaccia utente e i comportamenti funzionali sono modificabili tramite apposite opzioni.
+È facile da configurare [!INCLUDE[name-sos](../includes/name-sos-short.md)] alle proprie esigenze tramite le impostazioni. Quasi tutte le parti di [!INCLUDE[name-sos](../includes/name-sos-short.md)]dell'editor, interfaccia utente e un comportamento funzionale sono disponibili opzioni è possibile modificare.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] fornisce due ambiti diversi per le impostazioni:
 
-* **Utente**: queste impostazioni si applicano globalmente a qualsiasi istanza di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
-* **Area di lavoro**: sono impostazioni specifiche di una cartella nel computer e sono disponibili solo quando la cartella è aperta in Esplora risorse dalla barra laterale. Le impostazioni definite in questo ambito ridefiniscono quelle di ambito utente.
+* **Utente** queste impostazioni si applicano globalmente a qualsiasi istanza di [!INCLUDE[name-sos](../includes/name-sos-short.md)] si apre.
+* **Area di lavoro** le impostazioni dell'area sono impostazioni specifiche per una cartella nel computer in uso e sono disponibili solo quando la cartella è aperta nella barra laterale di Explorer. Le impostazioni definite in questo ambito di eseguire l'override l'ambito dell'utente.
 
-## <a name="creating-user-and-workspace-settings"></a>Creazione di impostazioni utente e dell'area di lavoro
+## <a name="creating-user-and-workspace-settings"></a>Creazione di utenti e le impostazioni dell'area di lavoro
 
-Il comando **File**>**Preferenze**>**Impostazioni** (**sqlops**>**Preferenze**>**Impostazioni** su Mac) fornisce il punto di ingresso per configurare le impostazioni utente e dell'area di lavoro. Esse vengono fornite con un elenco di impostazioni predefinite. Copiare qualsiasi impostazione si desideri modificare nell'appropriato file `settings.json`. Le schede a destra consentono di passare rapidamente tra i file delle impostazioni utente e dell'area di lavoro.
+Il comando di menu **File** > **preferenze** > **impostazioni** (**codice**  >  **Preferenze** > **impostazioni** su Mac) fornisce il punto di ingresso per configurare le impostazioni utente e dell'area di lavoro. Vengono fornite con un elenco di impostazioni predefinite. Copia di qualsiasi impostazione che si desidera modificare appropriati `settings.json` file. Le schede a destra consentono di passare rapidamente tra i file delle impostazioni utente e dell'area di lavoro.
 
-È inoltre possibile aprire le impostazioni utente e dell'area di lavoro dal **Riquadro comandi** (**Ctrl+MAIUSC+P**) con **Preferenze: Apri impostazioni utente** e **Preferenze: Apri impostazioni area di lavoro** o utilizzare il tasto di scelta rapida (**Ctrl+,**).
+È inoltre possibile aprire le impostazioni utente e dell'area di lavoro dal **comando tavolozza** (**Ctrl + MAIUSC + P**) con **preferenze: aprire le impostazioni utente** e  **Preferenze: Aprire le impostazioni dell'area** o utilizzare il tasto di scelta rapida (**Ctrl +**).
 
-Nell'esempio seguente vengono disabilitati i numeri di riga nell'editor e viene abilitata la funzionalità di *indentazione automatica* del codice al cambio del testo.
+Nell'esempio seguente disabilita i numeri di riga nell'editor e configura le righe di codice per essere rientrate automaticamente.
 
 ![Impostazioni di esempio](media/settings/sample-settings.png)
 
-Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../includes/name-sos-short.md)] dopo aver modificato e salvato il file `settings.json`.
+Le modifiche alle impostazioni vengono ricaricate da [!INCLUDE[name-sos](../includes/name-sos-short.md)] dopo aver modificato `settings.json` viene salvato.
 
->**Nota:** le impostazioni dell'area di lavoro sono utili per la condivisione delle impostazioni specifiche di un progetto in un team.
+>**Nota:** dell'area di lavoro impostazioni sono utili per la condivisione delle impostazioni specifiche di un progetto in un team.
 
-## <a name="settings-file-locations"></a>Percorsi dei file delle impostazioni
+## <a name="settings-file-locations"></a>Percorsi dei File di impostazioni
 
-A seconda della piattaforma, il file delle impostazioni utente si trova nei percorsi seguenti:
+A seconda della piattaforma, il file di impostazioni utente si trova qui:
 
 * **Windows** `%APPDATA%\sqlops\User\settings.json`
 * **Mac** `$HOME/Library/Application Support/sqlops/User/settings.json`
 * **Linux** `$HOME/.config/sqlops/User/settings.json`
 
-Il file delle impostazioni dell'area di lavoro si trova sotto la cartella `.sqlops` nel progetto.
+Il file di impostazione dell'area di lavoro si trova sotto il `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` cartella nel progetto.
 
 ## <a name="hot-exit"></a>Uscita a caldo
 
-In caso di uscita, SQL Operations Studio memorizza le modifiche non salvate sui file per impostazione predefinita. Si tratta della stessa funzionalità presente in Visual Studio Code.
+Operazioni SQL Studio verranno memorizzate le modifiche non salvate per i file quando si esce per impostazione predefinita. Questo è lo stesso come la funzionalità di uscita di frequente in Visual Studio Code.
 
-Per gestire tale comportamento, modificare l'opzione `files.hotExit`. Per informazioni dettagliate, vedere [Uscita a caldo (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+Per impostazione predefinita, uscita frequente è disattivata. Abilitare l'area uscita modificando il `files.hotExit` impostazione. Per informazioni dettagliate, vedere [Exit a caldo (nella documentazione di Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
 
 
 ## <a name="tab-color"></a>Colore della scheda
 
-Per semplificare l'identificazione delle connessioni utilizzate, le schede aperte nell'editor possono essere impostate con un proprio colore in modo che esso corrisponda a quello definito nel gruppo di Server a cui appartiene la connessione. Per impostazione predefinita, i colori delle schede sono disattivati. Abilitare i colori delle schede modificando l'impostazione `sql.tabColorMode`.
+Per semplificare l'identificazione le connessioni che si sta utilizzando, le schede aperte nell'editor possono avere i loro colori impostati in modo che corrisponda il colore del gruppo di Server a cui appartiene la connessione. Per impostazione predefinita, i colori delle schede sono disattivati per impostazione predefinita. Abilitare i colori delle schede modificando il `sql.tabColorMode` impostazione.
 
 ## <a name="additional-resources"></a>Risorse aggiuntive
 
-Poiché [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le impostazioni utente e dell'area di lavoro da Visual Studio Code, informazioni dettagliate sono incluse nell'articolo sulle [impostazioni per Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings).
+Poiché [!INCLUDE[name-sos](../includes/name-sos-short.md)] eredita le impostazioni utente e dell'area di lavoro funzionalità dal codice di Visual Studio, informazioni dettagliate sulle impostazioni sono incluse nel [impostazioni per il codice di Visual Studio](https://code.visualstudio.com/docs/getstarted/settings) articolo.

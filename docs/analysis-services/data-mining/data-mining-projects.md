@@ -1,31 +1,23 @@
 ---
 title: Progetti di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f545d90cd695eef78f4ae8b33eef7f2f32e9439f
-ms.sourcegitcommit: d8ab09ad99e9ec30875076acee2ed303d61049b7
-ms.translationtype: MT
+ms.openlocfilehash: e01ea2027e95d3bb6e2635e48488df6b471bf238
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-projects"></a>Progetti di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
+  Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Durante il processo di progettazione, gli oggetti creati nel progetto sono disponibili per l'esecuzione di test e query come parte di un database dell'area di lavoro. Per consentire agli utenti di eseguire query o esplorare gli oggetti nel progetto, è necessario distribuire il progetto in un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in esecuzione in modalità multidimensionale.  
   
  In questo argomento vengono fornite informazioni di base necessarie per comprendere e creare i progetti di data mining.  
   
@@ -97,7 +89,7 @@ Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](..
   
  Un progetto di data mining può fare riferimento a più origini dati. Anche se un modello di data mining può utilizzare una sola origine dati alla volta, il progetto può avere più modelli tratti da origini dati diverse.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportati dati da più provider esterni e nel data mining di SQL Server è possibile utilizzare sia dati relazionali sia dati del cubo come origine dati. Tuttavia, se si sviluppano entrambi i tipi di progetti (modelli basati su origini relazionali e modelli basati su cubi OLAP) può essere utile svilupparli e gestirli in progetti separati.  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono supportati dati da più provider esterni e nel data mining di SQL Server è possibile utilizzare sia dati relazionali sia dati del cubo come origine dati. Tuttavia, se si sviluppano entrambi i tipi di progetti (modelli basati su origini relazionali e modelli basati su cubi OLAP) può essere utile svilupparli e gestirli in progetti separati.  
   
 -   In genere i modelli basati su un cubo OLAP devono essere sviluppati all'interno della soluzione di progettazione OLAP. Ciò è dovuto al fatto che i modelli basati su un cubo devono elaborare il cubo per aggiornare i dati. In genere è necessario utilizzare dati del cubo solo quando si tratta del mezzo principale di archiviazione dati e accesso o quando si richiedono le aggregazioni, le dimensioni e gli attributi creati dal progetto multidimensionale.  
   
@@ -188,7 +180,7 @@ Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](..
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  Dopo avere creato un modello, è possibile analizzare i risultati e decidere quali modelli offrono prestazioni ottimali.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diversi grafici che è possibile utilizzare per fornire strumenti che consentono di confrontare direttamente i modelli di data mining e di scegliere quello più accurato o più utile. Tra questi strumenti sono inclusi un grafico di accuratezza, un grafico dei profitti e una matrice di classificazione. È possibile generare tali grafici usando la scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining.  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sono disponibili diversi grafici che è possibile utilizzare per fornire strumenti che consentono di confrontare direttamente i modelli di data mining e di scegliere quello più accurato o più utile. Tra questi strumenti sono inclusi un grafico di accuratezza, un grafico dei profitti e una matrice di classificazione. È possibile generare tali grafici usando la scheda **Grafico accuratezza modello di data mining** di Progettazione modelli di data mining.  
   
  È anche possibile utilizzare il report convalida incrociata per eseguire il campionamento secondario iterativo dei dati per determinare se il modello è influenzato da un determinato set di dati. Le statistiche fornite dal report possono essere utilizzate per confrontare in modo obiettivo i modelli e per valutare la qualità dei dati di training.  
   
@@ -198,13 +190,13 @@ Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](..
   
   
 ###  <a name="bkmk_Predict"></a> Create Predictions  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fornisce un linguaggio di query denominato DMX (Data Mining Extension) che costituisce la base per la creazione di stime ed è facilmente gestibile tramite script. Per agevolare la compilazione di query di stima DMX, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un generatore query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sono inoltre presenti molti modelli DMX per l'editor di query. Se non si ha esperienza nelle query di stima, è consigliabile utilizzare il generatore query fornito sia in Progettazione modello di data mining sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Data Mining Tools](../../analysis-services/data-mining/data-mining-tools.md).  
+ In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è disponibile un linguaggio di query denominato DMX (Data Mining Extension) che costituisce la base per la creazione di stime ed è facilmente gestibile tramite script. Per agevolare la compilazione di query di stima DMX, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disponibile un generatore query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sono inoltre presenti molti modelli DMX per l'editor di query. Se non si ha esperienza nelle query di stima, è consigliabile utilizzare il generatore query fornito sia in Progettazione modello di data mining sia in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Data Mining Tools](../../analysis-services/data-mining/data-mining-tools.md).  
   
  Le stime create in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] non sono persistenti, pertanto se le query sono complesse o è necessario riprodurre i risultati, è consigliabile salvare le query di stima in file di query DMX, generarne script o incorporarle come parte di un pacchetto di Integration Services.  
   
   
 ##  <a name="bkmk_API"></a> Accesso a livello di codice agli oggetti di data mining  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre diversi strumenti per l'utilizzo a livello di codice dei progetti di data mining e dei relativi oggetti. Il linguaggio DMX offre istruzioni che è possibile utilizzare per creare origini dati e viste origine dati, nonché per creare, eseguire il training e utilizzare strutture e modelli di data mining. Per altre informazioni, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]offre diversi strumenti che è possibile utilizzare a livello di codice con i progetti di data mining e gli oggetti in essi contenuti. Il linguaggio DMX offre istruzioni che è possibile utilizzare per creare origini dati e viste origine dati, nonché per creare, eseguire il training e utilizzare strutture e modelli di data mining. Per altre informazioni, vedere [Guida di riferimento a DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md).  
   
  È inoltre possibile eseguire tali attività tramite ASSL (Analysis Services Scripting Language) oppure mediante AMO (Analysis Management Objects). Per altre informazioni, vedere [Sviluppo con XMLA in Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
@@ -215,16 +207,16 @@ Un progetto di data mining è parte di una soluzione [!INCLUDE[ssASnoversion](..
 |Attività|Argomento|  
 |-----------|------------|  
 |Viene descritto come utilizzare colonne della struttura di data mining|[Creare una struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)|  
-|Vengono fornite ulteriori informazioni sull'aggiunta di nuovi modelli di data mining e sull'elaborazione di una struttura e dei relativi modelli|[Aggiungere modelli di Data Mining a una struttura &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Vengono fornite ulteriori informazioni sull'aggiunta di nuovi modelli di data mining e sull'elaborazione di una struttura e dei relativi modelli|[Aggiungere modelli di Data Mining a una struttura & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Vengono forniti collegamenti a risorse utili per personalizzare gli algoritmi per la compilazione di modelli di data mining|[Personalizzare struttura e modelli di Data Mining](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
 |Vengono forniti collegamenti alle informazioni su ciascuno dei visualizzatori dei modelli di data mining|[Visualizzatori modello di Data Mining](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
-|Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Vengono fornite informazioni sulla creazione di un grafico di accuratezza, un grafico dei profitti o una matrice di classificazione o sul test di una struttura di data mining|[Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Vengono fornite informazioni sulle opzioni di elaborazione e sulle autorizzazioni|[L'elaborazione di oggetti di Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Vengono fornite ulteriori informazioni su Analysis Services|[Database modello multidimensionale ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Progettazione di Data Mining](../../analysis-services/data-mining/data-mining-designer.md)   
- [Creazione di modelli multidimensionali tramite SQL Server Data Tools &#40; SSDT &#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Creazione di modelli multidimensionali tramite SQL Server Data Tools & #40; SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Database dell'area di lavoro](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  
   
   

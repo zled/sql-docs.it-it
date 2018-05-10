@@ -1,35 +1,23 @@
 ---
 title: Aggiungere modelli di Data Mining a una struttura (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining structures [Analysis Services], creating
-- mining models [Analysis Services], creating
-- mining models [Analysis Services], modifying
-ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 46207c91d6bfbbb122f42213b779841c91ac996a
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Aggiungere modelli di data mining a una struttura (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  
+  Una struttura di data mining può supportare più modelli di data mining. Pertanto dopo avere completato la procedura guidata è possibile aprire la struttura e aggiungere nuovi modelli di data mining. Ogni volta che si crea un modello, è possibile utilizzare un algoritmo diverso, modificare i parametri o applicare filtri per utilizzare un subset di dati diverso.  
   
 ## <a name="adding-new-mining-models"></a>Aggiunta di nuovi modelli di data mining  
  Quando si utilizza Creazione guidata modello di data mining per creare un nuovo modello di data mining, per impostazione predefinita è sempre necessario creare prima una struttura di data mining. Tramite la procedura guidata è quindi possibile aggiungere un modello di data mining iniziale alla struttura. Tuttavia, non è necessario creare immediatamente un modello. Se si crea solo la struttura, non è necessario prendere una decisione in merito alla colonna da utilizzare come attributo stimabile o su come utilizzare i dati in un determinato modello. Al contrario, è sufficiente impostare la struttura dei dati generale da utilizzare in futuro e in seguito utilizzare [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md) per aggiungere nuovi modelli di data mining basati su tale struttura.  
@@ -65,7 +53,7 @@ Una struttura di data mining può supportare più modelli di data mining. Pertan
  In alcuni casi può anche essere necessario specificare il *contenuto della colonna*. Nel data mining di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la proprietà Tipo di contenuto di ogni colonna di dati indica all'algoritmo come devono essere elaborati i dati in tale colonna. Se ad esempio i dati includono una colonna Income, è necessario specificare che la colonna contiene numeri continui impostando il tipo di contenuto su Continuous. Tuttavia, è anche possibile specificare che i numeri della colonna Income devono essere raggruppati in bucket impostando il tipo di contenuto su Discretized e, se si desidera, specificando il numero esatto di bucket. È possibile creare modelli diversi che gestiscono le colonne in modo diverso. Ad esempio, è possibile provare con un modello che raggruppa i clienti in tre bucket di età e un altro che li raggruppa in 10 bucket di età.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Strutture di data mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Strutture di data mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Creare una struttura di Data Mining relazionale](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Proprietà modello di data mining](../../analysis-services/data-mining/mining-model-properties.md)   
  [Colonne del modello di data mining](../../analysis-services/data-mining/mining-model-columns.md)  

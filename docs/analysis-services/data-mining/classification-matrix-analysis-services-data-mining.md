@@ -1,39 +1,23 @@
 ---
 title: Matrice di classificazione (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- mining models [Analysis Services], validating
-- validating data mining models
-- viewing mining accuracy
-- displaying mining accuracy
-- confusion matrix [data mining]
-- classification matrix [Analysis Services]
-- accuracy testing [data mining]
-ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 7897c756eb0aa9aa53ed56356052974e53afd601
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: c2d3eeb8eb8a50988e163b32300cb456fea7516b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matrice di classificazione (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una *matrice di classificazione* consente di ordinare tutti i case del modello in categorie, determinando se il valore stimato corrisponde a quello effettivo. Vengono calcolati tutti i case di ogni categoria, quindi vengono visualizzati i totali nella matrice. La matrice di classificazione è uno strumento standard per la valutazione di modelli statistici, talvolta definita *matrice di confusione*.  
+  Una *matrice di classificazione* consente di ordinare tutti i case del modello in categorie, determinando se il valore stimato corrisponde a quello effettivo. Vengono calcolati tutti i case di ogni categoria, quindi vengono visualizzati i totali nella matrice. La matrice di classificazione è uno strumento standard per la valutazione di modelli statistici, talvolta definita *matrice di confusione*.  
   
  Nel grafico creato quando si sceglie l'opzione **Matrice di classificazione** è possibile confrontare i valori effettivi con quelli stimati per ogni stato stimato specificato. Le righe nella matrice rappresentano i valori stimati per il modello, mentre le colonne rappresentano i valori effettivi. Le categorie usate nell'analisi sono *falso positivo*, *vero positivo*, *falso negativo*e *vero negativo*.  
   
@@ -85,12 +69,12 @@ Una *matrice di classificazione* consente di ordinare tutti i case del modello i
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base di Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40; Esercitazione di base di Data Mining &#41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
-|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[La convalida incrociata &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Test e convalida le attività e procedure relative alla &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base di Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza & #40; Esercitazione di base di Data Mining & #41;](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)|  
+|Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Grafico dei profitti & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Vengono descritti gli utilizzi della convalida incrociata per modelli e strutture di data mining.|[La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Test e convalida le attività e procedure relative alla & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -1,44 +1,23 @@
 ---
-title: "Modalità di archiviazione e l'elaborazione di partizione | Documenti Microsoft"
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- hybrid OLAP
-- data storage [Analysis Services]
-- relational OLAP
-- multidimensional OLAP
-- partitions [Analysis Services], storage
-- storing data [Analysis Services], partitions
-- HOLAP
-- MOLAP
-- ROLAP
-ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
-caps.latest.revision: 
-author: Minewiskan
+title: Modalità di archiviazione e l'elaborazione di partizione | Documenti Microsoft
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2d5eab13f606ada93eaf927e8c01ecb09644b7ac
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 3792cc06fc1fd679f5b708d5e1eec618038951af
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partizioni - l'elaborazione e modalità di archiviazione delle partizioni
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La modalità di archiviazione di una partizione influisce sulle prestazioni di esecuzione delle query e di elaborazione e su requisiti e percorsi di archiviazione della partizione e del relativo cubo e gruppo di misure padre. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
+  La modalità di archiviazione di una partizione influisce sulle prestazioni di esecuzione delle query e di elaborazione e su requisiti e percorsi di archiviazione della partizione e del relativo cubo e gruppo di misure padre. La scelta della modalità di archiviazione influisce inoltre sulle opzioni di elaborazione.  
   
  Una partizione può utilizzare una delle tre modalità di archiviazione di base seguenti:  
   
@@ -53,7 +32,7 @@ La modalità di archiviazione di una partizione influisce sulle prestazioni di e
 ## <a name="molap"></a>MOLAP  
  La modalità di archiviazione MOLAP determina l'archiviazione delle aggregazioni della partizione e di una copia dei dati di origine in una struttura multidimensionale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durante l'elaborazione della partizione. Questa struttura MOLAP è ottimizzata in modo da garantire le massime prestazioni di esecuzione delle query. L'archiviazione può essere eseguita in un percorso sul computer in cui la partizione è definita o su un altro computer che esegue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Poiché una copia dei dati di origine risiede nella struttura multidimensionale, le query possono essere risolte senza accedere ai dati di origine della partizione. I tempi di risposta alle query possono essere ridotti significativamente utilizzando le aggregazioni. I dati nella struttura MOLAP della partizione sono aggiornati all'elaborazione più recente della partizione.  
   
- Poiché i dati di origine vengono modificati, gli oggetti nell'archivio MOLAP devono essere elaborati periodicamente in modo da incorporare tali modifiche e renderle disponibili agli utenti. L'elaborazione determina l'aggiornamento completo o incrementale dei dati nella struttura MOLAP. L'intervallo di tempo tra un'elaborazione e quella successiva crea un periodo di latenza durante il quale i dati negli oggetti OLAP potrebbero non corrispondere ai dati di origine. È possibile eseguire l'aggiornamento completo o incrementale degli oggetti nell'archivio MOLAP senza porre la partizione o il cubo in modalità offline. In alcune situazioni, tuttavia, può essere necessario porre un cubo in modalità offline per elaborare determinate modifiche strutturali agli oggetti OLAP. Il tempo di inattività necessario per aggiornare l'archivio MOLAP può essere ridotto al minimo aggiornando ed elaborando i cubi su un server dell'area di gestione temporanea e utilizzando la sincronizzazione di database per copiare gli oggetti elaborati nel server di produzione. È inoltre possibile utilizzare la memorizzazione nella cache attiva per ridurre al minimo la latenza e ottimizzare la disponibilità mantenendo la maggior parte dei vantaggi offerti in termini di prestazioni dall'archiviazione MOLAP. Per ulteriori informazioni, vedere [la memorizzazione nella cache &#40; Le partizioni &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [Sincronizzare i database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), e [l'elaborazione di un modello multidimensionale &#40; Analysis Services &#41; ](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
+ Poiché i dati di origine vengono modificati, gli oggetti nell'archivio MOLAP devono essere elaborati periodicamente in modo da incorporare tali modifiche e renderle disponibili agli utenti. L'elaborazione determina l'aggiornamento completo o incrementale dei dati nella struttura MOLAP. L'intervallo di tempo tra un'elaborazione e quella successiva crea un periodo di latenza durante il quale i dati negli oggetti OLAP potrebbero non corrispondere ai dati di origine. È possibile eseguire l'aggiornamento completo o incrementale degli oggetti nell'archivio MOLAP senza porre la partizione o il cubo in modalità offline. In alcune situazioni, tuttavia, può essere necessario porre un cubo in modalità offline per elaborare determinate modifiche strutturali agli oggetti OLAP. Il tempo di inattività necessario per aggiornare l'archivio MOLAP può essere ridotto al minimo aggiornando ed elaborando i cubi su un server dell'area di gestione temporanea e utilizzando la sincronizzazione di database per copiare gli oggetti elaborati nel server di produzione. È inoltre possibile utilizzare la memorizzazione nella cache attiva per ridurre al minimo la latenza e ottimizzare la disponibilità mantenendo la maggior parte dei vantaggi offerti in termini di prestazioni dall'archiviazione MOLAP. Per altre informazioni, vedere [la memorizzazione nella cache &#40;partizioni&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), [sincronizzare i database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md), e [l'elaborazione di un modello multidimensionale &#40; Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md).  
   
 ## <a name="rolap"></a>ROLAP  
  La modalità di archiviazione ROLAP determina l'archiviazione delle aggregazioni della partizione in viste indicizzate del database relazionale specificato nell'origine dei dati della partizione. A differenza della modalità di archiviazione MOLAP, la modalità ROLAP non prevede l'archiviazione di una copia dei dati di origine nelle cartelle dei dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Quando non è possibile derivare risultati dalla cache delle query, per rispondere alle query viene invece eseguito l'accesso alle viste indicizzate dell'origine dei dati. I tempi di risposta alle query sono in genere più lenti con la modalità di archiviazione ROLAP rispetto alle modalità di archiviazione MOLAP e HOLAP, così come sono in genere più lenti i tempi di elaborazione con ROLAP. La modalità ROLAP consente inoltre agli utenti di visualizzare i dati in tempo reale e di risparmiare spazio di archiviazione quando si utilizzano set di dati di grandi dimensioni su cui vengono raramente eseguite query, ad esempio dati esclusivamente cronologici.  
@@ -93,8 +72,8 @@ La modalità di archiviazione di una partizione influisce sulle prestazioni di e
  Le partizioni archiviate come HOLAP presentano dimensioni inferiori rispetto alle partizioni MOLAP equivalenti, poiché non contengono i dati di origine, e garantiscono tempi di risposta più rapidi rispetto alle partizioni ROLAP per le query in cui sono coinvolti dati di riepilogo. La modalità di archiviazione HOLAP è in genere appropriata per partizioni di cubi che necessitano di tempi di risposta alle query rapidi per riepiloghi basati su un'ingente quantità di dati di origine. Nei casi in cui gli utenti generano query che devono accedere ai dati a livello foglia, ad esempio per il calcolo di mediane, è in genere preferibile la modalità MOLAP.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La memorizzazione nella cache &#40; Le partizioni &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
+ [La memorizzazione nella cache & #40; Le partizioni & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md)   
  [Sincronizzare i database di Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Le partizioni &#40; Analysis Services - dati multidimensionali &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Le partizioni & #40; Analysis Services - dati multidimensionali & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

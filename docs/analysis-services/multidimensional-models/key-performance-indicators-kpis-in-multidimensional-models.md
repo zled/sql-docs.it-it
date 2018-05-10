@@ -1,40 +1,23 @@
 ---
 title: Indicatori di prestazioni (KPI) nei modelli multidimensionali chiave | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- viewing Key Performance Indicators
-- Key Performance Indicators [Analysis Services]
-- KPIs [Analysis Services]
-- OLAP objects [Analysis Services], performance indicators
-- weights [Analysis Services]
-- displaying Key Performance Indicators
-- parent KPIs [Analysis Services]
-- child KPIs
-ms.assetid: 73aee2da-da30-44f1-829c-0a4c078a7768
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 396ac061fca578b06766830948001387c65b036e
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: f7c49068db1ee60a6b417b7ef2bc4348693fc500
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Indicatori KPI nei modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e  
+  Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rappresenta una misurazione quantificabile per la valutazione dei risultati aziendali e  
   
  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]un indicatore KPI è costituito da una raccolta di calcoli associati a un gruppo di misure in un cubo e usati per valutare il successo aziendale. Questi calcoli sono in genere una combinazione di espressioni MDX (Multidimensional Expressions) o di membri calcolati. Gli indicatori KPI dispongono inoltre di metadati aggiuntivi che offrono informazioni sulla modalità di visualizzazione dei risultati dei calcoli degli indicatori stessi nelle applicazioni client.  
   
@@ -67,7 +50,7 @@ Nella terminologia aziendale, un indicatore di prestazioni chiave (KPI) rapprese
 ## <a name="parent-kpis"></a>Indicatori di prestazioni chiave padre  
  In un'organizzazione potrebbe essere necessario tenere traccia di metriche aziendali diverse a più livelli. Potrebbero ad esempio venire utilizzati solo due o tre indicatori di prestazioni chiave per valutare il successo aziendale, ma questi indicatori validi per l'intera azienda potrebbero essere basati su altri tre o quattro indicatori di prestazioni chiave calcolati dalle business unit nella società. Le business unit di una società potrebbero inoltre utilizzare dati statistici diversi per calcolare lo stesso indicatore di prestazioni chiave, dei cui risultati è possibile eseguire il rollup nell'indicatore di prestazioni chiave valido per l'intera azienda.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile definire una relazione padre-figlio tra indicatori di prestazioni chiave. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Consente di definire una relazione padre-figlio tra gli indicatori KPI. Questa relazione padre-figlio consente di utilizzare i risultati dell'indicatore di prestazioni chiave figlio per calcolare i risultati dell'indicatore di prestazioni chiave padre. Questa relazione può inoltre essere utilizzata dalle applicazioni client per visualizzare in modo corretto gli indicatori di prestazioni chiave padre e figlio.  
   
 ## <a name="weights"></a>Pesi  
  È possibile assegnare pesi anche agli indicatori di prestazioni chiave figlio. I pesi consentono ad [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] di modificare in modo proporzionale i risultati dell'indicatore di prestazioni chiave figlio quando si calcola il valore dell'indicatore di prestazioni chiave padre.  

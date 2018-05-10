@@ -1,38 +1,19 @@
 ---
 title: Backup e ripristino di database di Analysis Services | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.ssmsimbi.Restore.f1
-- sql13.asvs.ssmsimbi.Backup.f1
-helpviewer_keywords:
-- backing up databases [Analysis Services]
-- encryption [Analysis Services]
-- databases [Analysis Services], restoring
-- cryptography [Analysis Services]
-- databases [Analysis Services], backing up
-- restoring databases [Analysis Services]
-- recovery [Analysis Services]
-ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: a3ca95b34e684fa5ec67d0dab4720020a0e4e883
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d744fbed12ab9231e044d879db2e168ab23fa22b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Backup e ripristino di database di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +55,7 @@ ms.lasthandoff: 02/15/2018
  Gli amministratori possono eseguire il backup di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in un singolo file di backup (con estensione abf) di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , indipendentemente dalle dimensioni del database. Per istruzioni dettagliate, vedere [come eseguire il backup di un database di Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) e [Automatizzare il backup di un database di Analysis Services (TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html).  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], usato per il caricamento e l'esecuzione di query sui modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in un ambiente SharePoint, carica i relativi modelli dai database del contenuto di SharePoint. Questi database di contenuto sono relazionali e vengono eseguiti nel motore di database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di conseguenza, non è prevista alcuna strategia di backup e ripristino di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se è stato predisposto un piano di ripristino di emergenza per il contenuto di SharePoint, tale piano include i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] archiviati nei database di contenuto.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], utilizzato per il caricamento e l'esecuzione di query [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modelli di dati in un ambiente SharePoint, carica i relativi modelli dai database del contenuto SharePoint. Questi database di contenuto sono relazionali e vengono eseguiti nel motore di database relazionale di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Di conseguenza, non è prevista alcuna strategia di backup e ripristino di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se è stato predisposto un piano di ripristino di emergenza per il contenuto di SharePoint, tale piano include i modelli di dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] archiviati nei database di contenuto.  
   
  **Partizioni remote**  
   

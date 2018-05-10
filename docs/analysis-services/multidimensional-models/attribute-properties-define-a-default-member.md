@@ -1,36 +1,23 @@
 ---
 title: Definire un membro predefinito | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- default members
-- attributes [Analysis Services], default members
-- members [Analysis Services], default
-- DefaultMember property
-ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a457e54c1653cfc996de2040a09e8b22578307f0
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 875aa329b79215fc8075d418d168e38ba09a71d5
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-properties---define-a-default-member"></a>Attributo di proprietà: definire un membro predefinito
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Il membro predefinito di una gerarchia dell'attributo viene utilizzato per valutare le espressioni quando una gerarchia dell'attributo non è inclusa in una query. Il membro predefinito viene ignorato ogni volta che una query include una gerarchia dell'attributo o dell'utente contenente l'attributo che dà origine alla gerarchia dell'attributo, poiché viene utilizzato il membro specificato nella query.  
+  Il membro predefinito di una gerarchia dell'attributo viene utilizzato per valutare le espressioni quando una gerarchia dell'attributo non è inclusa in una query. Il membro predefinito viene ignorato ogni volta che una query include una gerarchia dell'attributo o dell'utente contenente l'attributo che dà origine alla gerarchia dell'attributo, poiché viene utilizzato il membro specificato nella query.  
   
  Il membro predefinito per una gerarchia dell'attributo viene impostato specificando un membro dell'attributo come valore della proprietà **DefaultMember** per la gerarchia dell'attributo. È possibile impostare questa proprietà nella scheda Struttura dimensione di Progettazione dimensioni o nello script di calcolo del cubo nella scheda Calcolo di Progettazione cubi in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. È inoltre possibile specificare la proprietà **DefaultMember** per un ruolo di sicurezza (sostituendo il membro predefinito impostato sulla dimensione) nella scheda Dati della dimensione quando viene definita la sicurezza delle dimensioni. Per evitare problemi di risoluzione del nome, definire il membro predefinito nello script MDX del cubo nelle situazioni seguenti: se il cubo fa riferimento a una dimensione del database più di una volta, se la dimensione nel cubo ha un nome diverso da quello nel database o se si desidera avere membri predefiniti diversi in cubi diversi.  
   

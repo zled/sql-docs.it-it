@@ -1,37 +1,23 @@
 ---
 title: Query di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- prediction queries [Analysis Services]
-- queries [DMX], creating
-- prediction queries [DMX]
-- Prediction Query Builder
-- mining models [Analysis Services], querying
-ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 260a6d48b6da55f65098790df73b01a10e35e126
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: eb1e42ac7f9cf3aeaf58d6e1fb3f913c8c164047
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-queries"></a>Query di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Le query di data mining sono utili per molti scopi. È possibile effettuare le operazioni seguenti:  
+  Le query di data mining sono utili per molti scopi. È possibile effettuare le operazioni seguenti:  
   
 -   Applicare il modello ai nuovi dati per eseguire una o più stime. È possibile fornire valori di input come parametri o in un batch.  
   
@@ -60,7 +46,7 @@ Le query di data mining sono utili per molti scopi. È possibile effettuare le o
 ##  <a name="bkmk_Understand"></a> Informazioni sulle query di data mining  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta i tipi di query seguenti:  
   
--   [Query di stima &#40; Data Mining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+-   [Query di stima & #40; Data Mining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
      Query mediante le quali vengono eseguite inferenze in base agli schemi del modello e dai dati di input.  
   
@@ -68,7 +54,7 @@ Le query di data mining sono utili per molti scopi. È possibile effettuare le o
   
      Query mediante le quali vengono restituiti metadati, statistiche e altre informazioni sul modello stesso.  
   
--   [Data Mining query drill-through &#40; &#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+-   [Data Mining query drill-through & #40; & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
      Query mediante le quali è possibile recuperare i dati del case sottostanti per il modello o persino i dati della struttura che non è stata utilizzata nel modello.  
   
@@ -149,13 +135,13 @@ Le query di data mining sono utili per molti scopi. È possibile effettuare le o
 ## <a name="in-this-section"></a>Contenuto della sezione  
  Negli argomenti di questa sezione viene presentato dettagliatamente ogni tipo di query di data mining e vengono forniti collegamenti a esempi dettagliati di creazione di query sui modelli di data mining.  
   
- [Query di stima &#40; Data Mining &#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Query di stima & #40; Data Mining & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
  [Query sul contenuto &#40;Data mining&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)  
   
  [Query drill-through &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
- [Query di definizione dei dati &#40; Data Mining &#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
+ [Query di definizione dei dati & #40; Data Mining & #41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
  [Data Mining Query Tools](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
@@ -174,7 +160,7 @@ Le query di data mining sono utili per molti scopi. È possibile effettuare le o
 |Utilizzare i componenti di data mining in Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Algoritmi di Data Mining &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Algoritmi di Data Mining & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Contenuto dei modelli di data mining &#40;Analysis Services - Data mining&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   
   

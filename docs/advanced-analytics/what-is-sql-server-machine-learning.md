@@ -7,11 +7,11 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1b33d7fb0736e1d87aa46d052ff9e42fa740662e
-ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
+ms.openlocfilehash: d52196007b5a1de4753e9846e4057295113baa7b
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="what-is-sql-server-machine-learning-services"></a>Novità di servizi di SQL Server Machine Learning?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -23,7 +23,7 @@ La proposta di valore della chiave di servizi di Machine Learning è la potenza 
 Sono disponibili due opzioni per l'utilizzo di funzionalità di machine learning in SQL Server: 
 
 + [**SQL Server Machine Learning Services (In-Database)** ](r/sql-server-r-services.md) opera all'interno dell'istanza di motore di database, in cui il motore di calcolo è completamente integrato con il motore di database. La maggior parte delle installazioni sono questa opzione.
-+ [**Machine Learning Server (Standalone) di SQL Server** ](r/r-server-standalone.md) è un'installazione non SQL. Anche se si utilizza il programma di installazione di SQL Server per installare il server, è completamente separata da SQL Server. A livello funzionale, equivale a non-SQL [Machine Learning per Windows di Microsoft Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
++ [**Machine Learning Server (Standalone) di SQL Server** ](r/r-server-standalone.md) Machine Learning Server per Windows che viene eseguito indipendentemente dal motore di database. Anche se si utilizza il programma di installazione di SQL Server per installare il server, la funzionalità non è specifico dell'istanza. A livello funzionale, equivale a non-SQL Server [Machine Learning per Windows di Microsoft Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install).
 
 ## <a name="r-and-python-packages"></a>Pacchetti R e Python
 
