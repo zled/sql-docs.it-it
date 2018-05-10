@@ -1,17 +1,16 @@
 ---
 title: Controllo dell'accesso per dati sensibili nei pacchetti | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: security
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.packageprotectionlevel.f1
 - sql13.ssis.bids.projectprotectionlevel.f1
@@ -26,16 +25,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-caps.latest.revision: 
+caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: fd094efc965679119e0a15d9fc0fc97be27db4f4
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 329a9cbc48f2576160c53701dc199fb689ad9674
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Controllo dell'accesso per dati sensibili nei pacchetti
   Per proteggere i dati in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , è possibile impostare un livello di protezione in modo da proteggere i dati sensibili o tutti i dati all'interno del pacchetto. Inoltre, è possibile crittografare questi dati con una password o una chiave utente o utilizzare il sistema di crittografia del database. Inoltre, il livello di protezione che si utilizza per un pacchetto non è necessariamente statico, ma cambia durante tutto il ciclo di vita del pacchetto. Spesso si imposta un livello di protezione durante lo sviluppo e un altro appena si distribuisce il pacchetto.  
@@ -68,9 +66,9 @@ ms.lasthandoff: 01/25/2018
 |----------------------|-----------------|  
 |Non salva i dati sensibili (**DontSaveSensitive**)|Quando si salva il pacchetto, i valori delle proprietà riservate vengono eliminati. Con questo livello di protezione i dati non vengono crittografati, ma le proprietà contrassegnate come riservate non vengono salvate insieme al pacchetto. Di conseguenza i dati riservati non sono disponibili ad altri utenti, i quali dovranno specificarli quando aprono il pacchetto.<br /><br /> Se usato con l'utilità **dtutil** (dtutil.exe), questo livello di protezione corrisponde al valore 0.|  
 |Crittografa tutti i dati con una password (**EncryptAllWithPassword**)|Viene utilizzata una password per crittografare l'intero pacchetto. Il pacchetto viene crittografato con una password specificata dall'utente in fase di creazione o di esportazione del pacchetto. Per aprire il pacchetto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o per eseguirlo con l'utilità del prompt dei comandi **dtexec** , l'utente deve specificare la password del pacchetto. Se non specifica la password corretta, l'utente non può né aprire né eseguire il pacchetto.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 3.|  
-|Crittografa tutti i dati con una chiave utente (**EncryptAllWithUserKey**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare l'intero pacchetto. Il pacchetto può essere aperto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o eseguito con l'utilità del prompt dei comandi **dtexec** solo dall'utente che lo ha creato o esportato.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 4.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gli standard DPAPI. Per altre informazioni su DPAPI, vedere il sito MSDN Library all'indirizzo [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Crittografa tutti i dati con una chiave utente (**EncryptAllWithUserKey**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare l'intero pacchetto. Il pacchetto può essere aperto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o eseguito con l'utilità del prompt dei comandi **dtexec** solo dall'utente che lo ha creato o esportato.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 4.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gli standard DPAPI. Per altre informazioni su DPAPI, vedere MSDN Library all'indirizzo [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Crittografa tutti i dati sensibili con una password (**EncryptSensitiveWithPassword**)|Viene utilizzata una password per crittografare solo i valori delle proprietà riservate nel pacchetto. Per la crittografia viene utilizzato DPAPI. I dati riservati vengono salvati come parte del pacchetto, ma crittografati tramite una password specificata dall'utente corrente in fase di creazione o di esportazione del pacchetto. Per poter aprire il pacchetto in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , l'utente deve specificare la password. Se non specifica la password, il pacchetto viene aperto senza i dati riservati e l'utente corrente deve specificare nuovi valori per questi dati. I tentativi di esecuzione del pacchetto senza specificare la password hanno esito negativo. Per altre informazioni sulle password e sull'esecuzione dell'utilità della riga di comando, vedere [Utilità dtexec](../../integration-services/packages/dtexec-utility.md).<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 2.|  
-|Crittografa tutti i dati sensibili con una chiave utente (**EncryptSensitiveWithPassword**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare solo i valori delle proprietà riservate nel pacchetto. Il pacchetto può essere caricato solo da uno stesso utente in base allo stesso profilo. Gli altri utenti che aprono il pacchetto dovranno immettere le informazioni riservate. I tentativi di esecuzione del pacchetto hanno esito negativo. Per la crittografia viene utilizzato DPAPI.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 1.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gli standard DPAPI. Per altre informazioni su DPAPI, vedere il sito MSDN Library all'indirizzo [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
+|Crittografa tutti i dati sensibili con una chiave utente (**EncryptSensitiveWithPassword**)|Viene utilizzata una chiave basata sul profilo utente corrente per crittografare solo i valori delle proprietà riservate nel pacchetto. Il pacchetto può essere caricato solo da uno stesso utente in base allo stesso profilo. Gli altri utenti che aprono il pacchetto dovranno immettere le informazioni riservate. I tentativi di esecuzione del pacchetto hanno esito negativo. Per la crittografia viene utilizzato DPAPI.<br /><br /> Se usato con l'utilità **dtutil** , questo livello di protezione corrisponde al valore 1.<br /><br /> Nota: per i livelli di protezione che prevedono una chiave utente, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa gli standard DPAPI. Per altre informazioni su DPAPI, vedere MSDN Library all'indirizzo [http://msdn.microsoft.com/library](http://go.microsoft.com/fwlink/?LinkId=15408).|  
 |Usa l'archiviazione su server per la crittografia (**ServerStorage**)|Protegge l'intero pacchetto tramite ruoli del database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa opzione è supportata quando i pacchetti vengono salvati nel database msdb di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Anche il catalogo SSISDB usa il livello di protezione **ServerStorage** .<br /><br /> Questa opzione non è supportata quando un pacchetto viene salvato nel file system da [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].|  
   
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Impostazione del livello di protezione e catalogo SSISDB  

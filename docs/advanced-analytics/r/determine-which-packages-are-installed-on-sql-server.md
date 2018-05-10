@@ -1,25 +1,24 @@
 ---
-title: Pacchetti di Python installati in SQL Server o visualizzazione R | Documenti Microsoft
+title: Ottenere informazioni sul pacchetto di Python e R in SQL Server Machine Learning | Documenti Microsoft
+description: Determinare la versione del pacchetto R, Python, verificare l'installazione e ottenere un elenco dei pacchetti installati in SQL Server R Services o servizi di Machine Learning.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/08/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 7cea8b82337ca7d5b4cd17b1038a1eccc99370be
-ms.sourcegitcommit: beaad940c348ab22d4b4a279ced3137ad30c658a
-ms.translationtype: MT
+ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
+ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
-# <a name="viewing-r-or-python-packages-installed-on-sql-server"></a>Visualizzazione R o pacchetti Python installati in SQL Server
+#  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Ottenere informazioni sul pacchetto di Python e R in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Se si sono installati più ambienti Python o utilizzano più strumenti di R, è facile da installare un pacchetto per la libreria non corretta o l'ambiente e non sarà possibile trovarlo in un secondo momento. 
-
-Questo articolo fornisce alcune query che è possibile utilizzare per determinare la versione corrente e per elencare i pacchetti installati nell'ambiente di SQL Server corrente.
+Se si sono installati più ambienti Python o utilizzano più strumenti di R, è facile da installare un pacchetto per la libreria non corretta o l'ambiente e non sarà possibile trovarlo in un secondo momento. Questo articolo fornisce le query e al materiale sussidiario utile per la versione del pacchetto determininga e per elencare i pacchetti che vengono installati nell'ambiente di SQL Server corrente.
 
 ## <a name="verify-the-current-default-library"></a>Verificare la libreria predefinita corrente
 
