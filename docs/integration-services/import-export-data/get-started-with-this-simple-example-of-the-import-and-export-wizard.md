@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 02/15/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
@@ -17,12 +16,11 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e84e1bf87d657f3b72786c19d662b0f664a78d74
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 20a36a42ca3ce3cd7511dbf36896827f156b6bd3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Introduzione a un esempio semplice di importazione/esportazione guidata
 Informazioni sull'importazione/esportazione guidata SQL Server attraverso uno scenario comune da un foglio di calcolo di Excel a un database SQL Server. Anche se si prevede di usare un'origine diversa e una destinazione diversa, in questo argomento è illustrata la maggior parte delle operazioni da conoscere per l'esecuzione della procedura guidata.

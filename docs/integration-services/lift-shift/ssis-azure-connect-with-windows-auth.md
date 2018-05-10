@@ -1,10 +1,9 @@
 ---
 title: Connettersi a origini dati e condivisioni file con autenticazione di Windows | Microsoft Docs
 ms.date: 02/05/2018
-ms.topic: article
+ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
@@ -13,12 +12,11 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: c4e70d0ce14b4205c19140fc952a53725894679a
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: a07cd66ebc67b5885ce535425ce8984f0181dc04
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Connettersi a origini dati locali e condivisioni file di Azure con autenticazione di Windows
 In questo articolo viene descritto come configurare il catalogo SSIS nel database SQL di Azure per eseguire pacchetti che usano l'autenticazione di Windows per connettersi a origini dati locali e condivisioni file di Azure. È possibile usare l'autenticazione di Windows per connettersi alle origini dati nella stessa rete virtuale del runtime di integrazione SSIS di Azure, sia in locale che nelle macchine virtuali di Azure e in File di Azure.

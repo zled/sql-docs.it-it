@@ -2,7 +2,7 @@
 title: 'Esercitazione SSIS: Creazione di un pacchetto ETL | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/17/2018
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
 ms.service: ''
 ms.component: non-specific
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 83e51e583e0c83d8d0cbc8dbd213a78baa766ffb
-ms.sourcegitcommit: bb044a48a6af9b9d8edb178dc8c8bd5658b9ff68
+ms.openlocfilehash: b35b1f9ac19d76f9c78165a973044c67c4aab7d4
+ms.sourcegitcommit: 31df356f89c4cd91ba90dac609a7eb50b13836de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Esercitazione SSIS: Creazione di un pacchetto ETL semplice
 
@@ -40,9 +40,6 @@ ms.lasthandoff: 04/18/2018
 In questa esercitazione viene illustrato come usare Progettazione [!INCLUDE[ssIS](../includes/ssis-md.md)] per creare un pacchetto semplice di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Tale pacchetto preleva i dati da un file flat, li riformatta e quindi li inserisce in una tabella dei fatti. Nelle lezioni successive il pacchetto viene espanso per illustrare i loop, le configurazioni del pacchetto, la registrazione e il flusso degli errori.  
   
 Contestualmente all'installazione dei dati di esempio usati nell'esercitazione, vengono installate anche le versioni complete dei pacchetti creati in ogni lezione. Questi pacchetti completi consentono di iniziare l'esercitazione dalla lezione desiderata. Se è la prima volta che si usano i pacchetti o il nuovo ambiente di sviluppo, è consigliabile iniziare dalla lezione 1.  
-
-> [!IMPORTANT]
-> Da un po' di tempo i file di esempio necessari per eseguire questa esercitazione non sono più disponibili online nella posizione precedente. Ci scusiamo per l'inconveniente. Ora si trovano in una nuova posizione. I collegamenti sono stati aggiornati in questo articolo.
 
 ## <a name="what-is-sql-server-integration-services-ssis"></a>Definizione di SQL Server Integration Services (SSIS)
 
@@ -53,12 +50,15 @@ Il modo più efficace per acquisire familiarità con i nuovi strumenti e control
   
 ## <a name="requirements"></a>Requisiti  
 Questa esercitazione è destinata agli utenti esperti nelle operazioni fondamentali sui database ma con una conoscenza limitata delle nuove funzionalità disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
-  
+
+> [!IMPORTANT]
+> Da un po' di tempo i file di esempio necessari per eseguire questa esercitazione non sono più disponibili online nella posizione precedente. Ci scusiamo per l'inconveniente. Ora si trovano in una nuova posizione. I collegamenti per il download sono stati aggiornati in questo articolo.
+
 Per utilizzare l'esercitazione è necessario che nel sistema siano installati i componenti seguenti:  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con il database **AdventureWorksDW2012** . Per scaricare il database **AdventureWorksDW2012**, scaricare `AdventureWorksDW2012.bak` dai [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) e ripristinare il backup.  
 
--   Dati di esempio I dati di esempio sono inclusi nei pacchetti di lezioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per scaricare i dati di esempio e i pacchetti di lezioni sotto forma di file ZIP, [fare clic qui](http://download.microsoft.com/download/3/1/4/314A4169-D540-4E9E-9776-585BFBFC2CC5/Creating a Simple ETL Package.zip).  
+-   Dati di esempio I dati di esempio sono inclusi nei pacchetti di lezioni di [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per scaricare i dati di esempio e i pacchetti di lezioni come file con estensione zip, vedere [SQL Server Integration Services Tutorial - Create a Simple ETL Package](https://www.microsoft.com/download/details.aspx?id=56827) (Esercitazione di SQL Server Integration Services - Creare un semplice pacchetto ETL).  
 
 ## <a name="lessons-in-this-tutorial"></a>Lezioni dell'esercitazione  
 [Lezione 1: Creare un progetto e un pacchetto di base](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  

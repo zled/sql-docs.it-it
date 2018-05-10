@@ -1,7 +1,7 @@
 ---
 title: Mascheramento dati dinamici | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2016
+ms.date: 04/23/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.service: ''
@@ -19,11 +19,11 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1a261930d257f4c787a5f28af59d82ee75a7af7c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 453399db3852ff7165bfd569a255b16797675fc5
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ Ad esempio, un addetto del call center può identificare i chiamanti da diverse 
   
 -   Usando `SELECT INTO` o `INSERT INTO` per copiare i dati da una colonna con maschera in un'altra tabella vengono restituiti i dati mascherati nella tabella di destinazione.  
   
--   La maschera dati dinamica viene applicata quando si esegue l'importazione e l'esportazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un database contenente colonne con maschera genera un file di backup con dati mascherati, supponendo che venga esportato da un utente senza privilegi **UNMASK** , e il database importato conterrà dati mascherati in modo statico.  
+-   La maschera dati dinamica viene applicata quando si esegue l'importazione e l'esportazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un database contenente colonne con maschera genera un file di dati esportato con dati mascherati, supponendo che venga esportato da un utente senza privilegi **UNMASK**, e il database importato contiene dati mascherati in modo statico.  
   
 ## <a name="querying-for-masked-columns"></a>Esecuzione di query per le colonne con maschera  
  Usare la vista **sys.masked_columns** per eseguire query per tabelle e colonne con funzione di maschera applicata. Questa vista viene ereditata dalla vista **sys.columns** , che restituisce tutte le colonne della vista **sys.columns** , in aggiunta alle colonne **is_masked** e **masking_function** , che indicano se la colonna è nascosta e, in tal caso, quale funzione di maschera viene definita. Questa vista mostra solo le colonne su cui è applicata una funzione di maschera.  

@@ -1,27 +1,19 @@
 ---
 title: Installare Analysis Services in modalità Power Pivot | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: setup-install
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: 40
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2f7c09094c0a55337e2bb64b58e2ea14d6f2973f
-ms.sourcegitcommit: 9351e8b7b68f599a95fb8e76930ab886db737e5f
-ms.translationtype: MT
+ms.openlocfilehash: 24bf58f255e20188b17ec53f0b75762a5e89a0b1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Installazione di Analisi Services in modalità Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -269,7 +261,7 @@ ms.lasthandoff: 04/06/2018
  I passaggi necessari per aggiornare le cartelle di lavoro create in versioni precedenti di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dipendono dalla versione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] tramite cui è stata creata la cartella di lavoro. Per altre informazioni, vedere [Aggiornare le cartelle di lavoro e l'aggiornamento dati pianificato &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Oltre l'installazione a server singolo - Power Pivot per Microsoft SharePoint  
- **Front-end Web (WFE)** o **livello intermedio:**per usare un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint in una farm di SharePoint di grandi dimensioni e per installare le funzionalità aggiuntive di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] nella farm, eseguire il pacchetto di installazione **spPowerPivot16.msi (SharePoint 2016), o spPowerPivot.msi (SharePoint 2013)** su ogni server SharePoint. Tramite spPowerPivot16.msi, o spPowerPivot.msi, vengono installati i provider di dati necessari e lo strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016 o 2013.  
+ **Front-end Web (WFE)** o **livello intermedio:** per usare un server [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in modalità SharePoint in una farm di SharePoint di grandi dimensioni e per installare le funzionalità aggiuntive di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] nella farm, eseguire il pacchetto di installazione **spPowerPivot16.msi (SharePoint 2016), o spPowerPivot.msi (SharePoint 2013)** su ogni server SharePoint. Tramite spPowerPivot16.msi, o spPowerPivot.msi, vengono installati i provider di dati necessari e lo strumento di configurazione di [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] per SharePoint 2016 o 2013.  
   
  Per ulteriori informazioni sull'installazione e sulla configurazione del livello intermedio, vedere gli argomenti seguenti:  
   

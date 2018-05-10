@@ -1,47 +1,23 @@
 ---
 title: Relazioni tra attributi | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- member properties [Analysis Services], attribute relationships
-- security [Analysis Services], properties
-- PROPERTIES keyword
-- storage [Analysis Services], attribute relationships
-- natural hierarchies [Analysis Services]
-- dimensions [Analysis Services], member properties
-- queries [MDX], attribute relationships
-- user-defined hierarchies [Analysis Services]
-- attributes [Analysis Services], relationships
-- member properties [Analysis Services]
-- members [Analysis Services], attribute relationships
-- storing data [Analysis Services], attribute relationships
-- relationships [Analysis Services], attributes
-ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: e687d64d3ba36bee4cffab7e81d401081b57eaa2
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 903f66edbe7c296c4f4c02526e87944d5738e0ed
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="attribute-relationships"></a>Relazioni tra attributi
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
+  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], gli attributi all'interno di una dimensione sono sempre correlati direttamente o indirettamente all'attributo chiave. Quando si definisce una dimensione in base a uno schema star, in cui tutti gli attributi della dimensione sono derivati dalla stessa tabella relazionale, viene automaticamente definita una relazione tra l'attributo chiave e ogni attributo non chiave della dimensione. Quando si definisce una dimensione in base a uno schema snowflake, in cui gli attributi della dimensione sono derivati da più tabelle correlate, viene automaticamente definita una relazione tra attributi come indicato di seguito:  
   
 -   Tra l'attributo chiave e ogni attributo non chiave associato alle colonne della tabella principale della dimensione.  
   
@@ -99,7 +75,7 @@ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](..
  Il vincolo principale quando si crea una relazione tra attributi consiste nel verificare che l'attributo a cui la relazione fa riferimento non abbia più di un valore per ogni membro nell'attributo a cui appartiene la relazione tra attributi. Se, ad esempio, si definisce una relazione tra un attributo City e un attributo State, ogni città può essere in relazione solo con un unico stato.  
   
 ## <a name="attribute-relationship-queries"></a>Query sulla relazione tra attributi  
- È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi, sotto forma di proprietà del membro, con la **proprietà** parola chiave di MDX **selezionare** istruzione. Per ulteriori informazioni sull'utilizzo di MDX per recuperare le proprietà di membro, vedere [utilizzando le proprietà del membro &#40; MDX &#41; ](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
+ È possibile utilizzare query MDX per recuperare dati dalle relazioni tra attributi, sotto forma di proprietà del membro, con la **proprietà** parola chiave di MDX **selezionare** istruzione. Per ulteriori informazioni sull'utilizzo di MDX per recuperare le proprietà di membro, vedere [utilizzo delle proprietà di membro &#40;MDX&#41;](../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli attributi e gerarchie di attributi](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

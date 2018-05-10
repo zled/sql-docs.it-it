@@ -1,31 +1,23 @@
 ---
 title: Configurare la raccolta di dati di utilizzo per (Power Pivot per SharePoint | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: ppvt-sharepoint
 ms.topic: article
-ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 60e8c6ab0537a8757d6a75b05e4788dc4a29768f
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a798fdc88ca500d95bf86a7f3fe1ecaad6aebd9c
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+  La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] per SharePoint questo sistema viene usato ed esteso per fornire i report nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] in cui viene mostrato l'uso dei servizi e dei dati [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Per informazioni sui dati di utilizzo nel dashboard di gestione [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vedere [Dati di utilizzo e dashboard di gestione PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   

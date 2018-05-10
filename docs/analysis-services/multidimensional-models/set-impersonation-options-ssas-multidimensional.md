@@ -1,34 +1,23 @@
 ---
 title: Impostare le opzioni di rappresentazione (SSAS - multidimensionale) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/13/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-f1_keywords:
-- sql13.asvs.sqlserverstudio.impersonationinfo.f1
-helpviewer_keywords:
-- Impersonation Information dialog box
-ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
-caps.latest.revision: 27
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 91971d02c7a5def697049af142734ea4ba0e9468
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Impostare opzioni di rappresentazione (SSAS - Multidimensionale)
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Quando si crea un **origine dati** dell'oggetto in un modello di Analysis Services, una delle impostazioni che è necessario configurare è un'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+  Quando si crea un oggetto **origine dati** in un modello di Analysis Services, una delle impostazioni da configurare è l'opzione di rappresentazione. Con questa opzione è possibile determinare se in Analysis Services viene acquisita l'identità di uno specifico account utente di Windows quando si eseguono operazioni locali correlate alla connessione, ad esempio il caricamento di un provider di dati OLE DB o la risoluzione di informazioni sul profilo utente in ambienti che supportano profili mobili.  
   
  Per le connessioni in cui viene utilizzata l'autenticazione di Windows, con l'opzione di rappresentazione è possibile inoltre determinare l'identità utente con cui vengono eseguite le query nell'origine dati esterna. Ad esempio, se l'opzione di rappresentazione viene impostata su **contoso\dbuser**, le query usate per recuperare i dati durante l'elaborazione saranno eseguite come **contoso\dbuser** nel server di database.  
   
@@ -55,7 +44,7 @@ ms.lasthandoff: 01/08/2018
  Nella finestra di dialogo sono disponibili tutte le opzioni, ma solo alcune sono appropriate per ogni scenario. Utilizzare le informazioni seguenti per determinare l'opzione più adatta per il proprio scenario.  
   
  **Usa nome utente e password specifici**  
- Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizzi le credenziali di sicurezza di un account utente di Windows specificato nel formato:  *\<nome di dominio >*  **\\**   *\<Nome dell'account utente >*.  
+ Selezionare questa opzione per disporre il [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oggetto utilizzi le credenziali di sicurezza di un account utente di Windows specificato nel formato seguente:  *\<nome di dominio >***\\***\<utente nome dell'account >*.  
   
  Scegliere questa opzione per utilizzare un'identità utente di Windows dedicata e con privilegi minimi, creata specificamente a scopo di accesso ai dati. Se, ad esempio, si crea regolarmente un account di uso generale per il recupero dei dati utilizzati nei report, è possibile specificarlo qui.  
   
@@ -106,7 +95,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare un'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Impostare le proprietà dell'origine dati &#40;SSAS multidimensionale&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
+ [Impostare proprietà origine dati & #40; SSAS multidimensionale & #41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 
   
   

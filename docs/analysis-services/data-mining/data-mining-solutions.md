@@ -1,34 +1,23 @@
 ---
 title: Soluzioni di Data Mining | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data mining [Analysis Services], about data mining
-- data mining [Analysis Services], development
-ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: a6bee0ab1d519974c8564569fc334e7271f6bd04
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-mining-solutions"></a>Soluzioni di data mining
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una soluzione di data mining è una soluzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che contiene uno o più progetti di data mining.  
+  Una soluzione di data mining è una soluzione di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] che contiene uno o più progetti di data mining.  
   
  Negli argomenti di questa sezione vengono fornite informazioni sulla progettazione e l'implementazione di una soluzione di data mining integrata utilizzando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per una panoramica sul processo di progettazione dei modelli di data mining e sugli strumenti correlati, vedere [Concetti di data mining](../../analysis-services/data-mining/data-mining-concepts.md).  
   
@@ -85,13 +74,13 @@ Una soluzione di data mining è una soluzione di [!INCLUDE[ssASnoversion](../../
   
 |Attività|Argomento|  
 |-----------|------------|  
-|Eseguire test sui modelli creati, convalidare la qualità dei dati di training e creare grafici che rappresentano l'accuratezza dei modelli di data mining.|[Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
+|Eseguire test sui modelli creati, convalidare la qualità dei dati di training e creare grafici che rappresentano l'accuratezza dei modelli di data mining.|[Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |Eseguire il training del modello popolando la struttura e i modelli correlati con i dati. Aggiornare ed estendere i modelli con nuovi dati.|[L'elaborazione di oggetti di Data Mining](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Personalizzare un modello di data mining applicando filtri ai dati di training, scegliendo un algoritmo diverso o impostando parametri avanzati dell'algoritmo.|[Personalizzare struttura e modelli di Data Mining](../../analysis-services/data-mining/customize-mining-models-and-structure.md)|  
-|Personalizzare un modello di data mining applicando filtri ai dati utilizzati per il training del modello.|[Aggiungere modelli di Data Mining a una struttura &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
+|Personalizzare un modello di data mining applicando filtri ai dati utilizzati per il training del modello.|[Aggiungere modelli di Data Mining a una struttura & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Aggiornare e gestire soluzioni di data mining.|Collegamento|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esercitazioni sul Data Mining &#40; Analysis Services &#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
+ [Esercitazioni sul Data Mining & #40; Analysis Services & #41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

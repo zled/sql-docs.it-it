@@ -1,46 +1,23 @@
 ---
 title: Partizioni (Analysis Services - dati multidimensionali) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- storage [Analysis Services], partitions
-- incremental updates [Analysis Services]
-- data sources [Analysis Services], partitions
-- data storage [Analysis Services]
-- aggregations [Analysis Services], partitions
-- OLAP objects [Analysis Services], partitions
-- storing data [Analysis Services], partitions
-- partitions [Analysis Services], about partitions
-- cubes [Analysis Services], partitions
-- partitions [Analysis Services]
-- remote partitions [Analysis Services]
-- measure groups [Analysis Services], partitions
-ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 1a44581e828d92756c46b897d9e7c9be69144c5b
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: e88ef15309c52942c24f663f3242ec3aba1afb81
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>Partizioni (Analysis Services - Dati multidimensionali)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una partizione è un contenitore di una parte di dati dei gruppi di misure. Le partizioni non vengono individuate dalle query MDX. Tutte le query riflettono l'intero contenuto del gruppo di misure, indipendentemente dal numero di partizioni definite per esso. Il contenuto dei dati di una partizione è definito dalle associazioni di query della partizione e dall'espressione di sezionamento.  
+  Una partizione è un contenitore di una parte di dati dei gruppi di misure. Le partizioni non vengono individuate dalle query MDX. Tutte le query riflettono l'intero contenuto del gruppo di misure, indipendentemente dal numero di partizioni definite per esso. Il contenuto dei dati di una partizione è definito dalle associazioni di query della partizione e dall'espressione di sezionamento.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.Partition> semplice è composto da informazioni di base, dalla definizione di sezionamento, dalla progettazione delle aggregazioni e altro. Le informazioni di base includono il nome della partizione, la modalità di archiviazione, la modalità di elaborazione e altro. La definizione di sezionamento è un'espressione MDX che specifica una tupla o un set. La definizione di sezionamento ha le stesse restrizioni della funzione MDX StrToSet. Se utilizzata con il parametro CONSTRAINED, la definizione di sezionamento può utilizzare nomi, chiavi e nomi univoci di membri, livelli, gerarchie e dimensioni e altri oggetti denominati nel cubo, ma non le funzioni MDX. La progettazione delle aggregazioni è una raccolta di definizioni di aggregazione che possono essere condivise tra più partizioni. L'impostazione predefinita deriva dalla progettazione delle aggregazioni del cubo padre.  
   
@@ -50,7 +27,7 @@ Una partizione è un contenitore di una parte di dati dei gruppi di misure. Le p
   
  Le partizioni non sono visibili agli utenti aziendali del cubo. Gli amministratori possono tuttavia configurare, aggiungere o eliminare le partizioni. Ogni partizione viene archiviata in un set di file distinto. I dati aggregati di ogni partizione possono essere archiviati nell'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in cui è stata definita la partizione, in un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oppure nell'origine dei dati utilizzata per fornire i dati di origine della partizione. Le partizioni consentono di distribuire i dati di origine e i dati aggregati di un cubo tra più dischi rigidi e tra più computer server. Per un cubo di dimensioni medio-grandi, le partizioni consentono di migliorare sensibilmente le prestazioni di query e carichi, nonché di semplificare le operazioni di manutenzione dei cubi.  
   
- La modalità di archiviazione di ogni partizione può essere configurata indipendentemente dalle altre partizioni incluse nel gruppo di misure. Le partizioni possono essere archiviate utilizzando qualsiasi combinazione di opzioni per la posizione dei dati di origine, la modalità di archiviazione, la memorizzazione nella cache attiva e la progettazione delle aggregazioni. Le opzioni relative a OLAP in tempo reale e memorizzazione nella cache attiva consentono di bilanciare la velocità di esecuzione delle query rispetto alla latenza quando si progetta una partizione. Le opzioni di archiviazione possono inoltre essere applicate alle dimensioni correlate e ai fatti inclusi in un gruppo di misure. Questa flessibilità consente all'utente di definire le strategie di archiviazione dei cubi più appropriate per le proprie esigenze. Per ulteriori informazioni, vedere [l'elaborazione e modalità di archiviazione delle partizioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [aggregazioni e progettazione di aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md) e [la memorizzazione nella cache &#40; Le partizioni &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
+ La modalità di archiviazione di ogni partizione può essere configurata indipendentemente dalle altre partizioni incluse nel gruppo di misure. Le partizioni possono essere archiviate utilizzando qualsiasi combinazione di opzioni per la posizione dei dati di origine, la modalità di archiviazione, la memorizzazione nella cache attiva e la progettazione delle aggregazioni. Le opzioni relative a OLAP in tempo reale e memorizzazione nella cache attiva consentono di bilanciare la velocità di esecuzione delle query rispetto alla latenza quando si progetta una partizione. Le opzioni di archiviazione possono inoltre essere applicate alle dimensioni correlate e ai fatti inclusi in un gruppo di misure. Questa flessibilità consente all'utente di definire le strategie di archiviazione dei cubi più appropriate per le proprie esigenze. Per altre informazioni, vedere [modalità di archiviazione delle partizioni e l'elaborazione](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [aggregazioni e le progettazioni delle aggregazioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md) e [la memorizzazione nella cache &#40;partizioni&#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
 ## <a name="partition-structure"></a>Struttura delle partizioni  
  La struttura di una partizione deve corrispondere alla struttura del relativo gruppo di misure. Le misure che definiscono il gruppo di misure devono pertanto essere definite anche nella partizione, con tutte le dimensioni correlate. Pertanto, quando viene creata, una partizione eredita automaticamente lo stesso set di misure e dimensioni correlate definite per il gruppo di misure.  
@@ -68,7 +45,7 @@ Una partizione è un contenitore di una parte di dati dei gruppi di misure. Le p
   
 -   In un gruppo di misure partizionato verticalmente, il gruppo di misure è basato su un'unica tabella e ogni partizione è basata su una query sul sistema di origine che filtra i dati per la partizione. Se ad esempio un'unica tabella contiene i dati relativi a più mesi, il gruppo di misure potrebbe ancora essere partizionato per mese applicando una clausola WHERE di Transact SQL in grado di restituire i dati di un mese distinto per ogni partizione.  
   
- Ogni partizione dispone di impostazioni di archiviazione che determinano se i dati e le aggregazioni della partizione vengono archiviati nell'istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oppure in una partizione remota che utilizza un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nelle impostazioni di archiviazione è inoltre possibile specificare la modalità di archiviazione e l'eventuale utilizzo della memorizzazione nella cache attiva per controllare la latenza di una partizione. Per ulteriori informazioni, vedere [l'elaborazione e modalità di archiviazione delle partizioni](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [la memorizzazione nella cache &#40; Le partizioni &#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), e [partizioni Remote](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
+ Ogni partizione dispone di impostazioni di archiviazione che determinano se i dati e le aggregazioni della partizione vengono archiviati nell'istanza locale di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oppure in una partizione remota che utilizza un'altra istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Nelle impostazioni di archiviazione è inoltre possibile specificare la modalità di archiviazione e l'eventuale utilizzo della memorizzazione nella cache attiva per controllare la latenza di una partizione. Per altre informazioni, vedere [modalità di archiviazione delle partizioni e l'elaborazione](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [la memorizzazione nella cache &#40;partizioni&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md), e [partizioni Remote](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
   
 ## <a name="incremental-updates"></a>Aggiornamenti incrementali  
  Quando si creano e gestiscono partizioni in gruppi di misure con più partizioni, è necessario adottare alcune particolari precauzioni per garantire l'accuratezza dei dati del cubo. Sebbene tali precauzioni non siano in genere applicabili ai gruppi di misure con un'unica partizione, in caso di aggiornamento incrementale delle partizioni sono valide anche per questo tipo di gruppo. In caso di aggiornamento incrementale di una partizione, viene creata una nuova partizione temporanea con la stessa struttura della partizione di origine. La partizione temporanea viene elaborata e quindi unita alla partizione di origine. È pertanto necessario verificare che la query di elaborazione con cui viene popolata la partizione temporanea non determini la duplicazione di dati già presenti in una partizione esistente.  

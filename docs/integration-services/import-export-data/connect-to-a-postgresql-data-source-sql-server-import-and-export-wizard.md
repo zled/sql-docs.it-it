@@ -1,28 +1,26 @@
 ---
 title: Connettersi a un'origine dati PostgreSQL (Importazione/Esportazione guidata SQL Server) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: integration-services
-ms.service: 
 ms.component: import-export-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - integration-services
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-caps.latest.revision: 
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 5f57bd2510c80e676a979c691b1e3d43707c6885
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: bc6221ec311e5836f94ef5fd2d865f1fc91e0588
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Connettersi a un'origine dati PostgreSQL (Importazione/Esportazione guidata SQL Server)
 Questo argomento illustra come connettersi a un'origine dati **PostgreSQL** dalla pagina **Scelta origine dati** o **Scelta destinazione** dell'Importazione/Esportazione guidata SQL Server. 
@@ -38,7 +36,7 @@ Eseguire il generatore di stack per aggiungere il driver ODBC PostgreSQL (psqlOD
 ![Installare il driver ODBC PostgreSQL con il generatore di stack](../../integration-services/import-export-data/media/install-postgresql-odbc-with-stack-builder.png)
 
 ### <a name="or-download-the-latest-odbc-driver"></a>Scaricare il driver ODBC più recente
-In alternativa, scaricare il programma di installazione di Windows per la versione più recente del driver ODBC PostgreSQL (psqlODBC) direttamente da questo sito FTP - [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Estrarre i file dal file con estensione zip ed eseguire il file con estensione msi.
+In alternativa, scaricare il programma di installazione di Windows per la versione più recente del driver ODBC PostgreSQL (psqlODBC) direttamente da questo sito FTP: [https://www.postgresql.org/ftp/odbc/versions/msi/](https://www.postgresql.org/ftp/odbc/versions/msi/). Estrarre i file dal file con estensione zip ed eseguire il file con estensione msi.
 
 ## <a name="connect-to-postgresql-with-the-postgresql-odbc-driver-psqlodbc"></a>Connettersi a PostgreSQL con il driver ODBC PostgreSQL (psqlODBC)
 I driver ODBC non sono presenti nell'elenco a discesa delle origini dati. Per connettersi con un driver ODBC, selezionare innanzitutto **Provider di dati .NET Framework per ODBC** come origine dati nella pagina **Scelta origine dati** o **Scelta destinazione**. Questo provider funge da wrapper per il driver ODBC.

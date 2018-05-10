@@ -1,35 +1,23 @@
 ---
 title: Distribuzione di soluzioni di modelli multidimensionali | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
 ms.topic: article
-helpviewer_keywords:
-- Analysis Services deployments, planning
-- deploying [Analysis Services]
-- deploying [Analysis Services], planning
-ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
-caps.latest.revision: 
-author: Minewiskan
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 5fb17843b2c01de1a99bff2d37b22eaa07783c8a
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 4b8f66bcf6715040ab572f0884c12b343a3dc6b0
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Distribuzione di soluzioni di modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  
+  Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], è possibile distribuire il database in un server Analysis Services. In Analysis Services sono disponibili sei possibili metodi di distribuzione che possono essere utilizzati per spostare il database in un server di prova o di produzione. I metodi di distribuzione sono elencati di seguito in ordine di convenienza: automazione AMO, XMLA, Distribuzione guidata, Utilità di distribuzione, Sincronizzazione guidata database, Backup e ripristino.  
   
  In questo argomento sono contenute le sezioni seguenti:  
   
@@ -43,7 +31,7 @@ Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../.
   
 |Metodo|Description|Collegamento|  
 |------------|-----------------|----------|  
-|**Automazione AMO (Analysis Management Objects)**|AMO (Analysis Management Objects) offre un'interfaccia di programmazione per il set di comandi completo per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusi comandi che possono essere utilizzati per la distribuzione della soluzione. Come approccio per la distribuzione della soluzione, l'automazione AMO (Analysis Management Objects) è la più flessibile, ma richiede anche un lavoro di programmazione.  Il vantaggio principale offerto da AMO è che consente di utilizzare SQL Server Agent insieme all'applicazione AMO per eseguire la distribuzione in base a una pianificazione predefinita.|[Lo sviluppo con Analysis Management Objects &#40; AMO &#41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
+|**Automazione AMO (Analysis Management Objects)**|AMO (Analysis Management Objects) offre un'interfaccia di programmazione per il set di comandi completo per [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], inclusi comandi che possono essere utilizzati per la distribuzione della soluzione. Come approccio per la distribuzione della soluzione, l'automazione AMO (Analysis Management Objects) è la più flessibile, ma richiede anche un lavoro di programmazione.  Il vantaggio principale offerto da AMO è che consente di utilizzare SQL Server Agent insieme all'applicazione AMO per eseguire la distribuzione in base a una pianificazione predefinita.|[Lo sviluppo con Analysis Management Objects & #40; AMO & #41;](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |**XMLA**|Utilizzare [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per generare uno script XMLA dei metadati di un database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] esistente, quindi eseguire tale script in un altro server per ricreare il database iniziale. Per creare script XMLA in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , è sufficiente definire il processo di distribuzione e quindi codificarlo e memorizzarlo in uno script XMLA. Dopo aver salvato lo script XMLA in un file, è possibile eseguire lo script in base a una pianificazione oppure incorporarlo nello script di un'applicazione che si connette direttamente a un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> È inoltre possibile eseguire script XMLA a intervalli predefiniti tramite SQL Server Agent, ma questo metodo non è caratterizzato dalla stessa flessibilità del metodo basato sull'automazione AMO. Nella libreria AMO è disponibile un'ampia gamma di funzionalità che supportano l'insieme completo di comandi amministrativi.|[Distribuire soluzioni di modelli utilizzando XMLA](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|  
 |**Distribuzione guidata**|Distribuzione guidata consente di utilizzare i file di output XMLA generati da un progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per distribuire i metadati del progetto in un server di destinazione. Grazie alla Distribuzione guidata è possibile eseguire la distribuzione direttamente dal file di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creato nella directory di output tramite la compilazione del progetto.<br /><br /> Il vantaggio principale rappresentato dall'utilizzo della Distribuzione guidata di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è la praticità. È possibile salvare script della Distribuzione guidata nello stesso modo in cui è possibile salvare uno script XMLA per un utilizzo successivo in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. La Distribuzione guidata può essere eseguita sia in modalità interattiva sia dal prompt dei comandi tramite l'utilità di distribuzione.|[Distribuire soluzioni di modelli tramite la distribuzione guidata](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)|  
 |**Utilità di distribuzione**|L'utilità di distribuzione consente di avviare il motore di distribuzione di Analysis Services da un prompt dei comandi.|[Distribuire soluzioni di modelli con l'utilità di distribuzione](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|  
@@ -58,10 +46,10 @@ Dopo aver completato lo sviluppo di un progetto di [!INCLUDE[ssASnoversion](../.
 |Quali risorse hardware e software sono richieste per questa soluzione?|[Requisiti e considerazioni per la distribuzione di Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Come verranno distribuiti gli oggetti correlati che non rientrano nell'ambito del progetto di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , quali pacchetti, report o schemi del database relazionale di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ?||  
 |Come sono stati caricati e aggiornati i dati nel database [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuito?<br /><br /> Come verranno aggiornati i metadati (ad esempio calcoli) nel database di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] distribuito?|[Metodi di distribuzione](#bkmk_meth) in questo argomento.|  
-|Si desidera concedere agli utenti l'accesso ai dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite Internet?|[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services &#40; IIS &#41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
+|Si desidera concedere agli utenti l'accesso ai dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tramite Internet?|[Configurare l'accesso HTTP ad Analysis Services in Internet Information Services & #40; IIS & #41; 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |Si desidera fornire accesso continuo ai dati [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] per query?|[Requisiti e considerazioni per la distribuzione di Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |Si desidera distribuire oggetti in un ambiente distribuito utilizzando oggetti collegati o partizioni remote?|[Creare e gestire una partizione locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [Creare e gestire una partizione remota &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) e [Gruppi di misure collegati](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
-|Come verranno protetti i dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]?|[Per l'autorizzazione di accesso per gli oggetti e operazioni &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
+|Come verranno protetti i dati di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]?|[Per l'autorizzazione di accesso per gli oggetti e operazioni & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  
   
 ##  <a name="bkmk_rel"></a> Attività correlate  
  [Requisiti e considerazioni per la distribuzione di Analysis Services](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)  

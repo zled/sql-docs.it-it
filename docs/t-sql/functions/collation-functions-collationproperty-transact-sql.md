@@ -27,16 +27,16 @@ ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76baefbaf0fc156d782c705e8a81683770bedc68
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 041b1bdcc190980d471b48e7525da0fa035d087a
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funzioni delle regole di confronto - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce la proprietà delle regole di confronto specificate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+La funzione restituisce la proprietà delle regole di confronto specificate in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -48,16 +48,16 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Argomenti  
 *nome_regole_di_confronto*  
-Nome delle regole di confronto. *collation_name* è di tipo **nvarchar(128)** e non dispone di valore predefinito.
+Nome delle regole di confronto. L'argomento *collation_name* ha un tipo di dati **nvarchar (128)**, senza alcun valore predefinito.
   
 *property*  
-Proprietà regole di confronto. *property* è **varchar(128)**. I valori possibili sono i seguenti:
+Proprietà delle regole di confronto. L'argomento *property* ha un tipo di dati **varchar(128)** e può avere uno dei valori seguenti:
   
 |Nome proprietà|Description|  
 |---|---|
 |**CodePage**|Tabella codici non Unicode delle regole di confronto. Vedere [Appendix G DBCS/Unicode Mapping Tables](https://msdn.microsoft.com/en-us/library/cc194886.aspx) (Appendice G - Tabelle di mapping DBCS/Unicode) e [Appendix H Code Pages](https://msdn.microsoft.com/en-us/library/cc195051.aspx) (Appendice H - Tabelle codici) per la conversione e la visualizzazione dei mapping dei caratteri di questi valori.|  
-|**LCID**|Identificatore delle impostazioni locali (LCID) di Windows per le regole di confronto. Vedere [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (Struttura LCID) per la conversione di questi valori (sarà necessario convertire prima **varbinary**).|  
-|**ComparisonStyle**|Stile di confronto di Windows per le regole di confronto. Restituisce 0 per tutte le regole di confronto binarie, sia (\_BIN) che (\_BIN2), e anche quando tutte le proprietà sono sensibili. Valori della maschera di bit:<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento : 2<br /><br /> Ignora Kana : 65536<br /><br /> Ignora larghezza: 131072<br /><br /> Nota: anche se ha effetto sul comportamento di confronto, l'opzione con distinzione tra selettori di variazione (\_VSS) non è rappresentata in questo valore.|  
+|**LCID**|Identificatore delle impostazioni locali (LCID) di Windows per le regole di confronto. Vedere [LCID Structure](https://msdn.microsoft.com/en-us/library/cc233968.aspx) (Struttura LCID) per la conversione di questi valori (sarà necessario convertirli prima in **varbinary**).|  
+|**ComparisonStyle**|Stile di confronto di Windows per le regole di confronto. Restituisce 0 per tutte le regole di confronto binarie, sia (\_BIN) che (\_BIN2), e anche quando tutte le proprietà distinguono tra maiuscole e minuscole. Valori della maschera di bit:<br /><br /> Ignora maiuscole/minuscole: 1<br /><br /> Ignora accento : 2<br /><br /> Ignora Kana : 65536<br /><br /> Ignora larghezza: 131072<br /><br /> Nota: anche se ha effetto sul comportamento di confronto, l'opzione con distinzione tra selettori di variazione (\_VSS) non è rappresentata in questo valore.|  
 |**Versione**|Versione delle regole di confronto, derivata dal campo relativo alla versione dell'ID delle regole di confronto. Restituisce un valore intero compreso tra 0 e 3.<br /><br /> Le regole di confronto con "140" nel nome restituiscono 3.<br /><br /> Le regole di confronto con "100" nel nome restituiscono 2.<br /><br /> Le regole di confronto con "90" nel nome restituiscono 1.<br /><br /> Tutte le altre regole di confronto restituiscono 0.|  
   
 ## <a name="return-types"></a>Tipi restituiti

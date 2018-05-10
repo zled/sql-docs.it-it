@@ -37,39 +37,40 @@ ms.author: douglasl
 manager: craigg
 ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: da1f46475be001737512dc3a0da074d2f97c403c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb75008ddad294be1a1f4aa465770d85d7ddb7e2
+ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>Clausola SELECT - INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT…INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
+SELECT…INTO crea una nuova tabella nel filegroup predefinito e vi inserisce le righe restituite dalla query. Per visualizzare la sintassi SELECT completa, vedere [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
- ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintassi  
   
 ```  
 [ INTO new_table ]
-[ ON filegroup]
+[ ON filegroup ]
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *new_table*  
+ *new_table*   
  Specifica il nome di una nuova tabella da creare in base alle colonne dell'elenco di selezione e alle righe scelte dall'origine dati.  
- 
-  *filegroup*
- 
- Specifica il nome del filegroup in cui verrà creata la nuova tabella. Il filegroup specificato deve esistere nel database anche se il motore di SQL Server genera un errore. Questa opzione è supportata solo a partire da [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
  
  Il formato dell'argomento *new_table* viene determinato tramite la valutazione delle espressioni nell'elenco di selezione. Le colonne di *new_table* vengono create nell'ordine indicato nell'elenco di selezione. A ogni colonna di *new_table* vengono assegnati lo stesso nome, lo stesso tipo di dati, il supporto dei valori Null e lo stesso valore dell'espressione corrispondente nell'elenco di selezione. La proprietà IDENTITY di una colonna viene trasferita, tranne nelle condizioni definite in "Utilizzo di colonne Identity" nella sezione Osservazioni.  
   
  Per creare la tabella in un altro database della stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], specificare *new_table* come nome completo nel formato *database.schema.table_name*.  
   
  Non è possibile creare *new_table* in un server remoto. È tuttavia possibile popolare *new_table* da un'origine dati remota. Per creare *new_table* da una tabella di origine remota, specificare la tabella di origine usando un nome in quattro parti nel formato *linked_server*.*catalog*.*schema*.*object* nella clausola FROM dell'istruzione SELECT. In alternativa, è possibile usare la funzione [OPENQUERY](../../t-sql/functions/openquery-transact-sql.md) o [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) nella clausola FROM per specificare l'origine dati remota.  
+ 
+ *filegroup*    
+ Specifica il nome del filegroup in cui verrà creata la nuova tabella. Il filegroup specificato deve esistere nel database anche se il motore di SQL Server genera un errore.   
+ 
+ **Si applica a**: da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Tipi di dati  
  L'attributo FILESTREAM non viene trasferito nella nuova tabella. Gli oggetti binari di grandi dimensioni FILESTREAM vengono copiati e archiviati nella nuova tabella come oggetti binari di grandi dimensioni di tipo **varbinary(max)**. Senza l'attributo FILESTREAM, il tipo di dati **varbinary(max)** è soggetto al limite di 2 GB. Se un oggetto BLOB FILESTREAM supera questo valore, viene generato l'errore 7119 e l'istruzione viene arrestata.  
@@ -91,18 +92,18 @@ Se una di queste condizioni risulta vera, la colonna viene creata come colonna N
 ## <a name="limitations-and-restrictions"></a>Limitazioni e restrizioni  
  Non è possibile specificare una variabile di tabella o un parametro con valori di tabella come nuova tabella.  
   
- Non è possibile utilizzare SELECT…INTO per creare una tabella partizionata, anche quando la tabella di origine è partizionata. Lo schema di partizione della tabella di origine non viene utilizzato in SELECT...INTO. La nuova tabella viene invece creata nel filegroup predefinito. Per inserire righe in una tabella partizionata, per prima cosa è necessario creare la tabella partizionata, quindi utilizzare l'istruzione INSERT INTO...SELECT FROM.  
+ Non è possibile usare `SELECT…INTO` per creare una tabella partizionata, anche quando la tabella di origine è partizionata. Lo schema di partizione della tabella di origine non viene usato in `SELECT...INTO`. La nuova tabella viene invece creata nel filegroup predefinito. Per inserire righe in una tabella partizionata, per prima cosa è necessario creare la tabella partizionata e quindi usare l'istruzione `INSERT INTO...SELECT...FROM`.  
   
- Indici, vincoli e trigger definiti nella tabella di origine non vengono trasferiti alla nuova tabella e non possono essere specificati nell'istruzione SELECT...INTO. Se questi oggetti sono richiesti, è possibile crearli dopo avere eseguito l'istruzione SELECT...INTO.  
+ Indici, vincoli e trigger definiti nella tabella di origine non vengono trasferiti alla nuova tabella e non possono essere specificati nell'istruzione `SELECT...INTO`. Se questi oggetti sono richiesti, è possibile crearli dopo avere eseguito l'istruzione `SELECT...INTO`.  
   
- La specifica della clausola ORDER BY non garantisce che le righe vengano inserite nell'ordine specificato.  
+ La specifica della clausola `ORDER BY` non garantisce che le righe vengano inserite nell'ordine specificato.  
   
  Quando nell'elenco di selezione è presente una colonna di tipo sparse, la relativa proprietà non viene trasferita nella colonna della nuova tabella. Se questa proprietà è richiesta nella nuova tabella, modificare la definizione di colonna dopo l'esecuzione dell'istruzione SELECT...INTO per includere la proprietà.  
   
- Quando nell'elenco di selezione è presente una colonna calcolata, la colonna corrispondente della nuova tabella non è di tipo calcolato. I valori della nuova colonna corrispondono ai valori calcolati quando è stata eseguita l'istruzione SELECT...INTO.  
+ Quando nell'elenco di selezione è presente una colonna calcolata, la colonna corrispondente della nuova tabella non è di tipo calcolato. I valori della nuova colonna corrispondono ai valori calcolati quando è stata eseguita l'istruzione `SELECT...INTO`.  
   
 ## <a name="logging-behavior"></a>Comportamento di registrazione  
- La quantità di registrazioni per SELECT INTO dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione SELECT... INTO può essere più efficace della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ La quantità di registrazioni per `SELECT...INTO` dipende dal modello di recupero attivato per il database. Nel modello di recupero con registrazione minima o in quello con registrazione minima delle operazioni bulk, per tali operazioni la registrazione prevista è quella minima. Con la registrazione minima, l'uso dell'istruzione `SELECT...INTO` può essere più efficiente della creazione di una tabella e del popolamento della stessa con un'istruzione INSERT. Per altre informazioni, vedere [Log delle transazioni &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È necessaria l'autorizzazione CREATE TABLE nel database di destinazione.  
@@ -214,7 +215,7 @@ FROM OPENDATASOURCE('SQLNCLI',
 GO  
 ```  
   
-### <a name="e-import-from-an-external-table-created-with--polybase"></a>E. Importare da una tabella esterna creata con PolyBase  
+### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. Importare da una tabella esterna creata con PolyBase  
  Importare dati da Hadoop o dall'archiviazione di Azure in SQL Server per l'archivio permanente. Usare `SELECT INTO` per importare i dati a cui fa riferimento una tabella esterna per l'archiviazione permanente in SQL Server. Creare un tabella relazionale e quindi creare un indice di archivio colonne nella parte superiore della tabella in un secondo passaggio.  
   
  **Si applica a:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -229,8 +230,7 @@ INTO Fast_Customers from Insured_Customers INNER JOIN
         SELECT * FROM CarSensor_Data where Speed > 35   
 ) AS SensorD  
 ON Insured_Customers.CustomerKey = SensorD.CustomerKey  
-ORDER BY YearlyIncome  
-  
+ORDER BY YearlyIncome;  
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Creare una nuova tabella come copia di un'altra tabella e caricarla in un filegroup specificato
 Nell'esempio seguente viene illustrato come creare una nuova tabella come copia di un'altra tabella e come caricarla in un filegroup specificato diverso dal filegroup predefinito dell'utente.
@@ -247,7 +247,7 @@ FILENAME = '/var/opt/mssql/data/AdventureWorksDW2016_Data1.mdf'
 )
 TO FILEGROUP FG2;
 GO
-SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
+SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
 ## <a name="see-also"></a>Vedere anche  

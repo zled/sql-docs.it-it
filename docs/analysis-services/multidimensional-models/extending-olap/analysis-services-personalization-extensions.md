@@ -1,46 +1,35 @@
 ---
 title: Analysis Services Personalization Extensions | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: ''
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- personalization extensions [Multidimensional Databases]
-ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
-caps.latest.revision: 22
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: olap
+ms.topic: article
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: bd55cabe877554254b63ba31e80a504117d2cf36
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: d06db85a9d9e75238c2aa2c4e25e0feb28a9daf1
+ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services Personalization Extensions
-[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione sono alla base di base dell'implementazione di un'architettura plug-in. In un'architettura plug-in è possibile sviluppare dinamicamente nuovi oggetti cubo e funzionalità e condividerli facilmente con gli altri sviluppatori. Di conseguenza, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione forniscono la funzionalità che rende possibile raggiungere i seguenti obiettivi:  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le estensioni della personalizzazione sono alla base di quello di implementare un'architettura plug-in. In un'architettura plug-in è possibile sviluppare dinamicamente nuovi oggetti cubo e funzionalità e condividerli facilmente con gli altri sviluppatori. Di conseguenza, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione forniscono la funzionalità che rende possibile raggiungere i seguenti obiettivi:  
   
 -   **Progettazione e distribuzione dinamiche** immediatamente dopo la progettazione e distribuzione [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione, gli utenti hanno accesso agli oggetti e funzionalità all'inizio della sessione dell'utente successiva.  
   
--   **Indipendenza dell'interfaccia** indipendentemente dall'interfaccia che consente di creare il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione, gli utenti possono utilizzare qualsiasi interfaccia per gli oggetti e funzionalità di accesso.  
+-   **Indipendenza dell'interfaccia** indipendentemente dall'interfaccia che consente di creare il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione, gli utenti possono utilizzare qualsiasi interfaccia per accedere a oggetti e alle funzionalità.  
   
--   **Contesto della sessione** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione non sono oggetti permanenti nell'infrastruttura esistente e non richiedono il rielaborazione del cubo. Vengono esposti e creati per l'utente al momento della connessione al database e rimangono disponibili per la durata della sessione dell'utente.  
+-   **Contesto della sessione** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le estensioni della personalizzazione non sono oggetti permanenti nell'infrastruttura esistente e non richiedono il rielaborazione del cubo. Vengono esposti e creati per l'utente al momento della connessione al database e rimangono disponibili per la durata della sessione dell'utente.  
   
--   **Distribuzione rapida** condivisione [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] estensioni della personalizzazione con altri sviluppatori di software senza necessità di specifiche dettagliate su dove o come trovare la funzionalità estesa.  
+-   **Distribuzione rapida** condivisione [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le estensioni della personalizzazione con altri sviluppatori di software senza necessità di specifiche dettagliate su dove o come trovare la funzionalità estesa.  
   
  Le estensioni della personalizzazione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] possono essere utilizzate per diversi scopi. Ad esempio, la propria azienda dispone di vendite che hanno valute diverse. Viene creato un membro calcolato che restituisce le vendite consolidate nella valuta locale della persona che accede al cubo. Tale membro viene creato come estensione della personalizzazione. Il membro calcolato viene quindi condiviso con un gruppo di utenti. Una volta condiviso, gli utenti hanno accesso immediato al membro calcolato non appena si connettono al server. anche se non utilizzano la stessa interfaccia utilizzata durante la creazione del membro calcolato.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]estensioni della personalizzazione rappresentano una semplice ed elegante modifica all'architettura dell'assembly gestita esistente e vengono esposte in tutta la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> dell'oggetto modello, nella sintassi MDX (Multidimensional Expressions) e i set di righe dello schema.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] le estensioni della personalizzazione rappresentano una semplice ed elegante modifica all'architettura dell'assembly gestita esistente e vengono esposte in tutta la [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> dell'oggetto modello, nella sintassi MDX (Multidimensional Expressions) e i set di righe dello schema.  
   
 ## <a name="logical-architecture"></a>Architettura logica  
  L'architettura delle estensioni della personalizzazione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è basata sull'architettura dell'assembly gestita e sui quattro elementi di base seguenti:  
@@ -123,26 +112,26 @@ ms.lasthandoff: 01/08/2018
 #### <a name="adomdcommand-class"></a>Classe AdomdCommand  
  La classe <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand> supporta ora i comandi MDX seguenti:  
   
--   [Istruzione CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)  
+-   [CREARE l'istruzione MEMBER & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)  
   
--   [Istruzione membro UPDATE &#40; MDX &#41;](../../../mdx/mdx-data-definition-update-member.md)  
+-   [Istruzione UPDATE membro &#40;MDX&#41;](../../../mdx/mdx-data-definition-update-member.md)  
   
--   [DROP MEMBER-istruzione &#40; MDX &#41;](../../../mdx/mdx-data-definition-drop-member.md)  
+-   [Istruzione DROP membro &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-member.md)  
   
--   [Istruzione CREATE SET &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
+-   [CREARE l'istruzione SET & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-set.md)  
   
--   [ELIMINARE l'istruzione SET &#40; MDX &#41;](../../../mdx/mdx-data-definition-drop-set.md)  
+-   [Istruzione DROP SET &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-set.md)  
   
--   [Crea KPI-istruzione &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
+-   [Istruzione CREATE KPI &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-kpi.md)  
   
--   [DROP KPI-istruzione &#40; MDX &#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
+-   [Istruzione DROP KPI &#40;MDX&#41;](../../../mdx/mdx-data-definition-drop-kpi.md)  
   
 ### <a name="mdx-extensions-and-enhancements"></a>Estensioni MDX e miglioramenti  
  Il comando CREATE MEMBER è stato ottimizzato con il **didascalia** proprietà, il **display_folder** , proprietà e **associated_measure_group** proprietà.  
   
  Il comando UPDATE MEMBER è stato aggiunto per evitare di ricreare il membro quando è necessario un aggiornamento, con la conseguente perdita di precedenza nella risoluzione dei calcoli. Gli aggiornamenti non è possibile modificare l'ambito del membro calcolato, spostare il membro calcolato a un padre diverso o definire un diverso **solveorder**.  
   
- Il comando CREATE SET è stato ottimizzato con il **didascalia** proprietà, il **display_folder** , proprietà e il nuovo **statico | DINAMICA** (parola chiave). *Statico* significa che i set viene valutato solo al momento della creazione. *Dinamica* significa che il set viene valutato ogni volta che il set viene utilizzato in una query. Il valore predefinito è **statico** se viene omessa una parola chiave.  
+ Il comando CREATE SET è stato ottimizzato con il **didascalia** proprietà, il **display_folder** , proprietà e il nuovo **statico | DINAMICA** (parola chiave). *Statico* significa che set viene valutato solo al momento della creazione. *Dinamica* significa che il set viene valutato ogni volta che il set viene utilizzato in una query. Il valore predefinito è **statico** se viene omessa una parola chiave.  
   
  I comandi CREATE KPI e DROP KPI sono stati aggiunti alla sintassi MDX. Gli indicatori KPI possono essere creati dinamicamente da qualsiasi script MDX.  
   
