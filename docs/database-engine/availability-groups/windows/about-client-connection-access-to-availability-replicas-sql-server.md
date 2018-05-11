@@ -59,7 +59,7 @@ ms.lasthandoff: 05/03/2018
  Solo connessioni con finalità di lettura  
  I database secondari sono disponibili solo per le connessioni la cui proprietà di connessione **Finalità dell'applicazione** è impostata su **Sola lettura** , ovvero le*connessioni con finalità di lettura*.  
   
- Per informazioni su questa proprietà di connessione, vedere [SQL Server Native Client Support for High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Per informazioni su questa proprietà di connessione, vedere [Supporto di SQL Server Native Client per il ripristino di emergenza a disponibilità elevata](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
  Consentire qualsiasi connessione di sola lettura  
  I database secondari sono tutti disponibili per le connessioni con accesso in lettura. Questa opzione consente la connessione di client di versioni precedenti.  
