@@ -28,7 +28,7 @@ Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Accedere a un computer nel dominio di Windows per eseguire query verso il Controller di dominio Kerberos.
+- Accedere a un computer nel dominio di Windows per eseguire query verso il controller di dominio Kerberos. 
 - SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Devono esistere SPN registrati per ogni istanza di Sql Server a cui si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
@@ -53,7 +53,7 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-Copiare il nome d DC, che corrisponde al valore di configurazione KDC richiesto; in questo caso dc-33.domain.company.com.
+Copiare il nome del controller di dominio, che corrisponde al valore di configurazione KDC richiesto; in questo caso dc-33.domain.company.com. 
 
 ## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Collegare il vostro sistema operativo al controller di dominio Active Directory
 
@@ -74,7 +74,7 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> L'interfaccia di rete (eth0) potrebbe essere differente per diverse macchine. Per individuare quello in uso, eseguire il comando ifconfig e copiare l'interfaccia che ha un indirizzo IP e che ha trasmesso e ricevuto byte.
+> L'interfaccia di rete (eth0) potrebbe essere differente per diverse macchine. Per individuare quella in uso, eseguire il comando ifconfig e copiare l'interfaccia che ha un indirizzo IP e che ha trasmesso e ricevuto byte.
 
 Dopo avere modificato questo file, riavviare il servizio di rete:
 
@@ -99,7 +99,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 sudo yum install realmd krb5-workstation
 ```
 
-Modificare il file `/etc/sysconfig/network-scripts/ifcfg-eth0` (o altro file di configurazione interfaccia a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns:
+Modificare il file "/etc/sysconfig/network-scripts/ifcfg-eth0" (o altro file di configurazione interfaccia a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns: 
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -113,7 +113,7 @@ Dopo avere modificato questo file, riavviare il servizio di rete:
 sudo systemctl restart network
 ```
 
-Controllare che il file `/etc/resolv.conf` contenga una riga simile alla seguente:
+Controllare che il file "/etc/resolv.conf" contenga una riga simile alla seguente:
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -134,7 +134,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ## <a name="configure-kdc-in-krb5conf"></a>Configurazione KDC in krb5
 
-Modificare il file `/etc/krb5.conf` in un editor di propria scelta. Configurare le chiavi seguenti:
+Modificare il file "/etc/krb5.conf" in un editor di propria scelta. Configurare le chiavi seguenti: 
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -148,7 +148,7 @@ DOMAIN.COMPANY.COM = {
 }
 ```
 
-Quindi salvare il file `krb5.conf` e uscire
+Quindi salvare il file "krb5.conf" e uscire 
 
 > [!NOTE]
 > Il dominio deve essere in lettere maiuscole
@@ -174,7 +174,7 @@ krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 
 * Creare un nuovo profilo di connessione
 
-* Scegliere **Autenticazione di Windows** come il tipo di autenticazione
+* Scegliere **Autenticazione di Windows** come tipo di autenticazione
 
 * Completare il profilo di connessione, fare clic su **Connetti**
 
