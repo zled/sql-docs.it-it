@@ -3,17 +3,17 @@ title: Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services) | 
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: multidimensional-models
-ms.topic: article
+ms.custom: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5a8dc16e1f2885141f20395cbe5e150996919e06
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 88290b9598ffdbbcfc90a738654a9485107da464
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorizzazione dell'accesso a oggetti e operazioni (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

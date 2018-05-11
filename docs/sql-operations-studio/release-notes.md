@@ -1,10 +1,10 @@
-﻿---
-title: Note sulla versione di Microsoft SQL Operations Studio (anteprima) | Microsoft Docs
-description: Note sulla versione di Microsoft SQL Operations Studio (anteprima)
+---
+title: Note sulla versione di Microsoft SQL operazioni Studio (anteprima) | Documenti Microsoft
+description: Note sulla versione di Microsoft SQL operazioni Studio (anteprima)
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,15 +13,42 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3e13f0604ebbfc616a70768d7382b0e044055ec6
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione di SQL Operations Studio (anteprima)
+# <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione Studio operazioni SQL (anteprima)
 
-**[Scaricare l'anteprima pubblica di aprile](download.md)**
+**[Scaricare l'anteprima pubblica di maggio](download.md)**
+
+
+## <a name="may-2018-may-public-preview"></a>2018 maggio (maggio anteprima pubblica)
+
+Data di rilascio: 7 maggio 2018  
+versione: 0.29.3
+
+Il *anteprima pubblica potrebbe* è incentrato sulla stabilizzazione e correzioni di bug. Questa generazione contiene le caratteristiche principali seguenti:  
+
+- Annuncio relativo all'estensione di ricerca SQL Redgate disponibile in Gestione estensioni.
+- Localizzazione di community disponibile per 10 lingue: tedesco, spagnolo, francese, italiano, giapponese, coreano, portoghese, russo, cinese semplificato e cinese tradizionale.
+- Compilazione PILR conforme è ridotta raccolta dati di telemetria, migliorata l'esperienza di rifiutare esplicitamente e nel prodotto collegamenti all'informativa sulla Privacy.
+- Gestore estensioni ha Marketplace una migliore esperienza per individuare facilmente le estensioni della community.
+- Analisi utilizzo software consente di visualizzare i processi di estensione di SQL Agent e nella cronologia processo.
+- Aggiornamenti per whoisactive ed estensioni di Server report.
+- Migliorare la gestione proprietà Dashboard lo scorrimento.
+- Risolvere i problemi di GitHub:
+   - Correggere [emettere 703](https://github.com/Microsoft/sqlopsstudio/issues/703): immissione di testo HTML simile a quello nei dati di modifica comporta valore da visualizzare in modo non corretto finché l'aggiornamento
+   - Correggere [emettere 821](https://github.com/Microsoft/sqlopsstudio/issues/821): dipendenza pacchetto sqlopsstudio.deb
+   - Correggere [emettere 1260](https://github.com/Microsoft/sqlopsstudio/issues/1260): parola chiave 'distinct' non è evidenziato
+   - Correggere [emettere 1332](https://github.com/Microsoft/sqlopsstudio/issues/1332): ripristino i dati di modifica riga non funziona
+   - Correggere [emettere 1215](https://github.com/Microsoft/sqlopsstudio/issues/1215): estensione SQL Agent e la barra di stato
+   - Correggere [emettere 1316](https://github.com/Microsoft/sqlopsstudio/issues/1316): SQL Agent non ridimensionare dopo la modifica delle dimensioni di windows
+
+
+Per altre informazioni, vedere la [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md), e [versioni](https://github.com/Microsoft/sqlopsstudio/releases).
+
 
 
 ## <a name="april-2018-april-public-preview"></a>2018 aprile (anteprima pubblica di aprile)
@@ -74,60 +101,60 @@ Per ulteriori dettagli, estrarre il [note sulla versione di Visual Studio codice
 
 Per ulteriori informazioni, vedere il [registro delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
-## <a name="march-2018-march-public-preview"></a>Marzo 2018 (anteprima pubblica di marzo)
+## <a name="march-2018-march-public-preview"></a>2018 marzo (marzo in anteprima pubblica)
 
-Data di rilascio: 28 marzo 2018  
+Data di rilascio: il 28 marzo 2018  
 versione: 0.27.3
 
-L'*anteprima pubblica di marzo* continua a rivolgersi ai principali issue su GitHub e si concentra sul miglioramento dell'estendibilità. In particolare, è stato aggiunto il pannello di gestione delle estensioni, è stata migliorata la gestione delle dashboard e sono stati introdotti il supporto a SQL Agent e le estensioni di insight. Questa versione include i miglioramenti seguenti:
+Il *anteprima pubblica di marzo* continua a risolvere i problemi principali GitHub e si concentra sul miglioramento della nostra storia di estendibilità. In particolare l'abilitazione estensione Manager, il miglioramento della gestione di dashboard e fornire SQL Agent e le estensioni di insights. Questa versione include i miglioramenti seguenti:
 
-- Migliorato il modello di estendibilità delle dashboard tramite l'aggiunta del supporto di schede per gli insight e riquadri di configurazione.
-   - Aggiunto il pannello **ESTENSIONI**, che consente la semplice acquisizione delle estensioni.
-   - Aggiunta un'estensione per *sp_whoisactive* da [whoisactive.com](http://www.whoisactive.com).
-   - Per informazioni dettagliate, vedere [estendere le funzionalità di SQL Operations Studio](extensions.md).
-- Aggiunte ulteriori [API di estendibilità per le connessioni ed Esplora Oggetti](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API).
-- Correzioni dei [problemi di GitHub](https://github.com/Microsoft/sqlopsstudio/issues) ad alto impatto sui clienti.
+- Migliorare il modello di estendibilità del dashboard per supportare insights a schede e riquadri di configurazione.
+   - Gestore estensioni del attiva semplice acquisizione delle estensioni.
+   - Le estensioni del dashboard per sp_whoisactive dal [whoisactive.com](http://www.whoisactive.com).
+   - Per informazioni dettagliate, vedere [estendere le funzionalità di SQL Studio operazioni](extensions.md).
+- Aggiungere ulteriori [API di estendibilità per la connessione e oggetto explorer](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API) management.
+- Continuare a correggere i clienti che hanno un impatto [problemi GitHub](https://github.com/Microsoft/sqlopsstudio/issues).
 
 
-## <a name="february-2018-february-public-preview"></a>Febbraio 2018 (anteprima pubblica di febbraio)
+## <a name="february-2018-february-public-preview"></a>2018 febbraio (febbraio in anteprima pubblica)
 
 Data di rilascio: 15 febbraio 2018  
 versione: 0.26.7
 
-L'*anteprima pubblica di febbraio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
+Il *anteprima pubblica di febbraio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
 
-- Introdotta la funzionalità di aggiornamento automatico, che mostra una notifica quando una nuova versione è disponibile per il download. 
-- Il campo 'Database' della finestra di dialogo di connessione è ora un elenco a discesa popolato in modo dinamico dall'elenco dei database presenti nel server specificato.
-- Corretto il [problema 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Mantienere la connessione e il database selezionati quando si aprono nuove schede di query.
-- Corretto il [problema 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Server' e 'Database' - è possibile trasformarli in elenchi a discesa anziché caselle di testo?
-- Corretto il [problema 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Le installazioni con il parametro Silent/VerySilent fanno aprire l'applicazione subito dopo la fine del setup.
-- Corretto il [problema 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Aggiungere l'opzione "Controlla aggiornamenti".
-- Correzioni riguardanti l'editor SQL e il completamento automatico:
-   - Corretto il [problema 584](https://github.com/Microsoft/sqlopsstudio/issues/584): La parola chiave 'FULL' non è evidenziata da IntelliSense.
-   - Corretto il [problema 345](https://github.com/Microsoft/sqlopsstudio/issues/345): Colorare le funzioni SQL all'interno dell'editor.
-   - Corretto il [problema 300](https://github.com/Microsoft/sqlopsstudio/issues/300): In una stringa [#tempData] il carattere finale"]" verrà visualizzato di colore verde.
-   - Corretto il [problema 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Mancata corrispondenza di colore su parola chiave.
-   - Corretto il [problema 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Colore non valido quando si utilizza una tabella temporanea nella clausola from.
-- Introdotta l'API di estensibilità di connessione.
-- Aggiunta l'integrazione dell'editor di codice di Visual Studio 1.19.
-- Aggiornato il componente JustinPealing/query-plan per ottenere diversi miglioramenti sul visualizzatore dei piani di query.
+- Che l'introduzione di installazione di aggiornamento automatico, fornisce una notifica quando una nuova versione è disponibile per il download 
+- Il campo di finestra di dialogo di connessione 'Database' è un elenco di riepilogo a discesa popolato in modo dinamico contenenti un elenco di database popolato dal server specificato.
+- Correggere [emettere 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Mantieni connessione e il database selezionato quando si apre nuove schede di query.
+- Correggere [emettere 22](https://github.com/Microsoft/sqlopsstudio/issues/22): "Nome Server" e 'Nome di Database -' possono questi essere elenchi a discesa anziché le caselle di testo?
+- Correggere [emettere 549](https://github.com/Microsoft/sqlopsstudio/issues/549): installazione invisibile all'utente invisibile all'utente/molto comporterà l'applicazione che apre dopo l'installazione.
+- Correggere [emettere 481](https://github.com/Microsoft/sqlopsstudio/issues/481): aggiungere l'opzione "Controlla aggiornamenti".
+- Editor SQL colorazione e correzioni di completamento automatico:
+   - Correggere [emettere 584](https://github.com/Microsoft/sqlopsstudio/issues/584): parola chiave "Completa" non è evidenziata da IntelliSense.
+   - Correggere [emettere 345](https://github.com/Microsoft/sqlopsstudio/issues/345): funzioni colorare SQL all'interno dell'editor.
+   - Correggere [emettere 300](https://github.com/Microsoft/sqlopsstudio/issues/300): [#tempData] più recente "]" verrà visualizzato di colore verde.
+   - Correggere [emettere 225](https://github.com/Microsoft/sqlopsstudio/issues/225): mancata corrispondenza di colore (parola chiave).
+   - Correggere [emettere 60](https://github.com/Microsoft/sqlopsstudio/issues/60): sql non valido Colore evidenziazione della sintassi quando si utilizza la tabella temporanea nella clausola from.
+- Introdurre API di estensibilità di connessione.
+- Integrazione di Visual Studio 1.19 Editor di codice.
+- Aggiornare il componente JustinPealing/html-piano di query al ritiro diversi miglioramenti di Visualizzatore di piano di Query.
 
 
-## <a name="january-2018-january-public-preview"></a>Gennaio 2018 (anteprima pubblica di gennaio)
+## <a name="january-2018-january-public-preview"></a>2018 gennaio (anteprima pubblica di gennaio)
 
 Data di rilascio: 17 gennaio 2018  
 versione: 0.25.4
 
-L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
+Il *anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
 
-- Le connessioni server salvate sono disponibili nella finestra di dialogo di connessione.
-- Abilitare l'uscita Hot, disattivata per impostazione predefinita. Per abilitarla vedere [impostazione uscita Hot](settings.md#hot-exit).
-- Ogni scheda è ora contraddistinta dal colore del relativo gruppo di server. La colorazione della scheda è disattivata per impostazione predefinita, per abilitare vedere [impostazione del colore di una scheda](settings.md#tab-color).
-- Modificata l'etichetta *Nome Server* in *Server* nella finestra di dialogo di connessione.
-- Corretto il comando non funzionante *Esegui Query corrente*.
-- Corretto il bug dello scripting di interruzione di tracina e rilascia.
-- Corretta l'icona del Menu Start bloccata in modo non corretto.
-- Aggiunta l'icona mancante dell'Account di Azure.
+- Connessioni Server salvate sono disponibili nella finestra di dialogo di connessione.
+- Abilitare l'uscita a caldo. Uscita frequente è disattivata per impostazione predefinita, per abilitare vedere [impostazione uscita Hot](settings.md#hot-exit).
+- Scheda contraddistinta dal colore in base a gruppo di Server. La colorazione della scheda è disattivata per impostazione predefinita, per abilitare vedere [scheda impostazione del colore](settings.md#tab-color).
+- Modifica *nome Server* a *Server* nella finestra di dialogo di connessione.
+- Correzione suddiviso *Esegui Query corrente* comando.
+- Correggere l'interruzione di trascinamento e rilascio bug di scripting.
+- Correggere icona Menu Start aggiunto non corretta.
+- Correggere l'icona di branding mancante Account di Azure.
 
 
 ## <a name="december-2017-december-public-preview"></a>Dicembre 2017 (anteprima pubblica di dicembre)
@@ -135,29 +162,29 @@ L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalit�
 Data di rilascio: 19 dicembre 2017  
 versione: 0.24.1
 
-L'*anteprima pubblica di dicembre* include diverse correzioni di bug in tutte le aree di funzionalità, nonché i miglioramenti seguenti:
+Il *anteprima pubblica di dicembre* include diverse correzioni di bug in tutte le aree di funzionalità, nonché i miglioramenti seguenti:
 
-- La finestra di dialogo per l'aggiunta automatica della regola del firewall è ora disponibile per consentire la connessione a Database SQL di Azure e Azure SQL Data Warehouse.
-- Aggiunta l'installazione di Windows e i pacchetti di installazione Linux DEB e RPM.
-- Aggiunto l'editor di layout della dashboard.
-- Aggiunti i comandi *Script come ALTER* e *Script come EXECUTE*.
-- Aggiunto il comando *Esegui la query corrente con il piano effettivo*.
-- Integrato l'editor di codice di Visual Studio 1.18.1.
-- Abilitato il caricamento dei file con estensione VSIX.
-- Supporta la sintassi di iterazione batch "GO N".
+- Creare finestra di dialogo regola Firewall è ora disponibile per consentire la connessione a Database SQL di Azure e Azure SQL Data Warehouse.
+- Aggiunto l'installazione di Windows e Linux DEB e RPM pacchetti di installazione.
+- Gestire l'editor di layout visivo del Dashboard.
+- *Script di modifica come* e *Script come eseguire* comandi.
+- *Eseguire la Query corrente con il piano effettivo* comando.
+- Integrare il codice di Visual Studio 1.18.1 editor platform.
+- Abilitare i file di trasferimento locale di estensione VSIX.
+- Supporta la sintassi di iterazione batch "Vai N".
 
 
-## <a name="november-2017"></a>Novembre 2017
+## <a name="november-2017"></a>2017 novembre
 
 Data di rilascio: 15 novembre 2017  
 versione: 0.23.6
 
-- Versione iniziale di [!INCLUDE[name-sos](../includes/name-sos-short.md)].
+- Versione di iniziale [!INCLUDE[name-sos](../includes/name-sos-short.md)].
 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Seguire una delle guide rapide qui sotto per iniziare:
+Vedere una delle Guide rapide seguenti per iniziare:
 - [Connettersi ed eseguire query in SQL Server](quickstart-sql-server.md)
 - [Connettersi ed eseguire query di Database SQL di Azure](quickstart-sql-database.md)
 - [Connettersi ed eseguire query in Azure Data Warehouse](quickstart-sql-dw.md)

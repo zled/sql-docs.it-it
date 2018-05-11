@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 140d84717f7343f52b1c553964cce8f0c40e2c7c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 716fbd8a105164d40bfa6b3e67d126067174dc5a
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>L'aggiornamento dei componenti della macchina di apprendimento (R e Python) in istanze di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,9 @@ Per SQL Server 2017 Machine Learning Services, considerare l'associazione solo q
 
 Per i clienti di SQL Server 2016 R Services, sono presenti due percorsi per ottenere nuovi e aggiornati i pacchetti R. Una di queste prevede l'aggiornamento a SQL Server 2017; il secondo, l'associazione a Server di Microsoft Machine Learning.
 
-È l'aggiornamento a SQL Server 2017 Ottiene i pacchetti R in corrispondenza le versioni incluse in tale versione, oltre alle funzionalità di Python. In alternativa, associazione ottiene aggiornamento pacchetti R, che possono essere aggiornati ulteriormente in ogni nuova versione principale e secondaria del Server di Microsoft Machine Learning. Associazione non offrono supporto Python, che è una funzionalità di SQL Server 2017. 
+È l'aggiornamento a SQL Server 2017 Ottiene i pacchetti R in corrispondenza le versioni incluse in tale versione, oltre alle funzionalità di Python. In alternativa, associazione ottiene aggiornamento pacchetti R, che possono essere aggiornati ulteriormente in ogni nuova versione principale e secondaria del Server di Microsoft Machine Learning. 
+
+Associazione non offrono supporto Python, che è una funzionalità di SQL Server 2017. 
 
 **Aggiornamenti dei componenti disponibili tramite Microsoft Machine Learning Server**
 
@@ -47,7 +49,7 @@ Si noti che l'associazione non garantisce la versione più recente di R o Anacon
 Componente |Versione iniziale | R Server 9.0.1 | R Server 9.1 | MLS 9.2.1 | MLS 9.3 |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) su R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | LA VERSIONE 3.4.3 R |
-[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 9.0 | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[RevoScaleR](https://docs.microsoft.com/achine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1,0 |  1,0 |  1,0 |  1,0 |
@@ -58,24 +60,26 @@ Microsoft R Open (MRO) su R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | LA
 
 Componente |Versione iniziale | MLS 9.3 | | | |
 ----------|----------------|---------|-|-|-|-|
-Microsoft R Open (MRO) su R | R 3.4.1 | LA VERSIONE 3.4.3 R | | | |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.3 |  9.3 | | | |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
+Microsoft R Open (MRO) su R | R 3.3.3 | LA VERSIONE 3.4.3 R | | | |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
 [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1,0 |  1,0 | | | |
 [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1,0 |  1,0 | | | |
 Anaconda 4.2 su Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
-[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.3  | 9.3| | | |
- [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.3  | 9.3| | | |
-[modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.3 | 9.3| | | |
+[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
+ [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
+[modelli con training preliminare](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) | 9.2 | 9.3| | | |
 
 ## <a name="how-component-upgrade-works"></a>Funzionamento dell'aggiornamento di componenti
 
-Aggiornamento del componente è attraverso *associazione* un'istanza di SQL Server 2016 R Services (o un'istanza di servizi di SQL Server 2017 Machine Learning) al Server di Microsoft Machine Learning. [Server di Microsoft Machine Learning](https://docs.microsoft.com/machine-learning-server/index) è un prodotto server in locale separati da SQL Server, ma con lo stesso interpreti e pacchetti. Associazione swap out il meccanismo di aggiornamento del servizio SQL Server in modo che è possibile usare i pacchetti R e Python shipping con Microsoft Machine Learning Server, che spesso sono più recenti rispetto a quelli forniti da SQL Server per la manutenzione. Criteri di cambio di supporto è un'opzione attraente per team di analisi scientifica dei dati che richiedono la generazione più recente di R e i moduli Python per le relative soluzioni. 
+Consiste nell'aggiornamento del componente *associazione* un'istanza di SQL Server 2016 R Services (o un'istanza di SQL Server 2017 Machine Learning Services) a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index). 
+
+Server di Microsoft Machine Learning è un prodotto server in locale separati da SQL Server, ma con lo stesso interpreti e pacchetti. Associazione swap out il meccanismo di aggiornamento del servizio SQL Server in modo che è possibile usare i pacchetti R e Python shipping con Microsoft Machine Learning Server, che spesso sono più recenti rispetto a quelli installati tramite SQL Server. Criteri di cambio di supporto è un'opzione attraente per team di analisi scientifica dei dati che richiedono la generazione più recente di R e i moduli Python per le relative soluzioni. 
 
 Associazione viene eseguita tramite il [installer MLS](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install). Il programma di installazione aggiorna pacchetti R e Python specifici, ma non sostituisce l'istanza nel database di SQL Server con un autonomo, un'installazione server disconnesso.
 
 + Senza l'associazione, i pacchetti R e Python sono corretti per le correzioni di bug quando si installa un service pack SQL Server o l'aggiornamento cumulativo (CU). 
-+ Con l'associazione, le versioni più recenti del pacchetto possono essere applicate all'istanza, in modo indipendente dalla pianificazione del rilascio CU, sotto il [moderna criteri del ciclo di vita](https://support.microsoft.com/help/30881/modern-lifecycle-policy) e le versioni di Microsoft Machine Learning Server. I criteri di supporto del ciclo di vita moderna offre aggiornamenti più frequenti su una durata più breve, un anno. 
++ Con l'associazione, le versioni più recenti del pacchetto possono essere applicate all'istanza, in modo indipendente dalla pianificazione del rilascio CU, sotto il [moderna criteri del ciclo di vita](https://support.microsoft.com/help/30881/modern-lifecycle-policy) e le versioni di Microsoft Machine Learning Server. I criteri di supporto del ciclo di vita moderna offre aggiornamenti più frequenti su una durata più breve, un anno. Post-binding, potrebbe continuare a utilizzare il programma di installazione MLS per gli aggiornamenti futuri di R e Python man mano che diventano disponibili nel Server di Microsoft Machine Learning.
 
 Associazione si applica alle funzionalità R e Python. Vale a dire, pacchetti open source per le funzionalità di R e Python (Microsoft R Open, Anaconda) e il proprietari pacchetti RevoScaleR, revoscalepy e così via. Associazione non modifica il modello di supporto per l'istanza del motore di database e non cambia la versione di SQL Server.
 
@@ -90,25 +94,31 @@ Passaggi per l'associazione ha sommato, sono i seguenti:
 
 In termini di esperienza utente, la tecnologia e modalità di utilizzo è rimasto invariato. L'unica differenza è la presenza di pacchetti più recente-con controllo delle versioni e altri pacchetti non originariamente disponibili tramite SQL Server (ad esempio MicrosoftML per i clienti di SQL Server 2016 R Services).
 
-## <a name="bkmk_BindWizard"></a>Eseguire l'aggiornamento utilizzando il programma di installazione
+## <a name="bkmk_BindWizard"></a>Associare MLS tramite l'installazione
 
-Il programma di installazione di Microsoft Machine Learning rileva la versione di SQL Server e le funzionalità esistenti e richiama un'utilità denominata SqlBindR.exe per modificare l'associazione. Internamente, SqlBindR è concatenato al programma di installazione e utilizzato indirettamente. In un secondo momento, è possibile eseguire SqlBindR direttamente dalla riga di comando per esercitare opzioni specifiche.
+Il programma di installazione di Microsoft Machine Learning rileva la versione di SQL Server e le funzionalità esistenti e richiama un'utilità denominata SqlBindR.exe per modificare l'associazione. Internamente, SqlBindR è concatenato al programma di installazione e utilizzato indirettamente. In un secondo momento, è possibile chiamare SqlBindR direttamente dalla riga di comando per esercitare opzioni specifiche.
 
-1. Controllare la versione di R e RevoScaleR per verificare che siano inferiori rispetto a ciò che si intende sostituirle con le versioni esistenti. Per altre informazioni, vedere [Python e R ottenere informazioni sul pacchetto](determine-which-packages-are-installed-on-sql-server.md).
+1. Verificare che il server soddisfi i requisiti minimi di compilazione. Per SQL Server 2016 R Services, il valore minimo è [Service Pack 1](https://www.microsoft.com/download/details.aspx?id=54276) e [CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). In SSML eseguire `SELECT @@version` per restituire le informazioni sulla versione di server. 
 
-1. [Scaricare Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer) al computer che dispone dell'istanza da aggiornare. 
+1. Controllare la versione di R e RevoScaleR per verificare che siano inferiori rispetto a ciò che si intende sostituirle con le versioni esistenti. Per SQL Server 2016 R Services, pacchetto di Base di R è 3.2.2 e RevoScaleR è 8.0.3.
 
-1. Decomprimere la cartella e avviare l'installazione.
+    + Passare a \Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin
+    + Fare doppio clic su **R** per aprire la console.
+    + Per ottenere versioni del pacchetto, usare `library(help="base")` e `library(help="RevoScaleR")`. 
 
-    ![Configurazione guidata Server di Microsoft Machine Learning](media/mls-921-installer-start.PNG)
+1. Scaricare Microsoft Machine Learning Server nel computer che dispone dell'istanza da aggiornare. È consigliabile il [versione più recente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer).
+
+1. Decomprimere la cartella e avviare ServerSetup.exe, sotto MLSWIN93.
+
+   ![Configurazione guidata Server di Microsoft Machine Learning](media/mls-921-installer-start.PNG)
 
 1. Nel **configurare l'installazione**confermare i componenti da aggiornare e rivedere l'elenco delle istanze compatibile. 
 
-   A sinistra, scegliere tutte le funzionalità che si desidera mantenere o l'aggiornamento. Non è possibile aggiornare alcune funzionalità e non altri. Una casella di controllo vuota indica che le funzionalità rimosse presupponendo che sia attualmente installato. Nella schermata, è selezionata un'istanza di SQL Server 2017 Machine Learning Services (MSSQL14) con R e Python. Questa configurazione è supportata perché SQL Server 2017 è R e Python.
+   A sinistra, scegliere tutte le funzionalità che si desidera mantenere o l'aggiornamento. Non è possibile aggiornare alcune funzionalità e non altri. Una casella di controllo vuota rimuove tale caratteristica, presupponendo che sia attualmente installato. Nella schermata, data un'istanza di SQL Server 2016 R Services (MSSQL13), vengono selezionati R e la versione di R dei modelli con training preliminare. Questa configurazione è valida perché SQL Server 2016 supporta R, ma non Python.
 
-   A destra, selezionare la casella di controllo accanto al nome di istanza. Se nessuna istanza non è elencata, è una combinazione incompatibile. Se non si seleziona un'istanza, viene creata una nuova installazione autonoma di Machine Learning Server e le librerie di SQL Server non sono cambiate.
+   A destra, selezionare la casella di controllo accanto al nome di istanza. Se nessuna istanza non è elencata, è una combinazione incompatibile. Se non si seleziona un'istanza, viene creata una nuova installazione autonoma di Machine Learning Server e le librerie di SQL Server non sono cambiate. Se non è possibile selezionare un'istanza, potrebbe non essere al [SP1 CU3](https://support.microsoft.com/help/4019916/cumulative-update-3-for-sql-server-2016-sp1). 
 
-    ![Configurazione guidata Server di Microsoft Machine Learning](media/configure-the-installation.PNG)
+    ![Configurazione guidata Server di Microsoft Machine Learning](media/mls-931-installer-mssql13.png)
 
 1. Nel **contratto di licenza** selezionare **accetto le condizioni** per accettare le condizioni di licenza per il Server di Machine Learning. 
 
@@ -118,15 +128,51 @@ Il programma di installazione di Microsoft Machine Learning rileva la versione d
 
     Se si desidera modificare la cartella di installazione, fare clic su **avanzate** per tornare alla prima pagina della procedura guidata. Tuttavia, è necessario ripetere tutte le selezioni precedenti.
 
-1. Se si [installazione dei componenti non in linea](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline), potrebbero essere richieste per il percorso dei componenti di apprendimento macchina richiesta, ad esempio Microsoft R Open, il Server di Python e Python aperto.
-
-Durante il processo di installazione, vengono sostituite tutte le librerie di R o Python utilizzate da SQL Server e finestra di avvio viene aggiornato per utilizzare i componenti più recenti. Di conseguenza, se l'istanza viene utilizzata in precedenza librerie nella cartella R_SERVICES predefinita, dopo l'aggiornamento queste librerie vengono rimossi e vengono modificate le proprietà per il servizio Launchpad, per utilizzare le librerie nella nuova posizione.
+Durante il processo di installazione, vengono sostituite tutte le librerie di R o Python utilizzate da SQL Server e finestra di avvio viene aggiornato per utilizzare i componenti più recenti. Di conseguenza, se l'istanza utilizzata in precedenza librerie nella cartella R_SERVICES predefinita, dopo l'aggiornamento queste librerie vengono rimossi e vengono modificate le proprietà per il servizio Launchpad usino le librerie nella nuova posizione.
 
 Associazione influisce sul contenuto di queste cartelle: C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\library viene sostituito con il contenuto di c:\Programmi\Microsoft Files\Microsoft\ML Server\R_SERVER. La seconda cartella e il relativo contenuto viene creati dal programma di installazione di Microsoft Machine Learning Server. 
 
+Se l'aggiornamento non riesce, controllare [codici di errore SqlBindR](#sqlbindr-error-codes) per altre informazioni.
+
 ## <a name="confirm-binding"></a>Verificare associazione
 
-Controlla di nuovo la versione di R e RevoScaleR per confermare di che avere le versioni più recenti. Per altre informazioni, vedere [Python e R ottenere informazioni sul pacchetto](determine-which-packages-are-installed-on-sql-server.md). I clienti di SQL Server 2016 R Services devono anche avere MicrosoftML.
+Controlla di nuovo la versione di R e RevoScaleR per confermare di che avere le versioni più recenti. Utilizzare la console di R distribuita con i pacchetti R nell'istanza di motore di database per ottenere informazioni sul pacchetto:
+
++ Passare a \Programmi\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\bin
++ Fare doppio clic su **R** per aprire la console.
++ Per ottenere versioni del pacchetto, usare `library(help="base")` e `library(help="RevoScaleR")`. 
+
+Per SQL Server 2016 R Services associato a Machine Learning Server 9.3, il pacchetto di Base di R deve essere 3.4.1 ed è inoltre necessario avere 9.3 MicrosoftML RevoScaleR devono essere 9.3. 
+
+Se si aggiungono i modelli con training preliminare, i modelli sono incorporati nella libreria MicrosoftML ed è possibile chiamarli tramite funzioni MicrosoftML. Per altre informazioni, vedere [esempi di R per MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/sample-microsoftml).
+
+## <a name="offline-no-internet-access"></a>Non in linea (Nessun accesso a internet)
+
+Per i sistemi senza connessione a internet, è possibile scaricare i programma di installazione del file CAB e a un computer connesso a internet e quindi trasferire i file al server di tipo isolato. 
+
+Il programma di installazione (ServerSetup.exe) include i pacchetti Microsoft (RevoScaleR MicrosoftML, olapR, sqlRUtils). I file con estensione cab forniscono altri componenti di base. Ad esempio, il file cab "SRO" fornisce R Open, distribuzione di Microsoft r open source.
+
+Le istruzioni seguenti viene illustrato come inserire i file per un'installazione offline.
+
+1. Scaricare il programma di installazione MLS. Scarica come un unico file ZIP. È consigliabile il [versione più recente](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install#download-machine-learning-server-installer), ma è anche possibile installare [versioni](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components).
+
+1. Scaricare i file con estensione cab. I seguenti collegamenti rimandano per versione 9.3. Se sono necessarie le versioni precedenti, è possibile trovare i collegamenti aggiuntivi nel [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Tenere presente che Python/Anaconda possono essere aggiunti solo a un'istanza di SQL Server 2017 Machine Learning Services. I modelli con training preliminare disponibili per R e Python; file CAB sono disponibili modelli nelle lingue in uso.
+
+    | Funzionalità | Scarica |
+    |---------|----------|
+    | L       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
+    | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
+    | Modelli con training preliminare | [MLM_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859053) |
+
+1. Trasferire i file con estensione zip e con estensione CAB per il server di destinazione.
+
+1. Nel server, digitare `%temp%` nel comando Esegui per ottenere il percorso fisico della directory temporanea. Il percorso fisico varia dal computer, ma è in genere `C:\Users\<your-user-name>\AppData\Local\Temp`.
+
+1. Place.cab file nella cartella % temp %.
+
+1. Decomprimere il programma di installazione.
+
+1. Eseguire ServerSetup.exe e seguire le istruzioni visualizzate per completare l'installazione.
 
 ## <a name="bkmk_BindCmd"></a>Operazioni dalla riga di comando
 
@@ -239,21 +285,25 @@ Se si ritiene cartelle con un nome simile al seguente, è possibile rimuoverlo a
 |*bind*| Aggiorna l'istanza di database SQL specificata alla versione più recente di R Server e assicura che all'istanza vengano applicati automaticamente gli aggiornamenti successivi di R Server|
 |*unbind*|Disinstalla la versione più recente di R Server dall'istanza di database SQL specificata e impedisce l'applicazione degli aggiornamenti successivi di R Server|
 
+< a name = "codici di errore sqlbinder"<a/>
+
 ### <a name="errors"></a>Errori
 
 La query restituisce i messaggi di errore seguenti:
 
-|Errore|Soluzione|
-|------|------|
-|An error occurred while binding the instance (Si è verificato un errore durante l'associazione dell'istanza)| Non è stato possibile associare l'istanza. Contattare il supporto tecnico.|
-|The instance is already bound (L'istanza è già associata)| È stato eseguito il comando *bind* , ma l'istanza specificata è già associata. Scegliere un'istanza diversa.|
-|The instance is not bound (L'istanza non è associata)| È stato eseguito il comando *unbind* , ma l'istanza specificata non è associata. Scegliere un'altra istanza compatibile.|
-|Not a valid SQL instance ID (L'ID dell'istanza SQL non è valido)| È possibile che il nome di istanza digitato non sia corretto. Eseguire nuovamente il comando con l'argomento *list* per visualizzare gli ID di istanza disponibili.|
-|No instances found (Non è stata trovata alcuna istanza)| In questo computer non è presente un'istanza di SQL Server R Services.|
-|Nell'istanza deve essere installata una versione compatibile di SQL R Services (In-Database).| Per informazioni dettagliate, vedere i requisiti di compatibilità in questo argomento.|
-|An error occurred while unbinding the instance (Si è verificato un errore durante l'annullamento dell'associazione dell'istanza)| Non è stato possibile disassociare l'istanza. Contattare il supporto tecnico.|
-|An unexpected error has occurred (Si è verificato un errore imprevisto)| Si sono verificati altri errori. Contattare il supporto tecnico.  |
-|No SQL instances found (Non è stata trovata alcuna istanza di SQL)| In questo computer non è presente un'istanza di SQL Server. |
+|Codice di errore  | Message           | Dettagli               |
+|------------|-------------------|-----------------------|
+|Associare l'errore 0 | OK (esito positivo) | Associazione passato senza errori. |
+|Eseguire l'associazione di errore 1 | Argomenti non validi | Errore di sintassi. |
+|Eseguire l'associazione di errore 2 | Azione non valida | Errore di sintassi. |
+|Eseguire l'associazione di errore 3 | Istanza non valida | Un'istanza esistente, ma non è valida per l'associazione. |
+|Eseguire l'associazione di errore 4 | Non associabile | |
+|Associare l'errore 5 | Già associato | È stato eseguito il comando *bind* , ma l'istanza specificata è già associata. |
+|Associare l'errore 6 | Eseguire il binding non riuscita | Si è verificato un errore durante l'annullamento dell'associazione dell'istanza. |
+|Associare l'errore 7 | Non è associato | Istanza del motore di database ha R Services o servizi di SQL Server Machine Learning. L'istanza non è associata al Server di Microsoft Machine Learning. |
+|Associare l'errore 8 | Annullamento del binding non riuscita | Si è verificato un errore durante l'annullamento dell'associazione dell'istanza. |
+|Errore 9 di associazione | No instances found (Non è stata trovata alcuna istanza) | Nessuna istanza trovata nel computer. |
+
 
 ## <a name="see-also"></a>Vedere anche
 

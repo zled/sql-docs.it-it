@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ac932c68e218ecbaf4fdd19c1e77b491ab444feb
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a601df470449c9bc21253c071bc4c7e560e98749
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Programmazione di attività amministrative con AMO
   La libreria AMO (Analysis Management Objects) è una libreria di programmazione utilizzata dalle applicazioni client per gestire [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. In questa sezione viene illustrato come programmare utilizzando gli oggetti AMO.  

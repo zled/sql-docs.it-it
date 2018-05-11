@@ -1,33 +1,19 @@
 ---
 title: Classi di Data Mining AMO | Documenti Microsoft
-ms.custom: 
-ms.date: 02/14/2018
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: 
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data mining [AMO]
-- AMO, data mining
-- Analysis Management Objects, data mining
-ms.assetid: e4108825-b722-417c-9647-ab30ce35e549
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: amo
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: a1a5ca970ee22d91b06a945e8a3b600b74892790
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 23ab7f4e460834ba0fbf0cadd374c963a3a9306d
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-data-mining-classes"></a>Classi di data mining AMO
   Le classi di data mining consentono di creare, modificare, eliminare ed elaborare oggetti di dati mining. L'utilizzo di oggetti di data mining include la creazione di strutture e di modelli di data mining e l'elaborazione di tali modelli.  
@@ -46,7 +32,7 @@ ms.lasthandoff: 02/15/2018
   
  ![Classi di data mining AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/media/amo-dataminingclasses.gif "classi di data mining AMO")  
   
-##  <a name="MiningStructure">Oggetti MiningStructure</a>  
+##  <a name="MiningStructure"></a> Oggetti MiningStructure  
  Una struttura di data mining rappresenta il contenitore per i modelli di data mining. La struttura definisce tutte le possibili colonne che i modelli di data mining possono utilizzare. Ogni modello di data mining definisce le proprie colonne dal set di colonne definite nella struttura.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.MiningStructure> semplice è costituito da informazioni di base, una vista origine dati, uno o più oggetti <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, zero o più oggetti <xref:Microsoft.AnalysisServices.TableMiningStructureColumn> e un oggetto <xref:Microsoft.AnalysisServices.MiningModelCollection>.  
@@ -98,7 +84,7 @@ ms.lasthandoff: 02/15/2018
   
  Per rimuovere un oggetto <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>, è necessario eliminarlo dalla raccolta dell'oggetto <xref:Microsoft.AnalysisServices.MiningStructure> padre e aggiornare l'oggetto <xref:Microsoft.AnalysisServices.MiningStructure> padre nel server tramite il metodo Update.  
   
-##  <a name="MiningModel">Oggetti MiningModel</a>  
+##  <a name="MiningModel"></a> Oggetti MiningModel  
  Un oggetto <xref:Microsoft.AnalysisServices.MiningModel> consente di scegliere le colonne della struttura e un algoritmo da utilizzare, nonché eventuali parametri specifici per ottimizzare il modello. Potrebbe essere necessario ad esempio definire nella stessa struttura di data mining diversi modelli di data mining che utilizzano gli stessi algoritmi, ma ignorare alcune colonne della struttura di data mining in un modello e utilizzarle come colonne di input in un altro modello e come colonne di input e di stima in un terzo modello. Queste operazioni possono risultare utili se si desidera considerare continua una colonna in un modello di data mining, ma discretizzata in un altro modello.  
   
  Un oggetto <xref:Microsoft.AnalysisServices.MiningModel> semplice è costituito da informazioni di base, dalla definizione di algoritmo e da colonne.  
@@ -120,7 +106,7 @@ ms.lasthandoff: 02/15/2018
  [Classi fondamentali AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)   
  [Oggetti di Data Mining di programmazione AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)   
  [Introduzione a classi AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-classes-introduction.md)   
- [Architettura logica &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Gli oggetti di database &#40; Analysis Services - dati multidimensionali &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Architettura logica & #40; Analysis Services - dati multidimensionali & #41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Gli oggetti di database & #40; Analysis Services - dati multidimensionali & #41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

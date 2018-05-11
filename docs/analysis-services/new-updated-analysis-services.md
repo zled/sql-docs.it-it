@@ -4,7 +4,7 @@ description: Visualizzare i frammenti di contenuto aggiornato per modificati di 
 manager: craigg
 author: MightyPen
 ms.author: genemi
-ms.topic: article
+ms.topic: conceptual
 ms.custom: UpdArt.exe
 ms.suite: sql
 ms.technology: release-landing
@@ -12,11 +12,11 @@ ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: analysis-services
 ms.date: 04/28/2018
-ms.openlocfilehash: 1d76f2a9f60e5bb69b2586a9b9fee10210c87c81
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a41ae049a0aab30e8a5761fc2612ccf0e05d6a09
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Nuovi e aggiornati: Analysis Services per SQL Server
 

@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: amo
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9ba64d48fe93ea047210c00717d84cde0e4dcae9
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 2c0cd9ff11f2d2bc12a823c4696690ce9a7a8c44
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-data-mining-objects"></a>Programmazione di oggetti di data mining AMO
   La programmazione di oggetti di data mining tramite AMO è un'operazione estremamente semplice. Il primo passaggio consiste nella creazione del modello della struttura dei dati per supportare il progetto di data mining. Successivamente viene creato il modello di data mining che supporta l'algoritmo di data mining da utilizzare per stimare o individuare le relazioni non visibili sottostanti ai dati. Dopo avere creato il progetto di data mining, inclusi la struttura e gli algoritmi, è possibile elaborare i modelli di data mining per ottenere i modelli di cui è stato eseguito il training da utilizzare in un secondo momento durante l'esecuzione di query e di stime dall'applicazione client.  

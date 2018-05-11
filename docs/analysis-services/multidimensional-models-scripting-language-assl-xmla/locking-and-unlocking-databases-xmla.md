@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: xmla
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2fbc606d5eb93796ef03e62d07be0f70b5d3f807
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 1a5e765befc755820c927252d25ddb8b0edb0706
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="locking-and-unlocking-databases-xmla"></a>Blocco e sblocco di database (XMLA)
   È possibile bloccare e sbloccare database utilizzando, rispettivamente, il [blocco](../../analysis-services/xmla/xml-elements-commands/lock-element-xmla.md) e [Unlock](../../analysis-services/xmla/xml-elements-commands/unlock-element-xmla.md) comandi XML for Analysis (XMLA). In genere, gli altri comandi XMLA bloccano e sbloccano automaticamente gli oggetti in base alle esigenze per completare il comando durante l'esecuzione. È possibile in modo esplicito bloccare o sbloccare un database per eseguire più comandi all'interno di una singola transazione, ad esempio un [Batch](../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md) comando, impedendo l'esecuzione del commit di una transazione di scrittura al database di altre applicazioni.  

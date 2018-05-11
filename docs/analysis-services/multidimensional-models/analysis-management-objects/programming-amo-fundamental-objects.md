@@ -3,17 +3,17 @@ title: Programmazione di oggetti fondamentali AMO | Documenti Microsoft
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: amo
-ms.topic: article
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2bc8a2cf279f204d76e96657bfb25c0ebfe14329
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 7d1a41e3682023862c69cc74bf961f279f99689e
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="programming-amo-fundamental-objects"></a>Programmazione di oggetti fondamentali AMO
   Gli oggetti fondamentali sono in genere oggetti di semplice utilizzo che solitamente vengono creati e di cui successivamente viene creata un'istanza. Quando non sono più necessari, l'utente si disconnette da tali oggetti. Le classi fondamentali includono gli oggetti <xref:Microsoft.AnalysisServices.Server>, <xref:Microsoft.AnalysisServices.Database>, <xref:Microsoft.AnalysisServices.DataSource> e <xref:Microsoft.AnalysisServices.DataSourceView>. L'unico oggetto complesso tra gli oggetti fondamentali AMO è <xref:Microsoft.AnalysisServices.DataSourceView>, per cui è necessario utilizzare dettagli per la compilazione del modello astratto che rappresenta la vista origine dati.  

@@ -25,11 +25,11 @@ caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1bc7964fafb35a4da03f8d5414f93835b49ed17
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 5c4e752c1d8c88a4b0f9dadc129213a6f2ac8951
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ managed_backup.fn_backup_db_config (‘database_name’ | ‘’ | NULL)
 |is_dropped|BIT|Il valore 1 indica che si tratta di un database rimosso.|  
 |credential_name|SYSNAME|Nome delle credenziali SQL utilizzate per l'autenticazione per l'account di archiviazione. Il valore NULL indica che non sono state impostate le credenziali SQL.|  
 |retention_days|INT|Periodo di memorizzazione corrente espresso in giorni. Il valore NULL indica che il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] non è stato configurato mai per questo database.|  
-|is_smart_backup_enabled|INT|Indica se il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è attualmente abilitato per questo database. Un valore 1 indica che il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è attualmente abilitato e il valore 0 indica che il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è disabilitato per questo database.|  
+|is_managed_backup_enabled|INT|Indica se il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è attualmente abilitato per questo database. Un valore 1 indica che il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è attualmente abilitato e il valore 0 indica che il [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] è disabilitato per questo database.|  
 |storage_url|NVARCHAR(1024)|URL dell'account di archiviazione.|  
 |Encryption_algorithm|NCHAR(20)|Restituisce l'algoritmo di crittografia corrente da utilizzare quando si crittografa il backup.|  
 |Encryptor_type|NCHAR(15)|Restituisce l'impostazione del componente di crittografia: certificato o chiave asimmetrica.|  

@@ -1,31 +1,23 @@
 ---
 title: Le formule di convalida incrociata | Documenti Microsoft
-ms.custom: 
-ms.date: 03/01/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
-caps.latest.revision: 
-author: Minewiskan
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 542e875d690d3698f942ef0d891f6f64c70cebfb
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cross-validation-formulas"></a>Formule per la convalida incrociata
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Quando viene generato, un report di convalida incrociata contiene misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero dell'algoritmo utilizzato per creare il modello), del tipo di dati dell'attributo stimabile e del valore dell'attributo stimabile, se presente.  
+  Quando viene generato, un report di convalida incrociata contiene misure di accuratezza per ogni modello, a seconda del tipo di modello di data mining (ovvero dell'algoritmo utilizzato per creare il modello), del tipo di dati dell'attributo stimabile e del valore dell'attributo stimabile, se presente.  
   
  In questa sezione vengono elencate le misure utilizzate nel report di convalida incrociata e viene descritto il metodo di calcolo.  
   
@@ -52,7 +44,7 @@ Quando viene generato, un report di convalida incrociata contiene misure di accu
 |**Radice errore quadratico medio**|Attributo discreto, nessuna destinazione specificata.|Radice quadrata della media dei quadrati di complemento del punteggio di probabilità, divisa per il numero di case nella partizione, esclusi i case con valori mancanti per l'attributo di destinazione.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Test e convalida &#40; Data Mining &#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [La convalida incrociata &#40; Analysis Services - Data Mining &#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [Test e convalida & #40; Data Mining & #41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
+ [La convalida incrociata & #40; Analysis Services - Data Mining & #41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

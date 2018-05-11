@@ -1,31 +1,23 @@
 ---
 title: La creazione di misure in MDX | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: f0347835-4983-4d26-acbb-6c8fae7992bd
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: mdx
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: d7c10b66d6ba27d406c2682b2aea3b8858c8fd12
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 70783b27502da7f3ab9c77b971ae730f5e047d88
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="mdx-building-measures"></a>Misure di compilazione di MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-Nelle espressioni MDX una misura è un'espressione DAX denominata che viene risolta tramite il calcolo dell'espressione per la restituzione di un valore in un modello tabulare. Dietro a questa definizione apparentemente semplice si nasconde un'enorme quantità di informazioni. La possibilità di creare e utilizzare misure in una query MDX offre capacità notevoli per la manipolazione dei dati tabulari.  
+  Nelle espressioni MDX una misura è un'espressione DAX denominata che viene risolta tramite il calcolo dell'espressione per la restituzione di un valore in un modello tabulare. Dietro a questa definizione apparentemente semplice si nasconde un'enorme quantità di informazioni. La possibilità di creare e utilizzare misure in una query MDX offre capacità notevoli per la manipolazione dei dati tabulari.  
   
 > [!WARNING]  
 >  Le misure possono essere definite solo nei modelli tabulari. Se il database viene impostato in modalità multidimensionale, la creazione di una misura genera un errore  
@@ -50,8 +42,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>Vedere anche  
- [CREARE l'istruzione MEMBER &#40; MDX &#41;](../../../mdx/mdx-data-definition-create-member.md)   
- [Riferimento alla funzione MDX &#40; MDX &#41;](../../../mdx/mdx-function-reference-mdx.md)   
- [Istruzione SELECT &#40; MDX &#41;](../../../mdx/mdx-data-manipulation-select.md)  
+ [CREARE l'istruzione MEMBER & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Riferimento alla funzione MDX & #40; MDX & #41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Istruzione SELECT & #40; MDX & #41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

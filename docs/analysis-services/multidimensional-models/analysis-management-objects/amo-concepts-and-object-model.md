@@ -3,17 +3,17 @@ title: Modello a oggetti e i concetti di AMO | Documenti Microsoft
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
-ms.component: amo
-ms.topic: article
+ms.custom: amo
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 778007f9cdf5b2c0eea94d9d202545e95476d1c7
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 8f3baad2b8d105c8c23e7f69d487ce2e1f88f3ff
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="amo-concepts-and-object-model"></a>Modello a oggetti AMO e concetti relativi
   In questo argomento fornisce una definizione di Analysis Management Objects (AMO), come AMO è correlato agli altri strumenti e librerie disponibili nell'architettura di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]e una spiegazione concettuale di tutti gli oggetti AMO principali.  

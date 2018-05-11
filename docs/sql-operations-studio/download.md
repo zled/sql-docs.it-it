@@ -2,9 +2,9 @@
 title: Scaricare e installare SQL Operations Studio (preview) | Microsoft Docs
 description: Scaricare e installare Microsoft SQL Operations Studio (preview) per Windows, Mac OS o Linux
 ms.custom: tools|sos
-ms.date: 04/25/2018
+ms.date: 05/08/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,23 +13,23 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f195a7877a93cba53cab77a3d3b8726bee29666
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: dcf6f9d14efd903c47d4e3b059503fb77606209b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Scaricare e installare SQL Operations Studio (preview)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] è supportato in Windows, macOS e Linux.
 
-Scaricare e installare la versione più recente, ovvero *l'anteprima pubblica di marzo*:
+Scaricare e installare la versione più recente, il *anteprima pubblica potrebbe*:
 
 |Piattaforma|Scarica|Data di rilascio| Versione |
 |:---|:---|:---|:---|
-|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=872717)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=872718)|25 aprile 2018 |0.28.6|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=872719)|25 aprile 2018 |0.28.6|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=872722)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=872721)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)|25 aprile 2018 |0.28.6|
+|Windows|[Programma di installazione](https://go.microsoft.com/fwlink/?linkid=873386)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=873387)|7 maggio 2018 |0.29.3|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=873388)|7 maggio 2018 |0.29.3|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=873391)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=873390)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)|7 maggio 2018 |0.29.3|
 
 Per informazioni dettagliate sulla versione più recente, vedere le [note sulla versione](release-notes.md).
 
@@ -39,20 +39,20 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 
 **Programma di installazione**
 
-1. Scaricare ed eseguire il [programma di installazione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=872717).
+1. Scaricare ed eseguire il [programma di installazione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Windows](https://go.microsoft.com/fwlink/?linkid=873386).
 1. Avviare l'app [!INCLUDE[name-sos-short](../includes/name-sos-short.md)].
 
 
 **file con estensione zip**
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=872718).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] ZIP per Windows](https://go.microsoft.com/fwlink/?linkid=873387).
 2. Individuare il file scaricato e decomprimerlo.
 3. Eseguire `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Ottenere SQL Operations Studio (preview) per macOS
 
-1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=872719).
+1. Scaricare [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] per macOS](https://go.microsoft.com/fwlink/?linkid=873388).
 2. Per espandere il contenuto del file zip, fare doppio clic.
 3. Per rendere [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibile nel *Launchpad*, trascinare *sqlops.app* sulla cartella *applicazioni*.
 
@@ -60,9 +60,9 @@ Questa versione di [!INCLUDE[name-sos](../includes/name-sos-short.md)] include u
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Ottenere SQL Operations Studio (preview) per Linux
 
 1. Scaricare [!INCLUDE[name-sos](../includes/name-sos-short.md)] per Linux usando uno dei programmi di installazione o l'archivio GZ:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=872722)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=872721)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=872720)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=873391)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=873390)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=873389)
 1. Per estrarre il file e avviare [!INCLUDE[name-sos](../includes/name-sos-short.md)], aprire una nuova finestra terminale e digitare i comandi seguenti:
 
    **Debian installazione:**

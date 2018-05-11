@@ -1,38 +1,23 @@
 ---
 title: Visualizzare un modello utilizzando il visualizzatore Microsoft Neural Network | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- mining model content, viewing
-- classification mining model [Analysis Services]
-- Microsoft Neural Network Viewer
-- regression algorithms [Analysis Services]
-- Neural Network Viewer [Analysis Services]
-- neural network model [Analysis Services]
-ms.assetid: 2343d746-c4f4-499b-9d3c-17d63310a9a3
-caps.latest.revision: 
-author: Minewiskan
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7c8416b54fe5501dcae1e4a333ec7291e530576
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 021f4ef076a29baa167c288465daeffcffb77858
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Neural Network
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, che consente di creare modelli di data mining di classificazione e regressione in grado di analizzare più input e output, è molto utile a scopo di analisi ed esplorazione. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
+  Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare i modelli di data mining compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network, che consente di creare modelli di data mining di classificazione e regressione in grado di analizzare più input e output, è molto utile a scopo di analisi ed esplorazione. Per ulteriori informazioni su questo algoritmo, vedere [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
   
  Quando si esplora un modello utilizzando il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network Viewer, si sceglie in genere un attributo di destinazione e uno stato, quindi si utilizza il visualizzatore per determinare in che modo gli attributi di input influiscono sul risultato.  
   
@@ -76,7 +61,7 @@ Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Net
  [Torna all'inizio](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variabili  
- La griglia della scheda **Variabili** contiene le colonne seguenti: **Attributo**, **Valore**, **Predilige [valore 1]**e **Predilige [valore 2]**. Per impostazione predefinita, le colonne vengono ordinate in base al valore di **Predilige [valore 1]**. Se si fa clic su un'intestazione di colonna, viene modificato l'ordinamento della colonna selezionata.  
+ La griglia della scheda **Variabili** contiene le colonne seguenti: **Attributo**, **Valore**, **Predilige [valore 1]** e **Predilige [valore 2]**. Per impostazione predefinita, le colonne vengono ordinate in base al valore di **Predilige [valore 1]**. Se si fa clic su un'intestazione di colonna, viene modificato l'ordinamento della colonna selezionata.  
   
  Una barra a destra dell'attributo indica lo stato dell'attributo di output prediletto dallo stato dell'attributo di input specificato. La dimensione della barra indica in quale misura lo stato di input è prediletto dallo stato di output.  
   

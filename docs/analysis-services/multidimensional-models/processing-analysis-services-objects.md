@@ -1,34 +1,23 @@
 ---
 title: L'elaborazione di Analysis Services oggetti | Documenti Microsoft
-ms.custom: 
-ms.date: 03/14/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
-ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-helpviewer_keywords:
-- OLAP objects [Analysis Services], processing
-- OLAP objects [Analysis Services]
-ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
-caps.latest.revision: 
-author: Minewiskan
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.component: multidimensional-models
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 9b9d17eac58d4ae287f71e924d9c012f63484c21
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: 026d0b92f4d97e67ca6676cf6ce6168b567d7b4b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="processing-analysis-services-objects"></a>Elaborazione di oggetti di Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+  L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguenti: database, cubi, dimensioni, gruppi di misure, partizioni e strutture e modelli di data mining di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Per ogni tipo di oggetto è possibile specificare il livello di elaborazione o impostare l'opzione Elaborazione predefinita in modo che [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selezioni automaticamente il livello di elaborazione ottimale. Per altre informazioni sui diversi livelli di elaborazione per ogni oggetto, vedere [Opzioni e impostazioni di elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  È importante conoscere le conseguenze dell'elaborazione per ridurre l'occorrenza di ripercussioni negative. Ad esempio, l'elaborazione completa di una dimensione imposta automaticamente tutte le partizioni dipendenti da tale dimensione su uno stato di non elaborazione. In tal modo i cubi interessati diventano non disponibili per l'esecuzione di query fino all'elaborazione delle partizioni dipendenti.  
   
@@ -101,7 +90,7 @@ L'elaborazione interessa i tipi di oggetto di [!INCLUDE[msCoName](../../includes
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti e approcci per l'elaborazione &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [L'elaborazione batch &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [L'elaborazione batch & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Elaborazione di un modello multidimensionale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

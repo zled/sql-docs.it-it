@@ -9,16 +9,16 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 3295bbdbb00c73c9aaa37dcb15d35121b82454bb
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: e19217fb00cba1f9369bf79a09790f58f9dc2e66
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 #  <a name="get-r-and-python-package-information-on-sql-server-machine-learning"></a>Ottenere informazioni sul pacchetto di Python e R in SQL Server Machine Learning
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Se si sono installati più ambienti Python o utilizzano più strumenti di R, è facile da installare un pacchetto per la libreria non corretta o l'ambiente e non sarà possibile trovarlo in un secondo momento. Questo articolo fornisce le query e al materiale sussidiario utile per la versione del pacchetto determininga e per elencare i pacchetti che vengono installati nell'ambiente di SQL Server corrente.
+Se si sono installati più ambienti Python o utilizzano più strumenti di R, è facile da installare un pacchetto per la libreria non corretta o l'ambiente e non sarà possibile trovarlo in un secondo momento. Questo articolo fornisce le query e al materiale sussidiario utile per la versione del pacchetto ga determinin e per elencare i pacchetti che vengono installati nell'ambiente di SQL Server corrente.
 
 ## <a name="verify-the-current-default-library"></a>Verificare la libreria predefinita corrente
 

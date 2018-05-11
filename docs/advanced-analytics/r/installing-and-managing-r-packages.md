@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: ee2c8124cf3487ca300c0b08ea113c8e66b114f4
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 48fb451e35f58cf606c47cd64cf5f9093069c274
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Valore predefinito R e Python pacchetti in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,17 +61,17 @@ In questa sezione riepiloga le funzionalità di R e Python inclusa in un'install
 
 ### <a name="r-components"></a>Componenti di R
 
-I componenti includono la distribuzione di Microsoft di R open source come [Microsoft R Open](https://mran.microsoft.com/open). Pacchetti di base R includono funzionalità di base, ad esempio **stats** e **utils**. È possibile eseguire `installed.packages(priority = "base")` per restituire un elenco dei pacchetti. Un'installazione di base di R include inoltre numerosi set di dati di esempio e gli strumenti standard di R, ad esempio RGui (un semplice editor interattivo) e RTerm (un prompt dei comandi R).
+Open source R è la distribuzione di Microsoft [Microsoft R Open (MRO)](https://mran.microsoft.com/open). Pacchetti di base R includono funzionalità di base, ad esempio **stats** e **utils**. È possibile eseguire `installed.packages(priority = "base")` per restituire un elenco dei pacchetti. Un'installazione di base di R include inoltre numerosi set di dati di esempio e gli strumenti standard di R, ad esempio RGui (un semplice editor interattivo) e RTerm (un prompt dei comandi R).
 
-I pacchetti Microsoft includono [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) per contesti di calcolo remoto, streaming, esecuzione parallela di funzioni rx per l'importazione dei dati e la trasformazione, modellazione, visualizzazione e analisi. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) aggiunge apprendimento di modellazione in R. Includono altri pacchetti [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) per la scrittura di istruzioni MDX in R e [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) per l'inclusione di script R nelle stored procedure.
+Includono i pacchetti R proprietaria [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) per contesti di calcolo remoto, streaming, esecuzione parallela di funzioni rx per l'importazione dei dati e la trasformazione, modellazione, visualizzazione e analisi. [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package) aggiunge apprendimento di modellazione in R. Includono altri pacchetti Microsoft [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) per la scrittura di istruzioni MDX in R e [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) per l'inclusione di script R nelle stored procedure.
 
 
 |Versione             | Versione di R       | Pacchetti Microsoft    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2016 R Services | 3.2.2   | RevoScaleR, sqlrutil  |
-| SQL Server 2017 Machine Learning Services| versione 3.4.3 | RevoScaleR, MicrosoftML, olapR, sqlrutil|
+| SQL Server 2017 Machine Learning Services| 3.3.3 | RevoScaleR, MicrosoftML, olapR, sqlrutil|
 
-È possibile aggiungere pacchetti e i modelli di pre-installati per R Services di SQL Server 2016 mediante associazione per i criteri di supporto del ciclo di vita moderna. Associazione viene modificato il modello di manutenzione. Per impostazione predefinita, dopo l'installazione iniziale, i pacchetti R vengono aggiornati tramite service pack e gli aggiornamenti cumulativi. Altri pacchetti e aggiornamenti di versione completo di componenti di base R sono possibili solo tramite gli aggiornamenti di prodotto (da SQL Server 2016 da SQL Server 2017) o mediante l'associazione R supportano al Server di Microsoft Machine Learning. Per altre informazioni, vedere [aggiornamento R e Python componenti di SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+È possibile aggiornare i pacchetti di componenti di R, aggiungere i nuovi pacchetti R e modelli di pre-installati mediante l'associazione ai criteri di supporto del ciclo di vita moderna. Associazione viene modificato il modello di manutenzione. Per impostazione predefinita, dopo l'installazione iniziale, i pacchetti R vengono aggiornati tramite service pack e gli aggiornamenti cumulativi. Altri pacchetti e aggiornamenti di versione completo di componenti di base R sono possibili solo tramite gli aggiornamenti di prodotto (da SQL Server 2016 da SQL Server 2017) o mediante l'associazione R supportano al Server di Microsoft Machine Learning. Per altre informazioni, vedere [aggiornamento R e Python componenti di SQL Server](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
 
 ### <a name="python-components"></a>Componenti di Python
 
@@ -89,9 +89,9 @@ Dopo l'installazione iniziale, pacchetti Python vengono aggiornati tramite servi
 
 ## <a name="administrative-permissions-for-package-installation"></a>Autorizzazioni amministrative per l'installazione del pacchetto
 
-Le autorizzazioni necessarie per l'installazione del pacchetto sono stati modificati tra SQL Server 2016 e SQL Server 2017.
+La libreria di pacchetti utilizzata da un'istanza nel database si trova fisicamente nella cartella file di programma dell'istanza di SQL Server. La scrittura in questa posizione richiede le autorizzazioni di amministratore. Tuttavia, SQL Server 2017 offre alcune metodologie aggiuntive per l'installazione del pacchetto che offre a utenti non amministratori la possibilità di aggiungere pacchetti.
 
-+ In SQL Server 2016, è necessario per l'installazione di nuovi pacchetti R accesso amministrativo.
++ In SQL Server 2016, l'accesso amministrativo è obbligatorio per una nuova installazione del pacchetto.
 + In SQL Server 2017, è possibile continuare a installare i pacchetti come amministratore per R e Python, e si tratta probabilmente il metodo più semplice. 
 
     L'istruzione DDL, creare libreria esterna consente all'amministratore di database installare i pacchetti senza utilizzare gli strumenti di R. 

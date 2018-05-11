@@ -4,16 +4,16 @@ ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.component: adomd
-ms.topic: article
+ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ef37a558e3e8c0fb9b932cffe223508121b9103
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 6e28952d0c9e9f0341d25fd3f01f254d682acb29
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adomdnet-client-programming"></a>Programmazione di client ADOMD.NET
   I componenti client ADOMD.NET si trovano all'interno di **Microsoft.AnalysisServices.AdomdClient** dello spazio dei nomi (in microsoft.analysisservices.adomdclient.dll). Questi componenti forniscono la funzionalità per client e applicazioni di livello intermedio per facilmente i dati di query e i metadati da un archivio dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

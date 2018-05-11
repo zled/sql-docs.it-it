@@ -1,31 +1,23 @@
 ---
 title: Contenuto di query (Data Mining) | Documenti Microsoft
-ms.custom: 
-ms.date: 03/06/2017
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.service: 
+ms.date: 05/01/2018
+ms.prod: sql
+ms.technology: analysis-services
 ms.component: data-mining
-ms.reviewer: 
-ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
-caps.latest.revision: 
-author: Minewiskan
+ms.topic: conceptual
 ms.author: owend
+ms.reviewer: owend
+author: minewiskan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: cae138336afe7590bf23f42532096dc910010848
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
-ms.translationtype: MT
+ms.openlocfilehash: d1b65feb3b1666fda6491aa90419f922ba792957
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="content-queries-data-mining"></a>Query sul contenuto (Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
+  Una query sul contenuto consente di estrarre informazioni sulle statistiche interne e sulla struttura del modello di data mining. Talvolta una query sul contenuto può fornire dettagli che non sono immediatamente disponibili nel visualizzatore. I risultati di una query sul contenuto possono essere utilizzati anche per estrarre a livello di codice informazioni per altri utilizzi.  
   
  In questa sezione vengono fornite informazioni generali sui tipi di informazioni che è possibile recuperare tramite una query sul contenuto, nonché la sintassi DMX generale per le query sul contenuto.  
   
