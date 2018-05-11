@@ -1,31 +1,29 @@
 ---
-title: "Finestra di dialogo Proprietà set di dati, Query (Generatore report) | Microsoft Docs"
-ms.custom: 
+title: Finestra di dialogo Proprietà set di dati, Query (Generatore report) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-data
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
+ms.technology: ''
+ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - "10024"
 - sql13.rtp.rptdesigner.datasetproperties.query.f1
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f733d1c6013bb6f8110a52007e1a3cfa682bfecd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 79bb516e7b23961a79c17c6123d66b8f4985ba63
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Finestra di dialogo Proprietà set di dati, Query (Generatore report)
   Selezionare **Query** nella finestra di dialogo **Proprietà set di dati** per scegliere un set di dati condiviso da un server di report o per creare un set di dati incorporato. Per un set di dati incorporato, è necessario scegliere un'origine dati e compilare una query.  
