@@ -93,7 +93,7 @@ Per evitare l'esaurimento dello spazio, il troncamento si verifica automaticamen
  Per altre informazioni, vedere [Fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation) più avanti in questo argomento.  
   
 > [!NOTE]
-> Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Manage the Size of the Transaction Log File](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
+> Il troncamento del log non riduce le dimensioni del file di log fisico. Per ridurre la dimensione fisica di un file di log fisico, è necessario ridurre il file di log. Per informazioni sulla compattazione del file di log fisico, vedere [Gestire le dimensioni del file di log delle transazioni](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md).  
 > Tenere tuttavia presenti i [fattori che possono posticipare il troncamento del log](#FactorsThatDelayTruncation). Se dopo una compattazione del log è di nuovo necessario lo spazio di archiviazione, il log delle transazioni torna a crescere e durante tale crescita origina un overhead delle prestazioni.
   
 ##  <a name="FactorsThatDelayTruncation"></a> Factors that can delay log truncation  
