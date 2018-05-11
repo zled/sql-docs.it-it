@@ -36,7 +36,7 @@ L'*anteprima pubblica di marzo* continua a rivolgersi ai principali issue su Git
    - Aggiunta un'estensione per *sp_whoisactive* da [whoisactive.com](http://www.whoisactive.com).
    - Per informazioni dettagliate, vedere [estendere le funzionalità di SQL Operations Studio](extensions.md).
 - Aggiunte ulteriori [API di estendibilità per le connessioni ed Esplora Oggetti](https://github.com/Microsoft/sqlopsstudio/wiki/Extensibility-API).
-- Correzioni degli [issue di GitHub](https://github.com/Microsoft/sqlopsstudio/issues) ad alto impatto sui clienti.
+- Correzioni dei [problemi di GitHub](https://github.com/Microsoft/sqlopsstudio/issues) ad alto impatto sui clienti.
 
 Per ulteriori informazioni, vedere il [log delle modifiche](https://github.com/Microsoft/sqlopsstudio/blob/master/CHANGELOG.md).
 
@@ -50,16 +50,16 @@ L'*anteprima pubblica di febbraio* include alcuni suggerimenti sulle funzionalit
 
 - Introdotta la funzionalità di aggiornamento automatico, che mostra una notifica quando una nuova versione è disponibile per il download. 
 - Il campo 'Database' della finestra di dialogo di connessione è ora un elenco a discesa popolato in modo dinamico dall'elenco dei database presenti nel server specificato.
-- Corretto l'[issue 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Mantieni la connessione e il database selezionato quando si aprono nuove schede di query.
-- Corretto l'[issue 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Server' e 'Database' - è possibile trasformarli in elenchi a discesa anziché caselle di testo?
-- Corretto l'[issue 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Le installazioni con il parametro Silent/VerySilent fanno aprire l'applicazione subito dopo la fine del setup.
-- Corretto l'[issue 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Aggiungere l'opzione "Controlla aggiornamenti".
+- Corretto il [problema 6](https://github.com/Microsoft/sqlopsstudio/issues/6): Mantienere la connessione e il database selezionati quando si aprono nuove schede di query.
+- Corretto il [problema 22](https://github.com/Microsoft/sqlopsstudio/issues/22): 'Server' e 'Database' - è possibile trasformarli in elenchi a discesa anziché caselle di testo?
+- Corretto il [problema 549](https://github.com/Microsoft/sqlopsstudio/issues/549): Le installazioni con il parametro Silent/VerySilent fanno aprire l'applicazione subito dopo la fine del setup.
+- Corretto il [problema 481](https://github.com/Microsoft/sqlopsstudio/issues/481): Aggiungere l'opzione "Controlla aggiornamenti".
 - Correzioni riguardanti l'editor SQL e il completamento automatico:
-   - Corretto l'[issue 584](https://github.com/Microsoft/sqlopsstudio/issues/584): La parola chiave 'FULL' non è evidenziata da IntelliSense.
-   - Corretto l'[issue 345](https://github.com/Microsoft/sqlopsstudio/issues/345): Colorare le funzioni SQL all'interno dell'editor.
-   - Corretto l'[issue 300](https://github.com/Microsoft/sqlopsstudio/issues/300): In una stringa [#tempData] il carattere finale "]" verrà visualizzato di colore verde.
-   - Corretto l'[issue 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Mancata corrispondenza di colore su parola chiave.
-   - Corretto l'[issue 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Colore non valido quando si utilizza una tabella temporanea nella clausola from.
+   - Corretto il [problema 584](https://github.com/Microsoft/sqlopsstudio/issues/584): La parola chiave 'FULL' non è evidenziata da IntelliSense.
+   - Corretto il [problema 345](https://github.com/Microsoft/sqlopsstudio/issues/345): Colorare le funzioni SQL all'interno dell'editor.
+   - Corretto il [problema 300](https://github.com/Microsoft/sqlopsstudio/issues/300): In una stringa [#tempData] il carattere finale"]" verrà visualizzato di colore verde.
+   - Corretto il [problema 225](https://github.com/Microsoft/sqlopsstudio/issues/225): Mancata corrispondenza di colore su parola chiave.
+   - Corretto il [problema 60](https://github.com/Microsoft/sqlopsstudio/issues/60): Colore non valido quando si utilizza una tabella temporanea nella clausola from.
 - Introdotta l'API di estensibilità di connessione.
 - Aggiunta l'integrazione dell'editor di codice di Visual Studio 1.19.
 - Aggiornato il componente JustinPealing/query-plan per ottenere diversi miglioramenti sul visualizzatore dei piani di query.
@@ -73,7 +73,7 @@ versione: 0.25.4
 L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalità e correzioni di bug con priorità alta. Questa versione include i miglioramenti seguenti:
 
 - Le connessioni server salvate sono disponibili nella finestra di dialogo di connessione.
-- Aggiunta l'uscita a caldo, disattivata per impostazione predefinita. Per abilitarla vedere [impostazione uscita a caldo](settings.md#hot-exit).
+- Abilitare l'uscita Hot, disattivata per impostazione predefinita. Per abilitarla vedere [impostazione uscita Hot](settings.md#hot-exit).
 - Ogni scheda è ora contraddistinta dal colore del relativo gruppo di server. La colorazione della scheda è disattivata per impostazione predefinita, per abilitare vedere [impostazione del colore di una scheda](settings.md#tab-color).
 - Modificata l'etichetta *Nome Server* in *Server* nella finestra di dialogo di connessione.
 - Corretto il comando non funzionante *Esegui Query corrente*.
