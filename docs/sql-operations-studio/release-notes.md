@@ -77,8 +77,8 @@ L'*anteprima pubblica di gennaio* include alcuni suggerimenti sulle funzionalit�
 - Ogni scheda è ora contraddistinta dal colore del relativo gruppo di server. La colorazione della scheda è disattivata per impostazione predefinita, per abilitare vedere [impostazione del colore di una scheda](settings.md#tab-color).
 - Modificata l'etichetta *Nome Server* in *Server* nella finestra di dialogo di connessione.
 - Corretto il comando non funzionante *Esegui Query corrente*.
-- Corretto il drag-and-drop dei bug di scripting.
-- Corretta l'icona per il pin sul Menu Start.
+- Corretto il bug dello scripting di interruzione di tracina e rilascia.
+- Corretta l'icona del Menu Start bloccata in modo non corretto.
 - Aggiunta l'icona mancante dell'Account di Azure.
 
 
@@ -90,13 +90,13 @@ version: 0.24.1
 L'*anteprima pubblica di dicembre* include diverse correzioni di bug in tutte le aree di funzionalità, nonché i miglioramenti seguenti:
 
 - La finestra di dialogo per l'aggiunta automatica della regola del firewall è ora disponibile per consentire la connessione a Database SQL di Azure e Azure SQL Data Warehouse.
-- Aggiunta l'installazione di Windows e Linux DEB e i pacchetti di installazione RPM.
+- Aggiunta l'installazione di Windows e i pacchetti di installazione Linux DEB e RPM.
 - Aggiunto l'editor di layout della dashboard.
 - Aggiunti i comandi *Script come ALTER* e *Script come EXECUTE*.
 - Aggiunto il comando *Esegui la query corrente con il piano effettivo*.
 - Integrato l'editor di codice di Visual Studio 1.18.1.
-- Abilitato il caricamento dei file di estensione VSIX.
-- Aggiunto il supporto per la sintassi batch `GO N`.
+- Abilitato il caricamento dei file con estensione VSIX.
+- Supporta la sintassi di iterazione batch "GO N".
 
 
 ## <a name="november-2017"></a>Novembre 2017
