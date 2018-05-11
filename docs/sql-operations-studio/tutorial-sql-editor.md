@@ -1,6 +1,6 @@
 ---
-title: 'Esercitazione: Usare l''editor Transact-SQL di SQL Operations Studio (anteprima) per creare oggetti di database | Microsoft Docs'
-description: "Questa esercitazione illustra le funzionalità principali in SQL Operations Studio (anteprima) che semplificano l'uso di T-SQL."
+title: 'Esercitazione: Usare l'editor Transact-SQL di SQL Operations Studio (anteprima) per creare oggetti di database | Microsoft Docs'
+description: "description: "Questa esercitazione illustra le funzionalità principali nell'editor T-SQL per creare oggetti di database."
 ms.custom: tools|sos
 ms.date: 03/13/2018
 ms.prod: sql-non-specified
@@ -188,10 +188,10 @@ SQL Operations Studio offre la possibilità di mostrare la definizione di oggett
 
 La stored procedure *setCustomer* creata nella sezione precedente richiede i dati JSON passati nel parametro *@json_val*. In questa sezione viene illustrato come ottenere un JSON formattato correttamente per poi passarlo al parametro, in modo da testare la stored procedure.
 
-1. Nella barra laterale **SERVER** premere il tasto destro del mouse su *dbo.Customers* e fare clic su **seleziona le prime 1000 righe**.
+1. Nella barra laterale **SERVER** premere il tasto destro del mouse su *dbo.Customers* e fare clic su **Seleziona le prime 1000 righe**. 
 
 2. Selezionare la prima riga nella visualizzazione dei risultati, verificare che sia selezionata l'intera riga (scegliere il numero 1 nella colonna più a sinistra) e selezionare **salvare come JSON**.  
-3. Cambiare la cartella in un percorso da ricordare al fine di eliminare il file in un secondo momento (sul desktop, ad esempio) e fare clic su **salva**. Il file in formato JSON si aprirà.
+3. Cambiare la cartella in un percorso da ricordare al fine di eliminare il file in un secondo momento (sul desktop, ad esempio) e fare clic su **Salva**. Il file in formato JSON si aprirà. 
 
    ![salvare in formato JSON](./media/tutorial-sql-editor/save-as-json.png)
 
