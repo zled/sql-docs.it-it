@@ -1,4 +1,4 @@
-﻿---
+---
 title: Utilizzare l'autenticazione di Active Directory (Kerberos) per la connessione con SQL Operations Studio (anteprima) | Microsoft Docs
 description: Informazioni su come abilitare Kerberos e utilizzare l'autenticazione di Active Directory per SQL Operations Studio (anteprima)
 ms.custom: tools|sos
@@ -23,17 +23,17 @@ ms.lasthandoff: 05/03/2018
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] supporta la connessione a SQL Server tramite Kerberos.
 
-Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o Linux, è necessario impostare un **ticket Kerberos** collegando l'utente corrente a un account di dominio di Windows. 
+Per utilizzare l'autenticazione integrata (autenticazione di Windows) in macOS o Linux, è necessario impostare un **ticket Kerberos** collegando l'utente corrente a un account di dominio di Windows 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-- Accedere a un computer nel dominio di Windows per eseguire query verso il controller di dominio Kerberos. 
+- Accedere a un computer nel dominio di Windows per eseguire query verso il controller di dominio Kerberos.
 - SQL Server deve essere configurato per consentire l'autenticazione Kerberos. Per il driver client in esecuzione su Unix, l'autenticazione integrata è supportata solo con Kerberos. Sono disponibili ulteriori informazioni sulla configurazione di Sql Server per l'autenticazione tramite Kerberos [qui](https://support.microsoft.com/en-us/help/319723/how-to-use-kerberos-authentication-in-sql-server). Devono esistere SPN registrati per ogni istanza di Sql Server a cui si sta tentando di connettersi. I dettagli sul formato dei nomi SPN di SQL Server sono elencati [qui](https://technet.microsoft.com/en-us/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
 
 
-## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verifica della presenza del setup di Kerberos su Sql Server 
+## <a name="checking-if-sql-server-has-kerberos-setup"></a>Verifica della presenza del setup di Kerberos su Sql Server
 
-Effettuare il login sul computer host di Sql Server. Dal prompt dei comandi Windows, utilizzare il comando `setspn -L %COMPUTERNAME%` per elencare tutti i Nomi Entità Server per l'host. Dovrebbero essere visualizzate voci che iniziano con *MSSQLSvc/HostName.Domain.com* il che indica che Sql Server è registrato con un nome SPN ed è pronto ad accettare l'autenticazione Kerberos.
+Effettuare il login sul computer host di Sql Server. Dal prompt dei comandi Windows, utilizzare il comando `setspn -L %COMPUTERNAME%` per elencare tutti i Nomi Entità Server per l'host. Dovrebbero essere visualizzate voci che iniziano con *MSSQLSvc/HostName.Domain.com* il che indica che Sql Server è registrato con un nome SPN ed è pronto ad accettare l'autenticazione Kerberos.  
 - Se non si ha accesso all'host di Sql Server, accedere su qualsiasi altro sistema operativo Windows presente nello stesso dominio Active Directory e utilizzare il comando `setspn -L <SQLSERVER_NETBIOS>` dove <SQLSERVER_NETBIOS> è il nome del computer dell'host di Sql Server.
 
 
@@ -52,7 +52,7 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-Copiare il nome del controller di dominio, che corrisponde al valore di configurazione KDC richiesto; in questo caso dc-33.domain.company.com. 
+Copiare il nome del controller di dominio, che corrisponde al valore di configurazione KDC richiesto; in questo caso dc-33.domain.company.com.
 
 ## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Collegare il vostro sistema operativo al controller di dominio Active Directory
 
@@ -61,7 +61,7 @@ Copiare il nome del controller di dominio, che corrisponde al valore di configur
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-Modificare il file `/etc/network/interfaces` in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns. Esempio:
+Modificare il file `/etc/network/interfaces` in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns. Esempio: 
 
 ```/etc/network/interfaces
 <...>
@@ -81,7 +81,7 @@ Dopo avere modificato questo file, riavviare il servizio di rete:
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-Controllare che il file `/etc/resolv.conf` contenga una riga simile alla seguente:
+Controllare che il file `/etc/resolv.conf` contenga una riga simile alla seguente:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -98,7 +98,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 sudo yum install realmd krb5-workstation
 ```
 
-Modificare il file "/etc/sysconfig/network-scripts/ifcfg-eth0" (o altro file di configurazione interfaccia a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns: 
+Modificare il file `/etc/sysconfig/network-scripts/ifcfg-eth0` (o altro file di configurazione interfaccia a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns:
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -112,7 +112,7 @@ Dopo avere modificato questo file, riavviare il servizio di rete:
 sudo systemctl restart network
 ```
 
-Controllare che il file "/etc/resolv.conf" contenga una riga simile alla seguente:
+Controllare che il file `/etc/resolv.conf` contenga una riga simile alla seguente:  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -133,7 +133,8 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ## <a name="configure-kdc-in-krb5conf"></a>Configurazione KDC in krb5
 
-Modificare il file "/etc/krb5.conf" in un editor di propria scelta. Configurare le chiavi seguenti: 
+Modificare il file `/etc/krb5.conf` in un editor di propria scelta. Configurare le chiavi seguenti:
+
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -147,7 +148,7 @@ DOMAIN.COMPANY.COM = {
 }
 ```
 
-Quindi salvare il file "krb5.conf" e uscire 
+Quindi salvare il file "krb5.conf" e uscire
 
 > [!NOTE]
 > Il dominio deve essere in lettere maiuscole
@@ -161,7 +162,7 @@ Ottenere un Ticket Granting Ticket (TGT) dal KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Consente di visualizzare il ticket disponibile tramite *kinit*. Se *kinit* ha avuto esito positivo, verrà visualizzato un ticket.
+Consente di visualizzare il ticket disponibile tramite kinit. Se il kinit ha avuto esito positivo, verrà visualizzato un ticket. 
 
 ```bash
 klist
