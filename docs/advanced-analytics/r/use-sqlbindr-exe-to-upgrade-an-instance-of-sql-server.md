@@ -8,11 +8,11 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: f58eb498843c259c4bc9ac9a5d453456dac21b54
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
-ms.translationtype: HT
+ms.openlocfilehash: aa67fbf2480de093ffe2f919e9c50ee2d5082b83
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>L'aggiornamento dei componenti della macchina di apprendimento (R e Python) in istanze di SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -305,9 +305,9 @@ Se si ritiene cartelle con un nome simile al seguente, è possibile rimuoverlo a
 
 <a name="sqlbinder-error-codes"><a/>
 
-### <a name="errors"></a>Errori
+## <a name="binding-errors"></a>Errori di associazione
 
-La query restituisce i messaggi di errore seguenti:
+Programma di installazione MLS e SqlBindR restituiscono entrambi i seguenti codici di errore e i messaggi.
 
 |Codice di errore  | Message           | Dettagli               |
 |------------|-------------------|-----------------------|
@@ -317,7 +317,7 @@ La query restituisce i messaggi di errore seguenti:
 |Eseguire l'associazione di errore 3 | Istanza non valida | Un'istanza esistente, ma non è valida per l'associazione. |
 |Eseguire l'associazione di errore 4 | Non associabile | |
 |Associare l'errore 5 | Già associato | È stato eseguito il comando *bind* , ma l'istanza specificata è già associata. |
-|Associare l'errore 6 | Eseguire il binding non riuscita | Si è verificato un errore durante l'annullamento dell'associazione dell'istanza. Questo errore può verificarsi se si esegue il programma di installazione MLS senza selezionare alcuna funzionalità.|
+|Associare l'errore 6 | Eseguire il binding non riuscita | Si è verificato un errore durante l'annullamento dell'associazione dell'istanza. Questo errore può verificarsi se si esegue il programma di installazione MLS senza selezionare alcuna funzionalità. L'associazione richiede che si selezionano sia un'istanza MSSQL di R e Python, presupponendo che l'istanza è SQL Server 2017.|
 |Associare l'errore 7 | Non è associato | Istanza del motore di database ha R Services o servizi di SQL Server Machine Learning. L'istanza non è associata al Server di Microsoft Machine Learning. |
 |Associare l'errore 8 | Annullamento del binding non riuscita | Si è verificato un errore durante l'annullamento dell'associazione dell'istanza. |
 |Errore 9 di associazione | No instances found (Non è stata trovata alcuna istanza) | Nessuna istanza di motore di database sono stata trovata nel computer. |
