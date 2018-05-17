@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -28,17 +26,16 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 1cc0d866a576d0236b2a429b6266eeda155b5114
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 39767751186028fd5cd8b93621d7465094d99264
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-Restituisce il numero di tentativi di connessione, con esito positivo o negativo, dopo l'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Questa funzione restituisce il numero di tentativi di connessione, sia con esito positivo che negativo, dopo l'ultimo avvio di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,14 +49,14 @@ Restituisce il numero di tentativi di connessione, con esito positivo o negativo
 **integer**
   
 ## <a name="remarks"></a>Remarks  
-Le connessioni sono distinte dagli utenti. Nelle applicazioni, ad esempio, è possibile aprire più connessioni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che siano visibili all'utente.
+Le connessioni sono distinte dagli utenti. Un'applicazione, ad esempio, può aprire più connessioni a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] senza che siano visibili all'utente.
   
-Per visualizzare un report contenente dati statistici relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compresi i tentativi di connessione, eseguire la procedura **sp_monitor**.
+Eseguire **sp_monitor** per un report contenente dati statistici relativi a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compreso il conteggio dei tentativi di connessione.
   
-@@MAX_CONNECTIONS rappresenta il numero massimo di connessioni simultanee consentite al server. Il valore @@CONNECTIONS viene incrementato a ogni tentativo di connessione, quindi @@CONNECTIONS può essere maggiore di @@MAX_CONNECTIONS.
+@@MAX_CONNECTIONS rappresenta il numero massimo consentito di connessioni simultanee al server. @@CONNECTIONS viene incrementato a ogni tentativo di connessione, quindi @@CONNECTIONS può superare @@MAX_CONNECTIONS.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene illustrato il numero di tentativi di accesso in corrispondenza della data e dell'ora correnti.
+Questo esempio restituisce il conteggio dei tentativi di accesso a partire dalla data e ora correnti.
   
 ```sql
 SELECT GETDATE() AS 'Today''s Date and Time',   

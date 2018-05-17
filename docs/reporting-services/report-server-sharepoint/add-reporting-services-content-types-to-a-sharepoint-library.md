@@ -1,27 +1,25 @@
 ---
 title: Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server-sharepoint
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 2fe50a939544eb7f3d58bbd38ad98e9ffcc82733
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 26f53f76d18900158ff0e9d439839c376a991d73
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>Aggiungere i tipi di contenuto di Reporting Services a una raccolta di SharePoint
 
@@ -45,7 +43,7 @@ ms.lasthandoff: 01/09/2018
 > [!TIP]  
 >  Se i tipi di contenuto di una raccolta **non** sono stati già configurati, abilitare innanzitutto la relativa gestione, quindi abilitare i tipi di contenuto di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vedere le procedure per abilitare la gestione dei tipi di contenuto in una singola raccolta documenti.  
   
- **Breve video sull'** [abilitazione dei tipi di contenuto di SSRS in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
+ **Breve video:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](http://www.youtube.com/watch?v=yqhm3DrtT1w) (Abilitazione dei tipi di contenuto di SSRS in SharePoint2010.wm) (http://www.youtube.com/watch?v=yqhm3DrtT1w).  
   
  **Contenuto dell'argomento:**  
   

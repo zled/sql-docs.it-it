@@ -1,27 +1,25 @@
 ---
 title: File di configurazione RsReportServer.config | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 06/12/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-caps.latest.revision: 
+caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Active
-ms.openlocfilehash: 87efa1c9f3fd309ac6b9da150545ac7e08630cd5
-ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
+ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -65,7 +63,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
  Nella tabella seguente vengono fornite le informazioni sulle impostazioni di configurazione generali visualizzate nella prima parte del file. Le impostazioni sono elencate nell'ordine in cui vengono visualizzate nel file di configurazione. Nell'ultima colonna della tabella viene indicato se l'impostazione si applica a un server di report in modalità nativa **(N)** , a un server di report in modalità SharePoint **(S)** o a entrambi.  
   
 > [!NOTE]  
->  In questo argomento, con "numero intero massimo" viene fatto riferimento a un valore di INT_MAX pari a 2147483647.  Per altre informazioni, vedere [Limiti Integer](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
+>  In questo argomento, con "numero intero massimo" viene fatto riferimento a un valore di INT_MAX pari a 2147483647.  Per altre informazioni, vedere [Integer Limits](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (Limiti Integer) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
 |Impostazione|Description|Mode|  
 |-------------|-----------------|----------|  

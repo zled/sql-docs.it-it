@@ -1,27 +1,25 @@
 ---
 title: Aggiungere un filtro (Generatore report e SSRS) | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-design
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 9802327aa4eedb46086927e67c4b6673963157c4
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c7138aa01512abe74931e7e0fd3510a597baaa0e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Aggiungere un filtro (Generatore report e SSRS)
   Aggiungere un filtro a un set di dati, un'area dati o un gruppo per includere o escludere valori specifici nei calcoli o nella visualizzazione. In fase di esecuzione, i filtri vengono applicati prima al set di dati, poi all'area dati e infine al gruppo procedendo dall'alto verso il basso per le gerarchie di gruppi. In una tabella, una matrice o un elenco i filtri per gruppi di righe, gruppi di colonne e gruppi adiacenti vengono applicati in modo indipendente. Anche in un grafico i filtri per gruppi di categorie e gruppi di serie vengono applicati in modo indipendente.  

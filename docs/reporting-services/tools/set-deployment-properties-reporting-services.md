@@ -1,32 +1,30 @@
 ---
-title: "Impostare le proprietà di distribuzione (Reporting Services) | Microsoft Docs"
-ms.custom: 
+title: Impostare le proprietà di distribuzione (Reporting Services) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], deploying
 - publishing reports [Reporting Services]
 - properties [Reporting Services], deployment
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
-caps.latest.revision: "44"
+caps.latest.revision: 44
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 3646d424b9f2f66546369c74a4bb310d0fb6a4cd
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Impostare le proprietà di distribuzione (Reporting Services)
   In[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]è necessario specificare il server di report e facoltativamente le cartelle per i report e le origini dati condivise in modo da poter pubblicare gli elementi di un progetto del server di report in un server di report. Le proprietà e i valori necessari in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] per compilare, visualizzare in anteprima e distribuire i report vengono archiviati nelle configurazioni di progetto del progetto server di report. È possibile creare più set denominati per queste proprietà del progetto, in modo da poter passare da un set di proprietà all'altro in base alle esigenze. Ogni set di proprietà è una configurazione. È possibile ad esempio disporre di una configurazione per la pubblicazione di report in un server di prova e di una configurazione diversa per la pubblicazione di report in un server di produzione.  

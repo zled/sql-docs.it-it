@@ -4,65 +4,56 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Inactive
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8e6229b5b7c8ad03b6a8fbabb317d470eadb4c69
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1be524afd73d1486d2a5e3904c69275cd4c89db
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] e versioni successive e nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è possibile eseguire operazioni ALTER in stored procedure compilate in modo nativo e in altri moduli T-SQL compilati in modo nativo, ad esempio UDF scalari e trigger, con l'istruzione ALTER.  
+In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) e [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] è possibile eseguire operazioni `ALTER` in stored procedure compilate in modo nativo e in altri moduli [!INCLUDE[tsql](../../includes/tsql-md.md)] compilati in modo nativo, ad esempio UDF scalari e trigger, con l'istruzione `ALTER`.  
   
- Quando si esegue ALTER in un modulo T-SQL compilato in modo nativo, il modulo viene ricompilato con una nuova definizione. Durante la ricompilazione la versione precedente del modulo continua a essere disponibile per l'esecuzione. Una volta completata la compilazione, le esecuzioni dei moduli vengono svuotate e viene installata la nuova versione del modulo. Quando si modifica un modulo T-SQL compilato in modo nativo, è possibile modificare le opzioni seguenti.  
+Quando si esegue `ALTER` in un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] compilato in modo nativo, il modulo viene ricompilato con una nuova definizione. Durante la ricompilazione la versione precedente del modulo continua a essere disponibile per l'esecuzione. Una volta completata la compilazione, le esecuzioni dei moduli vengono svuotate e viene installata la nuova versione del modulo. Quando si modifica un modulo [!INCLUDE[tsql](../../includes/tsql-md.md)] compilato in modo nativo, è possibile modificare le opzioni seguenti.  
   
 -   Parametri  
-  
 -   EXECUTE AS  
-  
 -   TRANSACTION ISOLATION LEVEL  
-  
 -   LANGUAGE  
-  
 -   DATEFIRST  
-  
 -   DATEFORMAT  
-  
 -   DELAYED_DURABILITY  
   
 > [!NOTE]  
->  I moduli T-SQL compilati in modo nativo non possono essere convertiti in moduli compilati in modo non nativo. I moduli T-SQL compilati in modo non nativo non possono essere convertiti in moduli compilati in modo nativo.  
+> I moduli [!INCLUDE[tsql](../../includes/tsql-md.md)] compilati in modo nativo non possono essere convertiti in moduli compilati in modo non nativo. I moduli T-SQL compilati in modo non nativo non possono essere convertiti in moduli compilati in modo nativo.  
   
- Per altre informazioni sul funzionamento e la sintassi di ALTER PROCEDURE, vedere [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
+Per altre informazioni sul funzionamento e la sintassi di `ALTER PROCEDURE`, vedere [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md).  
   
- È possibile eseguire sp_recompile in moduli T-SQL compilati in modo nativo. Ciò causa la ricompilazione del modulo all'esecuzione successiva.  
+È possibile eseguire [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) in moduli [!INCLUDE[tsql](../../includes/tsql-md.md)] compilati in modo nativo. Ciò causa la ricompilazione del modulo all'esecuzione successiva.  
   
 ## <a name="example"></a>Esempio  
- L'esempio seguente crea una tabella ottimizzata per la memoria (T1) e una stored procedure compilata in modo nativo (SP1) che seleziona tutte le colonne T1. Quindi, SP1 viene modificata per rimuovere la clausola EXECUTE AS, modificare LANGUAGE e selezionare una sola colonna (C1) da T1.  
+L'esempio seguente crea una tabella ottimizzata per la memoria (T1) e una stored procedure compilata in modo nativo (usp_1) che seleziona tutte le colonne T1. usp_1 viene quindi modificata per rimuovere la clausola `EXECUTE AS`, modificare `LANGUAGE` e selezionare una sola colonna (C1) da T1.  
   
-```  
-CREATE TABLE [dbo].[T1]  
-(  
-[c1] [int] NOT NULL,  
-[c2] [float] NOT NULL,  
-CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
-)WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
+```sql  
+CREATE TABLE [dbo].[T1] (  
+  [c1] [int] NOT NULL,  
+  [c2] [float] NOT NULL,  
+  CONSTRAINT [PK_T1] PRIMARY KEY NONCLUSTERED ([c1])  
+  ) WITH ( MEMORY_OPTIMIZED = ON , DURABILITY = SCHEMA_AND_DATA )  
 GO  
   
 CREATE PROCEDURE [dbo].[usp_1]  
@@ -71,7 +62,7 @@ AS BEGIN ATOMIC WITH
 (  
  TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english'  
 )  
- SELECT c1, c2 from dbo.T1  
+   SELECT c1, c2 FROM dbo.T1  
 END  
 GO  
   
@@ -81,10 +72,10 @@ AS BEGIN ATOMIC WITH
 (  
  TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'Dutch'  
 )  
- SELECT c1 from dbo.T1  
+   SELECT c1 FROM dbo.T1  
 END  
-GO  
+GO    
+```   
   
-```  
-  
-  
+## <a name="see-also"></a>Vedere anche  
+ [Stored procedure compilate in modo nativo](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)    

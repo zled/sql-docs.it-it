@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: bb4fb973ed9311fd6b2ad6a89022b55208971ebd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a44bb869e9954c0bd080f23bc6b09913ea011617
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="statistics"></a>Statistiche
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -275,6 +275,10 @@ Solo in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è possibile c
  
 > [!TIP]
 > A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4, usare l'opzione PERSIST_SAMPLE_PERCENT di [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md) o [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md), per impostare e mantenere una percentuale di campionamento specifica per gli aggiornamenti delle statistiche successivi che non specificano in modo esplicito una percentuale di campionamento.
+
+### <a name="automatic-index-and-statistics-management"></a>Gestione automatica dell'indice e delle statistiche
+
+Sfruttare le soluzioni, ad esempio la [deframmentazione dell'indice adattativo](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag), per gestire automaticamente la deframmentazione dell'indice e gli aggiornamenti delle statistiche per uno o più database. Questa procedura sceglie automaticamente se ricompilare o riorganizzare un indice in base al relativo livello di frammentazione, tra gli altri parametri, e aggiornare le statistiche con una soglia lineare.
   
 ##  <a name="DesignStatistics"></a> Query che usano le statistiche in modo efficace  
  Alcune implementazioni delle query, quali le variabili locali e le espressioni complesse nel predicato di query, possono comportare la definizione di piani di query non ottimali. Per evitare che ciò accada, attenersi alle linee guida relative alla progettazione delle query per un utilizzo efficace delle statistiche. Per altre informazioni sui predicati, vedere [Condizione di ricerca&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -389,4 +393,5 @@ GO
  [sys.dm_db_stats_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)   
  [sys.dm_db_stats_histogram &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)  
  [sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)  
- [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)
+ [sys.stats_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)    
+ [Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)   

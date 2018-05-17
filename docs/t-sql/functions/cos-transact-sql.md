@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -25,18 +23,17 @@ caps.latest.revision: 21
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a54e9376a84e42baf400e08750c72c4e14eea382
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5ad420e56dd205772cf8d7b2a9ec8013c3ddfccc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="cos-transact-sql"></a>COS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Funzione matematica che restituisce il coseno dell'angolo specificato, espresso in radianti, nell'espressione specificata.
+Funzione matematica che restituisce il coseno dell'angolo specificato, misurato in radianti, nell'espressione specificata.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -54,7 +51,7 @@ COS ( float_expression )
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene restituito il coseno dell'angolo specificato.
+In questo esempio viene restituito il valore `COS` dell'angolo specificato:
   
 ```sql
 DECLARE @angle float;  
@@ -70,13 +67,11 @@ The COS of the angle is: -0.599465
   
 (1 row(s) affected)  
 ```  
-
-## <a name="examples"></a>Esempi
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 
-Nell'esempio seguente viene restituito il coseno dell'angolo specificato.
+In questo esempio vengono restituiti i valori COS degli angoli specificati:
   
 ```sql
 SELECT COS(14.76) AS cosCalc1, COS(-0.1472738) AS cosCalc2;   

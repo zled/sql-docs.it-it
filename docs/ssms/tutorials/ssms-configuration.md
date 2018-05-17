@@ -12,11 +12,11 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: b2c850ac32aebf78441234327ec33b6223dc447b
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 51fb197c3b5177c699134a48fc4888cd134e1711
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Esercitazione: Componenti e configurazione di SQL Server Management Studio
 In questa esercitazione vengono descritti i vari componenti finestra all'interno di SQL Server Management Studio (SSMS) e alcune opzioni di configurazione di base per l'area di lavoro. In questo articolo viene illustrato quanto segue: 
@@ -32,7 +32,7 @@ In questa esercitazione vengono descritti i vari componenti finestra all'interno
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione è necessario avere SQL Server Management Studio.  
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="sql-server-management-studio-components"></a>Componenti di SQL Server Management Studio
 In questa sezione vengono illustrati i vari componenti finestra disponibili nell'area di lavoro e il loro scopo. 

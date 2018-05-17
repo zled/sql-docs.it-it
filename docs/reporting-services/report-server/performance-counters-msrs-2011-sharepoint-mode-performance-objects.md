@@ -1,16 +1,15 @@
 ---
-title: "Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 in modalità SharePoint | Microsoft Docs"
-ms.custom: 
+title: Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 in modalità SharePoint | Microsoft Docs
+ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - counters [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: "52"
+caps.latest.revision: 52
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: acc06da22cc03530e3a7ddc05f8825eaadfd8f6a
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 4b71aab05f6e9fe43b5077ef04cf3d7bd8dbc41d
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 in modalità SharePoint
   Questo argomento illustra i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2011 Web Service SharePoint Mode** e **MSRS 2011 Windows Service SharePoint Mode** che fanno parte di una distribuzione in modalità SharePoint di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]  
 >  Tramite questi oggetti prestazioni vengono monitorati gli eventi nel server di report locale. Se si esegue un server di report in una distribuzione con scalabilità orizzontale, i conteggi si applicano al server corrente e non all'intera distribuzione con scalabilità orizzontale.  
   
- Gli oggetti prestazioni sono disponibili in Windows Performance Monitor (**Perfmon.exe**). Per ulteriori informazioni, vedere la documentazione di Windows. [Profiling di runtime](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
+ Gli oggetti prestazioni sono disponibili in Windows Performance Monitor (**Perfmon.exe**). Per ulteriori informazioni, vedere la documentazione di Windows. [Profilatura di runtime](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
  Per informazioni sui contatori delle prestazioni e sui server di report in modalità nativa, vedere [Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service e MSRS 2011 Windows Service &#40;modalità nativa&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)[Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 Web Service SharePoint Mode e MSRS 2011 Windows Service SharePoint Mode (modalità SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -26,18 +24,17 @@ caps.latest.revision: 43
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6d72cdc92b923dc00eec9dbe3b6f075f1e21e322
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 165cd76209927d223e90be73bad6fd0b383e5404
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="acos-transact-sql"></a>ACOS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Funzione matematica che restituisce l'angolo, espresso in radianti, il cui coseno corrisponde all'espressione di tipo **float** specificata (denominato anche arcocoseno).
+Funzione che restituisce l'angolo, espresso in radianti, il cui coseno corrisponde all'espressione float specificata. Il valore restituito viene definito anche arcocoseno.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,35 +46,16 @@ ACOS ( float_expression )
   
 ## <a name="arguments"></a>Argomenti  
 *float_expression*  
-Espressione di tipo **float** o di un tipo che è possibile convertire in modo implicito in tipo **float** con un valore compreso tra -1 e 1. I valori non compresi in questo intervallo restituiscono NULL e segnalano un errore di dominio.
+[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) di tipo **float** oppure di un tipo che può essere convertito in modo implicito in float. È valido solo un valore compreso tra -1,00 e 1,00. I valori non compresi in questo intervallo restituiscono NULL e ASIN e segnalano un errore di dominio.
   
 ## <a name="return-types"></a>Tipi restituiti  
 **float**
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene restituito l'arcocoseno del numero specificato.
+In questo esempio viene restituito il valore `ACOS` del numero specificato.
   
 ```sql
 SET NOCOUNT OFF;  
-DECLARE @cos float;  
-SET @cos = -1.0;  
-SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
----------------------------------   
-The ACOS of the number is: 3.14159   
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] e [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
-Nell'esempio seguente viene restituito l'arcocoseno del numero specificato.
-  
-```sql
 DECLARE @cos float;  
 SET @cos = -1.0;  
 SELECT 'The ACOS of the number is: ' + CONVERT(varchar, ACOS(@cos));  

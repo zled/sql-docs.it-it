@@ -26,28 +26,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e727b05f4b57e00694c2bf12aa60a972838a9af2
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3d61d87f1e19088d7f667029bdaaf935d150dc88
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Crea una tabella esterna e quindi esporta, in parallelo, i risultati di un'istruzione SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] in Hadoop o nel BLOB del servizio di archiviazione di Azure.  
-  
- Usare l'istruzione CREATE EXTERNAL TABLE AS SELECT (CETAS) per:  
-  
--   Esportare una tabella di database in Hadoop o nell'archiviazione BLOB di Azure.  
-  
--   Importare i dati da Hadoop o dall'archiviazione BLOB di Azure e archiviarli nel database.  
-  
--   Eseguire query sui dati di Hadoop o dell'archiviazione BLOB di Azure, aggiungere i dati alle tabelle relazionali del database e scrivere i risultati in Hadoop o nell'archiviazione BLOB di Azure.  
-  
--   Eseguire query sui dati di Hadoop o dell'archiviazione BLOB di Azure, trasformare i dati usando le funzionalità di elaborazione rapida del database e scrivere di nuovo i dati in Hadoop o nell'archiviazione BLOB di Azure.  
-  
- Per altre informazioni, vedere [Get started with PolyBase](../../relational-databases/polybase/get-started-with-polybase.md)(Introduzione a PolyBase).  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento") [Convenzioni della sintassi Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

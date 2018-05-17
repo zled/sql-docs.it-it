@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 58475a1c7bfb27f29c1e040de286c82d9c7a204f
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
 ---
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="open-an-existing-git-repository"></a>Aprire un repository Git esistente
 
 1. Nel menu **File** selezionare **Apri cartella...**
-2. Passare alla cartella che contiene i file rilevati da git e fare clic su **selezionare la cartella**. Le sottocartelle nel repository locale sono integri da selezionare.
+2. Passare alla cartella contenente i file tracciati da Git e fare clic su **Seleziona cartella**. È possibile selezionare anche le sottocartelle del repository locale.
 
 
 ## <a name="initialize-a-new-git-repository"></a>Inizializzare un nuovo repository Git

@@ -1,16 +1,15 @@
 ---
-title: "Utilità rskeymgmt (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Utilità rskeymgmt (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: tools
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
 - joining report server instances [SQL Server]
@@ -23,16 +22,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-caps.latest.revision: "56"
+caps.latest.revision: 56
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c2bdcd2610eb4a4c6d351868a8fbb7aac9a44bf7
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilità rskeymgmt (SSRS)
   Questa utilità consente di estrarre, ripristinare, creare ed eliminare la chiave simmetrica utilizzata per proteggere i dati riservati del server di report dall'accesso non autorizzato. Questa utilità viene inoltre utilizzata per unire in join istanze del server di report in un'implementazione basata sulla scalabilità orizzontale. La *distribuzione con scalabilità orizzontale di un server di report* fa riferimento a più istanze del server di report che condividono lo stesso database del server di report.  
@@ -65,12 +63,12 @@ rskeymgmt {-?}
  **-e**  
  Consente di estrarre la chiave simmetrica utilizzata per crittografare e decrittografare i dati per l'istanza del server di report in modo da renderne possibile la copia in un file.  
   
- Questo argomento non accetta un valore. Per completare l'estrazione, tuttavia, è necessario includere ulteriori argomenti. Gli argomenti che è necessario specificare includono **-f** e**-p**.  
+ Questo argomento non accetta un valore. Per completare l'estrazione, tuttavia, è necessario includere ulteriori argomenti. Gli argomenti che è necessario specificare includono **-f** e **-p**.  
   
  **-a**  
  Sostituisce una chiave simmetrica esistente con una copia specificata in un file di backup protetto da password. Tutte le istanze della chiave simmetrica vengono aggiornate.  
   
- Questo argomento non accetta un valore. Per selezionare il file contenente la chiave da applicare, è tuttavia necessario includere ulteriori argomenti. Gli argomenti che è possibile specificare includono **-f** e**-p**.  
+ Questo argomento non accetta un valore. Per selezionare il file contenente la chiave da applicare, è tuttavia necessario includere ulteriori argomenti. Gli argomenti che è possibile specificare includono **-f** e **-p**.  
   
  **-d**  
  Elimina tutte le istanze della chiave simmetrica e tutti i dati crittografati in un database del server di report. Questo argomento non accetta un valore.  

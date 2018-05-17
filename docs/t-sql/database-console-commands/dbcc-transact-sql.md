@@ -40,11 +40,11 @@ caps.latest.revision: 50
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: a244e1e6a1f0c32f56e183f389ac4940b25cb00f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 6dbf227ec42614e77cb4129c273ec55609781b2f
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ La vista del catalogo **sys.dm_exec_requests** contiene informazioni riguardanti
   
 L'unità di riferimento dello stato dipende dalla fase di esecuzione corrente del comando DBCC. In alcune fasi lo stato viene segnalato per ogni pagina del database e in altre per ogni correzione del database o dell'allocazione. Nella tabella seguente viene descritta ogni fase di esecuzione e viene specificato il livello di granularità in base a cui viene segnalato lo stato del comando.
   
-|Fase di esecuzione|Description|Granularità del report di stato|  
+|Fase di esecuzione|Descrizione|Granularità del report di stato|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Durante questa fase viene controllata la consistenza logica e fisica degli oggetti del database.|Lo stato viene segnalato a livello di pagina del database.<br /><br /> Il valore del report di stato viene aggiornato ogni 1000 pagine del database controllate. |  
 |DBCC TABLE REPAIR|Se viene specificata l'opzione REPAIR_FAST, REPAIR_REBUILD o REPAIR_ALLOW_DATA_LOSS ed è necessario correggere alcuni errori relativi agli oggetti, durante questa fase vengono implementate correzioni nel database.|Lo stato viene segnalato a livello di singola correzione.<br /><br /> Il contatore viene aggiornato ogni volta che viene completata una correzione.|  
@@ -146,6 +146,6 @@ L'unità di riferimento dello stato dipende dalla fase di esecuzione corrente de
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](https://support.microsoft.com/en-us/kb/3177838) <br /><br /> **Si applica a**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2.|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **Si applica a**: da [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

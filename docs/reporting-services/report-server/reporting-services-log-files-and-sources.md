@@ -1,16 +1,15 @@
 ---
 title: File di log e origini di Reporting Services | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: report-server
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [Reporting Services], log files
 - logs [Reporting Services]
@@ -19,16 +18,15 @@ helpviewer_keywords:
 - report server log files
 - files [Reporting Services], logs
 ms.assetid: 80ef0acc-cbef-49d0-87e7-844e3ce19604
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: On Demand
-ms.openlocfilehash: 7b36566dce410fff0122e66c735a3058061e2af8
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 8d2bbaf2046f8cf62264005e787938a8d61fee6a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="reporting-services-log-files-and-sources"></a>File di log e origini di Reporting Services
   Nel server di report e nell'ambiente server di report viene utilizzata una varietà di destinazioni di log per registrare le informazioni sullo stato e sulle operazioni del server. Sono disponibili due categorie di base di registrazione: registrazione dell'esecuzione e registrazione della traccia. La registrazione dell'esecuzione include le informazioni sulle statistiche, sul controllo, sulla diagnosi delle prestazioni e sull'ottimizzazione dell'esecuzione del report. La registrazione della traccia è costituita da informazioni su messaggi di errore e diagnostica generale.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 01/09/2018
 |[Registro applicazioni di Windows](../../reporting-services/report-server/windows-application-log.md)|Il registro applicazioni di Microsoft Windows contiene informazioni sugli eventi del server di report.|  
 |Log delle prestazioni di Windows|I log delle prestazioni di Windows contengono dati sulle prestazioni del server di report. L'utente può creare registri di prestazioni e scegliere i contatori in base ai dati che desidera raccogliere. Per altre informazioni, vedere [Monitoraggio delle prestazioni del server di report](../../reporting-services/report-server/monitoring-report-server-performance.md).|  
 |File di log del programma di installazione di SQL Server|File di log vengono inoltre creati durante l'installazione. Se il programma di installazione non viene completato oppure se viene completato ma vengono visualizzati avvisi o altri messaggi, è possibile esaminare i file di log per risolvere il problema. Per altre informazioni, vedere [Visualizzare e leggere i file di log del programma di installazione di SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).|  
-|Log IIS|File di log creati da Microsoft Internet Information Services (IIS). Per altre informazioni, vedere [How to enable logging in Internet Information Services (IIS)](http://support.microsoft.com/kb/313437) [Come abilitare la registrazione in Internet Information Services (IIS)] (http://support.microsoft.com/kb/313437).|  
+|Log IIS|File di log creati da Microsoft Internet Information Services (IIS). Per altre informazioni, vedere [Come attivare la registrazione in Internet Information Services (IIS)](http://support.microsoft.com/kb/313437) (http://support.microsoft.com/kb/313437).|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   

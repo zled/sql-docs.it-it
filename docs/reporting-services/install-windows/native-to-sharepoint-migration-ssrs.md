@@ -1,27 +1,25 @@
 ---
-title: "Migrazione dalla modalità nativa alla modalità SharePoint (SSRS) | Microsoft Docs"
-ms.custom: 
+title: Migrazione dalla modalità nativa alla modalità SharePoint (SSRS) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: f7418326fb11d712ad8cea0bd77fb4479e3020f2
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: c1504f51732a5f0dd6b7affabdbc49f3517db254
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>Migrazione dalla modalità nativa alla modalità SharePoint (SSRS)
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 ##  <a name="bkmk_native_to_sharepoint"></a> Strumento di migrazione di Reporting Services  
  Lo strumento supporta la migrazione del contenuto da una distribuzione in modalità nativa a una distribuzione in modalità SharePoint. Lo strumento non supporta la migrazione dalla modalità SharePoint alla modalità SharePoint o dalla modalità SharePoint alla modalità nativa.  
   
- Per altre informazioni, vedere [Strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+ Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
 ## <a name="use-script-to-migrate-content"></a>Utilizzare lo script per eseguire la migrazione di contenuto  
  Se lo strumento di migrazione non soddisfa le proprie esigenze, è possibile eseguire manualmente la migrazione dei dati del server di report. Di seguito è riportato un riepilogo dei passaggi necessari per eseguire la migrazione degli elementi del report da una distribuzione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a un'altra. L'approccio supporta la modalità nativa o la modalità SharePoint come server di origine o di destinazione.  

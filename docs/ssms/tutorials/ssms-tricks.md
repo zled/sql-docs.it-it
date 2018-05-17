@@ -18,11 +18,11 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: 4f41aaa169e87a246b91304d24142195e7a21988
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: e358fb73ff4f248b7de368364b8bb758f70018ff
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
 Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio. In questo articolo viene illustrato come eseguire quanto segue: 
@@ -37,9 +37,9 @@ Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Serve
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a SQL Server e un database AdventureWorks. 
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- Scaricare un [database campione AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristino di un database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- Scaricare un [database campione AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 ## <a name="comment--uncomment-your-t-sql-code"></a>Inserire e rimuovere commenti nel codice T-SQL
 È possibile inserire e rimuovere commenti in parti del testo usando il pulsante dei commenti sulla barra degli strumenti. Il testo che viene impostato come commento non viene eseguito. 

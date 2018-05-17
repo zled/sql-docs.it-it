@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CONCAT_WS
 - CONCAT_WS_TSQL
@@ -24,18 +22,17 @@ caps.latest.revision: 5
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
 monikerRange: = azuresqldb-current || >= sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 171d063e746393709629720dae40eb207d45d584
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1a3d184ccdd0a1716fdace286b2bb8ed6a6cae6
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-Consente di concatenare un numero variabile di argomenti con un delimitatore specificato nel primo argomento. (`CONCAT_WS` indica *concatenare con separatore*.)
+Questa funzione restituisce una stringa risultante dalla concatenazione o unione in join end-to-end di due o più valori di stringa. Separa tali valori concatenati della stringa con il delimitatore specificato nel primo argomento della funzione. (`CONCAT_WS` indica *concatenare con separatore*.)
 
 ##  <a name="syntax"></a>Sintassi   
 ```sql
@@ -44,16 +41,16 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 
 ## <a name="arguments"></a>Argomenti   
 separator  
-Espressione di qualsiasi tipo di carattere (`nvarchar`, `varchar`, `nchar` o `char`).
+Espressione di qualsiasi tipo di carattere (`char`', `nchar`', `nvarchar` o `varchar`).
 
 argument1, argument2, argument*N*  
 Espressione di qualsiasi tipo.
 
 ## <a name="return-types"></a>Tipi restituiti
-Proprietà di tipo String. La lunghezza e il tipo dipendono dall'input.
+Valore stringa la cui lunghezza e tipo dipendono dall'input.
 
 ## <a name="remarks"></a>Remarks   
-`CONCAT_WS` consente di accettare un numero variabile di argomenti e di concatenarli in una singola stringa usando il primo argomento come separatore. È richiesto un separatore e un minimo di due argomenti . In caso contrario, viene generato un errore. Tutti gli argomenti vengono convertiti in modo implicito nei tipi di stringa e successivamente concatenati. 
+`CONCAT_WS` accetta un numero variabile di argomenti stringa e li concatena in una singola stringa. Separa tali valori concatenati della stringa con il delimitatore specificato nel primo argomento della funzione. `CONCAT_WS` richiede un argomento separatore e almeno altri due argomenti dei valori della stringa. In caso contrario, `CONCAT_WS` genererà un errore. `CONCAT_WS` converte in modo implicito tutti gli argomenti nei tipi di stringa prima della concatenazione. 
 
 Per la conversione implicita in stringhe vengono seguite le regole esistenti per le conversioni dei tipi di dati. Per altre informazioni sul comportamento e le conversioni dei tipi di dati, vedere [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
 
@@ -61,16 +58,16 @@ Per la conversione implicita in stringhe vengono seguite le regole esistenti per
 
 `CONCAT_WS` ignora l'impostazione `SET CONCAT_NULL_YIELDS_NULL {ON|OFF}`.
 
-Se tutti gli argomenti sono Null, viene restituita una stringa vuota di tipo `varchar(1)`. 
+Se `CONCAT_WS` riceve argomenti con tutti i valori NULL, restituisce una stringa vuota di tipo varchar(1).
 
-I valori Null vengono ignorati durante la concatenazione e non viene aggiunto il separatore. Ciò semplifica lo scenario comune di concatenazione di stringhe che contengono spesso valori vuoti, ad esempio un secondo campo dell'indirizzo. Vedere l'esempio B.
+`CONCAT_WS` ignora i valori Null durante la concatenazione e non aggiunge il separatore tra i valori Null. `CONCAT_WS` può quindi gestire correttamente la concatenazione di stringhe che potrebbero avere valori "vuoti", ad esempio il campo di un secondo indirizzo. Per altre informazioni, vedere l'esempio B.
 
-Se lo scenario richiede che i valori Null vengano inclusi con un separatore, vedere l'esempio C usando la funzione `ISNULL`.
+Se uno scenario include valori Null separati da un delimitatore, prendere in considerazione la funzione `ISNULL`. Per altre informazioni, vedere l'esempio C.
 
 ## <a name="examples"></a>Esempi   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  Concatenazione di valori con separatore
-Nell'esempio seguente viene illustrato come concatenare tre colonne della tabella sys.databases, separando i valori con un `- `.   
+Questo esempio illustra come concatenare tre colonne della tabella sys.databases, separando i valori con un `- `.   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo
@@ -88,7 +85,7 @@ FROM sys.databases;
 
 
 ### <a name="b--skipping-null-values"></a>B.  Ignorare i valori Null
-Nell'esempio seguente vengono ignorati i valori `NULL` nell'elenco degli argomenti.
+Questo esempio ignora i valori `NULL` nell'elenco degli argomenti.
 
 ```sql
 SELECT CONCAT_WS(',','1 Microsoft Way', NULL, NULL, 'Redmond', 'WA', 98052) AS Address;
@@ -103,7 +100,7 @@ Address
 ```
 
 ### <a name="c--generating-csv-file-from-table"></a>C.  Generazione di file CSV da tabella
-Nell'esempio seguente viene usata una virgola come separatore e viene aggiunto il carattere di ritorno a capo per determinare il formato dei valori separati da virgola della colonna.
+Questo esempio usa una virgola `,` come valore separatore e aggiunge il carattere di ritorno a capo `char(13)` nel formato dei valori separati da virgola del set di risultati.
 
 ```sql
 SELECT 
@@ -122,7 +119,7 @@ DatabaseInfo
 4,SIMPLE,NONE 
 ```
 
-CONCAT_WS ignorerà i valori Null nelle colonne. Se alcune colonne sono di tipo nullable, eseguirne il wrapping con la funzione `ISNULL` e specificare il valore predefinito come nell'esempio seguente:
+CONCAT_WS ignora i valori NULL nelle colonne. Eseguire il wrapping di una colonna che ammette i valori Null con la funzione `ISNULL` e specificare un valore predefinito. Per altre informazioni, vedere questo esempio:
 
 ```sql
 SELECT 

@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
 ms.prod_service: sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -27,12 +25,11 @@ caps.latest.revision: 72
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: e21a2e591b9bd5c38d4abf458c938b17563cc89c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: fb2dd1c54653b825d135e9ca3fb1b478212f70f3
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -193,16 +190,19 @@ SQLDUMPEREDUMPFLAGS
 **Si applica a**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] tramite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  HADR CLUSTER CONTEXT **=** { **'***remote_windows_cluster***'** | LOCAL }  
- Passa il contesto del cluster HADR dell'istanza del server al cluster WSFC (Windows Server Failover Clustering) specificato. Il *contesto cluster HADR* determina il cluster WSFC (Windows Server Failover Clustering) che gestisce i metadati per le repliche di disponibilità ospitate dall'istanza del server. Utilizzare l'opzione SET HADR CLUSTER CONTEXT solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o versione successiva in un nuovo cluster WSFC.  
+ Passa il contesto del cluster HADR dell'istanza del server al cluster WSFC (Windows Server Failover Cluster) specificato. Il *contesto del cluster HADR* determina il cluster WSFC che gestisce i metadati per le repliche di disponibilità ospitate dall'istanza del server. Usare l'opzione SET HADR CLUSTER CONTEXT solo durante una migrazione tra cluster di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] a un'istanza di [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] o versione successiva in un nuovo cluster WSFC.  
   
- È possibile cambiare il contesto del cluster HADR solo dal cluster WSFC locale a un cluster remoto e quindi nuovamente dal cluster remoto al cluster locale. È possibile cambiare il contesto del cluster HADR in un cluster remoto solo se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non ospita alcuna replica di disponibilità.  
+ È possibile cambiare il contesto del cluster HADR solo da WSFC locale a un cluster WSFC remoto e quindi nuovamente da WSFC remoto al cluster WSFC locale. È possibile cambiare il contesto del cluster HADR in un cluster remoto solo se l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non ospita alcuna replica di disponibilità.  
   
  Il contesto di un cluster HADR remoto può essere nuovamente cambiato nel cluster locale in qualsiasi momento, a meno che l'istanza del server non ospiti una replica di disponibilità.  
   
  Per identificare il cluster di destinazione, specificare uno dei valori seguenti:  
   
  *windows_cluster*  
- Nome dell'oggetto cluster (CON) di un cluster WSFC. È possibile specificare il nome breve o il nome di dominio completo. Per individuare l'indirizzo IP di destinazione di un nome breve, ALTER SERVER CONFIGURATION utilizza la risoluzione DNS. In alcuni casi, un nome breve potrebbe generare confusione e DNS potrebbe restituire l'indirizzo IP errato. È pertanto consigliabile specificare il nome di dominio completo.  
+ Nome netwirj di un cluster WSFC. È possibile specificare il nome breve o il nome di dominio completo. Per individuare l'indirizzo IP di destinazione di un nome breve, ALTER SERVER CONFIGURATION utilizza la risoluzione DNS. In alcuni casi, un nome breve potrebbe generare confusione e DNS potrebbe restituire l'indirizzo IP errato. È pertanto consigliabile specificare il nome di dominio completo.  
+  
+  > [!NOTE] 
+  > Una migrazione tra cluster che usa questa impostazione non è più supportata. Per eseguire una migrazione tra cluster, usare un gruppo di disponibilità distribuito o un altro metodo, ad esempio il log shipping. 
   
  LOCAL  
  Cluster WSFC locale.  

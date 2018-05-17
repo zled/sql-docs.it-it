@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 04/11/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|statements
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -33,12 +31,11 @@ caps.latest.revision: 92
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Active
-ms.openlocfilehash: be6c818401a74f4f14d6a8381fe696bc02a48e6e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: a284d0d144b4cdc091a866d4c660d6a84ad0c2dc
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,6 +267,12 @@ column_name <data_type>
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'autorizzazione CREATE TYPE nel database corrente e l'autorizzazione ALTER per *schema_name*. Se *schema_name* viene omesso, vengono applicate le regole predefinite per la risoluzione dei nomi per determinare lo schema dell'utente corrente. Se l'argomento *assembly_name* viene specificato, è necessario che l'utente sia il proprietario dell'assembly o che abbia l'autorizzazione REFERENCES per tale assembly.  
+
+ Se una colonna nell'istruzione CREATE TABLE è definita con un tipo definito dall'utente, è necessaria l'autorizzazione REFERENCES per il tipo definito dall'utente.
+ 
+   >[!NOTE]
+  > Un utente che crea una tabella con una colonna che usa un tipo definito dall'utente necessita dell'autorizzazione REFERENCES per il tipo definito dall'utente.
+  > Se questa tabella deve essere creata in TempDB, è necessario concedere ogni volta l'autorizzazione REFERENCES in modo esplicito **prima** che la tabella venga creata oppure è necessario aggiungere questo tipo di dati e le autorizzazioni REFERENCES al database modello. In tal caso, questo tipo di dati e le autorizzazioni saranno disponibili in TempDB in modo permanente. In caso contrario, il tipo di dati definito dall'utente e le autorizzazioni verranno rimossi al riavvio di SQL Server. Per altre informazioni, vedere [CREATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/create-table-transact-sql?view=sql-server-2017#permissions-1).
   
 ## <a name="examples"></a>Esempi  
   

@@ -2,16 +2,15 @@
 title: Utilità profiler | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
 ms.component: profiler
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - command prompt utilities [SQL Server], profiler90 utility
 - profiler90 utility
@@ -23,15 +22,15 @@ caps.latest.revision: 42
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 9eb834190093ae44b8ccc80334b33bd3e0c147a1
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
-ms.translationtype: HT
+ms.openlocfilehash: 3bcd3dab5c08b7d8df8dec05004b7ee67bbb5a30
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="profiler-utility"></a>Utilità profiler
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] L'utilità **profiler** consente di avviare lo strumento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]. Gli argomenti facoltativi elencati di seguito in questo argomento consentono di controllare la modalità di avvio dell'applicazione.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  L'utilità **profiler** consente di avviare lo strumento [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Gli argomenti facoltativi elencati di seguito in questo argomento consentono di controllare la modalità di avvio dell'applicazione.  
   
 > [!NOTE]  
 >  L'utilità **profiler** non viene usata per lo scripting delle tracce. Per altre informazioni, vedere [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md).  
@@ -79,7 +78,7 @@ profiler
  Specifica un'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare **/S** *sql_server_name*\\*instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **/A**  *analysis_services_server_name*  
- Consente di specificare un'istanza di Analysis Services. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  **** *per connettersi a un'istanza denominata di*.  
+ Consente di specificare un'istanza di Analysis Services. Profiler viene automaticamente connesso al server specificato usando le informazioni di autenticazione definite nelle opzioni **/U** e **/P** o **/E** . Usare **/A** *analysis_services_server_name\instance_name* per connettersi a un'istanza denominata di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **/D** *database*  
  Specifica il nome del database da utilizzare con la connessione. Se non si specifica alcun database, questa opzione selezionerà il database predefinito per l'utente specificato.  

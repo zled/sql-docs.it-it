@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.service: ''
 ms.component: t-sql|functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: t-sql
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,17 +22,16 @@ caps.latest.revision: 25
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.workload: Inactive
-ms.openlocfilehash: 95c95ad472c5b5d4cb5420fa3b0da8f88053c0c5
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 51685541435f4ab0192792341d2a29210dc9f504
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce informazioni sulle proprietà di connessione per la connessione univoca da cui si è ricevuta la richiesta.
+Per una richiesta in arrivo al server, questa funzione restituisce informazioni sulle proprietà della connessione univoca che supporta tale richiesta.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,18 +43,18 @@ CONNECTIONPROPERTY ( property )
   
 ## <a name="arguments"></a>Argomenti  
 *property*  
-Proprietà della connessione. I possibili valori di *property* sono i seguenti.
+Proprietà della connessione. *property* può avere uno dei valori seguenti:
   
 |valore|Tipo di dati|Description|  
 |---|---|---|
-|net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico utilizzato dalla connessione. Non ammette i valori Null.<br /><br /> I valori restituiti sono: **HTTP**, **Named pipe**, **Session**, **Shared memory**, **SSL**, **TCP** e **VIA**.<br /><br /> Nota: viene restituito sempre **Session** quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set) e il pool di connessioni.|  
+|net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico usato dalla connessione. Questo valore non ammette i valori Null. Valori restituiti possibili:<br /><br /> **HTTP**<br /> **Named pipe**<br /> **Session**<br /> **Shared memory**<br /> **SSL**<br /> **TCP**<br /><br /> e<br /><br /> **VIA**<br /><br /> Nota: viene restituito sempre **Session** quando per una connessione sono abilitati sia la funzionalità MARS (Multiple Active Result Set) che il pool di connessioni.|  
 |protocol_type|**nvarchar(40)**|Restituisce il tipo di protocollo del payload. Attualmente distingue tra TDS (TSQL) e SOAP. Ammette i valori Null.|  
 |auth_scheme|**nvarchar(40)**|Restituisce lo schema di autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per una connessione. Lo schema di autenticazione può essere relativo all'autenticazione di Windows (NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) o all'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non ammette i valori Null.|  
-|local_net_address|**varchar(48)**|Restituisce l'indirizzo IP del server di destinazione della connessione. Disponibile solo per le connessioni che utilizzano il provider del trasporto TCP. Ammette i valori Null.|  
-|local_tcp_port|**int**|Restituisce la porta TCP del server che verrebbe impiegata nel caso in cui la connessione utilizzasse il trasporto TCP. Ammette i valori Null.|  
-|client_net_address|**varchar(48)**|Richiede l'indirizzo host del client che si connette al server. Ammette i valori Null.|  
-|physical_net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico utilizzato dalla connessione. È accurato quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set).|  
-|\<Qualsiasi altra stringa>||Restituisce NULL se l'input non è valido.|  
+|local_net_address|**varchar(48)**|Restituisce l'indirizzo IP del server di destinazione della connessione specifica. Disponibile solo per le connessioni che usano il provider del trasporto TCP. Ammette i valori Null.|  
+|local_tcp_port|**int**|Restituisce la porta TCP del server che verrebbe impiegata nel caso in cui la connessione usasse il trasporto TCP. Ammette i valori Null.|  
+|client_net_address|**varchar(48)**|Richiede l'indirizzo host del client che prova a connettersi al server. Ammette i valori Null.|  
+|physical_net_transport|**nvarchar(40)**|Restituisce il protocollo di trasporto fisico usato dalla connessione. È accurato quando per una connessione è abilitata la funzionalità MARS (Multiple Active Result Set).|  
+|\<Qualsiasi altra stringa>||Restituisce NULL per l'input non valido.|  
   
 ## <a name="remarks"></a>Remarks  
 **local_net_address** e **local_tcp_port** restituiscono NULL in [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].

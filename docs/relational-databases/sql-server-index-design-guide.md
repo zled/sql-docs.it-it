@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 92aa59127e07e684c6325a811e17469689e403ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
+ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -881,6 +881,11 @@ Quando si esegue una query su una tabella ottimizzata per la memoria con predica
 > Quando in un indice non cluster le colonne chiave contengono molti valori duplicati, le prestazioni per le operazioni di aggiornamento, inserimento ed eliminazione potrebbero risultare ridotte. Un modo per migliorare le prestazioni in questa situazione è aggiungere un'altra colonna nell'indice non cluster.
 
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni  
+[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
+[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
+[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
+[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
+[Riorganizzare e ricompilare gli indici](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Miglioramento delle prestazioni con le viste indicizzate di SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
 [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
 [Creare una chiave primaria](../relational-databases/tables/create-primary-keys.md)    
@@ -890,8 +895,5 @@ Quando si esegue una query su una tabella ottimizzata per la memoria con predica
 [Viste a gestione dinamica correlate alle tabelle con ottimizzazione per la memoria &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Funzioni a gestione dinamica e DMV correlate all'indice &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       
 [Indici per le colonne calcolate](../relational-databases/indexes/indexes-on-computed-columns.md)   
-[Indici e ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)   
-[CREATE INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-index-transact-sql.md)    
-[ALTER INDEX &#40;Transact-SQL&#41;](../t-sql/statements/alter-index-transact-sql.md)   
-[CREATE XML INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-xml-index-transact-sql.md)  
-[CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)  
+[Indici e ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)      
+[Adaptive Index Defrag](http://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) (Deframmentazione dell'indice adattativo)      

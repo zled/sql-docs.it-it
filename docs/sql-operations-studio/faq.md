@@ -1,4 +1,4 @@
-﻿---
+---
 title: Domande frequenti su SQL Operations Studio (anteprima) | Microsoft Docs
 description: Domande frequenti (FAQ) su SQL Operations Studio (anteprima).
 ms.custom: tools|sos
@@ -15,7 +15,7 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b902c414c1e1d0405595109f45a0c6e495424c00
 ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
 ---
@@ -23,7 +23,7 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="what-is-includename-sosincludesname-sos-shortmd"></a>Che cos'è [!INCLUDE[name-sos](../includes/name-sos-short.md)]?
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] è uno strumento di sviluppo e di gestione delle operazioni su database, leggero e gratuito, eseguito su desktop, disponibile per Windows, macOS e Linux. [!INCLUDE[name-sos](../includes/name-sos-short.md)] include il supporto incorporato per Database SQL di Azure, Azure SQL Data Warehouse e SQL Server installati in locale o in qualsiasi cloud. [!INCLUDE[name-sos](../includes/name-sos-short.md)] offre un'esperienza coerente tra i propri database e nei sistemi operativi preferiti.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] è uno strumento di sviluppo e di gestione delle operazioni su database, leggero e gratuito, eseguito su desktop, disponibile per Windows, macOS e Linux. [!INCLUDE[name-sos](../includes/name-sos-short.md)] include il supporto incorporato per Database SQL di Azure, Azure SQL Data Warehouse e SQL Server installati in locale o in qualsiasi cloud.  [!INCLUDE[name-sos](../includes/name-sos-short.md)] offre un'esperienza coerente tra i propri database e nei sistemi operativi preferiti.
 
 ## <a name="where-can-i-get-includename-sosincludesname-sos-shortmd"></a>Dove è possibile ottenere [!INCLUDE[name-sos](../includes/name-sos-short.md)]?
 
@@ -40,7 +40,7 @@ Gli utenti possono utilizzare [!INCLUDE[name-sos](../includes/name-sos-short.md)
 
 ## <a name="what-can-i-do-with-includename-sosincludesname-sos-shortmd"></a>Operazioni eseguibili con [!INCLUDE[name-sos](../includes/name-sos-short.md)]? 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] è costruito su Visual Studio Code e offre un'esperienza leggera, focalizzata sull'utilizzo della tastiera e basata su un moderno workflow di codice, quando si lavora con SQL.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] è costruito su Visual Studio Code e offre un'esperienza leggera, focalizzata sull'utilizzo della tastiera e basata su un moderno workflow di codice, quando si lavora con SQL. 
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] rende il lavoro di ogni giorno molto semplice tramite funzionalità incorporate, come ad esempio la gestione a schede, un editor avanzato di SQL, IntelliSense, il completamento automatico delle parole chiave, i frammenti di codice, la navigazione del codice e l'integrazione del controllo del codice sorgente (Git e TFS). È possibile eseguire query a richiesta, visualizzare e salvare i risultati come testo, JSON o Excel, modificare i dati, organizzare e gestire le connessioni ai database preferiti e sfogliare oggetti di database tramite una familiare esperienza di esplorazione.
 
@@ -50,7 +50,7 @@ Utilizza gli strumenti da riga di comando (ad esempio, bash, PowerShell, sqlcmd,
 [!INCLUDE[name-sos](../includes/name-sos-short.md)] è stato progettato per aumentare la produttività del ciclo di vita di DevOps dei database desiderati nei sistemi operativi di propria scelta. Di conseguenza, si riducono i rischi, si risolvono i problemi più velocemente e si distribuisce continuamente valore che supera le aspettative dei clienti.
 
 
-## <a name="is-includename-sosincludesname-sos-shortmd-open-source"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] è Open Source? 
+## <a name="is-includename-sosincludesname-sos-shortmd-open-source"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]è Open Source? 
 
 Il codice sorgente di [!INCLUDE[name-sos](../includes/name-sos-short.md)] e il relativo provider di dati sono disponibili su GitHub. Il codice sorgente per il front-end di [!INCLUDE[name-sos](../includes/name-sos-short.md)] (che si basa su Visual Studio Code) è disponibile con un contratto di licenza che fornisce diritti per modificare e utilizzare il software, ma non per ridistribuirlo o inserirlo in un servizio cloud di codice sorgente. Il codice sorgente per i provider di dati è disponibile con licenza MIT in [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice).
 
@@ -65,7 +65,7 @@ No. Gli investimenti per i principali strumenti Windows (SQL Server Management S
 L'obiettivo è quello di offrire ai clienti la possibilità di scegliere gli strumenti che desiderano utilizzare sulle piattaforme di propria scelta, in base ai relativi scenari.
 
 
-## <a name="includename-sosincludesname-sos-shortmd-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]manca di una funzionalità presente in SQL Server Management Studio o SSDT. Verrà aggiunta?
+## <a name="includename-sosincludesname-sos-shortmd-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] manca di una funzionalità presente in SQL Server Management Studio o SSDT. Verrà aggiunta?
 A seconda dello scenario e delle necessità del cliente/business. Per aiutare a definire la priorità, invia un suggerimento in [GitHub](https://github.com/microsoft/sqlopsstudio/issues).
 
 

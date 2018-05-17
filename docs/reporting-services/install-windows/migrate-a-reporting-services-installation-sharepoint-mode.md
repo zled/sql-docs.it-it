@@ -1,27 +1,25 @@
 ---
-title: "Eseguire la migrazione di un'installazione di Reporting Services (modalità SharePoint) | Microsoft Docs"
-ms.custom: 
+title: Eseguire la migrazione di un'installazione di Reporting Services (modalità SharePoint) | Microsoft Docs
+ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.service: 
 ms.component: install-windows
-ms.reviewer: 
+ms.reviewer: ''
 ms.suite: pro-bi
-ms.technology: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: ''
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 ms.assetid: 61290949-690a-4e19-b078-57c99b6b30fa
-caps.latest.revision: 
+caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.workload: Inactive
-ms.openlocfilehash: 627029330280cef882f631701d5ea9a0ed8a8791
-ms.sourcegitcommit: 7519508d97f095afe3c1cd85cf09a13c9eed345f
+ms.openlocfilehash: 94cb6edf73b942b7cf3d41aee922fa25ca25c755
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="migrate-a-reporting-services-installation-sharepoint-mode"></a>Migrazione di un'installazione di Reporting Services in modalità SharePoint
 
@@ -59,7 +57,7 @@ ms.lasthandoff: 02/15/2018
   
 -   **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :** gli script consentono di eseguire la migrazione del contenuto e delle risorse tra i server di report in modalità SharePoint e in modalità nativa. Per altre informazioni, vedere [Script di esempio rs.exe di Reporting Services per la copia di contenuto tra server di report](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md) e [Script di esempio rs.exe di Reporting Services per la migrazione del contenuto tra server di report](http://azuresql.codeplex.com/releases/view/115207).  
   
--   **Strumento di migrazione di Reporting Services:** lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere [Strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
+-   **Strumento di migrazione di Reporting Services:** lo strumento consente di copiare gli elementi del report da un server in modalità nativa a un server in modalità SharePoint. Per altre informazioni, vedere la pagina relativa allo [strumento di migrazione di Reporting Services](http://www.microsoft.com/download/details.aspx?id=29560) (http://www.microsoft.com/download/details.aspx?id=29560).  
   
 ###  <a name="bkmk_full_migration"></a> Migrazione completa  
  **Migrazione completa:** se si desidera eseguire la migrazione dei database del contenuto di SharePoint insieme ai database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a una nuova farm, è possibile ricorrere a una serie di opzioni di backup e ripristino riepilogate nel presente argomento. In alcuni casi per la fase di ripristino sarà necessario usare uno strumento diverso da quello usato per la fase di backup. È ad esempio possibile usare Gestione configurazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per eseguire il backup delle chiavi di crittografia da una versione precedente di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ma è necessario usare Amministrazione centrale SharePoint o PowerShell per ripristinare le chiavi di crittografia in un'installazione della modalità SharePoint di SQL Server 2016 Reporting Services.  
@@ -94,7 +92,7 @@ ms.lasthandoff: 02/15/2018
   
 ||Oggetti|Metodo|Note|  
 |-|-------------|------------|-----------|  
-|**1**|Ripristinare il database del contenuto di SharePoint nella nuova farm.|Metodo SharePoint "Aggiornamento basato sul collegamento di database".|Passaggi principali:<br /><br /> 1) Ripristinare il database nel nuovo server.<br /><br /> 2) Collegare il database del contenuto a un'applicazione Web indicando l'URL.<br /><br /> 3) Get-SPWebapplication elenca tutte le applicazioni Web e tutti gli URL.<br /><br /> <br /><br /> Vedere la sezione "Aggiornamento basato sul collegamento di database" nella pagina [Determinare il metodo di aggiornamento (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx)e [Collegare database ed eseguire l'aggiornamento a SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx).|  
+|**1**|Ripristinare il database del contenuto di SharePoint nella nuova farm.|Metodo SharePoint "Aggiornamento basato sul collegamento di database".|Passaggi principali:<br /><br /> 1) Ripristinare il database nel nuovo server.<br /><br /> 2) Collegare il database del contenuto a un'applicazione Web indicando l'URL.<br /><br /> 3) Get-SPWebapplication elenca tutte le applicazioni Web e tutti gli URL.<br /><br /> <br /><br /> Vedere la sezione "Aggiornamento basato sul collegamento di database" nella pagina [Determinare il metodo di aggiornamento (SharePoint Server 2010) (http://technet.microsoft.com/library/cc263447.aspx)](http://technet.microsoft.com/library/cc263447.aspx) e [Attach databases and upgrade to SharePoint Server 2010 (http://technet.microsoft.com/library/cc263299.aspx)](http://technet.microsoft.com/library/cc263299.aspx) (Collegare database ed eseguire l'aggiornamento a SharePoint Server 2010).|  
 |**2**|Ripristinare il database SQL Server che rappresenta il database del catalogo di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (ReportServer).|Backup e ripristino del database SQL.<br /><br /> **o Gestione configurazione**<br /><br /> Collegamento e scollegamento di un database di SQL Server.|Quando il database viene usato per la prima volta, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] aggiorna lo schema del database affinché funzioni correttamente con l'ambiente SQL Server 2016.|  
 |**3**|Creare una nuova applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Creare una nuova applicazione del servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Quando si crea la nuova applicazione di servizio, configurarla per usare il database del server di report che si è copiato.<br /><br /> Per altre informazioni sull'uso di Amministrazione centrale SharePoint, vedere la sezione "Passaggio 3: Creare un'applicazione di servizio Reporting Services" in [Installare la modalità SharePoint di Reporting Services per SharePoint 2013](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> Per alcuni esempi sull'utilizzo di PowerShell, vedere la sezione "Per creare un'applicazione di servizio Reporting Services usando PowerShell" in [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Ripristinare i file di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|Semplice copia di file.|Esempio di percorso predefinito dei file: C:\Programmi\File comuni\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting.|  
@@ -130,7 +128,7 @@ ms.lasthandoff: 02/15/2018
   
 -   [Introduzione agli aggiornamenti a SharePoint 2013 (http://technet.microsoft.com/library/ee833948.aspx)](http://technet.microsoft.com/library/ee833948.aspx).  
   
--   [Panoramica del processo di aggiornamento a SharePoint Server 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
+-   [Panoramica del processo di aggiornamento a SharePoint 2013 (http://technet.microsoft.com/library/cc262483.aspx)](http://technet.microsoft.com/library/cc262483.aspx).  
 
 ## <a name="next-steps"></a>Passaggi successivi
 
