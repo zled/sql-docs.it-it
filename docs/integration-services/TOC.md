@@ -23,14 +23,14 @@
 ### [Esecuzione con PowerShell](ssis-quickstart-run-powershell.md)
 ### [Esecuzione con C#](./ssis-quickstart-run-dotnet.md) 
 
-# [Distribuire ed eseguire pacchetti in Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-## [Esercitazione - Distribuire ed eseguire un pacchetto in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Connettersi a dati con l'autenticazione di Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+# [Migrazione lift and shift di pacchetti SSIS in Azure](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [Esercitazione: distribuire, eseguire e monitorare un pacchetto in Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Connettersi a origini dati con l'autenticazione di Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Connettersi a file e condivisioni file](lift-shift/ssis-azure-files-file-shares.md)
-## [Connettersi a SSISDB in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Convalidare i pacchetti distribuiti in Azure](lift-shift/ssis-azure-validate-packages.md)
-## [Pianificare i pacchetti in Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Pianificare i pacchetti in Azure con SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
+## [Connettersi al catalogo SSIS in Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Pianificare l'esecuzione di pacchetti in Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Pianificare l'esecuzione di pacchetti in Azure con SSMS](lift-shift/ssis-azure-schedule-packages-ssms.md)
 
 # [Installare o aggiornare](../integration-services/install-windows/install-integration-services.md)
 
