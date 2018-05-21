@@ -14,11 +14,11 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3c891393018f69c47e93e56cd49ddf318756256d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 10f225602ed302aa8573b09e0b0a852f50a1971f
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="odbc-64-bit-information"></a>Informazioni di ODBC a 64 bit
 A partire da Windows Server 2003, Microsoft sono supportati i sistemi operativi le librerie ODBC a 64 bit. Le intestazioni ODBC e librerie fornite con il SDK di MDAC 2.7 contengono le modifiche per consentire ai programmatori di scrivere facilmente il codice per nuove piattaforme a 64 bit. Assicurando che il codice vengono utilizzati i tipi ODBC definiti elencati di seguito, è possibile compilare il codice sorgente stesso sia per le piattaforme a 64 bit e a 32 bit basati sul **Win64** o **WIN32** macro.  
@@ -397,7 +397,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetDescField**  
   
- Quando il *FieldIdentifier* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **ValuePtr*:  
+ Quando il *FieldIdentifier* parametro presenta uno dei valori seguenti, viene passato un valore a 64 bit *ValuePtr*:  
   
  SQL_DESC_ARRAY_SIZE  
   
@@ -421,7 +421,7 @@ typedef SQLULEN BOOKMARK;
   
  **Funzione SQLSetStmtAttr**  
   
- Quando il *attributo* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **ValuePtr*:  
+ Quando il *attributo* parametro presenta uno dei valori seguenti, viene passato un valore a 64 bit *ValuePtr*:  
   
  SQL_ATTR_APP_PARAM_DESC  
   
@@ -489,7 +489,7 @@ typedef SQLULEN BOOKMARK;
   
  **SQLSetStmtOption**  
   
- Quando il *opzione* parametro dispone di uno dei valori seguenti, viene passato un valore a 64 bit **valore*:  
+ Quando il *opzione* parametro presenta uno dei valori seguenti, viene passato un valore a 64 bit *valore*:  
   
  SQL_KEYSET_SIZE  
   

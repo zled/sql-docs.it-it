@@ -4,14 +4,12 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.service: ''
-ms.component: ssms-scripting
-ms.reviewer: ''
-ms.suite: sql
 ms.technology:
 - database-engine
+ms.reviewer: ''
+ms.suite: sql
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -25,13 +23,12 @@ caps.latest.revision: 25
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.workload: Active
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de05d593aa47001a5afd2f698d5d1c181757d4c7
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +41,7 @@ ms.lasthandoff: 04/16/2018
 2.  Accanto al campo **Trova** viene reso disponibile il pulsante triangolare per **l'elenco dei riferimenti**. Fare clic su questo pulsante per visualizzare un elenco delle espressioni regolari più comuni. Ogni elemento selezionato in Generatore di espressioni viene inserito nella stringa **Trova** .  
   
 > [!NOTE]  
->  Le espressioni regolari che possono essere utilizzate nelle stringhe **Trova** presentano differenze sintattiche rispetto a quelle valide nella programmazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Poiché ad esempio in **Trova e sostituisci**la notazione con parentesi graffe {} viene utilizzata per le espressioni con tag, l'espressione "zo\{1\}" consente di trovare tutte le occorrenze di "zo" seguite dal tag 1, come "Pranzo1" e "Gonzo1". In .NET Framework, tuttavia, la notazione {} viene utilizzata per i quantificatori. Pertanto l'espressione "zo\{1\}" consente di trovare tutte le occorrenze di "z" seguite da una sola "o", come in "zona", ma non in "zoo".  
+>  Le espressioni regolari che possono essere utilizzate nelle stringhe **Trova** presentano differenze sintattiche rispetto a quelle valide nella programmazione in [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework. Poiché ad esempio in **Trova e sostituisci** la notazione con parentesi graffe {} viene usata per le espressioni con tag, l'espressione "zo{1}" consente di trovare tutte le occorrenze di "zo" seguite dal tag 1, come in "Pranzo1" e "Gonzo1". In .NET Framework, tuttavia, la notazione {} viene usata per i quantificatori. Pertanto l'espressione "zo{1}" consente di trovare tutte le occorrenze di "z" seguite da una e una sola "o", come in "zona", ma non in "zoo".  
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   

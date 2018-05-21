@@ -1,31 +1,30 @@
 ---
-title: "SQL Server forzare il failover per il gruppo di disponibilità"
-description: "Forzare il failover per il gruppo di disponibilità con cluster di tipo NONE"
-services: 
+title: Failover forzato di SQL Server per il gruppo di disponibilità
+description: Failover forzato per il gruppo di disponibilità con tipo di cluster NONE
+services: ''
 author: MikeRayMSFT
-ms.service: 
 ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 10a2af2cb5bc9e98605a3ee988439e3c3be60c1e
-ms.sourcegitcommit: acab4bcab1385d645fafe2925130f102e114f122
-ms.translationtype: MT
+ms.openlocfilehash: f5655e73481d830c848aea34c4a4f49613be0913
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 05/03/2018
 ---
-Ogni gruppo di disponibilità è solo una replica primaria. consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile eseguire il failover. In un gruppo di disponibilità per la disponibilità elevata, la gestione di cluster consente di automatizzare il processo di failover. In un gruppo di disponibilità con il tipo di cluster NONE, il processo di failover è manuale. 
+Ogni gruppo di disponibilità ha soltanto una replica primaria, che consente operazioni di lettura e scrittura. Per modificare la replica primaria, è possibile effettuare il failover. In un gruppo di disponibilità per disponibilità elevata, il processo di failover è automatizzato da Gestione cluster. In un gruppo di disponibilità con tipo di cluster NONE, il processo di failover è manuale. 
 
-Esistono due modi per eseguire il failover la replica primaria in un gruppo di disponibilità con il tipo di cluster NONE:
+Esistono due modi per effettuare il failover della replica primaria in un gruppo di disponibilità con tipo di cluster NONE:
 
 - Failover manuale forzato con perdita di dati
 - Failover manuale senza perdita di dati
 
 ### <a name="forced-manual-failover-with-data-loss"></a>Failover manuale forzato con perdita di dati
 
-Utilizzare questo metodo quando la replica primaria non è disponibile e non può essere recuperata. 
+Usare questo metodo quando la replica primaria non è disponibile e non può essere recuperata. 
 
-Per forzare il failover con perdita di dati, connettersi all'istanza di SQL Server che ospita la replica secondaria di destinazione ed eseguire:
+Per forzare il failover con perdita di dati, connettersi all'istanza di SQL Server che ospita la replica secondaria di destinazione ed eseguire il comando seguente:
 
 ```SQL
 ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
@@ -33,11 +32,11 @@ ALTER AVAILABILITY GROUP [ag1] FORCE_FAILOVER_ALLOW_DATA_LOSS;
 
 ### <a name="manual-failover-without-data-loss"></a>Failover manuale senza perdita di dati
 
-Usare questo metodo quando la replica primaria è disponibile, ma è necessario modificare temporaneamente o definitivamente la configurazione e l'istanza SQL Server che ospita la replica primaria. Prima di eseguire il failover manuale, assicurarsi che la replica secondaria di destinazione viene aggiornata per evitare la perdita di dati. 
+Usare questo metodo quando la replica primaria è disponibile, ma è necessario modificare temporaneamente o definitivamente la configurazione e l'istanza SQL Server che ospita la replica primaria. Prima di effettuare il failover manuale, verificare che la replica secondaria di destinazione sia aggiornata per evitare una potenziale perdita di dati. 
 
-Per eseguire manualmente il failover senza perdita di dati:
+Per effettuare il failover manuale senza perdita di dati:
 
-1. Verificare la replica secondaria di destinazione `SYNCHRONOUS_COMMIT`.
+1. Trasformare la replica secondaria di destinazione in `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -45,7 +44,7 @@ Per eseguire manualmente il failover senza perdita di dati:
         WITH (AVAILABILITY_MODE = SYNCHRONOUS_COMMIT);
    ```
 
-2. Eseguire la query seguente per identificare che le transazioni attive vengano eseguito il commit per la replica primaria e almeno una replica secondaria asincrona: 
+2. Eseguire la query seguente per verificare che per le transazioni attive sia eseguito il commit della replica primaria e di almeno una replica secondaria sincrona: 
 
    ```SQL
    SELECT ag.name, 
@@ -60,7 +59,7 @@ Per eseguire manualmente il failover senza perdita di dati:
 
    La replica secondaria è sincronizzata quando `synchronization_state_desc` è `SYNCHRONIZED`.
 
-3. Aggiornamento `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` su 1.
+3. Aggiornare `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` su 1.
 
    Lo script seguente imposta `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` su 1 in un gruppo di disponibilità denominato `ag1`. Prima di eseguire lo script seguente, sostituire `ag1` con il nome del gruppo di disponibilità:
 
@@ -69,9 +68,9 @@ Per eseguire manualmente il failover senza perdita di dati:
         SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
    ```
 
-   Questa impostazione assicura che ogni transazione attiva viene eseguito il commit per la replica primaria e almeno una replica secondaria asincrona. 
+   Questa impostazione assicura che per ogni transazione attiva venga eseguito il commit della replica primaria e di almeno una replica secondaria sincrona. 
 
-4. Abbassare di livello la replica primaria a una replica secondaria. Dopo la replica primaria viene abbassato di livello, è in sola lettura. Eseguire questo comando nell'istanza di SQL Server che ospita la replica primaria per aggiornare il ruolo `SECONDARY`:
+4. Abbassare il livello della replica primaria a replica secondaria. Dopo aver abbassato di livello la replica primaria, la replica è in sola lettura. Eseguire questo comando nell'istanza di SQL Server che ospita la replica primaria per aggiornare il ruolo in `SECONDARY`:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -85,4 +84,4 @@ Per eseguire manualmente il failover senza perdita di dati:
    ```  
 
    > [!NOTE] 
-   > Per eliminare un gruppo di disponibilità, utilizzare [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Per un gruppo di disponibilità creato con cluster digitare nessuno o esterno, il comando deve essere eseguito su tutte le repliche che fanno parte del gruppo di disponibilità.
+   > Per eliminare un gruppo di disponibilità, usare [DROP AVAILABILITY GROUP](https://docs.microsoft.com/en-us/sql/t-sql/statements/drop-availability-group-transact-sql). Per un gruppo di disponibilità creato con il tipo di cluster NONE o EXTERNAL, il comando deve essere eseguito in tutte le replica che fanno parte del gruppo di disponibilità.

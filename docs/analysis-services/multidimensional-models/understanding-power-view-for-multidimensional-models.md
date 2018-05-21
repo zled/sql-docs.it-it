@@ -9,11 +9,11 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1428f577c1a6094d1fe58cfdcd7cd8f62f8036
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 899569bffcb0e521d6bcb36e0172498fa0da340c
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Informazioni su Power View per modelli multidimensionali
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/10/2018
  ![Gerarchia non aggregabile in Power View](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Gerarchia non aggregabile in Power View")  
   
 ### <a name="implicit-measures"></a>Misure implicite  
- I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati dell'attributo dimensione sono archiviati in modo diverso, l'esecuzione di query su misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
+ I modelli tabulari permettono agli utenti di creare misure *implicite* come conteggio, somma o media dei campi. Per i modelli multidimensionali, poiché i dati dell'attributo dimensione viene archiviati in modo diverso, l'esecuzione di query le misure implicite può richiedere molto tempo. Per questo motivo, le misure implicite non sono disponibili in Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensioni, attributi e gerarchie  
  Le dimensioni del cubo vengono esposte come tabelle nei metadati tabulari. Nell'elenco campi di Power View gli attributi dimensione vengono mostrati come colonne nelle cartelle di visualizzazione  Gli attributi dimensione la cui proprietà AttributeHierarchyEnabled è impostata su false, ad esempio l'attributo Birth Date nella dimensione Customer o la proprietà AttributeHierarchyVisible impostata su false, non sono visibili nell'elenco campi di Power View. Le gerarchie multilivello o le gerarchie utente, ad esempio Customer Geography nella dimensione Customer, vengono esposte come gerarchie nell'elenco campi di Power View. Gli elementi UnknownMembers nascosti di un attributo dimensione sono esposti nelle query DAX e in Power View.  

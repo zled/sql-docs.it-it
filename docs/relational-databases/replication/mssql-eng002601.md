@@ -66,7 +66,7 @@ ms.lasthandoff: 05/03/2018
   
 -   L'errore si verifica durante un inserimento nella tabella di sistema **MSmerge_contents**.  
   
-     Tale errore può verificarsi a causa di un valore non corretto per la proprietà del filtro join **join_unique_key**. Tale proprietà deve essere impostata su TRUE solo se la colonna unita in join nella tabella padre è univoca. Se la proprietà è impostata su TRUE ma la colonna non è univoca, viene generato l'errore. Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [Define and Modify a Join Filter Between Merge Articles](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     Tale errore può verificarsi a causa di un valore non corretto per la proprietà del filtro join **join_unique_key**. Tale proprietà deve essere impostata su TRUE solo se la colonna unita in join nella tabella padre è univoca. Se la proprietà è impostata su TRUE ma la colonna non è univoca, viene generato l'errore. Per ulteriori informazioni sull'impostazione di questa proprietà, vedere [Definizione e modifica di un filtro di join tra articoli di merge](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida di riferimento a errori ed eventi &#40;replica&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

@@ -4,14 +4,13 @@ ms.custom: ''
 ms.date: 04/09/2018
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: replication
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 applies_to:
 - SQL Server 2016
 helpviewer_keywords:
@@ -23,23 +22,22 @@ caps.latest.revision: 13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 3900aae4e96b5490b0b65cbbee004fc66337ff63
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: f168e135dd563d1b76d99254bfa17d7ba8cf721a
+ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="replication-tutorials"></a>Esercitazioni sulla replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-La replica è una soluzione avanzata per lo spostamento di dati, o di subset di dati, da un server a un altro. Per replicare dati tra server sempre connessi è possibile usare la replica transazionale. È anche possibile replicare dati tra server e client connessi saltuariamente usando la replica di tipo merge. Di seguito sono disponibili esercitazioni che consentono di preparare più facilmente il server per la replica e di apprendere quindi come configurare sia la replica transazionale che la replica di tipo merge. 
+La replica è una soluzione avanzata per lo spostamento di dati, o di subset di dati, da un server a un altro. Per replicare dati tra server sempre connessi è possibile usare la replica transazionale. È anche possibile replicare dati tra server e client connessi saltuariamente usando la replica di tipo merge. In questo articolo sono disponibili esercitazioni che consentono di preparare più facilmente il server per la replica e di apprendere quindi come configurare sia la replica transazionale che la replica di tipo merge. 
   
-Nelle esercitazioni sulla replica, "server di pubblicazione" indica il server che contiene i dati di origine sottoposti a replica e "sottoscrittore" indica il server di destinazione. Il server di pubblicazione e il Sottoscrittore possono utilizzare la stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma ciò non è un requisito. Per altre informazioni, vedere [Panoramica del modello di pubblicazione della replica](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
+Nelle esercitazioni sulla replica, "server di pubblicazione" indica il server che contiene i dati di origine sottoposti a replica. "Sottoscrittore" indica il server di destinazione. Il server di pubblicazione e il sottoscrittore possono usare la stessa istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ma questo non è un requisito. Per altre informazioni, vedere [Panoramica del modello di pubblicazione della replica](../../relational-databases/replication/publish/replication-publishing-model-overview.md).  
 
-Queste esercitazioni usano NODE1\SQL2016 come server di pubblicazione e database di distribuzione e NODE2\SQL2016 come sottoscrittore. 
+Queste esercitazioni usano NODE1\SQL2016 come server di pubblicazione e database di distribuzione. Usano NODE2\SQL2016 come sottoscrittore. 
   
 > [!NOTE]  
-> La maggior parte delle attività illustrate in queste esercitazioni possono essere eseguite a livello di programmazione. Per altre informazioni, vedere [Guida per gli sviluppatori (replica)](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
+> La maggior parte delle attività illustrate in queste esercitazioni possono essere eseguite a livello di programmazione. Per altre informazioni, vedere [Documentazione per gli sviluppatori di replica](../../relational-databases/replication/concepts/replication-developer-documentation.md).  
   
 ## <a name="replication-tutorials"></a>Esercitazioni sulla replica  
 [Esercitazione: Preparare SQL Server per la replica: server di pubblicazione, server di distribuzione, sottoscrittore](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md) 

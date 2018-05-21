@@ -4,20 +4,20 @@ description: Con questa esercitazione viene illustrato come abilitare il widget 
 ms.custom: tools|sos
 ms.date: 03/15/2018
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
 ms.tgt_pltfrm: ''
 ms.topic: tutorial
-author: erickangMSFT
-ms.author: erickang
+author: stevestein
+ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d06bd752b0cdd07d87d8e5816a74d6e2d43d31ef
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: cef672411019a0c4402663597382eba426c2562b
+ms.sourcegitcommit: b3bb41424249de198f22d9c6d40df4996f083aa6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/18/2018
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Esercitazione: Aggiunta di *cinque query più lente* widget di esempio per il dashboard del database
 
@@ -33,9 +33,9 @@ Con questa esercitazione viene illustrato il processo di aggiunta di uno dei wid
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Questa esercitazione richiede il database *TutorialDB*, su SQL Server o Azure SQL Database. Per crearlo, completare una delle guide rapide seguenti:
+Questa esercitazione richiede *TutorialDB*, un database su SQL Server o Database SQL di Azure. Per crearlo, completare una delle guide rapide seguenti:
 
-- [Connettersi ed eseguire query su SQL Server tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+- [Connettersi ed eseguire query su SQL Server [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 - [Connettersi ed eseguire query su Azure SQL Database tramite [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-database.md)
 
 

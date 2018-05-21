@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
  **Per passare da una modalità di aggiornamento all'altra**  
   
  Per passare da una modalità di aggiornamento all'altra, è necessario abilitare la pubblicazione e la sottoscrizione per entrambe le modalità e quindi passare da una all'altra, se necessario. Per ulteriori informazioni, vedere  
-[Switch Between Update Modes for an Updatable Transactional Subscription](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Passare da una modalità di aggiornamento all'altra per una sottoscrizione transazionale aggiornabile](../../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Considerazioni per l'utilizzo di sottoscrizioni aggiornabili  
   

@@ -70,7 +70,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  In Esplora oggetti espandere la cartella **Sicurezza** .  
   
-2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**. Per altre informazioni, vedere [Create a Server Audit and Server Audit Specification](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Fare clic con il pulsante destro del mouse sulla cartella **Controlli** e scegliere **Nuovo controllo...**. Per altre informazioni, vedere [Creazione di un controllo del server e di una specifica del controllo del server](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Una volta selezionate le opzioni, fare clic su **OK**.  
   

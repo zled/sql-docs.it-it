@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
     > [!NOTE]  
     >  L'opzione **Usa indicizzazione full-text** è sempre selezionata e visualizzata in grigio, in quanto, a partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], tutti i database utente sono abilitati per la funzionalità full-text.  
   
-6.  Per modificare i valori predefiniti dei file di dati primario e di log delle transazioni, fare clic sulla cella appropriata nella griglia **File di database** , quindi immettere il nuovo valore. Per ulteriori informazioni, vedere [Add Data or Log Files to a Database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
+6.  Per modificare i valori predefiniti dei file di dati primario e di log delle transazioni, fare clic sulla cella appropriata nella griglia **File di database** , quindi immettere il nuovo valore. Per ulteriori informazioni, vedere [Aggiungere file di dati o file di log a un database](../../relational-databases/databases/add-data-or-log-files-to-a-database.md).  
   
 7.  Per modificare le regole di confronto del database, selezionare la pagina **Opzioni** , quindi selezionare le regole di confronto nell'elenco.  
   

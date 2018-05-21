@@ -97,7 +97,7 @@ ms.lasthandoff: 05/03/2018
   
     -   Se il valore di **allow_push** è **0**, eseguire [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)specificando **allow_push** per **@property** e **true** per **@value**.  
   
-2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Specificare **@publication**, **@subscriber** e **@destination_db**. Specificare il valore **push** per **@subscription_type**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
+2.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md). Specificare **@publication**, **@subscriber** e **@destination_db**. Specificare il valore **push** per **@subscription_type**. Per informazioni sull'aggiornamento delle sottoscrizioni, vedere [Creazione di una sottoscrizione aggiornabile di una pubblicazione transazionale](publish/create-an-updatable-subscription-to-a-transactional-publication.md).  
   
 3.  Nel database di pubblicazione del server di pubblicazione eseguire [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md). Specificare le opzioni seguenti:  
   

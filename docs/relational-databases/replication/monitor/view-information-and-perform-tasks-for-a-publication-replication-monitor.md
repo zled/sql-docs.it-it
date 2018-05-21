@@ -68,7 +68,7 @@ ms.lasthandoff: 05/03/2018
   
 5.  Per visualizzare informazioni su avvisi e valore soglia dell'agente, fare clic sulla scheda **Avvisi** . Per altre informazioni, vedere [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
-6.  Per visualizzare le informazioni sui token di traccia, fare clic sulla scheda **Token di traccia** . Per ulteriori informazioni sulle modalità di utilizzo dei token di traccia, vedere [Measure Latency and Validate Connections for Transactional Replication](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
+6.  Per visualizzare le informazioni sui token di traccia, fare clic sulla scheda **Token di traccia** . Per ulteriori informazioni sulle modalità di utilizzo dei token di traccia, vedere [Misurazione della latenza e convalida delle connessioni per la replica transazionale](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Visualizzare e modificare le proprietà della pubblicazione](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   

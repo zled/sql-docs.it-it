@@ -86,7 +86,7 @@ ms.lasthandoff: 05/03/2018
  **Cambio data per anno a due cifre**  
  Indica il numero più alto che può essere immesso come anno a due cifre. L'anno indicato e i 99 anni precedenti possono essere immessi con due cifre. Tutti gli altri anni devono essere immessi con quattro cifre.  
   
- Ad esempio, l'impostazione predefinita 2049 indica che la data '14/03/49' verrà interpretata come 14 marzo 2049, mentre la data '14/03/50' verrà interpretata come 14 marzo 1950. Per altre informazioni, vedere [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
+ Ad esempio, l'impostazione predefinita 2049 indica che la data '14/03/49' verrà interpretata come 14 marzo 2049, mentre la data '14/03/50' verrà interpretata come 14 marzo 1950. Per altre informazioni, vedere [Configurare l'opzione di configurazione del server two-digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).  
   
 ## <a name="cursor"></a>Cursore  
  **Chiusura cursori dopo commit abilitata**  

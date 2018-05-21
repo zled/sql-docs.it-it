@@ -4,7 +4,7 @@ description: Scopri il terminale integrato in SQL Operations Studio (anteprima).
 ms.custom: tools|sos
 ms.date: 11/15/2017
 ms.prod: sql
-ms.reviewer: alayu; erickang; sstein
+ms.reviewer: alayu; sstein
 ms.suite: sql
 ms.prod_service: sql-tools
 ms.component: sos
@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: e33468679c7c499c4f55d25cff2ac816c051e272
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: 0754c66c182acefd2fdff799b791fbf135356d7b
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="integrated-terminal"></a>Terminale integrato
 
@@ -151,5 +151,5 @@ Le sessioni del terminale integrato possono essere rinominate ora utilizzando il
 
 ### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>Utilizzo forzato di tasti di scelta rapida per il passaggio tra i terminali
 
-Mentre il terminale integrato è attivo, molti tasti di scelta rapida non funzioneranno perché tali sequenze sono utilizzati dal terminale stesso. L'impostazione `terminal.integrated.commandsToSkipShell` può essere utilizzata per risolvere il problema. Contiene una lista di nomi di comando con tasti di scelta rapida che verranno ignorati dalla shell al fine di essere elaborati dal sistema di associazione tasti di [!INCLUDE[name-sos](../includes/name-sos-short.md)]. Per impostazione predefinita, questo include tutti i tasti di scelta rapida del terminale più una selezione di alcuni dei più comuni tasti di scelta rapida.
+Mentre il terminale integrato è attivo, molti tasti di scelta rapida non funzioneranno perché tali sequenze sono utilizzati dal terminale stesso. L'impostazione `terminal.integrated.commandsToSkipShell` può essere utilizzata per risolvere il problema. Contiene una matrice di nomi di comando con tasti di scelta rapida ignorare l'elaborazione dalla shell e invece essere elaborati dal [!INCLUDE[name-sos](../includes/name-sos-short.md)] chiave di sistema di associazione. Per impostazione predefinita, questo include tutti i tasti di scelta rapida del terminale più una selezione di alcuni dei più comuni tasti di scelta rapida.
 

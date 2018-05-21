@@ -64,7 +64,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Nella pagina **Filtro righe tabella** della Creazione guidata nuova pubblicazione o nella pagina **Filtro righe** della finestra di dialogo **Proprietà pubblicazione - \<Pubblicazione>** selezionare un filtro di riga nel riquadro **Tabelle filtrate**.  
   
-     A una relazione tra record logici è associato un filtro join che estende un filtro di riga. È pertanto necessario definire un filtro di riga prima di poter estendere il filtro con un join e applicare una relazione tra record logici. Dopo aver definito un filtro join, è possibile estenderlo con un altro filtro join. Per ulteriori informazioni sulla definizione di filtri join, vedere [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
+     A una relazione tra record logici è associato un filtro join che estende un filtro di riga. È pertanto necessario definire un filtro di riga prima di poter estendere il filtro con un join e applicare una relazione tra record logici. Dopo aver definito un filtro join, è possibile estenderlo con un altro filtro join. Per ulteriori informazioni sulla definizione di filtri join, vedere [Definizione e modifica di un filtro di join tra articoli di merge](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 2.  Fare clic su **Aggiungi**e quindi su **Aggiungi join per estendere il filtro selezionato**.  
   
@@ -208,7 +208,7 @@ ms.lasthandoff: 05/03/2018
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
 ## <a name="see-also"></a>Vedere anche  
- [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
+ [Definizione e modifica di un filtro di join tra articoli di merge](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Definire e modificare un filtro di riga con parametri per un articolo di merge](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Definire e modificare un filtro di riga statico](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
  [Raggruppare modifiche alle righe correlate con record logici](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)   

@@ -1,6 +1,6 @@
 ---
-title: Pianificare l'esecuzione del pacchetto SSIS in Azure | Microsoft Docs
-ms.date: 05/07/2018
+title: Pianificare i pacchetti SSIS in Azure | Microsoft Docs
+ms.date: 05/09/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,23 +12,25 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 946fb9c302057844eed3c1e14aed1243e0d4c7f7
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 4bfad00425848189d88bd780296db00ec810b37c
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Pianificare l'esecuzione di un pacchetto SSIS in Azure
+# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Pianificare l'esecuzione di un pacchetto SSIS in Azure
 È possibile pianificare l'esecuzione dei pacchetti archiviati nel database del catalogo SSISDB in un server di database SQL di Azure scegliendo una delle opzioni di pianificazione seguenti:
 -   [Opzione di pianificazione in SQL Server Management Studio (SSMS)](#ssms)
 -   [Attività Esegui pacchetto SSIS di Azure Data Factory](#execute)
--   [Attività stored procedure di SQL Server di Azure Data Factory](#stored proc)
+-   [Attività stored procedure di SQL Server di Azure Data Factory](#storedproc)
 -   [Processi elastici del database SQL](#elastic)
 -   [SQL Server Agent](#agent)
 
 ## <a name="ssms"></a> Pianificare un pacchetto con SSMS
 
-In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**.
+In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**. Per altre informazioni, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure con SQL Server Management Studio (SSMS)](ssis-azure-schedule-packages-ssms.md).
+
+Questa funzionalità richiede SQL Server Management Studio 17.7 o versione successiva. Per ottenere la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
 ## <a name="execute"></a> Pianificare un pacchetto con l'attività di esecuzione pacchetto SSIS
 
