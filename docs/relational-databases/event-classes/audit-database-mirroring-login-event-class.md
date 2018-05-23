@@ -3,12 +3,9 @@ title: Classe di evento Audit Database Mirroring Login | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3bc56d4598d39d31d26c43357c76fc6889c5e53c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac0ba1d2748dbb6d4e30c62af36ce2dd823a63c3
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Classe di evento Audit Database Mirroring Login
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Colonne di dati della classe di evento Audit Database Mirroring Login  
   
-|Colonna di dati|Tipo|Description|Numero colonna|Filtrabile|  
+|Colonna di dati|Tipo|Descrizione|Numero colonna|Filtrabile|  
 |-----------------|----------|-----------------|-------------------|----------------|  
 |**ApplicationName**|**nvarchar**|Non utilizzata per questa classe di evento.|10|Sì|  
 |**ClientProcessID**|**int**|Non utilizzata per questa classe di evento.|9|Sì|  
@@ -60,7 +57,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente sono elencati i valori di sottoclasse per questa classe di evento.  
   
-|ID|Sottoclasse|Description|  
+|ID|Sottoclasse|Descrizione|  
 |--------|--------------|-----------------|  
 |1|Login Success|Un evento Login Success segnala che il processo di accesso per il mirroring del database adiacente è stato completato correttamente.|  
 |2|Login Protocol Error|Un evento Login Protocol Error segnala che durante l'accesso per il mirroring del database è stato ricevuto un messaggio di formato corretto ma non valido per lo stato corrente del processo di accesso. Questo messaggio potrebbe essere andato perduto o potrebbe essere stato inviato fuori sequenza.|  

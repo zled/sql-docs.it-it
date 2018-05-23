@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
@@ -17,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d7c5a6fa406e4ac16da7641053ab1804887a6a96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e26743a1020bc71e20e17d64aad7c14ccd29c325
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="atomic-blocks-in-native-procedures"></a>Blocchi atomici nelle procedure native
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -138,14 +137,14 @@ GO
   
  Le opzioni seguenti sono necessarie con **BEGIN ATOMIC**:  
   
-|Impostazione necessaria|Description|  
+|Impostazione necessaria|Descrizione|  
 |----------------------|-----------------|  
 |**TRANSACTION ISOLATION LEVEL**|I valori supportati sono **SNAPSHOT**, **REPEATABLEREAD**e **SERIALIZABLE**.|  
 |**LANGUAGE**|Determina i formati data e ora e i messaggi di sistema. Tutti i linguaggi e gli alias in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) sono supportati.|  
   
  Le impostazioni seguenti sono facoltative:  
   
-|Impostazione facoltativa|Description|  
+|Impostazione facoltativa|Descrizione|  
 |----------------------|-----------------|  
 |**DATEFORMAT**|Tutti i formati data di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sono supportati. Quando viene specificata, **DATEFORMAT** esegue l'override del formato data predefinito associato a **LANGUAGE**.|  
 |**DATEFIRST**|Quando viene specificata, **DATEFIRST** esegue l'override del valore predefinito associato a **LANGUAGE**.|  

@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6307d2bd9f7af779e37fbcc37bc5b1b743dbd83a
-ms.sourcegitcommit: bac61a04d11fdf61deeb03060e66621c0606c074
+ms.openlocfilehash: 911e983816453ede6a40375aad7e09bf399567b0
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Architettura e guida per la progettazione degli indici di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -798,11 +798,11 @@ Un indice hash può essere dichiarato:
   
 Di seguito è riportato un esempio della sintassi per creare un indice hash al di fuori dell'istruzione CREATE TABLE:  
   
-    ```sql
-    ALTER TABLE MyTable_memop  
-    ADD INDEX ix_hash_Column2 UNIQUE  
-    HASH (Column2) WITH (BUCKET_COUNT = 64);
-    ``` 
+```sql
+ALTER TABLE MyTable_memop  
+ADD INDEX ix_hash_Column2 UNIQUE  
+HASH (Column2) WITH (BUCKET_COUNT = 64);
+``` 
 
 ### <a name="row-versions-and-garbage-collection"></a>Versioni delle righe e Garbage Collection  
 In una tabella ottimizzata per la memoria, quando una riga è interessata da un'istruzione `UPDATE`, la tabella crea una versione aggiornata della riga. Durante la transazione di aggiornamento, altre sessioni potrebbero riuscire a leggere la versione precedente della riga e quindi evitare il rallentamento delle prestazioni associato a un blocco di riga.  

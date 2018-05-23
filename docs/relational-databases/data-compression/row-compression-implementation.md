@@ -13,16 +13,15 @@ helpviewer_keywords:
 - compression [SQL Server], row
 - row compression [Database Engine]
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
-caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 91cf1a6e8889e210f0d1e64145af64aa83ba70ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74e3b96d96fa0906e92b3aa6df5f10fcdd248847
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="row-compression-implementation"></a>Implementazione della compressione di riga
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="how-row-compression-affects-storage"></a>Influenza della compressione di riga sull'archiviazione  
  Nella tabella seguente è descritto il modo in cui la compressione di riga influisce sui tipi esistenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]. Nella tabella non sono inclusi i risparmi in termini di spazio che possono essere ottenuti usando la compressione di pagina.  
   
-|Tipo di dati|Influenza sull'archiviazione|Description|  
+|Tipo di dati|Influenza sull'archiviazione|Descrizione|  
 |---------------|--------------------------|-----------------|  
 |**tinyint**|no|Lo spazio di archiviazione minimo necessario è 1 byte.|  
 |**smallint**|Sì|Se il valore può essere archiviato in 1 byte, verrà utilizzato solo 1 byte.|  

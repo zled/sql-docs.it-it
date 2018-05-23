@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
@@ -17,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 43e6e1de5ffbafa9d17a3696ce556185aec80290
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3a7393dfd780eb62aa6dff5ca70d89f297dc6952
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Funzionalità di SQL Server non supportate per OLTP in memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ Le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in
 Salvo alcune eccezioni, le transazioni tra database non sono supportate. Nella tabella seguente vengono descritti i casi supportati e le relative restrizioni. Vedere anche [Query tra database](../../relational-databases/in-memory-oltp/cross-database-queries.md).  
 
 
-|Database|Allowed|Description|  
+|Database|Allowed|Descrizione|  
 |---------------|-------------|-----------------|  
 | Database utente, **modello** e **msdb**. | no | Nella maggior parte dei casi, query e transazioni tra database *non* sono supportate.<br /><br />Una query non è in grado di accedere ad altri database se usa una tabella ottimizzata per la memoria o una stored procedure compilata in modo nativo. Questa restrizione si applica sia alle transazioni che alle query.<br /><br />Le eccezioni sono i database di sistema **tempdb** e **master**. In questo caso il database **master** è disponibile per l'accesso in sola lettura. |
 | Database delle **risorse**, **tempdb** | Sì | In una transazione che coinvolge gli oggetti di OLTP In memoria, i database di sistema **risorse** e **tempdb** possono essere usati senza alcuna restrizione aggiuntiva.

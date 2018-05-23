@@ -3,9 +3,7 @@ title: Eseguire ricerche di testo con espressioni regolari | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -24,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1ca12a4b1a5ddcd7d08fb4cd1badb7daa3b88c4e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bdf5092dc19a5a96121db99ef0da7c9192da1bb
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="search-text-with-regular-expressions"></a>Testo di ricerca con espressioni regolari
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella seguente tabella vengono descritte le espressioni regolari disponibili nell'**elenco dei riferimenti**.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Qualsiasi carattere|,|Consente di ricercare un carattere qualsiasi, ad eccezione del carattere di interruzione riga.|  
 |Zero o più|*|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il maggior numero di caratteri corrispondenti possibile.|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 05/03/2018
   
  Nell'**elenco dei riferimenti** non è possibile visualizzare tutte le espressioni regolari valide per le operazioni di **ricerca e sostituzione**. In una stringa **Trova** è possibile inserire anche le seguenti espressioni regolari:  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Minimo tra zero o più occorrenze|@|Consente di ricercare zero o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
 |Minimo tra una o più occorrenze|#|Consente di ricercare una o più occorrenze dell'espressione precedente, con il minor numero di caratteri corrispondenti possibile.|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente viene descritta la sintassi per stabilire una corrispondenza attraverso le proprietà dei caratteri Unicode standard. Le abbreviazioni di due lettere corrispondono a quelle indicate nel database delle proprietà dei caratteri Unicode e possono essere specificate come parte di un set di caratteri. Ad esempio, l'espressione [:Nd:Nl:No] corrisponde a qualsiasi tipo di cifra.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Lettera maiuscola|:Lu|Consente di ricercare una qualsiasi lettera maiuscola. Ad esempio, :Luli corrisponde a "Gli" ma non a "gli".|  
 |Lettera minuscola|:Ll|Consente di ricercare una qualsiasi lettera minuscola. Ad esempio, :Llli corrisponde a "gli" ma non a "Gli".|  
@@ -126,7 +124,7 @@ ms.lasthandoff: 05/03/2018
   
  Oltre alle proprietà dei caratteri Unicode standard, è possibile specificare come parte di un set di caratteri le proprietà aggiuntive elencate di seguito.  
   
-|Espressione|Sintassi|Description|  
+|Espressione|Sintassi|Descrizione|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Consente di ricercare qualsiasi carattere. Ad esempio, :Alli consente di trovare parole come "Gli", "giglio" e "foglio".|  
 |Numeric|:Nu|Consente di ricercare un numero o una cifra.|  

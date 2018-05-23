@@ -7,8 +7,7 @@ ms.prod_service: database-engine, sql-database
 ms.component: in-memory-oltp
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: in-memory-oltp
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -20,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b9843ce1aedeb297e1960569a73f013678085511
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 54fa82bd4f225847214211cf3549858bf9bf3182
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP in memoria (ottimizzazione per la memoria)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ Per una panoramica più dettagliata di OLTP in memoria e un'analisi degli scenar
 ## <a name="in-this-section"></a>Contenuto della sezione  
  In questa sezione vengono trattati gli argomenti seguenti:  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Avvio rapido 1: Tecnologie OLTP in memoria per migliorare le prestazioni di Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Analizza in maniera approfondita OLTP in memoria|
 |[Panoramica e scenari di utilizzo](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Panoramica delle informazioni su OLTP in memoria e degli scenari che ne esaminano i vantaggi.|

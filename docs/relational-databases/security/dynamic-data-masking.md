@@ -13,11 +13,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0aa8b9f31337bbbe2b4a545574c3a9cfc0e03116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bdd58460e8dc3c9d763f92a335b0d2a0cee850b2
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="dynamic-data-masking"></a>Mascheramento dati dinamici
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ Il mascheramento dei dati dinamici è disponibile in [!INCLUDE[ssSQL15](../../in
 ## <a name="defining-a-dynamic-data-mask"></a>Definizione di una maschera dati dinamica  
  Una regola per la maschera può essere definita in una colonna all'interno di una tabella, al fine di nascondere i dati in tale colonna. Sono disponibili quattro tipi di maschere.  
   
-|Funzione|Description|Esempi|  
+|Funzione|Descrizione|Esempi|  
 |--------------|-----------------|--------------|  
 |Default|Maschera completa in base al tipo di dati dei campi designati.<br /><br /> Per il tipo di dati stringa usare XXXX o X minori se la dimensione del campo è inferiore a 4 caratteri  (**char**, **nchar**,  **varchar**, **nvarchar**, **text**, **ntext**).  <br /><br /> Per il tipo di dati numerici, usare il valore zero (**bigint**, **bit**, **decimal**, **int**, **money**, **numeric**, **smallint**, **smallmoney**, **tinyint**, **float**, **real**).<br /><br /> Per i tipi di dati data e ora, usare 01.01.1900 00:00:00.0000000 (**date**, **datetime2**, **datetime**, **datetimeoffset**, **smalldatetime**, **time**).<br /><br />Per i tipi di dati binati, usare un singolo byte di valore 0 ASCII (**binary**, **varbinary**, **image**).|Esempio di sintassi di definizione della colonna: `Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Gender ADD MASKED WITH (FUNCTION = 'default()')`|  
 |Email|Metodo di maschera che espone la prima lettera di un indirizzo di posta elettronica e il suffisso costante ".com", sotto forma di un indirizzo di posta elettronica. , `aXXX@XXXX.com`.|Esempio di sintassi di definizione: `Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL`<br /><br /> Esempio di sintassi di alter: `ALTER COLUMN Email ADD MASKED WITH (FUNCTION = 'email()')`|  
@@ -127,10 +127,10 @@ CREATE TABLE Membership
   (MemberID int IDENTITY PRIMARY KEY,  
    FirstName varchar(100) MASKED WITH (FUNCTION = 'partial(1,"XXXXXXX",0)') NULL,  
    LastName varchar(100) NOT NULL,  
-   Phone# varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
+   Phone varchar(12) MASKED WITH (FUNCTION = 'default()') NULL,  
    Email varchar(100) MASKED WITH (FUNCTION = 'email()') NULL);  
   
-INSERT Membership (FirstName, LastName, Phone#, Email) VALUES   
+INSERT Membership (FirstName, LastName, Phone, Email) VALUES   
 ('Roberto', 'Tamburello', '555.123.4567', 'RTamburello@contoso.com'),  
 ('Janice', 'Galvin', '555.123.4568', 'JGalvin@contoso.com.co'),  
 ('Zheng', 'Mu', '555.123.4569', 'ZMu@contoso.net');  

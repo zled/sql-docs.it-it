@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 09/13/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dafc740c11cf79294786440204e8e284dcbd518e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3e839b220bb8a3464d8dfbc9a7f4afa8bbcb416
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="how-query-store-collects-data"></a>Come Archivio query raccoglie i dati
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  **Descrizioni delle viste**  
   
-|Vista|Description|  
+|Vista|Descrizione|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Presenta i testi delle singole query univoche eseguite sul database. I commenti e gli spazi prima e dopo il testo della query vengono ignorati. I commenti e gli spazi all'interno del testo non vengono ignorati. Ogni istruzione del batch genera una voce diversa nell'elenco dei testi di query.|  
 |**sys.query_context_settings**|Presenta combinazioni univoche di impostazioni che influiscono sul piano e con cui sono eseguite le query. Lo stesso testo di query eseguito con impostazioni diverse che influiscono sul piano genera voci di query separate in Archivio query in quanto `context_settings_id` fa parte della chiave della query.|  

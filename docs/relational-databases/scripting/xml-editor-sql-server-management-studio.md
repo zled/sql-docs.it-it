@@ -3,9 +3,7 @@ title: Editor XML (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.technology:
-- database-engine
+ms.technology: scripting
 ms.reviewer: ''
 ms.suite: sql
 ms.tgt_pltfrm: ''
@@ -23,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e88b2ccbfbfa42d024a2fb51cf4e27442ac8d731
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d5abdb3d615448c575b40facbeea3f8c6c734d58
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editor XML (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  Per consentire di lavorare sui file XML, sugli XML Schema e sui set di dati, Progettazione XML dispone delle tre visualizzazioni (o modalità) seguenti:  
   
-|Vista|Description|Tipi di file supportati|  
+|Vista|Descrizione|Tipi di file supportati|  
 |----------|-----------------|--------------------------|  
 |**Schema**|Per la creazione e la modifica in modo visivo degli XML Schema e dei set di dati ADO.NET.|xsd|  
 |**Dati**|Per la modifica in modo visivo dei file di dati XML in una griglia dati strutturata.|xml|  

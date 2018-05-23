@@ -19,14 +19,14 @@ caps.latest.revision: 5
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: e9dc3062b902074f052475f5c63130244e9a582e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8da49de795c0a0fbc8d6da2cf28374a07d7f8778
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="azure-sql-dw-upload-task"></a>Attività di caricamento di Azure SQL DW
-L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'efficiente approccio della tecnologia PolyBase, descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2016/02/06/azure-sql-data-warehouse-loading-patterns-and-strategies/)(Modelli e strategie di caricamento di Azure SQL Data Warehouse). In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.
+L' **attività di caricamento di Azure SQL DW** consente a un pacchetto SSIS di caricare i dati locali in una tabella in Azure SQL Data Warehouse (DW). Il formato di file dei dati di origine attualmente supportato è testo delimitato in codifica UTF8. Il processo di caricamento segue l'efficiente approccio della tecnologia PolyBase, descritto nell'articolo [Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/) (Modelli e strategie di caricamento di Azure SQL Data Warehouse). In particolare, i dati vengono prima caricati in Archiviazione BLOB di Azure e poi in Azure SQL DW. Per usare questa attività, è quindi necessario un account di Archiviazione BLOB di Azure.
 
 **Attività di caricamento BLOB di Azure** è un componente del [Feature Pack di SQL Server Integration Services (SSIS) per Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).
 
@@ -34,7 +34,7 @@ Per aggiungere un' **attività di caricamento di Azure SQL DW**, trascinare l'at
 
 Nella pagina **Generale** configurare le proprietà seguenti.
 
-Campo|Description
+Campo|Descrizione
 -----|-----------
 LocalDirectory|Specifica la directory locale che contiene i file di dati da caricare.
 Recursively (Ricorsivo)|Specifica se eseguire una ricerca ricorsiva delle sottodirectory.

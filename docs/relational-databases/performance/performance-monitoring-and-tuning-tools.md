@@ -3,12 +3,9 @@ title: Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni | Micr
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: performance
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -25,11 +22,11 @@ caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4c0cc4e5b9264c3259305027ad8ee54869c914f7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 185096f5e4d9a2722d720fe37549f22cd5e608e7
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>Strumenti per il monitoraggio e l'ottimizzazione delle prestazioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  Di seguito sono elencati gli strumenti di monitoraggio e ottimizzazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
-|Strumento|Description|  
+|Strumento|Descrizione|  
 |----------|-----------------|  
 |[sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tiene traccia degli eventi di elaborazione del motore, ad esempio l'avvio di un batch o di una transazione, consentendo di monitorare l'attività del server e del database, ad esempio deadlock, errori irreversibili o attività di accesso. È possibile acquisire dati di [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] in un file o una tabella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per poterli analizzare in seguito, nonché riprodurre gli eventi acquisiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] passaggio per passaggio e determinare con esattezza quali eventi hanno avuto luogo.|  
 |[SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In Distributed Replay è possibile usare più computer per riprodurre dati di traccia e simulare un carico di lavoro di importanza critica.|  
@@ -69,7 +66,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="windows-monitoring-tools"></a>Strumenti di monitoraggio di Windows  
  Nei sistemi operativi Windows e in Windows Server 2003 sono inoltre disponibili gli strumenti di monitoraggio indicati di seguito.  
   
-|Strumento|Description|  
+|Strumento|Descrizione|  
 |----------|-----------------|  
 |Gestione attività|Consente di visualizzare un riepilogo dei processi e delle applicazioni eseguite nel sistema.|  
 |Agente Network Monitor|Esegue il monitoraggio del traffico di rete.|  

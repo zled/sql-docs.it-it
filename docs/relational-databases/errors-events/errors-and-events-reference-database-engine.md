@@ -3,8 +3,6 @@ title: Guida di riferimento a errori ed eventi (motore di database) | Microsoft 
 ms.custom: ''
 ms.date: 05/03/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -19,11 +17,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b28a5ca483dded374cb7c5bdc31a205fd18c23ef
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: de9cc2a589a7dbf9f8322a02841688f551de3f7a
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Guida di riferimento a errori ed eventi (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.lasthandoff: 05/04/2018
   
  Nella tabella seguente sono elencati i collegamenti a tali risorse insieme a una descrizione delle principali caratteristiche.  
   
-|Risorsa|Description|  
+|Risorsa|Descrizione|  
 |--------------|-----------------|  
 |[Community di SQL Server](http://go.microsoft.com/fwlink/?LinkId=42455)|Questo sito contiene collegamenti a newsgroup e forum monitorati dalla community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elenca inoltre le fonti di informazione della community, quali Blog e siti Web. La community di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è molto utile per ottenere la risposta a eventuali domande. Non è tuttavia garantita una risposta.|  
 |[Community del centro per sviluppatori di SQL Server](http://go.microsoft.com/fwlink/?LinkId=42456)|Questo sito è incentrato sui newsgroup, i forum e le altre risorse della community utili per gli sviluppatori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

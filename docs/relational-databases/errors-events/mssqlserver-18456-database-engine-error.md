@@ -3,8 +3,6 @@ title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/09/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: errors-events
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: supportability
@@ -17,11 +15,11 @@ caps.latest.revision: 15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 49aeb80c984dd3b01f300e38d81e423a1fee56d2
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: b5bb3731947cebbd5ff1fe2d0f5f1f1875867724
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +63,7 @@ Può essere inoltre restituito il messaggio seguente:
 ## <a name="additional-error-information"></a>Informazioni aggiuntive sull'errore  
 Per aumentare il livello di sicurezza, il messaggio di errore restituito al client nasconde deliberatamente la natura dell'errore di autenticazione. Tuttavia, nel log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per ogni errore viene indicato lo stato corrispondente tramite cui viene eseguito il mapping alla condizione di errore di autenticazione. Confrontare lo stato di errore restituito con l'elenco seguente per determinare il motivo dell'errore di accesso.  
   
-|State|Description|  
+|State|Descrizione|  
 |---------|---------------|  
 |1|Non sono disponibili informazioni sull'errore. Questo stato in genere indica che non si dispone dell'autorizzazione a ricevere i dettagli dell'errore. Per ulteriori informazioni, contattare l'amministratore di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|L'ID utente non è valido.|  

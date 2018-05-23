@@ -3,12 +3,9 @@ title: Categoria di eventi Stored procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
-ms.component: event-classes
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: supportability
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: c88932cd800e5956a0ab0bbd34e5d25ce222a0fd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e155df20d6345e8b3bbc34566ba702f464cd196e
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="stored-procedures-event-category"></a>Categoria di eventi Stored procedure
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +30,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
-|Argomento|Description|  
+|Argomento|Descrizione|  
 |-----------|-----------------|  
 |[Classe di evento RPC:Completed](../../relational-databases/event-classes/rpc-completed-event-class.md)|Indica il completamento di una chiamata di procedura remota (RPC).|  
 |[Classe di evento PreConnect:Completed](../../relational-databases/event-classes/preconnect-completed-event-class.md)|Indica la fine dell'esecuzione di una funzione di classificazione di Resource Governor.|  
