@@ -78,7 +78,7 @@ sp_table_validation [ @table = ] 'table'
 |-----------|-----------------|  
 |**0**|Esegue un conteggio completo con COUNT(*).|  
 |**1**|Un conteggio rapido in **sysindexes**. Il conteggio delle righe in **sysindexes** è molto più veloce rispetto al conteggio delle righe nella tabella effettiva. Tuttavia, poiché **sysindexes** in modo differito è aggiornato, il conteggio delle righe potrebbe non essere accurata.|  
-|**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count completo.|  
+|**2** (impostazione predefinita)|Esegue un conteggio rapido condizionale eseguendo innanzitutto un tentativo con il metodo rapido. Se il metodo rapido evidenzia delle differenze, viene applicato il metodo completo. Se *expected_rowcount* è NULL e la stored procedure viene utilizzata per ottenere il valore, viene utilizzato sempre un Count (\*) completo.|  
   
  [  **@shutdown_agent=**] *shutdown_agent*  
  Se è in esecuzione l'agente di distribuzione **sp_table_validation**, specifica se l'agente di distribuzione deve arrestare immediatamente dopo il completamento della convalida. *shutdown_agent* viene **bit**, il valore predefinito è **0**. Se **0**, l'agente di replica non viene arrestato. Se **1**, viene generato l'errore 20578 e l'agente di replica viene segnalato l'arresto. Questo parametro viene ignorato quando **sp_table_validation** viene eseguito direttamente dall'utente.  

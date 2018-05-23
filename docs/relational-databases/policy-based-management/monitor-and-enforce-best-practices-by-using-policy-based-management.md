@@ -44,7 +44,7 @@ ms.lasthandoff: 05/03/2018
 |Autorizzazioni Guest|[Autorizzazioni Guest nei database utente](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
 |Data ultimo backup completato|[Backup obsoleto](../../relational-databases/policy-based-management/outdated-backup.md)|  
 |Autorizzazioni server non concesse al ruolo public|[Autorizzazioni server per il ruolo public](../../relational-databases/policy-based-management/server-public-permissions.md)|  
-|Sovrapposizione maschera di affinità a 64 bit SQL Server|[Correct Affinity Mask and Affinity Input and Output Mask Overlap](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
+|Sovrapposizione maschera di affinità a 64 bit SQL Server|[Correggere la sovrapposizione delle opzioni affinity mask e affinity I/O mask](../../relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md)|  
 |Maschera di affinità SQL Server|[Valore predefinito per la maschera di affinità](../../relational-databases/policy-based-management/keep-the-affinity-mask-default-value.md)|  
 |Soglia processo bloccato SQL Server|[Aumento o disabilitazione dell'opzione blocked process threshold](../../relational-databases/policy-based-management/increase-or-disable-blocked-process-threshold.md)|  
 |Traccia predefinita SQL Server|[File dei log di traccia predefiniti disabilitati](../../relational-databases/policy-based-management/default-trace-log-files-disabled.md)|  

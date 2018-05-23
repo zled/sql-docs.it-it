@@ -108,7 +108,7 @@ ms.lasthandoff: 05/03/2018
   
 -   Mediante una modifica globale del mapping predefinito per tutti gli articoli futuri utilizzando stored procedure (i mapping predefiniti non vengono modificati per gli articoli esistenti).  
   
- Per specificare mapping di tipi di dati alternativi, vedere [Specify Data Type Mappings for an Oracle Publisher](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
+ Per specificare mapping di tipi di dati alternativi, vedere [Specifica dei mapping tra i tipi di dati di un server di pubblicazione Oracle](../../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Configurare un server di pubblicazione Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
