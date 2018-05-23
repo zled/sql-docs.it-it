@@ -13,19 +13,19 @@ ms.service: sql-database
 ms.component: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
-ms.date: 04/10/2018
+ms.date: 05/08/2018
 ms.author: rebeccaz
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: bc007f1021c68c782d8a3e2e426cad3c43f3047a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b88dfeac58ef9c00307b2cfee35aca3ea0549f02
+ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="transparent-data-encryption-for-sql-database-and-data-warehouse"></a>Transparent Data Encryption per database e data warehouse SQL
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-Transparent Data Encryption contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione.
+Transparent Data Encryption (TDE) contribuisce a proteggere il database SQL di Azure e Azure Data Warehouse dagli attacchi di attività dannose. Esegue la crittografia e la decrittografia in tempo reale del database, dei backup associati e dei file di log delle transazioni inattivi senza richiedere modifiche all'applicazione. Per impostazione predefinita, Transparent Data Encryption è abilitato per tutti i database SQL di Azure appena distribuiti, ma potrebbe essere necessario abilitarlo manualmente per i database meno recenti.  
 
 Transparent Data Encryption crittografa l'archivio di un intero database usando una chiave simmetrica denominata chiave di crittografia del database. La chiave di crittografia del database è protetta dalla protezione di Transparent Data Encryption. La protezione può essere un certificato gestito dal servizio (Transparent Data Encryption gestita dal servizio) o una chiave asimmetrica archiviata in Azure Key Vault (Bring Your Own Key). La protezione di Transparent Data Encryption si imposta a livello di server. 
 
@@ -84,7 +84,7 @@ Impostare la chiave master, nota anche come protezione, di Transparent Data Encr
 
 Per configurare Transparent Data Encryption usando PowerShell, è necessario essere connessi come proprietario, collaboratore o Gestore Sicurezza SQL di Azure. 
 
-| Cmdlet | Description |
+| Cmdlet | Descrizione |
 | --- | --- |
 | [Set-AzureRmSqlDatabaseTransparentDataEncryption](/powershell/module/azurerm.sql/set-azurermsqldatabasetransparentdataencryption) |Abilita o disabilita Transparent Data Encryption per un database|
 | [Get-Azure-Rm-Sql-Database-Transparent-Data-Encryption](/powershell/module/azurerm.sql/get-azurermsqldatabasetransparentdataencryption) |Ottiene lo stato di Transparent Data Encryption per un database |
@@ -100,7 +100,7 @@ Per configurare Transparent Data Encryption usando PowerShell, è necessario ess
 
 Connettersi al database con un account di accesso di amministratore o membro del ruolo **dbmanager** nel database master.
 
-| Comando | Description |
+| Comando | Descrizione |
 | --- | --- |
 | [ALTER DATABASE (database SQL di Azure)](/sql/t-sql/statements/alter-database-azure-sql-database) | SET ENCRYPTION ON/OFF consente di crittografare o decrittografare un database |
 | [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) |Restituisce informazioni sullo stato della crittografia di un database e sulle chiavi di crittografia del database associate |
@@ -113,7 +113,7 @@ Non è possibile passare dalla protezione di Transparent Data Encryption a una c
  
 Per configurare Transparent Data Encryption usando l'API REST, è necessario essere connessi come proprietario, collaboratore o Gestore Sicurezza SQL di Azure. 
 
-| Comando | Description |
+| Comando | Descrizione |
 | --- | --- |
 |[Create Or Update Server](/rest/api/sql/servers/createorupdate)|Aggiunge un'identità di Azure Active Directory a un'istanza di SQL Server (usata per concedere accesso a Key Vault)|
 |[Create Or Update Server Key](/rest/api/sql/serverkeys/createorupdate)|Aggiunge una chiave di Key Vault a un'istanza di SQL Server|

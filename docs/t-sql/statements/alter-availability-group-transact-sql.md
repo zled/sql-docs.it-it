@@ -27,11 +27,11 @@ caps.latest.revision: 152
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b00b6e36b24dbe000a3651841ca347b8539e690c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0791b05bdb2526da5d744c067b2f221f6cf4e1be
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -429,7 +429,7 @@ ALTER AVAILABILITY GROUP group_name
  Per altre informazioni, vedere [Creare un join di una replica secondaria a un gruppo di disponibilità &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
- Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nella replica secondaria a cui si è connessi. La replica in cui viene eseguito un comando di failover della destinazione di failover è nota come .  La destinazione di failover subentrerà al ruolo primario e recupererà la copia di ogni database per portarli online come nuovi database primari. La replica primaria precedente passa contemporaneamente al ruolo secondario e i relativi database diventano database secondari e vengono immediatamente sospesi. Potenzialmente, questi ruoli possono alternati in successione da una serie di errori.  
+Avvia un failover manuale del gruppo di disponibilità senza perdita di dati nella replica secondaria a cui si è connessi. La replica che ospiterà la replica primaria è la *destinazione di failover*.  La destinazione di failover subentrerà al ruolo primario e recupererà la copia di ogni database per portarli online come nuovi database primari. La replica primaria precedente passa contemporaneamente al ruolo secondario e i relativi database diventano database secondari e vengono immediatamente sospesi. Potenzialmente, questi ruoli possono alternati in successione da una serie di errori.  
   
  Supportato solo su una replica secondaria con commit sincrono che è attualmente sincronizzata con la replica primaria. Notare che per la sincronizzazione di una replica secondaria, è necessario che anche la replica primaria sia in esecuzione in modalità con commit sincrono.  
   
@@ -574,7 +574,7 @@ ALTER AVAILABILITY GROUP group_name
  \<modify_listener_option>  
  MODIFY LISTENER accetta una delle opzioni seguenti:  
   
- ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘**dns_name*ipv6_address***’)** }  
+ ADD IP { **(‘***four_part_ipv4_address***’,‘***four_part_ipv4_mask***’)** | **(‘** dns_name*ipv6_address***’)** }  
  Aggiunge l'indirizzo IP specificato al listener del gruppo di disponibilità specificato da *dns_name*.  
   
  PORT **=** *listener_port*  

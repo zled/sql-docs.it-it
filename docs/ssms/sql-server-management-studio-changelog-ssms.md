@@ -1,7 +1,7 @@
 ---
 title: SQL Server Management Studio - Log delle modifiche (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/17/2018
+ms.date: 05/09/2018
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.component: ssms
@@ -15,22 +15,91 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8b53c720b6f08583dc94fd45c270ee07bff399a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5190c4bbd8e0ade4f32831f5d696cc6f26296e5
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 Questo articolo fornisce informazioni dettagliate sugli aggiornamenti, i miglioramenti e le correzioni di bug per le versioni correnti e precedenti di SSMS. Scaricare le [versioni precedenti di SSMS indicate di seguito](#previous-ssms-releases).
 
 
-## <a name="ssms-176download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.6](download-sql-server-management-studio-ssms.md)
+## <a name="ssms-177download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.7](download-sql-server-management-studio-ssms.md)
 
-Numero di versione: 17.6<br>
+Numero di versione: 17.7<br>
+Numero di build: 14.0.17254.0<br>
+Data di rilascio: 09 maggio 2018
+
+### <a name="whats-new"></a>Novità
+
+**SQL Server Management Studio (SSMS) - Generale**
+
+Monitoraggio replica:   
+- Monitoraggio replica supporta ora la registrazione di un listener per gli scenari in cui il database del server di pubblicazione e/o il database del server di distribuzione fa parte del gruppo di disponibilità. È ora possibile monitorare gli ambienti di replica in cui il database del server di pubblicazione e/o il database del server di distribuzione fa parte di Always On. 
+ 
+Azure SQL Data Warehouse: 
+- Aggiunto il supporto del percorso righe rifiutate per Tabelle esterne in Azure SQL Data Warehouse. 
+
+**Integration Services (IS)**
+
+- Aggiunta una funzionalità di pianificazione per i pacchetti SSIS distribuiti al database SQL di Azure. A differenza di SQL Server locale e di Istanza gestita di database SQL (anteprima), che dispongono di SQL Server Agent come pianificatore di processi di prima classe, il database SQL non dispone di un pianificatore integrato. Questa nuova funzionalità SSMS offre un'interfaccia utente familiare e simile a SQL Server Agent per la pianificazione dei pacchetti distribuiti al database SQL. Se si usa il database SQL per ospitare il database del catalogo SSIS, SSIDB, è possibile usare questa funzionalità SSMS per generare le pipeline, le attività e i trigger Data Factory necessari per la pianificazione dei pacchetti SSIS. Quindi è possibile modificare ed estendere tali oggetti in Data Factory. Per altre informazioni, vedere [Schedule SSIS package execution on Azure SQL Database with SSMS](../integration-services/lift-shift/ssis-azure-schedule-packages-ssms.md) (Pianificare l'esecuzione del pacchetto SSIS nel database SQL di Azure con SSMS). Per altre informazioni sulla pipeline, le attività e i trigger di Azure Data Factory, vedere [Pipeline e attività in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipelines-activities) e [Esecuzione e trigger di pipeline in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-pipeline-execution-triggers).
+- Supporto per la pianificazione dei pacchetti SSIS in SQL Agent nell'istanza gestita di SQL. È ora possibile creare processi di SQL Agent per eseguire pacchetti SSIS nell'istanza gestita. 
+
+### <a name="bug-fixes"></a>Correzioni di bug
+
+**SQL Server Management Studio (SSMS) - Generale** 
+
+Piano di manutenzione:   
+- Risolto un problema per cui durante il tentativo di modificare la pianificazione di un piano di manutenzione esistente veniva generata un'eccezione. Per informazioni dettagliate, vedere [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924) (Arresto anomalo di SSMS 17.6 se si seleziona una pianificazione in un piano di manutenzione).
+
+Always On: 
+- Risolto un problema per cui il dashboard della latenza di Always On latenza non funzionava con SQL Server 2012.
+ 
+Scripting: 
+- Risolto un problema per cui la creazione dello script per la stored procedure in Azure SQL Data Warehouse non funziona con utenti non amministratori.
+- Risolto un problema per cui la creazione dello script per un database nel database SQL di Azure non creava lo script delle proprietà *SCOPED CONFIGURATION*.
+ 
+Telemetria: 
+- Risolto il problema per cui SSMS si arresta in modo anomalo nel tentativo di connettersi a un server, dopo il rifiuto esplicito dell'invio dei dati di telemetria.
+ 
+Database SQL di Azure: 
+- Risolto un problema per cui l'utente non poteva impostare o modificare il livello di compatibilità (menu a discesa vuoto). Nota: per impostare il livello di compatibilità su 150, l'utente deve comunque usare il pulsante *Script* e modificare manualmente lo script. 
+ 
+SMO: 
+- Esposta l'impostazione delle dimensioni del log degli errori in SMO. Per informazioni dettagliate, vedere [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115) (Impostare le dimensioni massime dei log degli errori in SQL Server).  
+- Corretta la creazione dello script per l'avanzamento riga in SMO in Linux.
+- Vari miglioramenti delle prestazioni durante il recupero di proprietà usate raramente.  
+
+Intellisense: 
+- Miglioramento delle prestazioni: ridotto il volume delle query Intellisense per i dati di colonna. Questo miglioramento è particolarmente utile se si usano tabelle con un numero elevato di colonne. 
+
+Impostazioni utente SSMS:
+- Risolto un problema per cui la pagina delle opzioni non veniva ridimensionata correttamente.
+
+Varie:  
+- Migliorata la visualizzazione del testo nella pagina *Statistics details* (Dettagli statistiche). 
+
+**Integration Services (IS)**
+
+- Migliore supporto per Istanza gestita di database SQL di Azure.
+- Risolto un problema per cui l'utente non poteva creare un catalogo per SQL Server 2014 o versione precedente.
+- Sono stati risolti due problemi con i report:
+   - Rimosso il nome del computer per i server di Azure.
+   - Migliorata la gestione del nome di oggetto localizzato.
+
+
+### <a name="known-issues"></a>Problemi noti
+
+Alcune finestre di dialogo visualizzano un errore di edizione non valida quando si lavora con nuove edizioni del database SQL di Azure *Utilizzo generico* oppure *Business Critical*.
+
+## <a name="downloadssdtmediadownloadpng-ssms-176httpsgomicrosoftcomfwlinklinkid870039"></a>![Download](../ssdt/media/download.png) [SSMS 17.6](https://go.microsoft.com/fwlink/?linkid=870039)
+
 Numero di build: 14.0.17230.0<br>
 Data di rilascio: 20 marzo 2018
+
+[Cinese (Repubblica popolare cinese)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x804) | [Cinese (Taiwan)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x404) | [Inglese (Stati Uniti)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x409) | [Francese](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40c) | [Tedesco](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x407) | [Italiano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x410) | [Giapponese](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x411) | [Coreano](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x412) | [Portoghese (Brasile)](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x416) | [Russo](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x419) | [Spagnolo](https://go.microsoft.com/fwlink/?linkid=870039&clcid=0x40a)
 
 ### <a name="whats-new"></a>Novità
 

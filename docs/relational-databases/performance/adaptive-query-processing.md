@@ -2,7 +2,7 @@
 title: Elaborazione di query adattive nei database Microsoft SQL | Microsoft Docs
 description: Funzionalità per l'elaborazione di query adattive e il miglioramento delle prestazioni delle query in SQL Server (2017 e versioni successive) e nel database SQL di Azure.
 ms.custom: ''
-ms.date: 11/13/2017
+ms.date: 05/08/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: performance
@@ -17,11 +17,11 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2874e8bb59a47b5732d716924ec3d49a9f80992d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 464696823e99e81a763fbbc4a2835c86ef9bea5c
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Elaborazione di query adattive nei database SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +83,31 @@ Se il piano viene rimosso dalla cache il feedback non viene mantenuto. Il feedba
 ### <a name="memory-grant-feedback-resource-governor-and-query-hints"></a>Feedback delle concessioni di memoria, Resource Governor e hint per la query
 La memoria concessa reale è conforme al limite di memoria per le query determinato da Resource Governor o dall'hint per la query.
 
+### <a name="disabling-memory-grant-feedback-without-changing-the-compatibility-level"></a>Disabilitazione dei commenti della concessione di memoria senza modificare il livello di compatibilità
+È possibile disabilitare i commenti della concessione di memoria nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore. Per disabilitare i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+
+Per abilitare nuovamente i commenti della concessione di memoria in modalità batch per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+```
+
+È anche possibile disabilitare i commenti della concessione di memoria in modalità batch per una query specifica, definendo DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT * FROM Person.Address  
+WHERE City = 'SEATTLE' AND PostalCode = 98104
+OPTION (USE HINT ('DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK')); 
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
+
 ## <a name="batch-mode-adaptive-joins"></a>Join adattivi in modalità batch
 La funzionalità di join adattivo in modalità batch consente di rimandare a **dopo** la scansione del primo input la scelta tra l'[esecuzione di un metodo hash join e l'esecuzione di un metodo join a cicli annidati](../../relational-databases/performance/joins.md). L'operatore Join adattivo definisce una soglia che viene usata per stabilire quando passare a un piano Cicli annidati. Durante l'esecuzione il piano può pertanto passare a una strategia di join più efficace.
 Il funzionamento è il seguente:
@@ -139,7 +164,7 @@ I join adattivi in modalità batch funzionano per l'esecuzione iniziale di un'is
 ### <a name="tracking-adaptive-join-activity"></a>Rilevamento delle attività di join adattivo
 L'operatore Join adattivo ha i seguenti attributi dell'operatore del piano:
 
-| Attributo del piano | Description |
+| Attributo del piano | Descrizione |
 |--- |--- |
 | AdaptiveThresholdRows | Visualizza l'uso della soglia che determina il passaggio da un hash join a un join a cicli annidati. |
 | EstimatedJoinType | Probabile tipo del join. |
@@ -165,6 +190,36 @@ Se un join adattivo passa al funzionamento con cicli annidati usa le righe già 
 Il grafico seguente visualizza un esempio di intersezione tra il costo di un hash join e il costo di un join a cicli annidati alternativo.  In questo punto di intersezione viene determinata la soglia, che a sua volta determina l'algoritmo usato per l'operazione di join.
 
 ![Soglia di join](./media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>Disabilitazione dei join adattivi senza modificare il livello di compatibilità
+
+È possibile disabilitare i join adattivi nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  
+Per disabilitare i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Per abilitare nuovamente i join adattivi per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+È anche possibile disabilitare i join adattivi per una query specifica, definendo DISABLE_BATCH_MODE_ADAPTIVE_JOINS come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="interleaved-execution-for-multi-statement-table-valued-functions"></a>Esecuzione interleaved per funzioni con valori di tabella a più istruzioni
 L'esecuzione interleaved cambia il limite unidirezionale tra le fasi di ottimizzazione ed esecuzione nel caso di un'esecuzione a query singola e consente l'adattamento dei piani in base alle stime di cardinalità aggiornate. Se durante l'ottimizzazione viene rilevato un candidato per l'esecuzione interleaved, che attualmente corrisponde a una **funzione con valori di tabella a più istruzioni (MSTVF, Multi-Statement Table Valued Function)** si sospende l'ottimizzazione, si esegue il sottoalbero appropriato, si acquisiscono stime di cardinalità accurate e quindi si riprende l'ottimizzazione per le operazioni downstream.
@@ -205,14 +260,14 @@ Dopo che un piano di esecuzione interleaved viene memorizzato nella cache, il pi
 ### <a name="tracking-interleaved-execution-activity"></a>Rilevamento delle attività di esecuzione interleaved
 È possibile visualizzare gli attributi d'uso nel piano di esecuzione query:
 
-| Attributo del piano di esecuzione | Description |
+| Attributo del piano di esecuzione | Descrizione |
 | --- | --- |
 | ContainsInterleavedExecutionCandidates | Si applica al nodo *QueryPlan*. Quando è *true*, il piano contiene candidati per l'esecuzione interleaved. |
 | IsInterleavedExecuted | Attributo dell'elemento *RuntimeInformation* in RelOp per il nodo TVF. Quando è *true*, l'operazione è stata materializzata come parte di un'operazione di esecuzione interleaved. |
 
 È anche possibile rilevare le occorrenze di esecuzione interleaved con i seguenti eventi xEvent:
 
-| xEvent | Description |
+| xEvent | Descrizione |
 | ---- | --- |
 | interleaved_exec_status | Questo evento viene generato quando si verifica l'esecuzione interleaved. |
 | interleaved_exec_stats_update | Questo evento descrive le stime della cardinalità aggiornate dall'esecuzione interleaved. |
@@ -226,6 +281,41 @@ Un'istruzione che usa `OPTION (RECOMPILE)` crea un nuovo piano usando l'esecuzio
 
 ### <a name="interleaved-execution-and-query-store-interoperability"></a>Interoperabilità tra esecuzione interleaved e Archivio query
 È possibile forzare i piani che usano l'esecuzione interleaved. Il piano è la versione che presenta stime della cardinalità corrette sulla base dell'esecuzione iniziale.    
+
+### <a name="disabling-interleaved-execution-without-changing-the-compatibility-level"></a>Disabilitazione dell'esecuzione interleaved senza modificare il livello di compatibilità
+
+È possibile disabilitare l'esecuzione interleaved nell'ambito del database o dell'istruzione mantenendo comunque la compatibilità sul livello 140 o superiore.  Per disabilitare l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+```
+
+Quando è abilitata, questa impostazione viene visualizzata come abilitata in sys. database_scoped_configurations.
+Per abilitare nuovamente l'esecuzione interleaved per tutte le esecuzioni di query provenienti dal database, eseguire l'istruzione seguente all'interno del contesto del database applicabile:
+
+```sql
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+```
+
+È anche possibile disabilitare l'esecuzione interleave per una query specifica definendo DISABLE_INTERLEAVED_EXECUTION_TVF come hint per la query USE HINT.  Ad esempio
+
+```sql
+SELECT  [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
+FROM    [Fact].[Order] AS [fo]
+INNER JOIN [Fact].[WhatIfOutlierEventQuantity]('Mild Recession',
+                            '1-01-2013',
+                            '10-15-2014') AS [foo] ON [fo].[Order Key] = [foo].[Order Key]
+                            AND [fo].[City Key] = [foo].[City Key]
+                            AND [fo].[Customer Key] = [foo].[Customer Key]
+                            AND [fo].[Stock Item Key] = [foo].[Stock Item Key]
+                            AND [fo].[Order Date Key] = [foo].[Order Date Key]
+                            AND [fo].[Picked Date Key] = [foo].[Picked Date Key]
+                            AND [fo].[Salesperson Key] = [foo].[Salesperson Key]
+                            AND [fo].[Picker Key] = [foo].[Picker Key]
+OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
+```
+
+L'hint per la query USE HINT ha la precedenza rispetto una configurazione con ambito database o un'impostazione del flag di traccia.
 
 ## <a name="see-also"></a>Vedere anche
 [Centro prestazioni per il motore di database di SQL Server e il database SQL di Azure](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     

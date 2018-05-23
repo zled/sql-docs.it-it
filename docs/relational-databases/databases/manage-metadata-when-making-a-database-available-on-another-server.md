@@ -40,15 +40,15 @@ caps.latest.revision: 84
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0eb4e0cb4da6395d0c48da787b0e21b6f27dcae4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0b300bc3f204af062eac1e151933659216dd921
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Gestire i metadati quando si rende disponibile un database in un altro server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le informazioni contenute in questo argomento sono relative alle situazioni seguenti:  
+  Le informazioni contenute in questo articolo sono relative alle situazioni seguenti:  
   
 -   Configurazione delle repliche di disponibilità di un gruppo di disponibilità [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 05/03/2018
  Quando il database per un'applicazione viene spostato in un'altra istanza del server, è necessario ricreare tutti i metadati delle entità e degli oggetti dipendenti nei database **master** e **msdb** dell'istanza del server di destinazione. Ad esempio, se un'applicazione del database utilizza trigger a livello di server, non è sufficiente collegare o ripristinare il database nel nuovo sistema. Il database non funzionerà come previsto a meno che non si ricreino manualmente i metadati per tali trigger nel database **master** .  
   
 ##  <a name="information_entities_and_objects"></a> Informazioni, entità e oggetti archiviati all'esterno dei database utente  
- Nel resto dell'argomento vengono riepilogate le potenziali problematiche che possono influenzare un database reso disponibile in un'altra istanza del server. Potrebbe essere necessario ricreare uno o più tipi di informazioni, entità o oggetti indicati nell'elenco seguente. Per visualizzare un riepilogo, fare clic sul collegamento per l'elemento.  
+ Nel resto dell'articolo vengono riepilogate le potenziali problematiche che possono influenzare un database reso disponibile in un'altra istanza del server. Potrebbe essere necessario ricreare uno o più tipi di informazioni, entità o oggetti indicati nell'elenco seguente. Per visualizzare un riepilogo, fare clic sul collegamento per l'elemento.  
   
 -   [Impostazioni di configurazione del server](#server_configuration_settings)  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 05/03/2018
 ##  <a name="event_notif_and_wmi_events"></a> Event Notifications and Windows Management Instrumentation (WMI) Events (at Server Level)  
   
 ### <a name="server-level-event-notifications"></a>Notifiche degli eventi a livello di server  
- Le notifiche degli eventi a livello di server sono archiviate nel database **msdb**. Se un'applicazione del database si basa su notifiche degli eventi a livello di server, tali notifiche devono pertanto essere ricreate nell'istanza del server di destinazione. Per visualizzare le notifiche degli eventi in un'istanza del server, usare la vista del catalogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Per altre informazioni, vedere [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
+ Le notifiche degli eventi a livello di server sono archiviate nel database **msdb**. Se un'applicazione del database si basa su una notifica degli eventi a livello di server, tale notifica deve essere nuovamente creata nell'istanza del server di destinazione. Per visualizzare le notifiche degli eventi in un'istanza del server, usare la vista del catalogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) . Per altre informazioni, vedere [Event Notifications](../../relational-databases/service-broker/event-notifications.md).  
   
  Le notifiche degli eventi vengono inoltre recapitate utilizzando [!INCLUDE[ssSB](../../includes/sssb-md.md)]. I route per i messaggi in ingresso non sono inclusi nel database che contiene un servizio. I route espliciti sono invece archiviati nel database **msdb**. Se il servizio consente di usare una route esplicita nel database **msdb** per eseguire il routing dei messaggi in arrivo al servizio, quando si collega un database in un'istanza diversa è necessario ricreare questa route.  
   
@@ -188,7 +188,8 @@ ms.lasthandoff: 05/03/2018
   
  Le stored procedure estese vengono eseguite direttamente nello spazio degli indirizzi di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]e possono produrre perdite di memoria o altri problemi che riducono le prestazioni e l'affidabilità del server. È consigliabile valutare l'opportunità di archiviare le stored procedure estese in un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] distinta dall'istanza contenente i dati di riferimento. Valutare inoltre l'opportunità di utilizzare query distribuite per accedere al database.  
   
-> **IMPORTANTE** Prima di aggiungere stored procedure estese al server e concedere le autorizzazioni EXECUTE ad altri utenti, è necessario che l'amministratore di sistema esamini con attenzione ogni stored procedure estesa per verificare che non contenga codice dannoso o malware.  
+  > [!IMPORTANT]
+  > Prima di aggiungere stored procedure estese al server e concedere le autorizzazioni EXECUTE ad altri utenti, è necessario che l'amministratore di sistema esamini con attenzione ogni stored procedure estesa per verificare che non contenga codice dannoso o malware.  
   
  Per altre informazioni, vedere [GRANT - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md), [DENY - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md) e [REVOKE - autorizzazioni per oggetti &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md).  
   
@@ -279,9 +280,10 @@ ms.lasthandoff: 05/03/2018
 ### <a name="grant-revoke-and-deny-permissions-on-system-objects"></a>Autorizzazioni GRANT, REVOKE o DENY per gli oggetti di sistema  
  Le autorizzazioni per gli oggetti di sistema, ad esempio stored procedure, stored procedure estese, funzioni e viste, sono archiviate nel database **master** e devono essere configurate nell'istanza del server di destinazione.  
   
- Per generare uno script per alcuni o tutti gli oggetti nella copia originale del database è possibile usare la procedura guidata di generazione script e, nella finestra di dialogo **Selezione opzioni generazione script** impostare l'opzione **Script per autorizzazioni a livello oggetto** su **True**.  
+ Per generare uno script per tutti gli oggetti nella copia originale del database o per alcuni di essi, è possibile utilizzare Generazione guidata script e, nella finestra di dialogo **Selezione opzioni generazione script** , impostare l'opzione **Script per autorizzazioni a livello oggetto** su **True**.  
   
-> **IMPORTANTE** Se si creano script per account di accesso, le password non vengono incluse negli script. Se sono presenti account di accesso che utilizzano l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario modificare lo script nella destinazione.  
+   > [!IMPORTANT]
+   > Se si creano script per account di accesso, le password non vengono incluse negli script. Se sono presenti account di accesso che utilizzano l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario modificare lo script nella destinazione.  
   
  Gli oggetti di sistema sono visibili nella vista del catalogo [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md) . Le autorizzazioni per gli oggetti di sistema sono visibili nella vista del catalogo [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) nel database **master**. Per informazioni su come eseguire query in queste viste del catalogo e su come concedere autorizzazioni per gli oggetti di sistema, vedere [GRANT - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/grant-system-object-permissions-transact-sql.md). Per altre informazioni, vedere [REVOKE - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md) e [DENY - autorizzazioni per oggetti di sistema &#40;Transact-SQL&#41;](../../t-sql/statements/deny-system-object-permissions-transact-sql.md).  
   
@@ -313,7 +315,10 @@ ms.lasthandoff: 05/03/2018
   
  Per ulteriori informazioni su certificati e chiavi asimmetriche, vedere [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-  
+## <a name="trustworthy-property"></a>Proprietà TRUSTWORHTY
+La proprietà di database TRUSTWORTHY consente di indicare se l'istanza di SQL Server considera attendibile il database e il relativo contenuto. Quando viene collegato un database, per impostazione predefinita e per questioni di sicurezza, questa opzione è impostata su OFF, anche se era impostata su ON nel server originale. Per alte informazioni su questa proprietà, vedere [Proprietà di database TRUSTWORTHY](../security/trustworthy-database-property.md). Per informazioni su come impostare questa opzione su ON, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
+
+
 ##  <a name="replication_settings"></a> Replication Settings  
  Se si ripristina un backup di un database replicato in un altro server o database, le impostazioni di replica non potranno essere mantenute. In questo caso, è necessario ricreare tutte le pubblicazioni e le sottoscrizioni dopo il ripristino dei backup. Per semplificare questo processo, creare script per le impostazioni di replica correnti e per l'abilitazione e la disabilitazione della replica. Per ricreare più agevolmente le impostazioni di replica, copiare questi script e modificare i riferimenti al nome del server in base all'istanza del server di destinazione.  
   
@@ -321,7 +326,7 @@ ms.lasthandoff: 05/03/2018
   
   
 ##  <a name="sb_applications"></a> Service Broker Applications  
- Insieme al database vengono spostati molti aspetti di un'applicazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Tuttavia, alcuni aspetti dell'applicazione dovranno essere ricreati o riconfigurati nella nuova posizione.  
+ Insieme al database vengono spostati molti aspetti di un'applicazione di [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Tuttavia, alcuni aspetti dell'applicazione dovranno essere ricreati o riconfigurati nella nuova posizione.  Quando un database viene collegato da un altro server, per impostazione predefinita e per questioni di sicurezza, le opzioni *is_broker_enabled* e *is_honoor_broker_priority_on* sono impostate su OFF. Per informazioni su come impostare queste opzioni su ON, vedere [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
   
 ##  <a name="startup_procedures"></a> Startup Procedures  

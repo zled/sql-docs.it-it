@@ -19,11 +19,11 @@ caps.latest.revision: 59
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ce21bef20a2fa73ca0a9acee22e2eeddefd5fce1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fd85694c8b2678d85b66db6c84b89a409fa0fc4a
+ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Domande frequenti per gli amministratori di replica
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +164,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="database-maintenance"></a>Manutenzione database  
   
 ### <a name="why-cant-i-run-truncate-table-on-a-published-table"></a>Per quale motivo non è possibile eseguire TRUNCATE TABLE su una tabella pubblicata?  
- TRUNCATE TABLE è un'operazione non registrata che non attiva i trigger. Non è consentita perché la replica non può tener traccia delle modifiche provocate dall'operazione: la replica transazionale tiene traccia delle modifiche tramite il log delle transazioni, la replica di tipo merge tramite i trigger sulle tabelle pubblicate.  
+ TRUNCATE TABLE è un'istruzione DDL che non registra eliminazioni di singole righe e non attiva trigger DML. Non è consentita perché la replica non può tener traccia delle modifiche provocate dall'operazione: la replica transazionale tiene traccia delle modifiche tramite il log delle transazioni, la replica di tipo merge tramite i trigger DML sulle tabelle pubblicate.  
   
 ### <a name="what-is-the-effect-of-running-a-bulk-insert-command-on-a-replicated-database"></a>Quale è l'effetto dell'esecuzione di un comando BULK INSERT su un database replicato?  
  Per la replica transazionale, gli inserimenti bulk vengono rilevati e replicati come gli altri inserimenti. Per la replica di tipo merge, è necessario verificare che i metadati di rilevamento delle modifiche vengano aggiornati correttamente.  

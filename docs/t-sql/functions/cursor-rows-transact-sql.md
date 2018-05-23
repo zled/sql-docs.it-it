@@ -25,16 +25,16 @@ caps.latest.revision: 36
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 481c4205bec9032b31b4405830827405050abb8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a608d12c790b9b9808ef0f1d84264f1423ba472b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore aperto sulla connessione. Per migliorare le prestazioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può popolare i cursori statistici e i set di chiavi di grandi dimensioni in modo asincrono. È possibile chiamare la funzione @@CURSOR_ROWS in modo che il recupero del numero delle righe per un cursore venga eseguito al momento della chiamata alla funzione @@CURSOR_ROWS.
+Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore aperto sulla connessione. Per migliorare le prestazioni, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] può popolare i cursori statistici e i set di chiavi di grandi dimensioni in modo asincrono. È possibile chiamare la funzione `@@CURSOR_ROWS` in modo che il recupero del numero delle righe per un cursore venga eseguito al momento della chiamata a @@CURSOR_ROWS.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,18 +49,18 @@ Restituisce il numero delle righe attualmente risultanti nell'ultimo cursore ape
   
 ## <a name="return-value"></a>Valore restituito  
   
-|Valore restituito|Description|  
+|Valore restituito|Descrizione|  
 |---|---|
 |-*m*|Il cursore viene popolato in modo asincrono. Il valore restituito (-*m*) corrisponde al numero di righe risultanti per il set di chiavi.|  
-|-1|Il cursore è dinamico. Poiché nei cursori dinamici vengono riportate tutte le modifiche, il numero delle righe risultanti per il cursore è variabile. Non è possibile affermare in modo definitivo che tutte le righe restituite sono state recuperate.|  
+|-1|Il cursore è dinamico. Poiché nei cursori dinamici vengono riportate tutte le modifiche, il numero delle righe risultanti per il cursore cambia in modo costante. Il cursore non recupera necessariamente tutte le righe qualificate.|  
 |0|Non è stato aperto alcun cursore, nessuna riga è stata restituita per l'ultimo cursore aperto oppure l'ultimo cursore aperto è chiuso o deallocato.|  
 |*n*|Il cursore è completamente popolato. Il valore restituito (*n*) corrisponde al numero totale di righe nel cursore.|  
   
 ## <a name="remarks"></a>Remarks  
-Il numero restituito dalla funzione @@CURSOR_ROWS è negativo se l'ultimo cursore è stato aperto in modo asincrono. I driver del set di chiavi o i cursori statistici vengono aperti in modo asincrono se il valore della soglia del cursore sp_configure è maggiore di 0 e il numero di righe nel set di risultati del cursore è maggiore del valore soglia del cursore.
+`@@CURSOR_ROWS` restituisce un numero negativo se l'ultimo cursore è stato aperto in modalità asincrona. I driver del set di chiavi o i cursori statici si aprono in modo asincrono se il valore della soglia del cursore sp_configure è maggiore di 0 e il numero di righe nel set di risultati del cursore è maggiore del valore soglia del cursore.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene dichiarato un cursore e viene utilizzata l'istruzione `SELECT` per visualizzare il valore della funzione `@@CURSOR_ROWS`. Prima dell'apertura del cursore il valore della funzione è `0`. Il valore `-1` indica che il set di chiavi del cursore è stato popolato in modo asincrono.
+Questo esempio prima dichiara un cursore e quindi usa l'istruzione `SELECT` per visualizzare il valore della funzione `@@CURSOR_ROWS`. Prima dell'apertura del cursore, il valore della funzione è `0`. Il valore diventa quindi `-1`, a indicare che il set di chiavi del cursore viene popolato in modo asincrono.
   
 ```sql
 USE AdventureWorks2012;  

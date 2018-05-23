@@ -25,16 +25,16 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: e0583570ce9a4d11b2e4aa6c019c8f4ccc753239
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e297fd93c5e91eac02008fab13d7c66c71ce0e90
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="databaseprincipalid-transact-sql"></a>DATABASE_PRINCIPAL_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Restituisce il numero di ID di un'entità nel database corrente. Per altre informazioni sulle entità, vedere [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
+Questa funzione restituisce il numero ID di un'entità nel database corrente. Per altre informazioni sulle entità, vedere [Entità &#40;motore di database&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md).
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,20 +46,19 @@ DATABASE_PRINCIPAL_ID ( 'principal_name' )
   
 ## <a name="arguments"></a>Argomenti  
 *principal_name*  
-Espressione di tipo **sysname** che rappresenta l'entità.  
-Se *principal_name* viene omesso, viene restituito l'ID dell'utente corrente. È necessario utilizzare le parentesi.
+Espressione di tipo **sysname** che rappresenta l'entità. Se *principal_name* viene omesso, `DATABASE_PRINCIPAL_ID` restituisce l'ID dell'utente corrente. `DATABASE_PRINCIPAL_ID` richiede le parentesi.
   
 ## <a name="return-types"></a>Tipi restituiti
 **int**  
-NULL quando l'entità di database non esiste
+NULL se l'entità di database non esiste.
   
 ## <a name="remarks"></a>Remarks  
-È possibile utilizzare DATABASE_PRINCIPAL_ID in un elenco di selezione, una clausola WHERE o in tutti i casi in cui è consentita un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
+Usare `DATABASE_PRINCIPAL_ID` in un elenco di selezione, una clausola WHERE o in qualsiasi posizione che consente un'espressione. Per altre informazioni, vedere [Espressioni &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).
   
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-retrieving-the-id-of-the-current-user"></a>A. Recupero dell'ID dell'utente corrente  
-Nell'esempio seguente viene restituito l'ID dell'entità di database per l'utente corrente.
+In questo esempio viene restituito l'ID dell'entità di database per l'utente corrente.
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID();  
@@ -67,7 +66,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-the-id-of-a-specified-database-principal"></a>B. Recupero dell'ID di un'entità di database specifica  
-Nell'esempio seguente viene restituito l'ID dell'entità di database per il ruolo di database `db_owner`.
+In questo esempio viene restituito l'ID dell'entità di database per il ruolo di database `db_owner`.
   
 ```sql
 SELECT DATABASE_PRINCIPAL_ID('db_owner');  

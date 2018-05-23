@@ -1,5 +1,5 @@
 ---
-title: Distribuire, eseguire e monitorare un pacchetto SSIS in Azure | Microsoft Docs
+title: Distribuire ed eseguire un pacchetto SSIS in Azure | Microsoft Docs
 ms.date: 02/05/2018
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a15194b18efb21c7a7947e23b8bc673021606b31
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 27c7e77b5143bca56b7ded2233c01e11ad088d5f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>Distribuire, eseguire e monitorare un pacchetto SSIS in Azure
+# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Distribuire ed eseguire un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -45,7 +45,7 @@ Ecco i due aspetti più importanti da ricordare. Questi passaggi sono descritti 
 
 2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Description | 
+   | Impostazione       | Valore suggerito | Descrizione | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Il nome deve essere nel formato **mysqldbserver.database.windows.net**. Per sapere qual è il nome del server, vedere [Connettersi al database del catalogo SSISDB in Azure](ssis-azure-connect-to-catalog-database.md). |

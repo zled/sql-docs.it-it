@@ -22,16 +22,16 @@ caps.latest.revision: 6
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5170c6a3b96710ea42d1acdb88256c33be0eb6d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 73a9583e40d73a48b7e8ddfdf8eddf8d38b743c7
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-Restituisce l'ID della transazione corrente nella sessione corrente.
+Questa funzione restituisce l'ID della transazione corrente nella sessione corrente.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,7 @@ ID della transazione corrente nella sessione corrente, ricavato da [sys.dm_tran_
 Qualsiasi utente può restituire l'ID transazione della sessione corrente.
   
 ## <a name="examples"></a>Esempi  
-L'esempio seguente restituisce l'ID transazione della sessione corrente:
+Questo esempio restituisce l'ID transazione della sessione corrente:
   
 ```sql
 SELECT CURRENT_TRANSACTION_ID();  

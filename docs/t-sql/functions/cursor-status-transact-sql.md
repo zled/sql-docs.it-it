@@ -24,16 +24,16 @@ caps.latest.revision: 37
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 4d04041eee085a4fc29d899ad1245ee5ae43743c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2bc5eff629bc16e655094c08c71b3cef195420bc
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Funzione scalare che consente al chiamante di una stored procedure di determinare se la procedura ha restituito o meno un cursore e un set di risultati per un determinato parametro.
+Per un parametro specifico, `CURSOR_STATUS` visualizza se una dichiarazione di cursore ha restituito un cursore e un set di risultati o meno.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -53,7 +53,7 @@ CURSOR_STATUS
 Specifica una costante che indica che l'origine del cursore è un nome di cursore locale.
   
 '*cursor_name*'  
-Nome del cursore. I nomi di cursore devono essere conformi alle regole per gli identificatori.
+Nome del cursore. I nomi di cursore devono essere conformi alle [regole per gli identificatori dei database](../../relational-databases/databases/database-identifiers.md).
   
 'global'  
 Specifica una costante che indica che l'origine del cursore è un nome di cursore globale.
@@ -62,23 +62,23 @@ Specifica una costante che indica che l'origine del cursore è un nome di cursor
 Specifica una costante che indica che l'origine del cursore è una variabile locale.
   
 '*cursor_variable*'  
-Nome di una variabile cursore. Le variabili di cursore devono essere definite usando il tipo di dati **cursor**.
+Nome di una variabile di cursore. Le variabili di cursore devono essere definite usando il tipo di dati **cursor**.
   
 ## <a name="return-types"></a>Tipi restituiti
 **smallint**
   
 |Valore restituito|Nome cursore|Variabile cursore|  
 |---|---|---|
-|1|Il set di risultati del cursore include almeno una riga.<br /><br /> Nel caso di cursori INSENSITIVE e KEYSET, il set di risultati include almeno una riga.<br /><br /> Nel caso di cursori dinamici, il set di risultati può includere una o più righe oppure nessuna riga.|Il cursore allocato a questa variabile è aperto.<br /><br /> Nel caso di cursori INSENSITIVE e KEYSET, il set di risultati include almeno una riga.<br /><br /> Nel caso di cursori dinamici, il set di risultati può includere una o più righe oppure nessuna riga.|  
+|1|Il set di risultati del cursore ha almeno una riga.<br /><br /> Nel caso di cursori INSENSITIVE e KEYSET, il set di risultati include almeno una riga.<br /><br /> Nel caso di cursori dinamici, il set di risultati può includere una o più righe oppure nessuna riga.|Il cursore allocato a questa variabile è aperto.<br /><br /> Nel caso di cursori INSENSITIVE e KEYSET, il set di risultati include almeno una riga.<br /><br /> Nel caso di cursori dinamici, il set di risultati può includere una o più righe oppure nessuna riga.|  
 |0|Il set di risultati del cursore è vuoto.*|Il cursore allocato a questa variabile è aperto, ma il set di risultati è vuoto.*|  
 |-1|Il cursore è chiuso.|Il cursore allocato a questa variabile è chiuso.|  
-|-2|Non applicabile.|I possibili valori sono i seguenti:<br /><br /> Tramite la procedura chiamata in precedenza, a questa variabile di OUTPUT non è stato assegnato alcun cursore.<br /><br /> Tramite la procedura chiamata in precedenza, a questa variabile di OUTPUT è stato assegnato un cursore, che tuttavia al completamento della procedura era chiuso. Il cursore viene pertanto deallocato e non viene restituito alla procedura chiamante.<br /><br /> A una variabile cursore dichiarata non è assegnato alcun cursore.|  
-|-3|Il cursore specificato non esiste.|La variabile cursore specificata non esiste oppure esiste ma non è ancora stato allocato un cursore.|  
+|-2|Non applicabile.|Ha una di queste possibilità:<br /><br /> La procedura chiamata in precedenza non ha assegnato un cursore a questa variabile di OUTPUT.<br /><br /> La procedura chiamata in precedenza ha assegnato un cursore a questa variabile di OUTPUT, ma al completamento della procedura il cursore era chiuso. Il cursore viene pertanto deallocato e non viene restituito alla procedura chiamante.<br /><br /> Alla variabile cursore dichiarata non è assegnato alcun cursore.|  
+|-3|Il cursore specificato non esiste.|La variabile cursore con il nome specificato non esiste oppure esiste ma a questa non è ancora stato allocato un cursore.|  
   
 * I cursori dinamici non restituiscono mai questo risultato.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene utilizzata la funzione `CURSOR_STATUS` per visualizzare lo stato di un cursore prima e dopo la relativa apertura o chiusura.
+Questo esempio usa la funzione `CURSOR_STATUS` per visualizzare lo stato di un cursore dopo la dichiarazione, dopo l'apertura e dopo la chiusura di questo.
   
 ```sql
 CREATE TABLE #TMP  

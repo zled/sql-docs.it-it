@@ -36,23 +36,23 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 465567e7b115b0ce92f2154a2e6047de4000a831
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6a5dd72c23867d45fa015ebd8c055f7e8758c188
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce il timestamp di sistema del database corrente come valore **datetime** senza la differenza di fuso orario del database. Questo valore deriva dal sistema operativo del computer in cui è in esecuzione l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Questa funzione restituisce il timestamp di sistema del database corrente come valore **datetime** senza la differenza di fuso orario del database. `CURRENT_TIMESTAMP` deriva dal sistema operativo del computer in cui viene eseguita l'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 > [!NOTE]  
->  La precisione in secondi frazionari di SYSDATETIME e SYSUTCDATE è maggiore di quella di GETDATE e GETUTCDATE. SYSDATETIMEOFFSET include la differenza di fuso orario di sistema. SYSDATETIME, SYSUTCDATE e SYSDATETIMEOFFSET possono essere assegnate a una variabile di qualsiasi tipo di data e ora.  
+>  `SYSDATETIME` e `SYSUTCDATE` hanno una precisione maggiore, misurata in base alla precisione in secondi frazionari, rispetto a `GETDATE` e a `GETUTCDATE`. La funzione `SYSDATETIMEOFFSET` include la differenza di fuso orario di sistema. È possibile assegnare `SYSDATETIME`, `SYSUTCDATE` e `SYSDATETIMEOFFSET` a una variabile di uno qualsiasi dei tipi di data e ora.  
   
 Questa funzione è l'equivalente ANSI SQL di [GETDATE](../../t-sql/functions/getdate-transact-sql.md).
   
-Per una panoramica di tutti i tipi di dati e funzioni di data e ora [!INCLUDE[tsql](../../includes/tsql-md.md)], vedere [Funzioni e tipi di dati di data e ora](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).
+Vedere [Funzioni e tipi di dati di data e ora](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) per una panoramica di tutti i tipi di dati e di tutte le funzioni di data e ora di [!INCLUDE[tsql](../../includes/tsql-md.md)].
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -63,18 +63,18 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>Argomenti  
-Questa istruzione non accetta argomenti.
+Questa funzione non accetta argomenti
   
 ## <a name="return-type"></a>Tipo restituito  
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a CURRENT_TIMESTAMP in qualsiasi punto in cui possono fare riferimento a un'espressione **datetime**.
+Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] possono fare riferimento a `CURRENT_TIMESTAMP` in qualsiasi punto in cui possono fare riferimento a un'espressione **datetime**.
   
-CURRENT_TIMESTAMP è una funzione non deterministica. Le viste e le espressioni in cui viene fatto riferimento a questa colonna non sono indicizzabili.
+`CURRENT_TIMESTAMP` è una funzione non deterministica. Le viste e le espressioni in cui viene fatto riferimento a questa colonna non sono indicizzabili.
   
 ## <a name="examples"></a>Esempi  
-Negli esempi seguenti sono utilizzate le sei funzioni di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che restituiscono data e ora corrente per restituire la data, l'ora o entrambe. I valori sono restituiti in serie. Pertanto, i secondi frazionari potrebbero essere diversi.
+Questi esempi usano le sei funzioni di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che restituiscono valori di data e ora correnti per restituire la data, l'ora o entrambe. Gli esempi restituiscono i valori in serie. Pertanto, i secondi frazionari potrebbero essere diversi. Si noti che i valori effettivi restituiti riflettono il giorno e/o l'ora effettivi di esecuzione.
   
 ### <a name="a-get-the-current-system-date-and-time"></a>A. Recupero della data e dell'ora correnti del sistema  
   
@@ -92,6 +92,7 @@ SYSUTCDATETIME()   2007-04-30 20:10:02.0474381
 CURRENT_TIMESTAMP  2007-04-30 13:10:02.047  
 GETDATE()          2007-04-30 13:10:02.047  
 GETUTCDATE()       2007-04-30 20:10:02.047  
+*/
 ```  
   
 ### <a name="b-get-the-current-system-date"></a>B. Recupero della data corrente del sistema  

@@ -21,11 +21,11 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9536b898df7a0f232d81dc85be3f3d6526f0741d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 331d5dc6a7f570e626edb541e14da57b3370858e
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="attach-a-database"></a>Collegare un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
      **Stato**  
      Consente di visualizzare lo stato del base in base alla tabella seguente.  
   
-    |Icona|Testo Stato|Description|  
+    |Icona|Testo Stato|Descrizione|  
     |----------|-----------------|-----------------|  
     |(Nessuna icona)|(Nessun testo)|L'operazione di collegamento non è stata avviata o può essere sospesa per questo oggetto. È il valore predefinito all'apertura della finestra di dialogo.|  
     |Triangolo verde che punta a destra|In corso|L'operazione di collegamento è stata avviata ma non ancora completata.|  
@@ -163,7 +163,8 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
   ``` 
   
 ## <a name="see-also"></a>Vedere anche  
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [Scollegare un database](../../relational-databases/databases/detach-a-database.md)  
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
+ <br>[Gestire i metadati quando si rende disponibile un database in un altro server](/manage-metadata-when-making-a-database-available-on-another-server.md)  
+ [Scollegamento di un database](../../relational-databases/databases/detach-a-database.md)  
   
   

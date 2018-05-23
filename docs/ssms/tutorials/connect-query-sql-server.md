@@ -12,11 +12,11 @@ ms.reviewer: sstein
 manager: craigg
 ms.prod: sql
 ms.technology: ssms
-ms.openlocfilehash: e663bf07fb724e5b65a47573f26702a6b1ccae14
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 5ccc024b8589efa95af2503a8ea5bdba0c47147b
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio"></a>Esercitazione: Connettersi a un'istanza di SQL Server ed eseguire query con SQL Server Management Studio
 Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per connettersi all'istanza di SQL Server ed eseguire alcuni comandi Transact-SQL (T-SQL) di base. Questo articolo illustra come eseguire le operazioni seguenti:
@@ -33,17 +33,16 @@ Questa esercitazione illustra come usare SQL Server Management Studio (SSMS) per
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione è necessario avere SQL Server Management Studio e l'accesso a un'istanza di SQL Server. 
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piattaforma in uso tra i collegamenti seguenti. Se si sceglie Autenticazione SQL, usare le credenziali di accesso di SQL Server.
-- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
-- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker).
+- **Windows**: [scaricare SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS**: [scaricare SQL Server 2017 in Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
 
 
 ## <a name="connect-to-a-sql-server-instance"></a>Connessione a un'istanza di SQL Server
 
-1. Avviare SQL Server Management Studio.  
-    Quando si esegue SSMS per la prima volta viene visualizzata la finestra di dialogo **Connetti al server**. Se la finestra non si apre è possibile aprirla manualmente selezionando **Esplora oggetti** > **Connetti** > **Motore di database**.
+1. Avviare SQL Server Management Studio. Quando si esegue SSMS per la prima volta viene visualizzata la finestra di dialogo **Connetti al server**. Se la finestra non si apre è possibile aprirla manualmente selezionando **Esplora oggetti** > **Connetti** > **Motore di database**.
 
     ![Collegamento Connetti in Esplora oggetti](media/connect-query-sql-server/connectobjexp.png)
 
@@ -54,15 +53,21 @@ Se non si dispone dell'accesso a un'istanza di SQL Server, selezionare la piatta
 
     ![Campo "Nome server" con l'opzione per l'uso dell'istanza di SQL Server](media/connect-query-sql-server/connection2.png)
 
-    - In **Autenticazione** selezionare **Autenticazione di Windows**. In questo articolo viene usata l'autenticazione di Windows, ma è supportato anche l'accesso di SQL Server. Se si seleziona **Account di accesso SQL** viene richiesto di specificare un nome utente e una password. Per altre informazioni sui tipi di autenticazione, vedere [Connetti al server (motore di database)](https://docs.microsoft.com/en-us/sql/ssms/f1-help/connect-to-server-database-engine).
+    - In **Autenticazione** selezionare **Autenticazione di Windows**. In questo articolo viene usata l'autenticazione di Windows, ma è supportato anche l'accesso di SQL Server. Se si seleziona **Account di accesso SQL** viene richiesto di specificare un nome utente e una password. Per altre informazioni sui tipi di autenticazione, vedere [Connetti al server (motore di database)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
     È anche possibile modificare altre opzioni di connessione selezionando **Opzioni**. Sono esempi di opzioni di connessione il database al quale ci si connette, il valore di timeout della connessione e il protocollo di rete. In questo articolo vengono usati i valori predefiniti per tutte le opzioni. 
 
 3. Dopo aver completato tutti i campi selezionare **Connetti**. 
 
-4. Verificare che la connessione all'istanza di SQL Server sia riuscita, visualizzando gli oggetti in Esplora oggetti come illustrato di seguito: 
+### <a name="examples-of-successful-connections"></a>Esempi di connessioni riuscite
+Per verificare se la connessione a SQL Server è stata eseguita correttamente, espandere ed esplorare gli oggetti in **Esplora oggetti**. Questi oggetti sono diversi a seconda del tipo di server al quale si è connessi. 
 
-   ![Connessione riuscita](media/connect-query-sql-server/successfulconnection.png)
+- Connessione a un server SQL Server locale, in questo caso NODE5\SQL2016ST: ![Connecting to an on-prem server](media/connect-query-sql-server/connect-on-prem.png) (Connessione a un server SQL Server locale)
+
+- Connessione a un database SQL di Azure, in questo caso msftestserver.database.windows.net: ![Connecting to a SQL Azure DB](media/connect-query-sql-server/connect-sql-azure.png) (Connessione a un database SQL di Azure)
+
+  >[!NOTE]
+  > In questa esercitazione è già stata usata l'*autenticazione di Windows* per connettersi al server SQL Server locale, ma questo metodo non è supportato per il database SQL di Azure. Pertanto la figura seguente illustra l'uso dell'autenticazione SQL per la connessione al database SQL di Azure. Per altre informazioni, vedere [SQL on-prem authentication](../../relational-databases/security/choose-an-authentication-mode.md) (Autenticazione SQL locale) e [SQL Azure authentication](https://docs.microsoft.com/azure/sql-database/sql-database-security-overview#control-access) (Autenticazione SQL Azure). 
 
 ## <a name="create-a-database"></a>Creazione di un database
 Creare un database denominato TutorialDB seguendo questa procedura: 
@@ -170,8 +175,7 @@ I risultati di una query vengono visualizzati sotto la finestra di testo della q
 ## <a name="change-the-server-that-the-query-window-is-connected-to"></a>Modificare il server al quale è connessa la finestra di query
 È possibile modificare il server al quale è connessa la finestra di query corrente seguendo questa procedura:
 
-1. Fare clic con il pulsante destro del mouse nella finestra di query e selezionare **Connessione** > **Cambia connessione**.  
-    Viene visualizzata di nuovo la finestra **Connetti al server**.
+1. Fare clic con il pulsante destro del mouse nella finestra di query e selezionare **Connessione** > **Cambia connessione**. Viene visualizzata di nuovo la finestra **Connetti al server**.
 2. Modificare il server al quale è connessa la query. 
  
    ![Comando Cambia connessione](media/connect-query-sql-server/changeconnection.png)

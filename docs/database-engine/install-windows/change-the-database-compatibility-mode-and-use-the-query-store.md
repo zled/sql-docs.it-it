@@ -1,5 +1,5 @@
 ---
-title: Modificare la modalità di compatibilità del database e usare l'archivio query | Microsoft Docs
+title: Modificare il livello di compatibilità del database e usare Query Store | Microsoft Docs
 ms.custom: ''
 ms.date: 07/21/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d3a297d2a6de7527fbd756d3bfc51e650875ad37
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1859f4ad95717c087ecfe68b36f3866c63d60d54
+ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="change-the-database-compatibility-mode-and-use-the-query-store"></a>Modificare la modalità di compatibilità del database e usare l'archivio query
+# <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modificare il livello di compatibilità del database e usare Query Store
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -35,10 +35,11 @@ Da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] fino a [!INCLUDE[ssCurrent]
 - Le modifiche apportate a Query Processor possono avere effetti complessi. Anche se una modifica "positiva" al sistema è ideale per la maggior parte dei carichi di lavoro, potrebbe causare una regressione inaccettabile altrove in una query importante. Separare la logica dal processo di aggiornamento consente a funzionalità quali Query Store di ridurre rapidamente le regressioni della scelta del piano o persino di evitarle completamente nei server di produzione.  
   
 > [!IMPORTANT]  
-> Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento.    
-> Se il livello di compatibilità di un database utente è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].    
-> I livelli di compatibilità dei database tempdb, model, msdb e Resource vengono impostati sul livello di compatibilità corrente dopo l'aggiornamento.   
-> Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento.    
+> Sono previsti i comportamenti seguenti per [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] quando un database viene collegato o ripristinato e dopo un aggiornamento sul posto:
+> - Se il livello di compatibilità di un database utente era 100 o superiore prima dell'aggiornamento, rimane invariato dopo l'aggiornamento.    
+> - Se il livello di compatibilità di un database utente è 90 prima dell'aggiornamento, nel database aggiornato viene impostato su 100, ovvero sul livello di compatibilità supportato più basso in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].    
+> - I livelli di compatibilità dei database tempdb, model, msdb e Resource vengono impostati sul livello di compatibilità corrente dopo l'aggiornamento.   
+> - Per il database di sistema master viene mantenuto il livello di compatibilità precedente l'aggiornamento.    
   
 Il processo di aggiornamento per abilitare nuove funzionalità di Query Processor è correlato al modello di manutenzione post-rilascio del prodotto.  Alcune di queste correzioni vengono rilasciate con il [flag di traccia 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md#4199).  I clienti che necessitano di correzioni possono acconsentire esplicitamente a esse senza causare regressioni impreviste per altri clienti. Il modello di manutenzione post-rilascio per gli aggiornamenti rapidi di Query Processor è documentato [qui](http://support.microsoft.com/kb/974006). A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] il passaggio a un nuovo livello di compatibilità implica che il flag di traccia 4199 non è più necessario, perché tali correzioni sono ora abilitate per impostazione predefinita nel livello di compatibilità più recente. Come parte del processo di aggiornamento, è pertanto importante verificare che al termine del processo di aggiornamento il flag di traccia 4199 non sia abilitato.  
 
@@ -50,6 +51,8 @@ Il flusso di lavoro consigliato per aggiornare Query Processor alla versione pi�
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
  
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)  
- [Scenari d'uso dell'archivio query](../../relational-databases/performance/query-store-usage-scenarios.md) 
+[Visualizzare o modificare il livello di compatibilità di un database](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
+[Scenari di utilizzo dell'Archivio query](../../relational-databases/performance/query-store-usage-scenarios.md)     
+[Livello di compatibilità ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
+    
   

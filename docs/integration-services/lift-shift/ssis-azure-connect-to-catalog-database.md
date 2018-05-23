@@ -1,5 +1,5 @@
 ---
-title: Connettersi al database del catalogo SSISDB in Azure | Microsoft Docs
+title: Connettersi al database del catalogo SSIS (SSISDB) in Azure | Microsoft Docs
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
@@ -12,13 +12,13 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b34e28dca32da44b60f65f92934373d1f7a42f12
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
+ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/15/2018
 ---
-# <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Connettersi al database del catalogo SSISDB in Azure
+# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Connettersi al database del catalogo SSIS (SSISDB) in Azure
 
 Ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSISDB ospitato in un server di database SQL di Azure. Per eseguire la connessione sono necessari gli elementi seguenti:
 - nome completo del server
@@ -45,7 +45,7 @@ Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Serv
 
 2. **Connettersi al server**. Immettere le informazioni seguenti nella finestra di dialogo **Connetti al server**:
 
-   | Impostazione       | Valore suggerito | Description | 
+   | Impostazione       | Valore suggerito | Descrizione | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Il nome deve essere nel formato **mysqldbserver.database.windows.net**. |

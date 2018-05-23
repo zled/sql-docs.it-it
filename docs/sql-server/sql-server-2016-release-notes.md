@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: bc83f2e17c82ca074fe07f6312fd5c3c864c9e74
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2568e2d57cb05164153fa5a9b2a22a49bcb31dac
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sql-server-2016-release-notes"></a>Note sulla versione di SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.lasthandoff: 05/03/2018
 L'installazione di SQL Server 2016 SP2 può richiedere il riavvio dopo l'installazione. Come procedura consigliata, è opportuno pianificare ed eseguire un riavvio dopo l'installazione di SQL Server 2016 SP2.
 
 Miglioramenti relativi a prestazioni e scalabilità inclusi in SQL Server 2016 SP2.
-|Funzionalità|Description|Ulteriori informazioni|
+|Funzionalità|Descrizione|Ulteriori informazioni|
 |   --- |   --- |   --- |
 |Procedura di pulizia del database di distribuzione migliorata |   Una tabella del database di distribuzione di dimensioni eccessive è la causa di una situazione di blocco e di deadlock. Grazie a una procedura di pulizia migliorata è possibile eliminare scenari di blocco e di deadlock di questo genere. |   [KB4040276](https://support.microsoft.com/help/4040276/fix-indirect-checkpoints-on-the-tempdb-database-cause-non-yielding)  |
 |Pulizia rilevamento modifiche    |   Miglioramento delle prestazioni di pulizia di Rilevamento modifiche ed efficienza delle tabelle lato Rilevamento modifiche.    |   [KB4052129](https://support.microsoft.com//help/4052129/update-for-manual-change-tracking-cleanup-procedure-in-sql-server-2016) |
 |Usare il timeout della CPU per annullare la richiesta di Resource Governor   |   Migliora la gestione delle richieste di query annullando di fatto la richiesta, se viene raggiunta la soglia della CPU per una richiesta. Questo comportamento viene abilitato con il flag di traccia 2422. |   [KB4038419](https://support.microsoft.com/help/4038419/add-cpu-timeout-to-resource-governor-request-max-cpu-time-sec)   |
 |SELECT INTO per creare la tabella di destinazione in filegroup    |   A partire da SQL Server 2016 SP2, la sintassi T-SQL SELECT INTO supporta il caricamento di una tabella in un filegroup diverso da quello predefinito dell'utente usando la parola chiave <Filegroup name> ON nella sintassi T-SQL. |       |
 |Checkpoint indiretto migliorato per TempDB    |   Il checkpoint indiretto per TempDB è stato migliorato per ridurre al minimo la contesa di spinlock in DPLists. Questo miglioramento consente il ridimensionamento predefinito del carico di lavoro TempDB in SQL Server 2016 se il checkpoint indiretto è attivo per TempDB.    |   [KB4040276](https://support.microsoft.com/en-us/help/4040276)   |
-|Prestazioni di backup del database migliorate nei computer di memoria di grandi dimensioni  |   SQL Server 2016 SP2 ottimizza il modo in cui le operazioni di I/O in corso vengono svuotate durante il backup, comportando un significativo miglioramento delle prestazioni di backup per i database di piccole e medie dimensioni. È stato osservato un miglioramento più di 100 volte superiore trasferendo i backup del database di sistema in un computer da 2 TB. Risultati più esaurienti del test delle prestazioni su database di dimensioni diverse sono disponibili sotto. Il miglioramento delle prestazioni si riduce con l'aumentare delle dimensioni del database e delle pagine di cui eseguire il backup e l'I/O di backup richiede più tempo rispetto allo scorrimento del pool di buffer. Questo miglioramento consentirà di aumentare le prestazioni di backup per i clienti che ospitano più database di piccole dimensioni in server di fascia alta di grandi dimensioni con molta memoria. |       |
+|Prestazioni di backup del database migliorate nei computer di memoria di grandi dimensioni  |   SQL Server 2016 SP2 ottimizza il modo in cui le operazioni di I/O in corso vengono svuotate durante il backup, comportando un significativo miglioramento delle prestazioni di backup per i database di piccole e medie dimensioni. È stato osservato un miglioramento più di 100 volte superiore trasferendo i backup del database di sistema in un computer da 2 TB. Il miglioramento delle prestazioni si riduce con l'aumentare delle dimensioni del database e delle pagine di cui eseguire il backup e l'I/O di backup richiede più tempo rispetto allo scorrimento del pool di buffer. Questa modifica consentirà di aumentare le prestazioni di backup per i clienti che ospitano più database di piccole dimensioni in server di fascia alta di grandi dimensioni con molta memoria.    |       |
 |Supporto per la compressione del backup VDI per i database abilitati per TDE   |   In SQL Server 2016 SP2 è stato aggiunto il supporto VDI per consentire alle soluzioni di backup VDI di sfruttare la compressione per i database abilitati per TDE. Con questo miglioramento, è stato introdotto un nuovo formato di backup per supportare la compressione del backup per i database abilitati per TDE. Il motore di SQL Server gestirà in modo trasparente i formati di backup nuovi ed esistenti per ripristinare i backup.   |       |
 |Caricamento dinamico dei parametri dei profili agenti di replica    |   Questo nuovo miglioramento consente di caricare i parametri degli agenti di replica in modo dinamico senza dover riavviare l'agente. Questa modifica è applicabile solo ai parametri dei profili agenti di uso più frequente. |       |
 |Opzione MAXDOP di supporto per creazione/aggiornamento di statistiche |    Questo miglioramento consente non solo di specificare l'opzione MAXDOP per un'istruzione CREATE/UPDATE relativa alle statistiche, ma anche di verificare che sia usata l'impostazione MAXDOP corretta quando le statistiche vengono aggiornate durante la creazione o la ricompilazione di tutti i tipi di indici (se l'opzione MAXDOP è presente)   |   [KB4041809](https://support.microsoft.com/en-us/help/4041809)   |
 |Aggiornamento delle statistiche automatico migliorato per le statistiche incrementali |    In alcuni scenari, quando si è verificato un certo numero di modifiche ai dati tra più partizioni in una tabella in modo tale che il contatore di modifiche totali per le statistiche incrementate supera la soglia di aggiornamenti automatici, ma nessuna delle singole partizioni supera la soglia di aggiornamenti automatici, l'aggiornamento delle statistiche potrebbe venire rimandato finché nella tabella non si verifica un numero molto più elevato di modifiche. Questo comportamento è stato corretto con il flag di traccia 11024.   |       |
 
 Miglioramenti relativi a supporto e diagnostica in SQL Server 2016 SP2.
-|Funzionalità |Description   |Ulteriori informazioni   |
+|Funzionalità |Descrizione   |Ulteriori informazioni   |
 |   --- |   --- |   --- |
 |Supporto DTC completo per i database in un gruppo di disponibilità    |   Le transazioni tra database per i database che fanno parte di un gruppo di disponibilità non sono attualmente supportate per SQL Server 2016. Con SQL Server 2016 SP2, viene introdotto il supporto completo per le transazioni distribuite con i database di un gruppo di disponibilità.   |       |
 |Aggiornamento della colonna is_encrypted di sys.databases per rispecchiare in modo preciso lo stato della crittografia di TempDB |   Il valore della colonna is_encrypted in sys.databases è 1 per TempDB, anche dopo avere disattivato la crittografia per tutti i database utente e avere riavviato SQL Server. Il comportamento previsto è invece che questo valore sia 0, perché TempDB non è più crittografato in questa situazione. A partire da SQL Server 2016 SP2, is_encrypted di sys.databases rispecchia in modo preciso lo stato della crittografia per TempDB.  |       |
@@ -64,6 +64,7 @@ Miglioramenti relativi a supporto e diagnostica in SQL Server 2016 SP2.
 |Nuova DMV per monitorare l'utilizzo dello spazio dell'archivio versioni in TempDB    |   In SQL Server 2016 SP2 è stata introdotta la nuova DMV sys.dm_tran_version_store_space_usage per consentire il monitoraggio dell'utilizzo dell'archivio versioni in TempDB. Gli amministratori di database ora possono pianificare in modo proattivo il ridimensionamento di TempDB in base ai requisiti di utilizzo dell'archivio versioni dei singoli database, senza sovraccarico delle prestazioni durante l'esecuzione nei server di produzione. |       |
 |Supporto dei dump completi per gli agenti di replica | Oggi, se gli agenti di replica incontrano un'eccezione non gestita, l'impostazione predefinita prevede la creazione di un breve dump dei sintomi dell'eccezione. La risoluzione dei problemi relativi alle eccezioni non gestite è quindi molto difficile. Attraverso questa modifica viene introdotta una nuova chiave del Registro di sistema che consentirà di creare un dump completo per gli agenti di replica.  |       |
 |Miglioramento degli eventi estesi per l'errore di routing in lettura per un gruppo di disponibilità |   In precedenza, se era presente un elenco di routing, veniva generato l'XEvent read_only_rout_fail, ma nessuno dei server nell'elenco di routing era disponibile per le connessioni. SQL Server 2016 SP2 aggiunge informazioni per facilitare la risoluzione dei problemi e coinvolgere anche gli elementi di codice in cui è attivo XEvent.  |       |
+|Nuova DMV per monitorare il log delle transazioni |   È stata aggiunta una nuova DMV sys.dm_db_log_stats che restituisce attributi a livello di riepilogo e informazioni sui file registro transazioni di database. |       |
 |Nuova DMV per monitorare le informazioni VLF |   La nuova DMV sys.dm_db_log_info è stata introdotta in SQL Server 2016 SP2 per esporre le informazioni VLF simili a DBCC LOGINFO per monitorare, segnalare ed evitare potenziali problemi dei log delle transazioni riscontrati dai clienti.    |       |
 |Informazioni sul processore in sys.dm_os_sys_info|   Nuove colonne aggiunte alla DMV sys.dm_os_sys_info per esporre le informazioni relative al processore, ad esempio socket_count e cores_per_numa.  |       |
 |Informazioni sugli extent modificati in sys.dm_db_file_space_usage| Nuova colonna aggiunta a sys.dm_db_file_space_usage per tenere traccia del numero di extent modificati dall'ultimo backup completo.  |       |
@@ -105,7 +106,7 @@ Le funzionalità seguenti sono disponibili nelle edizioni Standard, Web, Express
 
 La tabella seguente contiene un riepilogo dei principali miglioramenti disponibili in SQL Server 2016 SP1.
 
-|Funzionalità|Description|Per ulteriori informazioni|
+|Funzionalità|Descrizione|Per ulteriori informazioni|
 |---|---|---|
 |Inserimento in blocco negli heap con TABLOCK automatico in TF 715| Trace Flag 715 abilita il blocco della tabella per le operazioni di caricamento bulk in heap senza indici non cluster.|[La migrazione dei carichi di lavoro SAP a SQL Server è 2,5 volte più veloce](https://blogs.msdn.microsoft.com/sql_server_team/migrating-sap-workloads-to-sql-server-just-got-2-5x-faster/)|
 |CREATE o ALTER|Consentono la distribuzione di oggetti, ad esempio stored procedure, trigger, funzioni definite dall'utente e visualizzazioni.|[Blog sul motore di database di SQL Server](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/11/17/create-or-alter-another-great-language-enhancement-in-sql-server-2016-sp1/)|
@@ -221,12 +222,13 @@ Inoltre, eseguire periodicamente le stored procedure dell'archivio query per pul
     
 * Aprire il file %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings nel Blocco note e impostare una data futura nel codice seguente.
 
-     Memorizzare nella cache LastRefreshed="12/31/2017 00:00:00"    
+```
+     Cache LastRefreshed="12/31/2017 00:00:00"    
 ```
 
-## Additional Information
-+ [SQL Server 2016 installation](../database-engine/install-windows/installation-for-sql-server-2016.md)
-+ [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
+## <a name="additional-information"></a>Informazioni aggiuntive
++ [Installazione di SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)
++ [SQL Server Update Center (Centro aggiornamenti di SQL Server): collegamenti e informazioni per tutte le versioni supportate](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
