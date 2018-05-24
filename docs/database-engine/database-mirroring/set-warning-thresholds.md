@@ -35,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="options"></a>Opzioni  
  *Istanza del server e relativo stato di connessione*  
- Nome di un'istanza del server partner nel formato *SYSTEM***\\*** INSTANCE_NAME*. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
+ Nome di un'istanza del server partner nel formato *SYSTEM***\\***INSTANCE_NAME*. Per un'istanza del server predefinita, viene visualizzato solo il nome di sistema.  
   
  Il campo indica inoltre se il monitoraggio è attualmente connesso all'istanza del server. I possibili stati di connessione sono i seguenti:  
   

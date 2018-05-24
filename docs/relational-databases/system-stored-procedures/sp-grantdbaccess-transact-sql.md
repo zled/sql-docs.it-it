@@ -47,7 +47,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- [  **@loginame =** ]  **' * * * accesso* **'** è il nome del gruppo di Windows, account di accesso di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per eseguire il mapping al nuovo database utente. Nomi dei gruppi di Windows e gli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *dominio*\\* accesso *, ad esempio **LONDON\Joeb**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *account di accesso* è un **sysname**, non prevede alcun valore predefinito.  
+ [  **@loginame =** ]  **' * * * accesso* **'** è il nome del gruppo di Windows, account di accesso di Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account di accesso per eseguire il mapping al nuovo database utente. Nomi dei gruppi di Windows e gli account di accesso di Windows devono essere qualificati con un nome di dominio Windows nel formato *dominio*\\*accesso *, ad esempio **LONDON\Joeb**. Sull'account di accesso non può essere già stato eseguito il mapping a un utente nel database. *account di accesso* è un **sysname**, non prevede alcun valore predefinito.  
   
  [  **@name_in_db=**] **'***name_in_db***'** [ **OUTPUT**]  
  Nome del nuovo utente del database. *name_in_db* è una variabile OUTPUT con un tipo di dati **sysname**e un valore predefinito è NULL. Se non specificato, *accesso* viene utilizzato. Se specificato come variabile OUTPUT con valore NULL, **@name_in_db** è impostato su *accesso*. *name_in_db* non deve essere già presente nel database corrente.  

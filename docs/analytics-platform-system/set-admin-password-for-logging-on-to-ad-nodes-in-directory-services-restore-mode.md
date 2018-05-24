@@ -20,7 +20,7 @@ Modalità ripristino servizi directory (DSRM) è una modalità di avvio per il r
   
 ## <a name="HowToDSRM"></a>Per reimpostare la password dell'amministratore  
   
-1.  Aprire una finestra del prompt dei comandi su un nodo di dispositivo Active ***appliance_domain*– AD*xx***macchina virtuale.  
+1.  Aprire una finestra del prompt dei comandi su un nodo di dispositivo Active ***appliance_domain *– AD*xx***macchina virtuale.  
   
 2.  Al prompt dei comandi, digitare `ntdsutil`.  
   
