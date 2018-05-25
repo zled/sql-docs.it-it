@@ -8,16 +8,23 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 1106d0f1505f29a3b54f9fc036fcaf28b8715b75
-ms.sourcegitcommit: feff98b3094a42f345a0dc8a31598b578c312b38
+ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installare i nuovi pacchetti di R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo viene descritto come installare i nuovi pacchetti di R a un'istanza di SQL Server in cui è abilitato l'apprendimento. Sono disponibili diversi metodi per l'installazione di nuovi pacchetti di R, a seconda di quale versione di SQL Server in uso e se il server dispone di una connessione a internet.
+In questo articolo viene descritto come installare i nuovi pacchetti di R a un'istanza di SQL Server in cui è abilitato l'apprendimento. Sono disponibili diversi metodi per l'installazione di nuovi pacchetti di R, a seconda di quale versione di SQL Server in uso e se il server dispone di una connessione a internet. Sono possibili approcci seguenti per la nuova installazione del pacchetto.
+
+| Approccio                           | Autorizzazioni  | Remoto o locale |
+|------------------------------------|---------------------------|-------|
+| [Utilizzare gestori di pacchetti R convenzionali](#bkmk_rInstall)  | Amministrativi | Local |
+| [Usare RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Amministrativi | Local |
+| [Utilizzare T-SQL (Crea raccolta esterni)](install-r-packages-tsql.md) | All'amministratore di eseguire l'installazione, i ruoli del database in un secondo momento | both 
+| [Utilizzare un miniCRAN per creare un repository locale](create-a-local-package-repository-using-minicran.md) | All'amministratore di eseguire l'installazione, i ruoli del database in un secondo momento | both |
 
 ## <a name="bkmk_rInstall"></a> Installare pacchetti R tramite una connessione Internet
 
@@ -75,51 +82,6 @@ Questa procedura si presuppone che sia stato preparato tutti i pacchetti necessa
     Questo comando consente di estrarre il pacchetto R `mynewpackage` dal file compresso locale, presupponendo che la copia è stato salvato nella directory `C:\Temp\Downloaded packages`, quindi installa il pacchetto nel computer locale. Se il pacchetto contiene tutte le dipendenze, il programma di installazione verifica i pacchetti esistenti nella libreria. Se è stato creato un repository che include le dipendenze, il programma di installazione installa anche i pacchetti richiesti.
 
     Se tutti i pacchetti necessari non sono presenti nella libreria di istanza e non possono essere disponibile nei file compressi, l'installazione del pacchetto di destinazione non riesce.
-
-## <a name="bkmk_createlibrary"></a> Utilizzo della libreria esterna crea
-
-**Si applica a:**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
-
-Il [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) istruzione consente di aggiungere un pacchetto o un set di pacchetti a un'istanza o un database specifico senza eseguire R o Python code direttamente. Tuttavia, questo metodo richiede la preparazione del pacchetto e le autorizzazioni di database aggiuntivo.
-
-+ Tutti i pacchetti devono essere disponibili come un file compresso locale, anziché scaricati su richiesta da internet.
-
-    Se non si dispone dell'accesso al file system nel server, è inoltre possibile passare un pacchetto completo come una variabile, utilizzando un formato binario. Per ulteriori informazioni, vedere [creare libreria esterna](../../t-sql/statements/create-external-library-transact-sql.md).
-
-+ Tutte le dipendenze devono essere identificate dal nome e la versione e inclusi nel file zip. L'istruzione ha esito negativo se pacchetti richiesti non sono disponibili, tra cui le dipendenze dei pacchetti a valle. Si consiglia di utilizzare **miniCRAN** o **igraph** per l'analisi delle dipendenze di pacchetti. Installazione della versione errata del pacchetto o una dipendenza pacchetto possono causare l'esito negativo dell'istruzione. 
-
-+ È necessario disporre delle autorizzazioni necessarie nel database. Per informazioni dettagliate, vedere [creare libreria esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
-
-### <a name="prepare-the-packages-in-archive-format"></a>Preparare i pacchetti in formato di archiviazione
-
-1. Se si sta installando un singolo pacchetto, è possibile scaricare il pacchetto in formato compresso. 
-
-2. Se il pacchetto richiede eventuali altri pacchetti, è necessario verificare che i pacchetti richiesti siano disponibili. È possibile utilizzare miniCRAN per analizzare il pacchetto di destinazione e identificare tutte le relative dipendenze. 
-
-3. Copiare il file ZIP o miniCRAN repository che contiene tutti i pacchetti in una cartella locale nel server.
-
-4. Aprire un **Query** finestra, utilizzando un account con privilegi amministrativi.
-
-5. Eseguire l'istruzione T-SQL `CREATE EXTERNAL LIBRARY` per caricare la raccolta di pacchetto compresso nel database.
-
-    Ad esempio, l'istruzione seguente nomi, come origine del pacchetto, di un repository miniCRAN contenenti il **randomForest** pacchetto, insieme alle relative dipendenze. 
-
-    ```R
-    CREATE EXTERNAL LIBRARY randomForest
-    FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
-    WITH (LANGUAGE = 'R');
-    ```
-
-    Non è possibile utilizzare un nome arbitrario. il nome della libreria esterna deve avere lo stesso nome che si prevede di utilizzare durante il caricamento o la chiamata del pacchetto.
-
-6. Se la raccolta è stata creata, è possibile eseguire il pacchetto in SQL Server, quando viene chiamata all'interno di una stored procedure.
-    
-    ```SQL
-    EXEC sp_execute_external_script
-    @language =N'R',
-    @script=N'
-    library(randomForest)'
-    ```
 
 ## <a name="tips-for-package-installation"></a>Suggerimenti per l'installazione del pacchetto
 

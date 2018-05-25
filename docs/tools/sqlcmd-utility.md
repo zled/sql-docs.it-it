@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6454e750ae8ed30c3e06a91e374ffae47037d566
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96ade458ea294f3f2cfe051449578acd97ff2fe5
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MTE
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -679,7 +679,7 @@ Imposta la crittografia delle colonne su `Enabled`. Per altre informazioni, vede
   
  I valori restituiti compresi tra -1 e -99 sono riservati a SQL Server. L'utilità **sqlcmd** definisce i valori restituiti aggiuntivi elencati di seguito:  
   
-|Valori restituiti|Description|  
+|Valori restituiti|Descrizione|  
 |-------------------|-----------------|  
 |-100|Si è verificato un errore prima di selezionare il valore restituito.|  
 |-101|Selezionando il valore restituito non si sono trovate righe.|  

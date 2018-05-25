@@ -7,16 +7,15 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
-ms.openlocfilehash: 0e86081f681c87e09b5cfde1fec85f20967de1a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.technology: linux
+ms.openlocfilehash: dbab0dd07db4859c83a827285e810ee818c3aeb8
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Ripristinare un database di SQL Server in un contenitore Linux Docker
 
@@ -139,7 +138,7 @@ Questa esercitazione viene utilizzato il [database di esempio Wide World Importe
 Il file di backup è ora disponibile all'interno del contenitore. Prima di ripristinare il backup, è importante conoscere i nomi di file logico e i tipi di file all'interno del backup. I comandi Transact-SQL seguenti ispezionare il backup ed eseguire il ripristino utilizzando **sqlcmd** nel contenitore.
 
 > [!TIP]
-> Questa esercitazione viene utilizzato **sqlcmd** all'interno del contenitore, in quanto il contenitore viene fornito con questo strumento di pre-installato. Tuttavia, è possibile inoltre eseguire istruzioni Transact-SQL con altri client di strumenti di fuori del contenitore, ad esempio [codice di Visual Studio](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md). Per connettersi, utilizzare la porta dell'host che è stato eseguito il mapping alla porta 1433 nel contenitore. In questo esempio, che è **localhost, 1401** nel computer host e **Host_IP_Address, 1401** in modalità remota.
+> Questa esercitazione viene utilizzato **sqlcmd** all'interno del contenitore, in quanto il contenitore viene fornito con questo strumento di pre-installato. Tuttavia, è possibile inoltre eseguire istruzioni Transact-SQL con altri client di strumenti di fuori del contenitore, ad esempio [codice di Visual Studio](sql-server-linux-develop-use-vscode.md) o [SQL Server Management Studio](sql-server-linux-manage-ssms.md). Per connettersi, utilizzare la porta dell'host che è stato eseguito il mapping alla porta 1433 nel contenitore. In questo esempio, che è **localhost, 1401** nel computer host e **Host_IP_Address, 1401** in modalità remota.
 
 1. Eseguire **sqlcmd** all'interno del contenitore all'elenco di nomi di file logico e i percorsi all'interno del backup. Questa operazione viene eseguita con il **RESTORE FILELISTONLY** istruzione Transact-SQL.
 

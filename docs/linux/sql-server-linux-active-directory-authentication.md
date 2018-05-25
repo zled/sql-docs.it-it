@@ -7,18 +7,17 @@ ms.author: meetb
 manager: craigg
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
-ms.technology: database-engine
+ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: d14914079cca30006255d4316bf0aba91e659880
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: df3cea6d47d50464fe0b8a7f2573c230585b9cb1
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: L'autenticazione utilizzo di Active Directory con SQL Server in Linux
 
@@ -71,7 +70,7 @@ Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../inc
 
    - **Ubuntu**:
 
-      Modificare il `/etc/network/interfaces` file in modo che l'indirizzo IP del controller di dominio Active Directory è elencato come un dns server dei nomi. Esempio: 
+      Modificare il file `/etc/network/interfaces` in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns. Esempio: 
 
       ```/etc/network/interfaces
       <...>
@@ -83,7 +82,7 @@ Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../inc
       ```
 
       > [!NOTE]
-      > L'interfaccia di rete (eth0) potrebbero essere diversi per diverse macchine. Per individuare quello in uso, eseguire il comando ifconfig e copiare l'interfaccia che ha un indirizzo IP e trasmessi e ricevuti byte.
+      > L'interfaccia di rete (eth0) potrebbe essere differente per diverse macchine. Per individuare quella in uso, eseguire il comando ifconfig e copiare l'interfaccia che ha un indirizzo IP e che ha trasmesso e ricevuto byte.
 
       Dopo avere modificato questo file, riavviare il servizio di rete:
 
@@ -99,7 +98,7 @@ Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../inc
 
    - **RHEL**:
 
-     Modificare il `/etc/sysconfig/network-scripts/ifcfg-eth0` file (o altra configurazione interfaccia file a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory è elencato come server DNS:
+     Modificare il file `/etc/sysconfig/network-scripts/ifcfg-eth0` (o altro file di configurazione interfaccia a seconda dei casi) in modo che l'indirizzo IP del controller di dominio Active Directory sia elencato come server dns:
 
      ```/etc/sysconfig/network-scripts/ifcfg-eth0
      <...>

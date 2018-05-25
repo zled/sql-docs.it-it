@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, pdw
-ms.component: dmv's
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: system-objects
@@ -25,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e648dc76c88bbacd81256063053d22fa17a268f6
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f95f4d1596d84648034b51833738a26817f5e96b
+ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.lasthandoff: 05/07/2018
   
  Il **versione** proprietà indica la versione di .NET Framework e CLR hosted nel server.  
   
- Il **Sys.dm clr_properties** vista a gestione dinamica può restituire sei diversi valori per il **stato** proprietà, che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. ovvero:  
+ Il **Sys.dm clr_properties** vista a gestione dinamica può restituire sei diversi valori per il **stato** proprietà, che riflette lo stato del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hosted. Sono:  
   
 -   Mscoree is not loaded.  
   

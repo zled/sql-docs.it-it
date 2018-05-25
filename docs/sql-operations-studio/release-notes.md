@@ -13,11 +13,11 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 47c5e129ca6c77f9116b6be928f202341d457041
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 3f461b78c3d76f7e6b848b83d8a2333dffe5de3c
+ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="sql-operations-studio-preview-release-notes"></a>Note sulla versione di SQL Operations Studio (anteprima)
 
@@ -33,7 +33,7 @@ Il *anteprima pubblica potrebbe* è incentrato sulla stabilizzazione e correzion
 
 - Annuncio relativo all'estensione di ricerca SQL Redgate disponibile in Gestione estensioni.
 - Localizzazione di community disponibile per 10 lingue: tedesco, spagnolo, francese, italiano, giapponese, coreano, portoghese, russo, cinese semplificato e cinese tradizionale.
-- Compilazione PILR conforme è ridotta raccolta dati di telemetria, migliorata l'esperienza di rifiutare esplicitamente e nel prodotto collegamenti all'informativa sulla Privacy.
+- Raccolta di dati di telemetria ridotta, migliorata l'esperienza di rifiutare esplicitamente e nel prodotto collegamenti all'informativa sulla Privacy.
 - Gestore estensioni ha Marketplace una migliore esperienza per individuare facilmente le estensioni della community.
 - Analisi utilizzo software consente di visualizzare i processi di estensione di SQL Agent e nella cronologia processo.
 - Aggiornamenti per whoisactive ed estensioni di Server report.

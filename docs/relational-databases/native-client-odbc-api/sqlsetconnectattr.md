@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1b4066a595e7b17f5c5ff70b965aea3ca43a798f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5ad5c5425427f9bf5b8f7e6177379d91ebd10d6f
+ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 05/03/2018
 |SQL_COPT_SS_FAILOVER_PARTNER|Prima|  
 |SQL_COPT_SS_INTEGRATED_SECURITY|Prima|  
 |SQL_COPT_SS_MARS_ENABLED|Prima|  
-|SQL_COPT_SS_MULTISUBMIT_FAILOVER|Prima|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|Prima|  
 |SQL_COPT_SS_OLDPWD|Prima|  
 |SQL_COPT_SS_PERF_DATA|After|  
 |SQL_COPT_SS_PERF_DATA_LOG|After|  
@@ -198,7 +198,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
  Se l'applicazione si connette a un gruppo di disponibilità [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] in subnet diverse, questa proprietà di connessione consente di configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client per garantire una maggiore velocità di rilevamento e connessione al server attualmente attivo. Esempio:  
   
 ```  
-SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
  Per ulteriori informazioni su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto del Client nativo per [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] estensivi, vedere [SQL Server Native Client supporta per il ripristino di emergenza a disponibilità elevata](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  

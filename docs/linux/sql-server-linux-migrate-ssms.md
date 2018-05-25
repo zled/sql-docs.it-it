@@ -7,17 +7,16 @@ manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql
-ms.prod_service: database-engine
 ms.component: ''
 ms.suite: sql
-ms.technology: database-engine
+ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: sql-linux
-ms.openlocfilehash: 0087d33c0eabcff4ebc81de80fc69999e3017828
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7a7c1c73ca70e0d42104e74c868d6acd32cc01b1
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>Esportare e importare un database in Linux con SQL Server Management Studio o SqlPackage.exe in Windows
 
@@ -25,7 +24,7 @@ ms.lasthandoff: 05/03/2018
 
 In questo articolo viene illustrato come utilizzare [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) e [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) per esportare e importare un database in SQL Server 2017 in Linux. SQL Server Management Studio e SqlPackage.exe sono applicazioni di Windows, pertanto usare questa tecnica quando si dispone di un computer Windows in grado di connettersi a un'istanza remota di SQL Server in Linux.
 
-È sempre necessario installare e utilizzare la versione più recente di SQL Server Management Studio (SSMS), come descritto in [utilizzare SQL Server Management Studio in Windows per connettersi a SQL Server in Linux](sql-server-linux-develop-use-ssms.md)
+È sempre necessario installare e utilizzare la versione più recente di SQL Server Management Studio (SSMS), come descritto in [utilizzare SQL Server Management Studio in Windows per connettersi a SQL Server in Linux](sql-server-linux-manage-ssms.md)
 
 > [!NOTE]
 > Se si esegue la migrazione di un database da un'istanza di SQL Server a un altro, consiglia di utilizzare [Backup e ripristino](sql-server-linux-migrate-restore-database.md).
@@ -34,7 +33,7 @@ In questo articolo viene illustrato come utilizzare [SQL Server Management Studi
 
 1. Avviare SSMS digitando **Microsoft SQL Server Management Studio** nelle finestre di casella di ricerca e quindi fare clic sull'app desktop.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. Connettersi al database di origine in Esplora oggetti. Il database di origine può essere in esecuzione in locale di Microsoft SQL Server o nel cloud, Linux, Windows o Docker e Database SQL di Azure o Azure SQL Data Warehouse.
 
@@ -52,7 +51,7 @@ Il *. File BACPAC viene correttamente creato nel percorso che prescelto e si è 
 
 1. Avviare SSMS digitando **Microsoft SQL Server Management Studio** nelle finestre di casella di ricerca e quindi fare clic sull'app desktop.
 
-    ![SQL Server Management Studio](./media/sql-server-linux-develop-use-ssms/ssms.png) 
+    ![SQL Server Management Studio](./media/sql-server-linux-manage-ssms/ssms.png) 
 
 2. Connettersi al server di destinazione in Esplora oggetti. Il server di destinazione può essere eseguito in locale di Microsoft SQL Server o nel cloud, in Linux, Windows o Docker e Database SQL di Azure o Azure SQL Data Warehouse.
 

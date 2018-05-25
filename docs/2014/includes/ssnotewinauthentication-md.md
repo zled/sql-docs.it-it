@@ -1,0 +1,1 @@
+Se possibile, usare l'autenticazione di Windows.
