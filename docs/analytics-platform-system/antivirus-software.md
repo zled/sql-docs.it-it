@@ -6,14 +6,14 @@ manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
-ms.date: 04/17/2018
+ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ed050520a53aea596b2f315047c68d593c578f27
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 5d9ff6848d2df43408613d41dc7a0e6f8c1b0b8c
+ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Software antivirus per Analitica Platform System
 Se il centro dati richiede un software antivirus, è possibile utilizzare queste linee guida per installare il software antivirus nel sistema di piattaforma Analitica. Si consiglia di non installare il software antivirus a meno che non è un requisito rigorosi a livello del data center.  
