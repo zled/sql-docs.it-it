@@ -21,11 +21,12 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fdf20d18d4397b0d8ed2f0598b287a88d03caf0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20e98a86e61ba084073022eb515d436787f6a341
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455415"
 ---
 # <a name="odata-source"></a>Origine OData
 Usare il componente di origine OData in un pacchetto SSIS per utilizzare i dati da un servizio Protocollo OData (Open Data). Il componente supporta i protocolli OData v3 e v4.  
@@ -37,7 +38,10 @@ Usare il componente di origine OData in un pacchetto SSIS per utilizzare i dati 
 L'origine OData include il supporto per le origini dati seguenti:
 -   Microsoft Dynamics AX Online e Microsoft Dynamics CRM Online
 -   Elenchi SharePoint Per visualizzare tutti gli elenchi in un server SharePoint, usare l'URL seguente: http://\<server>/_vti_bin/ListData.svc. Per ulteriori informazioni sulle convenzioni per l'URL di SharePoint, vedere la pagina relativa all' [interfaccia REST di SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
-  
+
+> [!NOTE]
+> Il componente origine OData non supporta tipi complessi, ad esempio gli elementi a scelta multipla, in elenchi di SharePoint.
+
 ## <a name="odata-format-and-performance"></a>Formato e prestazioni di OData
  I risultati restituiti dalla maggior parte dei servizi OData sono in più formati. È possibile specificare il formato del set di risultati usando l'opzione query `$format`. I formati quali JSON e JSON Light sono più efficienti di ATOM o XML e possono garantire prestazioni migliori quando si trasferiscono grandi quantità di dati. Nella tabella seguente vengono forniti i risultati dei test di esempio. Come si può notare, si verifica un miglioramento delle prestazioni del 30-53% quando si passa dal formato ATOM a JSON e un miglioramento del 67% quando si passa da ATOM al nuovo formato JSON Light, disponibile in WCF Data Services 5.1.  
   
@@ -69,7 +73,7 @@ L'origine OData include il supporto per le origini dati seguenti:
  **Usa percorso risorsa o raccolta**  
  Consente di specificare il metodo per la selezione dei dati dall'origine.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Collection|Recuperare i dati dall'origine OData utilizzando il nome di una raccolta.|  
 |Percorso risorsa|Recuperare i dati dall'origine OData utilizzando un percorso della risorsa.|  

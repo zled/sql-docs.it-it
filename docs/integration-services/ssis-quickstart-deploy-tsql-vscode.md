@@ -1,6 +1,6 @@
 ---
 title: Distribuire un progetto SSIS con Transact-SQL (Visual Studio Code) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,17 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6c32302d499f1c8dc450d6e10451f080b30249d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b4611b711b9f220af26a7f629480fa9f7b4c071c
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455444"
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Distribuire un progetto SSIS da Visual Studio Code con Transact-SQL
 Questa guida introduttiva illustra come usare Visual Studio Code per connettersi al database del catalogo SSIS e quindi usare istruzioni Transact-SQL per distribuire un progetto SSIS nel catalogo SSIS.
-
-> [!NOTE]
-> Il metodo descritto in questo articolo non è disponibile quando ci si connette a un server di database SQL di Azure con Visual Studio Code. La stored procedure `catalog.deploy_project` prevede che il percorso del file `.ispac` sia nel file system locale.
 
 Visual Studio Code è un editor di codice per Windows, macOS e Linux che supporta le estensioni, incluse le estensioni `mssql` per la connessione a Microsoft SQL Server, al database SQL di Azure o ad Azure SQL Data Warehouse. Per altre informazioni su Visual Studio Code, vedere [Visual Studio Code](https://code.visualstudio.com/).
 
@@ -31,6 +29,16 @@ Visual Studio Code è un editor di codice per Windows, macOS e Linux che support
 Prima di iniziare, assicurarsi di aver installato la versione più recente di Visual Studio Code e caricato l'estensione `mssql`. Per scaricare questi strumenti, vedere le pagine seguenti:
 -   [Scaricare il codice per Visual Studio](https://code.visualstudio.com/Download)
 -   [Estensione mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
+
+## <a name="supported-platforms"></a>Piattaforme supportate
+
+È possibile usare le informazioni di questa guida introduttiva per distribuire un progetto SSIS nelle piattaforme seguenti:
+
+-   SQL Server in Windows.
+
+Non è possibile usare le informazioni di questa guida introduttiva per distribuire un pacchetto SSIS nel database SQL di Azure. La stored procedure `catalog.deploy_project` prevede che il percorso del file `.ispac` sia nel file system locale. Per altre informazioni sulla distribuzione e l'esecuzione di pacchetti in Azure, vedere [Spostare i carichi di lavoro di SQL Server Integration Services nel cloud](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md).
+
+Non è possibile usare le informazioni di questa guida introduttiva per distribuire un pacchetto SSIS a SQL Server in Linux. Per altre informazioni sull'esecuzione di pacchetti in Linux, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../linux/sql-server-linux-migrate-ssis.md).
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>Impostare la modalità di linguaggio su SQL in Visual Studio Code
 
@@ -46,9 +54,6 @@ Per abilitare i comandi `mssql` e Transact-SQL IntelliSense, impostare la modali
 
 Usare SQL Visual Studio Code per stabilire una connessione al catalogo SSIS.
 
-> [!IMPORTANT]
-> Prima di continuare, verificare che siano disponibili le informazioni relative a server, database e accesso. Se si sposta lo stato attivo da Visual Studio Code quando si inizia a immettere le informazioni sul profilo di connessione, è necessario riavviare la creazione del profilo di connessione.
-
 1. In Visual Studio Code premere **CTRL+MAIUSC+P** (o **F1**) per aprire il riquadro comandi.
 
 2. Digitare **sqlcon** e premere **INVIO**.
@@ -61,9 +66,9 @@ Usare SQL Visual Studio Code per stabilire una connessione al catalogo SSIS.
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Nome server** | Nome completo del server |  |
    | **Nome database** | **SSISDB** | Il nome del database a cui si effettua la connessione. |
-   | **Autenticazione** | Account di accesso SQL| In questa guida rapida viene usata l'autenticazione SQL. |
-   | **User name** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
-   | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
+   | **Autenticazione** | Account di accesso SQL | |
+   | **User name** | Account amministratore del server | Account specificato al momento della creazione del server. |
+   | **Password (account di accesso SQL)** | Password per l'account amministratore del server | Password specificata al momento della creazione del server. |
    | **Salvare la password?** | Sì o No | Se non si vuole immettere la password ogni volta, selezionare Sì. |
    | **Immettere un nome per questo profilo** | Un nome di profilo, ad esempio **mySSISServer** | Se si salva un nome di profilo, gli accessi successivi saranno più rapidi. | 
 
