@@ -1,6 +1,6 @@
 ---
 title: Eseguire un progetto SSIS con codice .NET (C#) | Microsoft Docs
-ms.date: 09/25/2017
+ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
@@ -12,14 +12,15 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d53d460267c8eaee91da326000db806a28e2db39
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 78ab97bd62ffcc564fbc1ef707f4ad5d1f7b2033
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455245"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>Eseguire un pacchetto SSIS con codice C# in un'app .NET
-Questa esercitazione introduttiva illustra come scrivere codice C# per connettersi a un server di database ed eseguire un pacchetto SSIS.
+Questa guida introduttiva illustra come scrivere codice C# per connettersi a un server di database ed eseguire un pacchetto SSIS.
 
 Per creare un'app C#, è possibile usare Visual Studio, Visual Studio Code o un altro strumento di propria scelta.
 
@@ -27,19 +28,18 @@ Per creare un'app C#, è possibile usare Visual Studio, Visual Studio Code o un 
 
 Prima di iniziare, verificare che Visual Studio o Visual Studio Code sia installato. Scaricare l'edizione Community gratuita di Visual Studio o lo strumento gratuito Visual Studio Code dalla pagina dei [download di Visual Studio](https://www.visualstudio.com/downloads/).
 
-> [!NOTE]
-> Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
+Un server di database SQL di Azure è in ascolto sulla porta 1433. Se si sta provando a connettersi a un server di database SQL di Azure dall'interno di un firewall aziendale, per stabilire correttamente la connessione questa porta deve essere aperta nel firewall aziendale.
 
-## <a name="get-the-connection-info-if-deployed-to-sql-database"></a>Ottenere le informazioni di connessione se la distribuzione viene eseguita al database SQL
+## <a name="for-azure-sql-database-get-the-connection-info"></a>Ottenere le informazioni di connessione per il database SQL di Azure
 
-Se i pacchetti vengono distribuiti a un database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
+Per eseguire il pacchetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
 1. Accedere al [portale di Azure](https://portal.azure.com/).
-2. Selezionare **Database SQL** dal menu a sinistra e fare clic sul database SSIDB nella pagina dei **database SQL**. 
+2. Selezionare **Database SQL** nel menu a sinistra, quindi selezionare il database SSISDB nella pagina dei **database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 5. Fare clic su **Mostra stringhe di connessione del database**.
-6. Esaminare l'intera stringa di connessione **ADO.NET**. L'esempio di codice usa `SqlConnectionStringBuilder` per ricreare questa stringa di connessione con i valori dei singoli parametri specificati.
+6. Esaminare l'intera stringa di connessione **ADO.NET**. Facoltativamente il codice può usare `SqlConnectionStringBuilder` per ricreare questa stringa di connessione con i valori dei singoli parametri specificati.
 
 ## <a name="create-a-new-visual-studio-project"></a>Creare un nuovo progetto Visual Studio
 
@@ -65,7 +65,7 @@ Se i pacchetti vengono distribuiti a un database SQL di Azure, ottenere le infor
 2. Sostituire il contenuto di **Program.cs** con il codice seguente. Aggiungere i valori appropriati per server, database, utente e password.
 
 > [!NOTE]
-> L'esempio seguente usa l'autenticazione di Windows. Per usare l'autenticazione di SQL Server, sostituire l'argomento `Integrated Security=SSPI;` con `User ID=<user name>;Password=<password>;`.
+> L'esempio seguente usa l'autenticazione di Windows. Per usare l'autenticazione di SQL Server, sostituire l'argomento `Integrated Security=SSPI;` con `User ID=<user name>;Password=<password>;`. Se ci si connette a un server di database SQL di Azure, non è possibile usare l'autenticazione di Windows.
 
 
 ```csharp

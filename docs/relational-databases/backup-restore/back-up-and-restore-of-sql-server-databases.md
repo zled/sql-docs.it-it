@@ -26,23 +26,20 @@ caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 22b55997d2631001afe9e220f87056026c49b4aa
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f5a985cffb4aa982e598cbaaeb5c8ddb57133fd7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455674"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Backup e ripristino di database SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-
-  In questo argomento vengono descritti i vantaggi dell'esecuzione del backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e illustrati i termini di base del backup e del ripristino. Vengono inoltre presentate alcune strategie di backup e ripristino per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alcune considerazioni relative alla sicurezza per il backup e il ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . 
-  
-[!INCLUDE[ssMIlimitation](../../includes/sql-db-mi-limitation.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+  In questo articolo vengono descritti i vantaggi dell'esecuzione del backup dei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e illustrati i termini di base del backup e del ripristino. Vengono anche presentate alcune strategie di backup e ripristino per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e alcune considerazioni relative alla sicurezza per il backup e il ripristino di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > **Servono istruzioni dettagliate?** Questo argomento **non fornisce procedure specifiche per l'esecuzione di un backup**. Per informazioni specifiche sul backup, in fondo a questa pagina è presente una sezione di collegamenti, organizzati per attività di backup e in base all'uso di T-SQL o SQL Server Management Studio.  
   
- Il componente di backup e ripristino di SQL Server rappresenta uno strumento essenziale per la sicurezza e la protezione di dati di importanza critica archiviati nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ridurre il rischio di perdita irreversibile dei dati, è necessario eseguire regolarmente il backup dei database per preservare le modifiche ai dati. Una strategia di backup e ripristino ben pianificata aiuta a proteggere i database dalla perdita di dati causata da vari tipi di guasti e problemi. Il test della strategia mediante il ripristino di un set di backup e il recupero del database assicura una efficace preparazione a reagire in qualsiasi emergenza.  
+ Il componente di backup e ripristino di SQL Server rappresenta uno strumento essenziale per la sicurezza e la protezione di dati di importanza critica archiviati nei database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Per ridurre il rischio di perdita irreversibile dei dati, è necessario eseguire regolarmente il backup dei database per preservare le modifiche ai dati. Una strategia di backup e ripristino ben pianificata aiuta a proteggere i database dalla perdita di dati causata da vari tipi di guasti e problemi. Il test della strategia mediante il ripristino di un set di backup e il recupero del database assicura una efficace preparazione a reagire in qualsiasi emergenza.
   
  Oltre alle risorse di archiviazione locale per l'archiviazione di backup, SQL Server supporta anche il backup e il ripristino dal servizio di archiviazione BLOB di Windows Azure. Per altre informazioni, vedere [Backup e ripristino di SQL Server con il servizio di archiviazione BLOB di Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Per i file di database archiviati tramite il servizio di archiviazione BLOB di Microsoft Azure, [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] consente di usare gli snapshot di Azure per backup quasi istantanei e operazioni di ripristino più veloci. Per altre informazioni, vedere [Backup di snapshot di file per i file di database in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -51,12 +48,9 @@ ms.lasthandoff: 05/03/2018
 
      Con backup validi di un database, è possibile recuperare i dati a seguito di molti tipi di guasti ed errori, quali:  
   
-    -   Errori di funzionamento dei supporti.  
-  
-    -   Errori degli utenti, ad esempio l'eliminazione accidentale di una tabella.  
-  
-    -   Errori hardware, ad esempio un'unità disco danneggiata o la perdita definitiva di un server.  
-  
+    -   Errori di funzionamento dei supporti.    
+    -   Errori degli utenti, ad esempio l'eliminazione accidentale di una tabella.    
+    -   Errori hardware, ad esempio un'unità disco danneggiata o la perdita definitiva di un server.    
     -   Calamità naturali o altre emergenze gravi. Tramite il backup di SQL Server nel servizio di archiviazione BLOB di Windows Azure, è possibile creare un backup esterno in un'area diversa dalla posizione locale da utilizzare in caso si venga colpiti da una calamità naturale.  
   
 -   I backup di un database risultano inoltre utili per le attività di amministrazione di routine, ad esempio la copia di un database da un server a un altro, l'impostazione di [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] o del mirroring del database e l'archiviazione.  
@@ -104,8 +98,8 @@ Dispositivo di**backup**
  ##  <a name="backup-and-restore-strategies"></a>Strategie di backup e ripristino  
  Il backup e il ripristino dei dati devono essere personalizzati per uno specifico ambiente e devono funzionare con le risorse disponibili. Per un utilizzo affidabile delle funzionalità di backup e ripristino è pertanto necessaria un'apposita strategia. Una strategia ben progettata a tale scopo ottimizza la disponibilità dei dati e ne riduce al minimo la perdita, rispettando al contempo le esigenze aziendali specifiche.  
   
-#### <a name="important"></a>Importante! 
-**Archiviare il database e i backup su dispositivi separati. In caso contrario, se nel dispositivo contenente il database si verifica un errore, i backup non saranno disponibili. L'archiviazione dei dati e dei backup su dispositivi separati migliora inoltre le prestazioni di I/O sia per la scrittura dei backup che per l'uso in produzione del database.**  
+  > [!IMPORTANT] 
+  > Archiviare il database e i backup su dispositivi separati. In caso contrario, se nel dispositivo contenente il database si verifica un errore, i backup non saranno disponibili. L'archiviazione dei dati e dei backup su dispositivi separati migliora anche le prestazioni di I/O sia per la scrittura dei backup sia per l'uso in produzione del database.**  
   
  Tale strategia prevede una parte relativa al backup e una parte relativa al ripristino. La parte della strategia relativa al backup definisce il tipo e la frequenza delle operazioni di backup, il tipo e la velocità dell'hardware necessario, le modalità di esecuzione di test dei backup, nonché i percorsi e le modalità di archiviazione dei relativi supporti, incluse le considerazioni relative alla sicurezza. La parte della strategia relativa al ripristino definisce il responsabile dell'esecuzione delle operazioni di ripristino e la modalità di esecuzione di tali operazioni in modo da realizzare gli obiettivi relativi alla disponibilità del database e ridurre al minimo il rischio di perdita dei dati. È consigliabile documentare le procedure di backup e ripristino e mantenerne una copia nella documentazione relativa alle procedure operative aziendali.  
   
@@ -151,12 +145,46 @@ Dispositivo di**backup**
    
 >  Per informazioni sulle restrizioni di concorrenza durante il backup, vedere [Panoramica del backup &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
- Dopo aver stabilito i tipi di backup necessari e la frequenza di esecuzione per ogni tipo, è consigliabile pianificare backup regolari come parte di un piano di manutenzione per il database. Per informazioni sui piani di manutenzione e su come crearli per i backup di database e di log, vedere [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).  
+ Dopo aver stabilito i tipi di backup necessari e la frequenza di esecuzione per ogni tipo, è consigliabile pianificare backup regolari come parte di un piano di manutenzione per il database. Per informazioni sui piani di manutenzione e su come crearli per i backup di database e di log, vedere [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md).
   
 ### <a name="test-your-backups"></a>Eseguire test dei backup  
- Una strategia di ripristino può essere considerata efficace solo dopo l'esecuzione di test dei backup. È essenziale testare accuratamente la strategia di backup per ogni database ripristinando una copia del database in un sistema di prova. È necessario testare il ripristino di tutti i tipi di backup che si desidera utilizzare.  
+ Una strategia di ripristino può essere considerata efficace solo dopo l'esecuzione di test dei backup. È essenziale testare accuratamente la strategia di backup per ogni database ripristinando una copia del database in un sistema di prova. È necessario testare il ripristino di tutti i tipi di backup che si desidera utilizzare.
   
- È consigliabile mantenere un manuale operativo per ogni database, in cui indicare la posizione dei backup, i nomi dei dispositivi di backup (se presenti) e il tempo necessario per il ripristino dei backup di prova.  
+ È consigliabile mantenere un manuale operativo per ogni database, in cui indicare la posizione dei backup, i nomi dei dispositivi di backup (se presenti) e il tempo necessario per il ripristino dei backup di prova.
+
+## <a name="monitor-progress-with-xevent"></a>Monitorare l'avanzamento con xEvent
+Le operazioni di backup e ripristino possono richiedere molto tempo a causa delle dimensioni di un database e della complessità delle operazioni coinvolte. Quando si verificano problemi con una delle operazioni, è possibile usare l'evento esteso **backup_restore_progress_trace** per monitorare l'avanzamento in tempo reale. Per altre informazioni sugli eventi estesi, vedere [Eventi estesi](../extended-events/extended-events.md).
+
+  >[!WARNING]
+  > L'evento esteso backup_restore_progress_trace può causare un problema di prestazioni e usare una quantità di spazio su disco considerevole. È consigliabile usarlo per brevi periodi di tempo, prestare attenzione ed eseguire test accurati prima di implementarlo nell'ambiente di produzione.
+
+
+```sql
+-- Create the backup_restore_progress_trace extended event esssion
+CREATE EVENT SESSION [BackupRestoreTrace] ON SERVER 
+ADD EVENT sqlserver.backup_restore_progress_trace
+ADD TARGET package0.event_file(SET filename=N'BackupRestoreTrace')
+WITH (MAX_MEMORY=4096 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=5 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)
+GO
+
+-- Start the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = start;  
+GO  
+
+-- Stop the event session  
+ALTER EVENT SESSION [BackupRestoreTrace]  
+ON SERVER  
+STATE = stop;  
+GO  
+```
+
+### <a name="sample-output-from-extended-event"></a>Esempio di output dell'evento esteso 
+
+![Esempio di output xEvent per backup](media/back-up-and-restore-of-sql-server-databases/backup-xevent-example.png)
+![Esempio di output xEvent per backup](media/back-up-and-restore-of-sql-server-databases/restore-xevent-example.png)
+ 
   
 ## <a name="more-about-backup-tasks"></a>Altre informazioni sulle operazioni di backup  
 -   [Creare un piano di manutenzione](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  

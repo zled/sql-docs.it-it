@@ -1,6 +1,6 @@
 ---
-Title: 'Tutorial: Using Templates in SQL Server Management Studio'
-description: Esercitazione per l'uso di modelli in SSMS. ,
+Title: 'Tutorial: Using templates in SQL Server Management Studio'
+description: Esercitazione per l'uso di modelli in SSMS.
 keywords: SQL Server, SSMS, SQL Server Management Studio, Modelli
 author: MashaMSFT
 ms.author: mathoma
@@ -20,13 +20,14 @@ helpviewer_keywords:
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: c4ddbf149048b7cb7f89be24369c60afc47bdb4a
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 539906b1a09838e43e34be96e4ee32daec19fab7
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455225"
 ---
-# <a name="tutorial-using-templates-within-sql-server-management-studio"></a>Esercitazione: Uso di modelli in SQL Server Management Studio
+# <a name="tutorial-using-templates-in-sql-server-management-studio"></a>Esercitazione: Uso di modelli in SQL Server Management Studio
 Questa esercitazione illustra i modelli predefiniti di Transact-SQL (T-SQL) che sono disponibili in SQL Server Management Studio (SSMS). In questo articolo vengono illustrate le operazioni seguenti:
 
 > [!div class="checklist"]
@@ -37,79 +38,80 @@ Questa esercitazione illustra i modelli predefiniti di Transact-SQL (T-SQL) che 
    
 
 ## <a name="prerequisites"></a>Prerequisites
-Per completare questa esercitazione, sono necessari SQL Server Management Studio e l'accesso a SQL Server. 
+Per completare questa esercitazione, è necessario SQL Server Management Studio e l'accesso a un server SQL. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
  
 
-## <a name="using-the-template-browser"></a>Uso del visualizzatore modelli
-In questa sezione si apprenderà come individuare e usare il **Visualizzatore modelli**. 
+## <a name="use-template-browser"></a>Usare il visualizzatore modelli
+Questa sezione illustra come individuare e usare il visualizzatore modelli. 
 
-1. Avviare SQL Server Management Studio.
-2. Dal menu **Visualizza** > **Visualizzatore modelli** (CTRL+ALT+T): 
+1. Aprire SQL Server Management Studio.
+2. Nel menu **Visualizza** selezionare **Visualizzatore modelli** (CTRL+ALT+T): 
 
-    ![Visualizzatore modelli](media/templates-ssms/templatebrowser.png)
-    - È anche possibile visualizzare i modelli usati di recente nella parte inferiore di **Visualizzatore modelli**.
+    ![Aprire il visualizzatore modelli](media/templates-ssms/templatebrowser.png)
+    
+    È possibile visualizzare i modelli usati di recente nella parte inferiore del visualizzatore modelli.
 
-3. Espandere il nodo di interesse > fare clic con il pulsante destro del mouse sul modello > Apri:
+3. Espandere il nodo desiderato. Fare clic con il pulsante destro sul modello e quindi selezionare **Apri**:
 
     ![Aprire un modello](media/templates-ssms/opentemplate.png)
-    - In alternativa, fare doppio clic sul modello.
+    
+    È anche possibile fare doppio clic sul nome del modello per aprirlo.
 
-4. Viene avviata una nuova finestra di query con l'istruzione T-SQL già popolata. 
+4. Viene visualizzata una nuova finestra di query. Lo script T-SQL è già popolato. 
 5. Modificare il modello in base alle esigenze e selezionare **Esegui** per eseguire la query:
     
-    ![Creare il modello di database](media/templates-ssms/createdbtemplate.png)
+    ![Creare un modello di database](media/templates-ssms/createdbtemplate.png)
 
 
 ## <a name="edit-an-existing-template"></a>Modificare un modello esistente
-È anche possibile modificare i modelli esistenti all'interno del **Visualizzatore modelli**.  
+È anche possibile modificare i modelli esistenti nel visualizzatore modelli.  
 
-1. Individuare il modello di interesse nel **Visualizzatore modelli**.
-2. Fare clic con il pulsante destro del mouse sul modello > **Modifica**:
+1. Nel visualizzatore modelli passare al modello da usare.
+2. Fare clic con il pulsante destro del mouse sul modello e quindi scegliere **Modifica**:
 
-    ![Modificare il modello](media/templates-ssms/edittemplate.png)
+    ![Modificare un modello](media/templates-ssms/edittemplate.png)
 
-3. Apportare le modifiche desiderate nella finestra di query che viene aperta.
-4. Salvare il modello selezionando **File** > **Salva** (CTRL+S).
+3. Nella finestra di query aperta apportare le modifiche desiderate.
+4. Per salvare il modello, selezionare **File** > **Salva** (CTRL+S).
 5. Chiudere la finestra di query.
-6. Riaprire il modello che è stato salvato > tutte le nuove modifiche dovrebbero essere presenti.
+6. Riaprire il modello. Vengono visualizzate le modifiche apportate.
  
 
-## <a name="locate-the-templates-on-disk"></a>Individuare i modelli su disco
-Una volta aperto un modello, è possibile individuarlo sul disco.
+## <a name="locate-templates-on-disk"></a>Individuare i modelli su disco
+Quando un modello è aperto, è possibile individuare i modelli che si trovano su disco.
 
-1. Selezionare un modello in **Visualizzatore modelli** > **Modifica**.
-2. Fare clic con il pulsante destro del mouse sul **titolo della query** > **Open Containing Folder** (Apri cartella superiore). In questo modo viene aperto Esplora risorse dove sono visualizzati i modelli archiviati su disco: 
+1. Nel visualizzatore modelli selezionare un modello e quindi scegliere **Modifica**.
+2. Fare clic con il pulsante destro del mouse su **Titolo query**, quindi selezionare **Apri cartella superiore**. I modelli archiviati su disco vengono visualizzati in Esplora risorse: 
 
-    ![Modelli su disco](media/templates-ssms/templatesondisk.png)
+   ![Modelli su disco](media/templates-ssms/templatesondisk.png)
   
 
 ## <a name="create-a-new-template"></a>Creare un nuovo modello
-In **Visualizzatore modelli** è anche possibile creare nuovi modelli. I passaggi seguenti illustrano come creare una nuova cartella e quindi creare un nuovo modello all'interno di tale cartella. Tuttavia, con questi passaggi è possibile creare anche un modello personalizzato all'interno di cartelle esistenti. 
+È anche possibile creare un nuovo modello nel visualizzatore modelli. La procedura seguente illustra come creare una nuova cartella e quindi creare un nuovo modello nella cartella. È anche possibile seguire la procedura per creare un modello personalizzato in una cartella esistente. 
 
-1. Aprire **Visualizzatore modelli**.
-2. Fare clic con il pulsante destro del mouse su Modelli di SQL Server > **Nuovo** > **Cartella**.
+1. Aprire il visualizzatore modelli.
+2. Fare clic con il pulsante destro del mouse su **Modelli di SQL Server** e quindi selezionare **Nuovo** > **Cartella**.
 3. Denominare la cartella **Modelli personalizzati**:
 
-    ![Creazione di modelli personalizzati](media/templates-ssms/creatingcustomtemplate.png)
+    ![Creare una cartella di modelli personalizzati](media/templates-ssms/creatingcustomtemplate.png)
 
-4. Fare clic con il pulsante destro del mouse sulla cartella **Modelli personalizzati** appena creata > **Nuovo** > **Modello** > denominare il modello:
+4. Fare clic con il pulsante destro del mouse sulla cartella Modelli personalizzati appena creata e quindi selezionare **Nuovo** > **Modello**. Immettere un nome per il modello:
  
-    ![Creare modelli personalizzati](media/templates-ssms/createnewtemplate.png)
+    ![Creare un modello personalizzato](media/templates-ssms/createnewtemplate.png)
    
-5. Fare clic con il pulsante destro del mouse sul modello appena creato > **Modifica**. Viene aperta una **nuova finestra di query**.
-6. Digitare il testo T-SQL che si vuole salvare. 
-7. Salvare il file selezionando il menu **File** > **Salva**.
-8. Chiudere la **finestra di query** esistente e aprire il nuovo modello personalizzato. 
+5. Fare clic con il pulsante destro del mouse sul modello creato e quindi scegliere **Modifica**. Viene visualizzata la nuova finestra di query.
+6. Immettere il testo T-SQL che si vuole salvare. 
+7. Scegliere **Salva** dal menu **File**.
+8. Chiudere la finestra di query esistente e aprire il nuovo modello personalizzato. 
 
     
 
 ## <a name="next-steps"></a>Passaggi successivi
-Nell'articolo successivo verranno offerti alcuni suggerimenti e consigli aggiuntivi per l'uso di SQL Server Management Studio. 
+L'articolo successivo offre suggerimenti e consigli aggiuntivi per l'uso di SQL Server Management Studio. 
 
-Per altre informazioni, vedere l'articolo successivo
 > [!div class="nextstepaction"]
-> [Pulsante passaggi successivi](ssms-tricks.md)
+> [Suggerimenti e consigli per l'uso di SSMS](ssms-tricks.md)

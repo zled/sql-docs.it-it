@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Additional Tips and Tricks for using SSMS'
+Title: 'Tutorial: Additional tips and tricks for using SQL Server Management Studio'
 description: 'Esercitazione che illustra suggerimenti e consigli aggiuntivi per usare SSMS. '
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -18,14 +18,15 @@ helpviewer_keywords:
 - tutorials [SQL Server Management Studio]
 - Transact-SQL tutorials
 - SQL Server Management Studio [SQL Server], tutorials
-ms.openlocfilehash: e358fb73ff4f248b7de368364b8bb758f70018ff
-ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
+ms.openlocfilehash: 80d50132c4e2b38ecda9d24b3c0f4c09b93ca4e6
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455255"
 ---
 # <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Esercitazione: Suggerimenti e consigli per l'uso di SSMS
-Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio. In questo articolo viene illustrato come eseguire quanto segue: 
+Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Server Management Studio (SSMS). Questo articolo illustra come: 
 
 > [!div class="checklist"]
 > * Inserire e rimuovere commenti nel testo Transact-SQL (T-SQL)
@@ -35,19 +36,20 @@ Questa esercitazione offre alcuni suggerimenti aggiuntivi per l'uso di SQL Serve
 > * Trovare il nome dell'istanza di SQL Server
 
 ## <a name="prerequisites"></a>Prerequisites
-Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a SQL Server e un database AdventureWorks. 
+Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un'istanza di SQL Server e un database AdventureWorks. 
 
 - Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 - Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
-- Scaricare un [database campione AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+- Scaricare un [database di esempio AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases). Per informazioni su come ripristinare un database in SSMS, vedere [Ripristino di un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
-## <a name="comment--uncomment-your-t-sql-code"></a>Inserire e rimuovere commenti nel codice T-SQL
-È possibile inserire e rimuovere commenti in parti del testo usando il pulsante dei commenti sulla barra degli strumenti. Il testo che viene impostato come commento non viene eseguito. 
+
+## <a name="commentuncomment-your-t-sql-code"></a>Inserire e rimuovere commenti nel codice T-SQL
+È possibile inserire e rimuovere commenti in parti del testo usando il pulsante **Commento** sulla barra degli strumenti. Il testo che viene impostato come commento non viene eseguito. 
 
 1. Aprire SQL Server Management Studio. 
-2. Connettersi a SQL Server.
-3. Aprire una finestra **Nuova query**. 
-4. Incollare il frammento di codice T-SQL seguente nella finestra del testo: 
+2. Connettersi all'istanza di SQL Server.
+3. Aprire una finestra Nuova query. 
+4. Incollare il codice T-SQL seguente nella finestra di testo: 
 
   ```sql
     USE master
@@ -71,25 +73,25 @@ Per completare questa esercitazione, sono necessari SQL Server Management Studio
  ``` 
 
 
-5. Evidenziare la parte del testo **Alter Database** e fare clic su **Commento** sulla barra degli strumenti: 
+5. Evidenziare la parte di testo **Alter Database** e quindi selezionare il pulsante **Commento** sulla barra degli strumenti: 
 
-    ![Commento](media/ssms-tricks/comment.png)
-6. Fare clic su **Esegui** per eseguire la parte di testo senza commenti. 
-7. Evidenziare tutto tranne il comando **Alter Database** e fare clic su **Commento** sulla barra degli strumenti:
+    ![Pulsante Commento](media/ssms-tricks/comment.png)
+6. Selezionare **Esegui** per eseguire la parte di testo senza commenti. 
+7. Evidenziare tutto ad eccezione del comando **Alter Database** e quindi selezionare il pulsante **Commento**:
 
     ![Commentare tutto](media/ssms-tricks/commenteverything.png)
 
-8. Evidenziare la parte **Alter Database** e fare clic su **Uncomment** (Rimuovi commento) per rimuovere i commenti:
+8. Evidenziare la parte di testo **Alter Database** e quindi selezionare il pulsante **Rimuovi commento** per rimuovere i commenti:
 
-    ![Rimuovere il commento](media/ssms-tricks/uncomment.png)
+    ![Rimuovere commenti dal testo](media/ssms-tricks/uncomment.png)
     
-9. Fare clic su **Esegui** per eseguire la parte di testo senza commenti. 
+9. Selezionare **Esegui** per eseguire la parte di testo senza commenti. 
 
 ## <a name="indent-your-text"></a>Impostare un rientro del testo
-I pulsanti di rientro consentono di aumentare e ridurre il rientro del testo. 
+È possibile usare i pulsanti di rientro sulla barra degli strumenti per aumentare o ridurre il rientro del testo. 
 
-1. Aprire una finestra **Nuova query**. 
-2. Incollare il frammento di codice T-SQL seguente nella finestra del testo: 
+1. Aprire una finestra Nuova query. 
+2. Incollare il codice T-SQL seguente nella finestra di testo: 
 
   ```sql
     USE master
@@ -112,65 +114,68 @@ I pulsanti di rientro consentono di aumentare e ridurre il rientro del testo.
     GO
  ``` 
  
-3. Evidenziare la parte di testo **Alter Database** e premere **Aumenta rientro** sulla barra degli strumenti per spostare il testo in avanti:
+3. Evidenziare la parte di testo **Alter Database** e quindi selezionare il pulsante **Aumenta rientro** sulla barra degli strumenti per spostare il testo in avanti:
 
-    ![Aumenta rientro](media/ssms-tricks/increaseindent.png)
+    ![Aumentare il rientro](media/ssms-tricks/increaseindent.png)
 
-4. Evidenziare nuovamente la parte **Alter Database** e questa volta fare clic su **Riduci rientro** per riportare indietro il testo. 
-    ![Riduci rientro](media/ssms-tricks/decreaseindent.png)
+4. Evidenziare di nuovo la parte di testo **Alter Database** e quindi selezionare il pulsante **Riduci rientro** per riportare indietro il testo.
+
+    ![Ridurre il rientro](media/ssms-tricks/decreaseindent.png)
 
 
 ## <a name="filter-objects-in-object-explorer"></a>Filtrare oggetti in Esplora oggetti
-Quando un database include molti oggetti, può risultare difficile trovare un oggetto specifico. Per semplificare questa operazione, è possibile filtrare gli oggetti. In questa sezione viene illustrato come filtrare le tabelle, ma gli stessi passaggi possono essere applicati a qualsiasi altro nodo all'interno di **Esplora oggetti**
+È possibile filtrare gli oggetti per semplificare il reperimento di oggetti specifici nei database con molti oggetti. In questa sezione viene illustrato come filtrare le tabelle, ma è possibile usare i passaggi seguenti in qualsiasi altro nodo in Esplora oggetti:
 
-1. Connettersi a SQL Server.
-2. Espandere il nodo **Database**.
-3. Espandere il nodo del database **AdventureWorks**. 
-4. Espandere il nodo **Tabelle**. 
-   - Si noterà che è possibile visualizzare tutte le tabelle presenti nel database.
-5. Fare clic con il pulsante destro del mouse sul nodo **Tabelle** > **Filtro** > **Impostazioni filtro**:
+1. Connettersi all'istanza di SQL Server.
+2. Espandere **Database** > **AdventureWorks** > **Tabelle**. Verranno visualizzate tutte le tabelle nel database.
+5. Fare clic con il pulsante destro del mouse su **Tabelle** e quindi selezionare **Filtro** > **Impostazioni filtro**:
 
     ![Impostazioni filtro](media/ssms-tricks/filtersettings.png)
 
-6. Nella finestra Impostazioni filtro, è possibile modificare le impostazioni del filtro. Alcuni esempi:
-    - Filtro per il nome: ![Filtro per nome](media/ssms-tricks/filterbyname.png)
-    - Filtro per lo schema: ![Filtro per schema](media/ssms-tricks/filterbyschema.png)
+6. Nella finestra **Impostazioni filtro** è possibile modificare alcune delle impostazioni di filtro seguenti:
+    - Filtra per nome: 
+   
+      ![Filtrare per nome](media/ssms-tricks/filterbyname.png)
 
-7. Per cancellare il filtro, fare clic con il pulsante destro del mouse su **Tabelle** > **Rimuovi filtro**
+    - Filtra per schema: 
+    
+      ![Filtrare per schema](media/ssms-tricks/filterbyschema.png)
 
-    ![Rimuovi filtro](media/ssms-tricks/removefilter.png)
+7. Per cancellare il filtro, fare clic con il pulsante destro del mouse su **Tabelle** e quindi selezionare **Rimuovi filtro**.
+
+    ![Rimuovere il filtro](media/ssms-tricks/removefilter.png)
     
 
 
 ## <a name="access-your-sql-server-error-log"></a>Accedere al log degli errori di SQL Server
-Il log degli errori è un file che contiene i dettagli di ciò che si verifica all'interno di SQL Server. All'interno di SSMS è possibile esplorare tale file ed eseguirvi delle query. È anche reperibile come un file con estensione log su disco.
+Il log degli errori è un file che contiene i dettagli di ciò che si verifica nell'istanza di SQL Server. È possibile sfogliare il log degli errori in SSMS ed eseguire query su di esso. Il log degli errori è un file con estensione log che si trova sul disco.
 
-### <a name="open-error-log-within-ssms"></a>Aprire il log degli errori in SSMS
-1. Connettersi a SQL Server.
-2. Espandere il nodo **Gestione** . 
-3. Espandere il nodo **Log di SQL Server**. 
-4. Fare clic con il pulsante destro del mouse sul log degli errori **Current** > **Visualizza log di SQL Server**:
+### <a name="open-the-error-log-in-ssms"></a>Aprire il log degli errori in SSMS
+1. Connettersi all'istanza di SQL Server.  
+2. Espandere **Gestione** > **Log di SQL Server**. 
+4. Fare clic con il pulsante destro del mouse sul log degli errori **Corrente** e quindi selezionare **Visualizza log di SQL Server**:
 
     ![Visualizzare il log degli errori in SSMS](media/ssms-tricks/viewerrorloginssms.png)
 
-### <a name="query-error-log-within-ssms"></a>Eseguire query sul log degli errori in SSMS
-1. Connettersi a SQL Server.
-2. Aprire una finestra **Nuova query**.
-3. Incollare il frammento di codice T-SQL seguente nella finestra di query:
+### <a name="query-the-error-log-in-ssms"></a>Eseguire query sul log degli errori in SSMS
+1. Connettersi all'istanza di SQL Server.
+2. Aprire una finestra Nuova query.
+3. Incollare il codice T-SQL seguente nella finestra di query:
 
  ```sql
    sp_readerrorlog 0,1,'Server process ID' 
   ``` 
-4. Modificare il testo tra virgolette singole nel testo di interesse.
-5. Eseguire la query e visualizzare i risultati:
+
+4. Sostituire il testo tra virgolette singole con il testo da cercare.
+5. Eseguire la query, quindi esaminare i risultati:
    
     ![Eseguire query sul log degli errori](media/ssms-tricks/queryerrorlog.png)
 
 
-### <a name="find-error-log-location-if-youre-connected-to-sql"></a>Trovare il percorso del log degli errori se si è connessi a SQL
-1. Connettersi a SQL Server.
-2. Aprire una finestra **Nuova query**.
-3. Incollare il frammento di codice T-SQL seguente nella finestra di query e fare clic su **Esegui**:
+### <a name="find-the-error-log-location-if-youre-connected-to-sql-server"></a>Trovare il percorso del log degli errori se si è connessi a SQL Server
+1. Connettersi all'istanza di SQL Server.
+2. Aprire una finestra Nuova query.
+3. Incollare il codice T-SQL seguente nella finestra di query e selezionare **Esegui**:
 
  ```sql
     SELECT SERVERPROPERTY('ErrorLogFileName') AS 'Error log file location'  
@@ -180,55 +185,62 @@ Il log degli errori è un file che contiene i dettagli di ciò che si verifica a
 
     ![Trovare il log degli errori mediante query](media/ssms-tricks/finderrorlogquery.png)
 
-### <a name="find-error-log-location-if-you-cannot-connect-to-sql"></a>Trovare il percorso del log degli errori se non è possibile connettersi a SQL
+### <a name="find-the-error-log-location-if-you-cant-connect-to-sql-server"></a>Trovare il percorso del log degli errori se non è possibile connettersi a SQL Server
 1. Aprire Gestione configurazione SQL Server. 
-2. Espandere il nodo **Servizi**.
-3. Fare clic con il pulsante destro del mouse sull'istanza di Server SQL > **Proprietà**:
+2. Espandere **Servizi**.
+3. Fare clic con il pulsante destro del mouse sull'istanza di SQL Server e quindi selezionare **Proprietà**:
 
-    ![Proprietà della Gestione configurazione](media/ssms-tricks/serverproperties.PNG)
+    ![Proprietà del server di Gestione configurazione](media/ssms-tricks/serverproperties.PNG)
 
 4. Selezionare la scheda **Parametri di avvio**.
 5. Nell'area **Parametri esistenti** il percorso dopo "-e" è il percorso del log degli errori: 
     
-    ![log degli errori](media/ssms-tricks/errorlog.png)
-    - Si noterà che esistono diversi file errorlog.* in questo percorso. Quello che termina con *.log è quello corrente. Quelli che terminano con i numeri sono log precedenti, dal momento che viene creato un nuovo log ad ogni riavvio di SQL Server. 
-6. Aprire il file nel Blocco note. 
+    ![Log degli errori](media/ssms-tricks/errorlog.png)
+    
+    In questo percorso sono presenti diversi file errorlog.*. Il nome del file che termina con *.log è il file del log degli errori corrente. I nomi di file che terminano con numeri sono i file di log precedenti. A ogni riavvio dell'istanza di SQL Server viene creato un nuovo log.
 
-## <a name="determine-sql-server-name"></a>Determinare il nome di SQL Server...
-Esistono diversi modi per determinare il nome di SQL Server, prima e dopo la connessione.  
+6. Aprire il file errorlog.log nel Blocco note. 
 
-### <a name="when-you-dont-know-it"></a>...Quando non lo si conosce
+## <a name="determine-sql-server-name"></a>Trovare il nome di SQL Server
+Per trovare il nome dell'istanza di SQL Server prima e dopo la connessione a SQL Server sono disponibili alcune opzioni.  
+
+### <a name="before-you-connect-to-sql-server"></a>Prima di connettersi a SQL Server
 1. Seguire la procedura per individuare il [log degli errori di SQL Server su disco](#finding-your-error-log-if-you-cannot-connect-to-sql). 
-2. Aprire errorlog.log nel Blocco note. 
-3. Scorrere fino a quando non si trova il testo "Il nome del server è":
-  - Il testo racchiuso tra virgolette singole è il nome del server SQL Server al quale si eseguirà la connessione: ![Nome del server nel log degli errori](media/ssms-tricks/servernameinlog.png). Il formato è 'NOMEHOST\NOMEISTANZA'. Se viene visualizzato solo il nome host, l'istanza installata è l'istanza predefinita e il suo nome è "MSSQLSERVER". Quando ci si connette a un'istanza predefinita, è sufficiente digitare il nome host per connettersi a SQL Server.  
+2. Aprire il file errorlog.log nel Blocco note.  
+3. Cercare il testo *Server name is*.
+    
+    Ciò che è racchiuso tra virgolette singole è il nome dell'istanza di SQL Server a cui ci si connetterà:
 
-### <a name="once-youre-connected-to-sql"></a>...Dopo essersi connessi a SQL Server 
-Il nome del server SQL Server al quale si è connessi è visualizzato in tre posizioni. 
+    ![Trovare il nome del server nel log degli errori](media/ssms-tricks/servernameinlog.png)
+    
+    Il formato del nome è NOMEHOST\NOMEISTANZA. Se viene visualizzato solo il nome host, l'istanza installata è l'istanza predefinita e il suo nome è MSSQLSERVER. Quando ci si connette a un'istanza predefinita, è sufficiente immettere il nome host per connettersi all'istanza di SQL Server.  
 
-1. Il nome del server sarà elencato in **Esplora oggetti**:
+### <a name="when-youre-connected-to-sql-server"></a>Quando si è connessi a SQL Server 
+Quando si è connessi a SQL Server, il nome del server è disponibile in tre posizioni: 
 
-    ![Nome dell'istanza in Esplora oggetti](media/ssms-tricks/nameinobjectexplorer.png)
-2. Il nome del server sarà elencato nella finestra di query:
+1. Il nome del server è elencato in Esplora oggetti:
 
-    ![Nome nella finestra di query](media/ssms-tricks/nameinquerywindow.png)
-3. Il nome del server sarà elencato anche nella **finestra Proprietà**.
-    - Per accedere a questa finestra, aprire **Visualizza** Menu > **Finestra Proprietà**:
+    ![Nome dell'istanza di SQL Server in Esplora oggetti](media/ssms-tricks/nameinobjectexplorer.png)
+2. Il nome del server è elencato nella finestra di query:
 
-    ![Nome in Proprietà](media/ssms-tricks/nameinproperties.png)
+    ![Nome dell'istanza di SQL Server nella finestra di query](media/ssms-tricks/nameinquerywindow.png)
+3. Il nome del server è elencato in **Proprietà**.
+    - Selezionare **Finestra Proprietà** dal menu **Visualizza**:
 
-### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>...Se si è connessi a un alias o a un listener del gruppo di disponibilità 
-Quando si è connessi a un alias o a un listener del gruppo di disponibilità, sono questi elementi che vengono visualizzati in **Esplora oggetti** e **Proprietà**. In questo caso il nome di SQL Server potrebbe non essere immediatamente evidente e deve essere eseguita una query per recuperarlo. 
+      ![Nome dell'istanza di SQL Server nella finestra Proprietà](media/ssms-tricks/nameinproperties.png)
 
-1. Connettersi a SQL Server.
-2. Aprire una finestra **Nuova query**.
-3. Incollare il frammento di codice T-SQL seguente nella finestra: 
+### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Se si è connessi a un alias o a un listener del gruppo di disponibilità 
+Se si è connessi a un alias o a un listener del gruppo di disponibilità, questa informazione viene visualizzata in Esplora oggetti e Proprietà. In questo caso il nome di SQL Server potrebbe non essere immediatamente evidente e deve essere eseguita una query per recuperarlo: 
+
+1. Connettersi all'istanza di SQL Server.
+2. Aprire una finestra Nuova query.
+3. Incollare il codice T-SQL seguente nella finestra: 
 
   ```sql
    select @@Servername 
  ``` 
-4. Visualizzare i risultati della query per identificare il nome del server di SQL Server cui si è connessi: 
+4. Visualizzare i risultati della query per identificare il nome dell'istanza di SQL Server a cui si è connessi: 
     
-    ![Query sul nome del server](media/ssms-tricks/queryservername.png)
+    ![Eseguire una query per recuperare il nome di SQL Server](media/ssms-tricks/queryservername.png)
 
 

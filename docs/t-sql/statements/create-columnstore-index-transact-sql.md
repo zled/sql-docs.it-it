@@ -34,11 +34,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e1ea30abed242b49684c685b55b05622b360159e
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: f00d346a509c7a240b00ce287782001804126311
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236142"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -340,8 +341,8 @@ Se la tabella sottostante ha una colonna con un tipo di dati non supportato per 
 -   uniqueidentifier (si applica a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])  
 
 **Indici columnstore non cluster:**
--   Non può includere più di 1024 colonne.  
--   Una tabella con un indice columnstore non cluster può presentare vincoli univoci, vincoli di chiave primaria o vincoli di chiave esterna, ma i vincoli non possono essere inclusi nell'indice columnstore non cluster.  
+-   Non può includere più di 1024 colonne.
+-   Non può essere creato come indice basato su vincoli. Una tabella con un indice columnstore può includere vincoli univoci, vincoli di chiave primaria o vincoli di chiave esterna. I vincoli vengono applicati sempre con un indice rowstore. I vincoli non possono essere applicati con un indice columnstore (cluster o non cluster).
 -   Non può essere creato in una vista o in una vista indicizzata.  
 -   Non può includere una colonna di tipo sparse.  
 -   Non può essere modificato usando l'istruzione **ALTER INDEX**. Per modificare l'indice non cluster, è invece necessario eliminare e ricreare l'indice columnstore. È possibile usare **ALTER INDEX** per disabilitare e ricompilare un indice columnstore.  

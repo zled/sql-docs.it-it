@@ -31,11 +31,12 @@ caps.latest.revision: 62
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: b6fe7fcf315849e6779b66087e8a87d2953d96d0
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: e6022b5609c2d4b4d362f90088bee4e84ad874c7
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34236412"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Set di risultati  
 Nella tabella seguente vengono descritte le colonne del set di risultati.
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**DbId**|Numero di identificazione del database del file che [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta di compattare.|  
 |**FileId**|Numero di identificazione del file che [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenta di compattare.|  
@@ -93,6 +94,10 @@ Nella tabella seguente vengono descritte le colonne del set di risultati.
 > [!INCLUDE[ssDE](../../includes/ssde-md.md)] non visualizza alcuna riga per i file non compattati.  
   
 ## <a name="remarks"></a>Remarks  
+
+>[!NOTE]
+> Azure SQL Data Warehouse attualmente non supporta DBCC SHRINKDATABASE. L'esecuzione di questo comando non è consigliata poiché si tratta di un'operazione a elevato utilizzo di input/output che può portare il data warehouse offline. Inoltre, l'esecuzione di questo comando comporta costi per gli snapshot del data warehouse. 
+
 Per compattare tutti i file di dati e di log per un database specifico, eseguire il comando DBCC SHRINKDATABASE. Per compattare un file di dati o di log alla volta per un database specifico, eseguire il comando [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md).
   
 Per visualizzare la quantità corrente di spazio disponibile, ovvero non allocato, nel database, eseguire [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -106,9 +111,6 @@ Eseguire DBCC SHRINKDATABASE senza specificare l'opzione NOTRUNCATE o TRUNCATEON
 Il database in fase di compattazione non deve essere necessariamente in modalità utente singolo. Altri utenti possono infatti utilizzare il database durante il processo di compattazione. Questo vale anche per i database di sistema.
   
 Non è possibile compattare un database mentre ne viene eseguito il backup e non è possibile eseguire il backup di un database mentre è in corso un'operazione di compattazione.
-
->[!NOTE]
-> Azure SQL Data Warehouse attualmente non supporta DBCC SHRINKDATABASE con TDE abilitato.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Funzionamento di DBCC SHRINKDATABASE  
 DBCC SHRINKDATABASE compatta i file di dati uno alla volta mentre i file di log vengono compattati come se fossero inclusi in un pool di log contigui. I file vengono compattati sempre a partire dalla fine.

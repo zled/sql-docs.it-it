@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f7415cfbe4343f9f50de42c26db5444b6582a572
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 03077d7ede10d42b4d4812ce6ef93a35dd295a22
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455554"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Creazione di una tabella temporale con controllo delle versioni di sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -184,7 +185,7 @@ ALTER TABLE InsurancePolicy
   
 -   Se si aggiunge Period, verranno eseguiti controlli di coerenza sulla tabella corrente per garantire che i valori predefiniti per le colonne di period siano validi.  
   
--   Se viene specificata una tabella di cronologia esistente quando si attiva **SYSTEM_VERSIONING**, sarà eseguito un controllo di coerenza sui dati nella tabella corrente e nella tabella di cronologia. Può essere ignorato se si specifica **DATA_CONISTENCY_CHECK = OFF** come parametro aggiuntivo.  
+-   Se viene specificata una tabella di cronologia esistente quando si attiva **SYSTEM_VERSIONING**, sarà eseguito un controllo di coerenza sui dati nella tabella corrente e nella tabella di cronologia. Può essere ignorato se si specifica **DATA_CONSISTENCY_CHECK = OFF** come parametro aggiuntivo.  
   
 ### <a name="migrate-existing-tables-to-built-in-support"></a>Eseguire la migrazione di tabelle esistenti al supporto incorporato  
  Questo esempio mostra come migrare una soluzione esistente basata su trigger al supporto temporale incorporato. In questo esempio si presuppone che la soluzione personalizzata corrente suddivida i dati attuali e cronologici in due tabelle utente separate (**ProjectTaskCurrent** e **ProjectTaskHistory**). Se la soluzione esistente usa una singola tabella per archiviare le righe attuali e cronologiche, è necessario suddividere i dati in due tabelle prima di eseguire i passaggi della migrazione illustrati in questo esempio:  

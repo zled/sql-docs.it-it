@@ -16,11 +16,12 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3c0f95bb10af0e466d139a8da8d499b9caea7ea2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 902b6783930b5e939e3f522964a19ceeaebc2055
+ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/23/2018
+ms.locfileid: "34455144"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Componenti di Microsoft Connector for SAP BW
   Questa sezione contiene gli argomenti che descrivono i tre componenti di [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW:  
@@ -29,8 +30,11 @@ ms.lasthandoff: 05/03/2018
   
 -   Origine SAP BW  
   
--   Destinazione SAP BW  
-  
+-   Destinazione SAP BW
+
+> [!IMPORTANT]
+> Microsoft non prevede di rendere disponibile una versione aggiornata del connettore per SAP BW. Microsoft non è proprietaria del codice sorgente dei componenti SAP BW, sviluppati da terze parti, e di conseguenza non può aggiornarli. Valutare l'acquisto dei componenti di connettività SAP più recenti presso un partner Microsoft ISV, ad esempio [Theobald Software](https://theobald-software.com/en/xtract-is-productinfo.html). I partner Microsoft ISV hanno adattato i propri componenti di connettività SAP per SSIS per l'installazione in Azure.
+
 > [!IMPORTANT]  
 >  La documentazione per Microsoft Connector 1.1 for SAP BW presuppone la conoscenza dell'ambiente SAP Netweaver BW. Per ulteriori informazioni su SAP Netweaver BW o per informazioni su come configurare oggetti e processi di SAP Netweaver BW, vedere la documentazione SAP.  
   

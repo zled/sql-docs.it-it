@@ -51,11 +51,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 81267bd94920ba0398a9ed6e3ca8192eaa3cdaa4
-ms.sourcegitcommit: d2573a8dec2d4102ce8882ee232cdba080d39628
+ms.openlocfilehash: 3c7d97d9c8ee56af89807f07cd335b16c50fbcc1
+ms.sourcegitcommit: 02c889a1544b0859c8049827878d66b2301315f8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34225345"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -700,10 +701,11 @@ Quando viene usata la compressione dei backup con i database con [Transparent Da
 A partire da [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l'impostazione abilita un algoritmo di compressione ottimizzato per i database con crittografia TDE che esegue innanzitutto la decrittografia di una pagina, la comprime e quindi ne esegue nuovamente la crittografia. Se viene usata `MAXTRANSFERSIZE = 65536` (64 KB), la compressione di backup con i database con crittografia TDE comprime direttamente le pagine crittografate e potrebbe non produrre rapporti di compressione validi. Per altre informazioni, vedere [Backup Compression for TDE-enabled Databases](http://blogs.msdn.microsoft.com/sqlcat/2016/06/20/sqlsweet16-episode-1-backup-compression-for-tde-enabled-databases/) (Compressione dei backup per i database con TDE).
 
 > [!NOTE]  
-> L'algoritmo di compressione ottimizzato per i database con crittografia TDE viene usato automaticamente quando:
-> * 
->  viene usato. In questo caso il valore `MAXTRANSFERSIZE` predefinito viene modificato in 1048576 (1 MB) e non viene forzato a un valore minore.
-> * Il database include più file di dati e il valore predefinito `MAXTRANSFERSIZE` viene modificato in multipli di 65536 (64 KB) e non viene modificato in un valore minore (ad esempio `MAXTRANSFERSIZE = 65536`). 
+> Esistono casi in cui il valore predefinito `MAXTRANSFERSIZE` è maggiore di 64 KB:
+> * Quando il database include più file di dati creati, viene usato il valore `MAXTRANSFERSIZE` > 64 KB
+> * Quando si esegue il backup nell'URL, viene usato il valore predefinito `MAXTRANSFERSIZE = 1048576` (1 MB)
+>   
+> Anche se sussiste una di queste condizioni, è necessario impostare esplicitamente il valore `MAXTRANSFERSIZE` maggiore di 64 KB nel comando di backup affinché si ottenga il nuovo algoritmo di compressione dei backup.
   
 Per impostazione predefinita, per ogni operazione di backup eseguita in modo corretto viene aggiunta una voce al log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e al registro eventi di sistema. Se il backup del log viene eseguito di frequente, questi messaggi possono aumentare rapidamente, provocando la creazione di log degli errori di dimensioni elevate e rendendo difficile l'individuazione di altri messaggi. In questi casi è possibile eliminare tali voci di log utilizzando il flag di traccia 3226 se nessuno degli script dipende da esse. Per altre informazioni, vedere [Flag di traccia &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   

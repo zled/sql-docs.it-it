@@ -1,7 +1,7 @@
 ---
 title: Eseguire un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach | Microsoft Docs
 ms.custom: ''
-ms.date: 04/02/2018
+ms.date: 05/15/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: control-flow
@@ -20,11 +20,12 @@ caps.latest.revision: 35
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6d151fd801483bd39188ad3474f95ae9ce0036af
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52daa47d99e6b9dab35f12280a7c89c710e1aa17
+ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/17/2018
+ms.locfileid: "34235665"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Esecuzione di un ciclo su file e tabelle di Excel utilizzando un contenitore Ciclo Foreach
   In questo argomento vengono illustrate le procedure per l'esecuzione di un ciclo sulle cartelle di lavoro di Excel archiviate in una directory oppure sulle tabelle incluse in una cartella di Excel mediante il contenitore Ciclo Foreach con l'enumeratore appropriato.  
@@ -36,13 +37,13 @@ ms.lasthandoff: 05/03/2018
   
 1.  Creare una variabile stringa che riceverà il percorso e il nome del file di Excel correnti a ogni iterazione del ciclo. Per evitare problemi di convalida, assegnare un percorso e un nome file di Excel validi come valore iniziale della variabile. Nell'espressione di esempio indicata di seguito in questa procedura viene utilizzata una variabile denominata `ExcelFile`.  
   
-2.  Facoltativamente, creare un'altra variabile stringa che conterrà il valore dell'argomento Proprietà estese della stringa di connessione a Excel. Tale argomento contiene una serie di valori che specificano la versione di Excel e determinano se la prima riga contiene i nomi delle colonne, nonché se viene utilizzata la modalità di importazione. Nell'espressione di esempio riportata di seguito in questa procedura viene utilizzata una variabile denominata `ExtProperties`, con un valore iniziale "`Excel 8.0;HDR=Yes`".  
+2.  Facoltativamente, creare un'altra variabile stringa che conterrà il valore dell'argomento Proprietà estese della stringa di connessione a Excel. Tale argomento contiene una serie di valori che specificano la versione di Excel e determinano se la prima riga contiene i nomi delle colonne, nonché se viene utilizzata la modalità di importazione. Nell'espressione di esempio riportata di seguito in questa procedura viene utilizzata una variabile denominata `ExtProperties`, con un valore iniziale "`Excel 12.0;HDR=Yes`".  
   
      Se non si utilizza una variabile per l'argomento Proprietà estese, è necessario aggiungerla manualmente all'espressione contenente la stringa di connessione.  
   
 3.  Aggiungere un contenitore Ciclo Foreach alla scheda **Flusso di controllo** . Per informazioni su come configurare il contenitore Ciclo Foreach, vedere [Configurare un contenitore Ciclo Foreach](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25).  
   
-4.  Nella pagina **Raccolta** dell' **Editor ciclo Foreach**selezionare l'enumeratore Foreach File, quindi specificare la directory in cui si trovano le cartelle di lavoro di Excel e il filtro file (in genere, con estensione \*.xls).  
+4.  Nella pagina **Raccolta** dell'**Editor ciclo Foreach** selezionare l'enumeratore Foreach File, quindi specificare la directory in cui si trovano le cartelle di lavoro di Excel e il filtro file (in genere, *.xlsx).  
   
 5.  Nella pagina **Mapping variabili** eseguire il mapping dell'indice 0 a una variabile stringa definita dall'utente che riceverà il percorso e il nome del file di Excel corrente a ogni iterazione del ciclo. Nell'espressione di esempio indicata di seguito in questa procedura viene utilizzata una variabile denominata `ExcelFile`.  
   
@@ -62,22 +63,22 @@ ms.lasthandoff: 05/03/2018
 10. In Generatore di espressioni immettere l'espressione seguente:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=\"" + @[User::ExtProperties] + "\""  
     ```  
   
      Si noti l'uso del carattere di escape "\\" per le virgolette interne necessarie per racchiudere il valore dell'argomento Extended Properties.  
   
-     L'argomento Proprietà estese non è facoltativo. Se non si utilizza una variabile per contenere il relativo valore, è necessario aggiungerla manualmente all'espressione, come indicato nell'esempio seguente per un file di Excel 2003:  
+     L'argomento Proprietà estese non è facoltativo. Se non si usa una variabile per contenere il relativo valore, è necessario aggiungerla manualmente all'espressione, come nell'esempio seguente:  
   
     ```  
-    "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 8.0"  
+    "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" +  @[User::ExcelFile] + ";Extended Properties=Excel 12.0"  
     ```  
   
 11. Creare attività nel contenitore Ciclo Foreach mediante le quali viene utilizzata la gestione connessione Excel per eseguire le stesse operazioni in ogni cartella di lavoro di Excel corrispondente allo schema e al percorso di file specificati.  
   
 ## <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Per eseguire un ciclo su un gruppo di tabelle mediante Foreach ADO.NET Schema Rowset Enumerator  
   
-1.  Creare una gestione connessione ADO.NET che utilizzi il provider OLE DB Microsoft Jet per connettersi a una cartella di lavoro di Excel. Nella pagina Tutte della finestra di dialogo **Gestione connessione** assicurarsi di immettere Excel 8.0 come valore della proprietà Extended Properties. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
+1.  Creare una gestione connessione ADO.NET che usi il provider OLE DB Microsoft ACE per connettersi a una cartella di lavoro di Excel. Nella pagina Tutte della finestra di dialogo **Gestione connessione** assicurarsi di immettere la versione di Excel, in questo caso Excel 12.0, come valore della proprietà Extended Properties. Per altre informazioni, vedere [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655).  
   
 2.  Creare una variabile stringa che riceverà il nome della tabella corrente a ogni iterazione del ciclo.  
   
