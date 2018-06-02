@@ -1,31 +1,20 @@
 ---
 title: Discendenti (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DESCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Descendants function
-ms.assetid: d103b0f5-e794-4828-aa57-43f6918a0749
-caps.latest.revision: 38
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f5f38c620972906ec17820ffa1bb4a7c865dba16
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 047c9e0edc8120003cdd8a38953e33e779ab0994
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580413"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -66,7 +55,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  Espressione stringa valida che specifica un flag descrittivo che distingue i possibili set di discendenti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se si specifica un livello, il **discendenti** funzione restituisce un set contenente i discendenti del membro specificato o i membri del set specificato, un livello specificato, modificato facoltativamente da un flag specificato in *Desc_Flag*.  
   
  Se *distanza* è specificato, il **discendenti** funzione restituisce un set contenente i discendenti del membro specificato o i membri del set specificato che sono il numero specificato di livelli nella gerarchia del membro specificato, modificato facoltativamente da un flag specificato in *Desc_Flag*. Questa funzione viene in genere utilizzata con l'argomento Distance per gestire gerarchie incomplete. Se la distanza specificata è zero (0), la funzione restituisce un set costituito soltanto dal membro specificato o dal set specificato.  
@@ -174,6 +163,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

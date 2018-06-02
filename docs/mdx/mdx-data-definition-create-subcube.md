@@ -1,35 +1,20 @@
 ---
 title: Istruzione CREATE SUBCUBE (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_SUBCUBE
-- CREATE SUBCUBE
-- CREATE
-- SUBCUBE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- subcubes [MDX]
-- CREATE SUBCUBE statement
-ms.assetid: 15b6ac4c-b68a-4f9f-b33c-f5f7c4a74535
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 364bf7fe910e5073130bef1a75d88bfa560dd9f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 730d6f3b1445017cc1b1988c49bda176c6ba4ced
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580743"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>Definizione dei dati MDX - creare SOTTOCUBO
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +38,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Vedere [istruzione SELECT &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) per una spiegazione dettagliata sulla sintassi istruzioni Select e i **NON VISUAL** clausola.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se nella definizione di un sottocubo vengono eseguiti i membri predefiniti, le coordinate verranno modificate in modo appropriato. Per gli attributi che possono essere aggregati, il membro predefinito viene spostato nel membro [Totale]. Per gli attributi che non possono essere aggregati, il membro predefinito viene spostato in un membro presente nel sottocubo. Nella tabella seguente sono inclusi alcuni sottocubi di esempio e i relativi membri predefiniti.  
   
 |Membro predefinito originale|Aggregabile|sub-SELECT|Membro predefinito modificato|  
@@ -144,9 +129,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  [All Products] e [All Resellers], colonna e riga rispettivamente, contengono i totali per tutti i membri e non solo per quelli visibili.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Concetti chiave di MDX & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Concetti chiave per MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Istruzioni di Scripting MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE-istruzione &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [Istruzione SELECT & #40; MDX & #41;](../mdx/mdx-data-manipulation-select.md)  
+ [Istruzione SELECT &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   
