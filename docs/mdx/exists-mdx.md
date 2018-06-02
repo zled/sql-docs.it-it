@@ -1,29 +1,20 @@
 ---
 title: Esiste (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Exists function
-ms.assetid: 1e1d93b5-5be6-421c-b82b-839538ea50b1
-caps.latest.revision: 34
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: d92969eb94e60b846578bb60de2ce5f362ea7f6c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 98f07985b83ae32f02bd3da68d382c8f3fceb0cf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578253"
 ---
 # <a name="exists-mdx"></a>Exists (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +40,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  Espressione stringa valida che specifica il nome di un gruppo di misure.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 1.  Le righe di gruppo di misure con misure contenenti valori null contribuiscono a **Exists** quando è specificato l'argomento MeasureGroupName. Questa situazione rappresenta la differenza tra il form Exists e la funzione Nonempty. Se la proprietà NullProcessing di queste misure è impostata su Preserve, le misure visualizzeranno valori Null quando le query vengono eseguite sulla parte di cubo specifica. In questo caso la funzione NonEmpty rimuoverà sempre le tuple da un set con valori di misura Null, mentre Exists con l'argomento MeasureGroupName non filtrerà tuple che hanno associato righe del gruppo di misure, anche se i valori di misura sono Null.  
   
@@ -103,7 +94,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)   
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Crossjoin &#40;MDX&#41;](../mdx/crossjoin-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)   
  [NonEmpty &#40;MDX&#41;](../mdx/nonempty-mdx.md)   

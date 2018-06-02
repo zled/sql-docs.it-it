@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d9dd3cf815ee616c3519883a59ddcbb8fbd61eb8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 7155c03203ad852573318056ab4e194fe19e7113
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573903"
 ---
 # <a name="emptyresult-data-type-xmla"></a>Tipo di dati EmptyResult (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|[Set di risultati](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipi di dati derivati|Nessuno|  
+|Tipi di dati derivati|None|  
   
-## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
+## <a name="data-type-relationships"></a>Relazioni tra tipi di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
-|Elementi figlio|Nessuno|  
-|Elementi derivati|[radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Elementi padre|None|  
+|Elementi figlio|None|  
+|Elementi derivati|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per alcuni comandi XML for Analysis (XMLA) non è previsto che venga restituito un risultato oppure i comandi non sono stati in grado di restituire un risultato a causa di un errore. I comandi XMLA che non restituiscono un risultato restituiscono il **EmptyResult** tipo di dati, uno spazio dei nomi nel **radice** elemento.  
   
 ## <a name="example"></a>Esempio  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/10/2018
 </return>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Tipi di dati XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 29ad501e7a29e77c1f6b1ed04e497c2881b9a7d0
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 85ddeb22fac03e5ae7f66521ac3ca8a46e210fe7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574783"
 ---
 # <a name="protocolcapabilities-element-xmla"></a>Elemento ProtocolCapabilities (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Utilizza l'intestazione SOAP in un messaggio di richiesta SOAP per identificare le funzionalità del protocollo tra un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] e un'applicazione client.  
+  Utilizza l'intestazione SOAP in un messaggio di richiesta SOAP per identificare le funzionalità del protocollo tra un'istanza di Analysis Services e un'applicazione client.  
   
  **spazio dei nomi** `http://schemas.microsoft.com/analysisservices/2003/engine`  
   
@@ -41,20 +42,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[Funzionalità](../../../analysis-services/xmla/xml-elements-properties/capability-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **ProtocolCapabilities** elemento consente alle applicazioni client di negoziare funzionalità del protocollo, ad esempio XML binario o supporto della compressione, con un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza in qualsiasi momento. La negoziazione del protocollo comporta i passaggi seguenti:  
   
 1.  L'applicazione client identifica la funzionalità del protocollo inviando una richiesta SOAP che include come parte dell'elemento **ProtocolCapabilities** l'intestazione SOAP.  
@@ -71,8 +72,8 @@ ms.lasthandoff: 05/10/2018
   
  Le funzionalità del protocollo non devono essere negoziate in modo esplicito. Ovvero, un'applicazione client non deve includere come parte di un elemento **ProtocolCapabilities** la richiesta SOAP. Se una richiesta SOAP non include un **ProtocolCapabilities** elemento, il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza risponde utilizzando lo stesso formato della richiesta SOAP.  
   
-## <a name="see-also"></a>Vedere anche  
- [La gestione delle connessioni e sessioni & #40; XMLA & #41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
- [Intestazioni & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
+## <a name="see-also"></a>Vedere anche
+ [Gestione di connessioni e sessioni di &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   
+ [Le intestazioni &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-headers/xml-elements-headers.md)  
   
   

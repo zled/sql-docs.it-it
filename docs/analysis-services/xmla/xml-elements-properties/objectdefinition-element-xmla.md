@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 339c926bf4c25eb4dd1f8c7b16fdcd9009b0f504
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 71a8b5fe9e5fe1778ca941a597f86fb13249d623
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34575893"
 ---
 # <a name="objectdefinition-element-xmla"></a>Elemento ObjectDefinition (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene uno o più elementi di Analysis Services Scripting Language (ASSL), utilizzati per creare o modificare oggetti in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Contiene uno o più elementi di Analysis Services Scripting Language (ASSL), utilizzati per creare o modificare oggetti in un'istanza di Analysis Services.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |Elementi padre|[ALTER](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md), [creare](../../../analysis-services/xmla/xml-elements-commands/create-element-xmla.md)|  
 |Elementi figlio|Elementi ASSL obbligatori. Uno o più elementi ASSL, utilizzati per definire oggetti [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Per ulteriori informazioni su ASSL, vedere [proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md).|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="example"></a>Esempio  
  L'esempio seguente crea un database vuoto denominato **Database di prova** su un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

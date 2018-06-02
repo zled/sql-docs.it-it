@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 403074f1189bafc098f3fb9d76a19552407f0024
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3ada531d33baf7007d08ac8a719fca2bf8f1b2e4
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574253"
 ---
 # <a name="cellinfo-element-xmla"></a>Elemento CellInfo (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,10 +35,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/10/2018
 |Elementi padre|[OlapInfo](../../../analysis-services/xmla/xml-elements-properties/olapinfo-element-xmla.md)|  
 |Elementi figlio|Una o più definizioni di proprietà della cella|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **CellInfo** elemento contiene una raccolta di proprietà della cella per le celle incluse nel set di dati multidimensionale restituito da un **radice** elemento utilizzando il **MDDataSet**tipo di dati. Ogni proprietà della cella nel **CellInfo** è definito l'elemento da un elemento XML separato, ognuno con un **nome** attributo e un **tipo** attributo. Il **nome** attributo della proprietà della cella corrisponde al nome di OLE DB per la proprietà di cella OLAP rappresentata dall'elemento, XML e **tipo** attributo rappresenta il tipo di dati XML della cella proprietà. Il nome dell'elemento XML viene utilizzato per identificare il valore della proprietà della cella per le celle contenute nel **CellData** elemento il **radice** elemento.  
   
  Nella sintassi seguente è descritta una definizione di proprietà della cella:  
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/10/2018
 </OlapInfo>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

@@ -1,31 +1,20 @@
 ---
 title: DrillupMember (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DRILLUPMEMBER
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrillupMember function
-ms.assetid: debcd966-ea4e-4ecf-8600-0a4d346d03f8
-caps.latest.revision: 40
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6bfb3843e351ca6b2fe76c92fb8e1e50f090acfc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: a0e0a46f45b0c5ef2d0b582ca3948f6a5e34474b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34578183"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un set.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **DrillupMember** funzione restituisce un set di membri in base ai membri specificati nel primo set che sono discendenti dei membri del secondo set. Il primo set può avere qualsiasi dimensionalità, mentre il secondo deve contenere un set unidimensionale. L'ordine tra i membri originali del primo set viene mantenuto. La funzione costruisce il set includendo solo i membri del primo set che sono discendenti immediati dei membri del secondo set. Se il predecessore immediato di un membro del primo set non è presente nel secondo set, il set restituito dalla funzione include il membro del primo set. Vengono inoltre inclusi i discendenti presenti nel primo set che precedono un membro predecessore del secondo set.  
   
  Il primo set può contenere tuple anziché membri. La funzione per il drill-down di tuple è un'estensione di OLE DB e restituisce un set di tuple anziché di membri.  
@@ -106,6 +95,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

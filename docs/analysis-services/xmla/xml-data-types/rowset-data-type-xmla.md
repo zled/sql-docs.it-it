@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fe96b343afe9cdf5f8f2f301c9c0c8eade9dd67f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d3275114e1442634a462470487bc4c5f40d8dac6
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574793"
 ---
 # <a name="rowset-data-type-xmla"></a>Tipo di dati Rowset (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,20 +35,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|[Set di risultati](../../../analysis-services/xmla/xml-data-types/resultset-data-type-xmla.md)|  
-|Tipi di dati derivati|Nessuno|  
+|Tipi di dati derivati|None|  
   
-## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
+## <a name="data-type-relationships"></a>Relazioni tra tipi di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
+|Elementi padre|None|  
 |Elementi figlio|[Riga](../../../analysis-services/xmla/xml-elements-properties/row-element-xmla.md)|  
-|Elementi derivati|[radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
+|Elementi derivati|[root](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  XML non consente di utilizzare alcuni caratteri come nomi di elemento e attributo. Per risolvere i vincoli di denominazione, XML for Analysis (XMLA) supporta la codifica definita da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Per i nomi di colonna che contengono caratteri XML non validi in base alla specifica XML 1.0, XMLA utilizza i valori esadecimali corrispondenti per codificare i caratteri Unicode che non sono validi. I valori esadecimali vengono sottoposti a escape come x*HHHH*\_, dove *HHHH* è l'acronimo per il codice UCS-2 esadecimale a quattro cifre per il carattere nell'ordine primo bit più significativo. Ad esempio, il nome "Dettagli Ordine" viene codificato, in XMLA, come Order_x0020_Details, sostituendo lo spazio con il codice esadecimale corrispondente.  
   
  La codifica può rendere difficili le trasformazioni XSL (Extensible Style Language). Per supportare una ricerca rapida di effettivo, non codificate i nomi delle colonne, aggiungere il **SQL: field**attributo per il set di righe XML schema per ogni colonna, come illustrato nell'esempio seguente:  
@@ -212,7 +213,7 @@ ms.lasthandoff: 05/10/2018
 </root>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Tipi di dati XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

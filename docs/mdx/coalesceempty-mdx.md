@@ -1,31 +1,20 @@
 ---
 title: CoalesceEmpty (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COALESCEEMPTY
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- CoalesceEmpty function
-ms.assetid: c00dd739-44bc-4af6-9871-c7e1e3f3e5ba
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 14a972a7f79039e46ded92f62c748c6cd9577a6e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cbd5928e859436b90b986e9e0ea0d09e91ccd664
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577313"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +45,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  Espressione stringa valida che in genere è un valore stringa specificato con cui viene sostituito un valore NULL restituito dalla prima espressione stringa.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se vengono specificate uno o più espressioni numeriche, di **CoalesceEmpty** funzione restituisce il valore numerico della prima espressione numerica, da sinistra a destra, che può essere risolta in un valore non vuoto. Se nessuna delle espressioni numeriche specificate può essere risolta in un valore non vuoto, la funzione restituisce il valore di cella vuota. Il valore della seconda espressione numerica è in genere il valore numerico con cui viene sostituito un valore NULL restituito dalla prima espressione numerica.  
   
  Se vengono specificate una o più espressioni stringa, la funzione restituisce il valore stringa della prima espressione stringa, da sinistra a destra, che può essere risolta in un valore non vuoto. Se nessuna delle espressioni stringa specificate può essere risolta in un valore non vuoto, la funzione restituisce il valore di cella vuota. Il valore della seconda espressione stringa è in genere il valore stringa con cui viene sostituito un valore NULL restituito dalla prima espressione stringa.  
@@ -90,6 +79,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

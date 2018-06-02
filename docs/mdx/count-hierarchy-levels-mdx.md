@@ -1,31 +1,20 @@
 ---
 title: Conteggio (livelli di gerarchia) (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- COUNT
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Count function [MDX]
-ms.assetid: 3de6a824-2ff3-47ac-9ceb-e3369a04f35d
-caps.latest.revision: 33
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2f470f2e6f09ab2f53a8c98d20f1381e64a0fc23
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cc09cf02cb0ee75788cbd2e6ff9e9d99ab34e784
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34577573"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count (Hierarchy Levels) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Hierarchy_Expression.Levels.Count
  *Hierarchy_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce una gerarchia.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Restituisce il numero di livelli in una gerarchia, incluso il livello `[All]` se pertinente.  
   
 > [!IMPORTANT]  
@@ -62,7 +51,7 @@ FROM [Adventure Works]
 ## <a name="see-also"></a>Vedere anche  
  [Conteggio &#40;dimensione&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
  [Conteggio &#40;tupla&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [Numero & #40; Set & #41; & #40; MDX & #41;](../mdx/count-set-mdx.md)   
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Conteggio &#40;impostare&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
