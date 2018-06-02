@@ -9,15 +9,16 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a505a099e239049aab40c616c9e98e44e328537c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: b7a05e5381c2ad687c37926ad449cd6765403ceb
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585783"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Caricare i dati con l'istruzione INSERT in Parallel Data Warehouse
 
-È possibile utilizzare l'istruzione INSERT tsql per caricare dati in SQL Server Parallel Data Warehouse (PDW) distribuite o tabella replicata. Per ulteriori informazioni sull'inserimento, vedere [inserire](../t-sql/statements/insert-transact-sql.md). Per le tabelle replicate e tutte le colonne non distribuzione in una tabella distribuita, PDW utilizza SQL Server per convertire in modo implicito i valori di dati specificati nell'istruzione per il tipo di dati della colonna di destinazione. Per ulteriori informazioni sulle regole di conversione di dati di SQL Server, vedere [conversione SQL di tipo di dati](http://msdn.microsoft.com/library/ms191530&#40;v=sql11&#40;.aspx). Tuttavia, per le colonne di distribuzione, PDW supporta solo un subset delle conversioni implicite supportate da SQL Server. Pertanto, quando si utilizza l'istruzione INSERT per caricare dati in una colonna di distribuzione, i dati di origine devono essere specificati in uno dei formati definiti nelle tabelle seguenti.  
+È possibile utilizzare l'istruzione INSERT tsql per caricare dati in SQL Server Parallel Data Warehouse (PDW) distribuite o tabella replicata. Per ulteriori informazioni sull'inserimento, vedere [inserire](../t-sql/statements/insert-transact-sql.md). Per le tabelle replicate e tutte le colonne non distribuzione in una tabella distribuita, PDW utilizza SQL Server per convertire in modo implicito i valori di dati specificati nell'istruzione per il tipo di dati della colonna di destinazione. Per ulteriori informazioni sulle regole di conversione di dati di SQL Server, vedere [conversione SQL di tipo di dati](http://msdn.microsoft.com/library/ms191530\(v=sql11\).aspx). Tuttavia, per le colonne di distribuzione, PDW supporta solo un subset delle conversioni implicite supportate da SQL Server. Pertanto, quando si utilizza l'istruzione INSERT per caricare dati in una colonna di distribuzione, i dati di origine devono essere specificati in uno dei formati definiti nelle tabelle seguenti.  
   
   
 ## <a name="InsertingLiteralsBinary"></a>Inserire i valori letterali in tipi binari  
@@ -123,8 +124,8 @@ Nella tabella seguente definisce i formati accettati e regole per l'inserimento 
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |------------|------|----------------|
-|Valore letterale stringa nel **intero** formato|'nnnnnnnnnnnnnn'<br /><br />Esempio: '321312313123'| Nessuno |  
-|Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| Nessuno|  
+|Valore letterale stringa nel **intero** formato|'nnnnnnnnnnnnnn'<br /><br />Esempio: '321312313123'| None |  
+|Valore letterale integer|nnnnnnnnnnnnnn<br /><br />Esempio: 321312313123| None|  
 |Valore letterale decimale|nnnnnn.nnnnn<br /><br />Esempio: 123344.34455|I valori a destra del separatore decimale vengono troncati.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>tipi di dati Money e smallmoney  
@@ -147,10 +148,10 @@ Nella tabella seguente definisce i formati accettati e regole per l'inserimento 
   
 |Tipo di valore letterale|Formato|Regole di conversione|  
 |----------------|----------|--------------------|  
-|Valore letterale stringa|Formato: "stringa di caratteri'<br /><br />Esempio: 'abc'| Nessuno|  
-|Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc '|  Nessuno |  
-|Valore letterale integer|Formato: nnnnnnnnnnn<br /><br />Esempio: 321312313123| Nessuno |  
-|Valore letterale decimale|Formato: nnnnnn.nnnnnnn<br /><br />Esempio: 12344.34455| Nessuno |  
+|Valore letterale stringa|Formato: "stringa di caratteri'<br /><br />Esempio: 'abc'| None|  
+|Valore letterale stringa Unicode|Formato: Stringa N'character'<br /><br />Esempio: N'abc '|  None |  
+|Valore letterale integer|Formato: nnnnnnnnnnn<br /><br />Esempio: 321312313123| None |  
+|Valore letterale decimale|Formato: nnnnnn.nnnnnnn<br /><br />Esempio: 12344.34455| None |  
 |Valore letterale Money|Formato: $nnnnnn.nnnnn<br /><br />Esempio: $123456.99|Il simbolo di valuta non viene inserito con il valore. Per inserire il simbolo di valuta, inserire il valore come valore letterale stringa. Questo verrà corrisponde al formato di **dwloader** uno strumento che considera ogni valore letterale come un valore letterale stringa.<br /><br />Virgola non è consentita.<br /><br />Se il numero di cifre dopo il separatore decimale sono superiori a 2, il valore viene arrotondato per eccesso al valore più vicino. Ad esempio, il valore 123.946789 viene inserito come 123.95.<br /><br />Quando si utilizza la funzione CONVERT per inserire valori letterali money, è consentito solo lo stile predefinito 0 (Nessun separatore delle migliaia e 2 cifre dopo il separatore decimale).|  
 
   

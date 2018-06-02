@@ -7,11 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21bc5d6af2ad34a23bb56a589f7bcbacb6034ff3
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585273"
 ---
 # <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analitica R nel database per gli sviluppatori SQL (esercitazione)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -60,7 +61,7 @@ Questa esercitazione viene utilizzato un noto pubblica set di dati in base a tri
 
 ### <a name="requirements"></a>Requisiti
 
-In questa esercitazione è destinata agli utenti che hanno già familiarità con operazioni fondamentali sui database, ad esempio la creazione di tabelle e database, l'importazione di dati in tabelle e la creazione di query SQL. È disponibile tutto il codice R, quindi non è richiesto un ambiente di sviluppo di R. Un programmatore SQL deve essere in grado di completare l'esempio utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ed eseguendo gli script di PowerShell specificati.
+Questa esercitazione è per gli utenti che hanno familiarità con le operazioni di database basic, ad esempio la creazione di tabelle e database, l'importazione di dati in tabelle e la scrittura di query SQL. È disponibile tutto il codice R, quindi non è richiesto un ambiente di sviluppo di R. Un programmatore SQL esperto potrebbe essere possibile utilizzare [! Includi [tsql] (... /.. / incluso/tsql md.md)] in [! Includi [ssManStudioFull] (... /.. / incluso / ssmanstudiofull md.md) ed eseguire lo script di PowerShell fornito per completare questo esempio. Tuttavia, prima di iniziare questa esercitazione, è necessario completare le operazioni preliminari seguenti:
 
 Tuttavia, prima di iniziare l'esercitazione, è necessario completare le operazioni di preparazione:
 
