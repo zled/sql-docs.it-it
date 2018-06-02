@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 56a3bc495fa6541208a094f82ede9a43b4021c23
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: d06f34210f5ec4aee741d3f3a70a01f60f10fb98
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34586043"
 ---
 # <a name="r-libraries-and-r-data-types"></a>Librerie R e i tipi di dati R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +35,7 @@ Per visualizzare la versione di R associata a una particolare istanza di SQL Ser
 
 Per trovare la versione di R inclusi in una particolare versione di Microsoft R Server, vedere [R Server - Novità](https://msdn.microsoft.com/microsoft-r/rserver-whats-new#new-and-updated-packages).
 
-Si noti che il sistema di gestione di pacchetti in SQL Server significa che più versioni di un pacchetto R possono essere installate nello stesso computer, con più utenti di condividere lo stesso pacchetto o versioni diverse dello stesso pacchetto. Per ulteriori informazioni, vedere [gestione dei pacchetti R in SQL Server](../r/r-package-management-for-sql-server-r-services.md).
+Si noti che il sistema di gestione di pacchetti in SQL Server significa che più versioni di un pacchetto R possono essere installate nello stesso computer, con più utenti di condividere lo stesso pacchetto o versioni diverse dello stesso pacchetto. Per ulteriori informazioni, vedere [gestione dei pacchetti R in SQL Server](../r/install-additional-r-packages-on-sql-server.md).
 
 ## <a name="r-and-sql-data-types"></a>R e i tipi di dati SQL
 

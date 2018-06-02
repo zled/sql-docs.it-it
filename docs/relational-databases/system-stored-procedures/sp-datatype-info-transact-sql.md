@@ -1,7 +1,7 @@
 ---
 title: sp_datatype_info (Transact-SQL) | Documenti Microsoft
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/25/2018
 ms.prod: sql
 ms.prod_service: database-engine
 ms.component: system-stored-procedures
@@ -22,14 +22,15 @@ caps.latest.revision: 32
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: b5dd1eff2fb088fa96498334899631e2dd04a90f
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.openlocfilehash: 187b7969d46b6ab0a85779d108a66cbe8ae2d62b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553751"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
 
   Restituisce informazioni sui tipi di dati supportati nell'ambiente corrente.  
   
@@ -51,7 +52,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
  Versione di ODBC utilizzata. *odbc_version* viene **tinyint**, con un valore predefinito è 2.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
- Nessuno  
+ None  
   
 ## <a name="result-sets"></a>Set di risultati  
   
@@ -78,7 +79,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valore dell'intervallo di precisione iniziale se *data_type* è **intervallo**; in caso contrario, NULL.|  
 |USERTYPE|**smallint**|**usertype** valore dalla tabella systypes.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  sp_datatype_info corrisponde a SQLGetTypeInfo in ODBC. I risultati restituiti vengono ordinati in base a DATA_TYPE e quindi in base alla precisione del mapping del tipo di dati al tipo di dati SQL ODBC corrispondente.  
   
 ## <a name="permissions"></a>Autorizzazioni  

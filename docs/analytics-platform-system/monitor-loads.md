@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3230f170348f5952148894bd1fdb1ecc36a790bc
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 8980259b69dfa74c2bb27c9406553a5b5810348a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585673"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Monitorare i caricamenti in Parallel Data Warehouse
 Monitoraggio attivo e recente [dwloader](dwloader.md) carica utilizzando la Console di amministrazione di sistema della piattaforma Analitica (AP) o Parallel Data Warehouse (PDW) [viste di sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 
@@ -48,7 +49,7 @@ Visualizzare le viste di sistema per informazioni sui metadati relative al caric
   
 -   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx.md)  
+-   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
 -   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   

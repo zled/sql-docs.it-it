@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5ce937518c243e5c9fa391892073cb324c8bc04f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4644b8775212eae0cb6d912df9bc415c5fc96ec7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573943"
 ---
 # <a name="batch-element-xmla"></a>Elemento Batch (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Esegue uno o più XML per i comandi Analysis (XMLA) come un'operazione batch, in sequenza o in parallelo, in un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+  Esegue uno o più XML per i comandi Analysis (XMLA) come operazione batch, in sequenza o in parallelo, in un'istanza di Analysis Services.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -37,10 +38,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -52,19 +53,19 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Attributi  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |ProcessAffectedObjects|(Facoltativo **booleano** attributo) indica se tutti gli oggetti che richiedono la rielaborazione saranno elaborati.<br /><br /> Se impostato su true, il [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza elabora tutti gli oggetti che richiedono la rielaborazione in seguito all'elaborazione di un oggetto incluso nel **Batch** comando.<br /><br /> Se impostato su **false**, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza elabora solo gli oggetti inclusi nel **Batch** comando.|  
 |Transazione|(Facoltativo **booleano** attributo) indica se il comando è incluso nel **Batch** comando vengono considerati come una singola transazione o le singole transazioni.<br /><br /> Se impostato su true, tutti i comandi inclusi nel **Batch** comando sono considerati una singola transazione. Se un comando ha esito negativo, i comandi eseguiti prima del comando non riuscito il rollback e **Batch** comando Arresta senza eseguire i comandi successivi.<br /><br /> Se impostato su **false**, **Batch** comando tenta di eseguire ogni comando e viene eseguito il commit i risultati di ogni comando che viene completata correttamente.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 > [!WARNING]  
 >  In un'operazione Batch non è attualmente supportato un comando, un'esecuzione o un'istruzione.  
   
  Per ulteriori informazioni sull'esecuzione di operazioni batch in XMLA, vedere [l'esecuzione di operazioni Batch &#40;XMLA&#41;](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Comandi & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Vedere anche
+ [I comandi &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

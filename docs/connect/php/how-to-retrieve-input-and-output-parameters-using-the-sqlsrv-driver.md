@@ -3,8 +3,6 @@ title: 'Procedura: recuperare i parametri dei / o mediante il Driver SQLSRV | Do
 ms.custom: ''
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ef60cf4ef6710690d0ba63b5e159400f724268b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57143ae8694bba2bdeae3ff552b2ebb089ce6536
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563929"
 ---
 # <a name="how-to-retrieve-input-and-output-parameters-using-the-sqlsrv-driver"></a>How to: Retrieve Input and Output Parameters Using the SQLSRV Driver
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ In questo argomento viene illustrato come usare il driver SQLSRV per chiamare un
 > [!NOTE]  
 > Le variabili inizializzate o aggiornate su **null**, **DateTime**o tipi di flusso non possono essere usate come parametri di output.  
   
-## <a name="example"></a>Esempio  
+## <a name="example-1"></a>Esempio 1
 L'esempio seguente chiama una stored procedure che sottrae le ore di ferie usufruite dalle ore di ferie disponibili di un dipendente specifico. La variabile che rappresenta le ore di ferie usufruite, *$vacationHrs*, viene passata alla stored procedure come parametro di input. Dopo aver aggiornato le ore di ferie disponibili, la stored procedure usa lo stesso parametro per restituire il numero di ore di ferie rimanenti.  
   
 > [!NOTE]  
@@ -129,7 +128,7 @@ sqlsrv_close( $conn);
 > [!NOTE]
 > Quando si associa un parametro di input/output a un tipo bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
 
-## <a name="example"></a>Esempio  
+## <a name="example-2"></a>Esempio 2
 Questo esempio di codice viene illustrato come associare un valore bigint grande come parametro di input/output.  
 
 ```

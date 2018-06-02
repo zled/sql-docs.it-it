@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 24ef28cd5bfb8e09e3f0ac7dbfe46b5838ce029c
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 559309a29944f20f8c006ccc92769f0b2824e3b3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585963"
 ---
 # <a name="sql-server-machine-learning-and-r-services-in-database"></a>SQL Server di Machine Learning e R Services (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -124,7 +125,7 @@ Per sfruttare i vantaggi delle funzionalità securty e gestione delle risorse in
 **Risorse**
 
 + [Governance delle risorse per R](resource-governance-for-r-services.md)
-+ [Gestione dei pacchetti R per SQL Server](r-package-management-for-sql-server-r-services.md)
++ [Gestione dei pacchetti R per SQL Server](install-additional-r-packages-on-sql-server.md)
 
 ## <a name="see-also"></a>Vedere anche
 

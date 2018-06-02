@@ -1,31 +1,20 @@
 ---
 title: I membri (String) (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- Members
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Members function
-ms.assetid: 21fca354-448b-4b05-93f4-111bde1568f1
-caps.latest.revision: 35
-author: Minewiskan
+ms.date: 05/30/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 22e50f54105fdba6fe49f346a44f53246109002c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 36d5d3a8573346d164c77881ff80b17feacf8191
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34580513"
 ---
 # <a name="members-string-mdx"></a>Members (String) (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ Members(Member_Name)
  *Member_Name*  
  Espressione stringa valida che specifica il nome di un membro.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **membri (String)** funzione restituisce un singolo membro il cui nome è specificato. In genere, si utilizza il **membri (String)** funzione con funzioni esterne, fornendo al **membri (String)** funzione una stringa che identifica un membro, e **membri (String)** funzione restituisce il valore per tale membro specificato.  
   
 ## <a name="example"></a>Esempio  
@@ -55,6 +44,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

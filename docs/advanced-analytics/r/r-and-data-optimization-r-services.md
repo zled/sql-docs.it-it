@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 98605a5eb5291444e0bd46d64bd3b84ab7c1b008
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 5a30ff30651bacde42c60a1e0b265105e3c932e3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563759"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>Prestazioni per R Services - ottimizzazione dati
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +31,7 @@ Quando si usano set di dati di grandi dimensioni, è consigliabile usare sempre 
 
 ## <a name="factors"></a>Fattori
 
-Il linguaggio R è il concetto di "fattori", che sono variabili speciali per i dati categorici. Gli esperti di dati spesso utilizzano variabili di fattore in loro formula, perché le variabili di categoria come fattori di gestione garantisce che i dati viene elaborato correttamente da funzioni di machine learning. Per altre informazioni, vedere [R per dummy: variabili Factor] (http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
+Il linguaggio R è il concetto di "fattori", che sono variabili speciali per i dati categorici. Gli esperti di dati spesso utilizzano variabili di fattore in loro formula, perché le variabili di categoria come fattori di gestione garantisce che i dati viene elaborato correttamente da funzioni di machine learning. Per altre informazioni, vedere [R per dummy: fattore variabili](http://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
 Per impostazione predefinita, le variabili di fattore possono essere convertite da stringhe in numeri interi e viceversa nuovamente per l'archiviazione o l'elaborazione. R `data.frame` funzione gestisce tutte le stringhe come variabili fattore, a meno che l'argomento *stringsAsFactors* è impostato su **False**. Ciò significa che le stringhe vengono automaticamente convertito in un intero per l'elaborazione viene quindi eseguito il mapping alla stringa originale.
 

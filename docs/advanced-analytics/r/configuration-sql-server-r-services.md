@@ -7,11 +7,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 0b524e7e9fb24ff0296fc0e70c8bb8a462f3d199
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: b24832c8debe12c11aaa337e9558d99e7fae5ae0
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585503"
 ---
 # <a name="configure-and-manage-machine-learning-components-in-sql-server"></a>Configurare e gestire i componenti apprendimento della macchina in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +34,7 @@ Questo articolo fornisce collegamenti a informazioni più dettagliate su come co
 
 Questi articoli viene descritto come installare i nuovi pacchetti di R nell'istanza di SQL Server, gestione delle librerie di pacchetti R e ripristinare librerie del pacchetto dopo un ripristino del database.
 
-+ [Installazione e gestione dei pacchetti R](installing-and-managing-r-packages.md)
++ [Valore predefinito R e Python pacchetti in SQL Server](installing-and-managing-r-packages.md)
 + [Installazione di nuovi pacchetti R](install-additional-r-packages-on-sql-server.md)
 + [Abilitare la gestione dei pacchetti per un'istanza utilizzando i ruoli del Database](r-package-how-to-enable-or-disable.md)
 + [Creare un Repository di pacchetti locali utilizzando miniCRAN](create-a-local-package-repository-using-minicran.md)

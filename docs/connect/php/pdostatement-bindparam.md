@@ -1,7 +1,7 @@
 ---
 title: 'Pdostatement:: Bindparam | Documenti Microsoft'
 ms.custom: ''
-ms.date: 04/11/2017
+ms.date: 05/22/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.component: php
@@ -15,11 +15,12 @@ caps.latest.revision: 17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 082af7aa2e6bcac8c44af1660c4a797515938aef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 476030f5a5f08b2226036b5214ebc973a8a04b3a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563939"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +48,7 @@ $*driver_options*: le opzioni specifiche del driver (miste) facoltative. Ad esem
 ## <a name="return-value"></a>Valore restituito  
 TRUE in caso di esito positivo; in caso contrario, FALSE.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 Quando si associano dati null alle colonne del server di tipo varbinary, binary o varbinary (max) è necessario specificare la codifica binaria (PDO:: sqlsrv_encoding_binary) usando $*driver_options*. Per ulteriori informazioni sulle costanti di codifica, vedere [costanti](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).  
   
 Nella versione 2.0 dei [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]è stato aggiunto il supporto per PDO.  
@@ -125,7 +126,7 @@ In questo esempio di codice viene illustrato come usare un parametro di input/ou
 ```  
 
 > [!NOTE]
-> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php).
+> È consigliabile utilizzare le stringhe come input durante l'associazione di valori da un [colonna decimal o numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md) per garantire la precisione e l'accuratezza PHP limitate precisione per [numeri a virgola mobile](http://php.net/manual/en/language.types.float.php). Lo stesso vale per le colonne di tipo bigint, soprattutto quando i valori sono di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md).
 
 ## <a name="example"></a>Esempio  
 In questo esempio di codice viene illustrato come associare un valore decimale come parametro di input.  

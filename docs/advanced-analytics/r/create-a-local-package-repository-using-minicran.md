@@ -2,36 +2,33 @@
 title: Creare un repository di pacchetti R locale utilizzando miniCRAN (SQL Server Machine Learning) | Documenti Microsoft
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 4ce6479c0e7087e63271811abb47a2174747638e
-ms.sourcegitcommit: 7a6df3fd5bea9282ecdeffa94d13ea1da6def80a
+ms.openlocfilehash: 1f7ba3b4acde90d9e416eb092ac80cb0dfcbba8a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34585643"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Creare un repository di pacchetti R locale utilizzando miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Il [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) pacchetto è stato creato da Andre de Vries per supportare questi scenari comuni: 
+[miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) pacchetto, creato da [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifica e scaricare i pacchetti e le dipendenze in un'unica cartella, è possibile copiare in altri computer per l'installazione di pacchetti R offline.
 
-+ Analisi delle dipendenze di pacchetto per un singolo pacchetto o un set di pacchetti
-+ Preparazione di un set di pacchetti R per l'installazione in un server senza accesso a internet.
+Come input, specificare uno o più pacchetti. **miniCRAN** legge l'albero delle dipendenze per questi pacchetti in modo ricorsivo e Scarica solo i pacchetti elencati e le relative dipendenze da CRAN o repository simili.
 
-L'utente specifica un set di pacchetti desiderati e legge l'albero delle dipendenze per questi pacchetti, in modo ricorsivo miniCRAN e Scarica solo i pacchetti elencati e le relative dipendenze da CRAN o repository simili.
+Come output **miniCRAN** viene creato un repository internamente coerente costituito da pacchetti selezionati e le dipendenze richieste. È quindi possibile spostare questo repository locale nel server di e continuare a installare i pacchetti senza una connessione internet.
 
-Come output, miniCRAN crea un repository internamente coerenza, costituito da pacchetti selezionati e tutte le dipendenze necessarie. È quindi possibile spostare questo repository locale nel server di e continuare a installare i pacchetti senza utilizzare internet.
+> [!NOTE]
+> Gli utenti esperti di R esaminare spesso per l'elenco dei pacchetti dipendenti nel file di descrizione per il pacchetto scaricato. Tuttavia, i pacchetti elencati **importazioni** potrebbero avere delle dipendenze di secondo livello. Per questo motivo, è consigliabile **miniCRAN** per assemblare l'insieme completo di pacchetti richiesti.
 
-Gli utenti esperti di R esaminare spesso per l'elenco dei pacchetti dipendenti nel file di descrizione per il pacchetto scaricato. Tuttavia, i pacchetti elencati **importazioni** potrebbero avere delle dipendenze di secondo livello. Per questo motivo, è consigliabile l'utilizzo del **miniCRAN** metodo.
+## <a name="why-create-a-local-repository"></a>Informazioni sulla creazione di un repository locale
 
-## <a name="what-is-a-package-repository"></a>Che cos'è un repository di pacchetti
-
-L'obiettivo di creazione di un repository di pacchetti locali è fornire un singolo percorso che un amministratore del server o ad altri utenti nell'organizzazione consente di installare i nuovi pacchetti di R in un server che non dispone dell'accesso a internet. Dopo aver creato il repository, è possibile modificarla in aggiungendo nuovi pacchetti o l'aggiornamento della versione dei pacchetti esistenti.
-
-Il [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) dal pacchetto per R è stato scritto dal [Andre de Vries](http://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html) per renderne più semplice creare un coerente gestiti set di pacchetti R per un'organizzazione. 
+L'obiettivo di creazione di un repository di pacchetti locali consiste nello specificare un singolo percorso che un amministratore del server o ad altri utenti nell'organizzazione possono utilizzare per installare i nuovi pacchetti di R in un server, in particolare quelle che non dispone dell'accesso a internet. Dopo aver creato il repository, è possibile modificarla in aggiungendo nuovi pacchetti o l'aggiornamento della versione dei pacchetti esistenti.
 
 Repository di pacchetto sono utili in questi scenari:
 
@@ -46,129 +43,111 @@ Repository di pacchetto sono utili in questi scenari:
 > [!TIP]
 > È anche possibile utilizzare miniCRAN per preparare i pacchetti da utilizzare in Azure Machine Learning. Per ulteriori informazioni, vedere il blog: [utilizzando miniCRAN in Azure Machine Learning, da Michele Usuelli](https://www.r-bloggers.com/using-minicran-in-azure-ml/) 
 
-## <a name="prepare-packages-using-minicran"></a>Preparare i pacchetti utilizzando miniCRAN
+## <a name="install-minicran"></a>Installare miniCRAN
 
-Il **miniCRAN** pacchetto stesso dipende dal 18 altri pacchetti CRAN, tra cui è il **RCurl** pacchetto, che presenta una dipendenza di sistema sul **esposti all'interno di curl** pacchetto. Analogamente, creare un pacchetto **XML** presenta una dipendenza **esposti all'interno di libxml2**. 
+Il **miniCRAN** pacchetto stesso dipende dal 18 altri pacchetti CRAN, tra cui è il **RCurl** pacchetto, che presenta una dipendenza di sistema sul **esposti all'interno di curl** pacchetto. Analogamente, creare un pacchetto **XML** presenta una dipendenza **esposti all'interno di libxml2**. Per risolvere le dipendenze, è consigliabile compilare inizialmente il repository locale in un computer con accesso a internet. 
 
-Per questi motivi, è consigliabile compilare inizialmente il repository locale in un computer con accesso completo a Internet, in modo che è possibile soddisfare facilmente tutte le dipendenze. 
+Eseguire i comandi seguenti in un computer con una base R, strumenti di R e connessione a internet. Si presuppone che si tratta *non* computer SQL Server. Installano i seguenti comandi di **miniCRAN** pacchetto e la **igraph** pacchetto. Questo esempio viene verificata se il pacchetto è già installato, ma è possibile ignorare se le istruzioni e installare i pacchetti direttamente.
 
-Dopo aver creato il repository, è possibile spostare il repository in un percorso diverso.
+```R
+if(!require("miniCRAN")) install.packages("miniCRAN") 
+if(!require("igraph")) install.packages("igraph") 
+library("miniCRAN")
+```
 
-### <a name="step-1-install-the-minicran-package"></a>Passaggio 1. Installare il pacchetto miniCRAN
+## <a name="set-the-cran-mirror-and-mran-snapshot"></a>Impostare il server mirror CRAN e snapshot MRAN
 
-Iniziare creando un **miniCRAN** repository da utilizzare come origine. In un computer con accesso a internet, è necessario creare questo repository.
+Specificare un sito mirror da utilizzare nel recupero dei pacchetti. Nell'area che contiene i pacchetti che necessari, ad esempio, è possibile utilizzare il sito MRAN o qualsiasi altro sito. Se si verifica un errore di download, provare un altro sito mirror.
 
-1. Installare il **miniCRAN** pacchetto e la **igraph** pacchetto. Questo esempio viene verificata se il pacchetto è già installato, ma è possibile ignorare se le istruzioni e installare i pacchetti direttamente.
+```R
+CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
+CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+```
 
-    ```R
-    if(!require("miniCRAN")) install.packages("miniCRAN") 
-    if(!require("igraph")) install.packages("igraph") 
-    library("miniCRAN")
-    ```
+## <a name="create-a-local-folder"></a>Creare una cartella locale
 
-### <a name="step-2-define-a-package-source-a-cran-mirror-or-an-mran-snapshot"></a>Passaggio 2. Definire un'origine del pacchetto: un mirror CRAN o uno snapshot MRAN
+Creare una cartella locale, ad esempio `C:\mylocalrepo` in cui archiviare i pacchetti raccolti. Se si ripete questa spesso, è probabilmente deve utilizzare un nome più descrittivo, ad esempio "miniCRANZooPackages" o "miniCRANMyRPackagev2".
 
-1. Specificare un sito mirror da utilizzare nel recupero dei pacchetti. Nell'area che contiene i pacchetti che necessari, ad esempio, è possibile utilizzare il sito MRAN o qualsiasi altro sito. Se si verifica un errore di download, provare un altro sito mirror.
+Specificare la cartella come il repository locale. Sintassi di R utilizza una barra rovesciata per nomi di percorso, ovvero opposto dalle convenzioni Windows.
 
-    ```R
-    CRAN_mirror <- c(CRAN = "https://mran.microsoft.com")
-    CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
-    ```
+```R
+local_repo <- "C:/mylocalrepo"
+```
 
-2. Digitare il nome di una cartella locale in cui archiviare i pacchetti raccolti. 
+## <a name="add-packages-to-the-local-repo"></a>Aggiungere pacchetti per il repository locale
 
-    Assicurarsi di creare la cartella in anticipo. Viene generato un errore se il `local_repo` cartella non esiste quando si esegue il codice R in un secondo momento.
+Dopo aver **miniCRAN** sia installato e caricato, creare un elenco che specifica i pacchetti aggiuntivi che si desidera scaricare.
 
-    La cartella deve disporre di un nome descrittivo. Qui è stata utilizzata la "miniCRAN", ma se si ripete questa spesso, è probabilmente deve utilizzare un nome più descrittivo, ad esempio "miniCRANZooPackages" o "miniCRANMyRPackagev2".
+Eseguire **non** aggiungere dipendenze a questo elenco iniziale. Il **igraph** utilizzato dal pacchetto **miniCRAN** genera l'elenco delle dipendenze. Per ulteriori informazioni su come usare il grafico di dipendenze generato, vedere [utilizzando miniCRAN per identificare le dipendenze del pacchetto](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
 
-    ```R
-    local_repo <- "~/miniCRAN"
-    ```
-
-    L'operatore di espansione tilde restituisce una variabile di ambiente, con risultati equivalente a `Sys.getenv("R_USER")`.
-
-### <a name="step-3-add-packages-to-the-repository"></a>Passaggio 3. Aggiungere pacchetti al repository
-
-1. Dopo aver **miniCRAN** è installato, creare un elenco che specifica i pacchetti aggiuntivi che si desidera scaricare.
-
-    Eseguire **non** aggiungere dipendenze a questo elenco iniziale. Il **igraph** utilizzato dal pacchetto **miniCRAN** genera l'elenco delle dipendenze. Per ulteriori informazioni su come usare il grafico di dipendenze generato, vedere [utilizzando miniCRAN per identificare le dipendenze del pacchetto](https://cran.r-project.org/web/packages/miniCRAN/vignettes/miniCRAN-dependency-graph.html).
-
-    Il seguente script di R aggiunge i pacchetti di destinazione, "zoo" e "previsione" a una variabile.
+1. Aggiungere i pacchetti di destinazione, "in zoo" e "previsione" a una variabile.
 
     ```R
     pkgs_needed <- c("zoo", "forecast")
     ```
-2. Non è necessario che tracciare il grafico delle dipendenze, ma può essere informativo.
+
+2. Facoltativamente, tracciare il grafico delle dipendenze, ma può essere informativo.
     
     ```R
     plot(makeDepGraph(pkgs_needed))
     ```
 
-3. Creare il repository locale. Assicurarsi di modificare la versione di R, se necessario
+3. Creare il repository locale. Assicurarsi di modificare la versione di R, se necessario per la versione installata nell'istanza del Server SQL. Versione 3.2.2 è installata in SQL Server 2016, versione 3.3 è installata in SQL Server 2017. Se è stato eseguito un aggiornamento del componente, la versione potrebbe essere più recente. Per altre informazioni, vedere [Python e R ottenere informazioni sul pacchetto](determine-which-packages-are-installed-on-sql-server.md).
 
     ```R
     pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
     makeRepo(pkgs_expanded, path = local_repo, repos = CRAN_mirror, type = "win.binary", Rversion = "3.3");
     ```
 
-    Tali informazioni, il pacchetto miniCRAN crea la struttura di cartelle che si desidera copiare i pacchetti di [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] in un secondo momento.
+   Tali informazioni, il pacchetto miniCRAN crea la struttura di cartelle che si desidera copiare i pacchetti di [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] in un secondo momento.
 
-4. A questo punto è una cartella contenente i pacchetti necessari e tutti i pacchetti aggiuntivi che sono stati necessari.
+A questo punto è una cartella contenente i pacchetti necessari e tutti i pacchetti aggiuntivi che sono stati necessari. Il percorso dovrebbe essere simile a quello nell'esempio: C:\mylocalrepo\bin\windows\contrib\3.3 e pertanto deve contenere una raccolta di pacchetti compressi. Non decomprimere i pacchetti o rinominare i file.
 
-    È possibile eseguire il codice seguente per elencare i pacchetti contenuti nel repository miniCRAN.
+Facoltativamente, eseguire il codice seguente per elencare i pacchetti contenuti nel repository locale miniCRAN.
 
-    ```R
-    pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
-    head(pdb);
-    pdb$Package;
-    pdb[, c("Package", "Version", "License")]
-    ```
+```R
+pdb <- as.data.frame(pkgAvail(local_repo, type = "win.binary", Rversion = "3.3"), stringsAsFactors = FALSE);
+head(pdb);
+pdb$Package;
+pdb[, c("Package", "Version", "License")]
+```
 
-### <a name="step-4-use-the-repository-to-add-r-packages-to-the-instance-library"></a>Passaggio 4. Utilizzare il repository per aggiungere pacchetti R per la libreria di istanza
+## <a name="add-packages-to-the-instance-library"></a>Aggiungere pacchetti alla libreria di istanza
 
-Dopo avere creato il repository e avere aggiunto i pacchetti che necessari, è necessario spostare il repository di pacchetti nel computer server e verificare che i pacchetti R installati nella libreria corretta per l'utilizzo di SQL Server.
+Dopo aver creato un repository locale con i pacchetti che è necessario, spostare il repository di pacchetti nel computer di SQL Server. La procedura seguente viene descritto come installare i pacchetti utilizzando gli strumenti di R.
 
-La procedura seguente viene descritto come installare i pacchetti utilizzando gli strumenti di R.
+1. Copiare la cartella contenente il repository miniCRAN, nella sua interezza, al server in cui si prevede di installare i pacchetti. La cartella contiene in genere questa struttura: miniCRAN radice > bin > windows > pensionistici > versione > tutti i pacchetti. Negli esempi seguenti si presuppone una cartella nell'unità radice: 
 
-1. Copiare la cartella contenente il repository miniCRAN, nella sua interezza, al server in cui si prevede di installare i pacchetti. La cartella contiene in genere questa struttura: radice miniCRAN > -> bin -> windows -> pensionistici -> versione non -> tutti i pacchetti.
+2. Aprire uno strumento di R associato all'istanza (ad esempio, è possibile utilizzare Rgui.exe). Fare doppio clic su **Esegui come amministratore** per consentire allo strumento di apportare aggiornamenti al sistema.
 
-2. Aprire un prompt dei comandi di R usando lo strumento di R associato all'istanza.
+    - Per SQL Server 2017, è il percorso del file per RGUI `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-    - Per SQL Server 2017, la cartella predefinita è `C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library`.
+    - Per SQL Server 2016, percorso del file he per RGUI è `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
 
-    - Per SQL Server 2016, la cartella predefinita è `C:/Program Files/Microsoft SQL Server/MSSQL13.MSSQLSERVER/R_SERVICES/library`.
-
-    - Per un'istanza denominata, il percorso predefinito sarà simile al seguente: `<instance_path>.RTEST/R_SERVICES/library`.
-
-    -  Se SQL Server è stato installato in un'unità diversa o se sono state apportate altre modifiche al percorso di installazione, assicurarsi di applicare anche tali modifiche.
-
-3. Ottenere il percorso per la libreria di istanza e aggiungerlo all'elenco di percorsi di libreria.
+3. Ottenere il percorso per la libreria di istanza e aggiungerlo all'elenco di percorsi di libreria. In SQL Server 2017, il percorso è simile all'esempio seguente.
 
     ```R
-    .libPaths()[1];
-    lib <- .libPaths()[1]
+    outputlib <- "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER/R_SERVICES/library"
     ```
-
-    In SQL Server, questo comando deve restituire il percorso della libreria associato all'istanza, ad esempio: "c: o programma file/Microsoft SQL Server/MSSQL14. MSSQLSERVER/R_SERVICES/libreria"
 
 4. Specificare il nuovo percorso nel server in cui è stato copiato il **miniCRAN** repository, come `server_repo`.
 
     In questo esempio si presuppone che copiato il repository in una cartella temporanea sul server.
 
     ```R
-    source_repo <- "C:\\temp\\miniCRAN"
+    inputlib <- "C:/temp/mylocalrepo"
     ```
 
 5. Poiché utilizza una nuova area di lavoro R nel server, fornire anche l'elenco di pacchetti da installare.
 
     ```R
-    tspackages <- c("zoo", "forecast")
+    mypackages <- c("zoo", "forecast")
     ```
 
 6. Installare i pacchetti, indicando il percorso della copia locale del repository miniCRAN.
 
     ```R
-    install.packages(tspackages, repos = file.path("file://", normalizePath;(source_repo, winslash = "/")), lib = lib, type = "win.binary", dependencies = TRUE);
+    install.packages(mypackages, repos = file.path("file://", normalizePath(inputlib, winslash = "/")), lib = outputlib, type = "win.binary", dependencies = TRUE);
     ```
 
 7. Dalla raccolta di istanza, è possibile visualizzare i pacchetti installati tramite un comando simile al seguente:
@@ -177,19 +156,10 @@ La procedura seguente viene descritto come installare i pacchetti utilizzando gl
     installed.packages()
     ```
 
-> [!NOTE] 
-> Per utilizzare il pacchetto in SQL Server, è necessario installare i pacchetti in libreria predefinita utilizzata dall'istanza. 
+## <a name="see-also"></a>Vedere anche
 
-## <a name="manually-install-a-single-package-from-a-zipped-file"></a>Installare manualmente un singolo pacchetto da un file compresso
++ [Ottenere informazioni sui pacchetti](determine-which-packages-are-installed-on-sql-server.md)
++ [Esercitazioni di R](../tutorials/sql-server-r-tutorials.md)
++ [Guide pratiche](sql-server-machine-learning-tasks.md)
 
-Se si sta installando un singolo pacchetto che non è presenti dipendenze, o non è possibile utilizzare **miniCRAN**, è possibile scaricare manualmente il pacchetto è necessario. A tale scopo è necessario che sei un amministratore o unico proprietario di un server.
 
-Dopo aver scaricato i pacchetti, installare i pacchetti R dal percorso del file compresso.
-
-1. Scaricare il pacchetto come file compresso e salvarlo in una cartella locale
-
-2. Copiare la cartella per il [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md)] computer.
-
-3. Installare i pacchetti nella libreria di istanza di SQL Server utilizzando i comandi di R convenzionali. Se non sono state incluse le dipendenze di pacchetto che non sono già installati, l'installazione potrebbe non riuscire. 
-
-È inoltre possibile caricare i singoli pacchetti in un'istanza di SQL Server 2017, utilizzando il [istruzione Crea raccolta esterna](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql). Questo processo è inoltre necessario accesso amministrativo.

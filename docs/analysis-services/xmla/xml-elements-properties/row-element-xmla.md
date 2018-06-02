@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 78539bfa16bfca56cbac10a4d1d9a793f685a333
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 84cf252303832ed157981103ffaede9718949e16
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576213"
 ---
 # <a name="row-element-xmla"></a>Elemento row (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,20 +33,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (utilizzando la [set di righe](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo di dati)|  
+|Elementi padre|[radice](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) (usando la [set di righe](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md) tipo di dati)|  
 |Elementi figlio|Uno o più elementi di colonna.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Ogni riga restituita da un **radice** elemento che contiene i dati tabulari ha un corrispondente **riga** elemento. Ogni colonna di **radice** elemento è rappresentato da un elemento XML separato. Il valore della colonna per il **riga** elemento corrisponde ai dati contenuti nell'elemento XML, mentre il nome della colonna corrisponde al nome dell'elemento XML.  
   
  Ci sono due modalità per esprimere un valore null per una colonna all'interno di una riga:  
@@ -81,9 +82,9 @@ ms.lasthandoff: 05/10/2018
 </row>  
 ```  
   
- Per ulteriori informazioni sull'assegnazione di nomi di colonna e informazioni sullo schema per i dati tabulari, vedere [il tipo di dati di set di righe & #40; XMLA & #41; ](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
+ Per ulteriori informazioni sulla denominazione delle colonne e le informazioni sullo schema per i dati tabulari, vedere [tipo di dati di set di righe &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/rowset-data-type-xmla.md).  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

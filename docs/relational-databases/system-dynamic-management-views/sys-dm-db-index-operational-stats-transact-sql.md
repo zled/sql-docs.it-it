@@ -24,16 +24,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 559aea789fd19fcbbe11fea0868f77c0fdd8b90c
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: fb0db9ea7c4d58fdecf8ef4973e4d8f971ebb3d3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34553802"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
-  Restituisce l'attività corrente del metodo di I/O di basso livello, blocco, latch e accesso per ogni partizione di una tabella o un indice nel database.    
+  Restituisce i/o di basso livello corrente, blocco, latch e attività del metodo di accesso per ogni partizione di una tabella o indice nel database.    
     
  Gli indici con ottimizzazione per la memoria non vengono visualizzati in questa DMV.    
     
@@ -131,7 +132,7 @@ sys.dm_db_index_operational_stats (
 |**page_compression_attempt_count**|**bigint**|Numero di pagine valutate per la compressione di tipo PAGE per partizioni specifiche di una tabella, un indice o una vista indicizzata. Sono incluse le pagine che non sono state compresse perché la compressione non avrebbe comportato risparmi significativi. Sempre 0 per un indice columnstore.|    
 |**page_compression_success_count**|**bigint**|Numero di pagine di dati valutate compresse utilizzando la compressione di tipo PAGE per partizioni specifiche di una tabella, un indice o una vista indicizzata. Sempre 0 per un indice columnstore.|    
     
-## <a name="remarks"></a>Osservazioni    
+## <a name="remarks"></a>Remarks    
  Questo oggetto a gestione dinamica non accetta parametri correlati da CROSS APPLY e OUTER APPLY.    
     
  È possibile utilizzare **Sys.dm db_index_operational_stats** per tenere traccia della quantità di tempo in cui gli utenti devono attendere per leggere o scrivere in una tabella, un indice o una partizione e identificare le tabelle o indici che vengono rilevata una significativa attività dei / o o a caldo aree sensibili.    
