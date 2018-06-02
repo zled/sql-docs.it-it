@@ -3,97 +3,63 @@ title: Installare i nuovi pacchetti di R in servizi di SQL Server Machine Learni
 description: Aggiungere i nuovi pacchetti R per SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database)
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 20ef7181c5ab8c0494f73b205dddcdf1ac0a620e
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: e05842a8e8a5a1d2454dbbe500b4d5aa95fca660
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707079"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installare i nuovi pacchetti di R in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 In questo articolo viene descritto come installare i nuovi pacchetti di R a un'istanza di SQL Server in cui è abilitato l'apprendimento. Sono disponibili diversi metodi per l'installazione di nuovi pacchetti di R, a seconda di quale versione di SQL Server in uso e se il server dispone di una connessione a internet. Sono possibili approcci seguenti per la nuova installazione del pacchetto.
 
-| Approccio                           | Autorizzazioni  | Remoto o locale |
-|------------------------------------|---------------------------|-------|
-| [Utilizzare gestori di pacchetti R convenzionali](#bkmk_rInstall)  | Amministrativi | Local |
-| [Usare RevoScaleR](use-revoscaler-to-manage-r-packages.md) | Amministrativi | Local |
-| [Utilizzare T-SQL (Crea raccolta esterni)](install-r-packages-tsql.md) | All'amministratore di eseguire l'installazione, i ruoli del database in un secondo momento | both 
-| [Utilizzare un miniCRAN per creare un repository locale](create-a-local-package-repository-using-minicran.md) | All'amministratore di eseguire l'installazione, i ruoli del database in un secondo momento | both |
+| Approccio                           | Autorizzazioni               | Remoto o locale |
+|------------------------------------|---------------------------|--------------|
+| [Utilizzare gestori di pacchetti R convenzionali](use-r-package-managers-on-sql-server.md)  | Amministrativi | Local |
+| [Usare RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Amministrazione abilitati, i ruoli del database in un secondo momento | both|
+| [Utilizzare T-SQL (Crea raccolta esterni)](install-r-packages-tsql.md) | Amministrazione abilitati, i ruoli del database in un secondo momento | both 
 
-## <a name="bkmk_rInstall"></a> Installare pacchetti R tramite una connessione Internet
+## <a name="who-installs-permissions"></a>Che consente di installare (autorizzazioni)
 
-È possibile utilizzare gli strumenti standard di R per installare i nuovi pacchetti in un'istanza di SQL Server 2016 o SQL Server 2017, fornendo il computer dispone di una porta aperta 80 e disporre di diritti di amministratore.
+La libreria di pacchetti R fisicamente si trova nella cartella file di programma dell'istanza di SQL Server, in una cartella sicura con accesso limitato. La scrittura in questa posizione richiede le autorizzazioni di amministratore.
 
-> [!IMPORTANT] 
-> Assicurarsi di installare i pacchetti per la libreria predefinita associata con l'istanza corrente. Non installare mai pacchetti in una directory dell'utente.
+Gli amministratori non possono installare i pacchetti, ma questa operazione richiede funzionalità non disponibili nelle installazioni iniziale e configurazione supplementari. Esistono due approcci per le installazioni del pacchetto non-admin: RevoScaleR uso versione 9.0.1 e versioni successive, o a utilizzare creare libreria esterna (solo SQL Server 2017). In SQL Server 2017, **dbo_owner** o un altro utente con autorizzazione di creazione libreria esterna è possibile installare pacchetti R nel database corrente.
 
-Questa procedura Usa RGui ma è possibile utilizzare RTerm o qualsiasi altro R della riga di comando dello strumento che supporta l'accesso con privilegi elevato.
+Gli sviluppatori R sono abituati alla creazione di librerie utente per i pacchetti di che cui hanno bisogno se centralizzate librerie sono off-limits. Questa pratica è problematica per il codice R in esecuzione in un'istanza di motore di database di SQL Server. SQL Server non è possibile caricare i pacchetti da librerie esterne, anche se tale libreria nello stesso computer. Solo i pacchetti dalla libreria di istanza possono essere utilizzati nel codice R in esecuzione in SQL Server.
 
-### <a name="install-a-package-using-rgui"></a>Installare un pacchetto utilizzando RGui
+Accesso al file system è in genere limitata nel server, o anche se si dispone di diritti di amministratore e l'accesso in una cartella di documento utente nel server, il runtime dello script esterno che viene eseguita in SQL Server non può accedere tutti i pacchetti installati all'esterno dell'istanza predefinita libreria. 
 
-1. [Determinare il percorso della libreria di istanza](installing-and-managing-r-packages.md). Passare alla cartella in cui sono installati gli strumenti di R. Ad esempio, il percorso predefinito per un'istanza predefinita di SQL Server 2017 è come segue: `C:\Program Files\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+## <a name="considerations-for-package-installation"></a>Considerazioni per l'installazione del pacchetto
 
-1. RGui.exe e scegliere **Esegui come amministratore**. Se non si dispone delle autorizzazioni necessarie, contattare l'amministratore del database e fornire un elenco dei pacchetti che è necessario.
+Prima di installare i nuovi pacchetti, prendere in considerazione se le funzionalità abilitate per un determinato pacchetto sono adatti in un ambiente di SQL Server. In un ambiente di SQL Server protetti, è opportuno evitare quanto segue:
 
-1. Dalla riga di comando, se si conosce il nome del pacchetto, è possibile digitare: `install.packages("the_package-name")` tra virgolette sono necessarie per il nome del pacchetto.
++ Pacchetti che richiedono l'accesso alla rete
++ Pacchetti che richiedono Java o altri Framework non è in genere utilizzato in un ambiente di SQL Server
++ Pacchetti che richiedono l'accesso con privilegi elevati di file system
++ Pacchetto venga utilizzato per lo sviluppo web o altre attività che non traggono vantaggio dall'esecuzione all'interno di SQL Server
 
-1. Quando viene richiesto un sito mirror, è possibile selezionare qualsiasi sito a cui è utile per il percorso.
+## <a name="offline-installation-no-internet-access"></a>Installazione offline (Nessun accesso a internet)
 
-Se il pacchetto di destinazione dipende da pacchetti aggiuntivi, il programma di installazione di R automaticamente le dipendenze vengono scaricate e li installa automaticamente.
+In generale, i server che ospitano i database di produzione bloccano le connessioni internet. Installazione di nuovi pacchetti R o Python in tali ambienti è necessario preparare in anticipo i pacchetti e le dipendenze e copiare i file in una cartella sul server per l'installazione offline.
 
-Se sono presenti più istanze di SQL Server, ad esempio le istanze side-by-side di SQL Server 2016 R Services e SQL Server 2017 Machine Learning Services, installazione separatamente per ogni istanza se si desidera utilizzare il pacchetto in entrambi i contesti. Pacchetti non possono essere condivisa tra più istanze.
+Identificare tutte le dipendenze diventa complicata. Per R, è consigliabile utilizzare [miniCRAN per creare un repository locale](create-a-local-package-repository-using-minicran.md) e quindi trasferire il repository completamente definito in un'istanza di SQL Server isolata.
 
-## <a name = "bkmk_offlineInstall"></a> Installazione offline utilizzando gli strumenti di R
+In alternativa, è possibile eseguire questa procedura manualmente:
 
-Se il server non ha accesso a internet, sono necessari ulteriori passaggi per preparare i pacchetti. Per installare pacchetti R in un server che non dispone dell'accesso a internet, è necessario:
+1. Identificare tutte le dipendenze di pacchetto. 
+2. Verificare se tutti i pacchetti necessari sono già installati nel server. Se il pacchetto è installato, verificare che la versione sia corretta.
+3. Scaricare il pacchetto e tutte le dipendenze in un computer separato.
+4. Spostare i file in una cartella accessibile dal server.
+5. Eseguire un comando di installazione supportati o l'istruzione DDL per installare il pacchetto nella libreria di istanza.
 
-+ Analizzare le dipendenze in anticipo.
-+ Scaricare il pacchetto di destinazione in un computer con accesso a Internet.
-+ Scaricare tutti i pacchetti necessari nello stesso computer e inserire tutti i pacchetti in un archivio singolo pacchetto.
-+ Codice postale archivio se non è già in formato compresso.
-+ Copiare l'archivio di pacchetto in un percorso sul server.
-+ Installare il pacchetto di destinazione, specificando il file di archivio come origine.
-
-> [!IMPORTANT] 
-> > Verificare che per analizzare tutte le dipendenze e scaricare **tutti** necessari pacchetti **prima** iniziare l'installazione. È consigliabile [miniCRAN](https://mran.microsoft.com/package/miniCRAN) per questo processo. Il pacchetto R accetta un elenco di pacchetti da installare, consente di analizzare le dipendenze e ottiene tutti i file compressi automaticamente. miniCRAN crea quindi un singolo archivio che è possibile copiare nel computer server.
-> 
-> Per informazioni dettagliate, vedere [creare un repository di pacchetti locali tramite miniCRAN](create-a-local-package-repository-using-minicran.md)
-
-Questa procedura si presuppone che sia stato preparato tutti i pacchetti necessari, in formato compresso e sono pronti per copiarli nel server.
-
-1. Copia il pacchetto compresso file o per più pacchetti, il repository completo che contiene tutti i pacchetti compressi formato, in una posizione che il server può accedere.
-
-2. Aprire la cartella nel server in cui sono installati gli strumenti R per l'istanza. Ad esempio, se si utilizza il prompt dei comandi di Windows in un sistema con SQL Server 2016 R Services, passare al `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
-
-3. Fare clic su RGui o RTerm e selezionare **Esegui come amministratore**.
-
-4. Eseguire il comando di R `install.packages` e specificare il pacchetto o nome di repository e il percorso del file ZIP.
-
-    ```R
-    install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
-    ```
-
-    Questo comando consente di estrarre il pacchetto R `mynewpackage` dal file compresso locale, presupponendo che la copia è stato salvato nella directory `C:\Temp\Downloaded packages`, quindi installa il pacchetto nel computer locale. Se il pacchetto contiene tutte le dipendenze, il programma di installazione verifica i pacchetti esistenti nella libreria. Se è stato creato un repository che include le dipendenze, il programma di installazione installa anche i pacchetti richiesti.
-
-    Se tutti i pacchetti necessari non sono presenti nella libreria di istanza e non possono essere disponibile nei file compressi, l'installazione del pacchetto di destinazione non riesce.
-
-## <a name="tips-for-package-installation"></a>Suggerimenti per l'installazione del pacchetto
-
-In questa sezione fornisce diversi suggerimenti e domande comuni relative all'installazione di pacchetti R in SQL Server.
-
-###  <a name="packageVersion"></a> Ottenere la versione corretta del pacchetto e il formato
-
-Sono presenti più origini per i pacchetti R, ad esempio CRAN e Bioconductor. Il sito ufficiale per il linguaggio R (<https://www.r-project.org/>) elenca molte di queste risorse. Molti pacchetti vengono pubblicati in GitHub, dove è possibile ottenere il codice sorgente. Infine, si potrebbero avere fornito i pacchetti R sviluppati da qualcuno nella propria azienda, o si dispone di un pacchetto personalizzato che è stato scritto.
-
-Indipendentemente dall'origine, prima di tentare di installare il pacchetto, verificare di avere ottenuto il formato binario per la piattaforma Windows. 
-
-### <a name="bkmk_zipPreparation"></a> Scaricare il pacchetto come file compresso
+### <a name="download-the-package-as-a-zipped-file"></a>Scaricare il pacchetto come file compresso
 
 Per l'installazione in un server senza accesso a internet, è necessario scaricare una copia del pacchetto nel formato di un file compresso per l'installazione offline. **Non decomprimere il pacchetto.**
 
@@ -116,21 +82,17 @@ Ad esempio, la procedura seguente descrive adesso per ottenere la versione corre
 > 
 > Tuttavia, quando si ottiene utilizzando questo metodo di pacchetti, le dipendenze non vengono incluse. 
 
-### <a name="bkmk_packageDependencies"></a> Ottenere i pacchetti richiesti
 
-Pacchetti R spesso dipendono da altri più pacchetti, alcuni dei quali potrebbero non essere disponibili nella libreria R predefinito utilizzata dall'istanza. A volte un pacchetto richiede una versione diversa di un pacchetto dipendente che è già installato.
+## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Installazione side-by-side con server Python o Standalone R
 
-Se è necessario installare più pacchetti o per assicurarsi che tutti gli utenti dell'organizzazione Ottiene il tipo di pacchetto corretto e la versione, è consigliabile utilizzare il [miniCRAN](https://mran.microsoft.com/package/miniCRAN) pacchetto per analizzare la catena di dipendenze completo. minicRAN crea un repository locale che può essere condivisa tra più utenti o computer. Per ulteriori informazioni, vedere [creare un repository di pacchetti locali tramite miniCRAN](create-a-local-package-repository-using-minicran.md).
+R e Python sono incluse in diversi prodotti Microsoft, ognuno dei quali può coesistere nello stesso computer.
+
+Se è installato SQL Server 2017 Microsoft Machine Learning Server (Standalone) o SQL Server 2016 R Server (Standalone) oltre a analitica nel database (SQL Server 2017 Machine Learning Services e SQL Server 2016 R Services), il computer dispone separato installazioni di R per ogni, con i duplicati di tutti i strumenti di R e librerie.
+
+I pacchetti installati nella libreria R_SERVER vengono utilizzati solo da un server autonomo e non accessibili da un'istanza di SQL Server (In-Database). Utilizzare sempre il `R_SERVICES` libreria quando si installano pacchetti che si desidera utilizzare nel database in SQL Server. Per ulteriori informazioni sui percorsi, vedere [libreria posizione pacchetto](installing-and-managing-r-packages.md#package-library-location).
 
 
-### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>Conoscere la libreria che si sta installando a e quali pacchetti sono già installati.
+## <a name="see-also"></a>Vedere anche
 
-Se in precedenza, è stata modificata l'ambiente R nel computer, prima di installare qualsiasi elemento, sospendere qualche istante e assicurarsi che la variabile di ambiente R `.libPath` Usa un unico percorso.
-
-Questo percorso deve puntare alla cartella R_SERVICES per l'istanza. Per altre informazioni, incluse le modalità determinare quali pacchetti sono già installati, vedere [pacchetti R installati con SQL Server](installing-and-managing-r-packages.md).
-
-### <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Installazione side-by-side con server Python o Standalone R
-
-Se è installato SQL Server 2017 Microsoft Machine Learning Server (Standalone) o SQL Server 2016 R Server (Standalone) oltre a analitica nel database (SQL Server 2017 Machine Learning Services e SQL Server 2016 R Services), il computer dispone separare le installazioni di R per ognuno, con i duplicati di tutti i strumenti di R e librerie.
-
-I pacchetti installati nella libreria R_SERVER vengono utilizzati solo da un server autonomo e non accessibili da un'istanza di SQL Server (In-Database). Utilizzare sempre il `R_SERVICES` libreria quando si installano pacchetti che si desidera utilizzare nel database in SQL Server.
++ [Installare nuovi pacchetti Python](../python/install-additional-python-packages-on-sql-server.md)
++ [Esercitazioni, esempi, soluzioni](../tutorials/machine-learning-services-tutorials.md)

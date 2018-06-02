@@ -25,10 +25,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: e7574f58ead9dc10afaf2cf6a9dc65c48a8c24f4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706879"
 ---
 # <a name="sql-server-native-client-programming"></a>Programmazione in SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +48,7 @@ ms.lasthandoff: 05/03/2018
   
  Benché [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilizzi componenti di Windows DAC (applicazione livello dati), non dipende in modo esplicito da una determinata versione di Windows DAC. È possibile utilizzare [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la versione di Windows DAC (applicazione livello dati) installata con qualsiasi sistema operativo supportato da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client.md)  
  Vengono elencate le nuove importanti funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/03/2018
  [Funzionalità di SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
  Vengono descritte le caratteristiche supportate da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- [Creazione di applicazioni con SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Compilazione di applicazioni con SQL Server Native Client](../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
  Viene presentata una panoramica dello sviluppo con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, incluse le differenze rispetto a Windows DAC (applicazione livello dati), i componenti utilizzati e la modalità di utilizzo di ADO con questo prodotto.  
   
  Vengono inoltre illustrate le operazioni di installazione e di distribuzione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, inclusa la modalità di ridistribuzione della libreria di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 05/03/2018
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
  Vengono fornite informazioni sull'utilizzo del provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
- [SQL Server Native Client & #40; ODBC & #41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
  Vengono fornite informazioni sull'utilizzo del driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  [Ricerca di altre informazioni su SQL Server Native Client](../../relational-databases/native-client/finding-more-sql-server-native-client-information.md)  
@@ -80,6 +81,6 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento di un'applicazione da SQL Server 2005 Native Client](../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md)   
  [Procedure ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Procedure per OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure relative a OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

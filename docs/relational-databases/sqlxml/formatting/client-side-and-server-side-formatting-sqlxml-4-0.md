@@ -22,10 +22,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: a387f27bee5a4325709b3268c7e2deb6157768e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708459"
 ---
 # <a name="client-side-and-server-side-formatting-sqlxml-40"></a>Formattazione sul lato server e sul lato client (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,14 +38,14 @@ ms.lasthandoff: 05/03/2018
   
  In questa sezione include informazioni sulla formattazione di documenti XML sul lato client o lato server dai set di righe generati dalle query eseguite su un database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Architettura della formattazione XML sul lato Client e lato Server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)  
  Vengono forniti i diagrammi dell'architettura e vengono illustrate le nozioni fondamentali dell'architettura della formattazione sul lato server e sul lato client in SQLXML.  
   
  [Formattazione XML sul lato server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/server-side-xml-formatting-sqlxml-4-0.md)  
  Viene descritta la formattazione XML sul lato server.  
   
- [Formattazione XML sul lato client & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [Formattazione XML sul lato client &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
  Viene descritta la formattazione XML sul lato client, incluse le informazioni sull'utilizzo di FOR XML sul client.  
   
  [Formattazione XML sul lato client e Formattazione XML sul lato server &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md)  

@@ -8,25 +8,26 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 88604b48f93a7ec322e5e7f9a9bdba6b9eb2cc3c
-ms.sourcegitcommit: 1aedef909f91dc88dc741748f36eabce3a04b2b1
+ms.openlocfilehash: 997db094cb5e69e0cbf82d9a7e247cb13ec1d452
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707659"
 ---
 # <a name="enable-or-disable-remote-package-management-for-sql-server"></a>Abilitare o disabilitare la gestione di pacchetti remoti per SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-In questo articolo viene descritto come abilitare la gestione dei pacchetti di R da un'istanza remota di Server di Machine Learning. Dopo aver abilitata la funzionalità di gestione di pacchetti, è possibile utilizzare i comandi RevoScaleR per installare i pacchetti in un database da un client remoto.
+In questo articolo viene descritto come abilitare la gestione remota dei pacchetti di R da una workstation client o un altro Server di Machine Learning. Dopo aver abilitata la funzionalità di gestione di pacchetti in SQL Server, è possibile utilizzare i comandi RevoScaleR in un client per installare i pacchetti in SQL Server.
 
 > [!NOTE]
 > Gestione delle librerie R è attualmente supportata; supporto per Python è della mappa.
 
-Per impostazione predefinita, la funzionalità di gestione di pacchetto esterno per SQL Server è disabilitata, anche se le funzionalità di machine learning sono state installate. È necessario eseguire uno script separato per abilitare la funzionalità, come descritto nella sezione successiva.
+Per impostazione predefinita, la funzionalità di gestione di pacchetto esterno per SQL Server è disabilitata. È necessario eseguire uno script separato per abilitare la funzionalità, come descritto nella sezione successiva.
 
 ## <a name="overview-of-process-and-tools"></a>Panoramica del processo e strumenti
 
-Per abilitare o disabilitare la gestione dei pacchetti, utilizzare l'utilità della riga di comando **RegisterRExt.exe**, inclusa la **RevoScaleR** pacchetto.
+Per abilitare o disabilitare la gestione dei pacchetti in SQL Server, utilizzare l'utilità della riga di comando **RegisterRExt.exe**, inclusa la **RevoScaleR** pacchetto.
 
 [Abilitazione](#bkmk_enable) questa funzionalità è un processo in due fasi, che richiede un amministratore del database: abilitare la gestione dei pacchetti nell'istanza di SQL Server (una volta per ogni istanza di SQL Server) e quindi abilitare la gestione dei pacchetti nel database SQL (una volta per SQL Server database).
 
@@ -34,7 +35,7 @@ Per abilitare o disabilitare la gestione dei pacchetti, utilizzare l'utilità de
 
 ## <a name="bkmk_enable"></a> Abilitare la gestione dei pacchetti
 
-1. Aprire un prompt dei comandi con privilegi elevati e passare alla cartella contenente l'utilità, RegisterRExt.exe. Il percorso predefinito è `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
+1. In SQL Server, aprire un prompt dei comandi con privilegi elevati e passare alla cartella contenente l'utilità, RegisterRExt.exe. Il percorso predefinito è `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`.
 
 2. Eseguire il comando seguente, che fornisce gli argomenti appropriati per l'ambiente:
 
@@ -93,3 +94,8 @@ Dopo avere abilitato questa funzionalità, è possibile utilizzare la funzione R
 
     Questo comando rimuove la funzionalità di gestione del pacchetto dall'istanza. Potrebbe essere necessario riavviare manualmente il servizio Launchpad ancora una volta per visualizzare le modifiche.
 
+## <a name="next-steps"></a>Passaggi successivi
+
++ [Utilizzare RevoScaleR per installare i nuovi pacchetti R](use-revoscaler-to-manage-r-packages.md)
++ [Suggerimenti per l'installazione di pacchetti R](packages-installed-in-user-libraries.md)
++ [Pacchetti predefiniti](installing-and-managing-r-packages.md)

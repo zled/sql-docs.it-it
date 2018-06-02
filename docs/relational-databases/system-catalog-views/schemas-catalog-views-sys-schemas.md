@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 5fb74ca331e580ffa71111f987bf3a93450f2b56
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33178337"
 ---
 # <a name="schemas-catalog-views---sysschemas"></a>-Vista del catalogo schemi schemas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,7 +46,7 @@ ms.lasthandoff: 05/04/2018
 |**schema_id**|**int**|ID dello schema. Valore univoco all'interno del database.|  
 |**principal_id**|**int**|ID dell'entità che possiede lo schema.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Gli schemi di database fungono da spazi dei nomi o contenitori per gli oggetti, ad esempio tabelle, viste, procedure e funzioni, che possono essere trovati nel **Sys. Objects** vista del catalogo.  
   
 ## <a name="permissions"></a>Autorizzazioni  

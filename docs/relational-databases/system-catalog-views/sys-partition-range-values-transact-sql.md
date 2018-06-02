@@ -26,10 +26,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 35e2b56ec8338a45defd87b136db91712ef29e5d
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33179567"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 05/04/2018
 |**function_id**|**int**|ID della funzione di partizione per il valore limite di intervallo.|  
 |**boundary_id**|**int**|ID (ordinale in base 1) della tupla del valore limite con il primo limite a sinistra che inizia con l'ID 1.|  
 |**parameter_id**|**int**|ID del parametro della funzione a cui questo valore corrisponde. I valori in questa colonna corrispondono a quelli del **parameter_id** colonna del **partition_parameters** visualizzazione per qualsiasi particolare catalogo **function_id**.|  
-|**Valore**|**sql_variant**|Il valore limite effettivo.|  
+|**valore**|**sql_variant**|Il valore limite effettivo.|  
   
 ## <a name="permissions"></a>Autorizzazioni  
  È richiesta l'appartenenza al ruolo **public** . Per altre informazioni, vedere [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

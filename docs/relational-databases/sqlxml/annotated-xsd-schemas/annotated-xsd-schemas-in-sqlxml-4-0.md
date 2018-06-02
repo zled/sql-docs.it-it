@@ -24,17 +24,18 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: edf8e4836693eb67e9e6c4c3816d46d2b9d6ccc4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708759"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Schemi XSD con annotazioni in SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questa sezione vengono fornite informazioni sull'utilizzo degli schemi XSD con annotazioni in SQLXML 4.0. Nelle versioni precedenti di SQLXML, una funzionalità simile veniva fornita con gli schemi XDR (XML-Data Reduced). In questa sezione vengono inoltre fornite le informazioni su XDR per le applicazioni legacy.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Introduzione a schemi XSD con annotazioni & #40; SQLXML 4.0 & #41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ [Introduzione agli schemi XSD con annotazioni &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  
  Viene fornita una panoramica degli schemi XSD con annotazioni in SQLXML 4.0.  
   
  [Utilizzo delle annotazioni negli schemi XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/using-annotations-in-xsd-schemas-sqlxml-4-0.md)  

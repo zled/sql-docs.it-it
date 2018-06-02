@@ -19,10 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 225ba86e65657002289220c0147d211fee291153
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707789"
 ---
 # <a name="using-cursors-how-to-topics-odbc"></a>Procedure di utilizzo dei cursori (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,13 +33,13 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Utilizzare i cursori & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
+-   [Utilizzare i cursori &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-cursors-odbc.md)  
   
--   [Utilizzare l'associazione di set di righe & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
+-   [Utilizzare l'associazione di set di righe &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/use-rowset-binding-odbc.md)  
   
--   [Recuperare e aggiornare i set di righe & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
+-   [Recuperare e aggiornare i set di righe &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/fetch-and-update-rowsets-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+ [Procedure relative a ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

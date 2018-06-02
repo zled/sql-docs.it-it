@@ -4,12 +4,10 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.service: ''
 ms.component: system-stored-procedures
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: system-objects
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -24,11 +22,12 @@ caps.latest.revision: 30
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 23c91431f84e43e5dabd6f9e3ac0077e4946c79c
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
-ms.translationtype: HT
+ms.openlocfilehash: b9615c833939c18b3653fa4035258b91bb5bdfc8
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33253264"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Mapping automatico**|**smallint**|0 = **account di accesso locale** viene eseguito il mapping a **account di accesso remoto** durante la connessione a **Server collegato**.<br /><br /> 1 = **account di accesso locale** viene eseguito il mapping allo stesso account di accesso e password quando ci si connette a **Server collegato**.|  
 |**Account di accesso remoto**|**sysname**|Nome di account di accesso su **LinkedServer** che viene eseguito il mapping a **LocalLogin** quando **IsSelfMapping** è 0. Se **IsSelfMapping** è 1, **RemoteLogin** è NULL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Prima di eliminare i mapping di account di accesso, utilizzare **sp_helplinkedsrvlogin** per determinare i server collegati coinvolti.  
   
 ## <a name="permissions"></a>Autorizzazioni  

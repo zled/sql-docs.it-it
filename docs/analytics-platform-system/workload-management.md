@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6fba7a7e5dfded26d617ac905449a4799c19249b
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: a4f748ed39705f865a303f1b59ae352068f93431
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707099"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestione del carico di lavoro nel sistema della piattaforma Analitica
 
@@ -36,7 +37,7 @@ Gestione del carico di lavoro
 Classe di risorse  
 In SQL Server PDW, un *classe di risorse* è un ruolo predefinito del server che dispone di limiti di pre-assegnati per la memoria e concorrenza. SQL Server PDW alloca le risorse per le richieste in base l'appartenenza al ruolo di risorsa classe server dell'account di accesso che invia le richieste.  
   
-Nei nodi di calcolo, l'implementazione di classi di risorse utilizza la funzionalità Resource Governor in SQL Server. Per ulteriori informazioni su Resource Governor, vedere [Resource Governor](http://msdn.microsoft.com/en-us/library/bb933866(v=sql.11).aspx) su MSDN.  
+Nei nodi di calcolo, l'implementazione di classi di risorse utilizza la funzionalità Resource Governor in SQL Server. Per ulteriori informazioni su Resource Governor, vedere [Resource Governor](http://msdn.microsoft.com/library/bb933866(v=sql.11).aspx) su MSDN.  
   
 ### <a name="understand-current-resource-utilization"></a>Comprendere l'utilizzo delle risorse correnti  
 Per comprendere l'utilizzo delle risorse di sistema per le richieste attualmente in esecuzione, utilizzare le DMV di SQL Server PDW. Ad esempio, è possibile utilizzare viste a gestione dinamica per comprendere se un join hash di grandi dimensioni con esecuzione prolungata può trarre vantaggio dalla presenza di più memoria.  
@@ -130,7 +131,7 @@ Istruzioni SQL e operazioni di classi di risorse:
   
 -   UPDATE  
   
--   DELETE  
+-   Elimina  
   
 -   RESTORE DATABASE durante il ripristino in un dispositivo con più nodi di calcolo.  
   

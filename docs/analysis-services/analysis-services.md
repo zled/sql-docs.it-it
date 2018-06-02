@@ -10,10 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 704c2f1638676bd838c7aac367a1b610143fd85d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707039"
 ---
 # <a name="about-sql-server-analysis-services"></a>Informazioni su SQL Server Analysis Services
 
@@ -35,7 +36,7 @@ In generale, [documentazione di Azure Analysis Services](https://docs.microsoft.
 *  [Installare SQL Server Analysis Services](../analysis-services/instances/install-windows/install-analysis-services.md)
 *  [Modelli tabulari](../analysis-services/tabular-models/tabular-models-ssas.md)  
 *  [Modelli multidimensionali](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)  
-*  [Data Mining](../analysis-services/data-mining/data-mining-ssas.md)  
+*  [Data mining](../analysis-services/data-mining/data-mining-ssas.md)  
 *  [Power Pivot per SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
 *  [Esercitazioni](../analysis-services/analysis-services-tutorials-ssas.md)   
 *  [Gestione di server](../analysis-services/instances/analysis-services-instance-management.md)    

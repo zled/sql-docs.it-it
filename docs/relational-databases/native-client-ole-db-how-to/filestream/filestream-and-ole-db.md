@@ -17,10 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: b7eff1c42235cfd4b472e52936e45d3f3b187280
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707939"
 ---
 # <a name="filestream-and-ole-db"></a>Filestream e OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,12 +29,12 @@ ms.lasthandoff: 05/03/2018
 
   In questa sezione sono inclusi quattro esempi in cui viene illustrato l'utilizzo di OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con la caratteristica FILESTREAM:  
   
--   [Leggere una colonna FILESTREAM file utilizzando IBCPSession & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
+-   [Leggere una colonna FILESTREAM file utilizzando IBCPSession &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)  
   
--   [Recuperare dati da una colonna FILESTREAM utilizzando ISequentialStream & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
+-   [Recuperare i dati da una colonna FILESTREAM utilizzando ISequentialStream &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream in associazione al parametro ICommandText & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
+-   [Inviare dati a una colonna FILESTREAM utilizzando ISequentialStream in associazione al parametro ICommandText &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)  
   
--   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
+-   [Inviare dati a una colonna FILESTREAM utilizzando IRowsetFastUpload &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/filestream/send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)  
   
   

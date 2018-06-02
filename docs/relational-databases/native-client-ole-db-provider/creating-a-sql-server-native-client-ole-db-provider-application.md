@@ -21,10 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 3d2b5f72ccee7795392d3a792eb43899023b75f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708559"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Creazione di un'applicazione del provider OLE DB di SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,15 +44,15 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Stabilire una connessione a un'origine dati](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
+-   [Avvio di una connessione a un'origine dati](../../relational-databases/native-client-ole-db-provider/establishing-a-connection-to-a-data-source.md)  
   
--   [Esegue un comando](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
+-   [Esecuzione di un comando](../../relational-databases/native-client-ole-db-provider/executing-a-command.md)  
   
 -   [Elaborazione dei risultati](../../relational-databases/native-client-ole-db-provider/processing-results.md)  
   
--   [Sulle proprietà OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
+-   [Informazioni sulle proprietà OLE DB](../../relational-databases/native-client-ole-db-provider/about-ole-db-properties.md)  
   
--   [Utilizzo della clausola OUTPUT con OLE DB in SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
+-   [Uso della clausola OUTPUT con OLE DB in SQL Server Native Client](../../relational-databases/native-client-ole-db-provider/using-the-output-clause-with-ole-db-in-sql-server-native-client.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

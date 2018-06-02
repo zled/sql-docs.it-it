@@ -23,10 +23,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 1c722a870a5ac6d9715f874b3135d4ed0058ac63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707309"
 ---
 # <a name="errors"></a>Errori
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.lasthandoff: 05/03/2018
   
  Per informazioni sulla traccia degli errori, vedere [traccia di accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=125805). Per informazioni sui miglioramenti apportati alla traccia di errori aggiunta in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vedere [l'accesso a informazioni di diagnostica nel Log degli eventi estesi](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Codici restituiti](../../relational-databases/native-client-ole-db-errors/return-codes.md)  
   
 -   [Informazioni nelle interfacce di errore](../../relational-databases/native-client-ole-db-errors/information-in-error-interfaces.md)  
   
--   [Dettagli errore SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
+-   [Dettagli relativi agli errori di SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-error-detail.md)  
   
--   [Il recupero delle informazioni di errore](../../relational-databases/native-client-ole-db-errors/retrieving-error-information.md)  
+-   [Recupero delle informazioni sugli errori](../../relational-databases/native-client-ole-db-errors/retrieving-error-information.md)  
   
 -   [Risultati dei messaggi di SQL Server](../../relational-databases/native-client-ole-db-errors/sql-server-message-results.md)  
   

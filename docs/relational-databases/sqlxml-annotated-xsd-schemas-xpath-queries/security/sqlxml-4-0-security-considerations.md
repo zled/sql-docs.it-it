@@ -20,16 +20,17 @@ ms.author: douglasl
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 9f4a7e0ea6b195f4b77c844eba2fce133e1f8b21
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708479"
 ---
 # <a name="sqlxml-40-security-considerations"></a>Considerazioni sulla sicurezza per SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   In questa sezione vengono fornite informazioni relative alla sicurezza per [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Considerazioni principali sulla sicurezza di SQLXML](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/core-sqlxml-security-considerations.md)  
  Vengono fornite linee guida relative alla sicurezza per l'utilizzo di SQLXML per l'accesso ai dati.  
   

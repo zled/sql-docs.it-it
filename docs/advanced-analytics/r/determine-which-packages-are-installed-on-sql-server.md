@@ -4,27 +4,28 @@ description: Determinare la versione del pacchetto R, Python, verificare l'insta
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/08/2018
+ms.date: 05/29/2018
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 21975b4a59cbfaf1e3a203bc732543144856633f
-ms.sourcegitcommit: df382099ef1562b5f2d1cd506c1170d1db64de41
+ms.openlocfilehash: 85ea4658ca8b60fc24d7e4f7849de1655eab6082
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707889"
 ---
-#  <a name="get-r-and-python-package-information-on-sql-server"></a>Ottenere informazioni sul pacchetto di Python e R in SQL Server
+#  <a name="get-r-and-python-package-information"></a>Ottenere informazioni sul pacchetto R e Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A volte quando si lavora con più ambienti o le installazioni di Python o R, è necessario verificare che il codice che è in esecuzione viene utilizzata l'ambiente previsto per Python o l'area di lavoro corretto per R. Ad esempio, se è stato aggiornato di machine learning componenti mediante l'associazione, il percorso alla libreria R potrebbe essere in una cartella diversa da quelle predefinite. Inoltre, se si installa il Client R o un'istanza del server autonoma, potrebbe essere più librerie R nel computer in uso.
+A volte quando si lavora con più ambienti o le installazioni di Python o R, è necessario verificare che il codice che è in esecuzione stia utilizzando l'ambiente previsto per l'area di lavoro corretto o Python per R. Ad esempio, se è stato eseguito l'aggiornamento di machine learning componenti tramite [associazione](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md), il percorso alla libreria R potrebbe essere in una cartella diversa da quelle predefinite. Inoltre, se si installa il Client R o un'istanza del server autonoma, potrebbe essere più librerie R nel computer in uso.
 
-Negli esempi contenuti in questo articolo mostrano come ottenere il percorso e la versione della libreria che è utilizzata da SQL Server.
+Esempi di script R e Python in questo articolo mostrano come ottenere il percorso e la versione dei pacchetti utilizzato da SQL Server.
 
-## <a name="get-the-current-r-library"></a>Ottenere la libreria R corrente
+## <a name="get-the-r-library-location"></a>Ottenere il percorso della libreria R
 
-Per **R** in qualsiasi versione di SQL Server, eseguire l'istruzione seguente per verificare la libreria predefinita per l'istanza corrente:
+Per qualsiasi versione di SQL Server, eseguire l'istruzione seguente per verificare il [libreria pacchetto predefinito R](installing-and-managing-r-packages.md) per l'istanza corrente:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Facoltativamente, è possibile utilizzare rxSqlLibPaths nelle versioni più recenti di RevoScaleR in servizi di SQL Server 2017 Machine Learning o [R Services aggiornato R per almeno RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Questa stored procedure restituisce il percorso della libreria di istanza e la versione di RevoScaleR utilizzato da SQL Server:
+Facoltativamente, è possibile utilizzare [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) nelle versioni più recenti di RevoScaleR in servizi di SQL Server 2017 Machine Learning o [R Services aggiornato R per almeno RevoScaleR 9.0.1](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md). Questa stored procedure restituisce il percorso della libreria di istanza e la versione di RevoScaleR utilizzato da SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -57,7 +58,7 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-current-python-library"></a>Ottenere la libreria di Python corrente
+## <a name="get-the-python-library-location"></a>Ottenere il percorso della libreria Python
 
 Per **Python** in SQL Server 2017, eseguire l'istruzione seguente per verificare la libreria predefinita per l'istanza corrente. Questo esempio viene restituito l'elenco delle cartelle incluse in Python `sys.path` variabile. L'elenco include la directory corrente e il percorso della libreria standard.
 
@@ -88,7 +89,7 @@ Per ulteriori informazioni sulla variabile `sys.path` e su come viene utilizzato
 
 Sono disponibili più modi che è possibile ottenere un elenco completo dei pacchetti installati. Uno dei vantaggi dell'esecuzione di comandi dell'elenco di pacchetti da sp_execute_external_script è che si è certi di ottenere i pacchetti installati nella libreria di istanza.
 
-### <a name="r"></a>L
+### <a name="r"></a>R
 
 Nell'esempio seguente viene utilizzata la funzione di R `installed.packages()` in un [!INCLUDE [tsql](..\..\includes\tsql-md.md)] stored procedure per ottenere una matrice di pacchetti che sono stati installati nella libreria R_SERVICES per l'istanza corrente. Questo script restituisce i campi nome e la versione del pacchetto nel file DESCRIPTION, viene restituito solo il nome.
 
@@ -130,7 +131,7 @@ Quando si esegue `pip` dalla riga di comando, sono disponibili molte altre funzi
 
 Se si è installato un pacchetto e si desidera assicurarsi che sia disponibile per una particolare istanza di SQL Server, è possibile eseguire la seguente chiamata di stored procedure per caricare il pacchetto e restituire solo i messaggi.
 
-### <a name="r"></a>L
+### <a name="r"></a>R
 
 In questo esempio cerca e carica la libreria RevoScaleR, se disponibile.
 
@@ -221,6 +222,6 @@ Installazione di SQL Server non verranno aggiunti Pip o Conda al percorso di sis
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-+ [Installare i nuovi pacchetti R](install-additional-r-packages-on-sql-server.md)
-+ [Installare i nuovi pacchetti di Python](../python/install-additional-python-packages-on-sql-server.md)
++ [Installare nuovi pacchetti R](install-additional-r-packages-on-sql-server.md)
++ [Installare nuovi pacchetti Python](../python/install-additional-python-packages-on-sql-server.md)
 + [Esercitazioni, esempi, soluzioni](../tutorials/machine-learning-services-tutorials.md)

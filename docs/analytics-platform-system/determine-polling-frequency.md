@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8e2a1ccf469e6c587870c0d5921014d797f87d1
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: 39597e0e4623a3006709acde7fe54f97545c362f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707619"
 ---
 # <a name="determine-polling-frequency"></a>Determinare la frequenza di Polling
 In questo articolo viene illustrato come determinare la frequenza di polling Analitica Platform appliance gli avvisi di sistema.  
@@ -31,7 +32,7 @@ Poiché PDW non supporta attualmente attiva notifiche quando si verificano avvis
   
 È un intervallo comune per eseguire il polling per gli avvisi, viene utilizzato anche da System Center, **ogni 15 minuti**.  Ovviamente, è possibile eseguire una query più o meno frequente, ma non è consigliabile eseguire il polling inferiore a ogni sei ore.  
   
-Esecuzione più frequente del polling è accettabile, ma l'esecuzione troppo frequente del polling può creare confusione il [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/en-us/library/ms177648(v=sql11).aspx) DMV.  Esecuzione troppo frequente del polling può rendere difficile per gli utenti diagnosticare le prestazioni delle query problemi quando i relativi rapidamente il rollback fuori della visualizzazione.  
+Esecuzione più frequente del polling è accettabile, ma l'esecuzione troppo frequente del polling può creare confusione il [sys.dm_pdw_nodes_exec_requests](http://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV.  Esecuzione troppo frequente del polling può rendere difficile per gli utenti diagnosticare le prestazioni delle query problemi quando i relativi rapidamente il rollback fuori della visualizzazione.  
   
 ## <a name="see-also"></a>Vedere anche  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

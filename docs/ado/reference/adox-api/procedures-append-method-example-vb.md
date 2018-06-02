@@ -20,10 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 46af14e62769073be33f891bc11a7bf012c8924b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "32802586"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedure di esempio del metodo Append (VB)
 Il codice seguente viene illustrato come utilizzare un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto e [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per creare una nuova stored procedure nell'origine dati sottostante.  

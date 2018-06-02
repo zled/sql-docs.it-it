@@ -28,10 +28,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 090ec967e25fff1fac3761298214e0366c0f2478
-ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "33180257"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Database SQL di Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,13 +44,13 @@ ms.lasthandoff: 05/04/2018
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|Identificatore dell'impostazione del firewall a livello di server.|  
-|name|**NVARCHAR (128)**|Nome scelto per descrivere e distinguere l'impostazione del firewall a livello di server.|  
+|NAME|**NVARCHAR (128)**|Nome scelto per descrivere e distinguere l'impostazione del firewall a livello di server.|  
 |start_ip_address|**VARCHAR (50)**|L'indirizzo IP più basso nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o maggiori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più basso possibile è `0.0.0.0`.|  
 |end_ip_address|**VARCHAR (50)**|L'indirizzo IP più alto nell'intervallo dell'impostazione del firewall a livello di server. Gli indirizzi IP uguali o minori di questo possono tentare la connessione al server del [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L'indirizzo IP più alto possibile è `255.255.255.255`.<br /><br /> Nota: Tentativi di connessione di Azure di Windows sono consentiti quando sia questo campo e **start_ip_address** campo uguale a `0.0.0.0`.|  
 |create_date|**DATA/ORA**|Data e ora UTC in cui è stata creata l'impostazione del firewall a livello di server.<br /><br /> Nota: L'ora UTC è l'acronimo di Coordinated Universal Time.|  
 |modify_date|**DATA/ORA**|Data e ora UTC in cui è stata modificata per l'ultima volta l'impostazione del firewall a livello di server.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per rimuovere una regola del firewall del database, utilizzare [sp_delete_firewall_rule &#40;Database SQL di Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md). Per impostare una regola del firewall per un singolo database, vedere [Sys. database_firewall_rules &#40;Database SQL di Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md). Per restituire informazioni sulle regole firewall esistenti, eseguire query su Sys. firewall_rules (Database SQL di Azure).  
   
 ## <a name="permissions"></a>Autorizzazioni  

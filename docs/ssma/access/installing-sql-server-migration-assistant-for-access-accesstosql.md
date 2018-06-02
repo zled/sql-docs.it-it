@@ -31,11 +31,12 @@ caps.latest.revision: 31
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 4232c955646b44be8c1d41a9095146a47aa75e97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 39c6aef71584fbc3a50ec8611ead82ff5ad9f351
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34709089"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>L'installazione di SQL Server Migration Assistant per Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per l'accesso è stato installato utilizzando una procedura guidata basata su Windows Installer. In questo argomento fornisce informazioni sui prerequisiti di installazione, un collegamento all'ultima versione di SSMA e istruzioni per l'installazione, licenze, la disinstallazione e l'aggiornamento di SSMA.  
@@ -47,7 +48,7 @@ Prima di installare SSMA, assicurarsi che il sistema soddisfi i requisiti seguen
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Installer 3.1 o versione successiva.  
   
--   Il [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework versione 4.0 o versione successiva. È disponibile in .NET Framework versione 4.0 di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] disco del prodotto e con le informazioni nel [Guida di Microsoft .NET](https://docs.microsoft.com/en-us/dotnet/framework/).
+-   Il [!INCLUDE[msCoName](../../includes/msconame_md.md)] .NET Framework versione 4.0 o versione successiva. È disponibile in .NET Framework versione 4.0 di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] disco del prodotto e con le informazioni nel [Guida di Microsoft .NET](https://docs.microsoft.com/dotnet/framework/).
   
 -   Per l'accesso e autorizzazioni sufficienti nel computer che ospita l'istanza di destinazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]database SQL di Azure a cui si desidera migrare gli oggetti di database e i dati.  
   

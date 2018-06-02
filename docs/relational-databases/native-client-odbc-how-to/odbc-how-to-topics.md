@@ -17,42 +17,43 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 8a4888eaac053f8c0f6db09f0b9c6684bc0e6e78
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707339"
 ---
 # <a name="odbc-how-to-topics"></a>Procedure per l'utilizzo di ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Per utilizzare il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , è necessario essere in grado di creare origini dati ODBC e assicurarsi che nel server sia presente la versione corretta delle stored procedure di catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
+  Utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, è necessario essere in grado di creare origini dati ODBC e assicurarsi che il server abbia la versione corretta di stored procedure di catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Configurazione delle procedure di SQL Server ODBC Driver](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   
--   [Allocare handle e connettersi a SQL Server & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
+-   [Allocare handle e connettersi a SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [L'esecuzione di query procedure & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [L'esecuzione di query procedure &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Procedure per l'elaborazione dei risultati & #40; ODBC & #41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
+-   [Procedure di risultati per l'elaborazione &#40;ODBC&#41;](http://msdn.microsoft.com/library/772d9064-c91d-4cac-8b60-fcc16bf76e10)  
   
--   [Utilizzo delle procedure per cursori & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Utilizzare procedure per cursori &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
--   [Utilizzare Microsoft Distributed Transaction Coordinator & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
+-   [Utilizzare Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Esecuzione della Stored procedure procedure & #40; ODBC & #41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+-   [Esecuzione di procedure per le Stored procedure &#40;ODBC&#41;](http://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
--   [La gestione di testo e procedure relative alle immagini colonne & #40; ODBC & #41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+-   [La gestione di testo e immagine di procedure relative a colonne &#40;ODBC&#41;](http://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
--   [Profilatura procedure relative alle prestazioni del Driver ODBC & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+-   [Procedure ODBC Driver delle prestazioni di analisi &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
--   [Elaborare errori ODBC & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
+-   [Elaborare errori ODBC &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/process-odbc-errors-odbc.md)  
   
--   [Copia di massa dei con procedure di SQL Server ODBC Driver & #40; ODBC & #41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [Copia bulk con procedure di SQL Server ODBC Driver &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [SQL Server Native Client & #40; ODBC & #41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -20,10 +20,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 56749be182165535e7fb8678cdda09a3a485a95f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34707979"
 ---
 # <a name="commands"></a>Comandi
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/03/2018
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone la **ICommand** interfaccia e gli oggetti comando, che sono descritte in questa sezione:  
   
--   [Sintassi del comando](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
+-   [Sintassi dei comandi](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
--   [Parametri di comando](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
+-   [Parametri dei comandi](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
   
 -   [Preparazione dei comandi](../../relational-databases/native-client-ole-db-commands/preparing-commands.md)  
   
--   [Comandi che generano risultati di più set di righe](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
+-   [Comandi che generano risultati con più set di righe](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  

@@ -94,18 +94,18 @@
 
 # [Procedura](r/sql-server-machine-learning-tasks.md)
 
-## [Gestione dei pacchetti](r/r-package-management-for-sql-server-r-services.md)
+## Gestione dei pacchetti
 ### [Pacchetti predefiniti](r/installing-and-managing-r-packages.md)
 ### [Ottenere informazioni sui pacchetti](r/determine-which-packages-are-installed-on-sql-server.md)
 ### [Installare nuovi pacchetti Python](python/install-additional-python-packages-on-sql-server.md)
 ### [Installare nuovi pacchetti R](r/install-additional-r-packages-on-sql-server.md)
-#### [Usare i gestori di pacchetti R](r/install-additional-r-packages-on-sql-server.md)
-#### [Usare RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+#### [Usare i gestori di pacchetti R](r/use-r-package-managers-on-sql-server.md)
 #### [Usare T-SQL](r/install-r-packages-tsql.md)
-#### [Usare un repository miniCRAN](r/create-a-local-package-repository-using-minicran.md)
-#### [Abilitare la gestione remota dei pacchetti R](r/r-package-how-to-enable-or-disable.md)
-#### [Sincronizzare i pacchetti R](r/package-install-uninstall-and-sync.md)
-#### [Soluzioni alternative per le "librerie utente" R](r/packages-installed-in-user-libraries.md)
+#### [Usare RevoScaleR](r/use-revoscaler-to-manage-r-packages.md)
+##### [Abilitare la gestione remota dei pacchetti R](r/r-package-how-to-enable-or-disable.md)
+##### [Sincronizzare i pacchetti R](r/package-install-uninstall-and-sync.md)
+#### [Creare un repository miniCRAN](r/create-a-local-package-repository-using-minicran.md)
+#### [Suggerimenti per l'utilizzo di pacchetti R](r/packages-installed-in-user-libraries.md)
 
 ## Esplorazione e modellazione dei dati
 ### [Librerie e tipi di dati R](r/r-libraries-and-data-types.md)
@@ -156,19 +156,18 @@
 
 ## [Problemi noti](known-issues-for-sql-server-machine-learning-services.md)
 ## [Note sulla versione](https://docs.microsoft.com/sql/sql-server/sql-server-2017-release-notes)
-## [Articoli nuovi e aggiornati](new-updated-advanced-analytics.md)
-
-## [Suggerimenti per l'installazione e la risoluzione dei problemi](machine-learning-troubleshooting-faq.md)
-### [Configurare una macchina virtuale](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
-### [Raccolta dati per la risoluzione dei problemi](data-collection-ml-troubleshooting-process.md)
-### [Domande frequenti su installazione e aggiornamento](r/upgrade-and-installation-faq-sql-server-r-services.md)
-### [Problemi comuni con l'esecuzione di script esterni](common-issues-external-script-execution.md)
+## [Configurare una macchina virtuale](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
+## [Risoluzione dei problemi](machine-learning-troubleshooting-faq.md)
+### [Raccolta dati](data-collection-ml-troubleshooting-process.md)
+### [Installare e errori di aggiornamento](r/upgrade-and-installation-faq-sql-server-r-services.md)
+### [Finestra di avvio e gli errori di esecuzione di script esterni](common-issues-external-script-execution.md)
+### [Errori di script R](r-script-execution-errors.md)
 
 ## Blog
 ### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
 ### [R Server](https://blogs.msdn.microsoft.com/microsoftrservertigerteam/)
 ### [Apprendimento automatico](https://blogs.technet.microsoft.com/machinelearning/)
 
-## Forum di commenti e suggerimenti
+## Forum
 ### [SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/home?category=sqlserver)
-### [Microsoft R Server](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)
+### [Server di Machine Learning](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)

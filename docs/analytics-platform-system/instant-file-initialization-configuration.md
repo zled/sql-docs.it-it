@@ -9,11 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 20498cc4e2c4ad959fce263984b58e3186630cea
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.openlocfilehash: f2c1e0e17e2cbfb5816632a25ecdebe5d92ee024
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34706749"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configurazione di inizializzazione immediata dei File
 Inizializzazione immediata dei file è una funzionalità di SQL Server che consente operazioni di file di dati eseguire più rapidamente. Selezionando la casella per attivare l'inizializzazione immediata dei File migliorerà le prestazioni di SQL Server PDW. Tuttavia, se ciò comporta un rischio per la sicurezza per l'utente business, quindi lasciare deselezionata la casella.  
@@ -53,5 +54,5 @@ Il processo di backup richiede una credenziale di rete (account utente di Window
   
 ![Inizializzazione di File immediata DWConfig Appliance PDW](./media/instant-file-initialization-configuration/SQL_Server_PDW_DWConfig_ApplPDWInstant.png "SQL_Server_PDW_DWConfig_ApplPDWInstant")  
   
-Per ulteriori informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei File](http://technet.microsoft.com/en-us/library/ms175935(v=SQL.105).aspx).  
+Per ulteriori informazioni sull'inizializzazione immediata dei file, vedere [inizializzazione immediata dei File](http://technet.microsoft.com/library/ms175935(v=SQL.105).aspx).  
   

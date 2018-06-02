@@ -20,11 +20,12 @@ caps.latest.revision: 11
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 9f16a1eeccefbcf1299bf677f337c443d0e4004a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: aeb915c231cdaef032259a83ae647a75db4e3db7
+ms.sourcegitcommit: 2d93cd115f52bf3eff3069f28ea866232b4f9f9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34708869"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>L'installazione di SSMA per MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) per MySQL è costituito da un'applicazione client che consentono di eseguire una migrazione da MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. Include anche un pacchetto di estensione che supporta la migrazione dei dati e l'utilizzo delle funzioni di sistema di MySQL nei database migrati.  
@@ -38,9 +39,9 @@ Se si desidera eseguire l'aggiornamento a una versione successiva di SSMA per My
   
 |||  
 |-|-|  
-|**Argomento**|**Description**|  
+|**Argomento**|**Descrizione**|  
 |[Installazione di SSMA per Client di MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Fornisce informazioni e istruzioni per l'installazione del client SSMA.|  
-|[Installazione dei componenti SSMA in SQL Server (MySQL to SQL)](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Fornisce informazioni e istruzioni per installare il pacchetto di estensione in istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
+|[Installazione dei componenti SSMA in SQL Server (MySQL to SQL)](http://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Fornisce informazioni e istruzioni per installare il pacchetto di estensione in istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].|  
 |[Rimozione di SSMA per i componenti di MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Vengono fornite istruzioni per la disinstallazione del programma client.|  
   
 ## <a name="see-also"></a>Vedere anche  
