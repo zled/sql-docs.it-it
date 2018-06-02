@@ -15,11 +15,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 32a848344e0f3b4aa32c0ac4722adad02b6f9469
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7f8d8ee2ecca5db774ed31f25f85a150f0fc6b20
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563909"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -45,7 +46,7 @@ ADO.NET è la tecnologia di base per l'accesso ai dati per i linguaggi .NET. Usa
 ## <a name="more-samples"></a>Altri esempi  
 * [Esempi di codice ADO.NET](https://msdn.microsoft.com/library/dw70f090.aspx)  
 * [Introduzione a .NET Framework in Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [Introduzione a .NET Core su macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/mac/)
+* [Introduzione a .NET Core su macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Introduzione a .NET Core in Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
 * [Introduzione a .NET Core su Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

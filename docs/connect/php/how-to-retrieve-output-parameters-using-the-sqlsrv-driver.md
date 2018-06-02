@@ -3,8 +3,6 @@ title: 'Procedura: recuperare i parametri di Output mediante il Driver SQLSRV | 
 ms.custom: ''
 ms.date: 04/11/2018
 ms.prod: sql
-ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +15,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8699d76ace19555c57ff3bcd8992f60a5cef526a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81a94f68d7198285125236337a0025e41f1bf8ef
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34563889"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procedura: Recuperare i parametri di output mediante il driver SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ In questo argomento viene illustrato come chiamare una stored procedure in cui u
   
 Il troncamento dei dati può verificarsi quando vengono usati tipi di flusso, ad esempio SQLSRV_SQLTYPE_VARCHAR('max'), come parametri di output. I tipi di flusso non sono supportati come parametri di output. Per i tipi non di flusso, il troncamento dei dati può verificarsi se la lunghezza del parametro di output non viene specificata o se la lunghezza specificata non è sufficientemente grande per il parametro di output.  
   
-## <a name="example"></a>Esempio  
+## <a name="example-1"></a>Esempio 1
 L'esempio seguente effettua una chiamata a una stored procedure che restituisce le vendite da inizio anno di un dipendente specificato. La variabile PHP *$lastName* è un parametro di input e *$salesYTD* è un parametro di output.  
   
 > [!NOTE]  
@@ -125,9 +124,9 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Quando si associa un parametro di output a un valore bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
+> Quando si associa un parametro di output a un tipo bigint, se il valore può finire di fuori dell'intervallo di un [integer](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), sarà necessario specificare il tipo di campo SQL come SQLSRV_SQLTYPE_BIGINT. In caso contrario, può comportare un'eccezione di "valore non compreso nell'intervallo".
 
-## <a name="example"></a>Esempio  
+## <a name="example-2"></a>Esempio 2
 Questo esempio di codice viene illustrato come associare un valore bigint grande come parametro di output.  
 
 ```

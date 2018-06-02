@@ -9,15 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: eb6a4e848b35a31feeef31bb8e304ba43a8577f3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 78cdf8b38828e8b9f96a89ffc026ec39ae40366b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34574573"
 ---
 # <a name="create-element-xmla"></a>Elemento Create (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
-  Contiene gli elementi di Analysis Services Scripting Language (ASSL) utilizzati dal **Execute** metodo per creare oggetti in un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.  
+  Contiene gli elementi di Analysis Services Scripting Language (ASSL) utilizzati per il **Execute** metodo per creare gli oggetti in un'istanza di Analysis Services.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -33,10 +34,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -48,12 +49,12 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="attributes"></a>Attributi  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |AllowOverwrite|Attributo **Boolean** facoltativo. Se è impostata su True, gli oggetti definiti nel **ObjectDefinition** elemento può sovrascrivere oggetti esistenti nel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza. Se questo attributo è omesso o impostato a Falso, la presenza di un oggetto esistente genera un errore.|  
 |Ambito|Parametro facoltativo **Enum** attributo. Definisce la durata degli oggetti definiti nel **ObjectDefinition** elemento. Se questo attributo viene omesso, gli oggetti definiti nel **ObjectDefinition** elemento vengono rese persistenti nel [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza. Il valore seguente è disponibile:<br /><br /> *Sessione*: gli oggetti definiti nel **ObjectDefinition** l'elemento esiste solo per la durata del codice XML per sessione Analysis (XMLA).<br />                  Si noti che quando si utilizza il *sessione* impostazione, il **ObjectDefinition** elemento può contenere solo [dimensione](../../../analysis-services/scripting/objects/dimension-element-assl.md), [cubo](../../../analysis-services/scripting/objects/cube-element-assl.md), o [MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md) elementi ASSL.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Ogni **crea** operazione crea un oggetto principale sotto un padre fornito dal **ParentObject** elemento. Se l'oggetto padre viene omesso, si presuppone che sia l'istanza [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] di destinazione. Questo genera un errore se il padre di un oggetto principale non è l'istanza di destinazione.  
   
 ## <a name="example"></a>Esempio  
@@ -71,7 +72,7 @@ ms.lasthandoff: 05/10/2018
 </Create>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Comandi & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
+## <a name="see-also"></a>Vedere anche
+ [I comandi &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   

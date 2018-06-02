@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb1a181a73a6e6a2f4998fb12381c522afb4e510
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: a795b4cf935f7eae8052c52a3527005f362b533c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573803"
 ---
 # <a name="enumstring-data-type-xmla"></a>Tipo di dati EnumString (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -28,23 +29,23 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="data-type-characteristics"></a>Caratteristiche tipo di dati  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|**string**|  
-|Tipi di dati derivati|Nessuno|  
+|Tipi di dati derivati|None|  
   
-## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
+## <a name="data-type-relationships"></a>Relazioni tra tipi di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|Nessuno|  
-|Elementi figlio|Nessuno|  
-|Elementi derivati|Nessuno|  
+|Elementi padre|None|  
+|Elementi figlio|None|  
+|Elementi derivati|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Enumerazioni per limitare valori della stringa a un set di impostazioni verificabili sono utilizzate in XML for Analysis (XMLA). **EnumString** utilizza XML standard **stringa** tipo di dati. I valori specifici per ognuna delle costanti denominate sono specificati con la definizione dell'enumeratore. Gli enumeratori sono definiti aggiungendoli al file il [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) set di righe dello schema e può essere recuperato tramite il [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) tipo di metodo con il DISCOVER_ENUMERATORS richiesta.  
   
- Nella tabella seguente vengono descritti gli enumeratori supportati da un'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Nella tabella seguente vengono descritti gli enumeratori supportati da un'istanza di Analysis Services.  
   
 |Enumeratore|Description|  
 |----------------|-----------------|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/10/2018
 |ResultsetContents|Supporta la proprietà XMLA, **contenuto**, che determina se i dati o metadati vengono restituiti un **radice** elemento.<br /><br /> Per ulteriori informazioni **contenuto**, vedere [proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
 |MDXSupportLevel|Supporta la proprietà XMLA, **MDXSupport**, che indica il livello di supporto MDX (Multidimensional Expressions) disponibile in un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] istanza.<br /><br /> Per ulteriori informazioni **MDXSupport**, vedere [proprietà XMLA supportate &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Tipi di dati XML &#40;XMLA&#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   

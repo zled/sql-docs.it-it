@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: beb58b21c88bf5500ba7c15c336b866df59b0c7e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 4b2c49f32029078bbe67e70066845f5b8f7d4f3c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34573513"
 ---
 # <a name="contextualnamerule-element-xml"></a>Elemento ContextualNameRule (XML)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|-1|  
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[RelationshipEndVisualizationProperties](../../../analysis-services/scripting/data-type/relationshipendvisualizationproperties-data-type-assl.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Fornisce un suggerimento alle applicazioni client sulla creazione di nomi non ambigui per questo attributo.  
   
  Il valore di **ContextualNameRule** elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Nessuno*|Utilizzare il nome dell'attributo.|  
 |*Contesto*|Utilizzare il nome della relazione in entrata.|  

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: fde6410ac0f6932fe11e5486342e1d836dcc8000
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 0d528567e22c3ba19b49eefff10d886703a0d29a
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/02/2018
+ms.locfileid: "34576493"
 ---
 # <a name="readwritemode-element"></a>Elemento ReadWriteMode
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String (enumerazione)|  
 |Valore predefinito|ReadWrite|  
@@ -43,19 +44,19 @@ ms.lasthandoff: 05/10/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Database](../../../analysis-services/xmla/xml-elements-properties/database-element-xmla.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I database vengono creati **ReadWrite** solo in modalità. Non possono essere creati **ReadOnly** modalità.  
   
  Il valore di **ReadWriteMode** elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
-|Value|Descrizione|  
+|valore|Description|  
 |-----------|-----------------|  
 |*Sola lettura*|Non è possibile applicare modifiche o aggiornamenti al database.|  
 |*Lettura/scrittura*|È possibile applicare modifiche e aggiornamenti al database.|  
   
-## <a name="see-also"></a>Vedere anche  
+## <a name="see-also"></a>Vedere anche
  [Elemento Attach](../../../analysis-services/xmla/xml-elements-commands/attach-element.md)   
  [Collegamento e scollegamento di database di Analysis Services](../../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Spostare un Database di Analysis Services](../../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
