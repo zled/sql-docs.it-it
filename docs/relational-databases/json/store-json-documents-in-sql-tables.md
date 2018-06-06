@@ -17,11 +17,12 @@ caps.latest.revision: ''
 author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
-ms.openlocfilehash: 7f17fe3754cae9be4e6701e237b380d43cceed7e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 330e4d3bf4bf0059fc713d0b8969505e00d775c3
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689199"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>Archiviare documenti JSON in SQL Server o nel database SQL
 SQL Server e il database SQL di Azure includono funzioni JSON native che consentono di analizzare i documenti JSON usando il linguaggio SQL standard. È ora possibile archiviare i documenti JSON in SQL Server o nel database SQL ed eseguire query sui dati JSON come in un database NoSQL. In questo articolo vengono descritte le opzioni per archiviare i documenti JSON in SQL Server o nel database SQL.
@@ -59,7 +60,7 @@ SELECT TOP 100 JSON_VALUE(log, ‘$.severity’), AVG( CAST( JSON_VALUE(log,’$
  WHERE CAST( JSON_VALUE(log,’$.date’) as datetime) > @datetime
  GROUP BY JSON_VALUE(log, ‘$.severity’)
  HAVING AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) > 100
- ORDER BY CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
+ ORDER BY AVG( CAST( JSON_VALUE(log,’$.duration’) as float) ) DESC
 ```
 
 La possibilità di usare *qualsiasi* funzione e clausola di query T-SQL per eseguire query sui documenti JSON è un enorme vantaggio. SQL Server e il database SQL non introducono alcun vincolo nelle query che è possibile usare per analizzare i documenti JSON. È possibile estrarre i valori da un documento JSON con la funzione `JSON_VALUE` e usarla nella query come qualsiasi altro valore.

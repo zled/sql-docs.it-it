@@ -3,7 +3,6 @@ title: Replica di disponibilità non unita in join | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: 9c0d10b1-9e12-430c-83b9-ca2bd0a3afc4
 caps.latest.revision: 15
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab5079c7efcf04dd6f5461504d6bb97f9d2b548d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e072823b9a5330ad71ac1d211c939b60ffde970c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34771307"
 ---
 # <a name="availability-replica-is-not-joined"></a>Replica di disponibilità non unita in join
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |**Category**|**Avviso**|  
 |**Facet**|Replica di disponibilità|  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Tramite questi criteri viene controllato lo stato del join della replica di disponibilità. Lo stato dei criteri non è integro quando la replica di disponibilità viene aggiunta al gruppo di disponibilità, ma non ne viene creato il join correttamente. Altrimenti, sono in uno stato integro.  
   
 > [!NOTE]  

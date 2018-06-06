@@ -3,12 +3,9 @@ title: Guida dell'Installazione guidata | Microsoft Docs
 ms.custom: ''
 ms.date: 2017-04-21
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: install
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: install
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -17,15 +14,16 @@ helpviewer_keywords:
 - Instance Name page [SQL Server Installation Wizard]
 - SQL Server Installation Wizard, Instance Name page
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-caps.latest.revision: 62
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 0366b0613623960afd56a2877ad9462fded60bf5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b2224040e62b1c9f75cf93e4231cef1443edfbac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772767"
 ---
 # <a name="installation-wizard-help"></a>Guida dell'Installazione guidata
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +133,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
-|Description|Directory predefinita|Indicazioni|  
+|Descrizione|Directory predefinita|Indicazioni|  
 |-----------------|-----------------------|---------------------|  
 |Directory radice dati|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Assicurarsi che la cartella \Programmi\Microsoft SQL Server\ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
 |Directory file di log|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |Si tratta della directory per i file di log di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  
@@ -173,7 +171,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 ### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
-|Description|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
+|Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Directory radice dati|Disco locale, file server SMB, archiviazione condivisa* |C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.|  
 |Directory database utente|Disco locale, file server SMB, archiviazione condivisa*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.|  
@@ -185,7 +183,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 ### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nella tabella seguente vengono elencati i tipi di archivio supportati e le directory predefinite per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Description|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
+|Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Directory radice dati|Spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.|  
 |Directory database utente|Spazio di archiviazione condiviso, file server SMB|\<Unità:>Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.|  
@@ -225,7 +223,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
   
 #### <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
   
-|Description|Directory predefinita|Indicazioni|  
+|Descrizione|Directory predefinita|Indicazioni|  
 |-----------------|-----------------------|---------------------|  
 |Directory radice dati |C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Assicurarsi che la cartella \Programmi\Microsoft SQL Server\ sia protetta con autorizzazioni limitate. Le prestazioni di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dipendono, in molte configurazioni, dalle prestazioni del sottosistema di archiviazione in cui si trova la directory dei dati. Posizionare tale directory nel sottosistema di archiviazione collegato al sistema in grado di garantire le prestazioni più elevate. Per le installazioni del cluster di failover, assicurarsi che le directory dei dati vengano posizionate nel disco condiviso.|  
 |Directory file di log|C:\Programmi\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Si tratta della directory per i file di log di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e include il log FlightRecorder. Se si aumenta la durata dell'Utilità Traccia eventi, assicurarsi che la directory dei log disponga di spazio sufficiente.|  
@@ -369,7 +367,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 ### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directory di dati e log per un'istanza autonoma di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  La tabella seguente elenca i tipi di archivio supportati e le directory predefinite per le istanze autonome di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione.  
   
-|Description|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
+|Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |**Directory dati**|Disco locale, file server SMB, spazio di archiviazione condiviso* |C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Le procedure consigliate per le directory dei dati del database **tempdb** dipendono dai requisiti del carico di lavoro e delle prestazioni. Specificare più cartelle o unità per distribuire i file di dati su più volumi.|  
 |**Directory log**|Disco locale, file server SMB, spazio di archiviazione condiviso*|C:\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  
@@ -379,7 +377,7 @@ Ogni istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è cos
 ### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directory di dati e log per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Nella tabella seguente vengono elencati i tipi di archivio supportati e le directory predefinite per un'istanza del cluster di failover di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurabili dall'utente durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Description|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
+|Descrizione|Tipo di archivio supportato|Directory predefinita|Indicazioni|  
 |-----------------|----------------------------|-----------------------|---------------------|  
 |Directory dati**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vengono configurati gli elenchi ACL per le directory di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e viene disattivata l'ereditarietà come parte della configurazione.<br /><br /> Assicurarsi che la directory (o le directory se vengono specificati più file) sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.|  
 |Directory log**tempdb** |Disco locale, spazio di archiviazione condiviso, file server SMB|\<Unità:>\Programmi\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> Suggerimento: se nella pagina **Selezione dischi cluster** è stato selezionato un disco condiviso, per impostazione predefinita verrà usato il primo disco condiviso. Se nella pagina **Selezione dischi cluster** non è stata effettuata alcuna selezione, questo campo sarà vuoto per impostazione predefinita.|Le procedure consigliate per le directory dei dati dell'utente dipendono dai requisiti del carico di lavoro e delle prestazioni.<br /><br /> Assicurarsi che la directory specificata sia valida per tutti i nodi del cluster. Durante il failover, se le directory **tempdb** non sono disponibili sul nodo di destinazione del failover, la risorsa di SQL Server non verrà riportata online.<br /><br /> Assicurarsi che nella directory del log sia disponibile una quantità di spazio adeguata.|  

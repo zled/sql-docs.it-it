@@ -33,11 +33,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a20affed4c50345d5b7d2d61a2f2666e456a5971
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3339a53c2569f6561caa4cefdb5e697610c71fdd
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34582113"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenzioni della sintassi Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +50,7 @@ ms.lasthandoff: 05/03/2018
 |MAIUSCOLE|Parole chiave [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |*corsivo*|Parametri della sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] specificati dall'utente.|  
 |**grassetto**|Nomi di database, tabelle, colonne, indici, stored procedure, utilità, tipi di dati e testo che deve essere digitato esattamente come indicato.|  
-|**underline**|Indica il valore predefinito applicato quando la clausola che include il valore sottolineato viene omessa dall'istruzione.|  
+|_underline_|Indica il valore predefinito applicato quando la clausola che include il valore sottolineato viene omessa dall'istruzione.|  
 |&#124; (barra verticale)|Separazione di elementi sintattici racchiusi tra parentesi quadre o graffe. Indica che è possibile utilizzare solo uno degli elementi.|  
 |`[ ]` (parentesi quadre)|Elementi sintattici facoltativi. Le parentesi quadre non devono essere digitate.|  
 |{ } (parentesi graffe)|Elementi sintattici obbligatori. Le parentesi graffe non devono essere digitate.|  
@@ -88,7 +89,7 @@ Quando si fa riferimento a un oggetto specifico, non è sempre necessario specif
   
 Per omettere i nodi intermedi, contrassegnare queste posizioni con un punto. Nella tabella seguente sono inclusi i formati validi per i nomi di oggetto.  
   
-|Formato per i riferimenti agli oggetti.|Description|  
+|Formato per i riferimenti agli oggetti.|Descrizione|  
 |-----------------------------|-----------------|  
 |*server* **.** *database* **.** *schema* **.** *object*|Nome composto da quattro parti.|  
 |*server* **.** *database* **..** *object*|Il nome dello schema viene omesso.|  

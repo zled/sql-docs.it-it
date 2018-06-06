@@ -3,7 +3,6 @@ title: Risolvere i problemi relativi alla configurazione di Gruppi di disponibil
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 caps.latest.revision: 39
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51993c7798822b6ce73c0ba905bba67868bc35ca
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: decd62a6c869191a28922efb6622b646d97108fc
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770070"
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
   
  **Contenuto dell'argomento:**  
   
-|Sezione|Description|  
+|Sezione|Descrizione|  
 |-------------|-----------------|  
 |[Funzionalità Gruppi di disponibilità Always On non abilitata](#IsHadrEnabled)|Se un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non è abilitata per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], l'istanza non supporta la creazione del gruppo di disponibilità e non è in grado di ospitare alcuna replica di disponibilità.|  
 |[Accounts](#Accounts)|Illustra i requisiti per la corretta configurazione degli account in cui viene eseguito [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  

@@ -3,7 +3,6 @@ title: Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità Always O
 ms.custom: ''
 ms.date: 08/30/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -15,14 +14,15 @@ helpviewer_keywords:
 - PowerShell [SQL Server], cmdlets
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 caps.latest.revision: 36
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 051a279a8905c232a78e366daec95bbaee2ee612
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 21ec89f0a33e3170eed83f3a1ed0333a5bc67dac
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769217"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server"></a>Panoramica dei cmdlet di PowerShell per Gruppi di disponibilità Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="ConfiguringServerInstance"></a> Configuring a Server Instance for Always On Availability Groups  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|
 |[**Disable-SqlAlwaysOn**](/powershell/module/sqlserver/disable-sqlalwayson)|Disabilita la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza del server.|L'istanza del server è specificata dal parametro **Path**, **InputObject**o **Name** . (L'edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deve supportare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]).|  
 |[**Enable-SqlAlwaysOn**](/powershell/module/sqlserver/enable-sqlalwayson)|Abilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] su un'istanza di [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] che supporta la funzionalità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Per informazioni sul supporto per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vedere [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).|Qualsiasi edizione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che supporta [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="BnRcmdlets"></a> Backing Up and Restoring Databases and Transaction Logs  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |[**Backup-SqlDatabase**](/powershell/module/sqlserver/backup-sqldatabase)|Crea un backup dei dati o del log.|Qualsiasi database online (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un database nell'istanza del server che ospita la replica primaria)|  
 |[**Restore-SqlDatabase**](/powershell/module/sqlserver/restore-sqldatabase)|Ripristina un backup.|Qualsiasi istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], un'istanza del server che ospita una replica secondaria)<br /><br />
@@ -75,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="DeployManageAGs"></a> Creating and Managing an Availability Group  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroup**](/powershell/module/sqlserver/new-sqlavailabilitygroup)|Crea un nuovo gruppo di disponibilità.|Istanza del server per ospitare la replica primaria|  
 |[**Remove-SqlAvailabilityGroup**](/powershell/module/sqlserver/remove-sqlavailabilitygroup)|Elimina un gruppo di disponibilità.|Istanza del server abilitata per HADR|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="AGlisteners"></a> Creating and Managing an Availability Group Listener  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |------------|-----------------|------------------|  
 |[**New-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/new-sqlavailabilitygrouplistener)|Crea un nuovo listener del gruppo di disponibilità e lo collega a un gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
 |[**Set-SqlAvailabilityGroupListener**](/powershell/module/sqlserver/set-sqlavailabilitygrouplistener)|Modifica l'impostazione della porta su un listener del gruppo di disponibilità esistente.|Istanza del server che ospita la replica primaria|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="DeployManageARs"></a> Creating and Managing an Availability Replica  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |[**New-SqlAvailabilityReplica**](/powershell/module/sqlserver/new-sqlavailabilityreplica)|Crea una nuova replica di disponibilità È possibile usare il parametro **-AsTemplate** per creare un oggetto della replica di disponibilità in memoria per ogni nuova replica di disponibilità.|Istanza del server che ospita la replica primaria|  
 |[**Join-SqlAvailabilityGroup**](/powershell/module/sqlserver/join-sqlavailabilitygroup)|Viene creato un join della replica secondaria al gruppo di disponibilità.|Istanza del server che ospita la replica secondaria|  
@@ -101,7 +101,7 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="DeployManageDbs"></a> Adding and Managing an Availability Database  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |-------------|-----------------|------------------|  
 |[**Add-SqlAvailabilityDatabase**](/powershell/module/sqlserver/add-sqlavailabilitydatabase)|Nella replica primaria viene aggiunto un database a un gruppo di disponibilità.<br /><br /> In una replica secondaria viene creato un join di un database secondario a un gruppo di disponibilità.|Qualsiasi istanza del server che ospita una replica di disponibilità (il comportamento è diverso per le repliche primarie e per quelle secondarie)|  
 |[**Remove-SqlAvailabilityDatabase**](/powershell/module/sqlserver/remove-sqlavailabilitydatabase)|Nella replica primaria il database viene rimosso dal gruppo di disponibilità.<br /><br /> In una replica secondaria il database secondario locale viene rimosso dalla replica secondaria locale.|Qualsiasi istanza del server che ospita una replica di disponibilità (il comportamento è diverso per le repliche primarie e per quelle secondarie)|  
@@ -114,7 +114,7 @@ ms.lasthandoff: 05/03/2018
 > [!IMPORTANT]  
 >  È necessario disporre delle autorizzazioni CONNECT, VIEW SERVER STATE e VIEW ANY DEFINITION per eseguire questi cmdlet.  
   
-|Cmdlet|Description|Supportati in|  
+|Cmdlet|Descrizione|Supportati in|  
 |------------|-----------------|------------------|  
 |[**Test-SqlAvailabilityGroup**](/powershell/module/sqlserver/test-sqlavailabilitygroup)|Valuta l'integrità di un gruppo di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  
 |[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|Valuta l'integrità delle repliche di disponibilità valutando i criteri della gestione basata su criteri di SQL Server.|Qualsiasi istanza del server che ospita una replica di disponibilità*.|  

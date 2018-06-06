@@ -15,11 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0b16ad6c18bec1954d9c52ada5fd22202e3ff9da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fed2dac0cb435e906a3c880022f53fdc35880754
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34581983"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Ruotare le chiavi di Always Encrypted con PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -312,7 +313,7 @@ La rotazione di una chiave di crittografia della colonna comporta la decrittogra
 |Passaggio 3. Eseguire l'autenticazione in Azure, se la chiave master della colonna che protegge la chiave di crittografia della colonna da ruotare è archiviata nell'insieme di credenziali delle chiavi di Azure. | [Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext) | Sì | no
 |Passaggio 4. Generare una nuova chiave di crittografia di colonna, crittografarla con la chiave master della colonna e creare i metadati della chiave di crittografia della colonna nel database.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Nota:** usare una variante del cmdlet che genera internamente e crittografa una chiave di crittografia della colonna.<br>Questo cmdlet genera automaticamente l'istruzione [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) per creare i metadati della chiave. | Sì | Sì
 |Passaggio 5. Trovare tutte le colonne crittografate con la chiave di crittografia precedente della colonna. | [Guida alla programmazione di SMO (SQL Server Management Objects)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | no | Sì
-|Passaggio 6. Creare un oggetto *SqlColumnEncryptionSettings* per ogni colonna interessata.  In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria Specifica lo schema di crittografia di destinazione per una colonna. In questo caso, l'oggetto deve specificare che la colonna interessata deve essere crittografata con la nuova chiave di crittografia della colonna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeysettings) | no | no
+|Passaggio 6. Creare un oggetto *SqlColumnEncryptionSettings* per ogni colonna interessata.  In PowerShell SqlColumnMasterKeySettings è un oggetto presente in memoria Specifica lo schema di crittografia di destinazione per una colonna. In questo caso, l'oggetto deve specificare che la colonna interessata deve essere crittografata con la nuova chiave di crittografia della colonna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | no | no
 |Passaggio 7. Crittografare nuovamente le colonne, identificate nel passaggio 5, usando la nuova chiave di crittografia della colonna. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** questo passaggio può richiedere molto tempo. Le applicazioni non potranno accedere alle tabelle durante l'intera operazione o una parte di essa, a seconda dell'approccio (online o offline) selezionato. | Sì | Sì
 |Passaggio 8. Rimuovere i metadati per la chiave di crittografia precedente della colonna. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | no | Sì
 

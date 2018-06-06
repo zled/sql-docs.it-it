@@ -15,11 +15,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4454cfd34cf23c1fb22417acf275d7172c16063b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b8f6870e0e7881f9ce31a7b9d120b4fb4906a926
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563719"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tabelle temporali con controllo delle versioni di sistema con tabelle con ottimizzazione per la memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/03/2018
   
 -   La tabella di cronologia per la tabella ottimizzata per la memoria con controllo delle versioni di sistema deve essere basata su disco, che sia stata creata dall'utente finale o dal sistema.  
   
--   Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdnstage.redmond.corp.microsoft.com/en-us/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.  
+-   Le query che interessano solo la tabella corrente in memoria possono essere usate in [moduli T-SQL compilati in modo nativo](https://msdn.microsoft.com/en-us/library/dn133184.aspx). Le query temporali che usano la clausola FOR SYSTEM TIME non sono supportate nei moduli compilati in modo nativo. È supportato invece l'uso della clausola FOR SYSTEM TIME insieme a tabelle ottimizzate per la memoria in query ad hoc e in moduli non nativi.  
   
 -   Con **SYSTEM_VERSIONING = ON** viene creata automaticamente una tabella di staging interna ottimizzata per la memoria per accettare le modifiche più recenti alle versioni di sistema in seguito alle operazioni di aggiornamento ed eliminazione nella tabella ottimizzata per la memoria corrente.  
   

@@ -3,12 +3,8 @@ title: Avviare la procedura guidata Abilitare il database per l'estensione | Mic
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: stretch-database
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- dbe-stretch
 ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 f1_keywords:
@@ -25,15 +21,15 @@ helpviewer_keywords:
 - Stretch Database, wizard
 - Enable Database for Stretch Wizard
 ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
-caps.latest.revision: 39
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 934be2b3fc47d8c1b055f965237f02be16591039
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13e5366037f3f399325d1a453601314f46ae6a67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772967"
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Avviare la procedura guidata Abilitare il database per l'estensione
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -69,7 +65,7 @@ Le tabelle con un numero elevato di righe vengono visualizzate nella parte super
   
  ![Pagina Selezionare le tabelle della procedura guidata Estensione database](../../sql-server/stretch-database/media/stretch-wizard-2.png "Pagina Selezionare le tabelle della procedura guidata Estensione database")  
   
-|colonna|Description|  
+|colonna|Descrizione|  
 |------------|-----------------|  
 |(nessun titolo)|Selezionare la casella di controllo in questa colonna per abilitare la tabella selezionata per l'estensione.|  
 |**Nome**|Specifica il nome della tabella nel database.|  

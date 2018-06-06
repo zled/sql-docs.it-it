@@ -12,11 +12,12 @@ ms.prod: sql
 ms.prod_service: sql-non-specified
 ms.component: ssms
 ms.date: 04/28/2018
-ms.openlocfilehash: 1ce446219f71baca0f4cdedc835fca929b572a0f
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 75c3dafdfea93a1cb16b9101d187c208e6de2796
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585913"
 ---
 # <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>Articoli nuovi e aggiornati di recente: SQL Server Management Studio (SSMS) per SQL Server
 
@@ -132,7 +133,7 @@ Classificazione dei dati:
 
 **Integration Services (IS)**
 
-- Aggiunto il supporto per la distribuzione dei pacchetti a un'[istanza gestita del database SQL](docs/ssms/https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
+- Aggiunto il supporto per la distribuzione dei pacchetti a un'[istanza gestita del database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance).
 
 
 

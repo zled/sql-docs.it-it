@@ -23,10 +23,11 @@ ms.author: edmaca
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 61ff78d987e173c875e68f992d4ef4a57fee28b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708249"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Database Engine)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -158,7 +159,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="dynamic-views-and-functions"></a>Viste e funzioni dinamiche  
  Nella tabella seguente vengono elencate le viste e le funzioni dinamiche che è possibile utilizzare per il controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Viste e funzioni dinamiche|Description|  
+|Viste e funzioni dinamiche|Descrizione|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)|Restituisce una riga per ogni azione di controllo che può essere segnalata nel log di controllo e per ogni gruppo di azioni di controllo che possono essere configurate come parte di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit.|  
 |[sys.dm_server_audit_status](../../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)|Fornisce informazioni sullo stato corrente del controllo.|  
@@ -168,7 +169,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="catalog-views"></a>Viste del catalogo  
  Nella tabella seguente vengono elencate le viste del catalogo che è possibile utilizzare per il controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-|Viste del catalogo|Description|  
+|Viste del catalogo|Descrizione|  
 |-------------------|-----------------|  
 |[sys.database_ audit_specifications](../../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server.|  
 |[sys.database_audit_specification_details](../../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)|Contiene informazioni sulle specifiche del controllo del database in un controllo di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in un'istanza del server per tutti i database.|  

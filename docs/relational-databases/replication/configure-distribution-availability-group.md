@@ -1,7 +1,7 @@
 ---
 title: Configurare il database di distribuzione di SQL Server nel gruppo di disponibilità | Microsoft Docs
 ms.custom: ''
-ms.date: 04/19/2018
+ms.date: 05/23/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -23,11 +23,12 @@ caps.latest.revision: 44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a7253c3cc263d653c9e2d86e03da49ead9731e31
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+ms.openlocfilehash: 11574b8454c425c3f022ed1daf415e71ea317535
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34473885"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurare il database di distribuzione repliche nel gruppo di disponibilità Always On
 
@@ -76,7 +77,6 @@ Dopo aver configurato un database di distribuzione nel gruppo di disponibilità 
 - Apportare modifiche alle proprietà del server di distribuzione o del database di distribuzione in tutte le repliche del gruppo di disponibilità del database di distribuzione.
 - Modificare i processi di replica tramite stored procedure msdb o SQL Server Management Studio in tutte le repliche del gruppo di disponibilità del database di distribuzione.
 - La configurazione del server di distribuzione nel server di pubblicazione deve essere eseguita con gli script. Non è possibile usare la procedura guidata di replica. Le procedure guidate di replica e le finestre delle proprietà sono supportate per altri scopi.
-- Il monitoraggio delle repliche e altre interfacce utente che si connettono mediante il nome del listener del gruppo di disponibilità, non sono supportate a partire da SQL Server 2017 CU 6. Per gestire gli agenti di replica associati al database di distribuzione in un gruppo di disponibilità, usare la proprietà del processo e la cronologia processo.
 - La configurazione del gruppo di disponibilità per i database di distribuzione può essere eseguita solo tramite script.
 - Per configurare i database di distribuzione in un gruppo di disponibilità è necessario configurare una nuova replica. Il passaggio di un database di distribuzione esistente a un gruppo di disponibilità non è supportato. Una volta che un database di distribuzione viene tolto da un gruppo di disponibilità, non può più essere usato come database di distribuzione valido e deve essere eliminato.
 

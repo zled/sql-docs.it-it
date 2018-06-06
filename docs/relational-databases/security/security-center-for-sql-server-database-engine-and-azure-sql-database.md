@@ -24,11 +24,12 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8e07f44a6d09e0c5416f43c4a9113b633e2aa689
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3ebdcbdde0a274df0240b6e7d182ce600bd62ed7
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708099"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro di sicurezza per il motore di database di SQL Server e il database SQL di Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +75,7 @@ ms.lasthandoff: 05/03/2018
   
 |||  
 |-|-|  
-|**Controllo automatizzato**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controllo (livello di server e database)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Controllo (livello di database)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Rilevamento minacce| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Controllo del database SQL](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Introduzione al rilevamento minacce del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Valutazione delle vulnerabilità del database SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
+|**Controllo automatizzato**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Controllo (livello di server e database)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Controllo (livello di database)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Rilevamento minacce| <br /><br /> [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [Controllo del database SQL](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [Introduzione al rilevamento minacce del database SQL](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [Valutazione delle vulnerabilità del database SQL](https://docs.microsoft.com/azure/sql-database/sql-vulnerability-assessment) |  
 |**Controllo personalizzato**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Trigger|Implementazione di controlli personalizzati: creare [trigger DDL](../../relational-databases/triggers/ddl-triggers.md) e [trigger DML](../../relational-databases/triggers/dml-triggers.md)|  
 |**Conformità**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Conformità|SQL Server:<br />                        [Criteri comuni](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> Database SQL:<br />                        [Centro protezione di Microsoft Azure: conformità per funzionalità](http://azure.microsoft.com/support/trust-center/services/)|  
   

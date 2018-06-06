@@ -3,7 +3,6 @@ title: Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità 
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server]
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d5525a27e67c6096713f4487ee3e5f4aae898190
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f955e14d91bd62208d9e03e7c8b0aa6705a879b1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770187"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usare Dettagli Esplora oggetti per monitorare i gruppi di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.lasthandoff: 05/03/2018
   
  I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Non consentire connessioni**|Le connessioni dirette ai database di disponibilità non sono consentite quando questa replica di disponibilità agisce come una replica secondaria. I database secondari non sono disponibili per l'accesso in lettura.|  
 |**Consenti solo connessioni con finalità di lettura**|Sono consentite solo connessioni dirette in sola lettura quando questa replica agisce come una replica secondaria. Tutti i database nella replica sono disponibili per l'accesso in lettura.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 05/03/2018
  **Stato connessione**  
  Indica se una replica secondaria è attualmente connessa alla replica primaria. I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Disconnesso**|Per una replica di disponibilità remota, indica che è disconnessa dalla replica di disponibilità locale. La risposta della replica locale allo stato Disconnesso dipende dal relativo ruolo:<br /><br /> Sulla replica primaria, se una replica secondaria è disconnessa, i database secondari sono contrassegnati come **Non sincronizzato** sulla replica primaria e la replica primaria attende che la replica secondaria venga riconnessa.<br /><br /> Sulla replica secondaria, dopo avere rilevato che è disconnessa, tenta di riconnettersi alla replica primaria.|  
 |**Connesso**|Una replica di disponibilità remota attualmente connessa alla replica locale.|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 05/03/2018
  **Stato di sincronizzazione**  
  Indica se una replica secondaria è attualmente sincronizzata con la replica primaria. I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Non sincronizzato**|Il database non è sincronizzato o non è stato ancora aggiunto al gruppo di disponibilità.|  
 |**Sincronizzato**|Il database è sincronizzato con il database primario sulla replica primaria corrente o sull'ultima replica primaria.<br /><br /> Nota: nella modalità prestazioni, il database non si trova mai nello stato sincronizzato.|  
@@ -129,7 +129,7 @@ ms.lasthandoff: 05/03/2018
   
  Gli stati di sincronizzazione possibili sono:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Sincronizzazione in corso|Il database secondario ha ricevuto i record del log delle transazioni per il database primario che non sono ancora scritti su disco (finali).<br /><br /> Nota: nella modalità con commit asincrono, lo stato di sincronizzazione è sempre **Sincronizzazione**.|  
 |||  
@@ -137,7 +137,7 @@ ms.lasthandoff: 05/03/2018
  **Sospeso**  
  Indica se il database di disponibilità è attualmente online. I valori possibili sono i seguenti:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Sospeso**|Questo stato indica che il database è stato sospeso in locale e che deve essere ripreso manualmente.<br /><br /> Sulla replica primaria, il valore non è attendibile per un database secondario. Per determinare in modo affidabile se un database secondario è sospeso, eseguire una query sulla replica secondaria che ospita il database.|  
 |**Non unito in join**|Indica che il database secondario non è stato aggiunto al gruppo di disponibilità o stato rimosso dal gruppo.|  

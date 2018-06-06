@@ -15,11 +15,12 @@ caps.latest.revision: 20
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1be44e3e1f30aab2be4c446e6efd23610b9ae68b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0bc8e10c310ed490ae64022a5c002b66e104a9c
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550862"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config Configuration File
 Nel file [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** vengono archiviate le impostazioni usate dal servizio Web ReportServer e dall'elaborazione in background. Tutte le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vengono eseguite all'interno di un singolo processo tramite cui è possibile leggere le impostazioni di configurazione archiviate nel file RSReportServer.config. Il file RSReportServer.config viene utilizzato nei server di report sia in modalità nativa, sia in modalità SharePoint. Nelle due modalità non vengono tuttavia utilizzate tutte le stesse impostazioni disponibili nel file di configurazione. La versione per la modalità SharePoint del file è più piccola, poiché molte delle impostazioni per la modalità SharePoint sono archiviate nei database di configurazione di SharePoint anziché nel file. In questo argomento viene descritto il file di configurazione predefinito installato per la modalità nativa e la modalità SharePoint e alcune delle impostazioni e dei comportamenti importanti controllati dal file di configurazione.  
@@ -65,7 +66,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 > [!NOTE]  
 >  In questo argomento, con "numero intero massimo" viene fatto riferimento a un valore di INT_MAX pari a 2147483647.  Per altre informazioni, vedere [Integer Limits](http://msdn.microsoft.com/library/296az74e\(v=vs.110\).aspx) (Limiti Integer) (http://msdn.microsoft.com/library/296az74e(v=vs.110).aspx).  
   
-|Impostazione|Description|Mode|  
+|Impostazione|Descrizione|Mode|  
 |-------------|-----------------|----------|  
 |**Dsn**|Consente di specificare la stringa di connessione al server di database che ospita il database del server di report. Questo valore è crittografato e viene aggiunto al file di configurazione quando si crea il database del server di report. Per SharePoint, le informazioni di connessione al database vengono prese dal database di configurazione di SharePoint.|N, S|  
 |**ConnectionType**|Consente di specificare il tipo di credenziali utilizzato dal server di report per la connessione al relativo database. I valori validi sono **Default** e **Impersonate**. Il valore**Default** viene specificato se il server di report è configurato per l'uso dell'account del servizio o di un account di accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per la connessione al database del server di report. Il valore**Impersonate** viene specificato se il server di report usa un account di Windows per la connessione al database del server di report.|N|  
@@ -104,7 +105,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
   
  Nell'ultima colonna della tabella viene indicato se l'impostazione si applica a un server di report in modalità nativa (N), a un server di report in modalità SharePoint (S) o a entrambi.  
   
-|Impostazione|Description|Mode|  
+|Impostazione|Descrizione|Mode|  
 |-------------|-----------------|----------|  
 |**Applicazione**|Contiene le impostazioni per le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .|N|  
 |**Nome**|Specifica le applicazioni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . I valori validi sono ReportServerWebService o ReportManager.|N|  
@@ -133,7 +134,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
   
  Nell'ultima colonna della tabella riportata di seguito viene indicato se l'impostazione si applica a un server di report in modalità nativa (N), a un server di report in modalità SharePoint (S) o a entrambi.  
   
-|Impostazione|Description|Mode|  
+|Impostazione|Descrizione|Mode|  
 |-------------|-----------------|----------|  
 |**AuthenticationTypes**|Consente di specificare uno o più tipi di autenticazione. I valori validi sono: **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**, **RSWindowsBasic**e **Custom**.<br /><br /> I tipi**RSWindows** e **Custom** si escludono a vicenda.<br /><br /> **RSWindowsNegotiate**, **RSWindowsKerberos**, **RSWindowsNTLM**e **RSWindowsBasic** sono cumulativi e possono essere usati insieme, come illustrato in precedenza nell'esempio relativo al valore predefinito in questa sezione.<br /><br /> È necessario specificare più tipi di autenticazione se si prevedono richieste da una varietà di applicazioni client o browser che utilizzano tipi di autenticazione diversi.<br /><br /> Non rimuovere **RSWindowsNTLM**. In caso contrario verrà supportata solo una parte dei tipi di browser possibili. Per altre informazioni, vedere [Supporto browser per Reporting Services e Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|N|  
 |**RSWindowsNegotiate**|Il server di report accetta token di sicurezza Kerberos o NTLM. Si tratta dell'impostazione predefinita quando il server di report viene eseguito in modalità nativa e l'account del servizio utilizzato è Servizio di rete. Questa impostazione viene omessa quando il server di report viene eseguito in modalità nativa e l'account del servizio è configurato come account utente di dominio.<br /><br /> Se un account di dominio è configurato per l'account del servizio del server di report e per il server di report non è configurato alcun nome SPN, questa impostazione potrebbe impedire agli utenti di accedere al server.|N|  
@@ -153,7 +154,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
   
  Nell'ultima colonna della tabella riportata di seguito viene indicato se l'impostazione si applica a un server di report in modalità nativa (N), a un server di report in modalità SharePoint (S) o a entrambi.  
   
-|Impostazione|Description|Mode|  
+|Impostazione|Descrizione|Mode|  
 |-------------|-----------------|----------|  
 |**IsSchedulingService**|Specifica se tramite il server di report è possibile gestire un set di processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent che corrispondono a pianificazioni e sottoscrizioni create dagli utenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . I valori validi includono **True** (impostazione predefinita) e **False**.<br /><br /> Questa impostazione viene modificata quando si abilitano o disabilitano le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando il facet Configurazione superficie di attacco per Reporting Services della gestione basata sui criteri. Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N, S|  
 |**IsNotificationService**|Consente di specificare se il server di report elabora notifiche e recapiti. I valori validi includono **True** (impostazione predefinita) e **False**. Quando il valore è **False**, le sottoscrizioni non vengono recapitate.<br /><br /> Questa impostazione viene modificata quando si abilitano o disabilitano le funzionalità di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usando il facet Configurazione superficie di attacco per Reporting Services della gestione basata sui criteri. Per altre informazioni, vedere [Avviare e arrestare il servizio del server di report](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).|N, S|  
@@ -179,10 +180,10 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
   
  Nell'ultima colonna della tabella riportata di seguito viene indicato se l'impostazione si applica a un server di report in modalità nativa (N), a un server di report in modalità SharePoint (S) o a entrambi.  
   
-|Impostazione|Description|Mode|  
+|Impostazione|Descrizione|Mode|  
 |-------------|-----------------|----------|  
 |**ReportServerUrl**|Consente di specificare l'URL del server di report cui il portale Web si connette. Modificare questo valore solo se si configura il portale Web per connettersi a un server di report in un'altra istanza o in un computer remoto.|N, S|  
-|**ReportBuilderTrustLevel**|Non modificare questo valore poiché non è configurabile. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive Generatore report viene eseguito solo in **FullTrust**. Per altre informazioni, vedere [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md) . Per altre informazioni sulla modalità di attendibilità parziale non più disponibile, vedere [Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N, S|  
+|**ReportBuilderTrustLevel**|Non modificare questo valore poiché non è configurabile. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e versioni successive Generatore report viene eseguito solo in **FullTrust**. Per altre informazioni sulla modalità di attendibilità parziale non più disponibile, vedere [Funzionalità non più disponibili in SQL Server Reporting Services in SQL Server 2016](../../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md).|N, S|  
 |**PageCountMode**|Solo per il portale Web, questa impostazione consente di specificare se il server di report calcola il conteggio delle pagine prima che sia stato eseguito il rendering del report o nel momento in cui viene visualizzato. I valori validi sono **Estimate** (impostazione predefinita) e **Actual**. Usare **Estimate** per calcolare le informazioni sul conteggio delle pagine nel momento in cui l'utente visualizza il report. Inizialmente il conteggio delle pagine è impostato su 2 (la pagina corrente più una pagina aggiuntiva), ma aumenta man mano che l'utente si sposta tra le pagine del report. Usare **Actual** per calcolare il conteggio delle pagine in anticipo prima che il report venga visualizzato. **Actual** viene fornito per compatibilità con le versioni precedenti. Si noti che se si imposta **PageCountMode** su **Actual**, per ottenere un conteggio delle pagine valido è necessario elaborare l'intero report, aumentando in questo modo il tempo di attesa prima che il report venga visualizzato.|N, S|  
   
 ##  <a name="bkmk_extensions"></a> Extensions (file RSReportServer.config) per la modalità nativa  
@@ -227,7 +228,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
   
  A tutte le estensioni per il recapito sono associate le impostazioni **Extension Name**, **MaxRetries**, **SecondsBeforeRetry**e **Configuration**. Vengono descritte innanzitutto queste impostazioni condivise, mentre le impostazioni specifiche delle estensioni vengono descritte in una tabella successiva.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**Extension Name**|Consente di specificare un nome descrittivo e un assembly dell'estensione per il recapito. Non modificare questo valore.|  
 |**MaxRetries**|Consente di specificare il numero massimo di tentativi di recapito da parte di un server di report se il primo tentativo non viene eseguito in modo corretto. Il valore predefinito è 3.|  
@@ -237,14 +238,14 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 ####  <a name="bkmk_fileshare_extension"></a> Impostazioni di configurazione dell'estensione per il recapito tramite la condivisione file  
  Il recapito tramite la condivisione file consente di inviare un report esportato in un formato del file dell'applicazione a una cartella condivisa sulla rete. Per ulteriori informazioni, vedere [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats**, **RenderingExtension**|Queste impostazioni vengono utilizzate per escludere intenzionalmente formati di esportazione che non funzionano in modo corretto con il recapito tramite la condivisione file. Questi formati vengono utilizzati in genere per la creazione interattiva di report, la visualizzazione in anteprima o il precaricamento della cache del report e non producono file dell'applicazione facilmente visualizzabili da un'applicazione desktop.<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> Null|  
   
 ####  <a name="bkmk_email_extension"></a> Impostazioni di configurazione dell'estensione per la posta elettronica del server di report  
  La posta elettronica del server di report utilizza un dispositivo di rete di SMTP per inviare report agli indirizzi di posta elettronica. Prima che sia possibile utilizzare questa estensione per il recapito, è necessario configurarla. Per altre informazioni, vedere [Configurare un server di report per il recapito tramite posta elettronica (Gestione configurazione SSRS)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83) e [Recapito tramite posta elettronica in Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**SMTPServer**|Consente di specificare un valore stringa che indica l'indirizzo di un server SMTP remoto o di un server d'inoltro. Questo valore è obbligatorio per il servizio SMTP remoto. Può essere un indirizzo IP, un nome UNC di un computer nella Intranet aziendale o un nome di dominio completo.|  
 |**SMTPServerPort**|Consente di specificare un valore integer che indica la porta cui il servizio SMTP invia la posta in uscita. Di norma per l'invio della posta elettronica viene utilizzata la porta 25.|  
@@ -265,7 +266,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 ####  <a name="bkmk_documentlibrary_extension"></a> Configurazione dell'estensione per la raccolta documenti SharePoint del server di report  
  La raccolta documenti del server di report consente di inviare un report esportato in un formato del file dell'applicazione a una raccolta documenti. Questa estensione per il recapito può essere utilizzata solo da un server di report configurato per essere eseguito in modalità integrata SharePoint. Per ulteriori informazioni, vedere [SharePoint Library Delivery in Reporting Services](../../reporting-services/subscriptions/sharepoint-library-delivery-in-reporting-services.md).  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**ExcludedRenderFormats, RenderingExtension**|Queste impostazioni vengono utilizzate per escludere intenzionalmente formati di esportazione che non funzionano in modo corretto con il recapito tramite la raccolta documenti. Le estensioni per il recapito HTMLOWC, RGDI e Null sono escluse. Questi formati vengono utilizzati in genere per la creazione interattiva di report, la visualizzazione in anteprima o il precaricamento della cache del report e non producono file dell'applicazione facilmente visualizzabili da un'applicazione desktop.|  
   
@@ -275,7 +276,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 ###  <a name="bkmk_ui"></a> Configurazione generale delle estensioni per l'interfaccia utente per il recapito  
  Specifica estensioni per il recapito che contengono un componente dell'interfaccia utente visualizzato nelle pagine di definizione della sottoscrizione usate nella specifica di sottoscrizioni singole nel portale Web. Se si crea e si distribuisce un'estensione per il recapito personalizzata che include opzioni definite dall'utente e si desidera usare il portale Web, è necessario registrare tale estensione in questa sezione. Per impostazione predefinita, sono presenti impostazioni di configurazione per la posta elettronica e per la condivisione file del server di report. Le estensioni per il recapito utilizzate solo nelle sottoscrizioni guidate dai dati o nelle pagine dell'applicazione SharePoint non dispongono di impostazioni descritte in questa sezione.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**DefaultDeliveryExtension**|Questa impostazione consente di determinare se l'estensione per il recapito viene visualizzata per prima nell'elenco dei tipi di recapito nella pagina di definizione della sottoscrizione. Solo un estensione per il recapito può contenere questa impostazione. I valori validi includono **True** e **False**. Quando questo valore è impostato su **True**, tale estensione è l'opzione predefinita.|  
 |**Configuration**|Consente di specificare le opzioni di configurazione per un'estensione per il recapito. È possibile impostare un formato di rendering predefinito per ogni estensione per il recapito. I valori validi sono i nomi delle estensioni per il rendering indicati nella sezione relativa al rendering del file rsreportserver.config.|  
@@ -383,7 +384,7 @@ Per altre informazioni vedere [Modificare un file di configurazione di Reporting
 ##  <a name="bkmk_MapTileServer"></a> MapTileServerConfiguration (RSReportServer.config file)  
  **MapTileServerConfiguration** definisce le impostazioni di configurazione per i servizi Web di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing Maps che forniscono uno sfondo a sezioni per un elemento del report della mappa in un report pubblicato in un server di report. Tutti gli elementi figlio sono obbligatori.  
   
-|Impostazione|Description|  
+|Impostazione|Descrizione|  
 |-------------|-----------------|  
 |**MaxConnections**|Specifica il numero massimo di connessioni ai servizi Web di Bing Maps.|  
 |**Timeout**|Specifica il timeout in secondi per l'attesa di una risposta dai servizi Web di Bing Maps.|  

@@ -19,11 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6eacddc4432560bcde519602dd26c2b472b37041
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 80b6776f555fd5bdaa8ed4c4977dc5193a27eba2
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708939"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -119,7 +120,7 @@ Un *operatore* definisce le informazioni di contatto relative al responsabile de
 > [!IMPORTANT]  
 > Le opzioni Cercapersone e **Net Send** verranno rimosse da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare pertanto di utilizzarle in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui sono state implementate.  
   
-Per inviare notifiche agli operatori usando la posta elettronica o i cercapersone, è necessario configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Posta elettronica database](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
+Per inviare notifiche agli operatori usando la posta elettronica o i cercapersone, è necessario configurare [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent per l'uso di Posta elettronica database. Per altre informazioni, vedere [Posta elettronica database](http://msdn.microsoft.com/9e4563dd-4799-4b32-a78a-048ea44a44c1).  
   
 È possibile definire un operatore come alias assegnato a un gruppo di utenti. In questo modo la notifica può raggiungere contemporaneamente tutti i membri dell'alias. Per altre informazioni, vedere [Operatori](../../ssms/agent/operators.md).  
   
@@ -134,7 +135,7 @@ Un sottosistema è un oggetto predefinito che rappresenta funzionalità disponib
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] vengono definiti i sottosistemi inclusi nella tabella seguente:  
   
-|Nome sottosistema|Description|  
+|Nome sottosistema|Descrizione|  
 |--------------|-----------|  
 |Script Microsoft ActiveX|Esegue un passaggio di processo con script ActiveX.<br /><br />**Avviso** Il sottosistema di scripting ActiveX verrà rimosso da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Agent in una versione futura di [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata.|  
 |Sistema operativo (**CmdExec**)|Esegue un programma eseguibile.|  
@@ -174,16 +175,16 @@ Se si eseguono più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion
   
 Per un'introduzione a [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , utilizzare le attività riportate di seguito.  
   
-|Description|Argomento|  
+|Descrizione|Argomento|  
 |-----------|-----|  
 |Viene descritto come configurare SQL Server Agent.|[Configurazione di SQL Server Agent](../../ssms/agent/configure-sql-server-agent.md)|  
 |Viene descritto come avviare, arrestare e sospendere il servizio SQL Server Agent.|[Avvio, arresto o sospensione del servizio SQL Server Agent](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Descrive le considerazioni di cui tener conto per specificare un account per il servizio SQL Server Agent.|[Selezionare un account per il servizio SQL Server Agent](../../ssms/agent/select-an-account-for-the-sql-server-agent-service.md)|  
 |Descrive come utilizzare il log degli errori di SQL Server Agent.|[Log degli errori di SQL Server Agent](../../ssms/agent/sql-server-agent-error-log.md)|  
 |Viene descritto come utilizzare gli oggetti prestazioni.|[Utilizzo degli oggetti prestazioni](../../ssms/agent/use-performance-objects.md)|  
-|Viene descritta la Creazione guidata piano di manutenzione, un'utilità che è possibile utilizzare per creare processi, avvisi e operatori allo scopo di automatizzare l'amministrazione di un'istanza di SQL Server.|[Utilizzare la Creazione guidata piano di manutenzione](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
+|Viene descritta la Creazione guidata piano di manutenzione, un'utilità che è possibile utilizzare per creare processi, avvisi e operatori allo scopo di automatizzare l'amministrazione di un'istanza di SQL Server.|[Utilizzare la Creazione guidata piano di manutenzione](http://msdn.microsoft.com/db65c726-9892-480c-873b-3af29afcee44)|  
 |Viene descritto come utilizzare SQL Server Agent per automatizzare le attività amministrative.|[Automatizzazione delle attività amministrative &#40;SQL Server Agent&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
-[Configurazione superficie di attacco](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  
+[Configurazione superficie di attacco](http://msdn.microsoft.com/f741169c-1453-4ad2-830b-bf2be27d712f)  
   

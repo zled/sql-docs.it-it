@@ -35,10 +35,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 25b36b25efbb7c99d3595da26587007f784bfc25
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34708039"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/03/2018
     
  Alle regole di confronto sono associate le opzioni seguenti: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione. Tali opzioni vengono specificate aggiungendole al nome delle regole di confronto. Ad esempio, le regole di confronto `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` prevedono: distinzione tra maiuscole e minuscole, distinzione tra caratteri accentati e non accentati, distinzione Kana e distinzione di larghezza. Sempre a titolo di esempio, le regole di confronto `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` prevedono le opzioni seguenti: nessuna distinzione tra lettere maiuscole e minuscole, nessuna distinzione tra caratteri accentati e non accentati, distinzione dei caratteri Kana, distinzione di larghezza e distinzione dei selettori di variazione.  La tabella seguente descrive il comportamento associato a queste opzioni.    
     
-|Opzione|Description|    
+|Opzione|Descrizione|    
 |------------|-----------------|    
 |Distinzione maiuscole/minuscole (_CS)|Opera una distinzione tra lettere maiuscole e minuscole. Se viene selezionata questa opzione, le lettere minuscole precedono le versioni maiuscole corrispondenti nell'ordinamento. Se questa opzione non viene selezionata, le regole di confronto non fanno distinzione tra maiuscole e minuscole. Ovvero, in SQL Server non viene operata una distinzione tra lettere maiuscole e minuscole, che vengono considerate identiche ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra maiuscole e minuscole specificando _CI.|    
 |Distinzione caratteri accentati/non accentati (_AS)|Opera una distinzione tra caratteri accentati e non accentati. Il carattere 'a', ad esempio, non viene considerato uguale ad 'ấ'. Se questa opzione non viene selezionata, le regole di confronto non fanno distinzione tra caratteri accentati e non accentati. Ovvero, in SQL Server non viene opera una distinzione tra caratteri accentati e non accentati, che vengono considerati identici ai fini dell'ordinamento. È possibile selezionare in modo esplicito l'esclusione della distinzione tra caratteri accentati e non accentati specificando _AI.|    

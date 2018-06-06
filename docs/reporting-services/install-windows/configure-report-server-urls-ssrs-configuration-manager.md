@@ -14,17 +14,17 @@ helpviewer_keywords:
 - Report Server Windows service, virtual directories
 - report servers [Reporting Services], virtual directories
 - virtual directories [Reporting Services]
-- Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: 10
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4421895de0ba4bddc3d6905a142bee7907888033
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fadb6163b7ad9e52f02834a3982feb30cd9a3c8
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550562"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Configurare gli URL del server di report (Gestione configurazione SSRS)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gli URL vengono usati per accedere al servizio Web ReportServer e [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Per poter usare una delle due applicazioni, è necessario configurare almeno un URL per il servizio Web e per [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono disponibili valori predefiniti per entrambi gli URL dell'applicazione, appropriati per la maggior parte degli scenari di distribuzione, incluse le distribuzioni side-by-side con altri servizi e applicazioni Web.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="defining-a-report-server-url"></a>Definizione di un URL del server di report  
  L'URL identifica con precisione il percorso di un'istanza di un'applicazione del server di report nella rete. Quando si crea un URL del server di report, è necessario specificare le parti seguenti.  
   
-|Parte|Description|  
+|Parte|Descrizione|  
 |----------|-----------------|  
 |Nome host|Una rete TCP/IP utilizza un indirizzo IP per identificare in modo univoco un dispositivo in rete. È presente un indirizzo IP fisico per ogni scheda di rete installata in un computer. Se l'indirizzo IP viene risolto in un'intestazione host, è possibile specificare l'intestazione host. Se il server di report viene distribuito in una rete aziendale, è possibile utilizzare il nome di rete del computer.|  
 |Port|Una porta TCP è un endpoint nel dispositivo. Il server di report sarà in attesa delle richieste su una porta designata.|  

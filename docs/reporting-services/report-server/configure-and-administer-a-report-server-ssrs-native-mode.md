@@ -23,11 +23,12 @@ caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 00aaeca626ac2e2c8982d972bd64b01cc5574a99
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca2bbc7549a2616195061a5079918f236e963e28
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550032"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurare e amministrare un server di report (modalità nativa SSRS)
   In questo argomento vengono riepilogati gli approcci disponibili per la configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. È inoltre incluso un elenco di argomenti che illustrano come configurare componenti, caratteristiche specifiche o del server. Per configurare [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], è possibile:  
@@ -60,7 +61,6 @@ ms.lasthandoff: 05/03/2018
  Descrive come configurare un account utente per l'esecuzione automatica dei report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
  [File di configurazione di Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Sicurezza e protezione di Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)   

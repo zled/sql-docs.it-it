@@ -3,7 +3,6 @@ title: Configurare il gruppo di disponibilità per le transazioni distribuite | 
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], cross-database transactions
 ms.assetid: ''
 caps.latest.revision: 33
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bde3ca6e1b9712e34a3e0b43f0a52687de25a40f
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: 0655653463bc48ad0de71799f2e521f10e5c13b7
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455534"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769027"
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Configurare il gruppo di disponibilità per le transazioni distribuite
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "34455534"
 Per garantire le transazioni distribuite, il gruppo di disponibilità deve essere configurato in modo da registrare i database come strumenti di gestione delle risorse delle transazioni distribuite.  
 
 >[!NOTE]
->[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 e versioni successive offre supporto completo per le transazioni distribuite in gruppi di disponibilità. Nelle versioni di [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] precedenti al Service Pack 2, le transazioni distribuite tra database (ad esempio una transazione che usa i database nella stessa istanza di SQL Server) che coinvolgono un database in un gruppo di disponibilità non sono supportate. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] non presenta questa limitazione. 
+>[!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] Service Pack 2 e versioni successive offre supporto completo per le transazioni distribuite in gruppi di disponibilità. Nelle versioni di [!INCLUDE[SQL Server 2016]](../../../includes/sssql15-md.md)] precedenti a Service Pack 2, le transazioni distribuite tra database (ovvero le transazioni che usano database nella stessa istanza di SQL Server) che coinvolgono un database in un gruppo di disponibilità non sono supportate. [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)] non presenta questa limitazione. 
 >
 >In [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] i passaggi di configurazione sono uguali a quelli di [!INCLUDE[SQL2017](../../../includes/sssqlv14-md.md)].
 

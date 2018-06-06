@@ -3,7 +3,6 @@ title: Creare un gruppo di disponibilità (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -13,14 +12,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], creating
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 caps.latest.revision: 52
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c495e1162e852224bbd911b1e775a9d10c5b3405
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 46c652e4dd13d48121fc76eda7743840892aef00
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34769767"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Creare un gruppo di disponibilità (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -314,7 +314,7 @@ ms.lasthandoff: 05/03/2018
 ###  <a name="CompleteCodeExample"></a> Esempio di codice completo per la procedura di configurazione di esempio  
  Nell'esempio seguente vengono uniti gli esempi di codice di tutti i passaggi della procedura di configurazione di esempio. Nella tabella seguente sono riepilogati i valori segnaposto utilizzati nell'esempio di codice. Per ulteriori informazioni sui passaggi di questo esempio di codice, vedere [Prerequisiti per l'utilizzo della procedura di configurazione di esempio](#PrerequisitesForExample) e [Procedura di configurazione di esempio](#SampleProcedure), precedentemente in questo argomento.  
   
-|Segnaposto|Description|  
+|Segnaposto|Descrizione|  
 |-----------------|-----------------|  
 |\\\\*FILESERVER*\\*SQLbackups*|Condivisione di backup fittizia.|  
 |\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|File di backup per MyDb1.|  

@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: bd9c61743812b386d4bcf420debfce6e83fb0778
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d11bd76d4bc8f811cbaa4ea34258b56aaf6d6763
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34470243"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>Supporto di Scale Out per disponibilità elevata tramite istanza del cluster di failover di SQL Server
 
@@ -62,7 +63,7 @@ Portare il servizio Scale Out Master online.
 ![Portare il servizio online](media/bring-online.PNG)
 
 > [!NOTE]
-> Se si vuole eseguire il failover di SSISDB e del servizio Scale Out Master separatamente, seguire [7. Configurare il ruolo del servizio Scale Out Master del cluster di failover di Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster)
+> Se si vuole eseguire il failover di SSISDB e del servizio Scale Out Master separatamente, seguire [7. Configurare il ruolo del servizio Scale Out Master del cluster di failover di Windows](scale-out-support-for-high-availability.md#7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster)
 
 ## <a name="7-install-scale-out-workers"></a>7. Installare i ruoli di lavoro di Scale Out
 Installare il ruolo di lavoro di Scale Out nei nodi ruolo di lavoro. Durante l'installazione, specificare https://[nome rete di SQL Server]:[porta master] per l'endpoint master. 

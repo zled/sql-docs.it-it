@@ -3,7 +3,6 @@ title: Criteri Always On per problemi operativi con gruppi di disponibilità Alw
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -14,14 +13,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], policies
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 caps.latest.revision: 19
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fcc2a4f92bad4d12a8fd1b54601a53e3d801d23e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8fe881c82173877dba98e99c1af5b197ce5fba20
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768987"
 ---
 # <a name="always-on-policies-for-operational-issues---always-on-availability"></a>Criteri Always On per problemi operativi con gruppi di disponibilità Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 05/03/2018
   
  I criteri definiti dall'utente possono usare qualsiasi facet della gestione basata su criteri disponibile, inclusi quelli usati dai criteri predefiniti Always On. Vedere [Criteri predefiniti e problemi](#Always OnPBM), precedentemente in questo argomento. Il facet Server fornisce le proprietà seguenti per il monitoraggio dell'integrità [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] : (**IsHadrEnabled** e **HadrManagerStatus**). Fornisce anche le proprietà dei seguenti criteri per il monitoraggio della configurazione del cluster WSFC: **ClusterQuorumType**e **ClusterQuorumState**.  
   
- Per altre informazioni, vedere [The Always On Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx) (Seconda parte del modello di integrità Always On riguardante l'estensione del modello di integrità) (blog del team di SQL Server Always On).  
+ Per altre informazioni, vedere [The Always On Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/) (Seconda parte del modello di integrità Always On riguardante l'estensione del modello di integrità) (blog del team di SQL Server Always On).  
   
 ##  <a name="RelatedTasks"></a> Attività correlate  
   
@@ -122,9 +122,9 @@ ms.lasthandoff: 05/03/2018
   
 ##  <a name="RelatedContent"></a> Contenuto correlato  
   
--   [The Always On Health Model Part 1 -- Health Model Architecture (Prima parte del modello di integrità Always On riguardante l'architettura del modello di integrità)](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [The Always On Health Model Part 1 -- Health Model Architecture (Prima parte del modello di integrità Always On riguardante l'architettura del modello di integrità)](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/08/the-alwayson-health-model-part-1-health-model-architecture/)  
   
--   [The Always On Health Model Part 2 -- Extending the Health Model](http://blogs.msdn.com/b/sqlAlways On/archive/2012/02/13/extending-the-Always On-health-model.aspx)  
+-   [The Always On Health Model Part 2 -- Extending the Health Model](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/the-alwayson-health-model-part-2-extending-the-health-model/)  
   
 -   [Microsoft SQL Server Always On Solutions Guide for High Availability and Disaster Recovery (Guida alle soluzioni AlwaysOn di Microsoft SQL Server per la disponibilità elevata e il ripristino di emergenza)](http://go.microsoft.com/fwlink/?LinkId=227600)  
   

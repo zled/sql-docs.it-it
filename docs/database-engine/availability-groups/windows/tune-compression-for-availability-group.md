@@ -3,7 +3,6 @@ title: Ottimizzare la compressione per un gruppo di disponibilità | Microsoft D
 ms.custom: ''
 ms.date: 06/22/2016
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -11,14 +10,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: MikeRayMSFT
+author: MashaMSFT
 ms.author: v-saume
 manager: craigg
-ms.openlocfilehash: 9576b598e4bbdbab86708691540c1bae2b238b24
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ab713b7089f4c76214fe5e290196757cce43317
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34770937"
 ---
 # <a name="tune-compression-for-availability-group"></a>Ottimizzare la compressione per un gruppo di disponibilità
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Per la maggior parte degli scenari, non è consigliabile modificare queste impos
 
 La tabella seguente illustra i flag di traccia che modificheranno il comportamento di compressione predefinito in SQL Server. 
 
-Flag di traccia | Description
+Flag di traccia | Descrizione
 ------------- | -------------
 1462          | Disabilita la compressione dei flussi di log per i gruppi di disponibilità con repliche asincrone. Per impostazione predefinita, questa funzionalità è abilitata per le repliche asincrone per ottimizzare la larghezza di banda di rete.
 9567          | Abilita la compressione del flusso di dati per i gruppi di disponibilità durante il seeding automatico. Durante il seeding automatico, la compressione può ridurre significativamente i tempi di trasferimento e aumenta il carico sul processore.

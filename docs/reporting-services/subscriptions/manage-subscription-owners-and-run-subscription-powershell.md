@@ -15,11 +15,12 @@ caps.latest.revision: 21
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 26a9bbcc0b3e80dc8368c59af8c4922bdcd1a546
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 149c5e9142dc87cc538b0ae6521d0754b5d03d42
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585523"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>Gestire i proprietari di sottoscrizioni ed eseguire la sottoscrizione - PowerShell
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -139,7 +140,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  Per verificare gli URL del sito in modalità SharePoint, usare il cmdlet **Get-SPSite**di SharePoint. Per altre informazioni, vedere [Get-SPSite](http://msdn.microsoft.com/library/ff607950&#40;v=office.15&#41;.aspx).  
+>  Per verificare gli URL del sito in modalità SharePoint, usare il cmdlet **Get-SPSite**di SharePoint. Per altre informazioni, vedere [Get-SPSite](http://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
 ##  <a name="bkmk_list_all_one_user"></a> Script: elencare tutte le sottoscrizioni di proprietà di un utente specifico  
  Questo script permette di elencare tutte le sottoscrizioni di proprietà di un utente specifico. È possibile usare questo script per testare la connessione o verificare il percorso del report e l'ID di sottoscrizione da usare in altri script. Questo script è utile se un utente abbandona l'organizzazione e si vuole verificare le sottoscrizioni appartenenti a tale utente, in modo da potere modificare il proprietario o eliminare la sottoscrizione.  

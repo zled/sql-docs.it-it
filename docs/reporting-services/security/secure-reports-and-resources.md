@@ -21,11 +21,12 @@ caps.latest.revision: 47
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 82533018e021d38612b7cb73f5cfaa6788f23e60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4a41d9238315719bc6e47fb3bc9c598222673a6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550772"
 ---
 # <a name="secure-reports-and-resources"></a>Garantire la sicurezza di report e risorse
   È possibile impostare la sicurezza per singoli report e risorse e controllare quindi i livelli di accesso concessi ai vari utenti per questi elementi. Per impostazione predefinita, solo i membri del gruppo **Administrators** predefinito possono eseguire report, visualizzare risorse, modificare proprietà ed eliminare elementi. Per tutti gli altri utenti è necessario creare assegnazioni di ruolo che consentano l'accesso a un report o a una risorsa.  
@@ -79,7 +80,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Creare e gestire assegnazioni di ruolo](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Concessione di autorizzazioni in un server di report in modalità nativa](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Proteggere le origini dei dati condivise](../../reporting-services/security/secure-shared-data-source-items.md)   
  [Archiviare le credenziali in un'origine dati di Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  

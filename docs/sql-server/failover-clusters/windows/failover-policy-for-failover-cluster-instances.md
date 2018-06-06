@@ -3,7 +3,6 @@ title: Criteri di failover per istanze del cluster di failover | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -12,15 +11,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
-caps.latest.revision: 45
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a4b63755975f79e5dc601b952cc09eb5ab144116
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6132834fccf80bad897fbc272f9e86a95540523e
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772567"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Criteri di failover per istanze del cluster di failover
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.lasthandoff: 05/03/2018
   
  Rivedere [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) poiché questa stored procedure di sistema gioca un ruolo importante nei livelli di condizione di errore.  
   
-|Level|Condizione|Description|  
+|Level|Condizione|Descrizione|  
 |-----------|---------------|-----------------|  
 |0|Nessun failover o riavvio automatico|Viene indicato che con qualsiasi condizione di errore non verrà attivato automaticamente alcun failover o riavvio. Questo livello serve solo per scopi di manutenzione del sistema.|  
 |1|Failover o riavvio in caso di server non disponibile|Viene indicato che verrà attivato un riavvio o un failover del server se si verifica la condizione seguente:<br /><br /> Indisponibilità del servizio SQL Server.|  
