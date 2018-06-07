@@ -107,4 +107,3 @@
 
 ## [Eseguire il ripristino da PowerPivot](restore-from-power-pivot.md)  
 
-# [Accesso ai dati di modello tabulare](tabular-model-data-access.md)  
