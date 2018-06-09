@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1b149356d30dc390c6779ef165c80c9b967f9044
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: c0578c541c39bdaceede6bff8afdea3d642abcef
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576863"
 ---
 # <a name="tuples-element-xmla"></a>Elemento Tuples (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,20 +35,20 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[Asse](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
+|Elementi padre|[Axis](../../../analysis-services/xmla/xml-elements-properties/axis-element-xmla.md)|  
 |Elementi figlio|[Tupla](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando un'applicazione client imposta la proprietà **AxisFormat** su *TupleFormat*, un’asse viene rappresentata come un set di tuple. Ogni elemento **Axis** contiene un elemento **Tuples** che rappresenta il set di tuple su quell’asse. Ogni tupla viene rappresentata usando un elemento **Tuple** che contiene elementi [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) di ogni gerarchia sull'asse.  
   
 ## <a name="example"></a>Esempio  
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/10/2018
 </Axes>  
 ```  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

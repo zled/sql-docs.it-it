@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b480d896416350ec55317eea8a9cfc5db51a8c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8b6c50664cdce599128be9f0ad15a10e33b77ec6
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34576633"
 ---
 # <a name="translation-element-xmla"></a>Elemento Translation (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -35,10 +36,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipo di dati e lunghezza|Nessuno|  
-|Valore predefinito|Nessuno|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
 |Cardinalità|0-n: Elemento facoltativo che può ricorrere più di una volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -48,10 +49,10 @@ ms.lasthandoff: 05/10/2018
 |Elementi padre|[Traduzioni](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md)|  
 |Elementi figlio|[Linguaggio](../../../analysis-services/xmla/xml-elements-properties/language-element-xmla.md), [nome](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md)|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Oggetto **traduzione** elemento definisce le informazioni necessarie per associare un membro dell'attributo a una traduzione definita per un determinato attributo durante un [inserire](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) o [aggiornamento](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) comando.  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

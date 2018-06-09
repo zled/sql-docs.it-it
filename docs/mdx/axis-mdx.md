@@ -1,34 +1,23 @@
 ---
 title: Asse (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- AXIS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Axis function
-ms.assetid: a3a60a1e-e266-4fa1-ae13-bae73544de33
-caps.latest.revision: 31
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 2503dcaa13db79acd5cff94c78ad365ee41b0b9b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 2802422f7d50c0a504a0c42eec940d81e89e66b8
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739630"
 ---
 # <a name="axis-mdx"></a>Axis (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce il set di tuple su un asse specificato.  
   
@@ -43,7 +32,7 @@ Axis(Axis_Number)
  *Axis_Number*  
  Espressione numerica valida che specifica il numero dell'asse.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **asse** funzione utilizza la posizione in base zero di un asse per restituire il set di tuple su un asse. Ad esempio, `Axis(0)` restituisce l'asse COLUMNS, `Axis(1)` restituisce l'asse ROWS e così via. Il **asse** funzione non può essere utilizzata sull'asse del filtro. Questa funzione può essere utilizzata per rendere i membri calcolati specifici del contesto della query eseguita. Ad esempio, potrebbe essere necessario un membro calcolato che fornisce la somma solo dei membri selezionati sull'asse delle righe. Può essere utilizzata anche per rendere la definizione di un asse dipendente dalla definizione di un altro asse: ad esempio, ordinando il contenuto dell'asse delle righe in base al valore del primo elemento sull'asse delle colonne.  
   
 > [!NOTE]  
@@ -75,6 +64,6 @@ Axis(Axis_Number)
  `FROM [Adventure Works]`  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

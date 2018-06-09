@@ -1,8 +1,6 @@
 ---
 title: Riferimento all'interfaccia utente (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,21 +16,22 @@ caps.latest.revision: 18
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 881a94b3ced6f208d65bd168c469ee1a60b460f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd6d2126b4023231d2d1594816c93a94555a9e95
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776627"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Riferimento all'interfaccia utente (MySQLToSQL)
 In questa sezione include argomenti della Guida per SQL Server Migration Assistant (SSMA) per MySQL.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
 Nella tabella seguente sono elencate le finestre di dialogo SSMA:  
   
 |||  
 |-|-|  
-|**Argomento**|**Description**|  
+|**Argomento**|**Descrizione**|  
 |[Advanced selezione di oggetti &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Utilizzare il **avanzate selezionare oggetto** finestra di dialogo per individuare gli oggetti di database in base ai criteri di filtro, quindi selezionare o deselezionare gli oggetti.|  
 |[Report di valutazione &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Il report per visualizzare i risultati della conversione di oggetti di MySQL in sintassi Transact-SQL e per stimare il tempo e la complessità di una migrazione a SQL Server.|  
 |[Connessione a MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Utilizzare il **connessione a MySQL** la finestra di dialogo per la connessione al database di MySQL che si desidera eseguire la migrazione.|  

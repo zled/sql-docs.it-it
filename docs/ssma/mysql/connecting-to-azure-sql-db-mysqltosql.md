@@ -1,8 +1,6 @@
 ---
 title: La connessione al database SQL di Azure (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -21,11 +19,12 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: caa08a1a450e53e42e2b27bad33a7610e65220bc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2092062d5409db561ba6b3f9055d180c8d10db48
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775687"
 ---
 # <a name="connecting-to-azure-sql-db-mysqltosql"></a>La connessione al database SQL di Azure (MySQLToSQL)
 Per eseguire la migrazione di database MySQL a SQL Azure, è necessario connettersi all'istanza di destinazione di SQL Azure. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nell'istanza di SQL Azure e visualizza i metadati del database in Esplora risorse di metadati di SQL Azure. SSMA archivia le informazioni dell'istanza di SQL Azure si è connessi a, ma non archivia le password.  

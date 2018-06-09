@@ -1,8 +1,6 @@
 ---
 title: Impostazioni globali (Editor) (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 1d06b6185f59002c0fc88d97cf8ffdc00c583111
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70dd953d78eecf4f417ae9aeff2281b9eeee47d1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776117"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>Impostazioni globali (Editor) (MySQLToSQL)
 Utilizzare la pagina Editor del **impostazioni globali** la finestra di dialogo per specificare le impostazioni per finestre dell'editor di codice.  

@@ -9,11 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 343a1104058807f1832621c312d09d52ddd71184
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 2c860bcd21f6c717bae06478ca1ec1194383a75b
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34577983"
 ---
 # <a name="uname-element-xmla"></a>Elemento UName (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,10 +33,10 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="element-characteristics"></a>Caratteristiche elemento  
   
-|Caratteristica|Descrizione|  
+|Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipo di dati e lunghezza|String|  
-|Valore predefinito|Nessuno|  
+|Valore predefinito|None|  
 |Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
   
 ## <a name="element-relationships"></a>Relazioni elemento  
@@ -43,14 +44,14 @@ ms.lasthandoff: 05/10/2018
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [membro](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
-|Elementi figlio|Nessuno|  
+|Elementi figlio|None|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per **HierarchyInfo** elementi, il **UName** elemento contiene il nome della proprietà che fornisce i nomi della gerarchia di membro univoci. Il valore è equivalente alla proprietà MEMBER_UNIQUE_NAME definita per i set di righe dell'asse in OLE DB per la specifica OLAP.  
   
  Per **membro** elementi, il **UName** elemento contiene il nome univoco dell'elemento padre **membro** elemento.  
   
-## <a name="see-also"></a>Vedere anche  
- [Proprietà & #40; XMLA & #41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
+## <a name="see-also"></a>Vedere anche
+ [Proprietà &#40;XMLA&#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   

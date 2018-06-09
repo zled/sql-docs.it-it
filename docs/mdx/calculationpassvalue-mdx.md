@@ -1,6 +1,6 @@
 ---
 title: CalculationPassValue (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 88d7d8c52105feb14c982586f9a819977fc81ed0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ca5966492ac83599cd4a053ea526e2ce366e4b0e
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34577233"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739990"
 ---
 # <a name="calculationpassvalue-mdx"></a>CalculationPassValue (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce il valore numerico o il valore stringa di un'espressione MDX (Multidimensional Expression) valutata sulla sessione di calcolo specificata di un cubo.  
   
@@ -55,7 +55,7 @@ CalculationPassValue(String_Expression ,Pass_Value [, ABSOLUTE | RELATIVE [,ALL]
   
  Se viene fornita un'espressione stringa, la funzione restituisce un valore stringa valutando l'espressione stringa MDX specificata nella sessione di calcolo specificata e facoltativamente modificato da un flag di accesso e un modificatore di flag di accesso *.*  
   
- Con la risoluzione automatica delle ricorsioni in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], questa funzione presenta molte applicazioni pratiche.  
+ Con la risoluzione automatica delle ricorsioni in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], questa funzione non ha molte applicazioni pratiche.  
   
 > [!NOTE]  
 >  Solo gli amministratori possono utilizzare il **CalculationPassValue** funzione all'interno di uno script MDX. Se si esegue uno script MDX che contiene questa funzione nel contesto di un ruolo che non dispone di privilegi di amministratore, verrà generato un errore.  

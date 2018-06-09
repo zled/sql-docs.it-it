@@ -1,34 +1,23 @@
 ---
 title: StrToTuple (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STRTOTUPLE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StrToTuple function
-ms.assetid: e162cc01-cddd-4654-baab-d73abdc33b80
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 6f2d047b0745c152fe880216854a1af146dcd87f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 35cd9cf849ce35bf82c839f0bbeeb657a75e990c
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743230"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce la tupla specificata da una stringa in formato MDX (Multidimensional Expression).  
   
@@ -43,7 +32,7 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  Espressione stringa valida che specifica, in modo diretto o indiretto, una tupla.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **StrToTuple** funzione restituisce il set specificato. Il **StrToTuple** funzione viene in genere utilizzata con funzioni definite dall'utente per la restituzione di una tupla specificata da una funzione esterna a un'istruzione MDX.  
   
 -   Quando viene utilizzato il flag CONSTRAINED, la tupla specificata deve contenere nomi di membri completi o non qualificati. Questo flag viene utilizzato per ridurre il rischio di attacchi intrusivi tramite la stringa specificata. Se viene specificata una stringa non direttamente risolvibile in nomi di membri completi o non qualificati, viene visualizzato l'errore seguente: "Le restrizioni imposte dal flag CONSTRAINED nella funzione STRTOTUPLE sono state violate".  
@@ -87,6 +76,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

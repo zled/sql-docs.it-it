@@ -1,42 +1,23 @@
 ---
 title: Istruzione CREATE ACTION (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE ACTION
-- Action
-- CREATE
-- CREATE_ACTION
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- invocation types [MDX]
-- dimensions [Analysis Services], actions
-- CREATE ACTION statement
-- cubes [Analysis Services], actions
-- actions [MDX]
-- hierarchies [Analysis Services], actions
-ms.assetid: 0419f349-ece2-42ba-8552-a1023f268a41
-caps.latest.revision: 36
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dbb6e815e1cc9c66706641c16a9e169bb217ad6f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 762c2c1cc18d67ccafb05b0f61d213e5215de8b2
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34741290"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definizione dei dati MDX - creare azioni
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Crea un'azione che può essere associata a un cubo, a una dimensione, a una gerarchia o a un oggetto subordinato.  
   
@@ -91,14 +72,14 @@ FOR
  *String_Expression*  
  Espressione stringa valida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Le applicazioni client possono creare ed eseguire azioni non sicure, così come possono utilizzare funzioni non sicure. Per evitare queste situazioni, utilizzare il **Safety Options** proprietà. Per ulteriori informazioni, vedere l'argomento dedicato alle opzioni di sicurezza.  
   
 > [!NOTE]  
->  Questa istruzione è stata inclusa per compatibilità con le versioni precedenti. Familiarità con le azioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ad esempio le azioni di drill-through o di un Report, non sono supportati.  
+>  Questa istruzione è stata inclusa per compatibilità con le versioni precedenti. Familiarità con le azioni [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ad esempio le azioni di drill-through o di un Report, non sono supportati.  
   
 ## <a name="action-types"></a>Tipi di azioni  
- Nella tabella seguente vengono descritti i diversi tipi di azioni disponibili in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+ Nella tabella seguente vengono descritti i diversi tipi di azioni disponibili in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 |Tipo di azione|Description|  
 |-----------------|-----------------|  

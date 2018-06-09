@@ -1,6 +1,6 @@
 ---
 title: Commenti (sintassi MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: c2a5c543ca5f611c671566dcbdac16f2248a59af
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 17693d0dc76dd6cb8b3a4d0c3ead9f95c0599580
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34578453"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740761"
 ---
 # <a name="comments-mdx-syntax"></a>Commenti (sintassi MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   I commenti sono stringhe di testo contenute nel codice di un programma ma che non vengono eseguite . È possibile utilizzare i commenti per documentare il codice o disabilitare temporaneamente parti di un'istruzione MDX (Multidimensional Expressions) o di uno script durante la diagnostica del codice. Se si utilizzano i commenti per documentare il codice, la successiva manutenzione del codice risulterà più semplice. I commenti vengono in genere utilizzati per registrare dettagli quali il nome del programma, il nome dell'autore e le date delle principali modifiche apportate al codice. È inoltre possibile utilizzare i commenti per descrivere calcoli complessi o illustrare un metodo di programmazione.  
   
  Di seguito sono riportate le linee guida per l'utilizzo dei commenti in MDX:  
   
--   In un commento è possibile utilizzare qualsiasi carattere alfanumerico o simbolo. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Ignora tutti i caratteri all'interno di un commento.  
+-   In un commento è possibile utilizzare qualsiasi carattere alfanumerico o simbolo.  Vengono ignorati tutti i caratteri all'interno di un commento.  
   
 -   Per i commenti di uno script o istruzione non è prevista una lunghezza massima. Un commento può essere formato da una o più righe.  
   

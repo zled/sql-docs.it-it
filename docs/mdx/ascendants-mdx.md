@@ -1,34 +1,23 @@
 ---
 title: Predecessori (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ASCENDANTS
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Ascendants function
-ms.assetid: a2baf4a2-7d66-4766-b708-739a3c21b09e
-caps.latest.revision: 39
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: df35665a82149bd133e4116d97cb739d70865ac7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 1ef9cccb488cebb08c1b9721c40cb8037ea8687a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34739620"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce il set dei predecessori del membro specificato, incluso il membro stesso.  
   
@@ -43,7 +32,7 @@ Ascendants(Member_Expression)
  *Member_Expression*  
  Espressione MDX (Multidimensional Expression) valida che restituisce un membro.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **predecessori** funzione restituisce tutti i predecessori di un membro del membro nella parte superiore della gerarchia del membro; in particolare, esegue un attraversamento post-ordine della gerarchia per il membro specificato e restituisce tutti i predecessori correlati al membro, incluso se stesso, in un set. È in contrasto con la [predecessore](../mdx/ancestor-mdx.md) funzione che restituisce un membro di predecessori specifico o predecessore, a un livello specifico.  
   
 ## <a name="examples"></a>Esempi  
@@ -63,6 +52,6 @@ FROM
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,20 +1,21 @@
 ---
-title: Analitica R nel database per gli sviluppatori SQL (esercitazione) | Documenti Microsoft
+title: Esercitazione di analitica R incorporata per gli sviluppatori di SQL Server Machine Learning | Documenti Microsoft
+description: Esercitazione che illustra come incorporare R in SQL Server funzioni e stored procedure T-SQL
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/07/2018
 ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: e1ff2799ba37c97f5ff82c1c15cdeb986220a947
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 3d2b77d73bb1b8f5d4c507b884d0a09f4647012b
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34585273"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35250024"
 ---
-# <a name="in-database-r-analytics-for-sql-developers-tutorial"></a>Analitica R nel database per gli sviluppatori SQL (esercitazione)
+# <a name="tutorial-embedded-r-in-stored-procedures-and-t-sql-functions"></a>Esercitazione: Incorporato R nelle stored procedure e funzioni di T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 L'obiettivo di questa esercitazione è fornire ai programmatori SQL con la creazione di un di machine learning soluzioni in SQL Server. In questa esercitazione verrà illustrato come incorporare R in un'applicazione o di una soluzione di Business Intelligence eseguendo il wrapping di codice R nelle stored procedure.
@@ -31,41 +32,30 @@ Dopo la creazione della soluzione, tuttavia è possibile distribuirla facilmente
 
 In questa esercitazione si presuppone che è stato assegnato tutto il codice R necessario per la soluzione e lo stato attivo sulla compilazione e distribuzione della soluzione Usa SQL Server.
 
-- [Lezione 1: Scaricare i dati di esempio](../tutorials/sqldev-download-the-sample-data.md)
+- [Lezione 1: Scaricare i dati di esempio e gli script](../tutorials/sqldev-download-the-sample-data.md)
 
-    Scaricare il set di dati di esempio e i file di script SQL di esempio in un computer locale.
+- [Lezione 2: Configurare l'ambiente dell'esercitazione](../r/sqldev-import-data-to-sql-server-using-powershell.md)
 
-- [Lezione 2: Importare dati in SQL Server tramite PowerShell](../r/sqldev-import-data-to-sql-server-using-powershell.md)
+- [Lezione 3: Esplorare e visualizzare forma dei dati e la distribuzione tramite la chiamata di funzioni R nelle stored procedure](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-    Eseguire uno script di PowerShell che crea un database e una tabella nell'istanza di [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e carica i dati di esempio nella tabella.
-
-- [Lezione 3: Esplorare e visualizzare i dati](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-    Eseguire l'esplorazione e la visualizzazione di base dei dati, chiamando pacchetti e funzioni R dalle stored procedure di [!INCLUDE[tsql](../../includes/tsql-md.md)] .
-
-- [Lezione 4: Creare funzionalità di dati con T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
-
-    Creare nuove funzionalità di dati usando funzioni personalizzate di SQL.
+- [Lezione 4: Creare le funzionalità di dati usando R nelle funzioni di T-SQL](../tutorials/sqldev-create-data-features-using-t-sql.md)
   
--   [Lezione 5: Eseguire il training e salvare un modello R con T-SQL](../r/sqldev-train-and-save-a-model-using-t-sql.md)
-
-    Compilare un modello di machine learning usando R nelle stored procedure. Salvare il modello a una tabella di SQL Server.
+- [Lezione 5: Eseguire il training e salvare un modello R tramite stored procedure e funzioni](../r/sqldev-train-and-save-a-model-using-t-sql.md)
   
--   [Lezione 6: Rendere operativo il modello](../tutorials/sqldev-operationalize-the-model.md)
+- [Lezione 6: Codice di incapsulamento R in una stored procedure per rendere operativo il](../tutorials/sqldev-operationalize-the-model.md). 
+  Dopo aver salvato il modello per il database, chiamare il modello per la stima da [!INCLUDE[tsql](../../includes/tsql-md.md)] usando le stored procedure.
 
-    Dopo aver salvato il modello per il database, chiamare il modello per la stima da [!INCLUDE[tsql](../../includes/tsql-md.md)] usando le stored procedure.
-
-### <a name="scenario"></a>Scenario
+## <a name="scenario"></a>Scenario
 
 Questa esercitazione viene utilizzato un noto pubblica set di dati in base a trip nei taxi New York city. Per eseguire il codice di esempio più velocemente, è stato creato un campione rappresentativo di % 1 dei dati. Utilizzare questi dati per compilare un modello di classificazione binaria che consente di stimare se un particolare trip è probabile che ottenere un suggerimento o non, in base alle colonne, ad esempio l'ora del giorno, distanza e posizione ritiro.
 
-### <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>Requisiti
 
-Questa esercitazione è per gli utenti che hanno familiarità con le operazioni di database basic, ad esempio la creazione di tabelle e database, l'importazione di dati in tabelle e la scrittura di query SQL. È disponibile tutto il codice R, quindi non è richiesto un ambiente di sviluppo di R. Un programmatore SQL esperto potrebbe essere possibile utilizzare [! Includi [tsql] (... /.. / incluso/tsql md.md)] in [! Includi [ssManStudioFull] (... /.. / incluso / ssmanstudiofull md.md) ed eseguire lo script di PowerShell fornito per completare questo esempio. Tuttavia, prima di iniziare questa esercitazione, è necessario completare le operazioni preliminari seguenti:
+Questa esercitazione si presuppone una certa familiarità con le operazioni di database basic, ad esempio la creazione di tabelle e database, l'importazione di dati e la scrittura di query SQL. Presuppone che una conoscenza di R. Di conseguenza, tutto il codice R viene fornito. Un programmatore SQL esperto potrebbe essere possibile usare uno script di PowerShell fornito, dati di esempio in GitHub, e [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] per completare questo esempio. 
 
-Tuttavia, prima di iniziare l'esercitazione, è necessario completare le operazioni di preparazione:
+Prima di iniziare l'esercitazione:
 
-- Connettersi a un'istanza di SQL Server 2016 con R Services o SQL Server 2017 con servizi di Machine Learning e R abilitato.
+- Verificare disporre di un'istanza configurata di [R Services di SQL Server 2016](../install/sql-r-services-windows-install.md#verify-installation) oppure [servizi SQL Server 2017 Machine Learning con R abilitato](../install/sql-machine-learning-services-windows-install.md#verify-installation). Inoltre, [confermare di avere librerie R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location).
 - L'account di accesso utilizzato per questa esercitazione è necessario disporre delle autorizzazioni per creare database e altri oggetti, per caricare i dati, selezionano i dati, eseguono le stored procedure.
 
 > [!NOTE]

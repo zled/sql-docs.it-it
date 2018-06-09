@@ -3,8 +3,6 @@ title: Connessione a Sybase ASE (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -20,11 +18,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: ac144d636536bac66f7330825f536f01200738b6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fb1bb6047dca0965d71e80b1042d9fe1d8bca97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778457"
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Connessione a Sybase ASE (SybaseToSQL)
 Per eseguire la migrazione dei database Sybase Adaptive Server Enterprise (ASE) [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure, è necessario connettersi al Server adattivo che contiene i database che si desidera eseguire la migrazione. Quando ci si connette, SSMA Ottiene i metadati relativi a tutti i database nel Server adattivo e visualizza i metadati del database nel riquadro di esplorazione dei metadati di Sybase. SSMA archivia le informazioni relative al server di database, ma non archivia le password.  

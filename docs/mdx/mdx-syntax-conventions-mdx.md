@@ -1,6 +1,6 @@
 ---
 title: Convenzioni della sintassi MDX (MultiDimensional Expression) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4bcf7e11254db3219f8f39c9c4d9d6f00eddf9a5
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ec9918497b28951f85f3214a6c69302a87b47ecd
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34580903"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742090"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>Convenzioni della sintassi MDX (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Nella tabella seguente vengono descritte le convenzioni adottate nelle figure relative alla sintassi MDX (Multidimensional Expression) riportate nella Guida di riferimento al linguaggio MDX.  
   

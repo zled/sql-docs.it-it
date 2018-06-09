@@ -1,8 +1,6 @@
 ---
 title: La migrazione dei dati di accesso in SQL Server - database SQL di Azure (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -27,11 +25,12 @@ caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 747ffdc89104deb4fcbe356065b9b81f383231ab
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 38301e26dbe4b39a2be873a2154ec791c3c9a3f6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773877"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>La migrazione dei dati di accesso in SQL Server - database SQL di Azure (AccessToSQL)
 Dopo avere creato gli oggetti di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile migrare i dati dall'accesso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure.  
