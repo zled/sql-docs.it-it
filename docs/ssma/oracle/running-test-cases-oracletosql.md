@@ -1,8 +1,6 @@
 ---
 title: Esecuzione di Test case (OracleToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: a0affe85a5c823fdeecf530cd2c661011076c18f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 283dac366a8cfdf7e6fba39037a7c728945e0f67
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777907"
 ---
 # <a name="running-test-cases-oracletosql"></a>Esecuzione di Test case (OracleToSQL)
 Quando SSMA Tester esegue un Test Case, esegue gli oggetti selezionati per il test e crea un report sui risultati della verifica. Se i risultati sono identici in entrambe le piattaforme, il test completata. La corrispondenza degli oggetti tra Oracle e [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] viene determinato in base alle impostazioni di mapping dello schema per il progetto SSMA corrente.  
@@ -47,7 +46,7 @@ Si supponga che la tabella verificata viene denominata USER_TABLE. Per una tabel
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Description|  
+|nome|Tipo|Description|  
 |USER_TABLE$Trg|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
 |USER_TABLE$ AUD|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
 |USER_TABLE$ AUDID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
@@ -60,14 +59,14 @@ L'oggetto seguente viene creato nello schema della tabella verificato [!INCLUDE[
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Description|  
+|nome|Tipo|Description|  
 |USER_TABLE$Trg|trigger|Controllo delle modifiche nella tabella verificata di trigger.|  
   
 E vengono creati gli oggetti seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]nel database ssmatesterdb.  
   
 ||||  
 |-|-|-|  
-|Nome|Tipo|Description|  
+|nome|Tipo|Description|  
 |USER_TABLE$Aud|table|Tabella in cui vengono salvate le righe eliminate o sovrascritte.|  
 |USER_TABLE$AudID|table|Tabella in cui vengono salvate le righe nuove e modificate.|  
 |USER_TABLE|vista|Rappresentazione semplificata delle modifiche nella tabella.|  

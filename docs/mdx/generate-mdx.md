@@ -1,34 +1,23 @@
 ---
 title: Generare (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- GENERATE
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- Generate function
-ms.assetid: 696a229d-c2f1-47b7-9dca-7b0a6b547d9b
-caps.latest.revision: 32
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be6b05c0738b2407d6d803bae471a73ead15e353
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34740890"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Applica un set a ogni membro di un altro set e unisce i set risultanti tramite un join di unione. In alternativa, questa funzione restituisce una stringa concatenata creata valutando un'espressione stringa su un set.  
   
@@ -56,7 +45,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *delimitatore*  
  Delimitatore valido espresso come espressione stringa.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se viene specificato un secondo set, il **genera** funzione restituisce un set generato applicando le tuple del secondo set a ogni tupla nel primo set *,* e quindi creando un join risultante dall'unione. Se **tutti** viene specificato, la funzione consente di mantenere duplicati nel set risultante.  
   
  Se viene specificata un'espressione di stringa, il **genera** funzione restituisce una stringa generata valutando l'espressione stringa specificata rispetto a ogni tupla nel primo set *,* quindi concatenando i risultati. Facoltativamente, è possibile delimitare la stringa separando i vari risultati nella stringa concatenata risultante.  
@@ -139,6 +128,6 @@ FROM [Adventure Works]
 >  Questa forma del **genera** può risultare utile durante il debug di calcoli, in quanto consente di restituire una stringa che visualizza i nomi di tutti i membri di un set. Ciò potrebbe essere più facile da leggere rispetto alla rigida rappresentazione MDX di un set che il [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) restituito dalla funzione.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

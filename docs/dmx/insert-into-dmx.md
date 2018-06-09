@@ -1,41 +1,20 @@
 ---
 title: INSERIRE (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- INSERT INTO
-- INSERT
-- INSERT_INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SKIP (DMX)
-- mapped model columns element
-- source data query element
-- <mapped model columns> element
-- <source data query> element
-- INSERT INTO statement
-- mining models [Analysis Services], processing
-- training mining models
-- mining structures [DMX], processing
-ms.assetid: 85eed207-396c-4a95-a74e-2acc1abc7e2c
-caps.latest.revision: 49
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: f76a649664d5240d31b1fa5b69a5d3045a59de26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842654"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +44,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *query di origine dati*  
  Query di origine nel formato definito dal provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se non si specifica **modello di data MINING** o **struttura di data MINING**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cerca il tipo di oggetto in base al nome ed elabora l'oggetto corretto. Se il server contiene una struttura di data mining e un modello di data mining con lo stesso nome, verrà restituito un errore.  
   
  Tramite la seconda forma della sintassi, INSERT INTO*\<oggetto >*. COLUMN_VALUES è possibile inserire dati direttamente nelle colonne del modello senza training del modello. Questo metodo consente di fornire dati di colonna al modello in un modo ordinato e conciso, che risulta utile quando si utilizzano set di dati che contengono gerarchie o colonne ordinate.  
@@ -86,7 +65,7 @@ INSERT INTO [MINING MODEL] <model>
 ||La struttura di data mining non è elaborata.|Vengono elaborati il modello e la struttura di data mining.|  
 ||La struttura di data mining contiene modelli di data mining aggiuntivi.|L'elaborazione non riesce. È necessario rielaborare la struttura e i modelli di data mining associati.|  
 |INSERT INTO MINING STRUCTURE*\<struttura >*|La struttura di data mining viene elaborata o non elaborata.|La struttura di data mining e i modelli di data mining associati vengono elaborati.|  
-|INSERT INTO MINING MODEL*\<modello >* che contiene una query di origine<br /><br /> o<br /><br /> INSERT INTO MINING STRUCTURE*\<struttura >* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [Elimina &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING MODEL*\<modello >* che contiene una query di origine<br /><br /> o Gestione configurazione<br /><br /> INSERT INTO MINING STRUCTURE*\<struttura >* che contiene una query di origine|La struttura o il modello include già un contenuto.|L'elaborazione non riesce. È necessario cancellare gli oggetti prima di eseguire questa operazione, utilizzando [Elimina &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Elemento mapped model columns  
  Tramite il \<il mapping delle colonne del modello > elemento, è possibile eseguire il mapping di colonne dall'origine dati e le colonne del modello di data mining. Il \<il mapping delle colonne del modello > elemento ha il formato seguente:  
@@ -144,6 +123,6 @@ AS [Models]
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

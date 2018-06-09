@@ -1,8 +1,6 @@
 ---
 title: Impostazione delle opzioni progetto (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 12
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: dbe36fd3276ae6a5de2f5f41a8694fa9331d75a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5cbaeadbc97a178f3c90f43e26fc13cde416ecc5
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776647"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Impostazione delle opzioni progetto (MySQLToSQL)
 Per ogni progetto SSMA, è possibile impostare le opzioni a livello di progetto. Queste opzioni specificano la modalità di conversione, migrazione dei dati e modalità di mapping dei tipi di dati di origine ai tipi di dati di destinazione.  Prima di convertire gli oggetti in SQL Server o SQL Azure o la migrazione dei dati in SQL Server o SQL Azure, verificare che le opzioni di configurazione siano appropriate per il progetto.  
@@ -46,13 +45,13 @@ SSMA con cinque set di impostazioni di progetto:
   
 Le impostazioni di progetto possono essere configurate in quattro modi:  
   
--   Valore predefinito  
+-   Default  
   
 -   Optimistic  
   
--   Completo  
+-   Full  
   
--   Custom  
+-   Personalizzato  
   
 La modalità predefinita è consigliata per la maggior parte degli utenti. La modalità ottimistica mantiene più la sintassi corrente di MySQL e più facile la lettura. Tuttavia, mantenendo la sintassi corrente potrebbe non essere accurata. Se la sintassi di MySQL deve essere convertita in sintassi equivalente di SQL Server o SQL Azure, la modalità completa esegue la conversione più completa. Il codice risultante, tuttavia, potrebbe essere più difficile da leggere. Nella modalità personalizzata, è possibile impostare le opzioni.  
   

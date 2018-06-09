@@ -1,31 +1,20 @@
 ---
 title: StructureColumn (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- StructureColumn
-dev_langs:
-- DMX
-helpviewer_keywords:
-- StructureColumn function
-ms.assetid: 57557536-4bfa-4fa7-bf7a-fb8722ca200d
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 8dbf127092a2fc15e8c113f42249bc4fb0d49bdf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e1bf58c9477cc06855d332ec3bd69b50a6bf19dc
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842624"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +37,7 @@ StructureColumn('structure column name')
   
  Se la colonna della struttura di data mining alla quale viene fatto riferimento è una tabella nidificata, la funzione restituisce un valore di tabella. Il valore di tabella restituito può essere utilizzato nella clausola FROM di un'istruzione sub-SELECT.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione è polimorfica e può essere utilizzata in qualunque posizione in un'istruzione che consente espressioni, comprese un elenco di espressioni SELECT, un'espressione di condizione WHERE e un'espressione ORDER BY.  
   
  Il nome della colonna nella struttura di data mining è un valore stringa e di conseguenza deve essere racchiuso tra virgolette singole: ad esempio, `StructureColumn('` **colonna 1**`')`. Nel caso in cui siano presenti più colonne con lo stesso nome, il nome è risolto nel contesto dell'istruzione SELECT che lo racchiude.  

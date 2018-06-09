@@ -1,40 +1,20 @@
 ---
 title: Commenti (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- comments [DMX]
-- Data Mining Extensions [Analysis Services], comments
-- double forward slashes
-- commenting characters
-- text strings [SQL Server]
-- remarks [DMX]
-- forward slash-asterisk character pairs
-- DMX [Analysis Services], comments
-- /*...*/ (comment)
-- double hyphens
-- // (comment)
-- -- (comment character)
-ms.assetid: 64d10eb5-4fe8-42c6-b387-eff336315e56
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: eb8bb33e09514117ec2b7f8f8ea8f96f4de3be63
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842954"
 ---
 # <a name="comments-dmx"></a>Commenti (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -58,10 +38,10 @@ ms.lasthandoff: 05/03/2018
 -   **/\* ... \*/ (barra-asterisco coppia di caratteri).** Usare questi caratteri di commento per scrivere un commento nella stessa riga di codice da eseguire oppure per scrivere un commento in una riga distinta, o anche per scrivere commenti in un codice eseguibile. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] i caratteri situati tra la coppia di commenti di apertura (/ *) per la coppia di chiusura del commento (\*/) come parte del commento. Per creare un commento su più righe, iniziare il commento con la coppia di caratteri di apertura del commento (/\*) e terminare il commento con la coppia di caratteri di chiusura del commento (\*/). Nelle righe del commento non deve essere inserito nessun altro simbolo di commento. Per ulteriori informazioni su questo indicatore di commento, vedere [stella barra &#40;commento&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento](../dmx/data-mining-extensions-dmx-reference.md)   
  [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Estensioni Data Mining &#40;DMX&#41; di riferimento agli operatori](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Estensioni Data Mining &#40;DMX&#41; riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)   
  [Estensioni Data Mining &#40;DMX&#41; convenzioni della sintassi](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Estensioni Data Mining &#40;DMX&#41; gli elementi della sintassi](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funzioni di stima generale &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   

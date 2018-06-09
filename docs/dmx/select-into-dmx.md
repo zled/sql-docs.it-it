@@ -1,36 +1,20 @@
 ---
 title: SELECT INTO (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- SELECT_INTO
-- SELECT INTO
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining models [Analysis Services], copying
-- SELECT INTO statement
-- mining models [Analysis Services], creating
-- copying mining models
-ms.assetid: 31ab9b4c-e20d-41ee-886f-6665c22c6ad5
-caps.latest.revision: 42
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ab2052950624fa7c322336e3855bda72e74726f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: acc30b259a9fa327c7f5d48fb0f77fdc3b8bf110
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842234"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -54,15 +38,15 @@ FROM <existing model>
  Nome definito dal provider di un algoritmo di data mining.  
   
  *Elenco di parametri*  
- Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
- *espressione*  
+ *expression*  
  Espressione che restituisce una condizione di filtro valida sui dati di training. Per ulteriori informazioni sulle espressioni che possono essere utilizzate come filtri, vedere [filtri per i modelli di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
  *modello esistente*  
  Nome del modello esistente da copiare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il modello esistente è stato sottoposto a training, il nuovo modello verrà automaticamente elaborato quando viene eseguita l'istruzione. In caso contrario il nuovo modello rimarrà non elaborato.  
   
  Il **SELECT INTO** istruzione funziona solo se la struttura del modello esistente è compatibile con l'algoritmo del nuovo modello. Pertanto, questa istruzione è molto utile per creare e testare rapidamente modelli basati sullo stesso algoritmo. Se si modifica il tipo di algoritmo, il nuovo algoritmo deve supportare il tipo di dati di ogni colonna presente nel modello esistente, altrimenti potrebbe verificarsi un errore quando viene elaborato il modello.  
@@ -93,6 +77,6 @@ FROM [TM Clustering]
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

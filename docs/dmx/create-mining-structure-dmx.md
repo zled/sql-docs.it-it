@@ -1,34 +1,20 @@
 ---
 title: CREARE LA STRUTTURA DI DATA MINING (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE_MINING_STRUCTURE
-- CREATE MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- CREATE MINING STRUCTURE statement
-- mining structures [DMX], creating
-- RELATED TO column
-ms.assetid: c0dec39c-e90f-4afd-aeaf-a9c3e1d1a5e0
-caps.latest.revision: 45
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: be83f470de9f72c74d5dc00403684a9ca6aa66f1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842754"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +62,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Valore predefinito: REPEATABLE (0)  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per definire una struttura di data mining è necessario specificare un elenco di colonne, specificando facoltativamente le relazioni gerarchiche tra le stesse e partizionando facoltativamente la struttura di data mining in set di dati di training e test.  
   
  La parola chiave SESSION facoltativa indica che si tratta di una struttura temporanea che è possibile utilizzare solo per la durata della sessione corrente. Al termine della sessione, la struttura e gli eventuali modelli basati su di essa verranno eliminati. Per creare modelli e strutture di data mining temporanei, è innanzitutto necessario impostare la proprietà del database AllowSessionMiningModels. Per altre informazioni, vedere [Proprietà di data mining](../analysis-services/server-properties/data-mining-properties.md).  
@@ -110,13 +96,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire le colonne di una struttura, vedere gli argomenti seguenti:  
   
--   [Tipi di dati & #40; Data Mining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipi di dati &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenuto di Data Mining tipi & #40; & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [I tipi di contenuto &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [Distribuzioni delle colonne &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modello di Data Mining flag & #40; & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [I flag di modellazione &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  È possibile definire più valori dei flag di modellazione per una colonna. Tuttavia, è possibile disporre solo di un tipo di contenuto e di un tipo di dati per colonna.  
   
@@ -195,6 +181,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

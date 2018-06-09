@@ -1,33 +1,20 @@
 ---
 title: SELECT FROM &lt;struttura&gt;. CASI | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- CASES
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <structure> statements
-ms.assetid: 36f50213-14dc-42da-b899-20240b781e1a
-caps.latest.revision: 15
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: ea905e78ee2e1c86882981ed54defca0d8ac65d2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f473cb42230aec0b5e40fb59fe10b2f34013ba2f
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842104"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;struttura&gt;. CASI
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +40,7 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco di espressioni separate da virgola.  
@@ -66,10 +53,10 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
  *Espressione della condizione*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il drill-through è attivato sia nella struttura che nel modello, qualsiasi membro di un ruolo che dispone di autorizzazioni drill-through per il modello di data mining e per la struttura di data mining può restituire le colonne della struttura non incluse nel modello utilizzando la sintassi seguente:  
   
 ```  
@@ -106,6 +93,6 @@ WHERE IsTestCase();
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

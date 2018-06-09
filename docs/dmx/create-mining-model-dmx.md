@@ -1,38 +1,20 @@
 ---
 title: CREARE IL MODELLO DI DATA MINING (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- CREATE MINING MODEL
-- CREATE
-- CREATE_MINING_MODEL
-dev_langs:
-- DMX
-helpviewer_keywords:
-- RELATED TO column
-- mining models [Analysis Services], creating
-- column definition lists [DMX]
-- parameter lists [DMX]
-- SESSION clause
-- CREATE MINING MODEL statement
-ms.assetid: 43e4b591-7b34-494c-9b2d-7f0fe69af788
-caps.latest.revision: 57
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: b496ad8ea528345fed110c388c1ffa632c6b0cb3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: b1bf442083845359affea6237a7c994ae1229fa9
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842634"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -69,7 +51,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite [set di righe DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [proprietà di Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Elenco di parametri*  
- Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *Stringa XML*  
  (Riservato agli utenti esperti). Modello con codifica XML (PMML). La stringa deve essere racchiusa tra virgolette singole (').  
@@ -113,13 +95,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Per un elenco dei tipi di dati, dei tipi di contenuto, delle distribuzioni di colonna e dei flag di modellazione che è possibile utilizzare per definire una colonna, vedere gli argomenti seguenti:  
   
--   [Tipi di dati & #40; Data Mining & #41;](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [Tipi di dati &#40;Data Mining&#41;](../analysis-services/data-mining/data-types-data-mining.md)  
   
--   [Contenuto di Data Mining tipi & #40; & #41;](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [I tipi di contenuto &#40;Data Mining&#41;](../analysis-services/data-mining/content-types-data-mining.md)  
   
 -   [Distribuzioni delle colonne &#40;Data Mining&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)  
   
--   [Modello di Data Mining flag & #40; & #41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [I flag di modellazione &#40;Data Mining&#41;](../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
  Per descrivere la relazione tra due colonne, è possibile aggiungere una clausola alla descrizione. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supporta l'utilizzo delle operazioni seguenti \<relazione a colonna > clausola.  
   
@@ -142,7 +124,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Per un elenco dei parametri associati a ogni algoritmo, vedere [algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per creare un modello che dispone di un set di dati di testing incorporati, è necessario utilizzare l'istruzione CREATE MINING STRUCTURE seguita da ALTER MINING STRUCTURE. Tuttavia, non tutti i tipi di modello supportano un set di dati di controllo. Per altre informazioni, vedere [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Per una procedura dettagliata di come creare un modello di data mining utilizzando l'istruzione CREATEMODEL, vedere [esercitazione su DMX stima serie tempo](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -208,6 +190,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,34 +1,23 @@
 ---
 title: StdevP (MDX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: ''
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- STDEVP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- StdevP function [MDX]
-ms.assetid: cd8ae7c9-3cef-49f0-bb41-8f577c7b6f31
-caps.latest.revision: 30
-author: Minewiskan
+ms.date: 06/04/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: mdx
+ms.topic: reference
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c9a1f716c03f1615d258626e4895abd4b8d06813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742930"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Restituisce la deviazione standard della popolazione di un'espressione numerica valutata su un set, utilizzando la formula della popolazione distorta (dividendo *n*).  
   
@@ -46,7 +35,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_expression*  
  Espressione numerica valida che in genere è un'espressione MDX (Multidimensional Expression) di coordinate di celle che restituisce un numero.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **StdevP** funzione utilizza la formula della popolazione distorta formula, durante il [Stdev](../mdx/stdev-mdx.md) funzione utilizza la formula della popolazione non distorta.  
   
 ## <a name="example"></a>Esempio  
@@ -64,6 +53,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento alla funzione MDX & #40; MDX & #41;](../mdx/mdx-function-reference-mdx.md)  
+ [Riferimento alla funzione MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

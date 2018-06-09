@@ -1,31 +1,20 @@
 ---
 title: NON (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- NOT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- NOT operator [DMX]
-ms.assetid: 6d91b3d9-270c-4a68-b41f-169cff5faa0e
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 155dbc89f38ad39a87bbf2e69171e741735ec8a0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 053eb905edb1379bfdc40ec010dc6d4efadcba26
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842844"
 ---
 # <a name="not-dmx"></a>NOT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +35,7 @@ NOT Expression1
 ## <a name="return-value"></a>Valore restituito  
  Valore booleano che restituisce FALSE se l'argomento restituisce TRUE e viceversa.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per consentire all'operatore di eseguire la negazione logica, l'argomento viene gestito come valore booleano, per cui 0 equivale a FALSE e tutti gli altri valori a TRUE. Se *Expression1* è TRUE, l'operatore restituisce FALSE. Se *Expression1* è FALSE, l'operatore restituisce TRUE. La tabella seguente illustra come viene eseguita la negazione logica.  
   
 |Valore di Expression1|Valore restituito|  

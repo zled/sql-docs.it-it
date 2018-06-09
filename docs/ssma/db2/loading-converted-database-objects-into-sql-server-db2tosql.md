@@ -1,8 +1,6 @@
 ---
 title: Il caricamento di convertire gli oggetti di Database in SQL Server (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 04d7ce18baed888af7b0de96faec99b72a6b4586
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 915456e1dd679b62c42fb0bd29feeb0c861a85c2
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775117"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>Il caricamento di convertire gli oggetti di Database in SQL Server (DB2ToSQL)
 Dopo aver convertito schemi DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], è possibile caricare gli oggetti di database risultante in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. È possibile avere SSMA creare gli oggetti, oppure è possibile creare script degli oggetti ed eseguire gli script manualmente. SSMA consente inoltre di aggiornare i metadati di destinazione con il contenuto effettivo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] database.  

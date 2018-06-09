@@ -1,41 +1,20 @@
 ---
 title: SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PREDICTION
-- PREDICTION_JOIN
-- SELECT
-- join
-- FROM
-- PREDICTION JOIN
-dev_langs:
-- DMX
-helpviewer_keywords:
-- prediction joins [DMX]
-- PREDICTION JOIN statement
-- natural prediction joins [DMX]
-- open query predictions
-- singleton query predictions [DMX]
-- SELECT FROM <model> PREDICTION JOIN statement
-ms.assetid: 7ca37fec-4a50-4d79-b1d6-1c7c12176946
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 7014d546d0484dcd5d741844a98c8060f925c96c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842164"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modello&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +34,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni SELECT*  
  Elenco delimitato da virgole contenente espressioni e identificatori di colonna derivati dal modello di data mining.  
@@ -70,15 +49,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Query di origine.  
   
  *elenco di mapping di join*  
- Facoltativa. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
+ Facoltativo. Espressione logica che confronta le colonne del modello con quelle della query di origine.  
   
  *Espressione della condizione*  
- Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La clausola ON definisce il mapping tra le colonne della query di origine e quelle del modello di data mining. Tale mapping viene utilizzato per dirigere le colonne dalla query di origine alle colonne nel modello di data mining, di modo che possano essere utilizzate come input durante la creazione delle stime. Le colonne di \< *elenco mapping join*> correlati usando un segno di uguale (=), come illustrato nell'esempio seguente:  
   
 ```  
@@ -211,6 +190,6 @@ NATURAL PREDICTION JOIN
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

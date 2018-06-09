@@ -1,6 +1,6 @@
 ---
 title: Istruzione UPDATE MEMBER (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: cd74ca9c5ebe5195dd65c88f657587583be55e92
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579843"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742710"
 ---
 # <a name="mdx-data-definition---update-member"></a>Definizione dei dati MDX - UPDATE MEMBER
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Aggiorna un membro calcolato esistente.  
   
@@ -61,7 +61,7 @@ UPDATE MEMBER Cube_Name.Member_Name
   
 |Identificatore proprietà|Significato|  
 |-------------------------|-------------|  
-|FORMAT_STRING|Oggetto [!INCLUDE[msCoName](../includes/msconame-md.md)] stringa di formato di stile Office che l'applicazione client consente di visualizzare i valori delle celle.|  
+|FORMAT_STRING|Una stringa di formato stile Office che l'applicazione client può utilizzare per visualizzare i valori delle celle.|  
 |VISIBLE|Un valore che indica se il membro calcolato è visibile in un set di righe dello schema. Visible calcolati i membri possono essere aggiunti a un set con il [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (funzione). Un valore diverso da zero indica che il membro calcolato è visibile. Il valore predefinito per questa proprietà è *Visible*.<br /><br /> I membri calcolati non visibili, vengono in genere utilizzati come passaggi intermedi in membri calcolati più complessi. A tali membri calcolati è possibile fare riferimento anche da altri tipi di membri, ad esempio le misure.|  
 |NON_EMPTY_BEHAVIOR|La misura o il set che MDX utilizza per determinare il comportamento dei membri calcolati durante la risoluzione delle celle vuote.|  
 |CAPTION|Un valore di stringa che specifica la didascalia che può essere utilizzata dall'applicazione client per la visualizzazione del membro.|  

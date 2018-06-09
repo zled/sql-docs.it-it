@@ -3,8 +3,6 @@ title: Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL) | Documenti
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -21,11 +19,12 @@ caps.latest.revision: 7
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8015121c04b75b0f99d56503715a43539db8dceb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 775d251eb43ae33457d6707f1d881a72d54c0112
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779141"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mapping di Sybase ASE e tipi di dati SQL Server (SybaseToSQL)
 Tipi di database di Sybase Adaptive Server Enterprise (ASE) diversi da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o tipi di database di SQL Azure. Quando si esegue la conversione di oggetti di database ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o oggetti di SQL Azure, è necessario specificare come eseguire il mapping di tipi di dati di base per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o SQL Azure. È possibile accettare i mapping dei tipi di dati predefinito oppure è possibile personalizzare i mapping, come illustrato nelle sezioni seguenti.  
@@ -71,7 +70,7 @@ La procedura seguente viene illustrato come eseguire il mapping di tipi di dati 
   
         Alcuni tipi richiedono una lunghezza di tipo di dati di destinazione. Se necessario, immettere la nuova lunghezza dei dati nel **sostituire** casella.  
   
-    5.  Scegliere **OK**.  
+    5.  Fare clic su **OK**.  
   
 3.  Per modificare un mapping dei tipi di dati, eseguire le operazioni seguenti:  
   

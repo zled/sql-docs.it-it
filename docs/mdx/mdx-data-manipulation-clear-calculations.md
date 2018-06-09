@@ -1,6 +1,6 @@
 ---
 title: Istruzione CLEAR CALCULATIONS (MDX) | Documenti Microsoft
-ms.date: 05/30/2018
+ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f210f2ad8af7b0d4e71482946a496d326fe63f24
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34579783"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34742390"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>Manipolazione dei dati MDX - CLEAR CALCULATIONS
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
 
   Rimuove tutti i calcoli dal cubo e ripristina la sessione di calcolo 0 del cubo.  
   

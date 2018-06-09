@@ -1,31 +1,20 @@
 ---
 title: Data Mining Extensions (DMX) convenzioni della sintassi | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- Data Mining Extensions [Analysis Services], syntax conventions
-- syntax [DMX]
-- DMX [Analysis Services], syntax conventions
-ms.assetid: 7a885df3-9500-4793-9307-90a7d617f486
-caps.latest.revision: 13
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 88e745a3d4ccb35d5076b7998f9d6a5813e76772
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: cf80ef73ae3f55f58978d95b0d12b8c69b81dfff
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34843044"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Convenzioni della sintassi DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +32,7 @@ ms.lasthandoff: 05/03/2018
 |\<label> ::=|Nome di un blocco della sintassi. Consente di raggruppare ed etichettare sezioni della sintassi o unità della sintassi utilizzabili in più posizioni di un'istruzione. Ogni posizione in cui è possibile utilizzare il blocco di sintassi è indicata dall'etichetta racchiusa tra parentesi angolari, ad esempio \<etichetta >.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining Extensions & #40; DMX & #41; Riferimento](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Estensioni Data Mining &#40;DMX&#41; riferimento](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

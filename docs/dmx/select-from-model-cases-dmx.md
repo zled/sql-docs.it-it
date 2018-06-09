@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM &lt;modello&gt;. CASE (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- CASES
-- FROM
-dev_langs:
-- DMX
-helpviewer_keywords:
-- SELECT FROM <model>.CASES statement
-- drillthrough [DMX]
-ms.assetid: d58acb47-aaa6-40b7-b8c4-6a6700fbc1dd
-caps.latest.revision: 55
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: dfbac38cd1083ffe21c5e3117a8db2d9dbdb2ac1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: bba9e354eb1925ed4175f720f8008550364dc1a5
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842804"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modello&gt;. CASE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +38,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco di espressioni separate da virgola. Un'espressione può includere identificatori di colonna, funzioni definite dall'utente (UDF), funzioni VBA e altro.  
@@ -65,10 +51,10 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *Espressione della condizione*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se il drill-through è attivato sia nella struttura di data mining che nel modello di data mining, gli utenti membri di un ruolo con autorizzazioni drill-through sul modello e sulla struttura possono accedere alle colonne della struttura di data mining che non sono incluse nel modello di data mining. Pertanto, per proteggere dati riservati o informazioni personali, è necessario costruire la vista origine dati per mascherare informazioni personali e concedere **AllowDrillthrough** autorizzazioni su una struttura di data mining solo quando è necessario.  
   
  Il [Lag &#40;DMX&#41; ](../dmx/lag-dmx.md) funzione può essere utilizzata con i modelli time series per restituire o filtrare l'intervallo di tempo tra ogni case e l'ora iniziale.  
@@ -105,6 +91,6 @@ AND IsInNode('002')
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

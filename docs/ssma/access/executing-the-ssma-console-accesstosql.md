@@ -1,8 +1,6 @@
 ---
 title: L'esecuzione la Console SSMA (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 630e58111b82485b0e7567b972f05227fc26921e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e871f2dd71c4c348067555e03c45a151f001d933
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773997"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>L'esecuzione la Console SSMA (AccessToSQL)
 Microsoft offre una serie di comandi di file di script e le opzioni della riga di comando per eseguire e controllare le attività SSMA affidabili. In dettaglio le sezioni che seguono lo stesso.  
@@ -165,7 +164,7 @@ database di access carico: utilizzato per caricare i file di database di access
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <load-access-database>  
@@ -199,7 +198,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
   metabase="<source/target>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <force-load>  
@@ -312,7 +311,7 @@ generare report di valutazione
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <generate-assessment-report  
@@ -384,7 +383,7 @@ convert-schema
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <convert-schema  
@@ -444,7 +443,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <migrate-data  
@@ -474,7 +473,7 @@ le tabelle di collegamento: questo comando Collega la tabella di origine (access
   
 </link-tables>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <link-tables>  
@@ -500,7 +499,7 @@ tabelle scollegare: questo comando consente di scollegare la tabella di origine 
   
 </unlink-tables>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <unlink-tables>  
@@ -579,7 +578,7 @@ synchronize-target
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target  
@@ -588,7 +587,7 @@ o
   
   object-type="category"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target>  
@@ -644,7 +643,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database  
@@ -653,7 +652,7 @@ o
   
   object-type="category"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database>  
@@ -703,7 +702,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <save-as-script  

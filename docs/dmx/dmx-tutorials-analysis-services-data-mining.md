@@ -1,37 +1,27 @@
 ---
 title: Esercitazioni su DMX (Analysis Services - Data Mining) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-dev_langs:
-- DMX
-helpviewer_keywords:
-- DMX [Analysis Services]
-- tutorials [Data Mining]
-ms.assetid: 8bcc844f-259a-4ffe-8191-086f6cdb5f44
-caps.latest.revision: 17
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 24fc92634d3e6883d3e57a4fa73328220303c487
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e3d242236074c652f2210580f657d99e205f5ed6
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842204"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>Esercitazioni su DMX (Analysis Services - Data mining)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Nelle seguenti esercitazioni vengono fornite informazioni sull'utilizzo delle istruzioni DMX (Data Mining Extensions) con le strutture e i modelli di data mining.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Esercitazione su DMX per bike Buyer](http://msdn.microsoft.com/library/4b634cc1-86dc-42ec-9804-a19292fe8448)  
   
  In questa esercitazione vengono descritte le procedure per la creazione, il training e l'esplorazione di modelli di data mining utilizzando il linguaggio di query DMX. Questi modelli di data mining verranno quindi utilizzati per la creazione di stime sulla probabilità che un cliente acquisti un prodotto specifico.  
@@ -54,6 +44,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Struttura e l'utilizzo di query di stima DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Esercitazione di base di Data Mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
+ [Esercitazione di base sul data mining](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)  
   
   

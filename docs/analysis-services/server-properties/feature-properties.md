@@ -1,6 +1,6 @@
 ---
 title: Proprietà funzionalità | Documenti Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bec4d89fd1135ecc7bfdbc563547b9d3dbbdfa47
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 8ee5a58d5c04cbfbb1f47f0d073ba6614490970c
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238921"
 ---
 # <a name="feature-properties"></a>Proprietà di funzionalità
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+
   Tramite le proprietà di funzionalità è possibile controllare le funzionalità di un prodotto e, nella maggior parte dei casi, si tratta di proprietà avanzate, comprese le proprietà mediante le quali vengono controllati i collegamenti tra istanze di server.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supporta le proprietà del server elencate nella tabella seguente. Per altre informazioni sulle proprietà aggiuntive del server e sulla relativa impostazione, vedere [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -25,7 +27,7 @@ ms.lasthandoff: 05/10/2018
   
 ## <a name="properties"></a>Proprietà  
   
-|Proprietà|Valore predefinito|Description|  
+|Proprietà|Default|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Proprietà booleana che indica se le procedure di archiviazione CLR sono abilitate.|  
 |**LinkInsideInstanceEnabled**|1|Proprietà booleana che indica se è possibile creare un oggetto collegato all'interno della medesima istanza di server.|  
@@ -40,6 +42,6 @@ ms.lasthandoff: 05/10/2018
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà server in Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Determinare la modalità server di un'istanza di Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
- [Usare dinamica viste a Gestione & #40; viste a gestione dinamica & #41; per monitorare Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Utilizzare DMV per monitorare Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   

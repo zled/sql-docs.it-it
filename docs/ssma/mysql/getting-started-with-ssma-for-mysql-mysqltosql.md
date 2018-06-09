@@ -1,8 +1,6 @@
 ---
 title: Introduzione a SSMA per MySQL (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -22,11 +20,12 @@ caps.latest.revision: 19
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 191ff0505de357b4a76579e2797ceaeb636faf1a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f3192db5033a9d20ca21d21d7b0d2c8f3d1550b6
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776537"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introduzione a SSMA per MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) per MySQL consente di convertire gli schemi di database MySQL in schemi di SQL Server o database SQL di Azure, caricare gli schemi risultanti in SQL Server o database SQL di Azure e la migrazione dei dati da MySQL a SQL Server o database SQL di Azure.  
@@ -115,7 +114,7 @@ Nella tabella seguente viene illustrato i menu SSMA.
   
 |||  
 |-|-|  
-|**Menu**|**Description**|  
+|**Menu**|**Descrizione**|  
 |**File**|Contiene i comandi per l'utilizzo di progetti, la connessione a MySQL e connessione a SQL Server o database SQL di Azure.|  
 |**Modifica**|Contiene i comandi per la ricerca e l'utilizzo del testo nelle pagine di dettagli. Per aprire **gestire segnalibri** finestra di dialogo, dal menu Modifica, fare clic su Gestisci segnalibri. Nella finestra di dialogo verrà visualizzato un elenco di segnalibri. È possibile utilizzare i pulsanti sul lato destro della finestra di dialogo per gestire i segnalibri.|  
 |**Visualizza**|Contiene il **sincronizzare i metadati Explorers** comando. Che consente di sincronizzare gli oggetti tra Visualizzatore metadati MySQL e SQL Server o Visualizzatore metadati di database SQL Azure. Contiene inoltre i comandi per visualizzare e nascondere il **Output** e **elenco errori** riquadri e un'opzione **layout** da gestire con il layout.|  

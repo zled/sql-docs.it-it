@@ -1,34 +1,20 @@
 ---
 title: SELECT FROM &lt;modello&gt;. CONTENUTO (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- SELECT
-- FROM
-- Content
-dev_langs:
-- DMX
-helpviewer_keywords:
-- schema rowsets [Analysis Services], data mining
-- SELECT FROM <model>.CONTENT statement
-ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: c68fe4831c0fcbae281eae4ca3ed823d737267cd
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: e00a7f272362a103e94d8cac686201ce79c06322
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842664"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modello&gt;. CONTENUTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +32,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
+ Facoltativo. Valore intero mediante il quale viene specificato il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente colonne derivate dal set di righe dello schema relativo al contenuto.  
@@ -55,12 +41,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Identificatore del modello.  
   
  *Espressione della condizione*  
- Facoltativa. Condizione per limitare i valori restituiti dall'elenco di colonne.  
+ Facoltativo. Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **SELECT FROM**  *\<modello > * * *. CONTENUTO** contenuto specifico per ogni algoritmo restituito dall'istruzione. È ad esempio possibile utilizzare le descrizioni di tutte le regole di un modello Association Rules in un'applicazione personalizzata. È possibile utilizzare un **SELECT FROM \<modello >. CONTENUTO** istruzione per restituire i valori nella colonna NODE_RULE del modello.  
   
  Nella tabella seguente vengono elencate le colonne incluse nel contenuto del modello di data mining.  
@@ -76,7 +62,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|Nome dell'attributo che corrisponde al nodo.|  
 |NODE_NAME|Nome del nodo.|  
 |NODE_UNIQUE_NAME|Nome univoco del nodo all'interno del modello.|  
-|NODE_TYPE|Valore intero che rappresenta il tipo del nodo. tramite tabelle annidate.|  
+|NODE_TYPE|Valore intero che rappresenta il tipo del nodo. ,|  
 |NODE_GUID|GUID del nodo. Se il GUID non è presente, ha valore NULL.|  
 |NODE_CAPTION|Etichetta o didascalia associata al nodo. Utilizzata principalmente a scopo di visualizzazione. Se non esiste una didascalia, verrà restituito NODE_NAME.|  
 |CHILDREN_CARDINALITY|Numero di nodi figlio del nodo.|  
@@ -160,6 +146,6 @@ WHERE NODE_TYPE = 26
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

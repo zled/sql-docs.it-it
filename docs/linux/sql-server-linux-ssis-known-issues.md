@@ -5,24 +5,25 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 06/06/2018
 ms.topic: article
 ms.prod: sql
 ms.component: ''
 ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 8e666a50f90a390307f00e8fd310f965fb7a50b7
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 33f798fd3b7816cae61137292392cb9cca729ec7
+ms.sourcegitcommit: cfe5b2af733e7801558b441b4b9427cfe4c26435
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34822204"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitazioni e problemi noti per SSIS in Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Questo articolo descrive problemi noti e limitazioni correnti per SQL Server Integration Services (SSIS) in Linux.
+Questo articolo descrive le limitazioni e problemi noti per SQL Server Integration Services (SSIS) in Linux.
 
 ## <a name="general-limitations-and-known-issues"></a>Problemi noti e limitazioni generali
 
@@ -41,11 +42,9 @@ Per altre limitazioni e problemi noti con SSIS in Linux, vedere il [note sulla v
 
 ## <a name="components"></a> Componenti supportati e non supportati
 
-I seguenti componenti di Integration Services predefiniti sono supportati in Linux. Alcuni di essi hanno limitazioni sulla piattaforma Linux, come descritto nelle tabelle seguenti.
+I seguenti componenti di Integration Services predefiniti sono supportati in Linux. Alcune di esse presentano limitazioni sulla piattaforma Linux. Componenti predefiniti ai quali non sono elencati di seguito non sono supportati in Linux.
 
-Componenti predefiniti ai quali non sono elencati di seguito non sono supportati in Linux.
-
-### <a name="supported-control-flow-tasks"></a>Attività flusso di controllo è supportato
+## <a name="supported-control-flow-tasks"></a>Attività flusso di controllo è supportato
 - Inserimento bulk - attività
 - Attività Flusso di dati
 - Attività Profiling dati
@@ -54,9 +53,9 @@ Componenti predefiniti ai quali non sono elencati di seguito non sono supportati
 - Attività Espressione
 - Attività FTP
 - Attività Servizio Web
-- XML Task
+- Attività XML
 
-### <a name="control-flow-tasks-supported-with-limitations"></a>Attività flusso di controllo è supportata con limitazioni
+## <a name="control-flow-tasks-supported-with-limitations"></a>Attività flusso di controllo è supportata con limitazioni
 
 | Attività | Limitazioni |
 |------------|---|
@@ -67,16 +66,34 @@ Componenti predefiniti ai quali non sono elencati di seguito non sono supportati
 | Attività Trasferisci Database | I percorsi UNC non sono supportati. |
 | | |
 
-### <a name="supported-control-flow-containers"></a>Contenitori del flusso di controllo è supportato
+## <a name="supported-and-unsupported-maintenance-plan-tasks"></a>Attività del piano di manutenzione supportati e non supportati
+
+In un piano di manutenzione di SQL Server, è possibile utilizzare in genere una serie di attività SSIS.
+
+La seguente attività di manutenzione non sono supportate in Linux:
+- Inviare notifica all'operatore
+- Esegui processo di SQL Server Agent
+
+La seguente attività di manutenzione sono supportate in Linux:
+- Controlla integrità Database
+- Compattazione di Database
+- Riorganizza indice
+- Ricompila indice
+- Aggiorna statistiche
+- Pulizia della cronologia
+- Eseguire il backup di Database
+- Istruzione T-SQL
+
+## <a name="supported-control-flow-containers"></a>Contenitori del flusso di controllo è supportato
 - Sequenza - contenitore
 - Contenitore Ciclo For
 - Contenitore Ciclo Foreach
 
-### <a name="supported-data-flow-sources-and-destinations"></a>Flusso di dati supportati origini e destinazioni
+## <a name="supported-data-flow-sources-and-destinations"></a>Flusso di dati supportati origini e destinazioni
 - Origine File non elaborato e destinazione
 - Origine XML
 
-### <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Origini flusso di dati e destinazioni supportate con limitazioni
+## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Origini flusso di dati e destinazioni supportate con limitazioni
 
 | Componente | Limitazioni |
 |------------|---|
@@ -87,7 +104,7 @@ Componenti predefiniti ai quali non sono elencati di seguito non sono supportati
 | Origine OLE DB e destinazione | Supporta solo SQL Server Native Client 11.0 e il Provider Microsoft OLE DB per SQL Server. |
 | | |
 
-### <a name="supported-data-flow-transformations"></a>Trasformazioni del flusso di dati supportati
+## <a name="supported-data-flow-transformations"></a>Trasformazioni del flusso di dati supportati
 - Aggregate
 - Controllare il funzionamento di
 - Server di distribuzione di dati bilanciati
@@ -112,7 +129,7 @@ Componenti predefiniti ai quali non sono elencati di seguito non sono supportati
 - Union All
 - UnPivot
 
-### <a name="data-flow-transformations-supported-with-limitations"></a>Trasformazioni di flusso di dati supportate con restrizioni
+## <a name="data-flow-transformations-supported-with-limitations"></a>Trasformazioni di flusso di dati supportate con restrizioni
 
 | Componente | Limitazioni |
 |------------|---|
@@ -120,7 +137,7 @@ Componenti predefiniti ai quali non sono elencati di seguito non sono supportati
 | componente script | Supporta solo l'API di .NET Framework standard. |
 | | |
 
-### <a name="supported-and-unsupported-log-providers"></a>Provider di log supportati e non supportati
+## <a name="supported-and-unsupported-log-providers"></a>Provider di log supportati e non supportati
 Tutti i provider di log SSIS predefiniti sono supportati in Linux tranne il provider del registro eventi di Windows.
 
 Il provider di log di SQL Server supporta solo l'autenticazione di SQL. non supporta l'autenticazione di Windows.

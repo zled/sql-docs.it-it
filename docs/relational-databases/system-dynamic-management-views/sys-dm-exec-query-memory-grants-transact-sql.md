@@ -24,11 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ad96038b59e283053b944f4bb88a7b0fdd0406f
-ms.sourcegitcommit: 7019ac41524bdf783ea2c129c17b54581951b515
+ms.openlocfilehash: f783df6df249f5ce045454070771566b59ba0bba
+ms.sourcegitcommit: 155f053fc17ce0c2a8e18694d9dd257ef18ac77d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34812055"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ ms.lasthandoff: 05/23/2018
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], le viste a gestione dinamica non possono esporre le informazioni che influenzerebbero l'indipendenza del database o le informazioni sugli altri database a cui l'utente dispone di accesso. Per evitare di esporre queste informazioni, ogni riga che contiene dati che non appartengono al tenant connesso viene esclusa tramite filtro. Inoltre, i valori nelle colonne **scheduler_id**, **wait_order**, **pool_id**, **group_id** vengono filtrati; il valore della colonna è impostato su NULL.  
   
 > [!NOTE]  
->  Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_exec_query_memory_grants**.  
+> Per chiamare questo metodo dal [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilizzare il nome **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Nome colonna|Tipo di dati|Description|  
 |-----------------|---------------|-----------------|  
@@ -71,56 +72,55 @@ ms.lasthandoff: 05/23/2018
 ## <a name="permissions"></a>Autorizzazioni  
 
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], richiede `VIEW SERVER STATE` autorizzazione.   
-In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
+In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], richiede il `VIEW DATABASE STATE` autorizzazione per il database.   
    
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Di seguito è illustrato un tipico scenario di debug per il timeout delle query:  
   
 -   Controllare sistema memoria lo stato complessivo utilizzando [Sys.dm os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [Sys.dm os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)e diversi contatori di prestazioni.  
   
 -   Verificare la presenza di prenotazioni di memoria dell'esecuzione di query in **Sys.dm os_memory_clerks** in `type = 'MEMORYCLERK_SQLQERESERVATIONS'`.  
   
--   Verificare le query in attesa di concessione di memoria utilizzando **Sys.dm exec_query_memory_grants**.  
+-   Verificare la presenza di query in attesa<sup>1</sup> di concessione utilizzando **DM exec_query_memory_grants**.  
   
-    ```  
+    ```sql  
     --Find all queries waiting in the memory queue  
     SELECT * FROM sys.dm_exec_query_memory_grants where grant_time is null  
     ```  
+    
+    <sup>1</sup> in questo scenario, il tipo di attesa viene in genere RESOURCE_SEMAPHORE. Per altre informazioni, vedere [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md). 
   
--   Eseguire la ricerca della cache per le query con concessioni di memoria utilizzando[exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) e [exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
+-   Eseguire la ricerca della cache per le query con concessioni di memoria utilizzando [exec_cached_plans &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) e [exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)  
   
-    ```  
+    ```sql  
     -- retrieve every query plan from the plan cache  
     USE master;  
     GO  
     SELECT * FROM sys.dm_exec_cached_plans cp CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);  
     GO  
-  
     ```  
   
 -   Esaminare in maggiore dettaglio le query a elevato utilizzo di memoria che utilizzano [Sys.dm exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).  
   
-    ```  
+    ```sql  
     --Find top 5 queries by average CPU time  
     SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
-    Plan_handle, query_plan   
+      plan_handle, query_plan   
     FROM sys.dm_exec_query_stats AS qs  
     CROSS APPLY sys.dm_exec_query_plan(qs.plan_handle)  
     ORDER BY total_worker_time/execution_count DESC;  
     GO  
-  
     ```  
   
 -   Se si sospetta la presenza di una query runaway, esaminare lo Showplan di [Sys.dm exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) e testo del batch di [Sys.dm exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- Le query che utilizzano viste a gestione dinamica con incluse clausole ORDER BY o funzioni di aggregazione potrebbero aumentare l'utilizzo della memoria, contribuendo di conseguenza a causare il problema che dovrebbero risolvere.  
+ Le query che utilizzano viste a gestione dinamica che includono `ORDER BY` o funzioni di aggregazione potrebbero aumentare l'utilizzo della memoria e pertanto contribuiscono al problema che dovrebbero risolvere.  
   
  La funzionalità Resource Governor consente a un amministratore di database di distribuire risorse del server fra un massimo di 64 pool di risorse. A partire da [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], ogni pool si comporta come una piccola indipendenti istanza del server e richiede 2 semafori. Il numero di righe restituite da **Sys.dm exec_query_resource_semaphores** può essere fino a 20 volte superiore alle righe restituite in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="see-also"></a>Vedere anche  
- [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     
+ [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)     
  [Funzioni e viste a gestione dinamica relative all'esecuzione &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
-
-

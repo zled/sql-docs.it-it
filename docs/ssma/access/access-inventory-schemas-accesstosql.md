@@ -1,8 +1,6 @@
 ---
 title: Accedere a schemi di inventario (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -41,15 +39,15 @@ helpviewer_keywords:
 - SSMA_Access_InventoryTables
 - tables, inventory
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
-caps.latest.revision: 17
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: db3476f35a5388d127d34ebb183364e0f63184f3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c9614227b73058459fee7c902823bdb032ef2bc3
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773307"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schemi di inventario di accesso (AccessToSQL)
 Nelle sezioni seguenti vengono descritte le tabelle che vengono create SSMA durante l'esportazione degli schemi di accesso per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -62,7 +60,7 @@ I metadati del database viene esportato nel **SSMA_Access_InventoryDatabases** t
 |**DatabaseId**|**uniqueidentifier**|GUID che identifica in modo univoco ogni database. Questa colonna è anche la chiave primaria per la tabella.|  
 |**DatabaseName**|**nvarchar(4000)**|Il nome del database di Access.|  
 |**ExportTime**|**datetime**|Data e ora di che creazione da SSMA questi metadati.|  
-|**FilePath**|**nvarchar(4000)**|Il nome di file e percorso completo del database di Access.|  
+|**filePath**|**nvarchar(4000)**|Il nome di file e percorso completo del database di Access.|  
 |**FileSize**|**bigint**|Le dimensioni del database di Access in KB.|  
 |**FileOwner**|**nvarchar(4000)**|L'account Windows specificato come proprietario del database di Access.|  
 |**DateCreated**|**datetime**|Data e ora di che creazione del database di Access.|  
@@ -74,7 +72,7 @@ I metadati del database viene esportato nel **SSMA_Access_InventoryDatabases** t
 |**ReportsCount**|**int**|Il numero di report nel database di Access.|  
 |**MacrosCount**|**int**|Il numero di macro nel database di Access.|  
 |**AccessVersion**|**nvarchar(4000)**|La versione di accesso del database.|  
-|**Confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
+|**Regole di confronto**|**nvarchar(4000)**|Le regole di confronto del database di Access. Regole di confronto determinano le modalità di Ordina e confronta le stringhe in un database.|  
 |**JetVersion**|**nvarchar(4000)**|La versione del motore di database Jet. I database di Access utilizzano il motore di database Jet sottostante.|  
 |**IsUpdatable**|**bit**|Indica se il database può essere aggiornato. Se il valore è 1, il database è aggiornabile. Se il valore è 0, il database è di sola lettura.|  
 |**QueryTimeout**|**int**|Configurato ODBC query valore di timeout per il database, in secondi. Il valore predefinito è 60 secondi.|  

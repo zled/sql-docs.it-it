@@ -1,35 +1,20 @@
 ---
 title: SELECT DISTINCT FROM &lt;modello &gt; (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- DISTINCT
-- SELECT
-dev_langs:
-- DMX
-helpviewer_keywords:
-- discrete columns [DMX]
-- discretized columns [DMX]
-- SELECT DISTINCT FROM <model> statement
-- continuous columns
-ms.assetid: 0ab44ef6-1c3b-4809-a687-4d5d13f343af
-caps.latest.revision: 44
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 5754cbeb07789b0d5f7a3f51386f108633cda83e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: 912d4bfee171c795518e794d4afbcb302e96ee33
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842714"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modello &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +31,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 ## <a name="arguments"></a>Argomenti  
  *n*  
- Facoltativa. Valore intero che specifica il numero di righe da restituire.  
+ Facoltativo. Valore intero che specifica il numero di righe da restituire.  
   
  *elenco di espressioni*  
  Elenco delimitato da virgole contenente espressioni o identificatori di colonne correlate (derivati dal modello).  
@@ -57,10 +42,10 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *elenco delle condizioni*  
  Condizione per limitare i valori restituiti dall'elenco di colonne.  
   
- *espressione*  
- Facoltativa. Espressione che restituisce un valore scalare.  
+ *expression*  
+ Facoltativo. Espressione che restituisce un valore scalare.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **SELECT DISTINCT FROM** istruzione funziona solo con una singola colonna o con un set di colonne correlate. Non è possibile utilizzare questa clausola con un set di colonne non correlate.  
   
  Il **SELECT DISTINCT FROM** istruzione consente di fare riferimento direttamente a una colonna all'interno di una tabella nidificata. Esempio:  
@@ -73,7 +58,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
 |Tipo di colonna|Output|  
 |-----------------|------------|  
-|Discreto|Valori univoci nella colonna.|  
+|Discrete|Valori univoci nella colonna.|  
 |Discretizzato|Punto medio di ogni bucket discretizzato nella colonna.|  
 |Continuo|Punto medio dei valori nella colonna.|  
   
@@ -152,6 +137,6 @@ FROM [TM Decision Tree]
 ## <a name="see-also"></a>Vedere anche  
  [SELEZIONARE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

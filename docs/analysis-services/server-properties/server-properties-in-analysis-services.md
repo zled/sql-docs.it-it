@@ -1,6 +1,6 @@
 ---
 title: Le proprietà del server in Analysis Services | Documenti Microsoft
-ms.date: 05/03/2018
+ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,22 +9,24 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: dd37fd44c7bfaff5b338602eb18b0d779ee9e777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: d70f58bfb5dba352d154f18b4c3db675b69147ad
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238821"
 ---
 # <a name="server-properties-in-analysis-services"></a>Proprietà server in Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
   Un amministratore di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] può modificare le proprietà di configurazione del server predefinite di un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ogni istanza ha proprietà di configurazione proprie, impostate in modo indipendente rispetto ad altre istanze presenti nello stesso server.  
   
- Per configurare il server, usare SQL Server Management Studio oppure modificare il file msmdsrv.ini di un'istanza specifica.  
+ Per configurare il server, utilizzare SQL Server Management Studio o modificare il file msmdsrv. ini di un'istanza di SQL Server Analysis Services specifico.  
  
 Le pagine delle proprietà di SQL Server Management Studio mostrano un subset di proprietà che hanno maggiori probabilità di essere modificate. L'elenco completo delle proprietà è disponibile nel file msmdsrv.ini.   
   
 > [!NOTE]  
->  In un'installazione predefinita il file msmdsrv.ini si trova nella cartella \Programmi\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config.
+>  In un'installazione di SQL Server Analysis Services predefinita, msmdsrv. ini è reperibile in \Programmi\Microsoft SQL Server\MSAS13. Cartella MSSQLSERVER\OLAP\Config.
 > 
 > Altre proprietà in grado di influenzare la configurazione del server includono le proprietà di distribuzione della configurazione riportate in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Per altre informazioni su queste proprietà, vedere [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md).
  
@@ -64,21 +66,21 @@ Le pagine delle proprietà di SQL Server Management Studio mostrano un subset di
 |Argomento|Description|  
 |-----------|-----------------|  
 |[Proprietà generali](../../analysis-services/server-properties/general-properties.md)|Le proprietà generali comprendono proprietà di base e proprietà avanzate, comprese le proprietà che consentono di definire la directory dei dati, la directory di backup e altre caratteristiche di funzionamento del server.|  
-|[Proprietà di Data Mining](../../analysis-services/server-properties/data-mining-properties.md)|Le proprietà di data mining controllano quali algoritmi di data mining vengono abilitati e quali disabilitati. Per impostazione predefinita, tutti gli algoritmi sono abilitati.| 
+|[Proprietà di data mining](../../analysis-services/server-properties/data-mining-properties.md)|Le proprietà di data mining controllano quali algoritmi di data mining vengono abilitati e quali disabilitati. Per impostazione predefinita, tutti gli algoritmi sono abilitati.| 
 |[Proprietà DAX](../../analysis-services/server-properties/dax-properties.md)|Definisce le proprietà correlate alle query DAX.|
 |DSO|DSO non è più supportato. Le proprietà DSO vengono ignorate.|  
-|[Proprietà funzionalità](../../analysis-services/server-properties/feature-properties.md)|Le proprietà di funzionalità controllano le funzionalità di un prodotto e nella maggior parte dei casi si tratta di proprietà avanzate, comprese le proprietà che controllano i collegamenti tra istanze di server.|  
-|[FILESTORE-proprietà](../../analysis-services/server-properties/filestore-properties.md)|Le proprietà di archiviazione di file sono riservate ad utenti esperti. Queste proprietà comprendono le impostazioni avanzate di gestione della memoria.|  
+|[Proprietà di funzionalità](../../analysis-services/server-properties/feature-properties.md)|Le proprietà di funzionalità controllano le funzionalità di un prodotto e nella maggior parte dei casi si tratta di proprietà avanzate, comprese le proprietà che controllano i collegamenti tra istanze di server.|  
+|[Proprietà della cache dei file](../../analysis-services/server-properties/filestore-properties.md)|Le proprietà di archiviazione di file sono riservate ad utenti esperti. Queste proprietà comprendono le impostazioni avanzate di gestione della memoria.|  
 |[Proprietà di Gestione blocchi](../../analysis-services/server-properties/lock-manager-properties.md)|Le proprietà di gestione dei blocchi consentono di definire il comportamento del server in relazione a blocchi e timeout. La maggior parte di queste proprietà è riservata ad utenti esperti.|  
 |[Proprietà dei log](../../analysis-services/server-properties/log-properties.md)|Le proprietà di registrazione controllano se, dove e come vengono registrati gli eventi sul server. Queste proprietà riguardano anche la registrazione degli errori, delle eccezioni e delle query, l'utilità Traccia eventi e le tracce.|  
 |[Proprietà della memoria](../../analysis-services/server-properties/memory-properties.md)|Le proprietà della memoria controllano come il server utilizza la memoria. Queste proprietà sono destinate principalmente ad utenti esperti.|  
 |[Proprietà di rete](../../analysis-services/server-properties/network-properties.md)|Le proprietà di rete controllano il comportamento del server in relazione alle reti, comprese le proprietà che controllano la compressione e l'XML binario. La maggior parte di queste proprietà è riservata ad utenti esperti.|  
 |[Proprietà OLAP](../../analysis-services/server-properties/olap-properties.md)|Le proprietà OLAP controllano l'elaborazione delle dimensioni e del cubo, l'elaborazione lenta, la memorizzazione dei dati nella cache e il comportamento delle query. Comprendono sia proprietà di base che proprietà avanzate.|  
 |[Proprietà di sicurezza](../../analysis-services/server-properties/security-properties.md)|La sezione sulla sicurezza comprende proprietà di base e proprietà avanzate che consentono di definire le autorizzazioni di accesso. Comprendono anche proprietà riguardanti amministratori ed utenti.|  
-|[Proprietà dei Pool di thread](../../analysis-services/server-properties/thread-pool-properties.md)|Le proprietà di pooling dei thread controllano il numero di thread creati dal server. Queste proprietà sono destinate principalmente ad utenti esperti.|  
+|[Proprietà dei pool di thread](../../analysis-services/server-properties/thread-pool-properties.md)|Le proprietà di pooling dei thread controllano il numero di thread creati dal server. Queste proprietà sono destinate principalmente ad utenti esperti.|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione di un'istanza di Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
- [Specificare le impostazioni di configurazione per la distribuzione della soluzione](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
+ [Definizione delle impostazioni di configurazione per la distribuzione di soluzioni](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

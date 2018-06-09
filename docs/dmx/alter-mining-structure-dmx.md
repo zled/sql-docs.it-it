@@ -1,36 +1,20 @@
 ---
 title: MODIFICARE LA STRUTTURA DI DATA MINING (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- ALTER_MINING_STRUCTURE
-- ALTER MINING STRUCTURE
-dev_langs:
-- DMX
-helpviewer_keywords:
-- mining structures [DMX], creating
-- WITH DRILLTHROUGH clause
-- column definition lists [DMX]
-- parameter lists [DMX]
-- ALTER MINING STRUCTURE statement
-ms.assetid: d1efd2a8-1a4d-47bc-ba7f-73a7c61e2fde
-caps.latest.revision: 41
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 05d1a7c0d1e28ae380be05058661221a4952228c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: ca56d141e7a010119dfd9d218398c9e165ed65d8
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842694"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,12 +59,12 @@ USING <algorithm> [(<parameter list>)]
 >  Un elenco degli algoritmi supportati dal provider corrente può essere recuperato tramite [set di righe DMSCHEMA_MINING_SERVICES](../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md). Per visualizzare gli algoritmi supportati nell'istanza corrente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vedere [proprietà di Data Mining](../analysis-services/server-properties/data-mining-properties.md).  
   
  *Elenco di parametri*  
- Facoltativa. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
+ Facoltativo. Elenco delimitato da virgole dei parametri definiti dal provider per l'algoritmo.  
   
  *criteri di filtro*  
  Espressione di filtro applicata alle colonne della tabella del case.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se la struttura di data mining contiene chiavi composte, il modello di data mining dovrà includere tutte le colonne chiave definite nella struttura.  
   
  Se il modello non richiede una colonna stimabile, come ad esempio i modelli compilati utilizzando gli algoritmi [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering e [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering, non sarà necessario includere una definizione di colonna nell'istruzione. Tutti gli attributi nel modello risultante verranno gestiti come input.  
@@ -220,6 +204,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni Data Mining &#40;DMX&#41; le istruzioni di definizione dei dati](../dmx/dmx-statements-data-definition.md)   
  [Estensioni Data Mining &#40;DMX&#41; istruzioni Data Manipulation](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining Extensions & #40; DMX & #41; Riferimento istruzione](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Guida di riferimento alle istruzioni DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -3,8 +3,6 @@ title: Nuovo progetto (SybaseToSQL) | Documenti Microsoft
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-sybase
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ssma
@@ -18,11 +16,12 @@ caps.latest.revision: 6
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 651b4f434f2d8c42836bc22002cbb2f43aea4318
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c7b69fdbf09e76b75f4dd203fba356b5eda34c9
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779107"
 ---
 # <a name="new-project-sybasetosql"></a>Nuovo progetto (SybaseToSQL)
 Utilizzare il **nuovo progetto** la finestra di dialogo per creare un nuovo progetto SSMA. Per accedere al **nuovo progetto** della finestra di dialogo di **File** menu, fare clic su **nuovo progetto**.  

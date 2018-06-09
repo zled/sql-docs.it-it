@@ -1,8 +1,6 @@
 ---
 title: Connettersi a Oracle (OracleToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: f682fd589ed585c84c7cb3a4f9efed5f2d185999
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3d002682b0671bedbe15a3c790429b9a80452a35
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776997"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Connettersi a Oracle (OracleToSQL)
 Utilizzare il **Connect to Oracle** la finestra di dialogo per la connessione al database Oracle che si desidera eseguire la migrazione.  

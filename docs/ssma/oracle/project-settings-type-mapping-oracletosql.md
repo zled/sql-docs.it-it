@@ -1,8 +1,6 @@
 ---
 title: Impostazioni (Mapping dei tipi) del progetto (OracleToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: 18d49c123b42a41db33fd6eb37f580eba34f786e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0e239c2dfe345ff17b82fa002550e44fb5b09
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778147"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Impostazioni (Mapping dei tipi) del progetto (OracleToSQL)
 La pagina Mapping dei tipi del **impostazioni progetto** la finestra di dialogo contiene le impostazioni che consentono di personalizzare la modalità SSMA converte i tipi di dati Oracle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] tipi di dati.  
@@ -66,7 +65,7 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|int|  
+|binary_integer|INT|  
 |blob|varbinary(max)|  
 |boolean|bit|  
 |char|ntext|  
@@ -74,13 +73,13 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 |character|ntext|  
 |character varying|ntext|  
 |Oggetto CLOB|ntext|  
-|data|datetime2 [0]|  
+|Data|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |Decimal|float [53]|  
 |valore a precisione doppia|float [53]|  
-|float|float [53]|  
-|int|int|  
-|integer|int|  
+|FLOAT|float [53]|  
+|INT|INT|  
+|integer|INT|  
 |long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [\*... 8000]<sup>*</sup>|varbinary [*]|  
@@ -93,19 +92,19 @@ Nella tabella seguente contiene il mapping dei tipi di dati predefinito per gli 
 |NCHAR|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
 |number|float [53]|  
-|numeric|float [53]|  
+|NUMERIC|float [53]|  
 |NVARCHAR2|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |raw|varbinary(max)|  
-|real|float [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|SMALLINT|SMALLINT|  
 |string|ntext|  
 |TIMESTAMP|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario|datetimeoffset|  
-|UROWID|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
 |varchar|ntext|  
 |VARCHAR2|ntext|  
 |XmlType|xml|  
@@ -130,7 +129,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.
 |variabile di tipo carattere [*... \*]|varchar [*]|  
 |caratteri [*... \*]|Char [*]|  
 |Oggetto CLOB|ntext|  
-|data|datetime2 [0]|  
+|Data|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*... \*]|dec[*][0]|  
 |DEC [*... \*][\*.. \*]|dec[*][\*]|  
@@ -138,11 +137,11 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.
 |decimale [*... \*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |valore a precisione doppia|float [53]|  
-|float|float [53]|  
+|FLOAT|float [53]|  
 |float [*... 53]|float [*]|  
 |float [54... *]|float [53]|  
-|int|int|  
-|integer|int|  
+|INT|INT|  
+|integer|INT|  
 |long|ntext|  
 |long raw|varbinary(max)|  
 |long raw [*... 8000]|varbinary [*]|  
@@ -162,22 +161,22 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le colonne.
 |number|float [53]|  
 |numero [*... \*]|numerico [*]|  
 |numero [*... \*][\*.. \*]|numerico [*] [\*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |numerico [*... \*]|numerico [*]|  
 |numerico [*... \*][\*.. \*]|numerico [*] [\*]|  
 |NVARCHAR2 [*... \*]|nvarchar [*]|  
 |raw[*..\*]|varbinary [*]|  
-|real|float [53]|  
-|ROWID|uniqueidentifier|  
-|smallint|smallint|  
+|REAL|float [53]|  
+|ROWID|UNIQUEIDENTIFIER|  
+|SMALLINT|SMALLINT|  
 |TIMESTAMP|datetime2|  
 |timestamp con fuso orario locale|datetimeoffset|  
 |timestamp con fuso orario locale [*... \*]|DateTimeOffset [*]|  
 |timestamp con fuso orario|datetimeoffset|  
 |timestamp con fuso orario [*... \*]|DateTimeOffset [*]|  
 |timestamp [*... \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*... \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*... \*]|UNIQUEIDENTIFIER|  
 |varchar [*... \*]|varchar [*]|  
 |VARCHAR2 [*... \*]|varchar [*]|  
 |XmlType|xml|  
@@ -190,7 +189,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |BFILE|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|int|  
+|binary_interger|INT|  
 |BLOB|varbinary(max)|  
 |Boolean|bit|  
 |Char|char|  
@@ -204,7 +203,7 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |caratteri [*... 8000]|Char [*]|  
 |caratteri [8001... *]|ntext|  
 |Oggetto CLOB|ntext|  
-|data|datetime2 [0]|  
+|Data|datetime2 [0]|  
 |dec|DEC [38] [0]|  
 |DEC [*... \*]|dec[*][0]|  
 |DEC [*... \*][\*.. \*]|dec[*][\*]|  
@@ -212,11 +211,11 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |decimale [*... \*]|decimal[*][0]|  
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |valore a precisione doppia|float [53]|  
-|Float|float [53]|  
+|float|float [53]|  
 |float [*... 53]|float [*]|  
 |float [54... *]|float [53]|  
-|Int|int|  
-|Integer|int|  
+|Int|INT|  
+|Valore intero|INT|  
 |numero intero [*... \*]|numerico [*] [0]|  
 |Long|ntext|  
 |long raw|varbinary(max)|  
@@ -246,13 +245,13 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |numerico [*... \*][\*.. \*]|numerico [*] [\*]|  
 |nvarchar2[*..4000]|nvarchar [*]|  
 |nvarchar2[4001..*]|nvarchar(max)|  
-|pls_integer|int|  
+|pls_integer|INT|  
 |raw[*..8000]|varbinary [*]|  
 |raw[8001..*]|varbinary(max)|  
 |Real|float [53]|  
-|ROWID|uniqueidentifier|  
-|Signtype|smallint|  
-|Smallint|smallint|  
+|ROWID|UNIQUEIDENTIFIER|  
+|Signtype|SMALLINT|  
+|Smallint|SMALLINT|  
 |string[*..8000]|varchar [*]|  
 |string[8001..*]|ntext|  
 |TIMESTAMP|datetime2|  
@@ -261,8 +260,8 @@ Nella tabella seguente contiene il mapping dei tipi predefiniti per le variabili
 |timestamp con fuso orario locale [*... \*]|DateTimeOffset [*]|  
 |timestamp con fuso orario [*... \*]|DateTimeOffset [*]|  
 |timestamp [*... \*]|datetime2 [*]|  
-|UROWID|uniqueidentifier|  
-|UROWID [*... \*]|uniqueidentifier|  
+|UROWID|UNIQUEIDENTIFIER|  
+|UROWID [*... \*]|UNIQUEIDENTIFIER|  
 |varchar [*... 8000]|varchar [*]|  
 |varchar [8001... *]|ntext|  
 |VARCHAR2 [*... 8000]|varchar [*]|  

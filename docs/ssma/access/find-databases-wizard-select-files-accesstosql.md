@@ -1,8 +1,6 @@
 ---
 title: Trovare la procedura guidata database (selezionare file) (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -20,11 +18,12 @@ caps.latest.revision: 13
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 8bd5b106fbd45311606e0802c51997ad576c8475
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: da8c4f3dbdfb374defe0144ef3accb004ee70b77
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34773517"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Trovare la procedura guidata database (selezionare file) (AccessToSQL)
 La pagina di selezione file della procedura guidata database di ricerca sono elencati i file che sono stati trovati durante la ricerca. Per selezionare un file da aggiungere alla SSMA, selezionare la riga che contiene il nome del file. Dopo aver selezionato i file, fare clic su **Avanti** per visualizzare la pagina di selezione verificare.  

@@ -1,35 +1,20 @@
 ---
 title: PredictTimeSeries (DMX) | Documenti Microsoft
-ms.custom: ''
-ms.date: 03/02/2016
-ms.prod: analysis-services
-ms.prod_service: analysis-services
-ms.component: data-mining
-ms.reviewer: ''
-ms.suite: pro-bi
-ms.technology: ''
-ms.tgt_pltfrm: ''
-ms.topic: language-reference
-f1_keywords:
-- PredictTimeSeries
-dev_langs:
-- DMX
-helpviewer_keywords:
-- time series algorithms [Analysis Services]
-- time series [Analysis Services]
-- EXTEND_MODEL_CASES parameter
-- REPLACE_MODEL_CASES parameter
-- PredictTimeSeries function
-ms.assetid: 85c596be-a7f4-499b-8d36-7e67c2647b6c
-caps.latest.revision: 56
-author: Minewiskan
+ms.date: 06/07/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: dmx
+ms.topic: conceptual
 ms.author: owend
-manager: erikre
-ms.openlocfilehash: 97094e9f59e9e4e505ad1aa16592871500b35eef
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
+ms.openlocfilehash: f7b4f9303a96e6197cc6580a5c799404f48e5c4a
+ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34842744"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +68,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ## <a name="return-type"></a>Tipo restituito  
  Oggetto \< *espressione di tabella*>.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  L'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series non supporta la stima cronologica quando i dati nuovi sono aggiunti mediante l'istruzione PREDICTION JOIN.  
   
  In un'istruzione PREDICTION JOIN, il processo di stima inizia sempre immediatamente dopo la fine della serie di training originale anche se si aggiungono dati nuovi. Pertanto, il *n* parametro e *n-inizio* i valori dei parametri deve essere un numero intero maggiore di 0.  
@@ -270,6 +255,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>Vedere anche  
  [Estensioni Data Mining &#40;DMX&#41; riferimento alla funzione](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Tempo Series Model Query Examples](../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Stimare & #40; DMX & #41;](../dmx/predict-dmx.md)  
+ [Stimare &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

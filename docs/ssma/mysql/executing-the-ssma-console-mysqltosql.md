@@ -1,8 +1,6 @@
 ---
 title: L'esecuzione la Console SSMA (MySQLToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-mysql
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -26,11 +24,12 @@ caps.latest.revision: 25
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a3af52acedfa86cc969e8c2ced508e30a5ddd1f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8381ce25e64ef417483791b4e8f68c2e4a8f1845
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34776037"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>L'esecuzione la Console SSMA (MySQLToSQL)
 Microsoft fornisce un set affidabile di script di comandi di file per eseguire e controllare le attività SSMA.  
@@ -293,7 +292,7 @@ generare report di valutazione
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <generate-assessment-report  
@@ -367,7 +366,7 @@ convert-schema
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <convert-schema  
@@ -427,7 +426,7 @@ migrate-data
   
 </migrate-data>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <migrate-data  
@@ -515,7 +514,7 @@ synchronize-target
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target  
@@ -524,7 +523,7 @@ o
   
   object-type="<object-category>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <synchronize-target>  
@@ -580,7 +579,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database  
@@ -589,7 +588,7 @@ o
   
    object-type="<object-category>"/>  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <refresh-from-database>  
@@ -639,7 +638,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```xml  
 <save-as-script  
@@ -678,7 +677,7 @@ Convert-istruzione
   
 8.  `write-summary-report-to` Specifica il percorso in cui verrà generato il report di riepilogo. Se viene specificato il percorso della cartella, solo file in base al nome **ConvertSQLReport.XML** viene creato. (attributo facoltativo)  
   
-    Report creazione è 2 ulteriormente mediante le sottocategorie..,:  
+    Report creazione è 2 ulteriormente mediante le sottocategorie,..,:  
   
     -   report-errori (= "true/false" con valore predefinito è "false" (attributi facoltativi)).  
   
@@ -715,7 +714,7 @@ Richiede uno o più nodi di metabase come parametro della riga di comando.
   
 </convert-sql-statement>  
 ```  
-o  
+o Gestione configurazione  
   
 ```  
 <convert-sql-statement  
@@ -740,7 +739,7 @@ o
   
 />  
 ```  
-o  
+o Gestione configurazione  
   
 ```  
 <convert-sql-statement  

@@ -1,8 +1,6 @@
 ---
 title: Riferimento all'interfaccia utente (DB2ToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-db2
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,16 +16,17 @@ caps.latest.revision: 5
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 7b2f512f062909cbb92611bac1e34ad13d508d34
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf70c785021f352d000acd0c6237b1aa70e69756
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34775937"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Riferimento all'interfaccia utente (DB2ToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per DB2.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
 Nella tabella seguente sono elencate le finestre di dialogo SSMA:  
   
 |||  

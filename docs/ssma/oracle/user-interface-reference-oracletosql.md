@@ -1,8 +1,6 @@
 ---
 title: Riferimento all'interfaccia utente (OracleToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,16 +13,17 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
-ms.openlocfilehash: bf07df733aad0657fa24791eb8b0ca4a01def782
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 981fd5efeda156774de298be5f45d5a9387279e1
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34778127"
 ---
 # <a name="user-interface-reference-oracletosql"></a>Riferimento all'interfaccia utente (OracleToSQL)
 In questa sezione include argomenti della Guida per [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) per Oracle.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
 Nella tabella seguente sono elencate le finestre di dialogo SSMA:  
   
 |||  

@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 26868cfd136f3d06366a47ec7d52fa17e3c8fe39
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: ddbe5f25cf3153b3354425fd426798e7061bdf36
+ms.sourcegitcommit: 99e355b71ff2554782f6bc8e0da86e6d9e3e0bef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34799811"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Failover gruppo di disponibilità AlwaysOn su Linux
 
@@ -71,7 +72,7 @@ Durante un failover manuale, il `pcs` comando `move` o `crm` comando `migrate` a
 - **Esempio RHEL/Ubuntu**
 
    ```bash
-   sudo pcs constraint --full
+   sudo pcs constraint list --full
    ```
 
 - **Esempio SLES**
@@ -80,35 +81,17 @@ Durante un failover manuale, il `pcs` comando `move` o `crm` comando `migrate` a
    crm config show
    ```
 
-Rimuovere il vincolo di percorso failover future, incluso il failover automatico, avere esito positivo. 
-
-Per rimuovere il vincolo, eseguire il comando seguente: 
-
-- **Esempio RHEL/Ubuntu**
-
-   In questo esempio `ag_cluster-master` è il nome della risorsa che è stato eseguito il failover. 
-
-   ```bash
-   sudo pcs resource clear ag_cluster-master 
-   ```
-
-- **Esempio SLES**
-
-   In questo esempio `ag_cluster` è il nome della risorsa che è stato eseguito il failover. 
-
-   ```bash
-   crm resource clear ag_cluster
-   ```
-
-In alternativa, è possibile eseguire il comando seguente per rimuovere il vincolo di posizione.  
+Un esempio del vincolo che viene creato a causa di un failover manuale. 
+ `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
 - **Esempio RHEL/Ubuntu**
 
-   Nel comando seguente `cli-prefer-ag_cluster-master` è l'ID del vincolo che deve essere rimosso. `sudo pcs constraint --full` restituisce questo ID. 
-
+   Nel comando seguente `cli-prefer-ag_cluster-master` è l'ID del vincolo che deve essere rimosso. `sudo pcs constraint list --full` restituisce questo ID. 
+   
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
+   
 - **Esempio SLES**
 
    Il comando seguente `cli-prefer-ms-ag_cluster` è l'ID del vincolo. `crm config show` restituisce questo ID. 

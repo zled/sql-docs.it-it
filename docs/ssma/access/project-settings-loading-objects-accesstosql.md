@@ -1,8 +1,6 @@
 ---
 title: Impostazioni (caricamento di oggetti) del progetto (AccessToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-access
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -18,11 +16,12 @@ caps.latest.revision: 4
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: a12bdcd556504eaed7e0472b6e20e70f876b4275
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dc0517af077d0dcb6d7914eb7decffdc0ee7a198
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34774127"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>Impostazioni (caricamento di oggetti) del progetto (AccessToSQL)
 Le impostazioni di progetto durante il caricamento di oggetti consentono di configurare come oggetti di database di Access vengono sincronizzati con gli oggetti di database di SQL Server.  

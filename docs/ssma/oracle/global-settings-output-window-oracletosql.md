@@ -1,8 +1,6 @@
 ---
 title: Impostazioni globali (finestra di Output) (OracleToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: 4d32da0211ab869ebba3750efd309ba63fbd9eaf
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e79770513bfb92db0fc7966e4f5347a1c0760e3d
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777547"
 ---
 # <a name="global-settings-output-window--oracletosql"></a>Impostazioni globali (finestra di Output) (OracleToSQL)
 Utilizzare il **impostazioni globali** la finestra di dialogo per specificare le impostazioni per SSMA.  

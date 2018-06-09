@@ -1,8 +1,6 @@
 ---
 title: Salvare i metadati (OracleToSQL) | Documenti Microsoft
 ms.prod: sql
-ms.prod_service: sql-tools
-ms.component: ssma-oracle
 ms.custom: ''
 ms.date: 01/19/2017
 ms.reviewer: ''
@@ -15,11 +13,12 @@ caps.latest.revision: 3
 author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
-ms.openlocfilehash: fa68cd023af0af79a771da103d138b1a4090664f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7462d25fc759d422dd17fe11e2aad221fa3defca
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34777847"
 ---
 # <a name="save-metadata--oracletosql"></a>Salvare i metadati (OracleToSQL)
 Il **salvare metadati** la finestra di dialogo viene richiesto di caricare i metadati al progetto SSMA prima del salvataggio. Questo consente di avere un file di progetto completo che è possibile utilizzare non in linea e inviare ad altri utenti, come il personale di supporto tecnico.  
@@ -41,7 +40,7 @@ Seleziona database tutti elencati.
 **Clear**  
 Cancella la casella di controllo per tutti i database con metadati mancanti. È possibile deselezionare la casella di controllo se i metadati sono stato caricato.  
   
-**Salva**  
+**Salvare**  
 Salva il progetto, il caricamento dei metadati per i database selezionati con metadati mancanti.  
   
 **Annulla**  
