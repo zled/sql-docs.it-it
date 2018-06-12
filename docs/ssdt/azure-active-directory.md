@@ -1,7 +1,7 @@
 ---
-title: Supporto di Azure Active Directory in SQL Server Data Tools (SSDT) | Microsoft Docs
+title: Azure Active Directory in SQL Server Data Tools (SSDT) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/09/2018
+ms.date: 05/31/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.suite: sql
@@ -11,63 +11,81 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 906bd42a1a4143217a974dd114adf82fa41e7270
-ms.sourcegitcommit: 6fd8a193728abc0a00075f3e4766a7e2e2859139
+monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
+ms.openlocfilehash: a61c80ebc47a4f3ca99e637518c58b88d8a96f97
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689269"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Supporto di Azure Active Directory in SQL Server Data Tools (SSDT)
 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md.md](../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
-SQL Server Data Tools (SSDT) supporta vari metodi di autenticazione di [Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
+SQL Server Data Tools (SSDT) supporta vari metodi di autenticazione di [Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis).
 
 ![Finestra di dialogo di connessione di SSDT](media/azure-active-directory/interactive.png)
 
+#### <a name="which-azure-sql-products"></a>Prodotti Azure SQL
+
+Questo articolo illustra Azure AD per l'elenco seguente di *prodotti Azure SQL* nel [cloud di Azure](https://azure.microsoft.com/):
+
+- Database SQL di Azure
+- Azure SQL Data Warehouse
+
 ## <a name="active-directory-password-authentication"></a>Autenticazione della password Active Directory
 
-L'autenticazione della password di Active Directory è un meccanismo di connessione al database SQL di Azure tramite identità in Azure Active Directory (Azure AD).  Usare questo metodo per la connessione se si è connessi a Windows con le credenziali da un dominio che non è federato con Azure o se si usa l'autenticazione di Azure AD tramite Azure AD basata sul dominio iniziale o client. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
+*Autenticazione della password Active Directory* è un meccanismo per la connessione ai prodotti Azure SQL elencati sopra. Questo meccanismo usa le identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione quando:
+
+- Si è connessi a Windows con credenziali di un dominio non federato con Azure, oppure
+- Si usa l'autenticazione di Azure AD con Azure AD e tale autenticazione è basata sul dominio iniziale o sul dominio client.
+
+Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).  
 
 ## <a name="active-directory-integrated-authentication"></a>Autenticazione integrata di Active Directory
 
-L'autenticazione integrata di Active Directory è un meccanismo di connessione al database SQL di Azure tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
+L'*autenticazione integrata di Active Directory* è un meccanismo di connessione ai prodotti Azure SQL elencati tramite identità in Azure Active Directory (Azure AD). Usare questo metodo per la connessione se si è connessi a Windows con le credenziali di Azure Active Directory da un dominio federato. Per altre informazioni, vedere [Connessione al database SQL oppure a SQL Data Warehouse con l'autenticazione di Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication).
 
 ## <a name="active-directory-interactive-authentication"></a>Autenticazione interattiva di Active Directory
 
-SSDT offre un nuovo metodo di autenticazione per la connessione a un database SQL di Azure: l'**autenticazione interattiva di Active Directory**.
+*Autenticazione interattiva di Active Directory* è disponibile per la connessione ai prodotti SQL Azure elencati con SSDT, ma solo con [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) o versione successiva.
 
+- [Scaricare e installare qualsiasi versione di .NET Framework](https://www.microsoft.com/net/download/all).
+- [Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o successiva.
 
-> [!NOTE]
-> L'autenticazione interattiva di Active Directory è disponibile quando ci si connette con SSDT in [Visual Studio 2017 versione 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) e richiede il [download e l'installazione di .NET Framework 4.7.2](https://www.microsoft.com/net/download/all) nel computer che esegue SSDT. Se [.NET Framework 4.7.2](https://docs.microsoft.com/dotnet/api/?view=netframework-4.7.2) non è installato, l'opzione di autenticazione interattiva di Active Directory non sarà disponibile.
+#### <a name="multi-factor-authentication-mfa"></a>Multi-Factor Authentication (MFA).
 
+Autenticazione interattiva di Active Directory supporta un'autenticazione interattiva che consente di usare la funzionalità Multi-Factor Authentication (MFA) di Azure Active Directory (AD) per l'autenticazione con i prodotti Azure SQL elencati. Questo metodo supporta gli utenti di Azure AD nativi e federati e gli utenti guest da altri account. Gli altri tipi di account includono:
 
-L'autenticazione interattiva di Active Directory supporta un'autenticazione interattiva che consente di usare Multi-Factor Authentication (MFA) di Azure Active Directory (AD) per l'autenticazione con il database SQL di Azure. Questo metodo supporta utenti di Azure AD nativi e federati e utenti guest da altri account (inclusi utenti B2B, account Microsoft e account non Microsoft come @outlook.com, @hotmail.com, @live.com e @gmail.com). Se si seleziona questo metodo, è necessario specificare il **nome utente** e il campo Password verrà disabilitato. 
+- Utenti Business to Business (Azure AD B2B).
+- Account Microsoft, ad esempio @outlook.com, @hotmail.com o @live.com.
+- Account non Microsoft, ad esempio @gmail.com.
+
+Se si specifica il metodo MFA è necessario specificare il **Nome utente**, mentre il campo **Password** è disabilitato. 
+
+#### <a name="password-entry"></a>Immissione della password
 
 Quando si esegue l'autenticazione con l'*autenticazione interattiva di Active Directory* viene visualizzata una finestra un'autenticazione che richiede agli utenti di immettere manualmente una password.
 
 ![Finestra di dialogo di accesso](media/azure-active-directory/sign-in.png)
 
-L'autenticazione a più fattori viene imposta da Azure AD tramite questa finestra popup di autenticazione a più fattori aggiuntiva durante il processo di autenticazione.
+L'autenticazione MFA viene imposta da Azure AD tramite questa finestra popup MFA aggiuntiva.
 
 > [!NOTE]
-> Dato che l'*autenticazione interattiva di Active Directory* richiede agli utenti di immettere manualmente la password (in modo interattivo), non è consigliabile per i flussi di lavoro automatizzati.
-
+> I flussi di lavoro automatizzati vengono bloccati dall'uso di *Autenticazione interattiva di Active Directory*. Deve essere presente un utente che interagisca con il processo di autenticazione, immettendo manualmente una password.
 
 ## <a name="known-issues-and-limitations"></a>Problemi noti e limitazioni
 
-- L'*autenticazione interattiva di Active Directory* è supportata solo quando ci si connette a un database SQL di Azure. Non è supportata per SQL Server (in locale o in una macchina virtuale) o per Azure SQL Data Warehouse.
-- L'*autenticazione interattiva di Active Directory* non è supportata nella finestra di dialogo di connessione in *Esplora server*. È necessario connettersi usando SSDT con *Esplora oggetti di SQL Server*.
+- *Autenticazione interattiva di Active Directory* è supportato solo per la connessione ai prodotti Azure SQL elencati all'inizio di questo articolo. Non è supportata per SQL Server (in locale o in una macchina virtuale).
+- *Autenticazione interattiva di Active Directory* non è supportata nella finestra di dialogo di connessione di *Esplora server*. È necessario connettersi usando SSDT con *Esplora oggetti di SQL Server*.
 - L'integrazione di Single Sign-On con l'account attualmente connesso in Visual Studio non è supportata per SSDT.
-- La versione di SQLPackage.exe installata nella directory Extensions durante l'installazione di Visual Studio non è progettata per l'uso da tale percorso. Per usare SQLpackage.exe con AAD, visitare la pagina https://www.microsoft.com/en-us/download/details.aspx?id=55088 
-- La funzionalità Confronto dati di SSDT non è supportata per l'autenticazione AAD, incluso il nuovo metodo di autenticazione.  
-
-
-
+- Il file SQLPackage.exe installato nella directory Extensions durante l'installazione di Visual Studio non è progettato per l'uso da tale percorso. Per l'uso di SQLpackage.exe con Azure AD, visitare la pagina [https://www.microsoft.com/download/details.aspx?id=55088](https://www.microsoft.com/download/details.aspx?id=55088) 
+- La funzionalità Confronto dati di SSDT non è supportata per l'autenticazione di Azure AD.  
 
 
 ## <a name="see-also"></a>Vedere anche  
+
 [Autenticazione a più fattori](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Autenticazione di Azure Active Directory con il database SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  
 [SQL Server Data Tools in Visual Studio](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  

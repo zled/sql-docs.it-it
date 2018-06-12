@@ -1,7 +1,7 @@
 ---
 title: Registrare un provider di dati .NET Framework standard (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/18/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -22,11 +22,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 68c34c7ce77c3986d4df390c3512617e27de23b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7cfd6cbea6bfefca9b695af4071727ba3d2550a1
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550432"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrare un provider di dati .NET Framework standard (SSRS)
   Per usare un provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] di terze parti per recuperare dati per un set di dati di un report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , è necessario distribuire e registrare l'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in due posizioni, ovvero nel client di creazione dei report e nel server di report. Nel client per la creazione del report, è necessario registrare il provider di dati come tipo di origine dei dati e associarlo a una finestra Progettazione query. Sarà quindi possibile selezionare il provider di dati come tipo di origine dei dati per la creazione di un set di dati di report. La finestra Progettazione query associata verrà aperta per consentire la creazione di query per il tipo di origine dei dati specifico. Nel server di report il provider di dati deve essere registrato come tipo di origine dei dati. Sarà quindi possibile elaborare i report pubblicati che recuperano i dati da un'origine mediante il provider di dati.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Aggiungere una voce per il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |attribute|Description|  
+    |attribute|Descrizione|  
     |---------------|-----------------|  
     |**Nome**|Specificare un nome univoco per il provider di dati, ad esempio **ProviderDatiNET**. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco tra tutte le voci dell'elemento **Extension** di un file di configurazione. Il valore indicato qui viene inserito nell'elenco a discesa dei tipi di origini dei dati per la creazione di una nuova origine.|  
     |**Tipo**|Immettere un elenco delimitato da virgole che includa lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:System.Data.IDbConnection> , seguito dal nome dell'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , senza l'estensione dll.|  
@@ -106,7 +107,7 @@ ms.lasthandoff: 05/03/2018
  L'appartenenza URL è solo una delle diverse condizioni di appartenenza selezionabili per il provider di dati.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Verifica della distribuzione e della registrazione  
- È possibile verificare se la distribuzione del provider di dati nel server di report ha avuto esito positivo aprendo Gestione report e controllando che sia incluso nell'elenco delle origini dati disponibili. Per altre informazioni su Gestione report e sulle origini dati, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ È possibile verificare se la distribuzione del provider di dati nel server di report ha avuto esito positivo aprendo il portale Web e controllando che sia incluso nell'elenco delle origini dati disponibili. Per altre informazioni sul portale Web e sulle origini dati, vedere [Creare, modificare ed eliminare origini dati condivise &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Registrazione di un provider di dati .NET Framework nel client di Progettazione report  
  Per creare report che utilizzino il provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per un'origine dei dati, è necessario installare l'assembly nel computer client che esegue Progettazione report. È necessario modificare due file di configurazione. Modificare RSReportDesigner.config per registrare il provider di dati come origine dei dati e per utilizzare la finestra Progettazione query standard. Modificare RSPreviewPolicy.config per assegnare autorizzazioni di sicurezza dell'accesso al codice per l'assembly del provider di dati.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 05/03/2018
   
 4.  Aggiungere una voce per il provider di dati.  
   
-    |attribute|Description|  
+    |attribute|Descrizione|  
     |---------------|-----------------|  
     |**Nome**|Specificare un nome univoco per il provider di dati, ad esempio **ProviderDatiNET**. La lunghezza massima consentita per l'attributo **Name** è 255 caratteri. Il nome deve essere univoco tra tutte le voci dell'elemento **Extension** di un file di configurazione. Il valore indicato qui viene inserito nell'elenco a discesa dei tipi di origini dei dati per la creazione di una nuova origine.|  
     |**Tipo**|Immettere un elenco delimitato da virgole che includa lo spazio dei nomi completo della classe che implementa l'interfaccia <xref:System.Data.IDbConnection> , seguito dal nome dell'assembly del provider di dati [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , senza l'estensione dll.|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 05/03/2018
  Per poter verificare la distribuzione, è necessario chiudere tutte le istanze di [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] nel computer locale. Dopo aver chiuso tutte le sessioni correnti, è possibile verificare se la distribuzione del provider di dati in Progettazione report è riuscita creando un nuovo progetto di report in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Quando si crea un nuovo set di dati per il report il provider di dati dovrebbe essere incluso nell'elenco dei tipi di origini dei dati disponibili.  
   
 ## <a name="platform-considerations"></a>Considerazioni relative alla piattaforma  
- In una piattaforma a 64 bit (x64) [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene eseguito in modalità WOW a 32 bit. Quando si creano report su una piattaforma x64, per visualizzarne l'anteprima è necessario che i provider di dati a 32 bit siano installati nel client per la creazione di report. Se si pubblica il report sul medesimo sistema, per poterlo visualizzare in Gestione report saranno necessari i provider di dati x64.  
+ In una piattaforma a 64 bit (x64) [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene eseguito in modalità WOW a 32 bit. Quando si creano report su una piattaforma x64, per visualizzarne l'anteprima è necessario che i provider di dati a 32 bit siano installati nel client per la creazione di report. Se si pubblica il report sul medesimo sistema, per poterlo visualizzare nel portale Web sono necessari provider di dati x64.  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] non è supportato per le piattaforme con processore [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   

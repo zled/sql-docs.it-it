@@ -1,7 +1,7 @@
 ---
-title: Panoramica delle estensioni di sicurezza| Microsoft Docs
+title: Panoramica delle estensioni di sicurezza (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.component: extensions
@@ -19,13 +19,14 @@ caps.latest.revision: 22
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0aa92c8538efae252aa205a38aa6f5eb2c542c90
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4cd80296e13af18902d48b934bf26144d153c039
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34550462"
 ---
-# <a name="security-extensions-overview"></a>Panoramica sulle estensioni di sicurezza
+# <a name="security-extensions-overview---reporting-services-ssrs"></a>Panoramica delle estensioni di sicurezza - Reporting Services (SSRS)
   Un'estensione di sicurezza di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] consente l'autenticazione e l'autorizzazione di utenti o gruppi, ovvero consente a utenti diversi di accedere a un server di report e, sulla base delle relative identità, di eseguire diverse attività o operazioni. Per impostazione predefinita, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utilizza un'estensione di autenticazione basata su Windows che verifica le identità degli utenti che dichiarano di avere account nel sistema tramite i protocolli degli account di Windows. In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] l'autorizzazione degli utenti viene effettuata tramite un sistema di sicurezza basato sui ruoli. Il modello di sicurezza basato sui ruoli di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] è simile ai modelli di sicurezza basati sui ruoli di altre tecnologie.  
   
  Poiché le estensioni di sicurezza si basano su un'API aperta ed estensibile, è possibile creare nuove estensioni di autenticazione e autorizzazione in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Di seguito viene fornito un esempio di una tipica implementazione dell'estensione di sicurezza in cui l'autenticazione e l'autorizzazione sono basate su form:  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
   
  Come illustrato nella figura, l'autenticazione e l'autorizzazione vengono effettuate nel modo seguente:  
   
-1.  Un utente tenta di accedere a Gestione report mediante un URL e viene reindirizzato a un form che ne raccoglie le credenziali per l'applicazione client.  
+1.  Un utente tenta di accedere al portale Web mediante un URL e viene reindirizzato a un form che ne raccoglie le credenziali per l'applicazione client.  
   
 2.  L'utente invia le credenziali al form.  
   
@@ -42,11 +43,11 @@ ms.lasthandoff: 05/03/2018
   
 4.  Il servizio Web chiama l'estensione di sicurezza fornita dal cliente e verifica che nome utente e password siano presenti nell'autorità di sicurezza personalizzata.  
   
-5.  Dopo l'autenticazione, il servizio Web crea e gestisce un ticket di autenticazione (noto come "cookie"), quindi verifica il ruolo dell'utente per la home page di Gestione report.  
+5.  Dopo l'autenticazione, il servizio Web crea e gestisce un ticket di autenticazione, noto come "cookie", e verifica il ruolo dell'utente per la home page del portale Web.  
   
-6.  Il servizio Web restituisce il cookie al browser e visualizza l'interfaccia utente appropriata in Gestione report.  
+6.  Il servizio Web restituisce il cookie al browser e visualizza l'interfaccia utente appropriata nel portale Web.  
   
-7.  Dopo l'autenticazione dell'utente, il browser invia richieste a Gestione report durante la trasmissione del cookie nell'intestazione HTTP. Queste richieste vengono inviate in risposta alle azioni dell'utente all'interno dell'applicazione Gestione report.  
+7.  Dopo l'autenticazione dell'utente, il browser invia richieste al portale Web durante la trasmissione del cookie nell'intestazione HTTP. Queste richieste vengono inviate in risposta alle azioni dell'utente nel portale Web.  
   
 8.  Il cookie viene trasmesso nell'intestazione HTTP al servizio Web insieme all'operazione utente richiesta.  
   
@@ -69,6 +70,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Implementazione di un'estensione di sicurezza](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
- [Configurare Gestione report per il passaggio di cookie di autenticazione personalizzati](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   

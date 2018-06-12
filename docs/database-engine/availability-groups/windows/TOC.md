@@ -61,6 +61,7 @@
 ### [Configurare il backup su repliche](configure-backup-on-availability-replicas-sql-server.md)  
 ### [Configurare gruppi di disponibilità distribuiti](configure-distributed-availability-groups.md)
 ### [Configurare per transazioni distribuite](configure-availability-group-for-distributed-transactions.md)
+### [Configurare un gruppo di disponibilità con scalabilità in lettura](configure-read-scale-availability-groups.md)
 ### [Configurare la replica con accesso in sola lettura](configure-read-only-access-on-an-availability-replica-sql-server.md)  
 ### [Configurare il routing di sola lettura](configure-read-only-routing-for-an-availability-group-sql-server.md)  
 ### [Rimuovere un listener](remove-an-availability-group-listener-sql-server.md)  

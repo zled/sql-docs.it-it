@@ -1,7 +1,7 @@
 ---
 title: Processi di SQL Server Agent per i pacchetti | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/04/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: packages
@@ -21,15 +21,21 @@ caps.latest.revision: 54
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 9cb26adf331696cb98901c6c9db387dc4d47f052
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d262b623566f84b1ce5f8595560d4db6b646de97
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772497"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Processi di SQL Server Agent per i pacchetti
   È possibile automatizzare e pianificare l'esecuzione dei pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] tramite [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. È possibile pianificare i pacchetti distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] e archiviati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], nell'archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e nel file system.  
-  
+ 
+> [!NOTE]
+> In questo articolo viene illustrato come pianificare i pacchetti SSIS a livello generale e come pianificare i pacchetti in locale. È anche possibile eseguire e pianificare pacchetti SSIS nelle piattaforme seguenti:
+> - **Cloud di Microsoft Azure**. Per altre informazioni, vedere [Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md) e [Pianificare l'esecuzione di un pacchetto SSIS in Azure](../lift-shift/ssis-azure-schedule-packages.md).
+> - **Linux**. Per altre informazioni, vedere [Estrarre, trasformare e caricare i dati in Linux con SSIS](../../linux/sql-server-linux-migrate-ssis.md) e [Pianificare l'esecuzione dei pacchetti SSIS in Linux con cron](../../linux/sql-server-linux-schedule-ssis-packages.md).
+
 ## <a name="sections-in-this-topic"></a>Sezioni dell'argomento  
  In questo argomento sono incluse le sezioni seguenti:  
   
@@ -129,7 +135,7 @@ ms.lasthandoff: 05/03/2018
   
      **Nella tabella seguente vengono descritte le possibili origini pacchetto.**  
   
-    |Origine pacchetto|Description|  
+    |Origine pacchetto|Descrizione|  
     |--------------------|-----------------|  
     |**Catalogo SSIS**|Pacchetti archiviati nel database SSISDB. I pacchetti sono contenuti nei progetti di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] distribuiti nel server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .|  
     |**SQL Server**|Pacchetti archiviati nel database MSDB. Utilizzare il servizio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per gestire i pacchetti.|  

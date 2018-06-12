@@ -21,11 +21,12 @@ caps.latest.revision: 50
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da6c81701af24b495e84cb26dc3a6581d00ba1f6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 76498c4abdc226194f71648cae49640bdae2dfcc
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34689219"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Creare una sottoscrizione guidata dai dati (esercitazione su SSRS)
 Questa esercitazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] illustra i concetti di sottoscrizioni guidate dai dati attraverso un semplice esempio che crea una sottoscrizione guidata dai dati per generare e salvare l'output di un report filtrato in una condivisione di file. 
@@ -46,7 +47,7 @@ Questa esercitazione di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md
 
  Il diagramma seguente illustra la struttura dell'esercitazione
 
-Passaggio  |Description 
+Passaggio  |Descrizione 
 ---------|---------
 (1)     |  La configurazione della sottoscrizione nota il report di origine, la pianificazione e il campo che eseguono il mapping al database del Sottoscrittore.        
 (2)     | La tabella OrderInfo contiene 4 numeri di ordine da usare per i filtri , 1 per i file. La tabella contiene anche i formati di file per i report generati.

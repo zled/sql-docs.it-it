@@ -1,7 +1,7 @@
 ---
 title: Creare, modificare ed eliminare origini dati condivise (SSRS) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: report-data
@@ -23,28 +23,24 @@ caps.latest.revision: 53
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: f68f43c6b004219977aed509286c8d56fdca1afe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fa0546bd09cd108c4e9cccbd5909cad94558d92d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550762"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Creare, modificare ed eliminare origini dati condivise (SSRS)
   Un'origine dati condivisa è un set di proprietà di connessione dell'origine dati a cui è possibile fare riferimento in più report, modelli e sottoscrizioni guidate dai dati in esecuzione su un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Le origini dei dati condivise rappresentano una soluzione semplice per gestire proprietà dell'origine dati soggette a frequenti modifiche. Se un account utente o una password viene modificata o se si sposta il database in un server diverso, è possibile aggiornare le informazioni di connessione da una posizione centralizzata.  
-  
- L'icona seguente indica un'origine dei dati condivisa nella gerarchia di cartelle di Gestione report:  
-  
- ![Icona di origine dati condivisa](../../reporting-services/report-data/media/hlp-16datasource.png "Icona di origine dati condivisa")  
-Icona dell'origine dati condivisa  
   
  Le origini dei dati condivise sono facoltative per i report e le sottoscrizioni guidate dai dati, ma obbligatorie per i modelli di report. Se si intende utilizzare modelli di report per il reporting ad hoc, è necessario creare e gestire un'origine dei dati condivisa per fornire al modello le informazioni di connessione.  
   
  Un'origine dei dati condivisa è costituita dalle seguenti parti:  
   
-|Parte|Description|  
+|Parte|Descrizione|  
 |----------|-----------------|  
 |nome|Un nome che identifica l'elemento all'interno della gerarchia di cartelle del server di report.|  
-|Description|Una descrizione che viene visualizzata con l'elemento in Gestione report quando si visualizza il contenuto della cartella.|  
+|Descrizione|Una descrizione che viene visualizzata con l'elemento nel portale Web quando viene visualizzato il contenuto della cartella.|  
 |Tipo di connessione|L'estensione per l'elaborazione dati utilizzata con l'origine dati. È possibile utilizzare solo estensioni per l'elaborazione dati distribuite sul server di report. Per altre informazioni sulle estensioni per l'elaborazione dati incluse in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vedere [Origini dati supportate da Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Stringa di connessione|La stringa di connessione per il database. Per altre informazioni e per visualizzare esempi di stringhe di connessione alle origini dati più frequenti, vedere [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
 |Tipo di credenziali|Specifica in che modo vengono ottenute le credenziali per la connessione e se devono essere utilizzate quando viene stabilita la connessione. Per altre informazioni, vedere [Specificare le credenziali e le informazioni sulla connessione per le origini dati del report](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
@@ -52,7 +48,7 @@ Icona dell'origine dati condivisa
  Le origini dei dati condivise non contengono informazioni sulla query utilizzata per recuperare i dati. La query viene sempre mantenuta all'interno della definizione del report.  
   
 ## <a name="creating-and-modifying-shared-data-sources"></a>Creazione e modifica di origini dati condivise  
- Per creare un'origine dati condivisa o modificarne le proprietà, è necessario avere le autorizzazioni **Gestione di origini dei dati** sul server di report. Se il server di report viene eseguito in modalità nativa, è possibile utilizzare Gestione report per creare e configurare l'origine dei dati condivisa. Se il server di report viene eseguito in modalità integrata SharePoint, è possibile utilizzare le pagine dell'applicazione su un sito di SharePoint. Per qualsiasi server di report, indipendentemente dalla modalità, è possibile creare un'origine dei dati condivisa in Progettazione report e pubblicarla su un server di destinazione.  
+ Per creare un'origine dati condivisa o modificarne le proprietà, è necessario avere le autorizzazioni **Gestione di origini dei dati** sul server di report. Se il server di report viene eseguito in modalità nativa, è possibile creare e configurare l'origine dati condivisa nel portale Web. Se il server di report viene eseguito in modalità integrata SharePoint, è possibile utilizzare le pagine dell'applicazione su un sito di SharePoint. Per qualsiasi server di report, indipendentemente dalla modalità, è possibile creare un'origine dei dati condivisa in Progettazione report e pubblicarla su un server di destinazione.  
   
  Dopo avere creato un'origine dei dati condivisa sul server di report, è possibile creare assegnazioni di ruolo per controllarne l'accesso, spostarla in un percorso diverso, rinominarla o disconnetterla per impedire l'elaborazione dei report durante l'esecuzione di operazioni di manutenzione sull'origine dati esterna. Se si rinomina un'origine dei dati condivisa o la si sposta in una posizione diversa nella gerarchia di cartelle del server di report, vengono di conseguenza aggiornate le informazioni sul percorso in tutti i report e sottoscrizioni che fanno riferimento all'origine dei dati condivisa. Se l'origine dei dati condivisa è offline, tutti i report, i modelli e le sottoscrizioni non verranno eseguite finché l'origine dati non viene nuovamente abilitata.  
   
@@ -75,30 +71,26 @@ Icona dell'origine dati condivisa
   
          La nuova origine dati verrà visualizzata nella cartella Origini dati condivise in Esplora soluzioni.  
   
-4.  Fare clic su Credenziali.  
+4.  Fare clic su **Credenziali**.  
   
      Specificare le credenziali da utilizzare per questa origine dati. Il tipo di credenziali supportato viene determinato dal proprietario dell'origine dati.  
   
- **Per creare un'origine dati condivisa in Gestione report**  
+ **Per creare un'origine dati condivisa nel portale Web**  
   
-1.  Avviare [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
-  
-2.  In Gestione report passare alla pagina **Contenuto** .  
-  
-3.  Fare clic su **Nuova origine dati**. Verrà visualizzata la pagina **Nuova origine dati** .  
+1.  Nel portale Web selezionare **Nuovo** > **Origine dati**. 
   
 4.  Digitare un nome per l'elemento. Un nome deve includere almeno un carattere e deve iniziare con una lettera. È inoltre possibile utilizzare alcuni simboli, con l'esclusione degli spazi e dei caratteri ; ? : @ & = + , $ / * < > | " /.  
   
-5.  È possibile digitare facoltativamente una descrizione per fornire agli utenti informazioni sulla connessione. La descrizione verrà visualizzata nella pagina **Contenuto** in Gestione report.  
+5.  È possibile digitare facoltativamente una descrizione per offrire agli utenti informazioni sulla connessione.  
   
 6.  Nell'elenco **Tipo di origine dati** specificare l'estensione per l'elaborazione dati usata per elaborare i dati dell'origine dati.  
   
 7.  Per **Stringa di connessione**specificare la stringa usata dal server di report per la connessione all'origine dati. È consigliabile evitare di specificare credenziali nella stringa di connessione.  
   
-     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database:  
+     L'esempio seguente illustra una stringa di connessione usata per connettersi al database [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale AdventureWorks2016:  
   
     ```  
-    data source=<localservername>; initial catalog=AdventureWorks2012  
+    data source=<localservername>; initial catalog=AdventureWorks2016 
     ```  
   
 8.  Per **Connetti tramite**specificare come verranno ottenute le credenziali quando il report è in esecuzione:  
@@ -120,11 +112,13 @@ Icona dell'origine dati condivisa
   
 10. Fare clic su **OK**.  
   
- **Per modificare un'origine dati condivisa in Gestione report**  
+ **Per modificare un'origine dati condivisa nel portale Web**  
   
-1.  In Gestione report passare alla pagina Contenuto.  
+1.  Nel portale Web passare all'origine dati condivisa.  
   
-2.  Passare alla voce origine dati condivisa, posizionare il puntatore del mouse sulla voce, fare clic sull'elenco a discesa e scegliere **Gestisci**dal menu di scelta rapida. Verrà visualizzata la pagina **Proprietà** .  
+2.  Selezionare i puntini di sospensione (...) nell'angolo superiore destro dell'origine dati condivisa > **Gestisci**.   
+
+    Verrà visualizzata la pagina **Proprietà** .
   
 3.  Modificare l'origine dati e fare clic su **Applica**.  
   
@@ -133,21 +127,14 @@ Icona dell'origine dati condivisa
   
  **Per eliminare un'origine dei dati condivisa**  
   
-1.  In Gestione report passare alla pagina **Contenuto** e quindi eseguire una di queste operazioni:  
+1. Nel portale Web passare all'origine dati condivisa.  
   
-    -   Passare all'origine dei dati condivisa.  
+2.  Selezionare i puntini di sospensione (...) nell'angolo superiore destro dell'origine dati condivisa > **Gestisci**.    
+    Verrà visualizzata la pagina **Proprietà** .
   
-         Fare clic sull'elemento per aprirlo. Verrà visualizzata la pagina Proprietà generali.  
+3. Fare clic su **Elimina**e quindi su **OK**.  
   
-         Fare clic su **Elimina**e quindi su **OK**.  
-  
-    -   Nella pagina **Contenuto** passare alla cartella contenente l'origine dati che si vuole eliminare.  
-  
-         Posizionare il puntatore del mouse sull'elemento, fare clic sull'elenco a discesa e scegliere **Elimina**dal menu di scelta rapida.  
-  
-         [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- Quando si elimina un'origine dei dati condivisa, verranno disattivati tutti i report, i modelli o le sottoscrizioni guidate dai dati in cui viene utilizzata. In assenza delle informazioni sulla connessione all'origine dati, gli elementi non verranno più eseguiti. Per attivare tali elementi, è necessario aprirli singolarmente ed eseguire le seguenti operazioni:  
+Quando si elimina un'origine dati condivisa, vengono disattivati tutti i report, i modelli o le sottoscrizioni guidate dai dati in cui viene usata. In assenza delle informazioni sulla connessione all'origine dati, gli elementi non verranno più eseguiti. Per attivare tali elementi, è necessario aprirli singolarmente ed eseguire le seguenti operazioni:  
   
 -   Per i report e le sottoscrizioni guidate dai dati che fanno riferimento all'origine dei dati condivisa, è possibile specificare le informazioni sulla connessione all'origine dati nelle proprietà del report o nella sottoscrizione. In alternativa, è possibile selezionare una nuova origine dei dati condivisa che include i valori che si desidera utilizzare.  
   
@@ -156,7 +143,8 @@ Icona dell'origine dati condivisa
  Non è prevista alcuna operazione di annullamento per l'eliminazione di un'origine dei dati condivisa. Se tuttavia si elimina accidentalmente un'origine dei dati condivisa, è possibile crearne una nuova utilizzando gli stessi valori di proprietà di quella eliminata. Sarà necessario aprire i singoli report, modelli e sottoscrizioni guidate dai dati per riassociare l'origine dei dati condivisa all'elemento in cui viene utilizzata, ma i report, i modelli e le sottoscrizioni continueranno a funzionare come in precedenza purché le proprietà dell'origine dati siano identiche a quelle precedenti.  
   
 ## <a name="importing-shared-data-sources"></a>Importazione di origini dati condivise  
- **Per importare un'origine dati esistente in Progettazione report**  
+
+**Per importare un'origine dati esistente in Progettazione report**  
   
 1.  In Esplora soluzioni fare clic con il pulsante destro del mouse sulla cartella **Origini dati condivise** nel progetto del server report e quindi scegliere **Aggiungi elemento esistente**. Verrà visualizzata la finestra di dialogo **Aggiungi elemento esistente** .  
   
@@ -220,7 +208,7 @@ Icona dell'origine dati condivisa
  Quando si elimina un modello di report è necessario prestare molta attenzione. Se si elimina un modello, non sarà più possibile aprire e modificare in Generatore report alcun report basato su tale modello. Se si elimina accidentalmente un modello utilizzato da report esistenti, sarà necessario rigenerare il modello, ricreare e salvare tutti i report che utilizzano il modello, quindi specificare di nuovo le impostazioni di sicurezza di tutti gli elementi del modello che si desidera utilizzare. Non è possibile rigenerare semplicemente il modello e collegarlo a un report esistente.  
   
 ## <a name="dependent-items"></a>Elementi dipendenti  
- Per visualizzare un elenco di report e modelli che utilizzano l'origine dati, aprire la pagina Elementi dipendenti relativa all'origine dei dati condivisa. È possibile accedere a questa pagina quando si apre l'origine dati in Gestione report o in una pagina dell'applicazione di SharePoint. Si noti che nella pagina Elementi dipendenti non vengono visualizzate le sottoscrizioni guidate dai dati. Se un'origine dei dati condivisa viene utilizzata da una sottoscrizione, questa non sarà inclusa nell'elenco degli elementi dipendenti.  
+ Per visualizzare un elenco di report e modelli che utilizzano l'origine dati, aprire la pagina Elementi dipendenti relativa all'origine dei dati condivisa. È possibile accedere a questa pagina quando si apre l'origine dati nel portale Web o in una pagina dell'applicazione di SharePoint. Si noti che nella pagina Elementi dipendenti non vengono visualizzate le sottoscrizioni guidate dai dati. Se un'origine dei dati condivisa viene utilizzata da una sottoscrizione, questa non sarà inclusa nell'elenco degli elementi dipendenti.  
   
  **Per visualizzare elementi dipendenti in SharePoint**  
   
@@ -233,13 +221,8 @@ Icona dell'origine dati condivisa
      Per i modelli di report, nell'elenco degli elementi dipendenti sono visualizzati i report creati in Generatore report. L'elenco degli elementi dipendenti relativo alle origini dei dati condivise può includere sia i report che i modelli di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Connessioni dati, origini dati e stringhe di connessione &#40;Generatore report e SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Gestire origini dati dei report](../../reporting-services/report-data/manage-report-data-sources.md)   
- [Gestione report &#40;modalità nativa SSRS&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Connessioni dati o origini dati incorporate e condivise &#40;Generatore report e SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
- [Pagina delle proprietà Origini dati &#40;Gestione report&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [Creare, eliminare o modificare un'origine dei dati condivisa &#40;Gestione report&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [Configurare le proprietà delle origini dati per un report &#40;Gestione report&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Configurare le proprietà delle origini dati per un report](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

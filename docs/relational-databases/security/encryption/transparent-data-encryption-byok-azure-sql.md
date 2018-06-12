@@ -18,11 +18,12 @@ ms.topic: conceptual
 ms.date: 04/19/2018
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 2265778ca41dd82a1e55fe01749bd2d5057f5f1c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bffd6ec43cb298c652e8154ec28064bd9c891799
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476083"
 ---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Transparent Data Encryption con supporto Bring Your Own Key per i database e data warehouse SQL di Azure
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
@@ -140,7 +141,7 @@ Procedura per una nuova distribuzione:
 - Selezionare il riquadro TDE dei server logici e per ognuno dei server SQL logici:  
    - Selezionare l'Azure Key Vault che si trova nella stessa area 
    - Selezionare la chiave da usare come protezione TDE. Ogni server userà la copia locale della protezione TDE. 
-   - Se si esegue questa operazione nel portale, viene creato un [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) per il server SQL logico, che consente di assegnare le autorizzazioni di SQL Server logico per accedere all'insieme di credenziali delle chiavi. Non eliminare questa identità.  L'accesso può essere revocato rimuovendo invece le autorizzazioni in Azure Key Vault. per il server SQL logico, che consente di assegnare le autorizzazioni di SQL Server logico per accedere all'insieme di credenziali delle chiavi.
+   - Se si esegue questa operazione nel portale, viene creato un [AppID](https://docs.microsoft.com/en-us/azure/active-directory/managed-service-identity/overview) per il server SQL logico, che consente di assegnare le autorizzazioni di SQL Server logico per accedere all'insieme di credenziali delle chiavi. Non eliminare questa identità. È invece possibile revocare l'accesso rimuovendo le autorizzazioni in Azure Key Vault per il server SQL logico, che consente di assegnare le autorizzazioni di SQL Server logico per accedere all'insieme di credenziali delle chiavi.
 - Creare il database primario. 
 - Seguire il [materiale sussidiario per la replica geografica attiva](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-geo-replication-overview) per completare questo scenario. Questo passaggio creerà il database secondario.
 

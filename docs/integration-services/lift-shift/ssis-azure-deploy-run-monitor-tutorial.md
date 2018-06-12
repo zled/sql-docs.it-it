@@ -12,11 +12,12 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 42041134b027d9a9f274a31d0b6a7276dcc23ef8
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34585633"
 ---
 # <a name="deploy-and-run-an-ssis-package-in-azure"></a>Distribuire ed eseguire un pacchetto SSIS in Azure
 Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
@@ -101,7 +102,8 @@ Per altre informazioni sulla distribuzione di pacchetti e sulla distribuzione gu
     -   Per apportare modifiche alle impostazioni, selezionare **Indietro** o uno dei passaggi nel riquadro sinistro.
     -   Selezionare **Distribuisci** per avviare il processo di distribuzione.
 
-    > ![NOTA] Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)**, assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
+    > [!NOTE]
+    > Se viene visualizzato il messaggio di errore **Nessun agente di lavoro attivo. (provider di dati SqlClient .Net)**, assicurarsi che il runtime di integrazione SSIS di Azure sia in esecuzione. Questo errore si verifica se si tenta di eseguire la distribuzione mentre il runtime di integrazione SSIS di Azure è arrestato.
 
 5.  Al termine del processo di distribuzione viene visualizzata la pagina **Risultati**. Questa pagina consente di visualizzare l'esito positivo o negativo di ogni azione.
     -   Se l'azione ha avuto esito negativo, selezionare **Non riuscito** nella colonna **Risultato** per visualizzare una spiegazione dell'errore.
@@ -190,9 +192,17 @@ Per visualizzare lo stato delle operazioni di Integration Services attualmente i
 
 Per altre informazioni su come monitorare i pacchetti in esecuzione in SQL Server Management Studio, vedere [Esecuzione di pacchetti e altre operazioni di monitoraggio](https://docs.microsoft.com/sql/integration-services/performance/monitor-running-packages-and-other-operations).
 
+## <a name="monitor-the-execute-ssis-package-activity"></a>Monitorare l'attività Esegui pacchetto SSIS
+
+Se si esegue un pacchetto nell'ambito di una pipeline di Azure Data Factory con l'attività Esegui pacchetto SSIS, è possibile monitorare le esecuzioni della pipeline nell'interfaccia utente di Data Factory. È quindi possibile ottenere l'ID di esecuzione SSISDB dall'output dell'attività eseguita e usarlo per consultare log di esecuzione e messaggi di errore più completi in SSMS.
+
+![Ottenere l'ID di esecuzione del pacchetto in Data Factory](media/ssis-azure-deploy-run-monitor-tutorial/get-execution-id.png)
+
 ## <a name="monitor-the-azure-ssis-integration-runtime"></a>Monitorare il runtime di integrazione SSIS di Azure
 
-Per ottenere informazioni sullo stato del runtime di integrazione di Azure-SSIS in cui vengono eseguiti i pacchetti, usare i comandi di PowerShell seguenti. Per ogni comando, specificare i nomi delle data factory, il runtime di integrazione di SSIS-Azure e il gruppo di risorse. Per altre informazioni, vedere [Runtime di integrazione SSIS-Azure](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
+Per ottenere informazioni sullo stato del runtime di integrazione di Azure-SSIS in cui vengono eseguiti i pacchetti, usare i comandi di PowerShell seguenti. Per ogni comando, specificare i nomi delle data factory, il runtime di integrazione di SSIS-Azure e il gruppo di risorse.
+
+Per altre informazioni, vedere [Runtime di integrazione SSIS-Azure](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime).
 
 ### <a name="get-metadata-about-the-azure-ssis-integration-runtime"></a>Monitorare il runtime di integrazione SSIS di Azure
 

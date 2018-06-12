@@ -16,11 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 84313f1bedd406c39a862c57bdc94436eb0c7cbe
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 523e42b868bc6f461579bed208d82cfb55ebc697
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563799"
 ---
 # <a name="customer-experience-improvement-program-for-sql-server-data-tools"></a>Analisi utilizzo software per SQL Server Data Tools
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,23 +60,25 @@ ms.lasthandoff: 05/03/2018
   
  Le relative impostazioni e chiavi del Registro di sistema sono le seguenti:  
   
- Chiave = HKEY_CURRENT_USER\Software\Microsoft\VSCommon\15.0\SQM  
-  
- Nome RegEntry = OptIn  
-  
- Tipo voce DWORD:  
-  
--   0 è rifiutare esplicitamente  
-  
--   1 è acconsentire esplicitamente  
+- Sistema operativo a 64 bit, Chiave = HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSCommon\15.0\SQM
+- Sistema operativo a 32 bit, Chiave = HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSCommon\15.0\SQM
+
+Quando Criteri di gruppo è attivata, Chiave = HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\VisualStudio\SQM 
+
+Voce = OptIn
+
+Valore = (DWORD)
+- 0 è rifiutato esplicitamente (disattivare VSCEIP)
+- 1 è accettato esplicitamente (attivare VSCEIP)
+
   
 > [!CAUTION]  
 >  Se il Registro di sistema viene modificato in modo non appropriato, il sistema potrebbe venire gravemente danneggiato. Prima di modificare il Registro di sistema, è consigliabile eseguire il backup di tutti i dati importanti disponibili nel computer. Se si riscontrano problemi dopo l'applicazione di modifiche manuali, è inoltre possibile utilizzare l'opzione di avvio Ultima configurazione valida nota.  
   
  Per altre informazioni sui dati raccolti, elaborati o trasmessi tramite Analisi utilizzo software, vedere l' [Informativa sulla privacy per Analisi utilizzo software Microsoft](http://go.microsoft.com/fwlink/?LinkId=52143).  
  
-### <a name="choice-and-control-over--ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Scelta e controllo per il programma Analisi utilizzo software e SQL Server Data Tools per Visual Studio 2015  
- SSDT per Visual Studio 2015 è lo strumento di modellazione dei dati fornito con SQL Server 2016. Questo strumento usa le opzioni di Analisi utilizzo software integrate in Visual Studio 2015. In questo [documento della Guida da Visual Studio](http://go.microsoft.com/fwlink/?LinkId=517102)sono disponibili altre informazioni sull'invio di commenti e suggerimenti tramite Analisi utilizzo software in Visual Studio 2015.  
+### <a name="choice-and-control-over-ceip-and-sql-server-data-tools-for-visual-studio-2015"></a>Scelta e controllo per Analisi utilizzo software e SQL Server Data Tools per Visual Studio 2015  
+ SSDT per Visual Studio 2015 è lo strumento di modellazione dei dati fornito con SQL Server 2016. Usa le opzioni di Analisi utilizzo software integrate in Visual Studio 2015. In questo [documento della Guida da Visual Studio](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) sono disponibili altre informazioni sull'invio di commenti e suggerimenti con Analisi utilizzo software in Visual Studio 2015.  
   
  Nelle versioni di anteprima di SQL Server 2016, la funzionalità Analisi utilizzo software è attivata per impostazione predefinita. È possibile disattivarla o riattivarla seguendo le istruzioni seguenti.  
   

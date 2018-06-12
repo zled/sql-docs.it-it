@@ -26,11 +26,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77947f8263b66f1b7f26e8ee5a5d52a4d019aeb2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97d24445d506a41675822f13d0a23d4e03edac3d
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34563749"
 ---
 # <a name="-equals-transact-sql"></a>= (uguale a) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,15 +54,15 @@ expression = expression
  Boolean  
   
 ## <a name="remarks"></a>Remarks  
- Per il confronto di due espressioni NULL, il risultato dipende dall'impostazione `ANSI_NULLS`:  
+ Se si esegue il confronto usando un'espressione NULL, il risultato dipende dall'impostazione `ANSI_NULLS`:  
   
--   Se `ANSI_NULLS` è impostata su ON, il risultato è NULL, conformemente alla convenzione ANSI in base alla quale un valore NULL (o sconosciuto) non è uguale a un altro valore NULL o sconosciuto.  
+-   Se `ANSI_NULLS` è impostata su ON, il risultato di qualsiasi confronto con NULL è UNKNOWN, in base alla convenzione ANSI secondo la quale NULL è un valore sconosciuto che non può essere confrontato con nessun altro valore, neanche con altri valori NULL.  
   
--   Se `ANSI_NULLS` è impostata su OFF, il risultato del confronto di due espressioni NULL è TRUE.  
+-   Se `ANSI_NULLS` è impostata su OFF, il risultato del confronto tra NULL a NULL è TRUE e il risultato del confronto tra NULL e qualsiasi altro valore è FALSE.  
 
 Per altre informazioni, vedere [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).
   
- Qualsiasi tipo di confronto di un valore NULL (sconosciuto) con un valore non NULL restituisce sempre FALSE.  
+ Un'espressione booleana con risultato UNKNOWN si comporta in modo simile a FALSE nella maggior parte dei casi, ma non in tutti. Per altre informazioni, vedere [NULL e UNKNOWN &#40;Transact-SQL&#41;](../../t-sql/language-elements/null-and-unknown-transact-sql.md) e [NOT &#40;Transact-SQL&#41;](../../t-sql/language-elements/not-transact-sql.md).  
   
   
 ## <a name="examples"></a>Esempi  

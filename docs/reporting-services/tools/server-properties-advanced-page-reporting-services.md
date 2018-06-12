@@ -1,7 +1,7 @@
 ---
 title: Proprietà server (pagina Avanzate) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2017
+ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.component: tools
@@ -17,11 +17,12 @@ caps.latest.revision: 18
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dfbfe74439ecbf3db24f1a2a32bd5ab5d528fb72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 336a201dde0a1afba761e135d561079ce5c95d75
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34550402"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Proprietà server (pagina Avanzate) - Reporting Services
 
@@ -49,7 +50,7 @@ Indica se la registrazione per l'esecuzione di report è attivata. Il valore pre
 Numero di giorni durante i quali le informazioni sulle esecuzioni dei report vengono conservate nel log di esecuzione. I valori validi per questa proprietà sono compresi tra **-1** e **2**,**147**,**483**,**647**. Se il valore è **-1** le voci non vengono eliminate dalla tabella del log di esecuzione. Il valore predefinito è **60**.  
 
 > [!NOTE] 
-> Se si imposta un valore **0** verranno *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** manterrà le voci del log di esecuzione e non verrà eliminato.
+> Se si imposta un valore **0** vengono *eliminate* tutte le voci dal log di esecuzione. Il valore **-1** mantiene le voci del log di esecuzione e non le elimina.
 
 **SessionTimeout**  
 Intervallo, in secondi, durante il quale una sessione rimane attiva. Il valore predefinito è **600**.  
@@ -75,9 +76,9 @@ Determina l'intervallo di tempo consentito per il recupero di un file di immagin
 **SnapshotCompression**  
 Definisce come vengono compressi gli snapshot. Il valore predefinito è **SQL**. I valori validi sono i seguenti:
 
-|Valori|Description|
+|Valori|Descrizione|
 |---------|---------|
-|**SQL**|Gli snapshot vengono compressi quando vengono archiviati nel database del server di report. Questa impostazione corrisponde al comportamento corrente.|
+|**SQL**|Gli snapshot vengono compressi quando vengono archiviati nel database del server di report. Tale compressione è il comportamento corrente.|
 |**Nessuno**|Gli snapshot non vengono compressi.|
 |**Tutto**|Gli snapshot vengono compressi per tutte le opzioni di archiviazione, incluso il database del server di report o il file system.|
 
@@ -90,7 +91,7 @@ Numero massimo di snapshot archiviati per un report. I valori validi sono compre
 **EnableIntegratedSecurity**  
 Determina se la sicurezza integrata di Windows è supportata per le connessioni alle origini dati dei report. Il valore predefinito è **True**. I valori validi sono i seguenti:
 
-|Valori|Description|
+|Valori|Descrizione|
 |---------|---------|
 |**True**|La sicurezza integrata di Windows è attivata.|
 |**False**|La sicurezza integrata di Windows non è attivata. Le origini dati dei report configurate per l'utilizzo della sicurezza integrata di Windows non verranno eseguite.|
@@ -98,7 +99,7 @@ Determina se la sicurezza integrata di Windows è supportata per le connessioni 
 **EnableLoadReportDefinition**  
 Selezionare questa opzione per specificare se gli utenti possono eseguire report ad hoc da un report di Generatore report. Selezionando questa opzione si imposta la proprietà **EnableLoadReportDefinition** sul server di report.  
 
-Se si deseleziona questa opzione, la proprietà viene impostata su False e nel server di report non sarà possibile generare report click-through per i report che utilizzano un modello di report come origine dati. Qualsiasi chiamata al metodo LoadReportDefinition verrà bloccata.  
+Se si deseleziona questa opzione, la proprietà viene impostata su False. Il server di report non genererà report click-through per i report che usano un modello di report come origine dati. Qualsiasi chiamata al metodo LoadReportDefinition verrà bloccata.  
 
 La disattivazione di questa opzione consente di attenuare i rischi di attacchi Denial of Service condotti da utenti malintenzionati tramite overload del server di report con richieste LoadReportDefinition.  
 
@@ -106,13 +107,13 @@ La disattivazione di questa opzione consente di attenuare i rischi di attacchi D
 Include informazioni esterne sugli errori, ad esempio, informazioni sull'errore relative alle origini dati del report, nei messaggi di errore restituiti agli utenti che richiedono i report dai computer remoti. I valori validi sono **true** e **false**. Il valore predefinito è **false**. Per altre informazioni, vedere [Abilita errori remoti &#40;Reporting Services&#41;](../../reporting-services/report-server/enable-remote-errors-reporting-services.md).  
 
 **EnableReportDesignClientDownload**  
-Specifica se il pacchetto di installazione di Generatore report può essere scaricato dal server di report. Se si deseleziona questa impostazione, l'URL di Generatore report non funziona. Per altre informazioni, vedere [Configurare l'accesso a Generatore report](../../reporting-services/report-server/configure-report-builder-access.md).  
+Specifica se il pacchetto di installazione di Generatore report può essere scaricato dal server di report. Se si deseleziona questa impostazione, l'URL di Generatore report non funziona. 
 
 **EditSessionCacheLimit**  
 Consente di specificare il numero di voci della cache di dati che possono essere attive in una sessione di modifica del report. Il numero predefinito è 5.  
 
 **EditSessionTimeout**  
-Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (2 ore).  
+Consente di specificare il numero di secondi prima del timeout di una sessione di modifica del report. Il valore predefinito è 7200 secondi (due ore).  
 
 **EnableCustomVisuals** ***(solo Server di report di Microsoft Power BI)***  
 Se i server di report di Microsof Power BI consentono la visualizzazione di oggetti visivi personalizzati di Power BI. I valori sono True e False.  Il valore predefinito è True.  
@@ -124,7 +125,7 @@ Se i server di report di Microsof Power BI consentono l'esportazione dei dati da
 Timeout in minuti per l'aggiornamento dei dati nell'aggiornamento pianificato dei report di Power BI con modelli AS incorporati. Il valore predefinito è 120 minuti.
 
 **EnableTestConnectionDetailedErrors**  
-Indica se messaggi di errore dettagliati vengono inviati al computer client quando gli utenti verificano le connessioni all'origine dati utilizzando il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.
+Indica se inviare messaggi di errore dettagliati al computer client quando gli utenti verificano le connessioni all'origine dati mediante il server di report. Il valore predefinito è **true**. Se l'opzione viene impostata su **false**, vengono inviati solo messaggi di errore generici.
 
 **AccessControlAllowCredentials**  
 Indica se la risposta alla richiesta del client può essere esposta quando il flag "credenziali" è impostato su true. Il valore predefinito è **false**.
@@ -133,7 +134,7 @@ Indica se la risposta alla richiesta del client può essere esposta quando il fl
 
 **AccessControlAllowMethods** Elenco separato da virgole dei metodi HTTP consentiti dal server quando un client invia una richiesta. I valori predefiniti sono (GET, PUT, POST, PATCH, DELETE). Specificando * si consentono tutte le intestazioni.
 
-**AccessControlAllowOrigin** Elenco separato da virgole delle origini consentite dal server quando un client invia una richiesta. Il valore predefinito è vuoto, il che impedisce tutte le richieste. Specificando * si consentono tutte le origini quando le credenziali non sono impostate; se vengono specificate credenziali, è necessario specificare un elenco esplicito delle origini.
+**AccessControlAllowOrigin** Elenco separato da virgole delle origini consentite dal server quando un client invia una richiesta. Il valore predefinito è vuoto, il che impedisce tutte le richieste. Se si specifica * si consentono tutte le origini quando le credenziali non sono impostate; se vengono specificate credenziali, è necessario specificare un elenco esplicito delle origini.
 
 **AccessControlExposeHeaders** Elenco separato da virgole delle intestazioni che il server esporrà ai client. Il valore predefinito è vuoto.
 

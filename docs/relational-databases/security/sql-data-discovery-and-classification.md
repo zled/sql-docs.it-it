@@ -13,20 +13,20 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.date: 02/13/2018
 ms.author: giladm
-ms.openlocfilehash: 8900faccfda82e759ee6f31009682eb632df7509
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: a797824724677745d33936ef570abe12f5b15b8d
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34743970"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Individuazione dati e classificazione SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 La funzionalità Individuazione dati e classificazione costituisce un nuovo strumento incorporato in SQL Server Management Studio (SSMS) per **l'individuazione**, **la classificazione**, **l'assegnazione di etichette** & **la creazione di report** di dati sensibili nei database.
-L'individuazione e la classificazione dei dati più sensibili, come ad esempio i dati aziendali, finanziari, medici, personali e così via, possono avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione. Possono costituire l'infrastruttura per:
-* Soddisfare i requisiti in materia di privacy e di conformità alle normative, come ad esempio l'RGPD (Regolamento generale sulla protezione dei dati).
+L'individuazione e la classificazione dei dati più sensibili, come i dati aziendali, finanziari, medici e così via, può avere un ruolo fondamentale nella protezione delle informazioni dell'organizzazione. Possono costituire l'infrastruttura per:
+* Contribuire a soddisfare gli standard per la privacy dei dati.
 * Controllare l'accesso e rafforzare la sicurezza di database o colonne contenenti dati altamente sensibili.
-
 
 > [!NOTE]
 > Individuazione dati e classificazione è una funzionalità **supportata per SQL Server 2008 e versioni successive**. Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](https://go.microsoft.com/fwlink/?linkid=866265).
@@ -94,7 +94,57 @@ La classificazione include due attributi di metadati:
     ![Riquadro di spostamento][10]
 
 
-## <a id="subheading-3"></a>Passaggi successivi
+## <a id="subheading-3"></a>Accesso ai metadati di classificazione
+
+I metadati di classificazione per i *tipi di informazioni* e le *etichette Riservatezza* sono archiviati nelle seguenti Proprietà estese: 
+* sys_information_type_name
+* sys_sensitivity_label_name
+
+I metadati sono accessibili tramite la vista del catalogo Proprietà estese [sys.extended_properties](https://docs.microsoft.com/en-us/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties).
+
+L'esempio di codice seguente restituisce tutte le colonne classificate e le classificazioni corrispondenti:
+
+```sql
+SELECT
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    sensitivity_label 
+FROM
+    (
+        SELECT
+            IT.major_id,
+            IT.minor_id,
+            IT.information_type,
+            L.sensitivity_label 
+        FROM
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS information_type 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_information_type_name'
+        ) IT 
+        FULL OUTER JOIN
+        (
+            SELECT
+                major_id,
+                minor_id,
+                value AS sensitivity_label 
+            FROM sys.extended_properties 
+            WHERE NAME = 'sys_sensitivity_label_name'
+        ) L 
+        ON IT.major_id = L.major_id AND IT.minor_id = L.minor_id
+    ) EP
+    JOIN sys.objects O
+    ON  EP.major_id = O.object_id 
+    JOIN sys.columns C 
+    ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+## <a id="subheading-4"></a>Passaggi successivi
 
 Per database SQL di Azure, vedere [Individuazione dati e classificazione nel database SQL di Azure](https://go.microsoft.com/fwlink/?linkid=866265).
 
@@ -106,7 +156,8 @@ Potrebbe essere consigliabile proteggere le colonne sensibili applicando meccani
 <!--Anchors-->
 [SQL Data Discovery & Classification overview]: #subheading-1
 [Discovering, classifying & labeling sensitive columns]: #subheading-2
-[Next Steps]: #subheading-3
+[Accessing the classification metadata]: #subheading-3
+[Next Steps]: #subheading-4
 
 <!--Image references-->
 [1]: ./media/sql-data-discovery-and-classification/1_data_classification_explorer_menu.png

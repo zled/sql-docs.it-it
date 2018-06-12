@@ -3,7 +3,6 @@ title: Windows Server Failover Clustering con SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: sql
-ms.prod_service: high-availability
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,14 +16,15 @@ helpviewer_keywords:
 - failover clustering [SQL Server], Always On Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 caps.latest.revision: 35
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c8079053cc729a5ca5445dc1aebd7ccf32e738
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 43117124b43bf234f8d72c9e2974d6e42631d06c
+ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34772467"
 ---
 # <a name="windows-server-failover-clustering-with-sql-server"></a>Windows Server Failover Clustering con SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/03/2018
  Entità fisica o logica che può essere di proprietà di un nodo e che è possibile portare online e offline, spostare tra nodi e gestire come oggetto cluster. Una risorsa cluster può essere solo di proprietà di un nodo singolo in qualsiasi punto nel tempo.  
   
  Role  
- Raccolta di risorse cluster gestita come singolo oggetto cluster per offrire funzionalità specifiche. Per SQL Server, un ruolo sarà un gruppo di disponibilità Always On (AG) o un'istanza di cluster di failover Always On (FCI). Un ruolo contiene tutte le risorse cluster necessarie per un gruppo di disponibilità o un'istanza di cluster di failover. Failover e failback vengono sempre eseguiti in un contesto di ruoli. Per un'istanza FCI, il ruolo conterrà una risorsa indirizzo IP, una risorsa nome di rete e le risorse di SQL Server. Un ruolo AG conterrà la risorsa gruppo di disponibilità e, se un è configurato un listener, un nome networm e una risorsa IP. 
+ Raccolta di risorse cluster gestita come singolo oggetto cluster per offrire funzionalità specifiche. Per SQL Server, un ruolo sarà un gruppo di disponibilità Always On (AG) o un'istanza di cluster di failover Always On (FCI). Un ruolo contiene tutte le risorse cluster necessarie per un gruppo di disponibilità o un'istanza di cluster di failover. Failover e failback vengono sempre eseguiti in un contesto di ruoli. Per un'istanza FCI, il ruolo conterrà una risorsa indirizzo IP, una risorsa nome di rete e le risorse di SQL Server. Un ruolo AG conterrà la risorsa gruppo di disponibilità e, se un è configurato un listener, un nome rete e una risorsa IP. 
 
  Risorsa nome di rete  
  Nome di server logico gestito come risorsa cluster. Una risorsa nome di rete deve essere utilizzata con una risorsa indirizzo IP. Queste voci possono richiedere oggetti in Active Directory Domain Services e/o DNS. 

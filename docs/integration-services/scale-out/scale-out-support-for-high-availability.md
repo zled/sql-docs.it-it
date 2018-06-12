@@ -2,7 +2,7 @@
 title: Supporto della disponibilità elevata in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs
 ms.description: This article describes how to configure SSIS Scale Out for high availability
 ms.custom: ''
-ms.date: 12/19/2017
+ms.date: 05/23/2018
 ms.prod: sql
 ms.prod_service: integration-services
 ms.component: scale-out
@@ -16,11 +16,12 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 8cd79327b3733de9f7463f1d5f9d8f924b58a46b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 25660b9e6b4edbdd8a2654d092990fef94313bed
+ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34476043"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Supporto della disponibilità elevata in Scale Out
 
@@ -47,7 +48,7 @@ Questo account dovrà poi poter accedere al database SSISDB nel nodo secondario 
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Includere il nome host DNS del servizio Scale Out Master nei nomi comuni (CN) del certificato di Scale Out Master
 
-Questo nome host viene usato nell'endpoint di Scale Out Master. 
+Questo nome host viene usato nell'endpoint di Scale Out Master. (Fornire un nome host DNS e non un nome del server.)
 
 ![Configurazione del master a disponibilità elevata](media/ha-master-config.PNG)
 
@@ -61,9 +62,9 @@ Usare lo stesso certificato di Scale Out Master applicato nel nodo primario. Esp
 > [!NOTE]
 > È possibile configurare più istanze di backup di Scale Out Master ripetendo queste operazioni per Scale Out Master in altri nodi secondari.
 
-## <a name="4-set-up-ssisdb-always-on"></a>4. Configurare la funzionalità Always On per il database SSISDB
+## <a name="4-set-up-and-configure-ssisdb-support-for-always-on"></a>4. Impostare e configurare il supporto SSIS per Always On
 
-Seguire le istruzioni per configurare Always On per il database SSISDB disponibili in [Always On per il catalogo SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
+Seguire le istruzioni per impostare e configurare il supporto SSISDB per Always On in [Always On per il catalogo SSIS (SSISDB)](../catalog/ssis-catalog.md#always-on-for-ssis-catalog-ssisdb).
 
 È anche necessario creare un listener del gruppo di disponibilità per il gruppo di disponibilità in cui viene aggiunto il database SSISDB. Vedere [Creare o configurare un listener del gruppo di disponibilità](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
@@ -85,7 +86,7 @@ Chiamare la stored procedure `[catalog].[update_logdb_info]` usando i valori di 
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
-## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-failover-cluster"></a>7. Configurare il ruolo del servizio Scale Out Master del cluster di failover di Windows
+## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Configurare il ruolo del servizio Scale Out Master del cluster di failover di Windows Server
 
 1.  In Gestione cluster di failover connettersi al cluster per Scale Out. Selezionare il cluster. Selezionare **Azione** dal menu e poi **Configura ruolo**.
 
@@ -96,6 +97,12 @@ Chiamare la stored procedure `[catalog].[update_logdb_info]` usando i valori di 
     ![Configurazione guidata disponibilità elevata 1](media/ha-wizard1.PNG)
 
 4.  Completare la procedura guidata.
+
+Nelle macchine virtuali di Azure questa procedura di configurazione richiede passaggi aggiuntivi. Una spiegazione completa di questi concetti e passaggi esula dall'ambito di questo articolo.
+
+1.  È necessario configurare un dominio di Azure. Windows Server Failover Clustering richiede che tutti i computer del cluster siano membri dello stesso dominio. Per altre informazioni, vedere [Abilitare Azure Active Directory Domain Services tramite il portale di Azure](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+
+2. È necessario configurare un servizio di bilanciamento del carico di Azure. Questa operazione è un requisito per il listener del gruppo di disponibilità. Per altre informazioni, vedere [Tutorial: Load balance internal traffic with Basic Load Balancer to VMs using the Azure portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal) (Esercitazione: Bilanciare il carico del traffico interno con Load Balancer base per le VM usando il portale di Azure).
 
 ## <a name="8-update-the-scale-out-master-address-in-ssisdb"></a>8. Aggiornare l'indirizzo di Scale Out Master nel database SSISDB
 

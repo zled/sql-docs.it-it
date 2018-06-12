@@ -2,7 +2,7 @@
 title: Opzioni di ALTER DATABASE SET (Transact-SQL) | Microsoft Docs
 description: Informazioni su come impostare le opzioni di database, ad esempio l'ottimizzazione automatica, la crittografia, Query Store in un'istanza di SQL Server o in un database SQL di Azure
 ms.custom: ''
-ms.date: 12/20/2017
+ms.date: 6/01/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.component: t-sql|statements
@@ -33,16 +33,17 @@ caps.latest.revision: 159
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: ea637d3853d3e63cbab6806022000c04d95e3e92
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 52ad590fd7efeddc9a7e086f1337b4e61a850fc1
+ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34744140"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opzioni ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  In questo argomento è inclusa la sintassi di ALTER DATABASE correlata all'impostazione delle opzioni di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per la sintassi di ALTER DATABASE di altro tipo, vedere gli argomenti seguenti.  
+  Questo articolo include la sintassi di ALTER DATABASE correlata all'impostazione delle opzioni di database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per la sintassi di ALTER DATABASE di altro tipo, vedere gli argomenti seguenti.  
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
@@ -274,7 +275,7 @@ SET
   
  `CURRENT` consente di eseguire l'azione nel database corrente. `CURRENT` non è supportato per tutte le opzioni in tutti i contesti. In caso di errore di `CURRENT`, specificare il nome del database.  
   
- **\<auto_option> ::=**  
+ **\<auto_option> ::=**
   
  Consente di controllare le opzioni automatiche.  
  <a name="auto_close"></a> AUTO_CLOSE { ON | OFF }  
@@ -538,7 +539,7 @@ SET
  SINGLE_USER  
  **Si applica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Non è disponibile nel [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
- Specifica che l'accesso al database è consentito a un solo utente alla volta. Se si specifica SINGLE_USER e sono presenti altri utenti connessi al database, l'istruzione ALTER DATABASE verrà bloccata fino a quando tutti gli utenti non si disconnettono dal database specificato. Per eseguire l'override di questo comportamento, vedere la clausola WITH \<termination>.  
+ Specifica che l'accesso al database è consentito a un solo utente alla volta. Se si specifica SINGLE_USER e sono presenti altri utenti connessi al database, l'istruzione ALTER DATABASE viene bloccata fino a quando tutti gli utenti non si disconnettono dal database specificato. Per eseguire l'override di questo comportamento, vedere la clausola WITH \<termination>.  
   
  Il database rimane in modalità SINGLE_USER anche se l'utente che ha impostato l'opzione si disconnette. A questo punto, un altro utente (ma solo uno) potrà connettersi al database.  
   
