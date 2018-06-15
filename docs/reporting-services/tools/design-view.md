@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031478"
 ---
 # <a name="design-view"></a>Visualizzazione Progettazione
 In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] Progettazione report usare la visualizzazione Progettazione per disporre gli elementi nel report. Tale visualizzazione viene talvolta denominata superficie di progettazione o visualizzazione Layout.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026778"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner - file di configurazione
   Nel file RSReportDesigner.config sono archiviate le impostazioni delle estensioni per il rendering e l'elaborazione dati disponibili per Progettazione report. Le informazioni sulle estensioni per l'elaborazione dati sono contenute nell'elemento **Dati** . Le informazioni sulle estensioni per il rendering sono contenute nell'elemento **Rendering** . L'elemento **Progettazione** enumera i generatori di query usati in progettazione report.  
