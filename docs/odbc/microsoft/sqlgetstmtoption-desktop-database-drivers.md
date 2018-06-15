@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902436"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (driver di Database Desktop)
 I segnalibri restituiti da un *fOption* di SQL_GETBOOKMARK sono validi solo quando la query è aperta e vengono invalidati quando la query viene riemesso. I segnalibri permanente non sono supportati.

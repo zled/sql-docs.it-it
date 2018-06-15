@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32900538"
 ---
 # <a name="sqlstate"></a>SQLSTATE
 Per gli errori che si verificano nell'origine dati, il driver ODBC esegue il mapping di errore nativo restituito al codice SQLSTATE appropriato. Per gli errori che vengono rilevati dal driver o di gestione Driver, il driver ODBC o Driver Manager genera il codice SQLSTATE appropriato.

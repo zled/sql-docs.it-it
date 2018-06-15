@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908946"
 ---
 # <a name="driver-manager-error-and-warning-checks"></a>Errore di Gestione driver e i controlli di avviso
 Gestione Driver completamente o parzialmente implementa una serie di funzioni e pertanto verifica la presenza di tutti o alcuni degli errori e avvisi in tali funzioni.  

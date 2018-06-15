@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906856"
 ---
 # <a name="application-and-driver-compatibility"></a>Compatibilità del Driver e applicazione
 Driver e le applicazioni ODBC rientrano in un numero di categorie oltre alla relativa versione. Alcune di queste applicazioni non sono compatibili con alcuni driver. in altri casi, il tipo dell'applicazione o del driver potrebbe essere in rapporto sui problemi di compatibilità tra di essi.  

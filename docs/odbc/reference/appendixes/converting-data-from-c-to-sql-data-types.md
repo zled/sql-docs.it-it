@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912506"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversione di dati c ai tipi di dati SQL
 Quando un'applicazione chiama **SQLExecute** o **SQLExecDirect**, il driver recupera i dati per tutti i parametri associati con **SQLBindParameter** da posizioni di archiviazione in l'applicazione. Quando un'applicazione chiama **SQLSetPos**, il driver recupera i dati per un aggiornamento o l'operazione di aggiunta di colonne associate a **SQLBindCol**. Per i parametri data-at-execution, l'applicazione invia i dati del parametro con **SQLPutData**. Se necessario, il driver converte i dati dal tipo di dati specificato per il *ValueType* argomento in **SQLBindParameter** al tipo di dati specificato dal *ParameterType*argomento **SQLBindParameter**e quindi invia i dati all'origine dati.  

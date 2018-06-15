@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913156"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Scelta dei dati di un Driver o origine
 L'origine dati o il driver utilizzato da un'applicazione è a volte hardcoded nell'applicazione. Ad esempio, un'applicazione personalizzata programmata dal dipartimento MIS per trasferire dati da un'origine dati a un'altra contiene i nomi di tali origini dati, ovvero semplicemente l'applicazione non funziona con tutte le altre origini dati. Un altro esempio è un'applicazione verticale, ad esempio un oggetto utilizzato per l'inserimento dell'ordine. Tale applicazione sempre utilizza la stessa origine dati, che ha uno schema predefinito noto dall'applicazione.  

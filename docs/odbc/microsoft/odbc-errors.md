@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899886"
 ---
 # <a name="odbc-errors"></a>Errori ODBC
 Quando si verifica un errore, i driver Microsoft ODBC Desktop Database restituiscono il numero di errore nativo, il valore SQLSTATE (un codice di errore ODBC) e un messaggio di errore.  
