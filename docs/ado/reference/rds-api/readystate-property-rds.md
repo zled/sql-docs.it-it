@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1afc0e84acaf044a7271f0d46d599f4422c650b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37ac91100876f9519e7f7ec2de1c9a375567d392
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288540"
 ---
 # <a name="readystate-property-rds"></a>Proprietà ReadyState (RDS)
 Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) oggetto mentre recupera i dati nel relativo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -33,7 +33,7 @@ Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-o
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta o restituisce uno dei valori seguenti.  
   
-|Value|Description|  
+|valore|Description|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La query corrente è ancora in esecuzione e non di righe recuperate. Il **DataControl** dell'oggetto **Recordset** non è disponibile per l'utilizzo.|  
 |**adcReadyStateInteractive**|Un set iniziale di righe recuperate dalla query corrente è stato archiviato nel **DataControl** dell'oggetto **Recordset** e sono disponibili per l'utilizzo. Le righe rimanenti sono ancora recuperate.|  
@@ -42,7 +42,7 @@ Indica lo stato di un [DataControl](../../../ado/reference/rds-api/datacontrol-o
 > [!NOTE]
 >  Ogni file eseguibile sul lato client che utilizza queste costanti è necessario fornire le relative dichiarazioni. È possibile tagliare e incollare le dichiarazioni di costante desiderato dal file Adcvbs. Inc, che si trova nella cartella di installazione predefinito per la libreria di servizi desktop remoto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) evento per monitorare le modifiche di **ReadyState** proprietà durante un'operazione di query asincrona. Questo è più efficiente rispetto alla verifica periodicamente il valore della proprietà.  
   
  Se si verifica un errore durante un'operazione asincrona, il **ReadyState** le modifiche alle proprietà **adcReadyStateComplete**, [stato](../../../ado/reference/ado-api/state-property-ado.md) proprietà viene cambiata da **adStateExecuting** a **adStateClosed**e **Recordset** oggetto [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà rimane *Nothing* .  

@@ -2,7 +2,6 @@
 title: Proprietà (ADOX) in cluster | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0258b5b5e6af9aaf86e578567a2cf19b05cd1266
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c2a61c17936b48864ba1bb15e3788727dd65a872
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285260"
 ---
 # <a name="clustered-property-adox"></a>Proprietà Clustered (ADOX)
 Indica se l'indice è cluster.  
@@ -36,7 +36,7 @@ Indica se l'indice è cluster.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta e restituisce un **booleano** valore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore predefinito è **False**.  
   
  Questa proprietà è di sola lettura su [indice](../../../ado/reference/adox-api/index-object-adox.md) gli oggetti che sono già stati accodati a una raccolta.  

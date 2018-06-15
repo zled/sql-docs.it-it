@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e11308cc4c5095a212f508168fdae2b1d14e8b96
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f63d2d829c36432e1d03a783ee438fc9e53e9132
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308010"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Panoramica dei driver Microsoft per PHP per SQL Server
 
@@ -29,7 +29,7 @@ Il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è un'estensione PH
   
 Utilizzare il [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], è necessario che la versione corretta di SQL Server Native Client o Microsoft ODBC Driver installati nello stesso computer PHP è in esecuzione.  Per altre informazioni, vedere [requisiti di sistema per Microsoft Drivers for PHP per SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md).  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Description|  
 |---------|---------------|  

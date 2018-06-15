@@ -1,7 +1,7 @@
 ---
 title: Domande frequenti (FAQ per il Driver JDBC) | Documenti Microsoft
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,16 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 282f71f49eba5ccece8bc9d50ef690fd0af3cb8c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ebe12966a73d5944c2cfb6eb1a2328e27a5385e
+ms.sourcegitcommit: 73ca0313b185e730579f09f9bc32a852c9dd2ef4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/13/2018
+ms.locfileid: "35452161"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Domande frequenti (FAQ per il Driver JDBC)
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Questo articolo fornisce le risposte alle domande frequenti su Microsoft JDBC Driver per SQL Server.  
+  Questa pagina vengono fornite risposte alle domande frequenti su Microsoft JDBC Driver per SQL Server.  
   
 ## <a name="frequently-asked-questions"></a>Domande frequenti  
 **Come posso utile migliorare il Driver JDBC?**  
@@ -32,6 +33,9 @@ Il Driver JDBC è open source e il codice sorgente può trovarsi in [GitHub](htt
 **Supportano le versioni di SQL Server e non di Java il driver?**  
  Vedere il [Microsoft JDBC Driver per SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) pagina per informazioni dettagliate.  
   
+**Che cos'è la differenza tra i pacchetti di driver JDBC disponibili nel Microsoft Download Center e il driver JDBC disponibile in GitHub?**  
+ JDBC driver file disponibili per il repository di GitHub per Microsoft JDBC driver sono il nucleo del driver JDBC e sotto la licenza open source elencata nel repository. I pacchetti driver nei Microsoft Download Center includono librerie aggiuntive per l'autenticazione integrata di Windows e l'abilitazione delle transazioni XA con il driver JDBC. Tali librerie aggiuntive sono in base alla licenza inclusa con il pacchetto scaricabile.
+
  **Cosa è necessario conoscere quando si aggiorna il driver?**  
  Microsoft JDBC Driver 6.4 supporta JDBC 4.1, 4.2 e 4.3 (parzialmente) specifiche e include tre librerie di classi JAR nel pacchetto di installazione, come indicato di seguito:  
   
@@ -69,12 +73,12 @@ Il Driver JDBC è open source e il codice sorgente può trovarsi in [GitHub](htt
   
  **È possibile ridistribuire il driver?** Il driver JDBC 4.1, 4.2, 6.0, 6.2 e 6.4 sono ridistribuibili. Esaminare la clausola "Codice distribuibile" nei contratti di licenza. 
    
- **È possibile utilizzare il driver per accedere a Microsoft SQL Server da un computer Linux?** Sì. È possibile usare il driver per accedere a SQL Server da Unix, Linux e altre piattaforme non Windows. Vedere [Microsoft JDBC Driver per SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) per altri dettagli.  
+ **È possibile utilizzare il driver per accedere a Microsoft SQL Server da un computer Linux?** Sì. È possibile usare il driver per accedere a SQL Server da Unix, Linux e altre piattaforme non Windows. Per altre informazioni, vedere [Microsoft JDBC Driver per SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
   
  **Il driver supporta la crittografia Secure Sockets Layer (SSL)?** A partire dalla versione 1.2, il driver supporta la crittografia Secure Sockets Layer (SSL). Per ulteriori informazioni, vedere [utilizzando la crittografia SSL](../../connect/jdbc/using-ssl-encryption.md).  
   
  **I tipi di autenticazione supportati da Microsoft JDBC Driver per SQL Server?**  
- La tabella seguente elenca le opzioni di autenticazione disponibili. L'autenticazione Kerberos Java pura è disponibile a partire dalla versione 4.0 del driver.  
+ La tabella seguente elenca le opzioni di autenticazione disponibili. Un'autenticazione Kerberos Java pura è disponibile, a partire dalla versione 4.0 del driver.  
   
 |||  
 |-|-|  
@@ -89,10 +93,10 @@ Il Driver JDBC è open source e il codice sorgente può trovarsi in [GitHub](htt
 |Windows|Autenticazione di Azure Active Directory|  
   
 **Il driver supporta Internet Protocol versione 6 (IPv6) indirizzi?**  
- Sì, il driver supporta l'utilizzo di indirizzi IPv6 con la raccolta delle proprietà di connessione e con la proprietà della stringa di connessione serverName. Per ulteriori informazioni, vedere [creazione dell'URL di connessione](../../connect/jdbc/building-the-connection-url.md).  
+ Sì. Il driver supporta l'utilizzo di indirizzi IPv6. Utilizzare la raccolta di proprietà di connessione e la proprietà di stringa di connessione serverName. Per ulteriori informazioni, vedere [creazione dell'URL di connessione](../../connect/jdbc/building-the-connection-url.md).  
   
 **Che cos'è il buffer adattivo?**  
- Il buffering adattivo è stato introdotto da Microsoft SQL Server 2005 JDBC Driver versione 1.2 ed è progettato per recuperare qualsiasi tipo di dati con valori di grandi dimensioni senza l'overhead dei cursori del server. La funzionalità di buffering adattivo di Microsoft SQL Server JDBC Driver fornisce una proprietà della stringa di connessione responseBuffering che può essere impostata su "adattiva" o "completa". A partire da JDBC Driver versione 2.0 il comportamento predefinito è "adattivo". In altre parole, per ottenere il comportamento del buffer adattivo in questa versione, l'applicazione non deve richiederlo in modo esplicito. Nella versione 1.2, tuttavia, la modalità di buffering predefinita è "completa" e l'applicazione deve richiedere la modalità di buffering adattivo in modo esplicito. Per ulteriori informazioni, vedere [utilizzando il buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md) argomento e il blog. [Che cos'è il buffering adaptiveresponse e perché usarla?](http://go.microsoft.com/fwlink/?LinkId=111575)  
+ Il buffer adattivo è stata introdotta con Microsoft SQL Server 2005 JDBC Driver versione 1.2. È progettato per recuperare qualsiasi tipo di dati di valori di grandi dimensioni senza l'overhead dei cursori server. La funzionalità di buffering adattivo di Microsoft SQL Server JDBC Driver fornisce una proprietà della stringa di connessione responseBuffering che può essere impostata su "adattiva" o "completa". Nella versione 1.2, la modalità di buffer è "" completo"per impostazione predefinita e l'applicazione deve impostare la modalità di buffer adattivo in modo esplicito. A partire da JDBC Driver versione 2.0 il comportamento predefinito è "adattivo". Di conseguenza, l'applicazione non deve richiederlo in modo esplicito per ottenere il comportamento di memorizzazione nel buffer ADATTIVA. Per altre informazioni, vedere [utilizzando il buffer adattivo](../../connect/jdbc/using-adaptive-buffering.md) e il blog [qual è il buffering adaptiveresponse e perché usarla?](http://go.microsoft.com/fwlink/?LinkId=111575).
   
 **Il pool di connessioni supporto driver?**  
  Il driver fornisce il supporto per il pool di connessioni Java Platform, Enterprise Edition 5 (Java EE 5). Il driver implementa le interfacce JDBC 3.0 necessarie per consentire al driver di partecipare a qualsiasi implementazione di pool di connessioni offerta dai fornitori di server applicazioni middleware. Il driver partecipa alle connessioni in pool in questi ambienti. Per ulteriori informazioni, vedere [utilizzando il pool di connessioni](../../connect/jdbc/using-connection-pooling.md). Il driver non fornisce una propria implementazione di pool, ma si basa su server applicazioni Java di terze parti.  

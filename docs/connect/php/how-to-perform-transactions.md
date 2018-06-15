@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe11037ad2b7a5ae0f927a0880537adf67594899
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4a2a2d041ba99ded7a8d611620ce288593b341a6
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307660"
 ---
 # <a name="how-to-perform-transactions"></a>Procedura: Eseguire le transazioni
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +46,7 @@ Per un esempio, vedere [PDO::beginTransaction](../../connect/php/pdo-begintransa
   
 Di seguito in questo argomento viene descritto come usare il driver SQLSRV per eseguire le transazioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 I passaggi principali per l'esecuzione di una transazione sono i seguenti:  
   
 1.  Avviare la transazione con **sqlsrv_begin_transaction**.  
@@ -76,7 +76,7 @@ Le query che seguono (eliminazione dell'ordine di vendita e aggiornamento delle 
   
 Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
   
-### <a name="code"></a>Codice  
+### <a name="code"></a>codice  
   
 ```  
 <?php  

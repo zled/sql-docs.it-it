@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 4ca0938fa06506cba549cccec444640989ed7db0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8d862ab9bde6a57a7f63deb46af7688d94b2586
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305820"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  Oltre ai valori restituiti elencati in precedenza, il **issasynchstatus::** metodo supporta anche i valori di codice restituito restituiti da OLE DB principali **ICommand:: Execute** e **IDBInitialize:: Initialize** metodi.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **issasynchstatus::** non restituirà fino a quando non ha superato il valore di timeout (in millisecondi) o viene eseguito l'operazione in sospeso. Il **comando** oggetto ha un **CommandTimeout** proprietà che controlla il numero di secondi prima del timeout verrà eseguita una query. Il **CommandTimeout** proprietà verrà ignorata se utilizzata in combinazione con **issasynchstatus::** metodo.  
   
  La proprietà di timeout viene ignorata per le operazioni asincrone. Il parametro di timeout di **issasynchstatus::** specifica la quantità massima di tempo che deve trascorrere prima che il controllo viene restituito al chiamante. Se questo timeout scade, verrà restituito DB_S_ASYNCHRONOUS. I timeout non annullano mai operazioni asincrone. Se l'applicazione deve annullare un'operazione asincrona che non viene completata entro il periodo di timeout, deve attendere lo scadere del timeout e quindi annullare in modo esplicito l'operazione se viene restituito DB_S_ASYNCHRONOUS.  
@@ -73,7 +73,7 @@ HRESULT WaitForAsynchCompletion(
  È stata inoltre aggiunta la proprietà SSPROP_ISSAsynchStatus al set di proprietà DBPROPSET_SQLSERVERROWSET. I provider che supportano il [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) interfaccia deve implementare questa proprietà con un valore VARIANT_TRUE.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [Eseguire le operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

@@ -2,7 +2,6 @@
 title: Proprietà UpdateRule (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4ff1ee3ac7e7513ccd67368b2ee3b2c9defcf2b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24375b3faa749889fe98d2d3f99815bc48987439
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287190"
 ---
 # <a name="updaterule-property-adox"></a>Proprietà UpdateRule (ADOX)
 Indica l'azione eseguita quando un database primario [chiave](../../../ado/reference/adox-api/key-object-adox.md) viene aggiornato.  
@@ -36,7 +36,7 @@ Indica l'azione eseguita quando un database primario [chiave](../../../ado/refer
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta e restituisce un **lungo** valore che può essere uno del [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) costanti. Il valore predefinito è **adRINone**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa proprietà è di sola lettura su [chiave](../../../ado/reference/adox-api/key-object-adox.md) già aggiunti alla raccolta di oggetti.  
   
 ## <a name="applies-to"></a>Si applica a  

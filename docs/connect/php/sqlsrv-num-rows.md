@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a6268d095bf3a560e30ea0494c7664663a7fd9a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 670d9b8f4e708fac264b8520a6a1ee6f183181a5
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35309010"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>Valore restituito  
 **false** se si è verificato un errore durante il calcolo del numero di righe. In caso contrario, restituisce il numero di righe del set di risultati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 sqlsrv_num_rows richiede sul lato client, statico o keyset e restituirà **false** se si utilizza un cursore forward o un cursore dinamico. (Un cursore forward è il valore predefinito). Per altre informazioni sui cursori, vedere [sqlsrv_query](../../connect/php/sqlsrv-query.md) e [tipi di cursore &#40;Driver SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Esempio  

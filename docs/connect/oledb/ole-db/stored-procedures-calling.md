@@ -2,10 +2,10 @@
 title: Chiamare una Stored Procedure (OLE DB) | Documenti Microsoft
 description: Esecuzione di una chiamata a una stored procedure (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,14 +22,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6f4ee66e9f1eaf37f78e3a0a4a326655554c58f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1dae3bfeae19e302d7e6320dcd61695d5d79d1e1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612286"
 ---
 # <a name="stored-procedures---calling"></a>Stored procedure - chiamata
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Una stored procedure può avere zero o più parametri. Può inoltre restituire un valore. Quando si utilizza il Driver OLE DB per SQL Server, è possibile passare parametri a una stored procedure:  
   
@@ -48,7 +51,7 @@ ms.lasthandoff: 05/03/2018
   
 1.  Completare le informazioni sui parametri in una matrice di strutture DBPARAMBINDINFO, ovvero nome del parametro, nome specifico del provider per il tipo di dati del parametro o nome del tipo di dati standard e così via. Ogni struttura della matrice descrive un solo parametro. Questa matrice viene quindi passata al **SetParameterInfo** metodo.  
   
-2.  Chiamare il **ICommandWithParameters:: SetParameterInfo** per descrivere i parametri al provider. **La funzione SetParameterInfo** specifica il tipo di dati nativi di ogni parametro. **La funzione SetParameterInfo** gli argomenti sono:  
+2.  Chiamare il **ICommandWithParameters:: SetParameterInfo** per descrivere i parametri al provider. **SetParameterInfo** specifica il tipo di dati nativo di ogni parametro. **SetParameterInfo** gli argomenti sono:  
   
     -   Numero di parametri per i quali impostare le informazioni sul tipo.  
   
@@ -119,7 +122,7 @@ ms.lasthandoff: 05/03/2018
 {rpc SalesByCategory}  
 ```  
   
- Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una Stored Procedure & #40; Tramite la sintassi RPC & #41; ed elaborare restituito codici e i parametri di Output & #40; OLE DB & #41; ](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Per un'applicazione di esempio che illustra una sequenza di escape RPC, vedere [eseguire una Stored Procedure &#40;utilizzando la sintassi RPC&#41; e processo di codici restituiti e parametri di Output &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Istruzione Transact-SQL EXECUTE  
  La sequenza di escape ODBC CALL e la sequenza di escape RPC rappresentano i metodi preferiti per chiamare una stored procedure anziché [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md) istruzione. Il Driver OLE DB per SQL Server utilizza il meccanismo RPC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per ottimizzare l'elaborazione del comando. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  

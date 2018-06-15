@@ -2,7 +2,7 @@
 title: Supporto per il nome dell'entità servizio (SPN) nelle connessioni Client | Documenti Microsoft
 description: Supporto del nome dell'entità servizio (SPN) nelle connessioni client
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -18,14 +18,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: c119c14cbd0441d22b8e97f8d168d10d652e86d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 802d8593c671ecef58f5a0eea8439e2f16898de1
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612326"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Supporto per nomi SPN nelle connessioni client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], supporto per i nomi dell'entità servizio (SPN) è stato esteso per consentire l'autenticazione reciproca in tutti i protocolli. Nelle versioni precedenti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], i nomi SPN sono supportati solo per Kerberos tramite TCP quando il valore predefinito SPN per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] istanza è stata registrata con Active Directory.  
   

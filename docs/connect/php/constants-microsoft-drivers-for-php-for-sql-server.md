@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,11 +16,12 @@ caps.latest.revision: 72
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a09ba7744f03fca15bb60db7979d31bb141f75c2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57c52b218406b658ef3f467ee122d51ed32158ad
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307010"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Costanti (driver Microsoft per PHP per SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -78,7 +78,7 @@ Nelle sezioni seguenti sono elencate le costanti usate dal driver SQLSRV.
 ### <a name="err-constants"></a>Costanti ERR  
 Nella tabella seguente sono elencate le costanti che vengono utilizzate per specificare se [sqlsrv_errors](../../connect/php/sqlsrv-errors.md) restituisce errori, avvisi o entrambi.  
   
-|Value|Description|  
+|valore|Description|  
 |---------|---------------|  
 |SQLSRV_ERR_ALL|Vengono restituiti gli errori e gli avvisi generati nell'ultima chiamata di funzione **sqlsrv** . Si tratta del valore predefinito.|  
 |SQLSRV_ERR_ERRORS|Vengono restituiti gli errori generati nell'ultima chiamata di funzione **sqlsrv** .|  
@@ -139,9 +139,9 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
   
 |Costante SQLSRV|Tipo di dati PHP|  
 |-------------------|-----------------|  
-|SQLSRV_PHPTYPE_INT|Integer|  
-|SQLSRV_PHPTYPE_DATETIME|DateTime|  
-|SQLSRV_PHPTYPE_FLOAT|Float|  
+|SQLSRV_PHPTYPE_INT|Valore intero|  
+|SQLSRV_PHPTYPE_DATETIME|DATETIME|  
+|SQLSRV_PHPTYPE_FLOAT|float|  
 |SQLSRV_PHPTYPE_STREAM($encoding<sup>1</sup>)|STREAM|  
 |SQLSRV_PHPTYPE_STRING($encoding<sup>1</sup>)|String|  
   
@@ -163,38 +163,38 @@ Nella tabella seguente sono elencate le costanti che vengono usate per descriver
   
 |Costante SQLSRV|Tipo di dati di SQL Server|  
 |-------------------|------------------------|  
-|SQLSRV_SQLTYPE_BIGINT|bigint|  
+|SQLSRV_SQLTYPE_BIGINT|BIGINT|  
 |SQLSRV_SQLTYPE_BINARY|BINARY|  
 |SQLSRV_SQLTYPE_BIT|bit|  
 |SQLSRV_SQLTYPE_CHAR|char<sup>5</sup>|  
 |SQLSRV_SQLTYPE_CHAR($charCount)|char|  
 |SQLSRV_SQLTYPE_DATE|date<sup>4</sup>|  
-|SQLSRV_SQLTYPE_DATETIME|datetime|  
+|SQLSRV_SQLTYPE_DATETIME|DATETIME|  
 |SQLSRV_SQLTYPE_DATETIME2|datetime2<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DATETIMEOFFSET|datetimeoffset<sup>4</sup>|  
 |SQLSRV_SQLTYPE_DECIMAL|decimal<sup>5</sup>|
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
-|SQLSRV_SQLTYPE_FLOAT|float|  
+|SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|int|  
+|SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|numerico<sup>5</sup>|
-|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|numeric|  
+|SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
 |SQLSRV_SQLTYPE_NVARCHAR|nvarchar<sup>5</sup>|  
-|SQLSRV_SQLTYPE_NVARCHAR($charCount)|nvarchar|  
+|SQLSRV_SQLTYPE_NVARCHAR($charCount)|NVARCHAR|  
 |SQLSRV_SQLTYPE_NVARCHAR('max')|nvarchar(MAX)|  
 |SQLSRV_SQLTYPE_NTEXT|ntext<sup>2</sup>|  
-|SQLSRV_SQLTYPE_REAL|real|  
+|SQLSRV_SQLTYPE_REAL|REAL|  
 |SQLSRV_SQLTYPE_SMALLDATETIME|smalldatetime|  
-|SQLSRV_SQLTYPE_SMALLINT|smallint|  
-|SQLSRV_SQLTYPE_SMALLMONEY|smallmoney|  
+|SQLSRV_SQLTYPE_SMALLINT|SMALLINT|  
+|SQLSRV_SQLTYPE_SMALLMONEY|SMALLMONEY|  
 |SQLSRV_SQLTYPE_TEXT|text<sup>3</sup>|  
 |SQLSRV_SQLTYPE_TIME|time<sup>4</sup>|  
 |SQLSRV_SQLTYPE_TIMESTAMP|TIMESTAMP|  
-|SQLSRV_SQLTYPE_TINYINT|tinyint|  
-|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|uniqueidentifier|  
+|SQLSRV_SQLTYPE_TINYINT|TINYINT|  
+|SQLSRV_SQLTYPE_UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|  
 |SQLSRV_SQLTYPE_UDT|UDT (tipo definito dall'utente)|  
 |SQLSRV_SQLTYPE_VARBINARY|varbinary<sup>5</sup>|  
 |SQLSRV_SQLTYPE_VARBINARY($byteCount)|varbinary|  

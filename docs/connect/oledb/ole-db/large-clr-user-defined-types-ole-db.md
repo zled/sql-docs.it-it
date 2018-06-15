@@ -2,10 +2,10 @@
 title: Tipi definiti dall'utente CLR di grandi dimensioni (OLE DB) | Documenti Microsoft
 description: Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,14 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: a2b62d0206fc36b69394975f93b7369465edebe1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac07bf034e65d654a2b8577bdad8d5f3fb8ff48d
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611986"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipi CLR definiti dall'utente di grandi dimensioni (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   In questo argomento vengono illustrate le modifiche a OLE DB nel Driver OLE DB per SQL Server per supportare grandi tipi common language runtime (CLR) definito dall'utente (UDT).  
   
@@ -34,7 +37,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di righe:  
   
-|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|Value|  
+|Tipo di dati di SQL Server|Tipo di dati OLE DB|Layout in memoria|valore|  
 |--------------------------|----------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|DBTYPE_UDT|BYTE [] (matrice di byte\)|132 (OleDb)|  
   
@@ -128,7 +131,7 @@ ms.lasthandoff: 05/03/2018
 |DBTYPE_BSTR|Supportati (2), (5)|N/D|Supportato (3), (5)|N/D|  
 |DBTYPE_STR|Supportati (2), (5)|N/D|Supportato (3), (5)|N/D|  
 |DBTYPE_IUNKNOWN|Supportato (6)|N/D|Supportato (6)|N/D|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Supportato (5)|N/D|Supportato (3), (5)|N/D|  
+|DBTYPE_VARIANT (VT_UI1 SINGOLO &AMP;#124; VT_ARRAY)|Supportato (5)|N/D|Supportato (3), (5)|N/D|  
 |DBTYPE_VARIANT (VT_BSTR)|Supportati (2), (5)|N/D|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Descrizione dei simboli  

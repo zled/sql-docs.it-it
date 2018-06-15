@@ -13,11 +13,12 @@ ms.custom: sql-linux
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: df3cea6d47d50464fe0b8a7f2573c230585b9cb1
-ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
+ms.openlocfilehash: 31c8d15941956e4476156718404159deabac9776
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611436"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Esercitazione: L'autenticazione utilizzo di Active Directory con SQL Server in Linux
 
@@ -75,7 +76,7 @@ Utilizzare la procedura seguente per aggiungere un [!INCLUDE[ssNoVersion](../inc
       ```/etc/network/interfaces
       <...>
       # The primary network interface
-      auth eth0
+      auto eth0
       iface eth0 inet dhcp
       dns-nameservers **<AD domain controller IP address>**
       dns-search **<AD domain name>**
@@ -193,7 +194,7 @@ Per ulteriori informazioni, vedere la documentazione di Red Hat per [alla scoper
    >
    > Se si modifica la porta TCP in futuro, è necessario eseguire nuovamente il comando di setspn con il nuovo numero di porta. È inoltre necessario aggiungere il nuovo nome SPN per il keytab del servizio SQL Server seguendo i passaggi descritti nella sezione successiva.
 
-3. Per altre informazioni, vedere [Registrazione di un nome dell'entità servizio per le connessioni Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
+3. Per altre informazioni, vedere [Registrare un nome dell'entità servizio per le connessioni Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a id="configurekeytab"></a> Configurare [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab servizio
 

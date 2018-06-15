@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -17,23 +16,24 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 786d653868fe53c5910a4e3bcffedd89805e3dac
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 24adfa0e768d3c51582cbd5f2d9e7f86e3f5cfba
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306670"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Parametri con valori di tabella (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   In questa sezione viene descritto il supporto per i parametri con valori di tabella nel Driver OLE DB per SQL Server. Per ulteriori informazioni, vedere [Table-Valued Parameters &#40;il Driver OLE DB per SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Per un esempio, vedere [utilizzare parametri &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Attualmente, è possibile inviare dati a riga multipla al server come parametri per una procedura con set di parametri (parametro DBPARAMS in **ICommand:: Execute**). Con i set di parametri, ogni elemento del set deve essere inviato al server in una richiesta di chiamata di procedura remota (RPC) separata. I parametri con valori di tabella forniscono funzionalità simili, ma offrono una maggiore integrazione con il server. Riduce il numero di richieste RPC e consente di eseguire operazioni basate su set nel server.  
   
  I parametri con valori di tabella sono supportati nel Driver OLE DB per SQL Server come OLE DB **set di righe** oggetti. Qualsiasi **set di righe** oggetto può essere fornito dal consumer (vale a dire, l'applicazione client usando il Driver OLE DB per SQL Server) come segnaposto per i parametri con valori di tabella. I parametri con valori di tabella vengono considerati come gli altri tipi di parametro di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il Driver OLE DB per SQL Server fornisce la creazione, l'individuazione, specifica, associazione e le interfacce dello schema.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Creazione di un set di righe di parametri con valori di tabella](../../oledb/ole-db-table-valued-parameters/table-valued-parameter-rowset-creation.md)  
   
@@ -53,6 +53,6 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per la programmazione di SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [Utilizzare i valori di tabella parametri & #40; OLE DB & #41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [Utilizzare parametri con valori di tabella &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

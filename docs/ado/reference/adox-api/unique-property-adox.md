@@ -2,7 +2,6 @@
 title: La proprietà univoca (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2f73e9547e9f0b5d95d4f1666ea4fd5dcfa1fb09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66647c71f1491bbf7f85d839d64c3e40f93bfccf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287390"
 ---
 # <a name="unique-property-adox"></a>Proprietà univoca (ADOX)
 Indica se le chiavi di indice devono essere univoche.  
@@ -34,7 +34,7 @@ Indica se le chiavi di indice devono essere univoche.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta e restituisce un **booleano** valore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore predefinito è **False**.  
   
  Questa proprietà è di sola lettura su [indice](../../../ado/reference/adox-api/index-object-adox.md) già aggiunti a una raccolta di oggetti.  

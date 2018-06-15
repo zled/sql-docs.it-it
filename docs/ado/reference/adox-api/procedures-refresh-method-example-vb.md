@@ -2,7 +2,6 @@
 title: Procedure di esempio del metodo Refresh (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ad5229cc50c58b49e22d6a88808fc14c23703d9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb1e831fafeeadd47e87928fe7d829ea83d93e58
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286780"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Procedure di esempio del metodo Refresh (VB)
 Il codice seguente viene illustrato come aggiornare il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) raccolta di un [catalogo](../../../ado/reference/adox-api/catalog-object-adox.md). Questa operazione è necessaria prima [procedura](../../../ado/reference/adox-api/procedure-object-adox.md) oggetti dal **catalogo** accessibili.  

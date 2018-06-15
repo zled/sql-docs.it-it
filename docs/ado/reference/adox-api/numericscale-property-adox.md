@@ -2,7 +2,6 @@
 title: Proprietà NumericScale (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fdf5ce61c1be2940b289fc188c9d01123aeffd48
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7bbe61177e9af6db7d3c663e18afd01b4f2b951e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286720"
 ---
 # <a name="numericscale-property-adox"></a>Proprietà NumericScale (ADOX)
 Indica la scala di un valore numerico nella colonna.  
@@ -36,7 +36,7 @@ Indica la scala di un valore numerico nella colonna.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta e restituisce un **Byte** valore che rappresenta la scala dei valori di dati nella colonna quando il [tipo](../../../ado/reference/adox-api/type-property-column-adox.md) proprietà **adNumeric** o **adDecimal**. **NumericScale** viene ignorato per tutti gli altri tipi di dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il valore predefinito è zero (0).  
   
  **NumericScale** è di sola lettura per [colonna](../../../ado/reference/adox-api/column-object-adox.md) già aggiunti a una raccolta di oggetti.  

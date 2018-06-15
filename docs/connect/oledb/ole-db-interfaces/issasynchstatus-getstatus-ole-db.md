@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 3f302aaf87ebe80a778a91fffa6058f2e6751004
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fbb44ddf380b0f40ffd0a2fdb8619df275fbac7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305790"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +111,7 @@ HRESULT GetStatus(
  E_FAIL  
  Si è verificato un errore specifico del provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **issasynchstatus:: GetStatus** metodo funziona esattamente come il **idbasynchstatus:: GetStatus** metodo tranne il fatto che se l'oggetto di origine di inizializzazione di un tipo di dati viene interrotta, viene restituito E_UNEXPECTED anziché rispetto a DB_E_CANCELED (benché [issasynchstatus::](../../oledb/ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) restituirà DB_E_CANCELED). È perché l'oggetto origine dati non viene lasciato nello stato valido seguito a un'interruzione, in modo che possono eseguire ulteriori operazioni di inizializzazione.  
   
  Se il set di righe viene inizializzato o popolato in modo asincrono, deve supportare questo metodo.  
@@ -127,7 +127,7 @@ HRESULT GetStatus(
  La chiamata **issasynchstatus:: GetStatus** su un oggetto origine dati inizializzato o un set di righe popolato o si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK con  *pulProgress* e *pulProgressMax* impostata sullo stesso valore. Se **issasynchstatus:: GetStatus** metodo viene chiamato su un oggetto creato dall'esecuzione di un comando che aggiorna, Elimina o inserisce righe, entrambi *pulProgress* e *pulProgressMax*  indicano il numero totale di righe interessate dal comando.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [Eseguire le operazioni asincrone](../../oledb/features/performing-asynchronous-operations.md)   
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

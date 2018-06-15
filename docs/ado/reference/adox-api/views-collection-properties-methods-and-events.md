@@ -2,7 +2,6 @@
 title: Visualizza le proprietà della raccolta, metodi ed eventi | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f465afdcc872f64d23dc3ee9bd79aa77dfa5380e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1cfd32e16bf0aee91066924dcf04b0af7ee4b492
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35287360"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Proprietà dell'insieme di viste, metodi ed eventi
 ## <a name="properties"></a>Proprietà  
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/03/2018
  [Metodo Refresh](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Eventi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Raccolta di oggetti View (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

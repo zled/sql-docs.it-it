@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -23,11 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 1bd6c32f7a0eaa0937c937abac3f135fd19f143c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f6b4f1bde4b123ba2a8a807a5bd91abe12cdad2
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307720"
 ---
 # <a name="tables-and-indexes"></a>Tabelle e indici
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,23 +44,23 @@ ms.lasthandoff: 05/03/2018
 |-----------------|-----------------|  
 |SSPROP_COL_COLLATIONNAME|Tipo: VT_BSTR<br /><br /> L/S: Scrittura<br /><br /> Valore predefinito: Null<br /><br /> Descrizione: Questa proprietà viene utilizzata solo in **ITableDefinition**. La stringa specificata in questa proprietà viene utilizzata durante la creazione di un [CREATE TABLE](../../../t-sql/statements/create-table-transact-sql.md)<br /><br /> .|  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Creazione di tabelle di SQL Server](../../oledb/ole-db-tables-indexes/creating-sql-server-tables.md)  
   
--   [Aggiunta di una colonna in una tabella SQL Server](../../oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
+-   [Aggiunta di una colonna a una tabella di SQL Server](../../oledb/ole-db-tables-indexes/adding-a-column-to-a-sql-server-table.md)  
   
--   [Rimozione di una colonna da una tabella SQL Server](../../oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
+-   [Rimozione di una colonna da una tabella di SQL Server](../../oledb/ole-db-tables-indexes/removing-a-column-from-a-sql-server-table.md)  
   
--   [Eliminazione di una tabella SQL Server](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-table.md)  
+-   [Eliminazione di una tabella di SQL Server](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-table.md)  
   
--   [Creazione di indici SQL Server](../../oledb/ole-db-tables-indexes/creating-sql-server-indexes.md)  
+-   [Creazione di indici di SQL Server](../../oledb/ole-db-tables-indexes/creating-sql-server-indexes.md)  
   
--   [Eliminazione di un indice SQL Server](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md)  
+-   [Eliminazione di un indice di SQL Server](../../oledb/ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per la programmazione di SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   
- [DROP TABLE & #40; Transact-SQL & #41;](../../../t-sql/statements/drop-table-transact-sql.md)   
+ [DROP TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-table-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/create-index-transact-sql.md)   
  [DROP INDEX &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-index-transact-sql.md)  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 37
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1515d7e58580b7dd0b56b3e0e3f658e2aed132be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a176aaa76934c10c4b7cd3526b59d889d1533268
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307240"
 ---
 # <a name="connection-options"></a>Opzioni di connessione
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -27,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 In questo argomento sono elencate le opzioni che sono consentite nella matrice associativa (quando si utilizza [sqlsrv_connect](../../connect/php/sqlsrv-connect.md) nel driver SQLSRV) o le parole chiave che sono consentite nel nome dell'origine dati (dsn) (quando si utilizza [PDO::__construct ](../../connect/php/pdo-construct.md) nel driver PDO_SQLSRV).  
 
 ## <a name="table-of-connection-options"></a>Tabella delle opzioni di connessione
-|Key|Value|Description|Valore predefinito|  
+|Key|valore|Description|Default|  
 |-------|---------|---------------|-----------|  
 |APP|String|Specifica il nome dell'applicazione usato nella traccia.|Nessun valore impostato.|  
 |ApplicationIntent|String|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono ReadOnly e ReadWrite.<br /><br />Per ulteriori informazioni [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] supporto [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [supporto per il ripristino di emergenza a disponibilità elevata](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
@@ -52,7 +52,7 @@ In questo argomento sono elencate le opzioni che sono consentite nella matrice a
 |Server<br /><br />(non supportato nel driver SQLSRV)|String|Istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] a cui connettersi.<br /><br />È inoltre possibile specificare un nome di rete virtuale per connettersi a un gruppo di disponibilità AlwaysOn. Per ulteriori informazioni [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] supporto [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [supporto per il ripristino di emergenza a disponibilità elevata](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|Server è una parola chiave obbligatoria (anche se non deve essere la prima parola chiave della stringa di connessione). Se il nome del server non viene passato alla parola chiave, viene effettuato un tentativo di connettersi all'istanza locale.<br /><br />Il valore passato a Server può essere il nome di un'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] o l'indirizzo IP dell'istanza. È possibile specificare facoltativamente un numero di porta (ad esempio, `sqlsrv:server=(local),1033`).<br /><br />A partire dalla versione 3.0 di [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] è inoltre possibile specificare un'istanza di LocalDB con `server=(localdb)\instancename`. Per altre informazioni, vedere [supporto per LocalDB](../../connect/php/php-driver-for-sql-server-support-for-localdb.md).|  
 |TraceFile|String|Specifica il percorso del file usato per i dati di traccia.|Nessun valore impostato.|  
 |TraceOn|1 o **true** per abilitare la traccia.<br /><br />0 o **false** per disabilitare la traccia.|Specifica se la traccia ODBC è abilitata (1 o **true**) o disattivato (0 o **false**) per la connessione stabilita.|**false** (0)|  
-|TransactionIsolation|Il driver SQLSRV usa i valori seguenti:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Il driver PDO_SQLSRV usa i valori seguenti:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Specifica il livello di isolamento delle transazioni.<br /><br />Per ulteriori informazioni sull'isolamento delle transazioni, vedere [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) nella documentazione di SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />o<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
+|TransactionIsolation|Il driver SQLSRV usa i valori seguenti:<br /><br />SQLSRV_TXN_READ_UNCOMMITTED<br /><br />SQLSRV_TXN_READ_COMMITTED<br /><br />SQLSRV_TXN_REPEATABLE_READ<br /><br />SQLSRV_TXN_SNAPSHOT<br /><br />SQLSRV_TXN_SERIALIZABLE<br /><br />Il driver PDO_SQLSRV usa i valori seguenti:<br /><br />PDO::SQLSRV_TXN_READ_UNCOMMITTED<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED<br /><br />PDO::SQLSRV_TXN_REPEATABLE_READ<br /><br />PDO::SQLSRV_TXN_SNAPSHOT<br /><br />PDO::SQLSRV_TXN_SERIALIZABLE|Specifica il livello di isolamento delle transazioni.<br /><br />Per ulteriori informazioni sull'isolamento delle transazioni, vedere [SET TRANSACTION ISOLATION LEVEL](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md) nella documentazione di SQL Server.|SQLSRV_TXN_READ_COMMITTED<br /><br />o Gestione configurazione<br /><br />PDO::SQLSRV_TXN_READ_COMMITTED|  
 |TransparentNetworkIPResolution|**Abilitato** o **disabilitato**|Interessa la sequenza di connessione quando il primo risolto IP dell'host non risponde e non vi sono più indirizzi IP associati con il nome host.<br /><br />Questa utilità interagisce con MultiSubnetFailover per fornire le sequenze di connessione diversa. Per ulteriori informazioni, vedere [utilizzando la risoluzione IP di rete Transparent](https://docs.microsoft.com/en-us/sql/connect/odbc/using-transparent-network-ip-resolution).|Abilitata|
 |TrustServerCertificate|1 o **true** per considerare il certificato attendibile.<br /><br />0 o **false** per non considerare il certificato attendibile.|Specifica se il client deve considerare attendibile (1 o **true**) o rifiutare (0 o **false**) un certificato server autofirmato.|**false** (0)|  
 |UID<br /><br />(non supportato nel driver PDO_SQLSRV)|String|Specifica l'ID utente da utilizzare durante la connessione con autenticazione di SQL Server<sup>4</sup>.|Nessun valore impostato.|  

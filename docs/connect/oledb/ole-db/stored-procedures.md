@@ -2,10 +2,10 @@
 title: Stored procedure | Documenti Microsoft
 description: Stored procedure
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db
+ms.component: oledb|ole-db
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,16 +19,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 65a78fddd455df4b04c06086beca808658879aed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 248132d4afca731bb3715da83286a85dc6edc8ee
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611546"
 ---
 # <a name="stored-procedures"></a>Stored procedure
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  Una stored procedure ([Stored procedure & #40; motore di Database & #41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  Una stored procedure ([Stored procedure &#40;motore di Database&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) è un oggetto eseguibile archiviato in un database. Supporti [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   Stored procedure  
   
@@ -40,9 +43,9 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Esecuzione della Stored procedure & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-running.md)  
+-   [Esecuzione di Stored procedure &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-running.md)  
   
--   [La chiamata a una Stored Procedure & #40; OLE DB & #41;](../../oledb/ole-db/stored-procedures-calling.md)  
+-   [Chiamare una Stored Procedure &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per programmazione con SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -21,11 +20,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: de00c4aac3125209bb56a1867f07b1f395804cc8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2c3d85ce4a26c5840b393336e878bda4fa20b142
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35308000"
 ---
 # <a name="supporting-local-transactions"></a>Supporto delle transazioni locali
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 05/03/2018
   
  Per le transazioni locali, il Driver OLE DB per SQL Server implementa **ITransaction:: commit** parametri come indicato di seguito.  
   
-|Parametro|Descrizione|  
+|Parametro|Description|  
 |---------------|-----------------|  
 |*fRetaining*[in]|Quando è TRUE, una nuova transazione viene iniziata implicitamente per la sessione. È necessario che il consumer esegua il commit o termini la transazione. Se è FALSE, il Driver OLE DB per SQL Server passa alla modalità di autocommit per la sessione.|  
 |*grfTC*[in]|Asincrono e restituisce una fase non sono supportati dal Driver OLE DB per SQL Server. Il Driver OLE DB per SQL Server restituisce XACT_E_NOTSUPPORTED per qualsiasi valore diverso da XACTTC_SYNC.|  
@@ -132,6 +132,6 @@ if (FAILED(hr))
   
 ## <a name="see-also"></a>Vedere anche  
  [Transazioni](../../oledb/ole-db-transactions/transactions.md)   
- [Utilizzo dell'isolamento dello Snapshot](../../oledb/features/working-with-snapshot-isolation.md)  
+ [Uso dell'isolamento dello snapshot](../../oledb/features/working-with-snapshot-isolation.md)  
   
   

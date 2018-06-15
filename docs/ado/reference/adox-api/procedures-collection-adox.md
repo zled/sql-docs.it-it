@@ -2,7 +2,6 @@
 title: Raccolta di procedure (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,16 +20,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 61b961bb722004c3a76ab6c44cbd878f03e801d8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2690c2911fbd4824937c7153ba681cd5d77b703c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286660"
 ---
 # <a name="procedures-collection-adox"></a>Raccolta di procedure (ADOX)
 Contiene tutti [procedura](../../../ado/reference/adox-api/procedure-object-adox.md) gli oggetti di un catalogo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) metodo per un **procedure** è univoco in ADOX insieme. È possibile effettuare le operazioni seguenti:  
   
 -   Aggiungere una nuova stored procedure alla raccolta con il **Append** metodo.  

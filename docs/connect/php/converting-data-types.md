@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,18 +14,19 @@ caps.latest.revision: 29
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f374b1b0c67c151d7ae7d2da7e5dce9a8b09222d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 44d58351f0a120268983500166aeafdbfa773ee0
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306850"
 ---
 # <a name="converting-data-types"></a>Conversione dei tipi di dati
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 I [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] consentono di specificare i tipi di dati per l'invio di dati a oppure il recupero di dati da [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Specificare i tipi di dati è facoltativo. Se i tipi di dati non vengono specificati, vengono usati i tipi predefiniti. Negli argomenti di questa sezione viene descritto come specificare i tipi di dati e fornire informazioni dettagliate sui tipi di dati predefiniti.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Description|  
 |---------|---------------|  

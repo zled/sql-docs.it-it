@@ -2,7 +2,6 @@
 title: Proprietà InternetTimeout (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 401410dee3c7968c1547e3efa70fe61521b29d6a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a95ec64f7ed35ab3701fd0ad286829d9f87bec44
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288272"
 ---
 # <a name="internettimeout-property-rds"></a>Proprietà InternetTimeout (RDS)
 Indica il numero di millisecondi di attesa prima del timeout di una richiesta.  
@@ -33,7 +33,7 @@ Indica il numero di millisecondi di attesa prima del timeout di una richiesta.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **lungo** valore che rappresenta il numero di millisecondi prima che una richiesta di timeout.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa proprietà si applica solo alle richieste inviate con il protocollo HTTP o HTTPS.  
   
  Le richieste in un ambiente a tre livelli possono richiedere alcuni minuti per l'esecuzione. Utilizzare questa proprietà per specificare un tempo aggiuntivo per le richieste a esecuzione prolungata.  

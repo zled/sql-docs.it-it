@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9995acd8fb7259738f5d1985bf24583237ea3526
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23c7ff83fa1f75e5cf309daaa45b34663cef42a7
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35305890"
 ---
 # <a name="irowsetfastloadinsertrow-ole-db"></a>IRowsetFastLoad::InsertRow (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +69,7 @@ HRESULT InsertRow(
  DB_E_BADACCESSORTYPE  
  La funzione di accesso specificata non è una funzione di accesso di riga o non specifica la memoria del consumer.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un errore durante la conversione dei dati del consumer per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo di dati per una colonna determina una restituzione E_FAIL dal Driver OLE DB per SQL Server. Dati possono essere trasmessi a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] su qualsiasi **InsertRow** (metodo) o solo **Commit** metodo. L'applicazione consumer può chiamare il **InsertRow** metodo più volte con dati non corretti prima di ricevere notifica dell'esistenza di un errore di conversione di tipo di dati. Poiché il **Commit** metodo assicura che tutti i dati sia specificato correttamente dal consumer, il consumer può utilizzare il **Commit** metodo in modo appropriato per convalidare i dati in base alle esigenze.  
   
  Il Driver OLE DB per set di righe copia bulk SQL Server sono in sola lettura. Il Driver OLE DB per SQL Server non espone alcun metodo che consenta di query di tipo consumer del set di righe. Per terminare l'elaborazione, il consumer può rilasciare il riferimento di [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaccia senza chiamare il **Commit** metodo. Non sono disponibili funzioni per accedere alle righe inserite dal consumer nel set di righe e modificarne i valori o per rimuoverle singolarmente dal set di righe.  

@@ -12,11 +12,12 @@ ms.suite: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 07782a5b8290b41a5a11557c503fcbfd0736790b
-ms.sourcegitcommit: a9da0abd3e17fbcd6339980d7331d0418cdada53
+ms.openlocfilehash: f853cb623bee0fcd27d5cc7e6203610ed1603335
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611976"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Note sulla versione di SQL Server 2017 su Linux
 
@@ -215,6 +216,7 @@ Le funzionalità e i servizi seguenti non sono disponibili in Linux al momento d
 | &nbsp; | Estensione database |
 | &nbsp; | PolyBase |
 | &nbsp; | Query distribuita con connessioni a 3rd party |
+| &nbsp; | Server collegati alle origini di dati diverso da SQL Server |
 | &nbsp; | (XP_CMDSHELL, e così via). le stored procedure estese di sistema |
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Impostare gli assembly CLR con il EXTERNAL_ACCESS o UNSAFE autorizzazione |
@@ -225,7 +227,7 @@ Le funzionalità e i servizi seguenti non sono disponibili in Linux al momento d
 | &nbsp; | Change Data Capture |
 | &nbsp; | Backup gestito |
 | **Disponibilità elevata** | Mirroring del database  |
-| **Sicurezza** | Extensible Key Management |
+| **Security** | Extensible Key Management |
 | &nbsp; | Autenticazione di Active Directory per i server collegati | 
 | &nbsp; | Autenticazione di Active Directory per i gruppi di disponibilità (estensivi) | 
 | &nbsp; | strumenti di terze parti AD 3 (Centrify, Vintela, Powerbroker) | 

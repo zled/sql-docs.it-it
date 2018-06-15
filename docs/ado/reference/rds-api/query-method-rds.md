@@ -2,7 +2,6 @@
 title: Eseguire una query (metodo) (RDS) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c9f676540c7076a68c006aeeb1c6d120e889c7b7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 682743135ddb0a7eddff18e0c659f0a7a7b9931f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288349"
 ---
 # <a name="query-method-rds"></a>Metodo query (RDS)
 Viene utilizzata una stringa di query SQL valida per restituire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -50,7 +50,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Query*  
  Oggetto **stringa** che contiene la query SQL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La query deve utilizzare il sottolinguaggio SQL del server di database. Se si verifica un errore con la query che è stato eseguito, viene restituito uno stato del risultato. Il **Query** metodo non esegue alcuna sintassi per la **Query** stringa.  
   
 ## <a name="applies-to"></a>Si applica a  

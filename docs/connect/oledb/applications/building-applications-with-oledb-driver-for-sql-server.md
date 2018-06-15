@@ -2,7 +2,7 @@
 title: Compilazione di applicazioni con il Driver OLE DB per SQL Server | Documenti Microsoft
 description: Compilazione di applicazioni con il Driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|applications
@@ -19,20 +19,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 48d5ea2a58b2a9466b5a32387143a4540c321355
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b768ec6810767e920650bc83e10f9ddece464a56
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35612116"
 ---
 # <a name="building-applications-with-ole-db-driver-for-sql-server"></a>Compilazione di applicazioni con il Driver OLE DB per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Quando si sviluppa un'applicazione che utilizza il Driver OLE DB per la libreria di SQL Server, esistono alcuni problemi che entrano in gioco. Negli argomenti di questa sezione vengono illustrati alcuni di questi problemi tra cui l'aggiornamento da MDAC a Driver OLE DB per SQL Server, usando il Driver OLE DB per SQL Server intestazione e i file di libreria e una panoramica delle varie stringhe di connessione che può essere utilizzato con il Driver OLE DB per S SQL Server.  
 
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Installazione del driver OLE DB per SQL Server](../../oledb/applications/installing-oledb-driver-for-sql-server.md)  
  Descrive la modalità di installazione Driver OLE DB per SQL Server, i percorsi in cui vengono installati vari componenti in e come disinstallare il Driver OLE DB per SQL Server.  
 
@@ -59,4 +60,4 @@ ms.lasthandoff: 05/03/2018
 
 ## <a name="see-also"></a>Vedere anche  
  [Driver OLE DB per SQL Server](../../oledb/oledb-driver-for-sql-server.md)     
- [Procedure per OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure relative a OLE DB](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  

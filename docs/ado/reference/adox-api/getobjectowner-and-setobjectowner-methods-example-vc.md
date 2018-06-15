@@ -2,7 +2,6 @@
 title: GetObjectOwner e metodi SetObjectOwner (VC + +) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bc2d82fd3223e38d6441cace07bd4f26a0a57bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7ea1e53e6a9259633a353e8eb0988b0fddc74a4e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285870"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner e metodi SetObjectOwner (VC + +)
 Questo esempio viene illustrato il [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) e [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) metodi. Questo codice presuppone l'esistenza del gruppo Contabilità (vedere il [gruppi e utenti, ChangePassword esempio del metodo Append (VC + +)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md) per informazioni su come aggiungere questo gruppo per il sistema). Il proprietario della tabella Categories è impostato in finanze.  

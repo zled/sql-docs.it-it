@@ -2,7 +2,6 @@
 title: Metodi ADOX | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bf7837fb749222fe3083671632758ea04a112728
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ced2fbeb94aacd1035b28b56a46b10535f17c192
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284800"
 ---
 # <a name="adox-methods"></a>Metodi ADOX
 |||  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 |[Append (utenti)](../../../ado/reference/adox-api/append-method-adox-users.md)|Aggiunge un nuovo **utente** dell'oggetto per il **utenti** insieme.|  
 |[Append (Views)](../../../ado/reference/adox-api/append-method-adox-views.md)|Aggiunge un nuovo **vista** dell'oggetto per il **viste** insieme.|  
 |[ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)|Modifica la password per un account utente.|  
-|[Create](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
+|[Creare](../../../ado/reference/adox-api/create-method-adox.md)|Crea un nuovo catalogo.|  
 |[Elimina](../../../ado/reference/adox-api/delete-method-adox-collections.md)|Rimuove un oggetto da una raccolta.|  
 |[GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|Restituisce il proprietario di un oggetto in un catalogo.|  
 |[GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)|Restituisce le autorizzazioni per un gruppo o utente su un oggetto.|  

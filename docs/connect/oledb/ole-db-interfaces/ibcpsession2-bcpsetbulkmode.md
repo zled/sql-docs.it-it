@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -17,16 +16,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: edc24c92138ebfa8e1bb72e64a50ed0dc7a2c234
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c41f484dbbe2877e2d358b3d19ee2b7d33107a56
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35304900"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  IBCPSession2::BCPSetBulkMode offre un'alternativa al [ibcpsession:: BCPColFmt & #40; OLE DB & #41;](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per specificare il formato della colonna. A differenza di ibcpsession:: BCPColFmt, che imposta gli attributi di formato di colonna singola, IBCPSession2::BCPSetBulkMode imposta tutti gli attributi.  
+  IBCPSession2::BCPSetBulkMode offre un'alternativa al [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) che consente di specificare il formato della colonna. A differenza di ibcpsession:: BCPColFmt, che imposta gli attributi di formato di colonna singola, IBCPSession2::BCPSetBulkMode imposta tutti gli attributi.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -42,7 +42,7 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *proprietà*  
+ *property*  
  Costante di tipo BYTE. Per un elenco di costanti, vedere la tabella nella sezione Osservazioni.  
   
  *pField*  
@@ -68,7 +68,7 @@ HRESULT BCPSetBulkMode (
 |**E_INVALIDARG**|L'argomento non è valido.|  
 |**E_OUTOFMEMORY**|Errore di memoria insufficiente.|  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  IBCPSession2::BCPSetBulkMode può essere utilizzato per copiare da una query o una tabella. Quando IBCPSession2::BCPSetBulkMode viene utilizzato da copiare da un'istruzione di query, deve essere chiamato prima di chiamare `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, …)` per specificare l'istruzione di query.  
   
  È necessario evitare di combinare la sintassi di chiamata RPC con la sintassi di query batch (ad esempio `{rpc func};SELECT * from Tbl`) in un unico testo di comando.  In questo modo ICommandPrepare:: Prepare restituire un errore e impedire il recupero dei metadati. Utilizzare la sintassi ODBC CALL (ad esempio `{call func}; SELECT * from Tbl`) se è necessario combinare l'esecuzione della stored procedure e una query batch in un singolo testo di comando.  
@@ -365,6 +365,6 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [OLE DB IBCPSession2 & #40; & #41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
+ [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

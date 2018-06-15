@@ -5,7 +5,6 @@ ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,11 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 5497a74c256282fd14f7c5301f7eea4cfa9aa596
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b26077abc7d714ffebdf36068a2f3d5fc081d7e
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35306780"
 ---
 # <a name="creating-sql-server-tables"></a>Creazione di tabelle di SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 05/03/2018
  Il Driver OLE DB per SQL Server riconosce un subset di valori DBTYPE enumerati da OLE DB di *wType* membro. Per ulteriori informazioni, vedere [Mapping di tipi di dati in ITableDefinition](../../oledb/ole-db-data-types/data-type-mapping-in-itabledefinition.md).  
   
 > [!NOTE]  
->  **CreateTable** restituisce DB_E_BADTYPE se il consumer imposta il *pTypeInfo* o *pclsid* membro per specificare il tipo di dati della colonna.  
+>  **CreateTable** restituisce DB_E_BADTYPE se il consumer imposta il il *pTypeInfo* o *pclsid* membro per specificare il tipo di dati di colonna.  
   
- Il consumer specifica il nome della colonna di *pwszName* membro del *uName* unione di DBCOLUMNDESC *dbcid* membro. Il nome di colonna viene specificato come stringa di caratteri Unicode. Il *eKind* membro di *dbcid* deve essere DBKIND_NAME. **CreateTable** restituisce DB_E_BADCOLUMNID se *eKind* non è valido, *pwszName* è NULL, o se il valore di *pwszName* non è un valido [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificatore.  
+ Il consumer specifica il nome della colonna di *pwszName* membro del *uName* unione di DBCOLUMNDESC *dbcid* membro. Il nome di colonna viene specificato come stringa di caratteri Unicode. Il *eKind* membro di *dbcid* deve essere DBKIND_NAME. **CreateTable** restituisce DB_E_BADCOLUMNID se *eKind* non è valido, *pwszName* è NULL, o se il valore del *pwszName* non è valida [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identificatore.  
   
- Tutte le proprietà delle colonne sono disponibili in tutte le colonne definite per la tabella. **CreateTable** può restituire DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED se i valori delle proprietà sono impostati in conflitto. **CreateTable** restituisce un errore quando le impostazioni delle proprietà delle colonne non valide provocano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] errore di creazione tabella.  
+ Tutte le proprietà delle colonne sono disponibili in tutte le colonne definite per la tabella. **CreateTable** può restituire DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED se i valori delle proprietà sono impostati in conflitto. **CreateTable** restituisce un errore quando impostazioni delle proprietà di colonne non valide provocano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] errore di creazione tabella.  
   
  Le proprietà delle colonne in un parametro DBCOLUMNDESC vengono interpretate nel modo seguente.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/03/2018
   
  Quando il consumer chiama **itabledefinition:: CreateTable**, il Driver OLE DB per SQL Server interpreta le proprietà di tabella come indicato di seguito.  
   
-|ID proprietà|Descrizione|  
+|ID proprietà|Description|  
 |-----------------|-----------------|  
 |DBPROP_TBL_TEMPTABLE|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE descrizione: per impostazione predefinita, il Driver OLE DB per SQL Server crea tabelle denominate dal consumer. Quando VARIANT_TRUE, il Driver OLE DB per SQL Server genera un nome di tabella temporanea per il consumer. Il consumer imposta il *pTableID* parametro di **CreateTable** su NULL. Il *ppTableID* parametro deve contenere un puntatore valido.|  
   

@@ -2,7 +2,6 @@
 title: Oggetto Catalog (ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b30a6725a58c96fc414f9ac4c15cc86fc9599329
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ae03190406dd6a37a7670fe749d76762e6e6674d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285240"
 ---
 # <a name="catalog-object-adox"></a>Oggetto del catalogo (ADOX)
 Contiene raccolte ([tabelle](../../../ado/reference/adox-api/tables-collection-adox.md), [viste](../../../ado/reference/adox-api/views-collection-adox.md), [utenti](../../../ado/reference/adox-api/users-collection-adox.md), [gruppi](../../../ado/reference/adox-api/groups-collection-adox.md), e [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md)) che vengono descritti il catalogo dello schema di un'origine dati.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  È possibile modificare il **catalogo** oggetto aggiungendo o rimuovendo oggetti o modificando gli oggetti esistenti. Alcuni provider potrebbero non supportare tutte le **catalogo** oggetti o può supportare solo la visualizzazione delle informazioni sullo schema.  
   
  Con le proprietà e metodi di un **catalogo** dell'oggetto, è possibile:  

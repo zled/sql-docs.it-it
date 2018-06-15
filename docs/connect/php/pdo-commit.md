@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -15,11 +14,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98bd6d4f7856dee4580f303638e7de2346a9feb4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b60b75aea820f1f9ef41c099aa8d9b2bb98b875
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307800"
 ---
 # <a name="pdocommit"></a>PDO::commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +36,7 @@ bool PDO::commit();
 ## <a name="return-value"></a>Valore restituito  
 true se la chiamata al metodo ha avuto esito positivo; in caso contrario, false.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
 PDO::commit non è influenzato e non influisce sul valore di PDO::ATTR_AUTOCOMMIT.  
   
 Per un esempio d'uso di PDO::commit, vedere [PDO::beginTransaction](../../connect/php/pdo-begintransaction.md) .  

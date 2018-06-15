@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: COM
 helpviewer_keywords:
@@ -17,11 +16,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fae3b712f32ad2b3b5c9f478a600af611379e798
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e5253e7ad569413fc22e4a8d0ab04c8b7c403410
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288490"
 ---
 # <a name="sortcolumn-property-rds"></a>Proprietà SortColumn (RDS)
 Indica da quale colonna per ordinare i record.  
@@ -43,7 +43,7 @@ DataControl.SortColumn = String
  *String*  
  Oggetto **stringa** valore che rappresenta il nome o l'alias della colonna in base al quale ordinare i record.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **SortColumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), e [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)proprietà forniscono l'ordinamento e filtrare le funzionalità della cache sul lato client. La funzionalità di ordinamento Ordina i record per i valori da una colonna. La funzionalità di filtro consente di visualizzare un subset di record in base a criteri di ricerca, mentre la versione completa [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) viene mantenuto nella cache. Il [reimpostare](../../../ado/reference/rds-api/reset-method-rds.md) metodo i criteri e sostituire corrente **Recordset** con un aggiornabile **Recordset**.  
   
  Ordinare elementi su un **Recordset**, è necessario salvare le modifiche in sospeso. Se si utilizza il **RDS. DataControl**, è possibile utilizzare il [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) metodo. Ad esempio, se il **RDS. DataControl** è denominato ADC1, il codice sarebbe `ADC1.SubmitChanges`. Se si utilizza un oggetto ADO **Recordset**, è possibile utilizzare il relativo [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) metodo. Utilizzando **UpdateBatch** è il metodo consigliato per **Recordset** gli oggetti creati con il [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) metodo. Ad esempio, il codice può essere `myRS.UpdateBatch` o `ADC1.Recordset.UpdateBatch`.  
