@@ -2,7 +2,6 @@
 title: Nozioni di base di ADO MD | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5d15a76c1a7109c6c08d95610278ba4ac9d5c37a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bf6cf507d47527e2ca6a72985b6f5bc817ba88e7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273510"
 ---
 # <a name="ado-md-fundamentals"></a>Nozioni di base di ADO MD
 Microsoft® ActiveX® Data Objects (ADO MD) (multidimensionale) consente di accedere ai dati multidimensionali da linguaggi, ad esempio Microsoft Visual Basic®, Microsoft Visual C++®. ADO MD estende Microsoft® dati oggetti ADO (ActiveX) per includere oggetti specifici di dati multidimensionali, ad esempio il [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) e [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetti. Con ADO MD è Sfoglia schema multidimensionale, un cubo di query e recuperare i risultati.  

@@ -2,7 +2,6 @@
 title: Provider Microsoft OLE DB per SQL Server | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bbe50621dc248a3f11368717bbe9423b5a8b59e3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ca737ed49349cc87e378fbd891ec224155147acc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271640"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Provider Microsoft OLE DB per una panoramica di SQL Server
 Il Provider Microsoft OLE DB per SQL Server, SQLOLEDB, consente di ADO per accedere a Microsoft SQL Server.
@@ -154,7 +154,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Definizione di colonna|DBPROP_COLUMNDEFINITION|
 |Timeout di connessione|DBPROP_INIT_TIMEOUT|
 |Catalogo corrente|DBPROP_CURRENTCATALOG|
-|Data Source|DBPROP_INIT_DATASOURCE|
+|origine dati|DBPROP_INIT_DATASOURCE|
 |Nome origine dati|DBPROP_DATASOURCENAME|
 |Modello di Threading oggetto origine dei dati|DBPROP_DSOTHREADMODEL|
 |Nome DBMS|DBPROP_DBMSNAME|

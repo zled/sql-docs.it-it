@@ -2,7 +2,6 @@
 title: Rilevamento e risoluzione dei conflitti | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,18 +17,19 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 05e79fec4c5ddf9d33c9cfaa17581b6d50e0e42b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bca0eb3d528c1f7572745e1b6f8d8e59e9749f36
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270610"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Rilevamento e risoluzione di conflitti
 Se si utilizzano il Recordset in modalità immediata, è meno probabile per problemi di concorrenza si verifichi. D'altra parte, se l'applicazione utilizza la modalità batch di aggiornamento, potrebbe esserci una buona possibilità che un utente modifichi un record prima che vengano salvate le modifiche apportate da un altro utente modifica lo stesso record. In tal caso, è possibile utilizzare l'applicazione di gestire correttamente il conflitto. Potrebbe essere desideri che l'ultima persona di inviare un aggiornamento al server "wins". Oppure è possibile consentire all'utente più recente per decidere quali update deve avere la precedenza fornendo a quest'ultimo una scelta tra i due valori in conflitto.  
   
  In ogni caso, ADO fornisce le proprietà UnderlyingValue e OriginalValue dell'oggetto campo per gestire questi tipi di conflitti. Utilizzare queste proprietà in combinazione con il metodo Resync e la proprietà Filter del Recordset.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se ADO rileva un conflitto durante un aggiornamento batch, un messaggio di avviso verrà aggiunto alla raccolta di errori. Pertanto, deve sempre cercare errori immediatamente dopo aver chiamato il metodo BatchUpdate e se vengono individuati, iniziare il test si presuppone che si è verificato un conflitto. Il primo passaggio è impostare la proprietà Filter per Recordset uguale a adFilterConflictingRecords. Consente di limitare la visualizzazione in Recordset ai record in conflitto. Se la proprietà RecordCount è uguale a zero dopo questo passaggio, si conosce che l'errore è stato generato da un valore diverso da un conflitto.  
   
  Quando si chiama il metodo BatchUpdate, ADO e il provider generano istruzioni SQL per eseguire aggiornamenti sull'origine dati. Tenere presente che determinate origini dati presentano limitazioni in cui è possono utilizzare i tipi di colonne in una clausola WHERE.  

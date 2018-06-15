@@ -2,7 +2,6 @@
 title: I limiti di un oggetto Recordset | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20373bc374d1f5f5b75522ede5255a376ab6f657
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 49282472acf783008a45d0b66f12e0aefc13ecb6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270930"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limiti di un Recordset
 **Recordset** supporta la **BOF** e **EOF** proprietà per delineare l'inizio e alla fine, rispettivamente, del set di dati. È possibile considerare **BOF** e **EOF** come record "fantasma" posizionati all'inizio e fine il **Recordset**. Conteggio **BOF** e **EOF**, l'esempio **Recordset** avrà ora un aspetto simile al seguente:  

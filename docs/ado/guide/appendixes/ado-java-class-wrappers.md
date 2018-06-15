@@ -2,7 +2,6 @@
 title: Wrapper di classe Java ADO | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 02/15/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 40c9943eb1004dd612e46a144ec50e6753181be7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 72206624c6952a63d7784e2b054f86b9c6cd43f3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270230"
 ---
 # <a name="ado-java-class-wrappers"></a>Wrapper di classe Java ADO
 Questo codice dichiara un'istanza di ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) wrapper della classe e la inizializza, tutte nella stessa riga di codice. Inoltre, vengono dichiarate le variabili per ognuno degli argomenti nel [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) (metodo), in particolare per [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) e [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (perché non supporta il linguaggio enumerato tipi). Apre e chiude il **Recordset** oggetto. L'impostazione di gruppi di risultati 1 su NULL semplicemente pianifica tale variabile deve essere rilasciato quando Java esegue il relativo rilascio sistematico e intermittente di oggetti inutilizzati.  

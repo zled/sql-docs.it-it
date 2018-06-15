@@ -2,7 +2,6 @@
 title: Aggiunta di record mediante AddNew | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6ba15d68b5fbaa749e00987b1fbfef73887dc377
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36827d102d7e6ef0850c557eb6555135343fbec0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270090"
 ---
 # <a name="adding-records-using-addnew-method"></a>Aggiunta di record mediante AddNew (metodo)
 Questa è la sintassi di base di **AddNew** metodo:
@@ -51,5 +51,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
  Poiché il codice utilizza un disconnesso **Recordset** con un cursore sul lato client in modalità batch, è necessario riconnettere il **Recordset** all'origine dati con un nuovo **connessione** oggetto prima di chiamare il **UpdateBatch** metodo per inviare modifiche al database. Ciò avviene con facilità utilizzando la nuova funzione **GetNewConnection**.

@@ -2,7 +2,6 @@
 title: I cursori keyset | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6abebe52390c8c3423cd3c41f212236e051e1972
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 94df9cb54dcdb98b6f0932e63d0935b0350eb868
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271930"
 ---
 # <a name="keyset-cursors"></a>Cursori keyset
 Il cursore keyset fornisce funzionalità tra un valore statico e un cursore dinamico nella capacità di rilevare le modifiche. Un cursore statico, non sempre rileva le modifiche per l'appartenenza e l'ordine del set di risultati. È un cursore dinamico, di rilevare le modifiche ai valori delle righe nel set di risultati.  

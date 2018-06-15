@@ -2,7 +2,6 @@
 title: Il Provider di servizi remoti Microsoft OLE DB (ADO Service Provider) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b69c6f64de019aadf71476958c26f99a46dabac2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c68d168716351a8c3adda7b5ff10e6ef825e19cf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271290"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Cenni preliminari sul Provider di servizi remoti Microsoft OLE DB
 Il Provider remoto Microsoft OLE DB consente a un utente locale in un computer client richiamare i provider di dati in un computer remoto. Specificare i parametri di provider di dati per il computer remoto come se fosse un utente locale sul computer remoto. Quindi specificare i parametri utilizzati dal Provider di servizi remoti di accedere al computer remoto. È quindi possibile accedere al computer remoto, come se trattasse di un utente locale.
@@ -73,7 +73,7 @@ Debug.Print cn.Properties("Internet Timeout")
 cn.Properties("Internet Timeout") = 5000
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
  In ADO.NET 2.0, il Provider OLE DB remota può specificare solo nel *ActiveConnection* parametro del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto **aprire** metodo. A partire da ADO 2.1, il provider può anche essere specificato nel *ConnectionString* parametro del [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto **aprire** metodo.
 
  L'equivalente di **RDS. DataControl** oggetto [SQL](../../../ado/reference/rds-api/sql-property.md) proprietà non è disponibile. Il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto **aprire** metodo *origine* viene invece utilizzato l'argomento.

@@ -2,7 +2,6 @@
 title: Riepilogo dei gestori di eventi ADO | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3e52fe70e497ab8c5b715861e16f3f67266f9f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fcb37f418a053abbd67cae435b674e187956a7a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271260"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Connessione di ADO e gli eventi di Recordset
 Due oggetti ADO possono generare eventi: il [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto e [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto. Il **ConnectionEvent** famiglia relativa alle operazioni sul **connessione** oggetto e **RecordsetEvent** famiglia relativa alle operazioni sul  **Recordset** oggetto.

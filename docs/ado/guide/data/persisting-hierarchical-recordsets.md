@@ -2,7 +2,6 @@
 title: Persistenza dei recordset gerarchici | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1506bd80eee82c2b93a3f3f543825efef394ef07
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ef907391ad15cb5dd4d58efb6268a0b1688274fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272520"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Persistenza dei recordset gerarchici
 È possibile salvare un gerarchica **Recordset** in un file in formato ADTG o XML chiamando il [salvare](../../../ado/reference/ado-api/save-method.md) metodo. Tuttavia, vengono applicate due limitazioni quando si salva gerarchica **Recordset**s in formato XML: se non è possibile salvare in XML la gerarchica **Recordset** contiene gli aggiornamenti, in sospeso e non è possibile salvare un con parametri gerarchica **Recordset**.  

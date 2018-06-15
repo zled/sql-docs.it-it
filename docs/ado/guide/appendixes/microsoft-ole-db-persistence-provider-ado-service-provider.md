@@ -2,7 +2,6 @@
 title: Il Provider di persistenza Microsoft OLE DB (ADO Service Provider) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9c47487547153426b2826792c5af0ad3bbeb7371
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37144f19abfb60d13a24818d8b47a3531affcc08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35270390"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Cenni preliminari sul Provider di persistenza Microsoft OLE DB
 Provider Microsoft OLE DB persistenza consente di salvare un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto in un file e successivamente ripristinare che **Recordset** oggetto dal file. Informazioni sullo schema, i dati e vengono mantenute le modifiche in sospeso.
@@ -45,7 +45,7 @@ Provider Microsoft OLE DB persistenza consente di salvare un [Recordset](../../.
 |E_BADSTREAM|Il file aperto non dispone di un formato valido (ovvero, il formato non è ADTG o XML).|
 |E_CANTPERSISTROWSET|Il **Recordset** oggetto salvato include caratteristiche che ne impediscono l'archiviazione.|
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
  Provider Microsoft OLE DB persistenza non espone proprietà dinamiche.
 
  Attualmente, solo con parametri gerarchici **Recordset** oggetti non possono essere salvati.

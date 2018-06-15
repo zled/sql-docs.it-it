@@ -2,7 +2,6 @@
 title: Provider Microsoft OLE DB per servizio di indicizzazione Microsoft | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dc341794d419559b3683c06d51766d2e7b6287a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b789802f6a8d565119450183889d238d2e3f498e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271310"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Provider Microsoft OLE DB per una panoramica del servizio di indicizzazione Microsoft
 Il Provider Microsoft OLE DB per servizio di indicizzazione Microsoft fornisce l'accesso di sola lettura a livello di codice per file system e i dati Web indicizzati dal servizio di indicizzazione Microsoft. Applicazioni ADO possono eseguire query SQL per recuperare informazioni sulle proprietà di contenuto e il file.
@@ -82,7 +82,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|sempre **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|sempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Sola lettura|
-|[Filtra](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponibile|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|
@@ -110,10 +110,10 @@ MSIDXS
 |[Sposta](../../../ado/reference/ado-api/move-method-ado.md)|Sì|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sì|
-|[Apertura](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|
+|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|
 |[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|Sì|
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|
+|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|
 |[Update](../../../ado/reference/ado-api/update-method.md)|no|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|no|
 

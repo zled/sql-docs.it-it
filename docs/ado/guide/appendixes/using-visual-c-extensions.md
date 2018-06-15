@@ -2,7 +2,6 @@
 title: Uso delle estensioni di Visual C++ | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a1c832cff45ad5998918c6f5f67927e49bc9d4e9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 06e2d13c589d4dc88f3a148122322f483c49d2fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271590"
 ---
 # <a name="visual-c-extensions"></a>Estensioni di Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L'interfaccia IADORecordBinding
@@ -118,21 +118,21 @@ Update(CADORecordBinding *binding)
 |---------------|-----------------|
 |*Classe*|Classe in cui vengono definite voci di associazione e le variabili di C/C++.|
 |*Ordinal*|Numero ordinale, a partire da uno, del **Recordset** campo corrispondente alla variabile di C/C++.|
-|*DataType*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Il valore di **Recordset** campo verrà convertito in questo tipo di dati se necessario.|
+|*Tipo di dati*|Tipo di dati ADO equivalente della variabile C/C++ (vedere [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) per un elenco di tipi di dati validi). Il valore di **Recordset** campo verrà convertito in questo tipo di dati se necessario.|
 |*Buffer*|Nome della variabile C/C++ in cui il **Recordset** campo verrà archiviato.|
 |*Dimensione*|Dimensione massima in byte di *Buffer*. Se *Buffer* conterrà una stringa di lunghezza variabile, consentire spazio per un terminazione zero.|
 |*Stato*|Nome di una variabile che indica se il contenuto di *Buffer* validi e se la conversione del campo da *DataType* ha avuto esito positivo.<br /><br /> I due valori più importanti per questa variabile sono **adFldOK**, ovvero la conversione ha avuto esito positivo; e **adFldNull**, ovvero il valore del campo è una variante del tipo VT_NULL e non semplicemente vuoto.<br /><br /> I valori possibili per *stato* sono elencati nella tabella seguente, "Valori di Status".|
 |*Modificare*|Flag booleano. Se TRUE, indica ad ADO è consentito aggiornare corrispondente **Recordset** campo con il valore contenuto in *Buffer*.<br /><br /> Impostare il valore booleano *modificare* parametro su TRUE per abilitare ADO aggiornare il campo associato e FALSE se si desidera esaminare il campo, ma non modificarlo.|
 |*Precisione*|Numero di cifre che può essere rappresentato in una variabile numerica.|
 |*Scala*|Numero di posizioni decimali in una variabile numerica.|
-|*Length*|Nome di una variabile a quattro byte che contiene la lunghezza effettiva dei dati in *Buffer*.|
+|*Lunghezza*|Nome di una variabile a quattro byte che contiene la lunghezza effettiva dei dati in *Buffer*.|
 
 ## <a name="status-values"></a>Valori di stato
  Il valore di *stato* variabile indica se un campo è stato copiato correttamente a una variabile.
 
  Durante l'impostazione di dati, *stato* può essere impostata su **adFldNull** per indicare il **Recordset** campo deve essere impostato su null.
 
-|Costante|Value|Description|
+|Costante|valore|Description|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|È stato restituito un valore di campo non null.|
 |**adFldBadAccessor**|1|Associazione non è valida.|

@@ -2,7 +2,6 @@
 title: Provider Microsoft OLE DB per ODBC | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 612ca78e6af181aaf3e2d3b1eb16ae5fea7eec3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f539df9c19bacbe449479f45d5e7fd4fe59613d5
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271630"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Provider Microsoft OLE DB per ODBC Panoramica
 Per un programmatore di ADO o RDS, un mondo ideale sarebbe uno in cui ogni tipo di dati origine espone un'interfaccia OLE DB, in modo che ADO è possibile chiamare direttamente nell'origine dati. Anche se un numero sempre maggiore di fornitori di database siano implementando le interfacce OLE DB, alcune origini dati non sono ancora esposte in questo modo. Tuttavia, è possano accedere la maggior parte dei sistemi DBMS attualmente in uso tramite ODBC.
@@ -84,7 +84,7 @@ MSDASQL
 DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ```
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
  Se si utilizza un **DSN** o **FileDSN**, deve essere definita tramite Amministrazione origine dati ODBC nel Pannello di controllo di Windows. In Microsoft Windows 2000, l'amministratore ODBC si trova in strumenti di amministrazione. Nelle versioni precedenti di Windows, l'icona del ruolo Amministratore ODBC è denominata **ODBC a 32 bit** o semplicemente **ODBC**.
 
  In alternativa all'impostazione un **DSN**, è possibile specificare il driver ODBC (**DRIVER =**), ad esempio "SQL Server"; il nome del server (**SERVER =**); e il nome del database (**DATABASE =**).
@@ -187,7 +187,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Sola lettura|Sola lettura|Sola lettura|Sola lettura|
-|[Filtra](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
+|[Filter](../../../ado/reference/ado-api/filter-property.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lettura/scrittura|lettura/scrittura|lettura/scrittura|lettura/scrittura|
@@ -208,7 +208,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Annulla](../../../ado/reference/ado-api/cancel-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sì|Sì|Sì|Sì|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sì|Sì|Sì|Sì|
-|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|no|No|Sì|Sì|
+|[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|no|no|Sì|Sì|
 |[Chiudi](../../../ado/reference/ado-api/close-method-ado.md)|Sì|Sì|Sì|Sì|
 |[Elimina](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sì|Sì|Sì|Sì|
@@ -218,10 +218,10 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Metodo MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sì|Sì|Sì|Sì|
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|no|Sì|Sì|Sì|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sì|Sì|Sì|Sì|
-|[Apertura](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
+|[Aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sì|Sì|Sì|Sì|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sì|Sì|Sì|Sì|
-|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|no|No|Sì|Sì|
-|[Supporti](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
+|[Risincronizzazione](../../../ado/reference/ado-api/resync-method.md)|no|no|Sì|Sì|
+|[Supporta](../../../ado/reference/ado-api/supports-method.md)|Sì|Sì|Sì|Sì|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sì|Sì|Sì|Sì|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sì|Sì|Sì|Sì|
 
@@ -246,7 +246,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Definizione di colonna|DBPROP_COLUMNDEFINITION|
 |Timeout di connessione|DBPROP_INIT_TIMEOUT|
 |Catalogo corrente|DBPROP_CURRENTCATALOG|
-|Data Source|DBPROP_INIT_DATASOURCE|
+|origine dati|DBPROP_INIT_DATASOURCE|
 |Nome origine dati|DBPROP_DATASOURCENAME|
 |Modello di Threading oggetto origine dei dati|DBPROP_DSOTHREADMODEL|
 |Nome DBMS|DBPROP_DBMSNAME|
@@ -264,7 +264,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Dimensioni massime delle righe|DBPROP_MAXROWSIZE|
 |Dimensioni massime riga con BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Numero massimo di tabelle in SELECT|DBPROP_MAXTABLESINSELECT|
-|Elabora partizione/i|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Più set di parametri|DBPROP_MULTIPLEPARAMSETS|
 |Più risultati|DBPROP_MULTIPLERESULTS|
 |Più oggetti di archiviazione|DBPROP_MULTIPLESTORAGEOBJECTS|
