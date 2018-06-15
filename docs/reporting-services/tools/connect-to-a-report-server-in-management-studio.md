@@ -30,6 +30,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033728"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Eseguire la connessione a un server di report in Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fornisce Esplora oggetti, che consente di connettersi a qualsiasi server della famiglia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e di visualizzarne graficamente il contenuto. Per Reporting Services, è possibile utilizzare Esplora oggetti per effettuare le operazioni seguenti:  

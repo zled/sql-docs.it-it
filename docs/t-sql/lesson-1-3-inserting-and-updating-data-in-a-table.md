@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33062218"
 ---
 # <a name="lesson-1-3---inserting-and-updating-data-in-a-table"></a>Lezione 1-3 - Inserimento e aggiornamento dei dati in una tabella
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]

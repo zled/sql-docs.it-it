@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024148"
 ---
 # <a name="report-builder-functions---level-function"></a>Funzioni di Generatore report - Funzione Level
   Restituisce il livello di nidificazione corrente in una gerarchia ricorsiva.  

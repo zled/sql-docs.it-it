@@ -33,6 +33,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026024"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Passaggio delle impostazioni relative alle informazioni sul dispositivo alle estensioni per il rendering
   In [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]le impostazioni relative alle informazioni sul dispositivo vengono usate per passare i parametri di rendering a un'estensione per il rendering. Le impostazioni nel servizio Web ReportServer vengono passate come elemento XML **DeviceInfo** ed elaborate dal server di report. Poiché le impostazioni delle informazioni sul dispositivo dispongono di valori predefiniti, sono considerate argomenti facoltativi nel processo di rendering. È tuttavia possibile usare le impostazioni delle informazioni sul dispositivo per personalizzare il rendering ed eseguire l'override dei valori predefiniti forniti dal server.  
