@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906116"
 ---
 # <a name="c-to-sql-time"></a>C a SQL: ora
 L'identificatore per il tipo di dati ODBC C ora è:  

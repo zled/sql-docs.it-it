@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911366"
 ---
 # <a name="features-to-watch-for"></a>Funzionalità di controllo per
 In questa sezione descrive alcune delle funzionalità che gli sviluppatori di applicazioni accettano spesso per concesso. Infatti, queste funzionalità variano notevolmente in supporto e modalità di supporto tra DBMS; Errore nel codice per essi è possono causare problemi in applicazioni interoperative.  

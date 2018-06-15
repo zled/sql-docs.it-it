@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908526"
 ---
 # <a name="dbms-based-drivers"></a>Driver basati su DBMS
 Driver basati su DBMS vengono utilizzati con origini dati, ad esempio Oracle o SQL Server che forniscono un motore di database autonomo per il driver da utilizzare. Questi driver accedere ai dati fisici tramite il motore autonomo; ovvero sono inviare istruzioni SQL e recuperare i risultati dal motore.  

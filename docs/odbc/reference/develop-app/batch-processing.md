@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910406"
 ---
 # <a name="batch-processing"></a>Elaborazione batch
 Supporto per i batch di istruzioni SQL non è generalizzato, applicazioni interoperative devono utilizzarli in modo condizionale o non è affatto. Per ulteriori informazioni, vedere [l'esecuzione batch](../../../odbc/reference/develop-app/executing-batches.md).

@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910477"
 ---
 # <a name="data-buffer-type"></a>Tipo di Buffer di dati
 Il tipo di dati C di un buffer specificato dall'applicazione. Con una singola variabile, questo errore si verifica quando l'applicazione alloca la variabile. Con generici per la memoria, vale a dire memoria a cui fa riferimento un puntatore di tipo void, questo errore si verifica quando l'applicazione esegue il cast della memoria per un particolare tipo. Il driver individua questo tipo in due modi:  

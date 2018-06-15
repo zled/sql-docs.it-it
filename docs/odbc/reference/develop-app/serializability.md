@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913626"
 ---
 # <a name="serializability"></a>Serializzabilità è infatti
 In teoria, le transazioni devono essere *serializzabile*. Le transazioni vengono considerate serializzabile se i risultati dell'esecuzione di transazioni contemporaneamente sono gli stessi, come i risultati dell'esecuzione di tali in modo seriale, vale a dire, una dopo l'altra. Non è importante la transazione viene eseguito per primo, solo che il risultato non rifletta qualsiasi combinazione delle transazioni.  

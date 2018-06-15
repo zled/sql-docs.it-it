@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905536"
 ---
 # <a name="bookmark-c-data-type"></a>Tipo di dati C a segnalibro
 Il tipo di dati C segnalibro consente a un'applicazione recuperare un segnalibro. I tipi di segnalibro C vengono utilizzati solo per recuperare i valori di segnalibro che possono essere una variabile di lunghezza. non devono essere convertiti in altri tipi di dati. Un'applicazione recupera un segnalibro dalla colonna 0 del risultato impostata con **SQLBulkOperations** (con un'operazione di SQL_ADD), **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**. Per ulteriori informazioni, vedere [segnalibri](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

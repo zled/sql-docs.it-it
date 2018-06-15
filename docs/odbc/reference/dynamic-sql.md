@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916896"
 ---
 # <a name="dynamic-sql"></a>SQL dinamica
 Sebbene SQL statico funziona bene in molte situazioni, è disponibile una classe di applicazioni in cui l'accesso ai dati non è possibile determinare in anticipo. Si supponga, ad esempio, che consente di immettere una query, il foglio di calcolo inviato per il sistema DBMS per recuperare dati da un foglio di calcolo. Il contenuto di questa query ovviamente non può essere noto al programmatore di quando viene scritto il foglio di calcolo.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910826"
 ---
 # <a name="binding-result-set-columns"></a>Colonne del Set di risultati di associazione
 Le applicazioni possono associare come molti o con il minor numero di colonne del set di risultati a propria scelta, tra cui non associazione colonne affatto. Quando viene recuperata una riga di dati, il driver restituisce i dati per le colonne associate all'applicazione. Se l'applicazione associa tutte le colonne nel set di risultati dipende dall'applicazione. Ad esempio, le applicazioni che generano i rapporti in genere hanno un formato fisso; tali applicazioni creare un set di risultati contenente tutte le colonne utilizzate nel report e quindi associare e recuperano i dati per tutte queste colonne. Le applicazioni che consentono di visualizzare schermate completa dei dati talvolta consentono all'utente di decidere le colonne da visualizzare. tali applicazioni creare un set di risultati contenente tutte le colonne, l'utente potrebbe comunque ma associare e recuperare i dati solo per le colonne selezionate dall'utente.  

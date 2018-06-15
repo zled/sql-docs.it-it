@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908366"
 ---
 # <a name="basic-odbc-application-steps"></a>Passaggi di base ODBC applicazione
 In questa sezione viene descritto il flusso generale delle applicazioni ODBC. È improbabile che qualsiasi applicazione chiami tutte queste funzioni in esattamente questo ordine. La maggior parte delle applicazioni di utilizzare variazioni di questi passaggi. Nella figura seguente vengono illustrati i passaggi base dell'applicazione.  

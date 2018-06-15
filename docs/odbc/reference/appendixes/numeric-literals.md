@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906446"
 ---
 # <a name="numeric-literals"></a>Valori letterali numerici
 Quando i valori di dati numerici vengono archiviati nelle stringhe di caratteri, vengono utilizzati valori letterali numerici. Per la conversione di dati numerici di SQL su una stringa SQL_C_CHAR o conversione di dati numerici di C in una stringa SQL_CHAR o SQL_VARCHAR, sintassi del valore letterale numerica viene utilizzata per specificare il contenuto archiviato nel database di destinazione. Per la conversione di numerico archiviato come stringa SQL_C_CHAR a dati numerici di SQL o numerico archiviato sotto forma di stringa a dati C numerici SQL_CHAR, questa sintassi è utilizzata per convalidare il contenuto archiviato nell'origine.  

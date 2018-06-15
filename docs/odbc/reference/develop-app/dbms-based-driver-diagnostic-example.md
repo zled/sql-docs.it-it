@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910846"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Esempio di diagnostica di Driver basati su DBMS
 Un driver basati su DBMS invia le richieste a un sistema DBMS e restituisce informazioni per l'applicazione tramite Gestione Driver. Poiché il driver è il componente che si interfaccia con gestione Driver, viene formattato e restituisce gli argomenti per **SQLGetDiagRec**.  

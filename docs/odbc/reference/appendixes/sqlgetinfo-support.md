@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912486"
 ---
 # <a name="sqlgetinfo-support"></a>Supporto SQLGetInfo
 Quando un'applicazione ODBC 2. *x* applicazione chiama **SQLGetInfo** per un'applicazione ODBC 3*x* driver, il *InfoType* argomenti nella tabella seguente devono essere supportati.  

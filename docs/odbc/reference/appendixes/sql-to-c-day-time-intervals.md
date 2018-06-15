@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910616"
 ---
 # <a name="sql-to-c-day-time-intervals"></a>SQL a intervalli di giorno-Time c:
 Gli identificatori per i tipi di dati SQL ODBC intervallo di tempo di giorno sono:  

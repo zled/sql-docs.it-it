@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916076"
 ---
 # <a name="odbc-overview"></a>Panoramica ODBC
 Open Database Connectivity (ODBC) è una diffuso API application programming interface () per l'accesso al database. È basato sulle specifiche di interfaccia a livello di chiamata (CLI) da Open Group e ISO/IEC per API di database e si utilizza Structured Query Language (SQL) poiché la lingua di accesso del database.  

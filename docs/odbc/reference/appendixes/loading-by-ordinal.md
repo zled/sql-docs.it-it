@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906246"
 ---
 # <a name="loading-by-ordinal"></a>Caricamento da ordinale
 In ODBC 2. *x*, è possibile eseguire il caricamento da numero ordinale per migliorare le prestazioni del processo di connessione. Un database ODBC 2. *x* driver Esporta una funzione fittizia con l'ordinale 199; quando Gestione Driver rileva, risolve gli indirizzi delle funzioni ODBC per ordinale e non per nome. Questa funzionalità è ancora supportata per l'API ODBC 2. *x* driver ma non è supportata per ODBC 3*x* driver.

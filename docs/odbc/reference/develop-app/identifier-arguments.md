@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911516"
 ---
 # <a name="identifier-arguments"></a>Argomenti di tipo identificatore
 Se una stringa in un argomento dell'identificatore è racchiuso tra virgolette, il driver rimuove iniziali e gli spazi vuoti finali e considera letteralmente la stringa tra virgolette. Se la stringa non è racchiuso tra virgolette, il driver rimuove riduzioni e gli spazi vuoti finali stringa in maiuscolo. L'impostazione di un argomento dell'identificatore a un puntatore null restituisce SQL_ERROR e SQLSTATE HY009 (utilizzo non valido del puntatore null), a meno che l'argomento è un nome di catalogo e i cataloghi non sono supportati.  

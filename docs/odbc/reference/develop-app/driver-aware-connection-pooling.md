@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912676"
 ---
 # <a name="driver-aware-connection-pooling"></a>Pool di connessioni compatibile con il driver
 Il pool di connessioni compatibile con il driver è una nuova funzionalità di gestione Driver in Windows 8. Il pool di connessioni compatibile con il driver consente agli autori di driver di personalizzare il comportamento nel driver ODBC di pool di connessioni.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908146"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Funzione di conversione di tipi di dati esplicite
 Conversione di tipi di dati esplicito è specificata in termini di definizioni dei tipi di dati SQL.  

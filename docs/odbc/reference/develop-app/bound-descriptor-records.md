@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907569"
 ---
 # <a name="bound-descriptor-records"></a>Record del descrittore di binding
 Quando l'applicazione imposta il campo SQL_DESC_DATA_PTR di un record di descrittore in modo che non contiene un valore null, il record è detto *associato*.  

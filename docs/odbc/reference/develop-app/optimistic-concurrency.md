@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914346"
 ---
 # <a name="optimistic-concurrency"></a>Concorrenza ottimistica
 *Concorrenza ottimistica* il relativo nome deriva dal presupposto ottimistico che raramente si verificheranno conflitti tra le transazioni, viene definito un conflitto si sono verificati quando un'altra transazione aggiorna o elimina una riga di dati tra il momento in cui viene letto la transazione corrente e l'ora viene aggiornata o eliminata. È l'opposto di *concorrenza pessimistica,* o di blocco, in cui lo sviluppatore dell'applicazione ritiene che tali conflitti siano comuni.  

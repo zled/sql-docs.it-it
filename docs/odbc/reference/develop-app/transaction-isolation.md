@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914776"
 ---
 # <a name="transaction-isolation"></a>Isolamento delle transazioni
 *Isolamento delle transazioni* indica il livello di interazione tra più transazioni simultanee. Per visualizzare perché questo è importante, è necessario innanzitutto controllare il concetto di serializzabilità.  

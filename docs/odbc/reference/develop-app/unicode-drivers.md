@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914886"
 ---
 # <a name="unicode-drivers"></a>Driver di Unicode
 Se un driver deve essere un driver Unicode o un driver ANSI dipende interamente la natura dell'origine dati. Se l'origine dati supporta dati Unicode, il driver deve essere un driver di Unicode. Se l'origine dati supporta solo i dati ANSI, il driver deve rimanere un driver ANSI.  

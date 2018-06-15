@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913006"
 ---
 # <a name="retrieving-results-basic"></a>Il recupero dei risultati (Basic)
 Oggetto *set di risultati* è un set di righe nell'origine dati che soddisfa determinati criteri. È una tabella concettuale che nei risultati di una query e che sia disponibile per un'applicazione in formato tabulare. **Selezionare** istruzioni, funzioni di catalogo e alcune procedure creano set di risultati. Nell'esempio seguente, la prima istruzione SQL crea un set di risultati contenente tutte le righe e tutte le colonne nella tabella Orders e la seconda istruzione SQL crea un set di risultati contenente le colonne OrderID, venditore e stato per le righe nella tabella Orders in cui lo stato è aperto:  

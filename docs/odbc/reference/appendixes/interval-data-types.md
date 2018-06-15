@@ -34,6 +34,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909566"
 ---
 # <a name="interval-data-types"></a>Tipi di dati di intervallo
 Un intervallo è definito come la differenza tra due date e ore. Gli intervalli sono espressi in uno dei due modi diversi. Uno è un *anno-mese* intervallo espresso intervalli in termini di anni e un numero integrale di mesi. L'altro è un *diurno* intervallo che esprime gli intervalli in termini di giorni, minuti e secondi. Questi due tipi di intervalli sono distinti e non possono essere combinati, perché i mesi possono avere un numero di giorni.  

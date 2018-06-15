@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910786"
 ---
 # <a name="odbc-fundamentals"></a>Nozioni fondamentali su ODBC
 In questa sezione vengono trattati gli argomenti seguenti.  

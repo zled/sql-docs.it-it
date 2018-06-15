@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914296"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Istruzioni SQL costruite in fase di esecuzione
 Applicazioni che eseguono analisi ad hoc comunemente compilare istruzioni SQL in fase di esecuzione. Ad esempio, un foglio di calcolo potrebbe consentire a un utente di selezionare le colonne da cui recuperare i dati:  
