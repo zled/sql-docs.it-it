@@ -2,7 +2,6 @@
 title: Open (metodo) (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c6fb508318c54e4b82a4efd301b889baadad6edc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 69f746be975d56c4cb6ff6bcb4fd85905acd71bb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284540"
 ---
 # <a name="open-method-ado-md"></a>Open (metodo) (ADO MD)
 Recupera i risultati di una query multidimensionale e restituisce i risultati in un [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
@@ -39,12 +39,12 @@ Cellset.Open Source, ActiveConnection
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativa. Oggetto **Variant** che restituisce una query multidimensionale valida, ad esempio una query MDX (Multidimensional Expression). Il *origine* argomento corrisponde alla [origine](../../../ado/reference/ado-md-api/source-property-ado-md.md) proprietà. Per ulteriori informazioni su MDX, vedere il [OLE DB per l'elaborazione OLAP (Online Analytical)](http://msdn.microsoft.com/en-us/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentazione di Microsoft Data Access Components SDK.  
+ Facoltativo. Oggetto **Variant** che restituisce una query multidimensionale valida, ad esempio una query MDX (Multidimensional Expression). Il *origine* argomento corrisponde alla [origine](../../../ado/reference/ado-md-api/source-property-ado-md.md) proprietà. Per ulteriori informazioni su MDX, vedere il [OLE DB per l'elaborazione OLAP (Online Analytical)](http://msdn.microsoft.com/en-us/8a7673c6-3ca1-4411-9f1e-adf1e47df4f3) documentazione di Microsoft Data Access Components SDK.  
   
  *ActiveConnection*  
- Facoltativa. Oggetto **Variant** che restituisce una stringa che specifica un valido ADO [connessione](../../../ado/reference/ado-api/connection-object-ado.md) nome di variabile o una definizione per una connessione dell'oggetto. Il *ActiveConnection* argomento specifica la connessione in cui aprire il [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto. Se si passa una definizione di connessione per questo argomento, ADO apre una nuova connessione utilizzando i parametri specificati. Il *ActiveConnection* argomento corrisponde alla [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) proprietà.  
+ Facoltativo. Oggetto **Variant** che restituisce una stringa che specifica un valido ADO [connessione](../../../ado/reference/ado-api/connection-object-ado.md) nome di variabile o una definizione per una connessione dell'oggetto. Il *ActiveConnection* argomento specifica la connessione in cui aprire il [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto. Se si passa una definizione di connessione per questo argomento, ADO apre una nuova connessione utilizzando i parametri specificati. Il *ActiveConnection* argomento corrisponde alla [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) proprietà.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **aprire** metodo genera un errore se uno dei relativi parametri viene omesso e il valore della proprietà corrispondente non è stata impostata prima di tentare di aprire il **set di celle**.  
   
 ## <a name="applies-to"></a>Si applica a  

@@ -2,7 +2,6 @@
 title: Livello di oggetto (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d3f515c5bc8eaac8e674bcf82bd3a5e47eeefc0f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 35263c640b1446397776a4365349afdd522d78f4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283990"
 ---
 # <a name="level-object-ado-md"></a>Oggetto di livello (ADO MD)
 Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di una gerarchia.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Raccolte e le proprietà di un **livello** dell'oggetto, è possibile eseguire le operazioni seguenti:  
   
 -   Identificare il **livello** con il [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) e [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) proprietà.  
@@ -46,7 +46,7 @@ Contiene un set di membri, ognuno dei quali ha lo stesso rango all'interno di un
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|Nome|Description|  
+|nome|Description|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |CubeName|Nome del cubo.|  

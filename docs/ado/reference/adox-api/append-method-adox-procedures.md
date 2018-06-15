@@ -2,7 +2,6 @@
 title: Append (metodo) (procedure ADOX) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 83e3973bccfd0466ed7d912b4fc4d1c63b6da7a7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bc5721f8806481de872d0c3e1de7d47a3720dfa9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284860"
 ---
 # <a name="append-method-adox-procedures"></a>Append (metodo) (ADOX procedure)
 Aggiunge un nuovo [procedura](../../../ado/reference/adox-api/procedure-object-adox.md) dell'oggetto per il [procedure](../../../ado/reference/adox-api/procedures-collection-adox.md) insieme.  
@@ -44,7 +44,7 @@ Procedures.Append Name, Command
  *Command*  
  Un oggetto ADO [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto che rappresenta la procedura per creare e aggiungere.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Crea una nuova stored procedure nell'origine dati con il nome e gli attributi specificati nel **comando** oggetto.  
   
  Se il testo del comando specificato dall'utente rappresenta una vista piuttosto che una stored procedure, il comportamento è dipende dal provider in uso. **Aggiungere** avrà esito negativo se il provider non supporta i comandi di persistenza.  

@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,16 +16,17 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bdb021c9d036a3daab6b0e5c3f4912c0da4059eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d38ec14d124bcf45c4eb22188f86849d95f0275
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283410"
 ---
 # <a name="ado-glossary"></a>Glossario di ADO
 In questo argomento definisce termini rilevanti per ADO.  
   
-## <a name="a"></a>A  
+## <a name="a"></a>Un  
  URL assoluto  
  Un URL completo che specifica il percorso di una risorsa che si trova su Internet o intranet. Vedere anche *URL* e *URL relativo*.  
   
@@ -68,7 +68,7 @@ In questo argomento definisce termini rilevanti per ADO.
  regola di Business  
  La combinazione di modifiche di convalida, verifiche di accesso, ricerche nel database, i criteri e trasformazioni algoritmiche che costituiscono un'azienda di attività di business. Noto anche come *logica di business*.  
   
-## <a name="c"></a>C  
+## <a name="c"></a>c  
  Espressione calcolata  
  Un'espressione non costante, ma il cui valore dipende da altri valori. Per poter essere valutata un'espressione calcolata è necessario ottenere e calcolare i valori da altre origini, in genere in altri campi o righe.  
   
@@ -253,7 +253,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Proxy  
  Un oggetto specifico dell'interfaccia che fornisce il marshalling dei parametri e la comunicazione richiesti da un client chiamare un oggetto di applicazione che è in esecuzione in un ambiente di esecuzione diverso, ad esempio in un thread diverso o in un altro processo. Il proxy con il client si trova e comunica con uno stub corrispondente si trova all'oggetto applicazione che viene chiamato. Vedere anche stub.  
   
-## <a name="r"></a>L  
+## <a name="r"></a>R  
  URL relativo  
  URL parziale che specifica una risorsa in Internet o intranet il cui percorso è relativo a un punto di partenza specificato da un URL assoluto o un oggetto ADO Connection equivalente. In effetti, la concatenazione assoluto e relativo URL rappresentare un URL completo. Vedere anche URL e l'URL assoluto.  
   
@@ -292,7 +292,7 @@ In questo argomento definisce termini rilevanti per ADO.
  Operazione avviata dal codice che viene completato prima che venga avviato l'operazione successiva. Vedere anche l'operazione asincrona.  
   
 ## <a name="t-z"></a>T-Z  
- trEE  
+ Tree  
  Struttura che rappresenta una relazione gerarchica tra gli elementi (nodi). È presente un nodo al livello superiore di una struttura ad albero (radice). Sotto la radice, possono essere presenti più figli. Ogni elemento figlio a sua volta potrebbe essere l'elemento padre di altri elementi figlio, pertanto la diramazione come una struttura ad albero. Una cartella contenente i documenti e altre cartelle è un esempio tipico di una struttura ad albero. Vedere anche gerarchia, nodo, radice, figlio, padre.  
   
  Server Web  

@@ -2,7 +2,6 @@
 title: Metodo UpdateBatch | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75fa802b85b1bdb9f2dcd97af8c244a41f7ec37b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3c7b25df0679596485586393993ba718f08542bf
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282810"
 ---
 # <a name="updatebatch-method"></a>Metodo UpdateBatch
 Scrive tutti gli aggiornamenti di batch in sospeso sul disco.  
@@ -39,12 +39,12 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **UpdateBatch** saranno influenzati dal metodo.  
+ Facoltativo. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che indica il numero di record di **UpdateBatch** saranno influenzati dal metodo.  
   
  *PreserveStatus*  
- Facoltativa. Oggetto **booleano** valore che specifica se le modifiche locali, come indicato dal [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà, deve essere eseguito il commit. Se questo valore è impostato su **True**, **stato** proprietà di ogni record rimane invariata dopo il completamento dell'aggiornamento.  
+ Facoltativo. Oggetto **booleano** valore che specifica se le modifiche locali, come indicato dal [stato](../../../ado/reference/ado-api/status-property-ado-recordset.md) proprietà, deve essere eseguito il commit. Se questo valore è impostato su **True**, **stato** proprietà di ogni record rimane invariata dopo il completamento dell'aggiornamento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **UpdateBatch** metodo quando si modifica un **Recordset** oggetto in modalità di aggiornamento batch per trasmettere tutte le modifiche apportate un **Recordset** oggetto al database sottostante.  
   
  Se il **Recordset** oggetto supporta l'aggiornamento in batch, è possibile memorizzare nella cache più modifiche a uno o più record localmente finché non si chiama il **UpdateBatch** metodo. Se si modifica il record corrente o aggiungendo un nuovo record quando si chiama il **UpdateBatch** (metodo), ADO chiamerà automaticamente il [aggiornamento](../../../ado/reference/ado-api/update-method.md) per salvare le modifiche in sospeso per il record corrente prima di trasmettere le modifiche in blocco al provider. È consigliabile utilizzare l'aggiornamento in blocco con un solo cursore statico o keyset.  

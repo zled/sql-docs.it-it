@@ -2,7 +2,6 @@
 title: Valore di proprietà (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -21,11 +20,12 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8a7a96d3b663afb8c30eea502e475487ae0572d7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 45f028bf6aaa1273f7220519fc5dfa76c1365437
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282830"
 ---
 # <a name="value-property-ado"></a>Valore proprietà (ADO)
 
@@ -35,7 +35,7 @@ Indica il valore assegnato a un [campo](../../../ado/reference/ado-api/field-obj
 
 Restituisce o imposta un **Variant** valore che indica il valore dell'oggetto. Dipende dal valore predefinito di [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà.
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
 
 Utilizzare il **valore** proprietà per impostare o restituire dati da **campo** oggetti, per impostare o restituire i valori dei parametri con **parametro** oggetti, oppure per impostare o restituire le impostazioni di proprietà con **Proprietà** oggetti. Se il **valore** proprietà è di lettura/scrittura o sola lettura dipende da numerosi fattori. vedere gli argomenti corrispondenti per ulteriori informazioni.
 

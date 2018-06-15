@@ -2,7 +2,6 @@
 title: Evento WillExecute (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 28d9fee251d53f5966f83fb1a49d3ecd75fe0813
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d0fd9c97018c5c15710067298a88b4996c5a699f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282880"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 Il **WillExecute** eventi viene chiamato prima dell'esecuzione di un comando in sospeso su una connessione.  
@@ -62,7 +62,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  Il [connessione ADO (Object)](../../../ado/reference/ado-api/connection-object-ado.md) dell'oggetto per cui si applica questa notifica dell'evento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Oggetto **WillExecute** evento può verificarsi a causa di una connessione.  [Execute (metodo) (connessione ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), [metodo Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md), o [Open (metodo) (Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo il *pConnection* deve parametro contengono sempre un riferimento valido a un **connessione** oggetto. Se l'evento è dovuto al **Connection**, *pRecordset* e *pCommand* sono impostati su **nulla**. Se l'evento è dovuto al **Open**, *pRecordset* parametro farà riferimento il **Recordset** oggetto e *pCommand* parametro è impostato su **nulla**. Se l'evento è dovuto al **Command. Execute**, *pCommand* parametro farà riferimento il **comando** oggetto e *pRecordset* parametro è impostato su **nulla**.  
   
  **WillExecute** consente di esaminare e modificare i parametri di esecuzione in sospeso. Questo evento può restituire una richiesta di annullamento che il comando in sospeso.  

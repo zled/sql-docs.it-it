@@ -2,7 +2,6 @@
 title: Cella di oggetti (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 22227f22f42e5848b0826028a855b31b4b82443a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f82bfdf0e1b61d3b6fdab096af77f8b843178384
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283430"
 ---
 # <a name="cell-object-ado-md"></a>Oggetto Cell (ADO MD)
 Rappresenta i dati in corrispondenza dell'intersezione delle coordinate dell'asse contenuti in un set di celle.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Oggetto **cella** viene restituito dal [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) proprietà di un [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) oggetto.  
   
  Raccolte e le proprietà di un **cella** dell'oggetto, è possibile eseguire le operazioni seguenti:  
@@ -46,7 +46,7 @@ Rappresenta i dati in corrispondenza dell'intersezione delle coordinate dell'ass
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|Nome|Description|  
+|nome|Description|  
 |----------|-----------------|  
 |ColoreSfondo|Colore di sfondo utilizzato per la visualizzazione della cella.|  
 |FontFlags|Maschera di bit in dettaglio gli effetti sul tipo di carattere.|  

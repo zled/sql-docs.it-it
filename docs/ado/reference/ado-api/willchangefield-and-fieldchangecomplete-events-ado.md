@@ -2,7 +2,6 @@
 title: Eventi WillChangeField e FieldChangeComplete (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -24,11 +23,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7e141b989d671e37818f09cf4dbf173e9fd23d6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 108aea1a4f8106c3a84b411591d4866235726efc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282851"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventi WillChangeField e FieldChangeComplete (ADO)
 Il **WillChangeField** eventi viene chiamato prima che un'operazione in sospeso cambia il valore di uno o più [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti di [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Il **FieldChangeComplete** eventi viene chiamato dopo il valore di uno o più **campo** oggetti è stato modificato.  
@@ -65,7 +65,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  Oggetto **Recordset** oggetto. Il **Recordset** per cui si è verificato l'evento.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  A **WillChangeField** o **FieldChangeComplete** evento può verificarsi quando si imposta la [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà e la chiamata di [aggiornamento](../../../ado/reference/ado-api/update-method.md) (metodo) con i parametri di matrice campo e valore.  
   
 ## <a name="see-also"></a>Vedere anche  

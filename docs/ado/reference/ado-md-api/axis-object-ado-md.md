@@ -2,7 +2,6 @@
 title: Oggetto asse (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 689bc6f49df65025bea7df44110cf02b4ec09ba0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66dfcb418d7a440b260956d411ae87b9601d4274
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283370"
 ---
 # <a name="axis-object-ado-md"></a>Oggetto asse (ADO MD)
 Rappresenta una posizione o l'asse filtro di un set di celle contenente i membri selezionati di una o più dimensioni.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Un **asse** oggetto può essere contenuto da un [assi](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) insieme, o restituiti dal [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) proprietà di un [set di celle](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
  Raccolte e le proprietà di un **asse** dell'oggetto, è possibile eseguire le operazioni seguenti:  

@@ -2,7 +2,6 @@
 title: ResyncEnum | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 79752a7733450fc1e6761f39cd49fb6f808a334b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3b974d00ecb1fb4d0d9d7e431f28df16f945d778
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281360"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 Specifica se i valori sottostanti vengono sovrascritti da una chiamata a [Resync](../../../ado/reference/ado-api/resync-method.md).  
   
-|Costante|Value|Description|  
+|Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|Valore predefinito. Sovrascrive i dati e gli aggiornamenti in sospeso vengono annullate.|  
 |**adResyncUnderlyingValues**|1|Non sovrascrivere i dati e gli aggiornamenti in sospeso non vengono annullate.|  

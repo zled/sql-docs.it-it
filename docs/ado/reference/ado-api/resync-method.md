@@ -2,7 +2,6 @@
 title: Metodo Resync | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -23,11 +22,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 187f1397cbdb4e6ccdfc39b573f301fce1a957ed
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 96853ed76d4fa94092ecedd54978ee9cfbd25497
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281420"
 ---
 # <a name="resync-method"></a>Risincronizzazione (metodo)
 Aggiorna i dati nell'oggetto [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto, o [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md) oggetto dal database sottostante.  
@@ -41,12 +41,12 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
 #### <a name="parameters"></a>Parametri  
  *AffectRecords*  
- Facoltativa. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record di **Resync** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il **Resync** metodo il **campi** raccolta di un **Record** oggetto.  
+ Facoltativo. Un [AffectEnum](../../../ado/reference/ado-api/affectenum.md) valore che determina il numero di record di **Resync** saranno influenzati dal metodo. Il valore predefinito è **adAffectAll**. Questo valore non è disponibile con il **Resync** metodo il **campi** raccolta di un **Record** oggetto.  
   
  *ResyncValues*  
- Facoltativa. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
+ Facoltativo. Oggetto [ResyncEnum](../../../ado/reference/ado-api/resyncenum.md) valore che specifica se i valori sottostanti vengono sovrascritti. Il valore predefinito è **adResyncAllValues**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>recordset  
  Utilizzare il **Resync** metodo risincronizzare i record nell'oggetto **Recordset** con il database sottostante. Ciò è utile se si utilizza un cursore statico o forward-only, ma si desidera visualizzare tutte le modifiche nel database sottostante.  

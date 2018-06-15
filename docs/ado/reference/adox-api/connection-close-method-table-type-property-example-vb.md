@@ -2,7 +2,6 @@
 title: Connessione Close (metodo), esempio di proprietà di tipo tabella (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 98e7ba7600ddcb19487d604f2f62f520770a6543
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 13ff79486ee041981a95eda537317d5406364429
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35285330"
 ---
 # <a name="connection-close-method-table-type-property-example-vb"></a>Connessione Close (metodo), esempio di proprietà di tipo tabella (Visual Basic)
 L'impostazione di [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) proprietà **nulla** deve chiudere la connessione al catalogo. Raccolte associate sarà vuote. Tutti gli oggetti creati da oggetti dello schema nel catalogo risulterà orfano. Tutte le proprietà per gli oggetti memorizzati nella cache sarà comunque disponibile, ma un tentativo di leggere le proprietà che richiede una chiamata al provider avrà esito negativo.  

@@ -2,7 +2,6 @@
 title: Proprietà Version (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9198d706b668b2185924ed7141344cd2352ab005
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5f67d4737bdf7e7eee528f190855047aea06a18a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282687"
 ---
 # <a name="version-property-ado"></a>Proprietà Version (ADO)
 Indica il numero di versione di ADO.  
@@ -34,7 +34,7 @@ Indica il numero di versione di ADO.
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **stringa** valore che indica la versione.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **versione** proprietà per restituire il numero di versione dell'implementazione di ADO.  
   
  La versione del provider saranno disponibile come proprietà dinamica nel [proprietà](../../../ado/reference/ado-api/properties-collection-ado.md) insieme.  

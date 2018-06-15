@@ -2,7 +2,6 @@
 title: Tipo di proprietà (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78984a64299b947afe71d07e8a9155b9594173e5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 33bf90a2ac3101cbf582449f2b5495f110a37a62
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282570"
 ---
 # <a name="type-property-ado"></a>Proprietà di tipo (ADO)
 Indica il tipo di dati o di tipo operativo di un [parametro](../../../ado/reference/ado-api/parameter-object.md), [campo](../../../ado/reference/ado-api/field-object.md), o [proprietà](../../../ado/reference/ado-api/property-object-ado.md) oggetto.  
@@ -33,7 +33,7 @@ Indica il tipo di dati o di tipo operativo di un [parametro](../../../ado/refere
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) valore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per **parametro** oggetti, il **tipo** proprietà è di lettura/scrittura. Per i nuovi **campo** gli oggetti che sono stati accodati per il [campi](../../../ado/reference/ado-api/fields-collection-ado.md) raccolta di un [Record](../../../ado/reference/ado-api/record-object-ado.md), **tipo** è di lettura/scrittura solo dopo il [ Valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà per il **campo** è stato specificato e il provider di dati è stato aggiunto il nuovo **campo** chiamando il [aggiornare](../../../ado/reference/ado-api/update-method.md)metodo il **campi** insieme.  
   
  Per tutti gli altri oggetti, il **tipo** proprietà è di sola lettura.  

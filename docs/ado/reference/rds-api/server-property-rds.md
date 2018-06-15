@@ -6,8 +6,7 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.suite: sql
 ms.prod: sql
-ms.prod_service: drivers
-ms.component: reference
+ms.prod_service: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 apitype: COM
@@ -20,11 +19,12 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6015f19a003148dbe12d6489b23a33848aa0ca29
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: efe8323ac57dda7d1405777e3be0dc997f955556
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288460"
 ---
 # <a name="server-property-rds"></a>Proprietà server (RDS)
 Indica il protocollo di comunicazione e nome di Internet Information Services (IIS).  
@@ -115,12 +115,12 @@ DataControl.Server=""
  Oggetto **stringa** valore che contiene un Internet o intranet percorso o nome del computer, se il server è in un computer remoto; o una stringa vuota se il server nel computer locale.  
   
  *port*  
- Facoltativa. Porta utilizzata per connettersi a un server che esegue IIS. Il numero di porta viene impostato in Internet Explorer (sul **vista** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
+ Facoltativo. Porta utilizzata per connettersi a un server che esegue IIS. Il numero di porta viene impostato in Internet Explorer (sul **vista** menu, fare clic su **opzioni**e quindi selezionare il **connessione** scheda) o in IIS.  
   
  *DataControl*  
  Una variabile oggetto che rappresenta un **RDS. DataControl** oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il server è il percorso in cui il **RDS. DataControl** elaborazione richiesta (ovvero, una query o aggiornamento). Per impostazione predefinita, tutte le richieste vengono elaborate le [RDSServer](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oggetto [MSDFMAP. Gestore](../../../ado/guide/remote-data-service/datafactory-customization.md) componente e [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) file nel server specificato. Ricordare che quando si modificano i server per riconciliare le impostazioni nel vecchio e nuovo **MSDFMAP. INI** file. Incompatibilità possono causare richieste con esito positivo su un server in un altro. Se la proprietà del Server è impostata su una stringa vuota "", tali oggetti verranno utilizzati nel computer locale.  
   
 ## <a name="applies-to"></a>Si applica a  

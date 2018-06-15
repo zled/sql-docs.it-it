@@ -2,7 +2,6 @@
 title: Oggetto CubeDef (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31e2bf587c19ab8088b0ab702be60fde54247aec
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fc529ed3ab408d70e6bcc0881a9a62d86029e35e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283600"
 ---
 # <a name="cubedef-object-ado-md"></a>Oggetto CubeDef (ADO MD)
 Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimensioni correlate.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Raccolte e le proprietà di un **CubeDef** dell'oggetto, è possibile eseguire le operazioni seguenti:  
   
 -   Identificare un **CubeDef** con il [nome](../../../ado/reference/ado-md-api/name-property-ado-md.md) proprietà.  
@@ -42,7 +42,7 @@ Rappresenta un cubo da uno schema multidimensionale, contenente un set di dimens
   
  Il **proprietà** insieme contiene le proprietà specifiche del provider. Nella tabella seguente sono elencate le proprietà che potrebbero essere disponibili. L'elenco di proprietà effettivo può variare in base all'implementazione del provider. Vedere la documentazione del provider per un elenco completo delle proprietà disponibili.  
   
-|Nome|Description|  
+|nome|Description|  
 |----------|-----------------|  
 |CatalogName|Il nome del catalogo a cui appartiene il cubo.|  
 |CreatedOn|Data e ora di creazione del cubo.|  

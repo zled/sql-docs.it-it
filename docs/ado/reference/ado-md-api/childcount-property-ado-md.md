@@ -2,7 +2,6 @@
 title: Proprietà ChildCount (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da861dbc7648edbe93926e8f4df7b560fc4a415f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7fdc3697ac683b63df1f40fbec543e113f11037e
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283580"
 ---
 # <a name="childcount-property-ado-md"></a>Proprietà ChildCount (ADO MD)
 Indica il numero di membri per cui corrente [membro](../../../ado/reference/ado-md-api/member-object-ado-md.md) oggetto è l'elemento padre in una gerarchia.  
@@ -33,7 +33,7 @@ Indica il numero di membri per cui corrente [membro](../../../ado/reference/ado-
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un **lungo** integer ed è di sola lettura.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **ChildCount** proprietà per restituire una stima del numero di figli un **membro** ha. I figli effettivi di un **membro** possono essere restituiti dal [figli](../../../ado/reference/ado-md-api/children-property-ado-md.md) proprietà.  
   
  Per **membro** oggetti da un [posizione](../../../ado/reference/ado-md-api/position-object-ado-md.md) dell'oggetto, il numero massimo restituito è 65536. Se il numero effettivo di elementi figlio supera i 65536, il valore restituito sarà ancora 65536. Pertanto, l'applicazione è necessario interpretare un **ChildCount** di 65536 come uguale o maggiore di 65536 figli.  

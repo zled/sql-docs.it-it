@@ -2,7 +2,6 @@
 title: Metodo WriteText | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a2b12293935df6f9afaf6a1691e2decce3f6c6f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c38b1e8573e59d4446ff0a4dbfebf1cc627b3863
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283190"
 ---
 # <a name="writetext-method"></a>Metodo WriteText
 Scrive una stringa di testo specificato in un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -42,9 +42,9 @@ Stream.WriteText Data, Options
  Oggetto **stringa** valore che contiene il testo in caratteri da scrivere.  
   
  *Opzioni*  
- Facoltativa. Oggetto [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valore che indica se un carattere separatore di riga deve essere scritto alla fine della stringa specificata.  
+ Facoltativo. Oggetto [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) valore che indica se un carattere separatore di riga deve essere scritto alla fine della stringa specificata.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Stringhe specificate vengono scritti i **flusso** oggetto senza spazi intermedi o caratteri tra ogni stringa.  
   
  Corrente [posizione](../../../ado/reference/ado-api/position-property-ado.md) è impostata sul carattere che segue i dati scritti. Il **WriteText** metodo tronca il resto dei dati in un flusso. Se si desidera troncare questi caratteri, chiamare [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

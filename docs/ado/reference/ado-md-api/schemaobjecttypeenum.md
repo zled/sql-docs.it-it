@@ -2,7 +2,6 @@
 title: SchemaObjectTypeEnum | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d955c79e8cf826f13d72c246bd23c824ce76684
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eebccac5754530ba20949f51ee0fe3179a77d890
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35284609"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 Specifica il tipo di oggetto per il recupero dal [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) metodo.  
   
-|Costante|Value|Description|  
+|Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|Oggetto [dimensione](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) oggetto.|  
 |**adObjectTypeHierarchy**|2|Oggetto [gerarchia](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) oggetto.|  

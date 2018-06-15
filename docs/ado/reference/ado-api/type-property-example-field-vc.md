@@ -2,7 +2,6 @@
 title: Tipo di esempio di proprietà (campo) (VC + +) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b04083dcc8901ac884588b1dc02fee3e36ab2bb9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb420e129d36c9172837a9d68e631c9bc26086e7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282660"
 ---
 # <a name="type-property-example-field-vc"></a>Esempio di proprietà Type (campo) (VC + +)
 Questo esempio viene illustrato il [tipo](../../../ado/reference/ado-api/type-property-ado.md) proprietà visualizzando il nome della costante che corrisponde al valore del **tipo** proprietà di tutti i [campo](../../../ado/reference/ado-api/field-object.md) gli oggetti nel ***Dipendenti*** tabella. La funzione FieldType è necessaria per eseguire questa procedura.  

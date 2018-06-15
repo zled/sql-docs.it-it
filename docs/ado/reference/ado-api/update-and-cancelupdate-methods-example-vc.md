@@ -2,7 +2,6 @@
 title: Esempio di metodi CancelUpdate (VC + +) e di aggiornamento | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 709e155ee6f5dba684aa284b479bde29b922ee66
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 93a9f0c959e1e6c271e611a0ab94150317e9c45a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282780"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Esempio di metodi CancelUpdate (VC + +) e di aggiornamento
 Questo esempio viene illustrato il [aggiornamento](../../../ado/reference/ado-api/update-method.md) metodo in combinazione con il [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) metodo.  

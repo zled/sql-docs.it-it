@@ -2,7 +2,6 @@
 title: Controllo le modifiche nella tabella di Base di Recordset (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76bf7ee2916e6fa4277154d7261f40b9b5959ea9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8351eb10101219b09450055526f0cb6a47a95b5f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35282700"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Tabella univoca, Schema univoco, univoco catalogo proprietà dinamica (ADO)
 Consente di controllare rigorosamente le modifiche a una tabella di base in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) che valido da un'operazione di JOIN più tabelle di base.  
@@ -38,7 +38,7 @@ Consente di controllare rigorosamente le modifiche a una tabella di base in un [
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **stringa** valore che rappresenta il nome di una tabella, schema o catalogo.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La tabella di base desiderata è identificata in modo univoco il catalogo, schema e i nomi di tabella. Quando il **tabella univoca** è impostata, i valori del **Schema univoco** o **catalogo univoca** proprietà vengono utilizzate per trovare la tabella di base. È consigliabile, ma non è obbligatorio, che una o entrambe le **Schema univoco** e **catalogo univoca** prima di impostare le proprietà di **tabella univoca** proprietà è impostata.  
   
  La chiave primaria del **tabella univoca** viene trattato come chiave primaria dell'intero **Recordset**. Si tratta della chiave utilizzata per qualsiasi metodo richiede una chiave primaria.  

@@ -2,7 +2,6 @@
 title: Modificare la forma di nome proprietà dinamica (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4901e09d0df933c6aa35e8c1ebed3e62ef2012f8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4752609469ecad3a3a6631584e120de8cc4a7575
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281410"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Modificare la forma di nome proprietà dinamica (ADO)
 Specifica un nome per il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -30,7 +30,7 @@ Specifica un nome per il [Recordset](../../../ado/reference/ado-api/recordset-ob
 ## <a name="return-values"></a>Valori restituiti  
  Restituisce un **stringa** valore che rappresenta il nome del **Recordset**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I nomi vengono mantenute per tutta la durata della connessione o fino a quando il **Recordset** viene chiuso.  
   
  Il **modificare la forma di nome** proprietà viene usata principalmente per l'utilizzo con la funzionalità di ripetizione del data shaping di [Microsoft Data shaping per OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) provider del servizio. I nomi devono essere univoci a partecipare di nuovo data shaping.  

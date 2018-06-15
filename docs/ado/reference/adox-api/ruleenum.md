@@ -2,7 +2,6 @@
 title: RuleEnum | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b4702461532dca979c272c8bf52ac469f35224f9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 66a6a38010487345e2b50ae1267bbe291e05407b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35286888"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Specifica la regola quando è possibile seguire una [chiave](../../../ado/reference/adox-api/key-object-adox.md) viene eliminato.  
   
-|Costante|Value|Description|  
+|Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Consente di propagare le modifiche.|  
 |**adRINone**|0|Valore predefinito. Non viene eseguita alcuna azione.|  
