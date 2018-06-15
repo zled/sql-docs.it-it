@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022968"
 ---
 # <a name="report-model-connection-ssrs"></a>Connessione a un modello di report (SSRS)
   Per includere dati da un modello di report, è necessario disporre di un set di dati basato su un modello di report come origine dati. A differenza di altre origini dati del report, non vi sono estensioni per i dati per un modello di report. In Generatore report individuare e selezionare il modello direttamente dal server di report. In Progettazione report specificare l'URL del modello di report.  

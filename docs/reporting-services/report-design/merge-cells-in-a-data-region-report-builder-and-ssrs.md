@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33024328"
 ---
 # <a name="merge-cells-in-a-data-region-report-builder-and-ssrs"></a>Unire le celle in un'area dati (Generatore report e SSRS)
 In un report impaginato di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile unire celle in un'area dati per combinare più celle, migliorare l'aspetto dell'area dati oppure consentire l'espansione delle etichette per gruppi di colonne e di righe.  

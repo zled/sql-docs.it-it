@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550642"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novità nel sistema della piattaforma Analitica, un data warehouse di scalabilità orizzontale MPP
 Vedere Novità gli ultimi aggiornamenti di dispositivo per Microsoft® Analitica Platform System (AP). Punti di accesso è uno strumento di scalabilità orizzontale in locale che ospita MPP SQL Server Parallel Data Warehouse. 
