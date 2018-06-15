@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019148"
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>Visualizzare set di dati nascosti per i valori dei parametri - Dati multidimensionali
   Il report potrebbe includere set di dati generati automaticamente (noti anche come set di dati nascosti) che per impostazione predefinita non vengono visualizzati nel riquadro dei dati del report. Tali set di dati vengono creati nei modi seguenti:  

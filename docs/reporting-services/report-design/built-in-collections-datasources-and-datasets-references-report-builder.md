@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33022268"
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Raccolte predefinite - Riferimenti alle raccolte DataSources e DataSets (Generatore report)
   La raccolta **DataSources** rappresenta tutte le origini dati usate in un report. Analogamente, la raccolta **DataSets** rappresenta tutti i set di dati per tutte le origini dati disponibili in un report. Usare il riquadro **Dati report** per ottenere una visualizzazione gerarchica dei set di dati del report organizzati sotto l'origine dati cui fanno riferimento. Se si includono riferimenti a queste raccolte, durante l'anteprima del report questi valori non verranno visualizzati. Le raccolte sono disponibili solo dopo la pubblicazione del report in un server di report.  

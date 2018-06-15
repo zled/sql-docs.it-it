@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33026292"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Pubblicazione di origini dati e report
   Prima di pubblicare il report, è necessario visualizzare l'anteprima del report per verificarne l'aspetto durante l'esecuzione. È possibile modificare la progettazione finché non si è soddisfatti dei risultati.  

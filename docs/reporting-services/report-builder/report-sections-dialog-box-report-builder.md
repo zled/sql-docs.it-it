@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018698"
 ---
 # <a name="report-sections-dialog-box-report-builder"></a>Finestra di dialogo Sezione del report (Generatore report)
   Quando si apre un report, Generatore report consente di verificare che nel report sia contenuto solo un elemento **\<sezione>** RDL (Report Definition Language). L'apertura di un report con più elementi **\<sezione>** non è supportata.  

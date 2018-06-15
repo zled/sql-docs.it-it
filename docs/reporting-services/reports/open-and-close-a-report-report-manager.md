@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025728"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Aprire e chiudere un report (Gestione report)
   È possibile utilizzare Gestione report per visualizzare i report pubblicati in un server di report. Per impostazione predefinita, tutti i report vengono aperti in formato HTML. Dopo avere aperto un report, è possibile esportarlo per visualizzarlo in altri formati di applicazioni. Se il report contiene caratteristiche interattive o se si tratta di un report di Generatore report contenente dati interattivi, sarà possibile fare clic sui collegamenti per visualizzare report o dati aggiuntivi.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029228"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancorare il riquadro dei dati del report in Progettazione report (SSRS)
   In Progettazione report [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], nel riquadro Dati report viene visualizzata una vista gerarchica di oggetti dati che è possibile usare in un report, ad esempio origini dati, set di dati, campi, parametri e immagini. Le origini dati presenti in questa vista possono essere incorporate o fare riferimento a origini dati condivise visualizzate in Esplora soluzioni.  

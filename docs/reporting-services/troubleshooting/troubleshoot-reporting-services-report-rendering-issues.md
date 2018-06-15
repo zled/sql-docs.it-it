@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33033318"
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Risolvere i problemi di rendering del report di Reporting Services
 Dopo che le informazioni sul layout e i dati del report sono stati combinati, il report compilato viene inviato a un renderer di report. Ad esempio, quando si visualizza in anteprima un report in locale, si utilizza il renderer HTML per visualizzare il report compilato. Utilizzare le informazioni riportate in questo argomento per risolvere i problemi specifici del rendering del report.   

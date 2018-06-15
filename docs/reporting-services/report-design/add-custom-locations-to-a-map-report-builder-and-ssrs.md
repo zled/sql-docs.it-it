@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33020178"
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Aggiungere percorsi personalizzati a una mappa (Generatore report e SSRS)
   Dopo avere aggiunto una mappa a un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , è possibile aggiungere percorsi punto personalizzati.  

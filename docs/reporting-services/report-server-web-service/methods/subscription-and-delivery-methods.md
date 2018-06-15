@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025748"
 ---
 # <a name="subscription-and-delivery-methods"></a>Metodi di sottoscrizione e recapito
   È possibile utilizzare questi metodi per creare e gestire le sottoscrizioni e il recapito degli elementi del catalogo.  

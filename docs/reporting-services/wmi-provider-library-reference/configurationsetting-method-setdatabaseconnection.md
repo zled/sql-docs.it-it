@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031538"
 ---
 # <a name="configurationsetting-method---setdatabaseconnection"></a>Metodo di ConfigurationSetting - SetDatabaseConnection
   Imposta la connessione al database del server di report su un database del server di report specifico.  

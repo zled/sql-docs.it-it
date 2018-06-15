@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031088"
 ---
 # <a name="configurationsetting-method---generatedatabaseupgradescript"></a>Metodo di ConfigurationSetting - GenerateDatabaseUpgradeScript
   Genera uno script che può essere usato per aggiornare il database del server di report allo schema di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  

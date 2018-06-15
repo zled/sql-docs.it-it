@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33015108"
 ---
 # <a name="reporting-services-extension-library"></a>Libreria di estensioni di Reporting Services
   La libreria di estensioni di Reporting Services è un set di classi, interfacce e tipi di valori inclusi in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Questa libreria consente di accedere alle funzionalità di sistema ed è progettata come base per l'uso di applicazioni [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per l'estensione dei componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
