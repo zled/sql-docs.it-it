@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: php
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,11 +17,12 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3aea23b8a3fcf3632b164846a3addaba7a501e6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e1d49ff27e0698f0c475f8150654b01bbaf1d283
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35307226"
 ---
 # <a name="default-sql-server-data-types"></a>Tipi di dati di SQL Server predefiniti
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,16 +33,16 @@ Se l'utente non ha specificato alcun tipo di dati di SQL Server, quando si invia
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|non supportato|  
 |Boolean|bit|bit|  
-|Integer|int|int|  
-|Float|float(24)|non supportato|  
+|Valore intero|INT|INT|  
+|float|float(24)|non supportato|  
 |Stringa (lunghezza minore di 8000 byte)|varchar (<string length>)|varchar (<string length>)|  
 |Stringa (lunghezza maggiore di 8000 byte)|ntext|ntext|  
 |Risorsa|Non supportato.|Non supportato.|  
 |Flusso (codifica: non binaria)|ntext|ntext|  
 |Flusso (codifica: binaria)|varbinary|varbinary|  
 |Array|Non supportato.|Non supportato.|  
-|Oggetto|Non supportato.|Non supportato.|  
-|DateTime (1)|datetime|Non supportato.|  
+|Object|Non supportato.|Non supportato.|  
+|DateTime (1)|DATETIME|Non supportato.|  
   
 ## <a name="see-also"></a>Vedere anche  
 [Costanti &#40;driver Microsoft per PHP per SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
