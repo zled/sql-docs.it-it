@@ -2,7 +2,6 @@
 title: Preparazione e l'esecuzione di comandi | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d4d0736e2c4f0a09ec43f2e910cc7fd8c9263fc6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 92b63916bd6dfdc8d61fa2c8b3a9bbfba9f3224a
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272240"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparazione e l'esecuzione di comandi
 I comandi sono disponibili istruzioni di rilasciato a un provider di eseguire alcune operazioni per l'origine dati sottostante. Un'istruzione SQL, è ad esempio, un comando per il Provider di dati SQL Microsoft. In ADO, i comandi in genere vengono rappresentati da **comando** oggetti, anche se i comandi semplici possono anche essere emessi tramite **connessione** o **Recordset** oggetti.  

@@ -2,7 +2,6 @@
 title: Riepilogo del modello a oggetti RDS | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,17 +17,18 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 01f4af73d416616eeba6d8bcba82c390b09c3b7f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ecbfaf946dfdd6744ddd6ed5d6d8f9ef654f52a6
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274120"
 ---
 # <a name="rds-object-model-summary"></a>Riepilogo del modello oggetto di servizi desktop remoto
 > [!IMPORTANT]
 >  A partire da Windows 8 e Windows Server 2012, i componenti server di servizi desktop remoto non sono più inclusi nel sistema operativo Windows (vedere Windows 8 e [Guida alla compatibilità tra Windows Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=27416) per altri dettagli). Componenti client di servizi desktop remoto verranno rimossa in una versione futura di Windows. Evitare di usare questa funzionalità in un nuovo progetto di sviluppo e prevedere interventi di modifica nelle applicazioni in cui è attualmente implementata. Le applicazioni che utilizzano servizi desktop remoto devono eseguire la migrazione a [servizio dati WCF](http://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|Oggetto|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md)|Questo oggetto contiene un metodo per ottenere un proxy server. Il proxy può essere il valore predefinito o un'applicazione server personalizzata (oggetto business). L'applicazione server può essere richiamata su Internet, intranet, una rete locale o da una libreria a collegamento dinamico locale.<br /><br /> Il **DataSpace** oggetto è sicuro per lo script.|  
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|Questo oggetto rappresenta l'applicazione server predefinita. Esegue il servizio dati di riferimento dati aggiornamento e recupero comportamento predefinito.<br /><br /> Il **DataFactory** oggetto non è sicuro per lo scripting.|  

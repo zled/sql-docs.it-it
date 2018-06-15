@@ -2,7 +2,6 @@
 title: Utilizzo di ADO con ADO MD | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,11 +16,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00a999350e2aed86e74bb0bfaea77c05207a21a6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7d6aed08b40b25eb0f725697eb6fac8908894ebd
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273532"
 ---
 # <a name="using-ado-with-ado-md"></a>Utilizzo di ADO con ADO MD
 ADO e ADO MD sono modelli a oggetti correlato ma separato. ADO fornisce oggetti per la connessione a origini dati, l'esecuzione di comandi, il recupero dei dati e metadati dello schema in un formato tabulare e la visualizzazione di informazioni sugli errori di provider. ADO MD fornisce oggetti per il recupero di dati multidimensionali e visualizzazione dei metadati di schema multidimensionale.  

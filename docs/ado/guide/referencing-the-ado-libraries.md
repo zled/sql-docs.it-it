@@ -7,7 +7,6 @@ ms.suite: sql
 ms.tgt_pltfrm: ''
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9f5bd59675d24810ddef02a790cb3464ede168ee
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d4966f9446f87ea25cc5fdab5e658fd5a30c80fb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35273620"
 ---
 # <a name="referencing-the-ado-libraries"></a>Riferimento alle librerie ADO
 La versione più recente di ADO viene assemblata come *msado15.dll*. Le versioni più recenti di ADO MD e ADOX vengono impacchettate come *msadom.dll* e *Msadox*, rispettivamente. Queste librerie vengono installate per impostazione predefinita in *$installDir*, dove *$installDir* indica il percorso della directory in cui la libreria ADO è stata installata nel computer in uso. Per utilizzare le librerie di ADO nell'applicazione, è necessario farvi riferimento in modo esplicito nel progetto di applicazione.  

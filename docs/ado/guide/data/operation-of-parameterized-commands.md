@@ -2,7 +2,6 @@
 title: Funzionamento dei comandi con parametri | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ce4d9977628e4024539a2e3e9fe8950513100620
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ea5f45e5f7fa1b60bb9f6b4884fcb1e480534d00
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35272170"
 ---
 # <a name="operation-of-parameterized-commands"></a>Funzionamento dei comandi con parametri
 Se si lavora con un elemento figlio di grandi dimensioni **Recordset**, in particolare rispetto alla dimensione dell'elemento padre **Recordset**, ma è necessario accedere solo ad alcuni capitoli figlio, potrebbe essere preferibile utilizzare un comando con parametri.  
