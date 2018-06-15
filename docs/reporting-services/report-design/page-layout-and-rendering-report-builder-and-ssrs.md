@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028678"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Layout e rendering della pagina (Generatore report e SSRS)
 Leggere le informazioni sulle estensioni per il rendering di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per i report impaginati in modo da ottenere il report desiderato in termini di layout di pagina, interruzioni di pagina e formato della carta. 

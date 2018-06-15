@@ -14,6 +14,7 @@ ms.sourcegitcommit: fc3cd23685c6b9b6972d6a7bab2cc2fc5ebab5f2
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34550902"
 ---
 #<a name="appliance-feature-switch"></a>Opzione della funzionalità dello strumento
 Il **opzione della funzionalità** pagina vengono visualizzate informazioni sulle opzioni di due funzionalità che sono stati introdotti in Analitica piattaforma sistema AU7. Utilizzare questa pagina per aggiornare o attivare/disattivare funzionalità e impostazioni di sistema della piattaforma Analitica. Modificare i valori delle funzionalità commutatore, è necessario un riavvio del servizio.

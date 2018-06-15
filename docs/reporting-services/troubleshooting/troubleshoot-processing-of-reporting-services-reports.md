@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33031428"
 ---
 # <a name="troubleshoot-processing-of-reporting-services-reports"></a>Risolvere i problemi di elaborazione dei report di Reporting Services
 Dopo aver recuperato i dati del report, le informazioni sul layout e i dati vengono combinati dal componente Elaborazione report. Ciascuna proprietà dell'elemento del report contenente un'espressione viene valutata nel contesto dei dati e del layout combinati. Utilizzare le informazioni presenti in questo argomento per risolvere questi problemi.   

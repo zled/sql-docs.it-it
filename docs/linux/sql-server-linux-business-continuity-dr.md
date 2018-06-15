@@ -19,6 +19,7 @@ ms.sourcegitcommit: ee661730fb695774b9c483c3dd0a6c314e17ddf8
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/19/2018
+ms.locfileid: "34320412"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server-on-linux"></a>Continuità aziendale e database di ripristino, SQL Server in Linux
 
