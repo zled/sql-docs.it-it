@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32897966"
 ---
 # <a name="fixed-width-text-file"></a>File di testo a larghezza fissa
 Quando viene utilizzato il driver di testo, l'ultima colonna di un file di testo a larghezza fissa può essere di lunghezza variabile.
