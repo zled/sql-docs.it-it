@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908696"
 ---
 # <a name="general-error-checks"></a>Controlli degli errori generali
 Gestione Driver verifica un errore generale. Restituisce SQL_ERROR sempre quando viene rilevato il seguente errore: la funzione deve essere supportata dal driver.

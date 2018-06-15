@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909206"
 ---
 # <a name="driver-manager-diagnostic-example"></a>Esempio di diagnostica di Gestione driver
 Gestione Driver è anche possibile generare messaggi di diagnostica. Ad esempio, se un'applicazione passata un'opzione di direzione non valida per **SQLDataSources**, gestione Driver potrebbe formattare e restituire i valori seguenti dal **SQLGetDiagRec**:  

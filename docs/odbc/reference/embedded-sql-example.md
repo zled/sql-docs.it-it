@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916356"
 ---
 # <a name="embedded-sql-example"></a>Esempio di Embedded SQL
 Il codice seguente è un programma SQL incorporato semplice, scritto in C. Il programma illustra molte, ma non l'intero incorporato tecniche di SQL. Il programma richiede l'immissione di un numero di ordine, recupera il numero cliente, venditore e lo stato dell'ordine e visualizza le informazioni recuperate sullo schermo.  

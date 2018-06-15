@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908586"
 ---
 # <a name="allocating-a-connection-handle-odbc"></a>Allocare un Handle di connessione ODBC
 Prima che l'applicazione può connettersi a un'origine dati o il driver, è necessario allocare un handle di connessione, come indicato di seguito:  

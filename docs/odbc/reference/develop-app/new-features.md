@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913346"
 ---
 # <a name="new-features"></a>Nuove funzionalità
 Le seguenti nuove funzionalità sono stata introdotta in ODBC 3. *x*. Un database ODBC 3. *x* applicazione che utilizza un ODBC 2*x* driver non sarà in grado di utilizzare questa funzionalità. ODBC 3. *x* gestione Driver non eseguire il mapping di queste funzionalità quando si lavora con un ODBC 2*x* driver.  

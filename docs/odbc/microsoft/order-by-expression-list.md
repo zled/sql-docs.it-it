@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904626"
 ---
 # <a name="order-by-expression-list"></a>ORDERBY-elenco di espressioni
 Le espressioni possono essere utilizzate nella clausola ORDER BY. Ad esempio, nelle clausole seguenti nella tabella viene ordinata in base tre espressioni chiave: + b, c + d ed e.  

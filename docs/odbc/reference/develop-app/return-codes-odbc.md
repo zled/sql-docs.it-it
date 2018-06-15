@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913216"
 ---
 # <a name="return-codes-odbc"></a>Codici restituiti ODBC
 Ogni funzione ODBC restituisce un codice, noto come relativo *codice restituito,* che indica l'esito positivo o negativo della funzione complessivo. La logica del programma si basa generalmente sui codici restituiti.  

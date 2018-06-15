@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909466"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>Scelta di un livello di interoperabilità
 Supponendo che l'applicazione utilizza ODBC, il passaggio successivo consiste nel determinare il livello di interoperabilità è obbligatorio. Il livello di base dell'interoperabilità è in genere una funzione del tipo di applicazione: applicazioni personalizzate non tendono a essere interoperativo, le applicazioni verticali tendono a essere interoperabili tra un numero limitato di DBMS e applicazioni generiche tendono a essere interoperabili tra tutti i DBMS.  

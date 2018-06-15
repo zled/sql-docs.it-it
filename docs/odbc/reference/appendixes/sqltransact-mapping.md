@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907876"
 ---
 # <a name="sqltransact-mapping"></a>Mapping di SQLTransact
 **SQLTransact** è ora sostituita dalla **SQLEndTran**. La differenza principale tra le due funzioni è che **SQLEndTran** contiene un argomento *HandleType*, che consente di specificare l'ambito di lavoro da eseguire. Il *HandleType* argomento può specificare l'ambiente o l'handle di connessione. La seguente chiamata al **SQLTransact**:  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908626"
 ---
 # <a name="procedure-call-escape-sequence"></a>Sequenza di Escape di chiamata di routine
 ODBC utilizza le sequenze di escape per le chiamate di procedura. La sintassi di questa sequenza di escape è come segue:  

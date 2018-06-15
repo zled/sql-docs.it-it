@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904966"
 ---
 # <a name="about-drivers-and-data-sources"></a>Sui driver e origini dati
 *I driver* sono i componenti che elaborano le richieste ODBC e restituiscono dati all'applicazione. Se necessario, i driver di modificare la richiesta di un'applicazione in un formato che è stato riconosciuto dall'origine dati. Per aggiungere o eliminare un driver dal computer, è necessario utilizzare il programma di installazione del driver.  

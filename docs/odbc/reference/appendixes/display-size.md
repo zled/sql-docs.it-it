@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32907036"
 ---
 # <a name="display-size"></a>Dimensioni di visualizzazione
 Le dimensioni di visualizzazione di una colonna sono il numero massimo di caratteri necessari per visualizzare i dati in formato carattere. Nella tabella seguente definisce le dimensioni di visualizzazione per ogni tipo di dati SQL ODBC.  

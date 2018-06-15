@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908346"
 ---
 # <a name="argument-value-checks"></a>Controlli di valori di argomento
 Gestione Driver controlla i seguenti tipi di argomenti. Se non diversamente specificato, gestione Driver restituisce SQL_ERROR errori nei valori dell'argomento.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910906"
 ---
 # <a name="odbc-static-cursors"></a>Puntatori statici ODBC
 Un cursore statico è uno in cui il set di risultati sembra essere statico. Non è in genere rilevare le modifiche apportate all'appartenenza, nella disposizione o valori di set di risultati dopo l'apertura del cursore. Si supponga, ad esempio, un cursore statico recupera una riga e un'altra applicazione, quindi aggiorna tale riga. Se un cursore statico recupera nuovamente la riga, i valori rilevati sono identiche, nonostante le modifiche apportate da altre applicazioni.  

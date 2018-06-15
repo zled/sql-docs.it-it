@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913066"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATE forniscono informazioni dettagliate sulla causa di un avviso o errore. SQLSTATE in questo manuale sono basati su quelli nella specifica ISO/IEF CLI, anche se tali SQLSTATE che iniziano con IM sono specifici per ODBC.  
