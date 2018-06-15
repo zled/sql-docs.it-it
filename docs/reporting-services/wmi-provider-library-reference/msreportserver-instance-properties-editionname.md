@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33030798"
 ---
 # <a name="msreportserverinstance-properties---editionname"></a>Proprietà di MSReportServer_Instance - EditionName
   Restituisce il nome leggibile dell'edizione del server di report. Di sola lettura.  

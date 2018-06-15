@@ -26,9 +26,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e7b1c7b1f415388ac2fad57b2973b2dd552e267f
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33077898"
 ---
 # <a name="sqlmaint-utility"></a>utilità sqlmaint
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +87,7 @@ number[minutes | hours | days | weeks | months]
  Specifica che deve essere restituito il diagramma della sintassi di **sqlmaint** . Questo parametro deve essere utilizzato da solo.  
   
  **-S** *server_name*[ **\\***instance_name*]  
- Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *server_name* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nel server. Specificare il *server_name***\\*** instance_name* per connettersi all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] su tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
+ Specifica l'istanza di destinazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Specificare *server_name* per connettersi all'istanza predefinita di [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] nel server. Specificare il *server_name***\\***instance_name* per connettersi all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] su tale server. Se non si specifica alcun server, **sqlmaint** si connette all'istanza predefinita di [!INCLUDE[ssDE](../includes/ssde-md.md)] nel computer locale.  
   
  **-U** *login_ID*  
  Specifica l'ID di accesso utilizzato per la connessione al server. Se omesso, **sqlmaint** prova a usare l'autenticazione di Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Se *login_ID* contiene caratteri speciali, il valore deve essere racchiuso tra virgolette doppie ("). In caso contrario, le virgolette doppie sono facoltative.  

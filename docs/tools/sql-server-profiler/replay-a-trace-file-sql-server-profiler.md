@@ -19,9 +19,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b0dc2625cfeae43ef4c524c460df5f2723130eb0
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33076556"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Riprodurre un file di traccia (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -30,6 +30,7 @@ ms.sourcegitcommit: f1caaa156db2b16e817e0a3884394e7b30fb642f
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33181477"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Scelta di una lingua durante la creazione di un indice full-text
 

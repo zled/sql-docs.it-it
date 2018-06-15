@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32954246"
 ---
 # <a name="lesson-1-2---configure-a-server-to-run-the-off-by-default-policy"></a>Lezione 1-2: Configurare un server per l'esecuzione di criteri Disattivata per impostazione predefinita
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
