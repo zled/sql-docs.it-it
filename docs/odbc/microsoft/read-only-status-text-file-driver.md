@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32898986"
 ---
 # <a name="read-only-status-text-file-driver"></a>Stato di sola lettura (Driver di File di testo)
 Quando viene utilizzato il driver di testo, tabelle di origine dati sono di sola lettura. Tuttavia, le applicazioni è possono eseguire le operazioni di inserimento per le tabelle di testo.

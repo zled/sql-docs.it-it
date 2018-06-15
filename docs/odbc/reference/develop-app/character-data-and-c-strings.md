@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912386"
 ---
 # <a name="character-data-and-c-strings"></a>Dati di tipo carattere e le stringhe C
 Parametri di input che fanno riferimento a dati di tipo carattere a lunghezza variabile (ad esempio i nomi delle colonne, i parametri dinamici e i valori di attributo di stringa) hanno un parametro di lunghezza associato. Se l'applicazione termina le stringhe con il carattere null, come avviene in C, viene fornito come argomento la lunghezza in byte della stringa (escluso il carattere di terminazione null) o SQL_NTS (Null-Terminated stringa). Un argomento non negativo lunghezza specifica la lunghezza effettiva della stringa associata. L'argomento length può essere 0 per specificare una stringa di lunghezza zero, che è diverso da un valore NULL. Il valore negativo SQL_NTS indica al driver per determinare la lunghezza della stringa individuando il carattere di terminazione null.  

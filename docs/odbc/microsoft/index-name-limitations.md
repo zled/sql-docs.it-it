@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901302"
 ---
 # <a name="index-name-limitations"></a>Limitazioni di nomi di indice
 Quando viene utilizzato il driver Paradox, un indice primario deve avere lo stesso nome della tabella su cui è definito. Altri indici univoci o non univoci devono avere lo stesso nome della tabella su cui sono definiti.

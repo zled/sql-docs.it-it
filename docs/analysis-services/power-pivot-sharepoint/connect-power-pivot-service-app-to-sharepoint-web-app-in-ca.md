@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024148"
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>La connessione di servizio App di Power Pivot per App Web di SharePoint nella CA
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

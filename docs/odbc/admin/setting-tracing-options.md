@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899976"
 ---
 # <a name="setting-tracing-options"></a>Impostazione opzioni di traccia
 Il **traccia** scheda della finestra di **Amministrazione origine dati ODBC** la finestra di dialogo consente di configurare la modalità di chiamate di funzioni ODBC vengono tracciate.  

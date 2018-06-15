@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32901136"
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Problemi di prestazioni di Database Desktop Driver
 Per garantire la compatibilità con le applicazioni esistenti ANSI, i tipi di dati SQL_WCHAR, SQL_WVARCHAR e SQL_WLONGVARCHAR vengono esposti come SQL_CHAR e SQL_VARCHAR SQL_LONGVARCHAR per Microsoft Access 4.0 o superiore alle origini dati. Le origini dati non restituiscono i tipi di dati carattere "wide", ma i dati devono essere ancora inviati agli Jet in formato carattere Wide. È importante comprendere che la conversione avrà luogo se una colonna di parametro o un risultato SQL_C_CHAR è associata a un tipo di dati SQL_CHAR in un'applicazione ANSI.  

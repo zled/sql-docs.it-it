@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914356"
 ---
 # <a name="outer-joins"></a>Outer join
 ODBC supporta SQL-92 a sinistra, la sintassi di right e full outer join. La sequenza di escape per gli outer join  
