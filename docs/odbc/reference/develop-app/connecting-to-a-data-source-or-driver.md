@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908566"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Connessione ai dati di un Driver o origine
 Un'applicazione può essere connesso a qualsiasi numero di driver e origini dati. Può trattarsi di un'ampia gamma di driver e origini dati, lo stesso driver e un'ampia gamma di origini dati o anche più connessioni allo stesso driver e origine dati.  

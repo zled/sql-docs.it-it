@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913956"
 ---
 # <a name="statement-parameters"></a>Parametri dell'istruzione
 Oggetto *parametro* è una variabile in un'istruzione SQL. Si supponga, ad esempio, che in una tabella include colonne denominate PartID, la descrizione e prezzo. Per aggiungere una parte senza parametri richiederebbe la costruzione di un'istruzione SQL, ad esempio:  

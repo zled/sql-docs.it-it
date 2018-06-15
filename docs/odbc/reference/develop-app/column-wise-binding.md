@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909776"
 ---
 # <a name="column-wise-binding"></a>L'associazione per colonna
 Quando si utilizza l'associazione per colonna, un'applicazione associa uno o due o in alcuni casi tre, matrici e ogni colonna per cui è possibile restituire dati. La prima matrice contiene i valori dei dati e la seconda matrice contiene i buffer di lunghezza/indicatore. Gli indicatori e i valori di lunghezza da memorizzare nel buffer separato impostando i campi di descrizione SQL_DESC_INDICATOR_PTR e SQL_DESC_OCTET_LENGTH_PTR su valori diversi. In tal caso, è associata una terza matrice. Ogni matrice contiene tutti gli elementi sono presenti righe nel set di righe.  

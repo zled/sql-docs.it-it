@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909396"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>Connessione con SQLDriverConnect
 **SQLDriverConnect** viene utilizzato per connettersi a un'origine dati tramite una stringa di connessione. **SQLDriverConnect** viene usata invece di **SQLConnect** per i motivi seguenti:  

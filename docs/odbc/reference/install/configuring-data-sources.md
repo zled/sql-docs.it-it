@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914706"
 ---
 # <a name="configuring-data-sources"></a>Configurazione delle origini dati
 Informazioni sulle origini dati vengono archiviate nel Registro di sistema. Gli utenti di modificare le informazioni sull'origine dati tramite un programma di amministrazione. Questo può essere l'amministratore ODBC, il dispositivo del Pannello di controllo di ODBC o un programma di amministrazione scritte da uno sviluppatore dell'applicazione o il driver.  

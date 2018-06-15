@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902886"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (driver di Database Desktop)
 Un indice univoco viene restituito (se presente) per il flag SQL_BEST_ROWID in *fColType*. Non verrà restituito alcun set di risultati per il flag SQL_ROWVER.  

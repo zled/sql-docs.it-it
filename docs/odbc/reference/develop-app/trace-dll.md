@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915776"
 ---
 # <a name="trace-dll"></a>DLL di traccia
 La DLL che esegue la traccia è uno dei componenti principali di ODBC. La traccia è attualmente fornito come una DLL di esempio nel componente ODBC di Windows SDK, DLL ed è stata precedentemente incluso Microsoft Data Access Components (MDAC) SDK. Pertanto, la voce del Registro di sistema, l'interfaccia e il codice di esempio per la DLL di traccia sono disponibili. Questa DLL può essere sostituita da una traccia DLL generati da un utente ODBC o un fornitore di terze parti. Una DLL di traccia personalizzato è necessario assegnare un nome diverso dalla traccia di esempio originale DLL. DLL di traccia deve essere installata nella directory di sistema o non riuscirà a caricare. Le stringhe di connessione non verrà passate alla DLL di traccia da Gestione Driver.  

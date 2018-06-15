@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920396"
 ---
 # <a name="driver-specification-subkeys"></a>Sottochiavi di specifica di driver
 Ogni driver elencate nella sottochiave del driver ODBC ha una sottochiave propri. Questa sottochiave ha lo stesso nome come valore corrispondente nella sottochiave del driver ODBC. I valori in questa sottochiave elencare i percorsi completi dei driver e di installazione del driver DLL, i valori delle parole chiave driver restituite da **SQLDrivers**e il conteggio di utilizzo. I formati dei valori vengono visualizzati nella tabella seguente.  

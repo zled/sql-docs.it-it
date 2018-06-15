@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912366"
 ---
 # <a name="sql-data-types-in-odbc"></a>Tipi di dati SQL ODBC
 Tipi di dati SQL sono i tipi in cui sono memorizzati i dati nell'origine dati.  

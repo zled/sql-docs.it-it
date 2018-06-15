@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912196"
 ---
 # <a name="retrieving-results-advanced"></a>Il recupero dei risultati (avanzati)
 Un'applicazione può specificare che un offset viene aggiunto per associare gli indirizzi di buffer di dati e l'indicatore di lunghezza corrispondente buffer indirizzi quando **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, o **SQLSetPos** viene chiamato. I risultati di queste aggiunte determinano gli indirizzi usati in queste operazioni.  

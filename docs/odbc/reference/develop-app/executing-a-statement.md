@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912306"
 ---
 # <a name="executing-a-statement"></a>Esecuzione di un'istruzione
 Sono disponibili quattro modi per eseguire un'istruzione, in base al momento della compilazione (autore) il motore di database e che sono definiti:  

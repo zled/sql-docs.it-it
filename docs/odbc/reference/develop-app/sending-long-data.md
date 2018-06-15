@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913966"
 ---
 # <a name="sending-long-data"></a>L'invio di dati Long
 Definiscono DBMS *dati long* come qualsiasi carattere o dati binari in una determinata dimensione, ad esempio 254 caratteri. Che non sia possibile archiviare l'intero elemento di dati long in memoria, ad esempio quando l'elemento rappresenta un documento di testo lungo o una bitmap. Poiché tali dati non possono essere archiviati in un unico buffer, la invia al driver in parti con l'origine dati **SQLPutData** quando viene eseguita l'istruzione. Parametri per il quale i dati vengono inviati in fase di esecuzione sono noti come *parametri data-at-execution*.  

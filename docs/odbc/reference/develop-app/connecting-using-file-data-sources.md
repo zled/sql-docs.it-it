@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911326"
 ---
 # <a name="connecting-using-file-data-sources"></a>Connessione tramite origini dati dei File
 Le informazioni di connessione per un'origine dati file viene archiviate in un file DSN. Di conseguenza, la stringa di connessione è possibile utilizzare ripetutamente a un singolo utente o condiviso da più utenti se hanno il driver appropriato installato. Il file contiene un nome di driver (o un altro nome dell'origine dati nel caso di un'origine dati file condivisibile) e, facoltativamente, una stringa di connessione che può essere utilizzata da **SQLDriverConnect**. Gestione Driver compila la stringa di connessione per la chiamata a **SQLDriverConnect** dalle parole chiave nel file DSN.  

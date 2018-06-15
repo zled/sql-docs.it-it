@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914336"
 ---
 # <a name="appendix-a-odbc-error-codes"></a>Appendice A: codici di errore ODBC
 In questo argomento vengono descritti i valori SQLSTATE per ODBC 3. *x*. Per ulteriori informazioni su ODBC 3. *x* valori SQLSTATE, vedere [mapping di SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md).  

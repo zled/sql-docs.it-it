@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904746"
 ---
 # <a name="select---sql-command"></a>Selezionare - comando SQL
 Recupera dati da una o più tabelle.  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914456"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>Set di risultati SQLGetTypeInfo di esempio
 Un'applicazione chiama **SQLGetTypeInfo** per determinare quali tipi di dati supportati da un'origine dati e le caratteristiche di questi tipi di dati. Le tabelle seguenti illustrano un set di risultati di esempio restituito da **SQLGetTypeInfo** per un'origine dati che supporta SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR e SQL_INTERVAL_DAY_TO_SECOND.  

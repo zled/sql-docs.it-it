@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913866"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Il recupero dei parametri di Output tramite SQLGetData
 Prima di ODBC 3.8, un'applicazione può recuperare solo i parametri di output di una query con un buffer di output associata. Tuttavia, è difficile allocare un buffer di dimensioni molto grande quando le dimensioni del valore del parametro sono molto grande (ad esempio, un'immagine di grandi dimensioni). ODBC 3.8 introduce un nuovo modo per recuperare i parametri di output in parti. Un'applicazione può chiamare **SQLGetData** con un buffer di piccole dimensioni più volte per recuperare un valore di parametro di grandi dimensioni. È simile al recupero di dati della colonna di grandi dimensioni.  

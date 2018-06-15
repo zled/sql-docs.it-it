@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914866"
 ---
 # <a name="using-data-buffers"></a>Utilizzo dei dati
 Buffer di dati sono descritti tre tipi di informazioni: la lunghezza in byte, l'indirizzo e tipo. Ogni volta che una funzione richiede uno di questi tipi di informazioni e non è già noto, dispone di un argomento con cui l'applicazione passa.  

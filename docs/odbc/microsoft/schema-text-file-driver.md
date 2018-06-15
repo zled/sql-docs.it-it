@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32899636"
 ---
 # <a name="schema-text-file-driver"></a>Schema (Driver di File di testo)
 Lo schema include informazioni su ogni tabella (file di testo) in un'origine dati, tra cui formato della tabella, il numero di righe da analizzare per determinare i tipi di colonna, se la prima riga della tabella contiene i nomi di colonna, se il file di origine viene scritta utilizzando un produttore OEM o Tabella codici ANSI e ogni colonna nome, tipo di dati e larghezza.

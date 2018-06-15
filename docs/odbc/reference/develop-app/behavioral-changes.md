@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910916"
 ---
 # <a name="behavioral-changes"></a>Modifiche del comportamento
 Modifiche del comportamento sono le modifiche per il quale il *sintassi* dell'interfaccia viene mantenuta, ma la *semantica* sono stati modificati. Per queste modifiche, funzionalità 2 di ODBC utilizzata. *x* presenta un comportamento diverso la stessa funzionalità in ODBC 3. *x*.  

@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903936"
 ---
 # <a name="limitations"></a>Limitazioni
 Questa sezione descrive le limitazioni dei driver ODBC Desktop Database per quanto riguarda gli argomenti seguenti:  

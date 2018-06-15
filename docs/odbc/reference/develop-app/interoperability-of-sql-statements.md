@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909866"
 ---
 # <a name="interoperability-of-sql-statements"></a>Interoperabilità di istruzioni SQL
 Ad esempio il resto di un'applicazione, istruzioni SQL possono essere interoperabili o specifici del DBMS. E come gli altri componenti dell'applicazione, deve essere la scelta della modalità interoperativa istruzioni SQL dipende dal tipo di applicazione. Applicazioni personalizzate hanno meno probabile di utilizzare istruzioni SQL interoperative perché sono in genere progettati per sfruttare le funzionalità di uno o due probabilmente DBMS. Applicazioni generiche utilizzano istruzioni SQL interoperative perché progettate per funzionare con un'ampia gamma di DBMS. E applicazioni verticali in genere rientrano in un punto intermedio, richiedono un certo livello di funzionalità ma in caso contrario, utilizzare istruzioni SQL interoperative.  

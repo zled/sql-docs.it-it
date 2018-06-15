@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904226"
 ---
 # <a name="diagnostics-for-desktop-database-drivers"></a>Diagnostica per i Database Desktop driver
 Tutti gli errori e avvisi non selezionato o parzialmente controllata da Gestione Driver vengono gestiti dal driver. Il driver esegue il mapping anche native errori o gli errori restituiti dall'origine dati, di SQLSTATE. Ogni funzione nel *riferimento per programmatori ODBC* contiene una sezione "Diagnostics" che specifica le condizioni e i messaggi.  

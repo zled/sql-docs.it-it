@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910356"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>Ottenere e impostare i campi di descrizione
 Questa sezione descrive i metodi di che un'applicazione può utilizzare per recuperare o impostare i valori in campi di descrizione.  

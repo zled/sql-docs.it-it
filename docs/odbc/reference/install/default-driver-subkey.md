@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915736"
 ---
 # <a name="default-driver-subkey"></a>Sottochiave Driver predefinito
 La sottochiave predefinito contiene un valore singolo che descrive il driver utilizzato dall'origine dati predefinito. Nella tabella seguente è illustrato il formato di questo valore.  

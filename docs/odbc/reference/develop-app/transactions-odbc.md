@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32916296"
 ---
 # <a name="transactions-odbc"></a>Transazioni ODBC
 Oggetto *transazione* è un'unità di lavoro che viene eseguita come operazione atomica singola; vale a dire, l'operazione ha esito positivo o negativo nel suo complesso. Si consideri, ad esempio, il trasferimento di denaro da un conto bancario a un altro. Questa operazione comporta due passaggi: prelievo del denaro dal conto primo e il deposito al secondo. È importante che entrambi i passaggi esito positivo. non è accettabile per un passaggio abbia esito positivo e l'altro errore. Un database che supporta le transazioni è in grado di garantire questo.  

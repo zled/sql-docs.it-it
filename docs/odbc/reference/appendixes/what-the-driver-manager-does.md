@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914236"
 ---
 # <a name="what-the-driver-manager-does"></a>Funzionamento di gestione Driver
 Nella tabella seguente sono riepilogati come ODBC 3*x* gestione Driver mapping delle chiamate a ODBC 2. *x* mentre ODBC 3*x* driver.  

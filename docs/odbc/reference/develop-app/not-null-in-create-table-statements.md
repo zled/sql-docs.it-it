@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32910446"
 ---
 # <a name="not-null-in-create-table-statements"></a>NON NULL in istruzioni CREATE TABLE
 Alcuni database e dei desktop in particolare, non supportano il **non NULL** il vincolo di colonna in **CREATE TABLE** istruzioni. Per ulteriori informazioni, vedere l'opzione SQL_NON_NULLABLE_COLUMNS nel [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) descrizione della funzione.

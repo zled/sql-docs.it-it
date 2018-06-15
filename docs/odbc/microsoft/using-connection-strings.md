@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32905687"
 ---
 # <a name="using-connection-strings"></a>Utilizzo delle stringhe di connessione
 È possibile utilizzare una stringa di connessione per connettersi a un'origine dati di Visual FoxPro.  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32909576"
 ---
 # <a name="applications"></a>Applicazioni
 Un *applicazione* è un programma che chiama l'API ODBC per accedere ai dati. Anche se sono possibili diversi tipi di applicazioni, la maggior parte rientrano in tre categorie, che vengono utilizzate come esempi in questa Guida.  

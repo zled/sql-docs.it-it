@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32870726"
 ---
 # <a name="perform-a-sql-server-migration-assessment"></a>Eseguire una valutazione della migrazione a SQL Server
 Le procedure dettagliate seguenti consentono di eseguire la prima valutazione per la migrazione di on-premise SQL Server, SQL Server in esecuzione nella macchina virtuale di Azure o Database SQL di Azure, tramite dati Migration Assistant.

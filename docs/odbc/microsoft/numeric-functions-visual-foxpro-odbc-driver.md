@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32902096"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Funzioni numeriche, Driver ODBC di Visual FoxPro,
 La tabella seguente descrive le funzioni ODBC numeriche supportate dal Driver ODBC di Visual FoxPro; Quando la grammatica di Visual FoxPro per la stessa funzione differisce dalla sintassi ODBC, viene elencata l'equivalente di Visual FoxPro.  

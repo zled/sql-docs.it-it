@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911946"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinare il DBMS di destinazione e i driver
 Domanda successiva da considerare è, quali sono il DBMS di destinazione per l'applicazione e i driver sono disponibili che supportano tali DBMS? Poiché le applicazioni generiche tendono a essere estremamente interoperativi, la domanda di DBMS di destinazione è più applicabile alle applicazioni personalizzate e verticale. Tuttavia, la domanda di driver di destinazione si applica a tutte le applicazioni, poiché i driver variano notevolmente in velocità, la qualità, supporto delle funzionalità e disponibilità. Inoltre, se i driver devono essere ridistribuito con l'applicazione, il costo e la disponibilità di piani di contratti multilicenza necessario essere considerato.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903116"
 ---
 # <a name="paradox-data-types"></a>Tipi di dati Paradox
 Il driver ODBC Paradox esegue il mapping di tipi di dati Paradox ai tipi di dati SQL ODBC. Nella tabella seguente elenca tutti i tipi di dati Paradox e Mostra ODBC SQL sono mappate per i tipi di dati.  

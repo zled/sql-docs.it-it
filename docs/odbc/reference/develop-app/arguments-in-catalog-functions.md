@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911496"
 ---
 # <a name="arguments-in-catalog-functions"></a>Argomenti nelle funzioni di catalogo
 Tutte le funzioni di catalogo accettano gli argomenti con cui un'applicazione può limitare l'ambito dei dati restituiti. Ad esempio, le chiamate a primo e seconda **SQLTables** nel codice seguente restituisce un set di risultati contenente informazioni su tutte le tabelle, mentre la terza chiamata restituisce informazioni sulla tabella Ordini:  

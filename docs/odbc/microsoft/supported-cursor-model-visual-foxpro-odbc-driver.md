@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32903626"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>Modello di cursore supportati (Driver ODBC di Visual FoxPro)
 Il Driver ODBC di Visual FoxPro supporta sia *blocco* (*set di righe*) e *statico* cursori. I cursori statici sono supportati per un driver conforme alla conformità di livello 1 ODBC. Il driver non supporta dynamic, basati su keyset o misto (keyset e dynamic) i cursori.  

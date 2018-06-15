@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913826"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Esecuzione asincrona (metodo di Polling)
 Prima di ODBC 3.8 e Windows 7 SDK, le operazioni asincrone sono state consentite solo su funzioni a istruzioni. Per ulteriori informazioni, vedere il **esecuzione asincrona delle operazioni istruzione**, più avanti in questo argomento.  

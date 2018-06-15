@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911806"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Mapping di funzione in Gestione Driver
 Gestione driver supporta due punti di ingresso per le funzioni che accettano argomenti di stringa. La funzione non decorata (**SQLDriverConnect**) è il formato ANSI della funzione. Il formato Unicode è decorato con un *W* (**SQLDriverConnectW**.)  

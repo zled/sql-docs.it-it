@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32915226"
 ---
 # <a name="standard-data-stream-protocol"></a>Protocollo del flusso di dati standard
 Un protocollo di flusso di dati standard è un modo per accedere ai dati nel DBMS eterogenei. In effetti, i protocolli di flusso di dati standard esistono già: lo standard ANSI/ISO remoto Database Access RDA () ([ISO/IEC 9579:2000](http://www.iso.org/iso/catalogue_detail.htm?csnumber=30615)) di IBM Distributed Relational Database Architecture (DRDA) e ([ http://www.netstoreusa.com/cbbooks/007/0070351384.shtml ](http://www.netstoreusa.com/cbbooks/007/0070351384.shtml)). Anche se entrambi i sistemi mostrano promessa, non è attualmente implementato.

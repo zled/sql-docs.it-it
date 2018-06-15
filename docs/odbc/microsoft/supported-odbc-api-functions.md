@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913336"
 ---
 # <a name="supported-odbc-api-functions"></a>Funzioni API ODBC supportati
 Lo scopo di livellamento è informare l'applicazione di quali funzionalità sono disponibili a esso dal driver. I driver di Database di Microsoft ODBC Desktop supportano tutte le funzioni di base e di livello 1.  
