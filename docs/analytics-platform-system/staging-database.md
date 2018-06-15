@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544655"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Utilizzo di un database di gestione temporanea in Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) utilizza un database di gestione temporanea per archiviare i dati durante il processo di caricamento. Per impostazione predefinita, SQL Server PDW utilizza il database di destinazione come database di gestione temporanea, che può provocare la frammentazione di tabella. Per ridurre la frammentazione della tabella, è possibile creare un database di gestione temporanea definita dall'utente. In alternativa, quando il rollback di un errore di caricamento non è un problema, è possibile utilizzare la modalità di caricamento di fastappend per migliorare le prestazioni ignorando la tabella temporanea e caricamento direttamente nella tabella di destinazione.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539311"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configurazione di rete dello strumento per Analitica Platform System
 Il dispositivo Analitica piattaforma di strumenti compilato e configurato con un set di correzione degli indirizzi IP in tutti i server e dispositivi applicabili da stabilimento del IHV. Dopo la consegna del dispositivo, è necessario riconfigurare l'indirizzo IP di esterno (Ethernet) in base ai requisiti del cliente specifico data center.  

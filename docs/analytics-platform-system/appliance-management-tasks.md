@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538831"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Attività di gestione dispositivo per Analitica Platform System
 Questa guida viene descritto come eseguire attività di amministrazione del dispositivo per Analitica Platform System (AP).  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539091"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Installazione dell'hardware per il dispositivo di sistema della piattaforma Analitica
 In questo articolo viene descritto come spostare, decomprimere e installare i componenti hardware per il dispositivo di SQL Server PDW. In questo articolo è esclusivamente informativo e consentono di comprendere il processo. Il dispositivo deve essere decompresso, installato e verificato prima che all'utente è attivata. La partecipazione cliente è obbligatoria per gli elementi, ad esempio data center di accesso, alimentazione elettrica e connessioni Ethernet.  

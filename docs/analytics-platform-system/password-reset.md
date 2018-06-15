@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539421"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Reimpostazione della password - Analitica Platform System
 Il **di reimpostazione della Password** pagina consente di modificare la password per gli account amministratore usato dal sistema di piattaforma Analitica.  

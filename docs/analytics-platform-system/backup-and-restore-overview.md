@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544813"
 ---
 # <a name="backup-and-restore"></a>Backup e ripristino
 Viene descritto come dati di backup e ripristino eseguito per Parallel Data Warehouse (PDW). Operazioni di backup e ripristino vengono utilizzate per il ripristino di emergenza. Backup e ripristino è consente anche di copiare un database da un dispositivo a un altro dispositivo.  

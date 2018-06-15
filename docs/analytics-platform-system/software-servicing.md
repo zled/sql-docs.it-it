@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538751"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Software di manutenzione in Analitica Platform System
 Questa sezione vengono riepilogati i requisiti per gli accessori Analitica Platform System, incluse le correzioni rapide WSUS e di sistema della piattaforma Analitica di manutenzione software.  

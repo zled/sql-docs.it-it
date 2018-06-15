@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538761"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Power accessorio o disattivare per Analitica Platform System
 In questo argomento viene descritto come accendere o spegnere il Systemappliance piattaforma Analitica che è in esecuzione Parallel Data Warehouse e, facoltativamente, in esecuzione un'area HDInsight. Dopo un'interruzione dell'alimentazione irreversibile, utilizzare questo argomento quando si sposta un dispositivo di sistema della piattaforma Analitica o alla potenza su un dispositivo.  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538341"
 ---
 # <a name="system-databases-in-parallel-data-warehouse-pdw"></a>Database di sistema in Parallel Data Warehouse (PDW)
 Database di sistema sono database di SQL Server PDW viene utilizzata per gestire utenti, database e i dati temporanei. SQL Server PDW include i database di sistema seguenti: master e tempdb.  

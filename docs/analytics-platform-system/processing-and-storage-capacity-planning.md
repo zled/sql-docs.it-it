@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539601"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacità di elaborazione e archiviazione in Analitica Platform System
 I requisiti aziendali determinano il numero di unità di scala di dati e le dimensioni dei dischi di nodo di calcolo che è necessario che nel dispositivo Analitica piattaforma di strumenti analitici. Utilizzare questi calcoli di elaborazione e archiviazione per la capacità di acquisto e decisioni relative alla pianificazione.  

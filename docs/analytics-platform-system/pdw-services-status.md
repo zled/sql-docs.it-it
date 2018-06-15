@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539001"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>Lo stato dei servizi Parallel Data Warehouse per Analitica Platform System
 Parallel Data Warehouse **stato del servizio** pagina nel gestore di configurazione sistema Microsoft Analitica piattaforma Mostra lo stato corrente di tutti i servizi di SQL Server PDW e offre la possibilità di arrestare e avviare i servizi PDW. Questo è l'unico metodo supportato per l'avvio e arresto dei servizi PDW. Si noti che i singoli componenti o servizi possono essere avviati in modo indipendente.  

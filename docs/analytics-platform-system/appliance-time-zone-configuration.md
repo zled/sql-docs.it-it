@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544659"
 ---
 # <a name="appliance-time-zone-configuration---analytics-platform-system"></a>Configurazione del fuso orario accessorio - Analitica Platform System
 Il **fuso orario** pagina consente di impostare il fuso orario per tutti i nodi nel dispositivo di sistema della piattaforma Analitica (AP).  

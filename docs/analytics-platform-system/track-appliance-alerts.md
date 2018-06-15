@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539271"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Avvisi accessorio traccia Analitica Platform System
 In questo argomento viene illustrato come utilizzare le Console di amministrazione e le viste di sistema per tenere traccia degli avvisi in un dispositivo di SQL Server PDW.  

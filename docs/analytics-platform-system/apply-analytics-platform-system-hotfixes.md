@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544873"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Applicare aggiornamenti rapidi Analitica Platform System
 In questo articolo viene descritto come applicare gli aggiornamenti rapidi per il software di sistema della piattaforma Analitica.  

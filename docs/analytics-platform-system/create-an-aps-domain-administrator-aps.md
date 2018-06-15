@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31545117"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Creare un amministratore di dominio punti di accesso
 Alcune operazioni richiedono privilegi di amministratore di sistema della piattaforma Analitica dominio. Viene descritto come creare gli amministratori di dominio aggiuntivo dello strumento.  

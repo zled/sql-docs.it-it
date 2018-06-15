@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544733"
 ---
 # <a name="backup-and-loading-hardware-overview---parallel-data-warehouse"></a>Backup e il caricamento Cenni preliminari sull'hardware - Parallel Data Warehouse
 Per distribuire i end-to-end soluzione di data warehousing su Analitica piattaforma di strumenti con Parallel Data Warehouse (PDW), è necessario creare un piano di backup del data warehouse e il caricamento dei dati. Utilizzare questa guida per acquisire e configurare i server di backup e il caricamento in grado di soddisfare i requisiti aziendali.  

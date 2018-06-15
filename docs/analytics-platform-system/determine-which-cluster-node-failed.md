@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544743"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Determinare quale cluster nodo non è riuscita per Analitica Platform System
 In questo argomento viene descritto come determinare il nome del nodo Analitica piattaforma di strumenti che non è riuscita dopo un failover del cluster si è verificato ed è stato generato un avviso di failover del cluster. Come parte della risoluzione dei problemi relativi a un cluster di failover, è necessario determinare il nome del nodo che non è riuscito prima di contattare Microsoft per risolvere il problema.  

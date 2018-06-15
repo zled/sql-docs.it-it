@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539761"
 ---
 # <a name="understanding-admin-console-alerts-in-analytics-platform-system"></a>Informazioni sugli avvisi di Console di amministrazione in Analitica Platform System
 Gli avvisi vengono visualizzati nell'accessorio **Console di amministrazione** e **System Center Operations Manager** (SCOM). Utilizzare questo elenco di avvisi per identificare gli avvisi che richiedono un'ulteriore analisi.  

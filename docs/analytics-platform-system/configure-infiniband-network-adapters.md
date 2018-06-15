@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31539021"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurare le schede di rete InfiniBand per Analitica Platform System
 Viene descritto come configurare le schede di rete InfiniBand in un server non strumento client per connettersi al nodo di controllo in Parallel Data Warehouse (PDW). Utilizzare queste istruzioni per la connettività di base e per la disponibilità elevata, in modo che il caricamento, i processi di backup e altri si connettono automaticamente alla rete InfiniBand attiva.  

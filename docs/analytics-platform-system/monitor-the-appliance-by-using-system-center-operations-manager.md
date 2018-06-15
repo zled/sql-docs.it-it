@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538981"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Monitoraggio con System Center Operations Manager - Analitica Platform System
 Utilizzare System Center Operations Manager (SCOM) per monitorare l'accessorio Analitica Platform System (AP).

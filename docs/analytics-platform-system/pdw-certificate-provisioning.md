@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31544933"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Provisioning di certificati PDW - Analitica Platform System
 Il **Provisioning di certificati PDW** pagina del sistema della piattaforma Analitica **Configuration Manager** Importa o rimuove il certificato utilizzato dall'area PDW. Utilizzando, un certificato per crittografare le connessioni consentono comunicazioni protette al nodo di controllo tramite client di SQL Server, gli strumenti che utilizzano il driver SQL Server PDW, il [Console di amministrazione](monitor-the-appliance-by-using-the-admin-console.md), e il caricamento di Integration Services.  

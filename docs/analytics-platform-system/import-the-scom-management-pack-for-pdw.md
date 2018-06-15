@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538591"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importare il Management Pack SCOM - Analitica Platform System
 Seguire questi passaggi per importare i Management Pack di System Center Operations Manager (SCOM) per Analitica Platform System (AP). I management pack sono necessari per monitorare Parallel Data Warehouse di SCOM. 
