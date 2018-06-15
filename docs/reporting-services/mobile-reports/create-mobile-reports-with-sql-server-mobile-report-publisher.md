@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33018638"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>Creare report per dispositivi mobili con SQL Server Mobile Report Publisher
 Informazioni su report per dispositivi mobili di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , ottimizzati per i dispositivi mobili e connessi ai dati locali, con un'ampia gamma di visualizzazioni dei dati. 

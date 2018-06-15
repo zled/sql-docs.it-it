@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016871"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 In questa lezione dell'esercitazione [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] verranno usate le pagine di sottoscrizione guidata dai dati dei portali Web di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per connettersi a un'origine dati di sottoscrizione, verrà compilata una query che recupera i dati di sottoscrizione e sarà eseguito il mapping tra il set di risultati e le opzioni di recapito e del report.  

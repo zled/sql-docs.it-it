@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33025888"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Aree dell'area dati Tablix (Generatore report e SSRS)
  In un report impaginato di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] un'area dati Tablix può includere quattro aree contenenti celle Tablix:   

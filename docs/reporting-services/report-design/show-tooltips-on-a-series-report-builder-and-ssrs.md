@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023728"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Visualizzazione di descrizioni comandi in una serie (Generatore report e SSRS)
   È possibile aggiungere una descrizione comando a ogni punto dati nella serie di un grafico per visualizzare informazioni relative al punto dati, ad esempio il nome del gruppo, il valore del punto dati o la relativa percentuale rispetto al totale della serie. Al passaggio del mouse sul punto dati in un report impaginato verranno visualizzate queste informazioni.  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33016348"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Implementazione di una classe Connection per un'estensione per l'elaborazione dati
   L'oggetto **Connection** rappresenta una connessione al database o una risorsa simile ed è il punto di partenza per gli utenti di un'estensione per l'elaborazione dati di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Questo oggetto rappresenta le connessioni ai server di database, sebbene qualsiasi entità con un comportamento simile possa essere esposta come oggetto **Connection**.  

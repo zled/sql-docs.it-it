@@ -33,9 +33,10 @@ ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebe736c1282342332a99a156dd95aadbe8cf32a5
 ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
-ms.translationtype: MTE
+ms.translationtype: MTE75
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33078208"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilità ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -249,7 +250,7 @@ WHERE database_id = DB_ID();
  **-S** *server_name*[\\*instance_name*]  
  Specifica l'istanza del [!INCLUDE[ssDE](../../includes/ssde-md.md)] che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare.  
   
- Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare *server_name***\\*** instance_name* per connettersi a un'istanza denominata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
+ Specificare *server_name* per connettersi all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Specificare *server_name***\\***instance_name* per connettersi a un'istanza denominata del [!INCLUDE[ssDE](../../includes/ssde-md.md)] in tale server. Se **-S** non viene specificata, **ssbdiagnose** usa il valore della variabile di ambiente SQLCMDSERVER. Se SQLCMDSERVER non è impostata, **ssbdiagnose** si connette all'istanza predefinita del [!INCLUDE[ssDE](../../includes/ssde-md.md)] sul computer locale.  
   
  **-d** *database_name*  
  Specifica il database che contiene i servizi di [!INCLUDE[ssSB](../../includes/sssb-md.md)] da analizzare. Se il database non esiste, viene generato un messaggio di errore. Se l'opzione **-d** non è specificata, per impostazione predefinita viene usato il database specificato nella proprietà default-database dell'account di accesso.  

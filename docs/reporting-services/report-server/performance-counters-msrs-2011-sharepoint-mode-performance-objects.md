@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33028418"
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Contatori delle prestazioni per gli oggetti prestazioni MSRS 2011 in modalità SharePoint
   Questo argomento illustra i contatori delle prestazioni per gli oggetti prestazioni **MSRS 2011 Web Service SharePoint Mode** e **MSRS 2011 Windows Service SharePoint Mode** che fanno parte di una distribuzione in modalità SharePoint di [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] .  

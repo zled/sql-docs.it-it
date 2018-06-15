@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32964576"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Esercitazione: Configurare la replica tra un server e più client per dispositivi mobili (replica di tipo merge)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33021608"
 ---
 # <a name="manage-shared-datasets"></a>Gestire set di dati condivisi
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]i set di dati condivisi consentono il recupero di dati da origini dati condivise tramite cui si esegue la connessione alle origini dati esterne. Un set di dati condiviso consente di condividere una query per fornire un set di dati coerente a più report. Nella query del set di dati possono essere inclusi i parametri di quest'ultimo. È possibile configurare un set di dati condiviso per memorizzare nella cache i risultati della query per specifiche combinazioni di parametri al primo utilizzo o specificando una pianificazione. È possibile inoltre utilizzare la memorizzazione nella cache del set di dati condiviso in combinazione con la memorizzazione nella cache dei report e con i feed di dati del report per consentire di gestire l'accesso a un'origine dati.  

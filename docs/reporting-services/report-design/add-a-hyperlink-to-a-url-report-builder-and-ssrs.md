@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023028"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Aggiungere un collegamento ipertestuale a un URL (Generatore report e SSRS)
 Informazioni su come aggiungere azioni con collegamento ipertestuale a caselle di testo, immagini, grafici e misuratori in report impaginati di [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . I collegamenti possono indirizzare ad altri report, a segnalibri di un report o a URL statici o dinamici. 

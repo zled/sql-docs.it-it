@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023008"
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Raccolta di campi del set di dati (Generatore report e SSRS)
   I campi del set di dati rappresentano i dati provenienti da una connessione dati. Un campo può presentare dati numerici o non numerici. Possono essere inclusi, ad esempio, importi delle vendite, vendite totali, nomi dei clienti, identificatori di database, URL, immagini, dati spaziali e indirizzi di posta elettronica. Nell'area di progettazione i campi vengono visualizzati come espressioni in elementi del report quali caselle di testo, tabelle e grafici.  

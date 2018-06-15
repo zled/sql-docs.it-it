@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33017493"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Utilizzo del controllo Web Form ReportViewer
   Per visualizzare i report distribuiti in un server di report o presenti in un file system locale, è possibile utilizzare il controllo Web Form ReportViewer per eseguirne il rendering in un'applicazione Web.  
