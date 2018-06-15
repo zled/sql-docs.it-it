@@ -21,11 +21,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: e812b2dcdc7293a51f1c014681d04674c9995d37
-ms.sourcegitcommit: 2ddc0bfb3ce2f2b160e3638f1c2c237a898263f4
+ms.openlocfilehash: 961c9f7e093f61db909360f0dd7f8ac30f2d13e1
+ms.sourcegitcommit: 38f8824abb6760a9dc6953f10a6c91f97fa48432
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
+ms.locfileid: "33988809"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Esercitazione: Creare script per oggetti in SQL Server Management Studio
 In questa esercitazione viene illustrato come generare script Transact-SQL (T-SQL) per vari oggetti presenti in SQL Server Management Studio (SSMS). In questa esercitazione è possibile trovare esempi di come creare script per gli oggetti seguenti:
@@ -43,11 +44,11 @@ Per creare lo script per un oggetto in **Esplora oggetti**, fare clic con il pul
 ## <a name="prerequisites"></a>Prerequisites
 Per completare questa esercitazione, sono necessari SQL Server Management Studio, l'accesso a un server che esegue SQL Server e un database AdventureWorks.
 
-- Installare [SQL Server Management Studio](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).
-- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads).
+- Installare [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+- Installare [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Scaricare i [database di esempio AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Le istruzioni per il ripristino dei database in SSMS sono disponibili in [Ripristinare un database](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Creare script di query dalla GUI
@@ -134,7 +135,7 @@ Nella sezione seguente viene illustrato come generare uno script per un database
    ![Oggetti dello script](media/scripting-ssms/advancedscripts.png)
 
    > [!NOTE]
-   > È possibile creare lo script di dati per il database quando si seleziona *Schema e dati* per l'opzione **Tipi di dati per cui generare lo script**. Non è tuttavia l'ideale con database di grandi dimensioni perché può richiedere più memoria di quanta ne possa essere allocata da SSMS. Questa limitazione è accettabile per i database di piccole dimensioni. Per spostare i dati per un database di dimensioni maggiori, usare l[Importazione/Esportazione guidata](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
+   > È possibile creare lo script di dati per il database quando si seleziona *Schema e dati* per l'opzione **Tipi di dati per cui generare lo script**. Non è tuttavia l'ideale con database di grandi dimensioni perché può richiedere più memoria di quanta ne possa essere allocata da SSMS. Questa limitazione è accettabile per i database di piccole dimensioni. Per spostare i dati per un database di dimensioni maggiori, usare l[Importazione/Esportazione guidata](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
 
 1. Selezionare **OK**e quindi selezionare **Avanti**.
@@ -173,7 +174,7 @@ In questa sezione verrà eliminata e ricreata una stored procedure.
     ![Generare script per stored procedure](media/scripting-ssms/scriptstoredprocedure.PNG)
 
 ## <a name="script-extended-events"></a>Generare script per eventi estesi
-In questa sezione viene illustrato come inserire nello script gli [eventi estesi](https://docs.microsoft.com/en-us/sql/relational-databases/extended-events/extended-events).
+In questa sezione viene illustrato come inserire nello script gli [eventi estesi](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
 
 1. Connettersi a un server che esegue SQL Server.
 2. Espandere il nodo **Gestione**.

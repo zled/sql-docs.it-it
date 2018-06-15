@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538601"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Topologia dello strumento - Analitica Platform System
 Visualizza le informazioni di riepilogo nell'intero sistema piattaforma Analitica.  

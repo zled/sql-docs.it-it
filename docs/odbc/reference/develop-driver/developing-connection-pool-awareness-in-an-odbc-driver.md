@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32922066"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Sviluppo di un Driver ODBC consapevolezza Pool di connessioni
 In questo argomento vengono illustrati i dettagli dello sviluppo di un driver ODBC che contiene informazioni su come il driver deve fornire i servizi del pool di connessione.  

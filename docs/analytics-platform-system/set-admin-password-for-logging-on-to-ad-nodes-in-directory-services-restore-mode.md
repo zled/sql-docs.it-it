@@ -14,6 +14,7 @@ ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/19/2018
+ms.locfileid: "31538381"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Impostare la Password di amministratore per accedendovi nodi di Active Directory in servizi di Directory ripristinare la modalità (DSRM) - Analitica Platform System
 Modalità ripristino servizi directory (DSRM) è una modalità di avvio per il ripristino o il ripristino di servizi di dominio Active Directory (AD DS). Consente di accedere ai nodi del dispositivo AD dopo di dominio Active Directory non è riuscita o quando servizi di dominio Active Directory deve essere ripristinato. La password per la modalità ripristino servizi directory è stata inizializzata durante l'installazione dello strumento presso il fornitore dell'hardware e debba essere modificata dall'amministratore del dispositivo. Sistema della piattaforma Analitica ha due AD DS (controller di dominio). ***appliance_domain *-AD01** e ***appliance_domain *-AD02**. Per ogni nodo di dispositivo Active Directory, modificare la password modalità ripristino servizi directory utilizzando la procedura seguente.  

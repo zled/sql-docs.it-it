@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34024758"
 ---
 # <a name="amo-olap-classes"></a>Classi OLAP di AMO
   Le classi OLAP della libreria AMO (Analysis Management Objects) consentono di creare, modificare, eliminare ed elaborare cubi, dimensioni e oggetti correlati, ad esempio indicatori di prestazioni chiave (KPI), azioni e memorizzazione nella cache attiva.  

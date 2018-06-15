@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017658"
 ---
 # <a name="lesson-4-4---hiding-and-disabling-attribute-hierarchies"></a>Lezione 4-4-come nascondere e disabilitare le gerarchie di attributi
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
