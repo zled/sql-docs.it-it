@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33032888"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Recapito tramite posta elettronica in Reporting Services
   In SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è disponibile un'estensione per il recapito tramite posta elettronica che consente di inviare un report a utenti o gruppi tramite posta elettronica. Per distribuire un report usando la posta elettronica, 1) configurare il server di report per il recapito della posta elettronica e 2) definire una sottoscrizione standard oppure una sottoscrizione guidata dai dati. Una singola sottoscrizione non può recapitare più report nello stesso messaggio di posta elettronica. È possibile, tuttavia, creare più sottoscrizioni.  
