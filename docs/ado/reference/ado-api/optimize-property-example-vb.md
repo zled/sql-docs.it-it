@@ -2,7 +2,6 @@
 title: Ottimizzare l'esempio di proprietà (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 881d332c6f7e1ac0f74a54dcacc7e9e7e3382006
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0b750a30030d3f37e0b53af36001fa10929756a4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280000"
 ---
 # <a name="optimize-property-example-vb"></a>Ottimizzare l'esempio di proprietà (Visual Basic)
 Questo esempio viene illustrato il [campo](../../../ado/reference/ado-api/field-object.md) del dinamica oggetto **Ottimizza** proprietà. Il ***zip*** campo il ***autori*** tabella il ***Pubs*** database non è indicizzato. Impostazione di [Ottimizza](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) proprietà **True** sul ***zip*** campo autorizza ADO a creare un indice che migliora le prestazioni del [trovare](../../../ado/reference/ado-api/find-method-ado.md)metodo.  

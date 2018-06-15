@@ -2,7 +2,6 @@
 title: Proprietà RecordCount (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 67416b2282f913e04867b9d4ac23ee0ea0f0c41a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0320cf9128c5b9f4b6bbe86f800c83e8eb779df4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280890"
 ---
 # <a name="recordcount-property-ado"></a>Proprietà RecordCount (ADO)
 
@@ -36,7 +36,7 @@ Indica il numero di record in un [Recordset](../../../ado/reference/ado-api/reco
 
 Restituisce un **lungo** valore che indica il numero di record di **Recordset**.
   
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Remarks
 
 Utilizzare il **RecordCount** sono di proprietà per individuare il numero di record un **Recordset** oggetto. La proprietà restituisce -1 quando ADO non è possibile determinare il numero di record o se il tipo di cursore o provider non supporta **RecordCount**. Lettura di **RecordCount** proprietà in una classe chiusa **Recordset** causa un errore.
 

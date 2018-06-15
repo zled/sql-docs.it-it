@@ -2,7 +2,6 @@
 title: HelpContext e HelpFile | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -26,11 +25,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0fdd4316a0d1ca1e75b074590755a65267e93ca0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 708ce57e129ed84dcbafa837916c299a76739e0d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278910"
 ---
 # <a name="helpcontext-helpfile-properties"></a>Proprietà HelpContext, HelpFile
 Indica il file e l'argomento associato a un [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
@@ -41,7 +41,7 @@ Indica il file e l'argomento associato a un [errore](../../../ado/reference/ado-
   
 -   **HelpFile** restituisce un **stringa** valore che restituisce un percorso completamente risolto da un file della Guida.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Se viene specificato un file della Guida nel **HelpFile** proprietà, il **HelpContext** proprietà viene utilizzata per visualizzare automaticamente l'argomento della Guida vengono identificati. Se non è disponibile, nessun argomento della Guida rilevante di **HelpContext** proprietà restituisce zero e **HelpFile** proprietà restituisce una stringa di lunghezza zero ("").  
   
 ## <a name="applies-to"></a>Si applica a  

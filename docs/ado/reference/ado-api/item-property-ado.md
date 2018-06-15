@@ -2,7 +2,6 @@
 title: Elemento proprietà (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -50,11 +49,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94826364231c295986d762361d6b946cba7e0b8e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 81c6ebc6b7dc0346a2d703c2969f1b114dd72039
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279250"
 ---
 # <a name="item-property-ado"></a>Proprietà dell'elemento (ADO)
 Indica un membro specifico di una raccolta, per nome o numero ordinale.  
@@ -72,7 +72,7 @@ Set object = collection.Item ( Index )
  *Index*  
  Oggetto **Variant** espressione che restituisce il nome o il numero ordinale di un oggetto in una raccolta.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **elemento** proprietà per restituire un oggetto specifico in una raccolta. Se **elemento** Impossibile trovare un oggetto nella raccolta corrispondente di *indice* si verifica un errore di argomento. Inoltre, alcuni insiemi non supportano gli oggetti denominati. Per queste raccolte, è necessario utilizzare riferimenti di un numero ordinale.  
   
  Il **elemento** proprietà è la proprietà predefinita per tutte le raccolte, di conseguenza, le forme di sintassi seguenti sono intercambiabili:  

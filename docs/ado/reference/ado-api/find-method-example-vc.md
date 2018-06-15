@@ -2,7 +2,6 @@
 title: Esempio del metodo Find (VC + +) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ed34d6e09df280034b4e9f9e2e0ce201ff69cf3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3280728d8e2e7a7f822be568052a5cbac84767a3
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278590"
 ---
 # <a name="find-method-example-vc"></a>Esempio del metodo Find (VC + +)
 Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) per individuare e calcolare il numero di titoli di business nel **Pubs** database. Si presuppone che il provider sottostante non supporta una funzionalità simile.  

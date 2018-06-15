@@ -2,7 +2,6 @@
 title: Raccolta di errori (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e7c259dda6c491c1992c19ed0ebe3decdc4a42d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 17e21c1d807ba537544a1578cb9ef2b8ea83ad21
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278160"
 ---
 # <a name="errors-collection-ado"></a>Raccolta di errori (ADO)
 Contiene tutti i [errore](../../../ado/reference/ado-api/error-object.md) gli oggetti creati in risposta a un singolo errore correlato al provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Qualsiasi operazione relativa agli oggetti ADO può generare una o più errori del provider. Quando si verifica ogni errore, uno o più **errore** oggetti possono essere inseriti nel **errori** insieme del [connessione](../../../ado/reference/ado-api/connection-object-ado.md) oggetto. Quando un'altra operazione ADO genera un errore, il **errori** insieme è deselezionata e il nuovo set di **errore** oggetti possono essere inseriti nel **errori** insieme.  
   
  Ogni **errore** oggetto rappresenta un errore del provider specifico, non un errore di ADO. Gli errori ADO vengono esposti al meccanismo di gestione delle eccezioni in fase di esecuzione. Ad esempio, in Microsoft Visual Basic, l'occorrenza di un errore specifico ADO verrà generato un [onError](../../../ado/reference/rds-api/onerror-event-rds.md) eventi e vengono visualizzate nel **Err** oggetto.  
