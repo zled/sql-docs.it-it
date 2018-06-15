@@ -2,7 +2,7 @@
 title: L'accesso a informazioni di diagnostica nel Log degli eventi estesi | Documenti Microsoft
 description: La traccia di Driver OLE DB per SQL Server e l'accesso alle informazioni di diagnostica nel log degli eventi estesi
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/12/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb|features
@@ -14,14 +14,17 @@ ms.topic: reference
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 255daa268cb3b8aeaee0e371052ae8af01241f72
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 57103074c0dd9453678e115bafcdfabf2270d1ba
+ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/14/2018
+ms.locfileid: "35611656"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Accesso alle informazioni di diagnostica nel registro eventi estesi
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   A partire da [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], il Driver OLE DB per la traccia di accesso di SQL Server e i dati ([traccia di accesso ai dati](http://go.microsoft.com/fwlink/?LinkId=125805)) sono stati aggiornati per rendere più semplice ottenere informazioni di diagnostica sugli errori di connessione dal buffer circolare di connettività e informazioni sulle prestazioni dell'applicazione dal log degli eventi estesi.  
   
@@ -31,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Questa funzionalità è destinata esclusivamente alla risoluzione dei problemi e a fini diagnostici e potrebbe non essere appropriata per il controllo o per scopi di sicurezza.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Per le operazioni di connessione, il Driver OLE DB per SQL Server invierà un client ID connessione. Se la connessione non riesce, è possibile accedere al buffer circolare ([la risoluzione dei problemi di connettività in SQL Server 2008 con il Buffer circolare di connettività](http://go.microsoft.com/fwlink/?LinkId=207752)) e individuare il **ClientConnectionID** campo e ottenere informazioni diagnostiche sull'errore di connessione. Gli ID di connessione client vengono registrati nel buffer circolare solo se si verifica un errore. In caso di errore di connessione prima dell'invio del pacchetto di preaccesso, l'ID di connessione client non verrà generato. L'ID di connessione client è un GUID a 16 byte. È anche possibile trovare il client ID di connessione negli eventi estesi di output di destinazione, se il **client_connection_id** azione viene aggiunta agli eventi in una sessione eventi estesi. È possibile abilitare la traccia di accesso ai dati e rieseguire il comando di connessione e osservare il **ClientConnectionID** campo nella traccia di accesso ai dati per un'operazione non riuscita, se necessaria ulteriore assistenza diagnostica.  
    
   

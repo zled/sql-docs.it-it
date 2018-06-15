@@ -2,7 +2,6 @@
 title: Metodo OpenSchema | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 52eaf3a58ae7f6eeaddecb943b5a129dec5e44e0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 780e708d5e852601333fb319291e1e9db9450c39
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280530"
 ---
 # <a name="openschema-method"></a>Metodo OpenSchema
 Ottiene informazioni sullo schema di database dal provider.  
@@ -45,12 +45,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Qualsiasi [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) valore che rappresenta il tipo di query di schema per l'esecuzione.  
   
  *Criteri*  
- Facoltativa. Una matrice dei vincoli di query per ogni *QueryType* opzione, come indicato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Facoltativo. Una matrice dei vincoli di query per ogni *QueryType* opzione, come indicato nella [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  GUID per una query di schema provider non è definito dalla specifica OLE DB. Questo parametro è obbligatorio se *QueryType* è impostato su **adSchemaProviderSpecific**; in caso contrario, non viene utilizzato.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **OpenSchema** metodo restituisce autodescrittivo informazioni sull'origine dati, ad esempio quali sono le tabelle nell'origine dati, le colonne nelle tabelle e i tipi di dati supportati.  
   
  Il *QueryType* argomento è un GUID che indica le colonne (schemi) restituite. La specifica OLE DB include un elenco completo degli schemi.  

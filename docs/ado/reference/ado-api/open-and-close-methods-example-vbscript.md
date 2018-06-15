@@ -2,7 +2,6 @@
 title: Apertura e chiusura di esempio di metodi (VBScript) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 87c8e2c897155c4dc8416dbfdd8ba68ae9191271
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e876658bcdd8bd7595349bc2e4a559d21d7efa08
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279960"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Esempio di metodi di apertura e chiusura (VBScript)
 Questo esempio viene utilizzato il [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) e [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) su entrambi i metodi [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) e [connessione](../../../ado/reference/ado-api/connection-object-ado.md) gli oggetti che sono stati aperti.  

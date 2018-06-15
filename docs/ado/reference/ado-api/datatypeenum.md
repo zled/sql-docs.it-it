@@ -2,7 +2,6 @@
 title: DataTypeEnum | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5ca60e4fda2319b9b63d7c0b7c0162cfd8027063
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c4e9f6e0188bf8752a4bbecb91b084c49317a238
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277510"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Specifica il tipo di dati di un [campo](../../../ado/reference/ado-api/field-object.md), [parametro](../../../ado/reference/ado-api/parameter-object.md), o [proprietà](../../../ado/reference/ado-api/property-object-ado.md). L'indicatore del tipo OLE DB corrispondente è racchiusa tra parentesi nella colonna Descrizione della tabella seguente.  
   
-|Costante|Value|Description|  
+|Costante|valore|Description|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|Un valore del flag, sempre combinato con un'altra costante del tipo di dati, che indica una matrice del tipo di dati. Si applica ad ADOX.|  
 |**adBigInt**|20|Indica un intero con segno a 8 byte (DBTYPE_I8).|  

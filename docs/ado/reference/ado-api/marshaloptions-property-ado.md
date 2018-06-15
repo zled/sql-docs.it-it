@@ -2,7 +2,6 @@
 title: Proprietà MarshalOptions (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ca3cb11f425b94145b89638012844d64265bd6b3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8b81646d7d4339f06e5682c1886651cf69ea0dc4
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279340"
 ---
 # <a name="marshaloptions-property-ado"></a>Proprietà MarshalOptions (ADO)
 Indica i record del [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) devono essere sottoposti a marshalling al server.  
@@ -32,7 +32,7 @@ Indica i record del [Recordset](../../../ado/reference/ado-api/recordset-object-
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md) valore. Il valore predefinito è **adMarshalAll**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Quando si utilizza un client-side [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), i record che sono stati modificati sul client vengono scritte nel livello intermedio o di un server Web mediante una tecnica denominata marshalling su diversi, il processo di creazione di pacchetti e l'invio di metodo di interfaccia parametri attraverso i limiti di thread o processo. L'impostazione di **MarshalOptions** proprietà può migliorare le prestazioni quando viene effettuato il marshalling di dati remoti modificati per l'aggiornamento nel server Web o nel livello intermedio.  
   
 > [!NOTE]

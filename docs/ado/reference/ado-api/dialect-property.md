@@ -2,7 +2,6 @@
 title: Proprietà Dialect | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 74299cc953c3ac94653860d18d0ee7774ecf49ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 638d02511078028fa6c5b1337fdb1b095d8e5c85
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277920"
 ---
 # <a name="dialect-property"></a>Proprietà Dialect
 Indica il sottolinguaggio di [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) proprietà. Il sottolinguaggio definisce la sintassi e regole generali che il provider utilizzato per analizzare la stringa o nel flusso.  
@@ -32,7 +32,7 @@ Indica il sottolinguaggio di [CommandText](../../../ado/reference/ado-api/comman
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Il **sottolinguaggio** proprietà contiene un GUID valido che rappresenta il sottolinguaggio del comando testo o del flusso. Il valore predefinito per questa proprietà è {C8B521FB-5CF3-11CE-ADE5-00AA0044773D}, che indica che il provider deve scegliere come interpretare il testo del comando o nel flusso.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  ADO non esegue la query il provider quando l'utente legge il valore di questa proprietà. Restituisce una rappresentazione di stringa del valore attualmente archiviato nel [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
   
  Quando l'utente imposta il **sottolinguaggio** convalida il GUID di proprietà, ADO e genera un errore se il valore fornito non è un GUID valido. Vedere la documentazione relativa al provider per determinare i valori GUID supportati dal **sottolinguaggio** proprietà.  

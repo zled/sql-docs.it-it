@@ -2,7 +2,6 @@
 title: Oggetto Cellset (ADO MD) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,23 +19,24 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f32af1f621f3470dc0a9175708719965eef5fc71
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6437c17c80c85e535f6b1807f68c2755e1362d3c
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35283390"
 ---
 # <a name="cellset-object-ado-md"></a>Oggetto Cellset (ADO MD)
 Rappresenta i risultati di una query multidimensionale. È una raccolta di celle selezionate da cubi o altri set di celle.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Dati all'interno di un **set di celle** vengono recuperati utilizzando l'accesso diretto di tipo matrice. È possibile accedere a un membro specifico per ottenere i dati relativi a tale membro. Ad esempio, il codice seguente restituisce la didascalia del primo membro nella prima posizione del primo asse di un set di celle denominato `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Non è prevista di una cella corrente all'interno di un set di celle. Al contrario, il [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) proprietà recupera una specifica [cella](../../../ado/reference/ado-md-api/cell-object-ado-md.md) oggetto dal set di celle. Gli argomenti del **elemento** proprietà determinare quale cella viene recuperata. È possibile specificare il valore ordinale univoco di una cella. È anche possibile recuperare le celle utilizzando i numeri di posizione lungo ogni asse del set di celle. Per ulteriori informazioni sul recupero di celle, vedere il [elemento](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) proprietà.  
   
  Con le raccolte, i metodi e proprietà di un **set di celle** dell'oggetto, è possibile eseguire le operazioni seguenti:  

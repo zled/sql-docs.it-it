@@ -2,7 +2,6 @@
 title: BOF, proprietà EOF (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 369d6a3b4d069ed67ccc4c4d217aa257c20c79b1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 36399bf938371a464426b3092dcc95b0ceaa9e09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276150"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, proprietà EOF (ADO)
 -   **BOF** indica che la posizione del record corrente è precedente al primo record in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="return-value"></a>Valore restituito  
  Il **BOF** e **EOF** restituiscono **booleano** valori.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **BOF** e **EOF** le proprietà per determinare se un **Recordset** oggetto contiene record o se sono stati superati i limiti di un **Recordset**  dell'oggetto quando si sposta da un record a altro.  
   
  Il **BOF** restituisce proprietà **True** (-1) se la posizione del record corrente è precedente al primo record e **False** (0) se la posizione del record corrente è il o dopo il primo record.  

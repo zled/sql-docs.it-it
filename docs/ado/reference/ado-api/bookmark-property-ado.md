@@ -2,7 +2,6 @@
 title: Proprietà Bookmark (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 03/20/2018
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e8b73c3d31886877702cadfca0194fd628bf6172
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9e645300f604e1880f98fd8d99cea8599062f72f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276200"
 ---
 # <a name="bookmark-property-ado"></a>Proprietà Bookmark (ADO)
 Indica un segnalibro che identifica in modo univoco il record corrente in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto o imposta il record corrente in un **Recordset** oggetto sul record identificato da un segnalibro valido.  
@@ -32,7 +32,7 @@ Indica un segnalibro che identifica in modo univoco il record corrente in un [Re
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **Variant** un'espressione che restituisca un segnalibro valido.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **segnalibro** proprietà per salvare la posizione del record corrente e tornare al record specifico in qualsiasi momento. I segnalibri sono disponibili solo in **Recordset** gli oggetti che supportano la funzionalità corrispondente.  
   
  Quando si apre un **Recordset** dell'oggetto, ognuno dei relativi record dispone di un segnalibro univoco. Per salvare il segnalibro per il record corrente, assegnare il valore di **segnalibro** proprietà a una variabile. Per tornare rapidamente al record specifico in qualsiasi momento dopo il passaggio a un altro record, impostare il **Recordset** dell'oggetto **segnalibro** sul valore della variabile.  

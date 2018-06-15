@@ -2,7 +2,6 @@
 title: Esempio di proprietà Count (VC + +) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14470bd316473eb77de66cea530c78073bb902ba
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 567e1eed35fba0148e4ebb0e9fd137d4425e90ac
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35277220"
 ---
 # <a name="count-property-example-vc"></a>Esempio di proprietà Count (VC + +)
 Questo esempio viene illustrato il [conteggio](../../../ado/reference/ado-api/count-property-ado.md) proprietà con due raccolte nel ***dipendente*** database. La proprietà ottiene il numero di oggetti in ogni raccolta e imposta il limite superiore per i cicli che enumerano questi insiemi.  

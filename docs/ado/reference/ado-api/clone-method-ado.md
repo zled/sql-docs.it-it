@@ -2,7 +2,6 @@
 title: Clone (metodo) (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33fee6bf55b3175d75879e06949744d0730f6af0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f993cee93bce398020fdb5ae2b43a7911114a270
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276430"
 ---
 # <a name="clone-method-ado"></a>Metodo Clone (ADO)
 Crea un duplicato [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto da un oggetto esistente **Recordset** oggetto. Facoltativamente, specifica che il clone è di sola lettura.  
@@ -48,9 +48,9 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Una variabile oggetto che identifica il **Recordset** oggetto da duplicare.  
   
  *LockType*  
- Facoltativa. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che specifica il tipo di blocco dell'originale **Recordset**, sola lettura o **Recordset**. I valori validi sono **adLockUnspecified** o **adLockReadOnly**.  
+ Facoltativo. Oggetto [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore che specifica il tipo di blocco dell'originale **Recordset**, sola lettura o **Recordset**. I valori validi sono **adLockUnspecified** o **adLockReadOnly**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **Clone** duplicato per creare più **Recordset** oggetti, specialmente se si desidera mantenere più di un record corrente in un determinato set di record. Utilizzando il **Clone** è più efficiente rispetto alla creazione e l'apertura di un nuovo metodo **Recordset** oggetto che utilizza la stessa definizione dell'originale.  
   
  Il [filtro](../../../ado/reference/ado-api/filter-property.md) proprietà dell'originale **Recordset**, se presente, non verranno applicate al clone. Impostare il **filtro** proprietà del nuovo **Recordset** per filtrare i risultati. Il modo più semplice per copiare eventuali **filtro** valore consiste nell'assegnarlo direttamente, come indicato di seguito.  

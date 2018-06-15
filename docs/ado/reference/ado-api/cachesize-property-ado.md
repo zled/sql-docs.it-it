@@ -2,7 +2,6 @@
 title: Proprietà CacheSize (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 36930b020c120a58c41579056397a3b5a3ea085c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a3e27d5ce3302ea6c356ee84b9cc767bbde76c72
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276160"
 ---
 # <a name="cachesize-property-ado"></a>Proprietà CacheSize (ADO)
 Indica il numero di record da un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetti memorizzati nella cache in locale.  
@@ -32,7 +32,7 @@ Indica il numero di record da un [Recordset](../../../ado/reference/ado-api/reco
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **lungo** valore che deve essere maggiore di 0. Valore predefinito è 1.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **CacheSize** proprietà per controllare il numero di record da recuperare contemporaneamente nella memoria locale dal provider. Ad esempio, se il **CacheSize** è 10, dopo avere aperto prima il **Recordset** dell'oggetto, il provider recupera i primi 10 record nella memoria locale. Quando si sposta attraverso i **Recordset** dell'oggetto, il provider restituisce i dati dal buffer di memoria locale. Non appena si sposta dopo l'ultimo record nella cache, il provider recupera i successivi 10 record dall'origine dati nella cache.  
   
 > [!NOTE]

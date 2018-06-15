@@ -2,7 +2,6 @@
 title: Requery (metodo) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 63c63ce0a4fd42b5cfe784793d76c68a5f23d083
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0473cd2c2e8faae5f5ca5805a4cf4e141225f9f9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281310"
 ---
 # <a name="requery-method"></a>Requery (metodo)
 Aggiorna i dati in un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oggetto rieseguendo la query in cui si basa l'oggetto.  
@@ -39,12 +39,12 @@ recordset.Requery Options
   
 #### <a name="parameters"></a>Parametri  
  *Opzioni*  
- Facoltativa. Maschera di bit che contiene [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valori che influenzano l'operazione.  
+ Facoltativo. Maschera di bit che contiene [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) e [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) valori che influenzano l'operazione.  
   
 > [!NOTE]
 >  Se *opzioni* è impostato su **adAsyncExecute**, l'operazione verrà eseguita in modo asincrono e un [RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md) verrà generato l'evento quando conclude. Il **ExecuteOpenEnum** valori di **adExecuteStream** o **adExecuteStream** non deve essere utilizzato con **Requery**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **Requery** per aggiornare l'intero contenuto di un **Recordset** oggetto dall'origine dati rieseguendo il comando originale e recuperando i dati una seconda volta. Chiamare questo metodo è equivalente alla chiamata di [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) e [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodi in successione. Se si modifica il record corrente o aggiungendo un nuovo record, si verifica un errore.  
   
  Mentre il **Recordset** oggetto è aperto, le proprietà che definiscono la natura del cursore ([CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md), [LockType](../../../ado/reference/ado-api/locktype-property-ado.md), [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) e così via) sono di sola lettura. Di conseguenza, il **Requery** metodo può aggiornare solo il cursore corrente. Per modificare le proprietà del cursore e visualizzare i risultati, è necessario utilizzare il [Chiudi](../../../ado/reference/ado-api/close-method-ado.md) metodo in modo che le proprietà di lettura/scrittura nuovamente. È quindi possibile modificare le impostazioni di proprietà e una chiamata di [aprire](../../../ado/reference/ado-api/open-method-ado-recordset.md) metodo per riaprire il cursore.  

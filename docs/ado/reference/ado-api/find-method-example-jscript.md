@@ -2,7 +2,6 @@
 title: Esempio del metodo Find (JScript) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4671755b8ebbe5cf69a0341604f931902dea2d0e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 067f8c214d3ebf1f90871108444b666e0da77bfb
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35278640"
 ---
 # <a name="find-method-example-jscript"></a>Esempio del metodo Find (JScript)
 Questo esempio viene utilizzato il [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dell'oggetto [trovare](../../../ado/reference/ado-api/find-method-ado.md) metodo per individuare e visualizzare le società il ***Northwind*** database il cui nome inizia con la lettera G. tagliare e incollare i seguente codice nel blocco note o un altro editor di testo e salvarlo come **FindJS**.  

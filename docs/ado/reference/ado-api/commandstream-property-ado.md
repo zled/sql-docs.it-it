@@ -2,7 +2,6 @@
 title: La proprietà CommandStream (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ff08261349b73b7aef5c8b9fe1375b288941d41e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f8696706c0a785c77d7ca6a811811e1aba5fe133
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35276700"
 ---
 # <a name="commandstream-property-ado"></a>Proprietà CommandStream (ADO)
 Indica il flusso utilizzato come input per un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
@@ -32,7 +32,7 @@ Indica il flusso utilizzato come input per un [comando](../../../ado/reference/a
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Imposta o restituisce il flusso utilizzato come input per un **comando** oggetto. Il formato per il flusso è specifico del provider; vedere la documentazione del provider per ulteriori informazioni. Questa proprietà è simile al [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) proprietà, che consente di specificare una stringa per l'input di un **comando**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  **CommandStream** e **CommandText** si escludono a vicenda. Quando l'utente imposta il **CommandStream** proprietà, il **CommandText** verrà impostata su una stringa vuota (""). Se l'utente imposta il **CommandText** proprietà, il **CommandStream** verrà impostata su **nulla**.  
   
  I comportamenti del **Command.Parameters.Refresh** e **Command. Prepare** metodi definiti dal provider. I valori dei parametri in un flusso non possono essere aggiornati.  

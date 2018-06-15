@@ -2,7 +2,6 @@
 title: Metodo MoveRecord (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -21,11 +20,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 103206f4f4fe731da23a194cf89a54a404545f0d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c5171b0399614e266ff5ecfa974921f7bdef7646
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279620"
 ---
 # <a name="moverecord-method-ado"></a>Metodo MoveRecord (ADO)
 Sposta l'entità rappresentata da un [Record](../../../ado/reference/ado-api/record-object-ado.md) in un'altra posizione.  
@@ -39,27 +39,27 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Parametri  
  *Origine*  
- Facoltativa. Oggetto **stringa** valore che contiene un URL che identifica il **Record** da spostare. Se *origine* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **Record** viene spostato. Ad esempio, se il **Record** rappresenta un file, il contenuto del file viene spostati nel percorso specificato da *destinazione*.  
+ Facoltativo. Oggetto **stringa** valore che contiene un URL che identifica il **Record** da spostare. Se *origine* viene omesso o specifica una stringa vuota, l'oggetto rappresentato da questo **Record** viene spostato. Ad esempio, se il **Record** rappresenta un file, il contenuto del file viene spostati nel percorso specificato da *destinazione*.  
   
  *Destinazione*  
- Facoltativa. Oggetto **stringa** valore contenente un URL che specifica la posizione in cui *origine* verrà spostato.  
+ Facoltativo. Oggetto **stringa** valore contenente un URL che specifica la posizione in cui *origine* verrà spostato.  
   
  *UserName*  
- Facoltativa. Oggetto **stringa** valore che contiene l'ID utente, se necessario, si autorizza l'accesso a *destinazione*.  
+ Facoltativo. Oggetto **stringa** valore che contiene l'ID utente, se necessario, si autorizza l'accesso a *destinazione*.  
   
  *Password*  
- Facoltativa. Oggetto **stringa** che contiene la password che, se necessario, verifica *UserName*.  
+ Facoltativo. Oggetto **stringa** che contiene la password che, se necessario, verifica *UserName*.  
   
  *Opzioni*  
- Facoltativa. Oggetto [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valore il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
+ Facoltativo. Oggetto [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valore il cui valore predefinito è **adMoveUnspecified**. Specifica il comportamento di questo metodo.  
   
  *Async*  
- Facoltativa. Oggetto **booleano** valore che, quando **True**, specifica l'operazione deve essere asincrona.  
+ Facoltativo. Oggetto **booleano** valore che, quando **True**, specifica l'operazione deve essere asincrona.  
   
 ## <a name="return-value"></a>Valore restituito  
  Oggetto **stringa** valore. In genere, il valore di *destinazione* viene restituito. Tuttavia, il valore esatto restituito è dipende dal provider.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I valori di *origine* e *destinazione* non deve essere identica; in caso contrario, si verifica un errore di run-time. Almeno i nomi di server, percorso e delle risorse devono essere diverso.  
   
  Per i file spostati utilizzando Internet Publishing Provider, questo metodo aggiorna tutti i collegamenti ipertestuali salvo diversamente specificato da *opzioni*. Questo metodo ha esito negativo se *destinazione* identifica un oggetto esistente (ad esempio, un file o una directory), a meno che non **adMoveOverWrite** specificato.  

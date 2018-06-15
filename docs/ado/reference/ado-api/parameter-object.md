@@ -2,7 +2,6 @@
 title: Oggetto Parameter | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,16 +19,17 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 59474a000d3def675caf66085380c6a3791805c3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: eb2eda53603a06ed73dce0962bea4ca18035714f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280710"
 ---
 # <a name="parameter-object"></a>Oggetto Parameter
 Rappresenta un parametro o un argomento associato a un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto basato su una query con parametri o stored procedure.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Molti provider supportano i comandi con parametri. Questi sono i comandi in cui l'azione desiderata è definita una sola volta, ma le variabili (o parametri) vengono usati per modificare alcuni dettagli del comando. Un'istruzione SQL SELECT, ad esempio, utilizzare un parametro per definire i criteri di corrispondenza di una clausola WHERE e un altro per definire il nome di colonna per una clausola di ordinamento.  
   
  **Parametro** oggetti rappresentano i parametri associati alle query con parametri o gli argomenti in/out e i valori restituiti di stored procedure. A seconda della funzionalità del provider, alcuni insiemi, metodi o proprietà di un **parametro** oggetto potrebbe non essere disponibile.  

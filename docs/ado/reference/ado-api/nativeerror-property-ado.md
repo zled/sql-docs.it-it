@@ -2,7 +2,6 @@
 title: Proprietà NativeError (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd8b2962e460606da23ac207daa0e5e2ad3d465
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 74fb46aca8127901ffea10be1e5a587324ea5d53
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279590"
 ---
 # <a name="nativeerror-property-ado"></a>Proprietà NativeError (ADO)
 Indica il codice di errore specifico del provider per un determinato [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
@@ -34,7 +34,7 @@ Indica il codice di errore specifico del provider per un determinato [errore](..
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **lungo** valore che indica il codice di errore.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **NativeError** proprietà per recuperare le informazioni di errore specifico del database per un particolare **errore** oggetto. Ad esempio, quando si utilizza il Provider Microsoft ODBC per OLE DB con un database di Microsoft SQL Server, i codici di errore nativo originati da SQL Server passano-through ODBC e il Provider ODBC per ADO **NativeError** proprietà.  
   
 ## <a name="applies-to"></a>Si applica a  

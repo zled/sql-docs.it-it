@@ -2,7 +2,6 @@
 title: Proprietà LockType (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 35d413ea9bfaded1494270d837f433fc9546e0b4
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f981f14e4eedb9dad3724f91c5ce70f6535ee0a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279230"
 ---
 # <a name="locktype-property-ado"></a>Proprietà LockType (ADO)
 Indica il tipo di blocco applicato ai record durante la modifica.  
@@ -32,7 +32,7 @@ Indica il tipo di blocco applicato ai record durante la modifica.
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valore. Il valore predefinito è **adLockReadOnly**.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Impostare il **LockType** proprietà prima di aprire un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) per specificare il tipo di blocco che il provider deve utilizzare durante l'apertura del file. Leggere la proprietà per restituire il tipo di blocco in uso su un oggetto aperto **Recordset** oggetto.  
   
  I provider potrebbero non supportare tutti i tipi di blocco. Se un provider non supporta la richiesta **LockType** impostazione sostituirà un altro tipo di blocco. Per determinare la funzionalità di blocco disponibile in un **Recordset** oggetto, usare il [supporta](../../../ado/reference/ado-api/supports-method.md) metodo con **valori adUpdate** e **adUpdateBatch**.  

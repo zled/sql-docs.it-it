@@ -2,7 +2,6 @@
 title: Registrazione di un oggetto Business personalizzato | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 19
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0102bc6f817c67bc61ef2c4f73d05f1bf86d099
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2ac3e25b0770ae2e7617f8cb10ff35496d26a5c0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35274260"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrazione di un oggetto di Business personalizzata
 Per avviare correttamente un oggetto business personalizzato (con estensione dll o .exe) tramite il server Web, ProgID dell'oggetto business deve essere immesso nel Registro di sistema, come illustrato in questa procedura. Questa funzionalità di servizi desktop remoto consente di proteggere la sicurezza del server Web tramite l'esecuzione di eseguibili attendibili.  

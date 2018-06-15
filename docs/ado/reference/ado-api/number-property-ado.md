@@ -2,7 +2,6 @@
 title: Numero di proprietà (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,11 +21,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 592390f1ae5fd6e1e8087d7c33062e2b271af3eb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3fca9c0eb3adf908b65c16e54ffb21e9d0ae49e0
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279943"
 ---
 # <a name="number-property-ado"></a>Proprietà Number (ADO)
 Indica il numero che identifica in modo univoco un [errore](../../../ado/reference/ado-api/error-object.md) oggetto.  
@@ -34,7 +34,7 @@ Indica il numero che identifica in modo univoco un [errore](../../../ado/referen
 ## <a name="return-value"></a>Valore restituito  
  Restituisce un **lungo** valore che può corrispondere a uno del [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md) costanti.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **numero** proprietà per determinare l'errore verificatosi. Il valore della proprietà è un numero univoco che corrisponde alla condizione di errore.  
   
  Il [errori](../../../ado/reference/ado-api/errors-collection-ado.md) raccolta restituisce un valore HRESULT in formato esadecimale (ad esempio, 0x80004005) o come valore long (ad esempio, 2147467259). Tali valori HRESULT possono essere generati da componenti sottostanti, ad esempio OLE DB o OLE stesso. Per ulteriori informazioni su questi numeri, vedere [errori (OLE DB)](http://msdn.microsoft.com/en-us/ed74e62d-4948-4eeb-a7c9-fd7ad46af7fd) nel [riferimento per programmatori OLE DB](http://msdn.microsoft.com/en-us/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)*.*  

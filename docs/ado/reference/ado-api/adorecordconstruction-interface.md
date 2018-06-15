@@ -2,7 +2,6 @@
 title: Interfaccia ADORecordConstruction | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 76a13ea05920d1a479734b26bdc57bedfe2d6817
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cadacd2dae2b21ea03187721eaee79aac848432f
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35275630"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaccia ADORecordConstruction
 Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggetto ADO **Record** oggetto da OLE DB **riga** oggetto in un'applicazione C/C++.  
@@ -39,12 +39,12 @@ Il **ADORecordConstruction**interfaccia viene utilizzata per costruire un oggett
 |[Riga](../../../ado/reference/ado-api/row-property-ado.md)|Lettura/scrittura.<br />Ottiene o imposta il valore OLE DB **riga** oggetto da/su questo ADO **Record** oggetto.|  
   
 ## <a name="methods"></a>Metodi  
- Nessuno  
+ Nessuna.  
   
 ## <a name="events"></a>Eventi  
- Nessuno  
+ Nessuna.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Data OLE DB **riga** oggetto (`pRow`), la costruzione di un oggetto ADO **Record** oggetto (`adoR`), gli importi di tre operazioni di base seguenti:  
   
 1.  Creare un oggetto ADO **Record** oggetto:  

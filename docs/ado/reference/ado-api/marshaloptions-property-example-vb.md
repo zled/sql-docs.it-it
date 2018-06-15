@@ -2,7 +2,6 @@
 title: Esempio di proprietà MarshalOptions (VB) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -19,11 +18,12 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b04608d3e8cad81d04769b42341cbd97303c38ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e9c2109bedd19bceb90469d5880342dec2780afc
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35279310"
 ---
 # <a name="marshaloptions-property-example-vb"></a>Esempio di proprietà MarshalOptions (VB)
 Questo esempio viene utilizzato il [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) proprietà per specificare le righe da inviare al server, tutte le righe o solo le righe modificate.  

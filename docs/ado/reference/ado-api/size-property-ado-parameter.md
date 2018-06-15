@@ -2,7 +2,6 @@
 title: Proprietà (parametro ADO) Size | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faa4e918d291f9d6dc095f05a40b6d71729bb5da
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c33004000e4f8f3099a53777a2941c442901ba7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35281860"
 ---
 # <a name="size-property-ado-parameter"></a>Proprietà Size (parametro ADO)
 Indica la dimensione massima, in byte o caratteri, di un [parametro](../../../ado/reference/ado-api/parameter-object.md) oggetto.  
@@ -32,7 +32,7 @@ Indica la dimensione massima, in byte o caratteri, di un [parametro](../../../ad
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **lungo** valore che indica le dimensioni massime in byte o caratteri di un valore in un **parametro** oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Utilizzare il **dimensioni** proprietà per determinare le dimensioni massime per i valori scritti o leggere il [valore](../../../ado/reference/ado-api/value-property-ado.md) proprietà di un **parametro** oggetto.  
   
  Se si specifica un tipo di dati a lunghezza variabile per un **parametro** oggetto (ad esempio, qualsiasi **stringa** digitare, ad esempio **adVarChar**), è necessario impostare l'oggetto  **Dimensioni** proprietà prima di aggiungerlo al [parametri](../../../ado/reference/ado-api/parameters-collection-ado.md) raccolta; in caso contrario, si verifica un errore.  

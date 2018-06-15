@@ -2,7 +2,6 @@
 title: Posizione, proprietà (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -20,11 +19,12 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c931d220a9418a790ff79d6b61c89004800a0061
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 407ef25ebc55685436f61acaa42cbdf964619b09
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280690"
 ---
 # <a name="position-property-ado"></a>Proprietà Position (ADO)
 Indica la posizione corrente all'interno di un [flusso](../../../ado/reference/ado-api/stream-object-ado.md) oggetto.  
@@ -32,7 +32,7 @@ Indica la posizione corrente all'interno di un [flusso](../../../ado/reference/a
 ## <a name="settings-and-return-values"></a>Le impostazioni e valori restituiti  
  Restituisce o imposta un **lungo** valore che specifica l'offset, in numero di byte, della posizione corrente dall'inizio del flusso. Il valore predefinito è 0, che rappresenta il primo byte nel flusso.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  La posizione corrente può essere spostata in un punto dopo la fine del flusso. Se si specifica la posizione corrente oltre la fine del flusso di [dimensioni](../../../ado/reference/ado-api/size-property-ado-stream.md) del **flusso** oggetto verrà aumentato di conseguenza. Eventuali nuovi byte aggiunti in questo modo sarà null.  
   
 > [!NOTE]

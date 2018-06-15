@@ -2,7 +2,6 @@
 title: Raccolta di parametri (ADO) | Documenti Microsoft
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -22,16 +21,17 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3b9976679454881af9279dc74ff86eacdb01d2a2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b7c59411e1aeeaa32e2b1904e2503b26a92c829b
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35280657"
 ---
 # <a name="parameters-collection-ado"></a>Raccolta di parametri (ADO)
 Contiene tutti i [parametro](../../../ado/reference/ado-api/parameter-object.md) gli oggetti di un [comando](../../../ado/reference/ado-api/command-object-ado.md) oggetto.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Oggetto **comando** oggetto ha un **parametri** raccolta costituita da **parametro** oggetti.  
   
  Utilizzando il [aggiornamento](../../../ado/reference/ado-api/refresh-method-ado.md) metodo su un **comando** dell'oggetto **parametri** insieme recupera informazioni sui parametri di provider per la stored procedure o query con parametri specificato nella **comando** oggetto. Alcuni provider non supporta chiamate di stored procedure o query con parametri. chiamata di **aggiornare** metodo il **parametri** raccolta quando si utilizza un provider di questo tipo verrà restituito un errore.  
