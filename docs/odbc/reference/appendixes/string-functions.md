@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32914046"
 ---
 # <a name="string-functions"></a>Funzioni per i valori stringa
 La tabella seguente elenca le funzioni di modifica di stringa. Un'applicazione può determinare le funzioni di stringa supportate da un driver chiamando **SQLGetInfo** con un *tipo di informazioni* di SQL_STRING_FUNCTIONS.  

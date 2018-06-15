@@ -21,6 +21,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913476"
 ---
 # <a name="procedure-parameters"></a>Parametri di routine
 I parametri nelle chiamate di procedura possono essere di input, input/output o i parametri di output. Ciò è diverso dai parametri di tutte le altre istruzioni SQL sono sempre i parametri di input.  
