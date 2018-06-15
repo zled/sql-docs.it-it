@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029868"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>Metodo di ConfigurationSetting - BackupEncryptionKey
   Esegue il backup della chiave di crittografia per l'istanza del server di report specificata. Tale chiave viene archiviata crittografata con una password.  

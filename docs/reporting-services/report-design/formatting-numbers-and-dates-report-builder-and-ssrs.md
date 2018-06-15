@@ -29,6 +29,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33023548"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Formattazione di numeri e date (Generatore report e SSRS)
   È possibile formattare numeri e date nelle aree dati selezionando un formato nella pagina **Numero** della finestra di dialogo **Proprietà** dell'area dati corrispondente.  

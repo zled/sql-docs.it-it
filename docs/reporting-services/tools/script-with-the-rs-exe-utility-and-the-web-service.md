@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33029424"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Eseguire lo script con l'utilità rs.exe e il servizio Web
   Gli sviluppatori e gli amministratori del server di report possono eseguire operazioni su un server di report con l'utilità **rs** (RS.exe). Tramite questa utilità, è possibile amministrare a livello di programmazione un server di report usando gli script scritti con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

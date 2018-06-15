@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33019318"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Aggiungere un segnalibro a un report (Generatore report e SSRS)
   Aggiungere segnalibri e collegamenti a segnalibro a un report quando si desidera fornire un sommario personalizzato o collegamenti interni personalizzati nel report. In genere i segnalibri vengono aggiunti a posizioni del report cui si desidera indirizzare gli utenti, ad esempio a ogni tabella o grafico o ai valori di gruppo univoci visualizzati in una tabella o una matrice. È possibile creare stringhe da utilizzare come segnalibri o, per i gruppi, è possibile impostare il segnalibro sull'espressione di raggruppamento.  

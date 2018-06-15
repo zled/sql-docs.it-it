@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "33013758"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integrazione di Reporting Services tramite i controlli ReportViewer - Raccolta dati
 Per impostazione predefinita, il controllo ReportViewer raccoglie informazioni anonime sull'utilizzo affinché Microsoft possa comprendere meglio come i clienti fanno uso del controllo. Con una migliore comprensione di come i clienti distribuiscono e usano il controllo Visualizzatore, lo sviluppo futuro può concentrarsi su miglioramenti in grado di offrire il massimo valore ai clienti.
