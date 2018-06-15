@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32908916"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>Utilizzare le applicazioni a 16 Bit e a 32 Bit con driver a 32 Bit
 > [!IMPORTANT]  

@@ -27,6 +27,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32913196"
 ---
 # <a name="role-of-the-driver-manager"></a>Ruolo di gestione Driver
 Gestione Driver determina l'ordine finale in cui restituire i record di stato che viene generata. In particolare, determina il record è il valore più alto e deve essere restituito prima. Il driver è responsabile per l'ordinamento dei record di stato che viene generata. Se i record di stato vengono registrati da Gestione Driver sia il driver, Driver Manager è responsabile ordinandoli. Per ulteriori informazioni, vedere [sequenza di record di stato](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

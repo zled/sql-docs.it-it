@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911336"
 ---
 # <a name="record-count"></a>Conteggio record
 Il campo dell'intestazione di un descrittore di SQL_DESC_COUNT è l'indice in base 1 del record numero più alto che contiene dati. Questo campo non è un conteggio di tutte le colonne o parametri associati. Quando viene allocato un descrittore, il valore iniziale di SQL_DESC_COUNT è 0.  

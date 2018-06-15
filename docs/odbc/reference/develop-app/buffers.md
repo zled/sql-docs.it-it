@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32911296"
 ---
 # <a name="buffers"></a>Buffer
 Un buffer è qualsiasi porzione di memoria dell'applicazione utilizzata per passare dati tra l'applicazione e il driver. Ad esempio, i buffer dell'applicazione può essere associato a, o *associato,* colonne con set di risultati **SQLBindCol**. Come viene recuperata ogni riga, i dati vengono restituiti per ogni colonna in questi buffer. *I buffer di input* vengono utilizzati per passare dati dall'applicazione al driver; *buffer di output* vengono utilizzate per restituire i dati dal driver per l'applicazione.  

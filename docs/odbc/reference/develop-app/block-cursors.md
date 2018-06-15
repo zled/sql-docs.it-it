@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32912156"
 ---
 # <a name="block-cursors"></a>Cursori a blocchi
 Molte applicazioni impiegano una quantità significativa di tempo per trasferire i dati attraverso la rete. Parte di questo tempo è trascorso effettivamente riportare i dati attraverso la rete e una parte viene impiegata per la rete sovraccarico, ad esempio la chiamata eseguita dal driver per richiedere una riga di dati. Il tempo di quest'ultimo può essere ridotto se l'applicazione utilizza in modo efficiente *blocco* o *fat* *i cursori,* che può restituire più di una riga alla volta.  

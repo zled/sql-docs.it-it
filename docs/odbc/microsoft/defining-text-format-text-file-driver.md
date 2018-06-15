@@ -22,6 +22,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32904876"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Definisce il formato di testo (Driver di File di testo)
 Quando viene utilizzato il driver di testo, è possibile utilizzare il **Definisci formato testo** la finestra di dialogo per definire il formato delle colonne in un file selezionato. Questa finestra di dialogo consente di specificare lo schema per ogni tabella di dati. Queste informazioni vengono scritte in un file ini nella directory di origine dati. Per ogni directory di origine dati di testo, viene creato un file di schema. ini separato.  

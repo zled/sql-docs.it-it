@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32906876"
 ---
 # <a name="odbc-escape-sequences"></a>Sequenze di Escape ODBC
 Le sequenze di escape seguenti vengono utilizzate in ODBC. La grammatica in questa sezione utilizza alcuni elementi definiti in [elementi utilizzati nelle istruzioni SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
