@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32940546"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantenimento dei valori Null o utilizzo dei valori predefiniti durante un'importazione bulk (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917276"
 ---
 # <a name="back-up-to-a-mirrored-media-set-transact-sql"></a>Backup in un set di supporti con mirroring (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

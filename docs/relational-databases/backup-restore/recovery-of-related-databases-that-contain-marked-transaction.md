@@ -31,6 +31,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32920686"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recupero di database correlati che contengono transazioni contrassegnate
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

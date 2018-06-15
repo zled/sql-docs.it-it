@@ -24,6 +24,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918526"
 ---
 # <a name="the-driver-manager"></a>Gestione Driver
 Il *gestione Driver* è una libreria che gestisce la comunicazione tra applicazioni e driver. Ad esempio, nelle piattaforme Microsoft® Windows®, gestione Driver è una libreria a collegamento dinamico (DLL) che viene scritto da Microsoft e può essere ridistribuita dagli utenti del SDK di ridistribuibile MDAC 2.8 SP1.  

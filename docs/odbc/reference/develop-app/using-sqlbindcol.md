@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32917476"
 ---
 # <a name="using-sqlbindcol"></a>Utilizzando la funzione SQLBindCol
 L'applicazione associa le colonne chiamando **SQLBindCol**. Questa funzione associa una colonna alla volta. Con questa soluzione, l'applicazione specifica quanto segue:  

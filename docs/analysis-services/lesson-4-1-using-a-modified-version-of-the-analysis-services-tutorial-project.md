@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34017698"
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Lezione 4-1-utilizzo di una versione modificata del progetto Analysis Services Tutorial
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

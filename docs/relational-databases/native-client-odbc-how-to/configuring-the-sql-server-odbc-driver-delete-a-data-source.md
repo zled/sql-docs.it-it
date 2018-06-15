@@ -23,6 +23,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32943586"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Il Driver ODBC SQL Server - elimina un'origine dati di configurazione
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

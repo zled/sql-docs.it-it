@@ -28,6 +28,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32918696"
 ---
 # <a name="sqldatasourcetodriver-function"></a>SQLDataSourceToDriver (funzione)
 **SQLDataSourceToDriver** supportstranslations per i driver ODBC. Questa funzione non viene chiamata dalle applicazioni basate su ODBC; le applicazioni richiedono traduzione attraverso **SQLSetConnectAttr**. Il driver associato il *ConnectionHandle* specificato in **SQLSetConnectAttr** chiama la DLL specificata per eseguire conversioni di tutti i dati che passano dall'origine dati per il driver. Una DLL di conversione predefinita può essere specificato nel file di inizializzazione di ODBC.  

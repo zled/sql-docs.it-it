@@ -20,6 +20,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32921946"
 ---
 # <a name="odbc-api-reference"></a>Riferimento all'API ODBC
 Gli argomenti in questa sezione descrivono ogni funzione ODBC in ordine alfabetico. Ogni funzione è definita come funzione del linguaggio di programmazione C. Di seguito sono riportate le descrizioni:  

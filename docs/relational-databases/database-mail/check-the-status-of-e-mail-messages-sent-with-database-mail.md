@@ -26,6 +26,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32924246"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Controllare lo stato di messaggi di posta elettronica inviati con Posta elettronica database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

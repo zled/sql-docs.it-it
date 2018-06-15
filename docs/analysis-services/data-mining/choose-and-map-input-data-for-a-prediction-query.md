@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34015058"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Scegliere ed eseguire il mapping di dati di input per una query di stima
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

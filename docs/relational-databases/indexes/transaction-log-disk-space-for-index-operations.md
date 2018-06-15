@@ -25,6 +25,7 @@ ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32937426"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>Spazio su disco per il log delle transazioni per operazioni sugli indici
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
