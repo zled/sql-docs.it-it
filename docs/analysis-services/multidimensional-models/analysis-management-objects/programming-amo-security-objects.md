@@ -14,6 +14,7 @@ ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "34023188"
 ---
 # <a name="programming-amo-security-objects"></a>Programmazione di oggetti di sicurezza AMO
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], gli oggetti di sicurezza di programmazione o si eseguono applicazioni che utilizzano oggetti di sicurezza AMO è necessario essere un membro del gruppo amministratore del Server o il gruppo amministratore del Database. Amministratore del server e amministratore del Database sono un accesso livelli forniti da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
