@@ -2,8 +2,6 @@
 title: Come contribuire alla documentazione di SQL Server | Microsoft Docs
 ms.date: 04/12/2018
 ms.prod: sql
-ms.prod_service: sql
-ms.component: sql-non-specified
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
@@ -14,11 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41bdbc55a67865e195ea06a10610af8224edf06b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 508dd4a658810bb6c62c1b4cf7eb067d9ccc563d
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288760"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>Come contribuire alla documentazione di SQL Server
 
@@ -75,7 +74,7 @@ Per contribuire con questo metodo, vedere gli articoli seguenti:
 - [Creare un account GitHub](https://docs.microsoft.com/contribute/get-started-setup-github)
 - [Installare gli strumenti di creazione del contenuto](https://docs.microsoft.com/contribute/get-started-setup-tools)
 - [Configurare un repository Git locale](https://docs.microsoft.com/contribute/get-started-setup-local)
-- [Usare gli strumenti per collaborare](https://docs.microsoft.com/contribute/full-workflow)
+- [Usare gli strumenti per collaborare](https://docs.microsoft.com/contribute/how-to-write-workflows-majo)
 
 Se si invia una richiesta pull con modifiche significative alla documentazione, verrà visualizzato un commento in GitHub che richiede di inviare un **contratto di licenza per contributi (CLA)** online. È necessario completare il modulo online affinché la richiesta pull possa essere accettata.
 
@@ -94,7 +93,7 @@ Questa sezione contiene informazioni aggiuntive sull'uso del repository **sql-do
 
 Il repository [sql-docs](https://github.com/MicrosoftDocs/sql-docs) usa alcune cartelle standard per organizzare il contenuto.
 
-| Cartella | Description |
+| Cartella | Descrizione |
 |---|---|
 | [docs](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs) | Contiene tutto il contenuto pubblicato su SQL Server. Le diverse aree del contenuto sono organizzate logicamente in sottocartelle. |
 | [docs/includes](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes) | Contiene i file di inclusione. Questi file sono blocchi di contenuto che si possono includere in uno o più argomenti diversi. |
@@ -138,5 +137,3 @@ Esplorare il [repository sql-docs](https://github.com/MicrosoftDocs/sql-docs) su
 Trovare un articolo, inviare una modifica e collaborare con la community di SQL Server. 
 
 Grazie.
-
-
