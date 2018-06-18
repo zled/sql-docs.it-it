@@ -2,7 +2,6 @@
 title: 'HelloData: Una semplice applicazione ADO | Documenti Microsoft'
 ms.prod: sql
 ms.prod_service: connectivity
-ms.component: ado
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -18,11 +17,12 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3fbc270a27350160933019c16c3b354270beb64f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fe8a5f0cd56c50441a44ab59da234791438876a7
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35271700"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Una semplice applicazione ADO
 Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO principali: recupero, esame, la modifica e aggiornamento dei dati. Queste operazioni vengono eseguite sul database di esempio Northwind incluso in Microsoft® SQL Server. Per concentrarsi sui fondamenti di ADO e per evitare confusione codice, gestione degli errori nell'esempio è minimo.  
@@ -46,19 +46,19 @@ Questa semplice applicazione passaggi per ognuna delle quattro operazioni ADO pr
   
  ![Mostra Form1 per l'applicazione VB HelloData](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo di controllo|Proprietà|Value|  
+|Tipo di controllo|Proprietà|valore|  
 |------------------|--------------|-----------|  
-|Form|Nome|Form1|  
+|Form|nome|Form1|  
 ||Altezza|6500|  
 ||Larghezza|6500|  
-|DataGrid MS|Nome|grdDisplay1|  
-|TextBox|Nome|txtDisplay1|  
+|DataGrid MS|nome|grdDisplay1|  
+|TextBox|nome|txtDisplay1|  
 ||Su più righe|true|  
-|Pulsante di comando|Nome|cmdGetData|  
-||Caption|Get Data|  
-|Pulsante di comando|Nome|cmdExamineData|  
-||Caption|Esaminare i dati|  
-|Pulsante di comando|Nome|cmdEditData|  
-||Caption|Modificare i dati|  
-|Pulsante di comando|Nome|cmdUpdateData|  
-||Caption|Dati di aggiornamento|
+|Pulsante di comando|nome|cmdGetData|  
+||Didascalia|Get Data|  
+|Pulsante di comando|nome|cmdExamineData|  
+||Didascalia|Esaminare i dati|  
+|Pulsante di comando|nome|cmdEditData|  
+||Didascalia|Modificare i dati|  
+|Pulsante di comando|nome|cmdUpdateData|  
+||Didascalia|Dati di aggiornamento|
