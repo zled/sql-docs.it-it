@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -16,11 +15,12 @@ caps.latest.revision: 10
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dd2d891192bdeb27b82cb8da463ca03624695aae
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c3905312358c36688e4c20a5a78d6c5504c745aa
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404123"
 ---
 # <a name="import-statuses-master-data-services"></a>Stati di importazione (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 05/03/2018
 
   Nella pagina **Batch di gestione temporanea** dell'area funzionale **Gestione integrazione** sono possibili gli stati seguenti.  
   
-|Stato|Description|Status_ID|  
+|Stato|Descrizione|Status_ID|  
 |------------|-----------------|----------------|  
 |In coda per l'esecuzione|L'elaborazione del batch non è iniziata.|1|  
 |In esecuzione|Il batch è in corso di elaborazione.|2|  

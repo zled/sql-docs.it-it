@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,11 +26,12 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: eec0f2ffa0a36940cf00e54c3ccdb0a4c1194d68
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 805cb6c613375f0aee126a264f8894b9c09d92a6
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401413"
 ---
 # <a name="error-handling-in-data"></a>Gestione degli errori nei dati
   Quando tramite un componente flusso di dati viene applicata una trasformazione ai dati delle colonne, vengono estratti dati dalle origini o vengono caricati dati nelle destinazioni, possono verificarsi errori. Gli errori sono spesso dovuti alla presenza di valori non previsti. Una conversione di dati può ad esempio avere esito negativo perché una colonna contiene una stringa anziché un numero, un inserimento in una colonna di database può avere esito negativo perché i dati rappresentano una data mentre la colonna ha un tipo di dati numeric oppure la valutazione di un'espressione può avere esito negativo perché il valore di una colonna è zero e dà luogo a un'operazione matematica non valida.  
@@ -99,7 +98,7 @@ Usare la finestra di dialogo **Configura output errori** per configurare le opzi
 ## <a name="select-an-error-handling-option"></a>Selezionare un'opzione di gestione degli errori  
  È possibile configurare la modalità di gestione di errori e troncamenti utilizzata da origini, trasformazioni e destinazioni. Nella tabella seguente vengono descritte le opzioni disponibili.  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |Interrompi componente|Quando si verifica un errore o un troncamento l'attività Flusso di dati viene interrotta. Questa è l'opzione predefinita per errori e troncamenti.|  
 |Ignora errore|L'errore o il troncamento viene ignorato e la riga di dati viene indirizzata all'output della trasformazione o dell'origine.|  

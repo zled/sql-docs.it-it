@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a48f3114c4207d11dab84a1706af2f3e1971f9cc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e8f4a37d9d1ffc68c0887bf67921a3b32b097413
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333655"
 ---
 # <a name="partition-processing-destination"></a>Destinazione elaborazione partizione
   La destinazione Elaborazione partizione consente di caricare ed elaborare una partizione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulle partizioni, vedere [Partizioni &#40;Analysis Services - Dati multidimensionali&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -81,7 +80,7 @@ ms.lasthandoff: 05/03/2018
  **Metodo di elaborazione**  
  Consente di selezionare il metodo di elaborazione. Il valore predefinito di questa opzione è **Completo**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Aggiunta (incrementale)|Consente di eseguire un'elaborazione incrementale della partizione.|  
 |Full|Consente di eseguire l'elaborazione completa della partizione.|  
@@ -119,7 +118,7 @@ ms.lasthandoff: 05/03/2018
  **Azione per errore chiave**  
  Consente di specificare la modalità di gestione dei record che hanno valori di chiave non validi.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**ConvertToUnknown**|Consente di convertire il valore di chiave non valido nel valore Sconosciuto.|  
 |**DiscardRecord**|Consente di scartare il record.|  
@@ -136,7 +135,7 @@ ms.lasthandoff: 05/03/2018
  **Azione in caso di errore**  
  Consente di specificare l'azione che deve essere intrapresa al raggiungimento della soglia di errore quando è stata selezionata l'opzione **Arresta in caso di errore**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**StopProcessing**|Consente di arrestare l'elaborazione.|  
 |**StopLogging**|Consente di arrestare la registrazione degli errori.|  
@@ -144,7 +143,7 @@ ms.lasthandoff: 05/03/2018
  **Chiave non trovata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave non trovata. Il valore predefinito è **ReportAndContinue**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -153,7 +152,7 @@ ms.lasthandoff: 05/03/2018
  **Chiave duplicata**  
  Consente di specificare l'azione che deve essere intrapresa per un errore di chiave duplicata. Il valore predefinito è **IgnoreError**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -162,7 +161,7 @@ ms.lasthandoff: 05/03/2018
  **Chiave Null convertita in sconosciuta**  
  Consente di specificare l'azione che deve essere intrapresa quando una chiave Null è stata convertita nel valore Sconosciuto. Il valore predefinito è **IgnoreError**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  
@@ -171,7 +170,7 @@ ms.lasthandoff: 05/03/2018
  **Chiave Null non consentita**  
  Consente di specificare l'azione che deve essere intrapresa quando viene incontrata una chiave Null e le chiavi Null non sono consentite. Il valore predefinito è **ReportAndContinue**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**IgnoreError**|Consente di ignorare l'errore e continuare l'elaborazione.|  
 |**ReportAndContinue**|Consente di segnalare l'errore e continuare l'elaborazione.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -23,11 +21,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 86a4674fff0795918fe89a26b62b5b15524d543e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4ee22fa57e381b8f7daa681427c31842745ead1b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333475"
 ---
 # <a name="analysis-services-processing-task"></a>Elaborazione Analysis Services - attività
   Con l'attività Elaborazione [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] è possibile elaborare gli oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quali modelli tabulari, cubi, dimensioni e modelli di data mining.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 05/03/2018
  **Argomenti correlati:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Riferimento all'interfaccia utente della finestra di dialogo Aggiungi gestione connessione Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Elenco oggetti**  
- |Proprietà|Description|  
+ |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Nome oggetto**|Consente di visualizzare i nomi degli oggetti specificati.|  
 |**Tipo**|Consente di visualizzare i tipi degli oggetti specificati.|  
@@ -139,7 +138,7 @@ ms.lasthandoff: 05/03/2018
  **Argomenti correlati:** [Finestra di dialogo Analisi di impatto &#40;Analysis Services - Dati multidimensionali&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Riepilogo impostazioni batch**  
- |Proprietà|Description|  
+ |Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**Ordine di elaborazione**|Consente di specificare se gli oggetti devono essere elaborati sequenzialmente o in un batch. Se si utilizza l'elaborazione parallela, consente di specificare il numero di oggetti da elaborare simultaneamente.|  
 |**Modalità transazione**|Consente di specificare la modalità di transazione per l'elaborazione sequenziale.|  

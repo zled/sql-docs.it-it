@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -29,11 +28,12 @@ caps.latest.revision: 59
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 92a4dc48daa318821dc1849094f66b046d80da20
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9abe04ac85e75a81553057e10fe01abcdfe5b01d
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35410493"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Sviluppo di un'interfaccia utente per un componente del flusso di dati
   Gli sviluppatori di componenti possono fornire un'interfaccia utente personalizzata per un componente, che viene visualizzata in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] quando il componente viene modificato. L'implementazione di un'interfaccia utente personalizzata fornisce notifiche quando il componente viene aggiunto o eliminato da un'attività Flusso di dati e quando per il componente è richiesta la Guida.  
@@ -95,7 +95,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Utilizzo dei servizi di Progettazione SSIS  
  Il parametro **IServiceProvider** del metodo <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> fornisce l'accesso ai servizi seguenti di Progettazione [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
-|Servizio|Description|  
+|Servizio|Descrizione|  
 |-------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Viene utilizzato per determinare se il componente è stato generato come parte di un'operazione Copia/Incolla o Taglia/Incolla.|  
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Viene utilizzato per accedere alle connessioni esistenti o per creare nuove connessioni nel pacchetto.|  

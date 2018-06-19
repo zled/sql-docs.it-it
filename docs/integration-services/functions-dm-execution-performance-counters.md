@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
@@ -16,11 +14,12 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 026b01925fbcf0ec615da77793dff7f84221322f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f60130ee43309e89ccc39fa2f4c3be42e928ca5a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35332185"
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Funzioni - dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="remarks"></a>Remarks  
  Nella tabella seguente sono elencati i valori dei nomi dei contatori restituiti dalla funzione dm_execution_performance_counter.  
   
-|Nome contatore|Description|  
+|Nome contatore|Descrizione|  
 |------------------|-----------------|  
 |Byte BLOB letti|Numero di byte dei dati BLOB (Binary Large Object) letti dal motore del flusso di dati in tutte le origini.|  
 |Byte BLOB scritti|Numero di byte dei dati BLOB scritti dal motore del flusso di dati in tutte le destinazioni.|  
@@ -61,7 +60,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Return  
  La funzione dm_execution_performance_counters restituisce una tabella con le colonne seguenti per un'esecuzione in corso. Le informazioni restituite riguardano tutti i pacchetti contenuti nell'esecuzione. In assenza di esecuzioni in corso, viene restituita una tabella vuota.  
   
-|Nome colonna|Tipo di colonna|Description|Remarks|  
+|Nome colonna|Tipo di colonna|Descrizione|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** non è un valore valido.|Identificatore univoco per l'esecuzione che contiene il pacchetto.||  
 |counter_name|**nvarchar(128)**|Nome del contatore.|Vedere la sezione **Osservazioni** relativa ai valori.|  

@@ -4,20 +4,18 @@ ms.date: 05/21/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 5f1bd8e0279da97974a4a1b420c7eea592931c6a
-ms.sourcegitcommit: b5ab9f3a55800b0ccd7e16997f4cd6184b4995f9
+ms.openlocfilehash: f1179443d8b86e23a51fdf2250f007914e27cf0b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34455306"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335865"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>Distribuire un progetto SSIS dal prompt dei comandi con ISDeploymentWizard.exe
 Questa guida introduttiva illustra come distribuire un progetto SSIS al prompt dei comandi eseguendo la Distribuzione guidata Integration Services, `ISDeploymentWizard.exe`.
@@ -45,7 +43,7 @@ Non è possibile usare le informazioni di questa guida introduttiva per distribu
 Per distribuire il progetto nel database SQL di Azure, ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSIS (SSISDB). Nelle procedure che seguono sono necessari il nome completo del server e le informazioni di accesso.
 
 1. Accedere al [portale di Azure](https://portal.azure.com/).
-2. Selezionare **Database SQL** nel menu a sinistra, quindi selezionare il database SSISDB nella pagina dei **database SQL**. 
+2. Selezionare **Database SQL** nel menu a sinistra e quindi il database SSISDB nella pagina **Database SQL**. 
 3. Nella pagina **Panoramica** del database controllare il nome completo del server. Passare il mouse sul nome del server per visualizzare l'opzione **Fare clic per copiare**. 
 4. Se si dimenticano le informazioni di accesso del server di database SQL di Azure, passare alla pagina del server di database SQL per visualizzare il nome amministratore del server. Se necessario, è possibile reimpostare la password.
 
@@ -74,7 +72,7 @@ Se si esegue la distribuzione a un server di database SQL di Azure, è necessari
     -   Immettere il nome completo del server. Se il server di destinazione è un server del database SQL di Azure, il nome è nel formato `<server_name>.database.windows.net`.
     -   Specificare le informazioni di autenticazione e quindi selezionare **Connetti**. Vedere [Metodi di autenticazione della Distribuzione guidata](#wizard_auth) in questo articolo.
     -   Selezionare **Sfoglia** per selezionare la cartella di destinazione in SSISDB.
-    -   Quindi selezionare **Avanti** per aprire la pagina **Verifica**. Il pulsante **Avanti** è abilitato solo dopo che è stato selezionato **Connetti**.
+    -   In seguito selezionare **Successivo** per aprire la pagina **Verifica**. Il pulsante **Successivo** viene abilitato solo dopo che è stato selezionato **Connetti**.
 
 4.  Nella pagina **Verifica** rivedere le impostazioni selezionate.
     -   È possibile modificare le selezioni facendo clic su **Indietro**o selezionando un qualsiasi passaggio nel riquadro sinistro.

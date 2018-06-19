@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 52
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: b7ff7d1fcaa85ac4b53b1cde391bfb5dd6cbaf91
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f6918b56ec5335a25b9f0606b4646222df7ce9ee
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330895"
 ---
 # <a name="ftp-task"></a>Attività FTP
   L'attività FTP consente di caricare e scaricare file di dati, nonché di gestire directory nei server. Un pacchetto può ad esempio scaricare file di dati da un server remoto o da un indirizzo Internet nell'ambito del flusso di lavoro di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . È possibile utilizzare l'attività FTP per gli scopi seguenti:  
@@ -55,7 +54,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="predefined-ftp-operations"></a>Operazioni FTP predefinite  
  L'attività FTP include un set predefinito di operazioni, descritte nella tabella seguente.  
   
-|Operazione|Description|  
+|Operazione|Descrizione|  
 |---------------|-----------------|  
 |Invia file|Invia un file dal computer locale al server FTP.|  
 |Ricevi file|Salva sul computer locale un file scaricato dal server FTP.|  
@@ -69,7 +68,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Voci di log personalizzate disponibili nell'attività FTP  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività FTP. Per altre informazioni, vedere [registrazione di Integration Services &#40;SSIS&#41;](../../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica che l'attività ha stabilito una connessione al server FTP.|  
 |**FTPOperation**|Specifica l'inizio e il tipo dell'operazione FTP eseguita dall'attività.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
  **IsRemotePathVariable**  
  Consente di specificare se il percorso remoto è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **RemoteVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **RemotePath**.|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
  **IsLocalPathVariable**  
  Consente di specificare se il percorso locale è archiviato in una variabile. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**True**|Il percorso di destinazione è archiviato in una variabile. Selezionando il valore viene visualizzata l'opzione dinamica **LocalVariable**.|  
 |**False**|Il percorso di destinazione è specificato in una gestione connessione file. Selezionando il valore viene visualizzata l'opzione dinamica **LocalPath**.|  
@@ -131,7 +130,7 @@ ms.lasthandoff: 05/03/2018
  **Operazione**  
  Consente di selezionare l'operazione FTP da eseguire. Per questa proprietà sono disponibili le opzioni elencate nella tabella seguente.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Invia file**|Consente di inviare i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  
 |**Ricevi file**|Consente di ricevere i file. Selezionando questo valore vengono visualizzate le opzioni dinamiche **LocalVariable**, **LocalPathRemoteVariable** e **RemotePath**.|  

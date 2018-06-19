@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -23,11 +23,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 41a6469d736bf62a7c2485197110a58c042a0780
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: bb06b6fb91104c5f48b215d2c260eddd8219d8b5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334325"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Invio di un messaggio di posta HTML con l'attività Script
   L'attività SendMail di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] supporta solo messaggi di posta in formato di testo normale. Tuttavia è possibile inviare facilmente messaggi di posta HTML tramite l'attività Script e le funzionalità di posta di .NET Framework.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  Nell'esempio seguente viene usato lo spazio dei nomi **System.Net.Mail** per configurare e inviare un messaggio di posta HTML. Lo script ottiene i campi A, Da, Oggetto e il corpo del messaggio di posta elettronica dalle variabili del pacchetto, li usa per creare un nuovo oggetto **MailMessage** e ne imposta la proprietà **IsBodyHtml** su **True**. Ottiene quindi il nome del server SMTP da un'altra variabile del pacchetto, inizializza un'istanza di **System.Net.Mail.SmtpClient** e chiama il metodo **Send** per inviare il messaggio HTML. Nell'esempio il messaggio viene incapsulato inviando la funzionalità in una subroutine che potrebbe essere riutilizzata in altri script.  
   
 #### <a name="to-configure-this-script-task-example-without-an-smtp-connection-manager"></a>Per configurare questa attività Script di esempio senza una gestione connessione SMTP  

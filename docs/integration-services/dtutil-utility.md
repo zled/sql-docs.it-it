@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -31,11 +29,12 @@ caps.latest.revision: 114
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: a3978535dd221b4df0534b1e559d688d14741168
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6c795635de7aad15099cb490bf621329a23fcd26
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35331225"
 ---
 # <a name="dtutil-utility"></a>utilità dtutil
   L'utilità del prompt dei comandi **dtutil** viene usata per gestire i pacchetti di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Utilizzare questa utility per copiare, spostare, eliminare un pacchetto oppure per verificarne l'esistenza. È possibile eseguire queste azioni in qualsiasi pacchetto di [!INCLUDE[ssIS](../includes/ssis-md.md)] archiviato in un database [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nell'archivio pacchetti [!INCLUDE[ssIS](../includes/ssis-md.md)] e nel file system. Se l'utilità accede a un pacchetto archiviato in **msdb**, al prompt dei comandi può essere necessario specificare nome utente e password. Se l'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizza l'autenticazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], al prompt dei comandi sarà necessario specificare nome utente e password. Se non viene specificato il nome utente, **dtutil[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tenta di accedere a**  usando l'autenticazione di Windows. Il tipo di archiviazione del pacchetto è definito dalle opzioni **/SQL**, **/FILE** e **/DTS**.  
@@ -88,7 +87,7 @@ dtutil /option [value] [/option [value]]...
   
 #### <a name="parameters"></a>Parametri  
   
-|Opzione|Description|  
+|Opzione|Descrizione|  
 |------------|-----------------|  
 |/?|Consente di visualizzare le opzioni del prompt dei comandi.|  
 |/C[opy] *location;destinationPathandPackageName*|Specifica un'operazione di copia su un pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] . Per usare questo parametro, è prima necessario specificare il percorso del pacchetto tramite l'opzione **/FI**, **/SQ**o **/DT** . e quindi indicare la posizione di destinazione e il nome del pacchetto di destinazione. L'argomento *destinationPathandPackageName* specifica la posizione nella quale il pacchetto [!INCLUDE[ssIS](../includes/ssis-md.md)] viene copiato. Se il *percorso* di destinazione è **SQL**, anche gli argomenti *DestUser*, *DestPassword* e *DestServer* devono essere specificati nel comando.<br /><br /> Se l'azione **Copy** rileva un pacchetto esistente nella destinazione, l'utilità **dtutil** richiede all'utente di confermare l'eliminazione del pacchetto. La risposta **Y** comporta la sovrascrittura del pacchetto, mentre la risposta **N** chiude il programma. Se il comando include l'argomento *Quiet* , non viene visualizzata alcuna richiesta di conferma e il pacchetto esistente viene sovrascritto.|  
@@ -121,7 +120,7 @@ dtutil /option [value] [/option [value]]...
 ## <a name="dtutil-exit-codes"></a>Codici di uscita di dtutil  
  **dtutil** imposta un codice di uscita di avviso nel caso in cui vengano rilevati errori di sintassi, siano stati usati argomenti non corretti o siano state specificate combinazioni di opzioni non valide. In caso contrario, l'utilità visualizza il messaggio "Operazione completata". Nella tabella seguente sono elencati i valori impostati dall'utilità **dtutil** all'uscita.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|L'esecuzione dell'utilità ha avuto esito positivo.|  
 |1|L'esecuzione dell'utilità ha avuto esito negativo.|  

@@ -7,7 +7,7 @@ ms.prod_service: integration-services
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +22,12 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: ef17791f7bbd34977a50820dec1424ff8e8de66e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2553da2693a51dcec0874a7ba35f919afc1b44a3
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35402203"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Rilevamento di un file flat vuoto con l'attività Script
   L'origine file flat non determina se un file flat contiene righe di dati prima di tentare di elaborarlo. È possibile migliorare l'efficienza di un pacchetto, specialmente di un pacchetto che scorre numerosi file flat, ignorando i file che non contengono alcuna riga di dati. L'attività Script consente di cercare un file flat vuoto prima che il pacchetto inizi a elaborare il flusso di dati.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/03/2018
 > [!NOTE]  
 >  Se si desidera creare un'attività da riutilizzare più facilmente con più pacchetti, è possibile utilizzare il codice di questo esempio di attività Script come punto iniziale per un'attività personalizzata. Per altre informazioni, vedere [Sviluppo di un'attività personalizzata](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Descrizione  
  L'esempio seguente usa i metodi dello spazio dei nomi **System.IO** per testare il file flat specificato in una gestione connessione file flat per determinare se il file è vuoto o se contiene solo le righe non di dati previste, ad esempio intestazioni di colonna o una riga vuota. Lo script prima controlla la dimensione del file. Se la dimensione è pari a zero byte, significa che il file è vuoto. Se la dimensione del file è superiore a zero, lo script legge le righe dal file finché non sussistono più righe o finché il numero di righe supera il numero previsto di righe non di dati. Se il numero di righe nel file è minore o uguale al numero previsto di righe non di dati, il file è considerato vuoto. Il risultato viene restituito come valore booleano in una variabile dell'utente, il cui valore può essere utilizzato per la diramazione nel flusso di controllo del pacchetto. Anche il metodo **FireInformation** visualizza il risultato nella finestra **Output** di[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA).  
   
 #### <a name="to-configure-this-script-task-example"></a>Per configurare l'esempio di attività Script  

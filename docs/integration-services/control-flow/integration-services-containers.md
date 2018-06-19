@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 20ce53ebc4de2694039019857264b5821f3c6f2d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d27f27154fe4faa1f028c53aafd7db40f20e938
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333275"
 ---
 # <a name="integration-services-containers"></a>Contenitori in Integration Services
   I contenitori sono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] che forniscono la struttura ai pacchetti e i servizi alle attività. Supportano la ripetizione dei flussi di controllo nei pacchetti e consentono di raggruppare attività e contenitori in unità di lavoro significative. Oltre alle attività, i contenitori possono includere anche altri contenitori.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="container-types"></a>Tipi di contenitori  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] offre quattro tipi di contenitori per la compilazione dei pacchetti, elencati nella tabella seguente.  
   
-|Contenitore|Description|  
+|Contenitore|Descrizione|  
 |---------------|-----------------|  
 |[Contenitore Ciclo Foreach](../../integration-services/control-flow/foreach-loop-container.md)|Esegue ripetutamente un determinato flusso di controllo utilizzando un enumeratore.|  
 |[Contenitore Ciclo For](../../integration-services/control-flow/for-loop-container.md)|Esegue ripetutamente un determinato flusso di controllo verificando una condizione.|  
@@ -54,7 +53,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="summary-of-container-properties"></a>Riepilogo delle proprietà dei contenitori  
  Tutti i tipi di contenitori dispongono di un set di proprietà comune. Se si creano pacchetti usando gli strumenti grafici offerti da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , per i contenitori Ciclo Foreach, Ciclo For e Sequenza vengono elencate nella finestra Proprietà le proprietà seguenti. Le proprietà dei contenitori host delle attività vengono configurate nell'ambito della configurazione dell'attività incapsulata nell'host. Le proprietà degli host delle attività vengono impostate quando si configura l'attività.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**DelayValidation**|Valore booleano che indica se la convalida del contenitore viene posticipata fino alla fase di esecuzione. Il valore predefinito di questa proprietà è **False**.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>.|  
 |**Descrizione**|Descrizione del contenitore. La proprietà contiene una stringa, ma può essere vuota.<br /><br /> Per altre informazioni, vedere <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>.|  

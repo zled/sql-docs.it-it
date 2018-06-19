@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: control-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 34
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d60d99a6bbe09da6f05d77675606e8478e004a13
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 483991212cd56bf587d562426357e1c940e61c1a
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333335"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Impostazione dell'attività Profiling dati
   Prima di poter esaminare un profilo dei dati di origine, configurare ed eseguire l'attività Profiling dati. È necessario creare questa attività all'interno di un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Per configurare l'attività Profiling dati, utilizzare lo strumento Editor attività Profiling dati. Questo editor consente di selezionare la destinazione dell'output dei profili e i profili da calcolare. Dopo avere configurato l'attività, è necessario eseguire il pacchetto per calcolare i profili dati.  

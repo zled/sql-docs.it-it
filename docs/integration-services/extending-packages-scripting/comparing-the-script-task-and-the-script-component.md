@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-scripting
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: xml
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -22,11 +21,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 194f4ded206617e7cb97e3cffb85f02019b5bb3d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f88d4e3527330c57b3053a80b4885bbd919a6905
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407203"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Confronto tra l'attività Script e il componente script
   L'attività Script, disponibile nella finestra Flusso di controllo di Progettazione [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], e il componente Script, disponibile nella finestra Flusso di dati, hanno scopi molto diversi in un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. L'attività è uno strumento generico del flusso di controllo, mentre il componente funge da origine, trasformazione o destinazione nel flusso di dati. Nonostante gli scopi diversi, tuttavia, l'attività Script e il componente script presentano analogie negli strumenti di creazione di codice che utilizzano e negli oggetti del pacchetto che rendono disponibili per lo sviluppatore. Identificando le analogie e le differenze, sarà possibile utilizzare l'attività e il componente in modo più efficace.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="similarities-between-the-script-task-and-the-script-component"></a>Analogie tra l'attività Script e il componente script  
  L'attività Script e il componente Script condividono le caratteristiche comuni seguenti.  
   
-|Funzionalità|Description|  
+|Funzionalità|Descrizione|  
 |-------------|-----------------|  
 |Due modalità della fase di progettazione|Nell'attività e nel componente si inizia specificando proprietà nell'editor e quindi si passa all'ambiente di sviluppo per scrivere codice.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA)|L'attività e il componente utilizzano entrambi lo stesso IDE di VSTA e supportano codice scritto in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.|  

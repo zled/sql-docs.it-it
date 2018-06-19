@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -25,11 +23,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 465a881b9a999331596bcbbc2329406e0ff5fe65
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2f22b22f3134122b733a9d2f233054445d1898c3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333515"
 ---
 # <a name="file-connection-manager"></a>gestione connessione file
   Una gestione connessione file consente a un pacchetto di fare riferimento a un file o a una cartella esistente oppure di creare un file o una cartella in fase di esecuzione. Ad esempio, è possibile fare riferimento a un file di Excel. Le informazioni presenti nei file vengono utilizzate da alcuni componenti di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] per effettuare le operazioni. L'attività Esegui SQL può ad esempio fare riferimento a un file che contiene le istruzioni SQL eseguite dall'attività. In altri componenti le operazioni vengono effettuate nei file. Ad esempio, tramite l'attività File System è possibile fare riferimento a un file per copiarlo in una nuova posizione.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono elencati i possibili valori di **FileUsageType**.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**0**|La gestione connessione file utilizza un file esistente.|  
 |**1**|La gestione connessione file crea un file.|  
@@ -80,7 +79,7 @@ ms.lasthandoff: 05/03/2018
  **Tipo di utilizzo**  
  Consente di specificare se **Gestione connessione file flat** deve connettersi a un file o a una cartella esistente o creare un nuovo file o cartella.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Creazione file|Consente di creare un nuovo file in fase di esecuzione.|  
 |File esistente|Consente di utilizzare un file esistente.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -27,11 +25,12 @@ caps.latest.revision: 56
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 10f340ee0cc9d8184c612e80de7b872356b0e962
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2b5c14308dfe28c103e60d136a1aa7c137bf73cd
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35404273"
 ---
 # <a name="integration-services-transformations"></a>Trasformazioni di Integration Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Le trasformazioni sono i componenti nel flusso di dati di un pacchetto che aggregano, uniscono, distribuiscono e modificano i dati. Le trasformazioni possono inoltre eseguire operazioni di ricerca e generare set di dati campione. In questa sezione vengono descritte le trasformazioni incluse in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , illustrandone il funzionamento.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="business-intelligence-transformations"></a>Trasformazioni di Business Intelligence  
  Le trasformazioni seguenti eseguono operazioni di Business Intelligence quali la pulitura dei dati, il text mining e l'esecuzione di query di stima basate su un modello di data mining.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Dimensione a modifica lenta](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Trasformazione che configura l'aggiornamento di una dimensione a modifica lenta.|  
 |[Trasformazione Raggruppamento fuzzy](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Trasformazione che standardizza i valori nei dati delle colonne.|  
@@ -52,7 +51,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="row-transformations"></a>Trasformazioni a livello di riga  
  Le trasformazioni elencate di seguito consentono di aggiornare i valori delle colonne e di creare nuove colonne. La trasformazione viene applicata a tutte le righe dell'input.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Mappa caratteri](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Trasformazione che applica funzioni per i valori stringa a dati di tipo carattere.|  
 |[Trasformazione Copia colonna](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Trasformazione che aggiunge copie delle colonne di input al proprio output.|  
@@ -66,7 +65,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="rowset-transformations"></a>Trasformazioni a livello di set di righe  
  Le trasformazioni seguenti creano nuovi set di righe. Il set di righe può includere valori aggregati e ordinati, set di righe campione o set di righe trasformati tramite Pivot o UnPivot.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Aggregazione](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Trasformazione che esegue aggregazioni quali AVERAGE, SUM e COUNT.|  
 |[Trasformazione Ordinamento](../../../integration-services/data-flow/transformations/sort-transformation.md)|Trasformazione che ordina i dati.|  
@@ -78,7 +77,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="split-and-join-transformations"></a>Trasformazioni di divisione e di unione  
  Le trasformazioni seguenti distribuiscono le righe tra output diversi, creano copie degli input della trasformazione, uniscono più input in un singolo output ed eseguono operazioni di ricerca.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Suddivisione condizionale](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Trasformazione che indirizza righe di dati verso output diversi.|  
 |[Trasformazione Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Trasformazione che distribuisce set di dati tra più output.|  
@@ -92,7 +91,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="auditing-transformations"></a>Trasformazioni di controllo  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] include le trasformazioni seguenti per l'aggiunta di informazioni di controllo e il conteggio delle righe.  
   
-|Trasformazione|Description|  
+|Trasformazione|Descrizione|  
 |--------------------|-----------------|  
 |[Trasformazione Controllo](../../../integration-services/data-flow/transformations/audit-transformation.md)|Trasformazione che rende le informazioni sull'ambiente disponibili a un flusso di dati in un pacchetto.|  
 |[Trasformazione Conteggio righe](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Trasformazione che conta le righe al suo interno e archivia il totale in una variabile.|  

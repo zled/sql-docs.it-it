@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: extending-packages-custom-objects
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -27,11 +26,12 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 65c540fec5a19b8c99057b56b83f12c8b49d1ac3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a5a4f32be14ce3faa26ce94fcfa7a3c70518a152
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35400683"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>Piano di esecuzione e allocazione di buffer
   Prima dell'esecuzione, l'attività Flusso di dati esamina i propri componenti e genera un piano di esecuzione per ogni sequenza di componenti. In questa sezione vengono fornite informazioni sul piano di esecuzione, su come visualizzarlo e su come influisce sull'allocazione dei buffer di input e output.  

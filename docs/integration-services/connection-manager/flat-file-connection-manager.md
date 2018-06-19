@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -28,11 +26,12 @@ caps.latest.revision: 49
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fe024751fe5e9510cb7fd4a69e7bbd120a1539b5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cba416a05c41b48ba4aa84cf6370a0a6e57b0ec4
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35334575"
 ---
 # <a name="flat-file-connection-manager"></a>Flat File Connection Manager
   Una gestione connessione file flat consente a un pacchetto di accedere ai dati contenuti in un file flat. L'origine e la destinazione del file flat possono ad esempio utilizzare gestioni connessioni file flat per estrarre e caricare dati.  
@@ -111,7 +110,7 @@ ms.lasthandoff: 05/03/2018
  **Formato**  
  Consente di indicare se il file utilizza il tipo di formattazione delimitato, a larghezza fissa o non allineato a destra.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |Delimitato|Le colonne sono separate dai delimitatori specificati nella pagina **Colonne** .|  
 |A larghezza fissa|Le colonne hanno una larghezza fissa.|  
@@ -126,7 +125,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitatore riga di intestazione**  
  Consente di selezionare il delimitatore per la riga di intestazione nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|La riga di intestazione è delimitata dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|La riga di intestazione è delimitata da un carattere di ritorno a capo.|  
@@ -160,7 +159,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -174,7 +173,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitatore di colonna**  
  Consente di selezionare il delimitatore di colonna desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le colonne sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le colonne sono delimitate da un ritorno a capo.|  
@@ -221,7 +220,7 @@ ms.lasthandoff: 05/03/2018
  **Delimitatore di riga**  
  Consente di selezionare il delimitatore di riga desiderato nell'elenco dei delimitatori disponibili oppure di immettere il testo per il delimitatore.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Le righe sono delimitate dalla combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Le righe sono delimitate da un ritorno a capo.|  
@@ -251,7 +250,7 @@ ms.lasthandoff: 05/03/2018
  **Configurare le proprietà delle singole colonne**  
  È possibile selezionare una colonna nel riquadro sinistro per visualizzarne le proprietà in quello destro. Nella tabella seguente è disponibile una descrizione delle proprietà dei tipi di dati. Alcune delle proprietà incluse nell'elenco possono essere configurate solo per alcuni formati di file flat.  
   
-|Proprietà|Description|  
+|Proprietà|Descrizione|  
 |--------------|-----------------|  
 |**ColumnType**|Indica se la colonna è delimitata, a larghezza fissa o non allineata a destra. Questa proprietà è di sola lettura. I file non allineati a destra sono file in cui ogni colonna ha una larghezza fissa, ad eccezione dell'ultima. L'ultima colonna è delimitata dal delimitatore di riga.|  
 |**OutputColumnWidth**|Consente di specificare il valore da archiviare come conteggio di byte. Nel caso dei file Unicode tale valore corrisponde al conteggio di caratteri. Nell'attività Flusso di dati questo valore viene utilizzato per impostare la larghezza della colonna di output per l'origine file flat. Nel modello a oggetti il nome di questa proprietà è MaximumWidth.|  
@@ -266,7 +265,7 @@ ms.lasthandoff: 05/03/2018
  **Nuova**  
  Consente di aggiungere una **nuova**colonna. Per impostazione predefinita, il pulsante **Nuova** aggiunge una colonna alla fine dell'elenco. Il pulsante dispone inoltre delle opzioni seguenti, disponibili nell'elenco a discesa.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Aggiungi colonna**|Consente di aggiungere una nuova colonna alla fine dell'elenco.|  
 |**Inserisci prima**|Consente di inserire una nuova colonna prima di quella selezionata.|  

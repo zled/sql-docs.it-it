@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: non-specific
 ms.reviewer: ''
 ms.suite: sql
 ms.technology:
@@ -20,11 +19,12 @@ caps.latest.revision: 14
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c1a75f5d3c6f4a9f9eadcec5ad6f48e809f9f3e1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 000322cdd3178c08e08a4bf6c7db47ecffbb5882
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35401323"
 ---
 # <a name="administrators-master-data-services"></a>Amministratori (Master Data Services)
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="comparing-administrator-types"></a>Confronto tra tipi di amministratore  
   
-|Tipo di amministratore|Description|  
+|Tipo di amministratore|Descrizione|  
 |------------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Utente con privilegi avanzati|Le autorizzazioni assegnate in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] non influenzano l'accesso dell'amministratore.<br /><br /> Può essere un utente con privilegi avanzati in autorizzazioni per aree funzionali assegnate in modo esplicito o autorizzazioni ereditate da un gruppo.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti i modelli.<br /><br /> Dispone automaticamente dell'accesso a tutte le aree funzionali.|  
 |Amministratore di modelli|Può essere un amministratore di modelli in base alle autorizzazioni di amministratore assegnate in modo esplicito o in base alle autorizzazioni ereditate da un gruppo.<br /><br /> Dispone dell'accesso solo alle aree funzionali per le quali è stato concesso l'accesso.<br /><br /> Ha automaticamente tutte le autorizzazioni per tutti gli oggetti e i membri nel modello specifico.|  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,11 +20,12 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c60572c425df10ab659239217424d789bfe2abc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: c803e00b62125c70bf0e99c2c90b550795a5b1d5
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35329815"
 ---
 # <a name="comparing-string-data"></a>confronto di dati stringa
   Il confronto tra stringhe costituisce una parte importante di molte delle trasformazioni eseguite da [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]e viene utilizzato anche nella valutazione di espressioni in variabili ed espressioni di proprietà. La trasformazione Ordinamento, ad esempio, confronta i valori in un set di dati per disporre i dati in ordine crescente o decrescente.  
@@ -72,7 +71,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritte le opzioni di confronto disponibili e uno stile di ordinamento.  
   
-|Opzione di confronto|Description|  
+|Opzione di confronto|Descrizione|  
 |-----------------------|-----------------|  
 |Ignora maiuscole/minuscole|Specifica se nel confronto viene fatta distinzione tra lettere maiuscole e minuscole. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la combinazione di maiuscole e minuscole. Ad esempio, la stringa "ABC" verrà considerata identica alla stringa "abc".|  
 |Ignora Katakana/Hiragana|Specifica se nel confronto viene fatta distinzione tra i due tipi di caratteri Kana giapponesi, Hiragana e Katakana. Se questa opzione è impostata, nel confronto tra stringhe verrà ignorata la distinzione tra Katakana e Hiragana.|  

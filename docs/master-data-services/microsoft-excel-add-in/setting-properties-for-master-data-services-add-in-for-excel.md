@@ -1,14 +1,12 @@
 ---
 title: Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel | Microsoft Docs
-ms.custom: ''
+ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
-ms.component: microsoft-excel-add-in
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
@@ -16,11 +14,12 @@ caps.latest.revision: 8
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f0afa753c2439eb55236d25bf518b6069c31750d
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1b6d9615762bb81ed883276bfe442831c837795b
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335095"
 ---
 # <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Impostazione delle proprietà per il componente aggiuntivo Master Data Services per Excel
 
@@ -34,7 +33,7 @@ ms.lasthandoff: 05/03/2018
   
 ||||  
 |-|-|-|  
-|Scheda e sezione|Impostazione|Description|  
+|Scheda e sezione|Impostazione|Descrizione|  
 |Impostazioni: Server di pubblicazione|Mostra la finestra di dialogo **Pubblicazione e annotazione** durante la pubblicazione|Selezionare questa opzione per visualizzare la finestra di dialogo **Pubblicazione e annotazione** dopo avere fatto clic su **Pubblica**e consentire di immettere una sola annotazione per tutte le modifiche o un'annotazione per ogni modifica.<br /><br /> Deselezionare questa opzione per specificare che il processo Pubblica è iniziato senza visualizzare la finestra di dialogo **Pubblicazione e annotazione** . Non si avrà la possibilità di immettere un'annotazione.|  
 |Impostazioni: Versione|Selezione della versione|Selezionare la versione dei dati master che saranno caricati nel componente aggiuntivo di Excel. I possibili valori sono i seguenti:<br /><br /> **Nessuno** per fare in modo che la versione non venga impostata automaticamente su alcuna versione<br /><br /> **Meno recente** per impostare come valore predefinito la versione meno recente **Più recente** per impostare come valore predefinito la versione più recente.|  
 |Impostazioni: Registrazione|Abilita registrazione dettagliata|Consente la registrazione per il processo di caricamento dei dati master da MDS nel componente aggiuntivo di Excel, così che il risultato di ogni comando nel servizio venga registrato.|  
