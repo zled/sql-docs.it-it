@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: packages
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
@@ -16,11 +14,12 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 19120f136913925721b61aacd59364f787ac0816
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2583631f47e2f986e238880acb3e420515eeda60
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335685"
 ---
 # <a name="dtexec-utility"></a>Utilità dtexec
   L'utilità del prompt dei comandi **dtexec** viene usata per configurare ed eseguire i pacchetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Con l'utilità **dtexec** è possibile accedere a tutte le funzionalità di configurazione ed esecuzione dei pacchetti, ad esempio parametri, connessioni, proprietà, variabili, registrazione e indicatori di stato. L'utilità **dtexec** consente di caricare i pacchetti da queste origini: server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , file di progetto con estensione ispac, database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , archivio pacchetti [!INCLUDE[ssIS](../../includes/ssis-md.md)] e file system.  
@@ -106,7 +105,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  Durante l'esecuzione di un pacchetto è possibile che **dtexec** restituisca un codice di uscita. Il codice di uscita viene utilizzato per popolare la variabile ERRORLEVEL, il cui valore può essere testato nelle istruzioni condizionali o nella logica di diramazione in un file batch. Nella tabella seguente vengono elencati i valori che l'utilità **dtexec** può impostare all'uscita.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |0|Il pacchetto è stato eseguito correttamente.|  
 |1|Il pacchetto non è stato eseguito.|  
