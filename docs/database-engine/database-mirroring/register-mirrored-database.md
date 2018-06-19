@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: high-availability
-ms.component: database-mirroring
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: high-availability
@@ -17,11 +16,12 @@ caps.latest.revision: 30
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5191250a1113be8bd5a613325aaceb31b176abce
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6b61c469ddf764ab2db6d7c56a23d0d87ef7a563
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312240"
 ---
 # <a name="register-mirrored-database"></a>Registra database con mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  La griglia include le colonne seguenti:  
   
-|Nome colonna|Description|  
+|Nome colonna|Descrizione|  
 |-----------------|-----------------|  
 |**Registra**|Consente di controllare ogni database da registrare. Se un database è attualmente monitorato, la relativa casella di controllo è selezionata e disabilitata.<br /><br /> Nota: per annullare la registrazione di un database, chiudere la finestra di dialogo **Registra database con mirroring** , selezionare il database nell'albero di navigazione e scegliere **Annulla registrazione** dal menu **Azione** .|  
 |**Database**|Nome di un database con mirroring sull'istanza del server selezionata.|  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: building-packages-programmatically
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: reference
 applies_to:
@@ -30,11 +29,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb9887d991b58efdc38d8a5565d28f7a508174c0
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1ce8ddbf21744900e09f27779621d2d31e2f30de
+ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35312650"
 ---
 # <a name="enabling-logging-programmatically"></a>Abilitazione della registrazione a livello di programmazione
   Il motore di runtime include una raccolta di oggetti <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> che consentono l'acquisizione di informazioni specifiche degli eventi durante la convalida e l'esecuzione di pacchetti. Gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sono disponibili per gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, compresi gli oggetti <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> e <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La registrazione viene abilitata su singoli contenitori o sull'intero pacchetto.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente sono elencati i provider di log disponibili, la relativa descrizione e le informazioni su <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
-|Provider|Description|Proprietà ConfigString|  
+|Provider|Descrizione|Proprietà ConfigString|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Genera tracce SQL che possono essere acquisite e visualizzate in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. L'estensione predefinita dei file per questo provider è trc.|Non è richiesta alcuna configurazione.|  
 |SQL Server|Scrive le voci del log eventi nella tabella **sysssislog** in qualsiasi database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Il provider [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] richiede che siano specificati la connessione al database e anche il nome del database di destinazione.|  
