@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: system-views
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
@@ -16,18 +14,19 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: fcc606c489ee5b783eb9fedbde53e33ddba9789a
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: de53ddb2b38e2a3423ea15acab63169e38b9d4e3
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330435"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Consente di visualizzare informazioni sui messaggi registrati durante le operazioni.  
   
-|Nome colonna|Tipo di dati|Description|  
+|Nome colonna|Tipo di dati|Descrizione|  
 |-----------------|---------------|-----------------|  
 |Event_message_ID|BIGINT|ID univoco del messaggio dell'evento.|  
 |Operation_id|BIGINT|Tipo di operazione.<br /><br /> Per un elenco dei tipi di operazioni, vedere [catalog.operations &#40;Database SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
@@ -49,7 +48,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="remarks"></a>Remarks  
  In questa vista vengono visualizzati i tipi di origine del messaggio seguenti.  
   
-|**message_source_type**|Description|  
+|**message_source_type**|Descrizione|  
 |-------------------------------|-----------------|  
 |10|API della voce, ad esempio stored procedure CLR e T-SQL|  
 |20|Processo esterno utilizzato per eseguire il pacchetto (ISServerExec.exe)|  
