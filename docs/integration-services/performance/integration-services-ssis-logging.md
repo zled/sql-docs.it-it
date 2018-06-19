@@ -1,14 +1,12 @@
 ---
 title: Registrazione di Integration Services (SSIS) | Microsoft Docs
-ms.custom: ''
+ms.custom: supportability
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: performance
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -35,11 +33,12 @@ caps.latest.revision: 69
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bd0e92f62d99f30d244b9fc14bbf0ebb42f15269
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1d24a5685db73a91be95a3a82b93e752877c8ad7
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35407643"
 ---
 # <a name="integration-services-ssis-logging"></a>Registrazione di Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sono disponibili provider di log che è possibile utilizzare per implementare la registrazione in pacchetti, contenitori e attività. Tramite la registrazione è possibile acquisire informazioni di run-time su un pacchetto, che consentono di controllare e risolvere i problemi del pacchetto ogni volta che viene eseguito. Nel log è ad esempio possibile acquisire il nome dell'operatore che ha eseguito il pacchetto, nonché la data e l'ora di inizio e di fine dell'esecuzione.  
@@ -100,7 +99,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="log-schema"></a>Schema del log  
  Nella tabella seguente vengono descritti gli elementi dello schema del log.  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |Computer|Nome del computer in cui è stato generato l'evento.|  
 |Operatore|Identifica l'utente che ha avviato il pacchetto.|  
@@ -112,7 +111,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente sono descritti tre elementi aggiuntivi dello schema del log che non sono disponibili nella scheda **Dettagli** della finestra di dialogo **Configura log SSIS** .  
   
-|Elemento|Description|  
+|Elemento|Descrizione|  
 |-------------|-----------------|  
 |StartTime|Ora di inizio dell'esecuzione del contenitore o dell'attività.|  
 |EndTime|Ora di arresto dell'esecuzione del contenitore o dell'attività.|  
@@ -123,7 +122,7 @@ ms.lasthandoff: 05/03/2018
   
  Nella tabella seguente vengono descritti gli eventi predefiniti che è possibile abilitare per scrivere voci di log quando si verificano eventi di run-time. Queste voci sono relative ai file eseguibili, al pacchetto e alle attività e ai contenitori inclusi nel pacchetto. Il nome della voce di log corrisponde al nome dell'evento di run-time che è stato generato e che ha causato la scrittura della voce.  
   
-|Eventi|Description|  
+|Eventi|Descrizione|  
 |------------|-----------------|  
 |**OnError**|Viene inserita una voce del registro quando si verifica un errore.|  
 |**OnExecStatusChanged**|Viene scritta una voce del registro quando un'attività (non un contenitore) viene sospesa o ripresa durante il debug.|  
@@ -181,7 +180,7 @@ ms.lasthandoff: 05/03/2018
 #### <a name="use-the-pipelinecomponenttime-event"></a>Utilizzo dell'evento PipelineComponentTime  
  La voce di log personalizzata più utile è probabilmente l'evento PipelineComponentTime. Questa voce di log indica il numero di millisecondi che ogni componente del flusso di dati dedica a ognuno dei cinque passaggi principali dell'elaborazione. Nella tabella seguente vengono descritti i passaggi di elaborazione. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Gli sviluppatori di Integration Services riconosceranno tali passaggi come i metodi principali di <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Passaggio|Description|  
+|Passaggio|Descrizione|  
 |----------|-----------------|  
 |Convalida|Il componente verifica la presenza di impostazioni di configurazione e valori di proprietà validi.|  
 |PreExecute|Il componente esegue un'unica elaborazione prima di iniziare a elaborare le righe di dati.|  
@@ -333,7 +332,7 @@ ms.lasthandoff: 05/03/2018
  **Avanzate**  
  Consente di selezionare o deselezionare gli eventi da registrare, nonché le informazioni da registrare per ogni evento. Fare clic su **Standard** per nascondere tutti i dettagli di registrazione, ad eccezione dell'elenco di eventi. Per la registrazione sono disponibili le informazioni seguenti:  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**Computer**|Nome del computer in cui si è verificato l'evento registrato.|  
 |**Operatore**|Nome utente dell'utente che ha avviato il pacchetto.|  
@@ -411,7 +410,7 @@ ms.lasthandoff: 05/03/2018
 ### <a name="select-a-logging-level"></a>Selezionare un livello di registrazione  
  Sono disponibili i livelli di registrazione predefiniti seguenti. È anche possibile selezionare un livello di registrazione personalizzato esistente. Questo argomento contiene una descrizione dei livelli di registrazione personalizzati.  
   
-|Livello di registrazione|Description|  
+|Livello di registrazione|Descrizione|  
 |-------------------|-----------------|  
 |None|La registrazione è disabilitata. Solo lo stato dell'esecuzione del pacchetto viene registrato.|  
 |Standard|Tutti gli eventi sono registrati, ad eccezione di eventi personalizzati e di diagnostica. Si tratta del valore predefinito.|  
@@ -495,7 +494,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="Package"></a> Pacchetto  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per i pacchetti.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**PackageStart**|Indica che l'esecuzione del pacchetto è iniziata. Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
 |**Fine pacchetto**|Indica che l'esecuzione del pacchetto è stata completata. Questa voce di log viene scritta automaticamente nel log e non può essere esclusa.|  
@@ -504,7 +503,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="BulkInsert"></a> Attività Inserimento bulk  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Inserimento bulk.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**DTSBulkInsertTaskBegin**|Indica che l'inserimento bulk è iniziato.|  
 |**DTSBulkInsertTaskEnd**|Indica che l'inserimento bulk è terminato.|  
@@ -513,7 +512,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="DataFlow"></a> Attività Flusso di dati  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Flusso di dati.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Indica che l'attività Flusso di dati ha modificato le dimensioni del buffer. In questa voce di log vengono indicati i motivi della modifica delle dimensioni del buffer e le nuove dimensioni temporanee del buffer.|  
 |**OnPipelinePostEndOfRowset**|Indica che a un componente è stato inviato il segnale di fine del set di righe, che viene impostato dall'ultima chiamata al metodo **ProcessInput** . Viene scritta una voce per ogni componente del flusso di dati che elabora dati di input. Tale voce include il nome del componente.|  
@@ -529,7 +528,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="ExecuteDTS200"></a> Attività Esegui pacchetto DTS 2000  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Esegui pacchetto DTS 2000.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Indica che l'attività ha iniziato a eseguire un pacchetto DTS 2000.|  
 |**ExecuteDTS80PackageTaskEnd**|Indica che l'attività è terminata.<br /><br /> Nota: l'esecuzione del pacchetto DTS 2000 può continuare anche dopo il termine dell'attività.|  
@@ -539,7 +538,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="ExecuteProcess"></a> Attività Esegui processo  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Esegui processo.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Fornisce informazioni sul processo di esecuzione del file eseguibile che l'attività dovrà eseguire.<br /><br /> Vengono scritte due voci di log. Una contiene informazioni sul nome e la posizione del file eseguibile eseguito dall'attività, l'altra registra l'uscita dall'eseguibile.|  
 |**ExecuteProcessVariableRouting**|Fornisce informazioni sulle variabili indirizzate all'input e agli output del file eseguibile. Vengono scritte voci di log per stdin (l'input), stdout (l'output) e stderr (l'output degli errori).|  
@@ -547,21 +546,21 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="ExecuteSQL"></a> Attività Esegui SQL  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività Esegui SQL.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Fornisce informazioni sulle fasi di esecuzione dell'istruzione SQL. Vengono scritte voci di log quando l'attività acquisisce la connessione al database, quando inizia a preparare l'istruzione SQL e al termine dell'esecuzione dell'istruzione SQL. La voce di log per la fase di preparazione include l'istruzione SQL utilizzata dall'attività.|  
   
 ####  <a name="FileSystem"></a> Attività File system  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività File system.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Indica l'operazione eseguita dall'attività. Questa voce di log viene scritta all'inizio dell'operazione sul file system e include informazioni sull'origine e sulla destinazione.|  
   
 ####  <a name="FTP"></a> Attività FTP  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività FTP.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Indica che l'attività ha stabilito una connessione al server FTP.|  
 |**FTPOperation**|Specifica l'inizio e il tipo dell'operazione FTP eseguita dall'attività.|  
@@ -569,7 +568,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="MessageQueue"></a> Attività Message Queue  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Message Queue.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Indica che l'attività ha terminato l'apertura della coda di messaggi.|  
 |**MSMQBeforeOpen**|Indica che l'attività ha iniziato ad aprire la coda di messaggi.|  
@@ -583,14 +582,14 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="Script"></a> Attività Script  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività Script.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. Viene scritta una voce di log per ogni chiamata al metodo **Log** dell'oggetto **Dts** . Tale voce viene scritta al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ####  <a name="SendMail"></a> Attività Invia messaggi  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Invia messaggi.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Indica che l'attività ha iniziato a inviare un messaggio di posta elettronica.|  
 |**SendMailTaskEnd**|Indica che l'attività ha terminato l'invio di un messaggio di posta elettronica.|  
@@ -599,7 +598,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="TransferDatabase"></a> Attività Trasferisci database  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci database.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**SourceDB**|Specifica il database copiato dall'attività.|  
 |**SourceSQLServer**|Specifica il computer da cui è stato copiato il database.|  
@@ -607,7 +606,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="TransferErrorMessages"></a> Attività Trasferisci messaggi di errore  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci messaggi di errore.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Indica che l'attività ha terminato il trasferimento dei messaggi di errore.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Indica che l'attività ha iniziato a trasferire messaggi di errore.|  
@@ -615,7 +614,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="TransferJobs"></a> Attività Trasferisci processi  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci processi.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**TransferJobsTaskFinishedTransferringObjects**|Indica che l'attività ha terminato il trasferimento dei processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
 |**TransferJobsTaskStartTransferringObjects**|Indica che l'attività ha iniziato a trasferire processi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.|  
@@ -623,7 +622,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="TransferLogins"></a> Attività Trasferisci account di accesso  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci account di accesso.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**TransferLoginsTaskFinishedTransferringObjects**|Indica che l'attività ha terminato il trasferimento degli account di accesso.|  
 |**TransferLoginsTaskStartTransferringObjects**|Indica che l'attività ha iniziato a trasferire account di accesso.|  
@@ -631,7 +630,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="TransferMasterStoredProcedures"></a> Attività Trasferisci stored procedure master  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci stored procedure master.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Indica che l'attività ha terminato il trasferimento delle stored procedure definite dall'utente archiviate nel database **master** .|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Indica che l'attività ha iniziato a trasferire le stored procedure definite dall'utente archiviate nel database **master** .|  
@@ -639,7 +638,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="TransferSQLServerObjects"></a> Attività Trasferisci oggetti di SQL Server  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Trasferisci oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Indica che l'attività ha terminato il trasferimento degli oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|Indica che l'attività ha iniziato a trasferire oggetti di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -647,7 +646,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="WebServices"></a> Attività Servizio Web  
  Nella tabella seguente sono elencate le voci di log personalizzate che è possibile abilitare per l'attività Servizio Web.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**WSTaskBegin**|Indica che l'attività ha iniziato ad accedere a un servizio Web.|  
 |**WSTaskEnd**|Indica che l'attività ha completato un metodo per il servizio Web.|  
@@ -656,7 +655,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="WMIDataReader"></a> Attività Lettore di dati WMI  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Lettore di dati WMI.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Indica che l'attività ha iniziato a leggere dati WMI.|  
 |**WMIDataReaderOperation**|Specifica la query WQL eseguita dall'attività.|  
@@ -664,7 +663,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="WMIEventWatcher"></a> Attività Monitoraggio eventi WMI  
  Nella tabella seguente sono elencate le voci di log personalizzate disponibili per l'attività Monitoraggio eventi WMI.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|Indica che l'evento monitorato dall'attività si è verificato.|  
 |**WMIEventWatcherTimedout**|Indica che si è verificato il timeout dell'attività.|  
@@ -673,7 +672,7 @@ SQL Server Integration Services offre numerosi eventi personalizzati per la scri
 ####  <a name="XML"></a> Attività XML  
  Nella tabella seguente è indicata la voce di log personalizzata disponibile per l'attività XML.  
   
-|Voce di log|Description|  
+|Voce di log|Descrizione|  
 |---------------|-----------------|  
 |**XMLOperation**|Fornisce informazioni sull'operazione eseguita dall'attività.|  
 

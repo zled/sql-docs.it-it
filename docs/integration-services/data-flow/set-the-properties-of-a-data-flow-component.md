@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: data-flow
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,11 +16,12 @@ caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 2a159f57e4315cba3f9eb3ee2d27cfffb94fb6f5
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: d97d2aeabc624d2d13ed4ed6e6ae515b314bbb1e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35409203"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Impostazione delle proprietà di un componente del flusso di dati
   Per impostare le proprietà dei componenti flusso di dati, tra cui origini, destinazioni e trasformazioni, utilizzare una delle funzionalità seguenti:  
@@ -128,11 +127,11 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |ComponentClassID|String|Valore CLSID del componente.|  
 |ContactInfo|String|Informazioni di contatto dello sviluppatore di un componente.|  
-|Description|String|Descrizione del componente flusso di dati. Il valore predefinito di questa proprietà è il nome del componente flusso di dati.|  
+|Descrizione|String|Descrizione del componente flusso di dati. Il valore predefinito di questa proprietà è il nome del componente flusso di dati.|  
 |ID|Valore intero|Valore che identifica in modo univoco questa istanza del componente.|  
 |IdentificationString|String|Identifica il componente.|  
 |IsDefaultLocale|Boolean|Indica se il componente utilizza le impostazioni locali dell'attività Flusso di dati alla quale appartiene.|  
@@ -148,9 +147,9 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà degli input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|Description|String|Descrizione dell'input.|  
+|Descrizione|String|Descrizione dell'input.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
 |HasSideEffects|Boolean|Indica se un componente può essere rimosso dal piano di esecuzione del flusso di dati se non è collegato a un componente a valle e se la proprietà **RunInOptimizedMode** è impostata su **true**.|  
@@ -168,10 +167,10 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di input dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Valore intero|Set di flag che specificano il confronto di colonne che hanno un tipo di dati character. Per altre informazioni, vedere [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Description|String|Descrive la colonna di input.|  
+|Descrizione|String|Descrive la colonna di input.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|ID della colonna di metadati esterna assegnato a una colonna di input.|  
@@ -192,10 +191,10 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà degli output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |DeleteOutputOnPathDetached|Boolean|Valore che determina se il motore del flusso di dati elimina l'output quando viene scollegato da un percorso.|  
-|Description|String|Descrive l'output.|  
+|Descrizione|String|Descrive l'output.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**.|  
 |ExclusionGroup|Valore intero|Valore che identifica un gruppo di output che si escludono a vicenda.|  
@@ -213,10 +212,10 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di output dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |ComparisonFlags|Valore intero|Set di flag che specificano il confronto di colonne che hanno un tipo di dati character. Per altre informazioni, vedere [Comparing String Data](../../integration-services/data-flow/comparing-string-data.md).|  
-|Description|String|Descrive la colonna di output.|  
+|Descrizione|String|Descrive la colonna di output.|  
 |ErrorOrTruncationOperation|String|Stringa facoltativa che specifica i tipi di errori o troncamenti che possono verificarsi durante l'elaborazione di una riga.|  
 |ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valore che specifica la gestione degli errori. I valori sono **Interrompi componente**, **Ignora errore**e **Reindirizza riga**. Il valore predefinito è **Interrompi componente**.|  
 |ExternalMetadataColumnID|Valore intero|ID della colonna di metadati esterna assegnato a una colonna di input.|  
@@ -236,9 +235,9 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà delle colonne di metadati esterne dei componenti in un flusso di dati. Alcune proprietà hanno valori di sola lettura assegnati in fase di esecuzione dal motore del flusso di dati.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
-|Description|String|Descrive la colonna esterna.|  
+|Descrizione|String|Descrive la colonna esterna.|  
 |ID|Valore intero|Valore che identifica la colonna in modo univoco.|  
 |IdentificationString|String|Stringa che identifica la colonna.|  
 |nome|String|Nome della colonna esterna.|  
@@ -250,7 +249,7 @@ Gli oggetti del flusso di dati nel modello a oggetti [!INCLUDE[msCoName](../../i
   
  Nella tabella seguente vengono descritte le proprietà del tipo di dati delle colonne di metadati esterne e delle colonne di output.  
   
-|Proprietà|Tipo di dati|Description|  
+|Proprietà|Tipo di dati|Descrizione|  
 |--------------|---------------|-----------------|  
 |CodePage|Valore intero|Specifica la tabella codici per i dati stringa non Unicode.|  
 |DataType|Integer (enumerazione)|Tipo di dati [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] della colonna. Per altre informazioni, vedere [Tipi di dati di Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|  

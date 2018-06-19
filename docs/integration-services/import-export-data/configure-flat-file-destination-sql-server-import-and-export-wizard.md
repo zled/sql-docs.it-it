@@ -4,14 +4,11 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.service: ''
-ms.component: import-export-data
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
@@ -19,12 +16,12 @@ caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: On Demand
-ms.openlocfilehash: 0145a4393465431b68c6fbacfa50a16048384077
-ms.sourcegitcommit: a85a46312acf8b5a59a8a900310cf088369c4150
+ms.openlocfilehash: 10d89181165d76e0b48dd7b09f0508d3d9f77419
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35408523"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurazione destinazione file flat (Importazione/Esportazione guidata SQL Server)
   Se è stata selezionata una destinazione file flat, l'Importazione/Esportazione guidata [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] visualizza **Configurazione destinazione file flat** dopo aver specificato che si vuole copiare una tabella o dopo aver indicato una query. In questa pagina è possibile specificare le opzioni di formattazione per il file flat di destinazione. Facoltativamente, è possibile esaminare il mapping di singole colonne e visualizzare in anteprima i dati di esempio.  
@@ -47,7 +44,7 @@ ms.lasthandoff: 04/26/2018
  **Delimitatore di riga**  
  Selezionare dall'elenco i delimitatori per separare le righe nell'output. Non è possibile specificare un delimitatore di riga *personalizzato*.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Consente di delimitare le righe con una combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Consente di delimitare le righe con un ritorno a capo.|  
@@ -61,7 +58,7 @@ ms.lasthandoff: 04/26/2018
  **Delimitatore di colonna**  
  Selezionare dall'elenco i delimitatori per separare le colonne nell'output. Non è possibile specificare un delimitatore di colonna *personalizzato*.  
   
-|valore|Description|  
+|valore|Descrizione|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Consente di delimitare le colonne con una combinazione di caratteri ritorno a capo/avanzamento riga.|  
 |**{CR}**|Consente di delimitare le colonne con un ritorno a capo.|  
