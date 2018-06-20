@@ -1,8 +1,5 @@
 # [Panoramica](integration-services-ssis-connections.md)  
 # [Origini dati](data-sources.md)  
-# [Connettersi a un database di Access](connect-to-an-access-database.md)  
-# [Connettersi a un file dBASE o a un altro file DBF](connect-to-a-dbase-or-other-dbf-file.md)  
-# [Connettersi a una cartella di lavoro di Excel](connect-to-an-excel-workbook.md)  
 # [Gestione connessione ADO](ado-connection-manager.md)  
 # [Gestione connessione ADO.NET](ado-net-connection-manager.md)  
 # [Gestione connessione Analysis Services](analysis-services-connection-manager.md)  

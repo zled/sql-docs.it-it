@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: connection-manager
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 f1_keywords:
@@ -29,11 +27,12 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c6ece524c8ee7565b692902b5f8d1e7dbcbd5db6
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7e9a42da365556c0936fdfe59d9c24851dafbedb
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35333545"
 ---
 # <a name="integration-services-ssis-connections"></a>Connessioni in Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vengono utilizzate le connessioni per eseguire varie attività e implementare le funzionalità di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] seguenti:  
@@ -84,7 +83,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
 ### <a name="built-in-connection-managers"></a>Gestioni connessioni predefinite  
  Nella tabella seguente sono elencati i tipi di gestione connessione disponibili in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-|Tipo|Description|Argomento|  
+|Tipo|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ADO|Consente di connettersi a oggetti ADO (ActiveX Data Objects).|[Gestione connessione ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
 |ADO.NET|Consente di connettersi a un'origine dei dati tramite un provider .NET.|[Gestione connessione ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
@@ -112,7 +111,7 @@ Una gestione connessione può essere creata al livello del pacchetto o al livell
 > [!IMPORTANT]  
 >  Le gestioni connessioni elencate nella tabella seguente funzionano unicamente con [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] e [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Tipo|Description|Argomento|  
+|Tipo|Descrizione|Argomento|  
 |----------|-----------------|-----------|  
 |ORACLE|Consente di connettersi a un server Oracle \<informazioni versione\>.|La gestione connessione Oracle è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per Oracle di Attunity include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa ai [connettori Microsoft per Oracle e Teradata di Attunity](http://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Consente di connettersi a un sistema SAP NetWeaver BI versione 7.|La gestione connessione SAP BI è il componente per la gestione delle connessioni del connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI. Il connettore [!INCLUDE[msCoName](../../includes/msconame-md.md)] per SAP BI include anche un'origine e una destinazione. Per ulteriori informazioni, vedere la pagina di download relativa al [Feature Pack di Microsoft SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=262016).|  
