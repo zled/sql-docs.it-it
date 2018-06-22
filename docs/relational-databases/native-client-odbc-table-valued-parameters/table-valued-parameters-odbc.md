@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC)
 - ODBC, table-valued parameters
 ms.assetid: ef06cd13-18e2-4c65-8ede-c3955d820e54
-caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f8c0f95a894b92c3522fa98d4022d28540d4a29
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 8344d1cbe163aefdb0ac42873a442e2a4fffc8e6
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707299"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694872"
 ---
 # <a name="table-valued-parameters-odbc"></a>Parametri con valori di tabella (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +34,7 @@ ms.locfileid: "34707299"
   
  In ODBC è possibile inviare parametri con valori di tabella al server in due modi:  
   
--   Tutti i dati dei parametri con valori di tabella possono essere in memoria al momento in cui viene chiamata SQLExecDirect o SQLExecute. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
+-   Tutti i dati del parametro con valori di tabella possono essere in memoria al momento SQLExecDirect o SQLExecute è definita. Se sono presenti più righe nel valore di tabella, i dati vengono archiviati in matrici.  
   
 -   Un'applicazione può specificare data-at-execution per un parametro con valori di tabella quando viene chiamata SQLExecDirect o SQLExecute. In tal caso, le righe di dati per il valore di tabella possono essere fornite in batch o uno alla volta per ridurre i requisiti di memoria.  
   
@@ -72,7 +70,7 @@ ms.locfileid: "34707299"
  Viene descritto il modo in cui un'applicazione può ottenere i metadati per una chiamata alla procedura preparata.  
   
  [Metadati aggiuntivi dei parametri con valori di tabella](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
- Viene descritto come utilizzare SQLColumns, SQLProcedureColumns e SQLTables per recuperare metadati per un parametro con valori di tabella.  
+ Viene descritto come utilizzare SQLColumns, SQLProcedureColumns e SQLTables per recuperare i metadati per un parametro con valori di tabella.  
   
  [Conversione di dati dei parametri con valori di tabella e altri errori e avvisi](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-data-conversion-and-other-errors-and-warnings.md)  
  Viene descritta l'elaborazione degli errori nei valori delle colonne dei parametri con valori di tabella.  

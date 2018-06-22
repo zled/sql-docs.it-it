@@ -1,10 +1,9 @@
 ---
-title: Funzionamento dei cursori | Documenti Microsoft
+title: Comportamenti dei cursori | Documenti Microsoft
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -26,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3bb10bf9bf855b7c343b07c597dc0436015344be
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 353fde7548431b354c6e101545b67a924e553b66
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945096"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700512"
 ---
 # <a name="cursor-behaviors"></a>Comportamenti dei cursori
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,10 +47,10 @@ ms.locfileid: "32945096"
 |SQL_NONSCROLLABLE e SQL_INSENSITIVE|Set di risultati predefinito (forward only, di sola lettura)|  
 |SQL_NONSCROLLABLE e SQL_UNSPECIFIED|Set di risultati predefinito (forward only, di sola lettura)|  
   
- Concorrenza ottimistica basata sulla versione richiede una **timestamp** colonna nella tabella sottostante. Se il controllo della concorrenza ottimistica basata sulla versione è richiesto in una tabella che non dispone di un **timestamp** colonna, il server utilizza basato sui valori concorrenza ottimistica.  
+ Concorrenza ottimistica basata sulla versione richiede un **timestamp** colonna nella tabella sottostante. Se il controllo della concorrenza ottimistica basata sulla versione è richiesto in una tabella che non dispone di un **timestamp** colonna, il server utilizza basato sui valori concorrenza ottimistica.  
   
 ## <a name="scrollability"></a>Scorrimento  
- Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_SCROLLABLE, il cursore supporta tutti i valori diversi per il *FetchOrientation* parametro di [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_NONSCROLLABLE, il cursore supporta solo un *FetchOrientation* valore di SQL_FETCH_NEXT.  
+ Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_SCROLLABLE, il cursore supporta tutti i valori diversi per la *FetchOrientation* parametro della [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Quando SQL_ATTR_CURSOR_SCROLLABLE è impostato su SQL_NONSCROLLABLE, il cursore supporta solo un *FetchOrientation* valore di SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilità  
  Quando SQL_ATTR_CURSOR_SENSITIVITY è impostato su SQL_SENSITIVE, il cursore riflette le modifiche dei dati apportate dall'utente corrente di cui è stato eseguito il commit da altri utenti. Quando SQL_ATTR_CURSOR_SENSITIVITY è impostato su SQL_INSENSITIVE, il cursore non riflette le modifiche dei dati.  

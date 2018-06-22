@@ -3,11 +3,9 @@ title: Using System. Transactions | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -22,33 +20,33 @@ caps.latest.revision: 16
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b6a16064cbff2b859f627271784d170b0c812078
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 985669c18716faec4ac731fe76c09c84f8f5584a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919656"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700572"
 ---
 # <a name="using-systemtransactions"></a>Utilizzo di System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Il **System. Transactions** spazio dei nomi fornisce un framework di transazioni che è completamente integrato con ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione common language runtime (CLR). Il **Transactions** rende un blocco di codice transazionale elencando implicitamente le connessioni in una transazione distribuita. È necessario chiamare il **completa** metodo alla fine del blocco di codice contrassegnato mediante il **TransactionScope**. Il **Dispose** metodo viene richiamato quando l'esecuzione del programma lascia un blocco di codice, la transazione non viene più utilizzata se il **completa** non viene chiamato. Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
+  Il **System. Transactions** spazio dei nomi fornisce un framework per le transazioni completamente integrato con ADO.NET e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrazione common language runtime (CLR). Il **System.Transactions.TransactionScope** rende un blocco di codice transazionale elencando implicitamente le connessioni in una transazione distribuita. È necessario chiamare il **completa** metodo alla fine del blocco di codice contrassegnato mediante il **TransactionScope**. Il **Dispose** metodo viene richiamato quando l'esecuzione del programma lascia un blocco di codice, la transazione non viene più utilizzata se il **completa** metodo non viene chiamato. Se è stata generata un'eccezione che determina l'uscita del codice dall'ambito, la transazione non viene più utilizzata.  
   
- Si consiglia di utilizzare un **utilizzando** blocco per garantire che il **Dispose** metodo viene chiamato sul **TransactionScope** oggetto quando il **utilizzando**blocco viene chiuso. Impossibile eseguire il commit o il rollback delle transazioni in sospeso può compromettere notevolmente le prestazioni perché il timeout predefinito per il **TransactionScope** è un minuto. Se non si utilizza un **utilizzando** istruzione, è necessario eseguire le operazioni in un **provare** bloccare e chiamare in modo esplicito il **Dispose** metodo il **infine**blocco.  
+ Si consiglia l'utilizzo di un **mediante** blocco per garantire che il **Dispose** metodo viene chiamato sul **TransactionScope** oggetto quando il **utilizzando**blocco viene chiuso. Impossibile eseguire il commit o il rollback delle transazioni in sospeso può compromettere notevolmente le prestazioni perché il timeout predefinito per il **TransactionScope** è un minuto. Se non si utilizza un **utilizzando** istruzione, è necessario eseguire le operazioni in un **provare** blocca e chiamare in modo esplicito il **Dispose** metodo il **infine**blocco.  
   
  Se si verifica un'eccezione all'interno di **TransactionScope**, la transazione viene contrassegnata come incoerente e viene interrotta. Viene eseguito il rollback quando il **TransactionScope** è stato eliminato. Se non si verifica alcuna eccezione, viene eseguito il commit delle transazioni partecipanti.  
   
- **TransactionScope** deve essere utilizzato solo quando le origini dati locali e remoti o gestori di risorse esterni sono a cui si accede. In questo modo **TransactionScope** comporta sempre promozione delle transazioni, anche se è utilizzato solo all'interno di una connessione di contesto.  
+ **TransactionScope** deve essere utilizzato solo quando le origini dati locali e remoti o gestori di risorse esterni sono a cui si accede. Infatti **TransactionScope** determinano sempre promozione delle transazioni, anche se viene utilizzato solo all'interno di una connessione di contesto.  
   
 > [!NOTE]  
->  Il **TransactionScope** classe crea una transazione con un **System.Transactions.Transaction.IsolationLevel** di **Serializable** per impostazione predefinita. A seconda dell'applicazione, è possibile abbassare il livello di isolamento per evitare che si verifichi un numero elevato di contese.  
+>  Il **TransactionScope** classe crea una transazione con un **System.Transactions.Transaction.IsolationLevel** dei **Serializable** per impostazione predefinita. A seconda dell'applicazione, è possibile abbassare il livello di isolamento per evitare che si verifichi un numero elevato di contese.  
   
 > [!NOTE]  
->  È consigliabile eseguire solo aggiornamenti, inserimenti ed eliminazioni all'interno di transazioni distribuite sui server remoti in quanto tali operazioni comportano un notevole consumo di risorse del database. Se l'operazione viene effettuata sul server locale, non è necessario eseguire una transazione distribuita ed è sufficiente una transazione locale. Le istruzioni SELECT potrebbero bloccare inutilmente risorse del database e in alcuni scenari può essere necessario utilizzare le transazioni per le operazioni di selezione. Tutto il lavoro che non riguarda il database deve essere svolto all'esterno dell'ambito della transazione, a meno che non coinvolga altri gestori di risorse inclusi nella transazione. Sebbene un'eccezione all'interno dell'ambito della transazione impedisca l'esecuzione del commit, il **TransactionScope** classe non è disponibile il rollback delle modifiche al codice apportate all'esterno dell'ambito della transazione se stesso. Se è necessario eseguire un'azione quando viene eseguito il rollback della transazione, è necessario scrivere la propria implementazione del **System.Transactions.IEnlistmentNotification** interfaccia ed integrarla esplicitamente nella transazione.  
+>  È consigliabile eseguire solo aggiornamenti, inserimenti ed eliminazioni all'interno di transazioni distribuite sui server remoti in quanto tali operazioni comportano un notevole consumo di risorse del database. Se l'operazione viene effettuata sul server locale, non è necessario eseguire una transazione distribuita ed è sufficiente una transazione locale. Le istruzioni SELECT potrebbero bloccare inutilmente risorse del database e in alcuni scenari può essere necessario utilizzare le transazioni per le operazioni di selezione. Tutto il lavoro che non riguarda il database deve essere svolto all'esterno dell'ambito della transazione, a meno che non coinvolga altri gestori di risorse inclusi nella transazione. Sebbene un'eccezione all'interno dell'ambito della transazione impedisca l'esecuzione del commit, il **TransactionScope** classe non è disponibile il rollback delle modifiche del codice apportate all'esterno dell'ambito della transazione se stesso. Se è necessario intraprendere un'azione quando viene eseguito il rollback della transazione, è necessario scrivere la propria implementazione del **System.Transactions.IEnlistmentNotification** interfaccia ed integrarla esplicitamente nella transazione.  
   
 ## <a name="example"></a>Esempio  
- Per funzionare con **System. Transactions**, è necessario disporre di un riferimento al file System.Transactions.dll.  
+ Per operare **System. Transactions**, è necessario disporre di un riferimento al file Transactions.  
   
- Nel codice seguente viene illustrato come creare una transazione che può essere promossa su due istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Queste istanze vengono rappresentate da due diversi **SqlConnection** oggetti, incapsulati in un **TransactionScope** blocco. Il codice crea il **TransactionScope** blocco con un **utilizzando** istruzione e viene aperta la prima connessione elencarla automaticamente nel **TransactionScope**. La transazione viene integrata inizialmente come transazione lightweight, non come transazione completamente distribuita. Il codice presuppone l'esistenza della logica condizionale, omessa per brevità. Si apre la seconda connessione solo se necessario, integrandola nel **TransactionScope**. Quando la connessione è aperta, la transazione viene promossa automaticamente a una transazione completamente distribuita. Il codice richiama quindi **TransactionScope.Complete**, che esegue il commit della transazione. Il codice elimina le due connessioni in uscita di **utilizzando** istruzioni per le connessioni. Il **TransactionScope.Dispose** metodo per il **TransactionScope** viene chiamato automaticamente al termine del **utilizzando** bloccare per il  **TransactionScope**. Se è stata generata un'eccezione in qualsiasi punto di **TransactionScope** blocco **completa** non viene chiamato e transazione distribuita verrà eseguito il rollback quando il **TransactionScope**  è stato eliminato.  
+ Nel codice seguente viene illustrato come creare una transazione che può essere promossa su due istanze diverse di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Queste istanze vengono rappresentate da due diverse **SqlConnection** oggetti, incapsulati in un **TransactionScope** blocco. Nel codice viene creato il **TransactionScope** blocco con un **utilizzando** istruzione e viene aperta la prima connessione, elencarla automaticamente nel **TransactionScope**. La transazione viene integrata inizialmente come transazione lightweight, non come transazione completamente distribuita. Il codice presuppone l'esistenza della logica condizionale, omessa per brevità. Si apre la seconda connessione solo se necessario, integrandola nel **TransactionScope**. Quando la connessione è aperta, la transazione viene promossa automaticamente a una transazione completamente distribuita. Il codice richiama quindi **TransactionScope.Complete**, che esegue il commit della transazione. Il codice elimina le due connessioni quando si esce dal **utilizzando** istruzioni per le connessioni. Il **TransactionScope.Dispose** metodo per il **TransactionScope** viene chiamato automaticamente al termine della **utilizzando** bloccare per il  **TransactionScope**. Se è stata generata un'eccezione in qualsiasi punto il **TransactionScope** blocco **completa** non viene chiamato e transazione distribuita verrà eseguito il rollback quando il **TransactionScope**  è stato eliminato.  
   
  Visual Basic  
   
@@ -112,6 +110,6 @@ using (TransactionScope transScope = new TransactionScope())
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le transazioni e integrazione con CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Integrazione con CLR e transazioni](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

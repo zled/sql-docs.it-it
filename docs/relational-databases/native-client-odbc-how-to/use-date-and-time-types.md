@@ -4,30 +4,28 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
-caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6fe22cd6029d3699371098c491060a893709cb84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 23cf3ddddd63bc5f3b3bc183fed34a6b83fb3911
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945226"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696372"
 ---
 # <a name="use-date-and-time-types"></a>Utilizzare tipi di data e ora
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo esempio viene illustrato come inizializzare le strutture dati di data e ora aggiunte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Successivamente vengono preparati i valori di input e associati i parametri e viene eseguita la query. Per ulteriori informazioni sull'utilizzo di questi tipi, vedere [data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  In questo esempio viene illustrato come inizializzare le strutture dati di data e ora aggiunte in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Successivamente vengono preparati i valori di input e associati i parametri e viene eseguita la query. Per ulteriori informazioni sull'utilizzo di questi tipi, vedere [data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Esempio  
  È necessaria anche un'origine dati ODBC denominata DateTime. Il database predefinito per DateTime deve essere tempdb. Tale origine dati deve essere basata sul driver ODBC per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

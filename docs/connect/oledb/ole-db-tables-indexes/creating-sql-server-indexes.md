@@ -2,9 +2,10 @@
 title: Creazione di indici SQL Server | Documenti Microsoft
 description: Creazione di indici di SQL Server usando il Driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-tables-indexes
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -19,27 +20,29 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 9648462e65ed85b5a9652e193dc63d30059c0753
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 352cdcbe6c2f5697ad7864f8048474d7a19ed632
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306870"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689494"
 ---
 # <a name="creating-sql-server-indexes"></a>Creazione di indici SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   Il Driver OLE DB per SQL Server espone il **iindexdefinition:: CreateIndex** funzione, che consente agli utenti di definire nuovi indici nelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabelle.  
   
- Il Driver OLE DB per SQL Server crea indici di tabella come indici o vincoli. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce privilegio di creazione del vincolo al proprietario della tabella, del database e ai membri di determinati ruoli amministrativi. Per impostazione predefinita, solo il proprietario di tabella può creare un indice in una tabella. Pertanto, l'esito positivo o negativo del **CreateIndex** dipende non solo i diritti di accesso dell'utente dell'applicazione ma anche sul tipo di indice creato.  
+ Il Driver OLE DB per SQL Server crea indici di tabella come indici o vincoli. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fornisce privilegio di creazione del vincolo al proprietario della tabella, del database e ai membri di determinati ruoli amministrativi. Per impostazione predefinita, solo il proprietario di tabella può creare un indice in una tabella. Pertanto, l'esito positivo o negativo del **CreateIndex** dipende non solo i diritti di accesso dell'utente dell'applicazione, ma anche sul tipo di indice creato.  
   
- I consumer specificano il nome della tabella come stringa di caratteri Unicode nel *pwszName* appartenente il *uName* unione nel *pTableID* parametro. Il *eKind* membro di *pTableID* deve essere DBKIND_NAME.  
+ I consumer specificano il nome della tabella come stringa di caratteri Unicode nel *pwszName* appartenente il *uName* unione nel *pTableID* parametro. Il *eKind* appartenente *pTableID* deve essere DBKIND_NAME.  
   
  Il *pIndexID* parametro può essere NULL e se è, il Driver OLE DB per SQL Server crea un nome univoco per l'indice. Il consumer può acquisire il nome dell'indice specificando un puntatore valido a un DBID nel *ppIndexID* parametro.  
   
- Il consumer può specificare il nome dell'indice come stringa di caratteri Unicode nel *pwszName* appartenente il *uName* unione del *pIndexID* parametro. Il *eKind* membro di *pIndexID* deve essere DBKIND_NAME.  
+ Il consumer può specificare il nome dell'indice come stringa di caratteri Unicode nel *pwszName* appartenente il *uName* unione del *pIndexID* parametro. Il *eKind* appartenente *pIndexID* deve essere DBKIND_NAME.  
   
- Il consumer specifica la colonna o le colonne utilizzate nell'indice in base al nome. Per ogni struttura DBINDEXCOLUMNDESC utilizzata in **CreateIndex**, *eKind* appartenente il *pColumnID* deve essere DBKIND_NAME. Il nome della colonna è specificato come stringa di caratteri Unicode nel *pwszName* appartenente il *uName* unione nel *pColumnID*.  
+ Il consumer specifica la colonna o le colonne utilizzate nell'indice in base al nome. Per ogni struttura DBINDEXCOLUMNDESC utilizzata in **CreateIndex**, la *eKind* appartenente il *pColumnID* deve essere DBKIND_NAME. Il nome della colonna viene specificato come stringa di caratteri Unicode nel *pwszName* appartenente il *uName* unione nel *pColumnID*.  
   
  Il Driver OLE DB per SQL Server e [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto ordine crescente nei valori nell'indice. Il Driver OLE DB per SQL Server restituisce E_INVALIDARG se il consumer specifica DBINDEX_COL_ORDER_DESC in una qualsiasi struttura DBINDEXCOLUMNDESC.  
   
@@ -49,7 +52,7 @@ ms.locfileid: "35306870"
 |-----------------|-----------------|  
 |DBPROP_INDEX_AUTOUPDATE|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: Il Driver OLE DB per SQL Server non supporta questa proprietà. Tenta di impostare la proprietà **CreateIndex** causano un valore restituito DB_S_ERRORSOCCURRED. Il *dwStatus* membro della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_CLUSTERED|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: VARIANT_FALSE<br /><br /> Descrizione: controlla il clustering dell'indice.<br /><br /> VARIANT_TRUE: Il Driver OLE DB per SQL Server tenta di creare un indice cluster sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta al massimo un indice con cluster su una tabella.<br /><br /> VARIANT_FALSE: Il Driver OLE DB per SQL Server tenta di creare un indice non cluster per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabella.|  
-|DBPROP_INDEX_FILLFACTOR|L/S: Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: specifica la percentuale di una pagina di indice utilizzata per l'archiviazione. Per ulteriori informazioni, vedere [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Il tipo della variante è VT_I4. Deve essere maggiore o uguale a 1 e minore o uguale a 100.|  
+|DBPROP_INDEX_FILLFACTOR|L/S: Lettura/Scrittura<br /><br /> Predefinito: 0<br /><br /> Descrizione: specifica la percentuale di una pagina di indice utilizzata per l'archiviazione. Per altre informazioni, vedere [CREATE INDEX](../../../t-sql/statements/create-index-transact-sql.md).<br /><br /> Il tipo della variante è VT_I4. Deve essere maggiore o uguale a 1 e minore o uguale a 100.|  
 |DBPROP_INDEX_INITIALIZE|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: Il Driver OLE DB per SQL Server non supporta questa proprietà. Tenta di impostare la proprietà **CreateIndex** causano un valore restituito DB_S_ERRORSOCCURRED. Il *dwStatus* membro della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_NULLCOLLATION|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: Il Driver OLE DB per SQL Server non supporta questa proprietà. Tenta di impostare la proprietà **CreateIndex** causano un valore restituito DB_S_ERRORSOCCURRED. Il *dwStatus* membro della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  
 |DBPROP_INDEX_NULLS|L/S: Lettura/Scrittura<br /><br /> Impostazione predefinita: nessuna<br /><br /> Descrizione: Il Driver OLE DB per SQL Server non supporta questa proprietà. Tenta di impostare la proprietà **CreateIndex** causano un valore restituito DB_S_ERRORSOCCURRED. Il *dwStatus* membro della struttura di proprietà indica DBPROPSTATUS_BADVALUE.|  

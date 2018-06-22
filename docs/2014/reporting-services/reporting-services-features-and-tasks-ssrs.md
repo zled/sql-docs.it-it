@@ -1,0 +1,59 @@
+---
+title: Caratteristiche e attività di Reporting Services (SSRS) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, programming
+- development [Reporting Services]
+ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
+caps.latest.revision: 39
+author: markingmyname
+ms.author: maghan
+manager: mblythe
+ms.openlocfilehash: 0c299c50e06b4e7959a5848adabe0a53142bf2e9
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36055172"
+---
+# <a name="reporting-services-features-and-tasks-ssrs"></a>Caratteristiche e attività di Reporting Services (SSRS)
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è organizzato in base ai report, le caratteristiche dei report, le caratteristiche del server di report e le caratteristiche dei prodotti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
+  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ [Server di report di Reporting Services](../../2014/reporting-services/reporting-services-report-server.md)  
+  
+ [Report di Reporting Services &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
+  
+ [Dati del report &#40;SSRS&#41;](report-data/report-data-ssrs.md)  
+  
+ [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)  
+  
+ [Parti del report in Progettazione report &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)  
+  
+ [Pianificazioni](subscriptions/schedules.md)  
+  
+ [Sottoscrizioni e recapito &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)  
+  
+ [Avvisi dati di Reporting Services](../ssms/agent/alerts.md)  
+  
+ [Sicurezza e protezione di Reporting Services](security/reporting-services-security-and-protection.md)  
+  
+ [Accesso con URL &#40;SSRS&#41;](url-access-ssrs.md)  
+  
+ [Le estensioni &#40;SSRS&#41;](extensions-ssrs.md)  
+  
+ [Strumenti di Reporting Services](tools/reporting-services-tools.md)  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Novità di &#40;Reporting Services&#41;](../../2014/reporting-services/what-s-new-reporting-services.md)  
+  
+  

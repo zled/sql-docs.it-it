@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e2077845a348243b8f2e68563580028f6d656354
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 2fd19f6b9fa8c9718b08ab90aff1406996e38e41
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949936"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695662"
 ---
 # <a name="date-and-time-improvements"></a>Data e ora miglioramenti
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "32949936"
 ### <a name="use-time-as-a-distinct-data-type"></a>Utilizzare il tipo time come tipo di dati distinto  
  OLE DB include già un tipo di dati che contiene solo l'ora, ovvero DBTYPE_DBTIME, che garantisce precisione pari a 1 secondo. Il tipo equivalente in ODBC è SQL_TYPE_TIME (SQL_TIME per le applicazioni ODBC 2.0).  
   
- Il nuovo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ora il tipo di dati ha frazionaria dei secondi precisione di 100 nanosecondi. Questa operazione richiede nuovi tipi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) e SQL_SS_TIME2 (ODBC). Le applicazioni esistenti scritte per utilizzare le ore senza secondi frazionari possono utilizzare colonne time(0). I tipi OLE DB DBTYPE_TIME e ODBC SQL_TYPE_TIME esistenti e le strutture corrispondenti funzioneranno correttamente, a meno che le applicazioni non si basino sul tipo restituito nei metadati.  
+ Il nuovo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ora tipo di dati ha frazionaria dei secondi precisione di 100 nanosecondi. Ciò richiede nuovi tipi in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client: DBTYPE_DBTIME2 (OLE DB) e SQL_SS_TIME2 (ODBC). Le applicazioni esistenti scritte per utilizzare le ore senza secondi frazionari possono utilizzare colonne time(0). I tipi OLE DB DBTYPE_TIME e ODBC SQL_TYPE_TIME esistenti e le strutture corrispondenti funzioneranno correttamente, a meno che le applicazioni non si basino sul tipo restituito nei metadati.  
   
 ### <a name="use-time-as-a-distinct-data-type-with-extended-fractional-seconds-precision"></a>Utilizzare il tipo time come tipo di dati distinto con precisione frazionaria dei secondi estesa  
  Alcune applicazioni, ad esempio le applicazioni di controllo dei processi e di produzione, richiedono la possibilità di gestire i dati di tipo time con una precisione pari a fino 100 nanosecondi. I nuovi tipi a tale scopo sono DBTYPE_DBTIME2 (OLE DB) e SQL_SS_TIME2 (ODBC).  

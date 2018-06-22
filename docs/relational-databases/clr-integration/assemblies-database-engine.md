@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - assemblies [CLR integration]
@@ -19,12 +17,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 80fbed0b759f3b05688ee51156a9092294fe0ceb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 5429ae69dfabd8d978e3dff6a2a29ff3f4ba56fe
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921706"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697112"
 ---
 # <a name="assemblies-database-engine"></a>Assembly (Motore di database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +32,15 @@ ms.locfileid: "32921706"
   
  Un assembly di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è un oggetto che fa riferimento a un modulo di applicazione gestito (file con estensione dll) creato nel linguaggio CLR di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Un assembly contiene i metadati della classe e codice gestito. Il caricamento di un assembly in un'istanza di SQL Server è il primo passaggio da eseguire per creare uno degli oggetti di database seguenti:  
   
--   Funzioni CLR. Per ulteriori informazioni, vedere [creare funzioni CLR](../../relational-databases/user-defined-functions/create-clr-functions.md).  
+-   Funzioni CLR. Per altre informazioni, vedere [creare funzioni CLR](../../relational-databases/user-defined-functions/create-clr-functions.md).  
   
--   Stored procedure CLR. Per ulteriori informazioni, vedere [Stored procedure CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
+-   Stored procedure CLR. Per altre informazioni, vedere [Stored procedure CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33).  
   
--   Trigger CLR. Per ulteriori informazioni, vedere [creare trigger CLR](../../relational-databases/triggers/create-clr-triggers.md).  
+-   Trigger CLR. Per altre informazioni, vedere [creazione di trigger CLR](../../relational-databases/triggers/create-clr-triggers.md).  
   
--   Funzioni di aggregazione definite dall'utente. Per ulteriori informazioni, vedere [le aggregazioni definite dall'utente di creare](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
+-   Funzioni di aggregazione definite dall'utente. Per altre informazioni, vedere [aggregazioni definite dall'utente di creare](../../relational-databases/user-defined-functions/create-user-defined-aggregates.md).  
   
--   Tipi definiti dall'utente. Per ulteriori informazioni, vedere [User-Defined Type](../../relational-databases/native-client/features/using-user-defined-types.md).  
+-   Tipi definiti dall'utente. Per altre informazioni, vedere [User-Defined Type](../../relational-databases/native-client/features/using-user-defined-types.md).  
   
  Gli assembly svolgono le funzioni seguenti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -54,7 +52,7 @@ ms.locfileid: "32921706"
   
 -   Includono i metadati relativi alle dipendenze da altri assembly a cui viene fatto riferimento nell'assembly.  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 |Argomento|Description|  
 |-----------|-----------------|  

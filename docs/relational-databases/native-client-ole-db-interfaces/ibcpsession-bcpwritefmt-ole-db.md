@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d618fab0ef10e790c53511c9ef49c826488673d3
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 517ee0611a613d7a450f29e66eeb4d9d431a3056
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945816"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694513"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,10 +41,10 @@ HRESULT BCPWriteFmt(
       const wchar_t *pwszFormatFile);  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate al [ibcpsession:: BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) metodi definiscono il formato del file di dati. Il **BCPWriteFmt** metodo Salva questa definizione nel file a cui fa riferimento l'argomento pwszFormatFile.  
+## <a name="remarks"></a>Remarks  
+ Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate ai [ibcpsession:: BCPColumns](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) e [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) metodi definiscono il formato del file di dati. Il **BCPWriteFmt** metodo Salva questa definizione nel file di cui fanno riferimento l'argomento pwszFormatFile.  
   
- Il **BCPWriteFmt** metodo è possibile salvare i file di formato in formato xml o testo. Queste devono essere indicate tramite l'opzione di controllo BCP_OPTION_XML con il [ibcpsession:: Bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) metodo.  
+ Il **BCPWriteFmt** metodo possibile salvare i file di formato in formato xml o testo. Queste devono essere indicate tramite l'opzione di controllo BCP_OPTION_XML con il [ibcpsession:: Bcpcontrol](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) metodo.  
   
  Per caricare un file di formato salvato, utilizzare il [ibcpsession:: Bcpreadfmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) metodo.  
   

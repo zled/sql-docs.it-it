@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +19,12 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 42a8ca545116bda764ed96a3093683d6e7d52bf9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7edffcdf1009199a2c2024adf7621a53e7109796
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919266"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698292"
 ---
 # <a name="altering-an-assembly"></a>Modifica di un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ALTER ASSEMBLY SQLCLRTest
 WITH PERMISSION_SET = EXTERNAL_ACCESS   
 ```  
   
- Se il set di autorizzazioni di un assembly viene modificato da **provvisoria** a **EXTERNAL_ACCESS** o **UNSAFE**, una chiave asimmetrica e l'account di accesso corrispondente con  **EXTERNAL ACCESS ASSEMBLY** autorizzazione o **ASSEMBLY UNSAFE** è necessario creare l'autorizzazione per l'assembly. Per altre informazioni, vedere [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+ Se il set di autorizzazioni di un assembly viene modificato da **provvisoria** alla **EXTERNAL_ACCESS** oppure **UNSAFE**, una chiave asimmetrica e l'account di accesso corrispondente con  **EXTERNAL ACCESS ASSEMBLY** autorizzazione o **UNSAFE ASSEMBLY** è necessario creare l'autorizzazione per l'assembly. Per altre informazioni, vedere [Creating an Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
 ## <a name="adding-the-source-code-of-an-assembly"></a>Aggiunta del codice sorgente di un assembly.  
  La clausola ADD FILE nella sintassi ALTER ASSEMBLY non è presente in CREATE ASSEMBLY. È possibile utilizzarla per aggiungere codice sorgente o altri file associati a un assembly. I file vengono copiati dai percorsi originali e vengono archiviati nelle tabelle di sistema del database. In questo modo il codice sorgente o gli altri file saranno sempre disponibili nel caso in cui sia necessario ricreare o documentare la versione corrente del tipo definito dall'utente (UDT).  

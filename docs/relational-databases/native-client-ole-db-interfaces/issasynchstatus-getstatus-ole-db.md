@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 455707070a8ee20fd767a510a255db2bfc87d502
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ccb9d40572b24322264ffc826e79d18faade8d8a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951466"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695902"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,12 +56,12 @@ HRESULT GetStatus(
  DBASYNCHOP_OPEN: il consumer richiede informazioni sull'apertura o sul popolamento asincrono di un set di righe o sull'inizializzazione asincrona di un oggetto origine dati. Se il provider è un provider conforme a OLE DB 2.5 che supporta l'associazione URL diretta, il consumer richiede informazioni sull'inizializzazione o sul popolamento asincrono di un oggetto origine dati, set di righe, riga o flusso.  
   
  *pulProgress*[out]  
- Puntatore alla memoria in cui restituire lo stato corrente dell'operazione asincrona rispetto al valore massimo previsto indicato nel *pulProgressMax* parametro. Per ulteriori informazioni sul significato di *pulProgress*, vedere la descrizione di *peAsynchPhase*.  
+ Puntatore alla memoria in cui si desidera ottenere lo stato corrente dell'operazione asincrona rispetto al valore massimo previsto indicato nella *pulProgressMax* parametro. Per ulteriori informazioni sul significato dei *pulProgress*, vedere la descrizione del *peAsynchPhase*.  
   
  Se *pulProgress* è un puntatore null, non viene restituito alcun progresso.  
   
  *pulProgressMax*[out]  
- Puntatore alla memoria in cui restituire il valore massimo previsto del *pulProgress* parametro. Questo valore può variare nelle diverse chiamate al metodo. Per ulteriori informazioni sul significato di *pulProgressMax*, vedere la descrizione di *peAsynchPhase*.  
+ Puntatore alla memoria in cui si desidera ottenere il valore massimo previsto del *pulProgress* parametro. Questo valore può variare nelle diverse chiamate al metodo. Per ulteriori informazioni sul significato dei *pulProgressMax*, vedere la descrizione del *peAsynchPhase*.  
   
  Se *pulProgressMax* è un puntatore null, non viene restituito alcun valore massimo previsto.  
   
@@ -81,19 +79,19 @@ HRESULT GetStatus(
  *ppwszStatusText*[in/out]  
  Puntatore alla memoria contenente informazioni aggiuntive sull'operazione. Un provider può utilizzare questo valore per distinguere tra elementi differenti di un'operazione, ad esempio le diverse risorse a cui si accede. Questa stringa viene localizzata in base alla proprietà DBPROP_INIT_LCID dell'oggetto origine dati.  
   
- Se *ppwszStatusText* è non null per l'input, il provider restituisce lo stato associato allo specifico elemento identificato da *ppwszStatusText*. Se *ppwszStatusText* non indica un elemento di *eOperation*, il provider restituisce S_OK con *pulProgress* e *pulProgressMax*impostato sullo stesso valore. Se il provider non distingue tra gli elementi in base a un identificatore testuale, imposta *ppwszStatusText* a NULL e restituisce informazioni sull'operazione nel suo complesso; in caso contrario, se *ppwszStatusText*è non null per l'input, il provider lascia *ppwszStatusText* invariati.  
+ Se *ppwszStatusText* è diverso da null per input, il provider restituisce lo stato associato l'elemento specifico identificato dal *ppwszStatusText*. Se *ppwszStatusText* non indica un elemento dell'elemento *eOperation*, il provider restituisce S_OK con *pulProgress* e *pulProgressMax*impostata sullo stesso valore. Se il provider non distingue tra gli elementi in base a un identificatore testuale, imposta *ppwszStatusText* a NULL e restituisce informazioni sull'operazione nel suo complesso; in caso contrario, se *ppwszStatusText*è diverso da null per input, il provider lascia *ppwszStatusText* invariati.  
   
- Se *ppwszStatusText* è null per l'input, il provider imposta *ppwszStatusText* su un valore che indica ulteriori informazioni sull'operazione o su NULL se tali informazioni non sono disponibile o se  **Issasynchstatus:: GetStatus** restituisce un errore. Quando *ppwszStatusText* è null per l'input, il provider alloca memoria per la stringa di stato e restituisce l'indirizzo alla memoria. Il consumer rilascia la memoria con **IMalloc:: Free** quando non è più necessario la stringa.  
+ Se *ppwszStatusText* è null per l'input, il provider imposta *ppwszStatusText* a un valore che indica ulteriori informazioni sull'operazione o su NULL se tali informazioni non sono disponibile o se  **Issasynchstatus:: GetStatus** restituisce un errore. Quando si *ppwszStatusText* è null per l'input, il provider alloca memoria per la stringa di stato e restituisce l'indirizzo alla memoria. Il consumer rilascia questa memoria con **IMalloc:: Free** quando non è più necessario la stringa.  
   
- Se *ppwszStatusText* è NULL per input, non viene restituita alcuna stringa di stato e il provider restituisce informazioni su qualsiasi elemento dell'operazione o sull'operazione in generale.  
+ Se *ppwszStatusText* è NULL nell'input, non viene restituita alcuna stringa di stato e il provider restituisce informazioni su qualsiasi elemento dell'operazione o sull'operazione in generale.  
   
 ## <a name="return-code-values"></a>Valori restituiti  
  S_OK  
  Il metodo è stato restituito correttamente.  
   
--   Se *peAsynchPhase* è uguale a DBASYNCHPHASE_INITIALIZATION, l'oggetto non ancora completamente inizializzato, il tentativo di chiamare qualsiasi altra interfaccia potrebbe non riuscire e il set completo di interfacce potrebbe non essere disponibile per l'oggetto.  
+-   Se *peAsynchPhase* è uguale a DBASYNCHPHASE_INITIALIZATION, l'oggetto non ancora completamente inizializzato; tentativo di chiamare qualsiasi altra interfaccia potrebbe non riuscire e il set completo di interfacce potrebbe non essere disponibile per l'oggetto.  
   
--   Se *peAsynchPhase* è uguale a DBASYNCHPHASE_POPULATION, il set di righe è completamente inizializzato e l'intervallo completo di interfacce è disponibile per l'oggetto; tuttavia, potrebbero essere presenti altre righe non ancora popolate nel set di righe.  
+-   Se *peAsynchPhase* è uguale a DBASYNCHPHASE_POPULATION, il set di righe è completamente inizializzato e l'intervallo completo di interfacce è disponibile per l'oggetto; tuttavia, potrebbero essere presenti altre righe non ancora popolate nei set di righe.  
   
 -   Se *peAsynchPhase* è uguale a DBASYNCHPHASE_COMPLETE, tutta l'elaborazione asincrona dell'oggetto è stata completata. L'oggetto è stato inizializzato e popolato completamente.  
   
@@ -115,23 +113,23 @@ HRESULT GetStatus(
  E_FAIL  
  Si è verificato un errore specifico del provider.  
   
-## <a name="remarks"></a>Osservazioni  
- Il **issasynchstatus:: GetStatus** metodo funziona esattamente come il **idbasynchstatus:: GetStatus** metodo tranne il fatto che se l'oggetto di origine di inizializzazione di un tipo di dati viene interrotta, viene restituito E_UNEXPECTED anziché rispetto a DB_E_CANCELED (benché [issasynchstatus::](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) restituirà DB_E_CANCELED). Questo accade perché l'oggetto origine dati non rimane nello stato non valido in seguito a un'interruzione, allo scopo di consentire altri tentativi di inizializzazione.  
+## <a name="remarks"></a>Remarks  
+ Il **issasynchstatus:: GetStatus** metodo funziona esattamente come il **idbasynchstatus:: GetStatus** metodo tranne il fatto che se l'inizializzazione di un'origine dati oggetto viene interrotta, viene restituito E_UNEXPECTED anziché rispetto a DB_E_CANCELED (benché [Waitforasynchcompletion](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) restituirà DB_E_CANCELED). Questo accade perché l'oggetto origine dati non rimane nello stato non valido in seguito a un'interruzione, allo scopo di consentire altri tentativi di inizializzazione.  
   
  Se il set di righe viene inizializzato o popolato in modo asincrono, deve supportare questo metodo.  
   
  Oltre ai valori restituiti elencati, **issasynchstatus:: GetStatus** può restituire qualsiasi HRESULT che sarebbe stato restituito dal metodo che ha avviato l'operazione asincrona, che indica l'esito positivo o negativo dell'operazione.  
   
- Alcune operazioni asincrone potrebbero non essere in grado di restituire stati diversi da "terminato" e "non terminato". È necessario impostare *pulProgressMax* su un valore pari a 1, che indica la granularità radicale della stima, pertanto le relative risposte sono 0/1 o 1/1.  
+ Alcune operazioni asincrone potrebbero non essere in grado di restituire stati diversi da "terminato" e "non terminato". È necessario impostare *pulProgressMax* su un valore pari a 1, che indica la granularità radicale della stima, in modo che le relative risposte sarebbe 0/1 o 1/1.  
   
  Un provider può modificare *pulProgressMax* nelle chiamate successive e persino restituire un rapporto inferiore a quello precedente, se riflette una stima migliore del livello di completamento dell'attività.  
   
  Il provider non è obbligato a garantire una maggiore accuratezza, anche se questa è auspicabile quando sono possibili stime accettabili del completamento. L'impegno per ottenere questo risultato migliorerà la qualità dell'interfaccia utente perché è probabile che questa funzione venga utilizzata principalmente per fornire all'utente dettagli sullo stato. La soddisfazione dell'utente aumenta proporzionalmente alla qualità dei dettagli relativi a un'attività impercettibile e con esecuzione prolungata.  
   
- La chiamata **issasynchstatus:: GetStatus** su un oggetto origine dati inizializzato o un set di righe popolato o si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK con  *pulProgress* e *pulProgressMax* impostata sullo stesso valore. Se **issasynchstatus:: GetStatus** viene chiamato su un oggetto creato dall'esecuzione di un comando che aggiorna, Elimina o inserisce righe, entrambi *pulProgress* e *pulProgressMax* indica il numero totale di righe interessate dal comando.  
+ La chiamata **issasynchstatus:: GetStatus** su un oggetto origine dati inizializzato o un set di righe popolato o si passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN, viene restituito S_OK con  *pulProgress* e *pulProgressMax* impostata sullo stesso valore. Se **issasynchstatus:: GetStatus** viene chiamato su un oggetto creato dall'esecuzione di un comando che aggiorna, Elimina o inserisce righe, entrambi *pulProgress* e *pulProgressMax* indicare il numero totale di righe interessate dal comando.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esecuzione di operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
- [ISSAsynchStatus & #40; OLE DB & #41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
+ [Eseguire le operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)   
+ [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
   

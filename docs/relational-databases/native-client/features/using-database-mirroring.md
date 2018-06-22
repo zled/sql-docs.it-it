@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -24,12 +23,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 17367de4b2594834c6758213f54be06023b1381b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0148570aa44220b4229f83bad45b67ffc9812d2d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951636"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699502"
 ---
 # <a name="using-database-mirroring"></a>Utilizzo del mirroring del database
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,15 +36,15 @@ ms.locfileid: "32951636"
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Utilizzare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] invece.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] In alternativa, usare [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
  Il mirroring del database, introdotto in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], è una soluzione per aumentare la disponibilità del database e la ridondanza dei dati. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client fornisce supporto implicito per il mirroring del database, in modo lo sviluppatore non debba scrivere alcun codice o eseguire altre azioni dopo che è stato configurato per il database.  
   
- Mirroring del database, implementato in una base per ogni database, mantiene una copia di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di produzione su un server di standby. Tale server può essere warm standby o hot standby, a seconda della configurazione e dello stato della sessione di mirroring del database. Un server hot standby supporta il failover rapido senza perdita di transazioni di cui è stato eseguito il commit, mentre un server warm standby supporta la forzatura del servizio (con possibile perdita di dati).  
+ Mirroring del database, implementato in base al database, mantiene una copia di un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database di produzione su un server di standby. Tale server può essere warm standby o hot standby, a seconda della configurazione e dello stato della sessione di mirroring del database. Un server hot standby supporta il failover rapido senza perdita di transazioni di cui è stato eseguito il commit, mentre un server warm standby supporta la forzatura del servizio (con possibile perdita di dati).  
   
- Nome del database di produzione di *database principale*, e viene chiamata la copia di standby di *database mirror*. Il database principale e mirror devono risiedere in istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanze del server), e devono risiedere in computer separati se possibile.  
+ Il database di produzione viene chiamato il *database principale*, e la copia di standby viene chiamata il *database mirror*. Il database principale e mirror devono risiedere in istanze separate di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (istanze del server), e devono risiedere in computer separati se possibile.  
   
- Istanza del server di produzione, chiamata di *server principale*, comunica con l'istanza del server di standby, denominato il *server mirror*. Il server principale e mirror utilizzate come partner all'interno di un mirroring del database *sessione*. Se il server principale non riesce, il server mirror può rendere il database nel database principale tramite un processo denominato *failover*. Partner_A e Partner_B, ad esempio, sono due server partner, con il database principale inizialmente su Partner_A come server principale e il database mirror che risiede in Partner_B come server mirror. Se Partner_A passa alla modalità offline, il database su Partner_B può eseguire il failover per diventare il database principale corrente. Quando Partner_A si unisce alla sessione di mirroring, diventa il server mirror e il database diventa il database mirror.  
+ Istanza del server di produzione, chiamato il *server principale*, comunica con l'istanza del server di standby, denominato il *server mirror*. Il server principale e mirror vengono utilizzate come partner all'interno di un mirroring del database *sessione*. Se il server principale non riesce, il server mirror può rendere il database nel database principale tramite un processo denominato *failover*. Partner_A e Partner_B, ad esempio, sono due server partner, con il database principale inizialmente su Partner_A come server principale e il database mirror che risiede in Partner_B come server mirror. Se Partner_A passa alla modalità offline, il database su Partner_B può eseguire il failover per diventare il database principale corrente. Quando Partner_A si unisce alla sessione di mirroring, diventa il server mirror e il database diventa il database mirror.  
   
  Le configurazioni del mirroring del database alternative offrono livelli diversi di prestazioni e sicurezza dei dati e supportano forme diverse di failover. Per altre informazioni, vedere [Mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -67,14 +66,14 @@ ms.locfileid: "32951636"
 >  Per i nomi di server, inoltre, non viene fatta distinzione tra maiuscole e minuscole, mentre tale distinzione viene fatta per i nomi di database. È pertanto consigliabile assicurarsi di utilizzare la stessa combinazione tra maiuscole e minuscole nei DSN e nelle stringhe di connessione.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta il mirroring del database tramite una connessione e gli attributi di stringa di connessione. La proprietà SSPROP_INIT_FAILOVERPARTNER è stato aggiunto al set di proprietà DBPROPSET_SQLSERVERDBINIT e **FailoverPartner** (parola chiave) è un nuovo attributo di stringa di connessione per DBPROP_INIT_PROVIDERSTRING. Per ulteriori informazioni, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta il mirroring del database tramite connessione e gli attributi di stringa di connessione. La proprietà SSPROP_INIT_FAILOVERPARTNER è stato aggiunto al set di proprietà DBPROPSET_SQLSERVERDBINIT e la **FailoverPartner** (parola chiave) è un nuovo attributo di stringa di connessione per DBPROP_INIT_PROVIDERSTRING. Per altre informazioni, vedere [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- La cache di failover viene gestita finché è caricato il provider, ovvero fino a quando **CoUninitialize** è chiamata o a condizione che l'applicazione contiene un riferimento a un oggetto gestito dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client, ad esempio un oggetto di origine dati.  
+ La cache di failover viene gestita finché è caricato il provider, ovvero fino **CoUninitialize** viene chiamato o fino a quando l'applicazione contiene un riferimento a un oggetto gestito dal [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client, ad esempio un oggetto di origine dati.  
   
- Per informazioni dettagliate su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto del provider OLE DB Native Client per il mirroring del database, vedere [proprietà di inizializzazione e autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Per informazioni dettagliate sulle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporto del provider OLE DB Native Client per il mirroring del database, vedere [proprietà di inizializzazione e autorizzazione](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta il mirroring del database tramite una connessione e gli attributi di stringa di connessione. In particolare, l'attributo SQL_COPT_SS_FAILOVER_PARTNER è stato aggiunto per l'utilizzo con il [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) funzioni; e **Failover_Partner** (parola chiave) è stata aggiunta come un nuovo attributo di stringa di connessione.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta il mirroring del database tramite connessione e gli attributi di stringa di connessione. In particolare, l'attributo SQL_COPT_SS_FAILOVER_PARTNER è stato aggiunto per l'utilizzo con il [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) funzioni; e il **Failover_Partner** parola chiave è stata aggiunta come un nuovo attributo di stringa di connessione.  
   
  La cache di failover viene gestita finché nell'applicazione è allocato almeno un handle di ambiente. Viene invece persa quando l'ultimo handle di ambiente viene deallocato.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "32951636"
 >  Gestione driver ODBC è stato migliorato per supportare la specifica del nome del server di failover.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Connettere client a una sessione di mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Mirroring del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

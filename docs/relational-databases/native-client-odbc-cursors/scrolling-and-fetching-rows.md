@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -26,12 +25,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c7b0d1f850ad554d507a63513d12992c0281c88
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0e1cf65e3fa8a145f48046bc8eb920509b152781
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944126"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702642"
 ---
 # <a name="scrolling-and-fetching-rows"></a>Scorrimento e recupero di righe
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,17 +40,17 @@ ms.locfileid: "32944126"
   
 -   Impostare la funzionalità del cursore utilizzando [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   
--   Aprire il cursore utilizzando **SQLExecute** o **SQLExecDirect**.  
+-   Aprire il cursore utilizzando **SQLExecute** oppure **SQLExecDirect**.  
   
--   Scorrere e recuperare righe utilizzando **SQLFetch** o [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
+-   Scorrere e recuperare righe utilizzando **SQLFetch** oppure [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md).  
   
  Entrambi **SQLFetch** e **SQLFetchSroll** possono recuperare blocchi di righe alla volta. Il numero di righe restituite viene specificato tramite **SQLSetStmtAttr** per impostare il parametro SQL_ATTR_ROW_ARRAY_SIZE.  
   
- Le applicazioni ODBC possono utilizzare **SQLFetch** recuperare tramite un cursore forward-only.  
+ Le applicazioni ODBC possono utilizzare **SQLFetch** per il recupero tramite un cursore forward-only.  
   
  **SQLFetchScroll** viene utilizzato per scorrere un cursore. **SQLFetchScroll** supporta il recupero successivo, precedente, primo e ultimo set di righe, il recupero relativo (recuperare il set di righe *n* righe dall'inizio del set di righe corrente) e il recupero assoluto (operazione di recupero del set di righe a partire dalla riga *n*). Se *n* è negativo in un recupero assoluto, le righe vengono conteggiate dalla fine del set di risultati. Un recupero assoluto della riga -1 indica il recupero del set di righe che inizia con l'ultima riga nel set di risultati.  
   
- Le applicazioni che utilizzano **SQLFetchScroll** solo per il relativo blocco di funzionalità del cursore, ad esempio report, è probabile che passano attraverso il set di risultati una sola volta, utilizzando solo l'opzione per recuperare il successivo set di righe. Applicazioni basate su schermo, d'altra parte, possono sfruttare tutte le funzionalità di **SQLFetchScroll**. Se l'applicazione imposta le dimensioni del set di righe per il numero di righe visualizzate sullo schermo e associa i buffer dello schermo al set di risultati, può convertire operazioni della barra di scorrimento direttamente in chiamate a **SQLFetchScroll**.  
+ Le applicazioni che utilizzano **SQLFetchScroll** solo il relativo blocco di funzionalità del cursore, ad esempio report, è probabile che siano per il passaggio attraverso il set di risultati una sola volta, utilizzando solo l'opzione per recuperare il successivo set di righe. Applicazioni basate su schermo, d'altra parte, possono sfruttare tutte le funzionalità del **SQLFetchScroll**. Se l'applicazione imposta le dimensioni del set di righe per il numero di righe visualizzate sullo schermo e associa i buffer dello schermo al set di risultati, può convertire operazioni della barra di scorrimento direttamente in chiamate a **SQLFetchScroll**.  
   
 |Operazione della barra di scorrimento|Opzione di scorrimento SQLFetchScroll|  
 |--------------------------|-------------------------------------|  
@@ -63,11 +62,11 @@ ms.locfileid: "32944126"
 |Casella di scorrimento alla fine|SQL_FETCH_LAST|  
 |Posizione casuale della casella di scorrimento|SQL_FETCH_ABSOLUTE|  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
   
 -   [Aggiunta di segnalibri righe in ODBC](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tramite i cursori & #40; ODBC & #41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
+ [Utilizzo di cursori &#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

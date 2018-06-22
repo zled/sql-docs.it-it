@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,31 +18,31 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: c22467069614bdfdd3979b7d74bb9261297225a1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e87de3e64178effb14c2a1abc17b51d69aa18181
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943826"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699792"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report dei driver ODBC Native Client imposta la colonna aggiuntiva USERTYPE nel risultato di **SQLGetTypeInfo**. USERTYPE riporta la definizione del tipo di dati DB-Library e risulta utile agli sviluppatori che trasferiscono applicazioni DB-Library esistenti a ODBC.  
+  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] report dei driver ODBC di Native Client imposta la colonna aggiuntiva USERTYPE nel risultato di **SQLGetTypeInfo**. USERTYPE riporta la definizione del tipo di dati DB-Library e risulta utile agli sviluppatori che trasferiscono applicazioni DB-Library esistenti a ODBC.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tratta l'identità come attributo, mentre ODBC la tratta come tipo di dati. Per risolvere questa mancata corrispondenza, **SQLGetTypeInfo** restituisce i tipi di dati: **intidentity**, **smallintidentity**, **tinyintidentity**, **decimalidentity**, e **numericidentity**. Il **SQLGetTypeInfo** colonna AUTO_UNIQUE_VALUE del set di risultati indica il valore TRUE per questi tipi di dati.  
   
- Per **varchar**, **nvarchar** e **varbinary**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client continua a segnalare 8000, 4000 e 8000 rispettivamente per il valore di COLUMN_SIZE il valore, anche se è illimitato. Ciò consente di assicurare la compatibilità con le versioni precedenti.  
+ Per **varchar**, **nvarchar** e **varbinary**la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client continua a segnalare 8000, 4000 e 8000 rispettivamente per il valore di COLUMN_SIZE il valore, anche se è illimitato. Ciò consente di assicurare la compatibilità con le versioni precedenti.  
   
  Per il **xml** tipo di dati, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riporta SQL_SS_LENGTH_UNLIMITED per COLUMN_SIZE indicare dimensioni illimitate.  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo e parametri con valori di tabella  
- Il tipo di tabella per i parametri con valori di tabella è sostanzialmente un metatipo, ovvero un tipo utilizzato per definire altri tipi. Pertanto, non dispone di esporli con SQLGetTypeInfo. Applicazioni devono utilizzare SQLTables anziché SQLGetTypeInfo, per recuperare i metadati per i tipi di tabella utilizzati con i parametri con valori di tabella.  
+ Il tipo di tabella per i parametri con valori di tabella è sostanzialmente un metatipo, ovvero un tipo utilizzato per definire altri tipi. Pertanto, non dispone di essere esposti mediante SQLGetTypeInfo. Le applicazioni devono utilizzare SQLTables, anziché SQLGetTypeInfo, per recuperare i metadati per i tipi di tabella utilizzati con i parametri con valori di tabella.  
   
  Per ulteriori informazioni sul recupero di metadati per i parametri con valori di tabella, vedere [gli attributi delle istruzioni che per i parametri Affect Table-Valued](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md).  
   
- Per ulteriori informazioni sui parametri con valori di tabella, vedere [parametri con valori di tabella & #40; ODBC & #41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
+ Per ulteriori informazioni sui parametri con valori di tabella, vedere [Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-enhanced-date-and-time-features"></a>Supporto di SQLGetTypeInfo per le caratteristiche avanzate di data e ora  
  Per i valori restituiti per i tipi di data/ora, vedere [metadati del catalogo](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md).  
@@ -51,10 +50,10 @@ ms.locfileid: "32943826"
  Per informazioni generali, vedere [data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>Supporto SQLGetTypeInfo per i tipi CLR definiti dall'utente di grandi dimensioni  
- **SQLGetTypeInfo** supporta grandi CLR tipi definiti dall'utente (UDT). Per ulteriori informazioni, vedere [Large CLR User-Defined tipi & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLGetTypeInfo** supporta grandi CLR tipi definiti dall'utente (UDT). Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLGetTypeInfo](http://go.microsoft.com/fwlink/?LinkId=59356)   
- [Dettagli di implementazione di API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Dettagli di implementazione dell'API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

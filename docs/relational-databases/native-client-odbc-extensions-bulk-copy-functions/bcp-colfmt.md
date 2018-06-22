@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: de5e429a0b2038064bfde3cf4835d4f8edd4beff
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4fcd18d87599e214b27473d716b27f9c19df487c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947976"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701852"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Specifica il formato di origine o di destinazione dei dati in un file utente. Quando viene utilizzato come formato di origine, **bcp_colfmt** specifica il formato di un file di dati esistente utilizzato come origine dei dati in una copia di massa a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. Quando usato come formato di destinazione, il file di dati viene creato utilizzando i formati di colonna specificati con **bcp_colfmt**.  
+  Specifica il formato di origine o di destinazione dei dati in un file utente. Quando viene utilizzato come formato di origine **bcp_colfmt** specifica il formato di un file di dati esistente utilizzato come origine dei dati in una copia bulk in una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella. Quando usato come formato di destinazione, il file di dati viene creato utilizzando i formati di colonna specificati con **bcp_colfmt**.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -64,15 +62,15 @@ RETCODE bcp_colfmt (
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] stato introdotto il supporto per i token tipo dati SQLXML e SQLUDT nel *eUserDataType* parametro.  
   
- Il *eUserDataType* parametro viene enumerato in base il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] token dei tipi di dati in SQLNCLI. h, non gli enumeratori tipo di dati C ODBC. È ad esempio possibile specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Il *eUserDataType* parametro viene enumerato in base il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] token dei tipi di dati in SQLNCLI. h, i non enumeratori dei tipi di dati C ODBC. È ad esempio possibile specificare una stringa di caratteri SQL_C_CHAR di tipo ODBC utilizzando il tipo SQLCHARACTER specifico di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Per specificare la rappresentazione predefinita dei dati per il tipo di dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], impostare questo parametro su 0.  
   
- Per una copia di massa di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file, quando *eUserDataType* è SQLDECIMAL o SQLNUMERIC:  
+ Per una copia bulk esterna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un file, quando *eUserDataType* è SQLDECIMAL o SQLNUMERIC:  
   
--   Se la colonna di origine non è **decimale** o **numerico**, vengono utilizzate la precisione predefinita e la scala.  
+-   Se la colonna di origine non è **decimale** oppure **numerico**, vengono utilizzate la precisione predefinita e la scala.  
   
--   Se la colonna di origine è **decimale** o **numerico**, vengono utilizzate la precisione e scala della colonna di origine.  
+-   Se la colonna di origine **decimale** oppure **numerico**, vengono utilizzate la precisione e scala della colonna di origine.  
   
  *cbIndicator*  
  Lunghezza, espressa in byte, di un indicatore di lunghezza o Null nei dati della colonna. Valori di lunghezza di indicatore validi sono 0 (nel caso in cui non venga utilizzato un indicatore), 1, 2, 4 o 8.  
@@ -88,13 +86,13 @@ RETCODE bcp_colfmt (
  *cbUserData*  
  Lunghezza massima, espressa in byte, dei dati della colonna nel file utente, senza includere la lunghezza di un carattere di terminazione o di un indicatore di lunghezza.  
   
- Impostazione *cbUserData* su SQL_NULL_DATA indica che tutti i valori nella colonna del file di dati, o deve essere impostato su NULL.  
+ L'impostazione *cbUserData* su SQL_NULL_DATA indica che tutti i valori nella colonna file di dati sono o dovrebbero essere impostati su NULL.  
   
- Impostazione *cbUserData* su SQL_VARLEN_DATA indica che il sistema deve determinare la lunghezza dei dati in ogni colonna. Per alcune colonne, ciò può indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ L'impostazione *cbUserData* su SQL_VARLEN_DATA indica che il sistema deve determinare la lunghezza dei dati in ogni colonna. Per alcune colonne, ciò può indicare che viene generato un indicatore di lunghezza o Null da anteporre ai dati in una copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o che l'indicatore è previsto nei dati copiati in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri e i tipi di dati binari, *cbUserData* può essere SQL_VARLEN_DATA, SQL_NULL_DATA, 0 o un valore positivo. Se *cbUserData* è SQL_VARLEN_DATA, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se *cbUserData* è SQL_VARLEN_DATA, i dati di tipo è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carattere o binario e né un indicatore di lunghezza né una sequenza di caratteri di terminazione è specificata, il sistema restituisce un messaggio di errore.  
+ Per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caratteri e tipi di dati binari *cbUserData* può essere SQL_VARLEN_DATA, SQL_NULL_DATA, 0 o un valore positivo. Se *cbUserData* è SQL_VARLEN_DATA, il sistema utilizza l'indicatore di lunghezza, se presente, o una sequenza di caratteri di terminazione per determinare la lunghezza dei dati. Se vengono specificati sia un indicatore di lunghezza che una sequenza di caratteri di terminazione, la copia bulk utilizza la modalità che comporta la copia del minor numero di dati. Se *cbUserData* è SQL_VARLEN_DATA, i dati di tipo è un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] carattere o binario e né un indicatore di lunghezza né una sequenza di caratteri di terminazione è specificata, il sistema restituisce un messaggio di errore.  
   
- Se *cbUserData* è 0 o un valore positivo, il sistema utilizza *cbUserData* come lunghezza massima dei dati. Tuttavia, se, oltre a un valore positivo *cbUserData*, viene specificato un carattere di terminazione o di un indicatore di lunghezza sequenza, il sistema determina la lunghezza dei dati tramite il metodo che comporta la quantità minima di dati da copiare.  
+ Se *cbUserData* è 0 o un valore positivo, il sistema utilizza *cbUserData* come la lunghezza massima dei dati. Tuttavia, se, oltre a un numero positivo *cbUserData*, viene specificato un carattere di terminazione o di un indicatore di lunghezza sequenza, il sistema determina la lunghezza dei dati utilizzando il metodo che comporta il minor numero di dati da copiare.  
   
  Il *cbUserData* valore rappresenta il numero di byte di dati. Se i dati di tipo carattere vengono rappresentati come caratteri wide Unicode, un numero positivo *cbUserData* valore del parametro rappresenta il numero di caratteri moltiplicato per la dimensione, in byte, di ogni carattere.  
   
@@ -111,14 +109,14 @@ RETCODE bcp_colfmt (
  Lunghezza, espressa in byte, della sequenza di caratteri di terminazione da utilizzare per la colonna. Se non sono presenti caratteri di terminazione nei dati o non si desidera includerli, impostare questo valore su 0.  
   
  *idxServerCol*  
- Posizione ordinale della colonna nella tabella di database. Il numero della prima colonna è 1. La posizione ordinale di una colonna è indicata da [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
+ Posizione ordinale della colonna nella tabella di database. Il numero della prima colonna è 1. La posizione ordinale di una colonna viene indicata da [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
  Se questo valore è 0, la copia bulk ignora la colonna nel file di dati.  
   
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Il **bcp_colfmt** funzione consente di specificare il formato di file utente per le copie bulk. Per la copia bulk, un formato contiene le parti seguenti:  
   
 -   Un mapping dalle colonne del file utente alle colonne del database.  
@@ -133,24 +131,24 @@ RETCODE bcp_colfmt (
   
 -   La lunghezza della sequenza di byte di terminazione facoltativa.  
   
- Ogni chiamata a **bcp_colfmt** specifica il formato per una colonna del file utente. Ad esempio, per modificare le impostazioni predefinite per tre colonne in un file di dati utente di cinque colonne, chiamare innanzitutto [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** e quindi chiamare **bcp_colfmt** cinque volte, con tre di queste chiamate impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su 0 e *cbIndicator*, *cbUserData*, e *cbUserDataTerm* su 0, SQL_VARLEN Dati e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
+ Ogni chiamata a **bcp_colfmt** specifica il formato per una colonna del file utente. Ad esempio, per modificare le impostazioni predefinite per tre colonne in un file di dati utente cinque colonne, chiamare innanzitutto [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)**, quindi chiamare **bcp_colfmt** cinque volte, con tre di queste chiamate impostano il formato personalizzato. Per le due chiamate rimanenti, impostare *eUserDataType* su 0 e set *cbIndicator*, *cbUserData*, e *cbUserDataTerm* su 0, SQL_VARLEN Dati e 0 rispettivamente. Questa procedura consente di copiare tutte e cinque le colonne, tre con il formato personalizzato e due con il formato predefinito.  
   
  Per *cbIndicator*, un valore pari a 8 per indicare un tipo di valore elevato è ora valido. Se si specifica il prefisso per un campo la cui colonna corrispondente è un nuovo tipo max, può essere impostato solo su 8. Per informazioni dettagliate, vedere [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   
- Il **bcp_columns** funzione deve essere chiamata prima delle chiamate a **bcp_colfmt**.  
+ Il **bcp_columns** la funzione deve essere chiamata prima delle chiamate a **bcp_colfmt**.  
   
  È necessario chiamare **bcp_colfmt** una volta per ogni colonna nel file utente.  
   
  La chiamata **bcp_colfmt** più di una volta per qualsiasi file utente colonna, viene generato un errore.  
   
- Non è necessario copiare tutti i dati di un file utente nella tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ignorare una colonna, specificare il formato dei dati per la colonna, l'impostazione di *idxServerCol* parametro su 0. Se si desidera ignorare una colonna, è necessario specificarne il tipo.  
+ Non è necessario copiare tutti i dati di un file utente nella tabella [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per ignorare una colonna, specificare il formato dei dati per la colonna, impostando il *idxServerCol* parametro su 0. Se si desidera ignorare una colonna, è necessario specificarne il tipo.  
   
  Il [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) funzione può essere utilizzata per rendere persistente la specifica di formato.  
   
 ## <a name="bcpcolfmt-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_colfmt per le caratteristiche avanzate di data e ora  
  Per informazioni sui tipi utilizzati con il *eUserDataType* parametro per i tipi di data/ora, vedere [modifiche di copia Bulk per avanzate di data e ora tipi &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).  
   
- Per ulteriori informazioni, vedere [data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni, vedere [data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

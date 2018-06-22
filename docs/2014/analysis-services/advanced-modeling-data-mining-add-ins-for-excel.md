@@ -1,0 +1,65 @@
+---
+title: Modellazione (Data componenti aggiuntivi Data Mining per Excel) avanzata | Documenti Microsoft
+ms.custom: ''
+ms.date: 12/29/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- mining structures, creating
+ms.assetid: 042270a3-6ec7-4b52-b2ba-2adb6c4740d5
+caps.latest.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: de7eea9099b458a9f16e6928c1535dc4a03eb81a
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36063735"
+---
+# <a name="advanced-modeling-data-mining-add-ins-for-excel"></a>Modellazione avanzata (componenti aggiuntivi Data mining per Excel)
+  È possibile usare il **avanzate** opzioni creare modelli e strutture di data mining di dati personalizzati con parametri diversi rispetto a quelli creati dalle procedure guidate di modellazione dati. Le due procedure guidate descritte in questa sezione consentono di creare una struttura di data mining completamente nuova e un nuovo modello di data mining da applicare a una struttura di data mining esistente.  
+  
+## <a name="create-mining-structure"></a>Crea struttura di data mining  
+ ![Pulsante Crea struttura di Data Mining, barra multifunzione Data Mining](media/dmc-createstruct.gif "pulsante Crea struttura di Data Mining, barra multifunzione Data Mining")  
+  
+ Il **Creazione guidata di struttura di Data Mining** consente di compilare una nuova struttura di data mining. Una struttura è una raccolta dei dati estratti da un'origine dati specificata.  Una struttura di data mining può essere aggiornata con nuovi dati di origine, ma quando si crea la struttura di data mining, è necessario definire i tipi di dati e i nomi che definiscono il modo in cui i dati vengono utilizzati per l'analisi.  
+  
+ È possibile utilizzare le seguenti origini dati per compilare la struttura: una tabella di Excel, un intervallo di Excel o tutti i dati in un'origine dati esterna che è già stata definita come vista origine dati di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  
+ Per ogni struttura, è possibile destinare alcuni dati al testing e alla convalida. Creando questo *set di dati di controllo* quando configuri le origini dati, è possibile assicurarsi che tutti i modelli basati sulla struttura siano in grado di utilizzare un set di dati coerente per il testing.  
+  
+ Dopo avere creato una struttura di data mining, è possibile aggiungere più modelli per applicare metodi di analisi differenti.  
+  
+ Per ulteriori informazioni su come usare il **procedura guidata Crea struttura di Data Mining**, vedere [Create Mining Structure &#40;componenti aggiuntivi Data Mining di SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md).  
+  
+## <a name="add-model-to-structure"></a>Aggiunta modello a struttura  
+ ![Aggiungere modello di struttura pulsante](media/dmc-addmodel.gif "aggiunta modello a pulsante struttura")  
+  
+ Quando si aggiunge un nuovo modello a una struttura, si analizzano i dati con un algoritmo diverso o con parametri diversi. Questa opzione risulta particolarmente utile se si desidera creare un modello utilizzando uno degli algoritmi non esposti negli strumenti del Client di data mining.  
+  
+ Ad esempio, è possibile utilizzare uno qualsiasi degli algoritmi supportati da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], ad esempio:  
+  
+-   Linear Regression  
+  
+-   Sequence Clustering  
+  
+-   Analisi di associazione sui set di dati nidificati  
+  
+ Per vedere quali tipi di strutture di data mining sono disponibili, è possibile esplorare i modelli e le strutture archiviati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facendo clic su **Gestione modelli** o **Sfoglia**.  
+  
+ È possibile utilizzare solo le strutture di data mining create durante la sessione corrente oppure quelle salvate a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+  
+ Per altre informazioni, vedere [aggiunta modello a struttura &#40;aggiuntivi di Data Mining per Excel&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Gestire i modelli di &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](manage-models-sql-server-data-mining-add-ins.md)   
+ [Esplorazione di modelli in Excel &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
+  
+  
