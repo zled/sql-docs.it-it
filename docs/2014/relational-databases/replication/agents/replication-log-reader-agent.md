@@ -1,0 +1,207 @@
+---
+title: Agente lettura log repliche | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- replication
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- Log Reader Agent, executables
+- Log Reader Agent, parameter reference
+- agents [SQL Server replication], Log Reader Agent
+- command prompt [SQL Server replication]
+ms.assetid: 5487b645-d99b-454c-8bd2-aff470709a0e
+caps.latest.revision: 50
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 8bef914f1fd6a2cd4dff784808e5334d3871d81c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36064231"
+---
+# <a name="replication-log-reader-agent"></a>Agente lettura log repliche
+  Agente lettura log repliche è un eseguibile che consente di monitorare il log delle transazioni di tutti i database configurati per la replica transazionale e di copiare le transazioni contrassegnate per la replica dal log delle transazioni al database di distribuzione.  
+  
+> [!NOTE]  
+>  I parametri possono essere specificati in qualsiasi ordine. Quando i parametri facoltativi non vengono specificati, vengono utilizzati i valori predefiniti basati sul profilo agente predefinito.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+  
+      logread [-?]   
+-Publisherserver_name[\instance_name]   
+-PublisherDBpublisher_database   
+[-Continuous]  
+[-DefinitionFiledef_path_and_file_name]  
+[-Distributorserver_name[\instance_name]]  
+[-DistributorLogindistributor_login]  
+[-DistributorPassworddistributor_password]  
+[-DistributorSecurityMode [0|1]]  
+[-EncryptionLevel [0|1|2]]  
+[-ExtendedEventConfigFileconfiguration_path_and_file_name]  
+[-HistoryVerboseLevel [0|1|2]]  
+[-KeepAliveMessageIntervalkeep_alive_message_interval_seconds]  
+[-LoginTimeOutlogin_time_out_seconds]  
+[-LogScanThresholdscan_threshold]  
+[-MaxCmdsInTrannumber_of_commands]  
+[-MessageIntervalmessage_interval]  
+[-Outputoutput_path_and_file_name]  
+[-OutputVerboseLevel [0|1|2|3|4]]  
+[-PacketSizepacket_size]  
+[-PollingIntervalpolling_interval]  
+[-ProfileNameprofile_name]   
+[-PublisherFailoverPartnerserver_name[\instance_name] ]  
+[-PublisherSecurityMode [0|1]]  
+[-PublisherLoginpublisher_login]  
+[-PublisherPasswordpublisher_password]   
+[-QueryTimeOutquery_time_out_seconds]  
+[-ReadBatchSizenumber_of_transactions]   
+[-ReadBatchThresholdread_batch_threshold]  
+[-RecoverFromDataErrors]  
+```  
+  
+## <a name="arguments"></a>Argomenti  
+ **-?**  
+ Visualizza le informazioni sull'utilizzo.  
+  
+ **-Publisher** *nome_server*[**\\***nome_istanza*]  
+ Nome del server di pubblicazione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+  
+ **-PublisherDB** *publisher_database*  
+ Nome del database del server di pubblicazione.  
+  
+ **-Continuous**  
+ Specifica se l'agente tenta di eseguire continuamente il polling delle transazioni replicate. Se specificato, l'agente esegue il polling delle transazioni replicate dall'origine in base agli intervalli di polling, anche se non vi sono transazioni in sospeso.  
+  
+ **-DefinitionFile** *def_path_and_file_name*  
+ Percorso del file di definizione dell'agente. Un file di definizione dell'agente contiene argomenti della riga di comando per l'agente. Il contenuto del file viene analizzato come file eseguibile. Utilizzare virgolette doppie (") per specificare valori dell'argomento contenenti caratteri arbitrari.  
+  
+ **-Distributor** *nome_server*[**\\***nome_istanza*]  
+ Nome del database di distribuzione. Specificare *server_name* per l'istanza predefinita di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server. Specificare *server_name***\\***instance_name* per un'istanza denominata di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in tale server.  
+  
+ **-DistributorLogin** *distributor_login*  
+ Nome dell'account di accesso del database di distribuzione.  
+  
+ **-DistributorPassword** *distributor_password*  
+ Password del database di distribuzione.  
+  
+ **-DistributorSecurityMode** [ **0**| **1**]  
+ Specifica la modalità di sicurezza del database di distribuzione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows.  
+  
+ **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ Livello di crittografia SSL (Secure Sockets Layer) utilizzato dall'agente di lettura log quando vengono stabilite le connessioni.  
+  
+|Valore di EncryptionLevel|Description|  
+|---------------------------|-----------------|  
+|**0**|Specifica che SSL non viene utilizzato.|  
+|**1**|Specifica che SSL viene utilizzato, ma l'agente non verifica che il certificato server SSL sia firmato da un'autorità emittente attendibile.|  
+|**2**|Specifica che SSL viene utilizzato e che il certificato viene verificato.|  
+  
+ Per altre informazioni, vedere [Panoramica della sicurezza &#40;replica&#41;](../security/security-overview-replication.md).  
+  
+ **-ExtendedEventConfigFile** *configuration_path_and_file_name*  
+ Consente di specificare il percorso e il nome del file di configurazione XML di eventi estesi. Il file di configurazione di eventi estesi consente di configurare sessioni e abilitare eventi per la traccia.  
+  
+ **-HistoryVerboseLevel** [ **0**| **1**| **2**]  
+ Consente di specificare la quantità di cronologia registrata durante un'operazione dell'agente di lettura log. Per ridurre al minimo l'effetto della registrazione della cronologia sulle prestazioni, selezionare **1**.  
+  
+|Valore di HistoryVerboseLevel|Description|  
+|-------------------------------|-----------------|  
+|**0**||  
+|**1**|Valore predefinito. Aggiorna sempre un messaggio di cronologia precedente con lo stesso stato (avvio, avanzamento, esito positivo e così via). Se non è presente un record precedente con lo stesso stato, inserisce un nuovo record.|  
+|**2**|Inserisce nuovi record della cronologia, a meno che il record sia per eventi come messaggi inattivi o messaggi di processo con esecuzione prolungata, nel qual caso aggiorna i record precedenti.|  
+  
+ **-KeepAliveMessageInterval** *keep_alive_message_interval_seconds*  
+ Numero di secondi prima che il thread per la cronologia controlli se una delle connessioni esistenti è in attesa di una risposta dal server. Questo valore può essere ridotto per evitare che l'agente di controllo contrassegni l'agente di lettura log come sospetto in caso di esecuzione di un batch con esecuzione prolungata. Il valore predefinito è 300 secondi.  
+  
+ **-LoginTimeOut** *login_time_out_seconds*  
+ Numero di secondi prima del timeout di accesso. Il valore predefinito è 15 secondi.  
+  
+ **-LogScanThreshold** *scan_threshold*  
+ Solo per uso interno.  
+  
+ **-MaxCmdsInTran** *number_of_commands*  
+ Specifica il numero massimo di istruzioni raggruppate in una transazione durante la scrittura dei comandi nel database di distribuzione da parte dell'agente di lettura log. L'utilizzo di questo parametro consente all'agente di lettura log e all'agente di distribuzione di dividere le transazioni di grandi dimensioni, ovvero costituite da molti comandi, nel server di pubblicazione in diverse transazioni più piccole quando applicate al Sottoscrittore. Può inoltre ridurre la possibilità che si verifichino contese nel server di distribuzione e diminuire la latenza tra il server di pubblicazione e il Sottoscrittore. Dal momento che la transazione originale viene applicata in unità più piccole, il Sottoscrittore può accedere alle righe di una vasta transazione logica del server di pubblicazione prima della fine della transazione originale, violando la rigida atomicità transazionale. Il valore predefinito è **0**, che consente di mantenere i limiti delle transazioni del server di pubblicazione.  
+  
+> [!NOTE]  
+>  Questo parametro viene ignorato per pubblicazioni non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per ulteriori informazioni, vedere la sezione "Configurazione del processo del set di transazioni" in [Performance Tuning for Oracle Publishers](../non-sql/performance-tuning-for-oracle-publishers.md).  
+  
+ **-MessageInterval** *intervallo_messaggi*  
+ Intervallo di tempo utilizzato per la registrazione della cronologia. Un evento della cronologia viene registrato quando viene raggiunto il valore di **MessageInterval** dopo la registrazione dell'ultimo evento della cronologia.  
+  
+ Se nell'origine non vi sono transazioni replicate disponibili, tramite l'agente viene inviato al server di distribuzione un messaggio che segnala l'assenza di transazioni. Questa opzione specifica per quanto tempo l'agente aspetta prima di inviare un altro messaggio di assenza di transazioni. Gli agenti inviano sempre un messaggio di assenza di transazioni quando rilevano che nell'origine non vi sono transazioni disponibili dopo aver elaborato in precedenza transazioni replicate. Il valore predefinito è 60 secondi.  
+  
+ **-Output** *output_path_and_file_name*  
+ Percorso del file di output dell'agente. Se non viene specificato il nome file, l'output viene inviato alla console. Se il nome file specificato esiste già, l'output viene aggiunto al file.  
+  
+ **-OutputVerboseLevel** [ **0**| **1**| **2** | **3** | **4** ]  
+ Specifica se l'output deve essere dettagliato.  
+  
+|valore|Description|  
+|-----------|-----------------|  
+|**0**|Vengono stampati solo i messaggi di errore.|  
+|**1**|Vengono stampati tutti i messaggi di report di stato dell'agente.|  
+|**2** (impostazione predefinita)|Vengono stampati tutti i messaggi di errore e i messaggi di report di stato dell'agente.|  
+|**3**|Vengono stampati i primi 100 byte di ogni comando replicato.|  
+|**4**|Vengono stampati tutti i comandi replicati.|  
+  
+ I valori 2-4 sono utili quando si esegue il debug.  
+  
+ **-PacketSize** *packet_size*  
+ Dimensioni del pacchetto, in byte. Il valore predefinito è 4096 byte.  
+  
+ **-PollingInterval** *polling_interval*  
+ Frequenza, in secondi, di esecuzione di query sul log per le transazioni replicate. Il valore predefinito è 5 secondi.  
+  
+ **-ProfileName** *profile_name*  
+ Specifica un profilo agente da utilizzare per i parametri dell'agente. Se **ProfileName** è NULL, il profilo agente è disabilitato. Se **ProfileName** non viene specificato, viene utilizzato il profilo predefinito per il tipo di agente. Per altre informazioni, vedere [Profili degli agenti di replica](replication-agent-profiles.md).  
+  
+ **-PublisherFailoverPartner** *nome_server*[**\\***nome_istanza*]  
+ Specifica l'istanza del partner di failover di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che partecipa in una sessione di mirroring del database con il database di pubblicazione. Per altre informazioni, vedere [Mirroring e replica del database &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
+  
+ **-PublisherSecurityMode** [ **0**| **1**]  
+ Specifica la modalità di sicurezza del server di pubblicazione. Un valore **0** indica la modalità di autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (impostazione predefinita), mentre un valore **1** indica la modalità di autenticazione di Windows.  
+  
+ **-PublisherLogin** *publisher_login*  
+ Nome dell'account di accesso del server di pubblicazione.  
+  
+ **-PublisherPassword** *publisher_password*  
+ Password del server di pubblicazione.  
+  
+ **-QueryTimeOut** *query_time_out_seconds*  
+ Numero di secondi prima del timeout delle query. Il valore predefinito è 1800 secondi.  
+  
+ **-ReadBatchSize** *number_of_transactions*  
+ Numero massimo di transazioni lette dal log delle transazioni del database di pubblicazione per ciclo di elaborazione, con un valore predefinito di 500. L'agente continuerà a leggere transazioni nei batch fino a quando viene completata la lettura di tutte le transazioni nel log. Questo parametro non è supportato per i server di pubblicazione Oracle.  
+  
+ **-ReadBatchThreshold** *number_of_commands*  
+ Numero di comandi di replica da leggere dal log delle transazioni prima del rilascio al Sottoscrittore da parte dell'agente di distribuzione. Il valore predefinito è 0. Se questo parametro non è specificato, l'agente di lettura log leggerà fino alla fine del log o fino al numero specificato in **-ReadBatchSize** (numero di transazioni).  
+  
+ **-RecoverFromDataErrors**  
+ Specifica che l'esecuzione dell'agente di lettura continua anche nel caso in cui vengano rilevati errori nei dati di colonna pubblicati da un server di pubblicazione non SQL Server. Per impostazione predefinita, tali errori comportano l'interruzione dell'agente di lettura log. Quando si utilizza **-RecoverFromDataErrors**, i dati di colonna erronei vengono replicati come NULL o come valore non Null appropriato e i messaggi di avviso vengono registrati nella tabella [MSlogreader_history](/sql/relational-databases/system-tables/mslogreader-history-transact-sql) . Questo parametro è supportato solo per i server di pubblicazione Oracle.  
+  
+## <a name="remarks"></a>Remarks  
+  
+> [!IMPORTANT]  
+>  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è stato installato per l'esecuzione con un account di sistema locale anziché un account utente di dominio (impostazione predefinita), il servizio può accedere solo al computer locale. Se l'agente di lettura log in esecuzione in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent è configurato per l'utilizzo della modalità di autenticazione di Windows durante l'accesso a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'agente di lettura log si interrompe. L'impostazione predefinita prevede l'autenticazione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Per informazioni sulla modifica degli account di sicurezza, vedere [View and Modify Replication Security Settings](../security/view-and-modify-replication-security-settings.md).  
+  
+ Per avviare l'agente di lettura log, eseguire **logread.exe** dal prompt dei comandi. Per informazioni, vedere [Concetti di base relativi ai file eseguibili dell'agente di replica](../concepts/replication-agent-executables-concepts.md).  
+  
+## <a name="change-history"></a>Cronologia modifiche  
+  
+|Contenuto aggiornato|  
+|---------------------|  
+|Aggiunta del parametro **-ExtendedEventConfigFile** .|  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Amministrazione dell'agente di replica](replication-agent-administration.md)  
+  
+  
