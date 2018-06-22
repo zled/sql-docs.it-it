@@ -1,0 +1,80 @@
+---
+title: File di elemento (ASSL) | Documenti Microsoft
+ms.custom: ''
+ms.date: 03/09/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- Files Element
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- Files
+helpviewer_keywords:
+- Files element
+ms.assetid: 8a1327cb-1f60-42a7-b8ef-213d45a63e55
+caps.latest.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: 5f7556009881e1d4155e47a368bcff4b49aa7988
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36064805"
+---
+# <a name="files-element-assl"></a>Elemento Files (ASSL)
+  Contiene la raccolta di [File](../objects/file-element-assl.md) gli elementi che costituiscono un [ClrAssembly](../data-type/assembly-data-type-assl.md) elemento.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
+  
+<Assembly xsi:type="ClrAssembly">  
+   ...  
+   <Files>  
+      <File xsi:type="ClrAssemblyFile">...</File>  
+   </Files>  
+   ...  
+</Assembly>  
+```  
+  
+## <a name="element-characteristics"></a>Caratteristiche elemento  
+  
+|Caratteristica|Description|  
+|--------------------|-----------------|  
+|Tipo di dati e lunghezza|None|  
+|Valore predefinito|None|  
+|Cardinalità|1-1: elemento obbligatorio visualizzato una sola volta.|  
+  
+## <a name="element-relationships"></a>Relazioni elemento  
+  
+|Relazione|Elemento|  
+|------------------|-------------|  
+|Elementi padre|[Assembly](../objects/assembly-element-assl.md) di tipo [ClrAssembly](../data-type/assembly-data-type-assl.md)|  
+|Elementi figlio|[File](../objects/file-element-assl.md) di tipo [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md)|  
+  
+## <a name="remarks"></a>Remarks  
+ L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ClrAssemblyFileCollection>.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Elemento server &#40;ASSL&#41;](../objects/server-element-assl.md)   
+ [Elemento database &#40;ASSL&#41;](../objects/database-element-assl.md)   
+ [Elemento Assemblies &#40;ASSL&#41;](assemblies-element-assl.md)   
+ [Elemento di dati &#40;ASSL&#41;](../objects/data-element-assl.md)   
+ [Tipo di dati DataBlock &#40;ASSL&#41;](../data-type/datablock-data-type-assl.md)   
+ [Blocca l'elemento &#40;ASSL&#41;](blocks-element-assl.md)   
+ [Bloccare l'elemento &#40;ASSL&#41;](../objects/block-element-assl.md)   
+ [Tipo di dati ComAssembly &#40;ASSL&#41;](../data-type/comassembly-data-type-assl.md)   
+ [Le raccolte &#40;ASSL&#41;](collections-assl.md)  
+  
+  
