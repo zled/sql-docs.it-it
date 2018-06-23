@@ -1,0 +1,97 @@
+---
+title: Funzione LocalDBFormatMessage | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- LocalDBFormatMessage
+api_location:
+- sqluserinstance.dll
+topic_type:
+- apiref
+ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
+caps.latest.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1d2fbc72ef5f3b54e1a9889150ebc27b08520ba9
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36068528"
+---
+# <a name="localdbformatmessage-function"></a>Funzione LocalDBFormatMessage
+  Viene restituita la descrizione testuale localizzata per l'errore del database locale di SQL Server Express specificato.  
+  
+ **File di intestazione:** SQLNCLI. h  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```  
+HRESULT LocalDBFormatMessage(  
+           HRESULT hrLocalDB,  
+           DWORD dwFlags,   
+           DWORD dwLanguageId,   
+           LPWSTR wszMessage,   
+           LPDWORD lpcchMessage   
+);  
+```  
+  
+## <a name="parameters"></a>Parametri  
+ *hrLocalDB*  
+ [Input] Codice di errore del database locale.  
+  
+ *dwFlags*  
+ [Input] Flag che specificano il comportamento di questa funzione.  
+  
+ Flag disponibili:  
+  
+ LOCALDB_TRUNCATE_ERR_MESSAGE  
+ Se il buffer di input è troppo corto, il messaggio di errore sarà troncato in base al buffer.  
+  
+ *dwLanguageId*  
+ [Input] Lingua desiderata (LANGID) o 0. In tal caso viene utilizzato l'ordine della lingua FormatMessage di Win32.  
+  
+ *wszMessage*  
+ [Output] Buffer per archiviare il messaggio di errore del database locale.  
+  
+ *lpcchMessage*  
+ [Input/Output] Nell'input contiene la dimensione del *wszMessage* buffer in caratteri. In fase di output, se le dimensioni del buffer specificate sono troppo piccole, nel parametro sono contenute le dimensioni del buffer richieste in caratteri, inclusi gli spazi vuoti finali. Se la funzione viene completata, in essa è contenuto il numero di caratteri nel messaggio, esclusi gli spazi vuoti finali.  
+  
+## <a name="returns"></a>Valori di codice restituiti  
+ S_OK  
+ Funzione completata.  
+  
+ [LOCALDB_ERROR_NOT_INSTALLED](../express-localdb-error-messages/localdb-error-not-installed.md)  
+ Database locale di SQL Server Express non installato nel computer.  
+  
+ [LOCALDB_ERROR_INVALID_PARAMETER](../express-localdb-error-messages/localdb-error-invalid-parameter.md)  
+ Uno o più parametri di input specificati non validi.  
+  
+ [LOCALDB_ERROR_UNKNOWN_ERROR_CODE](../express-localdb-error-messages/localdb-error-unknown-error-code.md)  
+ Messaggio richiesto inesistente.  
+  
+ [LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID](../express-localdb-error-messages/localdb-error-unknown-language-id.md)  
+ Messaggio non disponibile nella lingua richiesta.  
+  
+ [LOCALDB_ERROR_INSUFFICIENT_BUFFER](../express-localdb-error-messages/localdb-error-insufficient-buffer.md)  
+ Il buffer di input *wszMessage* è troppo breve, e troncamento non necessario.  
+  
+ [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
+ Errore imprevisto. Per informazioni, vedere il registro eventi.  
+  
+## <a name="remarks"></a>Remarks  
+ Per un esempio di codice che utilizza l'API LocalDB, vedere [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Informazioni sulla versione e intestazione di SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)  
+  
+  
