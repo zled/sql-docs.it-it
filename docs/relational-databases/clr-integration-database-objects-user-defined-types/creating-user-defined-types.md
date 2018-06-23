@@ -3,11 +3,9 @@ title: Creazione di un tipo definito dall'utente | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -20,25 +18,25 @@ caps.latest.revision: 15
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 86a719023090aecee9a92fea8b772ed092a2111e
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a0f0f9599e5a529011528307b97e39dc68009852
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920796"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702612"
 ---
-# <a name="creating-user-defined-types"></a>Creare tipi definiti dall'utente
+# <a name="creating-user-defined-types"></a>Creazione di tipi definiti dall'utente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Per creare un tipo definito dall'utente (UDT) che possa essere installato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], è necessario prima creare una classe in uno dei linguaggi di programmazione di .NET Framework supportati, ad esempio Visual C# o Visual Basic che sia conforme alle specifiche per la creazione di tipi definiti dall'utente. La classe può quindi essere compilata come DLL che può essere caricata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. È inoltre possibile creare e distribuire tipi definiti dall'utente utilizzando Visual Studio.  
   
- L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. Common Language Runtime può essere abilitato utilizzando il **sp_configure** stored procedure di sistema come mostrato nell'esempio seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni:  
+ L'esecuzione di codice CLR (Common Language Runtime) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è disattivata per impostazione predefinita. CLR può essere abilitato utilizzando la **sp_configure** stored procedure di sistema come mostrato nell'esempio seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni:  
   
 ```  
 sp_configure 'clr enabled', 1  
 Reconfigure  
 ```  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
  [Requisiti del tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md)  
  Vengono descritti i requisiti per la codifica dei tipi definiti dall'utente.  
   
@@ -46,9 +44,9 @@ Reconfigure
  Vengono illustrate le tecniche di codifica coinvolte nella creazione di tipi definiti dall'utente.  
   
 ## <a name="example"></a>Esempio  
- Listato di codice seguente definisce il punto di tipo definito dall'utente, come descritto in dettaglio in [codifica di tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Il listato di codice seguente definisce il punto di tipo definito dall'utente, come descritto in dettaglio nelle [codifica di tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [esempi del motore di Database SQL Server](http://msftengprodsamples.codeplex.com/).  
+ È possibile ottenere elenchi di codice completi per gli altri esempi discussi in questa sezione installando gli esempi CLR. Per istruzioni sull'installazione di questi esempi, vedere [motore di Database di SQL Server Samples](http://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -337,6 +335,6 @@ End Structure
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipi CLR definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
+ [Tipi definiti dall'utente per CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

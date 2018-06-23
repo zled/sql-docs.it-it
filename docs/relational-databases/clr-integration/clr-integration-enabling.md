@@ -1,14 +1,12 @@
 ---
-title: Attivazione dell'integrazione CLR | Documenti Microsoft
+title: Abilitazione dell'integrazione CLR | Documenti Microsoft
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - clr enabled option
@@ -18,16 +16,16 @@ caps.latest.revision: 19
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d7bec99220df05a5414bce2dcec6fd86235a4fb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 37be3af485d43180c03c2214b8ee88b0535a4ea2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919386"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703392"
 ---
 # <a name="clr-integration---enabling"></a>Integrazione con CLR - abilitazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, utilizzare il **clr abilitato** opzione del **sp_configure** stored procedure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
+  Per impostazione predefinita, la funzionalità di integrazione con Common Language Runtime (CLR) è disabilitata e deve essere abilitata per poter utilizzare gli oggetti implementati mediante l'integrazione con CLR. Per abilitare l'integrazione con CLR, usare il **clr abilitato** opzione del **sp_configure** stored procedure [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:  
   
 ```sql  
   
@@ -44,7 +42,7 @@ GO
  È possibile disabilitare l'integrazione con CLR impostando il **clr abilitato** opzione su 0. Quando si disabilita l'integrazione con CLR, in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene arrestata l'esecuzione di tutte le routine CLR e vengono scaricati tutti i domini dell'applicazione.  
   
 > [!NOTE]  
->  Per abilitare l'integrazione con CLR, è necessario disporre di impostazioni ALTER autorizzazione livello di server, che viene assegnata implicitamente ai membri del **sysadmin** e **serveradmin** ruoli predefiniti del server.  
+>  Per abilitare l'integrazione con CLR, è necessario disporre di server a livello dell'autorizzazione ALTER SETTINGS, che viene assegnata implicitamente ai membri del **sysadmin** e **serveradmin** predefiniti del server.  
   
 > [!NOTE]  
 >  I computer configurati con grandi quantità di memoria e con un gran numero di processori potrebbero non riuscire a caricare la funzionalità di integrazione con CLR di SQL Server all'avvio del server. Per risolvere questo problema, avviare il server utilizzando il **-gmemory_to_reserve** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] opzione di avvio del servizio e specificare un valore di memoria sufficiente. Per altre informazioni, vedere [Opzioni di avvio del servizio del motore di database](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
@@ -54,8 +52,8 @@ GO
   
 ## <a name="see-also"></a>Vedere anche  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [Opzione di configurazione Server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
- [RECONFIGURE & #40; Transact-SQL & #41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
+ [Opzione di configurazione del server clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)   
+ [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Ruoli a livello di server](../../relational-databases/security/authentication-access/server-level-roles.md)  
   

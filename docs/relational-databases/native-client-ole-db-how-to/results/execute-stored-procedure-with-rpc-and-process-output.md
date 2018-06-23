@@ -1,13 +1,12 @@
 ---
-title: Eseguire Stored Procedure con RPC ed elaborare Output | Documenti Microsoft
+title: Eseguire la Stored Procedure con RPC ed elaborare Output | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,27 +18,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cc8a41c4365cb2478a9387e40d75b7551dcaf448
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: abe2cb37bbf0de66bc6ab924575e7aebd89a7b9b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948456"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699182"
 ---
-# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire Stored Procedure con RPC ed elaborare l'Output
+# <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Eseguire la Stored Procedure con RPC ed elaborare Output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, dati dei parametri di output sono disponibili quando **IMultipleResults:: GetResult** restituisce DB_S_NORESULT o quando il **IMultipleResults** interfaccia è completamente rilasciata, qualunque si verifichi prima.  
+  Le stored procedure di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e i parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono pertanto disponibili all'applicazione fino al completo rilascio del set di righe. Se il comando restituisce più risultati, i dati dei parametri di output sono disponibili quando **IMultipleResults:: GetResult** restituisce DB_S_NORESULT o quando il **IMultipleResults** interfaccia è completamente rilasciata, qualunque si verifichi prima.  
   
 > [!IMPORTANT]  
->  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle utilizzando il [CryptoAPI Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle utilizzando il [API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>Per elaborare i codici restituiti e i parametri di output  
   
 1.  Costruire un'istruzione SQL che utilizzi la sequenza di escape RPC.  
   
-2.  Chiamare il **ICommandWithParameters:: SetParameterInfo** per descrivere i parametri al provider. Inserire le informazioni sul parametro in una matrice delle strutture PARAMBINDINFO.  
+2.  Chiamare il **ICommandWithParameters:: SetParameterInfo** metodo per descrivere i parametri al provider. Inserire le informazioni sul parametro in una matrice delle strutture PARAMBINDINFO.  
   
 3.  Creare un set di associazioni (uno per ogni creatore di parametro) tramite una matrice di strutture DBBINDING.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "32948456"
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un set di righe, di un codice restituito e di un parametro di output. I set di risultati non vengono elaborati. Questo esempio non è supportato in IA64.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) homepage.  
   
  Eseguire il primo listato di codice ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) per creare la stored procedure utilizzata dall'applicazione.  
   
@@ -403,6 +402,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure per l'elaborazione dei risultati & #40; OLE DB & #41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Procedure di risultati per l'elaborazione &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

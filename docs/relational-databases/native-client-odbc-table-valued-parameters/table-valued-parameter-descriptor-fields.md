@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
-caps.latest.revision: 31
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6205ed15e0771cc1900a458343defbbcb0e1384f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a63908b5a63ebf8501e0c0887d841c8e2619dff9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946516"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698232"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campi di descrizione dei parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,11 +29,11 @@ ms.locfileid: "32946516"
 
   Il supporto per i parametri con valori di tabella include nuovi campi specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nei descrittori di parametri delle applicazioni (APD, Application Parameter Descriptor) e nei descrittori di parametri di implementazione (IPD, Implementation Parameter Descriptor) ODBC.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
   
-|Nome|Percorso|Tipo|Description|  
+|nome|Percorso|Tipo|Description|  
 |----------|--------------|----------|-----------------|  
-|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nome del tipo di server del parametro con valori di tabella.<br /><br /> Quando in una chiamata a SQLBindParameter viene specificato un nome di tipo di parametro con valori di tabella, deve sempre essere specificato come valore Unicode, anche in applicazioni che vengono compilate come applicazioni ANSI. Il valore utilizzato per il parametro *StrLen_or_IndPtr* deve essere SQL_NTS o la lunghezza della stringa del nome moltiplicata per sizeof (WCHAR).<br /><br /> Quando viene specificato un nome di tipo di parametro con valori di tabella tramite SQLSetDescField, può essere specificato con un valore letterale conforme al modo in cui l'applicazione viene compilato. In Gestione driver ODBC verrà eseguita la conversione Unicode necessaria.|  
+|SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nome del tipo di server del parametro con valori di tabella.<br /><br /> Quando in una chiamata a SQLBindParameter viene specificato un nome di tipo di parametro con valori di tabella, deve sempre essere specificato come valore Unicode, anche nelle applicazioni compilate come applicazioni ANSI. Il valore utilizzato per il parametro *StrLen_or_IndPtr* deve essere SQL_NTS o la lunghezza della stringa del nome moltiplicata per sizeof (WCHAR).<br /><br /> Quando viene specificato il nome di un tipo di parametro con valori di tabella tramite SQLSetDescField, può essere specificato con un valore letterale conforme al modo in cui l'applicazione viene compilato. In Gestione driver ODBC verrà eseguita la conversione Unicode necessaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (di sola lettura)|IPD|SQLTCHAR*|Il catalogo in cui è definito il tipo.|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR*|Lo schema in cui è definito il tipo.|  
   
@@ -43,7 +41,7 @@ ms.locfileid: "32946516"
   
  Di seguito sono indicati gli attributi di istruzione e i campi di intestazione di descrizione che si applicano ai parametri con valori di tabella quando lo stato attivo del parametro è impostato su un parametro con valori di tabella:  
   
-|Nome|Percorso|Tipo|Description|  
+|nome|Percorso|Tipo|Description|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (equivale a SQL_DESC_ARRAY_SIZE in APD)|APD|SQLUINTEGER|Dimensione delle matrici di buffer per un parametro con valori di tabella. Si tratta del numero massimo di righe che può essere adattato dai buffer o della dimensione dei buffer in righe. Nel valore del parametro con valori di tabella stesso potrebbe essere presente un numero maggiore o minore di righe rispetto a quello che può essere contenuto nel buffer. Valore predefinito è 1.<br /><br /> Nota: Se SQL_SOPT_SS_PARAM_FOCUS è impostato sul valore predefinito pari a 0, SQL_ATTR_PARAMSET_SIZE si riferisce all'istruzione e specifica il numero di set di parametri. Se SQL_SOPT_SS_PARAM_FOCUS è impostato sul numero ordinale di un parametro con valori di tabella, si riferisce al parametro con valori di tabella e specifica il numero di righe per set di parametri per il parametro con valori di tabella.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|L'impostazione predefinita è SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Per selezionare l'associazione per riga, questo campo è impostato sulla lunghezza della struttura o su un'istanza di un buffer che verrà associato a un set di righe del parametro con valori di tabella. Questa lunghezza deve includere lo spazio per tutte le colonne associate ed eventuale riempimento della struttura o del buffer. In questo modo si garantisce che, quando l'indirizzo di una colonna associata viene incrementato con la lunghezza specificata, il risultato punterà all'inizio della stessa colonna della riga successiva. Quando si utilizza il **sizeof** operatore in ANSI C, questo comportamento è garantito.|  

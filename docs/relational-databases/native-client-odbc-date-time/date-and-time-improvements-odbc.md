@@ -4,33 +4,31 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC]
 - ODBC, date/time improvements
 ms.assetid: e31d5ca5-2103-498f-954c-1ee93e217186
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75eb2438dabb3d304158e524e7413df35ae9a8fc
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2b0588d063e5f1de8ca496feeacde92c7a8e440d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707249"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702524"
 ---
 # <a name="date-and-time-improvements-odbc"></a>Data e ora miglioramenti (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto come questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto Native Client per i nuovi tipi data e ora dati, vedere [data e ora miglioramenti](../../relational-databases/native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto per data e ora ODBC, vedere [utilizzare tipi di data e ora](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md).  
+  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sono stati introdotti nuovi tipi di dati di data e ora. In questa sezione viene descritto come questi nuovi tipi vengono esposti come estensioni in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Per una panoramica delle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporto Native Client per i nuovi tipi data e ora dei dati, vedere [data e ora miglioramenti](../../relational-databases/native-client/features/date-and-time-improvements.md). Per un esempio che illustra il supporto ODBC Data/ora, vedere [utilizzare tipi di data e ora](../../relational-databases/native-client-odbc-how-to/use-date-and-time-types.md).  
   
  Per ulteriori informazioni sui tipi di dati data e ora, vedere [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md).  
   

@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -29,12 +28,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ae2bd3237106f68e2330aded86fc96822ab7720
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 97280da27703892a916827bdcd6f31a327fbc360
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32951186"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35698512"
 ---
 # <a name="working-with-snapshot-isolation"></a>Utilizzo dell'isolamento dello snapshot
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,21 +63,21 @@ ms.locfileid: "32951186"
 > [!NOTE]  
 >  Si verifica l'errore DB_S_ERRORSOCCURRED o DB_E_ERRORSOCCURRED se DBPROPVAL_TI_SNAPSHOT viene impostato quando si utilizzano versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] precedenti a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Per informazioni su come isolamento dello snapshot è supportato nelle transazioni, vedere [che supporta le transazioni locali](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md).  
+ Per informazioni su come isolamento dello snapshot è supportato nelle transazioni, vedere [che supportano le transazioni locali](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client fornisce supporto per l'isolamento snapshot se miglioramenti apportati al [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) funzioni.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client fornisce il supporto per l'isolamento dello snapshot tuttavia miglioramenti apportati al [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) e [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) funzioni.  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
  Il **SQLSetConnectAttr** funzione ora supporta l'uso dell'attributo SQL_COPT_SS_TXN_ISOLATION. Impostando SQL_COPT_SS_TXN_ISOLATION su SQL_TXN_SS_SNAPSHOT si indica che la transazione si verificherà con il livello di isolamento dello snapshot.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- Il [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) funzione supporta ora il valore SQL_TXN_SS_SNAPSHOT che è stato aggiunto il tipo di informazioni sql_txn_isolation_option.  
+ Il [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) funzione supporta ora il valore SQL_TXN_SS_SNAPSHOT aggiunto al tipo di informazioni SQL_TXN_ISOLATION_OPTION.  
   
- Per informazioni su come isolamento dello snapshot è supportato nelle transazioni, vedere [livello di isolamento delle transazioni di cursore](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
+ Per informazioni su come isolamento dello snapshot è supportato nelle transazioni, vedere [cursore Transaction Isolation Level](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Funzionalità SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Proprietà set di righe e i comportamenti](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
+ [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Proprietà e comportamenti dei set di righe](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

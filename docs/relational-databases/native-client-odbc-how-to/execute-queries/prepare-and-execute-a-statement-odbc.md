@@ -4,27 +4,25 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - statement execution
 - statement preparation
 ms.assetid: 0adecc63-4da5-486c-bc48-09a004a2fae6
-caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfd8780e6d4fe804a6a124870c06e43bec752463
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a6d78ab8bbd48035795f8860cb02a20e83780289
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946496"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701422"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Preparare ed eseguire un'istruzione (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,13 +33,13 @@ ms.locfileid: "32946496"
   
 1.  Chiamare [funzione SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) per preparare l'istruzione.  
   
-2.  È possibile chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
+2.  Facoltativamente, chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
 3.  Per ogni parametro dell'istruzione preparata è possibile:  
   
     -   Chiamare [SQLDescribeParam](../../../relational-databases/native-client-odbc-api/sqldescribeparam.md) per ottenere informazioni sui parametri.  
   
-    -   Associare ogni parametro a una variabile di programma utilizzando [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurare i parametri data-at-execution.  
+    -   Associare ogni parametro a una variabile di programma usando [SQLBindParameter](../../../relational-databases/native-client-odbc-api/sqlbindparameter.md). Configurare i parametri data-at-execution.  
   
 4.  Per ogni esecuzione di un'istruzione preparata:  
   
@@ -65,9 +63,9 @@ ms.locfileid: "32946496"
   
 2.  Chiamare la funzione SQLPrepare per preparare l'istruzione.  
   
-3.  È possibile chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
+3.  Facoltativamente, chiamare [SQLNumParams](http://go.microsoft.com/fwlink/?LinkId=58404) per determinare il numero di parametri nell'istruzione preparata.  
   
-4.  Per ogni parametro nell'istruzione preparata, è possibile chiamare la funzione SQLDescribeParam per ottenere informazioni sul parametro.  
+4.  Facoltativamente, per ogni parametro nell'istruzione preparata, chiamare la funzione SQLDescribeParam per ottenere informazioni sul parametro.  
   
 5.  Per ogni marcatore di parametro:  
   
@@ -75,7 +73,7 @@ ms.locfileid: "32946496"
   
     -   Allocare una matrice di buffer di S parametri per archiviare le lunghezze dei dati.  
   
-    -   Chiamare la funzione SQLBindParameter per associare le matrici di lunghezza parametro valore e i dati del dati al parametro dell'istruzione.  
+    -   Chiamare la funzione SQLBindParameter per eseguire l'associazione di matrici di parametri dei dati e dei valori lunghezza per il parametro dell'istruzione.  
   
     -   Se il parametro è un testo data-at-execution o un parametro di immagine, configurarlo.  
   
@@ -87,7 +85,7 @@ ms.locfileid: "32946496"
   
     -   Chiamare la funzione SQLExecute per eseguire l'istruzione preparata.  
   
-    -   Se si utilizzano parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi utilizzando SQLParamData e SQLPutData.  
+    -   Se si utilizzano parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante SQLParamData e SQLPutData.  
   
 ### <a name="to-prepare-a-statement-with-row-wise-bound-parameters"></a>Per preparare un'istruzione con associazione di parametri a livello di riga  
   
@@ -109,7 +107,7 @@ ms.locfileid: "32946496"
   
 3.  Chiamare la funzione SQLPrepare per preparare l'istruzione.  
   
-4.  Per ogni marcatore di parametro, chiamare la funzione SQLBindParameter per puntare il parametro e dei valori lunghezza puntatore ai dati alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1. Se il parametro è di tipo data-at-execution, configurarlo.  
+4.  Per ogni marcatore di parametro, chiamare la funzione SQLBindParameter per puntare il parametro e dei valori lunghezza puntatore a dati alle relative variabili nel primo elemento della matrice di strutture allocate nel passaggio 1. Se il parametro è di tipo data-at-execution, configurarlo.  
   
 5.  Per ogni esecuzione di un'istruzione preparata:  
   
@@ -117,9 +115,9 @@ ms.locfileid: "32946496"
   
     -   Chiamare la funzione SQLExecute per eseguire l'istruzione preparata. Il driver esegue in modo efficace l'istruzione SQL S volte, una volta per ogni set di parametri.  
   
-    -   Se si utilizzano parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi utilizzando SQLParamData e SQLPutData.  
+    -   Se si utilizzano parametri di input data-at-execution, SQLExecute restituisce SQL_NEED_DATA. Inviare i dati in blocchi mediante SQLParamData e SQLPutData.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di query procedure & #40; ODBC & #41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+ [L'esecuzione di query procedure &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

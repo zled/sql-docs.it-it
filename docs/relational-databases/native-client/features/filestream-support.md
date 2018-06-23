@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: native-client|features
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -18,12 +17,12 @@ caps.latest.revision: 21
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d0081b632d9955a1fc4f8003c0036288c2d5b6c7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3eb1f9c51f6d21ea0684c33df33817003564d7d7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949746"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703122"
 ---
 # <a name="filestream-support"></a>Supporto FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ ms.locfileid: "32949746"
 ## <a name="querying-for-filestream-columns"></a>Esecuzione di una query sulle colonne FILESTREAM  
  I set di righe degli schemi in OLE DB non indicano se una colonna è di tipo FILESTREAM. ITableDefinition in OLE DB non può essere utilizzato per creare una colonna FILESTREAM.  
   
- Funzioni di catalogo, ad esempio SQLColumns di ODBC non indicano se una colonna è una colonna FILESTREAM.  
+ Funzioni di catalogo, ad esempio SQLColumns di ODBC non segnalerà se una colonna è una colonna FILESTREAM.  
   
- Per creare colonne FILESTREAM o per rilevare le colonne esistenti sono colonne FILESTREAM, è possibile utilizzare il **is_filestream** colonna il [Columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) vista del catalogo.  
+ Per creare colonne FILESTREAM o per rilevare le colonne esistenti sono colonne FILESTREAM, è possibile utilizzare il **is_filestream** colonna del [Sys. Columns](../../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) vista del catalogo.  
   
  Di seguito è riportato un esempio:  
   
@@ -64,11 +63,11 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Compatibilità con le versioni precedenti  
- Se il client è stato compilato utilizzando la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], e l'applicazione si connette a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary (max)** comportamento sarà compatibile con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, si verificherà il troncamento e verrà restituito un avviso di "stringa dati troncamento a destra".  
+ Se il client è stato compilato utilizzando la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], e l'applicazione si connette al [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], **varbinary (max)** comportamento sarà compatibile con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Questo significa che i dati restituiti avranno come dimensione massima 2 GB. Per valori di dimensioni superiori a 2 GB, verificherà il troncamento e verrà restituito un avviso "troncamento a destra dei dati di stringa".  
   
  Quando la compatibilità con il tipo di dati è impostata su 80, il comportamento client sarà coerente con il comportamento del client legacy.  
   
- Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, **varbinary (max)** verrà eseguito il mapping all'immagine.  
+ Per i client che utilizzano SQLOLEDB o altri provider rilasciati prima la [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] versione [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, **varbinary (max)** verrà eseguito il mapping all'immagine.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzionalità di SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

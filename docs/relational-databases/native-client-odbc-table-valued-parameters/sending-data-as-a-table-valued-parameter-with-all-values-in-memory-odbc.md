@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), sending data to a stored procedure with all values in memory
 ms.assetid: 8b96282f-00d5-4e28-8111-0a87ae6d7781
-caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ee213454caff486478eba22042dbeb04d32eec09
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 56b23a290944994fba861f02e78cddbb3488cbab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32943596"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703282"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -95,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi vengono associate le colonne del valore di tabella utilizzando SQLBindParameter esattamente così come si presenterebbero se fossero parametri di stored procedure, ma con numeri ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
+3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come si presenterebbero se fossero parametri della stored procedure, ma con numeri ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  

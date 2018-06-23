@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a7f4e8a8b6813eecf74fbc4e932296d3eff4631
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 0faf40639991005ad7161af9f144af49fb384ba3
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947506"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703492"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +54,7 @@ RETCODE bcp_gettypename (
 ## <a name="returns"></a>Valori di codice restituiti  
  Una stringa che contiene il nome del tipo SQL che corrisponde al tipo BCP. Se viene specificato un tipo BCP non valido, viene restituita una stringa vuota.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  I token del tipo BCP vengono definiti nel file di intestazione sqlncli.h e nella libreria sqlncli11.lib.  
   
  Nella tabella seguente viene specificato quali sono i possibili tipi BCP, se si tratta di tipi max e l'output previsto.  
@@ -80,8 +78,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|Prima o dopo|**text**|  
 |**SQLBIGBINARY**|no|**binary**|  
 |**SQLBINARY**|no|**Binario**|  
-|**SQLBIGVARBINARY**|no|**Varbinary**|  
-|**SQLVARBINARY**|no|**Varbinary**|  
+|**SQLBIGVARBINARY**|no|**varbinary**|  
+|**SQLVARBINARY**|no|**varbinary**|  
 |**SQLIMAGE**|Prima o dopo|**Immagine**|  
 |**SQLINTN**|Prima o dopo|**int-null**|  
 |**SQLDATETIMN**|Prima o dopo|**datetime-null**|  
@@ -93,10 +91,10 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|Prima o dopo|**Min**|  
 |**SQLAOPMAX**|Prima o dopo|**Max**|  
 |**SQLDATETIM4**|Prima o dopo|**smalldatetime**|  
-|**SQLMONEY4**|Prima o dopo|**smallmoney**|  
+|**SQLMONEY4**|Prima o dopo|**Smallmoney**|  
 |**SQLFLT4**|Prima o dopo|**reale**|  
 |**SQLUNIQUEID**|Prima o dopo|**uniqueidentifier**|  
-|**SQLNCHAR**|no|**nchar**|  
+|**SQLNCHAR**|no|**Nchar**|  
 |**SQLNVARCHAR**|no|**Nvarchar**|  
 |**SQLNTEXT**|Prima o dopo|**ntext**|  
 |**SQLVARIANT**|Prima o dopo|**sql_variant**|  
@@ -112,12 +110,12 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Sì|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sì|**nvarchar(max)**|  
 |**SQLXML**|Sì|**Xml**|  
-|**SQLUDT**|Prima o dopo|**tipo definito dall'utente**|  
+|**SQLUDT**|Prima o dopo|**Tipo definito dall'utente**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Supporto di bcp_gettypename per le caratteristiche avanzate di data e ora  
  I valori di parametro del token per i tipi di data/ora sono illustrati nella colonna "Tipo in SQLNCLI. h" della tabella [modifiche di copia Bulk per avanzate di data e ora tipi &#40;OLE DB e ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). Il valore restituito si trova nella riga corrispondente della colonna "Tipo di archiviazione di file".  
   
- Per ulteriori informazioni, vedere [data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni, vedere [data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzioni di copia bulk](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

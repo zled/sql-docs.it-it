@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f26a4a4d844767966dd3529789580d05363116bb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: fb68a61f5aca057eea4ec16334745e6e2e6e427b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32945956"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700732"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,15 +41,15 @@ HRESULT BCPColumns(
       DBCOUNTITEM nColumns);  
 ```  
   
-## <a name="remarks"></a>Osservazioni  
- Chiama internamente [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per impostare i valori predefiniti per i dati del campo. Questi valori predefiniti vengono ottenuti dalle informazioni di colonna di SQL Server che il provider recupera internamente quando viene specificato il nome della tabella tramite [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
+## <a name="remarks"></a>Remarks  
+ Chiama internamente [ibcpsession:: BCPColFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) per impostare i valori predefiniti per i dati del campo. Questi valori predefiniti vengono ottenuti dalle informazioni di colonna SQL Server che il provider recupera internamente quando il nome della tabella viene specificato tramite [ibcpsession:: BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md).  
   
 > [!NOTE]  
 >  Questo metodo può essere chiamato solo dopo aver **BCPInit** è stata chiamata con un nome file valido.  
   
- È consigliabile chiamare questo metodo solo se si intende utilizzare un formato di file utente diverso da quello predefinito. Per ulteriori informazioni su una descrizione del formato di file utente predefinito, vedere il **BCPInit** metodo.  
+ È consigliabile chiamare questo metodo solo se si intende utilizzare un formato di file utente diverso da quello predefinito. Per ulteriori informazioni su una descrizione del formato di file utente predefinito, vedere la **BCPInit** metodo.  
   
- Dopo la chiamata di **BCPColumns** (metodo), è necessario chiamare il **BCPColFmt** metodo per ogni colonna nel file utente per definire completamente un formato di file personalizzato.  
+ Dopo la chiamata di **BCPColumns** metodo, è necessario chiamare il **BCPColFmt** metodo per ogni colonna nel file utente per definire completamente un formato di file personalizzato.  
   
 ## <a name="arguments"></a>Argomenti  
  *nColumns*[in]  
