@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-caps.latest.revision: 27
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: b724f1dfa28bcfeb3119291a8904515e7bfeb592
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: cb3dfe34259e73bddf1fae44fe831ea4cefdadec
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947636"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695922"
 ---
 # <a name="metadata---parameter-and-result"></a>Metadati - parametro e il risultato
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +32,7 @@ ms.locfileid: "32947636"
 ## <a name="information-returned-in-ipd-fields"></a>Informazioni restituite nei campi IPD  
  Di seguito sono riportate le informazioni restituite nei campi IPD:  
   
-|Tipo di parametro|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo di parametro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CONCISE_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
@@ -55,9 +53,9 @@ ms.locfileid: "32947636"
   
  **datetime2** viene restituito come typename per **smalldatetime** e **datetime** perché il driver lo utilizza come un tipo comune per trasmettere tutti **SQL_TYPE_TIMESTAMP** valori al server.  
   
- SQL_CA_SS_VARIANT_SQL_TYPE è un nuovo campo di descrizione. Questo campo è stato aggiunto a IRD e IPD per consentire alle applicazioni specificare il tipo di valore associato **sqlvariant** (SQL_SSVARIANT) colonne e parametri  
+ SQL_CA_SS_VARIANT_SQL_TYPE è un nuovo campo di descrizione. Questo campo è stato aggiunto a IRD e IPD per consentire alle applicazioni di specificare il tipo di valore associato **sqlvariant** (SQL_SSVARIANT) le colonne e parametri  
   
- SQL_CA_SS_SERVER_TYPE è un nuovo campo solo IPD che consente alle applicazioni di controllare le modalità di invio al server dei valori per i parametri associati come SQL_TYPE_TYPETIMESTAMP (oppure come SQL_SS_VARIANT con un SQL_C_TYPE_TIMESTAMP di tipo C). Se SQL_DESC_CONCISE_TYPE è SQL_TYPE_TIMESTAMP (oppure è SQL_SS_VARIANT e il tipo C è SQL_C_TYPE_TIMESTAMP) quando viene chiamata SQLExecute o SQLExecDirect, il valore di SQL_CA_SS_SERVER_TYPE determina il tipo di (TDS Tabular) del valore del parametro di flusso di dati tabulari , come indicato di seguito:  
+ SQL_CA_SS_SERVER_TYPE è un nuovo campo solo IPD che consente alle applicazioni di controllare le modalità di invio al server dei valori per i parametri associati come SQL_TYPE_TYPETIMESTAMP (oppure come SQL_SS_VARIANT con un SQL_C_TYPE_TIMESTAMP di tipo C). Se SQL_DESC_CONCISE_TYPE è SQL_TYPE_TIMESTAMP (oppure è SQL_SS_VARIANT e il tipo C è SQL_C_TYPE_TIMESTAMP) quando viene chiamata SQLExecute o SQLExecDirect, il valore di SQL_CA_SS_SERVER_TYPE determina il tabular data stream tipo (TDS) del valore del parametro , come indicato di seguito:  
   
 |Valore di SQL_CA_SS_SERVER_TYPE|Valori validi per SQL_DESC_PRECISION|Valori validi per SQL_DESC_LENGTH|Tipo TDS|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -71,16 +69,16 @@ ms.locfileid: "32947636"
   
 -   In fase di preparazione o di esecuzione (quando vengono chiamati i metodi SQLExecute, SQLExecDirect, SQLSetPos o SQLBulkOperations).  
   
--   Quando forza un'applicazione non posticipata preparare chiamando SQLPrepare con posticipata preparare disabilitato, oppure chiamando la funzione SQLNumResultCols, SQLDescribeCol o SQLDescribeParam per un'istruzione preparata ma non eseguito.  
+-   Quando si forza un'applicazione non posticipata preparare chiamando SQLPrepare con posticipata preparare disabilitato, oppure chiamando la funzione SQLNumResultCols, SQLDescribeCol o SQLDescribeParam per un'istruzione preparata ma non eseguito.  
   
  Quando SQL_CA_SS_SERVER_TYPE viene impostato mediante una chiamata a SQLSetDescField, il relativo valore deve essere SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME o SQL_SS_TYPE_DATETIME. In caso contrario, viene restituito SQL_ERROR e viene registrato un record di diagnostica con SQLState HY092 e con il messaggio "Identificatore di opzione o di attributo non valido".  
   
- L'attributo SQL_CA_SS_SERVER_TYPE può essere utilizzato dalle applicazioni che dipendono da funzionalità supportate da **datetime** e **smalldatetime**, ma non **datetime2**. Ad esempio, **datetime2** richiede l'utilizzo del **dateadd** e **datediif** funzioni, mentre **datetime** e  **smalldatetime** accettano anche operatori aritmetici. Nella maggior parte delle applicazioni è consigliabile evitare l'uso di questo attributo.  
+ L'attributo SQL_CA_SS_SERVER_TYPE può essere utilizzato dalle applicazioni che dipendono da funzionalità supportate da **datetime** e **smalldatetime**, ma non **datetime2**. Ad esempio **datetime2** richiede l'utilizzo del **dateadd** e **datediif** funzioni, mentre **datetime** e  **smalldatetime** accettano anche operatori aritmetici. Nella maggior parte delle applicazioni è consigliabile evitare l'uso di questo attributo.  
   
 ## <a name="information-returned-in-ird-fields"></a>Informazioni restituite nei campi IRD  
  Di seguito sono riportate le informazioni restituite nei campi IRD:  
   
-|Tipo di colonna|data|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|Tipo di colonna|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |SQL_DESC_CASE_SENSITIVE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  

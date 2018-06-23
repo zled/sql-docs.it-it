@@ -1,10 +1,9 @@
 ---
-title: I cursori Fast Forward-Only (ODBC) | Documenti Microsoft
+title: Cursori Fast Forward-Only (ODBC) | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-cursors
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -21,22 +20,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f997c8d11b2392db8ceb2450b037ec25d94d4c60
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 20b721adca163021f87c490cc7c8bc8b42e53da0
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32948726"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35703718"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursori fast forward only (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Quando si è connessi a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta ottimizzazioni delle prestazioni per i cursori forward-only di sola lettura. I cursori fast forward only vengono implementati internamente dal driver e dal server in modo molto simile ai set di risultati predefiniti. Oltre a offrire prestazioni elevate, i cursori fast forward only possono presentare anche le caratteristiche seguenti:  
+  Quando si è connessi a un'istanza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta ottimizzazioni delle prestazioni per i cursori forward-only di sola lettura. I cursori fast forward only vengono implementati internamente dal driver e dal server in modo molto simile ai set di risultati predefiniti. Oltre a offrire prestazioni elevate, i cursori fast forward only possono presentare anche le caratteristiche seguenti:  
   
 -   [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) non è supportata. Le colonne del set di risultati devono essere associate a variabili di programma.  
   
--   Quando viene rilevata la fine del cursore, questo viene chiuso automaticamente dal server. L'applicazione deve ancora chiamare [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) o [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE), ma il driver non deve inviare la richiesta di chiusura al server. In questo modo viene evitato un round trip del server nella rete.  
+-   Quando viene rilevata la fine del cursore, questo viene chiuso automaticamente dal server. L'applicazione deve ancora chiamare [SQLCloseCursor](../../../relational-databases/native-client-odbc-api/sqlclosecursor.md) oppure [SQLFreeStmt](../../../relational-databases/native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE), ma il driver non deve inviare la richiesta di chiusura al server. In questo modo viene evitato un round trip del server nella rete.  
   
  L'applicazione richiede cursori fast forward only mediante l'attributo dell'istruzione SQL_SOPT_SS_CURSOR_OPTIONS specifica del driver. Quando l'attributo è impostato su SQL_CO_FFO, i cursori fast forward only vengono abilitati senza recupero automatico. Quando l'attributo è impostato su SQL_CO_FFO_AF, viene abilitata anche l'opzione per il recupero automatico. Per ulteriori informazioni sul recupero automatico, vedere [utilizzo del recupero automatico con i cursori ODBC](../../../relational-databases/native-client-odbc-cursors/programming/using-autofetch-with-odbc-cursors.md).  
   
@@ -48,11 +47,11 @@ ms.locfileid: "32948726"
   
 3.  Associare le colonne di risultati a matrici di *n* + 1 elementi (per essere sicuro se *n* + 1 righe vengano effettivamente recuperate).  
   
-4.  Aprire il cursore con **SQLExecDirect** o **SQLExecute**.  
+4.  Aprire il cursore con uno **SQLExecDirect** oppure **SQLExecute**.  
   
-5.  Se lo stato restituito è SQL_SUCCESS, chiamare **SQLFreeStmt** o **SQLCloseCursor** per chiudere il cursore. Tutti i dati delle righe si troveranno nelle variabili di programma associate.  
+5.  Se lo stato restituito è SQL_SUCCESS, quindi chiamare **SQLFreeStmt** oppure **SQLCloseCursor** per chiudere il cursore. Tutti i dati delle righe si troveranno nelle variabili di programma associate.  
   
- Con questi passaggi, la **SQLExecDirect** o **SQLExecute** invia una richiesta di apertura del cursore con l'opzione di recupero automatico abilitata. Nella singola richiesta proveniente dal client il server:  
+ Con questi passaggi, il **SQLExecDirect** oppure **SQLExecute** invia una richiesta di apertura del cursore con l'opzione di recupero automatico abilitata. Nella singola richiesta proveniente dal client il server:  
   
 -   Apre il cursore.  
   

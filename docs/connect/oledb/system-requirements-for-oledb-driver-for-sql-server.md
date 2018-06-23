@@ -2,7 +2,7 @@
 title: Requisiti di sistema per il Driver OLE DB per SQL Server | Documenti Microsoft
 description: Requisiti per il Driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: oledb
@@ -19,15 +19,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: e109f228d8b902e5c34b4ed5731b80e315fffe3c
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 485693e8f350370a293696a09f11ba036397b15e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859336"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689464"
 ---
 # <a name="system-requirements-for-ole-db-driver-for-sql-server"></a>Requisiti di sistema per il Driver OLE DB per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -64,20 +64,20 @@ ms.locfileid: "32859336"
 ## <a name="data-type-compatibility-for-client-versions"></a>Compatibilità dei tipi di dati per le versioni client  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e il Driver OLE DB per SQL Server mappa nuovi tipi di dati meno recenti che sono compatibili con i client legacy, come illustrato nella tabella seguente.  
 
- Le applicazioni OLE DB e ADO possono utilizzare il **DataTypeCompatibility** parola chiave di stringa di connessione con il Driver OLE DB per SQL Server per il funzionamento con tipi di dati precedenti. Quando **DataTypeCompatibility = 80**, i client OLE DB si connetteranno utilizzando il [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] del flusso di dati tabulari, versione (TDS Tabular) anziché la versione TDS. Ciò significa che per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e tipi di dati successivi, conversione di livello inferiore verranno eseguiti dal server anziché dal Driver OLE DB per SQL Server. Significa inoltre che le caratteristiche disponibili nella connessione saranno limitate al set di funzionalità di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. I tentativi di usare nuovi tipi di dati o caratteristiche vengono rilevati il prima possibile nelle chiamate API e, anziché tentare di passare richieste non valide al server, vengono restituiti errori all'applicazione chiamante.   
+ Le applicazioni OLE DB e ADO possono utilizzare il **DataTypeCompatibility** parola chiave di stringa di connessione con il Driver OLE DB per SQL Server per il funzionamento con tipi di dati precedenti. Quando si **DataTypeCompatibility porta=80**, i client OLE DB si connetteranno utilizzando il [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] del flusso di dati tabulari (TDS) versione, anziché la versione TDS. Ciò significa che per [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] e tipi di dati successivi, conversione di livello inferiore verranno eseguiti dal server anziché dal Driver OLE DB per SQL Server. Significa inoltre che le caratteristiche disponibili nella connessione saranno limitate al set di funzionalità di [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. I tentativi di usare nuovi tipi di dati o caratteristiche vengono rilevati il prima possibile nelle chiamate API e, anziché tentare di passare richieste non valide al server, vengono restituiti errori all'applicazione chiamante.   
 
 
- IDBInfo:: GetKeywords restituirà sempre un elenco di parole chiave che corrisponde alla versione del server per la connessione e non è interessato dalle **DataTypeCompatibility**.  
+ IDBInfo:: GetKeywords restituirà sempre un elenco di parole chiave che corrisponde alla versione del server per la connessione e non è influenzato **DataTypeCompatibility**.  
 
 |Tipo di dati|SQL Server Native Client<br /><br />SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Driver OLE DB per SQL Server|Applicazioni OLE DB di Windows Data Access Components, MDAC e<br /><br /> Driver OLE DB per le applicazioni OLE DB per SQL Server con DataTypeCompatibility = 80|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|udt|udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|varbinary|image|  
 |ntext|varchar|varchar|varchar|Text|  
-|nvarchar(max)|nvarchar|nvarchar|nvarchar|Ntext|  
+|nvarchar(max)|NVARCHAR|NVARCHAR|NVARCHAR|Ntext|  
 |xml|xml|xml|xml|Ntext|  
 |CLR UDT (> 8Kb)|varbinary|udt|udt|image|  
-|data|varchar|data|data|Varchar|  
+|Data|varchar|Data|Data|Varchar|  
 |datetime2|varchar|datetime2|datetime2|Varchar|  
 |datetimeoffset|varchar|datetimeoffset|datetimeoffset|Varchar|  
 |time|varchar|time|time|Varchar|  

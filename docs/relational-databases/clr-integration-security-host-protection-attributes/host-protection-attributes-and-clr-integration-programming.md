@@ -3,11 +3,9 @@ title: Programmazione dell'integrazione con CLR e attributi di protezione host |
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +20,12 @@ caps.latest.revision: 28
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8c844f2f5a3491c7eea71b6d3ffab7efff254a97
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4230a545122968a6b87005f4d10ad8f72ce03df2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921251"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699242"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Attributi di protezione host e programmazione dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +37,9 @@ ms.locfileid: "32921251"
   
 -   **ExternalProcessMgmt**, che indica se l'API espone un modo per controllare il processo host.  
   
- Sulla base di tali attributi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica un elenco di attributi di protezione host non consentiti nell'ambiente host attraverso la sicurezza da accesso di codice. I requisiti di autorità di certificazione vengono specificati da uno dei tre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di autorizzazioni: **provvisoria**, **EXTERNAL_ACCESS**, o **UNSAFE**. Uno dei tre livelli di sicurezza viene specificato quando l'assembly viene registrato nel server, utilizzando il **CREATE ASSEMBLY** istruzione. L'esecuzione di codice all'interno di **provvisoria** o **EXTERNAL_ACCESS** set di autorizzazioni necessario evitare alcuni tipi o membri che hanno il **System.Security.Permissions.HostProtectionAttribute** attributo applicato. Per ulteriori informazioni, vedere [creazione di un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) e [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
+ Sulla base di tali attributi, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specifica un elenco di attributi di protezione host non consentiti nell'ambiente host attraverso la sicurezza da accesso di codice. I requisiti di autorità di certificazione vengono specificati da uno dei tre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di autorizzazioni: **provvisoria**, **EXTERNAL_ACCESS**, o **UNSAFE**. Uno dei tre livelli di sicurezza viene specificato quando l'assembly viene registrato nel server, usando il **CREATE ASSEMBLY** istruzione. Codice in esecuzione all'interno di **provvisoria** o **EXTERNAL_ACCESS** set di autorizzazioni necessario evitare alcuni tipi o membri che hanno il **System.Security.Permissions.HostProtectionAttribute** attributo applicato. Per altre informazioni, vedere [creazione di un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md) e [restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   
- Il **HostProtectionAttribute** non è un'autorizzazione di sicurezza come costruisce un modo per migliorare l'affidabilità, in quanto identifica il codice specifico, tipi o metodi, che l'host possono essere disattivati. L'utilizzo del **HostProtectionAttribute** applica un modello di programmazione che consente di proteggere la stabilità dell'host.  
+ Il **HostProtectionAttribute** non è un'autorizzazione di sicurezza come un modo per migliorare l'affidabilità, in quanto identifica codice specifico costruisce, tipi o metodi, che l'host possono essere disattivati. L'utilizzo del **HostProtectionAttribute** applica un modello di programmazione che consente di proteggere la stabilità dell'host.  
   
 ## <a name="host-protection-attributes"></a>Attributi di protezione host  
  Gli attributi di protezione host identificano i tipi o i membri non inclusi nel modello di programmazione host e rappresentano i livelli di pericolo per l'affidabilità, riportati di seguito in ordine crescente di gravità:  
@@ -52,33 +50,33 @@ ms.locfileid: "32921251"
   
 -   Possono determinare la destabilizzazione del processo del server stesso.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non consente l'utilizzo di un tipo o membro che dispone di un **HostProtectionAttribute** che specifica un **System.Security.Permissions.HostProtectionResource** con un valore di enumerazione  **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**,  **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **sincronizzazione**, o **interfacciautente**. In questo modo si impedisce agli assembly di chiamare membri che attivano la condivisione dello stato, eseguono la sincronizzazione, possono determinare una perdita di risorse al termine del processo o compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disallows the use of a type or member that has a **HostProtectionAttribute** that specifies a **System.Security.Permissions.HostProtectionResource** enumeration with a value of **ExternalProcessMgmt**, **ExternalThreading**, **MayLeakOnAbort**, **SecurityInfrastructure**, **SelfAffectingProcessMgmnt**, **SelfAffectingThreading**, **SharedState**, **Synchronization**, or **UI**. In questo modo si impedisce agli assembly di chiamare membri che attivano la condivisione dello stato, eseguono la sincronizzazione, possono determinare una perdita di risorse al termine del processo o compromettere l'integrità del processo di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="disallowed-types-and-members"></a>Tipi e membri non consentiti  
- Gli argomenti seguenti identificano i tipi e membri i cui **HostProtectionResource** valori non sono consentiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Gli argomenti seguenti identificano i tipi e i membri il cui **HostProtectionResource** valori non sono consentiti da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Gli elenchi presenti in questi argomenti sono stati generati dagli assembly supportati.  Per ulteriori informazioni, vedere [librerie di .NET Framework supportata](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Gli elenchi presenti in questi argomenti sono stati generati dagli assembly supportati.  Per altre informazioni, vedere [librerie di .NET Framework supportata](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
- [Tipi non consentiti e i membri di Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
+ [Tipi e membri non consentiti in Microsoft.VisualBasic.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-microsoft-visualbasic-dll.md)  
  Vengono elencati i tipi e i membri di Microsoft.VisualBasic.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
- [Tipi non consentiti e i membri in mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
+ [Tipi e membri non consentiti in mscorlib.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)  
  Elenca i tipi e i membri in mscorlib.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
- [Tipi non consentiti e i membri in System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
+ [Tipi e membri non consentiti in System.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)  
  Elenca i tipi e i membri in System.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
- [Tipi non consentiti e i membri in System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
+ [Tipi e membri non consentiti in System.Data.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)  
  Elenca i tipi e i membri in System.Data.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
- [Tipi non consentiti e i membri in System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
+ [Tipi e membri non consentiti in System.Core.dll](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
  Elenca i tipi e i membri in System.Core.dll, i cui valori degli attributi di protezione host non sono consentiti.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Sicurezza di accesso di codice dell'integrazione CLR](../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
  [Restrizioni del modello di programmazione integrazione CLR](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   
- [Creazione di un Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+ [Creazione di un assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
   
   

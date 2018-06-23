@@ -4,7 +4,6 @@ ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-api
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: ''
@@ -19,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6a846851ac4558c3b39bd821f32f32c20a0993f2
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1228481d34256568947f9bc85ea2251f31f07db8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947236"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35696792"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  È possibile utilizzare **SQLColAttribute** per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata **SQLColAttribute** su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna set di risultati come parte dell'esecuzione dell'istruzione, pertanto la chiamata di **SQLColAttribute** dopo il completamento della **SQLExecute** o  **SQLExecDirect** non comporta un round trip del server.  
+  È possibile utilizzare **SQLColAttribute** per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata **SQLColAttribute** su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna set di risultati come parte dell'esecuzione dell'istruzione, pertanto la chiamata **SQLColAttribute** dopo il completamento della **SQLExecute** o  **SQLExecDirect** non comporta un round trip del server.  
   
 > [!NOTE]  
 >  Gli attributi di identificazione di colonna ODBC non sono disponibili in tutti i set di risultati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -102,21 +101,21 @@ ms.locfileid: "32947236"
  L'identificatore SQL_DESC_TYPE_NAME del campo di descrizione esistente viene utilizzato per indicare il nome del tipo definito dall'utente. Il campo SQL_DESC_TYPE per una colonna con tipo definito dall'utente è SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Supporto di SQLColAttribute per le caratteristiche avanzate di data e ora  
- Per i valori restituiti per i tipi di data/ora, vedere la sezione "Informazioni restituite nei campi IRD" in [metadati per parametri e risultato](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Per i valori restituiti per i tipi di data/ora, vedere la sezione "Informazioni restituite nei campi IRD" in [metadati per parametri e risultati](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Per ulteriori informazioni, vedere [data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni, vedere [data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Supporto di SQLColAttribute per tipi CLR definiti dall'utente di grandi dimensioni  
- **SQLColAttribute** supporta grandi CLR tipi definiti dall'utente (UDT). Per ulteriori informazioni, vedere [Large CLR User-Defined tipi & #40; ODBC & #41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ **SQLColAttribute** supporta grandi CLR tipi definiti dall'utente (UDT). Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Supporto di SQLColAttribute per colonne di tipo sparse  
- Il nuovo campo implementazione riga IRD (descrittore), SQL_CA_SS_IS_COLUMN_SET, per determinare se una colonna è una query SQLColAttribute un **column_set** colonna.  
+ SQLColAttribute esegue una query il nuovo campo implementazione riga IRD (descrittore), SQL_CA_SS_IS_COLUMN_SET, per determinare se una colonna è una **column_set** colonna.  
   
  Per altre informazioni, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Funzione SQLColAttribute](http://go.microsoft.com/fwlink/?LinkId=59334)   
  [Dettagli di implementazione di API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [Funzione SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
+ [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)  
   
   

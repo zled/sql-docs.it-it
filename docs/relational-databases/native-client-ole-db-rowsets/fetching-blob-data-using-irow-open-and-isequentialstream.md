@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3716c9eedab9105a9671c296d2f55aaa3c624528
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b865e3a5d5471e1dc638c321c64636b72469f548
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32949256"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35699482"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Recupero di dati BLOB mediante IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "32949256"
 
   **IRow:: Open** supporta solo i tipi DBGUID_STREAM e DBGUID_NULL di oggetti da aprire.  
   
- La funzione seguente utilizza **IRow:: Open** e **ISequentialStream** per recuperare i dati di grandi dimensioni.  
+ La funzione seguente utilizza **IRow:: Open** e **ISequentialStream** per recuperare dati di grandi dimensioni.  
   
 ```  
 void InitializeAndExecuteCommand()  
@@ -88,6 +87,6 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
  Dati di grandi dimensioni possono essere associati o recuperati utilizzando il **ISequentialStream** interfaccia. Per le colonne associate l'impostazione del flag di stato DBSTATUS_S_TRUNCATED consente di indicare se i dati vengono troncati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Recupero dati BLOB tramite IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
+ [Recupero di dati BLOB tramite IRow](http://msdn.microsoft.com/library/badbd6ac-20aa-4891-a14f-48d38e7f30de)  
   
   

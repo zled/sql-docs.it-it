@@ -1,0 +1,43 @@
+---
+title: Opzione di configurazione del server filestream access level | Microsoft Docs
+ms.custom: ''
+ms.date: 06/14/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], access level
+- filestream access level
+ms.assetid: b88f6ff2-795e-4730-bfb8-dbc6a958f2ad
+caps.latest.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 1d0296017c4ed64738b73d4d4fda9aaf55b11572
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36064084"
+---
+# <a name="filestream-access-level-server-configuration-option"></a>Opzione di configurazione del server filestream access level
+  Utilizzare l'opzione filestream_access_level per modificare il livello di accesso di FILESTREAM per l'istanza corrente di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+> [!NOTE]  
+>  Prima che questa opzione abbia effetto, è necessario abilitare le impostazioni dell'amministrazione di Windows per FILESTREAM. È possibile abilitare queste impostazioni durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oppure tramite Gestione configurazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+  
+|valore|Definizione|  
+|-----------|----------------|  
+|0|Disabilita il supporto di FILESTREAM per l'istanza corrente.|  
+|1|Abilita FILESTREAM per l'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|2|Abilita l'accesso tramite flusso [!INCLUDE[tsql](../../includes/tsql-md.md)] e Win32 per FILESTREAM.|  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Configurazione del Motore di database - Filestream](../../sql-server/install/database-engine-configuration-filestream.md)   
+ [Abilitare e configurare FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)  
+  
+  

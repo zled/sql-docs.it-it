@@ -3,11 +3,9 @@ title: La modifica dei dati di tipo definito dall'utente | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -34,19 +32,19 @@ caps.latest.revision: 14
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 754687e8fd100950b851f50d34e14aa968da37dc
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 3eeab65950cf19e967ad9bb0fbd082a879cead8a
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32920746"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702072"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Utilizzo di tipi definiti dall'utente, la modifica dei dati di tipo definito dall'utente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[tsql](../../includes/tsql-md.md)] non fornisce una sintassi specifica per l'istruzione INSERT, UPDATE o DELETE quando si modificano i dati nelle colonne con tipo definito dall'utente (UDT). Le funzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST o CONVERT vengono utilizzate per eseguire il cast dei tipi di dati nativi al tipo UDT.  
   
 ## <a name="inserting-data-in-a-udt-column"></a>Inserimento di dati in una colonna con tipo definito dall'utente  
- Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] consentono di inserire tre righe di dati di esempio nel **punti** tabella. Il **punto** tipo di dati è costituito da X valori integer e Y che sono esposte come proprietà del tipo in questione. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast delimitato da virgole valori X e Y per il **punto** tipo. Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa per il **punto** tipo e la terza istruzione utilizza la funzione CAST:  
+ I seguenti [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzioni inseriscono tre righe di dati di esempio nel **punti** tabella. Il **punto** tipo di dati è costituito da X valori integer e Y che sono esposte come proprietà del tipo in questione. È necessario utilizzare la funzione CAST o CONVERT per eseguire il cast di valori delimitati da virgole dei valori X e Y per il **punto** tipo. Le prime due istruzioni utilizzano la funzione CONVERT per convertire un valore stringa per il **punto** tipo e la terza istruzione utilizza la funzione CAST:  
   
 ```  
 INSERT INTO dbo.Points (PointValue) VALUES (CONVERT(Point, '3,4'));  
@@ -61,7 +59,7 @@ INSERT INTO dbo.Points (PointValue) VALUES (CAST ('1,99' AS Point));
 SELECT ID, PointValue FROM dbo.Points  
 ```  
   
- Per visualizzare l'output visualizzato in un formato leggibile, chiamare il **ToString** metodo il **punto** UDT, che converte il valore nella relativa rappresentazione di stringa.  
+ Per visualizzare l'output visualizzato in un formato leggibile, chiamare il **ToString** metodo per il **punto** tipo definito dall'utente, che converte il valore nella relativa rappresentazione di stringa.  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -135,7 +133,7 @@ SELECT @PointValue.ToString() AS PointValue;
  La differenza tra l'utilizzo di SELECT e di SET per l'assegnazione delle variabili sta nel fatto che SELECT consente di assegnare più variabili in un'istruzione SELECT, mentre la sintassi di SET richiede che ogni assegnazione di variabile contenga la relativa istruzione SET.  
   
 ## <a name="comparing-data"></a>Confronto dei dati  
- È possibile utilizzare gli operatori di confronto per confrontare i valori del tipo definito dall'utente se è stata impostata la **IsByteOrdered** proprietà **true** quando si definisce la classe. Per ulteriori informazioni, vedere [la creazione di un tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
+ È possibile utilizzare gli operatori di confronto per confrontare i valori del tipo definito dall'utente se è stato impostato il **IsByteOrdered** proprietà **true** quando si definisce la classe. Per altre informazioni, vedere [creazione di un tipo definito dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types.md).  
   
 ```  
 SELECT ID, PointValue.ToString() AS Points   
@@ -143,7 +141,7 @@ FROM dbo.Points
 WHERE PointValue > CONVERT(Point, '2,2');  
 ```  
   
- È possibile confrontare i valori interni dell'UDT indipendentemente dal valore di **IsByteOrdered** impostazione se i valori stessi sono confrontabili. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di selezionare le righe in cui X è maggiore di Y:  
+ È possibile confrontare i valori interni del tipo in questione indipendentemente dal valore di **IsByteOrdered** impostazione se i valori stessi sono confrontabili. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di selezionare le righe in cui X è maggiore di Y:  
   
 ```  
 SELECT ID, PointValue.ToString() AS PointValue   
@@ -162,9 +160,9 @@ WHERE PointValue = @ComparePoint;
 ```  
   
 ## <a name="invoking-udt-methods"></a>Chiamata dei metodi UDT  
- È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **punto** classe contiene tre metodi, **distanza**, **DistanceFrom**, e **DistanceFromXY**. Per i listati di codice la definizione di questi tre metodi, vedere [codifica di tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ È anche possibile richiamare i metodi definiti nel tipo definito dall'utente in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il **punto** classe contiene tre metodi **distanza**, **DistanceFrom**, e **DistanceFromXY**. Per i listati di codice la definizione di questi tre metodi, vedere [codifica di tipi](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
   
- Nell'esempio [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione chiama il **PointValue. Distance** metodo:  
+ I seguenti [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione chiama il **PointValue. Distance** metodo:  
   
 ```  
 SELECT ID, PointValue.X AS [Point.X],   
@@ -209,7 +207,7 @@ PointValue.DistanceFromXY(1, 99) AS DistanceFromXY
 FROM dbo.Points  
 ```  
   
- Il set di risultati è identico di **DistanceFrom** metodo.  
+ Il set di risultati è lo stesso come il **DistanceFrom** metodo.  
   
 ## <a name="updating-data-in-a-udt-column"></a>Aggiornamento dei dati in una colonna con tipo definito dall'utente  
  Per aggiornare i dati in una colonna con tipo definito dall'utente, utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] UPDATE. Per aggiornare lo stato dell'oggetto è anche possibile utilizzare un metodo del tipo definito dall'utente. L'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente consente di aggiornare una singola riga nella tabella:  
@@ -228,7 +226,7 @@ SET PointValue.Y = 99
 WHERE ID = 3  
 ```  
   
- Se il tipo definito dall'utente è stato definito con l'ordine dei byte impostato per **true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] possibile valutare la colonna di tipo definito dall'utente in una clausola WHERE.  
+ Se il tipo definito dall'utente è stato definito con ordine dei byte impostato per **true**, [!INCLUDE[tsql](../../includes/tsql-md.md)] possibile valutare la colonna di tipo definito dall'utente in una clausola WHERE.  
   
 ```  
 UPDATE dbo.Points  
@@ -270,6 +268,6 @@ WHERE ID = 2
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Utilizzo di tipi definiti dall'utente in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
+ [Uso di tipi definiti dall'utente in SQL Server](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)  
   
   

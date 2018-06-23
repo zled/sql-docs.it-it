@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e64f445788e35563120c357b93395fcfede50410
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: edfe93e41d5a9398649550b10b11f6db64ca7afc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32946296"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695772"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +50,7 @@ RETCODE bcp_moretext (
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *cbData*  
- È il numero di byte di dati vengono copiati in SQL Server da dati di riferimento di *pData*. Un valore di SQL_NULL_DATA indica NULL.  
+ È il numero di byte di dati copiati in SQL Server dai dati di cui fanno riferimento *pData*. Un valore di SQL_NULL_DATA indica NULL.  
   
  *pData*  
  Puntatore al blocco di dati Long a lunghezza variabile supportati da inviare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -60,20 +58,20 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
+## <a name="remarks"></a>Remarks  
  Questa funzione può essere utilizzata in combinazione con [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) e [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long, copiare i valori di dati a lunghezza variabile a SQL Server in un numero di blocchi più piccoli. **bcp_moretext** può essere usato con colonne che dispongono dei seguenti tipi di dati di SQL Server: **testo**, **ntext**, **immagine**, **varchar (max)** , **nvarchar (max)**, **varbinary (max)**, tipo definito dall'utente (UDT) e XML. **bcp_moretext** non supporto le conversioni di dati, i dati forniti devono corrispondere al tipo di dati della colonna di destinazione.  
   
- Se **bcp_bind** viene chiamato con un valore non NULL *pData* parametro per i tipi di dati supportati da **bcp_moretext**, **bcp_sendrow** invia il valore di tutti i dati, indipendentemente dalla lunghezza. Se, tuttavia, **bcp_bind** ha un valore NULL *pData* parametro per i tipi di dati supportati, **bcp_moretext** può essere utilizzato per copiare i dati immediatamente dopo una corretta restituzione da **bcp_sendrow** che indica che qualsiasi colonna associata contenente dati presenti è stati elaborati.  
+ Se **bcp_bind** viene chiamato con un valore non NULL *pData* parametro per i tipi di dati supportati da **bcp_moretext**, **bcp_sendrow** invia l'intero valore dei dati, indipendentemente dalla lunghezza. Se, tuttavia **bcp_bind** ha un valore NULL *pData* parametro per i tipi di dati supportati **bcp_moretext** può essere usato per copiare i dati immediatamente dopo una corretta restituzione da **bcp_sendrow** che indica che qualsiasi colonna associata contenente dati presenti è stati elaborati.  
   
- Se si utilizza **bcp_moretext** per l'invio di una colonna di tipo di dati supportati in una riga, è necessario inoltre utilizza per inviare tutte le altre colonne di tipo di dati supportati nella riga. Non è possibile ignorare alcuna colonna. I tipi di dati supportati sono SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT e SQLXML. Anche SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY e SQLVARBINARY rientrano in questa categoria se la colonna è di tipo varchar(max), nvarchar(max) o varbinary(max), rispettivamente.  
+ Se si utilizza **bcp_moretext** per l'invio di una colonna di tipo di dati supportati in una riga, è necessario anche utilizzarlo per inviare tutte le altre colonne di tipo di dati supportati nella riga. Non è possibile ignorare alcuna colonna. I tipi di dati supportati sono SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT e SQLXML. Anche SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY e SQLVARBINARY rientrano in questa categoria se la colonna è di tipo varchar(max), nvarchar(max) o varbinary(max), rispettivamente.  
   
- Una chiamata a **bcp_bind** o [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) imposta la lunghezza totale di tutte le parti di dati da copiare nella colonna di SQL Server. Tentativo di invio a SQL Server più byte rispetto a quanto specificato nella chiamata a **bcp_bind** o **bcp_collen** genera un errore. Questo errore può essere causato, ad esempio, in un'applicazione che ha utilizzato **bcp_collen** per impostare la lunghezza dei dati disponibili per un Server SQL **testo** colonna 4500, quindi chiamare **bcp_moretext** cinque volte durante il indicando in ogni chiamata che i dati nel buffer di lunghezza pari a 1000 byte.  
+ Una chiamata a **bcp_bind** oppure [bcp_collen](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) imposta la lunghezza totale di tutte le parti di dati da copiare nella colonna di SQL Server. Un tentativo di inviare più byte rispetto a quanto specificato nella chiamata a SQL Server **bcp_bind** oppure **bcp_collen** genera un errore. Questo errore può essere causato, ad esempio, in un'applicazione che ha utilizzato **bcp_collen** per impostare la lunghezza dei dati disponibili per un Server SQL **testo** colonna a 4500, quindi chiamato **bcp_moretext** cinque volte durante il indicando in ogni chiamata che i dati di lunghezza del buffer pari a 1000 byte.  
   
- Se una riga copiata contiene più di una colonna di tipo long, a lunghezza variabile, **bcp_moretext** invia i dati al valore più basso numero ordinale di colonna, seguito dal successivo più basso numerazione ordinale di colonna e così via. Una corretta impostazione della lunghezza totale dei dati previsti è importante. Non è possibile segnalare, al di fuori dell'impostazione della lunghezza, che tutti i dati per una colonna sono stati ricevuti dalla copia bulk.  
+ Se una riga copiata contiene più di una colonna a lunghezza variabile lunga **bcp_moretext** invia i dati a quello minimo numero esegue un confronto ordinale di colonna, seguita da quella successiva più basso numerato esegue un confronto ordinale di colonna e così via. Una corretta impostazione della lunghezza totale dei dati previsti è importante. Non è possibile segnalare, al di fuori dell'impostazione della lunghezza, che tutti i dati per una colonna sono stati ricevuti dalla copia bulk.  
   
- Quando **var(max)** i valori vengono inviati al server tramite bcp_sendrow e bcp_moretext, non è necessario chiamare bcp_collen per impostare la lunghezza della colonna. Invece, solo per questi tipi, il valore termina con bcp_sendrow chiamata con una lunghezza pari a zero.  
+ Quando si **var(max)** valori vengono inviati al server tramite bcp_sendrow e bcp_moretext, non è necessario chiamare bcp_collen per impostare la lunghezza della colonna. Al contrario, solo per questi tipi, il valore termina con bcp_sendrow chiamante con una lunghezza pari a zero.  
   
- Un'applicazione chiama in genere **bcp_sendrow** e **bcp_moretext** all'interno di cicli di inviare un numero di righe di dati. Di seguito è riportata una descrizione di come eseguire questa operazione per una tabella che contiene due **testo** colonne:  
+ Un'applicazione chiama in genere **bcp_sendrow** e **bcp_moretext** all'interno di cicli per inviare un numero di righe di dati. Di seguito è riportata una descrizione di come eseguire questa operazione per una tabella che contiene due **testo** colonne:  
   
 ```  
 while (there are still rows to send)  

@@ -1,0 +1,57 @@
+---
+title: MSSQLSERVER_7904 | Microsoft Docs
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- 7904 (Database Engine error)
+ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
+caps.latest.revision: 16
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 754b32656fc885fde2403297c818b5476d58f395
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36171436"
+---
+# <a name="mssqlserver7904"></a>MSSQLSERVER_7904
+    
+## <a name="details"></a>Dettagli  
+  
+|||  
+|-|-|  
+|Nome prodotto|SQL Server|  
+|ID evento|7904|  
+|Origine evento|MSSQLSERVER|  
+|Componente|SQLEngine|  
+|Nome simbolico|DBCC2_FS_MISSING_FILE|  
+|Testo del messaggio|Errore di tabella: impossibile trovare il file FileStream per l'ID di colonna C_ID, ROWGUID RG_ID, nell'oggetto con ID O_ID, ID di indice I_ID, ID di partizione PN_ID.|  
+  
+## <a name="explanation"></a>Spiegazione  
+ Un valore di colonna in una partizione è privo di un file FILESTREAM corrispondente nella relativa directory di colonne FILESTREAM.  
+  
+## <a name="user-action"></a>Azione dell'utente  
+  
+### <a name="look-for-hardware-failure"></a>Individuare errori hardware  
+ Eseguire gli strumenti di diagnostica hardware e risolvere eventuali problemi. Esaminare inoltre il registro di sistema di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows e il registro delle applicazioni, nonché il log degli errori di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per stabilire se l'errore è dovuto a un problema hardware. Risolvere tutti i problemi relativi all'hardware indicati nei log.  
+  
+ In caso di problemi persistenti che provocano il danneggiamento dei dati, provare a sostituire i vari componenti hardware per isolare il problema. Verificare che nel sistema non sia abilitata la memorizzazione nella cache in scrittura sul controller del disco. Se si ritiene che il problema sia dovuto alla memorizzazione nella cache in scrittura, rivolgersi al fornitore dell'hardware.  
+  
+ Infine, potrebbe essere conveniente passare a un nuovo sistema hardware. A tale scopo può essere necessario riformattare le unità disco e reinstallare il sistema operativo.  
+  
+### <a name="restore-from-backup"></a>Eseguire un ripristino da backup  
+ Se il problema non è correlato all'hardware ed è disponibile un backup valido noto, ripristinare il database dal backup.  
+  
+### <a name="run-dbcc-checkdb"></a>Eseguire DBCC CHECKDB  
+ Non applicabile. Impossibile correggere questo errore. Se non è possibile ripristinare il database da un backup, contattare il Servizio Supporto Tecnico Clienti [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+  
+  

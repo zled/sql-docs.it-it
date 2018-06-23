@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-extensions-bulk-copy-functions
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -24,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 32f20153d427012c74e3a58c4e83954fab94d237
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6486dcf5d77ae1543c85947e2f62efed625979fc
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32944736"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697762"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,15 +54,15 @@ RETCODE bcp_writefmt (
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Osservazioni  
- Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) definiscono il formato del file di dati. **bcp_writefmt** Salva questa definizione nel file di cui fanno riferimento *szFormatFile*. Per ulteriori informazioni, vedere [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
+## <a name="remarks"></a>Remarks  
+ Il file di formato specifica il formato dei dati di un file di dati creato dalla copia bulk. Le chiamate a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) definiscono il formato del file di dati. **bcp_writefmt** Salva questa definizione nel file di cui fanno riferimento *szFormatFile*. Per altre informazioni, vedere [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
  Per ulteriori informazioni sulla struttura del **bcp** i file di formato di dati, vedere [importazione ed esportazione Bulk di dati tramite l'utilità bcp &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Per caricare un file di formato salvato, utilizzare [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md).  
   
 > [!NOTE]  
->  Il file di formato generato dalla **bcp_writefmt** è supportato solo dalle versioni di **bcp** utilità distribuita con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 e versioni successive.  
+>  Il file di formato generato dalla **bcp_writefmt** è supportato solo dalle versioni del **bcp** utilità distribuita con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione 7.0 e versioni successive.  
   
 ## <a name="example"></a>Esempio  
   

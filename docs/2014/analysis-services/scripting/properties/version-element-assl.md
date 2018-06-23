@@ -1,0 +1,73 @@
+---
+title: Elemento Version (ASSL) | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+- docset-sql-devref
+ms.tgt_pltfrm: ''
+ms.topic: reference
+api_name:
+- Version Element
+api_location:
+- http://schemas.microsoft.com/analysisservices/2003/engine
+topic_type:
+- apiref
+f1_keywords:
+- Version
+helpviewer_keywords:
+- Version element
+ms.assetid: fb26fe5d-de40-443b-a8bc-031c950552e6
+caps.latest.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: d1d6f87dbdfec7af7b330cc24c5d8f227eb7a75c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36069493"
+---
+# <a name="version-element-assl"></a>Elemento Version (ASSL)
+  Contiene il numero di versione di sola lettura dell'istanza di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] rappresentato dal [Server](../objects/server-element-assl.md) elemento.  
+  
+## <a name="syntax"></a>Sintassi  
+  
+```xml  
+  
+<Server>  
+      ...  
+      <Version>...</Version>  
+   ...  
+</Server>  
+```  
+  
+## <a name="element-characteristics"></a>Caratteristiche elemento  
+  
+|Caratteristica|Description|  
+|--------------------|-----------------|  
+|Tipo di dati e lunghezza|String|  
+|Valore predefinito|None|  
+|Cardinalità|0-1: elemento facoltativo che può ricorrere una sola volta.|  
+  
+## <a name="element-relationships"></a>Relazioni elemento  
+  
+|Relazione|Elemento|  
+|------------------|-------------|  
+|Elemento padre|[Server](../objects/server-element-assl.md)|  
+|Elementi figlio|None|  
+  
+## <a name="remarks"></a>Remarks  
+ L'elemento `Version` descrive quale versione di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] è installata.  
+  
+ L'elemento che corrisponde al padre di `Version` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Server>.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Elemento Edition &#40;ASSL&#41;](edition-element-assl.md)   
+ [Proprietà &#40;ASSL&#41;](properties-assl.md)  
+  
+  

@@ -3,11 +3,9 @@ title: Accesso alla transazione corrente | Documenti Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +17,18 @@ caps.latest.revision: 17
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b157a9c72533d6c92f71ddc93e7c8023eab6edc1
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 01f0f1513d2b627f0097005487bae4e86f2507e8
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32919996"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695282"
 ---
 # <a name="accessing-the-current-transaction"></a>Accesso alla transazione corrente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Se una transazione è attiva nel punto in cui codice common language runtime (CLR) in esecuzione in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene immesso, la transazione viene esposta tramite il **Transactions** classe. Il **Current** proprietà viene utilizzata per accedere alla transazione corrente. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni di database, ADO.NET controlla **Current** automaticamente quando il **Connection** metodo viene chiamato e integra in modo trasparente la connessione in tale transazione (a meno che il **Integra** parola chiave è impostata su false nella stringa di connessione).  
+  Se è attiva nel punto in cui codice common language runtime (CLR) in esecuzione in una transazione [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene immesso, la transazione viene esposta tramite il **Transactions** classe. Il **Current** proprietà viene utilizzata per accedere alla transazione corrente. Nella maggior parte dei casi non è necessario accedere in modo esplicito alla transazione. Per le connessioni di database, ADO.NET controlla **Current** automaticamente quando il **relativo** metodo viene chiamato e integra in modo trasparente la connessione in tale transazione (a meno che non la **Integra** (parola chiave) è impostata su false nella stringa di connessione).  
   
- È possibile utilizzare il **transazione** oggetto direttamente negli scenari seguenti:  
+ Si potrebbe voler usare il **transazione** oggetto direttamente negli scenari seguenti:  
   
 -   Se si desidera integrare una risorsa che non esegue l'integrazione automatica o che per qualche motivo non è stata integrata durante l'inizializzazione.  
   
@@ -49,7 +47,7 @@ ms.locfileid: "32919996"
   
 -   La funzione o procedura gestita può restituire un valore utilizzando un parametro di output. La chiamata [!INCLUDE[tsql](../../includes/tsql-md.md)] routine può controllare il valore restituito e, se necessario, eseguire **ROLLBACK TRANSACTION**.  
   
--   La funzione o procedura gestita può generare un'eccezione personalizzata. La chiamata [!INCLUDE[tsql](../../includes/tsql-md.md)] procedura può intercettare l'eccezione generata dalla procedura gestita o funzione in un blocco try/catch ed eseguire **ROLLBACK TRANSACTION**.  
+-   La funzione o procedura gestita può generare un'eccezione personalizzata. La chiamata [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure può rilevare l'eccezione generata dalla procedura gestita o funzione in un blocco try/catch ed eseguire **ROLLBACK TRANSACTION**.  
   
 -   La funzione o procedura gestita può annullare la transazione corrente chiamando il **Transaction. Rollback** metodo se viene soddisfatta una determinata condizione.  
   
@@ -70,7 +68,7 @@ The context transaction which was active before entering user defined routine, t
  Anche questa eccezione è prevista e, per continuare l'esecuzione è necessario un blocco try/catch intorno all'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] che esegue l'azione che attiva il trigger. Nonostante le due eccezioni generate, viene eseguito il rollback della transazione e le modifiche non vengono sottoposte a commit.  
   
 ### <a name="example"></a>Esempio  
- Di seguito è riportato un esempio di una transazione in fase di rollback da una procedura gestita mediante il **Transaction. Rollback** metodo. Si noti il blocco try/catch intorno il **Transaction. Rollback** metodo nel codice gestito. Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un assembly e una stored procedure gestita. Tenere presente che il **uspRollbackFromProc EXEC** viene inserito in un blocco try/catch, in modo che viene rilevata l'eccezione generata quando la procedura gestita venga completata.  
+ Ecco un esempio di una transazione in corso il rollback da una procedura gestita usando il **Transaction. Rollback** metodo. Si noti il blocco try/catch intorno il **Transaction. Rollback** metodo nel codice gestito. Lo script [!INCLUDE[tsql](../../includes/tsql-md.md)] crea un assembly e una stored procedure gestita. Tenere presente che il **uspRollbackFromProc EXEC** viene inserito in un blocco try/catch, in modo che viene rilevata l'eccezione generata quando la procedura gestita venga completata.  
   
 ```csharp  
 using System;  
@@ -207,6 +205,6 @@ Go
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le transazioni e integrazione con CLR](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
+ [Integrazione con CLR e transazioni](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

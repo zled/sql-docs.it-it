@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: cb022814-a86b-425d-9b24-eaac20ab664e
@@ -16,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 76b1b344212a464e47ce49396aa517ec01b32aa7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: f4d5da9341be7e34b9aed38ed2de5fdbf7e1b7e0
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947486"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697962"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>Inviare dati BLOB a SQL Server utilizzando IROWSETFASTLOAD e ISEQUENTIALSTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "32947486"
   
  Poiché DBTYPE_IUNKNOWN viene specificato come tipo di dati nell'associazione, deve corrispondere al tipo della colonna o del parametro di destinazione. Le conversioni non sono possibili in caso di invio di dati tramite ISequentialStream dalle interfacce del set di righe. Per i parametri, è consigliabile non utilizzare ICommandWithParameters::SetParameterInfo e specificare un tipo diverso per forzare una conversione. Questa operazione richiederebbe la memorizzazione nella cache in locale di tutti i dati BLOB da parte del provider, per convertirli prima di eseguire l'invio a SQL Server. La memorizzazione nella cache di un oggetto BLOB di grandi dimensioni e la conversione dello stesso in locale non forniscono un buon livello di prestazioni.  
   
- Per ulteriori informazioni, vedere [BLOB e gli oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
+ Per altre informazioni, vedere [BLOB e gli oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md).  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  

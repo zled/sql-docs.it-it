@@ -1,10 +1,11 @@
 ---
-title: Livelli di isolamento (OLE DB) | Documenti Microsoft
+title: I livelli di isolamento (OLE DB) | Documenti Microsoft
 description: Livelli di isolamento (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-transactions
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -18,15 +19,17 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 0774a7743cc9993b05f1470be31faf482147d282
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: b015a27fccfdad7b9f20bdac16a3a587f0c026a5
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306770"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35690014"
 ---
 # <a name="isolation-levels-ole-db"></a>Livelli di isolamento (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
+
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   I client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] possono controllare i livelli di isolamento delle transazioni per una connessione. Per controllare il livello di isolamento delle transazioni, viene utilizzato il Driver OLE DB per il consumer di SQL Server:  
   
@@ -34,14 +37,14 @@ ms.locfileid: "35306770"
   
      Il Driver OLE DB per impostazione predefinita di SQL Server per il livello è DBPROPVAL_TI_READCOMMITTED.  
   
--   Il *isoLevel* parametro il **ITransactionLocal:: StartTransaction** metodo per le transazioni locali di commit manuale.  
+-   Il *isoLevel* parametro del **ITransactionLocal:: StartTransaction** metodo per le transazioni locali di commit manuale.  
   
 -   Il *isoLevel* parametro del **ITransactionDispenser:: BeginTransaction** metodo per la coordinata MS DTC transazioni distribuite.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] consente accesso di sola lettura nel livello di isolamento di lettura dirty. Tutti gli altri livelli limitano la concorrenza applicando blocchi agli oggetti di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Poiché il client richiede livelli di concorrenza maggiori, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applica restrizioni superiori all'accesso simultaneo ai dati. Per mantenere il massimo livello di accesso simultaneo ai dati, il Driver OLE DB per il consumer di SQL Server deve controllare in modo intelligenze le richieste per livelli di concorrenza specifici.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il livello di isolamento dello snapshot. Per ulteriori informazioni, vedere [utilizzo dell'isolamento dello Snapshot](../../oledb/features/working-with-snapshot-isolation.md).  
+>  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] è stato introdotto il livello di isolamento dello snapshot. Per altre informazioni, vedere [utilizzo dell'isolamento dello Snapshot](../../oledb/features/working-with-snapshot-isolation.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Transazioni](../../oledb/ole-db-transactions/transactions.md)  

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-ole-db-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: af3f6047543563dddbf85fdb53f1f8d3fdaf33ea
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a93b97df3b7c20898f1a923c26f3965dbf91ff0d
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947026"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35697842"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Eseguire una copia bulk di dati mediante IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "32947026"
   
  Tramite il consumer viene inviata una notifica a SQLOLEDB della necessità di eseguire una copia bulk impostando su VARIANT_TRUE la proprietà SSPROP_ENABLEFASTLOAD specifica del provider SQLOLEDB. Con la proprietà impostata sull'origine dati, il consumer crea una sessione di SQLOLEDB. La nuova sessione consente al consumer di accedere a **IRowsetFastLoad**.  
   
- È disponibile un esempio completo che illustra l'uso di **IRowsetFastLoad** per la copia bulk dei record in una tabella. In questo esempio, vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
+ È disponibile un esempio completo che illustra l'uso del **IRowsetFastLoad** per la copia bulk dei record in una tabella. In questo esempio, vengono aggiunti 10 record alla tabella **IRFLTable**. È necessario creare la tabella **IRFLTable** nel database.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) pagina iniziale.  
+ In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) homepage.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -51,13 +50,13 @@ ms.locfileid: "32947026"
   
 3.  Creare una sessione che richiede il **IOpenRowset** interfaccia.  
   
-4.  Chiamare **IOpenRowset:: OPENROWSET** per aprire un set di righe che include tutte le righe dalla tabella (in cui dati non viene copiato tramite l'operazione di copia bulk).  
+4.  Chiamare **IOpenRowset:: OPENROWSET** per aprire un set di righe che include tutte le righe dalla tabella (in cui i dati viene copiato tramite l'operazione di copia bulk).  
   
-5.  Le associazioni necessarie e creare una funzione di accesso tramite **IAccessor:: CreateAccessor**.  
+5.  Effettuare le associazioni necessarie e creare una funzione di accesso usando **IAccessor:: CreateAccessor**.  
   
 6.  Configurare il buffer della memoria dal quale verranno copiati i dati nella tabella.  
   
-7.  Chiamare **IRowsetFastLoad:: InsertRow** per la copia bulk dei dati nella tabella.  
+7.  Chiamare **IRowsetFastLoad:: InsertRow** a copia bulk dei dati nella tabella.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio vengono aggiunti 10 record alla tabella IRFLTable. È necessario creare la tabella IRFLTable nel database. Questo esempio non è supportato in IA64.  

@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 dev_langs:
 - TSQL
@@ -21,28 +19,28 @@ caps.latest.revision: 56
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c4883867e93c1f8a9e782f1e0a70d8ca6f53160
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 83dbc743bc6c11e0ab6e197426f5012573b8badf
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32918796"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35694192"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestione degli assembly dell'integrazione con CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Il codice gestito viene compilato e quindi distribuito in unità denominate assembly. Un assembly viene compresso come DLL o file eseguibile (con estensione exe). Mentre un file eseguibile può essere eseguito in modo autonomo, una DLL deve essere ospitata in un'applicazione esistente. Gli assembly DLL gestiti possono essere caricati e ospitati da [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] richiede che si registri l'assembly in un database [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando l'istruzione CREATE ASSEMBLY, prima che possa essere caricato nel processo e usato. Gli assembly possono inoltre essere aggiornati a una versione più recente tramite l'istruzione ALTER ASSEMBLY o rimossi da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tramite l'istruzione DROP ASSEMBLY.  
   
- Informazioni assembly vengono archiviate nel **assembly_files** tabella del database in cui è stato installato l'assembly. Il **assembly_files** tabella contiene le colonne seguenti.  
+ Sono contenute informazioni sull'assembly di **Sys. assembly_files** tabella del database in cui è stato installato l'assembly. Il **Sys. assembly_files** tabella contiene le colonne seguenti.  
   
-|Colonna|Description|  
+|colonna|Description|  
 |------------|-----------------|  
 |assembly_id|Identificatore definito per l'assembly. Questo numero viene assegnato a tutti gli oggetti relativi allo stesso assembly.|  
-|name|Nome dell'oggetto .|  
-|file_id|Numero che identifica ogni oggetto, con il primo oggetto associato a un determinato **assembly_id** viene assegnato il valore di 1. Se più oggetti sono associati allo stesso **assembly_id**, quindi ogni successivo **file_id** valore viene incrementato di 1.|  
+|NAME|Nome dell'oggetto .|  
+|file_id|Numero che identifica ogni oggetto, con il primo oggetto associato con un determinato **assembly_id** viene assegnato il valore pari a 1. Se più oggetti sono associati allo stesso **assembly_id**, quindi ogni successivo **file_id** valore viene incrementato di 1.|  
 |content|Rappresentazione esadecimale dell'assembly o del file.|  
   
-## <a name="in-this-section"></a>Contenuto della sezione  
- [Creazione di un Assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
+## <a name="in-this-section"></a>Argomenti della sezione  
+ [Creazione di un assembly](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
  Viene descritta la creazione di assembly CLR SAFE, EXTERNAL_ACCESS e UNSAFE in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Modifica di un assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)  

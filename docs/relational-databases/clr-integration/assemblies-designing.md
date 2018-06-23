@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - designing assemblies [SQL Server]
@@ -18,12 +16,12 @@ caps.latest.revision: 29
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 33519a8494be8f6a062227b81999f58c4f053071
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 8607c326734f998ee536d884a57463765f7b67b2
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32923586"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695342"
 ---
 # <a name="assemblies---designing"></a>Assembly - progettazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +87,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API .NET Framework non consentite  
- Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API annotate con uno degli attributi **HostProtectionAttributes** non può essere chiamato dagli assembly SAFE ed EXTERNAL_ACCESS.  
+ Qualsiasi [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] API annotate con uno dei consentiti **HostProtectionAttributes** non può essere chiamato dagli assembly SAFE ed EXTERNAL_ACCESS.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -123,7 +121,7 @@ System.Configuration
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Assembly & #40; motore di Database & #41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
- [Sicurezza dell'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
+ [Gli assembly &#40;motore di Database&#41;](../../relational-databases/clr-integration/assemblies-database-engine.md)   
+ [Sicurezza per l'integrazione con CLR](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

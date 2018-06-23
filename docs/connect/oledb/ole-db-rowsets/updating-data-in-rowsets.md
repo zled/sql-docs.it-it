@@ -2,9 +2,10 @@
 title: L'aggiornamento dei dati nei set di righe | Documenti Microsoft
 description: L'aggiornamento dei dati nei set di righe usando il Driver OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-rowsets
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -20,17 +21,19 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 6ae4adba438d1465a572971021c82dd004eca211
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 009c6023dc1905ac724287790c1b26a4bfcf87d3
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35306360"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689904"
 ---
 # <a name="updating-data-in-rowsets"></a>Aggiornamento dei dati dei set di righe
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  Il Driver OLE DB per gli aggiornamenti di SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dati quando un consumer aggiorna un set di righe modificabile che contiene i dati. Viene creato un set di righe modificabile quando il consumer richiede il supporto per uno di **IRowsetChange** o **IRowsetUpdate** interfaccia.  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  Il Driver OLE DB per gli aggiornamenti di SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dati quando un consumer aggiorna un set di righe modificabile che contiene i dati. Viene creato un set di righe modificabile quando il consumer richiede il supporto per uno i **IRowsetChange** oppure **IRowsetUpdate** interfaccia.  
   
  Tutti i Driver OLE DB per l'utilizzo di set di righe modificabile con SQL Server [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursori per supportare il set di righe. La proprietà del set di righe DBPROP_LOCKMODE modifica il comportamento di controllo della concorrenza di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nei cursori e determina il comportamento di recupero delle righe del set di righe e di generazione degli errori di integrità dei dati nei set di righe aggiornabili.  
   
