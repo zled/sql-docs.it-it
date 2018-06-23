@@ -1,0 +1,56 @@
+---
+title: Aggiunta di un'enumerazione a un flusso di controllo | Documenti Microsoft
+ms.custom: ''
+ms.date: 08/22/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- adding enumerations
+- Foreach Loop containers
+- control flow [Integration Services], enumerations
+- repeating workflows
+- enumerations [Integration Services]
+ms.assetid: f212b5fb-3cc4-422e-9b7c-89eb769a812a
+caps.latest.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: 10d30541be42331b544882f8a8b85f75db7f230d
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36067238"
+---
+# <a name="add-enumeration-to-a-control-flow"></a>Aggiunta di un'enumerazione a un flusso di controllo
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] include il contenitore Ciclo Foreach, un elemento del flusso di controllo che semplifica l'integrazione di un costrutto di ciclo per l'enumerazione di file e oggetti nel flusso di controllo di un pacchetto. Per altre informazioni, vedere [Contenitore Ciclo Foreach](control-flow/foreach-loop-container.md).  
+  
+ Il contenitore Ciclo Foreach non offre funzionalità, ma solo una struttura in cui è possibile compilare un flusso di controllo ripetibile, nonché specificare e configurare un tipo di enumeratore. Per aggiungere funzionalità al contenitore Ciclo Foreach è necessario includervi almeno un'attività. Per altre informazioni, vedere [Attività di Integration Services](control-flow/integration-services-tasks.md).  
+  
+ Il contenitore Ciclo Foreach può includere un flusso di controllo con più attività e può includere altri contenitori. L'aggiunta di attività e contenitori a un contenitore Ciclo Foreach è analoga all'aggiunta di tali elementi a un pacchetto, con la differenza che è necessario trascinare attività e contenitori nel contenitore Ciclo Foreach anziché nel pacchetto. Se il contenitore Ciclo Foreach include più di un contenitore o attività, sarà possibile connettere tali elementi utilizzando vincoli di precedenza, come avviene nei pacchetti. Per altre informazioni, vedere [Vincoli di precedenza](control-flow/precedence-constraints.md).  
+  
+### <a name="to-implement-a-foreach-loop-container-in-a-control-flow"></a>Per implementare un contenitore Ciclo Foreach in un flusso di controllo  
+  
+1.  Aggiungere il contenitore Ciclo Foreach al pacchetto. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  ,  
+  
+2.  Aggiungere attività e contenitori al contenitore Ciclo Foreach. Per altre informazioni, vedere [aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)  
+  ,  
+  
+3.  Connettere le attività e i contenitori inclusi nel contenitore Ciclo Foreach tramite vincoli di precedenza. Per altre informazioni, vedere [Connessione di attività e contenitori tramite un vincolo di precedenza predefinito](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md).  
+  
+4.  Configurare il contenitore Ciclo Foreach. Per altre informazioni, vedere [Configurazione di un contenitore Ciclo Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Aggiunta o eliminazione di un'attività o un contenitore in un flusso di controllo](control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [Raggruppare o separare componenti](group-or-ungroup-components.md)   
+ [Vincoli di precedenza](control-flow/precedence-constraints.md)   
+ [Aggiunta di un'iterazione per un flusso di controllo](add-iteration-to-a-control-flow.md)   
+ [Flusso di controllo](control-flow/control-flow.md)  
+  
+  
