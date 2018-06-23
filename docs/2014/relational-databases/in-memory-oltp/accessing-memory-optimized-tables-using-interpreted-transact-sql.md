@@ -1,0 +1,69 @@
+---
+title: Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: ''
+ms.topic: article
+ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
+caps.latest.revision: 20
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+ms.openlocfilehash: 030b8563ac272b0594697048169ade487c2321bf
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36169212"
+---
+# <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Accesso alle tabelle con ottimizzazione per la memoria utilizzando codice Transact-SQL interpretato
+  Salvo poche eccezioni, è possibile accedere alle tabelle ottimizzate per la memoria usando qualsiasi query [!INCLUDE[tsql](../../includes/tsql-md.md)] o operazione DML (SELECT, INSERT, UPDATE o DELETE), batch ad hoc e moduli SQL quali stored procedure, funzioni con valori di tabella, trigger e viste.  
+  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato fa riferimento a batch o stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] diverse da stored procedure compilate in modo nativo. L'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato a tabelle ottimizzate per la memoria è denominato accesso di interoperabilità.  
+  
+ È inoltre possibile accedere alle tabelle con ottimizzazione per la memoria tramite una stored procedure compilata in modo nativo. Le stored procedure compilate in modo nativo sono consigliate in caso di operazioni OLTP critiche per le prestazioni.  
+  
+ L'accesso [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato è consigliato per questi scenari:  
+  
+-   Query ad hoc e attività amministrative.  
+  
+-   Query di report in cui in genere vengono utilizzati costrutti non disponibili in stored procedure compilate in modo nativo, ad esempio funzioni finestra.  
+  
+-   Per eseguire la migrazione di parti dell'applicazione critiche per le prestazioni a tabelle ottimizzate per la memoria, con modifiche minime al codice dell'applicazione o addirittura nessuna. È possibile che si ottengano dei miglioramenti delle prestazioni dalla migrazione delle tabelle. Se quindi si esegue la migrazione di stored procedure a stored procedure compilate in modo nativo, è possibile che si ottengano miglioramenti ulteriori.  
+  
+-   Quando un'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] non è disponibile per stored procedure compilate in modo nativo.  
+  
+ I costrutti [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti non sono supportati in stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretate mediante le quali si accede ai dati in una tabella ottimizzata per la memoria.  
+  
+|Area|Non supportato|  
+|----------|-----------------|  
+|Accesso a tabelle|TRUNCATE TABLE<br /><br /> MERGE (tabella ottimizzata per la memoria come destinazione)<br /><br /> Cursori Dynamic e Keyset (diventano automaticamente Static).<br /><br /> Accesso dai moduli CLR, utilizzando la connessione del contesto.<br /><br /> Riferimento a una tabella ottimizzata per la memoria da una vista indicizzata.|  
+|Tra database|Query tra database<br /><br /> Transazioni tra database<br /><br /> Server collegati|  
+  
+## <a name="table-hints"></a>Hint di tabella  
+ Per ulteriori informazioni sugli hint di tabella, vedere [Hint di tabella &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). L'isolamento SNAPSHOT è stato aggiunto per supportare [!INCLUDE[hek_2](../../includes/hek-2-md.md)].  
+  
+ Gli hint di tabella seguenti non sono supportati quando si accede a una tabella ottimizzata per la memoria utilizzando [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretato.  
+  
+|||||  
+|-|-|-|-|  
+|HOLDLOCK|IGNORE_CONSTRAINTS|IGNORE_TRIGGERS|NOWAIT|  
+|PAGLOCK|READCOMMITTED|READCOMMITTEDLOCK|READPAST|  
+|READUNCOMMITTED|ROWLOCK|SPATIAL_WINDOW_MAX_CELLS = *integer*|TABLOCK|  
+|TABLOCKXX|UPDLOCK|XLOCK||  
+  
+ Quando si accede a una tabella ottimizzata per la memoria da una transazione esplicita o implicita usando [!INCLUDE[tsql](../../includes/tsql-md.md)] interpretato, è necessario includere un hint di tabella del livello di isolamento quale SNAPSHOT, REPEATABLEREAD, o SERIALIZABLE oppure usare MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT. Per altre informazioni, vedere [linee guida per i livelli di isolamento delle transazioni con tabelle con ottimizzazione per la memoria](memory-optimized-tables.md) e [opzioni ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+  
+> [!NOTE]  
+>  Un hint del livello di isolamento non è necessario per le tabelle ottimizzate per la memoria accessibili dalle query in esecuzione in modalità autocommit.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Supporto di Transact-SQL per OLTP in memoria](transact-sql-support-for-in-memory-oltp.md)   
+ [Migrazione a OLTP in memoria](migrating-to-in-memory-oltp.md)  
+  
+  
