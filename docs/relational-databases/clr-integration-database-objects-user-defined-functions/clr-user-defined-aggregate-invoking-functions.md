@@ -3,11 +3,9 @@ title: Richiamo di funzioni di aggregazione definita dall'utente CLR | Documenti
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: reference
 ms.tgt_pltfrm: ''
 ms.topic: reference
 dev_langs:
@@ -23,24 +21,24 @@ caps.latest.revision: 53
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 967475fc3c9781a999fe3d4dabc2f79d6324a492
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 7731be96b2cf9eaccdad14274250346c04b67a75
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32921416"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700342"
 ---
-# <a name="clr-user-defined-aggregate---invoking-functions"></a>Aggregazione definita dall'utente CLR - chiamata di funzioni
+# <a name="clr-user-defined-aggregate---invoking-functions"></a>Aggregazione definita dall'utente CLR, chiamata di funzioni
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Nelle istruzioni SELECT di [!INCLUDE[tsql](../../includes/tsql-md.md)] è possibile richiamare funzioni di aggregazione CLR (Common Language Runtime) definite dall'utente in base a tutte le regole applicabili alle funzioni di aggregazione del sistema.  
   
  Sono valide le regole aggiuntive seguenti:  
   
--   L'utente corrente deve disporre **EXECUTE** l'autorizzazione per l'aggregazione definita dall'utente.  
+-   L'utente corrente deve disporre **EXECUTE** dell'autorizzazione per l'aggregazione definita dall'utente.  
   
--   Le aggregazioni definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *udagg_name*.  
+-   Aggregazioni definite dall'utente devono essere richiamate utilizzando un nome in due parti nel formato *udagg_name*.  
   
--   Il tipo di argomento della funzione di aggregazione definita dall'utente deve corrispondere o essere convertibile in modo implicito il *input_type* della funzione di aggregazione, come definito nel **CREATE AGGREGATE** istruzione.  
+-   Il tipo di argomento della funzione di aggregazione definita dall'utente deve corrispondere o essere convertibile in modo implicito per il *input_type* della funzione di aggregazione, come definito nel **CREATE AGGREGATE** istruzione.  
   
 -   Il tipo restituito della funzione di aggregazione definita dall'utente deve corrispondere il *return_type* nel **CREATE AGGREGATE** istruzione.  
   
@@ -202,7 +200,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Dopo aver compilato il codice nel **MyAgg.dll**, è possibile registrare l'aggregato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
+ Dopo aver compilato il codice nel **MyAgg. dll**, è possibile registrare l'aggregato in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] come indicato di seguito:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -214,7 +212,7 @@ EXTERNAL NAME MyAgg.Concatenate;
 > [!NOTE]  
 >  L'esecuzione degli oggetti di database Visual C++, ad esempio le funzioni a valori scalari, compilati con l'opzione /clr:pure non è supportata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Come con la maggior parte delle funzioni di aggregazione, la maggior parte della logica di è il **Accumulate** metodo. Stringa che viene passato come parametro per il **Accumulate** metodo viene aggiunto al **StringBuilder** oggetto che è stata inizializzata nel **Init** metodo. Supponendo che non è la prima volta il **Accumulate** chiamata al metodo, una virgola viene anche aggiunto al **StringBuilder** prima di aggiungere la stringa passata. Al termine dell'attività di calcolo, il **Terminate** metodo viene chiamato, che restituisce il **StringBuilder** sotto forma di stringa.  
+ Come con la maggior parte delle funzioni di aggregazione, la maggior parte della logica di è presente il **Accumulate** metodo. , La stringa che viene passata come parametro per il **Accumulate** viene aggiunto al metodo il **StringBuilder** oggetto che è stata inizializzata nel **Init** (metodo). Supponendo che non si tratta la prima volta che il **Accumulate** chiamata al metodo, una virgola viene anche aggiunto al **StringBuilder** prima di aggiungere la stringa passata. Al termine delle attività di calcolo, il **Terminate** viene chiamato, che restituisce il **StringBuilder** sotto forma di stringa.  
   
  Si consideri, ad esempio, una tabella con lo schema seguente:  
   

@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-date-time
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d1e307f12de6f298381e1e314a343eaece6353ad
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: a44722f571f8cd0a9ac0cecdd0dd9a0a1254bd5b
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947876"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702862"
 ---
-# <a name="datetime-data-type-conversions-from-c-to-sql"></a>le conversioni di tipo di dati da C a SQL DateTime
+# <a name="datetime-data-type-conversions-from-c-to-sql"></a>Data/ora le conversioni di tipo di dati da C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo argomento elenca i problemi da prendere in considerazione quando esegue la conversione dai tipi C per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi data/ora.  
+  In questo argomento elenca i problemi da prendere in considerazione quando esegue la conversione dai tipi C ai [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipi data/ora.  
   
- Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando **SQLExecute** o  **SQLExecuteDirect** viene chiamato. In particolare, ODBC considera qualsiasi troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento prevede l'arrotondamento; ad esempio, arrotondamento si verifica quando si passa da **datetime2(6)** a **datetime2(2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
+ Le conversioni descritte nella tabella seguente sono valide se effettuate sul client. Nei casi in cui il client specifica la precisione in secondi frazionari per un parametro che differisce da definito nel server, la conversione client potrebbe avere esito positivo, ma il server restituirà un errore quando **SQLExecute** o  **SQLExecuteDirect** viene chiamato. In particolare, ODBC considera qualsiasi troncamento dei secondi frazionari come un errore, mentre il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] comportamento prevede l'arrotondamento; ad esempio arrotondamento si verifica quando si passa da **datetime2(6)** a **datetime2(2)**. I valori della colonna di tipo datetime vengono arrotondati a 1/300° di un secondo e le colonne smalldatetime contengono secondi impostati su zero dal server.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -99,6 +98,6 @@ ms.locfileid: "32947876"
 -   **N/d**: esistente [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] e viene mantenuto il comportamento precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti & #40; ODBC & #41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

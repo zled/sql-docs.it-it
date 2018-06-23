@@ -4,10 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-results
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC]
 - COMPUTE BY clause
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
-caps.latest.revision: 32
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4c323940c786949f699bae5bb82fb7268e4d424
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 08a76e5a2c7a69fa2c333f1848698e008b4f1eb9
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707919"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701912"
 ---
 # <a name="processing-results-odbc"></a>Risultati dell'elaborazione (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +35,13 @@ ms.locfileid: "34707919"
 
   Dopo l'invio di un'istruzione SQL da parte di un'applicazione, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restituisce eventuali dati risultanti come uno o più set di risultati. Un set di risultati è un set di righe e colonne che corrispondono ai criteri della query. Le istruzioni SELECT, le funzioni di catalogo e alcune stored procedure producono un set di risultati reso disponibile a un'applicazione in formato tabulare. Se l'istruzione SQL eseguita è una stored procedure, un batch contenente più comandi o un'istruzione SELECT contenente parole chiave, il numero di set di risultati da elaborare sarà maggiore.  
   
- Anche le funzioni di catalogo ODBC possono recuperare dati. Ad esempio, [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md) recupera dati relativi alle colonne nell'origine dati. Questi set di risultati possono contenere zero o più righe.  
+ Anche le funzioni di catalogo ODBC possono recuperare dati. Ad esempio [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md) recupera dati relativi alle colonne nell'origine dati. Questi set di risultati possono contenere zero o più righe.  
   
- Le altre istruzioni SQL, ad esempio GRANT o REVOKE, non restituiscono set di risultati. Per queste istruzioni, il codice restituito da **SQLExecute** o **SQLExecDirect** è in genere la sola indicazione l'istruzione è stata eseguita correttamente.  
+ Le altre istruzioni SQL, ad esempio GRANT o REVOKE, non restituiscono set di risultati. Per queste istruzioni, il codice restituito da **SQLExecute** oppure **SQLExecDirect** in genere è l'unica indicazione l'istruzione ha avuto esito positivo.  
   
- Ogni istruzione INSERT, UPDATE e DELETE restituisce un set di risultati contenente solo il numero di righe modificate. Questo conteggio viene reso disponibile quando l'applicazione chiama [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* applicazioni devono chiamare **SQLRowCount** per recuperare il risultato set o [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) di annullarlo. Quando un'applicazione esegue un batch o stored procedure che contiene più istruzioni INSERT, UPDATE o DELETE, il set di risultati di ogni istruzione di modifica devono essere elaborato utilizzando **SQLRowCount** o annullato utilizzando **SQLMoreResults**. Questi conteggi possono essere annullati includendo un'istruzione SET NOCOUNT ON nel batch o nella stored procedure.  
+ Ogni istruzione INSERT, UPDATE e DELETE restituisce un set di risultati contenente solo il numero di righe modificate. Questo conteggio viene reso disponibile quando l'applicazione chiama [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md). ODBC 3. *x* le applicazioni devono chiamare **SQLRowCount** per recuperare il risultato set o [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) di annullarlo. Quando un'applicazione esegue un batch o stored procedure che contiene più istruzioni INSERT, UPDATE o DELETE, il set di risultati da ogni istruzione di modifica devono essere elaborato utilizzando **SQLRowCount** o annullato utilizzando **SQLMoreResults**. Questi conteggi possono essere annullati includendo un'istruzione SET NOCOUNT ON nel batch o nella stored procedure.  
   
- Transact-SQL include l'istruzione SET NOCOUNT. Quando l'opzione NOCOUNT è impostata su, SQL Server non restituisce i conteggi delle righe interessate da un'istruzione e **SQLRowCount** restituisce 0. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione del driver ODBC di Native Client introduce un specifici del driver [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) opzione SQL_SOPT_SS_NOCOUNT_STATUS, per segnalare se l'opzione NOCOUNT è attivata o disattivata. In qualsiasi momento **SQLRowCount** restituisce 0, l'applicazione deve testare SQL_SOPT_SS_NOCOUNT_STATUS. Se viene restituito SQL_NC_ON, il valore 0 di **SQLRowCount** indica solo che SQL Server non ha restituito un conteggio delle righe. Se viene restituito SQL_NC_OFF, significa che NOCOUNT è disattivato e il valore 0 di **SQLRowCount** indica che l'istruzione non influito sulle righe. Le applicazioni non dovrebbero visualizzare il valore di **SQLRowCount** quando SQL_SOPT_SS_NOCOUNT_STATUS è SQL_NC_OFF. Le stored procedure o i batch di grandi dimensioni possono contenere più istruzioni SET NOCOUNT, pertanto i programmatori non possono presupporre che SQL_SOPT_SS_NOCOUNT_STATUS rimanga costante. L'opzione deve essere testata ogni volta **SQLRowCount** restituisce 0.  
+ Transact-SQL include l'istruzione SET NOCOUNT. Quando l'opzione NOCOUNT è impostata su, SQL Server non restituisce i conteggi delle righe interessate da un'istruzione e **SQLRowCount** restituisce 0. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versione del driver ODBC di Native Client introduce un specifici del driver [SQLGetStmtAttr](../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) opzione, SQL_SOPT_SS_NOCOUNT_STATUS, per segnalare se l'opzione NOCOUNT è attivata o disattivata. In qualsiasi momento **SQLRowCount** restituisce 0, l'applicazione deve testare SQL_SOPT_SS_NOCOUNT_STATUS. Se viene restituito SQL_NC_ON, il valore 0 dal **SQLRowCount** indica solo che SQL Server non ha restituito un conteggio delle righe. Se viene restituito SQL_NC_OFF, significa che NOCOUNT è disattivato e il valore 0 di **SQLRowCount** indica che l'istruzione non ha avuto effetto su tutte le righe. Le applicazioni non dovrebbero visualizzare il valore di **SQLRowCount** quando SQL_SOPT_SS_NOCOUNT_STATUS è sql_nc_off. Le stored procedure o i batch di grandi dimensioni possono contenere più istruzioni SET NOCOUNT, pertanto i programmatori non possono presupporre che SQL_SOPT_SS_NOCOUNT_STATUS rimanga costante. L'opzione deve essere testata ogni volta **SQLRowCount** restituisce 0.  
   
  Diverse altre istruzioni Transact-SQL restituiscono nei messaggi dati anziché set di risultati. Quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve questi messaggi, restituisce SQL_SUCCESS_WITH_INFO per indicare all'applicazione che sono disponibili messaggi informativi. L'applicazione può quindi chiamare **SQLGetDiagRec** per recuperare tali messaggi. Le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che funzionano in questo modo sono:  
   

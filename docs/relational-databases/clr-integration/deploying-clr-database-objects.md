@@ -4,11 +4,9 @@ ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.component: clr
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
-ms.tgt_pltfrm: ''
+ms.technology: reference
 ms.topic: reference
 helpviewer_keywords:
 - deployment script [CLR integration]
@@ -20,12 +18,12 @@ caps.latest.revision: 35
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 353aef3aac9f39217bb98bd551843eb1b69ae885
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: af823eb9457cbe74785de4c110334805f9ac1ad5
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32929696"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35701532"
 ---
 # <a name="deploying-clr-database-objects"></a>Distribuzione di oggetti di database CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +61,7 @@ ms.locfileid: "32929696"
   
  `vbc /target:library C:\helloworld.vb`  
   
- Questi comandi consentono di avviare il Visual c# o Visual Basic del compilatore tramite il **/destinazione** opzione per specificare la creazione di una DLL della libreria.  
+ Questi comandi consentono di avviare il linguaggio Visual c# o Visual Basic del compilatore tramite il **/destinazione** opzione per specificare la compilazione di una DLL della libreria.  
   
 1.  Risolvere tutti gli avvisi e gli errori di compilazione prima di distribuire l'assembly al server di prova.  
   
@@ -73,7 +71,7 @@ ms.locfileid: "32929696"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  La procedura, la funzione, l'aggregazione, il tipo definito dall'utente o il trigger deve essere quindi creato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il **HelloWorld** assembly contiene un metodo denominato **HelloWorld** nel **procedure** classe seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] possono essere aggiunti alla query per creare un routine chiamata **hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  La procedura, la funzione, l'aggregazione, il tipo definito dall'utente o il trigger deve essere quindi creato nell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se il **HelloWorld** assembly contiene un metodo denominato **HelloWorld** nel **procedure** classe seguente [!INCLUDE[tsql](../../includes/tsql-md.md)] possono essere aggiunti alla query per creare un chiamata la stored procedure **hello** in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  `CREATE PROCEDURE hello`  
   
@@ -81,10 +79,10 @@ ms.locfileid: "32929696"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [funzioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [aggregazioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [Stored procedure CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), e [trigger CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
+ Per ulteriori informazioni sulla creazione di diversi tipi di oggetti di database gestiti in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [le funzioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [aggregazioni CLR definite dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Tipi definiti dall'utente](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [Stored procedure CLR](http://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33), e [trigger CLR](http://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Distribuzione dell'assembly a server di produzione  
- Dopo aver testato e verificato gli oggetti di database CLR sul server di prova, sarà possibile distribuirli a server di produzione. Per ulteriori informazioni sul debug di oggetti di database gestiti, vedere [il debug di oggetti di Database CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
+ Dopo aver testato e verificato gli oggetti di database CLR sul server di prova, sarà possibile distribuirli a server di produzione. Per ulteriori informazioni sul debug di oggetti di database gestiti, vedere [debug di oggetti di Database CLR](../../relational-databases/clr-integration/debugging-clr-database-objects.md).  
   
  La distribuzione degli oggetti di database gestiti è simile a quella degli oggetti di database normali, quali tabelle, routine [!INCLUDE[tsql](../../includes/tsql-md.md)] e così via. Gli assembly che contengono gli oggetti di database CLR possono essere distribuiti agli altri server utilizzando uno script di distribuzione. Lo script di distribuzione può essere compilato utilizzando la funzionalità "Genera script" di [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Tale script può essere anche compilato manualmente o utilizzando "Genera script" e modificato manualmente. Una volta compilato, può essere eseguito in altre istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] per distribuire gli oggetti di database gestiti.  
   
@@ -92,22 +90,22 @@ ms.locfileid: "32929696"
   
 1.  Aprire [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] e connettersi all'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in cui è stato registrato l'oggetto di database o l'assembly gestito da distribuire.  
   
-2.  Nel **Esplora oggetti**, espandere il  **\<nome server >** e **database** strutture ad albero. Fare doppio clic su database in cui l'oggetto di database gestito registrato, selezionare **attività**, quindi selezionare **genera script**. Verrà avviata la Generazione guidata script.  
+2.  Nel **Esplora oggetti**, espandere il  **\<nome server >** e **database** strutture ad albero. Fare doppio clic su database in cui l'oggetto di database gestito è registrato, selezionare **attività**, quindi selezionare **genera script**. Verrà avviata la Generazione guidata script.  
   
-3.  Selezionare il database dalla casella di riepilogo e fare clic su **Avanti**.  
+3.  Selezionare il database dalla casella di riepilogo e fare clic su **successivo**.  
   
-4.  Nel **selezione opzioni generazione Script** riquadro, fare clic su **Avanti**, o modificare le opzioni e quindi fare clic su **Avanti**.  
+4.  Nel **selezione opzioni generazione Script** riquadro, fare clic su **successivo**, o modificare le opzioni e quindi fare clic su **Avanti**.  
   
 5.  Nel **selezione tipi di oggetti** riquadro, scegliere il tipo di oggetto di database da distribuire. Scegliere **Avanti**.  
   
-6.  Per ogni tipo di oggetto selezionato nel **selezione tipi di oggetti** riquadro un **scegliere \<tipo >** riquadro viene visualizzato. In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti e fare clic su **Avanti**.  
+6.  Per ogni tipo di oggetto selezionato nel **selezione tipi di oggetti** riquadro, una **Scegli \<tipo >** riquadro viene visualizzato. In questo riquadro è possibile scegliere tra tutte le istanze del tipo di oggetto di database registrato nel database specificato. Selezionare uno o più oggetti e fare clic su **successivo**.  
   
-7.  Il **le opzioni di Output** riquadro viene visualizzata quando tutti i database desiderati oggetto tipi sono stati selezionati. Selezionare **genera Script nel file** e specificare un percorso file per lo script. Fare clic su **Avanti**. Rivedere le selezioni e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
+7.  Il **opzioni di Output** riquadro viene visualizzato quando tutti i database desiderati oggetto tipi sono stati selezionati. Selezionare **genera Script nel file** e specificare un percorso file per lo script. Fare clic su **Avanti**. Rivedere le selezioni e fare clic su **fine**. Lo script di distribuzione verrà salvato nel percorso di file specificato.  
   
 ## <a name="post-deployment-scripts"></a>Script post-distribuzione  
  È possibile eseguire uno script post-distribuzione.  
   
- Per aggiungere uno script post-distribuzione, inserire un file denominato postdeployscript.sql nella directory del progetto di Visual Studio. Ad esempio, fare clic sul progetto in **Esplora** e selezionare **Aggiungi elemento esistente**. Aggiungere il file alla radice del progetto, anziché alla cartella Test Scripts.  
+ Per aggiungere uno script post-distribuzione, inserire un file denominato postdeployscript.sql nella directory del progetto di Visual Studio. Pulsante destro del mouse, ad esempio, selezionare il progetto in **Esplora soluzioni** e selezionare **Aggiungi elemento esistente**. Aggiungere il file alla radice del progetto, anziché alla cartella Test Scripts.  
   
  Fare clic su Distribuisci. In questo modo lo script verrà eseguito in Visual Studio dopo la distribuzione del progetto.  
   
