@@ -24,18 +24,15 @@ caps.latest.revision: 77
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 5ead833d28c31a1c34da1ce6e2182cbaa418f156
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+ms.openlocfilehash: f6b3cbdff4e837facc8a6cd2c2b0498ae6bf92a7
+ms.sourcegitcommit: d463f543e8db4a768f8e9736ff28fedb3fb17b9f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064082"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324705"
 ---
 # <a name="ole-db-destination"></a>Destinazione OLE DB
   La destinazione OLE DB consente di caricare dati in un'ampia gamma di database conformi con OLE DB, tramite una tabella o vista di database oppure un comando SQL. L'origine OLE DB, ad esempio, può caricare dati nelle tabelle dei database di [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
-> [!NOTE]  
->  Se l'origine dati è [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007, è richiesta una gestione connessione diversa rispetto alle versioni precedenti di Excel. Per altre informazioni, vedere [Connessione a una cartella di lavoro di Excel](../connection-manager/connect-to-an-excel-workbook.md).  
   
  Sono disponibili cinque diverse modalità di accesso ai dati per il caricamento dei dati:  
   

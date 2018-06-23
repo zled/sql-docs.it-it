@@ -1,0 +1,182 @@
+---
+title: Transparent Data Encryption con il database SQL di Azure | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- TDE, SQL Database
+- Transparent Data Encryption, SQL Database
+- encryption (SQL Database) TDE
+ms.assetid: 0bf7e8ff-1416-4923-9c4c-49341e208c62
+caps.latest.revision: 31
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+ms.openlocfilehash: 1850458778cadbfe871880d42a7830c94078c2a4
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36168584"
+---
+# <a name="transparent-data-encryption-with-azure-sql-database"></a>Transparent Data Encryption con il database SQL di Azure
+  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] Transparent data encryption (anteprima) contribuisce alla protezione dalle minacce di attività dannose eseguendo la crittografia in tempo reale e la decrittografia del database, i backup associati e dei file di log delle transazioni a riposo senza richiedere modifiche all'applicazione.  
+  
+ Transparent Data Encryption crittografa l'archivio di un intero database utilizzando una chiave simmetrica denominata chiave di crittografia del database. Nel [!INCLUDE[ssSDS](../includes/sssds-md.md)] la chiave di crittografia del database è protetta con un certificato server predefinito. Il certificato server predefinito è univoco per ogni server del [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Se un database fa parte di una relazione GeoDR, è protetto da una chiave diversa in ogni server. Se due database sono connessi allo stesso server, condividono lo stesso certificato predefinito. [!INCLUDE[msCoName](../includes/msconame-md.md)] ruota automaticamente questi certificati almeno ogni 90 giorni. Per una descrizione generale di TDE, vedere [Transparent Data Encryption &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
+  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] non supporta l'integrazione dell'insieme di credenziali delle chiavi di Azure con TDE. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in esecuzione in una macchina virtuale di Azure può usare una chiave asimmetrica dall'insieme di credenziali delle chiavi. Per altre informazioni, vedere [esempio a: Transparent Data Encryption tramite una chiave asimmetrica dall'insieme di credenziali chiave](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
+  
+||  
+|-|  
+|**Si applica a**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([anteprima in alcune aree](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+  
+> [!IMPORTANT]  
+>  Si tratta attualmente di una funzionalità di anteprima. Riconosco e Accetto che l'implementazione di [!INCLUDE[ssSDS](../includes/sssds-md.md)] crittografia trasparente dei dati nei database è soggetta alle condizioni di anteprima nel contratto di licenza (ad esempio, il contratto Enterprise Agreement, contratto di Microsoft Azure o Microsoft Online Subscription Contratto di licenza), nonché a eventuali [condizioni per l'utilizzo di Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+  
+ L'anteprima dello stato di TDE si applica anche nel subset di aree geografiche in cui la famiglia di versioni V12 di [!INCLUDE[ssSDS](../includes/sssds-md.md)] è stata annunciata in stato di disponibilità generale. TDE per [!INCLUDE[ssSDS](../includes/sssds-md.md)] non potrà essere usato nei database di produzione finché [!INCLUDE[msCoName](../includes/msconame-md.md)] non ne annuncia il passaggio dalla versione di anteprima a quella di disponibilità generale. Per altre informazioni sul [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, vedere l'articolo relativo alle [novità del database SQL di Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+  
+##  <a name="Permissions"></a> Permissions  
+ Per iscriversi per l'anteprima e configurare Transparent Data Encryption tramite il portale di Azure usando l'API REST o PowerShell, è necessario essere connessi come proprietario, collaboratore o Gestore Sicurezza SQL di Azure.  
+  
+ Per configurare Transparent Data Encryption tramite [!INCLUDE[tsql](../includes/tsql-md.md)] è necessario soddisfare le condizioni seguenti:  
+  
+-   Si deve essere già registrati per l'anteprima di Transparent Data Encryption.  
+  
+-   Per creare la chiave di crittografia del database, è necessario essere un [!INCLUDE[ssSDS](../includes/sssds-md.md)] amministratore o l'utente deve essere un membro del **dbmanager** ruolo di master di database e avere la **controllo** autorizzazione per il database.  
+  
+-   Per eseguire l'istruzione ALTER DATABASE con l'opzione SET, è richiesta solo l'appartenenza al ruolo **dbmanager** .  
+  
+##  <a name="Preview"></a> Iscriversi per l'anteprima di Transparent Data Encryption e abilitazione di TDE in un Database  
+  
+1.  Visitare il portale di Azure all'indirizzo [ https://portal.azure.com ](https://portal.azure.com) e Accedi con l'account amministratore di Azure o collaboratore.  
+  
+2.  Nel banner sinistro fare clic su **SFOGLIA**e quindi su **Database SQL**.  
+  
+3.  Con la voce **Database SQL** selezionata nel riquadro sinistro fare clic sul proprio database utente.  
+  
+4.  Nel pannello del database fare clic su **Tutte le impostazioni**.  
+  
+5.  Nel pannello **Impostazioni** fare clic su **Transparent Data Encryption (anteprima)** per aprire il pannello **Transparent Data Encryption ANTEPRIMA** . Se non si è già iscritti per l'anteprima di Transparent Data Encryption, le impostazioni di crittografia dei dati saranno disabilitate finché non si completa l'iscrizione.  
+  
+6.  Fare clic su **CONDIZIONI PER L'ANTEPRIMA**.  
+  
+7.  Leggere le condizioni dell'anteprima e, se si accettano le condizioni, selezionare il **termini encryptionPreview Transparent Data** casella di controllo e quindi fare clic su **OK** nella parte inferiore della pagina. Restituzione per il **dati encryptionPREVIEW** pannello, in cui il **la crittografia dei dati** pulsante ora dovrebbe essere abilitato.  
+  
+8.  Nel pannello **Crittografia dati ANTEPRIMA** spostare lo stato attivo del pulsante **Crittografia dati** su **Attivato**e quindi fare clic su **Salva** (in alto nella pagina) per applicare l'impostazione. Il valore di **Stato crittografia** indicherà approssimativamente lo stato di avanzamento di Transparent Data Encryption.  
+  
+     ![SQLDB_TDE_TermsNewUI](../../2014/database-engine/media/sqldb-tde-termsnewui.png "SQLDB_TDE_TermsNewUI")  
+  
+     È anche possibile monitorare lo stato di avanzamento della crittografia connettendosi al [!INCLUDE[ssSDS](../includes/sssds-md.md)] con uno strumento di query quale [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] come utente del database con l'autorizzazione di **VISUALIZZAZIONE STATO DEL DATABASE** . Query di `encryption_state` colonna del [DM database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) vista.  
+  
+##  <a name="Encrypt"></a> Abilitazione di TDE nel [!INCLUDE[ssSDS](../includes/sssds-md.md)] tramite Transact-SQL  
+ I passaggi seguenti presuppongono che sia già stata effettuata l'iscrizione per l'anteprima.  
+  
+###  <a name="TsqlProcedure"></a>  
+  
+1.  Connettersi al database con un account di accesso come amministratore o membro del ruolo **dbmanager** nel database master.  
+  
+2.  Eseguire le istruzioni seguenti per creare una chiave di crittografia del database e crittografare il database.  
+  
+    ```  
+    -- Create the database encryption key that will be used for TDE.  
+    CREATE DATABASE ENCRYPTION KEY   
+    WITH ALGORITHM = AES_256   
+    ENCRYPTION BY SERVER CERTIFICATE ##MS_TdeCertificate##;  
+  
+    -- Enable encryption  
+    ALTER DATABASE [AdventureWorks] SET ENCRYPTION ON;  
+    GO  
+    ```  
+  
+3.  Per monitorare lo stato della crittografia nei [!INCLUDE[ssSDS](../includes/sssds-md.md)], gli utenti che dispongono del database il **VIEW DATABASE STATE** autorizzazione possa eseguire una query il `encryption_state` colonna del [DM database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) Consente di visualizzare.  
+  
+## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Abilitazione di Transparent Data Encryption nel database SQL tramite PowerShell  
+ Con Azure PowerShell è possibile eseguire il comando seguente per attivare o disattivare TDE. Prima di eseguire il comando, è necessario connettere l'account alla finestra di PowerShell. I passaggi seguenti presuppongono che sia già stata effettuata l'iscrizione per l'anteprima. Per altre informazioni su PowerShell, vedere [Come installare e configurare Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
+  
+1.  Per abilitare Transparent Data Encryption, tornare al relativo stato e visualizzare l'attività di crittografia.  
+  
+    ```  
+    PS C:\> Switch-AzureMode -Name AzureResourceManager  
+  
+    PS C:\> Set-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1" -State "Enabled"  
+  
+    PS C:\> Get-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1"  
+  
+    PS C:\> Get-AzureSqlDatabaseTransparentDataEncryptionActivity -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1"  
+  
+    ```  
+  
+2.  Per disabilitare TDE:  
+  
+    ```  
+    PS C:\> Set-AzureSqlDatabaseTransparentDataEncryption -ServerName "myserver" -ResourceGroupName "Default-SQL-WestUS" -DatabaseName "database1" -State "Disabled"  
+  
+    PS C:\> Switch-AzureMode -Name AzureServiceManagement  
+    ```  
+  
+##  <a name="Decrypt"></a> Decrittografia di un database protetto con TDE nel [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
+  
+#### <a name="to-disable-tde-by-using-the-azure-portal"></a>Per disabilitare TDE tramite il portale di Azure  
+  
+1.  Visitare il portale di Azure all'indirizzo [ https://portal.azure.com ](https://portal.azure.com) e Accedi con l'account amministratore di Azure o collaboratore.  
+  
+2.  Nel banner sinistro fare clic su **SFOGLIA**e quindi su **Database SQL**.  
+  
+3.  Con la voce **Database SQL** selezionata nel riquadro sinistro fare clic sul proprio database utente.  
+  
+4.  Nel pannello del database fare clic su **Tutte le impostazioni**.  
+  
+5.  Nel pannello **Impostazioni** fare clic su **Transparent Data Encryption (anteprima)** per aprire il pannello **Transparent Data Encryption ANTEPRIMA** .  
+  
+6.  Nel pannello **Transparent Data Encryption ANTEPRIMA** spostare lo stato attivo del pulsante **Crittografia dati** su **Attivato**e quindi fare clic su **Salva** (in alto nella pagina) per applicare l'impostazione. Il valore di **Stato crittografia** indicherà approssimativamente lo stato di avanzamento della decrittografia trasparente dei dati.  
+  
+     È anche possibile monitorare lo stato di avanzamento della decrittografia connettendosi al [!INCLUDE[ssSDS](../includes/sssds-md.md)] con uno strumento di query quale [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] come utente del database con l'autorizzazione di **VISUALIZZAZIONE STATO DEL DATABASE** . Query di `encryption_state` colonna del [DM database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)vista.  
+  
+#### <a name="to-disable-tde-by-using-transact-sql"></a>Per disabilitare TDE tramite Transact-SQL  
+  
+1.  Connettersi al database con un account di accesso come amministratore o membro del ruolo **dbmanager** nel database master.  
+  
+2.  Eseguire le istruzioni seguenti per decrittografare il database.  
+  
+    ```  
+    -- Enable encryption  
+    ALTER DATABASE [AdventureWorks] SET ENCRYPTION OFF;  
+    GO  
+    ```  
+  
+3.  Per monitorare lo stato della crittografia nei [!INCLUDE[ssSDS](../includes/sssds-md.md)], gli utenti che dispongono del database il **VIEW DATABASE STATE** autorizzazione possa eseguire una query il `encryption_state` colonna del [DM database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) Consente di visualizzare.  
+  
+##  <a name="Working"></a> Utilizzo protetti con TDE dei database in [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
+ Non è necessario decrittografare i database per eseguire operazioni all'interno di Azure. Le impostazioni di Transparent Data Encryption nel database di origine o nel database primario vengono ereditate in modo trasparente nel database di destinazione. Sono incluse le operazioni che prevedono le attività seguenti:  
+  
+-   Ripristino geografico  
+  
+-   Ripristino temporizzato self-service  
+  
+-   Ripristino di un database eliminato  
+  
+-   Replica a livello geografico attiva  
+  
+-   Creazione di una copia del database  
+  
+##  <a name="Moving"></a> Spostamento di un Database protetto con TDE tramite. File Bacpac  
+ Quando si esporta un TDE protetto tramite la funzione Esporta Database nel database di [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] portale o il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] importazione / esportazione guidata, il contenuto del database non è crittografata. Il contenuto viene archiviato in file BACPAC che non sono crittografati.  Assicurarsi di proteggere i file BACPAC nel modo appropriato e abilitare TDE al termine dell'importazione del nuovo database.  
+  
+## <a name="related-sql-server-topic"></a>Argomento correlato a SQL Server  
+ [Abilitare Transparent Data Encryption tramite Extensible Key Management](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Transparent Data Encryption &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Opzioni di ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
+  
+  
