@@ -1,0 +1,77 @@
+---
+title: Visualizzare un elenco di file modificati | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- VisualStudio.SourceControl.CheckinWindow
+helpviewer_keywords:
+- listing modified files
+- modified files list [SQL Server]
+- checking in files
+ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
+caps.latest.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: affad7b7830088a955794f4825a68e72f12fca96
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36069440"
+---
+# <a name="view-a-list-of-modified-files"></a>Visualizzazione di un elenco di file modificati
+  È possibile usare il **archiviazioni in sospeso** finestra per visualizzare sempre un elenco dei file estratti nella soluzione corrente e per archiviare i file con un solo pulsante fare clic su.  
+  
+### <a name="to-view-a-list-of-modified-files"></a>Per visualizzare un elenco di file modificati  
+  
+1.  Nel **vista** menu, fare clic su **archiviazioni in sospeso**.  
+  
+2.  Per archiviare i file selezionati, fare clic su **Archivia**. In alternativa, è possibile ancorare la **archiviazioni in sospeso** sul lato destro della finestra di [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ambiente in modo da poter controllare nei file dopo averli completati utilizzo.  
+  
+     **Check-In**  
+     Consente di eseguire l'archiviazione della soluzione.  
+  
+     **Commenti**  
+     Consente di associare un commento in formato testo normale all'archiviazione in sospeso. Viene creato un commento che viene associato a ogni versione di un progetto e memorizzato nel database del controllo del codice sorgente.  
+  
+     **Opzioni**  
+     Specifica le azioni di controllo del codice sorgente deve intraprendere quando si fa clic sui **Archivia** pulsante.  
+  
+    -   **Mantenere tutte le versioni estratte**  
+  
+         Consente di specificare che le modifiche devono essere scritte nel provider del controllo del codice sorgente, ma che i file devono rimanere estratti.  
+  
+     **Sort**  
+     Consente di specificare il tipo di ordinamento per le colonne visualizzate nell'elenco Elementi.  
+  
+     **Colonne**  
+     Consente di visualizzare un elenco delle colonne che è possibile aggiungere all'elenco Elementi della finestra di dialogo.  
+  
+     **Visualizzazione struttura ad albero**  
+     Consente di visualizzare la gerarchia di cartelle e di file per la soluzione o il progetto che si sta archiviando.  
+  
+     **Visualizzazione semplice**  
+     Consente di visualizzare i file in corso di archiviazione come elenchi semplici sotto la relativa connessione del controllo del codice sorgente.  
+  
+     **Confrontare diverse versioni**  
+     Apre Visual SourceSafe **Opzioni differenze** della finestra di dialogo che confronta il file selezionato nel progetto dell'ambiente di sviluppo in qualsiasi altro file selezionato e vengono illustrate le differenze, se presente.  
+  
+     **Annulla estrazione**  
+     Inverte l'estrazione di tutti gli elementi selezionati nel **archiviazioni in sospeso** finestra.  
+  
+     **Nome**  
+     Consente di visualizzare un elenco degli elementi disponibili per l'archiviazione. Accanto a ciascun elemento viene visualizzata la casella di controllo selezionata. Se non si desidera archiviare un determinato elemento, deselezionare la relativa casella di controllo.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)   
+ [Gestione delle estrazioni](../../2014/database-engine/manage-checkouts.md)  
+  
+  
