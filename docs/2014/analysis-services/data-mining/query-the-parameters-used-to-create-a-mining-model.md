@@ -1,0 +1,77 @@
+---
+title: I parametri utilizzati per creare un modello di Data Mining di query | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- content queries [DMX]
+ms.assetid: ce7719e0-6127-4d9c-a753-0e0a3db065e1
+caps.latest.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: de91c7f924fbd6d83d3a7b74cbc5bd5e5b8f880d
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36155883"
+---
+# <a name="query-the-parameters-used-to-create-a-mining-model"></a>Eseguire query sui parametri utilizzati per creare un modello di data mining
+  La composizione di un modello di data mining non è interessata solo dai case di training, ma anche dai parametri impostati alla creazione del modello. Pertanto, è possibile recuperare le impostazioni dei parametri di un modello esistente per comprendere meglio il comportamento dello stesso. Il recupero dei parametri può essere utile anche per documentare una determinata versione del modello.  
+  
+ Per trovare i parametri utilizzati alla creazione del modello, creare una query su uno dei set di righe dello schema del modello di data mining. In [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]questi set di righe dello schema sono esposti come set di viste di sistema su cui è possibile eseguire query in modo semplice usando la sintassi Transact-SQL. In questa procedura viene descritto come creare una query che restituisce i parametri utilizzati per creare il modello di data mining specificato.  
+  
+### <a name="to-open-a-query-window-for-a-schema-rowset-query"></a>Per aprire una finestra Query per una query sul set di righe dello schema  
+  
+1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aprire l'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contenente il modello su cui eseguire la query.  
+  
+2.  Fare clic con il pulsante destro del mouse sul nome dell'istanza, scegliere **Nuova query**, quindi **DMX**.  
+  
+    > [!NOTE]  
+    >  È anche possibile creare una query su un modello di data mining tramite il modello **MDX** .  
+  
+3.  Se l'istanza contiene più database, selezionare quello che contiene il modello su cui eseguire la query dall'elenco **Database disponibili** nella barra degli strumenti.  
+  
+### <a name="to-return-model-parameters-for-an-existing-mining-model"></a>Per restituire i parametri di un modello di data mining esistente  
+  
+1.  Nel riquadro Query DMX digitare o incollare il testo seguente:  
+  
+    ```  
+    SELECT MINING_PARAMETERS  
+    FROM $system.DMSCHEMA_MINING_MODELS  
+    WHERE MODEL_NAME = ''  
+    ```  
+  
+2.  In Esplora oggetti selezionare il modello di data mining desiderato, quindi trascinarlo nel riquadro Query DMX, tra le virgolette singole.  
+  
+3.  Premere F5 oppure fare clic su **Esegui**.  
+  
+## <a name="example"></a>Esempio  
+ Nel codice seguente viene restituito un elenco dei parametri utilizzati per creare il modello di data mining compilato nell' [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md) Questi parametri includono i valori espliciti relativi alle impostazioni predefinite utilizzate dai servizi di data mining disponibili dai provider nel server.  
+  
+```  
+SELECT MINING_PARAMETERS   
+FROM $system.DMSCHEMA_MINING_MODELS  
+WHERE MODEL_NAME = 'TM Clustering'  
+```  
+  
+ Nell'esempio di codice vengono restituiti i parametri seguenti per il modello di clustering:  
+  
+ Risultati dell'esempio:  
+  
+ MINING_PARAMETERS  
+  
+ CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Procedure dettagliate e attività Query di data Mining](data-mining-query-tasks-and-how-tos.md)   
+ [Query di Data Mining](data-mining-queries.md)  
+  
+  

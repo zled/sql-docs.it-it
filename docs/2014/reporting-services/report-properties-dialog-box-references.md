@@ -1,0 +1,60 @@
+---
+title: Finestra di dialogo proprietà del report fa riferimento a | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- "10530"
+- sql12.rtp.rptdesigner.reportproperties.references.f1
+ms.assetid: 4639d368-9918-4bb1-9953-7a724ca78dea
+caps.latest.revision: 39
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: 8fc7bafa0a9cd0e292b5f697e94a781f21ca1844
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36065529"
+---
+# <a name="report-properties-dialog-box-references"></a>Finestra di dialogo Proprietà report, Riferimenti
+  Selezionare **Riferimenti** nella finestra di dialogo **Proprietà report** per aggiungere o rimuovere riferimenti ad assembly personalizzati o altri assembly esterni e a istanze di classe personalizzate utilizzate da espressioni nella definizione del report.  
+  
+## <a name="options"></a>Opzioni  
+ **Aggiungi o Rimuovi assembly**  
+ Consente di visualizzare l'elenco degli assembly a cui il report fa riferimento. È necessario che l'assembly sia disponibile sia nel computer in cui è installato lo strumento utilizzato per progettare il report, sia nel server di report. Il nome del riferimento deve corrispondere il contenuto di  **\<CodeModule >** esattamente i tag nel file di Report Definition Language (RDL).  
+  
+ **Aggiungi**  
+ Fare clic per aggiungere un assembly. Fare clic sul pulsante con i puntini di sospensione (...) per aprire la finestra di dialogo **Apri** e selezionare gli assembly necessari per completare l'elaborazione del report e la valutazione dell'espressione.  
+  
+ **Elimina**  
+ Per rimuovere un riferimento all'assembly dall'elenco, selezionare il nome dell'assembly e fare clic sul pulsante **Rimuovi** .  
+  
+ **Aggiungi o Rimuovi classi**  
+ Consente di visualizzare l'elenco delle istanze di classe utilizzate dal report. L'elenco delle classi viene utilizzato solo dai membri basati sull'istanza e non dai membri statici.  
+  
+ **Aggiungi**  
+ Fare clic per aggiungere un riferimento alle classi. Fare clic sul pulsante con i puntini di sospensione (...) per aprire la finestra di dialogo **Apri** e selezionare le classi necessarie per completare l'elaborazione del report e la valutazione dell'espressione.  
+  
+ **Elimina**  
+ Per eliminare l'istanza di classe, selezionarla e fare clic sul pulsante **Rimuovi** .  
+  
+ **Su**  
+ Per le classi con dipendenze, è possibile spostare il riferimento in un livello superiore dell'elenco.  
+  
+ **Giù**  
+ Per le classi con dipendenze, è possibile spostare il riferimento in un livello inferiore dell'elenco.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti a codice personalizzato e ad assembly in espressioni in Progettazione report &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Riferimenti a raccolte di variabili di report e di gruppo &#40;Generatore report e SSRS&#41;](report-design/built-in-collections-report-and-group-variables-references-report-builder.md)   
+ [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)  
+  
+  
