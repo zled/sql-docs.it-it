@@ -1,0 +1,58 @@
+---
+title: Ripristina da PowerPivot | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql11.asvs.ssmsimbi.RestoreFromPP.f1
+ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
+caps.latest.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: f01d963c2adacfb7df778787eac5f3ef37a66b1b
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36169080"
+---
+# <a name="restore-from-powerpivot"></a>Ripristina da PowerPivot
+  È possibile utilizzare la funzionalità Ripristina da PowerPivot in SQL Server Management Studio per creare un nuovo database modello tabulare in un'istanza di Analysis Services (in esecuzione in modalità tabulare) o eseguire il ripristino in un database esistente da una cartella di lavoro di PowerPivot (con estensione xlsx).  
+  
+> [!NOTE]  
+>  Il modello di progetto Importa da PowerPivot in SQL Server Data Tools offre funzionalità simili. Per altre informazioni, vedere [Importa da PowerPivot &#40;modello tabulare di SSAS&#41;](import-from-power-pivot-ssas-tabular.md).  
+  
+ Quando si utilizza Ripristina da PowerPivot, si tenga in considerazione quanto riportato di seguito:  
+  
+-   Per poter utilizzare Ripristina da PowerPivot, è necessario aver eseguito l'accesso come membro del ruolo di amministratori del server per l'istanza di Analysis Services.  
+  
+-   L'account del servizio dell'istanza di Analysis Services deve disporre di autorizzazioni di lettura per il file della cartella di lavoro da cui eseguire il ripristino.  
+  
+-   Per impostazione predefinita, quando si ripristina un database da PowerPivot, la proprietà Impostazioni di rappresentazione origine dati del database modello tabulare è impostata sul valore predefinito, tramite cui viene specificato l'account del servizio dell'istanza di Analysis Services. Si consiglia di impostare le credenziali di rappresentazione su un account utente di Windows nelle proprietà del database. Per altre informazioni, vedere [Rappresentazione &#40;SSAS tabulare&#41;](impersonation-ssas-tabular.md).  
+  
+-   I dati nel modello di dati PowerPivot verranno copiati in un nuovo database modello tabulare o in uno esistente nell'istanza di Analysis Services. Se nella cartella di lavoro di PowerPivot sono contenute tabelle collegate, queste verranno ricreate come tabelle senza un'origine dati, simili a tabelle create utilizzando Incolla in nuova tabella.  
+  
+### <a name="to-restore-from-powerpivot"></a>Per ripristinare da PowerPivot  
+  
+1.  In SQL Server Management Studio, nell'istanza di Active Directory a cui si desidera ripristinare, fare clic destro **database**, quindi fare clic su **Ripristina da PowerPivot**.  
+  
+2.  Nel **Ripristina da PowerPivot** della finestra di dialogo **origine ripristino**, in **file di Backup**, fare clic su **Sfoglia**e quindi selezionare un con estensione ABF o con estensione xslx file per il ripristino.  
+  
+3.  In **Destinazione ripristino**in **Ripristina database**digitare un nome per un nuovo database o per uno esistente. Se non si specifica un nome, viene utilizzato quello della cartella di lavoro.  
+  
+4.  In **Percorso di archiviazione**fare clic su **Sfoglia**, quindi selezionare un percorso per l'archiviazione del database.  
+  
+5.  Nella casella **Opzioni**lasciare **Includi informazioni di sicurezza** selezionato. Quando si esegue il ripristino da una cartella di lavoro di PowerPivot, questa impostazione non è applicabile.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Database modello tabulare &#40;tabulare di SSAS&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Importare da PowerPivot &#40;tabulare di SSAS&#41;](import-from-power-pivot-ssas-tabular.md)  
+  
+  
