@@ -1,0 +1,64 @@
+---
+title: Editor trasformazione script (pagina input e output) | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.dts.designer.scriptcomponent.columnproperties.f1
+helpviewer_keywords:
+- Script Transformation Editor
+ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
+caps.latest.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.openlocfilehash: c3d03826e9259a67ddd113e38ba9b58a9054e067
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36067217"
+---
+# <a name="script-transformation-editor-inputs-and-outputs-page"></a>Editor trasformazione Script (pagina Input e output)
+  Utilizzare la pagina **Input e output** della finestra di dialogo **Editor trasformazione Script** per aggiungere, rimuovere e configurare input e output per la trasformazione script.  
+  
+> [!NOTE]  
+>  I componenti di origine dispongono di output e di nessun input, mentre i componenti di destinazione dispongono di input e di nessun output. Le trasformazioni dispongono sia di input che di output.  
+  
+ Per ulteriori informazioni sul componente Script, vedere [Script Component](data-flow/transformations/script-component.md) e [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Per informazioni sulla programmazione del componente Script, vedere [Extending the Data Flow with the Script Component](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
+  
+## <a name="options"></a>Opzioni  
+ **Inputs and outputs**  
+ Selezionare un input o un output a sinistra per visualizzare le proprietà corrispondenti nella tabella a destra. Le proprietà modificabili variano in base alla selezione effettuata. Molte delle proprietà visualizzate sono di sola lettura. Per ulteriori informazioni sulle singole proprietà, vedere gli argomenti seguenti.  
+  
+ [Proprietà comuni](../../2014/integration-services/common-properties.md)  
+  
+ [Proprietà personalizzate delle trasformazioni](data-flow/transformations/transformation-custom-properties.md)  
+  
+ **Aggiungi output**  
+ Consente di aggiungere un ulteriore output all'elenco.  
+  
+ **Aggiungi colonna**  
+ Selezionare una cartella in cui posizionare la nuova colonna di output e quindi aggiungere la colonna facendo clic su **Aggiungi colonna**.  
+  
+ **Rimuovi output**  
+ Selezionare un output e quindi rimuoverlo facendo clic su **Rimuovi output**.  
+  
+ **Rimuovi colonna**  
+ Selezionare una colonna e quindi rimuoverla facendo clic su **Rimuovi colonna**.  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Seleziona tipo componente Script](../../2014/integration-services/select-script-component-type.md)   
+ [Editor trasformazione script &#40;pagina colonne di Input&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Editor trasformazione script &#40;pagina Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Editor trasformazione script &#40;pagina gestioni connessioni&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Ulteriori esempi di componente script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
+  
+  

@@ -1,0 +1,57 @@
+---
+title: Creare un report collegato | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- linked reports [Reporting Services], creating
+ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
+caps.latest.revision: 43
+author: douglaslM
+ms.author: douglasl
+manager: mblythe
+ms.openlocfilehash: 87e95389a4571162e07efce30c4bcd933309bef7
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36067531"
+---
+# <a name="create-a-linked-report"></a>Creare un report collegato
+  Un report collegato è un elemento del server di report che fornisce un punto di accesso a un report esistente. Tale elemento è concettualmente simile al collegamento a un programma utilizzato per l'esecuzione di un programma o per l'apertura di un file.  
+  
+ Un report collegato viene derivato da un report esistente e mantiene la definizione del report originale. Un report collegato, inoltre, eredita sempre il layout del report e le proprietà dell'origine dati del report originale. Tutte le altre proprietà e impostazioni, ad esempio sicurezza, parametri, percorso, sottoscrizioni e pianificazioni, possono essere diverse da quelle del report originale.  
+  
+ È possibile creare un report collegato quando si desidera creare versioni aggiuntive di un report esistente. Un singolo report delle vendite regionali può essere utilizzato, ad esempio, per creare report specifici di una regione per tutti i territori di vendita.  
+  
+ I report collegati sono in genere basati su report con parametri, sebbene questa condizione non costituisca un requisito. È possibile creare report collegati ogni volta che si desidera distribuire un report esistente con impostazioni diverse.  
+  
+### <a name="to-create-a-linked-report"></a>Per creare un report collegato  
+  
+1.  In Gestione report, passare alla cartella che contiene il report per il quale si vuole creare un collegamento, quindi aprire il menu delle opzioni e fare clic su **Crea report collegato**.  
+  
+2.  Digitare un nome per il nuovo report collegato. Se lo si desidera, digitare una descrizione.  
+  
+3.  Per selezionare una cartella diversa per il report, fare clic su **Cambia percorso**. Selezionare la cartella che si vuole usare o digitare il nome della cartella nella casella **Percorso** . [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Se non si seleziona una cartella diversa, il report collegato viene creato nella cartella corrente (in cui è archiviato il report su che è basato).  
+  
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Apre il report collegato.  
+  
+     L'icona di un report collegato è diversa da quella di altri elementi gestiti da un server di report. L'icona seguente indica un report collegato:  
+  
+     ![Icona di report collegato](../media/hlp-16linked.gif "Icona di report collegato")  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Apertura e chiusura di un Report &#40;gestione Report&#41;](../reports/open-and-close-a-report-report-manager.md)   
+ [Pagina Nuovo report collegato &#40;Gestione report&#41;](../new-linked-report-page-report-manager.md)   
+ [Pagina Choose Item Location (Scegli percorso elemento) &#40;Gestione report&#41;](../choose-item-location-page-report-manager.md)   
+ [Pagina delle proprietà Generale, Report &#40;Gestione report&#41;](../general-properties-page-reports-report-manager.md)   
+ [Concetti relativi a Reporting Services &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
+ [Gestione report &#40;modalità nativa SSRS&#41;](../report-manager-ssrs-native-mode.md)  
+  
+  

@@ -1,0 +1,53 @@
+---
+title: Aggiungere una tabella nidificata a una struttura di Data Mining | Documenti Microsoft
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: ''
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], nested
+- nested tables
+- mining structures [Analysis Services], nested tables
+- adding nested tables
+ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
+caps.latest.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: mblythe
+ms.openlocfilehash: d69932ebba84a08646dd1d8798f52fc2ff36dd66
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36168909"
+---
+# <a name="add-a-nested-table-to-a-mining-structure"></a>Aggiungere una tabella nidificata a una struttura di data mining
+  È possibile utilizzare Progettazione modelli di data mining per aggiungere una tabella nidificata a una struttura di data mining dopo averla creata tramite la Creazione guidata modello di data mining.  
+  
+### <a name="to-add-a-nested-table-to-a-mining-structure"></a>Per aggiungere una tabella nidificata a una struttura di data mining  
+  
+1.  Selezionare la scheda **Struttura di data mining** in Progettazione modelli di data mining.  
+  
+2.  Fare clic con il pulsante destro del mouse sulla struttura di data mining a cui si desidera aggiungere una colonna della tabella.  
+  
+3.  Selezionare **Aggiungi tabella annidata**.  
+  
+     Verrà visualizzata la finestra di dialogo **Seleziona colonna chiave tabella annidata** .  
+  
+4.  In **Tabella annidata**selezionare la tabella che si desidera annidare nella struttura di data mining.  
+  
+5.  In **Colonna di origine**selezionare la colonna chiave per la tabella annidata.  
+  
+6.  Fare clic su **OK**.  
+  
+     Alla struttura di data mining verrà aggiunta una nuova colonna della tabella contenente la colonna chiave. Per informazioni su come aggiungere altre colonne, vedere [Aggiungere colonne a una struttura di data mining](add-columns-to-a-mining-structure.md).  
+  
+## <a name="see-also"></a>Vedere anche  
+ [Attività e procedure relative alla struttura di data mining](mining-structure-tasks-and-how-tos.md)  
+  
+  

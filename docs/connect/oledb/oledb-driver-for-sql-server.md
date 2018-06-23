@@ -1,11 +1,11 @@
 ---
-title: Driver OLE DB per SQL Server | Documenti Microsoft
-description: Driver OLE DB per SQL Server
+title: Driver Microsoft OLE DB per SQL Server | Documenti Microsoft
+description: Driver Microsoft OLE DB per SQL Server
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: OLE DB Driver
+ms.component: oledb
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -22,15 +22,15 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: 7aef3dc362cfd83d1767f759b30cddde263d319f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 1fba5146cd663c2d7c312bb6a5c689162c1489ac
+ms.sourcegitcommit: a6596c62f607041c4402f7d5b41a232fca257c14
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32859456"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36240823"
 ---
-# <a name="ole-db-driver-for-sql-server"></a>Driver OLE DB per SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# <a name="microsoft-ole-db-driver-for-sql-server"></a>Driver Microsoft OLE DB per SQL Server
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -67,7 +67,7 @@ Il nuovo provider OLE DB viene chiamato il Driver OLE DB Microsoft per SQL Serve
 > [!NOTE]
 > Per utilizzare il nuovo Microsoft Driver OLE DB per SQL Server nelle applicazioni esistenti, è consigliabile pianificare convertire le stringhe di connessione da SQLOLEDB o SQLNCLI, a MSOLEDBSQL.
   
-## <a name="in-this-section"></a>Contenuto della sezione  
+## <a name="in-this-section"></a>Argomenti della sezione  
 [Quando utilizzare il driver OLE DB per SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  Viene illustrato come integrare il Driver OLE DB per SQL Server con i dati di Microsoft tecnologie di accesso, viene presentato un confronto con Windows DAC e ADO.NET e vengono fornite informazioni utili per decidere quale tecnologia utilizzare di accesso ai dati.  
   
@@ -91,6 +91,6 @@ Il nuovo provider OLE DB viene chiamato il Driver OLE DB Microsoft per SQL Serve
   
 ## <a name="see-also"></a>Vedere anche  
  [Aggiornamento di un'applicazione da SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
- [Procedure per OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Procedure relative a OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   
