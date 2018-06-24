@@ -1,0 +1,45 @@
+---
+title: Seleziona oggetti (Esplora oggetti) | Microsoft Docs
+ms.custom: ''
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dbe-cross-instance
+ms.tgt_pltfrm: ''
+ms.topic: article
+f1_keywords:
+- sql12.swb.common.selectobjects.f1
+ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
+caps.latest.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.openlocfilehash: 2ffeac246442f3ee291975902bcacd12104e77f2
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+ms.translationtype: MT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36067314"
+---
+# <a name="select-objects-object-explorer"></a>Seleziona oggetti (Esplora oggetti)
+  Usare la finestra di dialogo **Seleziona oggetti** per aggiungere un oggetto a un elenco in un'altra finestra di dialogo. Il titolo della finestra di dialogo e le opzioni disponibili nella finestra di dialogo dipendono dalla modalità utilizzata per la sua apertura. Vengono visualizzate solo le opzioni disponibili. Ad esempio, quando si seleziona un proprietario per un nuovo oggetto sono disponibili solo gli account di accesso.  
+  
+## <a name="options"></a>Opzioni  
+ **Selezionare i tipi di oggetti seguenti**  
+ Consente di visualizzare un elenco dei tipi ai quali appartengono gli oggetti da selezionare I tipi includono entità ed entità a sicurezza diretta a livello di database e a livello di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Questa casella viene popolata con le selezioni eseguite nella finestra di dialogo **Seleziona tipi di oggetti** alla quale è possibile accedere con il pulsante **Tipi di oggetti** .  
+  
+ **Immettere i nomi degli oggetti da selezionare**  
+ Consente di immettere un elenco separato da punto e virgola dei nomi degli oggetti da selezionare. Gli oggetti da selezionare devono essere del tipo elencato nella casella **Selezionare i tipi di oggetti seguenti** . È possibile selezionare gli oggetti nell'elenco che viene visualizzato facendo clic sul pulsante **Sfoglia** .  
+  
+ **Tipi di oggetti**  
+ Consente di visualizzare un elenco di tipi di oggetti. Effettuare una o più selezioni selezionando la casella di controllo corrispondente al tipo.  
+  
+ **Controlla nomi**  
+ Convalida i nomi di oggetti riportati nella casella **Immettere i nomi degli oggetti da selezionare** . Se è elencato un nome di oggetto non valido, verrà visualizzata la finestra di dialogo **Nome non trovato** . In questa finestra di dialogo sarà possibile correggere o rimuovere il nome dall'elenco di oggetti da selezionare.  
+  
+ **Sfoglia**  
+ Apre la finestra di dialogo **Cerca oggetti** . Questa finestra di dialogo contiene un elenco di oggetti dei tipi elencati nella casella **Selezionare i tipi di oggetti seguenti** . Selezionare gli oggetti in questo elenco selezionando le caselle di controllo corrispondenti.  
+  
+  
