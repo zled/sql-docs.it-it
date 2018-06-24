@@ -4,30 +4,28 @@ ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client-odbc-how-to
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: connectivity
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8a4888eaac053f8c0f6db09f0b9c6684bc0e6e78
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 457788ed712908413d5762fd4d31d399aa869c2c
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34707339"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700402"
 ---
 # <a name="odbc-how-to-topics"></a>Procedure per l'utilizzo di ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, è necessario essere in grado di creare origini dati ODBC e assicurarsi che il server abbia la versione corretta di stored procedure di catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
+  Utilizzare il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC, è necessario essere in grado di creare origini dati ODBC e assicurarsi che il server sia presente la versione corretta di stored procedure del catalogo. Per codificare un'applicazione ODBC che utilizza SQL Server, è necessario sapere come allocare gli handle ODBC, impostare gli attributi, eseguire la connessione a un'istanza di SQL Server, eseguire query ed elaborare risultati.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

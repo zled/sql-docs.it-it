@@ -1,5 +1,5 @@
 ---
-title: Disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft
+title: La disponibilità elevata e scalabilità in Analysis Services | Documenti Microsoft
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33270141fc67581adaeaeca9df8411c68fe0ac50
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: ece05b0bb8c21c628632e2efca8e54e317f38fab
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017998"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35700902"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Disponibilità elevata e scalabilità in Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34017998"
 |Modelli multidimensionali tramite archiviazione MOLAP|Scegliere una configurazione bilanciata che supporti le operazioni di I/O del disco per il caricamento rapido di dati e una quantità di RAM sufficiente per la memorizzazione di dati nella cache.|  
 |Modelli multidimensionali tramite archiviazione ROLAP.|Ottimizzare le operazioni di I/O e ridurre al minimo la latenza di rete.|  
   
-## <a name="highly-availability-and-redundancy-through-wsfc"></a>Disponibilità elevata e ridondanza tramite la funzionalità di cluster di failover di Windows Server  
+## <a name="high-availability-and-redundancy-through-wsfc"></a>Disponibilità elevata e ridondanza tramite WSFC  
  È possibile installare Analysis Services in un cluster di failover di Windows Server esistente per ottenere disponibilità elevata in grado di ripristinare il servizio nel minor tempo possibile.  
   
  I cluster di failover garantiscono accesso completo (in lettura e writeback) al database ma solo per un nodo alla volta. Database secondari in esecuzione all'interno di nodi aggiuntivi del cluster come server sostitutivi se il primo nodo diventa inattivo.  

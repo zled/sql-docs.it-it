@@ -2,9 +2,10 @@
 title: IBCPSession (OLE DB) | Documenti Microsoft
 description: Interfaccia IBCPSession (OLE DB)
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 06/14/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: oledb|ole-db-interfaces
 ms.reviewer: ''
 ms.suite: sql
 ms.technology: connectivity
@@ -16,19 +17,21 @@ helpviewer_keywords:
 author: pmasl
 ms.author: Pedro.Lopes
 manager: craigg
-ms.openlocfilehash: baa9e65a03ff398aa7efda70c8f78fddcec77118
-ms.sourcegitcommit: f16003fd1ca28b5e06d5700e730f681720006816
+ms.openlocfilehash: 9a252ab45aa8f20bac2c8b73606ebdc07b8a332e
+ms.sourcegitcommit: 03ba89937daeab08aa410eb03a52f1e0d212b44f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35305300"
+ms.lasthandoff: 06/16/2018
+ms.locfileid: "35689484"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-asdbmi-md](../../../includes/appliesto-ss-asdb-asdw-pdw-asdbmi-md.md)]
 
-  Il **IBCPSession** interfaccia espone il supporto per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] operazioni di copia bulk basate su file. Il **IBCPSession** interfaccia viene esposta nel Driver OLE DB per SQL Server con lo stesso livello di sessioni. Il Driver OLE DB per SQL Server, gli oggetti origine dati sono factory per oggetti di sessione, in operazioni di copia bulk vengono specificate nella proprietà di connessione SSPROP_ENABLEBULKCOPY. Inoltre, la proprietà SSPROP_ENABLEFASTLOAD deve essere impostata su True.  
+[!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
+
+  Il **IBCPSession** interfaccia espone il supporto per [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le operazioni di copia bulk basate su file. Il **IBCPSession** interfaccia viene esposta nel Driver OLE DB per SQL Server con lo stesso livello di sessioni. Il Driver OLE DB per SQL Server, gli oggetti origine dati sono factory per oggetti di sessione, in operazioni di copia bulk vengono specificate nella proprietà di connessione SSPROP_ENABLEBULKCOPY. Inoltre, la proprietà SSPROP_ENABLEFASTLOAD deve essere impostata su True.  
   
- La chiamata di **IDBCreateSession:: CreateSession** metodo comporterà quindi la creazione di un **BulkCopySession** oggetto. Tutti i metodi di copia bulk basate su file esposti tramite il **IBCPSession** oggetto vengono quindi chiamati con firme molto simili al **IBCPSession** dell'oggetto **IBCPSession**interfaccia.  
+ La chiamata di **IDBCreateSession:: CreateSession** metodo comporterà quindi la creazione di un **BulkCopySession** oggetto. Tutti i metodi di copia bulk basate su file esposti tramite il **IBCPSession** oggetto vengono quindi chiamati con firme molto simili su questo **IBCPSession** dell'oggetto **IBCPSession**interfaccia.  
   
 > [!NOTE]  
 >  Il Driver OLE DB per SQL Server supporta le operazioni di copia bulk basate sulla memoria tramite il [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) interfaccia.  
