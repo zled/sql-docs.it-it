@@ -1,0 +1,8 @@
+# [Visualizzatore file di log](log-file-viewer.md)
+## [Aprire il visualizzatore file di log](open-log-file-viewer.md)
+## [Visualizzare file di log offline](view-offline-log-files.md)
+## [Guida sensibile al contesto del Visualizzatore file di log](log-file-viewer-f1-help.md)
+# [Log delle transazioni (SQL Server)](the-transaction-log-sql-server.md)
+## [Gestione delle dimensioni del file di log delle transazioni](manage-the-size-of-the-transaction-log-file.md)
+## [Risolvere i problemi relativi a un log delle transazioni completo (Errore di SQL Server 9002)](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)
+## [Controllo della durabilità delle transazioni](control-transaction-durability.md)
