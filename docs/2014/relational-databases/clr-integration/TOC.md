@@ -58,6 +58,7 @@
 ## [Accesso alla transazione corrente](../clr-integration-data-access-transactions/accessing-the-current-transaction.md)
 ## [Uso di System.Transactions](../clr-integration-data-access-transactions/using-system-transactions.md)
 ## [Durata delle transazioni](../clr-integration-data-access-transactions/transaction-lifetimes.md)
+# [Serializzazione XML da oggetti di database CLR](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)
 # [Sicurezza per l'integrazione con CLR](security/clr-integration-security.md)
 ## [Sicurezza dall'accesso di codice dell'integrazione con CLR](security/clr-integration-code-access-security.md)
 ## [Collegamenti nella sicurezza per l'integrazione con CLR](../../database-engine/dev-guide/links-in-clr-integration-security.md)
