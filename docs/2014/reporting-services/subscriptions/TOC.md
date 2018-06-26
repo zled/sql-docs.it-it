@@ -6,6 +6,7 @@
 ## [Come creare, modificare ed eliminare una sottoscrizione guidata dai dati](create-modify-and-delete-data-driven-subscriptions.md)
 ## [Usa un'origine dati esterna per i dati del Sottoscrittore](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)
 # [Creare e gestire sottoscrizioni per server di report in modalità nativa](create-and-manage-subscriptions-for-native-mode-report-servers.md)
+## [Creare, modificare ed eliminare le sottoscrizioni standard](../create-manage-subscriptions-native-mode-report-servers.md)
 ## [Usare Sottoscrizioni personali](use-my-subscriptions-native-mode-report-server.md)
 ## [Sospendere l'elaborazione del report e della sottoscrizione](disable-or-pause-report-and-subscription-processing.md)
 ## [Controllare la distribuzione dei report](../control-report-distribution.md)

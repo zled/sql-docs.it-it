@@ -16,6 +16,8 @@
 # [Reporting Services +](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [Esercitazioni di SQL Server 2014 +](../tutorials/tutorials-for-sql-server-2014.md)
 
+# [Novità di SQL Server 2014 +](../sql-server/what-s-new-in-sql-server-2016.md)
+
 # [Guida di riferimento per gli sviluppatori per SQL Server 2014](developer-reference-for-sql-server-2014.md)
 ## [Guida per gli sviluppatori (Analysis Services) +](../analysis-services/dev-guide/analysis-services-dev-guide.md)
 ## [Guida per gli sviluppatori (Integration Services) +](../integration-services/integration-services-developer-documentation.md)
@@ -25,6 +27,7 @@
 ## [Guida per gli sviluppatori (Reporting Services) +](../reporting-services/reporting-services-developer-documentation.md)
 
 # [Installazione per SQL Server 2014 +](../database-engine/install-windows/installation-for-sql-server.md)
-# [Installazione dei servizi e configurazione](../sql-server/install/setup-and-servicing-installation.md)
-# [Gestione spazio aggiornamenti](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [Preparazione aggiornamento +](../sql-server/install/sql-server-2014-upgrade-advisor.md)
+## [Installazione dei servizi e configurazione +](../sql-server/install/setup-and-servicing-installation.md)
 # [Guida di Configuration Manager +](../tools/configuration-manager/sql-server-configuration-manager-help.md)
+
