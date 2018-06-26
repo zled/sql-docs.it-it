@@ -25,16 +25,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4a96e71ae1222951914743ad88d229d5a1ee9b8
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 9c3504238274c2aac2e9fd043068b822150f91ca
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239321"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>Funzioni delle regole di confronto - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Restituisce una stringa binaria di spessori per ogni carattere in un'espressione stringa non Unicode definita tramite una regola di confronto SQL terziaria.
+Questa funzione restituisce una stringa binaria di spessori per ogni carattere in un'espressione stringa non Unicode definita tramite una regola di confronto SQL terziaria.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -46,13 +47,13 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
   
 ## <a name="arguments"></a>Argomenti  
 *non_Unicode_character_string_expression*  
-[Espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa di tipo **char**, **varchar** o **varchar(max)** definita tramite una regola di confronto SQL terziaria. Per un elenco di queste regole di confronto, vedere la sezione Osservazioni.
+Un'[espressione](../../t-sql/language-elements/expressions-transact-sql.md) stringa di tipo **char**, **varchar** o **varchar(max)** definita tramite una regola di confronto SQL terziaria. Per un elenco di queste regole di confronto, vedere la sezione Osservazioni.
   
 ## <a name="return-types"></a>Tipi restituiti
-TERTIARY_WEIGHTS restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* è **varchar(max)**.
+`TERTIARY_WEIGHTS` restituisce **varbinary** quando *non_Unicode_character_string_expression* è **char** o **varchar** e restituisce **varbinary(max)** quando *non_Unicode_character_string_expression* ha il tipo di dati **varchar(max)**.
   
 ## <a name="remarks"></a>Remarks  
-TERTIARY_WEIGHTS restituisce NULL se *non_Unicode_character_string_expression* non è definito tramite una regola di confronto SQL terziaria. Nella tabella seguente sono elencate le regole di confronto SQL terziarie.
+`TERTIARY_WEIGHTS` restituisce NULL quando una raccolta SQL terziaria non definisce *non_Unicode_character_string_expression*. La tabella seguente elenca le regole di confronto SQL terziarie:
   
 |ID tipo di ordinamento|Regole di confronto SQL|  
 |---|---|
@@ -89,10 +90,10 @@ TERTIARY_WEIGHTS restituisce NULL se *non_Unicode_character_string_expression* n
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
 |186|SQL_Icelandic_Pref_CP1_CI_AS|  
   
-La funzione TERTIARY_WEIGHTS viene usata per la definizione di una colonna calcolata definita in base ai valori di una colonna di tipo **char**, **varchar** o **varchar(max)**. La definizione di un indice nella colonna calcolata e nella colonna di tipo **char**, **varchar** o **varchar(max)** può ottimizzare le prestazioni se la colonna di tipo **char**, **varchar** o **varchar(max)** viene specificata nella clausola ORDER BY di una query.
+Usare `TERTIARY_WEIGHTS` per la definizione di una colonna calcolata definita in base ai valori di una colonna di tipo **char**, **varchar** o **varchar(max)**. La definizione dell'indice sia nella colonna calcolata che nella colonna di tipo **char**, **varchar** o **varchar(max)** può migliorare le prestazioni quando la clausola ORDER BY di una query specifica quella colonna **char**, **varchar** o **varchar(max)**.
   
 ## <a name="examples"></a>Esempi  
-Nell'esempio seguente viene creata una colonna calcolata in una tabella in cui la funzione `TERTIARY_WEIGHTS` viene applicata ai valori di una colonna di tipo `char`.
+In questo esempio viene creata una colonna calcolata in una tabella in cui la funzione `TERTIARY_WEIGHTS` viene applicata ai valori di una colonna di tipo `char`:
   
 ```sql
 CREATE TABLE TertColTable  

@@ -21,12 +21,12 @@ caps.latest.revision: 52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 04097e3b88a7d15f13546eca3f9abffe09d15f19
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: a23a9165bc33637c98d2007c00ddca2280704bf9
+ms.sourcegitcommit: 62826c291db93c9017ae219f75c3cfeb8140bf06
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34581885"
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35288730"
 ---
 # <a name="attach-a-database"></a>Collegare un database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ Non è consigliabile usare le operazioni di collegamento e scollegamento da Back
   
 2.  Dalla barra Standard fare clic su **Nuova query**.  
   
-3.  Utilizzare l'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) con la clausola FOR ATTACH.  
+3.  Usare l'istruzione [CREATE DATABASE](../../t-sql/statements/create-database-sql-server-transact-sql.md) con la clausola FOR ATTACH.  
   
      Copiare e incollare l'esempio seguente nella finestra delle query e fare clic su **Esegui**. In questo esempio si collegano i file del database [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] e si rinomina il database in `MyAdventureWorks`.  
   

@@ -88,12 +88,12 @@ caps.latest.revision: 255
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d6f0416cb5e49cb04da00d7f816d3e888e221a78
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 8a2fee1a2a0c4f52138cdbeb1580926b21eae89c
+ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34771507"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "35999877"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>Installare SQL Server dal prompt dei comandi
 
@@ -196,7 +196,7 @@ Utilizzare le linee guida seguenti per sviluppare comandi di installazione con l
 |-----------------------------------------|---------------|-----------------|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ACTION<br /><br /> **Obbligatorio**|Richiesto per indicare il flusso di lavoro di installazione.<br /><br /> Valori supportati: **Install**.|  
 |Controllo del programma di installazione di [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/IACCEPTSQLSERVERLICENSETERMS<br /><br /> **Obbligatorio solo quando il parametro /Q o /QS è specificato per le installazioni automatiche.**|Obbligatorio per riconoscere l'accettazione delle condizioni di licenza.|  
-|Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTPYTHONOPENLICENSETERMS <br /><br /> **Obbligatorio solo quando il parametro /Q o /QS è specificato per le installazioni automatiche che includono il pacchetto Anaconda Python.**|Obbligatorio per riconoscere l'accettazione delle condizioni di licenza.| 
+|Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Python|/IACCEPTPYTHONLICENSETERMS <br /><br /> **Obbligatorio solo quando il parametro /Q o /QS è specificato per le installazioni automatiche che includono il pacchetto Anaconda Python.**|Obbligatorio per riconoscere l'accettazione delle condizioni di licenza.| 
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R|/IACCEPTROPENLICENSETERMS <br /><br /> **Obbligatorio solo quando il parametro /Q o /QS è specificato per le installazioni automatiche che includono il pacchetto Microsoft R Open.**|Obbligatorio per riconoscere l'accettazione delle condizioni di licenza.| 
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/ENU<br /><br /> **Facoltativo**|Usare questo parametro per installare la versione in lingua inglese di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un sistema operativo localizzato quando i supporti di installazione includono i Language Pack sia per la lingua inglese sia per la lingua corrispondente a quella del sistema operativo.|  
 |Controllo del programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|/UpdateEnabled<br /><br /> **Facoltativo**|Viene specificato se durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debbano essere individuati e inclusi gli aggiornamenti del prodotto. I valori validi sono True e False oppure 1 e 0. Per impostazione predefinita, gli aggiornamenti individuati verranno inclusi nel programma di installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
