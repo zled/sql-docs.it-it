@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1a6cee0f40ba7cd92024fd11b82a32c3de99d0e7
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 6e6f5d64408bc74b069ba4fbd7f39b98ed2f278d
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239231"
 ---
 # <a name="datetime2fromparts-transact-sql"></a>DATETIME2FROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Restituisce un valore **datetime2** per la data e l'ora specificate e con la precisione indicata.
+Questa funzione restituisce un valore di tipo **datetime2** per gli argomenti date e time. Il valore restituito ha una precisione specificata dall'argomento precision.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,41 +45,42 @@ DATETIME2FROMPARTS ( year, month, day, hour, minute, seconds, fractions, precisi
   
 ## <a name="arguments"></a>Argomenti  
 *year*  
-Espressione intera che specifica un anno.
+Espressione Integer che specifica un anno.
   
 *month*  
-Espressione intera che specifica un mese.
+Espressione Integer che specifica un mese.
   
 *day*  
-Espressione intera che specifica un giorno.
+Espressione Integer che specifica un giorno.
   
- *hour*  
-Espressione intera che specifica le ore.
+*hour*  
+Espressione Integer che specifica le ore.
   
-*minute* Espressione intera che specifica i minuti.
+*minute*  
+Espressione Integer che specifica i minuti.
   
 *secondi*  
-Espressione intera che specifica i secondi.
+Espressione Integer che specifica i secondi.
   
 *fractions*  
-Espressione intera che specifica le frazioni.
+Espressione Integer che specifica un valore per i secondi frazionari.
   
 *precisione*  
-Valore letterale intero che specifica la precisione del valore **datetime2** da restituire.
+Espressione Integer che specifica la precisione del valore **datetime2** che verrà restituito da `DATETIME2FROMPARTS`.
   
 ## <a name="return-types"></a>Tipi restituiti
 **datetime2(** *precision* **)**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIME2FROMPARTS** restituisce un valore **datetime2** completamente inizializzato. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null. Se tuttavia l'argomento *precision* è Null viene generato un errore.
+`DATETIME2FROMPARTS` restituisce un valore di tipo **datetime2** completamente inizializzato. `DATETIME2FROMPARTS` genererà un errore se almeno un argomento obbligatorio ha un valore non valido. `DATETIME2FROMPARTS` restituisce null se almeno un argomento obbligatorio ha un valore null. Se tuttavia l'argomento *precision* ha un valore null, `DATETIME2FROMPARTS` genererà un errore.
+
+L'argomento *fractions* dipende dall'argomento *precision*. Ad esempio, per un valore di *precision* pari a 7, ogni frazione rappresenta 100 nanosecondi, mentre per *precision* pari a 3, ogni frazione rappresenta un millisecondo. Per un valore di *precision* pari a zero, anche il valore di *fractions* deve essere zero. In caso contrario, `DATETIME2FROMPARTS` genererà un errore.
   
-L'argomento *fractions* dipende dall'argomento *precision*. Se ad esempio *precision* è 7, ogni frazione rappresenta 100 nanosecondi, mentre se *precision* è 3 ogni frazione rappresenta un millisecondo. Se il valore di *precision* è zero, anche il valore di *fractions* deve essere zero. In caso contrario, viene generato un errore.
-  
-Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive. Non supporterà la comunicazione remota con i server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Esempi  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>A. Esempio semplice senza frazioni di un secondo  
+### <a name="a-an-example-without-fractions-of-a-second"></a>A. Esempio senza frazioni di un secondo  
   
 ```sql
 SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;  
@@ -95,7 +97,7 @@ Result
 ```  
   
 ### <a name="b-example-with-fractions-of-a-second"></a>B. Esempio con frazioni di un secondo  
-L'esempio seguente illustra l'uso dei parametri *fractions* e *precision*:
+Questo esempio illustra l'uso dei parametri *fractions* e *precision*:
   
 1.  Se *fractions* ha valore 5 e *precision* ha valore 1, il valore di *fractions* corrisponde a 5/10 di secondo.  
   

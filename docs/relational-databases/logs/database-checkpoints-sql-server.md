@@ -31,12 +31,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: dd0160149410a5de96158f1137972fcafdbeba8b
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4136ea1d123ce96a9a10de1dab8cfe6377bd4231
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32947796"
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35695752"
 ---
 # <a name="database-checkpoints-sql-server"></a>Checkpoint di database (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,11 +48,11 @@ Per motivi legati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ss
   
  Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] supporta molti tipi di checkpoint: automatici, indiretti, manuali e interni. Nella tabella seguente vengono riepilogati i tipi di **checkpoint**
   
-|nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Description|  
+|nome|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaccia|Descrizione|  
 |----------|----------------------------------|-----------------|  
 |Automatico|EXEC sp_configure **'** recovery interval **','***seconds***'**|Emesso automaticamente in background per rispettare il limite di tempo superiore suggerito dall'opzione di configurazione del server **intervallo di recupero** . I checkpoint automatici vengono eseguiti fino al completamento.  I checkpoint automatici sono limitati in base al numero di scritture in sospeso e al fatto che il [!INCLUDE[ssDE](../../includes/ssde-md.md)] rilevi o meno un aumento della latenza di scrittura superiore ai 50 millisecondi.<br /><br /> Per altre informazioni, vedere [Configurare l'opzione di configurazione del server intervallo di recupero](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
 |Indiretto|ALTER DATABASE … SET TARGET_RECOVERY_TIME **=***target_recovery_time* { SECONDS &#124; MINUTES }|Emesso in background per rispettare un tempo di recupero di destinazione specificato dall'utente per un determinato database. A partire da [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], il valore predefinito è 1 minuto. Il valore predefinito è 0 per le versioni precedenti, a indicare che il database userà checkpoint automatici la cui frequenza dipende dall'impostazione dell'intervallo di recupero dell'istanza del server.<br /><br /> Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
-|Manual|CHECKPOINT [ *checkpoint_duration* ]|Emesso quando si esegue un comando CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il checkpoint manuale si verifica nel database corrente per la connessione. Per impostazione predefinita, i checkpoint manuali vengono eseguiti fino al completamento. La limitazione funziona come per i checkpoint automatici.  Facoltativamente, il parametro *checkpoint_duration* specifica una quantità di tempo richiesta, in secondi, per il completamento del checkpoint.<br /><br /> Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
+|Manual|CHECKPOINT [*checkpoint_duration*]|Emesso quando si esegue un comando CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Il checkpoint manuale si verifica nel database corrente per la connessione. Per impostazione predefinita, i checkpoint manuali vengono eseguiti fino al completamento. La limitazione funziona come per i checkpoint automatici.  Facoltativamente, il parametro *checkpoint_duration* specifica una quantità di tempo richiesta, in secondi, per il completamento del checkpoint.<br /><br /> Per altre informazioni, vedere [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Interno|Nessuna.|Emesso da varie operazioni del server quali backup e creazione dello snapshot del database per garantire che le immagini del disco corrispondano allo stato corrente del log.|  
   
 > [!NOTE]
@@ -73,7 +73,7 @@ Per motivi legati alle prestazioni, tramite il [!INCLUDE[ssDE](../../includes/ss
 |>0|Non applicabile.|Checkpoint indiretti il cui tempo di recupero di destinazione è determinato dall'impostazione TARGET_RECOVERY_TIME, espresso in secondi.|  
   
 ##  <a name="AutomaticChkpt"></a> Checkpoint automatici  
-Si verifica un checkpoint automatico ogni volta che il numero di record di log raggiunge il numero elaborabile dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] nel tempo specificato nell'opzione di configurazione del server **intervallo di recupero** . 
+Si verifica un checkpoint automatico ogni volta che il numero di record di log raggiunge il numero elaborabile dal [!INCLUDE[ssDE](../../includes/ssde-md.md)] nel tempo specificato nell'opzione di configurazione del server **intervallo di recupero** . Per altre informazioni, vedere [Configurare l'opzione di configurazione del server recovery interval](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).
  
 In ogni database senza un tempo di recupero di destinazione definito dall'utente, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera checkpoint automatici. La frequenza dipende dall'opzione di configurazione del server avanzata **intervallo di recupero** che specifica il tempo massimo che un'istanza del server deve usare per recuperare un database durante un riavvio del sistema. Il [!INCLUDE[ssDE](../../includes/ssde-md.md)] valuta il numero massimo di record di log che può elaborare nell'intervallo di recupero. Quando un database che usa i checkpoint automatici raggiunge il numero massimo specificato di record di log, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] pubblica un checkpoint sul database. 
  
@@ -97,11 +97,12 @@ In genere, i valori predefiniti forniscono prestazioni di recupero ottimali. Tut
 Se si decide di aumentare l'impostazione **recovery interval** , è consigliabile aumentarla gradualmente di piccoli incrementi e valutare l'effetto di ogni aumento incrementale sulle prestazioni del recupero. Questo approccio è importante perché man mano che l'impostazione **intervallo di recupero** viene aumentata, il recupero del database richiederà una quantità di tempo equivalente a tale impostazione. Ad esempio, se si imposta un **intervallo di recupero** pari a 10 minuti, la procedura di recupero richiederà un tempo 10 volte superiore rispetto a quello che richiederebbe se **intervallo di recupero** fosse impostato su 1 minuto.  
   
 ##  <a name="IndirectChkpt"></a> Checkpoint indiretti  
-I checkpoint indiretti, nuovi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], offrono un'alternativa a livello di database configurabile ai checkpoint automatici. In caso di un arresto anomalo del sistema, i checkpoint indiretti consentono un tempo di recupero potenzialmente più veloce e più prevedibile rispetto ai checkpoint automatici. I checkpoint indiretti offrono i vantaggi riportati di seguito:  
+I checkpoint indiretti, nuovi in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], offrono un'alternativa a livello di database configurabile ai checkpoint automatici. Per questa configurazione specificare l'opzione di configurazione del database **target recovery time**. Per altre informazioni, vedere [Modificare il tempo di recupero di riferimento di un database &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).
+In caso di un arresto anomalo del sistema, i checkpoint indiretti consentono un tempo di recupero potenzialmente più veloce e più prevedibile rispetto ai checkpoint automatici. I checkpoint indiretti offrono i vantaggi riportati di seguito:  
   
 -   Un carico di lavoro transazionale online su un database configurato per i checkpoint indiretti può subire un calo delle prestazioni. I checkpoint indiretti assicurano che il numero di pagine dirty sia inferiore a una determinata soglia, in modo che il recupero del database venga completato entro il tempo di recupero di riferimento. 
 
-A differenza dei checkpoint indiretti che usano il numero di pagine dirty, l'opzione di configurazione recovery interval usa il numero di transazioni per determinare il tempo di recupero. Quando i checkpoint indiretti sono abilitati per un database che riceve un numero elevato di operazioni DML, il writer in background può iniziare a scaricare i buffer dirty su disco in modo intensivo per garantire che il tempo necessario per eseguire il recupero non superi il tempo di recupero di riferimento impostato per il database. Questo può causare in determinati sistemi ulteriore attività di I/O che può comportare un collo di bottiglia delle prestazioni se il sottosistema del disco opera al di sopra o in prossimità della soglia di I/O.  
+  A differenza dei **checkpoint indiretti** che usano il numero di pagine dirty, l'opzione di configurazione **recovery interval** usa il numero di transazioni per determinare il tempo di recupero. Quando i checkpoint indiretti sono abilitati per un database che riceve un numero elevato di operazioni DML, il writer in background può iniziare a scaricare i buffer dirty su disco in modo intensivo per garantire che il tempo necessario per eseguire il recupero non superi il tempo di recupero di riferimento impostato per il database. Questo può causare in determinati sistemi ulteriore attività di I/O che può comportare un collo di bottiglia delle prestazioni se il sottosistema del disco opera al di sopra o in prossimità della soglia di I/O.  
   
 -   I checkpoint indiretti consentono di controllare in modo affidabile il tempo di recupero del database tramite factoring del costo di operazioni di I/O casuali durante REDO. In questo modo si consente a un'istanza del server di rimanere entro il limite superiore per i tempi di recupero per un determinato database, tranne quando una transazione con esecuzione prolungata causa tempi UNDO eccessivi.  
   

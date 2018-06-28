@@ -5,12 +5,12 @@ Prima di creare il gruppo di disponibilità, è necessario:
 - Impostare l'ambiente in modo che tutti i server che ospitano le repliche di disponibilità possano comunicare.
 - Installare SQL Server. Per informazioni dettagliate, vedere [Installare SQL Server](../database-engine/install-windows/install-sql-server.md).
 
-## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>Abilitare la funzionalità Gruppi di disponibilità Always On e riavviare mssql-server
+## <a name="enable-always-on-availability-groups-and-restart-mssql-server"></a>Abilitare la funzionalità Gruppi di disponibilità Always On e riavviare mssql-server
 
 >[!NOTE]
 >Il comando seguente usa cmdlet del modulo sqlserver pubblicato in PowerShell Gallery. È possibile installare questo modulo usando il comando Install-Module.
 
-Abilitare Gruppi di disponibilità AlwaysOn su ogni replica che ospita un'istanza di SQL Server. Quindi riavviare il servizio SQL Server. Eseguire il comando seguente per abilitare e quindi riavviare i servizi SQL Server:
+Abilitare Gruppi di disponibilità Always On per ogni replica che ospita un'istanza di SQL Server. Quindi riavviare il servizio SQL Server. Eseguire il comando seguente per abilitare e quindi riavviare i servizi SQL Server:
 
 ```powershell
 Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
@@ -18,20 +18,20 @@ Enable-SqlAlwaysOn -ServerInstance <server\instance> -Force
 
 ## <a name="enable-an-alwaysonhealth-event-session"></a>Abilitare una sessione eventi AlwaysOn_health
 
-Se si vuole è possibile abilitare una sessione eventi estesi (XE) dei gruppi di disponibilità Always On per diagnosticare più facilmente la causa radice durante la risoluzione dei problemi per un gruppo di disponibilità. Eseguire il comando seguente in ogni istanza di SQL Server:
+ Per diagnosticare più facilmente la causa radice durante la risoluzione dei problemi che interessano un gruppo di disponibilità, è possibile abilitare facoltativamente una sessione di eventi estesi dei gruppi di disponibilità Always On (XEvents). A tale scopo, eseguire il comando seguente in ogni istanza di SQL Server:
 
 ```sql
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-Per altre informazioni su questa sessione XE, vedere [Eventi estesi dei gruppi di disponibilità Always On](../database-engine/availability-groups/windows/always-on-extended-events.md).
+Per altre informazioni su questa sessione XEvents, vedere [Eventi estesi dei gruppi di disponibilità Always On](../database-engine/availability-groups/windows/always-on-extended-events.md).
 
 ## <a name="database-mirroring-endpoint-authentication"></a>Autenticazione endpoint del mirroring del database
 
-Per il funzionamento corretto della sincronizzazione, le repliche incluse nel gruppo di disponibilità per scalabilità in lettura devono eseguire l'autenticazione attraverso l'endpoint. Di seguito vengono descritti i due scenari principali che è possibile usare per questo tipo di autenticazione.
+Per il funzionamento corretto della sincronizzazione, le repliche incluse nel gruppo di disponibilità per scalabilità in lettura devono eseguire l'autenticazione attraverso l'endpoint. I due scenari principali che è possibile usare per l'autenticazione di questo tipo sono illustrati nelle sezioni successive.
 
-### <a name="service-account"></a>Service Account
+### <a name="service-account"></a>Account servizio
 
 In un ambiente Active Directory in cui tutte le repliche secondarie sono aggiunte allo stesso dominio, SQL Server può eseguire l'autenticazione usando l'account del servizio. È necessario creare in modo esplicito un account di accesso per l'account di servizio in ogni istanza di SQL Server:
 
@@ -41,7 +41,7 @@ CREATE LOGIN [<domain>\service account] FROM WINDOWS;
 
 ### <a name="sql-login-authentication"></a>Autenticazione dell'account di accesso SQL
 
-Negli ambienti in cui le repliche secondarie non possono essere aggiunte a un dominio di Active Directory, è necessario usare l'autenticazione SQL. Lo script Transact-SQL seguente crea un account di accesso con nome `dbm_login` e un utente con nome `dbm_user`. Aggiornare lo script con una password complessa. Per creare l'utente dell'endpoint di mirroring del database eseguire il comando seguente in tutte le istanze di SQL Server:
+Negli ambienti in cui le repliche secondarie non possono essere aggiunte a un dominio di Active Directory, è necessario usare l'autenticazione SQL. Lo script Transact-SQL seguente crea un account di accesso con nome `dbm_login` e un utente con nome `dbm_user`. Aggiornare lo script con una password complessa. Per creare l'utente dell'endpoint di mirroring del database, eseguire il comando seguente in tutte le istanze di SQL Server:
 
 ```sql
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -50,9 +50,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 #### <a name="certificate-authentication"></a>Autenticazione del certificato
 
-Se si usa una replica secondaria che richiede l'autenticazione con Autenticazione SQL, usare un certificato per l'autenticazione tra gli endpoint di mirroring.
+Se si usa una replica secondaria che richiede l'autenticazione con l'autenticazione SQL, usare un certificato per l'autenticazione tra gli endpoint di mirroring.
 
-Lo script Transact-SQL seguente crea una chiave master e un certificato. Quindi esegue il backup del certificato e protegge il file con una chiave privata. Aggiornare lo script con password complesse. Eseguire lo script seguente nell'istanza di SQL Server primaria per creare il certificato:
+Lo script Transact-SQL seguente crea una chiave master e un certificato. Quindi esegue il backup del certificato e protegge il file con una chiave privata. Aggiornare lo script con password complesse. Eseguire lo script nell'istanza di SQL Server primaria per creare il certificato:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -67,11 +67,11 @@ BACKUP CERTIFICATE dbm_certificate
 
 A questo punto la replica di SQL Server primaria dispone di un certificato in `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer` e di una chiave privata in `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk`. Copiare questi due file nello stesso percorso in tutti i server che ospiteranno le repliche di disponibilità.
 
-In ogni replica secondaria verificare che l'account del servizio per SQL Server abbia le autorizzazioni per l'accesso al certificato.
+In ogni replica secondaria verificare che l'account del servizio per l'istanza di SQL Server abbia le autorizzazioni per l'accesso al certificato.
 
 #### <a name="create-the-certificate-on-secondary-servers"></a>Creare il certificato nei server secondari
 
-Lo script Transact-SQL seguente crea una chiave master e un certificato dal backup creato nella replica primaria di SQL Server. Inoltre, il comando autorizza l'utente ad accedere al certificato. Aggiornare lo script con password complesse. La password di decrittografia è la stessa password usata per creare il file `.pvk` in un passaggio precedente. Per creare il certificato eseguire lo script seguente in tutte le repliche secondarie:
+Lo script Transact-SQL seguente crea una chiave master e un certificato dal backup creato nella replica primaria di SQL Server. Inoltre, il comando autorizza gli utenti ad accedere al certificato. Aggiornare lo script con password complesse. La password di decrittografia è la stessa password usata per creare il file *.pvk* in un passaggio precedente. Per creare il certificato eseguire lo script seguente in tutte le repliche secondarie:
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -84,7 +84,7 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Creare endpoint di mirroring del database in tutte le repliche
+## <a name="create-database-mirroring-endpoints-on-all-replicas"></a>Creare endpoint di mirroring del database in tutte le repliche
 
 Gli endpoint del mirroring del database usano il protocollo TCP (Transmission Control Protocol) per inviare e ricevere messaggi tra istanze del server che partecipano a sessioni di mirroring del database o ospitano repliche di disponibilità. L'endpoint del mirroring del database è in attesa su un numero di porta TCP univoco.
 
@@ -106,4 +106,4 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [<service account or user>];
 
 La porta TCP sul firewall deve essere aperta per la porta del listener.
 
-Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+Per altre informazioni, vedere [Endpoint del mirroring del database (SQL Server)](https://docs.microsoft.com/en-us/sql/database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server?view=sql-server-2017).

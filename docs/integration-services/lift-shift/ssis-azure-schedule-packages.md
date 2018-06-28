@@ -1,26 +1,26 @@
 ---
 title: Pianificare i pacchetti SSIS in Azure | Microsoft Docs
+description: Panoramica dei metodi disponibili per la pianificazione dell'esecuzione di pacchetti SSIS distribuiti nel database SQL di Azure.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 62980562b7f89293177307cd4c3ad02f54e977f0
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 53417e2f5431bd040c7b3a6be381e93c858d128e
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585843"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35411583"
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-in-azure"></a>Pianificare l'esecuzione di un pacchetto SSIS in Azure
-È possibile pianificare l'esecuzione di pacchetti SSIS distribuiti nel database del catalogo SSISDB in un server di database SQL di Azure scegliendo una delle opzioni descritte in questo articolo. Un pacchetto può essere pianificato direttamente oppure indirettamente nell'ambito di una pipeline di Azure Data Factory. Per una panoramica di SSIS in Azure, vedere [Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
+# <a name="schedule-the-execution-of-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Pianificare l'esecuzione dei pacchetti di SQL Server Integration Services (SSIS) distribuiti in Azure
+
+È possibile pianificare l'esecuzione di pacchetti SSIS distribuiti nel catalogo SSISDB in un server di database SQL di Azure scegliendo uno dei metodi descritti in questo articolo. Un pacchetto può essere pianificato direttamente oppure indirettamente nell'ambito di una pipeline di Azure Data Factory. Per una panoramica di SSIS in Azure, vedere [Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Pianificare un pacchetto direttamente
 
@@ -35,7 +35,7 @@ ms.locfileid: "34585843"
 
 ## <a name="ssms"></a> Pianificare un pacchetto con SSMS
 
-In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**. Per altre informazioni, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure con SQL Server Management Studio (SSMS)](ssis-azure-schedule-packages-ssms.md).
+In SQL Server Management Studio (SSMS) è possibile fare clic con il pulsante destro del mouse su un pacchetto distribuito nel database del catalogo SSIS, SSISDB, e scegliere **Pianifica** per aprire la finestra di dialogo **Nuova pianificazione**. Per altre informazioni, vedere [Pianificare pacchetti SSIS in Azure con SQL Server Management Studio](ssis-azure-schedule-packages-ssms.md).
 
 Questa funzionalità richiede SQL Server Management Studio 17.7 o versione successiva. Per ottenere la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md).
 
@@ -177,4 +177,4 @@ Per eseguire un pacchetto SSIS nell'ambito di una pipeline di Data Factory, usar
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Esaminare le opzioni per l'esecuzione dei pacchetti SSIS distribuiti in Azure. Per altre informazioni, vedere [Eseguire un pacchetto SSIS in Azure](ssis-azure-run-packages.md).
+Esaminare le opzioni per l'esecuzione dei pacchetti SSIS distribuiti in Azure. Per altre informazioni, vedere [Eseguire pacchetti SSIS in Azure](ssis-azure-run-packages.md).

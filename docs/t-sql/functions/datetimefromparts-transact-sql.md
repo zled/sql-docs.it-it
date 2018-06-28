@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: d8afd19d73538ca459d14c9964a4067619c52b84
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 70b225db949dec01343c56a24299d882d553e44e
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239051"
 ---
 # <a name="datetimefromparts-transact-sql"></a>DATETIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-Restituisce un valore di tipo **datetime** per la data e l'ora specificate.
+Questa funzione restituisce un valore di tipo **datetime** per gli argomenti date e time.
   
 ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -44,33 +45,33 @@ DATETIMEFROMPARTS ( year, month, day, hour, minute, seconds, milliseconds )
   
 ## <a name="arguments"></a>Argomenti  
 *year*  
-Espressione intera che specifica un anno.
+Espressione Integer che specifica un anno.
   
 *month*  
-Espressione intera che specifica un mese.
+Espressione Integer che specifica un mese.
   
 *day*  
-Espressione intera che specifica un giorno.
+Espressione Integer che specifica un giorno.
   
 *hour*  
-Espressione intera che specifica le ore.
+Espressione Integer che specifica le ore.
   
 *minute*  
-Espressione intera che specifica i minuti.
+Espressione Integer che specifica i minuti.
   
 *secondi*  
-Espressione intera che specifica i secondi.
+Espressione Integer che specifica i secondi.
   
 *milliseconds*  
-Espressione intera che specifica i millisecondi.
+Espressione Integer che specifica i millisecondi.
   
 ## <a name="return-types"></a>Tipi restituiti
 **datetime**
   
 ## <a name="remarks"></a>Remarks  
-**DATETIMEFROMPARTS** restituisce un valore **datetime2** completamente inizializzato. Se gli argomenti non sono validi, viene generato un errore. Se gli argomenti obbligatori sono Null, viene restituito un valore Null.
+`DATETIMEFROMPARTS` restituisce un valore di tipo **datetime** completamente inizializzato. `DATETIMEFROMPARTS` genererà un errore se almeno un argomento obbligatorio ha un valore non valido. `DATETIMEFROMPARTS` restituisce null se almeno un argomento obbligatorio ha un valore null.
   
-Questa funzione può essere eseguita in modalità remota in server con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Questa funzione supporta la comunicazione remota con i server [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] e versioni successive. Non supporterà la comunicazione remota con i server con versioni precedenti a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="examples"></a>Esempi  
   

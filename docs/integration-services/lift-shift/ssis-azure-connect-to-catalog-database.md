@@ -1,32 +1,32 @@
 ---
-title: Connettersi al database del catalogo SSIS (SSISDB) in Azure | Microsoft Docs
+title: Connettersi al catalogo SSIS (SSISDB) in Azure | Microsoft Docs
+description: Trovare le informazioni di connessione necessarie per connettersi al catalogo SSIS (SSISDB) ospitato in un server di database SQL di Azure.
 ms.date: 09/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 639f02809a003bc5418ecb5ec33930f89205701f
-ms.sourcegitcommit: 0cc2cb281e467a13a76174e0d9afbdcf4ccddc29
+ms.openlocfilehash: 00e2c2e9ce845a6775ea4baee458253ba5e1162c
+ms.sourcegitcommit: cc46afa12e890edbc1733febeec87438d6051bf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35405673"
 ---
-# <a name="connect-to-the-ssis-catalog-database-ssisdb-in-azure"></a>Connettersi al database del catalogo SSIS (SSISDB) in Azure
+# <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Connettersi al catalogo SSIS (SSISDB) in Azure
 
-Ottenere le informazioni di connessione necessarie per connettersi al database del catalogo SSISDB ospitato in un server di database SQL di Azure. Per eseguire la connessione sono necessari gli elementi seguenti:
+Trovare le informazioni di connessione necessarie per connettersi al catalogo SSIS (SSISDB) ospitato in un server di database SQL di Azure. Per eseguire la connessione sono necessari gli elementi seguenti:
 - nome completo del server
 - nome del database
 - informazioni di accesso 
 
 > [!IMPORTANT]
-> In questo momento, non è possibile creare il database del catalogo SSISDB in un database SQL di Azure se non si crea il runtime di integrazione SSIS di Azure in Azure Data Factory versione 2. È il runtime di integrazione SSIS di Azure che esegue i pacchetti SSIS in Azure. Per altre informazioni, vedere [Distribuire pacchetti SQL Server Integration Services in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
+> In questo momento, non è possibile creare il database del catalogo SSISDB in un database SQL di Azure se non si crea il runtime di integrazione SSIS di Azure in Azure Data Factory versione 2. Il runtime di integrazione Azure-SSIS è l'ambiente di runtime che esegue i pacchetti SSIS in Azure. Per una procedura dettagliata del processo, vedere [Distribuire ed eseguire un pacchetto SSIS in Azure](https://docs.microsoft.com/azure/data-factory/tutorial-create-azure-ssis-runtime-portal). 
 
 ## <a name="prerequisites"></a>Prerequisites
 Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Server Management Studio (SSMS). Se il database del catalogo SSISDB è ospitato nell'Istanza gestita di database SQL (anteprima), verificare di disporre di SSMS 17.6 o versioni successive. Per scaricare la versione più recente di SSMS, vedere [Scaricare SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
@@ -49,7 +49,7 @@ Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Serv
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **Tipo server** | Motore di database | Questo valore è obbligatorio. |
    | **Nome server** | Nome completo del server | Il nome deve essere nel formato **mysqldbserver.database.windows.net**. |
-   | **Autenticazione** | autenticazione di SQL Server | In questa guida rapida viene usata l'autenticazione SQL. |
+   | **Autenticazione** | autenticazione di SQL Server | |
    | **Account di accesso** | Account amministratore del server | Si tratta dell'account specificato al momento della creazione del server. |
    | **Password** | Password per l'account amministratore del server | Si tratta della password specificata al momento della creazione del server. |
 
@@ -71,4 +71,4 @@ Prima di iniziare, verificare di avere la versione 17.2 o successiva di SQL Serv
 ## <a name="next-steps"></a>Passaggi successivi
 - Distribuire un pacchetto. Per altre informazioni, vedere [Distribuire un progetto SSIS con SQL Server Management Studio (SSMS)](../ssis-quickstart-deploy-ssms.md).
 - Eseguire un pacchetto. Per altre informazioni, vedere [Eseguire un pacchetto SSIS con SQL Server Management Studio (SSMS)](../ssis-quickstart-run-ssms.md).
-- Pianificare un pacchetto. Per altre informazioni, vedere [Pianificare l'esecuzione del pacchetto SSIS in Azure](ssis-azure-schedule-packages.md)
+- Pianificare un pacchetto. Per altre informazioni, vedere [Pianificare i pacchetti SSIS in Azure](ssis-azure-schedule-packages.md).

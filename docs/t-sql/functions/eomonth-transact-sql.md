@@ -23,16 +23,17 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f9ef67d87b628f53b9bb97d6cf32ecb79aa3befb
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 4c9dbad26914fa653a7f3385725640bffcc03e2a
+ms.sourcegitcommit: b52b5d972b1a180e575dccfc4abce49af1a6b230
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35249764"
 ---
 # <a name="eomonth-transact-sql"></a>EOMONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Restituisce l'ultimo giorno del mese che contiene la data specificata, con un offset facoltativo.  
+Questa funzione restituisce l'ultimo giorno del mese contenente una data specificata, con una differenza facoltativa.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,19 +44,19 @@ EOMONTH ( start_date [, month_to_add ] )
 ```  
   
 ## <a name="arguments"></a>Argomenti  
- *start_date*  
- Espressione Date che specifica la data per cui restituire l'ultimo giorno del mese.  
+*start_date*  
+Espressione date che specifica la data per cui restituire l'ultimo giorno del mese.  
   
- *month_to_add*  
- Espressione intera facoltativa che specifica il numero di mesi da aggiungere a *start_date*.  
+*month_to_add*  
+Espressione Integer facoltativa che specifica il numero di mesi da aggiungere a *start_date*.  
   
- Se viene specificato questo argomento, **EOMONTH** aggiunge il numero di mesi specificato a *start_date*, quindi restituisce l'ultimo giorno del mese della data risultante. Se questa aggiunta supera l'intervallo valido di date, viene generato un errore.  
+Se l'argomento *month_to_add* ha un valore, `EOMONTH` aggiunge il numero di mesi specificato a *start_date*, quindi restituisce l'ultimo giorno del mese della data risultante. Se questa aggiunta supera l'intervallo valido di date, `EOMONTH` genererà un errore.  
   
 ## <a name="return-type"></a>Tipo restituito  
  **data**  
   
 ## <a name="remarks"></a>Remarks  
- Questa funzione può essere eseguita in modalità remota in server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+La funzione `EOMONTH` può essere eseguita in modalità remota in server [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] e versioni successive, ma non in server con versioni precedenti a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
 ## <a name="examples"></a>Esempi  
   
@@ -66,8 +67,7 @@ DECLARE @date DATETIME = '12/1/2011';
 SELECT EOMONTH ( @date ) AS Result;  
 GO  
 ```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
 Result  
@@ -76,7 +76,7 @@ Result
   
 (1 row(s) affected)  
 ```  
-  
+
 ### <a name="b-eomonth-with-string-parameter-and-implicit-conversion"></a>B. EOMONTH con parametro di tipo stringa e conversione implicita  
   
 ```  
@@ -97,6 +97,14 @@ Result
   
 ### <a name="c-eomonth-with-and-without-the-monthtoadd-parameter"></a>C. EOMONTH con e senza il parametro month_to_add  
   
+Nota: i valori illustrati in questi set di risultati rispecchiano una data di esecuzione inclusa tra e comprendente
+        
+        12/01/2011
+        
+        and
+        
+        12/31/2011
+
 ```sql  
 DECLARE @date DATETIME = GETDATE();  
 SELECT EOMONTH ( @date ) AS 'This Month';  

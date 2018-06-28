@@ -24,16 +24,17 @@ caps.latest.revision: 28
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 01e01348ab88ef33ab38a9fd9040d5ff0174cb26
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: b9aecb41372915f28eaf0e3b41a0fa405faccfc0
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239061"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Esegue la decrittografia dei dati crittografati con una passphrase.  
+Questa funzione decrittografa i dati originariamente crittografati con una passphrase.  
   
  ![Icona di collegamento a un argomento](../../database-engine/configure-windows/media/topic-link.gif "Icona di collegamento a un argomento")[Convenzioni della sintassi Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,43 +50,51 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
   
 ## <a name="arguments"></a>Argomenti  
  *passphrase*  
- Passphrase che sarà usata per generare la chiave per la decrittografia.  
+Passphrase usata per generare la chiave di decrittografia.  
   
  @passphrase  
- Variabile di tipo **nvarchar**, **char**, **varchar** o **nchar** contenente la passphrase da usare per generare la chiave per la decrittografia.  
+Variabile di tipo
+
++ **char**
++ **nchar**
++ **nvarchar**
+
+o Gestione configurazione
+
++ **varchar**
+
+contenente la passphrase usata per generare la chiave di decrittografia.  
   
- '*ciphertext*'  
- Testo crittografato da decrittografare.  
+'*ciphertext*'  
+Stringa di dati crittografata con la chiave. *ciphertext* ha un tipo dati **varbinary**.  
+ 
+@ciphertext  
+Variabile di tipo **varbinary** contenente dati crittografati con la chiave. La variabile *@ciphertext* ha una dimensione massima di 8.000 byte.  
   
- @ciphertext  
- Variabile di tipo **varbinary** contenente il testo crittografato. Le dimensioni massime sono pari a 8.000 byte.  
+*add_authenticator*  
+Indica se il processo di crittografia originale includeva e crittografava un autenticatore insieme al testo non crittografato. *add_authenticator* ha un valore pari a 1 se il processo di crittografia ha usato un autenticatore. *add_authenticator* ha un tipo di dati **int**.  
   
- *add_authenticator*  
- Indica se un autenticatore è stato crittografato insieme al testo normale. Il valore è 1 se è stato usato un autenticatore. **int**.  
+@add_authenticator  
+Variabile che indica se il processo di crittografia originale includeva e crittografava un autenticatore insieme al testo non crittografato. *@add_authenticator* ha un valore pari a 1 se il processo di crittografia ha usato un autenticatore. *@add_authenticator* ha un tipo di dati **int**.  
+
+*authenticator*  
+Dati usati come base per la generazione dell'autenticatore. *authenticator* ha un tipo di dati **sysname**.  
   
- @add_authenticator  
- Indica se un autenticatore è stato crittografato insieme al testo normale. Il valore è 1 se è stato usato un autenticatore. **int**.  
-  
- *authenticator*  
- Dati relativi all'autenticatore. **sysname**.  
-  
- @authenticator  
- Variabile contenente i dati da cui derivare un autenticatore.  
+@authenticator  
+Variabile contenente i dati usati come base per la generazione degli autenticatori. *@authenticator* ha un tipo di dati **sysname**.  
   
 ## <a name="return-types"></a>Tipi restituiti  
- **varbinary** con un valore massimo di 8.000 byte.  
+**varbinary** con un valore massimo di 8.000 byte.  
   
 ## <a name="remarks"></a>Remarks  
- Non sono necessarie autorizzazioni per eseguire questa funzione.  
+`DECRYPTBYPASSPHRASE` non richiede autorizzazioni per l'esecuzione. `DECRYPTBYPASSPHRASE` restituisce NULL se riceve la passphrase non corretta o informazioni errate sull'autenticatore.  
   
- Restituisce NULL se viene usata una passphrase non corretta o informazioni errate sull'autenticatore.  
+`DECRYPTBYPASSPHRASE` usa la passphrase per generare la chiave di decrittografia. Questa chiave di decrittografia non sarà persistente.  
   
- La passphrase viene usata per generare una chiave di decrittografia, che non sarà persistente.  
-  
- Se è stato incluso un autenticatore al momento della crittografia del testo non crittografato, l'autenticatore deve essere incluso anche in fase di decrittografia. Se il valore dell'autenticatore fornito in fase di decrittografia non corrisponde al valore dell'autenticatore crittografato con i dati, non sarà possibile completare la decrittografia.  
+Se è stato incluso un autenticatore durante la crittografia del testo, `DECRYPTBYPASSPHRASE` deve ricevere lo stesso autenticatore per il processo di decrittografia. Se il valore dell'autenticatore fornito per il processo di decrittografia non corrisponde al valore dell'autenticatore usato originariamente per crittografare i dati, non sarà possibile completare l'operazione `DECRYPTBYPASSPHRASE`.  
   
 ## <a name="examples"></a>Esempi  
- Nell'esempio seguente viene decrittografato il record aggiornato in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
+Questo esempio decrittografa il record aggiornato in [EncryptByPassPhrase](../../t-sql/functions/encryptbypassphrase-transact-sql.md).  
   
 ```  
 USE AdventureWorks2012;  

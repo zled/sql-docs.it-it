@@ -22,12 +22,12 @@ caps.latest.revision: 23
 author: edmacauley
 ms.author: edmaca
 manager: craigg
-ms.openlocfilehash: 05ab6a324d1193c301539780b55bdbd5494c3524
-ms.sourcegitcommit: 8aa151e3280eb6372bf95fab63ecbab9dd3f2e5e
+ms.openlocfilehash: 6c42d3aea3b73f5afae90e5f7612e9c3d65bfc22
+ms.sourcegitcommit: 6e55a0a7b7eb6d455006916bc63f93ed2218eae1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34779547"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35238961"
 ---
 # <a name="decryptbykeyautoasymkey-transact-sql"></a>DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +53,7 @@ ID della chiave asimmetrica usata per crittografare la chiave simmetrica. *akey_
  *akey_password*  
 Password che protegge la chiave asimmetrica. *akey_password* può avere un valore NULL se la chiave master del database protegge la chiave privata asimmetrica. *akey_password* ha un tipo di dati **nvarchar**.  
   
- '*ciphertext*'  
-Dati crittografati con la chiave. *ciphertext* ha un tipo dati **varbinary**.  
+ *ciphertext* Dati crittografati con la chiave. *ciphertext* ha un tipo dati **varbinary**.  
   
  @ciphertext  
 Variabile di tipo **varbinary** contenente dati crittografati con la chiave simmetrica.  
@@ -71,18 +70,27 @@ Dati usati come base per la generazione dell'autenticatore. Deve corrispondere a
  @authenticator  
 Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispondere al valore specificato per [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* ha un tipo di dati **sysname**.  
   
+@add_authenticator  
+Variabile che indica se il processo di crittografia originale includeva e crittografava un autenticatore insieme al testo non crittografato. Deve corrispondere al valore passato a [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) durante il processo di crittografia dei dati. *@add_authenticator* ha un tipo di dati **int**.  
+
+*authenticator*  
+Dati usati come base per la generazione dell'autenticatore. Deve corrispondere al valore specificato per [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *authenticator* ha un tipo di dati **sysname**.
+
+@authenticator  
+Variabile contenente i dati dai quali derivare un autenticatore. Deve corrispondere al valore specificato per [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md). *@authenticator* ha un tipo di dati **sysname**.  
+
 ## <a name="return-types"></a>Tipi restituiti  
 **varbinary** con un valore massimo di 8.000 byte.  
   
 ## <a name="remarks"></a>Remarks  
-`DECRYPTBYKEYAUTOASYMKEY` include le funzionalità di OPEN SYMMETRIC KEY e DecryptByKey. In un'unica operazione consente di decrittografare una chiave simmetrica e di usarla per la decrittografia del testo.  
+`DECRYPTBYKEYAUTOASYMKEY` consente di combinare le funzionalità sia di `OPEN SYMMETRIC KEY` che di `DECRYPTBYKEY`. In un'unica operazione consente prima di decrittografare una chiave simmetrica e quindi di usarla per la decrittografia del testo crittografato.  
   
 ## <a name="permissions"></a>Autorizzazioni  
 È richiesta l'autorizzazione `VIEW DEFINITION` per la chiave simmetrica e l'autorizzazione `CONTROL` per la chiave asimmetrica.  
   
-## <a name="examples"></a>Esempi  
-In questo esempio viene illustrato l'uso di `DECRYPTBYKEYAUTOASYMKEY` per semplificare il codice di decrittografia. Questo codice deve essere eseguito in un database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per cui non è già presente una chiave master.  
-  
+## <a name="examples"></a>Esempi
+In questo esempio viene illustrato come `DECRYPTBYKEYAUTOASYMKEY` consente di semplificare il codice di decrittografia. Questo codice deve essere eseguito in un database [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] per cui non è già presente una chiave master.  
+
 ```  
 --Create the keys and certificate.  
 USE AdventureWorks2012;  

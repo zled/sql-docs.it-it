@@ -1,26 +1,25 @@
 ---
 title: Distribuire ed eseguire un pacchetto SSIS in Azure | Microsoft Docs
+description: Informazioni su come distribuire un progetto di SQL Server Integration Services (SSIS) nel catalogo SSIS nel database SQL di Azure, eseguire un pacchetto
 ms.date: 5/22/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d482a7e8c3cf75be0cb87b35323c5fbc472a3f7b
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: ac3ee68b47e3ae70c3b6d149d75b68d50b093309
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34585633"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35335835"
 ---
-# <a name="deploy-and-run-an-ssis-package-in-azure"></a>Distribuire ed eseguire un pacchetto SSIS in Azure
-Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services per il database del catalogo SSISDB nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione SSIS di Azure e monitorare il pacchetto in esecuzione.
+# <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Esercitazione: Distribuire ed eseguire un pacchetto di SQL Server Integration Services (SSIS) in Azure
+Questa esercitazione illustra come distribuire un progetto di SQL Server Integration Services (SSIS) nel catalogo SSIS nel database SQL di Azure, eseguire un pacchetto nel runtime di integrazione Azure-SSIS e monitorare il pacchetto in esecuzione.
 
 ## <a name="prerequisites"></a>Prerequisites
 

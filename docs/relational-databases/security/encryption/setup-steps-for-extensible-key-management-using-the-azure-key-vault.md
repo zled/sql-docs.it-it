@@ -1,14 +1,11 @@
 ---
-title: Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure | Microsoft Docs
+title: Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione | Microsoft Docs
 ms.custom: ''
-ms.date: 08/09/2016
+ms.date: 06/11/2018
 ms.prod: sql
-ms.prod_service: database-engine
-ms.component: security
 ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: security
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,26 +14,27 @@ helpviewer_keywords:
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: edmacauley
-ms.author: edmaca
+author: aliceku
+ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 1d49310aa2c1d178dfb47f05a72ccac73cd0882f
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: e4b0ffd4d01aaf17d00c17390e4074653225efb7
+ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 06/18/2018
+ms.locfileid: "35702982"
 ---
-# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Procedura di installazione di Extensible Key Management con l'insieme di credenziali delle chiavi di Azure
+# <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Extensible Key Management TDE di SQL Server con Azure Key Vault - Passaggi di configurazione
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Questa procedura dettagliata spiega come installare e configurare il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Insieme credenziali chiavi Azure.  
+  Questa procedura dettagliata spiega come installare e configurare il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per Azure Key Vault.  
   
 ## <a name="before-you-start"></a>Prima di iniziare  
  Per usare l'insieme di credenziali delle chiavi di Azure con SQL Server, vanno soddisfatti alcuni prerequisiti:  
   
 -   È necessaria una sottoscrizione di Azure  
   
--   Installare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 1.0.1 o successiva.  
+-   Installare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) 5.2.0 o successiva.  
 
 -   Creare Azure Active Directory  
 
@@ -53,7 +51,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 ## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>Parte 1: Configurare un'entità servizio di Azure Active Directory  
  Per concedere le autorizzazioni di accesso di SQL Server all'insieme di credenziali delle chiavi di Azure, è necessario un account dell'entità servizio in Azure Active Directory (AAD).  
   
-1.  Andare al [portale di Azure classico](https://manage.windowsazure.com)ed eseguire l'accesso.  
+1.  Andare al [portale di Azure ](https://ms.portal.azure.com/) ed eseguire l'accesso.  
   
 2.  Registrare un'applicazione con Azure Active Directory. Per istruzioni dettagliate su come registrare un'applicazione, vedere la sezione **Get an identity for the application** (Ottenere un'identità per l'applicazione) del post di blog [Azure Key Vault](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)(Insieme di credenziali delle chiavi di Azure).  
   
@@ -71,7 +69,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
 1.  **Aprire e accedere a PowerShell**  
   
-     Installare e avviare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 1.0.1 o successiva. Accedere al proprio account Azure con il comando seguente:  
+     Installare e avviare la versione più recente di [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) 5.2.0 o successiva. Accedere al proprio account Azure con il comando seguente:  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -171,25 +169,28 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
 5.  **Generare una chiave asimmetrica nell'insieme di credenziali delle chiavi**  
   
      Esistono due modi per generare una chiave nell'insieme di credenziali delle chiavi di Azure: 1) importare una chiave esistente o 2) crearne una nuova.  
-
+                  
+      > [!NOTE]
+        >  SQL Server supporta solo chiavi RSA a 2048 bit.
+        
     ### <a name="best-practice"></a>Procedura consigliata:
     
     Per garantire un ripristino rapido della chiave e accedere ai dati all'esterno di Azure, si consiglia la procedura consigliata seguente:
  
-    1. Creare la chiave di crittografia in locale in un dispositivo HSM locale. Verificare che si tratti di una chiave RSA 2048 asimmetrica, in modo che possa essere archiviata nell'insieme di credenziali delle chiavi di Azure.
+    1. Creare la chiave di crittografia in locale in un dispositivo HSM locale. Verificare che si tratti di una chiave RSA 2048 asimmetrica, in modo che sia supportata da SQL Server.
     2. Importare la chiave di crittografia nell'insieme di credenziali delle chiavi di Azure. Vedere i passaggi seguenti per informazioni su come eseguire questa operazione.
     3. Prima di usare la chiave nell'insieme di credenziali delle chiavi di Azure per la prima volta, eseguire un backup di questa chiave. Altre informazioni sul comando [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) .
-    4. Ogni volta che vengono apportate modifiche alla chiave, ad esempio si aggiungono elenchi di controllo di accesso, tag o attributi chiave, assicurarsi di eseguire un altro backup della chiave nell'insieme di credenziali delle chiavi di Azure.
+    4. Ogni volta che vengono apportate modifiche alla chiave, ad esempio si aggiungono elenchi di controllo di accesso, tag o attributi chiave, assicurarsi di eseguire un altro backup della chiave di Azure Key Vault.
 
         > [!NOTE]  
-        >  Il backup di una chiave è un'operazione relativa alla chiave dell'insieme di credenziali delle chiavi di Azure che restituisce un file che può essere salvato in qualsiasi posizione".
+        >  Il backup di una chiave è un'operazione relativa alla chiave di Azure Key Vault che restituisce un file che può essere salvato in qualsiasi posizione.
 
     ### <a name="types-of-keys"></a>Tipi di chiavi:
-    Nell'insieme di credenziali delle chiavi di Azure è possibile generare due tipi di chiavi. Entrambe sono chiavi asimmetriche RSA a 2048 bit.  
+    In Azure Key Vault è possibile generare due tipi di chiavi che funzioneranno con SQL Server. Entrambe sono chiavi asimmetriche RSA a 2048 bit.  
   
     -   **Protetta da software:** elaborata nel software e crittografata quando inattiva. Le operazioni sulle chiavi protette da software vengono eseguite in Macchine virtuali di Azure. Consigliato per le chiavi non usate in una distribuzione di produzione.  
   
-    -   **Protetta da HSM:** creata e protetta da un modulo di protezione hardware (HSM) per una maggiore sicurezza. Costa circa 1 dollaro per ogni versione della chiave.  
+    -   **Protetta da HSM:** creata e protetta da un modulo di protezione hardware (HSM) per una maggiore sicurezza. Il costo è di circa 1 dollaro per ogni versione della chiave.  
   
         > [!IMPORTANT]  
         >  Connettore SQL Server richiede che il nome della chiave usi solo i caratteri "a-z", "A-Z", "0-9", e "-", con un limite di 26 caratteri.   
@@ -213,12 +214,11 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     ```  
  
     > [!IMPORTANT]  
-    > L'importazione della chiave asimmetrica è consigliata per gli scenari di produzione in quanto consente all'amministratore di depositare la chiave in un sistema di deposito delle chiavi. Se la chiave asimmetrica viene creata nell'insieme di credenziali, non potrà essere depositata perché la chiave privata non può mai lasciare l'insieme di credenziali. È consigliabile depositare le chiavi usate per proteggere i dati critici. Se si perde una chiave asimmetrica, non sarà più possibile recuperare i dati.  
+    > L'importazione della chiave asimmetrica è consigliata per gli scenari di produzione in quanto consente all'amministratore di depositare la chiave in un sistema di deposito delle chiavi. Se la chiave asimmetrica viene creata nell'insieme di credenziali, non potrà essere depositata perché la chiave privata non può mai lasciare l'insieme di credenziali. È consigliabile depositare le chiavi usate per proteggere i dati critici. La perdita di una chiave asimmetrica causa una perdita dei dati permanente.  
 
     ### <a name="create-a-new-key"></a>Creare una nuova chiave
-
-    ##### <a name="example"></a>Esempio:  
-    Se si vuole, è possibile creare una nuova chiave di crittografia direttamente nell'insieme di credenziali delle chiavi di Azure e proteggerla con il software o con il modulo di protezione hardware (HSM). In questo esempio viene creata una chiave protetta da software con `Add-AzureKeyVaultKey cmdlet`:  
+    #### <a name="example"></a>Esempio:  
+    In alternativa, è possibile creare una nuova chiave di crittografia direttamente in Azure Key Vault e proteggerla con il software o con il modulo di protezione hardware (HSM).  In questo esempio viene creata una chiave protetta da software con `Add-AzureKeyVaultKey cmdlet`:  
 
     ``` powershell  
     Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
@@ -237,8 +237,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
     Id         : https://contosodevkeyvault.vault.azure.net:443/  
                  keys/ContosoRSAKey0/<guid>  
     ```  
-
-    > [!IMPORTANT]  
+ > [!IMPORTANT]  
     >  L'insieme di credenziali delle chiavi supporta più versioni della stessa chiave denominata, ma le chiavi da usare con il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non devono essere con controllo delle versioni o rollback. Se l'amministratore vuole eseguire il rollback della chiave usata per la crittografia di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , sarà necessario creare una nuova chiave con un nome diverso nell'insieme di credenziali e usarla per crittografare la chiave DEK.  
    
   
@@ -290,7 +289,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
   
 3.  **Registrare (creare) il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] come provider EKM con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     -- Creare un provider di crittografia usando il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che rappresenta un provider EKM per l'insieme di credenziali delle chiavi di Azure.    
+     -- Creare un provider di crittografia usando il Connettore [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] che rappresenta un provider EKM per Azure Key Vault.    
     Questo esempio usa il nome `AzureKeyVault_EKM_Prov`.  
   
     ```sql  
@@ -316,7 +315,7 @@ Versione di SQL Server  |Collegamento di installazione ridistribuibile
      Modificare lo script [!INCLUDE[tsql](../../../includes/tsql-md.md)] sottostante nei modi seguenti:  
   
     -   Modificare l'argomento `IDENTITY` (`ContosoDevKeyVault`) in modo che punti all'insieme di credenziali delle chiavi di Azure.
-        - Se si usa **Azure pubblico**, sostituire l'argomento `IDENTITY` con il nome dell'insieme di credenziali delle chiavi di Azure della parte II.
+        - Se si usa **Azure globale**, sostituire l'argomento `IDENTITY` con il nome di Azure Key Vault dalla parte II.
         - Se si usa un **cloud privato di Azure** , ad esempio Azure per enti pubblici, Azure Cina o Azure Germania, sostituire l'argomento `IDENTITY` con l'URI dell'insieme di credenziali restituito nella parte II, passaggio 3. Non includere "https://" nell'URI dell'insieme di credenziali.   
     -   Sostituire la prima parte dell'argomento `SECRET` con l' **ID client** di Azure Active Directory della parte 1. In questo esempio l' **ID client** è `EF5C8E094D2A4A769998D93440D8115D`.  
   
@@ -362,6 +361,4 @@ Ora che è stata completata la configurazione di base, vedere come [Usare Connet
   
 ## <a name="see-also"></a>Vedere anche  
  [Extensible Key Management tramite l'insieme di credenziali delle chiavi di Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
-[Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
-  
-  
+[Manutenzione e risoluzione dei problemi di Connettore SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)

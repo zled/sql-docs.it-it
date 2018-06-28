@@ -1,28 +1,26 @@
 ---
 title: Eseguire i pacchetti SSIS in Azure | Microsoft Docs
-ms.description: Provides an overview of the available methods for running packages deployed to Azure SQL Database.
+description: Panoramica dei metodi disponibili per l'esecuzione di pacchetti SSIS distribuiti nel database SQL di Azure.
 ms.date: 05/29/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: integration-services
-ms.component: lift-shift
 ms.suite: sql
 ms.custom: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: e4d733b49f8353fc430f90161ef25c352c8cac8f
-ms.sourcegitcommit: 808d23a654ef03ea16db1aa23edab496b73e5072
+ms.openlocfilehash: 2d3c70085117e7d10aac5a7e29bde2448d383efe
+ms.sourcegitcommit: de5e726db2f287bb32b7910831a0c4649ccf3c4c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34586086"
+ms.lasthandoff: 06/12/2018
+ms.locfileid: "35330155"
 ---
-# <a name="run-an-ssis-package-in-azure"></a>Eseguire un pacchetto SSIS in Azure
+# <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Eseguire i pacchetti SQL Server Integration Services (SSIS) distribuiti in Azure
 
-È possibile eseguire i pacchetti SSIS distribuiti nel database del catalogo SSISDB in un server di database SQL di Azure scegliendo una delle opzioni descritte in questo articolo. Un pacchetto può essere eseguito direttamente oppure nell'ambito di una pipeline di Azure Data Factory. Per una panoramica di SSIS in Azure, vedere [Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
+È possibile eseguire i pacchetti SSIS distribuiti nel catalogo SSISDB in un server di database SQL di Azure scegliendo uno dei metodi descritti in questo articolo. Un pacchetto può essere eseguito direttamente oppure nell'ambito di una pipeline di Azure Data Factory. Per una panoramica su SSIS in Azure, vedere [Migrazione lift-and-shift dei carichi di lavoro di SQL Server Integration Services nel cloud](ssis-azure-lift-shift-ssis-packages-overview.md).
 
 - Eseguire un pacchetto direttamente
 
@@ -81,4 +79,4 @@ Per altre informazioni, vedere [Eseguire un pacchetto SSIS usando l'attività st
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Ottenere informazioni sulle opzioni per la pianificazione dei pacchetti SSIS distribuiti in Azure. Per altre informazioni, vedere [Pianificare l'esecuzione di un pacchetto SSIS in Azure](ssis-azure-schedule-packages.md).
+Ottenere informazioni sulle opzioni per la pianificazione dei pacchetti SSIS distribuiti in Azure. Per altre informazioni, vedere [Pianificare i pacchetti SSIS in Azure](ssis-azure-schedule-packages.md).
