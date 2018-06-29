@@ -33,7 +33,7 @@ In questo argomento sono elencate le opzioni che sono consentite nella matrice a
 |ApplicationIntent|String|Dichiara il tipo di carico di lavoro dell'applicazione in caso di connessione a un server. I valori possibili sono ReadOnly e ReadWrite.<br /><br />Per ulteriori informazioni [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] supporto [!INCLUDE[ssHADR](../../includes/sshadr_md.md)], vedere [supporto per il ripristino di emergenza a disponibilità elevata](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md).|ReadWrite|  
 |AttachDBFileName|String|Specifica il file di database a cui associare il server.|Nessun valore impostato.|  
 |Autenticazione|Una delle seguenti stringhe:<br /><br />'SqlPassword'<br /><br />'ActiveDirectoryPassword'|Specifica la modalità di autenticazione.|Non è impostata.|  
-|CharacterSet<br /><br />(non supportato nel driver PDO_SQLSRV)|String|Specifica il set di caratteri usato per l'invio di dati al server.<br /><br />I valori possibili sono SQLSRV_ENC_CHAR e UTF-8. Per altre informazioni, vedere [How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
+|CharacterSet<br /><br />(non supportato nel driver PDO_SQLSRV)|String|Specifica il set di caratteri usato per l'invio di dati al server.<br /><br />I valori possibili sono SQLSRV_ENC_CHAR e UTF-8. Per altre informazioni, vedere [Procedura: Invio e recupero di dati UTF-8 con il supporto incorporato di UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md).|SQLSRV_ENC_CHAR|  
 |ColumnEncryption<br /><br />(supportato solo in Windows)|**Abilitato** o **disabilitato**|Specifica se la funzionalità Always Encrypted è abilitata o meno. |Disabilitata|  
 |ConnectionPooling|1 o **true** per il pool di connessioni attivato.<br /><br />0 o **false** per il pool di connessioni disattivato.|Specifica se la connessione viene assegnata da un pool di connessioni (1 o **true**) o non (0 o **false**).<sup> 1</sup>|**true** (1)|  
 |ConnectRetryCount|Numero intero compreso tra 0 e 255 (inclusivo)|Il numero massimo di tentativi per ristabilire una connessione interrotta prima di rinunciare. Per impostazione predefinita, un singolo tenta di ristabilire una connessione quando vengono interrotti. Un valore pari a 0 indica che la riconnessione non verrà tentato di eseguire.|1|  
@@ -66,7 +66,7 @@ In questo argomento sono elencate le opzioni che sono consentite nella matrice a
 
 4. Istanza di *UID* e *PWD* devono essere entrambi impostati durante la connessione con l'autenticazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
 
-Molte delle chiavi supportate sono attributi della stringa di connessione ODBC. Per informazioni sulle stringhe di connessione ODBC, vedere [Using Connection String Keywords with SQL Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+Molte delle chiavi supportate sono attributi della stringa di connessione ODBC. Per informazioni sulle stringhe di connessione ODBC, vedere [Utilizzo delle parole chiave delle stringhe di connessione con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
 
 ## <a name="see-also"></a>Vedere anche  
 [Connessione al server](../../connect/php/connecting-to-the-server.md)  

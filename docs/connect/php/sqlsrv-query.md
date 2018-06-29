@@ -80,7 +80,7 @@ Risorsa di istruzione. Se l'istruzione non può essere creato e/o eseguita, **fa
 ## <a name="remarks"></a>Remarks  
 Il **sqlsrv_query** funzione è ideale per le query singole e deve essere la scelta predefinita per eseguire query a meno che non si verifichino circostanze speciali. Questa funzione fornisce un metodo semplificato per eseguire una query con una quantità minima di codice. La funzione **sqlsrv_query** esegue sia la preparazione che l'esecuzione dell'istruzione e può essere usata per eseguire query con parametri.  
   
-Per altre informazioni, vedere [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Per altre informazioni, vedere [Procedura: Recuperare i parametri di output mediante il driver SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Esempio  
 Nell'esempio seguente viene inserita un'unica riga nella tabella *Sales.SalesOrderDetail* del database AdventureWorks. Nell'esempio si presuppone che SQL Server e il [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) database vengono installati nel computer locale. Quando si esegue l'esempio dalla riga di comando, tutto l'output viene scritto nel browser.  
