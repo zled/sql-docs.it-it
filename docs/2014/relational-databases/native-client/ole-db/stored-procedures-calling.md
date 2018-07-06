@@ -25,7 +25,7 @@ ms.author: jhubbard
 manager: jhubbard
 ms.openlocfilehash: bd9a050bd3c424c832f765d02182136a5bcdef4f
 ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/19/2018
 ms.locfileid: "36065137"
@@ -38,7 +38,7 @@ ms.locfileid: "36065137"
 -   Utilizzando un marcatore di parametro (?) per specificare i parametri, associare una variabile di programma all'marcatore di parametro e quindi inserire il valore dei dati nella variabile di programma.  
   
 > [!NOTE]  
->  Quando si esegue una chiamata alle stored procedure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando parametri denominati con OLE DB, i nomi dei parametri devono iniziare con il carattere '@'. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC.  
+>  Quando si esegue una chiamata alle stored procedure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilizzando parametri denominati con OLE DB, i nomi dei parametri devono iniziare con il carattere '\@'. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC.  
   
  Per supportare i parametri, il **ICommandWithParameters** interfaccia viene esposta per l'oggetto command. Per utilizzare i parametri, il consumer descrive prima i parametri al provider chiamando il **ICommandWithParameters:: SetParameterInfo** metodo (o facoltativamente prepara un'istruzione di chiamata che chiama il  **GetParameterInfo** (metodo)). Il consumer crea quindi una funzione di accesso che specifica la struttura di un buffer e inserisce i valori dei parametri in questo buffer. Infine, passa l'handle della funzione di accesso e un puntatore al buffer a **Execute**. Nelle chiamate successive a **Execute**, il consumer inserisce i nuovi valori dei parametri nel buffer e chiama **Execute** con il puntatore del buffer e di handle della funzione di accesso.  
   

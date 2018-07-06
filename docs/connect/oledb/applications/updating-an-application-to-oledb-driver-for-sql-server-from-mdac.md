@@ -22,7 +22,7 @@ ms.author: Pedro.Lopes
 manager: craigg
 ms.openlocfilehash: 11597ed3b7cd80cae8604291bd8b662bf6a9ed80
 ms.sourcegitcommit: 354ed9c8fac7014adb0d752518a91d8c86cdce81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/14/2018
 ms.locfileid: "35612106"
@@ -62,7 +62,7 @@ ms.locfileid: "35612106"
 
 -   Gli avvisi e gli errori non hanno subito modifiche particolarmente rilevanti. Avvisi ed errori restituiti dal server ora mantengono il livello di gravità stesso quando viene passato al Driver OLE DB per SQL Server. Se l'intercettazione di determinati avvisi ed errori riveste un'importanza particolare, è necessario assicurarsi che l'applicazione sia stata sottoposta a test approfonditi.  
 
--   Il Driver OLE DB per SQL Server ha errori più restrittivo rispetto a MDAC, il che significa che alcune applicazioni che non sono completamente conformi alle specifiche OLE DB possono comportarsi in modo diverso. Ad esempio, il provider SQLOLEDB non ha applicato la regola che i nomi di parametro devono iniziare con ' @' per risultato esegue i parametri, ma il Driver OLE DB per SQL Server.  
+-   Il Driver OLE DB per SQL Server ha errori più restrittivo rispetto a MDAC, il che significa che alcune applicazioni che non sono completamente conformi alle specifiche OLE DB possono comportarsi in modo diverso. Ad esempio, il provider SQLOLEDB non ha applicato la regola che i nomi di parametro devono iniziare con '\@' per risultato esegue i parametri, ma il Driver OLE DB per SQL Server.  
 
 -   Il Driver OLE DB per SQL Server si comporta in modo diverso da MDAC alle connessioni non riuscite. Ad esempio, MDAC restituisce i valori delle proprietà memorizzati nella cache per una connessione riuscita, mentre il Driver OLE DB per SQL Server segnala un errore all'applicazione chiamante.  
 
