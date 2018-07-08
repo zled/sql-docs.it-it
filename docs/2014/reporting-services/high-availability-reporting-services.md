@@ -1,5 +1,5 @@
 ---
-title: La disponibilità elevata (Reporting Services) | Documenti Microsoft
+title: Disponibilità elevata (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - high availability [SQL Server], Reporting Services
 - high availability [Reporting Services]
@@ -17,18 +17,18 @@ ms.assetid: 50e0813f-f591-4688-9cd1-e6389a3808e5
 caps.latest.revision: 15
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: e1d11b2b53499b12a6a8a7dca262bc26ae777825
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0884a284e6d9169ce978d3c47330a683e2bb6b52
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065056"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150222"
 ---
 # <a name="high-availability-reporting-services"></a>Disponibilità elevata (Reporting Services)
   Un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è un server senza stato (stateless) in cui vengono archiviati dati dell'applicazione, contenuto, proprietà e informazioni sulla sessione in due database relazionali di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pertanto, il modo migliore per garantire la disponibilità di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] funzionalità consiste nell'eseguire le operazioni seguenti:  
   
--   Usare le funzionalità di disponibilità elevata del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] per ottimizzare il tempo di attività del database del server di report. Se si configura un [!INCLUDE[ssDE](../includes/ssde-md.md)] dell'istanza per l'esecuzione in un cluster di failover, è possibile selezionare quell'istanza quando si crea un database del server di report.  
+-   Usare le funzionalità di disponibilità elevata dei [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] per ottimizzare il tempo di attività di database server di report. Se si configura un [!INCLUDE[ssDE](../includes/ssde-md.md)] dell'istanza per l'esecuzione in un cluster di failover, è possibile selezionarla quando si crea un database del server di report.  
   
 -   Utilizzare, per quanto possibile, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssHADR](../includes/sshadr-md.md)] con i database di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e per le origini dati. Per altre informazioni, vedere [Reporting Services con i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](../database-engine/availability-groups/windows/reporting-services-with-always-on-availability-groups-sql-server.md).  
   

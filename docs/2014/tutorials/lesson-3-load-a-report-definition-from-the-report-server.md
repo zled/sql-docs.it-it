@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 3: Caricare una definizione del Report dal Server di Report | Documenti Microsoft'
+title: 'Lezione 3: Caricare una definizione del Report dal Server di Report | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
 caps.latest.revision: 16
-author: douglaslM
+author: craigg-msft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 912a149542133a4c2bbdf4dfecde2ac0313defd5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2963895811f8567f5142ed9b49137123390ec8d6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065723"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149432"
 ---
 # <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Lezione 3: Caricamento della definizione di un report dal Server report
   Dopo aver creato il progetto e generato le classi dallo schema RDL, è possibile caricare la definizione di un report dal server di report.  
   
 ### <a name="to-load-a-report-definition"></a>Per caricare la definizione di un report  
   
-1.  Aggiungere un campo privato all'inizio del `ReportUpdater` classe (modulo se si utilizza [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) per il `Report` classe. Questo campo verrà utilizzato per mantenere un riferimento al report caricato dal server di report per tutta la durata dell'applicazione.  
+1.  Aggiungere un campo privato in cima il `ReportUpdater` classe (modulo se si usa [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) per il `Report` classe. Questo campo verrà utilizzato per mantenere un riferimento al report caricato dal server di report per tutta la durata dell'applicazione.  
   
     ```csharp  
     private Report _report;  
@@ -101,10 +101,10 @@ ms.locfileid: "36065723"
     ```  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- Nella lezione successiva si scriverà il codice per l'aggiornamento della definizione del report caricata dal server di report. Vedere [lezione 4: aggiornare la definizione del Report a livello di programmazione](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Nella lezione successiva si scriverà il codice per l'aggiornamento della definizione del report caricata dal server di report. Visualizzare [lezione 4: aggiornare la definizione del Report a livello di programmazione](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'aggiornamento di report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+ [Aggiornamento dei report mediante le classi generate dallo Schema RDL &#40;esercitazione su SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Report Definition Language &#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Risoluzione dei problemi relativi a parti del Report (Generatore Report e SSRS) | Documenti Microsoft
+title: Risolvere i problemi di parti del Report (Generatore Report e SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
 caps.latest.revision: 6
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d3f8e675ff62ec000b3b9dd3c7c692c63f7fc8b1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce472be61a85aa1adfad529c38cd74c8dcd9d17a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065304"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148572"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Risoluzione dei problemi relativi alle parti del report (Generatore report e SSRS)
   Questi suggerimenti possono risultare utili durante l'utilizzo di parti del report.  
@@ -30,7 +30,7 @@ ms.locfileid: "36065304"
  Per conoscere le autorizzazioni di cui dispongono i colleghi, chiedere all'amministratore del server di report.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Impossibilità di visualizzare parti di report caricate in un server SharePoint in seguito alla relativa ricerca  
- È possibile che le parti di report caricate manualmente in una raccolta documenti di SharePoint, anziché pubblicate tramite Generatore report, non vengano visualizzate nella relativa raccolta. Potrebbe essere necessario sincronizzare il server di report utilizzato per la ricerca nella raccolta con il contenuto della raccolta documenti di SharePoint. Per altre informazioni, vedere [attivare la funzionalità sincronizzazione File Server di Report in Amministrazione centrale SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione Online di](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
+ È possibile che le parti di report caricate manualmente in una raccolta documenti di SharePoint, anziché pubblicate tramite Generatore report, non vengano visualizzate nella relativa raccolta. Potrebbe essere necessario sincronizzare il server di report utilizzato per la ricerca nella raccolta con il contenuto della raccolta documenti di SharePoint. Per altre informazioni, vedere [attivare la funzionalità di sincronizzazione File Server di Report in Amministrazione centrale SharePoint](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) nelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [documentazione in linea](http://go.microsoft.com/fwlink/?LinkId=154888) sul sito msdn.microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Impossibilità di visualizzare l'immagine nei report di altri utenti  
  Se si pubblica una parte di report rappresentata da un collegamento a un file di immagine, tale parte di report costituirà in effetti un semplice collegamento. Se altri utenti non riescono a visualizzare l'immagine quando aggiungono la parte di report immagine nei relativi report, potrebbero non disporre delle autorizzazioni per l'immagine a cui ci si sta collegando.  
@@ -47,6 +47,6 @@ ms.locfileid: "36065304"
  Se gli elementi del report presentano un riferimento circolare, non sarà possibile pubblicarli come parti di report. Un elemento del report punta, ad esempio, a un set di dati che a sua volta punta a un parametro. Il parametro, infine, punta nuovamente al set di dati. Sarà necessario anzitutto eliminare uno dei riferimenti prima di poter pubblicare la parte di report.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Parti di report &#40;SSRS e Generatore Report&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Editor destinazione ADO NET (pagina Mapping) | Documenti Microsoft
+title: Editor destinazione ADO NET (pagina Mapping) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
 caps.latest.revision: 16
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: df49ffc7af511e2c17f46ff96cc9e9102cd1574d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 471edf6bd2971c0ab2ee38bd81543f656923866e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239381"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor destinazione ADO NET (pagina Mapping)
   Utilizzare la pagina **Mapping** della finestra di dialogo **Editor destinazione ADO NET** per eseguire il mapping tra colonne di input e colonne di destinazione.  
@@ -51,6 +51,6 @@ ms.locfileid: "36054341"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione ADO NET &#40;pagina Gestione connessione&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Editor destinazione ADO NET &#40;pagina di Output di errore&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [Editor destinazione ADO NET &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

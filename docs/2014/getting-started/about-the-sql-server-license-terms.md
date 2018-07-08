@@ -1,5 +1,5 @@
 ---
-title: Informazioni sulle condizioni di licenza di SQL Server | Documenti Microsoft
+title: Sulle condizioni di licenza di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -8,28 +8,28 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - licenses [SQL Server]
 - end user license agreement [SQL Server]
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 caps.latest.revision: 55
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8188409924e88fe800e95266b94a7f62f883cd72
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mightypen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: edfd3cdc1d6565fd6538dfcf5d79e9c1e7d4c9d1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065640"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165342"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Informazioni sulle condizioni di licenza di SQL Server
-  Le condizioni di licenza software [!INCLUDE[msCoName](../includes/msconame-md.md)] vengono copiate nel computer locale durante l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. Vengono scritti i file: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ o % % ProgramFiles(x86) \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License termini\\.  
+  Le condizioni di licenza software [!INCLUDE[msCoName](../includes/msconame-md.md)] vengono copiate nel computer locale durante l'installazione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza. I file vengono scritti a: % ProgramFiles %\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License Terms\ o % % ProgramFiles(x86) \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Termini \120\License\\.  
   
  Quando più istanze della stessa edizione e lingua di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono installate nello stesso computer, a tutte le istanze della stessa edizione e lingua verrà applicata una sola copia delle condizioni di licenza.  
   
- Il nome di file condizioni di licenza indica l'edizione di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , nonché lo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizione in lingua installata. Il nome di file condizioni di licenza è nel formato: SQLServer2014_License_Edition_\<tipo > _\<LCID >. RTF. Esempio:  
+ Il nome di file condizioni di licenza indicate l'edizione [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] così come il [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edizione in lingua installata. Il nome di file condizioni di licenza è nel formato: SQLServer2014_License_Edition_\<tipo > _\<LCID >. RTF. Esempio:  
   
 -   SQLServer2014_License_DEV_1033.rtf per [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, edizione in lingua inglese.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "36065640"
 |Russo|RUS|1049|  
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-licensing-options"></a>Opzioni di gestione delle licenze per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- Per ulteriori informazioni [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determinazione dei prezzi e opzioni di licenza, vedere la [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) sito Web.  
+ Per altre informazioni sulle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sui prezzi e le opzioni di licenza, vedere la [Microsoft SQL Server](http://www.microsoft.com/sqlserver/sql-server-2014.aspx) (http://www.microsoft.com/sqlserver/sql-server-2014.aspx) sito Web.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Considerazioni sulle licenze per SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

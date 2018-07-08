@@ -1,5 +1,5 @@
 ---
-title: Glossario | Documenti Microsoft
+title: Glossario | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,22 +17,22 @@ ms.technology:
 - reporting-services-native
 - reporting-services-sharepoint
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
 - glossary [SQL Server]
 - terminology [SQL Server]
 ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 caps.latest.revision: 1952
-author: HeidiSteen
+author: heidisteen
 ms.author: heidist
-manager: jhubbard
-ms.openlocfilehash: 34fce852a5a3a06342bf5e8f16f4e1cd379e6d16
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 390fedf55957e0038d10579fe444bb843a057d47
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063655"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164332"
 ---
 # Glossario
   
@@ -1338,7 +1338,7 @@ ms.locfileid: "36063655"
 |schema SQL del repository|Set di tabelle standard utilizzate dal motore del repository per gestire tutti gli oggetti, le relazioni e le raccolte del repository.|  
 |modello informativo del tipo di repository|Modello a oggetti principale che rappresenta le definizioni del tipo del repository per Servizio metadati.|  
 |server di ripubblicazione|Sottoscrittore che pubblica i dati ricevuti da un server di pubblicazione.|  
-|carattere riservato|Carattere della tastiera con un significato specifico per un programma che, di conseguenza, non può essere utilizzato normalmente nell'assegnazione di nomi a file, documenti e altri strumenti generati dall'utente, ad esempio le macro. Caratteri comunemente riservati per usi specifici includono asterisco (*), barra (/), barra rovesciata (\\), punto interrogativo (?) e barra verticale (&#124;).|  
+|carattere riservato|Carattere della tastiera con un significato specifico per un programma che, di conseguenza, non può essere utilizzato normalmente nell'assegnazione di nomi a file, documenti e altri strumenti generati dall'utente, ad esempio le macro. Caratteri comunemente riservato per usi specifici includono asterisco (*), barra (/), barra rovesciata (\\), punto interrogativo (?) e barra verticale (&#124;).|  
 |strategia di risoluzione|Set di criteri valutati in sequenza dal motore del repository durante la selezione di un oggetto nel caso in cui esistano più versioni e le informazioni sulle versioni non siano state specificate nel programma che esegue la chiamata.|  
 |resource|Variabile speciale che contiene un riferimento a un'istruzione o a una connessione di database.|  
 |resource|Qualsiasi elemento in un database del server di report diverso da un report, una cartella o un'origine dati condivisa.|  

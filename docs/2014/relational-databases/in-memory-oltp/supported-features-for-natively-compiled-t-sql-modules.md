@@ -1,5 +1,5 @@
 ---
-title: Costrutti è supportato nelle Stored procedure compilate in modo nativo | Documenti Microsoft
+title: Costrutti è supportato nelle Stored procedure compilate in modo nativo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 caps.latest.revision: 34
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: ab0ce49a3f135d59dba89abc756bf9ee4d7fa198
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 91434af003bdf783ee4f2bd2c946e4a871eac44d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240852"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Costrutti supportati in stored procedure compilate in modo nativo
   In questo argomento contiene un elenco delle funzionalità supportate per le stored procedure compilate in modo nativo ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -30,15 +30,15 @@ ms.locfileid: "36054322"
   
 -   [Funzioni predefinite nelle Stored procedure compilate in modo nativo](#bfncsp)  
   
--   [Query della superficie di attacco in Stored procedure compilate in modo nativo](#qsancsp)  
+-   [Superficie di query nelle Stored procedure compilate in modo nativo](#qsancsp)  
   
 -   [Controllo](#auditing)  
   
--   [Tabella, Query e gli hint di Join](#tqh)  
+-   [Nella tabella, Query e gli hint di Join](#tqh)  
   
 -   [Limitazioni relative all'ordinamento](#los)  
   
- Per informazioni sui tipi di dati supportati in modo nativo nelle stored procedure compilate, vedere [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
+ Per informazioni sui tipi di dati in modo nativo è supportato nelle stored procedure compilate, vedere [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
   
  Per informazioni complete sui costrutti non supportati e per informazioni su come sopperire ad alcune funzionalità non supportate nelle stored procedure compilate in modo nativo, vedere [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Per altre informazioni su funzionalità non supportate, vedere [Costrutti Transact-SQL non supportati da OLTP in memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36054322"
   
 -   Funzioni di sistema: @@rowcount. Le istruzioni all'interno di stored procedure compilate in modo nativo aggiornano @@rowcount ed è possibile usare @@rowcount in una stored procedure compilata in modo nativo per determinare il numero di righe interessate dall'ultima istruzione eseguita all'interno della stored procedure. Tuttavia, @@rowcount viene reimpostato su 0 all'inizio e alla fine dell'esecuzione di una stored procedure compilata in modo nativo.  
   
-##  <a name="qsancsp"></a> Query della superficie di attacco in Stored procedure compilate in modo nativo  
+##  <a name="qsancsp"></a> Superficie di query nelle Stored procedure compilate in modo nativo  
  Sono supportati gli elementi seguenti:  
   
 -   BETWEEN  
@@ -112,13 +112,13 @@ ms.locfileid: "36054322"
   
 -   CROSS JOIN e INNER JOIN, supportati solo con query SELECT.  
   
--   Le espressioni sono supportate nell'elenco di selezione e [dove &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) clausola se si usa un operatore supportato. Vedere [Operatori supportati](#so) per l'elenco degli operatori attualmente supportati.  
+-   Le espressioni sono supportate nell'elenco SELECT e [dove &#40;Transact-SQL&#41; ](/sql/t-sql/queries/where-transact-sql) clausola se si usa un operatore supportato. Vedere [Operatori supportati](#so) per l'elenco degli operatori attualmente supportati.  
   
 -   Predicato del filtro IS [NOT] NULL  
   
 -   DA \<tabella con ottimizzazione per la memoria >  
   
--   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) è supportato, insieme alle funzioni di aggregazione AVG, COUNT, COUNT_BIG, MIN, MAX e SUM. MIN e MAX non sono supportate per i tipi nvarchar, char, varchar, varchar, varbinary e binary. [Clausola ORDER BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) è supportato con [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) se un'espressione nell'elenco ORDER BY appare in modo identico nell'elenco GROUP BY. Ad esempio, l'espressione GROUP BY a + b ORDER BY a + b è supportata, ma GROUP BY a, b ORDER BY a + b non lo è.  
+-   [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) è supportato, con le funzioni di aggregazione AVG, COUNT, COUNT_BIG, MIN, MAX e SUM. MIN e MAX non sono supportate per i tipi nvarchar, char, varchar, varchar, varbinary e binary. [Clausola ORDER BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-order-by-clause-transact-sql) è supportato con [GROUP BY &#40;Transact-SQL&#41; ](/sql/t-sql/queries/select-group-by-transact-sql) se un'espressione nell'elenco ORDER BY appare in modo identico nell'elenco GROUP BY. Ad esempio, l'espressione GROUP BY a + b ORDER BY a + b è supportata, ma GROUP BY a, b ORDER BY a + b non lo è.  
   
 -   HAVING, soggetto alle stesse limitazioni delle espressioni della clausola WHERE.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "36054322"
   
  <sup>1</sup> ORDER BY e TOP sono supportati nelle stored procedure compilate in modo nativo, con alcune restrizioni:  
   
--   Non sono supportate per `DISTINCT` nella `SELECT` o `ORDER BY` clausola.  
+-   Non è disponibile alcun supporto per `DISTINCT` nella `SELECT` o `ORDER BY` clausola.  
   
 -   `WITH TIES` o `PERCENT` non è supportata nella clausola `TOP`.  
   
--   `TOP` abbinata `ORDER BY` non supporta più di 8.192 quando si utilizza una costante nel `TOP` clausola. Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
+-   `TOP` combinata con `ORDER BY` non supporta più di 8.192 quando si usa una costante nel `TOP` clausola. Questo limite può risultare più basso nel caso in cui la query contenga funzioni di aggregazione o dei join. Ad esempio, con un join (due tabelle) il limite scende a 4.096 righe. Con due join (tre tabelle) il limite è 2.730 righe.  
   
      È possibile che si ottengano risultati maggiori di 8.192 archiviando il numero di righe in una variabile:  
   
@@ -153,14 +153,14 @@ ms.locfileid: "36054322"
   
  Tuttavia, una costante nella clausola `TOP` assicura prestazioni migliori rispetto a una variabile.  
   
- Queste restrizioni non si applicano a interpretate [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso nelle tabelle con ottimizzazione per la memoria.  
+ Queste restrizioni non si applicano a interpretate [!INCLUDE[tsql](../../includes/tsql-md.md)] accesso nelle tabelle ottimizzate per la memoria.  
   
 ##  <a name="auditing"></a> Controllo  
  Il controllo a livello di routine è supportato nelle stored procedure compilate in modo nativo. Il controllo a livello di istruzione non è supportato.  
   
  Per ulteriori informazioni sul controllo, vedere [Create a Server Audit and Database Audit Specification](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a> Tabella, Query e gli hint di Join  
+##  <a name="tqh"></a> Nella tabella, Query e gli hint di Join  
  Sono supportati gli elementi seguenti:  
   
 -   Gli hint INDEX, FORCESCAN e FORCESEEK, nella sintassi di hint di tabella o nella [clausola OPTION &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) della query.  
@@ -171,7 +171,7 @@ ms.locfileid: "36054322"
   
 -   OPTIMIZE FOR  
   
- Per altre informazioni, vedere [hint &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql).  
+ Per altre informazioni, vedere [hint per la &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql).  
   
 ##  <a name="los"></a> Limitazioni relative all'ordinamento  
  È possibile ordinare più di 8.000 righe in una query che usa [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) e una clausola [ORDER BY Clause &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Tuttavia, senza la [ clausola ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) può ordinare fino a 8.000 righe, meno se sono presenti join.  

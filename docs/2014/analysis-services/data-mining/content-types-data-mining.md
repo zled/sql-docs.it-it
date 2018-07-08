@@ -1,5 +1,5 @@
 ---
-title: Pacchetto di contenuto tipi (Data Mining) | Documenti Microsoft
+title: Tipi (Data Mining) del contenuto | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
 - KEY SEQUENCE column
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - coding [Data Mining]
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 caps.latest.revision: 42
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2f283ff19a1947cfda208979b80482432ec6c597
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 817de3b9232a755d94fe2790a0ab2e08a835c9dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064821"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163512"
 ---
 # <a name="content-types-data-mining"></a>Tipi di contenuto (Data mining)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]è possibile definire sia il tipo di dati fisico per una colonna in una struttura di data mining che un tipo di contenuto logico per la colonna quando viene usata in un modello.  
@@ -72,21 +72,21 @@ ms.locfileid: "36064821"
  Il tipo di contenuto `Discretized` è supportato dai tipi di dati `Date`, `Double`, `Long` e `Text`.  
   
 ## <a name="key"></a>Key  
- Il tipo di contenuto *key* indica che la colonna identifica in modo univoco una riga. In una tabella del case la colonna chiave è in genere un identificatore numerico o di testo. Il tipo di contenuto è impostata su `key` per indicare che la colonna non deve essere utilizzata per l'analisi, solo per i record di rilevamento.  
+ Il tipo di contenuto *key* indica che la colonna identifica in modo univoco una riga. In una tabella del case la colonna chiave è in genere un identificatore numerico o di testo. Impostare il tipo di contenuto `key` per indicare che la colonna non deve essere utilizzata per l'analisi, solo per i record di rilevamento.  
   
- Anche le tabelle nidificate contengono chiavi, ma in questo caso l'utilizzo è leggermente diverso. Il tipo di contenuto è impostata su `key` in una tabella nidificata se la colonna è l'attributo che si desidera analizzare. I valori nella chiave della tabella nidificata devono essere univoci per ogni case, ma possono esistere duplicati nell'intero set di case.  
+ Anche le tabelle nidificate contengono chiavi, ma in questo caso l'utilizzo è leggermente diverso. Impostare il tipo di contenuto `key` in una tabella nidificata se la colonna è l'attributo che si desidera analizzare. I valori nella chiave della tabella nidificata devono essere univoci per ogni case, ma possono esistere duplicati nell'intero set di case.  
   
  Se ad esempio si analizzano i prodotti acquistati dai clienti, è possibile impostare il tipo di contenuto chiave (key) per la colonna **CustomerID** nella tabella del case e di nuovo il tipo di contenuto chiave (key) per la colonna **PurchasedProducts** nella tabella annidata.  
   
 > [!NOTE]  
 >  Le tabelle nidificate sono disponibili solo se si utilizzano dati di un'origine dati esterna definiti come vista origine dati di Analysis Services.  
   
- Questo tipo di contenuto è supportato dai seguenti tipi di dati: `Date`, `Double`, `Long`, e `Text`.  
+ Questo tipo di contenuto è supportato dai tipi di dati seguenti: `Date`, `Double`, `Long`, e `Text`.  
   
 ## <a name="key-sequence"></a>Key Sequence  
  Il tipo di contenuto *key sequence* può essere usato solo nei modelli Sequence Clustering. Quando si imposta tipo di contenuto su `key sequence`, la colonna contiene valori che rappresentano una sequenza di eventi. I valori sono ordinati, ma non è necessario che siano equidistanti.  
   
- Questo tipo di contenuto è supportato dai seguenti tipi di dati: `Double`, `Long`, `Text`, e `Date`.  
+ Questo tipo di contenuto è supportato dai tipi di dati seguenti: `Double`, `Long`, `Text`, e `Date`.  
   
 ## <a name="key-time"></a>Chiave temporale  
  Il tipo di contenuto *key time* può essere usato solo nei modelli Time Series. Quando si imposta il tipo di contenuto su `key time`, i valori vengono ordinati e rappresentano una scala cronologica.  

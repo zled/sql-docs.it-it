@@ -1,31 +1,29 @@
 ---
-title: L'autenticazione Kerberos (OLE DB) integrata | Documenti Microsoft
+title: L'autenticazione Kerberos (OLE DB) integrata | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 caps.latest.revision: 6
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bd1ccb608aec68f96671ea52cdb17c5ff66c7182
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f2ad40a930192dcaf91afeb14f2d54a7c08db0b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063105"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37410300"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Autenticazione Kerberos integrata (OLE DB)
   Nell'esempio viene illustrato come ottenere l'autenticazione Kerberos reciproca tramite OLE DB in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Questo esempio può essere eseguito solo in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  
   
- Per ulteriori informazioni sui nomi SPN e l'autenticazione Kerberos, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
+ Per altre informazioni sui nomi SPN e l'autenticazione Kerberos, vedere [nome dell'entità servizio &#40;SPN&#41; supporto nelle connessioni Client](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Esempio  
  È necessario specificare un server. Nel file con estensione cpp impostare "MyServer" su un nome di computer in cui sia presente un'istanza di [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versione successiva.  

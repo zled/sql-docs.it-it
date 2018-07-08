@@ -1,5 +1,5 @@
 ---
-title: Calcoli (Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Calcoli (Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
 ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: f4f44529300b0152ef6f89ff2021d8827049e203
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f26be233fc8a3e9b4bcc1aa5267619b839a02ae1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056051"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239941"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Calcoli (Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Usare la scheda **Calcoli** in Progettazione cubi per visualizzare e modificare i calcoli, inclusi i membri calcolati, i set denominati e i comandi di script MDX (Multidimensional Expressions) per il cubo selezionato.  

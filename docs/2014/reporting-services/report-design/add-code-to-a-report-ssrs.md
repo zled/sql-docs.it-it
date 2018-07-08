@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
 - custom code [Reporting Services]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
 caps.latest.revision: 41
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 3b4861234af092f5acd9dc500e52737a446d5dad
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 75f7f2490adbf85d9d4796a8492d00b9685de423
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064609"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183948"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>Aggiungere codice a un report (SSRS)
   In qualsiasi espressione, è possibile chiamare un codice personalizzato. Il codice può essere fornito nei due modi seguenti:  
@@ -64,6 +64,6 @@ ms.locfileid: "36064609"
 ## <a name="see-also"></a>Vedere anche  
  [Finestra di dialogo Proprietà report, codice](../report-properties-dialog-box-code.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Riferimenti alla raccolta dei parametri &#40;SSRS e Generatore Report&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
+ [Riferimenti alla raccolta Parameters &#40;Report e SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)  
   
   

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: a513f196b0dc099f890225048e4e96adab51d285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: db88be22f9bb3e92739957bfaf0f4b827e49f61d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062227"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277357"
 ---
 # <a name="use-a-recordset-destination"></a>Utilizzo di una destinazione recordset
   La destinazione recordset non salva i dati in un'origine dati esterna, ma in un recordset in memoria archiviato in una variabile del pacchetto [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo di dati `Object`. Dopo che la destinazione recordset ha salvato i dati, in genere si utilizza un contenitore Ciclo Foreach con l'enumeratore Foreach ADO per elaborare una riga del recordset alla volta. L'enumeratore Foreach ADO salva il valore di ogni colonna della riga corrente in una variabile del pacchetto distinta. Quindi, le attività configurate nel contenitore Ciclo Foreach leggono tali valori dalle variabili ed eseguono alcune azioni.  
@@ -41,7 +41,7 @@ ms.locfileid: "36062227"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]creare o aprire un pacchetto di [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-2.  Creare una variabile che conterrà il recordset salvato in memoria da parte della destinazione Recordset e impostare il tipo di variabile `Object`.  
+2.  Creare una variabile che conterrà il recordset salvato in memoria dalla destinazione Recordset e impostare il tipo della variabile `Object`.  
   
 3.  Creare variabili aggiuntive dei tipi appropriati per contenere i valori di ogni colonna del recordset che si desidera utilizzare.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "36062227"
   
     3.  Creare una variabile denominata `FirstName`e impostarne il tipo di `String`.  
   
-         Il `FirstName` la variabile mantiene nome del venditore.  
+         Il `FirstName` variabile contiene nome del venditore.  
   
     4.  Creare una variabile denominata `Bonus`e impostarne il tipo di `Double`.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "36062227"
   
 2.  Aprire **Editor ciclo Foreach**e configurare il contenitore con le impostazioni seguenti:  
   
-    1.  Nel **insieme** pagina per **enumeratore**, selezionare **Foreach ADO Enumerator**e per **variabile di origine oggetto ADO**, selezionare `User::BonusRecordset`.  
+    1.  Nel **raccolta** pagina, per **enumeratore**, selezionare **Foreach ADO Enumerator**e per **variabile di origine oggetto ADO**, selezionare `User::BonusRecordset`.  
   
-    2.  Nel **mapping delle variabili** pagina, eseguire il mapping `User::EmailAddress` all'indice 0, `User::FirstName` all'indice 1 e `User::Bonus` all'indice 2.  
+    2.  Nel **mapping variabili** pagina, eseguire il mapping `User::EmailAddress` all'indice 0, `User::FirstName` all'indice 1 e `User::Bonus` all'indice 2.  
   
 3.  Nella scheda **Flusso di controllo** aggiungere un'attività Invia messaggi nel contenitore Ciclo Foreach.  
   

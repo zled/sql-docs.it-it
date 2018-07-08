@@ -1,5 +1,5 @@
 ---
-title: Libreria azioni (scheda azioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Libreria azioni (scheda azioni, Progettazione cubi) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.actionsview.organizerpane.f1
 ms.assetid: 147b4622-e9fa-4537-9dbb-9e595c0f55bc
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d97be0a5c0fe8272a448638273fc550724c803e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a39e5579671cf870778f1cee679c49cd3e1617fa
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065717"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151522"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Libreria azioni (scheda Azioni, Progettazione cubi) (Analysis Services - Dati multidimensionali)
   Utilizzare il riquadro **Libreria azioni** nella scheda **Azioni** in Progettazione cubi per accedere alle azioni incluse nel cubo specificato.  

@@ -1,5 +1,5 @@
 ---
-title: La creazione di calcoli di celle in MDX (MDX) | Documenti Microsoft
+title: Creazione di calcoli di celle in MDX (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - calculated cells [MDX]
 - queries [MDX], cell calculations
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], cell calculations
 ms.assetid: 068aea63-d419-4791-a960-3d74e76f808e
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2d9d00541e51cb25c939f881a8b531892c1bf64d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9b0a689858d4012f360e7f3893cfa844f3ecbdcf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063454"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161352"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Compilazione di formule per il calcolo di celle in MDX (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) sono disponibili numerosi strumenti per la generazione di valori calcolati, ad esempio membri calcolati, rollup personalizzati e membri personalizzati. Utilizzando tali caratteristiche è tuttavia difficile agire su un set specifico di celle o su una singola cella.  
@@ -38,7 +38,7 @@ ms.locfileid: "36063454"
   
  Per quanto concerne l'ambito di creazione, le celle calcolate sono simili sia ai set denominati che ai membri calcolati, poiché possono essere create temporaneamente per la durata di una sessione o di una singola query oppure possono essere rese disponibili a livello globale nell'ambito di un cubo.  
   
--   **Ambito query** Per creare una cella calcolata definita come parte di una query MDX e il cui ambito è pertanto limitato alla query, è necessario specificare la parola chiave WITH. La cella calcolata può essere quindi utilizzata in un'istruzione MDX SELECT. Questo approccio, la cella calcolata creata utilizzando il `WITH` (parola chiave) possono essere modificati senza alterare l'istruzione SELECT.  
+-   **Ambito query** Per creare una cella calcolata definita come parte di una query MDX e il cui ambito è pertanto limitato alla query, è necessario specificare la parola chiave WITH. La cella calcolata può essere quindi utilizzata in un'istruzione MDX SELECT. In questo modo, la cella calcolata creata utilizzando il `WITH` parola chiave può essere modificato senza alterare l'istruzione SELECT.  
   
      Per altre informazioni sulla creazione di membri calcolati mediante la parola chiave WITH, vedere [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   

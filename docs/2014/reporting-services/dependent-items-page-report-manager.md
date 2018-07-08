@@ -1,5 +1,5 @@
 ---
-title: Pagina elementi dipendenti (gestione Report) | Documenti Microsoft
+title: Pagina elementi dipendenti (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 caps.latest.revision: 29
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 0496334695c72a78afe3fedb87763cfaacd66e35
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e483d24a2b7e9463c5fb43b9bc2f00fd41a3a070
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065543"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164112"
 ---
 # <a name="dependent-items-page-report-manager"></a>Pagina Elementi dipendenti (Gestione report)
   La pagina Elementi dipendenti consente di visualizzare un elenco di report e modelli che fanno riferimento a un'origine dati condivisa. L'icona disponibile per ogni tipo di elemento indica se si tratta di un report o un modello. Questa pagina può essere visualizzata nella visualizzazione Elenco o Dettagli. Se per ogni elemento si desidera visualizzare un numero maggiore di informazioni, è consigliabile utilizzare la visualizzazione Dettagli. In tale visualizzazione sono infatti disponibili opzioni aggiuntive per la pagina. Per semplificare la gestione dell'origine dati condivisa, questa pagina fornisce collegamenti ai report e ai modelli che utilizzano l'origine dati, metriche relative all'ultima esecuzione del report o del modello, nonché i pulsanti Elimina e Sposta, che consentono di rimuovere in modo semplice report e modelli non più utilizzati o di spostarli in una posizione diversa mentre si stabilisce se sono ancora necessari.  
@@ -56,19 +56,19 @@ ms.locfileid: "36065543"
  **Tipo**  
  Mostra l'icona del tipo di elemento.  
   
- **Data modifica**  
+ **Data ultima modifica**  
  Mostra la data e l'ora dell'ultima modifica del report o del modello.  
   
  **Modificato da**  
  Mostra il nome dell'ultimo utente che ha modificato le proprietà dell'elemento.  
   
- **Durante l'esecuzione**  
+ **Quando viene eseguito**  
  Per i report eseguiti come snapshot dell'esecuzione del report, visualizza la data e l'ora dell'ultimo aggiornamento del report.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)   
  [Gestione report &#40;modalità nativa SSRS&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Contenuto della pagina &#40;gestione Report&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Guida F1 di gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
+ [Guida sensibile al contesto di Gestione report](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

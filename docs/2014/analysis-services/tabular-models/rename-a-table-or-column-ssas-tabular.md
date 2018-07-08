@@ -1,5 +1,5 @@
 ---
-title: Rinominare una tabella o colonna (SSAS tabulare) | Documenti Microsoft
+title: Rinominare una tabella o colonna (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d5edfa6b7fc59ed1a417abe22a34ae22e317538d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4e58496d1a1fc4bc712ba2d5157f004def162c94
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062956"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37211521"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Rinominare una tabella o una colonna (SSAS tabulare)
   È possibile modificare il nome di una tabella durante il processo di importazione digitando un **Nome descrittivo** nella pagina **Selezione tabelle e viste** dell' **Importazione guidata tabella**. È possibile modificare anche i nomi di tabelle e colonne se si importano dati specificando una query nella pagina **Specifica di una query SQL** dell' **Importazione guidata tabella**.  
@@ -50,7 +50,7 @@ ms.locfileid: "36062956"
   
 -   Caratteri di controllo  
   
--   I seguenti caratteri (che non sono validi nei nomi degli oggetti di Analysis Services):., ': / \\*|? & % $! [] () + ={}<>  
+-   I caratteri seguenti (che non sono validi nei nomi degli oggetti di Analysis Services):., ': / \\*|? & % $! + = [] (){}<>  
   
 -   Le parole chiave riservate di Analysis Services, inclusi i nomi delle funzioni e gli operatori MDX (Multidimensional Expressions) e DMX (Data Mining Extensions).  
   

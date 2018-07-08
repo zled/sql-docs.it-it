@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 12: Creare ruoli | Documenti Microsoft'
+title: 'Lezione 12: Creare ruoli | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 7c3b98fbbcbedca2a8bcdbefcd8e41e5d3d5c60b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 598491865120b2d401b0ca2447701cbebc12ce8d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062311"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278507"
 ---
 # <a name="lesson-12-create-roles"></a>Lezione 12: Creare ruoli
   In questa lezione verranno creati ruoli. I ruoli forniscono la sicurezza per i dati e gli oggetti del database modello, limitando l'accesso unicamente agli utenti di Windows che sono membri del ruolo. Ogni ruolo è definito con una singola autorizzazione, di lettura, lettura ed elaborazione, elaborazione o amministratore oppure nessuna autorizzazione. È possibile definire i ruoli durante la creazione del modello tramite la finestra di dialogo Gestione ruoli in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Dopo la distribuzione di un modello, è possibile gestire i ruoli tramite [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Per altre informazioni, vedere [Ruoli &#40;SSAS tabulare&#41;](tabular-models/roles-ssas-tabular.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "36062311"
   
      All'elenco verrà aggiunto un nuovo ruolo con l'autorizzazione Nessuno.  
   
-3.  Fare clic sul nuovo ruolo, quindi il **nome** colonna, rinominare il ruolo in `Internet Sales Manager`.  
+3.  Fare clic sul nuovo ruolo, quindi nella **Name** colonna, rinominare il ruolo in `Internet Sales Manager`.  
   
 4.  Nella colonna **Autorizzazioni** fare clic nell'elenco a discesa, quindi selezionare l'autorizzazione **Lettura** .  
   
@@ -70,7 +70,7 @@ ms.locfileid: "36062311"
   
      All'elenco verrà aggiunto un nuovo ruolo con l'autorizzazione Nessuno.  
   
-3.  Fare clic sul nuovo ruolo, quindi il **nome** colonna, rinominare il ruolo in `Internet Sales US`.  
+3.  Fare clic sul nuovo ruolo, quindi nella **Name** colonna, rinominare il ruolo in `Internet Sales US`.  
   
 4.  Nella colonna **Autorizzazioni** fare clic nell'elenco a discesa, quindi selezionare l'autorizzazione **Lettura** .  
   
@@ -92,7 +92,7 @@ ms.locfileid: "36062311"
   
 1.  Nella finestra di dialogo **Gestione ruoli** fare clic su **Nuovo**.  
   
-2.  Fare clic sul nuovo ruolo, quindi il **nome** colonna, rinominare il ruolo in `Internet Sales Administrator`.  
+2.  Fare clic sul nuovo ruolo, quindi nella **Name** colonna, rinominare il ruolo in `Internet Sales Administrator`.  
   
 3.  Nella colonna **Autorizzazioni** fare clic nell'elenco a discesa, quindi selezionare l'autorizzazione **Amministratore** .  
   

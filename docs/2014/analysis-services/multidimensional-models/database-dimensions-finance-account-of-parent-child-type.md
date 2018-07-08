@@ -1,5 +1,5 @@
 ---
-title: Creare un conto finanziario della dimensione di tipo padre-figlio | Documenti Microsoft
+title: Creare un conto finanziario della dimensione di tipo padre-figlio | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], account
 - account dimensions [Analysis Services]
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - account intelligence [Analysis Services]
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 209184ce52888c65dc24c044517ccaf95d1a1a24
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 39c5c676cd0a07c76a06fd559b7f40f8cee4cfcb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054381"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259597"
 ---
 # <a name="create-a-finance-account-of-parent-child-type-dimension"></a>Creare un conto finanziario della dimensione di tipo padre-figlio
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una dimensione di tipo Conto è una dimensione i cui attributi rappresentano un grafico dei conti per la generazione di report finanziari.  
   
  Una dimensione di tipo Conti consente di gestire in modo selettivo le modalità di aggregazione dei conti nel tempo. Una dimensione di tipo Conti consente inoltre di utilizzare un meccanismo standard per risolvere la maggior parte dei problemi di aggregazione non standard che in genere di verificano nelle soluzione di Business Intelligence per la gestione dei dati finanziari. Se non si disponesse di tale meccanismo standard, la risoluzione dei problemi di aggregazione non standard richiederebbe formule personalizzate di rollup, membri calcolati o script MDX (Multidimensional Expressions).  
   
- Per identificare una dimensione come una dimensione conto, impostare il `Type` proprietà della dimensione su `Accounts`.  
+ Per identificare una dimensione come una dimensione di tipo conti, impostare il `Type` proprietà della dimensione su `Accounts`.  
   
 ## <a name="dimension-structure"></a>Struttura dimensione  
  In una dimensione di tipo Conti sono contenuti almeno due attributi:  
@@ -40,7 +40,7 @@ ms.locfileid: "36054381"
   
 -   Un attributo Conto, ovvero un attributo padre che descrive in che modo i conti vengono disposti in modo gerarchico nella dimensione di tipo Conti.  
   
-     Per identificare un attributo come un attributo conto, impostare il `Type` proprietà dell'attributo `Account` e il `Usage` proprietà `Parent`.  
+     Per identificare un attributo come attributo conto, impostare il `Type` proprietà dell'attributo `Account` e il `Usage` proprietà `Parent`.  
   
  Facoltativamente, nelle dimensioni di tipo Conti possono essere contenuti gli attributi seguenti:  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36054381"
   
 ## <a name="see-also"></a>Vedere anche  
  [Gli attributi e gerarchie di attributi](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Business Intelligence guidata F1 Help](../business-intelligence-wizard-f1-help.md)   
- [Tipi di dimensione](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
+ [Guida F1 di Business Intelligence guidata](../business-intelligence-wizard-f1-help.md)   
+ [Tipi di dimensioni](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento MaxActiveConnections (ASSL) | Documenti Microsoft
+title: Elemento MaxActiveConnections (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MaxActiveConnections element
 ms.assetid: 0dc5b64d-061d-409f-95c0-4c63f87f5ee4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: df2dafc69a97d1beb954100413761c07878881d4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 71cc72a5b5b405a1548b08a331edbef10d0d3c60
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063187"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259347"
 ---
 # <a name="maxactiveconnections-element-assl"></a>Elemento MaxActiveConnections (ASSL)
   Contiene il numero massimo di connessioni simultanee consentite da un elemento derivato dal [DataSource](../data-type/datasource-data-type-assl.md) tipo di dati.  
@@ -59,7 +59,7 @@ ms.locfileid: "36063187"
 |Elemento padre|[Origine dati](../data-type/datasource-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se il valore di questo elemento è impostato su zero, il numero massimo di connessioni simultanee è determinato dalla cartridge dei dati utilizzata per accedere all'origine dati. Se il valore di questo elemento è impostato su un valore negativo, il numero massimo di connessioni simultanee è illimitato.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,12 +1,12 @@
 ---
-title: Invio di dati come un parametro con valori di tabella utilizzando Data-At-Execution (ODBC) | Documenti Microsoft
+title: Invio di dati come un parametro con valori di tabella utilizzando Data-At-Execution (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,26 +16,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 1252eaabf879ca1c0685ac6ec4334ce15a98fe27
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: c939772d5e8e9e8a5ef9aa7bcf2a817acefe5b96
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698602"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413057"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Invio di dati come parametro con valori di tabella utilizzando data-at-execution (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  È simile ai [memoria](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) stored procedure, ma utilizza data-at-execution per il parametro con valori di tabella.  
+  Come avviene per i [tutto in memoria](../../relational-databases/native-client-odbc-table-valued-parameters/sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) routine, ma Usa data-at-execution per il parametro con valori di tabella.  
   
- Per un esempio che illustra i parametri con valori di tabella, vedere [utilizzare parametri &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+ Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare parametri &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
- In questo esempio, quando viene chiamata SQLExecute o SQLExecDirect, il driver restituisce SQL_NEED_DATA. L'applicazione chiama quindi SQLParamData ripetutamente fino a quando il driver restituisce un valore diverso da SQL_NEED_DATA. Il driver restituisce *ParameterValuePtr* per informare l'applicazione il parametro che sta richiedendo dati. L'applicazione chiama SQLPutData per fornire i dati dei parametri prima della chiamata successiva a SQLParamData. Per un parametro con valori di tabella, la chiamata a SQLPutData indica il numero di righe preparate per il driver (in questo esempio sempre 1). Quando tutte le righe del valore di tabella sono state passate al driver, SQLPutData viene chiamato per indicare che sono disponibili 0 righe.  
+ In questo esempio, quando viene chiamata SQLExecute o SQLExecDirect, il driver restituisce SQL_NEED_DATA. L'applicazione chiama quindi SQLParamData ripetutamente fino a quando il driver restituisce un valore diverso da SQL_NEED_DATA. Il driver torna *ParameterValuePtr* per informare l'applicazione il parametro che sta richiedendo dati. L'applicazione chiama SQLPutData per fornire i dati dei parametri prima della chiamata successiva a SQLParamData. Per un parametro con valori di tabella, la chiamata a SQLPutData indica il numero di righe preparate per il driver (in questo esempio sempre 1). Quando tutte le righe del valore di tabella sono state passate al driver, SQLPutData viene chiamato per indicare che sono disponibili 0 righe.  
   
- È possibile utilizzare i valori data-at-execution nelle righe di un valore di tabella. Il valore restituito da SQLParamData informa l'applicazione richiede il driver quale valore. Come con i valori dei parametri normali, SQLPutData può essere chiamato una o più volte per un valore di tabella carattere o binario valore della colonna. Ciò consente a un'applicazione di passare valori di grandi dimensioni in parti.  
+ È possibile utilizzare i valori data-at-execution nelle righe di un valore di tabella. Il valore restituito da SQLParamData informa l'applicazione richiede il driver di quale valore. Come con i valori dei parametri normali, SQLPutData può essere chiamato come valore di colonna di una o più volte per un valore di tabella character o binary. Ciò consente a un'applicazione di passare valori di grandi dimensioni in parti.  
   
- Quando viene chiamato per un valore di tabella, SQLPutData *DataPtr* viene utilizzato per il numero di righe disponibili (in questo esempio sempre 1). *StrLen_or_IndPtr* deve sempre essere 0. Quando tutte le righe del valore di tabella sono state passate, SQLPutData viene chiamato con un *DataPtr* valore pari a 0.  
+ Quando per un valore di tabella, viene chiamato SQLPutData *DataPtr* viene usato per il numero di righe disponibili (in questo esempio sempre 1). *StrLen_or_IndPtr* deve sempre essere 0. Quando tutte le righe del valore di tabella sono state passate, SQLPutData viene chiamato con un *DataPtr* valore pari a 0.  
   
 ## <a name="prerequisite"></a>Prerequisiti  
  Questa procedura presuppone che sia stata eseguita l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel server:  
@@ -74,7 +74,7 @@ from @Items
     SQLPOINTER ParamId;  
     ```  
   
-2.  Associare i parametri. *ColumnSize* è 1, vale a dire che al massimo viene passata una riga alla volta.  
+2.  Associare i parametri. *ColumnSize* è 1, vale a dire che almeno una riga viene passata alla volta.  
   
     ```  
     // Bind parameters for call to TVPOrderEntryByRow.  
@@ -136,7 +136,7 @@ from @Items
     r = SQLExecDirect(hstmt, (SQLCHAR *) "{call TVPOrderEntry(?, ?, ?, ?)}",SQL_NTS);  
     ```  
   
-6.  Fornire i dati dei parametri data-at-execution. Quando viene restituito SQLParamData il *ParameterValuePtr* per un parametro con valori di tabella, l'applicazione deve preparare le colonne per le righe successive del valore di tabella. L'applicazione chiama quindi SQLPutData con *DataPtr* impostato sul numero di righe disponibili (in questo esempio, 1) e *StrLen_or_IndPtr* impostato su 0.  
+6.  Fornire i dati dei parametri data-at-execution. Quando la funzione SQLParamData restituisce il *ParameterValuePtr* per un parametro con valori di tabella, l'applicazione deve preparare le colonne per le righe successive del valore di tabella. Viene quindi chiamato con SQLPutData *DataPtr* impostato sul numero di righe disponibili (in questo esempio, 1) e *StrLen_or_IndPtr* impostato su 0.  
   
     ```  
     // Check if parameter data is required, and get the first parameter ID token  
@@ -191,7 +191,7 @@ from @Items
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Description  
- Questo esempio viene illustrato che è possibile utilizzare un flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
+ In questo esempio mostra che è possibile usare un flusso di righe, una riga per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
   
@@ -379,7 +379,7 @@ EXIT:
 ## <a name="example"></a>Esempio  
   
 ### <a name="description"></a>Description  
- Questo esempio viene illustrato che è possibile utilizzare un flusso di righe, più righe per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
+ In questo esempio mostra che è possibile usare un flusso di righe, più righe per ogni chiamata a SQLPutData, con ODBC TVP, analogamente a come si potrebbe utilizzare BCP.exe per caricare dati in un database.  
   
  Prima di compilare l'esempio, modificare il nome del server nella stringa di connessione.  
   
@@ -585,6 +585,6 @@ EXIT:
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di programmazione di parametro con valori di tabella ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Esempi di programmazione di parametri con valori di tabella ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

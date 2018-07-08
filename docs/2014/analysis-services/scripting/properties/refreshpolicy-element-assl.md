@@ -1,5 +1,5 @@
 ---
-title: Elemento RefreshPolicy (ASSL) | Documenti Microsoft
+title: Elemento RefreshPolicy (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - RefreshPolicy element
 ms.assetid: f4c36280-1a39-4f1c-a3ab-fbeb81742d6d
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 6d2dc0549eb8151f93c817e9e59bc1a8990fac87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cf0aa9478a44e7479b20357ae56317b90801f77f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054363"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277617"
 ---
 # <a name="refreshpolicy-element-assl"></a>Elemento RefreshPolicy (ASSL)
-  Determina la frequenza parte dinamica del gruppo di misura o dimensione (come specificato dal [persistenza](persistence-element-assl.md) elemento) è selezionata per le modifiche.  
+  Determina la frequenza la parte dinamica del gruppo di misure o dimensioni (come specificato dal [persistenza](persistence-element-assl.md) elemento) viene verificata la modifica.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,13 +65,13 @@ ms.locfileid: "36054363"
 |Elementi padre|[DimensionBinding](../data-type/binding-data-type-assl.md), [MeasureGroupBinding](../data-type/measuregroupbinding-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
 |-----------|-----------------|  
 |*ByQuery*|Ogni query controlla se i dati di origine sono modificati.|  
-|*ByInterval*|Dati di origine viene verificati solo per le modifiche in base all'intervallo specificato da [RefreshInterval](refreshinterval-element-assl.md).|  
+|*ByInterval*|I dati di origine viene verificati solo per le modifiche nell'intervallo specificato da [RefreshInterval](refreshinterval-element-assl.md).|  
   
  L'enumerazione che corrisponde ai valori consentiti di `RefreshPolicy` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.RefreshPolicy>.  
   

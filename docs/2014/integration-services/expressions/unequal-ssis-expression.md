@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
@@ -16,13 +16,13 @@ ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
 caps.latest.revision: 53
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 6046dcd370769518d6465a48b048e4beb639fc09
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbf78899779f87837ec6df2db46549563454d398
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062427"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259047"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (diverso da) (espressione SSIS)
   Viene eseguito un confronto per determinare se due espressioni con tipi di dati compatibili sono diverse. L'analizzatore di espressioni converte automaticamente numerosi tipi di dati prima di eseguire il confronto.  
@@ -44,7 +44,7 @@ expression1 != expression2
 ## <a name="result-types"></a>Tipi restituiti  
  DT_BOOL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se una delle espressioni nel confronto è Null, il risultato del confronto sarà Null. Se entrambe le espressioni sono Null, il risultato sarà Null.  
   
  Il set di espressioni *expression1* e *expression2*deve seguire una di queste regole:  
@@ -109,8 +109,8 @@ ListPrice != 500
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [= = &#40;Uguale&#41; &#40;espressione SSIS&#41;](equal-ssis-expression.md)   
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [= = &#40;Uguale&#41; &#40;espressione di SSIS&#41;](equal-ssis-expression.md)   
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

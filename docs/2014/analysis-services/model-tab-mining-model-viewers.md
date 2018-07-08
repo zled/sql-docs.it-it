@@ -1,5 +1,5 @@
 ---
-title: Scheda (visualizzatori modello di Data Mining) del modello | Documenti Microsoft
+title: Scheda (visualizzatori modello di Data Mining) del modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.decisiontree.f1
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 932874065a56b98f8eb532f62206430152c794ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ffed64e129b7c3a94e337ab7a749b6950cdae4c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278467"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Scheda Modello (Visualizzatori modello di data mining)
   Nella scheda **Modello** del Visualizzatore Microsoft Time Series viene visualizzata una rappresentazione di una serie temporale come nodo in un grafico, simile a quella usata nei modelli di albero delle decisioni.  
@@ -52,7 +52,7 @@ ms.locfileid: "36063200"
  **Copia grafico intero**  
  Consente di copiare tutto il diagramma negli Appunti.  
   
- **Scala adatta il diagramma alla finestra**  
+ **Scalabilità adatta il diagramma alla finestra**  
  Consente di eseguire lo zoom indietro del diagramma finché l'intero diagramma non si adatta alla schermata.  
   
  **Struttura ad albero**  
@@ -75,7 +75,7 @@ ms.locfileid: "36063200"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - queries [full-text search], about full-text queries
 - queries [full-text search], predicates
@@ -18,20 +17,20 @@ helpviewer_keywords:
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 caps.latest.revision: 79
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2edf2a5fbafb99287503d4b7ebe5475bd5604985
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 78351b4f710d84d6d8cb7f29d1de89d05ee763b8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064876"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229011"
 ---
 # <a name="query-with-full-text-search"></a>Esecuzione della query con ricerca Full-Text
   Per definire ricerche full-text, le query full-text in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzano i predicati full-text (CONTAINS e FREETEXT) e le funzioni full-text (CONTAINSTABLE e FREETEXTTABLE). Tali predicati e funzioni supportano la sintassi [!INCLUDE[tsql](../../includes/tsql-md.md)] avanzata che a sua volta supporta vari formati di termini di query. Per scrivere query full-text, è necessario sapere come e quando utilizzare questi predicati e queste funzioni.  
   
-##  <a name="OV_ft_predicates"></a> Cenni preliminari sui Full-Text predicati (CONTAINS e FREETEXT)  
+##  <a name="OV_ft_predicates"></a> Panoramica di Full-Text di predicati (CONTAINS e FREETEXT)  
  I predicati CONTAINS e FREETEXT restituiscono un valore TRUE o FALSE. Possono essere utilizzati solo per specificare i criteri di selezione per determinare se una determinata riga corrisponde alla query full-text. Le righe corrispondenti vengono restituite nel set di risultati. CONTAINS e FREETEXT vengono specificati nella clausola WHERE o HAVING di un'istruzione SELECT. Possono essere combinati con qualsiasi altro predicato [!INCLUDE[tsql](../../includes/tsql-md.md)] , ad esempio LIKE e BETWEEN.  
   
 > [!NOTE]  
@@ -85,7 +84,7 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> Panoramica delle funzioni Full-Text (CONTAINSTABLE e FREETEXTTABLE)  
+##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> Panoramica delle funzioni (CONTAINSTABLE e FREETEXTTABLE) Full-Text  
  È possibile fare riferimento alle funzioni CONTAINSTABLE e FREETEXTTABLE come un normale nome di tabella nella clausola FROM di un'istruzione SELECT. Restituiscono una tabella di zero, una o più righe corrispondenti alla query full-text. La tabella restituita contiene solo righe della tabella di base che corrispondono ai criteri di selezione specificati nella condizione della ricerca full-text della funzione.  
   
 > [!NOTE]  
@@ -169,7 +168,7 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> Utilizzo degli operatori booleani AND, OR e NOT in CONTAINS e CONTAINSTABLE  
+##  <a name="Using_Boolean_Operators"></a> Uso degli operatori booleani AND, OR e NOT in CONTAINS e CONTAINSTABLE  
  Il predicato CONTAINS e la funzione CONTAINSTABLE utilizzano le stesse condizioni di ricerca. Entrambi supportano la combinazione di più termini di ricerca tramite gli operatori booleani AND, OR, AND NOT per eseguire operazioni logiche. È ad esempio possibile utilizzare AND per trovare righe che contengono sia "latte" sia New York-style bagel". È possibile utilizzare AND NOT, ad esempio, per trovare le righe che contengono "bagel", ma non "cream cheese".  
   
 > [!NOTE]  
@@ -218,10 +217,10 @@ GO
  Se una colonna `varbinary(max)`, `varbinary` o `xml` viene sottoposta a indicizzazione full-text, le query su questa colonna possono essere eseguite utilizzando predicati (CONTAINS e FREETEXT) e funzioni (CONTAINSTABLE e FREETEXTTABLE) full-text, proprio come su ogni altra colonna indicizzata full-text.  
   
 > [!IMPORTANT]  
->  La ricerca full-text può anche essere eseguita con colonne di tipo image. Tuttavia, il `image` tipo di dati verrà rimossa in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarlo nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente lo utilizzano. Utilizzare il `varbinary(max)` invece del tipo di dati.  
+>  La ricerca full-text può anche essere eseguita con colonne di tipo image. Tuttavia, il `image` tipo di dati verrà rimosso in una versione futura di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evitare pertanto di utilizzarlo nelle nuove attività di sviluppo e pianificare la modifica delle applicazioni che attualmente lo utilizzano. Usare il `varbinary(max)` invece del tipo di dati.  
   
 ### <a name="varbinarymax-or-varbinary-data"></a>dati varbinary(max) o varbinary  
- Una singola `varbinary(max)` o `varbinary` colonna possono essere archiviati molti tipi di documenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta qualsiasi tipo di documento per cui viene installato un filtro e disponibile nel sistema operativo. Il tipo di ogni documento è identificato dall'estensione file relativa. Per un'estensione file doc, ad esempio, la ricerca full-text utilizza il filtro che supporta i documenti di Microsoft Word. Per un elenco dei tipi di documento disponibili, eseguire una query sulla vista del catalogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
+ Un unico `varbinary(max)` o `varbinary` colonna possibile archiviare molti tipi di documenti. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta qualsiasi tipo di documento per cui viene installato un filtro e disponibile nel sistema operativo. Il tipo di ogni documento è identificato dall'estensione file relativa. Per un'estensione file doc, ad esempio, la ricerca full-text utilizza il filtro che supporta i documenti di Microsoft Word. Per un elenco dei tipi di documento disponibili, eseguire una query sulla vista del catalogo [sys.fulltext_document_types](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql) .  
   
  Si noti che il motore di ricerca full-text può utilizzare i filtri esistenti installati nel sistema operativo. Prima di poter utilizzare i filtri, i word breaker e gli stemmer del sistema operativo, è necessario caricarli nell'istanza del server, come illustrato di seguito:  
   
@@ -234,9 +233,9 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
  
   
 ### <a name="xml-data"></a>dati xml  
- Un `xml` colonna tipo di dati vengono archiviati solo documenti e frammenti XML e viene utilizzato solo il filtro XML per i documenti. Una colonna del tipo non è pertanto necessaria. In `xml` colonne, l'indice full-text indicizza il contenuto degli elementi XML, ma ignora il markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag elemento sono utilizzati come limiti del token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue.  
+ Un `xml` colonna tipo di dati vengono archiviati solo documenti e frammenti XML e viene utilizzato solo il filtro XML per i documenti. Una colonna del tipo non è pertanto necessaria. In `xml` colonne, l'indice full-text indicizza il contenuto degli elementi XML, ma ignora i markup XML. Ai valori di attributo viene applicata l'indicizzazione full-text a meno che non siano valori numerici. I tag elemento sono utilizzati come limiti del token. Sono supportati documenti e frammenti XML o HTML ben formati e contenenti più lingue.  
   
- Per ulteriori informazioni su come eseguire query su un `xml` colonna, vedere [usare la ricerca Full-Text con colonne XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Per altre informazioni sull'esecuzione di query su un `xml` colonna, vedere [usare la ricerca Full-Text con colonne XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -257,8 +256,8 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
   
 
   
-###  <a name="Simple_Term"></a> Ricerca per parola o frase (termine semplice)  
- È possibile usare [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) per cercare una frase specifica in una tabella. Ad esempio, se si desidera cercare il `ProductReview` nella tabella di [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database per trovare tutti i commenti su un prodotto con la frase "learning curve", è possibile utilizzare il predicato CONTAINS nel modo seguente:  
+###  <a name="Simple_Term"></a> La ricerca per parola o frase (termine semplice)  
+ È possibile usare [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)o [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) per cercare una frase specifica in una tabella. Ad esempio, se si vuole cercare il `ProductReview` nella tabella di [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] database per trovare tutti i commenti su un prodotto con la frase "learning curve", è possibile utilizzare il predicato CONTAINS come segue:  
   
 ```  
 USE AdventureWorks2012  
@@ -274,7 +273,7 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> L'esecuzione di ricerche di prefissi (termine di prefisso)  
+###  <a name="Prefix_Term"></a> Esecuzione di ricerche con prefisso (termine di prefisso)  
  È possibile usare [CONTAINS](/sql/t-sql/queries/contains-transact-sql) o [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) per cercare parole o frasi con un prefisso specificato. Vengono restituite tutte le voci nella colonna che contengono testo che inizia con il prefisso specificato. È possibile cercare, ad esempio, tutte le righe che contengono il prefisso `top`-, come in `top``ple`, `top``ping`e `top`. La query è la seguente:  
   
 ```  
@@ -313,7 +312,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a> Ricerca di parole o frasi tramite valori ponderati (termine ponderato)  
+###  <a name="Weighted_Term"></a> Ricerca di parole o frasi tramite valori (termine ponderato) ponderati  
  È possibile usare [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) per cercare parole o frasi e specificare un valore ponderato. Il peso, espresso come numero compreso tra 0,0 e 1,0, indica l'importanza di ogni parola o frase all'interno di un set di parole o frasi. Il valore 0,0 corrisponde al peso minimo, mentre il valore 1,0 corrisponde al peso massimo.  
   
  Nell'esempio seguente viene illustrata una query per la ricerca di tutti gli indirizzi dei clienti, tramite valori di ponderazione, in cui il testo che inizia con la stringa "Bay" contiene anche la parola "Street" o "View". I risultati assegnano un livello di importanza superiore alle righe che contengono il numero maggiore di parole specificate.  
@@ -337,7 +336,7 @@ GO
   
 
   
-##  <a name="tokens"></a> Visualizzazione del risultato della suddivisione in token di un Word Breaker, Thesaurus e combinazione di parole non significative  
+##  <a name="tokens"></a> Visualizzazione del risultato della Tokenizzazione di un Word Breaker, Thesaurus ed elenco di parole significative combinazione  
  Dopo aver applicato una determinata combinazione di word breaker, thesaurus ed elenco di parole non significative all'input di una stringa di query, è possibile visualizzare il risultato della tokenizzazione usando la DMV **sys.dm_fts_parser**. Per altre informazioni, vedere [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  

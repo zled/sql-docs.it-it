@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttrans.f1
 helpviewer_keywords:
@@ -22,13 +22,13 @@ ms.assetid: 728c9351-84a8-4a89-be4d-d50d4adc04e0
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 5dedec0b22dabe6ecb41c25e0b6fbc4c9c8ea7da
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5155e1bc61e5a02d29420d20b1e2970693dda1da
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150722"
 ---
 # <a name="sort-transformation"></a>Ordinamento - trasformazione
   La trasformazione Ordinamento consente di disporre i dati di input in ordine crescente o decrescente e di copiare i dati ordinati nell'output della trasformazione. A uno stesso input è possibile applicare più ordinamenti, ognuno dei quali è identificato da un numero che ne determina il tipo. La colonna con il numero più basso viene ordinata per prima, quindi viene ordinata quella con il secondo numero più basso e così via. Se ad esempio la colonna di nome **CountryRegion** ha come tipo di ordinamento 1 e la colonna di nome **City** ha come tipo di ordinamento 2, l'output verrà ordinato prima per country/region, quindi per city. Un numero positivo indica che l'ordinamento è crescente, mentre un numero negativo indica che è decrescente. Le colonne che non sono ordinate hanno un tipo di ordinamento 0. Le colonne non selezionate per l'ordinamento vengono copiate automaticamente nell'output della trasformazione insieme alle colonne ordinate.  

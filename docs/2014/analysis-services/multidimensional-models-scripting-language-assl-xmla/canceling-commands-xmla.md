@@ -1,5 +1,5 @@
 ---
-title: Annullamento di comandi (XMLA) | Documenti Microsoft
+title: Annullamento di comandi (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - sessions [XML for Analysis]
 ms.assetid: b59f8197-c33d-4e65-9022-848ccba540f5
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5129dd84cdd120b778fb55986374d27055b5904c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 77cf7fbc0d90571548bb28fde2dcce066c9151dc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063459"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210151"
 ---
 # <a name="canceling-commands-xmla"></a>Annullamento di comandi (XMLA)
   A seconda delle autorizzazioni amministrative dell'utente che invia il comando, il [annullare](../xmla/xml-elements-commands/cancel-element-xmla.md) comando nel codice XML per Analysis (XMLA) può annullare un comando in una sessione, una sessione, una connessione, un processo del server o una sessione associata o connessione.  
@@ -47,23 +47,23 @@ ms.locfileid: "36063459"
  Se un utente annulla un comando `Batch`, tutti i comandi rimanenti non ancora eseguiti nel comando `Batch` vengono annullati. Se il comando `Batch` è transazionale, di tutti i comandi eseguiti prima del comando `Cancel` viene eseguito il rollback.  
   
 ## <a name="canceling-sessions"></a>Annullamento di sessioni  
- Specificando un identificatore di sessione per una sessione esplicita nella [SessionID](../xmla/xml-elements-properties/id-element-xmla.md) proprietà del `Cancel` comando, un amministratore del database o amministratore del server può annullare una sessione, incluso il comando attualmente in esecuzione . Un amministratore di database può annullare solo sessioni per i database per i quali dispone delle autorizzazioni amministrative.  
+ Specificando un identificatore di sessione per una sessione esplicita nella [SessionID](../xmla/xml-elements-properties/id-element-xmla.md) proprietà del `Cancel` comando, un amministratore del database o amministratore del server può annullare una sessione, inclusi il comando attualmente in esecuzione . Un amministratore di database può annullare solo sessioni per i database per i quali dispone delle autorizzazioni amministrative.  
   
- Un amministratore di database può recuperare le sessioni attive per un database specifico recuperando il set di righe dello schema DISCOVER_SESSIONS. Per recuperare il set di righe dello schema DISCOVER_SESSIONS, l'amministratore del database utilizza il codice XMLA `Discover` (metodo) e specifica l'identificatore del database appropriato per la colonna di restrizione SESSION_CURRENT_DATABASE nella [restrizioni](../xmla/xml-elements-properties/restrictions-element-xmla.md) proprietà del `Discover` metodo.  
+ Un amministratore di database può recuperare le sessioni attive per un database specifico recuperando il set di righe dello schema DISCOVER_SESSIONS. Per recuperare il set di righe dello schema DISCOVER_SESSIONS, l'amministratore del database utilizza XMLA `Discover` metodo e specifica l'identificatore del database appropriato per la colonna di restrizione SESSION_CURRENT_DATABASE nella [restrizioni](../xmla/xml-elements-properties/restrictions-element-xmla.md) proprietà del `Discover` (metodo).  
   
 ## <a name="canceling-connections"></a>Annullamento di connessioni  
  Specificando un identificatore di connessione nel [ConnectionID](../xmla/xml-elements-properties/connectionid-element-xmla.md) proprietà del `Cancel` comando, un amministratore del server può annullare tutte le sessioni associate a una determinata connessione, inclusi tutti i comandi in esecuzione, e Annulla la connessione.  
   
 > [!NOTE]  
->  Se l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è possibile individuare e annullare le sessioni associate a una connessione, ad esempio quando il data pump apre più sessioni fornendo al contempo connettività HTTP, l'istanza non è possibile annullare la connessione. Se questa situazione si verifica durante l'esecuzione di un comando `Cancel`, si verifica un errore.  
+>  Se l'istanza di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] non è possibile individuare e annullare le sessioni associate a una connessione, ad esempio quando il data pump apre più sessioni fornendo contemporaneamente connettività HTTP, l'istanza non è possibile annullare la connessione. Se questa situazione si verifica durante l'esecuzione di un comando `Cancel`, si verifica un errore.  
   
  Un amministratore del server può recuperare le connessioni attive per un'istanza di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] recuperando il set di righe dello schema DISCOVER_CONNECTIONS tramite il metodo `Discover` XMLA.  
   
 ## <a name="canceling-server-processes"></a>Annullamento di processi del server  
- Specificando un identificatore di processo server (SPID) nei [SPID](../xmla/xml-elements-properties/spid-element-xmla.md) proprietà del `Cancel` comando, un amministratore del server possa annullare comandi associati a un valore SPID specificato.  
+ Specificando un identificatore di processo server (SPID) nei [SPID](../xmla/xml-elements-properties/spid-element-xmla.md) proprietà del `Cancel` comando, un amministratore del server può annullare i comandi associati a un valore SPID specificato.  
   
 ## <a name="canceling-associated-sessions-and-connections"></a>Annullamento di sessioni e connessioni associate  
- È possibile impostare il [CancelAssociated](../xmla/xml-elements-properties/cancelassociated-element-xmla.md) proprietà su true per annullare le connessioni, sessioni e comandi associati con la connessione, session o valore SPID specificato nel `Cancel` comando.  
+ È possibile impostare il [CancelAssociated](../xmla/xml-elements-properties/cancelassociated-element-xmla.md) su true per annullare le connessioni, sessioni e comandi associati con la connessione, sessione o SPID specificato nella proprietà di `Cancel` comando.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Metodo Discover &#40;XMLA&#41;](../xmla/xml-elements-methods-discover.md)   

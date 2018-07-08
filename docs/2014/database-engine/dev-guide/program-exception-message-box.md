@@ -1,5 +1,5 @@
 ---
-title: Programmare la finestra di messaggio eccezione | Documenti Microsoft
+title: Finestra di messaggio eccezione del programma | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - displaying exception message box
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 caps.latest.revision: 21
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: a6d5e6112822b1191894c633b89f8b2d54b95e6f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 52a24c53fcb7efa367b089b4cf5baa0731d7ad5a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063680"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151332"
 ---
 # <a name="program-exception-message-box"></a>Programmare la finestra di messaggio eccezione
-  È possibile utilizzare la finestra di messaggio eccezione nelle applicazioni per offrire un controllo maggiore sulla messaggistica quelle fornite dal <xref:System.Windows.Forms.MessageBox> classe. Per altre informazioni, vedere [finestra di messaggio eccezione programmazione](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Per informazioni su come ottenere e distribuire il file DLL finestra di messaggio di eccezione, vedere [distribuzione di un'applicazione di finestra di messaggio di eccezione](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
+  È possibile usare la finestra di messaggio eccezione nelle applicazioni per fornire significativamente più controllo sulla messaggistica diverso da quello fornito dal <xref:System.Windows.Forms.MessageBox> classe. Per altre informazioni, vedere [finestra di messaggio eccezione programmazione](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Per informazioni su come ottenere e distribuire i file DLL della finestra di messaggio eccezione, vedere [distribuzione di un'applicazione di finestra di messaggio eccezione](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
   
 ## <a name="procedure"></a>Procedura  
   
@@ -34,13 +34,13 @@ ms.locfileid: "36063680"
   
 1.  Aggiungere un riferimento all'assembly Microsoft.ExceptionMessageBox.dll nel progetto di codice gestito.  
   
-2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) direttiva per utilizzare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
+2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET) della direttiva da utilizzare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
   
 3.  Creare un blocco Try-Catch per gestire l'eccezione anticipata.  
   
-4.  All'interno di `catch` blocco, creare un'istanza del <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> classe. Passare il <xref:System.Exception> oggetto gestito per il `try` - `catch` blocco.  
+4.  All'interno di `catch` blocco, creare un'istanza del <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> classe. Passare il <xref:System.Exception> oggetto gestita dal `try` - `catch` blocco.  
   
-5.  (Facoltativo) Impostare una o più delle seguenti proprietà su <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
+5.  (Facoltativo) Impostare una o più delle proprietà seguenti su <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> enumerazione che specifica i pulsanti da visualizzare nella finestra di messaggio eccezione.  
   
@@ -52,17 +52,17 @@ ms.locfileid: "36063680"
   
 6.  Chiamare il metodo <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passare la finestra padre alla quale appartiene la finestra di messaggio eccezione.  
   
-7.  (Facoltativo) Si noti il valore restituito <xref:System.Windows.Forms.DialogResult> enumerazione se è necessario determinare su quale pulsante l'utente fa clic su.  
+7.  (Facoltativo) Prendere nota del valore di restituita <xref:System.Windows.Forms.DialogResult> enumerazione se è necessario determinare su quale pulsante l'utente selezionato.  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>Per visualizzare la finestra di messaggio eccezione senza un'eccezione  
   
 1.  Aggiungere un riferimento all'assembly Microsoft.ExceptionMessageBox.dll nel progetto di codice gestito.  
   
-2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` (direttiva) (Visual Basic .NET) per utilizzare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
+2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` (direttiva) (Visual Basic .NET) usare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
   
 3.  Creare un'istanza della classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> . Passare il testo del messaggio come un <xref:System.String> valore.  
   
-4.  (Facoltativo) Impostare una o più delle seguenti proprietà su <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
+4.  (Facoltativo) Impostare una o più delle proprietà seguenti su <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>:  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons> enumerazione che specifica i pulsanti da visualizzare nella finestra di messaggio eccezione.  
   
@@ -76,13 +76,13 @@ ms.locfileid: "36063680"
   
 5.  Chiamare il metodo <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passare la finestra padre alla quale appartiene la finestra di messaggio eccezione.  
   
-6.  (Facoltativo) Prendere nota del valore dell'oggetto restituito <xref:System.Windows.Forms.DialogResult> enumerazione se è necessario determinare su quale pulsante l'utente fa clic su.  
+6.  (Facoltativo) Prendere nota del valore dell'oggetto restituito <xref:System.Windows.Forms.DialogResult> enumerazione se è necessario determinare su quale pulsante l'utente selezionato.  
   
 #### <a name="to-display-the-exception-message-box-with-customized-buttons"></a>Per visualizzare la finestra di messaggio eccezione con pulsanti personalizzati  
   
 1.  Aggiungere un riferimento all'assembly Microsoft.ExceptionMessageBox.dll nel progetto di codice gestito.  
   
-2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` (direttiva) (Visual Basic .NET) per utilizzare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
+2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` (direttiva) (Visual Basic .NET) usare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
   
 3.  Creare un'istanza della classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> in uno dei due modi seguenti:  
   
@@ -94,7 +94,7 @@ ms.locfileid: "36063680"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore> -Consente di visualizzare il **Abort**, **ripetere**, e **ignora** pulsanti.  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> -Visualizza pulsanti personalizzati.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> : Visualizza pulsanti personalizzati.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK> -Consente di visualizzare il **OK** pulsante.  
   
@@ -102,21 +102,21 @@ ms.locfileid: "36063680"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.RetryCancel> -Consente di visualizzare il **ripetere** e **Annulla** pulsanti.  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -Consente di visualizzare **Yes** e **n** pulsanti.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNo> -Consente di visualizzare **Yes** e **No** pulsanti.  
   
-    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -Consente di visualizzare **Yes**, **n**, e **Annulla** pulsanti.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.YesNoCancel> -Consente di visualizzare **Yes**, **senza**, e **Annulla** pulsanti.  
   
 5.  (Facoltativo) Se si usano pulsanti personalizzati, chiamare uno degli overload del <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> metodo per specificare il testo per un massimo di cinque pulsanti personalizzati.  
   
 6.  Chiamare il metodo <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Passare la finestra padre alla quale appartiene la finestra di messaggio eccezione.  
   
-7.  (Facoltativo) Prendere nota del valore dell'oggetto restituito <xref:System.Windows.Forms.DialogResult> enumerazione se è necessario determinare su quale pulsante l'utente fa clic su. Se si usano pulsanti personalizzati, annotare il valore di <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> per il <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> proprietà per determinare quale personalizzato pulsante l'utente fa clic su.  
+7.  (Facoltativo) Prendere nota del valore dell'oggetto restituito <xref:System.Windows.Forms.DialogResult> enumerazione se è necessario determinare su quale pulsante l'utente selezionato. Se si usano pulsanti personalizzati, annotare il valore di <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> per il <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> selezionata una proprietà per determinare quale personalizzato pulsante l'utente.  
   
 #### <a name="to-allow-users-to-decide-whether-to-show-the-exception-message-box"></a>Per consentire agli utenti di decidere se visualizzare la finestra di messaggio eccezione  
   
 1.  Aggiungere un riferimento all'assembly Microsoft.ExceptionMessageBox.dll nel progetto di codice gestito.  
   
-2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` (direttiva) (Visual Basic .NET) per utilizzare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
+2.  (Facoltativo) Aggiungere un `using` (c#) o `Imports` (direttiva) (Visual Basic .NET) usare il <xref:Microsoft.SqlServer.MessageBox> dello spazio dei nomi.  
   
 3.  Creare un'istanza della classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> in uno dei due modi seguenti:  
   
@@ -126,13 +126,13 @@ ms.locfileid: "36063680"
   
 4.  Impostare il <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> proprietà `true`.  
   
-5.  (Facoltativo) Specificare il testo in cui viene chiesto all'utente di decidere se visualizzare la finestra di messaggio eccezione nuovamente per <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>. Il testo predefinito è "Non visualizzare più questo messaggio".  
+5.  (Facoltativo) Specificare il testo che chiede all'utente di decidere se visualizzare la finestra di messaggio eccezione fois <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>. Il testo predefinito è "Non visualizzare più questo messaggio".  
   
-6.  Se è necessario mantenere la decisione dell'utente solo per la durata dell'esecuzione dell'applicazione, impostare il valore di <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> a globale <xref:System.Boolean> variabile. Valutare questo valore prima di creare un'istanza della finestra di messaggio eccezione.  
+6.  Se è necessario mantenere la decisione dell'utente solo per la durata dell'esecuzione dell'applicazione, impostare il valore della <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> a globale <xref:System.Boolean> variabile. Valutare questo valore prima di creare un'istanza della finestra di messaggio eccezione.  
   
 7.  Se è necessario archiviare in modo permanente la decisione di un utente, eseguire le operazioni seguenti:  
   
-    1.  Chiamare il metodo CreateSubKey per aprire una chiave del Registro di sistema personalizzata utilizzata dall'applicazione e impostare <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> sull'oggetto RegistryKey restituito.  
+    1.  Chiamare il metodo CreateSubKey per aprire una chiave del Registro di sistema personalizzata usata dall'applicazione e impostare <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A> sull'oggetto RegistryKey restituito.  
   
     2.  Impostare <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> sul nome del valore del Registro di sistema usato.  
   
@@ -141,14 +141,14 @@ ms.locfileid: "36063680"
     4.  Chiamare il metodo <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . La chiave del Registro di sistema specificata viene valutata e la finestra di messaggio eccezione viene visualizzata solo se i dati archiviati in tale chiave sono pari a 0. Se la finestra di dialogo viene visualizzata e l'utente seleziona la casella di controllo prima di fare clic su un pulsante, i dati nella chiave del Registro di sistema vengono impostati su 1.  
   
 ## <a name="example"></a>Esempio  
- In questo esempio Usa la finestra di messaggio eccezione con solo il **OK** pulsante per visualizzare le informazioni da un'eccezione dell'applicazione che include l'eccezione gestita con informazioni aggiuntive specifiche dell'applicazione.  
+ Questo esempio Usa la finestra di messaggio eccezione con solo le **OK** pulsante per visualizzare le informazioni da un'eccezione dell'applicazione che include l'eccezione gestita con informazioni aggiuntive specifiche dell'applicazione.  
   
  [!code-csharp[HowTo#emb_showOKbutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showokbutton)]  
   
  [!code-vb[HowTo#emb_vb_showOKbutton](../../snippets/visualbasic/SQL15/replication/howto/vb/embform.vb#emb_vb_showokbutton)]  
   
 ## <a name="example"></a>Esempio  
- In questo esempio viene usata la finestra di messaggio eccezione con **Yes** e **n** i pulsanti da cui l'utente sceglie.  
+ In questo esempio viene usata la finestra di messaggio eccezione con **Yes** e **No** da cui l'utente sceglie i pulsanti.  
   
  [!code-csharp[HowTo#emb_showYesNobutton](../../snippets/csharp/SQL15/replication/howto/cs/embform.cs#emb_showyesnobutton)]  
   

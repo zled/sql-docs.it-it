@@ -1,5 +1,5 @@
 ---
-title: Tipo di elemento (PerspectiveCalculation) (ASSL) | Documenti Microsoft
+title: Tipo di elemento (PerspectiveCalculation) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Type element
 ms.assetid: d7b87aea-3265-4f3c-a7ee-4f3e90f9a0b7
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 242d4d779da87c155371047fd2bb21128da51abf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 7d95f248e6991b8386ce9f6b4a2c012057c42ef4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065679"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229571"
 ---
 # <a name="type-element-perspectivecalculation-assl"></a>Elemento Type (PerspectiveCalculation) (ASSL)
-  Indica il tipo del [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.  
+  Indica il tipo dei [PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -58,10 +58,10 @@ ms.locfileid: "36065679"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[Oggetto PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
+|Elemento padre|[PerspectiveCalculation](../data-type/perspectivecalculation-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -71,7 +71,7 @@ ms.locfileid: "36065679"
   
  L'enumerazione che corrisponde ai valori consentiti di `Type` nel modello a oggetti AMO (Analysis Management Objects) è <xref:Microsoft.AnalysisServices.PerspectiveCalculationType>.  
   
- L'elemento che corrisponde al padre di `Type` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
+ L'elemento che corrisponde al padre di `Type` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.PerspectiveCalculation>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

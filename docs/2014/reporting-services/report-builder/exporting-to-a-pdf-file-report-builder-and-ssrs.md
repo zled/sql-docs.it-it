@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 caps.latest.revision: 11
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: f769ede65a47bbe3500b67ec02247ac5e3dc6f96
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4f5821043d7ea8c482c1aff13c52d5e12e023da9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064623"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183838"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Esportazione in un file PDF (Generatore report e SSRS)
   L'estensione per il rendering PDF consente di eseguire il rendering di un report in file che possono essere aperti in Adobe Acrobat e in altri visualizzatori PDF di terze parti che supportano il formato PDF 1.3. Anche se PDF 1.3 è compatibile con Adobe Acrobat 4.0 e versioni successive, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] supporta Adobe Acrobat 6 e versioni successive. Non è necessaria l'applicazione Adobe per convertire i report mediante l'estensione per il rendering. Per visualizzare o stampare i report in formato PDF è tuttavia necessario disporre di visualizzatori PDF, ad esempio Adobe Acrobat.  
   
- L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per ulteriori informazioni sulle limitazioni, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
+ L'estensione per il rendering PDF supporta i caratteri ANSI ed è in grado di convertire i caratteri Unicode dalle lingue giapponese, coreana, cinese tradizionale, cinese semplificato, cirillico, ebraico e arabo con alcune limitazioni. Per altre informazioni sulle limitazioni, vedere [esportazione di report &#40;Generatore Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md).  
   
  Il renderer PDF è un renderer di pagine fisiche e, pertanto, presenta un comportamento di paginazione diverso da quello di altri renderer, ad esempio HTML e Excel. In questo argomento vengono fornite informazioni specifiche sul renderer PDF e vengono descritte le eccezioni alle regole.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "36064623"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

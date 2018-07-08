@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options [Reporting Services]
 - DeviceInfo settings
@@ -20,13 +20,13 @@ ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 201a3af8cfd9acad20539327f4dc9afbfcb2a435
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 1734710832b6c064aa2d2a76eec0a1dda7a9b6b4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065322"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150242"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Personalizzare i parametri di estensione per il rendering in RSReportServer.config.
   È possibile specificare i parametri di estensione per il rendering nel file di configurazione RSReportServer per sostituire il comportamento di rendering predefinito per i report in esecuzione in un server di report di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . È possibile modificare i parametri di estensione per il rendering per ottenere gli obiettivi seguenti:  
@@ -66,7 +66,7 @@ ms.locfileid: "36065322"
 ```  
   
 ## <a name="changing-device-information-settings"></a>Modifica delle impostazioni relative alle informazioni sul dispositivo  
- Per modificare le impostazioni predefinite relative alle informazioni sul dispositivo utilizzate da un'estensione per il rendering già distribuita nel server di report, digitare la struttura XML `DeviceInfo` nei file di configurazione. Ogni estensione per il rendering supporta impostazioni relative alle informazioni sui dispositivi specifici per quella estensione. Per visualizzare l'elenco completo delle impostazioni delle informazioni sul dispositivo, vedere [passando Device Information Settings alle estensioni di Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
+ Per modificare le impostazioni predefinite relative alle informazioni sul dispositivo utilizzate da un'estensione per il rendering già distribuita nel server di report, digitare la struttura XML `DeviceInfo` nei file di configurazione. Ogni estensione per il rendering supporta impostazioni relative alle informazioni sui dispositivi specifici per quella estensione. Per visualizzare l'elenco completo di tali impostazioni, vedere [il passaggio di impostazioni informazioni dispositivo alle estensioni di Rendering](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md).  
   
  Nell'esempio seguente vengono illustrate la struttura XML e la sintassi per la modifica delle impostazioni predefinite dell'estensione per il rendering delle immagini:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "36065322"
   
 -   Specificare un nome visualizzato univoco per consentire agli utenti di comprendere le differenze per ogni formato di output.  
   
-     Se si configurano più versioni della stessa estensione, è possibile assegnare a ogni versione un nome univoco, fornendo un valore per `OverrideNames`. In caso contrario, nell'elenco relativo alle opzioni di esportazione sulla barra degli strumenti del report tutte le versioni dell'estensione avranno lo stesso nome.  
+     Se si configurano più versioni della stessa estensione, è possibile assegnare a ogni versione un nome univoco specificando un valore per `OverrideNames`. In caso contrario, nell'elenco relativo alle opzioni di esportazione sulla barra degli strumenti del report tutte le versioni dell'estensione avranno lo stesso nome.  
   
  Nell'esempio seguente viene illustrato come utilizzare l'estensione per il rendering delle immagini predefinita, che prevede la creazione di output in formato TIFF, per generare un output in formato EMF con orientamento verticale insieme a una seconda istanza per l'output di report in formato EMF con orientamento orizzontale. Si noti che ogni estensione ha un nome univoco. Quando si testa questo esempio, ricordarsi di scegliere report che non contengano funzionalità interattive, ad esempio opzioni per mostrare o nascondere gli elementi, matrici o collegamenti drill-through, in quanto le funzionalità di questo tipo non funzionano con l'estensione per il rendering delle immagini.  
   

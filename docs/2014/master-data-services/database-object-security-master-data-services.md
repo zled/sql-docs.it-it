@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 162d60e3a526c70a1624bfdd754076fb08566285
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: 5195df44c591f4c605cfd33aa6bb9934c7d54908
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065172"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163502"
 ---
 # <a name="database-object-security-master-data-services"></a>Sicurezza di oggetti di database (Master Data Services)
   Nel database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] i dati vengono archiviati in più tabelle di database e sono visibili tramite viste. Le informazioni eventualmente protette nell'applicazione Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sono visibili agli utenti che dispongono dell'accesso al database [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -41,7 +41,7 @@ ms.locfileid: "36065172"
   
 -   [Applicazione immediata di autorizzazioni per membri della gerarchia](#Hierarchy)  
   
--   [La modifica dell'Account amministratore di sistema](#SysAdmin)  
+-   [Modifica dell'Account amministratore di sistema](#SysAdmin)  
   
 -   [Configurazione di impostazioni di sistema](#SysSettings)  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36065172"
   
  Per altre informazioni, vedere [Applicare immediatamente autorizzazioni membri &#40;Master Data Services&#41;](../../2014/master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   
-##  <a name="SysAdmin"></a> La modifica dell'Account amministratore di sistema  
+##  <a name="SysAdmin"></a> Modifica dell'Account amministratore di sistema  
   
 |Azione|Entità a protezione diretta|Autorizzazioni|  
 |------------|----------------|-----------------|  

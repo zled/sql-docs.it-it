@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo Proprietà set di dati, filtri (Generatore Report) | Documenti Microsoft
+title: Finestra di dialogo Proprietà set di dati, filtri (Generatore Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10025"
 ms.assetid: 933a6f44-4eb7-4e73-9c40-ac0fd17b23d3
 caps.latest.revision: 14
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: beb0703212eb639483bbaa015b6fa89bba3a3068
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dbe6bee60f4cee2ce99f5aadd1dc3cea14e85b1b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054289"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258167"
 ---
 # <a name="dataset-properties-dialog-box-filters-report-builder"></a>Finestra di dialogo Proprietà set di dati, Filtri (Generatore report)
   Selezionare **Filtri** nella finestra di dialogo **Proprietà set di dati** per creare filtri per il set di dati.  
@@ -64,7 +64,7 @@ ms.locfileid: "36054289"
 ## <a name="see-also"></a>Vedere anche  
  [Set di dati condivisi e incorporati del report &#40;Generatore report e SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Parametri report &#40;Generatore report e Progettazione report&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Aggiungere un filtro a un set di dati &#40;SSRS e Generatore Report&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
+ [Aggiungere un filtro a un set di dati &#40;Report e SSRS&#41;](report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)  
   
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesource.f1
 helpviewer_keywords:
@@ -20,13 +20,13 @@ ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 caps.latest.revision: 50
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 1651289fc00fecceb5a1e5a6bdc2bfd992be166e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 040069e373761d6d3ad78ea26bea5f8e538c33ae
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064781"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229361"
 ---
 # <a name="flat-file-source"></a>origine file flat
   L'origine file flat legge dati da un file di testo. Tale file può essere in formato delimitato, a larghezza fissa o misto.  
@@ -48,7 +48,7 @@ ms.locfileid: "36064781"
   
  Le colonne di output nell'output dell'origine file flat includono la proprietà FastParse. FastParse indica se la colonna usa le routine di analisi più veloci ma indipendenti dalle impostazioni locali disponibili in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oppure le routine di analisi standard dipendenti dalle impostazioni locali. Per altre informazioni, vedere [Analisi veloce](../fast-parse.md) e [Analisi standard](../standard-parse.md).  
   
- Le colonne di output includono anche la proprietà UseBinaryFormat, utilizzata per implementare il supporto per i dati binari, ad esempio i dati con formato decimale packed, all'interno dei file. Per impostazione predefinita è impostata UseBinaryFormat `false`. Se si desidera utilizzare un formato binario, impostare UseBinaryFormat `true` e il tipo di dati nella colonna di output per `DT_BYTES`. In questo modo, nell'origine file flat viene saltata la conversione dei dati e i dati vengono passati alla colonna di output così come sono. È quindi possibile utilizzare una trasformazione, ad esempio Colonna derivata o Conversione dati, per eseguire il cast dei dati `DT_BYTES` in un diverso tipo di dati oppure scrivere uno script personalizzato in una trasformazione Script per interpretare i dati. Per l'interpretazione dei dati è inoltre possibile scrivere un componente del flusso di dati personalizzato. Per ulteriori informazioni sui tipi di dati è possano eseguire il cast `DT_BYTES` per visualizzare [Cast &#40;espressione SSIS&#41;](../expressions/cast-ssis-expression.md).  
+ Le colonne di output includono anche la proprietà UseBinaryFormat, utilizzata per implementare il supporto per i dati binari, ad esempio i dati con formato decimale packed, all'interno dei file. Per impostazione predefinita UseBinaryFormat è impostata su `false`. Se si desidera utilizzare un formato binario, impostare UseBinaryFormat su `true` e il tipo di dati della colonna di output su `DT_BYTES`. In questo modo, nell'origine file flat viene saltata la conversione dei dati e i dati vengono passati alla colonna di output così come sono. È quindi possibile utilizzare una trasformazione, ad esempio Colonna derivata o Conversione dati, per eseguire il cast dei dati `DT_BYTES` in un diverso tipo di dati oppure scrivere uno script personalizzato in una trasformazione Script per interpretare i dati. Per l'interpretazione dei dati è inoltre possibile scrivere un componente del flusso di dati personalizzato. Per altre informazioni su quali tipi di dati possono eseguire il cast `DT_BYTES` per visualizzare [Cast &#40;espressione SSIS&#41;](../expressions/cast-ssis-expression.md).  
   
  Per accedere al file di testo, questa origine utilizza una gestione connessione file flat. Impostando le proprietà di tale gestione connessione è possibile fornire informazioni sul file e le singole colonne contenute, nonché specificare la modalità con cui l'origine file flat deve gestire i dati del file di testo. È ad esempio possibile specificare i caratteri che delimitano le righe e le colonne del file, oltre al tipo di dati e alla lunghezza di ogni colonna. Per ulteriori informazioni, vedere [Flat File Connection Manager](../connection-manager/file-connection-manager.md).  
   
@@ -61,9 +61,9 @@ ms.locfileid: "36064781"
   
 -   [Editor origine File flat &#40;pagina Gestione connessione&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Editor origine File flat &#40;pagina colonne&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Editor origine File flat &#40;(pagina colonne)&#41;](../flat-file-source-editor-columns-page.md)  
   
--   [Editor origine File flat &#40;pagina di Output di errore&#41;](../flat-file-source-editor-error-output-page.md)  
+-   [Editor origine File flat &#40;pagina dell'Output degli errori&#41;](../flat-file-source-editor-error-output-page.md)  
   
  Nella finestra di dialogo **Editor avanzato** sono disponibili le proprietà che è possibile impostare a livello di codice. Per ulteriori informazioni sulle proprietà che è possibile impostare nella finestra di dialogo **Editor avanzato** o a livello di codice, fare clic su uno degli argomenti seguenti:  
   

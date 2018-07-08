@@ -1,13 +1,11 @@
 ---
-title: Criteri di supporto per SQL Server Native Client | Documenti Microsoft
+title: Criteri di supporto per SQL Server Native Client | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
-ms.component: native-client|applications
 ms.reviewer: ''
 ms.suite: sql
 ms.custom: ''
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 09c80cf4-23e6-4027-a24f-cdb9c87af811
@@ -16,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: fcf6d00af82ce8a67fd3259d39118907713f97b9
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: ac3e18c78f1bf7c094d535ddb9ece9e0abbbe623
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32950906"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409740"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>Criteri di supporto per SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +43,7 @@ ms.locfileid: "32950906"
 ## <a name="ado-support-policies"></a>Criteri di supporto ADO  
  Le applicazioni ADO possono utilizzare il provider OLE DB SQLOLEDB incluso in Windows se non richiedono alcuna funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o versione successiva.  
   
- Applicazioni ADO possono utilizzare la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Le applicazioni ADO possono inoltre utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 (incluso in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]). In tal caso, è tuttavia necessario che sia specificato `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente `DataTypeCompatibility=80`, sono disponibili solo le funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ Le applicazioni ADO possono utilizzare la versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client inclusa in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Le applicazioni ADO possono inoltre utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 (incluso in [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]). In tal caso, è tuttavia necessario che sia specificato `DataTypeCompatibility=80` nelle stringhe di connessione. Se nelle stringhe di connessione è presente `DataTypeCompatibility=80`, sono disponibili solo le funzionalità di [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ## <a name="bcp-support-policies"></a>Criteri di supporto BCP  
  A partire da [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], bcp.exe supporta file di dati appartenenti a versioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] non più vecchie di tre versioni rispetto alla versione di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con cui viene fornito bcp.exe.  
@@ -61,6 +59,6 @@ ms.locfileid: "32950906"
  Le applicazioni OLE DB che utilizzano OLE DB Service Components possono utilizzare [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client solo se specificano `DataTypeCompatibility=80` nelle stringhe di connessione. Tuttavia, delle funzionalità aggiunte dopo [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] saranno disponibili in questo caso.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di applicazioni con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
+ [Compilazione di applicazioni con SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

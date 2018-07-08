@@ -1,5 +1,5 @@
 ---
-title: Elemento RelationshipEndTranslation (ASSL) | Documenti Microsoft
+title: Elemento RelationshipEndTranslation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 04e09370-fdfe-4051-9998-4a6859ce8c54
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bb93b3cdaf3eda1b8be15679b0736e626a802cf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 62c779e29ce721289b364599063e1a1de747eb1c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063937"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153022"
 ---
 # <a name="relationshipendtranslation-element-assl"></a>Elemento RelationshipEndTranslation (ASSL)
   Definisce un tipo di dati primitivo che rappresenta una traduzione localizzata per una [RelationshipEnd](relationshipend-data-type-assl.md) elemento.  
@@ -44,16 +44,16 @@ ms.locfileid: "36063937"
 |Caratteristica|Description|  
 |--------------------|-----------------|  
 |Tipi di dati di base|None|  
-|Tipi di dati derivati|[Oggetto AttributeTranslation](translation-data-type-assl.md)|  
+|Tipi di dati derivati|[AttributeTranslation](translation-data-type-assl.md)|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
   
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|[Traduzioni](../collections/translations-element-assl.md)|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [didascalia](../properties/caption-element-assl.md), [CollectionCaption](../properties/caption-element-assl.md), [descrizione](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [ Lingua](../properties/language-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [didascalia](../properties/caption-element-assl.md), [CollectionCaption](../properties/caption-element-assl.md), [descrizione](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [ Lingua](../properties/language-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.Translation>.  
   
 ## <a name="see-also"></a>Vedere anche  

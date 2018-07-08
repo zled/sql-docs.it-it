@@ -5,10 +5,9 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-security
+ms.technology: security
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.authenticationmode.f1
 helpviewer_keywords:
@@ -24,15 +23,15 @@ helpviewer_keywords:
 - SQL authentication mode
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 caps.latest.revision: 45
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1c2927e5d68ac41c9813dd623983e44b95b8ba53
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: edmacauley
+ms.author: edmaca
+manager: craigg
+ms.openlocfilehash: 513a28480fbcd3c664b090ddcd68ebc0aa9df308
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063787"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155922"
 ---
 # <a name="choose-an-authentication-mode"></a>Scegliere una modalità di autenticazione
   Durante l'installazione è necessario selezionare una modalità di autenticazione per il [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Sono disponibili due modalità: la modalità di autenticazione di Windows e la modalità mista. La modalità di autenticazione di Windows abilita l'autenticazione di Windows e disabilita quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La modalità mista abilita sia l'autenticazione di Windows sia quella di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'autenticazione di Windows è sempre disponibile e non può essere disabilitata.  
@@ -71,7 +70,7 @@ ms.locfileid: "36063787"
   
 1.  Fare clic sul menu **Start** e scegliere **Esegui**.  
   
-2.  Nel **eseguiti** della finestra di dialogo tipo `secpol.msc`, quindi fare clic su **OK**.  
+2.  Nel **eseguiti** finestra di dialogo, digitare `secpol.msc`e quindi fare clic su **OK**.  
   
 3.  Nell'applicazione **Impostazioni sicurezza locale** espandere **Impostazioni di sicurezza**e **Criteri account**, quindi fare clic su **Criteri password**.  
   

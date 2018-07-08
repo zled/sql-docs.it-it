@@ -1,5 +1,5 @@
 ---
-title: Elemento CaptionIsMdx (ASSL) | Documenti Microsoft
+title: Elemento CaptionIsMdx (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - CaptionIsMdx element
 ms.assetid: 7569a75e-b3e0-4332-97d3-585abc546ada
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 624998a5bc65b1cfa9e0f61f93ef5e860210d697
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 42e99bc43634d27526ed6d18012b904818f43cf5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165192"
 ---
 # <a name="captionismdx-element-assl"></a>Elemento CaptionIsMdx (ASSL)
   Definisce se la didascalia per il [azione](../objects/action-element-assl.md) elemento è un'espressione MDX (Multidimensional Expressions).  
@@ -61,8 +61,8 @@ ms.locfileid: "36062971"
 |Elemento padre|[Azione](../objects/action-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `CaptionIsMdx` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `CaptionIsMdx` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Action>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

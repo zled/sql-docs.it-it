@@ -1,12 +1,12 @@
 ---
-title: Utilizzo di parametri di istruzione | Documenti Microsoft
+title: Usando i parametri delle istruzioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7741fc9a8b4de583055a5afccb0bc31d54b50406
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: b2533a645d18fbcfc14408c1a22b14f32641bd4b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698502"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37418820"
 ---
 # <a name="using-statement-parameters"></a>Utilizzo dei parametri delle istruzioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35698502"
   
 -   Migliorare l'interazione dell'utente nella costruzione di criteri di query.  
   
--   Gestire **testo**, **ntext**, e **immagine** dati e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipi di dati C specifici.  
+-   Gestire **testo**, **ntext**, e **immagine** dei dati e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-tipi di dati C specifici.  
   
  Ad esempio, un **parti** tabella include colonne denominate **PartID**, **descrizione**, e **prezzo**. Per aggiungere una parte senza parametri, è necessario costruire un'istruzione SQL come:  
   
@@ -59,7 +59,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   
--   [Parametri di associazione](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
+-   [Associazione di parametri](../../relational-databases/native-client-odbc-queries/using-statement-parameters-binding-parameters.md)  
   
 ## <a name="see-also"></a>Vedere anche  
  [L'esecuzione di query &#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  

@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo delle proprietà (SSAS - multidimensionale) database | Documenti Microsoft
+title: Finestra di dialogo Proprietà (SSAS - multidimensionale) del database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.databaseproperties.f1
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 99e14ae619776a0d14f2c78cff20a74dbc72c0a6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2c138f61c17f79ed264dda4c28be766a7b41c9b2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063729"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157372"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Finestra di dialogo Proprietà database (SSAS - Multidimensionale)
   Utilizzare la finestra di dialogo **Proprietà database** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per impostare le proprietà di un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Per visualizzare la finestra di dialogo **Proprietà database** è possibile fare clic con il pulsante destro del mouse su un database in Esplora oggetti e scegliere **Proprietà**.  
@@ -36,7 +36,7 @@ ms.locfileid: "36063729"
 |**Timestamp creazione**|Consente di visualizzare la data e l'ora di creazione del database.|  
 |**Ultimo aggiornamento schema**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei metadati del database.|  
 |**Ultimo aggiornamento**|Consente di visualizzare la data e l'ora dell'ultimo aggiornamento dei dati del database.|  
-|**Rappresentazione origine dati**|Consente di selezionare le informazioni di rappresentazione utilizzate dal database per la connessione e l'interazione con le origini dei dati contenute nel database. I valori validi sono i seguenti:<br /><br /> **ImpersonateAccount** (usare un nome utente e una password specifici di Windows).<br /><br /> **ImpersonateService** (usare l'account del servizio).<br /><br /> **ImpersonateCurrentUser** (usare le credenziali dell'utente corrente).<br /><br /> **Default** (usare l'account del servizio per le operazioni MOLAP e l'utente corrente per il data mining).<br /><br /> Sebbene sia possibile definire le impostazioni di rappresentazione dell'origine dati al livello del database, questa operazione influirebbe unicamente sulle origini dati per cui è stato specificato **Eredita** per le impostazioni della rappresentazione. Le impostazioni di rappresentazione specificate direttamente sull'origine dati eseguiranno sempre l'override delle impostazioni specificate al livello del database.<br /><br /> Quando si sceglie un'opzione di rappresentazione, considerare i tipi di operazioni che dovranno essere supportati. Alcune operazioni, ad esempio l'elaborazione, non possono essere eseguite da|  
+|**Impostazioni di rappresentazione origine dati**|Consente di selezionare le informazioni di rappresentazione utilizzate dal database per la connessione e l'interazione con le origini dei dati contenute nel database. I valori validi sono i seguenti:<br /><br /> **ImpersonateAccount** (usare un nome utente e una password specifici di Windows).<br /><br /> **ImpersonateService** (usare l'account del servizio).<br /><br /> **ImpersonateCurrentUser** (usare le credenziali dell'utente corrente).<br /><br /> **Default** (usare l'account del servizio per le operazioni MOLAP e l'utente corrente per il data mining).<br /><br /> Sebbene sia possibile definire le impostazioni di rappresentazione dell'origine dati al livello del database, questa operazione influirebbe unicamente sulle origini dati per cui è stato specificato **Eredita** per le impostazioni della rappresentazione. Le impostazioni di rappresentazione specificate direttamente sull'origine dati eseguiranno sempre l'override delle impostazioni specificate al livello del database.<br /><br /> Quando si sceglie un'opzione di rappresentazione, considerare i tipi di operazioni che dovranno essere supportati. Alcune operazioni, ad esempio l'elaborazione, non possono essere eseguite da|  
 |**Ultima elaborazione**|Consente di visualizzare la data e l'ora dell'ultima elaborazione del database.|  
 |**Dimensioni stimate**|Consente di visualizzare le dimensioni stimate del database.|  
 |**Percorso di archiviazione**|Specifica la posizione del database. Se il database si trova nella directory dati predefinita, questo valore sarà vuoto.|  
