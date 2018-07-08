@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 5
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: e16f84d38d32dc5e55ce3244f09b2e9c5a28f967
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 25c367550ca7efb08bb33e99318ceda2e62b9b11
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054704"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240021"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Ricerca di parti del report e impostazione di una cartella predefinita (Generatore report e SSRS)
   Il modo più semplice per creare un report consiste nell'aggiungere parti del report esistenti, ad esempio tabelle e grafici, al report in uso dalla raccolta di parti del report. Quando una parte di report viene aggiunta al report in uso, vengono aggiunti anche tutti gli elementi necessari affinché funzioni. Ad esempio, qualsiasi parte di report che consenta la visualizzazione dei dati dipende da un set di dati, ovvero una query e una connessione a un'origine dati. Dopo aver aggiunto la parte di report al report in uso, è possibile modificarla in base alle necessità.  
@@ -67,10 +67,10 @@ ms.locfileid: "36054704"
  Non è necessario riavviare Generatore report affinché questa impostazione venga applicata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Cercare gli aggiornamenti o Turn Off &#40;SSRS e Generatore Report&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Parti di report &#40;SSRS e Generatore Report&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Le parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Risoluzione dei problemi relativi a parti del Report &#40;SSRS e Generatore Report&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
- [Pubblicazione e ripubblicazione di parti del Report &#40;SSRS e Generatore Report&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
+ [Verificare o gli aggiornamenti Turn Off &#40;Report e SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
+ [Parti di report &#40;Report e SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parti del report e set di dati in Generatore Report](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Risolvere i problemi di parti del Report &#40;Report e SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
+ [Pubblicare e ripubblicare parti del Report &#40;Report e SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

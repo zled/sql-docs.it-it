@@ -1,5 +1,5 @@
 ---
-title: Elemento Administer (ASSL) | Documenti Microsoft
+title: Elemento Administer (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Administer element
 ms.assetid: 52924cd6-6176-47c8-ab17-4ee0e0ce42b1
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 099e5b9283acf8da6268e8b5abaaad73049ca076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 29b09b2f28512600496a4d461f34994dc1bf177e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064534"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229691"
 ---
 # <a name="administer-element-assl"></a>Elemento Administer (ASSL)
   Indica se l'autorizzazione associata include il diritto di amministrare un [Database](../objects/database-element-assl.md) elemento.  
@@ -61,13 +61,13 @@ ms.locfileid: "36064534"
 |Elementi padre|[DatabasePermission](../objects/databasepermission-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento `Administer` indica se un utente può eseguire funzioni amministrative solo nel database specificato. Il ruolo di amministratore del server è autorizzato a eseguire funzioni amministrative in tutti i database contenuti nell'istanza.  
   
- L'elemento che corrisponde al padre di `Administer` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DatabasePermission>.  
+ L'elemento che corrisponde al padre di `Administer` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.DatabasePermission>.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Tipo di dati di autorizzazione &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
+ [Tipo di dati Permission &#40;ASSL&#41;](../data-type/permission-data-type-assl.md)   
  [Elemento Role &#40;ASSL&#41;](../objects/role-element-assl.md)   
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL10.REP.CONFIGWEBSYNCWIZARD.SUBTYPE.F1
 - SQL10.REP.CONFIGWEBSYNCWIZARD.CLIENTAUTH.F1
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Web synchronization, configuring
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 caps.latest.revision: 73
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 3d2baa3c79d4d3915ad3cae1032c7c7df94a7ccd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 0f1e6f26bd99827a79140cfb0a14ed9049b82ab7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063092"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184158"
 ---
 # <a name="configure-web-synchronization"></a>Configurazione della sincronizzazione Web
   L'opzione di sincronizzazione Web per la replica di tipo merge di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consente la replica dei dati tramite il protocollo HTTPS su Internet. Per utilizzare la sincronizzazione Web, è innanzitutto necessario eseguire le azioni di configurazione riportate di seguito:  

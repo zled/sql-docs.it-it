@@ -1,5 +1,5 @@
 ---
-title: Aprire soluzioni e progetti dal controllo del codice sorgente | Documenti Microsoft
+title: Aprire soluzioni e progetti dal controllo del codice sorgente | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], solutions
 - source controls [SQL Server Management Studio], projects
 ms.assetid: 1c8d27f2-1741-485f-b56a-cadcb8b5493d
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 918b0f0084beae3644097fa795b1a0c9bc61471b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 2f034cadd18ea0cf448a2044debe6b081c2a7e2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054578"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239411"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Apertura di soluzioni e progetti dal controllo del codice sorgente
-  È possibile utilizzare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire una soluzione o progetto direttamente dal controllo del codice sorgente. Quando viene aperta una soluzione dal controllo del codice sorgente, nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene recuperata automaticamente la sua versione più recente e copiata nel percorso specificato.  
+  È possibile usare [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per aprire una soluzione o progetto direttamente dal controllo del codice sorgente. Quando viene aperta una soluzione dal controllo del codice sorgente, nell'ambiente [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] viene recuperata automaticamente la sua versione più recente e copiata nel percorso specificato.  
   
- Se non si dispone di una copia locale di una soluzione, è necessario aprirla dal controllo del codice sorgente prima di potere eseguire operazioni di controllo del codice sorgente su di essa. Dopo avere recuperato una copia locale della soluzione, non devi nuovamente ad aprirlo dal controllo del codice sorgente; è possibile aprire la copia locale e usare i comandi del controllo origine standard, ad esempio **Leggi ultima versione** oppure **Estrai**, per eseguire l'operazione desiderata.  
+ Se non si dispone di una copia locale di una soluzione, è necessario aprirla dal controllo del codice sorgente prima di potere eseguire operazioni di controllo del codice sorgente su di essa. Dopo avere recuperato una copia locale della soluzione, non occorre nuovamente ad aprirlo dal controllo del codice sorgente; è possibile aprire la copia locale e usare i comandi del controllo codice sorgente standard, ad esempio **Leggi ultima versione** oppure **Estrai**, per eseguire l'operazione desiderata.  
   
  Gli argomenti disponibili in questa sezione sono descritti nella tabella seguente.  
   

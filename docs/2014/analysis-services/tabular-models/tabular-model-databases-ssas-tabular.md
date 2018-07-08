@@ -1,5 +1,5 @@
 ---
-title: Database modello tabulare (SSAS tabulare) | Documenti Microsoft
+title: I database modello tabulare (SSAS tabulare) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 539c6b5f-f4b6-42f9-af81-7c02f74d5efe
 caps.latest.revision: 9
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0952d613290da279c5e044085ed79f415181bb9c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d1d74fe1e59121466acf3671e3ce036a6b3e4e89
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055777"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259417"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Database modello tabulare (SSAS tabulare)
   Un database modello tabulare è un database di Analysis Services creato in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] tramite il modello di progetto di modello tabulare di Analysis Services, in cui tabelle e relazioni sono le strutture primarie per la rappresentazione di dati.  
@@ -39,7 +39,7 @@ ms.locfileid: "36055777"
   
  [Partizioni di modelli tabulari &#40;tabulare di SSAS&#41;](tabular-model-partitions-ssas-tabular.md)  
   
- [Configurare l'accesso DirectQuery per un Database modello tabulare o In memoria](enable-directquery-mode-in-ssms.md)  
+ [Configurare l'accesso in memoria o DirectQuery per un database di modello tabulare](enable-directquery-mode-in-ssms.md)  
   
  [Connettersi a un Database modello tabulare &#40;SSAS&#41;](connect-to-a-tabular-model-database-ssas.md)  
   
