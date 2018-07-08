@@ -1,5 +1,5 @@
 ---
-title: Collations and Code Pages | Documenti Microsoft
+title: Collations and Code Pages | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: da33b883499f9119c7c23f3c203aca6add6c4d3c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 0632bb70a18930e71319554bba99b0660e986483
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062287"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182895"
 ---
 # <a name="collations-and-code-pages"></a>Tabelle codici e regole di confronto
   In [!INCLUDE[hek_2](../includes/hek-2-md.md)] sono presenti restrizioni per le tabelle codici supportate per le colonne di tipo (var)char nelle tabelle ottimizzate per la memoria e nelle regole di confronto supportate utilizzate negli indici e nelle stored procedure compilate in modo nativo.  
@@ -86,7 +86,7 @@ GO
   
 -   In tutte espressioni e le operazioni di ordinamento nelle stored procedure compilate in modo nativo devono essere utilizzate le regole di confronto BIN2. L'implicazione è che tutti i confronti e le operazioni di ordinamento si basano sugli elementi di codice Unicode dei caratteri (rappresentazioni binarie). Ad esempio, in tutte le operazioni di ordinamento viene fatta distinzione tra maiuscole e minuscole (" Z" viene prima di "a "). Se necessario, utilizzare codice [!INCLUDE[tsql](../includes/tsql-md.md)] interpretato per le operazioni di ordinamento e confronto senza distinzione tra maiuscole e minuscole.  
   
--   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che char n (var) (*n*) i valori non possono essere convertito nel tipo n (var) char (*si*), se *si* < *n*, se la le regole di confronto _ SC property. Ad esempio, il codice seguente non è supportato:  
+-   Il troncamento dei dati UTF-16 non è supportato nelle stored procedure compilate in modo nativo. Ciò significa che char n (var) (*n*) i valori non possono essere convertito nel tipo n (var) char (*ho*), se *ho* < *n*, se la le regole di confronto includano SC property. Ad esempio, il codice seguente non è supportato:  
   
     ```tsql  
     -- column definition using an _SC collation  

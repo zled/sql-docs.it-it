@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: DLLExport
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: eac28aa439dd698c4bc3229d65ad77c0ea35de14
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: a89873aa2464c75e51c338aae019dc3fcdbac122
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698942"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37419342"
 ---
 # <a name="sqlrowcount"></a>SQLRowCount
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "35698942"
   
  L'applicazione può inoltre utilizzare una matrice di valori di stato, associata tramite l'attributo di istruzione SQL_ATTR_PARAM_STATUS_PTR, per acquisire gli offset della matrice di righe di parametri con errori. L'applicazione può attraversare la matrice di stati per determinare il numero effettivo di righe elaborate.  
   
- Quando un [!INCLUDE[tsql](../../includes/tsql-md.md)] viene eseguita un'istruzione INSERT, UPDATE, DELETE o MERGE con una clausola OUTPUT, SQLRowCount non restituirà il conteggio delle righe interessate fino a quando tutte le righe nel set di risultati generato dalla clausola OUTPUT sono stata usate. Per utilizzare queste righe, chiamare SQLFetch o SQLFetchScroll. SQLResultCols restituiranno -1 finché tutte le righe di risultati sono stata usate. Dopo che SQLFetch o SQLFetchScroll restituisce SQL_NO_DATA, l'applicazione deve chiamare SQLRowCount per determinare il numero di righe interessate prima di chiamare SQLMoreResults per spostarsi al risultato successivo.  
+ Quando un [!INCLUDE[tsql](../../includes/tsql-md.md)] viene eseguita un'istruzione INSERT, UPDATE, DELETE o MERGE con una clausola OUTPUT, SQLRowCount non restituirà il numero di righe interessate fino a quando non sono state utilizzate tutte le righe nel set di risultati generato dalla clausola OUTPUT. Per utilizzare queste righe, chiamare SQLFetch o SQLFetchScroll. SQLResultCols restituiranno -1 finché tutte le righe di risultati sono state utilizzate. Dopo aver SQLFetch o SQLFetchScroll restituisce SQL_NO_DATA, l'applicazione deve chiamare SQLRowCount per determinare il numero di righe interessate prima di chiamare SQLMoreResults per passare al risultato successivo.  
   
 ## <a name="see-also"></a>Vedere anche  
  [SQLRowCount-funzione](http://go.microsoft.com/fwlink/?LinkId=59367)   

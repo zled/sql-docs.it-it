@@ -1,5 +1,5 @@
 ---
-title: Elemento NullKeyNotAllowed (ASSL) | Documenti Microsoft
+title: Elemento NullKeyNotAllowed (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - NullKeyNotAllowed element
 ms.assetid: 4ece99eb-954b-4da1-add4-dd9efd5fff0a
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 235c76fb2b8cad1682fab97f36cb1867d7c82c38
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 6e514e1258fc8a73be70195641525f400021a002
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165272"
 ---
 # <a name="nullkeynotallowed-element-assl"></a>Elemento NullKeyNotAllowed (ASSL)
-  Determina il modo in cui [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] motore di elaborazione gestisce un errore di chiave null rilevato durante l'elaborazione.  
+  Determina come il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] motore di elaborazione gestisce un errore di chiave null rilevato durante l'elaborazione.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -61,8 +61,8 @@ ms.locfileid: "36055569"
 |Elemento padre|[ErrorConfiguration](../objects/errorconfiguration-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Si verificano errori di chiave Null quando in una colonna chiave in cui non sono consentiti valori Null ne viene rilevato uno, che fa sì che il record venga ignorato durante l'elaborazione. Tuttavia, questo errore si verifica solo se il [NullProcessing](nullprocessing-element-assl.md) elemento per il `DataItem` predecessore del `ErrorConfiguration` elemento padre è impostato su *errore*.  
+## <a name="remarks"></a>Note  
+ Si verificano errori di chiave Null quando in una colonna chiave in cui non sono consentiti valori Null ne viene rilevato uno, che fa sì che il record venga ignorato durante l'elaborazione. Tuttavia, questo errore si verifica solo se il [NullProcessing](nullprocessing-element-assl.md) (elemento) per il `DataItem` predecessore del `ErrorConfiguration` elemento padre è impostato su *errore*.  
   
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   

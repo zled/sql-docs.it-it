@@ -5,21 +5,20 @@ ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 caps.latest.revision: 17
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: fefc4c7df12855615cba104bfb63d8547608c7f0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bd1bc616c3a897f0c7b3b3ea4fda256b240f75ab
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055416"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155422"
 ---
 # Guida per la progettazione di indici di SQL Server
   Gli indici progettati in modo non corretto e la mancanza di indici costituiscono le cause principali dei colli di bottiglia delle applicazioni di database. La progettazione di indici efficienti è fondamentale per ottenere buone prestazioni del database e dell'applicazione. In questa guida per la progettazione di indici di SQL Server sono contenute informazioni e procedure consigliate che consentono di progettare indici validi per soddisfare le esigenze dell'applicazione.  
@@ -29,7 +28,7 @@ ms.locfileid: "36055416"
  In questa guida si presuppone che il lettore conosca i tipi di indice disponibili in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Per una descrizione generale dei tipi di indice, vedere [Tipi di indice](http://msdn.microsoft.com/library/ms175049.aspx).  
   
 ##  <a name="Top"></a> In questa Guida  
- [Nozioni fondamentali sulla progettazione di indice](#Basics)  
+ [Nozioni fondamentali sulla progettazione di indici](#Basics)  
   
  [Linee guida generali per la progettazione dell'indice](#General_Design)  
   
@@ -41,7 +40,7 @@ ms.locfileid: "36055416"
   
  [Linee guida per la progettazione di indici filtrati](#Filtered)  
   
- [Risorse aggiuntive](#Additional_Reading)  
+ [Informazioni aggiuntive](#Additional_Reading)  
   
 ##  <a name="Basics"></a> Nozioni fondamentali sulla progettazione di indici  
  Un indice è una struttura su disco associata a una tabella o a una vista che consente di recuperare in modo rapido le righe della tabella o della vista. L'indice contiene chiavi costituite da una o più colonne della tabella o della vista. Queste chiavi vengono archiviate in una struttura (albero B) che consente a SQL Server di individuare con rapidità ed efficienza la riga o le righe associate ai valori di chiave.  
@@ -55,7 +54,7 @@ ms.locfileid: "36055416"
 ### Attività di progettazione di indici  
  Le attività seguenti costituiscono la strategia consigliata per la progettazione di indici:  
   
-1.  Comprendere le caratteristiche del database. Stabilire, ad esempio, se si tratta di un database OLTP (Online Transaction Processing) in cui avvengono frequenti modifiche dei dati o di un database DSS (Decision Support System) o di data warehouse (OLAP) contenente principalmente dati di sola lettura e tramite cui è necessario elaborare rapidamente set di dati di grandi dimensioni. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]l'indice *columnstore con ottimizzazione per la memoria di xVelocity* è particolarmente appropriato per set di dati di data warehousing tipici. Gli indici columnstore possono trasformare l'ambiente di data warehousing per gli utenti consentendo prestazioni più veloci per le query di data warehousing comuni quali quelle di filtro, aggregazione, raggruppamento e join a stella. Per altre informazioni, vedere [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Comprendere le caratteristiche del database. Stabilire, ad esempio, se si tratta di un database OLTP (Online Transaction Processing) in cui avvengono frequenti modifiche dei dati o di un database DSS (Decision Support System) o di data warehouse (OLAP) contenente principalmente dati di sola lettura e tramite cui è necessario elaborare rapidamente set di dati di grandi dimensioni. In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]l'indice *columnstore con ottimizzazione per la memoria di xVelocity* è particolarmente appropriato per set di dati di data warehousing tipici. Gli indici columnstore possono trasformare l'ambiente di data warehousing per gli utenti consentendo prestazioni più veloci per le query di data warehousing comuni quali quelle di filtro, aggregazione, raggruppamento e join a stella. Per altre informazioni, vedere [descrizione degli indici Columnstore](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Comprendere le caratteristiche delle query utilizzate più di frequente. Se, ad esempio, si stabilisce che una query utilizzata di frequente unisce in join due o più tabelle, è possibile determinare il tipo più adatto di indici da utilizzare.  
   
@@ -184,13 +183,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Dopo che la query è stata eseguita di nuovo, il piano di esecuzione seguente mostra che l'operatore SORT è stato eliminato ed è stato utilizzato il nuovo indice non cluster creato.  
   
- ![Piano di esecuzione indica un ordinamento di operatore non viene utilizzato](media/insertsort2.gif "piano di esecuzione indica un ordinamento di operatore non viene utilizzato")  
+ ![Piano di esecuzione indica un ordinamento non viene usato](media/insertsort2.gif "piano di esecuzione indica un ordinamento non viene usato")  
   
  Il [!INCLUDE[ssDE](../includes/ssde-md.md)] consente di spostarsi con la stessa efficienza in entrambe le direzioni. Un indice definito come `(RejectedQty DESC, ProductID ASC)` può comunque essere utilizzato per una query in cui l'ordinamento delle colonne nella clausola ORDER BY viene invertito. L'indice può ad esempio essere utilizzato da una query con la clausola ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` .  
   
  È possibile specificare l'ordinamento solo per le colonne chiave. La vista del catalogo [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) e la funzione INDEXKEY_PROPERTY indicano se una colonna di un indice è archiviata in ordine crescente o decrescente.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
   
 ##  <a name="Clustered"></a> Linee guida per la progettazione di indici cluster  
  Gli indici cluster ordinano e archiviano le righe di dati della tabella in base ai valori di chiave. Per ogni tabella è disponibile un solo indice cluster poiché le righe di dati possono essere ordinate con un solo tipo di ordinamento. Con poche eccezioni, è opportuno definire un indice cluster sulla colonna o sulle colonne di tutte le tabelle che presentano le caratteristiche seguenti:  
@@ -217,7 +216,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Nella figura seguente viene illustrata la struttura di un indice cluster in una singola partizione.  
   
- ![Livelli di un indice cluster](media/bokind2.gif "livelli di un indice cluster")  
+ ![I livelli di un indice cluster](media/bokind2.gif "livelli di un indice cluster")  
   
 ### Considerazioni sulle query  
  Prima di creare indici cluster, è consigliabile conoscere la modalità di accesso ai dati. Utilizzare ad esempio un indice cluster per query che eseguono le operazioni seguenti:  
@@ -261,7 +260,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Le chiavi estese sono costituite da diverse colonne normali o di grandi dimensioni. I valori di chiave dell'indice cluster vengono utilizzati come chiavi di ricerca da tutti gli indici non cluster. Gli indici non cluster definiti nella stessa tabella saranno significativamente più grandi perché le voci di indice non cluster includono la chiave di clustering, nonché le colonne chiave definite per l'indice non cluster.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
   
 ##  <a name="Nonclustered"></a> Linee guida per la progettazione di un indice non cluster  
  Un indice non cluster contiene i valori della chiave di indice e gli indicatori di posizione delle righe che puntano al percorso di archiviazione dei dati della tabella. In una vista tabella o indicizzata è possibile creare più indici non cluster. In genere, gli indici non cluster consentono di migliorare le prestazioni di query utilizzate di frequente non coperte da un indice cluster.  
@@ -287,7 +286,7 @@ ON Purchasing.PurchaseOrderDetail
   
  Nella figura seguente viene illustrata la struttura di un indice non cluster in una singola partizione.  
   
- ![Livelli di un indice non cluster](media/bokind1.gif "livelli di un indice non cluster")  
+ ![Livelli di un indice nonclustered](media/bokind1.gif "livelli di un indice non cluster")  
   
 ### Considerazioni sui database  
  Quando si progettano indici non cluster, considerare le caratteristiche del database.  
@@ -430,7 +429,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Sarà necessario determinare se i guadagni in termini di prestazioni delle query offrano maggiore vantaggio rispetto all'influenza sulle prestazioni durante la modifica dei dati e ai maggiori requisiti di spazio su disco.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
   
 ##  <a name="Unique"></a> Linee guida per la progettazione di indici univoci  
  Un indice univoco consente di garantire che nella chiave dell'indice non siano contenuti valori duplicati e che pertanto ogni riga della tabella sia univoca. È consigliabile specificare un indice univoco solo se l'unicità è una caratteristica dei dati stessi. Per verificare, ad esempio, che i valori della colonna `NationalIDNumber` nella tabella `HumanResources.Employee` siano univoci quando la chiave primaria è `EmployeeID`, creare un vincolo UNIQUE nella colonna `NationalIDNumber` . Se l'utente tenta di inserire nella colonna lo stesso valore per più dipendenti, verrà visualizzato un messaggio di errore e il valore duplicato non verrà inserito.  
@@ -455,7 +454,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   In un indice non cluster univoco possono essere contenute colonne non chiave. Per altre informazioni, vedere [Indice con colonne incluse](#Included_Columns).  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
   
 ##  <a name="Filtered"></a> Linee guida per la progettazione di indici filtrati  
  Un indice filtrato è un indice non cluster ottimizzato, particolarmente indicato per coprire query che selezionano dati da un subset ben definito. Un indice di questo tipo utilizza un predicato del filtro per indicizzare una parte di righe nella tabella. Se confrontato con indici di tabella completa, un indice filtrato progettato correttamente consente di migliorare le prestazioni di esecuzione delle query e di ridurre i costi di manutenzione e di archiviazione dell'indice stesso.  
@@ -596,7 +595,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Lo spostamento della conversione dei dati dal lato sinistro a quello destro di un operatore di confronto potrebbe modificare il significato della conversione. Nell'esempio precedente, quando l'operatore CONVERT è stato aggiunto al lato destro, il confronto è stato modificato da un confronto di un tipo integer in un confronto di tipo `varbinary`.  
   
- ![Icona freccia usata con Back collegamento Torna all'inizio](media/uparrow16x16.gif "icona freccia usata con Back collegamento Torna all'inizio") [In questa Guida](#Top)  
+ ![Icona freccia usata con il collegamento superiore](media/uparrow16x16.gif "icona freccia usata con il collegamento superiore") [In questa Guida](#Top)  
   
 ##  <a name="Additional_Reading"></a> Ulteriori informazioni  
  [Miglioramento delle prestazioni con le viste indicizzate di SQL Server 2008](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  

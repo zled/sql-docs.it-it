@@ -1,12 +1,12 @@
 ---
-title: L'esecuzione di query (ODBC) | Documenti Microsoft
+title: L'esecuzione di query (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: a2263557055cef5039364e7510f70006dc5c3efa
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3042b9db6526af479664001c9e7eaeeb8832f0fe
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35696194"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37407044"
 ---
 # <a name="executing-queries-odbc"></a>Esecuzione di query (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "35696194"
   
 4.  Recuperare tutti i set di risultati.  
   
- Dopo che un'applicazione recupera tutte le righe in tutti i set di risultati restituiti dall'istruzione SQL, può eseguire un'altra query sullo stesso handle di istruzione. Se un'applicazione determina che non è necessario recuperare tutte le righe in un determinato set di risultati, è possibile annullare il resto del set di risultati tramite una chiamata a [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oppure [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
+ Dopo che un'applicazione recupera tutte le righe in tutti i set di risultati restituiti dall'istruzione SQL, può eseguire un'altra query sullo stesso handle di istruzione. Se un'applicazione determina che non è necessario recuperare tutte le righe in un determinato set di risultati, è possibile annullare il resto del set di risultati tramite la chiamata a [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) oppure [SQLCloseCursor](../../relational-databases/native-client-odbc-api/sqlclosecursor.md).  
   
  Se in un'applicazione ODBC è necessario eseguire la stessa istruzione SQL più volte con dati diversi, utilizzare un marcatore di parametro rappresentato da un punto interrogativo (?) nella creazione di un'istruzione SQL:  
   

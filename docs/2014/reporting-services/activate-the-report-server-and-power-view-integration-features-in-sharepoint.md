@@ -1,5 +1,5 @@
 ---
-title: Attivare il Server di Report Power View Integration Features in SharePoint | Documenti Microsoft
+title: Attivare le funzionalità di integrazione Power View in SharePoint e il Server di Report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c7f64a54-c555-4d31-bf99-3abe57dc8626
 caps.latest.revision: 5
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 3f9d0adde23d8340bd5e10ed2a9c22c8aa425b52
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 45266427e7946e62a758ce994531126324dca39d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155852"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Attivare le funzionalità di integrazione per Power View e server di report in SharePoint
   Le funzionalità delle raccolte siti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sono in genere attivate per impostazione predefinita dopo l'installazione del componente aggiuntivo [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] per prodotti SharePoint. In alcune situazioni sarà necessario attivare manualmente le funzionalità.  
   
- Se si installa il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per Prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View saranno attivate solo per le raccolte siti radice. Per le altre raccolte siti, sarà necessario attivare manualmente le funzionalità. Ad esempio se si dispone di una raccolta siti **nome del server http://[my] /sites/ [nome raccolta siti]** sarà necessario attivare manualmente la [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] caratteristiche raccolta siti.  
+ Se si installa il componente aggiuntivo di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per Prodotti SharePoint 2010 dopo l'installazione del prodotto SharePoint, la funzionalità di integrazione del server di report e la funzionalità di integrazione di Power View saranno attivate solo per le raccolte siti radice. Per le altre raccolte siti, sarà necessario attivare manualmente le funzionalità. Ad esempio se si dispone di una raccolta siti **http://[my il nome server] /sites/ [nome raccolta siti]** sarà necessario attivare manualmente il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] caratteristiche raccolta siti.  
   
- Quando non vi è alcuna raccolta siti radice, il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aggiuntivo registra un messaggio simile al seguente.  
+ Quando non vi è alcuna raccolta siti radice, il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aggiuntivo registrerà un messaggio simile al seguente.  
   
  "L'applicazione Web SharePoint 80 non dispone della raccolta siti radice"  
   
- Il messaggio sarà registrato nel log dell'installazione del componente aggiuntivo, denominato "RS_SP_#.log" dove # è un numero incrementale. Il file di log si trova nella cartella Temp dell'utente corrente, ad esempio C:\Utenti\\[nome utente]\AppData\Local\Temp. Per ulteriori informazioni sulle opzioni di registrazione con il componente aggiuntivo, vedere [installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
+ Il messaggio sarà registrato nel log dell'installazione del componente aggiuntivo, denominato "RS_SP_#.log" dove # è un numero incrementale. Il file di log si trova nella cartella Temp dell'utente corrente, ad esempio C:\Utenti\\[nome utente]\AppData\Local\Temp. Per altre informazioni sulle opzioni di registrazione con il componente aggiuntivo, vedere [installare o disinstallare il componente aggiuntivo di Reporting Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md).  
   
  Contenuto dell'argomento:  
   
@@ -74,6 +74,6 @@ ms.locfileid: "36054955"
  Dopo aver attivato la funzionalità, è possibile continuare con l'integrazione del server.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare o disinstallare il componente aggiuntivo di servizi Reporting per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
+ [Installare o disinstallare il Reporting aggiuntivo Services per SharePoint &#40;SharePoint 2010 e SharePoint 2013&#41;](install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

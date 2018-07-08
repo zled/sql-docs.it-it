@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 31c3d3bdcfc2a986fc62ba32e2df443d74d7a8fd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c35cc475af0b083ce8f4a0f6afcb0c654b9bc266
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055542"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165002"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporamento di un'attività Profiling dati nel flusso di lavoro del pacchetto
   Il profiling dati e la pulizia non sono attività potenziali per un processo automatizzato nelle fasi iniziali. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]l'output dell'attività Profiling dati richiede di solito un'analisi visiva e una valutazione umana per determinare se le violazioni segnalate sono significative o eccessive. Anche dopo il riconoscimento di problemi di qualità dei dati, è comunque necessario definire con attenzione un piano ben studiato per tentare di individuare l'approccio migliore per la pulizia.  
@@ -146,9 +146,9 @@ ms.locfileid: "36055542"
   
 4.  Nella pagina **Script** selezionare il linguaggio di programmazione preferito. Quindi, rendere disponibili le due variabili del pacchetto per lo script:  
   
-    1.  Per `ReadOnlyVariables`, selezionare `ProfileConnectionName`.  
+    1.  Per la `ReadOnlyVariables`, selezionare `ProfileConnectionName`.  
   
-    2.  Per **ReadWriteVariables**, selezionare `AddressLine2NullRatio`.  
+    2.  Per la **ReadWriteVariables**, selezionare `AddressLine2NullRatio`.  
   
 5.  Selezionare **Modifica script** per aprire l'ambiente di sviluppo dello script.  
   
@@ -270,11 +270,11 @@ ms.locfileid: "36055542"
 #### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>Codice alternativo: lettura dell'output del profilo da una variabile  
  La procedura riportata in precedenza indica come caricare l'output dell'attività Profiling dati da un file. Un metodo alternativo consiste nel caricare questo output da una variabile del pacchetto. A tale scopo, è necessario apportare le modifiche seguenti al codice di esempio:  
   
--   Chiamare il `LoadXml` metodo per il `XmlDocument` classe anziché il `Load` (metodo).  
+-   Chiamare il `LoadXml` metodo del `XmlDocument` classe anziché il `Load` (metodo).  
   
--   Editor attività Script, aggiungere il nome della variabile del pacchetto che contiene l'output del profilo per l'attività `ReadOnlyVariables` elenco.  
+-   Nell'Editor attività Script, aggiungere il nome della variabile del pacchetto che contiene l'output del profilo per l'attività `ReadOnlyVariables` elenco.  
   
--   Passare il valore di stringa della variabile in cui il `LoadXML` (metodo), come illustrato nell'esempio di codice seguente. In questo esempio viene utilizzato "ProfileOutput" come nome della variabile del pacchetto che contiene l'output del profilo.  
+-   Passare il valore di stringa della variabile a cui il `LoadXML` metodo, come illustrato nell'esempio di codice seguente. In questo esempio viene utilizzato "ProfileOutput" come nome della variabile del pacchetto che contiene l'output del profilo.  
   
     ```vb  
     Dim outputString As String  
@@ -332,7 +332,7 @@ ms.locfileid: "36055542"
 7.  Nei vincoli di precedenza che connettono l'attività Script ai rami a valle nel flusso di lavoro, scrivere espressioni che utilizzano i valori delle variabili per indirizzare il flusso di lavoro.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installazione dell'attività Profiling dati](data-profiling-task.md)   
+ [Programma di installazione dell'attività Profiling dati](data-profiling-task.md)   
  [Visualizzatore profilo dati](data-profile-viewer.md)  
   
   

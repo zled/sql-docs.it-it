@@ -1,5 +1,5 @@
 ---
-title: Linee guida e limitazioni del codice XML eseguire il caricamento Bulk (SQLXML 4.0) | Documenti Microsoft
+title: Linee guida e limitazioni del codice XML eseguire il caricamento Bulk (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
 caps.latest.revision: 25
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7499332a73117dc75137915f9023f08eb79a9d8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 22ef1e64e2c8cf3dc1af65fde51c7b12107f1916
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054925"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149362"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Linee guida e limitazioni per il caricamento bulk XML (SQLXML 4.0)
   Quando si utilizza il caricamento bulk XML, è consigliabile disporre di una certa familiarità con le linee guida e le limitazioni seguenti:  
   
 -   Gli schemi inline non sono supportati.  
   
-     Se nel documento XML di origine è presente uno schema inline, questo viene ignorato dal caricamento bulk XML. È necessario specificare lo schema di mapping per il caricamento bulk XML come esterno ai dati XML. Non è possibile specificare lo schema di mapping in corrispondenza di un nodo utilizzando il **xmlns = "x:schema"** attributo.  
+     Se nel documento XML di origine è presente uno schema inline, questo viene ignorato dal caricamento bulk XML. È necessario specificare lo schema di mapping per il caricamento bulk XML come esterno ai dati XML. Non è possibile specificare lo schema di mapping in corrispondenza di un nodo tramite il **xmlns = "x:schema"** attributo.  
   
 -   Un documento XML viene controllato per verificare che utilizzi un formato corretto, ma non viene convalidato.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "36054925"
   
      Caricamento Bulk XML Ignora tutte le informazioni prima e dopo il \<radice > elemento nel documento XML. Il caricamento bulk XML, ad esempio, ignora qualsiasi dichiarazione XML, qualsiasi definizione DTD interna e tutti i riferimenti DTD esterni, i commenti e così via.  
   
--   Se è presente uno schema di mapping che definisce una relazione di chiave primaria/chiave esterna tra due tabelle, ad esempio tra Customer e CustOrder, la tabella con la chiave primaria deve essere descritta per prima nello schema. La tabella con la colonna chiave esterna deve essere visualizzata come successiva nello schema. Il motivo è che l'ordine in cui le tabelle vengono identificate nello schema è l'ordine in cui viene utilizzato per caricare i file nel database. Ad esempio, lo schema XDR seguente produrrà un errore quando viene utilizzato nel caricamento Bulk XML perché il  **\<ordine >** elemento viene descritto prima il  **\<cliente >** elemento. La colonna CustomerID in CustOrder è una colonna chiave esterna che fa riferimento alla colonna chiave primaria CustomerID nella tabella Cust.  
+-   Se è presente uno schema di mapping che definisce una relazione di chiave primaria/chiave esterna tra due tabelle, ad esempio tra Customer e CustOrder, la tabella con la chiave primaria deve essere descritta per prima nello schema. La tabella con la colonna chiave esterna deve essere visualizzata come successiva nello schema. Il motivo è che l'ordine in cui le tabelle identificate nello schema è l'ordine in cui viene utilizzato per caricarle nel database. Ad esempio, lo schema XDR seguente genererà un errore quando viene utilizzato nel caricamento Bulk XML perché la  **\<ordine >** elemento viene descritto prima il  **\<cliente >** elemento. La colonna CustomerID in CustOrder è una colonna chiave esterna che fa riferimento alla colonna chiave primaria CustomerID nella tabella Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -82,7 +82,7 @@ ms.locfileid: "36054925"
   
 -   Se lo schema non specifica colonne di overflow tramite l'annotazione `sql:overflow-field`, il caricamento bulk XML ignora tutti i dati presenti nel documento XML ma che non sono descritti nello schema di mapping.  
   
-     Il caricamento bulk XML applica lo schema di mapping specificato ogni volta che rileva tag noti nel flusso di dati XML e ignora i dati presenti nel documento XML ma che non sono descritti nello schema. Si supponga ad esempio si dispone di uno schema di mapping che descrive un  **\<cliente >** elemento. Il file di dati XML ha un  **\<AllCustomers >** radice tag (che non sono descritti nello schema) che include tutti i  **\<cliente >** elementi:  
+     Il caricamento bulk XML applica lo schema di mapping specificato ogni volta che rileva tag noti nel flusso di dati XML e ignora i dati presenti nel documento XML ma che non sono descritti nello schema. Ad esempio, si presuppone uno schema di mapping che descrive una  **\<cliente >** elemento. Il file di dati XML ha un  **\<AllCustomers >** radice tag (che non sono descritti nello schema) che include tutti i  **\<cliente >** elementi:  
   
     ```  
     <AllCustomers>  
@@ -114,7 +114,7 @@ ms.locfileid: "36054925"
   
 -   Le sezioni CDATA e i riferimenti a entità vengono convertiti nei rispettivi equivalenti in formato stringa prima di essere archiviati nel database.  
   
-     In questo esempio, una sezione CDATA incapsula il valore per il  **\<City >** elemento. Caricamento Bulk XML estrae il valore di stringa ("NY") prima di inserire il  **\<City >** elemento nel database.  
+     In questo esempio, una sezione CDATA incapsula il valore per il  **\<City >** elemento. Caricamento Bulk XML estrae il valore di stringa ("NY") prima di inserire le  **\<City >** elemento nel database.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -124,7 +124,7 @@ ms.locfileid: "36054925"
   
 -   Se lo schema di mapping specifica il valore predefinito per un attributo e i dati di origine XML non contengono tale attributo, il caricamento bulk XML utilizza il valore predefinito.  
   
-     Lo schema XDR di esempio seguente viene assegnato un valore predefinito per il **HireDate** attributo:  
+     Lo schema XDR di esempio seguente assegna un valore predefinito per il **HireDate** attributo:  
   
     ```  
     <?xml version="1.0" ?>  
@@ -147,7 +147,7 @@ ms.locfileid: "36054925"
     </Schema>  
     ```  
   
-     In questi dati XML, il **HireDate** manca l'attributo del secondo  **\<clienti >** elemento. Quando il caricamento Bulk XML inserisce il secondo  **\<clienti >** elemento nel database, viene utilizzato il valore predefinito specificato nello schema.  
+     In questi dati XML, il **HireDate** manca l'attributo del secondo  **\<Customers >** elemento. Quando il caricamento Bulk XML inserisce il secondo  **\<Customers >** elemento nel database, viene usato il valore predefinito specificato nello schema.  
   
     ```  
     <ROOT>  
@@ -162,15 +162,15 @@ ms.locfileid: "36054925"
   
      Vengono create le tabelle identificate nello schema di mapping (il database deve essere presente). Se esiste già uno o più delle tabelle nel database, sgdroptables-proprietà determina se tali tabelle preesistenti devono essere eliminate e ricreate.  
   
--   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true), vengono create le tabelle identificate nello schema di mapping. Ma SchemaGen eventuali vincoli (ad esempio, i vincoli di chiave primaria/chiave esterna) in tali tabelle non viene creata con una sola eccezione: se i nodi XML che costituiscono la chiave primaria in una relazione vengono definiti specificando un tipo XML dell'ID (vale a dire, `type="xsd:ID"` per XSD) e sguseid-proprietà è impostata su True per SchemaGen, quindi non sono chiavi primarie create solo da ID digitati nodi, ma vengono create relazioni di chiave esterna/chiave primarie da relazioni dello schema di mapping.  
+-   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true), vengono create le tabelle identificate nello schema di mapping. Ma SchemaGen eventuali vincoli (ad esempio i vincoli di chiave primaria/chiave esterna) in tali tabelle non viene creata con una sola eccezione: se i nodi XML che costituiscono la chiave primaria in una relazione sono definiti con un tipo XML dell'ID (vale a dire `type="xsd:ID"` per XSD) e sguseid-proprietà è impostata su True per SchemaGen, quindi non solo le chiavi primarie create da ID digitato i nodi, ma primarie/chiave relazioni di chiave esterna vengono create dal mapping di relazioni dello schema.  
   
--   SchemaGen non utilizza facet dello schema XSD ed estensioni per generare relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dello schema.  
+-   SchemaGen non utilizza estensioni e i facet di schema XSD per generare il relazionale [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dello schema.  
   
--   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true) on Bulk Load, solo le tabelle (e non le viste con nome condiviso) che vengono specificate vengono aggiornati.  
+-   Se si specifica la proprietà SchemaGen (ad esempio, SchemaGen = true) nel caricamento Bulk, solo le tabelle (e non le viste con nome condiviso) che vengono specificate vengono aggiornati.  
   
 -   SchemaGen fornisce solo le funzionalità di base per la generazione dello schema relazionale da XSD con annotazioni. Se necessario, l'utente deve modificare manualmente le tabelle generate.  
   
--   Se sussistono più relazioni tra tabelle, SchemaGen tenta di creare una singola relazione che include tutte le chiavi interessate tra le due tabelle. Questa limitazione può essere la causa di un errore [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+-   In cui sussistono più relazioni tra tabelle, SchemaGen prova a creare una singola relazione che include tutte le chiavi interessate tra le due tabelle. Questa limitazione può essere la causa di un errore [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   Quando si esegue il caricamento bulk di dati XML in un database, deve essere presente almeno un attributo o un elemento figlio nello schema di mapping mappato a una colonna del database.  
   

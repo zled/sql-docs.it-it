@@ -1,12 +1,12 @@
 ---
-title: Riferimento SQL Server Native Client (OLE DB) | Documenti Microsoft
+title: Riferimento SQL Server Native Client (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 99305b3d2f162cd4abd30ae6ad7e17007e66d42e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: cc385c19386a151625cbccf07e498f5a35b88827
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699822"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37413580"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>Interfacce SQL Server Native Client (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "35699822"
 
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client espone interfacce ai consumer che richiedono l'accesso ai dati in uno o più computer che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è un provider compatibile con OLE DB versione 2.0.  
   
- Ciò [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmazione riferimento del provider OLE DB Native Client non è documentate tutte le interfacce OLE DB e i metodi, solo le interfacce e metodi che possono presentare un comportamento specifico del provider quando si utilizza il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client provider.  
+ Ciò [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmazione riferimento del provider OLE DB Native Client non sono documentate tutte le interfacce OLE DB e i metodi, solo tali interfacce e metodi che mostrano un comportamento specifico del provider quando si usa il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Native Client provider.  
   
- Per una descrizione completa delle interfacce OLE DB principale e dei metodi, vedere la [riferimento per programmatori OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
+ Per una descrizione completa delle interfacce OLE DB di base e dei metodi, vedere la [riferimento per programmatori OLE DB](http://go.microsoft.com/fwlink/?LinkId=45232).  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

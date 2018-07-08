@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3f49bc9a31fcf2cf348f7616a337b51a9b7e5229
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cbfaab44f1b7c40a912eec0c6c6cef8a6b00c51f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055052"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158912"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Verifica mapping tra i tipi di dati (Importazione/Esportazione guidata SQL Server)
-  Usare la **revisione del mapping dei tipi di dati** pagina per esaminare le informazioni dettagliate sulle conversioni dei tipi di dati che è necessario eseguire per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi per distinguere le conversioni per cui si prevede un esito positivo da quelle che potrebbero provocare errori o troncamenti. Per ogni conversione, è possibile decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.  
+  Usare la **rivedere Data Type Mapping** pagina per esaminare le informazioni dettagliate sulle conversioni di tipi di dati che la procedura guidata deve eseguire per rendere i dati di origine compatibili con la destinazione. Queste informazioni includono segnali visivi per distinguere le conversioni per cui si prevede un esito positivo da quelle che potrebbero provocare errori o troncamenti. Per ogni conversione, è possibile decidere se accettare la conversione suggerita dalla procedura guidata e specificare come gestire gli eventuali errori restituiti.  
   
- Per ulteriori informazioni su questa procedura guidata, vedere [SQL Server di importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per ulteriori informazioni sulle opzioni di avvio della procedura guidata e sulle autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [eseguire il Server importazione / esportazione guidata SQL](start-the-sql-server-import-and-export-wizard.md).  
+ Per altre informazioni su questa procedura guidata, vedere [SQL Server importazione / esportazione guidata](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Per altre informazioni sulle opzioni per l'avvio della procedura guidata e sulle autorizzazioni necessarie per eseguire correttamente la procedura guidata, vedere [esecuzione di SQL Server importazione / esportazione guidata](start-the-sql-server-import-and-export-wizard.md).  
   
  Lo scopo del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importazione / esportazione guidata consiste nella copia dei dati da un'origine a una destinazione. La procedura guidata può inoltre creare automaticamente un database di destinazione e le tabelle di destinazione. Se tuttavia è necessario copiare più database o tabelle, o altri tipi di oggetti di database, è preferibile utilizzare Copia guidata database. Per altre informazioni, vedere [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "36055052"
  La pagina **Verifica mapping tra i tipi di dati** è costituita da un elenco **Tabella** , un elenco **Mapping dei tipi di dati** e da opzioni per la gestione degli errori.  
   
 ### <a name="table-list"></a>Elenco Tabella  
- La parte superiore della **verifica problemi dei tipi Data** pagina è un **tabella** elenco che contiene le tabelle da trasferire dall'origine alla destinazione. Nella tabella seguente vengono descritte le colonne presenti nell'elenco.  
+ La parte superiore del **verifica problemi dei tipi Data** pagina è un **tabella** elenco contenente le tabelle da trasferire dall'origine alla destinazione. Nella tabella seguente vengono descritte le colonne presenti nell'elenco.  
   
 |colonna|Description|  
 |------------|-----------------|  
@@ -43,10 +43,10 @@ ms.locfileid: "36055052"
 |Icona di destinazione|Indica se la destinazione è già presente o se verrà creata dalla procedura guidata:<br /><br /> Un'icona di tabella indica che la destinazione è costituita da una tabella esistente.<br /><br /> Un'icona di tabella con un riflesso di luce indica che la destinazione è costituita da una nuova tabella che verrà creata dalla procedura guidata.|  
 |**Destinazione**|Visualizza il nome della tabella di destinazione.|  
   
- Per visualizzare informazioni di conversione di una singola tabella, selezionare una tabella in questo **tabella** griglia. Le informazioni sulla conversione per la tabella selezionata verranno visualizzate nelle colonne della griglia **Mapping dei tipi di dati** nella parte inferiore della pagina.  
+ Per visualizzare informazioni di conversione su una singola tabella, selezionare una tabella in questo **tabella** griglia. Le informazioni sulla conversione per la tabella selezionata verranno visualizzate nelle colonne della griglia **Mapping dei tipi di dati** nella parte inferiore della pagina.  
   
 ### <a name="data-type-mapping-list"></a>Elenco Mapping dei tipi di dati  
- Nella parte inferiore del **verifica problemi dei tipi Data** pagina è la **mapping dei tipi di dati** elenco. Questa griglia fornisce informazioni dettagliate sulla conversione per le colonne della tabella selezionata nell'elenco **Tabella** . Nella tabella seguente vengono descritte le colonne presenti nell'elenco.  
+ La parte inferiore del **verifica problemi dei tipi Data** pagina è la **mapping dei tipi di dati** elenco. Questa griglia fornisce informazioni dettagliate sulla conversione per le colonne della tabella selezionata nell'elenco **Tabella** . Nella tabella seguente vengono descritte le colonne presenti nell'elenco.  
   
 |colonna|Description|  
 |------------|-----------------|  

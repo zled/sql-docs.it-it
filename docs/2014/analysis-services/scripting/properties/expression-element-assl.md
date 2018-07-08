@@ -1,5 +1,5 @@
 ---
-title: Elemento expression (ASSL) | Documenti Microsoft
+title: Elemento expression (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Expression element
 ms.assetid: a9491b21-5279-4531-b6a5-9e8022060dd8
 caps.latest.revision: 36
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b56f4d09e59644b63d11c4becbb999f0536479d0
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3d7ba9bbfeddef0d4d7466141cabb914f4289034
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055800"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155318"
 ---
 # <a name="expression-element-assl"></a>Elemento Expression (ASSL)
   Contiene un’espressione MDX (Multidimensional Expressions) che definisce i contenuti dell’elemento padre.  
@@ -58,11 +58,11 @@ ms.locfileid: "36055800"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elementi padre|[CellPermission](../objects/cellpermission-element-assl.md), [StandardAction](../data-type/action-data-type-assl.md)|  
+|Elementi padre|[Elemento CellPermission](../objects/cellpermission-element-assl.md), [StandardAction](../data-type/action-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Per il `CellPermission` elemento, il `Expression` elemento contiene un'espressione logica MDX che identifica celle applicabile ai diritti indicati dal [accesso](access-element-assl.md) elemento del `CellPermission` elemento. Se il valore di un elemento `Expression` per un elemento `CellPermission` è vuoto, l’elemento `CellPermission` viene ignorato.  
+## <a name="remarks"></a>Note  
+ Per il `CellPermission` elemento, il `Expression` elemento contiene un'espressione MDX logica che identifica celle applicabile ai diritti indicati dal [Access](access-element-assl.md) elemento del `CellPermission` elemento. Se il valore di un elemento `Expression` per un elemento `CellPermission` è vuoto, l’elemento `CellPermission` viene ignorato.  
   
  Per l'elemento `StandardAction`, l'elemento `Expression` contiene un'espressione MDX che rappresenta il contenuto dell'azione. Se il valore di un elemento `Expression` per un elemento `StandardAction` è vuoto, l’elemento `StandardAction` viene ignorato.  
   

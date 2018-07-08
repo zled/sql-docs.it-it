@@ -1,5 +1,5 @@
 ---
-title: Definizione funzionalità di Business Intelligence (Creazione guidata dimensione) | Documenti Microsoft
+title: Definizione funzionalità di Business Intelligence (Creazione guidata dimensione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.accountintelligencetypemapping.f1
 ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 caps.latest.revision: 26
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 27c0a8d48ae1a4a69ea96c4c87cc7cf8d0f1f1d3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a6609c795afdf4f966e9a5375459975dccc54587
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055804"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210321"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>Definizione funzionalità di Business Intelligence per la contabilità (Creazione guidata dimensione)
   La pagina **Funzionalità di Business Intelligence per la contabilità** consente di eseguire il mapping tra i tipi di conto definiti nell'istanza [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e i tipi di conto definiti nell'attributo della dimensione associato al tipo di attributo **Tipo conto** nella dimensione.  
@@ -49,8 +49,8 @@ ms.locfileid: "36055804"
 |**Statistiche**|Rapporto calcolato di alcuni elementi oppure conteggio di elementi non aggregabili.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [F1 Guida della procedura guidata di dimensione](dimension-wizard-f1-help.md)   
- [Le dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Guida F1 di creazione guidata dimensione](dimension-wizard-f1-help.md)   
+ [Dimensioni &#40;Analysis Services - dati multidimensionali&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensioni nei modelli multidimensionali](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

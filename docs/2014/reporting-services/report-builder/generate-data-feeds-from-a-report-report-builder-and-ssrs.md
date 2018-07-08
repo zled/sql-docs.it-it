@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 62e0dead34079abbceda90dabca6f44c7dbd5126
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 4ee1402202e08ab4ba718238b454f5eb4e548118
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055431"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210831"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Generare i feed di dati da un report (Generatore report e SSRS)
-  È possibile generare feed di dati conformi ad Atom dai report e quindi usare i feed di dati nelle applicazioni, come le [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client, che può utilizzare feed di dati.  
+  È possibile generare feed di dati conformi ad Atom dai report e quindi usare i feed di dati nelle applicazioni, ad esempio la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] client, che può utilizzare feed di dati.  
   
  Tramite l'estensione per il rendering Atom di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene generato un documento di servizio Atom in cui sono elencati i feed di dati disponibili in un report. Nel documento è elencato almeno un feed di dati per ogni area dati nel report. A seconda del tipo di area dati e dei dati in essa visualizzati, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] potrebbe generare più feed di dati da un'area dati.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36055431"
 6.  Se lo si desidera, aprire il file con estensione atom in un browser, in un editor di testo o in un editor XML.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esportazione di report &#40;SSRS e Generatore Report&#41;](export-reports-report-builder-and-ssrs.md)  
+ [Esportazione di report &#40;Report e SSRS&#41;](export-reports-report-builder-and-ssrs.md)  
   
   

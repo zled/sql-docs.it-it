@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b269484be4445888a662b2da2745ecb7a4e1002
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 43a6d53dd099589db67765ecd7ae6027d0b532bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054703"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159982"
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Formattazione di scale su un misuratore (Generatore report e SSRS)
   Una scala di misuratore è l'intervallo di numeri, limitati da un valore minimo e da un valore massimo, mostrato su un misuratore. Una scala di misuratore contiene generalmente segni di graduazione ed etichette che consentono una lettura accurata di quello che viene mostrato dall'indicatore di misura del misuratore ed è generalmente associata a una o più indicatori di misura del misuratore. Sullo stesso misuratore può essere presente più di una scala.  
@@ -89,7 +89,7 @@ ms.locfileid: "36054703"
 -   1% del valore più basso dell'altezza o della larghezza del misuratore su un misuratore lineare.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di intervalli su un misuratore &#40;SSRS e Generatore Report&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formattazione di intervalli su un misuratore &#40;Report e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Formattazione degli indicatori di misura su un misuratore &#40;Generatore report e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi come date o valute &#40;Generatore report e SSRSSSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Formattazione delle etichette degli assi in un grafico &#40;Generatore report e SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   

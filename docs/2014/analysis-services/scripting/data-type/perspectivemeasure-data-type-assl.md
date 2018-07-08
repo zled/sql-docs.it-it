@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati PerspectiveMeasure (ASSL) | Documenti Microsoft
+title: Tipo di dati PerspectiveMeasure (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - PerspectiveMeasure data type
 ms.assetid: 8622ad67-3dcf-48e2-ad4a-c5f0a086eec3
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bc66a5fd1e0e8b553bc0b27a384f97a8c0c483e7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 47d8578d2d41d5362b43a514dcb6d20df0999828
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062487"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210011"
 ---
 # <a name="perspectivemeasure-data-type-assl"></a>Tipo di dati PerspectiveMeasure (ASSL)
   Definisce un tipo di dati primitivo che rappresenta le informazioni su una misura in un [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md) elemento.  
@@ -57,10 +57,10 @@ ms.locfileid: "36062487"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[Annotazioni](../collections/annotations-element-assl.md), [MeasureID](../properties/id-element-assl.md)|  
+|Elementi figlio|[Le annotazioni](../collections/annotations-element-assl.md), [MeasureID](../properties/id-element-assl.md)|  
 |Elementi derivati|[Misura](../objects/measure-element-assl.md) ([misure](../collections/measures-element-assl.md) insieme [PerspectiveMeasureGroup](perspectivemeasuregroup-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.PerspectiveMeasure>.  
   
 ## <a name="see-also"></a>Vedere anche  

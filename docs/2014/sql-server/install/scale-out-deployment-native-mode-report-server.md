@@ -1,5 +1,5 @@
 ---
-title: Scalabilità orizzontale distribuzione (Server di Report in modalità nativa) | Documenti Microsoft
+title: Scalabilità orizzontale distribuzione (Server di Report in modalità nativa) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: d995052fe279fcc354a3293d881714bb3ec4bcb4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8038c9cbbce2eeb68b6e23b91fba1d7b0a2e708e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054119"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151802"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Distribuzione con scalabilità orizzontale (server di report in modalità nativa)
-  Usare la **basata sulla scalabilità orizzontale** pagina [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale oppure per unire un server di report a una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
+  Usare la **distribuzione con scalabilità orizzontale** nella pagina [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per visualizzare lo stato di inizializzazione per una distribuzione con scalabilità orizzontale o per aggiungere un server di report a una distribuzione con scalabilità orizzontale. Per *distribuzione con scalabilità orizzontale* si intendono due o più istanze del server di report che condividono un singolo database del server di report.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   

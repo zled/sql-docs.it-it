@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 9: Defining Perspectives and Translations | Documenti Microsoft'
+title: 'Lezione 9: Defining Perspectives and Translations | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: jhubbard
-ms.openlocfilehash: 8cfd54ff0c3b5e7c105ccc35b58cd18707b4a485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d5b9b8889bca7713453e1ce1734ce0a7ea5d3615
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159612"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>Lezione 9: Definizione di prospettive e traduzioni
   In questa lezione verranno descritte le procedure per definire prospettive e traduzioni. Le prospettive possono essere definite per ridurre la complessità evidente di un cubo e le traduzioni possono essere definite per consentire agli utenti di visualizzare i metadati di un cubo nella lingua di preferenza.  
@@ -39,7 +39,7 @@ ms.locfileid: "36055376"
  [Lezione 10: Definizione dei ruoli amministrativi](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)   
+ [Scenario di Analysis Services Tutorial](../analysis-services/analysis-services-tutorial-scenario.md)   
  [Modellazione multidimensionale &#40;esercitazione di AdventureWorks&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Prospettive](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)   
  [Prospettive nei modelli multidimensionali](multidimensional-models/perspectives-in-multidimensional-models.md)   

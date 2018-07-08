@@ -1,5 +1,5 @@
 ---
-title: Elemento StorageLocation (ASSL) | Documenti Microsoft
+title: Elemento StorageLocation (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - StorageLocation element
 ms.assetid: ecf8852f-56a1-4fcf-b0d8-d7eebb75e4ed
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b6f6d023731126cafaa76cf31598e0bae9fdf1cf
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fecb1a20c6c436749913ea9f8f83d284cf1000c2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062274"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163532"
 ---
 # <a name="storagelocation-element-assl"></a>Elemento StorageLocation (ASSL)
   Contiene il percorso di archiviazione del file system per il contenuto dell'elemento padre.  
@@ -66,7 +66,7 @@ ms.locfileid: "36062274"
 |Elementi padre|[Cubo](../objects/cube-element-assl.md), [MeasureGroup](../objects/group-element-assl.md), [partizione](../objects/partition-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Gli elementi che corrispondono ai padri di `StorageLocation` nel modello a oggetti AMO (Analysis Management Objects) sono <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup> e <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>Vedere anche  

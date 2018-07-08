@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-tables
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - partitioned tables [SQL Server], about partitioned tables
 - partitioned indexes [SQL Server], architecture
 - partitioned tables [SQL Server], architecture
 - partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
-caps.latest.revision: 44
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: d3c7b474881c87f38211832eb5eb1e68f3b415b4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 85627a122c87c3065fe0bbcd5bfc5cd246a77c9d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054971"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154262"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta il partizionamento di tabelle e indici. I dati di tabelle e indici partizionati vengono divisi in unità distribuibili tra più filegroup in un database. I dati sono partizionati in senso orizzontale, in modo che per gruppi di righe venga eseguito il mapping in singole partizioni. Tutte le partizioni di un singolo indice o di una singola tabella devono trovarsi nello stesso database. La tabella o indice viene gestito come singola entità logica quando si eseguono query o aggiornamenti sui dati. Le tabelle e gli indici partizionati sono disponibili solo in alcune edizioni di [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per un elenco delle funzionalità supportate dalle edizioni di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vedere [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -49,13 +47,13 @@ ms.locfileid: "36054971"
  I termini seguenti sono applicabili al partizionamento di tabelle e indici.  
   
  Funzione di partizione  
- Oggetto di database che definisce la modalità con cui viene eseguito il mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di una determinata colonna, denominata colonna di partizionamento. Ovvero, la funzione di partizione definisce il numero di partizioni che la tabella avrà e come sono definiti i limiti delle partizioni. Ad esempio, data una tabella che contiene i dati degli ordini, si può decidere di partizionare la tabella in dodici partizioni (mensili) basate su un `datetime` colonna, ad esempio una data di vendita.  
+ Oggetto di database che definisce la modalità con cui viene eseguito il mapping delle righe di una tabella o di un indice a un set di partizioni in base ai valori di una determinata colonna, denominata colonna di partizionamento. Ovvero, la funzione di partizione definisce il numero di partizioni che la tabella avrà e come sono definiti i limiti delle partizioni. Ad esempio, data una tabella che contiene i dati degli ordini, si potrebbe decidere di partizionare la tabella in dodici partizioni (mensili) basate su un `datetime` colonna, ad esempio una data di vendita.  
   
  Schema di partizione  
  Oggetto di database che mappa le partizioni di una funzione di partizione a un set di filegroup. Il principale motivo per cui inserire le partizioni in filegroup separati consiste nel fatto che in tal modo è possibile eseguire operazioni di backup nelle partizioni in modo indipendente, in quanto è possibile eseguire backup in filegroup singoli.  
   
  Colonna di partizionamento  
- Colonna di una tabella o di un indice utilizzata da una funzione di partizione per partizionare la tabella o l'indice. Le colonne calcolate che partecipano a una funzione di partizione devono essere contrassegnate in modo esplicito come PERSISTED. Tutti i tipi di dati validi per utilizzano le colonne dell'indice possono essere utilizzati come una colonna di partizionamento, tranne `timestamp`. Non è possibile specificare i tipi di dati `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. Inoltre, non è possibile specificare colonne di tipo definito dall'utente Common Language Runtime (CLR) di Microsoft .NET Framework né colonne di tipo di dati alias.  
+ Colonna di una tabella o di un indice utilizzata da una funzione di partizione per partizionare la tabella o l'indice. Le colonne calcolate che partecipano a una funzione di partizione devono essere contrassegnate in modo esplicito come PERSISTED. Tutti i tipi di dati validi per utilizzano come colonne di indice possono essere utilizzate come colonna di partizionamento, ad eccezione di `timestamp`. Non è possibile specificare i tipi di dati `ntext`, `text`, `image`, `xml`, `varchar(max)`, `nvarchar(max)` o `varbinary(max)`. Inoltre, non è possibile specificare colonne di tipo definito dall'utente Common Language Runtime (CLR) di Microsoft .NET Framework né colonne di tipo di dati alias.  
   
  Indice allineato  
  Indice basato sullo stesso schema di partizione della relativa tabella corrispondente. Se una tabella e i relativi indici sono allineati, in SQL Server è possibile cambiare le partizioni in modo rapido ed efficiente, mantenendo inalterata la struttura della tabella e degli indici. Per poter essere allineato alla relativa tabella di base, non è necessario che un indice sia inserito nella stessa funzione di partizione denominata. Le funzioni di partizione dell'indice e della tabella di base devono tuttavia condividere alcune caratteristiche, ad esempio i tipi di dati degli argomenti devono essere uguali, il numero di partizioni definito deve corrispondere e i valori limite delle partizioni devono essere uguali.  

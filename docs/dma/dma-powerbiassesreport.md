@@ -1,5 +1,6 @@
 ---
-title: Report attività di valutazione consolidata tramite Power BI (SQL Server Data Migration Assistant) | Documenti Microsoft
+title: Analizzare consolidati i report di valutazione Data Migration Assistant con Power BI (SQL Server) | Microsoft Docs
+description: Informazioni su come usare Power BI per analizzare i report di valutazione della migrazione dei dati che è stato importato e consolidati in SQL Server
 ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
@@ -17,48 +18,48 @@ caps.latest.revision: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 0c7479a1e55d90d59fbcc289978b943a8cd3c195
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: dd2280fbc15ffe515cc8fc6b020a6ec3e2cf1647
+ms.sourcegitcommit: 05e18a1e80e61d9ffe28b14fb070728b67b98c7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32869006"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37787632"
 ---
-# <a name="report-on-your-consolidated-assessments-by-using-power-bi-data-migration-assistant"></a>Report attività di valutazione consolidata tramite Power BI (dati della migrazione guidata)
+# <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analizzare i report consolidati di valutazione creati dai Data Migration Assistant con Power BI
 
-In questo articolo viene descritto come creare un report di Power BI per le valutazioni relative alla migrazione consolidati.
+Questo articolo descrive come creare un report di Power BI per analizzare le valutazioni di migrazione consolidati.
 
-Per informazioni su consolidando le valutazioni relative alla migrazione utilizzando l'Assistente per la migrazione dei dati, vedere [consolidare le relazioni di valutazione](../dma/dma-consolidatereports.md).
+Per informazioni su consolidare le valutazioni di migrazione create da Data Migration Assistant, vedere [consolidare i report di valutazione](../dma/dma-consolidatereports.md).
 
-## <a name="sample-power-bi-reports"></a>Report di esempio di Power BI
+## <a name="sample-power-bi-reports"></a>Report di Power BI di esempio
 
-È possibile scaricare esempi di report di Power BI per le valutazioni relative alla migrazione consolidati da questo [repository Github](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
+È possibile scaricare esempi di report di Power BI per valutazioni consolidate migrazione da questa [repository Github](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/data-migration-assistant).
 
 I report seguenti sono inclusi: 
 
 - [Dashboard](#dashboard--details)
 
-  Include statistiche snapshot e un report drill-down.
+  Include un report drill-down e statistiche di snapshot.
 
-- [Preparazione dell'aggiornamento in locale](#on-premises-upgrade-readiness--details)
+- [Preparazione aggiornamenti in locale](#on-premises-upgrade-readiness--details)
 
-  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database di valutazione.
+  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutati.
 
-- [Analogie nelle funzionalità in locale](#on-premise-feature-parity--details)
+- [Parità delle funzionalità in locale](#on-premise-feature-parity--details)
 
-  Mostra le indicazioni di funzionalità per la versione di SQL Server di destinazione.
+  Illustra le funzionalità consigliate per la versione di SQL Server di destinazione.
 
-- [Preparazione dell'aggiornamento di database SQL Azure](#azure-sql-db-upgrade-readiness--details)
+- [Azure SQL DB preparazione aggiornamenti](#azure-sql-db-upgrade-readiness--details)
 
-  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra la percentuale di aggiornamento completato per i database valutata per la migrazione di database SQL di Azure.
+  L'origine dati è la visualizzazione UpgradeSuccessRanking nel database DMAReporting.  Questo report mostra il corretto aggiornamento percentuale per i database valutato per le migrazioni di database SQL di Azure.
 
-- [Database di SQL Server non supportata di Microsoft Azure](#azure-sql-db-unsupported-features--details)
+- [Funzionalità di Azure SQL DB non supportati](#azure-sql-db-unsupported-features--details)
 
-  Mostra le funzionalità del database esistente che non sono supportate in database SQL di Azure (V12).
+  Mostra le funzionalità dei database esistenti che non sono supportate in database SQL di Azure (V12).
 
-È possibile modificare questi report per il funzionamento con l'ambiente, la modifica dell'origine dati in Power BI. 
+È possibile modificare tali report da usare con l'ambiente, la modifica dell'origine dati in Power BI. 
 
-1. Selezionare la freccia in giù accanto a **modifica query**e selezionare **impostazioni origine dati**.
+1. Selezionare la freccia giù accanto a **modifica query**e selezionare **impostazioni origine dati**.
 
    ![Le query menu Modifica, impostazioni dell'origine dati](../dma/media/DataSourceSettings.png)
 
@@ -76,64 +77,64 @@ I report seguenti sono inclusi:
 
 ![Report del dashboard](../dma/media/DashboardReport.png)
 
-Il dashboard Mostra informazioni dettagliate su tutte le valutazioni. È possibile utilizzare i filtri dei dati sul lato sinistro per filtrare in base al database o istanza. È possibile utilizzare il grafico a barre per il drill-down in categorie specifiche per vedere dove si trovano i problemi.
+Il dashboard Visualizza informazioni dettagliate su tutte le valutazioni. È possibile utilizzare i filtri dei dati sul lato sinistro per filtrare in base al database o istanza. È possibile utilizzare il grafico a barre per eseguire il drill-in categorie specifiche per vedere dove si trovano i problemi.
 
 Per eseguire il drill-, selezionare il cerchio con freccia in giù nell'angolo superiore destro del grafico a barre.
 
-![Categoria di drill-down](../dma/media/CategoryDrillDown.png)
+![Drill-down categoria](../dma/media/CategoryDrillDown.png)
 
-La sequenza di drill-down è impostata come illustrato nell'immagine seguente (in **asse**). Per modificare la sequenza, trascinare le colonne nell'ordine desiderato.
+La sequenza di drill-down viene impostata come illustrato nell'immagine seguente (sotto **asse**). Per modificare la sequenza, trascinare le colonne nell'ordine desiderato.
 
-![Visualizzazioni, asse grafico a barre](../dma/media/VisualizationsAxis.png)
+![Visualizzazioni, asse del grafico a barre](../dma/media/VisualizationsAxis.png)
 
-Questa vista diventa ancora più potente per filtri prima da un database specifico e quindi eseguire il drill-down i problemi di categoria specifica. Nell'esempio seguente, il database delle risorse Umane è selezionato per l'istanza **SQL01** per visualizzare tutti gli oggetti che impediscono le migrazioni (modifiche di rilievo).
+In questa vista diventa ancora più potente quando si filtra prima di tutto per un database specifico e quindi eseguire il drill down i problemi di categoria specifica. Nell'esempio seguente è selezionato, ad esempio il database delle risorse Umane **SQL01** per visualizzare tutti gli oggetti che impediscono le migrazioni (modifiche di rilievo).
 
 ![Modifiche di rilievo per database delle risorse Umane](../dma/media/BreakingChanges.png)
 
-### <a name="on-premises-upgrade-readiness-report"></a>Report di conformità di aggiornamento locale
+### <a name="on-premises-upgrade-readiness-report"></a>Report di conformità di aggiornamento in locale
 
-![Report di conformità di aggiornamento locale](../dma/media/OnPremisesUpgradeReadinessReport.png)
+![Report di conformità di aggiornamento in locale](../dma/media/OnPremisesUpgradeReadinessReport.png)
 
-Questo report mostra uno snapshot di database come pronto sono per eseguire la migrazione a una versione successiva di SQL Server. I dati in questo report provengono da dbo. UpgradeSuccessFactor\_OnPrem vista nel database DMAReporting.
+Questo report visualizza un'istantanea del livello di preparazione dei database devono eseguire la migrazione a una versione successiva di SQL Server. I dati in questo report provengono da dbo. UpgradeSuccessFactor\_OnPrem vista nel database DMAReporting.
 
-Filtraggio in base all'istanza e nome del database e usando le schede di punteggio nella parte superiore, si noterà che il database potrebbe essere migrato troppo versione. Ad esempio, se Filtra per il database AdventureWorks 2012, si noterà che il database è pronto per spostare tutte le versioni di SQL Server elencate nel report. Viene determinato assicurandosi che non sono presenti modifiche di rilievo per tale database e livello di compatibilità.
+Filtro di istanza e nome del database e usando le schede di punteggio nella parte superiore, è possibile vedere quale versione di database è stato possibile eseguire la migrazione troppo. Ad esempio, se Filtra per il database AdventureWorks 2012, si noterà che il database è pronto a passare a tutte le versioni di SQL Server elencate nel report. Ciò è determinato dal assicurando che non sono presenti modifiche di rilievo per quel database e livello di compatibilità.
 
 ![Fattore di successo aggiornamento per il database AdventureWorks](../dma/media/UpgradeSuccessFactor.png)
 
-### <a name="on-premises-feature-parity-report"></a>Report di parità di funzionalità locali
+### <a name="on-premises-feature-parity-report"></a>Report di parità delle funzionalità in locale
 
-![Report di parità di funzionalità locali](../dma/media/OnPremisesFeatureParityReport.png)
+![Report di parità delle funzionalità in locale](../dma/media/OnPremisesFeatureParityReport.png)
 
-Utilizzare questo report per evidenziare nuove funzionalità che può essere utilizzata per il database nella versione di SQL Server di destinazione.
+Usare questo report per evidenziare le nuove funzionalità che può essere utilizzata per il database nella versione di SQL Server di destinazione.
 
-Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore che evidenzia gli oggetti che sono interessati dalla funzionalità. Nell'esempio seguente, il **database di estensione per il risparmio di spazio di archiviazione** funzionalità è selezionata, e una tabella viene elencata che possono trarre vantaggio da questa funzionalità.
+Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore che evidenzia gli oggetti che sono interessati dalla funzionalità. Nell'esempio seguente, il **Stretch database per risparmiare spazio di archiviazione** funzionalità sia selezionata e una tabella viene indicata che possono trarre vantaggio da questa funzionalità.
 
-![Indicazione di funzionalità per l'estensione Database](../dma/media/FeatureRecommend_StretchDatabase.png)
+![Consiglio di funzionalità per Stretch Database](../dma/media/FeatureRecommend_StretchDatabase.png)
 
-### <a name="azure-sql-db-upgrade-readiness-report"></a>Report di preparazione aggiornamento database di SQL Azure
+### <a name="azure-sql-db-upgrade-readiness-report"></a>Report di preparazione aggiornamenti di Azure SQL DB
 
-![Report di preparazione aggiornamento database di SQL Azure](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
+![Report di preparazione aggiornamenti di Azure SQL DB](../dma/media/AzureSQLDBUpgradeReadinessReport.png)
 
-Questo report mostra lo stato di preparazione del database per eseguire la migrazione di Database SQL di Azure V12. I dati del report provengono da dbo. UpgradeSuccessRanking vista nel database DMAReporting.
+Questo report mostra la conformità del database per eseguire la migrazione al Database SQL di Azure V12. I dati da questo report provengono da dbo. UpgradeSuccessRanking vista nel database DMAReporting.
 
 ### <a name="azure-features-parity-report"></a>Report di parità di funzionalità di Azure
 
 ![Report di parità di funzionalità di Azure](../dma/media/AzureFeaturesParityReport.png)
 
-Questo report consente di evidenziare il *le funzionalità a livello di istanza* che non sono supportati dal Database SQL di Azure V12.
+Usare questo report per evidenziare le *le funzionalità a livello di istanza* che non sono supportate da Azure SQL Database V12.
 
-Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore sono elencate le istanze e funzionalità di database che non sono supportate. Nell'esempio seguente, questa funzionalità è selezionata: **configurazione gruppo di disponibilità AlwaysOn non è supportata in Database SQL di Azure**.  
+Quando si seleziona una funzionalità nel grafico a imbuto, i dati nella parte inferiore sono elencate le istanze e funzionalità del database che non sono supportate. Nell'esempio seguente, viene selezionata questa funzionalità: **Always on configurazione gruppo di disponibilità non è supportata nel Database SQL di Azure**.  
 
 ![Sempre nella funzionalità gruppo di disponibilità](../dma/media/Feature_AlwaysOnAvailability.png)
 
  
-### <a name="azure-sql-db-unsupported-features-report"></a>Report funzionalità non supportata di database SQL di Azure
+### <a name="azure-sql-db-unsupported-features-report"></a>Report delle funzionalità non supportate di database SQL di Azure
 
-![Report funzionalità non supportata di database SQL di Azure](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
+![Report delle funzionalità non supportate di database SQL di Azure](../dma/media/AzureSQLDBUnsupportedFeaturesReport.png)
 
 Questo report evidenzia le funzionalità non supportate per un determinato **database** quando la destinazione è il Database SQL di Azure (V12).
 
-Applicando un filtro per il valore di nome e funzionalità di database nel grafico a imbuto, consente di visualizzare i dettagli su funzionalità non supportata. Dettagli includono i requisiti per risolvere il problema e l'oggetto interessato.
+Filtrando in base al valore di nome e la funzionalità di database nel grafico a imbuto, è possibile visualizzare i dettagli su funzionalità non supportata. I dettagli includono l'oggetto è interessato e consigli per risolvere il problema.
 
 Ad esempio, il filtro per il database DTC e **non è possibile aggiornare i database di sola lettura**, è possibile visualizzare un elenco di oggetti che sono interessati.
 
@@ -141,8 +142,8 @@ Ad esempio, il filtro per il database DTC e **non è possibile aggiornare i data
 
 ## <a name="see-also"></a>Vedere anche
 
-[Panoramica dell'Assistente per la migrazione di dati](../dma/dma-overview.md)
+[Panoramica di Data Migration Assistant](../dma/dma-overview.md)
 
-[Download di Assistente per la migrazione dei dati](https://www.microsoft.com/download/details.aspx?id=53595)
+[Data Migration Assistant di download](https://www.microsoft.com/download/details.aspx?id=53595)
 
 [Download di Power BI](https://powerbi.microsoft.com/)

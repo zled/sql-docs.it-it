@@ -1,12 +1,12 @@
 ---
-title: Recupero di dati di grandi dimensioni | Documenti Microsoft
+title: Recupero di dati di grandi dimensioni | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,18 +19,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f04fb06f29ed9a9e46f749804d92cb4c2fc931eb
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 4ed32d379c0a0a58af6a4239899af434027a904f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35699512"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37421560"
 ---
 # <a name="getting-large-data"></a>Recupero di dati di grandi dimensioni
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In generale, i consumer devono isolare il codice che crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto di archiviazione del provider OLE DB Native Client da altro codice che gestisce i dati non viene fatto riferimento tramite un **ISequentialStream** puntatore a interfaccia.  
+  In generale, i consumer devono isolare il codice che crea una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oggetto di archiviazione del provider OLE DB Native Client da altro codice che gestisce i dati non viene fatto riferimento tramite un **ISequentialStream** puntatore a interfaccia.  
   
  In questo argomento vengono descritte le funzionalità disponibili con le funzioni seguenti:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "35699512"
   
 -   ICommand::Execute  
   
- Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare una sola riga di dati in una chiamata al **GetNextRows**  metodo perché non memorizzato nel buffer dei dati BLOB. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
+ Se la proprietà DBPROP_ACCESSORDER (nel gruppo di proprietà set di righe) è impostata su uno dei valori DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, il consumer deve recuperare solo una singola riga di dati in una chiamata al **GetNextRows**  metodo perché i dati BLOB non viene memorizzato nel buffer. Se il valore di DBPROP_ACCESSORDER è impostato su DBPROPVAL_AO_RANDOM, il consumer può recuperare più righe di dati in **GetNextRows**.  
   
  Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client non recupera dati di grandi dimensioni da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finché non viene richiesto di farlo dal consumer. Il consumer deve associare tutti i dati di tipo short in una funzione di accesso e quindi utilizzare una o più funzioni di accesso temporanee per recuperare valori di dati di grandi dimensioni come richiesto.  
   
@@ -153,7 +153,7 @@ HRESULT GetUnboundData
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Oggetti BLOB e OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
+ [I BLOB e gli oggetti OLE](../../relational-databases/native-client-ole-db-blobs/blobs-and-ole-objects.md)   
  [Uso di tipi valore di grandi dimensioni](../../relational-databases/native-client/features/using-large-value-types.md)  
   
   

@@ -1,12 +1,12 @@
 ---
-title: Elaborare codici restituiti e parametri di Output (ODBC) | Documenti Microsoft
+title: Elaborare codici restituiti e parametri di Output (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9f0c48c0c6a9a6f14e9223cda5da0d45479b9ef3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 1b64711f2cf375ee602e26a77a00d8a22e9e16e4
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695522"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423990"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Esecuzione di Stored procedure - elaborare i codici restituiti e parametri di Output
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "35695522"
 
   Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta l'esecuzione di stored procedure come stored procedure remote. L'esecuzione di una stored procedure come stored procedure remota consente al driver e al server di ottimizzare le prestazioni di esecuzione della procedura.  
   
-  Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino alla [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
+  Le stored procedure di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono includere parametri di output e codici restituiti di tipo integer. I codici restituiti e parametri di output vengono inviati nell'ultimo pacchetto dal server e non sono disponibili per l'applicazione fino a quando [SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md) restituisce SQL_NO_DATA. Se viene restituito un errore da una stored procedure, chiamare SQLMoreResults per passare al risultato successivo fino a quando non viene restituito SQL_NO_DATA.  
   
 > [!IMPORTANT]  
 >  Se possibile, usare l'autenticazione di Windows. Se non è disponibile, agli utenti verrà richiesto di immettere le credenziali in fase di esecuzione. Evitare di archiviare le credenziali in un file. Se è necessario rendere persistenti le credenziali, è consigliabile crittografarle usando l'[API di crittografia Win32](http://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -39,11 +39,11 @@ ms.locfileid: "35695522"
   
 1.  Costruire un'istruzione SQL in cui venga utilizzata la sequenza di escape ODBC CALL. Nell'istruzione devono essere utilizzati marcatori di parametro per ogni parametro di input, di input/output e di output e per il valore restituito della procedura, se disponibile.  
   
-2.  Chiamare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se presente).  
+2.  Chiamare [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) per ogni input, input/output, parametro di output e per la procedura di valore restituito (se disponibile).  
   
 3.  Eseguire l'istruzione con **SQLExecDirect**.  
   
-4.  Elaborare set di risultati fino alla **SQLFetch** oppure **SQLFetchScroll** restituisce SQL_NO_DATA durante l'ultimo risultato di elaborazione del set o fino alla **SQLMoreResults** restituisce SQL_NO_DATA. A questo punto, nelle variabili associate al codice restituito e nei parametri di output sono stati inseriti i valori dei dati restituiti.  
+4.  Elaborare set di risultati fino **SQLFetch** oppure **SQLFetchScroll** non restituisce SQL_NO_DATA durante l'ultimo risultato di elaborazione del set o fino a quando **SQLMoreResults** restituisce SQL_NO_DATA. A questo punto, nelle variabili associate al codice restituito e nei parametri di output sono stati inseriti i valori dei dati restituiti.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrata l'elaborazione di un codice restituito e di un parametro di output. Questo esempio non è supportato in IA64. L'esempio è stato sviluppato per ODBC versione 3.0 o successiva.  

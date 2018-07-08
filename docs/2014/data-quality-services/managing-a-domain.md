@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 72b2400e8a953490d1650a8e435c6b353c660445
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb61470789fb7474216b1a4da1364305c4cd9f8c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062952"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153002"
 ---
 # <a name="managing-a-domain"></a>Gestione di un dominio
   In questo argomento viene descritto l'utilizzo dei domini in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio contiene una rappresentazione semantica dei dati in un campo specifico nell'origine dati che deve essere analizzata. Un dominio fa parte della Knowledge Base che si crea per un'origine dati e le informazioni che si accumulano analizzando un'origine dati di esempio, o importando dati, vengono aggiunte ai domini definiti nella Knowledge Base. Le informazioni in tali domini verranno in seguito utilizzate per eseguire attività di pulizia e di individuazione delle corrispondenze in un progetto Data Quality. I domini sono al centro di tutte le attività in Data Quality Services.  
@@ -50,7 +50,7 @@ ms.locfileid: "36062952"
 |-|-|  
 |Creare una rappresentazione semantica per un campo dati con un tipo di dati specifico, specificare come viene popolato il dominio, e formattare l'output del dominio|[Creare un dominio](../../2014/data-quality-services/create-a-domain.md)|  
 |Collegare un dominio a un altro dominio, consentendone la condivisione delle impostazioni e dei valori|[Creare un dominio collegato](../../2014/data-quality-services/create-a-linked-domain.md)|  
-|Collegare un servizio dati di riferimento a un dominio singolo o composto|[Collegare un dominio o dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
+|Collegare un servizio dati di riferimento a un dominio singolo o composto|[Collegare un dominio o un dominio composito ai dati di riferimento](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
 |Modificare o evidenziare i valori in una Knowledge Base.|[Modificare i valori di dominio](../../2014/data-quality-services/change-domain-values.md)|  
 |Utilizzare regole di convalida e di standardizzazione|[Creare una regola di dominio](../../2014/data-quality-services/create-a-domain-rule.md)|  
 |Utilizzare relazioni per correggere un termine che forma parte di un valore in un dominio|[Creare relazioni basate su termini](../../2014/data-quality-services/create-term-based-relations.md)|  

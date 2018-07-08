@@ -1,12 +1,12 @@
 ---
-title: Invio di dati come un parametro con valori di tabella con tutti i valori in memoria (ODBC) | Documenti Microsoft
+title: Invio di dati come un parametro con valori di tabella con tutti i valori in memoria (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 56b23a290944994fba861f02e78cddbb3488cbab
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 038a507b3a5fc67c80903fce3691755ad4aac1e2
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703282"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411050"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Invio di dati come parametro con valori di tabella con tutti i valori in memoria (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un esempio che illustra i parametri con valori di tabella, vedere [utilizzare parametri &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
+  In questo argomento viene illustrato come inviare dati a una stored procedure come parametro con valori di tabella quando tutti i valori sono in memoria. Per un altro esempio che illustra i parametri con valori di tabella, vedere [usare parametri &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/use-table-valued-parameters-odbc.md).  
   
 ## <a name="prerequisite"></a>Prerequisiti  
  Questa procedura presuppone che sia stata eseguita l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] seguente nel server:  
@@ -93,7 +93,7 @@ from @Items
        sizeof(OrdDate), &cbOrdDate);  
     ```  
   
-3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come si presenterebbero se fossero parametri della stored procedure, ma con numeri ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
+3.  La seconda fase di associazione dei parametri consiste nell'associare le colonne per il parametro con valori di tabella. Lo stato attivo del parametro viene impostato prima sull'ordinale del parametro con valori di tabella, Quindi le colonne del valore di tabella vengono associate tramite SQLBindParameter esattamente come verrebbero usati se i parametri della stored procedure, ma con gli ordinali di colonna per ParameterNumber. Se ci fossero più parametri con valori di tabella, lo stato attivo verrebbe impostato a sua volta su ciascuno di essi, seguito dall'associazione delle colonne. Lo stato attivo del parametro viene infine reimpostato su 0.  
   
     ```  
     // Bind columns for the table-valued parameter (param 2).  
@@ -133,6 +133,6 @@ from @Items
     ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Esempi di programmazione di parametro con valori di tabella ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
+ [Esempi di programmazione di parametri con valori di tabella ODBC](http://msdn.microsoft.com/library/3f52b7a7-f2bd-4455-b79e-d015fb397726)  
   
   

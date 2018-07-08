@@ -1,5 +1,5 @@
 ---
-title: Applicare filtri ai dati di Testing del modello | Documenti Microsoft
+title: Applicare filtri ai dati di Testing del modello | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,27 +8,27 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
 - filtering input rows [Analysis Services]
 - Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 43
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: aa35fdc19ffca67cf82f2f4b2dfa468131dd97d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f81b15b5fa36913a54e6529602d903ede426addf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062507"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153282"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Applicare filtri ai dati di test del modello
   Quando si specifica un'origine dati esterna da usare per il test di un modello, è possibile applicare un filtro per limitare i dati di input. È ad esempio possibile testare il modello in modo specifico per le stime sui clienti in una determinata fascia di reddito.  
   
- Nello scenario relativo al mailing diretto di AdventureWorks destinazione, ad esempio, è possibile creare un'espressione di filtro come quello riportato di seguito in ProspectiveBuyer, ovvero la tabella che contiene i dati di test, e limitare i test case da fascia di reddito:  
+ Nello scenario mailing diretto di AdventureWorks mirato, ad esempio, è possibile creare un'espressione di filtro come quello seguente in ProspectiveBuyer, ovvero la tabella che contiene i dati di test, e limitare i test case per fascia di reddito:  
   
  `[YearlyIncome] = '50000'`  
   

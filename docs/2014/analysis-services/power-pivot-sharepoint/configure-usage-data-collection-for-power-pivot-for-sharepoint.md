@@ -1,5 +1,5 @@
 ---
-title: Configurare la raccolta di dati di utilizzo per (PowerPivot per SharePoint | Documenti Microsoft
+title: Configurare Usage Data Collection for (PowerPivot per SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 6
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de5ac4920baf8143a575e5697896542eae817c90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06dfd95c82aab8e3fed336863c75112728150247
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062499"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149753"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurare la raccolta dati di utilizzo per PowerPivot per SharePoint
   La raccolta dati di utilizzo è una funzionalità di SharePoint a livello di farm. In PowerPivot per SharePoint questo sistema viene utilizzato ed esteso per fornire i report nel dashboard di gestione PowerPivot in cui viene mostrato l'utilizzo dei servizi e dei dati PowerPivot. A seconda dell'installazione di SharePoint, la raccolta dati di utilizzo potrebbe essere disabilitata per la farm. È necessario che un amministratore della farm abiliti la registrazione dell'utilizzo per creare i dati di utilizzo che vengono visualizzati nel dashboard di gestione PowerPivot.  
@@ -42,7 +42,7 @@ ms.locfileid: "36062499"
   
  [Aprire la pagina di applicazione di servizio PowerPivot per accedere alle impostazioni di configurazione](#openconfig)  
   
- [La configurazione predefinita per la raccolta dati di utilizzo PowerPivot](#defaultconfig)  
+ [La configurazione predefinita per la raccolta dati sull'utilizzo di PowerPivot](#defaultconfig)  
   
 > [!IMPORTANT]  
 >  I dati sull'utilizzo forniscono indicazioni sulle modalità con cui gli utenti accedono a dati e risorse, ma non garantiscono dati affidabili e persistenti sulle operazioni server e l'accesso utente. Nel caso di un riavvio del server, ad esempio, i dati sull'utilizzo dell'evento andranno persi in modo irreversibile. Analogamente, se i file di log temporanei raggiungono le dimensioni massime stabilite, non verranno aggiunti altri dati finché il contenuto dei file non verrà cancellato. Se è necessario disporre di una funzione di controllo, considerare la possibilità di utilizzare le funzionalità del flusso di lavoro e del tipo di contenuto di SharePoint che offrono un sottosistema di controllo per la farm. Per ulteriori informazioni, cercare la documentazione relativa al prodotto e alla community sul Web.  
@@ -72,7 +72,7 @@ ms.locfileid: "36062499"
   
 6.  Scegliere **OK** per salvare le modifiche.  
   
-7.  Facoltativamente, è possibile specificare se registrare tutti i messaggi o solo gli errori. Per ulteriori informazioni su come limitare i messaggi di evento, vedere [Configura e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
+7.  Facoltativamente, è possibile specificare se registrare tutti i messaggi o solo gli errori. Per altre informazioni su come limitare i messaggi di evento, vedere [configurare e visualizzare i file di Log di SharePoint e la registrazione diagnostica &#40;PowerPivot per SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
 ##  <a name="configdb"></a> Impostare il percorso del file di log  
  I dati di utilizzo di PowerPivot vengono inizialmente archiviati nei file di log dei dati di utilizzo nel server locale e, successivamente, spostati a intervalli regolari nel database dell'applicazione di servizio PowerPivot. Il percorso del file di log viene impostato in Amministrazione centrale. Il percorso predefinito è:  
@@ -129,7 +129,7 @@ ms.locfileid: "36062499"
   
 3.  Fare clic su **OK**.  
   
- Per ulteriori informazioni sul modo in cui i dati di utilizzo vengono raccolti e archiviati, vedere [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
+ Per altre informazioni su come i dati di utilizzo vengono raccolti e archiviati, vedere [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definire le categorie delle risposte alle query veloce, media e lenta per la creazione di report  
  Le prestazioni di elaborazione query vengono misurate rispetto a categorie predefinite che definiscono un ciclo di risposta alle richieste in base al tempo necessario per il completamento. Le categorie predefinite includono: Semplice, Rapida, Prevista, Esecuzione prolungata e Superato. Ogni richiesta a un server PowerPivot rientrerà in una di queste categorie in base al tempo necessario per il completamento.  
@@ -178,7 +178,7 @@ ms.locfileid: "36062499"
   
 4.  In **Azioni**fare clic su **Configura impostazioni dell'applicazione di servizio**. Verrà visualizzata la pagina Impostazioni applicazioni di servizio di PowerPivot.  
   
-##  <a name="defaultconfig"></a> La configurazione predefinita per la raccolta dati di utilizzo PowerPivot  
+##  <a name="defaultconfig"></a> La configurazione predefinita per la raccolta dati sull'utilizzo di PowerPivot  
  La raccolta dei dati sull'utilizzo per le operazioni di servizio PowerPivot può essere abilitata con le impostazioni predefinite per renderla immediatamente disponibile nelle applicazioni che supportano la funzionalità di integrazione di Analysis Services. Le impostazioni predefinite includono eventi che attivano la raccolta dei dati sull'utilizzo, limiti sulla durata del periodo di archiviazione e soglie che suddividono in categorie i tempi di risposta query.  
   
  Nella tabella seguente sono riportati i valori predefiniti per la configurazione della raccolta dei dati sull'utilizzo.  
@@ -194,7 +194,7 @@ ms.locfileid: "36062499"
 |Limite massimo risposta con esecuzione prolungata|10000 (in millisecondi)|Valore intero|Imposta un limite massimo che definisce uno scambio richiesta-risposta con esecuzione prolungata. Tutte le richieste che superano questo limite massimo rientrano nella categoria Superato, che non prevede una soglia massima.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimento a impostazioni di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [Riferimento all'impostazione di configurazione &#40;PowerPivot per SharePoint&#41;](configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Raccolta dati di utilizzo di PowerPivot](power-pivot-usage-data-collection.md)  
   
   

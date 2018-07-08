@@ -1,5 +1,5 @@
 ---
-title: Altri problemi di aggiornamento del motore di Database | Documenti Microsoft
+title: Altri problemi di aggiornamento del motore di Database | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 caps.latest.revision: 42
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: b1c74bf4ffd8cf0eba5cb853cccda80cc0b5d662
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 1fda230ed04ddcac6d4c7c8bb52b73762c23b90f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054923"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150002"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Altri problemi di aggiornamento del motore di database
   I problemi di aggiornamento seguenti non possono essere rilevati dalla versione corrente di Preparazione aggiornamento. Esaminare i problemi elencati di seguito per valutarne il potenziale impatto sui sistemi.  
@@ -76,7 +76,7 @@ ms.locfileid: "36054923"
  MERGE è ora una parola chiave completamente riservata. Non è più possibile includere oggetti (tabella, colonna e così via) denominati MERGE nelle applicazioni.  
   
 ## <a name="rename-cdc-schema"></a>Rinominare lo schema CDC  
- È disponibile un nome di schema denominato CDC Questo nome di schema non può essere utilizzato se **Change Data Capture** è abilitato per il database.  
+ È disponibile un nome di schema denominato CDC Il nome dello schema non può essere utilizzato se **Change Data Capture** è abilitato per il database.  
   
  È necessario eliminare lo schema CDC prima di abilitare **Change Data Capture** per il database. Questo passaggio può essere completato prima o dopo l'aggiornamento. Per eliminare lo schema, eseguire le operazioni seguenti:  
   

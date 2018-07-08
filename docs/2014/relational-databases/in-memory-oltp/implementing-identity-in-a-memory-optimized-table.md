@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
 caps.latest.revision: 9
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 3e2eac0fd58bccad20094af9eb5956cb14cef54c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cdc1b44fda79d5b8ea8f940e18fc3b00240a6752
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055470"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229241"
 ---
 # <a name="implementing-identity-in-a-memory-optimized-table"></a>Implementazione di IDENTITY in una tabella con ottimizzazione per la memoria
-  IDENTITY(1, 1) è supportato in una tabella ottimizzata per la memoria. Tuttavia, le colonne Identity con la definizione di IDENTITY(x, y) dove x != 1 o y != 1 non sono supportate nelle tabelle ottimizzate per la memoria. La soluzione alternativa per i valori di identità usa l'oggetto sequenza ([numeri di sequenza](../sequence-numbers/sequence-numbers.md)).  
+  IDENTITY(1, 1) è supportato in una tabella ottimizzata per la memoria. Tuttavia, le colonne Identity con la definizione di IDENTITY(x, y) dove x != 1 o y != 1 non sono supportate nelle tabelle ottimizzate per la memoria. La soluzione alternativa per i valori di identità usa l'oggetto di sequenza ([numeri di sequenza](../sequence-numbers/sequence-numbers.md)).  
   
  Rimuovere innanzitutto la proprietà IDENTITY della tabella che si converte in OLTP in memoria. Quindi, definire un nuovo oggetto SEQUENCE per la colonna della tabella. Gli oggetti SEQUENCE come le colonne IDENTITY possono creare valori DEFAULT per le colonne che utilizzano la sintassi NEXT VALUE FOR per ottenere un nuovo valore IDENTITY. Poiché i valori DEFAULT non sono supportati in OLTP in memoria, è necessario passare il valore SEQUENCE appena generato all'istruzione INSERT o a una stored procedure compilata in modo nativo che esegue l'inserimento. Nell'esempio seguente viene illustrato questo modello.  
   

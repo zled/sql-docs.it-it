@@ -1,12 +1,12 @@
 ---
-title: IRowsetFastLoad (OLE DB) | Documenti Microsoft
+title: IRowsetFastLoad (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apitype: COM
@@ -18,20 +18,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ca121386791cd302bb3d50f570b97e46dcd76d23
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 81487f0395c2a0bf9904f19ad1b59954764bd64b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35694808"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37409800"
 ---
 # <a name="irowsetfastload-ole-db"></a>IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Il **IRowsetFastLoad** interfaccia espone il supporto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operazioni di copia bulk basate sulla memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider (consumer) utilizzare l'interfaccia per aggiungere rapidamente dati a un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.  
+  Il **IRowsetFastLoad** interfaccia espone il supporto per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] operazioni di copia bulk basate sulla memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer del provider OLE DB per Client nativi usano l'interfaccia per aggiungere rapidamente dati a un oggetto esistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella.  
   
- Se si imposta SSPROP_ENABLEFASTLOAD su VARIANT_TRUE per una sessione, non è possibile leggere dati dai set di righe restituiti successivamente dalla sessione. Quando SSPROP_ENABLEFASTLOAD è impostato su VARIANT_TRUE, tutti i set di righe creati nella sessione saranno di tipo IRowsetFastLoad. Set di righe iRowsetFastLoad non supportano la funzionalità di recupero di set di righe; Pertanto, non è possibile leggere i dati da questi set di righe.  
+ Se si imposta SSPROP_ENABLEFASTLOAD su VARIANT_TRUE per una sessione, non è possibile leggere dati dai set di righe restituiti successivamente dalla sessione. Quando SSPROP_ENABLEFASTLOAD è impostato su VARIANT_TRUE, tutti i set di righe creati nella sessione saranno di tipo IRowsetFastLoad. Set di righe iRowsetFastLoad non supportano funzionalità di recupero di set di righe; Pertanto, non è possibile leggere i dati da questi set di righe.  
   
 ## <a name="in-this-section"></a>Argomenti della sezione  
   

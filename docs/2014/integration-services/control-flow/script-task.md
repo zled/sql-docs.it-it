@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.f1
 helpviewer_keywords:
@@ -19,13 +19,13 @@ ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
 caps.latest.revision: 67
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 267bbd228565337594039162d7f01ec90a38d303
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 26b6d45a190a188f9091360583cf3f73c3097455
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062438"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156722"
 ---
 # <a name="script-task"></a>Attività Script
   L'attività Script fornisce il codice necessario per eseguire le funzioni non disponibili nelle trasformazioni e nelle attività predefinite di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Tale attività consente inoltre di combinare più funzioni in un unico script, anziché utilizzare più attività e trasformazioni. L'attività Script può essere utilizzata per operazioni che devono essere eseguite una sola volta in un pacchetto o una sola volta per oggetto enumerato, anziché una volta per ogni riga di dati.  
@@ -68,11 +68,11 @@ ms.locfileid: "36062438"
  È possibile impostare queste proprietà tramite Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] o a livello di codice.  
   
 ### <a name="configuring-the-script-task-in-the-designer"></a>Configurazione dell'attività Script in Progettazione  
- Nella tabella seguente viene descritto l'evento `ScriptTaskLogEntry` che può essere registrato per l'attività Script. Il `ScriptTaskLogEntry` evento è selezionato per l'accesso il **dettagli** scheda della finestra il **Configura log SSIS** finestra di dialogo. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
+ Nella tabella seguente viene descritto l'evento `ScriptTaskLogEntry` che può essere registrato per l'attività Script. Il `ScriptTaskLogEntry` evento è selezionato per la registrazione nella **dettagli** scheda della finestra di **Configura log SSIS** nella finestra di dialogo. Per altre informazioni, vedere [Registrazione di Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) e [Messaggi personalizzati per la registrazione](../custom-messages-for-logging.md).  
   
 |Voce di log|Description|  
 |---------------|-----------------|  
-|`ScriptTaskLogEntry`|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. L'attività viene registrata una voce di log per ogni chiamata ai `Log` metodo il `Dts` oggetto. Tali voci vengono scritte dall'attività al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
+|`ScriptTaskLogEntry`|Restituisce i risultati dell'implementazione della registrazione nell'ambito dello script. L'attività scrive una voce di log per ogni chiamata ai `Log` metodo del `Dts` oggetto. Tali voci vengono scritte dall'attività al momento dell'esecuzione del codice. Per altre informazioni, vedere [Registrazione nell'attività Script](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
  Per ulteriori informazioni sulle proprietà che è possibile impostare in Progettazione [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vedere gli argomenti seguenti:  
   

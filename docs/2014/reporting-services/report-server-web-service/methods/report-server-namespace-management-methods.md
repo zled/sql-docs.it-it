@@ -17,15 +17,15 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7b88c3693de9a0d2318094cd01d3e27044a697eb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 982dabf5a880459e785033411ead754f81dbce4b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055177"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155622"
 ---
 # <a name="report-server-namespace-management-methods"></a>Metodi di gestione dello spazio dei nomi del server di report
   Il servizio Web di gestione del server report include metodi che è possibile utilizzare per gestire report, cartelle e risorse nel database del server di report.  
@@ -34,7 +34,7 @@ ms.locfileid: "36055177"
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Annulla l'esecuzione di un processo.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Aggiunge una cartella al database del server di report o alla raccolta di SharePoint.|  
-|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Aggiunge un nuovo elemento a un database del server di report o alla raccolta di SharePoint. Questo metodo può essere applicato per la `Report`, `Model`, `Dataset`, `Component`, `Resource`, e `DataSource` i tipi di elemento.|  
+|<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|Aggiunge un nuovo elemento a un database del server di report o alla raccolta di SharePoint. Questo metodo può essere applicato per il `Report`, `Model`, `Dataset`, `Component`, `Resource`, e `DataSource` tipi di elemento.|  
 |M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|Crea una nuova sessione di modifica del report.|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|Rimuove un elemento dal database del server di report o dalla raccolta di SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|Restituisce gli elementi nel database del server di report o nella raccolta di SharePoint che corrispondono ai criteri di ricerca specificati.|  
@@ -42,7 +42,7 @@ ms.locfileid: "36055177"
 |<xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>|Restituisce un elenco di impostazioni per un'estensione specificata.|  
 |<xref:ReportService2010.ReportingService2010.GetItemType%2A>|Recupera il tipo di un elemento nel database del server di report o nella raccolta di SharePoint, se l'elemento esiste.|  
 |<xref:ReportService2010.ReportingService2010.GetProperties%2A>|Restituisce i valori di una o più proprietà di un elemento nel database del server di report o in una raccolta di SharePoint.|  
-|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Recupera la definizione o il contenuto per un elemento. Questo metodo può essere applicato per la `Report`, `Model`, `Dataset`, `Component`, `Resource`, e `DataSource` i tipi di elemento.|  
+|<xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>|Recupera la definizione o il contenuto per un elemento. Questo metodo può essere applicato per il `Report`, `Model`, `Dataset`, `Component`, `Resource`, e `DataSource` tipi di elemento.|  
 |<xref:ReportService2010.ReportingService2010.GetItemReferences%2A>|Restituisce un elenco di riferimenti a elementi del catalogo associati a un elemento.|  
 |<xref:ReportService2010.ReportingService2010.GetReportServerConfigInfo%2A>|Restituisce informazioni sull'istanza del server di report collegata o su tutte le istanze del server di report in una distribuzione con scalabilità orizzontale.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>|Restituisce una o più proprietà di sistema.|  
@@ -63,7 +63,7 @@ ms.locfileid: "36055177"
 |<xref:ReportService2010.ReportingService2010.SetItemReferences%2A>|Imposta gli elementi del catalogo associati a un elemento.|  
 |<xref:ReportService2010.ReportingService2010.MoveItem%2A>|Sposta e/o rinomina un elemento.|  
 |<xref:ReportService2010.ReportingService2010.SetProperties%2A>|Imposta una o più proprietà di un elemento.|  
-|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Imposta la definizione o il contenuto per un elemento specificato. Questo metodo può essere applicato per la `Report`, `Model`, `Dataset`, `Component`, `Resource`, e `DataSource` i tipi di elemento.|  
+|<xref:ReportService2010.ReportingService2010.SetItemDefinition%2A>|Imposta la definizione o il contenuto per un elemento specificato. Questo metodo può essere applicato per il `Report`, `Model`, `Dataset`, `Component`, `Resource`, e `DataSource` tipi di elemento.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Imposta una o più proprietà di sistema nel server di report o in una farm di SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Convalida le impostazioni per l'estensione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.deploydacwizard.updateconfiguration.f1
 - sql12.swb.deploydacwizard.selectdac.f1
@@ -23,15 +23,15 @@ helpviewer_keywords:
 - wizard [DAC], deploy
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4ede9c252977dbd5044fe4c8a7c154d425341490
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 7041a4e15314f7efa8ea626e41ed705b69faa18c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055517"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154532"
 ---
 # <a name="deploy-a-data-tier-application"></a>Distribuire un'applicazione livello dati
   È possibile distribuire un'applicazione livello dati (DAC) da un pacchetto di applicazione livello dati all'istanza esistente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o di [!INCLUDE[ssSDS](../../includes/sssds-md.md)] usando una procedura guidata o uno script di PowerShell. Il processo di distribuzione registra un'istanza di applicazione livello dati archiviando la definizione dell'applicazione livello dati nel database di sistema **msdb** (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea un database e quindi lo popola con tutti gli oggetti di database definiti nell'applicazione livello dati.  
@@ -67,7 +67,7 @@ ms.locfileid: "36055517"
 ####  <a name="Permissions"></a> Permissions  
  Un'applicazione livello dati può essere distribuita unicamente dai membri del ruolo predefinito del server **sysadmin** o **serveradmin** oppure tramite gli account di accesso disponibili nel ruolo predefinito del server **dbcreator** con autorizzazioni ALTER ANY LOGIN. È anche possibile distribuire un'applicazione livello dati usando l'account amministratore di sistema di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predefinito denominato **sa** . La distribuzione di un'applicazione livello dati con accessi in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] richiede l'appartenenza ai ruoli loginmanager o serveradmin. Per la distribuzione di un'applicazione livello dati senza account di accesso in [!INCLUDE[ssSDS](../../includes/sssds-md.md)] è richiesta l'appartenenza ai ruoli dbmanager o serveradmin.  
   
-##  <a name="UsingDeployDACWizard"></a> Utilizzando la distribuzione guidata di applicazione livello dati  
+##  <a name="UsingDeployDACWizard"></a> Tramite la distribuzione guidata di applicazione livello dati  
  **Per distribuire un'applicazione livello dati tramite una procedura guidata**  
   
 1.  In **Esplora oggetti**espandere il nodo per le istanze a cui si desidera distribuire l'applicazione livello dati.  
@@ -137,7 +137,7 @@ ms.locfileid: "36055517"
   
  **Ignora le violazioni dei criteri** : usare questa casella di controllo per continuare la distribuzione se una o più delle condizioni dei criteri non sono soddisfatte. Selezionare questa opzione solo se si è sicuri che tutte le condizioni non soddisfatte non impediranno la distribuzione del pacchetto DAC.  
   
- **\< Precedente** -restituisce il **Seleziona pacchetto** pagina.  
+ **\< Precedente** -restituisce la **Seleziona pacchetto** pagina.  
   
  **Avanti >**: consente di passare alla pagina **Aggiorna configurazione**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "36055517"
   
  **Percorso e nome file di log** : consente di specificare il percorso completo e il nome del file di log. La casella viene popolata con il percorso e il nome file predefiniti. Modificare la stringa nella casella per modificare l'impostazione predefinita oppure usare il pulsante **Sfoglia** per passare alla cartella in cui si desidera salvare il file di log.  
   
- **\< Precedente** -restituisce il **selezione pacchetto di applicazione livello dati** pagina.  
+ **\< Precedente** -restituisce la **selezione pacchetto di applicazione livello dati** pagina.  
   
  **Avanti >**: consente di passare alla pagina **Riepilogo**.  
   
@@ -189,13 +189,13 @@ ms.locfileid: "36055517"
  **Fine** : consente di terminare la procedura guidata.  
   
 ##  <a name="DeployDACPowerShell"></a> Utilizzo di PowerShell  
- **Per distribuire un'applicazione livello dati utilizzando il metodo Install () in uno script di PowerShell**  
+ **Per distribuire un'applicazione livello dati usando il metodo Install () in uno script di PowerShell**  
   
 1.  Creare un oggetto server SMO e impostarlo sull'istanza a cui distribuire l'applicazione livello dati.  
   
-2.  Aprire un `ServerConnection` e connetterlo alla stessa istanza.  
+2.  Aprire un `ServerConnection` oggetti e connettersi alla stessa istanza.  
   
-3.  Utilizzare `System.IO.File` per caricare il file di pacchetto di applicazione livello dati.  
+3.  Usare `System.IO.File` per caricare il file del pacchetto dell'applicazione livello dati.  
   
 4.  Usare `add_DacActionStarted` e `add_DacActionFinished` per sottoscrivere gli eventi di distribuzione dell'applicazione livello dati.  
   

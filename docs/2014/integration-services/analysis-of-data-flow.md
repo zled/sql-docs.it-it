@@ -1,5 +1,5 @@
 ---
-title: Analisi di flusso di dati | Documenti Microsoft
+title: Analisi di flusso di dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
 caps.latest.revision: 10
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: cb8a2a6df2e3b43486329c023a1aaf948064b425
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: fa09e2c86581214a1ae001c90dba640276920aba
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055549"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209841"
 ---
 # <a name="analysis-of-data-flow"></a>Analisi del flusso di dati
-  È possibile usare il [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista per analizzare il flusso di dati dei pacchetti del database. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
+  È possibile usare la [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista per analizzare il flusso di dati dei pacchetti di database. In questa vista viene visualizzata una riga ogni volta che un componente del flusso di dati invia dati a un componente a valle. Le informazioni possono essere utilizzate per acquisire una comprensione più approfondita delle righe inviate a ciascun componente.  
   
 > [!NOTE]  
 >  Il livello di registrazione deve essere impostato su **Dettagliato** per acquisire informazioni con la vista catalog.execution_data_statistics.  
@@ -46,7 +46,7 @@ order by source_component_name, destination_component_name
   
 -   **num_rows_per_millisecond** : numero di righe per millisecondi inviate da ogni componente  
   
- Il `HAVING` clausola viene utilizzata per evitare un errore di divisione per zero nei calcoli.  
+ Il `HAVING` clausola viene utilizzata per impedire un errore di divisione per zero nei calcoli.  
   
 ```  
 use SSISDB  

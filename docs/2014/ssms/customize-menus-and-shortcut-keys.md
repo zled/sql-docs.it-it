@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], shortcuts
 - keyboard shortcuts [SQL Server Management Studio]
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - accelerator keys
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 8e9331425dc13c81c2304cf43dc8639eee25d861
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: b96c4e3bc6f0b9d1da82d373d4b8c0374331fb2f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062324"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149912"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizzare i menu e i tasti di scelta rapida
-  Un tasto di scelta rapida consente di selezionare un comando di menu o un pulsante premendo ALT +*\<una sola lettera >*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
+  Un tasto di scelta rapida consente di selezionare un comando di menu o un pulsante premendo ALT +*\<sola lettera >*. Per aprire ad esempio il menu **Modifica** , premere ALT+M. È possibile modificare la disposizione di pulsanti della barra degli strumenti, di menu e di comandi di menu nella finestra di dialogo **Personalizza** . Vengono fornite istruzioni per modificare le impostazioni utilizzando il mouse o solo la tastiera.  
   
  È possibile creare tasti di scelta rapida per stored procedure tramite CTRL dalla pagina **Tastiera** della finestra di dialogo **Strumenti**/**Opzioni** .  
   

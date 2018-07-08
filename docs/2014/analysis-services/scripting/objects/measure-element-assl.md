@@ -1,5 +1,5 @@
 ---
-title: Misure di elemento (ASSL) | Documenti Microsoft
+title: Misurare l'elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Measure element
 ms.assetid: 4c2c2ed1-7f78-4564-982a-132f13bea36f
 caps.latest.revision: 38
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: da78700e32c81dab11d6609ca4aa12efd2204bcb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 80d59a5356bf1c0b5712e729f230fff9383603cc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054860"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159332"
 ---
 # <a name="measure-element-assl"></a>Elemento Measure (ASSL)
   Definisce una misura.  
@@ -77,7 +77,7 @@ ms.locfileid: "36054860"
   
 |Predecessore o padre|Tipo di dati|  
 |------------------------|---------------|  
-|[AggregationInstance](../data-type/binding-data-type-assl.md)|  
+|[Elemento AggregationInstance](../data-type/binding-data-type-assl.md)|  
 |[Gruppo di misure](group-element-assl.md)|None|  
 |[MeasureGroupBinding (out-of-line)](../data-type/measurebinding-data-type-assl.md)|  
 |[PerspectiveMeasureGroup](../data-type/perspectivemeasure-data-type-assl.md)|  
@@ -90,10 +90,10 @@ ms.locfileid: "36054860"
   
 |Predecessore o padre|Elementi figlio|  
 |------------------------|--------------------|  
-|[MeasureGroup](../properties/aggregatefunction-element-assl.md), [Annotations](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [Description](../properties/description-element-assl.md), [DisplayFolder](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [Name](../properties/name-element-assl.md), [Source](../properties/source-element-measure-assl.md), [Translations](../collections/translations-element-assl.md), [Visible](../properties/visible-element-assl.md)|  
+|[Elemento MeasureGroup](../properties/aggregatefunction-element-assl.md), [annotazioni](../collections/annotations-element-assl.md), [BackColor](../properties/backcolor-element-assl.md), [DataType](../properties/datatype-element-assl.md), [descrizione](../properties/description-element-assl.md), [DisplayFolder ](../properties/displayfolder-element-assl.md), [FontFlags](../properties/fontflags-element-assl.md), [FontName](../properties/name-element-assl.md), [FontSize](../properties/fontsize-element-assl.md), [ForeColor](../properties/forecolor-element-assl.md), [FormatString ](../properties/formatstring-element-assl.md), [ID](../properties/id-element-assl.md), [MeasureExpression](../properties/expression-element-assl.md), [nome](../properties/name-element-assl.md), [origine](../properties/source-element-measure-assl.md), [traduzioni](../collections/translations-element-assl.md), [Visibili](../properties/visible-element-assl.md)|  
 |Tutti gli altri|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I dettagli relativi all'associazione possono essere forniti per una misura. Tali dettagli si comportano come impostazioni predefinite per partizione.  
   
  Nei cubi di dimensioni maggiori possono essere presenti centinaia di misure e gerarchie. La proprietà `DisplayFolder` definisce l'aspetto utente nel client. Il valore della proprietà `DisplayFolder` può contenere una delle opzioni seguenti:  

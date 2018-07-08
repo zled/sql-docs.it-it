@@ -6,7 +6,7 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -22,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 352156802db248e50c42aa56fe8b5782b406fa77
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 112ad745e44d196d5fba37fbf113e2620d4690e9
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35695132"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422910"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,17 +54,17 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Dopo aver **bcp_readfmt** legge i valori di formato, effettua le chiamate appropriate a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) e [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). L'utente può evitare di analizzare un file di formato ed effettuare queste chiamate.  
   
  Per rendere persistente un file di formato, chiamare [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Le chiamate a **bcp_readfmt** può fare riferimento ai formati salvati. Per altre informazioni, vedere [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
- In alternativa, l'utilità di copia bulk (**bcp**) può salvare i formati di dati definito dall'utente nei file che possono essere utilizzati dalle **bcp_readfmt**. Per ulteriori informazioni sul **bcp** utilità e la struttura dei **bcp** i file di formato di dati, vedere [Bulk importazione ed esportazione di dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ In alternativa, l'utilità di copia bulk (**bcp**) può salvare i formati di dati definito dall'utente nei file che possono essere utilizzati dalle **bcp_readfmt**. Per altre informazioni sul **bcp** utilità e la struttura dei **bcp** i file di formato di dati, vedere [l'importazione ed esportazione dei dati &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
- Il **BCPDELAYREADFMT** valore il *eOption* parametro del [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) modifica il comportamento di bcp_readfmt.  
+ Il **BCPDELAYREADFMT** pari al *eOption* parametro dei [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) modifica il comportamento di bcp_readfmt.  
   
 > [!NOTE]  
->  Il file di formato è stato prodotto dalla versione 4.2 o versioni successive del **bcp** utilità.  
+>  Il file di formato è stato prodotto dalla versione 4.2 o versione successiva del **bcp** utilità.  
   
 ## <a name="example"></a>Esempio  
   

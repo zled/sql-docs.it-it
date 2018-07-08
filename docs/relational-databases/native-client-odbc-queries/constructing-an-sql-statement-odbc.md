@@ -1,12 +1,12 @@
 ---
-title: Costruzione di un'istruzione SQL (ODBC) | Documenti Microsoft
+title: Costruzione di un'istruzione SQL (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2ae5e68251e9e1d0aa08576c87a7d79a49cbaf1a
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 8f564842584763aa7dc516ef1fe8ba9bb45e707b
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698082"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412690"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Costruzione di un'istruzione SQL (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "35698082"
   
      Istruzioni SQL costruite in fase di esecuzione che consentono all'utente di personalizzare l'istruzione servendosi di clausole comuni, ad esempio SELECT, WHERE e ORDER BY. Sono incluse query ad hoc immesse dagli utenti.  
   
- Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Client analizza le istruzioni SQL solo per la sintassi ODBC e ISO non direttamente supportati dal [!INCLUDE[ssDE](../../includes/ssde-md.md)], che il driver trasforma in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Qualsiasi altra sintassi SQL viene passata per il [!INCLUDE[ssDE](../../includes/ssde-md.md)] invariato, in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina se è valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo approccio comporta due vantaggi:  
+ Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Client analizza le istruzioni SQL solo per la sintassi ODBC e ISO non supportati direttamente dai [!INCLUDE[ssDE](../../includes/ssde-md.md)], che il driver trasforma in [!INCLUDE[tsql](../../includes/tsql-md.md)]. Qualsiasi altra sintassi SQL viene passata al [!INCLUDE[ssDE](../../includes/ssde-md.md)] invariate, in cui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina se sia valido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo approccio comporta due vantaggi:  
   
 -   Riduzione dell'overhead  
   
@@ -47,7 +47,7 @@ ms.locfileid: "35698082"
   
 -   Flessibilità  
   
-     I programmatori possono personalizzare la portabilità delle applicazioni. Per migliorare la portabilità rispetto a più database, utilizzare principalmente la sintassi ODBC e ISO. Per utilizzare miglioramenti specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la sintassi di [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriata. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta l'intero [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi in modo che le applicazioni basate su ODBC possono sfruttare tutte le caratteristiche di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     I programmatori possono personalizzare la portabilità delle applicazioni. Per migliorare la portabilità rispetto a più database, utilizzare principalmente la sintassi ODBC e ISO. Per utilizzare miglioramenti specifici di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], utilizzare la sintassi di [!INCLUDE[tsql](../../includes/tsql-md.md)] appropriata. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta l'intero [!INCLUDE[tsql](../../includes/tsql-md.md)] sintassi in modo che le applicazioni basate su ODBC possono sfruttare tutte le funzionalità di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  L'elenco di colonne di un'istruzione SELECT deve contenere solo le colonne richieste per eseguire l'attività corrente. In questo modo non solo si riduce la quantità di dati inviati attraverso la rete, ma anche l'effetto delle modifiche del database sull'applicazione. Se in un'applicazione non si fa riferimento a una colonna di una tabella, l'applicazione non viene interessata dalle modifiche apportate alla colonna.  
   

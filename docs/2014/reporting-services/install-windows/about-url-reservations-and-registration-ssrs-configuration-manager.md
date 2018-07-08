@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - URL reservations
 - URL registration
@@ -17,13 +17,13 @@ ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 caps.latest.revision: 12
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 9bffc090c98e1adc507ba55fc856fb166ebd2187
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b042690b6cf4a9d2335a2c91f8f6a618f9261caf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183978"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Informazioni su prenotazioni e registrazione URL (Gestione configurazione SSRS)
   Gli URL per le applicazioni di Reporting Services vengono definiti come prenotazioni URL in HTTP.SYS. Una prenotazione URL definisce la sintassi di un endpoint dell'URL in un'applicazione Web. Le prenotazioni URL vengono definite sia per il servizio Web ReportServer sia per Gestione report quando si configurano le applicazioni nel server di report. Le prenotazioni URL vengono create automaticamente quando si configurano gli URL tramite il programma di installazione o lo strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -54,7 +54,7 @@ ms.locfileid: "36054293"
 >  In questo argomento non viene descritto l'accesso tramite URL a Generatore report o a report specifici archiviati nel server di report. Per altre informazioni sull'accesso tramite URL a tali elementi, vedere [Accedere agli elementi del server di report usando l'accesso tramite URL](../access-report-server-items-using-url-access.md) nella documentazione online di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLreservation"></a> Prenotazione e registrazione URL  
- Una prenotazione URL definisce gli URL che possono essere utilizzati per accedere a un'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prenoterà uno o più URL per il servizio Web ReportServer e gestione Report in HTTP. SYS e li registra quindi all'avvio del servizio. Gli URL di Generatore report e dei report sono basati sulla prenotazione URL del servizio Web ReportServer. Aggiungendo parametri all'URL, è possibile aprire Generatore report o i report tramite il servizio Web. Le prenotazioni e la registrazione vengono forniti da HTTP.SYS. Per ulteriori informazioni, vedere [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) nel sito Web MSDN.  
+ Una prenotazione URL definisce gli URL che possono essere utilizzati per accedere a un'applicazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] riserverà uno o più URL per il servizio Web ReportServer e gestione di Report in HTTP. SYS e li registra quindi all'avvio del servizio. Gli URL di Generatore report e dei report sono basati sulla prenotazione URL del servizio Web ReportServer. Aggiungendo parametri all'URL, è possibile aprire Generatore report o i report tramite il servizio Web. Le prenotazioni e la registrazione vengono forniti da HTTP.SYS. Per ulteriori informazioni, vedere [Namespace Reservations, Registration, and Routing](http://go.microsoft.com/fwlink/?LinkId=92653) nel sito Web MSDN.  
   
  Una*prenotazione URL* è un processo tramite cui un endpoint dell'URL a un'applicazione Web viene creato e archiviato in HTTP.SYS. HTTP.SYS è il repository comune di tutte le prenotazioni URL definite in un computer e determina un set di regole comuni che garantiscono l'univocità delle prenotazioni URL.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "36054293"
   
 |Prenotazione URL in HTTP.SYS|URL|Spiegazione|  
 |---------------------------------|---------|-----------------|  
-|http://+:80/reportserver|http://\<computername > / reportserver<br /><br /> http://\<IPAddress > / reportserver<br /><br /> http://localhost/reportserver|La prenotazione URL specifica un carattere jolly (+) sulla porta 80. In questo modo nella coda del server di report viene inserita qualsiasi richiesta in ingresso che specifica un host per la risoluzione nel computer server di report sulla porta 80. Si noti che con tale prenotazione URL è possibile utilizzare il numero desiderato di URL per accedere al server di report.<br /><br /> Si tratta della prenotazione URL predefinita per un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la maggior parte dei sistemi operativi.|  
-|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Questa prenotazione URL specifica un indirizzo IP ed è molto più restrittiva della prenotazione URL con carattere jolly. Solo gli URL che includono l'indirizzo IP possono essere utilizzati per la connessione al server di report. Specifica questa prenotazione URL, una richiesta a un server di report alla http://\<computername > / reportserver o http://localhost/reportserver avrà esito negativo.|  
+|http://+:80/reportserver|http://\<nomecomputer > / reportserver<br /><br /> http://\<IPAddress > / reportserver<br /><br /> http://localhost/reportserver|La prenotazione URL specifica un carattere jolly (+) sulla porta 80. In questo modo nella coda del server di report viene inserita qualsiasi richiesta in ingresso che specifica un host per la risoluzione nel computer server di report sulla porta 80. Si noti che con tale prenotazione URL è possibile utilizzare il numero desiderato di URL per accedere al server di report.<br /><br /> Si tratta della prenotazione URL predefinita per un server di report [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] per la maggior parte dei sistemi operativi.|  
+|http://123.45.67.0:80/reportserver|http://123.45.67.0/reportserver|Questa prenotazione URL specifica un indirizzo IP ed è molto più restrittiva della prenotazione URL con carattere jolly. Solo gli URL che includono l'indirizzo IP possono essere utilizzati per la connessione al server di report. Specifica questa prenotazione URL, una richiesta a un server di report all'indirizzo http://\<nomecomputer > / reportserver o http://localhost/reportserver avrebbe esito negativo.|  
   
 ##  <a name="DefaultURLs"></a> URL predefiniti  
  Se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato utilizzando la configurazione predefinita, il programma di installazione prenoterà gli URL per il servizio Web ReportServer e per Gestione report. È possibile accettare questi valori predefiniti anche quando si definiscono prenotazioni URL nello strumento di configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Gli URL predefiniti includono il nome di un'istanza se si installa [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] o se [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene installato come istanza denominata.  
@@ -91,10 +91,10 @@ ms.locfileid: "36054293"
 |-------------------|-----------------|-----------------|----------------------------------------|  
 |Istanza predefinita|servizio Web ReportServer|http://\<nomeserver > / reportserver|http://\<nomeserver >: 80/reportserver|  
 |Istanza predefinita|Gestione report|http://\<nomeserver > / reportserver|http://\<nomeserver >: 80/reportserver|  
-|Istanza denominata|servizio Web ReportServer|http://\<nomeserver > / ReportServer _\<instancename >|http://\<nomeserver >: 80/reportserver_<NomeIstanza\<instancename >|  
-|Istanza denominata|Gestione report|http://\<nomeserver > / reports_\<instancename >|http://\<nomeserver >: 80/reports_\<instancename >|  
-|SQL Server Express|servizio Web ReportServer|http://\<nomeserver > / /reportserver_sqlexpress|http://\<nomeserver >: 80/reportserver_sqlexpress|  
-|SQL Server Express|Gestione report|http://\<nomeserver > / /reports_sqlexpress|http://\<nomeserver >: 80/reports_sqlexpress|  
+|Istanza denominata|servizio Web ReportServer|http://\<nomeserver > / ReportServer _\<NomeIstanza >|http://\<nomeserver >: 80/reportserver_\<NomeIstanza >|  
+|Istanza denominata|Gestione report|http://\<nomeserver > / Reports _\<NomeIstanza >|http://\<nomeserver >: 80/reports_\<NomeIstanza >|  
+|SQL Server Express|servizio Web ReportServer|http://\<nomeserver > / reportserver_SQLExpress|http://\<nomeserver >: 80/reportserver_SQLExpress|  
+|SQL Server Express|Gestione report|http://\<nomeserver > / reports_SQLExpress|http://\<nomeserver >: 80/reports_SQLExpress|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticazione e identità del servizio per gli URL di Reporting Services  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] specificano l'account del servizio del server di report. L'account con cui viene eseguito il servizio viene utilizzato per tutti gli URL creati per le applicazioni di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in esecuzione nella stessa istanza. L'identità del servizio dell'istanza del server di report viene archiviata nel file RSReportServer.config.  
@@ -119,7 +119,7 @@ ms.locfileid: "36054293"
   
 -   Anche se per i prodotti e le tecnologie SharePoint sono state definite prenotazioni URL, è possibile ignorare la prenotazione in caso di pubblicazione nel server. Per le applicazioni Web di SharePoint, la prenotazione URL è un'operazione interna.  
   
--   Per distribuzioni a server singolo in cui un server di report integrato e l'istanza della tecnologia SharePoint sono installati nello stesso computer, non è possibile utilizzare http://localhost/reportserver. Se http://localhost viene utilizzato per accedere all'applicazione Web di SharePoint, è necessario utilizzare un sito Web non predefinito o un'assegnazione di porta univoco per accedere a un server di report. Se, inoltre, il server di report è integrato con una farm di SharePoint, l'accesso tramite localhost a un server di report non verrà risolto per i nodi presenti nella distribuzione installati in computer remoti.  
+-   Per distribuzioni a server singolo in cui un server di report integrato e l'istanza della tecnologia SharePoint sono installati nello stesso computer, è possibile utilizzare http://localhost/reportserver. Se http://localhost viene usato per accedere all'applicazione Web di SharePoint, è necessario utilizzare un sito Web non predefinito o un'assegnazione di porta univoco per accedere a un server di report. Se, inoltre, il server di report è integrato con una farm di SharePoint, l'accesso tramite localhost a un server di report non verrà risolto per i nodi presenti nella distribuzione installati in computer remoti.  
   
 -   Non è possibile configurare l'endpoint e la prenotazione URL per Gestione report per un server di report in esecuzione in modalità integrata SharePoint. Se si esegue tale configurazione, Gestione report non funzionerà in seguito alla distribuzione di un server di report in modalità integrata SharePoint. Gestione report non è supportato in tale modalità.  
   

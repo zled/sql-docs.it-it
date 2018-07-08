@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
 caps.latest.revision: 51
-author: markingmyname
-ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 417c2a44536a4f7a1c9ed9ade7d789e20e024874
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 8599cb6c4390b0e204bde2b02a36729cf3b48dcc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062597"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148722"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lezione 1: Creazione di un progetto server report (Reporting Services)
   Per creare un report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], è innanzitutto necessario creare un progetto server di report in cui verranno salvati il file della definizione del report (con estensione rdl) e altri file di risorse necessari per il report. Verrà quindi creato il file della definizione del report, verranno definiti un'origine dei dati per il report, un set di dati e il layout del report. Quando si esegue il report, i dati effettivi vengono recuperati e combinati con il layout, e quindi visualizzati sullo schermo. Sarà quindi possibile esportarli, stamparli o salvarli.  
@@ -28,7 +28,7 @@ ms.locfileid: "36062597"
   
 ### <a name="to-create-a-report-server-project"></a>Per creare un progetto server di report  
   
-1.  Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], quindi fare clic su **SQL Server Data Tools**. Se questa è la prima volta che è stata aperta [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], fare clic su **Impostazioni Business Intelligence** per le impostazioni di ambiente predefinite.  
+1.  Fare clic su **avviare**, scegliere **tutti i programmi**, scegliere [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], quindi fare clic su **SQL Server Data Tools**. Se questa è la prima volta che è stato aperto [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], fare clic su **Impostazioni Business Intelligence** per le impostazioni di ambiente predefinite.  
   
 2.  Scegliere **Nuovo** dal menu **File**e quindi fare clic su **Progetto**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36062597"
   
 ### <a name="to-create-a-new-report-definition-file"></a>Per creare un nuovo file di definizione del report  
   
-1.  In Esplora soluzioni fare doppio clic su **rapporti**, scegliere **Add**, fare clic su **nuovo elemento**.  
+1.  In Esplora soluzioni fare doppio clic su **Reports**, scegliere **Add**, fare clic su **nuovo elemento**.  
   
     > [!NOTE]  
     >  Se la finestra **Esplora soluzioni** non è visualizzata, scegliere **Esplora soluzioni** dal menu **Visualizza**.  

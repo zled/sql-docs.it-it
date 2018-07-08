@@ -1,5 +1,5 @@
 ---
-title: Data Mining nuove interfacce Query | Documenti Microsoft
+title: Data Mining nuove interfacce Query | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
 - predictions [DMX]
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 caps.latest.revision: 49
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3ee9db3934e1f9f89a4bbbb292a4dcea4bc7b7bb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 07641be25c1e7828238ea4a6dd897240651735ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054894"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159652"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfacce di query di data mining
   Le query di data mining sono basate sul linguaggio DMX (Data Mining Extensions). È possibile utilizzare DMX per tutte le attività di stima e di modellazione, tra cui la classificazione, l'analisi dei rischi, la generazione di indicazioni e la regressione lineare. È inoltre possibile recuperare i modelli e le statistiche generate durante l'elaborazione del modello.  
@@ -38,7 +38,7 @@ ms.locfileid: "36054894"
   
  [Strumenti di query](#bkmk_Tools)  
   
--   [generatore delle query di stima](#bkmk_Builder)  
+-   [Generatore di query di stima](#bkmk_Builder)  
   
 -   [Editor query](#bkmk_QueryEditor)  
   
@@ -62,10 +62,10 @@ ms.locfileid: "36054894"
 ###  <a name="bkmk_Builder"></a> generatore delle query di stima  
  Il generatore delle query di stima è incluso nella scheda **Stima modello di data mining** di Progettazione modelli di data mining, disponibile in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]e [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
- Quando si utilizza il generatore delle query, è possibile utilizzare strumenti grafici per selezionare un modello di data mining e aggiungere nuovi dati del case e funzioni di stima. Il generatore di Query di stima include un editor di testo che è possibile utilizzare per modificare la query manualmente e un semplice **risultati** riquadro per visualizzare i risultati della query.  
+ Quando si utilizza il generatore delle query, è possibile utilizzare strumenti grafici per selezionare un modello di data mining e aggiungere nuovi dati del case e funzioni di stima. Il generatore di Query di stima include un editor di testo che è possibile usare per modificare la query manualmente e un semplice **risultati** riquadro per visualizzare i risultati della query.  
   
 ###  <a name="bkmk_QueryEditor"></a> Editor query  
- Editor di Query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sono disponibili strumenti che è possibile utilizzare per compilare ed eseguire query DMX. È possibile connettersi a un'istanza di SQL Server Analysis Services e selezionare un database, le colonne della struttura di data mining e un modello di data mining. **Visualizzatore metadati** contiene un elenco di funzioni di stima che è possibile esplorare.  
+ Editor di Query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fornisce strumenti che è possibile usare per compilare ed eseguire query DMX. È possibile connettersi a un'istanza di SQL Server Analysis Services e selezionare un database, le colonne della struttura di data mining e un modello di data mining. **Visualizzatore metadati** contiene un elenco di funzioni di stima che è possibile esplorare.  
   
 ###  <a name="bkmk_Templates"></a> Modelli DMX  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] include modelli di query DMX interattivi che consentono di compilare query di questo tipo. Se l'elenco di modelli non è visualizzato, fare clic su **Visualizza** sulla barra degli strumenti e selezionare **Esplora modelli**. Per visualizzare tutti i modelli di Analysis Services, inclusi i modelli per DMX, MDX e XMLA, fare clic sull'icona del cubo.  
@@ -95,11 +95,11 @@ ms.locfileid: "36054894"
 -   Per recuperare il **contenuto del modello** e i **metadati del modello**, ad esempio il numero di cluster, gli attributi usati negli alberi delle decisioni, la data dell'ultima elaborazione del modello e i parametri dell'algoritmo usati durante la creazione del modello, è possibile usare il [metodo Discover &#40;XMLA&#41;](../xmla/xml-elements-methods-discover.md) e specificare uno dei set di righe dello schema di data mining nell'intestazione dell'[elemento RequestType &#40;XMLA&#41;](../xmla/xml-elements-properties/type-element-xmla.md). Per restringere l'ambito della query, immettere i criteri come restrizioni all'interno dell'elemento [RestrictionList Element &#40;XMLA&#41;](../xmla/xml-elements-properties/restrictionlist-element-xmla.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Estensioni Data Mining &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Le estensioni di Data Mining di dati &#40;DMX&#41; riferimento](/sql/dmx/data-mining-extensions-dmx-reference)   
  [Soluzioni di Data Mining](data-mining-solutions.md)   
  [Informazioni sull'istruzione DMX Select](/sql/dmx/understanding-the-dmx-select-statement)   
  [Struttura e l'utilizzo di query di stima DMX](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)   
- [Creare una Query di stima utilizzando Generatore di Query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)   
+ [Creare una Query di stima utilizzando Generatore Query di stima](create-a-prediction-query-using-the-prediction-query-builder.md)   
  [Creare una query DMX in SQL Server Management Studio](create-a-dmx-query-in-sql-server-management-studio.md)  
   
   

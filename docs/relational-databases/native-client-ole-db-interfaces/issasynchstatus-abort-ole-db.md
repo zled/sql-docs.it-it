@@ -1,12 +1,12 @@
 ---
-title: 'Issasynchstatus:: Abort (OLE DB) | Documenti Microsoft'
+title: 'Issasynchstatus:: Abort (OLE DB) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 apiname:
@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0262e1ffee1998fe661e7f6f950c05159fc695dd
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 3edaceb5802299ec8637634bf0006fb66d5d6851
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698218"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408680"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,18 +68,18 @@ HRESULT Abort(
  Il *hChapter* parametro non è DB_NULL_HCHAPTER oppure *eOperation* non è DBASYNCH_OPEN.  
   
  E_UNEXPECTED  
- **Issasynchstatus:: Abort** è stato chiamato su un oggetto di origine dati su cui **IDBInitialize:: Initialize** non è stato chiamato o non è stata completata.  
+ **Issasynchstatus:: Abort** è stato chiamato su un oggetto origine dati in cui **IDBInitialize:: Initialize** non è stato chiamato, o non è stata completata.  
   
- **Issasynchstatus:: Abort** è stato chiamato su un oggetto di origine dati su cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduta. L'oggetto origine dati è ancora non inizializzato.  
+ **Issasynchstatus:: Abort** è stato chiamato su un oggetto origine dati in cui **IDBInitialize:: Initialize** è stato chiamato ma successivamente annullato prima dell'inizializzazione o è scaduta. L'oggetto origine dati è ancora non inizializzato.  
   
- **Issasynchstatus:: Abort** è stato chiamato su un set di righe in cui **ITransaction:: commit** o **ITransaction:: Abort** è stato chiamato in precedenza, e il set di righe non sono stati restare attiva quando il commit o interrompere e in uno stato non valido.  
+ **Issasynchstatus:: Abort** è stato chiamato su un set di righe in cui **ITransaction:: commit** oppure **ITransaction:: Abort** è stato chiamato in precedenza, e il set di righe non vengono conservati dopo il commit o interrompere ed è in uno stato non valido.  
   
  **Issasynchstatus:: Abort** è stato chiamato su un set di righe annullato in modo asincrono nella fase di inizializzazione. Il set di righe si trova in uno stato non valido.  
   
-## <a name="remarks"></a>Remarks  
- L'interruzione dell'inizializzazione di un oggetto di origine dati o set di righe potrebbero lasciare l'oggetto di origine dati o set di righe in uno stato non valido, in modo che tutti i metodi diverso da **IUnknown** metodi restituiscono E_UNEXPECTED. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  
+## <a name="remarks"></a>Note  
+ L'interruzione dell'inizializzazione di un oggetto di origine dati o set di righe abbia lasciato l'oggetto origine dati o set di righe in uno stato non valido, in modo che tutti i metodi diverso da **IUnknown** metodi restituiscono E_UNEXPECTED. Quando ciò accade, l'unica azione possibile per il consumer consiste nel rilasciare il set di righe o l'oggetto origine dati.  
   
- La chiamata **issasynchstatus:: Abort** e passa un valore per *eOperation* diverso da DBASYNCHOP_OPEN restituisce S_OK. Questo non implica che l'operazione sia stata completata o annullata.  
+ La chiamata **issasynchstatus:: Abort** e passando un valore *eOperation* diverso da DBASYNCHOP_OPEN restituisce S_OK. Questo non implica che l'operazione sia stata completata o annullata.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Esecuzione di operazioni asincrone](../../relational-databases/native-client/features/performing-asynchronous-operations.md)  

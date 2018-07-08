@@ -1,5 +1,5 @@
 ---
-title: Pianificare per il supporto di Report mappa | Documenti Microsoft
+title: Piano di supporto dei Report mappa | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 caps.latest.revision: 10
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: cf56a62b3ef129d9d725aa54d05544f776d4f6ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8bfe76929c3f9b50e59cc276385b815973a0d06c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36056098"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163752"
 ---
 # <a name="plan-for-map-report-support"></a>Pianificare il supporto dei report mappa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] supporta i report di mappa che utilizzano origini dati spaziali. I dati spaziali possono provenire da database di SQL Server, da file di forma ESRI o dalla raccolta mappe installata con Reporting Services o Generatore report. In una mappa è inoltre possibile visualizzare uno sfondo a sezioni di Bing Map. L'autore del report è possibile creare un report che specifica i dati spaziali o sezioni di Bing map come dinamici e recuperati in fase di esecuzione o come statici e incorporati nella definizione del report.  
@@ -51,9 +51,9 @@ ms.locfileid: "36056098"
   
 -   Quando i dati mappa devono essere incorporati, regolare il centro del viewport e il livello di zoom per includere solo i dati mappa necessari per il report.  
   
- Per ulteriori informazioni [Maps &#40;Generatore Report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
+ Per altre informazioni, [Maps &#40;Generatore Report e SSRS&#41;](report-design/maps-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Risolvere i problemi di report: Eseguire il mapping di report &#40;SSRS e Generatore Report&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Risolvere i problemi di report: I report di mappa &#40;Report e SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

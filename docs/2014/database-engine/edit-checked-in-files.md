@@ -1,5 +1,5 @@
 ---
-title: Modificare i file archiviati | Documenti Microsoft
+title: Modificare i file archiviati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - modifying checked-in files
 - checking in files
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fd91efe4bd802a64ced4e6f93ac65f16ed4e5a71
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 3e705b2b62631e0d6747c5112c0efc66f3bfddf6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055345"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165292"
 ---
 # <a name="edit-checked-in-files"></a>Modificare i file archiviati
   Prima di poter modificare i file inclusi nel controllo del codice sorgente in genere è necessario estrarli. È tuttavia possibile configurare [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per poter modificare i file che non sono stati estratti. In questo caso le modifiche verranno conservate in memoria fino al salvataggio dei file. In seguito verrà chiesto di estrarre il file dal controllo del codice di origine.  
@@ -33,9 +33,9 @@ ms.locfileid: "36055345"
   
 1.  Scegliere **Opzioni** dal menu **Strumenti**.  
   
-2.  Nel **opzioni** finestra di dialogo espandere i **controllo del codice**l cartella e quindi fare clic su **ambiente**.  
+2.  Nel **le opzioni** finestra di dialogo espandere il **controllo del codice sorgente**l cartella e quindi fare clic su **ambiente**.  
   
-3.  Fare clic su **consentire degli elementi archiviati essere modificato**, quindi fare clic su **OK**.  
+3.  Fare clic su **consentire archiviato in modifica degli elementi**, quindi fare clic su **OK**.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Gestione delle archiviazioni](../../2014/database-engine/manage-checkins.md)   

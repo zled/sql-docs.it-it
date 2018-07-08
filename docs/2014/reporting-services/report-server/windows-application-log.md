@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows application logs [Reporting Services]
 - logs [Reporting Services], Windows application logs
@@ -17,19 +17,19 @@ ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 caps.latest.revision: 31
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: c8fab15175eddb015bac7bd96d97bceba1fbd076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5cc0848226b80c2c77345ed737f8acff68eba5bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062592"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150062"
 ---
 # <a name="windows-application-log"></a>Registro applicazioni di Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] i messaggi di evento vengono inseriti nel registro applicazioni di Windows. in modo da consentire l'individuazione degli eventi generati dalle applicazioni del server di report in esecuzione nel sistema locale.  
   
 ## <a name="viewing-report-server-events"></a>Visualizzazione degli eventi del server di report  
- Per visualizzare il registro e filtrare i messaggi in esso contenuti, è possibile utilizzare il Visualizzatore eventi. Per ulteriori informazioni sui messaggi di evento, vedere [errori e riferimento agli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md). Per ulteriori informazioni sul registro applicazioni di Windows e sul Visualizzatore eventi, vedere la documentazione di Windows.  
+ Per visualizzare il registro e filtrare i messaggi in esso contenuti, è possibile utilizzare il Visualizzatore eventi. Per altre informazioni sui messaggi di evento, vedere [errori e gli eventi riferimento &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md). Per ulteriori informazioni sul registro applicazioni di Windows e sul Visualizzatore eventi, vedere la documentazione di Windows.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dispone di tre origini dell'evento:  
   
@@ -53,6 +53,6 @@ ms.locfileid: "36062592"
   
 ## <a name="see-also"></a>Vedere anche  
  [File di log e origini di Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Gli errori e riferimento agli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Gli errori e riferimento degli eventi &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

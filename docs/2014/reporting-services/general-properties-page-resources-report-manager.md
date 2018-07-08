@@ -1,5 +1,5 @@
 ---
-title: Pagina delle proprietà generale, risorse (gestione Report) | Documenti Microsoft
+title: Pagina delle proprietà generale, le risorse (gestione Report) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 caps.latest.revision: 25
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: aff68336e0ca68a315d8b2cdab6bd783c87c5f7f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269cd82820bb8e07ec1ac66ccc8d3e8b8ceeb43a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062810"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164178"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Pagina delle proprietà Generale, Risorse (Gestione report)
   La pagina delle proprietà Generale per le risorse consente di rinominare, eliminare, spostare o sostituire una risorsa. Nella parte superiore della pagina viene visualizzato il nome dell'utente che ha aggiunto la risorsa o ne ha modificato le proprietà.  
@@ -39,7 +39,7 @@ ms.locfileid: "36062810"
   
 ## <a name="options"></a>Opzioni  
  **Nome**  
- Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ / * \< > | "o / quando si specifica un nome.  
+ Digitare un nome per la risorsa. Il nome deve includere almeno un carattere alfanumerico. È inoltre possibile utilizzare spazi e alcuni simboli. Non utilizzare i caratteri ; ? : @ & = +, $ / * \< > | "oppure / per specificare un nome.  
   
  **Descrizione**  
  Consente di digitare una descrizione della risorsa. Questa descrizione viene visualizzata nella pagina Contenuto per gli utenti autorizzati ad accedere alla risorsa.  
