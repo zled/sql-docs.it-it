@@ -1,5 +1,5 @@
 ---
-title: Completamento procedura guidata (Creazione guidata Data Mining) | Documenti Microsoft
+title: Completamento procedura guidata (Creazione guidata di Data Mining dati) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.finish.f1
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 caps.latest.revision: 27
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 1d013993f9a8e99898b78cfa520c474c788ac294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 729d594d2ab714770ec168a347e044aa968d9865
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278427"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Completamento procedura guidata (Creazione guidata modello di data mining)
   Usare la pagina **Completamento procedura guidata** per esaminare la struttura di data mining che verrà creata al termine della procedura guidata. È anche possibile modificare il nome della struttura di data mining.  
@@ -64,8 +64,8 @@ ms.locfileid: "36063967"
 >  Questa opzione è disponibile se sono state selezionate le opzioni **Da cubo esistente** nella pagina **Selezione metodo di definizione** e **Crea dimensione del modello di data mining** nella pagina corrente della procedura guidata.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data Mining della Guida F1 di procedura guidata &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Selezionare una vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
+ [I dati della Guida F1 di procedura guidata di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Selezione vista origine dati &#40;Creazione guidata di Data Mining&#41;](select-data-source-view-data-mining-wizard.md)   
  [Specificare i dati di Training &#40;Creazione guidata di Data Mining&#41;](specify-the-training-data-data-mining-wizard.md)  
   
   

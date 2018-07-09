@@ -1,12 +1,12 @@
 ---
-title: Metadati del catalogo | Documenti Microsoft
+title: Metadati del catalogo | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,20 +17,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: cd2567eac8a3bc7624af9b980c76eb2b7c6720bc
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 457f25d5429eccf2c253bb6b39fbae40b43d100a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35700382"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420380"
 ---
 # <a name="metadata---catalog"></a>Metadati - catalogo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  In questo argomento descrive i metadati della colonna restituito da **SQLColumns** e **SQLProcedureColumns**, e il tipo di dati metadati restituiti da **SQLGetTypeInfo**.  
+  In questo argomento descrive i metadati della colonna restituiti da **SQLColumns** e **SQLProcedureColumns**, i metadati restituiti da tipi di dati **SQLGetTypeInfo**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  I valori di colonna seguenti vengono restituiti per i tipi di data/ora da **SQLColumns** e **SQLProcedureColumns**.  
   
 |Tipo di parametro|Data|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
@@ -71,6 +71,6 @@ ms.locfileid: "35700382"
 |USERTYPE|0|0|12|22|0|0|  
   
 ## <a name="see-also"></a>Vedere anche  
- [I metadati &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
+ [Metadati &#40;ODBC&#41;](http://msdn.microsoft.com/library/99133efc-b1f2-46e9-8203-d90c324a8e4c)  
   
   

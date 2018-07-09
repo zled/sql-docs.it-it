@@ -1,12 +1,12 @@
 ---
-title: Supporto del tipo di dati per ODBC Data e ora miglioramenti | Documenti Microsoft
+title: Supporto per tipo di dati per ODBC Date e miglioramenti per la fase | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 970e40843b11679df67de56995606d077b583d1e
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 0c7ff2ba90e04165649bf30087cf1d4e8e9aae0f
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702632"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37431290"
 ---
-# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto tipo di dati per ODBC Data e ora miglioramenti
+# <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Supporto dei tipi di dati per ODBC Date e i miglioramenti di tempo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -140,9 +140,9 @@ typedef struct tagSS_TIMESTAMPOFFSET_STRUCT {
 } SQL_SS_TIMESTAMPOFFSET_STRUCT;  
 ```  
   
- Se il **timezone_hour** è negativo, il **timezone_minute** deve essere negativo o zero. Se il **timezone_hour** è un valore positivo, la **timezone_minute** deve essere positivo o zero. Se il **timezone_hour** è uguale a zero, i dispositivi**timezone_minute** può avere qualsiasi valore compreso tra -59 e + 59.  
+ Se il **timezone_hour** è negativo, il **timezone_minute** deve essere negativo o zero. Se il **timezone_hour** è un valore positivo, il **timezone_minute** deve essere positivo o zero. Se il **timezone_hour** è uguale a zero, la s**timezone_minute** può avere qualsiasi valore compreso nell'intervallo tra -59 e + 59.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Data e ora miglioramenti &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [Data e miglioramenti per la fase &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

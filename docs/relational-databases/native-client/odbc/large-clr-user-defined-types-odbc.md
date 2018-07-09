@@ -1,5 +1,5 @@
 ---
-title: Tipi definiti dall'utente CLR di grandi dimensioni (ODBC) | Documenti Microsoft
+title: Tipi definiti dall'utente CLR di grandi dimensioni (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -7,7 +7,7 @@ ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.component: native-client|ODBC
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -19,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: ec957ad4bc1ea32c885b51a940a793f84dbc6b73
-ms.sourcegitcommit: 1740f3090b168c0e809611a7aa6fd514075616bf
+ms.openlocfilehash: 14dcac32a0e8e6af89cf3f9dc87b2458a986a2ef
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32956626"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414420"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipi CLR definiti dall'utente di grandi dimensioni (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +32,9 @@ ms.locfileid: "32956626"
 
   In questo argomento vengono illustrate le modifiche apportate a ODBC in SQL Server Native Client per supportare i tipi CLR (Common Language Runtime) definiti dall'utente (UDT) di grandi dimensioni.  
   
- Per un esempio che illustra il supporto ODBC per i tipi UDT di grandi dimensioni CLR, vedere [il supporto per i tipi UDT di grandi dimensioni](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
+ Per un esempio che illustra il supporto ODBC per i tipi UDT CLR di grandi dimensioni, vedere [supporto per i tipi UDT di grandi dimensioni](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md).  
   
- Per ulteriori informazioni sul supporto per grandi tipi definiti dall'utente CLR in SQL Server Native Client, vedere [Large CLR User-Defined tipi](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
+ Per altre informazioni sul supporto per i tipi UDT CLR di grandi dimensioni in SQL Server Native Client, vedere [Large CLR User-Defined tipi](../../../relational-databases/native-client/features/large-clr-user-defined-types.md).  
   
 ## <a name="data-format"></a>Formato dati  
  SQL Server Native Client utilizza SQL_SS_LENGTH_UNLIMITED per indicare che le dimensioni di una colonna sono maggiori di 8.000 byte per i tipi LOB (Large Object). A partire da SQL Server 2008, lo stesso valore viene utilizzato per i tipi CLR definiti dall'utente quando le dimensioni sono maggiori di 8.000 byte.  
@@ -43,15 +43,15 @@ ms.locfileid: "32956626"
   
  Nella tabella seguente viene illustrato il mapping dei tipi di dati nei parametri e nei set di risultati:  
   
-|Tipo di dati di SQL Server|Tipo di dati SQL|Value|  
+|Tipo di dati di SQL Server|Tipo di dati SQL|valore|  
 |--------------------------|-------------------|-----------|  
 |tipo CLR definito dall'utente|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- Nella tabella seguente vengono illustrati il tipo ODBC C e la struttura corrispondente. CLR UDT è essenzialmente un **varbinary** tipo con metadati aggiuntivi.  
+ Nella tabella seguente vengono illustrati il tipo ODBC C e la struttura corrispondente. In pratica, CLR UDT è un **varbinary** tipo con metadati aggiuntivi.  
   
 |Tipo di dati SQL|Layout in memoria|Tipo di dati C|Valore (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
-|SQL_SS_UDT|SQLCHAR *(unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
+|SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
 ## <a name="descriptor-fields-for-parameters"></a>Campi di descrizione per i parametri  
  Di seguito sono riportate le informazioni restituite nei campi IPD:  
@@ -129,7 +129,7 @@ ms.locfileid: "32956626"
 |SS_UDT_SCHEMA_NAME|Nome dello schema che contiene il tipo definito dall'utente.|Nome dello schema che contiene il tipo definito dall'utente.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nome completo del tipo definito dall'utente.|Nome completo del tipo definito dall'utente.|  
   
- Le ultime tre colonne sono specifiche del driver. Vengono aggiunti dopo tutte le colonne definite da ODBC, ma prima le colonne esistenti specifiche del driver del set di risultati di SQLColumns o SQLProcedureColumns.  
+ Le ultime tre colonne sono specifiche del driver. Vengono aggiunti dopo tutte le colonne definite da ODBC, ma prima di tutte le colonne specifiche del driver esistente del set di risultati di SQLColumns o SQLProcedureColumns.  
   
  Viene restituita alcuna riga da SQLGetTypeInfo, per singoli tipi definiti dall'utente o per il tipo generico "udt".  
   
@@ -139,7 +139,7 @@ ms.locfileid: "32956626"
 |Conversione da e verso:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Supportato *|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|Supportato|  
 |SQL_C_CHAR|Supportato *|  
   
  \* Dati binari vengono convertiti in una stringa esadecimale.  
@@ -149,10 +149,10 @@ ms.locfileid: "32956626"
 |Conversione da e verso:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Supportato *|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|Supportato|  
 |SQL_C_CHAR|Supportato *|  
   
- \* Si verifica stringa esadecimale alla conversione di dati binari.  
+ \* Si verifica la stringa esadecimale alla conversione di dati binari.  
   
 ## <a name="sqlvariant-support-for-udts"></a>Supporto di SQL_VARIANT per i tipi definiti dall'utente  
  I tipi definiti dall'utente non sono supportati nelle colonne SQL_VARIANT.  
@@ -219,7 +219,7 @@ ms.locfileid: "32956626"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  I valori restituiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Lunghezza|Precisione|Scala|  
+|Tipo di dati SQL|Tipo|Sottotipo|Length|Precisione|Scala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -239,7 +239,7 @@ ms.locfileid: "32956626"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  I valori consentiti per i tipi definiti dall'utente sono i seguenti:  
   
-|Tipo di dati SQL|Tipo|Sottotipo|Lunghezza|Precisione|Scala|  
+|Tipo di dati SQL|Tipo|Sottotipo|Length|Precisione|Scala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (lunghezza minore o uguale a 8.000 byte)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (lunghezza maggiore di 8.000 byte)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

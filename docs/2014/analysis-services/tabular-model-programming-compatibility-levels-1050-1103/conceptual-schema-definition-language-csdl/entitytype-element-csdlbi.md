@@ -1,5 +1,5 @@
 ---
-title: Elemento EntityType (CSDLBI) | Documenti Microsoft
+title: Elemento EntityType (CSDLBI) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: 372e2c13-ec38-4bb1-981c-50758d59a1da
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 530608169372a06a50bdf613668f5650a5caecc8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f4f2697b3616e2a47e32b87913c49f76e009153a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062955"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277597"
 ---
 # <a name="entitytype-element-csdlbi"></a>Elemento EntityType (CSDLBI)
   L'elemento `EntityType` è un tipo complesso che rappresenta la struttura di un'entità ad alto livello, ad esempio un cliente o un ordine, nel modello di dati. Il `bi:EntityType` elemento estende la definizione di [EntityType](http://msdn.microsoft.com/library/bb399206.aspx) utilizzata nel [Entity Data Framework](http://msdn.microsoft.com/library/bb399567.aspx).  
@@ -33,11 +33,11 @@ ms.locfileid: "36062955"
 |nome|Obbligatorio|Description|  
 |----------|-----------------|-----------------|  
 |Sommario|no|Stringa contenente i possibili tipi di dati in una colonna. Il valore è derivato dal valore di DimensionAttributeTypeEnumType nel modello di dati.<br /><br /> Se il valore di DimensionAttributeTypeEnumType è "ExtendedType", il valore del contenuto è derivato dall'elemento ExtendedType di DimensionAttribute. Il client non è necessario per rispondere a tali valori.|  
-|DefaultDetails|no|Elenco di riferimenti a proprietà che rappresentano il set di colonne nella tabella.<br /><br /> Vedere [elemento DefaultDetails &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md).|  
-|DefaultImage|no|Riferimento a una colonna contenente l'immagine che illustra l'entità.<br /><br /> Nei modelli multidimensionali, questo elemento corrisponde a un attributo binario dell'attributo della dimensione. Se questo attributo è presente, l'elemento deve contenere un solo elemento MemberRef.<br /><br /> Vedere [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
-|DefaultMeasure|no|Riferimento a una misura dell'entità che deve essere utilizzato come impostazione predefinita durante l'esecuzione dei calcoli dell'entità. Se omesso, il valore predefinito è SUM.<br /><br /> Vedere [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
-|DisplayKey|no|Elenco di riferimenti a colonne o estremità del ruolo che costituiscono un identificatore sicuro che identifica in modo univoco un'istanza di entità.<br /><br /> Vedere [elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
-|Gerarchia|no|Elenco delle gerarchie nel modello.<br /><br /> Vedere [elemento Hierarchy &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
+|DefaultDetails|no|Elenco di riferimenti a proprietà che rappresentano il set di colonne nella tabella.<br /><br /> Visualizzare [elemento DefaultDetails &#40;CSDLBI&#41;](defaultdetails-element-csdlbi.md).|  
+|DefaultImage|no|Riferimento a una colonna contenente l'immagine che illustra l'entità.<br /><br /> Nei modelli multidimensionali, questo elemento corrisponde a un attributo binario dell'attributo della dimensione. Se questo attributo è presente, l'elemento deve contenere un solo elemento MemberRef.<br /><br /> Visualizzare [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
+|DefaultMeasure|no|Riferimento a una misura dell'entità che deve essere utilizzato come impostazione predefinita durante l'esecuzione dei calcoli dell'entità. Se omesso, il valore predefinito è SUM.<br /><br /> Visualizzare [elemento MemberRef &#40;CSDLBI&#41;](memberref-element-csdlbi.md).|  
+|DisplayKey|no|Elenco di riferimenti a colonne o estremità del ruolo che costituiscono un identificatore sicuro che identifica in modo univoco un'istanza di entità.<br /><br /> Visualizzare [elemento DisplayKey &#40;CSDLBI&#41;](displaykey-element-csdlbi.md).|  
+|Gerarchia|no|Elenco delle gerarchie nel modello.<br /><br /> Visualizzare [elemento Hierarchy &#40;CSDLBI&#41;](hierarchy-element-csdlbi.md).|  
 |ReferenceName|Sì|Identificatore che può essere utilizzato per fare riferimento a questa entità in una query DAX (Data Analysis Expressions).<br /><br /> Se tale attributo non è presente, viene utilizzato il nome completo del campo dell'entità.|  
 |SortMembers|no|Elenco di proprietà utilizzato per l'ordinamento. L'attributo SortDirection indica se l'ordinamento è crescente o decrescente.|  
   

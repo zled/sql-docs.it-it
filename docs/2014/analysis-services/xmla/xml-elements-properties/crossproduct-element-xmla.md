@@ -1,5 +1,5 @@
 ---
-title: Elemento CrossProduct (XMLA) | Documenti Microsoft
+title: Elemento CrossProduct (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CrossProduct element
 ms.assetid: a9a1584e-d2dd-45db-a918-d694c20d8189
 caps.latest.revision: 12
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1324a3c9449383301242ab6d0e76f94c636d9b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: a0d76cc463d39a3b33de41f1c342f5d9f8f800bb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36062978"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278230"
 ---
 # <a name="crossproduct-element-xmla"></a>Elemento CrossProduct (XMLA)
-  Contiene un prodotto incrociato tra set ordinati di membri da ogni gerarchia per un [asse](axis-element-xmla.md) elemento che utilizza il [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo di dati restituito dal [Execute](../xml-elements-methods-execute.md) metodo.  
+  Contiene un prodotto incrociato tra set ordinati di membri da ogni gerarchia per un [asse](axis-element-xmla.md) elemento che utilizza il [MDDataSet](../xml-data-types/mddataset-data-type-xmla.md) tipo di dati restituito dai [Execute](../xml-elements-methods-execute.md) (metodo).  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -69,10 +69,10 @@ ms.locfileid: "36062978"
   
 |attribute|Description|  
 |---------------|-----------------|  
-|Dimensione|Richiesto `Integer` attributo. Indica il numero di tuple contenuto nel prodotto-incrociato rappresentato dall'elemento `CrossProduct`.|  
+|Dimensione|Obbligatorio `Integer` attributo. Indica il numero di tuple contenuto nel prodotto-incrociato rappresentato dall'elemento `CrossProduct`.|  
   
-## <a name="remarks"></a>Remarks  
- Quando un'applicazione client imposta la `AxisFormat` proprietà da *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri da ogni gerarchia. Ogni cluster è rappresentato da un elemento `CrossProduct`. Ogni elemento `CrossProduct` contiene un elemento `Members` per ogni gerarchia sull'asse. Un elemento `CrossProduct` può contenere membri da una sola gerarchia.  
+## <a name="remarks"></a>Note  
+ Quando un'applicazione client imposta la `AxisFormat` proprietà *ClusterFormat*, i membri su ogni asse sono divisi in cluster in cui ogni cluster rappresenta un prodotto incrociato tra set ordinati di membri da ogni gerarchia. Ogni cluster è rappresentato da un elemento `CrossProduct`. Ogni elemento `CrossProduct` contiene un elemento `Members` per ogni gerarchia sull'asse. Un elemento `CrossProduct` può contenere membri da una sola gerarchia.  
   
 ## <a name="example"></a>Esempio  
  Nell'esempio seguente viene illustrata la struttura del `CrossProduct` elemento quando un client specifica *ClusterFormat* per il `AxisFormat` proprietà XMLA, presupponendo i membri seguenti per l'asse:  

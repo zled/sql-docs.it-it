@@ -1,5 +1,5 @@
 ---
-title: Claims nel servizio Token Windows (C2WTS) e Reporting Services | Documenti Microsoft
+title: Claims nel servizio Token Windows (C2WTS) e Reporting Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2016
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - c2wts.exe.config
 - SharePoint mode
@@ -18,16 +18,16 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 479be89681f7c34558c5a7e89d54023feb110d60
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a44f0beff9bd3351265caca0ee9490a7c6aeeb
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278187"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Attestazioni per il servizio token Windows (C2WTS) e Reporting Services
-  Il componente attestazioni per il servizio Token Windows (c2WTS) è necessario con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint se si desidera utilizzare l'autenticazione di windows per le origini dati all'esterno della farm di SharePoint. La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
+  Il componente attestazioni per il servizio Token Windows (c2WTS) è obbligatorio con [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modalità SharePoint, se si desidera utilizzare l'autenticazione di windows per origini dati all'esterno della farm di SharePoint. La condizione è valida anche se l'utente accede alla origini dati tramite l'autenticazione di Windows perché la comunicazione tra il server front-end Web e il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso sarà sempre un'autenticazione delle attestazioni.  
   
  Il servizio c2WTS è necessario anche se l'origine dati si trova nello stesso computer del servizio condiviso, sebbene in questo scenario la delega vincolata non sia richiesta.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "36063529"
   
     -   Accedi come servizio  
   
-     Inoltre, l'account usato per c2WTS deve essere configurato per la delega vincolata con transizione di protocollo e necessita di autorizzazioni per la delega ai servizi è necessario per comunicare con (ad esempio motore di SQL Server, SQL Server Analysis Services). Per configurare la delega è possibile utilizzare lo snap-in utenti Active Directory e Computer.  
+     Inoltre, l'account usato per c2WTS deve essere configurato per la delega vincolata con transizione di protocollo e necessita delle autorizzazioni per delegare ai servizi è necessario per comunicare con (ad esempio motore di SQL Server, SQL Server Analysis Services). Per configurare la delega è possibile utilizzare lo snap-in Active Directory Users e Computer.  
   
     1.  Fare clic con il pulsante destro del mouse su ogni account del servizio e aprire la finestra di dialogo delle proprietà. Nella finestra di dialogo fare clic sulla scheda **Delega** .  
   
@@ -103,7 +103,7 @@ ms.locfileid: "36063529"
 4.  Avviare Attestazioni per il servizio token Windows di Share Point tramite Amministrazione centrale SharePoint nella pagina **Gestisci servizi nel server** . Il servizio deve essere avviato nel server che eseguirà l'azione. Ad esempio, in presenza di un front-end Web e di un server applicazioni in cui è in esecuzione il servizio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] condiviso, è sufficiente avviare c2WTS solo sul server applicazioni. c2WTS non è necessario nel front-end Web.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Le attestazioni al servizio Token Windows (c2WTS) (panoramicahttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
+ [Attestazioni per il servizio Token Windows (c2WTS) (panoramicahttp://msdn.microsoft.com/library/ee517278.aspx)](http://msdn.microsoft.com/library/ee517278.aspx)   
  [Panoramica dell'autenticazione Kerberos per prodotti Microsoft SharePoint 2010 (http://technet.microsoft.com/library/gg502594.aspx)](http://technet.microsoft.com/library/gg502594.aspx)  
   
   

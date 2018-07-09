@@ -1,12 +1,12 @@
 ---
-title: Set di righe e cursori del Server SQL | Documenti Microsoft
+title: I set di righe e cursori SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +21,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 64ac951a3df348910f368c5944196d45c11c95c4
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 248e8e523e5ad261c261c1eb47d6cc0f64ee58fa
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35703312"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412169"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Set di righe e cursori di Server SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "35703312"
   
     -   Non supportano le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] che restituiscono più di un singolo set di risultati.  
   
- I consumer possono richiedere comportamenti del cursore diversi in un set di righe attraverso l'impostazione di determinate proprietà specifiche del set di righe. Se il consumer non imposta una di queste proprietà set di righe o le imposta tutte sui rispettivi valori predefiniti, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa il set di righe utilizzando un set di risultati predefinito. Se una di queste proprietà è impostata su un valore diverso da quello predefinito, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa il set di righe utilizzando un cursore del server.  
+ I consumer possono richiedere comportamenti del cursore diversi in un set di righe attraverso l'impostazione di determinate proprietà specifiche del set di righe. Se il consumer non imposta una di queste proprietà set di righe o le imposta tutte sui rispettivi valori predefiniti, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa il set di righe usando un set di risultati predefinito. Se una di queste proprietà è impostata su un valore diverso da quello predefinito, il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client implementa il set di righe utilizzando un cursore server.  
   
  Le proprietà del set di righe seguenti impostano il provider OLE DB di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client sull'utilizzo dei cursori [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Alcune proprietà possono essere combinate con altre senza rischi. Un set di righe che indica le proprietà DBPROP_IRowsetScroll e DBPROP_IRowsetChange, ad esempio, sarà un set di righe del segnalibro che esibisce un comportamento di aggiornamento immediato. Altre proprietà si escludono a vicenda. Un set di righe che esibisce DBPROP_OTHERINSERT, ad esempio, non può contenere segnalibri.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "35703312"
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta solo lo scorrimento in avanti. Il posizionamento relativo delle righe è supportato. Il testo del comando può includere una clausola ORDER BY se nelle colonne di riferimento esiste un indice.<br /><br /> DBPROP_IMMOBILEROWS è disponibile solo in set di righe che possono mostrare righe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserite dai comandi in altre sessioni o da altri utenti. Il tentativo di aprire un set di righe con la proprietà impostata su VARIANT_FALSE in qualsiasi set di righe per il quale DBPROP_OTHERINSERT non può essere VARIANT_TRUE genera un errore.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Non è possibile aggiornare i dati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tramite il set di righe. Il set di righe supporta solo lo scorrimento in avanti. Il posizionamento relativo delle righe è supportato. Il testo del comando può contenere una clausola ORDER BY a meno che non sia vincolato da un'altra proprietà.|  
   
- A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe di provider OLE DB Native Client supportato da un cursore del server possono essere creati facilmente in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabella di base o una vista utilizzando il **IOpenRowset:: OPENROWSET** metodo. Specificare la tabella o vista in base al nome, passando il set di righe richiesto proprietà consente di impostare il *rgPropertySets* parametro.  
+ Oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe di provider OLE DB Native Client supportato da un cursore server possono essere creati facilmente in un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] della tabella di base o una vista tramite il **IOpenRowset:: OPENROWSET** (metodo). Specificare la tabella o vista in base al nome, passando il set di righe necessarie proprietà consente di impostare il *rgPropertySets* parametro.  
   
  Il testo del comando che crea un set di righe è limitato quando il consumer prevede che il set di righe sia supportato da un cursore del server. In particolare, il testo del comando è limitato a una singola istruzione SELECT che restituisce un solo risultato del set di righe o a una stored procedure che implementa una singola istruzione SELECT che restituisce un solo risultato del set di righe.  
   
@@ -152,9 +152,9 @@ ms.locfileid: "35703312"
  Dalla raccolta specificata di proprietà del set di righe, ottenere un subset di proprietà elencate nelle tabelle precedenti. Dividere queste proprietà in due sottogruppi a seconda del valore del flag, obbligatorio (T, F) o facoltativo (-), di ogni proprietà del set di righe. Per ogni modello di cursore, iniziare dalla prima tabella e spostarsi da sinistra verso destra. Confrontare i valori delle proprietà nei due sottogruppi e i valori delle proprietà corrispondenti in quella colonna. Verrà selezionato il modello di cursore in cui corrispondono include tutte le proprietà obbligatorie e con il minor numero di proprietà facoltative non corrispondenti. Se è disponibile più di un modello di cursore, verrà scelto quello all'estrema sinistra.  
   
 ## <a name="sql-server-cursor-block-size"></a>Dimensioni del blocco del cursore di SQL Server  
- Quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursore supporterà un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rowset di provider OLE DB Native Client, il numero di elementi nella riga gestione parametro di matrice del **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt**  metodi definisce la dimensione del blocco del cursore. Le righe indicate dagli handle nella matrice rappresentano i membri del blocco del cursore.  
+ Quando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursore supporterà una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] set di righe del provider OLE DB Native Client, il numero di elementi nella riga gestione parametri di matrice del **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt**  metodi definisce la dimensione del blocco del cursore. Le righe indicate dagli handle nella matrice rappresentano i membri del blocco del cursore.  
   
- Per il set di righe che supportano i segnalibri, gli handle di riga recuperati tramite il **IRowsetLocate:: Getrowsbybookmark** il metodo per definire i membri del blocco del cursore.  
+ Per i set di righe che supportano i segnalibri, gli handle di riga recuperati tramite il **IRowsetLocate:: Getrowsbybookmark** metodo per definire i membri del blocco del cursore.  
   
  Indipendentemente dal metodo utilizzato per popolare il set di righe e formare il blocco del cursore [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il blocco del cursore è attivo fino all'esecuzione del metodo di recupero righe successivo sul set di righe.  
   

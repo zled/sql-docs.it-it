@@ -1,12 +1,12 @@
 ---
-title: Stabilire una connessione a un'origine dati | Documenti Microsoft
+title: Stabilire una connessione a un'origine dei dati | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,24 +20,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 77451d4ef65c23466005bd46a46e1f556643cda3
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6c11867c12a05656c74fa01ebc05a7a805bdac71
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35702922"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425970"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Avvio di una connessione a un'origine dati
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  Per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il **CoCreateInstance** metodo. Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, l'identificatore di classe è CLSID_SQLNCLI10. È inoltre possibile utilizzare il simbolo SQLNCLI_CLSID risolverà il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client che viene utilizzato nel SQLNCLI. h che si fa riferimento.  
+  Per l'accesso di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, il consumer deve prima creare un'istanza di un oggetto origine dati chiamando il **CoCreateInstance** (metodo). Un identificatore univoco di classe (CLSID) identifica ogni provider OLE DB. Per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client, l'identificatore di classe è CLSID_SQLNCLI10. È anche possibile usare il simbolo SQLNCLI_CLSID che verrà risolta nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provider OLE DB Native Client utilizzato nel SQLNCLI. h che si fa riferimento.  
   
- L'origine dati oggetto espone il **IDBProperties** interfaccia, il consumer utilizza per fornire informazioni di autenticazione di base, ad esempio nome del server, nome del database, ID utente e password. Il **IDBProperties:: SetProperties** metodo viene chiamato per impostare queste proprietà.  
+ I dati di origine oggetto espone le **IDBProperties** interfaccia, utilizzata dal consumer per fornire informazioni di autenticazione di base, ad esempio nome del server, nome del database, ID utente e password. Il **IDBProperties:: SetProperties** viene chiamato per impostare queste proprietà.  
   
  Se nel computer sono in esecuzione più istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il nome del server viene specificato come NomeServer\NomeIstanza.  
   
- L'oggetto origine dati espone anche il **IDBInitialize** interfaccia. Dopo aver configurate le proprietà, viene stabilita connessione all'origine dati chiamando il **IDBInitialize:: Initialize** metodo. Esempio:  
+ L'oggetto origine dati espone anche il **IDBInitialize** interfaccia. Una volta impostate le proprietà, viene stabilita connessione all'origine dati chiamando il **IDBInitialize:: Initialize** (metodo). Esempio:  
   
 ```  
 CoCreateInstance(CLSID_SQLNCLI10,   

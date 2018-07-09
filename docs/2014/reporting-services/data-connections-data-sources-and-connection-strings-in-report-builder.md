@@ -1,5 +1,5 @@
 ---
-title: Connessioni dati, origini dati e stringhe di connessione in Generatore Report | Documenti Microsoft
+title: Connessioni dati, origini dati e stringhe di connessione in Generatore Report | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10421"
 ms.assetid: 7e103637-4371-43d7-821c-d269c2cc1b34
 caps.latest.revision: 13
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: d8a958e8549d5c3204e18af02a19194de8904682
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f27dbcf0375f7acc1e478cce2cd148b5efc03ec9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066720"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183878"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>Connessioni dati, origini dati e stringhe di connessione in Generatore report
   Per includere dati in un report, è possibile creare connessioni dati e set di dati. In una connessione dati sono incluse informazioni sulla modalità di accesso a un'origine dati esterna. In un set di dati è incluso un comando di query che consente di specificare i dati da includere tramite la connessione dati.  
@@ -38,7 +38,7 @@ ms.locfileid: "36066720"
   
 6.  **Origini dati esterne** È possibile recuperare dati da database relazionali, database multidimensionali, elenchi SharePoint, servizi Web o modelli di report.  
   
- Per altre informazioni, vedere [incorporata e condivisa connessioni dati o origini dati &#40;Generatore Report e SSRS&#41; ](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
+ Per altre informazioni, vedere [incorporate e condivise le connessioni dati o origini dati &#40;Generatore Report e SSRS&#41; ](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) e [connessioni dati, origini dati e stringhe di connessione in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
  I dati possono anche essere inclusi in un report tramite origini dati condivise predefinite, set di dati condivisi e parti del report. Tali elementi dispongono già delle informazioni necessarie sulla connessione dati. Per altre informazioni, vedere [aggiungere dati a un Report &#40;Generatore Report e SSRS&#41;](report-data/report-datasets-ssrs.md).  
   
@@ -52,11 +52,11 @@ ms.locfileid: "36066720"
   
 |**Origine dati**|**Esempio**|**Descrizione**|  
 |---------------------|-----------------|---------------------|  
-|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel server locale|`data source="(local)";initial catalog=AdventureWorks2012`|Impostare il tipo di origine dati su `SQL Server`.|  
-|Database dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati su `SQL Server`.|  
-|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati su `SQL Server`.|  
-|Database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel server locale|`data source=localhost;initial catalog=Adventure Works DW 2012`|Impostare il tipo di origine dati su `SQL Server Analysis Services`.|  
-|Elenco SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Impostare il tipo di origine dati su `SharePoint List`.|  
+|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nel server locale|`data source="(local)";initial catalog=AdventureWorks2012`|Impostare il tipo di origine dati `SQL Server`.|  
+|Database dell'istanza di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|`Data Source=localhost\MSSQL12.InstanceName; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati `SQL Server`.|  
+|Database di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express|`Data Source=localhost\MSSQL12.SQLEXPRESS; Initial Catalog= AdventureWorks2012`|Impostare il tipo di origine dati `SQL Server`.|  
+|Database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nel server locale|`data source=localhost;initial catalog=Adventure Works DW 2012`|Impostare il tipo di origine dati `SQL Server Analysis Services`.|  
+|Elenco SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Impostare il tipo di origine dati `SharePoint List`.|  
 ||||  
 |Modelli di report|Non applicabile.|Non è necessaria una stringa di connessione per un modello di report. In Generatore report individuare il server di report e selezionare il file con estensione smdl che rappresenta il modello di report.|  
 |Server Oracle|`data source=myserver`|Impostare il tipo di origine dati su `Oracle`. È necessario installare gli strumenti client Oracle nel computer di Generatore report e nel server di report.|  
@@ -68,7 +68,7 @@ ms.locfileid: "36066720"
 |Origine dati XML, documento XML|`http://localhost/XML/Customers.xml`|Impostare il tipo di origine dati su `XML`. La stringa di connessione è un URL per il documento XML.|  
 |Origine dati XML, documento XML incorporato|*Vuoto*|Impostare il tipo di origine dati su `XML`. I dati XML vengono incorporati nella definizione del report.|  
   
- Per ulteriori informazioni su ogni tipo di connessione, vedere [aggiungere i dati da origini dati esterne &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) e [origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ Per altre informazioni su ogni tipo di connessione, vedere [aggiungere dati da origini dati esterne &#40;SSRS&#41; ](report-data/add-data-from-external-data-sources-ssrs.md) e [origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 
   
@@ -78,12 +78,12 @@ ms.locfileid: "36066720"
 > [!NOTE]  
 >  Alcuni tipi di credenziali potrebbero non supportare tutti gli scenari utilizzati da Generatore report: per eseguire una query in Progettazione query, visualizzare l'anteprima di un report dal computer in uso quando non si è connessi a un server di report ed eseguire il report dal server di report. Si consiglia di utilizzare le origini dati condivise tutte le volte che è consentito. È possibile archiviare le credenziali per un'origine dati condivisa sul server di report. Per altre informazioni, vedere [Specifica di credenziali in Generatore report](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
- Per creare un'origine dati condivisa, è necessario utilizzare Gestione Report per creare l'origine dati direttamente nel server di report o utilizzare un ambiente di creazione quale progettazione Report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [creare un'origine dati condivisa o un incorporata &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
+ Per creare un'origine dati condivisa, è necessario utilizzare Gestione Report per creare l'origine dati direttamente nel server di report, oppure usare un ambiente di creazione quale progettazione Report in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Per altre informazioni, vedere [creare un'origine dati condivisa o un Embedded &#40;SSRS&#41;](../../2014/reporting-services/create-an-embedded-or-shared-data-source-ssrs.md).  
   
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)   
- [Parti di report &#40;SSRS e Generatore Report&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)   
+ [Parti di report &#40;Report e SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

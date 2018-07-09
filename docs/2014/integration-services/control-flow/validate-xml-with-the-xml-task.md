@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - XML validation
 - XML, validating
@@ -16,27 +16,27 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: b66fe56d1309f3ebe0e16177ff1372ea0fa1692f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8ea74ad195b97541147c3d1b19dc01c5033b962c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067233"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37182828"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
-  Convalidare documenti XML e ottenere output avanzato degli errori abilitando la `ValidationDetails` proprietà dell'attività XML.  
+  Convalidare i documenti XML e ottenere output avanzato degli errori abilitando la `ValidationDetails` proprietà dell'attività XML.  
   
  L'immagine seguente mostra l' **Editor attività XML** con le impostazioni necessarie per la convalida di XML con l'output di errore completo.  
   
  ![Proprietà attività XML nell'Editor attività XML](../media/xmltaskproperties.jpg "Proprietà attività XML nell'Editor attività XML")  
   
- Prima di `ValidationDetails` proprietà era disponibile, la convalida XML dall'attività XML restituiva solo un risultato true o false, senza informazioni sugli errori o le relative posizioni sulle. A questo punto, quando si imposta `ValidationDetails` su true, l'output file contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML.  
+ Prima di `ValidationDetails` proprietà è disponibile, convalida di XML da parte dell'attività XML restituiva solo un risultato true o false, senza informazioni sugli errori o le relative posizioni sulle. A questo punto, quando si imposta `ValidationDetails` su true, l'output file contiene informazioni dettagliate su ogni errore, inclusi il numero di riga e la posizione. È possibile usare questa informazione per comprendere, individuare e risolvere gli errori nei documenti XML.  
   
  La funzionalità di convalida XML è facilmente scalabile per documenti XML di grandi dimensioni e un numero elevato di errori. Dato che il file di output è in formato XML, è possibile eseguire una query e analizzare l'output. Ad esempio, se l'output contiene un numero elevato di errori, è possibile raggrupparli usando un [!INCLUDE[tsql](../../../includes/tsql-md.md)] , come descritto in questo argomento.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introdotto il `ValidationDetails` proprietà [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è anche disponibile in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) introdotta la `ValidationDetails` in proprietà [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. La proprietà è anche disponibile in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] e in SQL Server 2016.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Esempio di output per un file XML valido  
  Ecco un file di output di esempio con i risultati della convalida per un file XML valido.  

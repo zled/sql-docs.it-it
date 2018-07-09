@@ -1,12 +1,12 @@
 ---
-title: La creazione dei set di righe di parametri con valori di tabella | Documenti Microsoft
+title: Creazione di set di righe di parametri con valori di tabella | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: connectivity
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5477da1ff6f857334b6ebaf71ab4f7890edc1891
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: 6932538ac699d4a8c1e0dbb5d2cbef93a29511df
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35701722"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37432360"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creazione di un set di righe di parametri con valori di tabella
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,27 +37,27 @@ ms.locfileid: "35701722"
   
  Il *guid* campo (*pTableID* parametro) contiene il GUID speciale (CLSID_ROWSET_TVP). Il *pwszName* membro contiene il nome del tipo di parametro con valori di tabella che il consumer desidera creare un'istanza. Il *eKind* campo verrà impostato su DBKIND_GUID_NAME. Questo nome è necessario quando si tratta di un'istruzione SQL ad hoc; il nome è facoltativo se è una chiamata di procedura.  
   
- Per l'aggregazione, il consumer passa il *pUnkOuter* parametro con l'interfaccia IUnknown di controllo.  
+ Per l'aggregazione il consumer passa il *pUnkOuter* parametro con l'interfaccia IUnknown di controllo.  
   
- Le proprietà dell'oggetto set di righe di parametri con valori di tabella sono di sola lettura, pertanto il consumer non deve impostare alcuna proprietà *rgPropertySets*.  
+ Le proprietà dell'oggetto parametro con valori di tabella di righe sono di sola lettura, in modo che il consumer non deve impostare alcuna proprietà *rgPropertySets*.  
   
  Per il *rgPropertySets* membro di ogni struttura DBCOLUMNDESC, il consumer può specificare proprietà aggiuntive per ogni colonna. Queste proprietà appartengono al set di proprietà DBPROPSET_SQLSERVERCOLUMN. Tali proprietà consentono di specificare le impostazioni predefinite e calcolate per ogni colonna. Supportano inoltre le proprietà esistenti della colonna, ad esempio nullability e identity.  
   
  Per recuperare le informazioni corrispondenti da un oggetto set di righe di parametri con valori di tabella, il consumer utilizza IRowsetInfo:: GetProperties.  
   
- Per recuperare informazioni su null, univoco, calcolata e aggiornare lo stato di ogni colonna, il consumer utilizzare IColumnsRowset:: GetColumnsRowset o IColumnsInfo:: GetColumnInfo. Questi metodi forniscono informazioni dettagliate su ogni colonna del set di righe di parametri con valori di tabella.  
+ Per recuperare informazioni su null, univoco, calcolata e aggiornare lo stato di ogni colonna, il consumer utilizza IColumnsRowset:: o IColumnsInfo:: GetColumnInfo. Questi metodi forniscono informazioni dettagliate su ogni colonna del set di righe di parametri con valori di tabella.  
   
  Il consumer specifica il tipo di ogni colonna del parametro con valori di tabella, analogamente al modo in cui vengono specificate le colonne quando viene creata una tabella in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il consumer Ottiene un oggetto set di righe di parametri con valori di tabella dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider OLE DB tramite il *ppRowset* parametro di output.  
   
 ## <a name="dynamic-scenario"></a>Scenario dinamico  
- Quando il consumer non dispone di informazioni sul tipo, è necessario utilizzare IOpenRowset:: OPENROWSET per creare istanze di oggetti set di righe di parametri con valori di tabella. L'unica informazione che il consumer deve fornire al provider è il nome del tipo.  
+ Quando il consumer non dispone di informazioni sul tipo, IOpenRowset:: OPENROWSET da usare per creare istanze degli oggetti set di righe di parametri con valori di tabella. L'unica informazione che il consumer deve fornire al provider è il nome del tipo.  
   
  In questo scenario, il provider ottiene le informazioni sul tipo relative a un oggetto set di righe di parametri con valori di tabella dal server per conto del consumer.  
   
- Il *pTableID* e *pUnkOuter* parametri devono essere impostati come nello scenario statico. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Provider OLE DB Native Ottiene le informazioni sul tipo (informazioni sulle colonne e vincoli) dal server, quindi restituire un oggetto set di righe di parametri con valori di tabella tramite il *ppRowset* parametro. Questa operazione richiede la comunicazione con il server e pertanto non viene eseguita, nonché lo scenario statico. Lo scenario dinamico funziona solo con le chiamate di procedura con parametri.  
+ Il *pTableID* e *pUnkOuter* parametri devono essere impostati come nello scenario statico. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Provider OLE DB Native quindi Ottiene le informazioni sul tipo (informazioni sulle colonne e vincoli) dal server e restituire un oggetto set di righe di parametri con valori di tabella tramite il *ppRowset* parametro. Questa operazione richiede la comunicazione con il server e pertanto non viene eseguita rispetto allo scenario statico. Lo scenario dinamico funziona solo con le chiamate di procedura con parametri.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Table-Valued Parameters &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
- [Utilizzare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
+ [I parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
+ [Usare parametri con valori di tabella &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

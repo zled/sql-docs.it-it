@@ -1,5 +1,5 @@
 ---
-title: Pianificazione dell'aggiornamento dati e origini dati che non supportano l'autenticazione di Windows (PowerPivot per SharePoint) | Documenti Microsoft
+title: Pianificazione dell'aggiornamento dati e origini dati che non supportano l'autenticazione di Windows (PowerPivot per SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 caps.latest.revision: 8
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28ab8ddcc8ef6a866992cdf7a2fabe75a5a30878
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 474308339c112899787a4b6344bbe53622f4fff7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230101"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Pianificazione dell'aggiornamento dati e origini dati che non supportano l'autenticazione di Windows (PowerPivot per SharePoint)
   Questo argomento descrive un flusso di lavoro della pianificazione di un aggiornamento dati di PowerPivot per SharePoint in cui è possibile usare origini dati che **NON** supportano l'autenticazione di Windows, ad esempio origini dati Oracle o IDM DB2. Le illustrazioni e i passaggi presenti in questo argomento fanno riferimento alle origini dati Oracle ma lo stesso flusso di lavoro è valido anche per altre origini dati.  
@@ -78,7 +78,7 @@ ms.locfileid: "36064132"
   
 9. Fare clic su **OK**.  
   
-10. Il nuovo ID applicazione di destinazione verrà aggiunto all'elenco. Selezionare l'ID applicazione di destinazione e fare clic su **Imposta credenziali**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. Il nuovo ID applicazione di destinazione verrà aggiunto all'elenco. Selezionare l'ID applicazione di destinazione e fare clic su **impostare le credenziali**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Digitare il Nome utente Windows e la Password Windows e quindi fare clic su **OK**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "36064132"
   
 2.  Fare clic sul nome dell'applicazione del servizio di archiviazione sicura.  
   
-3.  Nel **Manage** fare clic su **New**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
+3.  Nel **Manage** pagina, fare clic su **New**![as_powerpivot_refresh_sss_new_target_application](../media/as-powerpivot-refresh-sss-new-target-application.gif "as_powerpivot_refresh_sss_new_target_application ").  
   
 4.  Nella pagina **Crea nuova applicazione di destinazione dell'archiviazione sicura** configurare i valori seguenti:  
   
@@ -106,7 +106,7 @@ ms.locfileid: "36064132"
   
 6.  Nel **credenziali** pagina, modificare il nome del primo campo `Oracle User ID` e modificare le **tipo di campo** a `User Name`.  
   
-     Modificare il nome del campo secondo `Oracle Password` e il **tipo di campo** a `Password`.  
+     Modificare il secondo nome di campo in `Oracle Password` e il **tipo di campo** a `Password`.  
   
 7.  Scegliere **Avanti**.  
   
@@ -114,11 +114,11 @@ ms.locfileid: "36064132"
   
 9. Fare clic su **OK**.  
   
-10. Il nuovo ID applicazione di destinazione verrà aggiunto all'elenco. Selezionare l'ID applicazione di destinazione e fare clic su **Imposta credenziali**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
+10. Il nuovo ID applicazione di destinazione verrà aggiunto all'elenco. Selezionare l'ID applicazione di destinazione e fare clic su **impostare le credenziali**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Digitare l'ID utente Oracle e la Password Oracle e quindi fare clic su **OK**.  
   
- Per altre informazioni, vedere sezione "Per creare un'applicazione di destinazione per l'autenticazione di SQL Server" nella [utilizzare l'archiviazione sicura con autenticazione di SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
+ Per altre informazioni, vedere sezione "Per creare un'applicazione di destinazione per l'autenticazione di SQL Server" nella [Usa Secure Store con l'autenticazione di SQL Server (SharePoint Server 2013)](http://technet.microsoft.com/library/gg298949.aspx) (http://technet.microsoft.com/library/gg298949.aspx).  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Per configurare l'applicazione di servizio PowerPivot  
   
@@ -134,7 +134,7 @@ ms.locfileid: "36064132"
   
 ## <a name="to-configure-the-workbook"></a>Per configurare la cartella di lavoro  
   
-1.  Passare alla cartella di lavoro nella raccolta PowerPivot e fare clic su **Gestisci aggiornamento dati**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
+1.  Passare alla cartella di lavoro in raccolta PowerPivot e fare clic su **Gestisci aggiornamento dati**![as_powerpivot_refresh_manage_reresh](../media/as-powerpivot-refresh-manage-reresh.gif "as_powerpivot_refresh_manage_reresh").  
   
 2.  Se viene visualizzata la pagina **Cronologia aggiornamento dati** , fare clic su **Configura pianificazione**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ClrAssemblyFile (ASSL) | Documenti Microsoft
+title: Tipo di dati ClrAssemblyFile (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ClrAssemblyFile data type
 ms.assetid: 91074677-c149-483b-a56d-0e35d959d9eb
 caps.latest.revision: 41
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b542c4193d80fa80cc9aed6663f41e102266000b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebfcf0080184294cbbda05e671776972be18f9a1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063710"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277867"
 ---
 # <a name="clrassemblyfile-data-type-assl"></a>Tipo di dati ClrAssemblyFile (ASSL)
   Definisce un tipo di dati primitivo che rappresenta uno dei file che compongono un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] `Assembly` ([ClrAssembly](assembly-data-type-assl.md) elemento).  
@@ -58,10 +58,10 @@ ms.locfileid: "36063710"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[I dati](../objects/data-element-assl.md), [nome](../properties/name-element-assl.md), [tipo](../properties/type-element-clrassemblyfile-assl.md)|  
+|Elementi figlio|[I dati](../objects/data-element-assl.md), [Name](../properties/name-element-assl.md), [tipo](../properties/type-element-clrassemblyfile-assl.md)|  
 |Elementi derivati|[File](../objects/file-element-assl.md) ([file](../collections/files-element-assl.md) insieme [ClrAssembly](assembly-data-type-assl.md))|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vedere anche  
