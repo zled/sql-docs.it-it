@@ -1,5 +1,5 @@
 ---
-title: ODBC Destination Editor (pagina Gestione connessione) | Documenti Microsoft
+title: ODBC Destination Editor (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.connection.f1
 ms.assetid: f6d9c6c2-e4c4-468b-9e0d-af7b9609614d
 caps.latest.revision: 7
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ce1766615afb37976cc92c66c99de173ed3e9364
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5994e35479f73fb4bee3c062eb76858778a72d6d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067215"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158982"
 ---
 # <a name="odbc-destination-editor-connection-manager-page"></a>Editor destinazione ODBC (pagina Gestione connessione)
   Utilizzare la pagina **Gestione connessione** della finestra di dialogo **ODBC Destination Editor** per selezionare la gestione connessione ODBC per la destinazione. Tramite questa pagina è inoltre possibile selezionare una tabella o una vista del database  
@@ -62,6 +62,6 @@ ms.locfileid: "36067215"
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà personalizzate della destinazione ODBC](data-flow/odbc-destination-custom-properties.md)   
  [Editor destinazione ODBC &#40;pagina Mapping&#41;](../../2014/integration-services/odbc-destination-editor-mappings-page.md)   
- [Editor destinazione ODBC &#40;pagina di Output di errore&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [Editor destinazione ODBC &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

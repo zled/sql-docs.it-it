@@ -1,5 +1,5 @@
 ---
-title: Creazione di calcoli di celle con ambito Query (MDX) | Documenti Microsoft
+title: Creazione di calcoli di celle con ambito Query (MDX) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - WITH keyword
 - query-scoped cell calculations [MDX]
 ms.assetid: 45987daa-4400-41e9-add7-2428fd75709b
 caps.latest.revision: 30
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 34a26daaf3e1fc55eef72e9382cfe5586a00fb7a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5431862cd1a446a045d910841adc4d78d62d42be
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064134"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159392"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Creazione di formule per il calcolo di celle con ambito query (MDX)
   Nel linguaggio MDX (Multidimensional Expressions) è possibile utilizzare la parola chiave `WITH` per descrivere celle calcolate nel contesto di una query. Il `WITH` parola chiave ha la sintassi seguente:  
@@ -37,8 +37,8 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
 |--------------|-----------------|  
 |Set vuoto|Espressione set MDX che restituisce un set vuoto. In questo caso l'ambito della cella calcolata è costituito dall'intero cubo.|  
 |Set con un singolo membro|Espressione set MDX che restituisce un singolo membro.|  
-|Set di membri di un livello|Espressione set MDX che restituisce i membri di un singolo livello. Un esempio di un'espressione set di questo tipo è il *Level_Expression*.`Members` . Per includere i membri calcolati, utilizzare il *Level_Expression*.`AllMembers` . Per altre informazioni, vedere [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio di un'espressione set di questo tipo è il `Descendants`(*Member_Expression*, *Level_Expresion*, *Desc_Flag*) la funzione MDX. Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Set di membri di un livello|Espressione set MDX che restituisce i membri di un singolo livello. Un esempio di espressione set è il *Level_Expression*.`Members` . Per includere i membri calcolati, usare il *Level_Expression*.`AllMembers` . Per altre informazioni, vedere [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Set di discendenti|Espressione set MDX che restituisce i discendenti di un membro specificato. Un esempio di espressione set è il `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) funzione MDX. Per altre informazioni, vedere [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
  Se l'argomento `String_Expression` non descrive una dimensione, MDX presupporrà che tutti i membri debbano essere inclusi al fine di costruire il sottocubo per il calcolo. Se l'argomento `String_Expression` è NULL, la definizione delle celle calcolate verrà pertanto applicata all'intero cubo.  
   

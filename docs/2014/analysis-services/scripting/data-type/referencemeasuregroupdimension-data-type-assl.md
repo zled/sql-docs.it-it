@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati ReferenceMeasureGroupDimension (ASSL) | Documenti Microsoft
+title: Tipo di dati ReferenceMeasureGroupDimension (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - ReferenceMeasureGroupDimension data type
 ms.assetid: 81f7b83e-71a3-4eab-b291-0500d05903dc
 caps.latest.revision: 35
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 9ca3299aa36df705a107fac63bc5ae726b606e15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e8e2134f14ad34f14cbf1b7f6a2858fe14485bbe
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064992"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159310"
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Tipo di dati ReferenceMeasureGroupDimension (ASSL)
   Definisce un tipo di dati derivato che rappresenta una dimensione indirettamente correlata alla tabella dei fatti tramite una dimensione intermedia. Un gruppo di misure Sales può, ad esempio, fare riferimento a una dimensione Geography, correlata tramite la dimensione Customer.  
@@ -51,7 +51,7 @@ ms.locfileid: "36064992"
   
 |Caratteristica|Description|  
 |--------------------|-----------------|  
-|Tipi di dati di base|[MeasureGroupDimension](dimension-data-type-assl.md)|  
+|Tipi di dati di base|[Elemento MeasureGroupDimension](dimension-data-type-assl.md)|  
 |Tipi di dati derivati|None|  
   
 ## <a name="data-type-relationships"></a>Relazioni di tipo di dati  
@@ -59,10 +59,10 @@ ms.locfileid: "36064992"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[IntermediateCubeDimensionID](../properties/id-element-assl.md), [IntermediateGranularityAttributeID](../properties/attributeid-element-assl.md), [materializzazione di oggetti](../properties/materialization-element-assl.md)|  
+|Elementi figlio|[IntermediateCubeDimensionID](../properties/id-element-assl.md), [IntermediateGranularityAttributeID](../properties/attributeid-element-assl.md), [Materialization](../properties/materialization-element-assl.md)|  
 |Elementi derivati|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.ReferenceMeasureGroupDimension>.  
   
 ## <a name="see-also"></a>Vedere anche  

@@ -1,5 +1,5 @@
 ---
-title: Assegnare un nome corrispondente (guidata vista origine dati) (Analysis Services) | Documenti Microsoft
+title: Assegnare un nome corrispondente (guidata vista origine dati) (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.namematchingcriteria.f1
 ms.assetid: 7f811e02-0fe6-45c9-a7b7-29c61032d96b
 caps.latest.revision: 24
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: fcb6d01f55b450326efdea81d48135088d57fc3d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 258b23cc260ea4d31296aa00964138df399da516
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067079"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155382"
 ---
 # <a name="name-matching-data-source-view-wizard-analysis-services"></a>Corrispondenza nomi (Configurazione guidata vista origine dati) (Analysis Services)
   Utilizzare la pagina **Corrispondenza nomi** per selezionare il criterio da utilizzare per il rilevamento delle possibili relazioni esistenti tra le tabelle selezionate per la vista origine dati e le altre tabelle dello schema. Se non esistono relazioni fisiche di chiave esterna tra le tabelle, questo criterio consente all'utente di identificare e aggiungere tabelle correlate alla vista origine dati. Anche le relazioni logiche identificate mediante la corrispondenza dei nomi vengono aggiunte alla vista origine dati.  
@@ -30,7 +30,7 @@ ms.locfileid: "36067079"
 >  Questa pagina viene visualizzata solo se si seleziona un'origine dei dati che dispone di più tabelle ma non di relazioni di chiave esterna tra una delle tabelle.  
   
 ## <a name="options"></a>Opzioni  
- **Crea relazioni logiche individuando corrispondenti alle colonne**  
+ **Creare relazioni logiche facendo corrispondere le colonne**  
  Selezionare questa opzione per utilizzare un criterio di corrispondenza dei nomi che consenta di rilevare le possibili dipendenze e relazioni logiche esistenti tra le tabelle che si desidera includere nella vista origine dati e le altre tabelle dello schema. Se questa casella di controllo viene deselezionata, non viene utilizzato alcun criterio di corrispondenza dei nomi per identificare le relazioni logiche esistenti tra le tabelle dell'origine dei dati.  
   
  **Corrispondenze chiavi esterne**  

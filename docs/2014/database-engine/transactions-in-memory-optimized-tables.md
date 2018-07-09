@@ -1,5 +1,5 @@
 ---
-title: Transazioni in tabelle con ottimizzazione per la memoria | Documenti Microsoft
+title: Le transazioni nelle tabelle ottimizzate per la memoria | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2cd07d26-a1f1-4034-8d6f-f196eed1b763
 caps.latest.revision: 28
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: 7a1674d843f9701cf9eb2b2c41dad3dd4cbf7a0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d4f3f8fcac44dc238440006eddaf44681f8cbaee
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065200"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158872"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transazioni in tabelle con ottimizzazione per la memoria
   Il controllo delle versioni delle righe nelle tabelle basate su disco (tramite l'isolamento SNAPSHOT o READ_COMMITTED_SNAPSHOT) fornisce una forma di controllo della concorrenza ottimistica. Lettori e writer non si bloccano reciprocamente. Con le tabelle ottimizzate per la memoria i writer non bloccano writer. Nel caso di controllo delle versioni delle righe in tabelle basate su disco, una transazione blocca la riga e il tentativo di aggiornare la riga da parte di transazioni simultanee viene impedito. Per le tabelle ottimizzate per la memoria non vengono attivati blocchi. Al contrario, se due transazioni tentano di aggiornare la stessa riga, si verificherà un conflitto di scrittura/scrittura (errore 41302).  
@@ -54,7 +54,7 @@ ms.locfileid: "36065200"
  Se inoltre una transazione (TxA) legge righe che sono state inserito o modificate da un'altra transazione (TxB) che sono in fase di commit, verrà applicato il presupposto ottimistico che l'altra transazione sarà sottoposta a commit, anziché attendere l'esecuzione del commit. In questo caso, la transazione TxA avrà una dipendenza di commit dalla transazione TxB.  
   
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>Controlli relativi a rilevamento di conflitti, convalida e dipendenza di commit  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono rilevati i conflitti tra le transazioni simultanee, nonché le violazioni del livello di isolamento, e viene eliminata una delle transazioni in conflitto. L'esecuzione di tale transazione dovrà essere tentata di nuovo. (Per altre informazioni, vedere [linee guida per la logica di tentativi per le transazioni nelle tabelle con ottimizzazione per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vengono rilevati i conflitti tra le transazioni simultanee, nonché le violazioni del livello di isolamento, e viene eliminata una delle transazioni in conflitto. L'esecuzione di tale transazione dovrà essere tentata di nuovo. (Per altre informazioni, vedere [linee guida per la logica di tentativi per le transazioni nelle tabelle ottimizzate per la memoria](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)  
   
  Viene applicato automaticamente il presupposto ottimistico che non siano presenti conflitti né violazioni di isolamento delle transazioni. Se si verificano conflitti che possono causare incoerenze nel database o violare l'isolamento delle transazioni, tali conflitti vengono rilevati e la transazione viene terminata.  
   
@@ -103,7 +103,7 @@ Durata di una transazione che accede a tabelle ottimizzate per la memoria.
  All'inizio della fase di convalida, alla transazione viene assegnata un'ora di fine logica. Le versioni di riga scritte nel database diventano visibili ad altre transazioni all'ora di fine logica. Per altre informazioni, vedere [dipendenze di Commit](#cd).  
   
 ##### <a name="repeatable-read-validation"></a>Convalida di lettura ripetibile  
- Se il livello di isolamento della transazione è REPEATABLE READ o SERIALIZABLE oppure se le tabelle sono accessibili nel livello di isolamento REPEATABLE READ o SERIALIZABLE (per altre informazioni, vedere la sezione sull'isolamento di singole operazioni in [delle transazioni I livelli di isolamento](../../2014/database-engine/transaction-isolation-levels.md)), il sistema convalida che le letture siano ripetibili. Ciò significa che viene confermato che le versioni delle righe lette dalla transazione sono ancora valide al momento dell'ora di fine logica della transazione.  
+ Se il livello di isolamento della transazione è REPEATABLE READ o SERIALIZABLE oppure se le tabelle sono accessibili nel livello di isolamento REPEATABLE READ o SERIALIZABLE (per altre informazioni, vedere la sezione sull'isolamento di singole operazioni in [delle transazioni I livelli di isolamento](../../2014/database-engine/transaction-isolation-levels.md)), il sistema verifica che le letture siano ripetibili. Ciò significa che viene confermato che le versioni delle righe lette dalla transazione sono ancora valide al momento dell'ora di fine logica della transazione.  
   
  Se una qualsiasi delle righe è stata aggiornata o modificata, il commit della transazione non viene eseguito con l'errore 41305 (analogo a "Impossibile eseguire il commit della transazione corrente a causa di un errore di convalida di lettura ripetibile").  
   
@@ -136,6 +136,6 @@ Durata di una transazione che accede a tabelle ottimizzate per la memoria.
 -   Le tabelle con ottimizzazione per la memoria non supportano alcun blocco. I blocchi espliciti tramite hint di blocco (ad esempio TABLOCK, XLOCK, ROWLOCK) non sono supportati con le tabelle ottimizzate per la memoria.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Informazioni sulle transazioni nelle tabelle con ottimizzazione per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
+ [Informazioni sulle transazioni in tabelle con ottimizzazione per la memoria](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)  
   
   

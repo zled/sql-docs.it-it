@@ -1,5 +1,5 @@
 ---
-title: Opzioni (pagina generale di Editor di testo - testo normale -) | Documenti Microsoft
+title: Opzioni (pagina Editor di testo - testo normale - generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.General
 ms.assetid: 53bfa594-ba36-4c9c-8dd5-4c2dcce7d2dc
 caps.latest.revision: 22
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e46857d3ea3078847e2c540999f37cef79d05091
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b66c8286d3ae062307175e689f222f33ea3be6a0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067243"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150992"
 ---
 # <a name="options-text-editor---plain-text---general-page"></a>Opzioni (Editor di testo - Testo normale - pagina Generale)
   Utilizzare questa finestra di dialogo per cambiare il comportamento di modifica generale dell'editor di testo utilizzato per modificare un documento non associato a un dato linguaggio di sviluppo. Per visualizzare queste impostazioni scegliere **Opzioni** dal menu **Strumenti** , espandere **Editor di testo**, espandere **Testo normale** e quindi fare clic su **Generale**.  
@@ -30,7 +30,7 @@ ms.locfileid: "36067243"
  Le opzioni per l'editor di testo normale possono essere impostate anche nella finestra di dialogo **Tutti i linguaggi - Generale** . Se si utilizza la finestra di dialogo **Tutti i linguaggi** per impostare opzioni diverse per gli altri editor di [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , ad esempio DMX o MDX, è necessario reimpostare le opzioni dell'editor di testo normale tramite questa finestra di dialogo.  
   
 ## <a name="statement-completion"></a>Completamento istruzioni  
- **Elenco automatico membri**  
+ **Elenco membri automatico**  
  Questa caratteristica non è supportata dall'editor di testo normale.  
   
  **Nascondi membri avanzati**  
@@ -40,19 +40,19 @@ ms.locfileid: "36067243"
  Questa caratteristica non è supportata dall'editor di testo normale.  
   
 ## <a name="settings"></a>Impostazioni  
- **Abilita spazio virtuale**  
+ **Attiva spazio virtuale**  
  Consente di inserire spazi alla fine di ogni riga di testo. Selezionare la casella di controllo per inserire i commenti sempre nel medesimo punto accanto al testo.  
   
  **Ritorno a capo automatico**  
  Consente di visualizzare sulla riga successiva le parti di una riga che si estendono orizzontalmente oltre l'area visibile dell'editor. Se si seleziona questa casella di controllo, viene abilitata automaticamente l'opzione **Mostra icona per ritorno a capo automatico** .  
   
- **Mostra glifi per ritorno a capo automatico**  
+ **Mostra icone per ritorno a capo automatico**  
  Consente di visualizzare un simbolo di ritorno a capo nel punto in cui una riga lunga va a capo sulla riga successiva. Per non visualizzare questi indicatori, deselezionare la casella di controllo.  
   
 > [!NOTE]  
 >  I simboli di ritorno a capo non vengono aggiunti al codice, né stampati. Si tratta esclusivamente di elementi di riferimento.  
   
- **Applica comandi Taglia o copia a righe vuote quando assenza di selezione**  
+ **Applica comandi Taglia o copia a righe vuote quando è presente nessuna selezione**  
  Consente di impostare il comportamento dell'editor nei casi in cui si posiziona il punto di inserimento in una riga vuota senza selezionare alcun elemento e quindi si fa clic su **Copia** o **Taglia**.  
   
  Se la casella di controllo è selezionata, la riga vuota viene copiata o incollata. Se quindi si fa clic su **Incolla**, viene inserita una nuova riga vuota.  

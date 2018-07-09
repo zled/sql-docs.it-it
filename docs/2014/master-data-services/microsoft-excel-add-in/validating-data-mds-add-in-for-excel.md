@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 caps.latest.revision: 6
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 17a963b4ef2342e7c97069ce2ed7f5bd9eec6cd6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f2da7f9179f86b148d1f195121372ff9def985db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067612"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158852"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Convalida dei dati (componente aggiuntivo MDS per Excel)
   Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]quando si pubblicano i dati, vengono eseguiti due tipi di convalida:  
@@ -31,7 +31,7 @@ ms.locfileid: "36067612"
  In ogni caso, i dati validi vengono pubblicati nel repository MDS. I dati non validi vengono evidenziati e i dettagli dell'errore possono essere visualizzati nelle colonne di stato.  
   
 ## <a name="when-validation-occurs"></a>Esecuzione della convalida  
- Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], la convalida avviene quando si pubblicano dati nuovi o modificati oppure quando si applicano manualmente regole business.  
+ Nel [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], la convalida viene eseguita quando si pubblicano dati nuovi o modificati oppure quando si applicano manualmente regole business.  
   
  Quando le regole business hanno esito negativo, i dati vengono comunque pubblicati nel repository MDS. Quando la convalida dell'input ha esito negativo, i dati non vengono pubblicati nel repository.  
   

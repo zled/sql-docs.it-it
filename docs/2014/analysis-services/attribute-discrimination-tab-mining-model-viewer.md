@@ -1,5 +1,5 @@
 ---
-title: Attributo scheda Analisi discriminante tra (Visualizzatore modello di Data Mining) | Documenti Microsoft
+title: Scheda Analisi discriminante (Visualizzatore modello di Data Mining) dell'attributo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.naivebayse.discrimination.f1
 ms.assetid: 68323f23-121e-44fc-be85-6f9915d6d3c7
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 43ce0c215ac82eff64b688d6004dfd9c7af66266
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 2e661e6a993639d3eac86bd5fb45f607ba8d346f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067095"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161522"
 ---
 # <a name="attribute-discrimination-tab-mining-model-viewer"></a>Scheda Analisi discriminante attributi (Visualizzatore modello di data mining)
   Usare la scheda **Analisi discriminante attributi** per confrontare gli stati degli attributi di input e visualizzare la relativa correlazione con l'attributo risultante. I valori degli attributi che presentano le maggiori differenze tra i due stati di attributo stimabile selezionati vengono elencati per primi.  
@@ -47,7 +47,7 @@ ms.locfileid: "36067095"
  **Valore 2**  
  Consente di scegliere uno stato dell'attributo stimabile da confrontare con lo stato contenuto in **Valore 1**. È anche possibile selezionare **Tutti gli altri stati** per confrontare il valore in **Valore 1** con il relativo complemento, ovvero tutti gli altri valori eccetto Valore 1.  
   
- **Punteggi dell'analisi discriminante per \<1 valore > e \<valore 2 >**  
+ **Punteggi dell'analisi discriminante per \<1 valore > e \<2 valore >**  
  Nel grafico sono contenute le colonne seguenti in cui viene descritta la modalità di correlazione tra l'attributo di destinazione e gli stati specifici dell'attributo di input.  
   
 |valore|Description|  
@@ -59,7 +59,7 @@ ms.locfileid: "36067095"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmi di Data Mining &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visualizzatori modello di data mining](data-mining/data-mining-model-viewers.md)  
   
   

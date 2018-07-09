@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-xml
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - removing indexes
 - deleting indexes
@@ -34,18 +34,18 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: 58
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: aeb1c0f282e0cb46bcb1e35af933a67b84eb4e0d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 6842ef037bd8543a569449282886b9f943b8114f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066012"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152082"
 ---
 # <a name="xml-indexes-sql-server"></a>Indici XML (SQL Server)
-  È possibile creare indici XML in `xml` colonne con tipo di dati. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
+  È possibile creare indici XML su `xml` colonne con tipo di dati. Tutti i tag, i valori e i percorsi delle istanze XML presenti nella colonna vengono indicizzati, migliorando le prestazioni delle query. Per le applicazioni in uso l'utilizzo di un indice XML può risultare vantaggioso nelle situazioni seguenti:  
   
 -   Le query sulle colonne XML sono frequenti nel carico di lavoro. È necessario tenere in considerazione il costo di manutenzione dell'indice XML durante la modifica dei dati.  
   
@@ -76,12 +76,12 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  Per selezionare le istanze XML che soddisfano la condizione della clausola `WHERE` , gli oggetti BLOB XML in ogni riga della tabella `Production.ProductModel` vengono suddivisi in fase di esecuzione. In seguito, viene valutata l'espressione `(/PD:ProductDescription/@ProductModelID[.="19"]`) nel metodo `exist()` . La suddivisione in fase di esecuzione può essere costosa, a seconda delle dimensioni e del numero di istanze archiviate nella colonna.  
   
- Se l'esecuzione di query XML binary large object (BLOB) è comune nell'ambiente di applicazione, è utile indice la `xml` colonne di tipo. Tuttavia, la manutenzione dell'indice durante la modifica dei dati presuppone un costo associato.  
+ Se l'esecuzione di query XML binary large object (BLOB) è comune nell'ambiente dell'applicazione, facilitare l'indicizzazione di `xml` colonne di tipo. Tuttavia, la manutenzione dell'indice durante la modifica dei dati presuppone un costo associato.  
   
 ## <a name="primary-xml-index"></a>Indice XML primario  
  L'indice XML primario consente di indicizzare tutti i tag, i valori e i percorsi contenuti nelle istanze XML di una colonna XML. Per creare un indice XML primario, è necessario che la tabella contenente la colonna XML da indicizzare includa un indice cluster nella chiave primaria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa questa chiave primaria per correlare righe nell'indice XML primario con le righe nella tabella che contiene la colonna XML.  
   
- L'indice XML primario è una rappresentazione suddivisa e persistente dei blob XML nel `xml` colonna tipo di dati. Per ogni BLOB XML contenuto nella colonna, l'indice crea diverse righe di dati. Il numero di righe dell'indice corrisponde approssimativamente al numero di nodi del BLOB XML. Quando una query recupera l'istanza XML completa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'istanza dalla colonna XML. Le query all'interno delle istanze XML utilizzano l'indice XML primario e possono restituire valori scalari o sottoalberi XML utilizzando l'indice stesso.  
+ L'indice XML primario è una rappresentazione suddivisa e persistente del BLOB XML nel `xml` colonna tipo di dati. Per ogni BLOB XML contenuto nella colonna, l'indice crea diverse righe di dati. Il numero di righe dell'indice corrisponde approssimativamente al numero di nodi del BLOB XML. Quando una query recupera l'istanza XML completa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fornisce l'istanza dalla colonna XML. Le query all'interno delle istanze XML utilizzano l'indice XML primario e possono restituire valori scalari o sottoalberi XML utilizzando l'indice stesso.  
   
  In ogni riga vengono archiviate le informazioni seguenti:  
   
@@ -172,7 +172,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `/book[@* = "someValue"]` dove la query cerca l'elemento <`book`> che dispone di un qualche attributo con valore `"someValue"`.  
   
- La query seguente restituisce `ContactID` dalla tabella `Contact` . Il `WHERE` clausola specifica un filtro che esegue la ricerca di valori di `AdditionalContactInfo``xml` colonna di tipo. Gli ID dei contatti vengono restituiti solo se il BLOB XML con le informazioni aggiuntive corrispondenti include un numero di telefono specifico. Poiché l'elemento <`telephoneNumber`> può trovarsi ovunque nell'XML, l'espressione del percorso specifica l'asse discendente o stesso.  
+ La query seguente restituisce `ContactID` dalla tabella `Contact` . Il `WHERE` clausola che specifica un filtro che esegue la ricerca di valori nel `AdditionalContactInfo``xml` colonna di tipo. Gli ID dei contatti vengono restituiti solo se il BLOB XML con le informazioni aggiuntive corrispondenti include un numero di telefono specifico. Poiché l'elemento <`telephoneNumber`> può trovarsi ovunque nell'XML, l'espressione del percorso specifica l'asse discendente o stesso.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -187,7 +187,7 @@ WHERE  AdditionalContactInfo.exist('//ACT:telephoneNumber/ACT:number[.="111-111-
  In questo caso, il valore di ricerca di <`number`> è noto ma può trovarsi ovunque nell'istanza XML come figlio dell'elemento <`telephoneNumber`>. Per questo tipo di query può risultare utile eseguire una ricerca nell'indice basata su un valore specifico.  
   
 ### <a name="property-secondary-index"></a>Indice secondario PROPERTY  
- Per le query che recuperano uno o più valori da singole istanze XML può essere utile un indice PROPERTY. Questo scenario si verifica quando si recuperano proprietà dell'oggetto utilizzando il **Value ()** metodo il `xml` tipo e quando si conosce il valore di chiave primaria dell'oggetto.  
+ Per le query che recuperano uno o più valori da singole istanze XML può essere utile un indice PROPERTY. Questo scenario si verifica quando si recuperano proprietà dell'oggetto tramite il **Value ()** metodo il `xml` tipo e quando si conosce il valore di chiave primaria dell'oggetto.  
   
  L'indice PROPERTY viene compilato in base alle colonne PK e Path e al valore di nodo dell'indice XML primario, in cui PK è la chiave primaria della tabella di base.  
   
@@ -202,7 +202,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Ad eccezione delle differenze descritte più avanti in questo argomento, la creazione un indice XML in un`xml` è simile alla creazione di un indice su una colonna di tipo`xml` colonna di tipo. Per la creazione e la gestione di indici XML, è possibile utilizzare le istruzioni DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
+ Ad eccezione delle differenze descritte più avanti in questo argomento, la creazione un indice XML in un'`xml` è simile alla creazione di un indice su una colonna di tipo`xml` colonna di tipo. Per la creazione e la gestione di indici XML, è possibile utilizzare le istruzioni DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] seguenti:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

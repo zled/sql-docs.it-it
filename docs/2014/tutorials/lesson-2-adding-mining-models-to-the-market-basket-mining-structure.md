@@ -1,5 +1,5 @@
 ---
-title: 'Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket | Documenti Microsoft'
+title: 'Lezione 2: Aggiunta di modelli di Data Mining alla struttura di Data Mining Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,25 +8,25 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 6f50095f8bd5c46be96c7132b961477792e1fdd7
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 8d758ef319c61d7868c2114372f353a374c38230
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313104"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159712"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lezione 2: Aggiunta di modelli di data mining alla struttura di data mining Market Basket
-  In questa lezione verranno aggiunti due modelli di data mining nella struttura di data mining Market Basket creata nella [lezione 1: creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Questi modelli di data mining consentiranno di creare stime.  
+  In questa lezione verranno aggiunti due modelli di data mining alla struttura di data mining Market Basket creata nella [lezione 1: creazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Questi modelli di data mining consentiranno di creare stime.  
   
- Per stimare i tipi di prodotti che clienti tendono ad acquistare contemporaneamente, si creerà due modelli di data mining utilizzando il [algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e due valori diversi per il *MINIMUM_PROBABILTY* parametro.  
+ Per stimare quali tipi di prodotti i clienti tendono ad acquistare contemporaneamente, si creerà due modelli di data mining utilizzando il [algoritmo Microsoft Association Rules](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) e due valori diversi per il *MINIMUM_PROBABILTY* parametro.  
   
- *MINIMUM_PROBABILTY* è un [!INCLUDE[msCoName](../includes/msconame-md.md)] parametro di algoritmo di associazione che consente di determinare il numero di regole che un modello di data mining conterrà specificando la probabilità minima che una regola deve contenere. Ad esempio, l'impostazione di questo valore su 0,4 specifica che una regola può essere generata solo se la combinazione di prodotti che la regola descrive ha una probabilità di realizzazione di almeno il 40%.  
+ *MINIMUM_PROBABILTY* è un [!INCLUDE[msCoName](../includes/msconame-md.md)] parametro algoritmo Association che aiuta a determinare il numero di regole che un modello di data mining conterrà specificando la probabilità minima che deve avere una regola. Ad esempio, l'impostazione di questo valore su 0,4 specifica che una regola può essere generata solo se la combinazione di prodotti che la regola descrive ha una probabilità di realizzazione di almeno il 40%.  
   
  Si visualizzeranno l'effetto della modifica il *MINIMUM_PROBABILTY* parametro in una lezione successiva.  
   
@@ -71,7 +71,7 @@ ALTER MINING STRUCTURE [<mining structure name>]
 ADD MINING MODEL [<mining model name>]  
 ```  
   
- Per informazioni sulla denominazione di un oggetto di Data Mining DMX (Data Extensions), vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
+ Per informazioni sulla denominazione di un oggetto di Data Mining Extensions (DMX), vedere [identificatori &#40;DMX&#41;](/sql/dmx/identifiers-dmx).  
   
  Le successive righe del codice definiscono le colonne della struttura di data mining che verranno utilizzate dal modello di data mining:  
   
@@ -106,11 +106,11 @@ ADD MINING MODEL [<mining model name>]
 -   Aggiunta di un modello di data mining di associazione alla struttura utilizzando un valore di probabilità modificato  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-using-the-default-minimumprobability"></a>Aggiunta di un modello di data mining di associazione alla struttura utilizzando il valore predefinito di MINIMUM_PROBABILITY  
- La prima attività consiste nell'aggiungere un nuovo modello di data mining alla struttura di data mining Market Basket in base il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo di associazione utilizzando il valore predefinito di *MINIMUM_PROBABILITY*.  
+ La prima attività consiste nell'aggiungere un nuovo modello di data mining alla struttura di data mining Market Basket in base il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo di associazione utilizzando il valore predefinito per *MINIMUM_PROBABILITY*.  
   
 #### <a name="to-add-an-association-mining-model"></a>Per aggiungere un modello di data mining di associazione  
   
-1.  In **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -195,16 +195,16 @@ ADD MINING MODEL [<mining model name>]
   
 7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
   
-8.  Nel **Salva con nome** finestra di dialogo, selezionare la cartella appropriata e denominare il file `Default_Association_Model.dmx`.  
+8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Default_Association_Model.dmx`.  
   
-9. Sulla barra degli strumenti, fare clic sui **Execute** pulsante.  
+9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
   
 ## <a name="adding-an-association-mining-model-to-the-structure-changing-the-default-minimumprobability"></a>Aggiunta di un modello di data mining di associazione alla struttura modificando il valore predefinito di MINIMUM_PROBABILITY  
  L'attività successiva consiste nell'aggiunta di un nuovo modello di data mining alla struttura di data mining Market Basket in base all'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association modificando il valore predefinito di MINIMUM_PROBABILITY in 0,01. La modifica del parametro determinerà la creazione di ulteriori regole da parte dell'algoritmo [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
   
 #### <a name="to-add-an-association-mining-model"></a>Per aggiungere un modello di data mining di associazione  
   
-1.  In **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
+1.  Nella **Esplora oggetti**, fare doppio clic sull'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], scegliere **nuova Query**, quindi fare clic su **DMX**.  
   
      Verrà avviato l'editor di query con una nuova query vuota.  
   
@@ -282,13 +282,13 @@ ADD MINING MODEL [<mining model name>]
   
 7.  Nel **File** menu, fare clic su **Salva Dmxquery1.DMX**.  
   
-8.  Nel **Salva con nome** finestra di dialogo, selezionare la cartella appropriata e denominare il file `Modified Association_Model.dmx`.  
+8.  Nel **Salva con nome** della finestra di dialogo passare alla cartella appropriata e assegnare un nome di file `Modified Association_Model.dmx`.  
   
-9. Sulla barra degli strumenti, fare clic sui **Execute** pulsante.  
+9. Sulla barra degli strumenti, scegliere il **Execute** pulsante.  
   
  Nella lezione successiva verranno elaborati la struttura di data mining Market Basket insieme ai relativi modelli di data mining associati.  
   
 ## <a name="next-lesson"></a>Lezione successiva  
- [Lezione 3: Elaborazione della struttura di Data Mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Lezione 3: Elaborazione della struttura di data mining Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

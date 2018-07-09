@@ -1,5 +1,5 @@
 ---
-title: File di elemento (ASSL) | Documenti Microsoft
+title: File di elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - File element
 ms.assetid: 21c70707-d2f8-4040-9acb-cbce23076bcc
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 645882666ba82f965fddff9e1c886e97ff092a90
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 03b78545b1df04192a69dffa1a49733509b99700
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064320"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155353"
 ---
 # <a name="file-element-assl"></a>Elemento File (ASSL)
   Definisce uno dei file che compongono un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] [ClrAssembly](../data-type/assembly-data-type-assl.md) elemento.  
@@ -59,8 +59,8 @@ ms.locfileid: "36064320"
 |Elementi padre|[File](../collections/files-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Files` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Files` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento server &#40;ASSL&#41;](server-element-assl.md)   

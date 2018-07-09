@@ -1,5 +1,5 @@
 ---
-title: Set di righe dello Schema OLE DB | Documenti Microsoft
+title: Set di righe dello Schema OLE DB | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - rowsets [Analysis Services], OLE DB
 ms.assetid: ca2ee87a-ba04-4501-9125-33934c58ab31
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 313efc520f63240d3e9fa19584fc7f3e620fdeee
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3a1d03d6fd8d527d48a9a4051f201368ff870882
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064807"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161192"
 ---
 # <a name="ole-db-schema-rowsets"></a>Set di righe dello schema OLE DB
-  I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Usare la `DISCOVER_ENUMERATORS` set di righe con la [Discover](../../xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati specifica supporta un set di righe.  
+  I set di righe dello schema OLE DB seguenti sono supportati dal provider di [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML for Analysis (XMLA). Usare la `DISCOVER_ENUMERATORS` set di righe con i [Discover](../../xmla/xml-elements-methods-discover.md) metodo per verificare se un provider dell'origine dati specifica supporta un set di righe.  
   
  Per ottenere informazioni dettagliate su questi set di righe, è inoltre possibile cercare l'argomento "Set di righe dello schema" nella parte relativa alla OLE DB Programmer's Reference in MSDN® Library nel sito Web [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   
@@ -74,7 +74,7 @@ ms.locfileid: "36064807"
 |`DBSCHEMA_VIEW_TABLE_USAGE`|Identifica le tabelle da cui dipendono le tabelle visualizzate, definite nel catalogo e di proprietà di un determinato utente.|  
 |`DBSCHEMA_VIEWS`|Identifica le viste definite nel catalogo e accessibili a un determinato utente.|  
   
- <sup>1</sup> indica i rowset dello schema supportati dal provider dell'origine dati MSOLAP per il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] provider XMLA.  
+ <sup>1</sup> indica i set di righe dello schema supportati dal provider dell'origine dati MSOLAP per il [!INCLUDE[msCoName](../../../includes/msconame-md.md)] provider XMLA.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Set di righe DISCOVER_ENUMERATORS](../xml/discover-enumerators-rowset.md)   

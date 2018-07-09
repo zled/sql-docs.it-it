@@ -1,14 +1,13 @@
 ---
-title: Usare il Dashboard AlwaysOn (SQL Server Management Studio) | Documenti Microsoft
+title: Usare il Dashboard AlwaysOn (SQL Server Management Studio) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.agdashboard.f1
 helpviewer_keywords:
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 28
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 60d75f53c84d652b0d719ba73980cfbff6d08424
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 207f67602fd55e5186a64ba9b30df7230a35d1b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066229"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163522"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utilizzare il Dashboard AlwaysOn (SQL Server Management Studio)
   Gli amministratori del database utilizzano il dashboard AlwaysOn per ottenere una vista immediata dell'integrità di un gruppo di disponibilità AlwaysOn e delle relative repliche di disponibilità e database in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Alcuni degli utilizzi tipici del dashboard AlwaysOn sono i seguenti:  
@@ -97,7 +96,7 @@ ms.locfileid: "36066229"
 -   **Manuale**. Indica che non vi sono repliche in modalità di failover automatico.  
   
  **Problemi**  
- Fare clic sul collegamento **Problemi** per aprire la documentazione di risoluzione dei problemi relativa a un determinato problema. Per un elenco di tutti i problemi relativi ai criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Fare clic sul collegamento **Problemi** per aprire la documentazione di risoluzione dei problemi relativa a un determinato problema. Per un elenco di tutti i problemi di criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!TIP]  
 >  Fare clic sulle intestazioni di colonna per ordinare le informazioni sul gruppo di disponibilità in base al nome del gruppo di disponibilità, all'istanza primaria, alla modalità di failover o al problema.  
@@ -152,7 +151,7 @@ ms.locfileid: "36066229"
 -   **NULL**. Stato sconosciuto. Si ottiene questo valore quando l'istanza del server locale non è in grado di comunicare con il cluster di failover WSFC, ovvero il nodo locale non fa parte del quorum WSFC.  
   
  **Problemi**  
- Indica il nome del problema. Questo valore è visualizzato per impostazione predefinita. Per un elenco di tutti i problemi relativi ai criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Indica il nome del problema. Questo valore è visualizzato per impostazione predefinita. Per un elenco di tutti i problemi di criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Modalità di disponibilità**  
  Indica la proprietà della replica impostata separatamente per ogni replica di disponibilità. Questo valore è nascosto per impostazione predefinita. I valori possibili sono:  
@@ -281,7 +280,7 @@ ms.locfileid: "36066229"
   
 -   **Critico**. Fare clic per visualizzare i problemi critici.  
   
- Per un elenco di tutti i problemi relativi ai criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
+ Per un elenco di tutti i problemi di criteri AlwaysOn, vedere [i criteri AlwaysOn per problemi operativi con gruppi di disponibilità AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
   
  **Sospeso**  
  Indica se il database è **Sospeso** o **Ripreso**. Questo valore è nascosto per impostazione predefinita.  

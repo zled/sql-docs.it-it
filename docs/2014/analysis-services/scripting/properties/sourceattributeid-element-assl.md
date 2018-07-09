@@ -1,5 +1,5 @@
 ---
-title: Elemento SourceAttributeID (ASSL) | Documenti Microsoft
+title: Elemento SourceAttributeID (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SourceAttributeID element
 ms.assetid: 8973eb62-6142-4ce2-ad42-c8be2b43c04f
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 06da8df2a164ee903b59dc2a154bca926c1b82f6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d30b6a54f90437baad822ba285bf0fc56a6a891d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067676"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157082"
 ---
 # <a name="sourceattributeid-element-assl"></a>Elemento SourceAttributeID (ASSL)
   Contiene l'identificatore (ID) dell'attributo di origine in cui il [livello](../objects/level-element-assl.md) si basa l'elemento.  
@@ -61,8 +61,8 @@ ms.locfileid: "36067676"
 |Elemento padre|[Level](../objects/level-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento corrispondente dell'elemento padre del `SourceAttributeID` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Level>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `SourceAttributeID` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.Level>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

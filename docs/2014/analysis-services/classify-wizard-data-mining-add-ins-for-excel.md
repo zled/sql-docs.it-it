@@ -1,5 +1,5 @@
 ---
-title: Procedura guidata (dati componenti aggiuntivi Data Mining per Excel) classificazione | Documenti Microsoft
+title: Classificare Wizard (dati componenti aggiuntivi Data Mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
 - classification [data mining]
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 caps.latest.revision: 20
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 5f71610a317be36a84fa90aff08bed8d6a50d8aa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ec1741a66564a9243e06e53c77aa0473dec1b040
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066613"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159562"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Procedura guidata Classificazione (componenti aggiuntivi Data mining per Excel)
   ![Procedura guidata classificazione sulla barra multifunzione Data Mining](media/dmc-classify.gif "procedura guidata classificazione sulla barra multifunzione Data Mining")  
@@ -33,7 +33,7 @@ ms.locfileid: "36066613"
   
 ## <a name="using-the-classify-wizard"></a>Utilizzo della procedura guidata Classificazione  
   
-1.  Nel **Data Mining** sulla barra multifunzione, fare clic su **classificazione**, quindi fare clic su **Avanti**.  
+1.  Nel **Data Mining** sulla barra multifunzione, fare clic su **classifica**, quindi fare clic su **Avanti**.  
   
 2.  Nel **selezione dati di origine** pagina, scegliere i dati da analizzare.  
   
@@ -47,20 +47,20 @@ ms.locfileid: "36066613"
   
 4.  Facoltativamente, fare clic su **parametri** per modificare i parametri dell'algoritmo e personalizzare il comportamento del modello di clustering.  
   
-5.  Nel **suddividere i dati in set di training e set di testing** , specificare la quantità di dati da riservare per il testing. Il resto viene sempre utilizzato per il training del modello.  
+5.  Nel **suddividere i dati in set di training e set di testing** , specificare la quantità di dati da riservare per il test. Il resto viene sempre utilizzato per il training del modello.  
   
      L'impostazione predefinita è il 30% dei dati di testing e il 70% dei dati di training.  
   
 6.  Nel **fine** pagina, fornire un nome descrittivo per il set di dati e il modello e impostare le opzioni seguenti che consentono di controllare l'utilizzo del modello finito:  
   
-    -   **Esplora modello**. Quando questa opzione è selezionata, non appena la procedura guidata al termine dell'elaborazione del modello, questo viene aperto un **Sfoglia** finestra che consentono di esplorare i risultati. Il contenuto del visualizzatore dipende dal tipo di modello compilato. Per altre informazioni, vedere [esplorazione di un modello Decision Trees](browsing-a-decision-trees-model.md) e [esplorazione di un modello di rete neurale](browsing-a-neural-network-model.md).  
+    -   **Esplora modello**. Quando questa opzione è selezionata, il più presto la procedura guidata al termine dell'elaborazione del modello, viene aperto un **esplorare** finestra per semplificare l'esplorazione dei risultati. Il contenuto del visualizzatore dipende dal tipo di modello compilato. Per altre informazioni, vedere [esplorazione di un modello Decision Trees](browsing-a-decision-trees-model.md) e [esplorazione di un modello di rete neurale](browsing-a-neural-network-model.md).  
   
     -   **Consenti drill-through**. Selezionare questa opzione per visualizzare i dati sottostanti dal modello finito. Questa opzione è disponibile solo se si compila un modello Decision Trees.  
   
     -   **Usa modello temporaneo**. Se si seleziona questa opzione, il modello non verrà salvato nel server. I modelli temporanei vengono eliminati quando si chiude Excel.  
   
 ## <a name="more-about-classification-models"></a>Ulteriori informazioni sui modelli di classificazione  
- Nel **i parametri dell'algoritmo** finestra di dialogo, è anche possibile scegliere il metodo di classificazione tra questi algoritmi forniti in Analysis Services:  
+ Nel **i parametri dell'algoritmo** nella finestra di dialogo è anche possibile scegliere il metodo di classificazione tra questi algoritmi forniti in Analysis Services:  
   
 -   Microsoft Decision Trees  
   
@@ -86,6 +86,6 @@ ms.locfileid: "36066613"
  Usare la **classifica** procedura guidata, è necessario essere connessi a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Per informazioni su come creare una connessione, vedere [Connetti ai dati di origine &#40;Client di Data Mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Creazione di un modello di Data Mining](creating-a-data-mining-model.md)  
+ [Creazione di un modello di data mining](creating-a-data-mining-model.md)  
   
   

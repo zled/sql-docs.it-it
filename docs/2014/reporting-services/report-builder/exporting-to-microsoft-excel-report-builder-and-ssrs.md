@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: 24
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 6ae7c26bce8b52e58124b04c435af6be7d6dc84f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 9c72123024fff48604919df0804694e0cd6ec480
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066715"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152102"
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Esportazione in Microsoft Excel (Generatore report e SSRS)
   L'estensione di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] per il rendering di Excel consente di eseguire il rendering di un report nel formato nativo di [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Con l'estensione per il rendering di Excel, la larghezza delle colonne in Excel si riflette con più accuratezza nella larghezza delle colonne nei report.  
@@ -97,7 +97,7 @@ ms.locfileid: "36066715"
   
 -   Nelle intestazioni e nei piè di pagina di Excel sono supportati al massimo 256 caratteri, incluso il markup. L'estensione per il rendering tronca la stringa a 256 caratteri.  
   
--   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non supporta margini nelle intestazioni di report e i piè di pagina. Durante l'esportazione in Excel, questi valori dei margini vengono impostati su zero e qualsiasi intestazione o piè di pagina contenente più righe di dati potrebbe non essere stampata su più righe, a seconda delle impostazioni della stampante.  
+-   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] non supporta margini nelle intestazioni e piè di pagina. Durante l'esportazione in Excel, questi valori dei margini vengono impostati su zero e qualsiasi intestazione o piè di pagina contenente più righe di dati potrebbe non essere stampata su più righe, a seconda delle impostazioni della stampante.  
   
 -   Quando vengono esportate in Excel, le caselle di testo in un'intestazione o in un piè di pagina mantengono la relativa formattazione, ma non l'allineamento corrispondente. Questa situazione si verifica in quanto gli spazi iniziali e finali vengono rimossi durante il rendering del report.  
   
@@ -132,14 +132,14 @@ ms.locfileid: "36066715"
 ## <a name="excel-renderer"></a>Renderer di Excel  
   
 ### <a name="excel-2007-2010-renderer"></a>Renderer di Excel 2007-2010  
- In [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], il renderer di Excel predefinito è la versione compatibile con [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Si tratta dell'opzione **Excel** elencata nei menu **Esportazione in corso** in Gestione report e SharePoint.  
+ Nelle [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], il renderer di Excel predefinito è la versione compatibile con [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] 2007-2010. Si tratta dell'opzione **Excel** elencata nei menu **Esportazione in corso** in Gestione report e SharePoint.  
   
  Quando si usa il renderer di Excel predefinito, anziché il renderer precedente di Excel 2003, è possibile installare Microsoft Office Compatibility Pack per i formati di file Word, Excel e PowerPoint per consentire alle versioni precedenti di Excel di aprire i file esportati.  
   
 ### <a name="excel-2003-renderer"></a>Renderer di Excel 2003  
   
 > [!IMPORTANT]  
->  Il [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] estensione per il rendering 2003 è deprecata. Per altre informazioni, vedere [funzionalità deprecate in SQL Server Reporting Services in SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
+>  Il [!INCLUDE[ofprexcel](../../../includes/ofprexcel-md.md)] estensione per il rendering 2003 è deprecata. Per altre informazioni, vedere [Deprecated Features di SQL Server Reporting Services in SQL Server 2014](../deprecated-features-in-sql-server-reporting-services-ssrs.md).  
   
  La versione precedente del renderer di Excel, compatibile con Excel 2003, è ora denominata Excel 2003 ed è elencata nei menu con tale nome. Il tipo di contenuto dei file generati da questo renderer è **application/vnd.ms-excel** e l'estensione dei file è xls.  
   
@@ -149,7 +149,7 @@ ms.locfileid: "36066715"
   
 -   Generatore report in modalità senza connessione e anteprima di un report in Generatore report. Poiché il file di configurazione RSReportServer si trova nel server di report, gli strumenti o prodotti da cui si esportano i report devono essere connessi a un server di report per la lettura del file di configurazione.  
   
-     Questo errore si verifica in entrambe le [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] sia alla versione autonoma di Generatore Report.  
+     Ciò si verifica in entrambi i [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] e nelle versioni autonome di Generatore Report.  
   
 -   Web Part Visualizzatore report in modalità locale e farm di SharePoint non è integrato con un [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] server di report. Per altre informazioni, vedere [Report in modalità locale e con connessione nel visualizzatore di report &#40;Reporting Services in modalità SharePoint&#41;](../local-vs-connected-mode-report-viewer-reporting-services-sharepoint-mode.md)  
   
@@ -161,7 +161,7 @@ ms.locfileid: "36066715"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] e anteprima dei report.  
   
--   Generatore report connesso a un server di report. Può trattarsi di un [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] o versione autonoma di Generatore Report.  
+-   Generatore report connesso a un server di report. Può trattarsi di un [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] o la versione autonoma di Generatore Report.  
   
 -   Web part di Visualizzatore report in modalità remota.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "36066715"
   
  `<Extension Name="EXCEL" Type="Microsoft.ReportingServices.Rendering.ExcelRenderer.ExcelRenderer,Microsoft.ReportingServices.ExcelRendering" Visible="false"/>`  
   
- L'estensione EXCELOPENXML consente di definire il renderer di Excel per Excel 2007-2010. L'estensione EXCEL consente di definire la versione Excel 2003. `Visible = “false”` indica che il renderer di Excel 2003 è nascosto. Per altre informazioni, vedere [File di configurazione RSReportServer](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
+ L'estensione EXCELOPENXML consente di definire il renderer di Excel per Excel 2007-2010. L'estensione EXCEL consente di definire la versione Excel 2003. `Visible = “false”` indica che il renderer di Excel 2003 è nascosto. Per altre informazioni, vedere [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) e [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md).  
   
 ### <a name="differences-between-the-excel-2007-2010-and-excel-2003-renderers"></a>Differenze tra i renderer di Excel 2007-2010 ed Excel 2003  
  I report, di cui è stato eseguito il rendering tramite i renderer di Excel o Excel 2003, sono in genere identici e solo in rare circostanze si noteranno differenze tra i due formati. Nella tabella seguente vengono confrontati i renderer di Excel ed Excel 2003.  
@@ -229,7 +229,7 @@ ms.locfileid: "36066715"
  Nelle sezioni di intestazione e piè di pagina di Excel sono supportati al massimo 256 caratteri, incluso il markup. Se questo limite viene superato, il renderer di Excel rimuove i caratteri di markup a partire dalla fine della stringa dell'intestazione e/o del piè di pagina per ridurre il numero di caratteri totali. Se la lunghezza supera il limite massimo anche dopo l'eliminazione di tutti i caratteri di markup, la stringa verrà troncata a partire da destra.  
   
 ### <a name="simplepageheader-settings"></a>Impostazioni SimplePageHeader  
- Per impostazione predefinita, l'impostazione simplepageheaders delle informazioni sul dispositivo è `False`; pertanto, le intestazioni di pagina vengono visualizzate come righe del report sulla superficie del foglio di lavoro di Excel. Le righe del foglio di lavoro che contengono le intestazioni vengono bloccate. È possibile bloccare o sbloccare il riquadro in Excel.  
+ Per impostazione predefinita, l'impostazione simplepageheaders delle informazioni sul dispositivo è impostata `False`; di conseguenza, le intestazioni di pagina vengono visualizzate come righe del report sulla superficie del foglio di lavoro di Excel. Le righe del foglio di lavoro che contengono le intestazioni vengono bloccate. È possibile bloccare o sbloccare il riquadro in Excel.  
   
 > [!NOTE]  
 >  Se l'opzione **Stampa titoli** in Excel è selezionata, le intestazioni vengono automaticamente impostate per la stampa su ogni pagina del foglio di lavoro.  
@@ -283,7 +283,7 @@ ms.locfileid: "36066715"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

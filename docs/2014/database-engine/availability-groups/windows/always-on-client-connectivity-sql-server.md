@@ -5,25 +5,24 @@ ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Availability Groups [SQL Server], listeners
 - Availability Groups [SQL Server], prerequisites and restrictions
 - Availability Groups [SQL Server], client connectivity
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 caps.latest.revision: 19
-author: rothja
-ms.author: jroth
-manager: jhubbard
-ms.openlocfilehash: 40025093ad9293b436893c41a9e3fa44f731ab01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: bbf124c02a6fd80485b110f27e6bb2cbded6077e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067661"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158942"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connettività client Always On (SQL Server)
   In questo argomento vengono illustrate le considerazioni relative alla connettività client ai gruppi di disponibilità AlwaysOn, inclusi prerequisiti, restrizioni e indicazioni per configurazioni e impostazioni client.  
@@ -42,7 +41,7 @@ ms.locfileid: "36067661"
 |SQL Native Client 11.0 ODBC|Sì|Sì|Sì|Sì|Sì|  
 |SQL Native Client 11.0 OLEDB|no|Sì|Sì|no|no|  
 |ADO.NET con .NET Framework 4.0 con patch di connettività**<sup>*</sup>**|Sì|Sì|Sì|Sì|Sì|  
-|ADO.NET con .NET Framework 3.5 SP1 con patch di connettività **<sup>**</sup>**|Sì|Sì|Sì|Sì|Sì|  
+|ADO.NET con.NET Framework 3.5 SP1 con patch di connettività **<sup>**</sup>**|Sì|Sì|Sì|Sì|Sì|  
 |Microsoft JDBC Driver 4.0 per SQL Server|Sì|Sì|Sì|Sì|Sì|  
   
  **<sup>*</sup>**  Scaricare la patch di connettività per ADO .NET con .NET Framework 4.0: [ http://support.microsoft.com/kb/2600211 ](http://support.microsoft.com/kb/2600211).  
@@ -61,13 +60,13 @@ ms.locfileid: "36067661"
 
   
 ## <a name="see-also"></a>Vedere anche  
- [Panoramica di gruppi di disponibilità AlwaysOn di &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Panoramica di gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Clustering di failover e gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Listener del gruppo di disponibilità, connettività client e failover dell'applicazione &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Informazioni sull'accesso alla connessione client per le repliche di disponibilità &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Guida alle soluzioni di Microsoft SQL Server AlwaysOn per la disponibilità elevata e ripristino di emergenza](http://go.microsoft.com/fwlink/?LinkId=227600)   
- [SQL Server AlwaysOn Team Blog: Di SQL Server AlwaysOn Team Blog ufficiale](http://blogs.msdn.com/b/sqlalwayson/)   
+ [Microsoft SQL Server AlwaysOn Solutions Guide for High Availability and Disaster Recovery](http://go.microsoft.com/fwlink/?LinkId=227600)   
+ [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)   
  [Si verifica un ritardo prolungato quando si riconnette una connessione IPsec da un computer in cui è in esecuzione Windows Server 2003, Windows Vista, Windows Server 2008, Windows 7 o Windows Server 2008 R2](http://support.microsoft.com/kb/980915)   
  [Il servizio cluster impiega circa 30 secondi per il failover su indirizzi IP IPv6 in Windows Server 2008 R2](http://support.microsoft.com/kb/2578113)   
  [Failover lento se non esiste alcun router tra il cluster e un server applicazioni](http://support.microsoft.com/kb/2582281)  

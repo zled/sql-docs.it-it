@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - administering Reporting Services
 - administering [Reporting Services]
@@ -17,13 +17,13 @@ ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 23
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9673fbd613b927a16b4d5a66ee49ac74c158ca87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3e2710dae03006cf5f2b762c09aab55bf6663261
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067336"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157782"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   Un server di report configurato per la modalità nativa viene eseguito come server applicazioni che fornisce tutte le funzionalità di elaborazione e gestione esclusivamente tramite i componenti di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.locfileid: "36067336"
  Le operazioni di gestione del contenuto in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]includono la gestione dei report, dei modelli, delle cartelle, delle risorse e delle origini dati condivise. È possibile gestire questi elementi singolarmente tramite impostazioni di sicurezza e proprietà. Ogni elemento può essere spostato in una posizione diversa nello spazio dei nomi delle cartelle del server di report. Per gestire gli elementi in modo efficiente, è necessario conoscere quali attività vengono eseguite da un utente con ruolo Gestione contenuto.  
   
 > [!NOTE]  
->  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per ulteriori informazioni su come gestire l'ambiente in cui viene eseguito un server di report, vedere [amministrazione (Reporting Services)](reporting-services-report-server-native-mode.md).  
+>  La gestione del contenuto è un'operazione diversa dall'amministrazione di un server di report. Per altre informazioni su come gestire l'ambiente in cui viene eseguito un server di report, vedere [amministrazione (Reporting Services)](reporting-services-report-server-native-mode.md).  
   
  Nella gestione del contenuto sono incluse le attività seguenti:  
   

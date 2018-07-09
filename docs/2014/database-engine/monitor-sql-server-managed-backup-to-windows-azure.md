@@ -1,25 +1,24 @@
 ---
-title: Monitoraggio SQL Server Backup gestito in Microsoft Azure | Documenti Microsoft
+title: Monitoraggio di SQL Server Managed Backup in Windows Azure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-backup-restore
+ms.technology: backup-restore
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 401b41399b7c62f7feeda6d83d2400dd4814d9d8
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ff97e8210c38bac14bd7bd88075c2dea16f77489
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149792"
 ---
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Monitorare il backup gestito di SQL Server in Windows Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] dispone di misure predefinite per identificare problemi ed errori durante i processi di backup e risolverli con un'azione correttiva, se possibile.  Tuttavia, vi sono alcune situazioni in cui è richiesto l'intervento dell'utente. In questo argomento vengono descritti gli strumenti che è possibile utilizzare per determinare lo stato di integrità complessivo dei backup e vengono identificati tutti gli errori che devono essere risolti.  
@@ -73,7 +72,7 @@ GO
   
     ```  
   
-     Per ulteriori informazioni sulla stored procedure, vedere [sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
+     Per altre informazioni sulla stored procedure, vedere [sp_set_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql).  
   
 3.  Per visualizzare gli eventi registrati, eseguire la query riportata di seguito:  
   
@@ -123,21 +122,21 @@ Questi conteggi aggregati possono essere utilizzati per monitorare l'integrità 
   
  **Prerequisiti**  
   
--   Per utilizzare questa funzionalità, è necessario Posta elettronica database. Per ulteriori informazioni su come abilitare posta elettronica database per l'istanza di SQL Server, vedere [Configura posta elettronica Database](../relational-databases/database-mail/configure-database-mail.md).  
+-   Per utilizzare questa funzionalità, è necessario Posta elettronica database. Per altre informazioni su come abilitare posta elettronica database per l'istanza di SQL Server, vedere [Configura posta elettronica Database](../relational-databases/database-mail/configure-database-mail.md).  
   
 -   Per utilizzare Posta elettronica database devono essere impostate le proprietà di Sistema avvisi di SQL Server Agent.  
   
  **Architettura della notifica:**  
   
--   **Gestione basata su criteri:** vengono impostati due criteri per monitorare l'integrità di backup: **criteri di integrità di sistema di amministrazione intelligente**e il **Smart criteri di integrità dell'azione utente Admin**. Tramite i criteri di integrità del sistema di amministrazione intelligente vengono valutati errori critici come la mancanza di credenziali SQL o credenziali SQL non valide, errori di connettività e viene segnalata l'integrità del sistema. Per questi errori è in genere richiesta un'azione manuale per correggere il problema sottostante. Tramite i criteri di integrità dell'azione utente di amministrazione intelligente vengono valutati gli avvisi, ad esempio backup danneggiati e simili.  Per questi non sono richieste azioni, si tratta solo dell'avviso di un evento. È previsto che problemi di questo tipo vengano risolti automaticamente da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Agent.  
+-   **Gestione basata su criteri:** vengono impostati due criteri per monitorare l'integrità di backup: **criteri di integrità del sistema di amministrazione intelligente**e il **Smart criteri di integrità dall'azione utente amministrazione**. Tramite i criteri di integrità del sistema di amministrazione intelligente vengono valutati errori critici come la mancanza di credenziali SQL o credenziali SQL non valide, errori di connettività e viene segnalata l'integrità del sistema. Per questi errori è in genere richiesta un'azione manuale per correggere il problema sottostante. Tramite i criteri di integrità dell'azione utente di amministrazione intelligente vengono valutati gli avvisi, ad esempio backup danneggiati e simili.  Per questi non sono richieste azioni, si tratta solo dell'avviso di un evento. È previsto che problemi di questo tipo vengano risolti automaticamente da [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Agent.  
   
--   **SQL Server Agent** processo: la notifica viene eseguita tramite un processo di SQL Server Agent che prevede tre passaggi. Nel primo passaggio di processo viene verificato se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è configurato per un database o un'istanza. Se viene rilevato [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitato e configurato, viene eseguito il secondo passaggio: viene eseguito un cmdlet di PowerShell tramite cui viene valutato lo stato di integrità in base ai criteri di gestione basata su criteri di SQL Server. Se viene rilevato un errore o avviso, l'operazione non viene completata attivando il terzo passo, che prevede l'invio di una notifica tramite posta elettronica con il report dell'errore o dell'avviso.  Tuttavia il processo di SQL Server Agent non è abilitato per impostazione predefinita. Per abilitare il processo di notifica tramite posta elettronica, usare il **smart_admin.sp_set_backup_parameter** stored procedure di sistema.  Nella procedura seguente vengono descritti i passaggi in modo più dettagliato:  
+-   **SQL Server Agent** processo: la notifica viene eseguita tramite un processo di SQL Server Agent che prevede tre passaggi. Nel primo passaggio di processo viene verificato se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è configurato per un database o un'istanza. Se viene rilevato [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] abilitato e configurato, viene eseguito il secondo passaggio: viene eseguito un cmdlet di PowerShell tramite cui viene valutato lo stato di integrità in base ai criteri di gestione basata su criteri di SQL Server. Se viene rilevato un errore o avviso, l'operazione non viene completata attivando il terzo passo, che prevede l'invio di una notifica tramite posta elettronica con il report dell'errore o dell'avviso.  Tuttavia il processo di SQL Server Agent non è abilitato per impostazione predefinita. Per abilitare il processo di notifica di posta elettronica, usare il **smart_admin.sp_set_backup_parameter** stored procedure di sistema.  Nella procedura seguente vengono descritti i passaggi in modo più dettagliato:  
   
 ##### <a name="enabling-email-notification"></a>Abilitazione della notifica tramite posta elettronica  
   
 1.  Se posta elettronica Database non è già configurata, utilizzare la procedura descritta in [Configura posta elettronica Database](../relational-databases/database-mail/configure-database-mail.md).  
   
-2.  Impostare il database come sistema di posta elettronica per sistema avvisi di SQL Server: fare clic con il pulsante destro sul **SQL Server Agent**, selezionare **sistema avvisi**, controllare il **Abilita profilo di posta elettronica** casella, selezionare  **Posta elettronica database** come il **sistema di posta elettronica**e selezionare un profilo di posta elettronica creato in precedenza.  
+2.  Impostare il database come sistema di posta elettronica per sistema avvisi di SQL Server: fare clic con il pulsante destro sul **SQL Server Agent**, selezionare **sistema avvisi**, selezionare il **Abilita profilo di posta** casella, selezionare  **Posta elettronica database** come il **sistema di posta elettronica**e selezionare un profilo di posta elettronica creato in precedenza.  
   
 3.  Eseguire la query riportata di seguito in una finestra Query e immettere l'indirizzo di posta elettronica a cui si desidera inviare la notifica:  
   
@@ -201,9 +200,9 @@ EXEC msdb.smart_admin.sp_set_parameter
 ```  
   
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>Utilizzo di PowerShell per configurare il monitoraggio dello stato di integrità personalizzato  
- Il **Test-SqlSmartAdmin** cmdlet può essere utilizzato per creare il monitoraggio dello stato personalizzato. Ad esempio, l'opzione di notifica descritta nella sezione precedente può essere configurata a livello di istanza.  Se si dispone di più istanze di SQL Server configurate per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il cmdlet di PowerShell può essere utilizzato per creare script per raccogliere lo stato e l'integrità dei backup per tutte le istanze.  
+ Il **Test-SqlSmartAdmin** cmdlet può essere usato per creare il monitoraggio di integrità personalizzati. Ad esempio, l'opzione di notifica descritta nella sezione precedente può essere configurata a livello di istanza.  Se si dispone di più istanze di SQL Server configurate per l'utilizzo di [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], il cmdlet di PowerShell può essere utilizzato per creare script per raccogliere lo stato e l'integrità dei backup per tutte le istanze.  
   
- Il **Test-SqlSmartAdmin** cmdlet valutati gli errori e avvisi restituiti dai criteri di gestione basata su SQL Server dei criteri e viene segnalato uno stato di rollup.  Per impostazione predefinita, tramite questo cmdlet vengono utilizzati i criteri di sistema. Per includere tutti i criteri personalizzati, utilizzare il parametro `–AllowUserPolicies`.  
+ Il **Test-SqlSmartAdmin** cmdlet consente di valutare gli errori e avvisi restituiti dai criteri di gestione basata su SQL Server dei criteri e viene segnalato uno stato di rollup.  Per impostazione predefinita, tramite questo cmdlet vengono utilizzati i criteri di sistema. Per includere tutti i criteri personalizzati, utilizzare il parametro `–AllowUserPolicies`.  
   
  Di seguito è riportato un esempio di script di PowerShell tramite cui viene restituito un report di errori e avvisi basato sui criteri di sistema e su tutti i criteri utente creati:  
   
@@ -254,16 +253,16 @@ smart_backup_files;
   
  Di seguito è riportata una spiegazione dettagliata del diverso stato restituito:  
   
--   **Disponibili - r:** si tratta di un normale file di backup. Il backup è stato completato e ne è stata verificata la disponibilità nel Servizio di archiviazione Windows Azure.  
+-   **Disponibile - a:** si tratta di un normale file di backup. Il backup è stato completato e ne è stata verificata la disponibilità nel Servizio di archiviazione Windows Azure.  
   
--   **Copia in corso – b:** questo stato è specifico per i database del gruppo di disponibilità. Se tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene rilevata un'interruzione nella catena dei log di backup, tentare innanzitutto di identificare il backup da cui potrebbe essere stata causata l'interruzione della catena di backup. Per trovare il file di backup viene effettuato un tentativo di copia del file nel Servizio di archiviazione Windows Azure. Quando il processo di copia è in corso verrà visualizzato questo stato.  
+-   **Copia in corso – b:** questo stato è specifico per i database a gruppo di disponibilità. Se tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] viene rilevata un'interruzione nella catena dei log di backup, tentare innanzitutto di identificare il backup da cui potrebbe essere stata causata l'interruzione della catena di backup. Per trovare il file di backup viene effettuato un tentativo di copia del file nel Servizio di archiviazione Windows Azure. Quando il processo di copia è in corso verrà visualizzato questo stato.  
   
--   **Copia non riuscita – f:** simile alla copia In corso, si tratta i database del gruppo di disponibilità specifico. Se il processo di copia non viene completato, lo stato è contrassegnato come F.  
+-   **Copia non riuscita – f:** analogo a copia In corso, si tratta di database del gruppo di disponibilità specifica t. Se il processo di copia non viene completato, lo stato è contrassegnato come F.  
   
--   **Danneggiato – c:** se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è Impossibile verificare il file di backup nell'archiviazione eseguendo un comando RESTORE HEADER_ONLY anche dopo diversi tentativi, il file viene contrassegnato come danneggiato. Tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà pianificato un backup per garantire che dal file danneggiato non venga generata un'interruzione della catena di backup.  
+-   **Danneggiato – c:** se [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] è Impossibile verificare il file di backup nella risorsa di archiviazione eseguendo un comando RESTORE HEADER_ONLY anche dopo diversi tentativi, il file viene contrassegnato come danneggiato. Tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà pianificato un backup per garantire che dal file danneggiato non venga generata un'interruzione della catena di backup.  
   
--   **Eliminato – d:** non è possibile trovare il file corrispondente nel servizio di archiviazione Windows Azure. Tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà pianificato un backup se viene generata un'interruzione della catena di backup da parte del file eliminato.  
+-   **Eliminato – d:** file corrispondente non è stato trovato nella risorsa di archiviazione Windows Azure. Tramite [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verrà pianificato un backup se viene generata un'interruzione della catena di backup da parte del file eliminato.  
   
--   **Sconosciuto – u:** questo stato viene indicato che [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non è ancora stato in grado di verificare l'esistenza del file e le relative proprietà nella risorsa di archiviazione Windows Azure. Alla successiva esecuzione del processo, vale a dire circa ogni 15 minuti, questo stato verrà aggiornato.  
+-   **Sconosciuto – u** questo stato viene indicato che [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] non è ancora stato in grado di verificare l'esistenza del file e le relative proprietà nella risorsa di archiviazione Windows Azure. Alla successiva esecuzione del processo, vale a dire circa ogni 15 minuti, questo stato verrà aggiornato.  
   
   

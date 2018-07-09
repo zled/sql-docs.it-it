@@ -1,5 +1,5 @@
 ---
-title: Drill-Through finestra di dialogo (Visualizzatore modello di Data Mining) | Documenti Microsoft
+title: Drill-Through (Visualizzatore modello di Data Mining) finestra di dialogo | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
 ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 caps.latest.revision: 14
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: de01b0d081ecd26dc3472ebb697b72a42b128bab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 331ab6da3e2e244f3a0413d80006ceeb907704f4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067493"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151472"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Finestra di dialogo Drill-through (Visualizzatore modello di data mining)
   Quando si visualizza un modello di data mining tramite la scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining, è possibile eseguire il drill through ai dettagli dei dati del case, purché nel modello sia abilitato il drill-through. Inoltre se nella struttura di data mining sottostante è abilitato il drill-through, è anche possibile visualizzare colonne non incluse nel modello di data mining. Nell'elenco delle colonne, le colonne della struttura sono precedute dall'etichetta "Structure." etichetta.  
@@ -45,12 +45,12 @@ ms.locfileid: "36067493"
 > [!NOTE]  
 >  È possibile fare clic con il pulsante destro del mouse in un punto della griglia di colonne e selezionare **Copia tutto** per copiare negli Appunti i dati drill-through in formato delimitato da tabulazione. Nei dati copiati sono inclusi solo i dati dei case, non la definizione del nodo.  
   
- **Riproduzione**  
+ **Riproduci**  
  Fare clic sul pulsante con la freccia verde per aggiornare i dati.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Query drill-through &#40;Data Mining&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Attività e procedure relative al visualizzatore modello di data mining](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

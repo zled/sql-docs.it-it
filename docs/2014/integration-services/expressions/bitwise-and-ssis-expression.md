@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
@@ -17,13 +17,13 @@ ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: c17df738a3b8a97639a0c4097e01643c2e571119
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4a0c0557b4a0bbb1c0735476413e91af7645102e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067638"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156532"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND bit per bit) (espressione SSIS)
   Esegue un'operazione con AND bit per bit tra due valori integer. Confronta ogni bit del primo operando con il bit corrispondente del secondo operando. Se entrambi i bit hanno valore 1, il bit del risultato verrà impostato su 1, altrimenti verrà impostato su 0.  
@@ -45,7 +45,7 @@ integer_expression1 & integer_expression2
 ## <a name="result-types"></a>Tipi restituiti  
  Dipendenti dai tipi di dati dei due argomenti. Per altre informazioni, vedere [Tipi di dati nelle espressioni di Integration Services](integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Se una delle due condizioni è Null, il risultato dell'espressione sarà Null.  
   
 ## <a name="expression-examples"></a>Esempi di espressione  
@@ -98,8 +98,8 @@ ReorderPoint & SafetyStockLevel
  00000001  
   
 ## <a name="see-also"></a>Vedere anche  
- [& & &#40;AND logico&#41; &#40;espressione SSIS&#41;](logical-and-ssis-expression.md)   
- [Associatività e precedenza operatori](operator-precedence-and-associativity.md)   
- [Gli operatori &#40;espressione SSIS&#41;](operators-ssis-expression.md)  
+ [& & &#40;AND logico&#41; &#40;espressione di SSIS&#41;](logical-and-ssis-expression.md)   
+ [Precedenza e associatività degli operatori](operator-precedence-and-associativity.md)   
+ [Gli operatori &#40;espressione di SSIS&#41;](operators-ssis-expression.md)  
   
   

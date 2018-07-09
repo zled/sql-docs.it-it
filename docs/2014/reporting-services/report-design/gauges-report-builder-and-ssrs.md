@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - "10226"
 - "10264"
@@ -159,15 +159,15 @@ f1_keywords:
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 caps.latest.revision: 10
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8bf2cca5f2d87f6404555f170272cc18e244d2ea
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: ae0eda9c82e610289c6fad858578aaac440bbb7d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065772"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150282"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Misuratori (Generatore report e SSRS)
   L'area dati del misuratore è un'area dati unidimensionale in cui viene visualizzato un solo valore nel set di dati. Un misuratore viene sempre posizionato in un pannello del misuratore, dove è possibile aggiungere misuratori figlio o adiacenti. In un singolo pannello del misuratore è possibile creare più misuratori che condividono funzioni come il filtraggio, il raggruppamento o l'ordinamento.  
@@ -244,10 +244,10 @@ ms.locfileid: "36065772"
     > [!NOTE]  
     >  Questo metodo non è applicabile quando sul misuratore non è presente un indicatore di misura o quando il report contiene più di un set di dati e il pannello del misuratore non è associato a un set di dati.  
   
--   Fare clic con il pulsante destro del mouse sull'indicatore di misura del misuratore e scegliere **Proprietà indicatore di misura**. Per `Value`, selezionare un campo dall'elenco a discesa o definire un'espressione campo facendo clic il **espressione** (*fx*) pulsante.  
+-   Fare clic con il pulsante destro del mouse sull'indicatore di misura del misuratore e scegliere **Proprietà indicatore di misura**. Per la `Value`, selezionare un campo nell'elenco a discesa o definire un'espressione campo facendo il **espressione** (*fx*) pulsante.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Aggregazione di campi in un solo valore  
- Quando si aggiunge un campo a un misuratore, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] viene calcolata un'aggregazione per il campo per impostazione predefinita. I tipi di dati numerici vengono aggregati con la funzione SUM. I tipi di dati non numerici vengono aggregati con la funzione COUNT che consente di calcolare il numero di istanze per un valore o un campo specifico all'interno del set di dati o del gruppo. Se il tipo di dati del campo valori è String, non sarà possibile visualizzare un valore numerico, neanche se nei campi sono presenti numeri. I campi stringa vengono invece aggregati usando la funzione COUNT. Per evitare questo comportamento, assicurarsi che i campi usati includano tipi di dati numerici anziché stringhe con numeri formattati. È possibile specificare un'espressione di Visual Basic per convertire i valori String in un tipo di dati numerici usando la costante CDbl o la costante CInt. L'espressione seguente, ad esempio, converte un campo stringa chiamato MyField in valori numerici.  
+ Quando si aggiunge un campo a un misuratore, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcolata un'aggregazione per il campo per impostazione predefinita. I tipi di dati numerici vengono aggregati con la funzione SUM. I tipi di dati non numerici vengono aggregati con la funzione COUNT che consente di calcolare il numero di istanze per un valore o un campo specifico all'interno del set di dati o del gruppo. Se il tipo di dati del campo valori è String, non sarà possibile visualizzare un valore numerico, neanche se nei campi sono presenti numeri. I campi stringa vengono invece aggregati usando la funzione COUNT. Per evitare questo comportamento, assicurarsi che i campi usati includano tipi di dati numerici anziché stringhe con numeri formattati. È possibile specificare un'espressione di Visual Basic per convertire i valori String in un tipo di dati numerici usando la costante CDbl o la costante CInt. L'espressione seguente, ad esempio, converte un campo stringa chiamato MyField in valori numerici.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
@@ -290,13 +290,13 @@ ms.locfileid: "36065772"
 ##  <a name="HowTo"></a> Procedure  
  In questa sezione vengono elencate le procedure che illustrano in modo dettagliato come usare i misuratori nei report, come ottenere i dati da visualizzare in modo efficiente nei misuratori e come aggiungere e configurare i misuratori e i relativi elementi.  
   
--   [Aggiungere un misuratore a un Report &#40;SSRS e Generatore Report&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
+-   [Aggiungere un misuratore a un Report &#40;Report e SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Impostare un valore minimo o massimo su un misuratore &#40;SSRS e Generatore Report&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Impostare un valore minimo o massimo su un misuratore &#40;Report e SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Impostare un intervallo di blocco su un misuratore &#40;SSRS e Generatore Report&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Impostare un intervallo di blocco su un misuratore &#40;Report e SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   
--   [Specificare un'immagine come indicatore di misura su un misuratore &#40;SSRS e Generatore Report&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Specificare un'immagine come indicatore di misura su un misuratore &#40;Report e SSRS&#41;](../specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs.md)  
   
   
 ##  <a name="InThisSection"></a> Contenuto della sezione  
@@ -305,9 +305,9 @@ ms.locfileid: "36065772"
 |||  
 |-|-|  
 |Nome|Definizione|  
-|[Formattazione di Scale su un misuratore &#40;SSRS e Generatore Report&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
-|[Formattazione puntatori su un misuratore &#40;SSRS e Generatore Report&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione degli indicatori di misura dei misuratori e informazioni dettagliate sulle opzioni di formattazione per gli stili degli indicatori di misura dei misuratori radiali e lineari.|  
-|[Formattazione di intervalli su un misuratore &#40;SSRS e Generatore Report&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla formattazione degli intervalli dei misuratori per indicare un'importante sottosezione di valori del misuratore o per indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori.|  
+|[Formattazione di Scale su un misuratore &#40;Report e SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione delle scale dei misuratori e informazioni dettagliate sulle opzioni di formattazione per le scale dei misuratori radiali e lineari.|  
+|[Formattazione puntatori su un misuratore &#40;Report e SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni generali sulla formattazione degli indicatori di misura dei misuratori e informazioni dettagliate sulle opzioni di formattazione per gli stili degli indicatori di misura dei misuratori radiali e lineari.|  
+|[Formattazione di intervalli su un misuratore &#40;Report e SSRS&#41;](formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)|Vengono fornite informazioni sulla formattazione degli intervalli dei misuratori per indicare un'importante sottosezione di valori del misuratore o per indicare visivamente quando il valore dell'indicatore di misura rientra in un determinato intervallo di valori.|  
   
   
 ## <a name="see-also"></a>Vedere anche  

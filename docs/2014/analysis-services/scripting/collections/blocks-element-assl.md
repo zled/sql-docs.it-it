@@ -1,5 +1,5 @@
 ---
-title: Blocca elemento (ASSL) | Documenti Microsoft
+title: Blocca elemento (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Blocks element
 ms.assetid: d6fd4e6b-b5bd-43cd-9c28-48af57cf977c
 caps.latest.revision: 32
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf944cc053e7a8c32efec50d10f6cc176942cce1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c2776ea261c26bd8c53d3f78ba29231823bb659d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066170"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161322"
 ---
 # <a name="blocks-element-assl"></a>Elemento Blocks (ASSL)
   Contiene la raccolta di blocchi di dati binari che rappresentano contenuto binario di un [ClrAssemblyFile](../data-type/clrassemblyfile-data-type-assl.md) elemento.  
@@ -63,8 +63,8 @@ ms.locfileid: "36066170"
 |Elementi padre|[I dati](../objects/data-element-assl.md) di tipo [DataBlock](../data-type/datablock-data-type-assl.md)|  
 |Elementi figlio|[Blocco](../objects/block-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `Blocks` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `Blocks` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ClrAssemblyFile>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento assembly &#40;ASSL&#41;](../objects/assembly-element-assl.md)   
