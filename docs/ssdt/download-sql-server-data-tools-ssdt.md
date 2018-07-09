@@ -26,7 +26,7 @@ ms.lasthandoff: 05/10/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Scaricare SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** è un moderno strumento di sviluppo scaricabile gratuitamente per compilare database relazionali SQL Server, database Azure SQL, pacchetti di Integration Services, modelli di dati di Analysis Services e report di Reporting Services. Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio. 
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** è un moderno strumento di sviluppo scaricabile gratuitamente per creare database relazionali SQL Server, database Azure SQL, pacchetti di Integration Services, modelli di dati di Analysis Services e report di Reporting Services. Con SSDT è possibile progettare e distribuire qualsiasi tipo di contenuto SQL Server con la stessa facilità con la quale si sviluppa un'applicazione in Visual Studio. 
 
 SSDT 15.x offre un'esperienza di installazione Web autonoma per i progetti SQL Server Database, Analysis Services, Reporting Services e Integration Services in Visual Studio 2017 15.5 o versioni successive.
 
@@ -99,7 +99,7 @@ Questa versione di **SSDT per VS 2015** può essere installata nelle lingue segu
 
 ### <a name="iso-images---ssdt-for-vs-2015"></a>Immagini ISO - SSDT per VS 2015
 
-Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per installare SSDT o configurare un punto di installazione amministrativa. L'immagine ISO è un file autonomo che contiene tutti i componenti richiesti da SSDT e può essere scaricata mediante un gestore download riavviabile, utile nei casi di larghezza di banda della rete limitata o meno affidabile. Una volta scaricata, l'immagine ISO può essere montata come unità o masterizzata su un DVD.
+Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per installare SSDT o configurare un punto di installazione amministrativa. L'immagine ISO è un file autonomo che contiene tutti i componenti richiesti da SSDT e può essere scaricata mediante un gestore download ripristinabile, utile nei casi di larghezza di banda della rete limitata o meno affidabile. Una volta scaricata, l'immagine ISO può essere montata come unità o masterizzata su un DVD.
 
 > [!NOTE]
 > Le immagini ISO di SSDT per VS 2015 17.4 sono ora disponibili.
@@ -123,7 +123,7 @@ Un'immagine ISO di SSDT può essere utilizzata come metodo alternativo per insta
 
 ## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Installazione di SSDT senza Visual Studio preinstallato
 
-Se Visual Studio non è installato nel computer, l'installazione di SSDT per Visual Studio includerà anche l'installazione di una versione minima di Visual Studio. Questa versione di Visual Studio può essere installata e usata liberamente in qualsiasi numero di computer. Include tutti i tipi di progetto di SQL Server, oltre a *Esplora oggetti di SQL Server* e altre esperienze di strumenti SQL.
+Se Visual Studio non è installato nel computer, l'installazione di SSDT per Visual Studio includerà anche l'installazione di una versione minima di Visual Studio. Questa versione di Visual Studio può essere installata e usata liberamente in un numero qualunque di computer. Include tutti i tipi di progetto di SQL Server, oltre a *Esplora oggetti di SQL Server* e altri strumenti SQL.
 
 Se nel computer in uso è installato Visual Studio 2015 (o versioni successive), l'installazione di SSDT aggiunge il set completo di strumenti di SQL Server all'installazione di Visual Studio esistente. Visual Studio include molte funzionalità utili, come l'integrazione del controllo del codice sorgente e il supporto di linguaggi diversi da SQL. Per un'esperienza di sviluppo ottimale con T-SQL è consigliabile usare Visual Studio 2015 o versione successiva.
 
