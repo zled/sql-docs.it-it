@@ -1,5 +1,5 @@
 ---
-title: Implementazione di connessioni in ADOMD.NET | Documenti Microsoft
+title: Per stabilire le connessioni in ADOMD.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - ADOMD.NET, connections
 ms.assetid: 7b9610f5-6641-42cc-af4e-bd35771913d1
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: e9779ae9f6791443d06b97aaf9e56254ce1d7934
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9d7bf4529df77545cf2d0acf69af5d0b570ef750
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064594"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165302"
 ---
 # <a name="establishing-connections-in-adomdnet"></a>Implementazione di connessioni in ADOMD.NET
-  In ADOMD.NET è usare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto per aprire connessioni con origini dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database. Quando la connessione non è più necessaria, deve essere chiusa in modo esplicito.  
+  In ADOMD.NET è usare il <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> oggetto per aprire connessioni con origini dati analitici, ad esempio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] i database. Quando la connessione non è più necessaria, deve essere chiusa in modo esplicito.  
   
 ## <a name="opening-a-connection"></a>Apertura di una connessione  
  Per aprire una connessione in ADOMD.NET, è necessario prima specificare una stringa di connessione a un'origine dati analitici valida e un database. Successivamente è necessario stabilire in modo esplicito la connessione con tale origine dati.  
@@ -49,10 +49,10 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
 ```  
   
 ### <a name="opening-a-connection-to-the-data-source"></a>Stabilire una connessione con l'origine dati  
- Dopo avere specificato la stringa di connessione, è necessario utilizzare il metodo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> per aprire la connessione. Quando si apre un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, è possibile impostare i diversi livelli di sicurezza per la connessione. Il livello di sicurezza utilizzato per la connessione dipende dal valore dell'impostazione `ProtectionLevel` della stringa di connessione. Per ulteriori informazioni sull'apertura di connessioni protette in ADOMD.NET, vedere [tentativo di stabilire connessioni protette in ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
+ Dopo avere specificato la stringa di connessione, è necessario utilizzare il metodo <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.Open%2A> per aprire la connessione. Quando si apre un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, è possibile impostare i diversi livelli di sicurezza per la connessione. Il livello di sicurezza utilizzato per la connessione dipende dal valore dell'impostazione `ProtectionLevel` della stringa di connessione. Per altre informazioni sull'apertura di connessioni protette in ADOMD.NET, vedere [tentativo di stabilire connessioni protette in ADOMD.NET](connections-in-adomd-net-establishing-secure-connections.md).  
   
 ## <a name="working-with-a-connection"></a>Utilizzo di una connessione  
- Ogni connessione aperta esiste in una sessione, in cui viene fornito il supporto per le operazioni con stato. Una sessione può essere condivisa da più di una connessione aperta. La condivisione di una sessione consente a più di un client di utilizzare lo stesso contesto. Per altre informazioni, vedere [utilizzo di connessioni e sessioni in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
+ Ogni connessione aperta esiste in una sessione, in cui viene fornito il supporto per le operazioni con stato. Una sessione può essere condivisa da più di una connessione aperta. La condivisione di una sessione consente a più di un client di utilizzare lo stesso contesto. Per altre informazioni, vedere [uso di connessioni e sessioni in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
  È possibile utilizzare una connessione aperta per recuperare metadati e dati e per eseguire comandi. Per altre informazioni, vedere [recupero di metadati da un'origine dati analitici](retrieving-metadata-from-an-analytical-data-source.md), [recupero dei dati da un'origine dati analitici](retrieving-data-from-an-analytical-data-source.md), e [l'esecuzione di comandi su un dati analitici Origine](executing-commands-against-an-analytical-data-source.md).  
   
@@ -63,7 +63,7 @@ System.Diagnostics.Debug.Writeline(advwrksConnection.ConnectionString);
   
  Una connessione che non viene chiusa in modo esplicito, ma cui è consentito uscire dall'ambito, potrebbe non rilasciare le risorse del server in modo sufficientemente rapido per consentire alle applicazioni client di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con elevato grado di concorrenza di aprire nuove connessioni in modo efficiente. In base al modo in cui è stata creata la connessione, la sessione utilizzata dall'oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> può rimanere attiva se la connessione non viene chiusa in modo esplicito.  
   
- Per ulteriori informazioni sulle sessioni, vedere [utilizzo di connessioni e sessioni in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
+ Per altre informazioni sulle sessioni, vedere [uso di connessioni e sessioni in ADOMD.NET](../multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions.md).  
   
 > [!IMPORTANT]  
 >  Nel metodo `Finalize` di ogni classe implementata, non chiamare i metodi `Close` o `Dispose` di un oggetto <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection>, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> o di qualsiasi altro oggetto gestito. In un finalizzatore rilasciare solo le risorse non gestite di proprietà diretta della classe implementata. Se la classe implementata non è proprietaria di alcuna risorsa non gestita, non includere un metodo `Finalize` nella relativa definizione.  

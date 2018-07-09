@@ -1,5 +1,5 @@
 ---
-title: Destinazioni degli eventi estesi di SQL Server | Documenti Microsoft
+title: Destinazioni degli eventi estesi di SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,30 +8,30 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events]
 - extended events [SQL Server], targets
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 caps.latest.revision: 50
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dbd3b218390cc1a49f7256a7f2cb79228ff8c3c7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: ba3ea863b35142c65b2e5f38789f888d603b6977
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064081"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160982"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destinazioni degli eventi estese sono consumer di eventi. Le destinazioni possono scrivere in un file, archiviare dati evento in un buffer di memoria o dati degli eventi di aggregazione. Le destinazioni possono elaborare i dati in modo sincrono o asincrono.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Destinazioni degli eventi estesi sono consumer di eventi. Le destinazioni possono scrivere in un file, archiviare dati evento in un buffer di memoria o dati degli eventi di aggregazione. Le destinazioni possono elaborare i dati in modo sincrono o asincrono.  
   
  La progettazione degli eventi estesi assicura che per le destinazioni sia garantita la ricezione degli eventi solo una volta per sessione.  
   
  Gli eventi estesi forniscono le seguenti destinazioni che è possibile utilizzare per una sessione relativa ad essi:  
   
--   [Contatore eventi](../../2014/database-engine/event-counter-target.md)  
+-   [Contatore degli eventi](../../2014/database-engine/event-counter-target.md)  
   
      Conta tutti gli eventi specificati che si verificano durante una sessione di eventi estesi. Consente di ottenere informazioni sulle funzionalità del carico di lavoro senza aggiungere l'overhead di un'intera raccolta di eventi. Si tratta di una destinazione sincrona.  
   

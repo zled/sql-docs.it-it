@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.f1
 helpviewer_keywords:
@@ -17,13 +17,13 @@ ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 0cb5a9f08218a2533b4d1bcbcec2572b0b929dc4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 931978bdad7e2e82d232af85ee253ca8cae7de91
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054809"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239261"
 ---
 # <a name="transfer-database-task"></a>Attività Trasferisci database
   L'attività Trasferisci database trasferisce un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tra due istanze di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A differenza di altre attività che trasferiscono oggetti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo eseguendone una copia, l'attività Trasferisci database può copiare o spostare un database. Tramite questa attività è inoltre possibile copiare un database all'interno dello stesso server.  
@@ -42,7 +42,7 @@ ms.locfileid: "36054809"
 ## <a name="execution-value"></a>Valore di esecuzione  
  Il valore di esecuzione, definito nella proprietà `ExecutionValue` dell'attività, restituisce il valore 1, in quanto a differenza di altre attività di trasferimento, l'attività Trasferisci database può trasferire un solo database.  
   
- Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dell'attività Trasferisci Database, le informazioni sul trasferimento dei messaggi di errore possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
+ Tramite l'assegnazione di una variabile definita dall'utente per il `ExecValueVariable` proprietà dell'attività Trasferisci Database, le informazioni sul trasferimento di messaggio di errore possono essere rese disponibili ad altri oggetti nel pacchetto. Per altre informazioni, vedere [Variabili di Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) e [Utilizzo di variabili nei pacchetti](../use-variables-in-packages.md).  
   
 ## <a name="log-entries"></a>Voci di log  
  L'attività Trasferisci database include le voci di log personalizzate seguenti:  
@@ -53,7 +53,7 @@ ms.locfileid: "36054809"
   
 -   SourceDB    Indica il nome del database trasferito.  
   
- Inoltre, una voce di log per il `OnInformation` evento viene scritto quando il database di destinazione viene sovrascritto.  
+ Inoltre, una voce di log per il `OnInformation` viene scritto l'evento quando il database di destinazione viene sovrascritto.  
   
 ## <a name="security-and-permissions"></a>Sicurezza e autorizzazioni  
  Per poter trasferire un database in modalità offline, l'utente che esegue il pacchetto deve essere membro del ruolo del server _sysadmin.  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 771ae5285f38b89336fa1f62b71ab033a54b3e8d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: b750ea3f8586b874a78251790bd0d46e18680a2d
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064281"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158972"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Generazione di file di dump per l'esecuzione del pacchetto
   In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]è possibile creare file di dump del debug contenenti informazioni sull'esecuzione di un pacchetto. Tramite le informazioni di questi file, è possibile risolvere i problemi di esecuzione dei pacchetti.  
@@ -37,7 +37,7 @@ ms.locfileid: "36064281"
   
      Chiamare questa stored procedure per interrompere un pacchetto in esecuzione e creare un file di dump.  
   
- Se si distribuiscono pacchetti usando il modello di distribuzione del pacchetto, si creano i file di dump del debug usando l'utilità **dtexec** o **dtutil** per specificare un'opzione di dump del debug nella riga di comando. Per altre informazioni, vedere [Utilità dtexec](../packages/dtexec-utility.md) e [Utilità til dtutil](../dtutil-utility.md). Per ulteriori informazioni sul modello di distribuzione del pacchetto, vedere [distribuzione di progetti e pacchetti](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [distribuzione del pacchetto &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
+ Se si distribuiscono pacchetti usando il modello di distribuzione del pacchetto, si creano i file di dump del debug usando l'utilità **dtexec** o **dtutil** per specificare un'opzione di dump del debug nella riga di comando. Per altre informazioni, vedere [Utilità dtexec](../packages/dtexec-utility.md) e [Utilità til dtutil](../dtutil-utility.md). Per altre informazioni sul modello di distribuzione del pacchetto, vedere [distribuzione di progetti e pacchetti](../packages/deploy-integration-services-ssis-projects-and-packages.md) e [distribuzione del pacchetto &#40;SSIS&#41;](../packages/legacy-package-deployment-ssis.md).  
   
 ## <a name="debug-dump-file-format"></a>Formato del file di dump del debug  
  Quando si specifica un'opzione di dump del debug, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea i file di dump del debug seguenti:  
@@ -57,6 +57,6 @@ ms.locfileid: "36064281"
 |Messaggi recenti|Messaggi recenti emessi dal sistema. Sono inclusi l'ora, il tipo, la descrizione e l'ID thread di ogni messaggio.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> (@ 0282F1A8)<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Descrizione: Componente mancante, non registrato, non aggiornabile oppure mancano interfacce necessarie. Informazioni di contatto per il componente: "".|  
   
 ## <a name="related-content"></a>Contenuto correlato  
- [Eseguire la finestra di dialogo pacchetto](../execute-package-dialog-box.md)  
+ [Finestra di dialogo Esecuzione pacchetto](../execute-package-dialog-box.md)  
   
   

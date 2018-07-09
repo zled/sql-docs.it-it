@@ -1,5 +1,5 @@
 ---
-title: Utilizzo dei report | Documenti Microsoft
+title: Uso dei report | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - overriding reports
@@ -36,26 +36,26 @@ helpviewer_keywords:
 - analyzing system [Upgrade Advisor], reports
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 caps.latest.revision: 39
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: d71bcb0f6c695f540f1d38b1418c2c3282afea58
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 857f83c12983f7f23fdbedf7f73ce94a2ad91fff
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055842"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278367"
 ---
 # <a name="using-reports"></a>Utilizzo dei report
   Per ogni componente e, se necessario, per ogni istanza analizzata tramite l'Analisi guidata di Preparazione aggiornamento su un server viene generato un report distinto, in cui sono forniti dettagli su problemi noti che influiscono su un aggiornamento. Il report contiene inoltre collegamenti a informazioni e ad azioni consigliate per la risoluzione dei problemi identificati.  
   
 > [!NOTE]  
->  Se il Visualizzatore di Report di preparazione aggiornamento non trova tutti i report nella directory dei report predefiniti, è possibile caricare un report da una directory diversa utilizzando il **Apri Report** collegamento.  
+>  Se il Visualizzatore di Report di preparazione aggiornamento non trova alcun report nella directory dei report predefiniti, è possibile caricare un report da una directory diversa utilizzando il **Apri Report** collegamento.  
   
 ## <a name="viewing-reports"></a>Visualizzazione dei report  
  Utilizzare il Visualizzatore report di Preparazione aggiornamento per visualizzare i report di Preparazione aggiornamento. Per visualizzare i report, nella pagina iniziale di preparazione aggiornamento, fare clic su **avviare Visualizzatore Report Preparazione aggiornamento**.  
   
- Dopo avere caricato un report per un server, è possibile selezionare un componente per cui visualizzare i problemi di aggiornamento. È possibile applicare un filtro dal **Filtra per** finestra per visualizzare quanto segue:  
+ Dopo avere caricato un report per un server, è possibile selezionare un componente per cui visualizzare i problemi di aggiornamento. È possibile applicare un filtro dal **Filtra per** casella per visualizzare quanto segue:  
   
 -   Tutti i problemi  
   
@@ -69,19 +69,19 @@ ms.locfileid: "36055842"
   
 -   Problemi irrisolti  
   
- Se il report contiene più di 20 problemi, è possibile spostare al gruppo successivo o precedente di problemi, fare clic su **prossimi 20** oppure **precedenti 20** nella parte superiore o inferiore dell'elenco di problemi.  
+ Se il report contiene più di 20 problemi, è possibile spostare al gruppo successivo o precedente di problemi facendo **prossimi 20** oppure **precedenti 20** nella parte superiore o inferiore dell'elenco di problemi.  
   
- È possibile visualizzare fino a cinque report salvati selezionandoli dal **Report** casella di riepilogo a discesa. I report vengono elencati in base al valore timestamp che indica la data e l'ora in cui sono stati generati.  
+ È possibile visualizzare fino a cinque report salvati, selezionare il report dal **Report** casella di riepilogo a discesa. I report vengono elencati in base al valore timestamp che indica la data e l'ora in cui sono stati generati.  
   
 ## <a name="report-format"></a>Formato dei report  
  Il visualizzatore di report suddivide i problemi in tre colonne. Ogni problema è comprimibile, in modo che sia possibile nascondere la descrizione e visualizzare solo le informazioni essenziali.  
   
- La prima colonna è il **importanza** colonna. Le icone indicano l'importanza di ogni problema: viene visualizzato un cerchio rosso con una X per problemi importanti o che bloccano l'aggiornamento oppure un triangolo giallo con un punto esclamativo per problemi paragonabili a messaggi di avviso o informativi. La seconda colonna, **quando correggere**, indica quando è necessario risolvere il problema. È possibile ordinare il report nel **importanza** oppure **quando correggere** colonna. La terza colonna **descrizione**, sono elencati i titoli del problema.  
+ La prima colonna è il **importanza** colonna. Le icone indicano l'importanza di ogni problema: viene visualizzato un cerchio rosso con una X per problemi importanti o che bloccano l'aggiornamento oppure un triangolo giallo con un punto esclamativo per problemi paragonabili a messaggi di avviso o informativi. La seconda colonna, **quando correggere**, indica quando è necessario risolvere il problema. È possibile ordinare il report nel **importanza** oppure **quando correggere** colonna. La terza colonna, **descrizione**, sono elencati i titoli del problema.  
   
- È possibile espandere un problema per visualizzare informazioni aggiuntive, un collegamento a informazioni dettagliate sulla risoluzione e un collegamento per visualizzare i dettagli del problema. Quando si fa clic sul collegamento per ottenere informazioni dettagliate per il problema, verrà visualizzato un argomento della Guida con informazioni e istruzioni per risolverlo. Dopo avere risolto un problema o per gestire gli elementi delle azioni, è possibile contrassegnare i problemi come completati selezionando la **questo problema è stato risolto** casella di controllo. Se si desidera rimuovere i problemi risolti dall'elenco dei problemi di aggiornamento, fare clic su **aggiornare**. Il problema verrà visualizzato di nuovo fino a quando non si esegue l'analisi guidata Preparazione aggiornamento sullo stesso componente o si applica il **problemi risolti** filtrano le **Filtra per** opzione.  
+ È possibile espandere un problema per visualizzare informazioni aggiuntive, un collegamento a informazioni dettagliate sulla risoluzione e un collegamento per visualizzare i dettagli del problema. Quando si fa clic sul collegamento per ottenere informazioni dettagliate per il problema, verrà visualizzato un argomento della Guida con informazioni e istruzioni per risolverlo. Dopo aver risolto un problema o per gestire gli elementi delle azioni, è possibile contrassegnare i problemi come completati selezionando la **questo problema è stato risolto** casella di controllo. Se si desidera rimuovere i problemi risolti dall'elenco dei problemi di aggiornamento, fare clic su **Aggiorna**. Il problema non viene visualizzato nuovamente fino a quando non si esegue l'analisi guidata Preparazione aggiornamento sullo stesso componente o si applicano i **problemi risolti** filtrare dal **Filter By** opzione.  
   
 ## <a name="report-files"></a>File di report  
- L'analisi guidata Preparazione aggiornamento Crea report nella cartella documenti\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory aggiornamento Advisor\110\Reports e crea una sottodirectory per ogni server analizzato. I file di report sono in formato XML e seguono una convenzione di denominazione specifica. Quando si avvia il Visualizzatore report di Preparazione aggiornamento, vengono visualizzati i file di report della directory predefinita. Se vengono copiati file di report in questa cartella, è necessario che rispettino la convenzione di denominazione, altrimenti non verranno visualizzati automaticamente.  
+ L'analisi guidata Preparazione aggiornamento Crea report nella cartella documenti\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directory eseguire l'aggiornamento Advisor\110\Reports e crea una sottodirectory per ogni server analizzato. I file di report sono in formato XML e seguono una convenzione di denominazione specifica. Quando si avvia il Visualizzatore report di Preparazione aggiornamento, vengono visualizzati i file di report della directory predefinita. Se vengono copiati file di report in questa cartella, è necessario che rispettino la convenzione di denominazione, altrimenti non verranno visualizzati automaticamente.  
   
  Se si desidera condividere le informazioni con altri utenti, è possibile inviare il report XML. In alternativa, se si desidera utilizzare un'altra applicazione, è possibile esportare il report in un file con valori delimitati da virgole da utilizzare per creare un foglio di calcolo, un file di testo o un messaggio di posta elettronica.  
   
@@ -90,6 +90,6 @@ ms.locfileid: "36055842"
  [Procedura: esportare i report](../../../2014/sql-server/install/how-to-export-reports.md)   
  [Procedura: filtrare i report](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Risoluzione dei problemi di aggiornamento](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;nuovo&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Preparazione aggiornamento a SQL Server 2014 &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
   
   
