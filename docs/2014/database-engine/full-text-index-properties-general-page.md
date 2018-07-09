@@ -1,32 +1,31 @@
 ---
-title: Proprietà indice full-Text (pagina generale) | Documenti Microsoft
+title: Proprietà indice full-Text (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-search
+ms.technology: search
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 caps.latest.revision: 27
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 67fd5637e190d58cdcab186643d5233bb89b1b5e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 825b7e357d5904108b9dd4cbdec9533e89313c83
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064795"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149932"
 ---
 # <a name="full-text-index-properties-general-page"></a>Proprietà indice full-text (pagina Generale)
   **Per visualizzare o modificare le proprietà modificabili di un indice full-text**  
   
--   [Gestire indici Full-Text](../relational-databases/indexes/indexes.md)  
+-   [Gestire indici full-text](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
  **Catalogo full-Text**  
@@ -69,7 +68,7 @@ ms.locfileid: "36064795"
  Filegroup cui appartiene l'indice full-text.  
   
  **Elenco di parole non significative indice full-text**  
- Elenco di parole non significative associate all'indice full-text. Un elenco di parole non significative è un elenco di [le parole non significative](../relational-databases/search/full-text-search.md). eventualmente associato a un indice full-text viene applicato alle query full-text su tale indice. È possibile rimuovere le parole non significative dall'indice selezionando  **\<OFF >** dall'elenco, oppure è possibile selezionare un diverso stoplist;  **\<Sistema >** indica l'elenco di parole non significative di sistema.  
+ Elenco di parole non significative associate all'indice full-text. Un elenco di parole non significative è un elenco delle [parole non significative](../relational-databases/search/full-text-search.md). eventualmente associato a un indice full-text viene applicato alle query full-text su tale indice. È possibile rimuovere l'elenco di parole non significative dall'indice selezionando  **\<OFF >** dall'elenco, oppure è possibile selezionare un elenco diverso;  **\<Sistema >** indica l'elenco di parole non significative di sistema.  
   
  **Per creare un elenco di parole non significative**  
   
@@ -90,7 +89,7 @@ ms.locfileid: "36064795"
  **Conteggio elementi Full-Text tabella**  
  Indica il numero di righe sottoposte correttamente a indicizzazione full-text.  
   
- Questa proprietà corrisponde al `TableFulltextItemCount` proprietà restituita dalla OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] (funzione).  
+ Questa proprietà corrisponde al `TableFulltextItemCount` proprietà restituita da OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] (funzione).  
   
  **Documenti Full-Text della tabella elaborati**  
  Visualizza il numero di righe che sono state elaborate dopo l'avvio dell'indicizzazione full-text. In una tabella sottoposta a indicizzazione ai fini della ricerca full-text tutte le colonne di una riga vengono considerate come appartenenti a un unico documento da indicizzare. Le righe eliminate non vengono conteggiate.  
@@ -112,7 +111,7 @@ ms.locfileid: "36064795"
   
  0 = Popolamento completato.  
   
- \>0 = uno dei seguenti:  
+ \>0 = possibili valori sono i seguenti:  
   
 -   Numero di documenti non indicizzati dopo l'avvio del popolamento con rilevamento delle modifiche ad aggiornamento completo, incrementale e manuale.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "36064795"
 |||  
 |-|-|  
 |**Full**|Durante il popolamento di una tabella, vengono create voci di indice per tutte le righe.|  
-|**Incrementale**|Il popolamento incrementale aggiorna l'indice full-text relativamente alle righe aggiunte, eliminate o modificate dopo l'ultimo popolamento o durante la sua esecuzione. Eseguire un popolamento incrementale è necessario che la tabella di base include una colonna del `timestamp` tipo di dati.|  
+|**Incrementale**|Il popolamento incrementale aggiorna l'indice full-text relativamente alle righe aggiunte, eliminate o modificate dopo l'ultimo popolamento o durante la sua esecuzione. Eseguire un popolamento incrementale, è necessario che la tabella di base contenga una colonna del `timestamp` tipo di dati.|  
 |**Update**|L'indice full-text viene aggiornato ogni qual volta i dati della tabella di base vengono modificati.|  
   
 ## <a name="see-also"></a>Vedere anche  
