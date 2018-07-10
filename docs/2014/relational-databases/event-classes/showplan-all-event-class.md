@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 topic_type:
 - apiref
 helpviewer_keywords:
 - Showplan All event class
 ms.assetid: ee341319-c34a-43e3-ad33-6bfb1f85e314
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: bfdb5d7f438c5a7f525620ccf8831731a4baf03a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 2e0766addf66ce204be9eabaee809ac4f6bfe32a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064967"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229251"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All - classe di evento
   La classe di evento Showplan All viene generata quando in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] viene eseguita un'istruzione SQL. Le informazioni incluse sono tuttavia un subset delle informazioni disponibili nelle classi di evento Showplan XML Statistics o Showplan XML.  
