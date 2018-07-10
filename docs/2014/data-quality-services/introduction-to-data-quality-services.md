@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 2f254100d2f77d1e51faa5b295af91fe86524fe7
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8199de0df5b7910c547867fa62e5670670510988
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067264"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183308"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introduzione a Data Quality Services
   La soluzione per la qualità dei dati fornita da [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) consente a un amministratore dei dati o un professionista IT di mantenere la qualità dei dati gestiti e assicurarne l'appropriatezza per l'utilizzo aziendale. DQS è una soluzione basata sulle informazioni che offre modalità assistite da computer e interattive per gestire l'integrità e la qualità delle origini dati. DQS consente di individuare, compilare e gestire informazioni sui dati. È quindi possibile utilizzare tali informazioni per eseguire la pulizia, la corrispondenza e il profiling dei dati. È inoltre possibile utilizzare i servizi basati su cloud di provider di dati di riferimento in un progetto Data Quality DQS.  
@@ -33,7 +33,7 @@ ms.locfileid: "36067264"
   
  Una soluzione DQS consente a utenti aziendali, Information Worker o professionisti IT, non necessariamente esperti di database o di programmazione, di creare, gestire ed eseguire operazioni relative alla qualità dei dati dell'organizzazione con un tempo di preparazione o configurazione minimo.  
   
-##  <a name="Answer"></a> Rispondere alle esigenze di DQS  
+##  <a name="Answer"></a> La risposta l'esigenza con DQS  
  La qualità dei dati non è definibile in termini assoluti. Dipende dal fatto che i dati siano o meno appropriati allo scopo designato. Con DQS i dati potenzialmente errati vengono identificati e viene fornita una valutazione della probabilità che siano effettivamente errati. DQS fornisce un'illustrazione semantica dei dati che consente di decidere se siano appropriati. Grazie a DQS è possibile risolvere problemi di incompletezza, mancanza di conformità, incoerenza, imprecisione, mancanza di validità e duplicazione dei dati.  
   
  DQS include le funzionalità seguenti per risolvere i problemi di qualità dei dati.  

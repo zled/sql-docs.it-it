@@ -1,12 +1,11 @@
 ---
-title: Utilizzo delle notifiche delle Query | Documenti Microsoft
+title: Utilizzo delle notifiche delle Query | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.suite: sql
-ms.technology: ''
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, query notifications
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
-caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: dedf0f7ff3e8f89700e35544c94232a9c49656cf
-ms.sourcegitcommit: a78fa85609a82e905de9db8b75d2e83257831ad9
+ms.openlocfilehash: fe3a9ff4070761807066ac6f1e2c9ed752bb1db0
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/18/2018
-ms.locfileid: "35698572"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37425600"
 ---
 # <a name="working-with-query-notifications"></a>Utilizzo delle notifiche delle query
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +51,7 @@ ms.locfileid: "35698572"
   
  Le notifiche vengono inviate una sola volta. Per la notifica continua delle modifiche dei dati, è necessario creare una nuova sottoscrizione rieseguendo la query al termine dell'elaborazione di ogni notifica.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le applicazioni Client native in genere ricevono notifiche mediante il [!INCLUDE[tsql](../../../includes/tsql-md.md)] [ricezione](../../../t-sql/statements/receive-transact-sql.md) comando consente di leggerle dalla coda associata al servizio specificato nelle opzioni di notifica.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Le applicazioni Client native in genere ricevono notifiche tramite il [!INCLUDE[tsql](../../../includes/tsql-md.md)] [ricezione](../../../t-sql/statements/receive-transact-sql.md) comando consente di leggerle dalla coda associata al servizio specificato nelle opzioni di notifica.  
   
 > [!NOTE]  
 >  I nomi di tabella devono essere qualificati nelle query per le quali è necessaria la notifica, ad esempio `dbo.myTable`, e devono essere qualificati con nomi in due parti. La sottoscrizione non è valida se vengono utilizzati nomi in tre o quattro parti.  
@@ -73,19 +71,19 @@ CREATE SERVICE myService ON QUEUE myQueue
 >  Come mostrato sopra, il servizio deve utilizzare il contratto predefinito `http://schemas.microsoft.com/SQL/Notifications/PostQueryNotification`.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Provider OLE DB di SQL Server Native Client  
- Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la notifica di tipo consumer per modifica set di righe. Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.  
+ Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client supporta la notifica di tipo consumer nella modifica di set di righe. Il consumer riceve una notifica a ogni fase di modifica dei set di righe e a ogni tentativo di modifica.  
   
 > [!NOTE]  
->  Passaggio di una query di notifica al server con **ICommand:: Execute** è l'unico modo valido per sottoscrivere le notifiche delle query con il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client.  
+>  Passa al server con una query di notifica **ICommand:: Execute** è l'unico modo valido per sottoscrivere le notifiche delle query con il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provider OLE DB Native Client.  
   
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Set di proprietà DBPROPSET_SQLSERVERROWSET  
- Per supportare le notifiche delle query tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client consente di aggiungere le seguenti nuove proprietà per il set di proprietà DBPROPSET_SQLSERVERROWSET.  
+ Per supportare le notifiche delle query tramite OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aggiunge le nuove proprietà seguenti di proprietà dbpropset_sqlserverrowset.  
   
 |nome|Tipo|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Numero di secondi durante i quali la notifica di query deve rimanere attiva.<br /><br /> Il valore predefinito è 432000 secondi (5 giorni). Il valore minimo è 1 secondo e il valore massimo è 2^31-1 secondi.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Testo del messaggio di notifica. Tale testo è definito dall'utente e non presenta un formato predefinito.<br /><br /> Per impostazione predefinita, la stringa è vuota. È possibile specificare un messaggio utilizzando da 1 a 2000 caratteri.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opzioni di notifica delle query. Tali opzioni vengono specificate in una stringa con *nome*=*valore* sintassi. L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda.<br /><br /> Il valore predefinito è una stringa vuota.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Opzioni di notifica delle query. Tali opzioni vengono specificate in una stringa con *name*=*valore* sintassi. L'utente è responsabile della creazione del servizio e della lettura delle notifiche all'esterno della coda.<br /><br /> Il valore predefinito è una stringa vuota.|  
   
  Il commit della sottoscrizione di notifica viene sempre eseguito, indipendentemente dall'esecuzione dell'istruzione in una transazione utente o in modalità di commit automatico o a prescindere se la transazione in cui è stata eseguita l'istruzione sia stata sottoposta a commit o a rollback. La notifica server viene generata in seguito a una delle condizioni di notifica non valide seguenti: modifica dello schema o dei dati sottostanti o raggiungimento del periodo di timeout, a seconda dell'evento che si verifica per primo. Le registrazioni della notifica vengono eliminate subito dopo essere state generate. In seguito alla ricezione delle notifiche, è pertanto necessario che venga effettuata nuovamente la sottoscrizione se si desidera ottenere ulteriori aggiornamenti.  
   
@@ -103,14 +101,14 @@ RECEIVE * FROM MyQueue
   
  Questa istruzione restituisce immediatamente un set di risultati vuoto se la coda è vuota. In caso contrario, restituisce tutte le notifiche della coda.  
   
- Se le proprietà SSPROP_QP_NOTIFICATION_MSGTEXT e SSPROP_QP_NOTIFICATION_OPTIONS sono diverse da Null e non vuote, l'intestazione TDS delle notifiche delle query contenente le tre proprietà definite sopra viene inviata al server a ogni esecuzione del comando. Se una di esse è Null o vuota, l'intestazione non viene inviata e viene generato DB_E_ERRORSOCCURRED, o DB_S_ERRORSOCCURRED se le proprietà sono entrambe contrassegnate come facoltative, e il valore dello stato viene impostato su DBPROPSTATUS_BADVALUE. La convalida viene effettuata in fase di esecuzione/preparazione. Analogamente, DB_S_ERRORSOCCURED viene generato quando le proprietà di notifica di query vengono impostate per le connessioni a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le versioni precedenti [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Il valore dello stato in questo caso è DBPROPSTATUS_NOTSUPPORTED.  
+ Se le proprietà SSPROP_QP_NOTIFICATION_MSGTEXT e SSPROP_QP_NOTIFICATION_OPTIONS sono diverse da Null e non vuote, l'intestazione TDS delle notifiche delle query contenente le tre proprietà definite sopra viene inviata al server a ogni esecuzione del comando. Se una di esse è Null o vuota, l'intestazione non viene inviata e viene generato DB_E_ERRORSOCCURRED, o DB_S_ERRORSOCCURRED se le proprietà sono entrambe contrassegnate come facoltative, e il valore dello stato viene impostato su DBPROPSTATUS_BADVALUE. La convalida viene effettuata in fase di esecuzione/preparazione. Analogamente, DB_S_ERRORSOCCURED viene generato quando vengono impostate le proprietà di notifica di query per le connessioni a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le versioni precedenti [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Il valore dello stato in questo caso è DBPROPSTATUS_NOTSUPPORTED.  
   
  L'avvio di una sottoscrizione non garantisce il corretto recapito dei messaggi successivi. Inoltre, non viene effettuato alcun controllo della validità del nome di servizio specificato.  
   
 > [!NOTE]  
 >  La preparazione delle istruzioni non causerà mai l'avvio della sottoscrizione. Tale operazione verrà effettuata solo mediante l'esecuzione delle istruzioni. L'uso dei servizi OLE DB di base non influisce sulle notifiche delle query.  
   
- Per ulteriori informazioni sul set di proprietà DBPROPSET_SQLSERVERROWSET, vedere [proprietà set di righe e i comportamenti](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
+ Per altre informazioni sul set di proprietà DBPROPSET_SQLSERVERROWSET, vedere [proprietà set di righe e i comportamenti](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Driver ODBC di SQL Server Native Client  
  Il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta le notifiche delle query mediante l'aggiunta di tre nuovi attributi per il [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) e [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) funzioni:  

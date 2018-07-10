@@ -1,5 +1,5 @@
 ---
-title: Esplorazione del modello di Clustering (esercitazione di base di Data Mining) | Documenti Microsoft
+title: Esplorazione del modello di Clustering (esercitazione di base di Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ce8aa034-161b-473f-baec-9c29e0a8e5f5
 caps.latest.revision: 34
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: 0d731d16bdb19fdf600f050d580a8b018515fe8d
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: 35cbe12526fbd8ead78132f8560368b62e50aa61
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36313189"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153382"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Esplorazione del modello di clustering (Esercitazione di base sul data mining)
   Il [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo Clustering Raggruppa i case in cluster con caratteristiche simili. Tali raggruppamenti sono utili per l'esplorazione dei dati, l'identificazione delle relative anomalie e la creazione di stime.  
@@ -33,27 +33,27 @@ ms.locfileid: "36313189"
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>Per esplorare il modello nella scheda Diagramma dei cluster  
   
-1.  Utilizzare la **modello di Data Mining** nella parte superiore dell'elenco il **visualizzatore modello di Data Mining** tab per passare al `TM_Clustering` modello.  
+1.  Usare la **modello di Data Mining** elenco nella parte superiore del **visualizzatore modello di Data Mining** tab per passare al `TM_Clustering` modello.  
   
-2.  Nel **Visualizzatore** elenco, selezionare **visualizzatore Microsoft Clustering**.  
+2.  Nel **Viewer** elenco, selezionare **visualizzatore Microsoft Clustering**.  
   
 3.  Nel **variabile ombreggiatura** , quindi selezionare **Bike Buyer**.  
   
-     La variabile predefinita è **popolamento**, ma è possibile modificare questa agli attributi nel modello, per individuare quali cluster contengono i membri che presentano gli attributi desiderati.  
+     La variabile predefinita è **popolamento**, ma è possibile modificarlo in qualsiasi attributo del modello, per rilevare quali cluster contengono membri che hanno gli attributi desiderati.  
   
-4.  Selezionare **1** nel **stato** casella per esplorare i case in cui è stata acquistata una bicicletta.  
+4.  Selezionare **1** nel **stato** finestra per esplorare i case in cui è stata acquistata una bicicletta.  
   
-     Il **densità** della legenda viene descritta la densità della coppia attributo stata selezionata in variabile ombreggiatura e lo stato. In questo esempio indica che il clusterwith l'ombreggiatura più scura è la percentuale più elevata di acquirenti di biciclette.  
+     Il **densità** legenda descrive la densità della coppia di stato dell'attributo selezionata in variabile ombreggiatura e stato. In questo esempio indica che il clusterwith l'ombreggiatura più scura contiene la percentuale più elevata di acquirenti di biciclette.  
   
 5.  Posizionare il mouse sul cluster con l'ombreggiatura più scura.  
   
      Nella descrizione comando verrà visualizzata la percentuale di case che includono l'attributo `Bike Buyer = 1`.  
   
-6.  Selezionare il cluster con la densità più elevata, il pulsante destro del cluster, selezionare **Rinomina Cluster** e il tipo **Bike Buyers High** per identificarlo più avanti. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Selezionare il cluster con la densità più elevata, il pulsante destro del cluster, selezionare **Rinomina Cluster** e digitare **Bike Buyers High** per identificarlo più avanti. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Individuare il cluster con l'ombreggiatura più leggera (e la densità più bassa). Il pulsante destro del cluster, selezionare **Rinomina Cluster** e il tipo **Bike Buyers Low**. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+7.  Individuare il cluster con l'ombreggiatura più leggera (e la densità più bassa). Il pulsante destro del cluster, selezionare **Rinomina Cluster** e digitare **Bike Buyers Low**. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-8.  Fare clic sui **Bike Buyers High** del cluster e trascinarlo in un'area del riquadro al fine di ottenere una visione chiara delle relative connessioni agli altri cluster.  
+8.  Scegliere il **Bike Buyers High** del cluster e trascinarlo in un'area del riquadro che offre una visione chiara delle relative connessioni agli altri cluster.  
   
      Quando si seleziona un cluster, le linee che lo connettono agli altri cluster vengono evidenziate, in modo che sia possibile vedere facilmente tutte le relazioni del cluster. Quando il cluster non è selezionato, dal colore delle linee è possibile dedurre il livello di relazione tra tutti i cluster del diagramma. Se l'ombreggiatura è chiara o inesistente, il grado di somiglianza dei cluster è basso.  
   
@@ -62,42 +62,42 @@ ms.locfileid: "36313189"
 
   
 ##  <a name="ClusterProfilesTab"></a> Scheda Profili cluster  
- Il **profili Cluster** scheda fornisce una visualizzazione complessiva del `TM_Clustering` modello. Il **profili Cluster** scheda contiene una colonna per ogni cluster nel modello. Nella prima colonna sono elencati gli attributi associati ad almeno un cluster. La parte rimanente del visualizzatore contiene la distribuzione degli stati di un attributo per ogni cluster. La distribuzione di una variabile discreta viene visualizzata come una barra colorata e il numero massimo di barre visualizzate nel **barre istogramma** elenco. Gli attributi continui sono visualizzati sotto forma di un grafico a rombi che rappresenta la deviazione media e standard in ogni cluster.  
+ Il **profili Cluster** scheda fornisce una visualizzazione complessiva del `TM_Clustering` modello. Il **profili Cluster** scheda contiene una colonna per ogni cluster nel modello. Nella prima colonna sono elencati gli attributi associati ad almeno un cluster. La parte rimanente del visualizzatore contiene la distribuzione degli stati di un attributo per ogni cluster. La distribuzione di una variabile discreta viene visualizzata come una barra colorata e il numero massimo di barre è visualizzato nei **barre istogramma** elenco. Gli attributi continui sono visualizzati sotto forma di un grafico a rombi che rappresenta la deviazione media e standard in ogni cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>Per esplorare il modello nella scheda Profili cluster  
   
-1.  Impostare **istogramma** barre a **5**.  
+1.  Impostare **istogramma** devono le barre **5**.  
   
      Nel modello utilizzato in questo esempio 5 è il numero massimo di stati per ogni singola variabile.  
   
-2.  Se il **legenda Data Mining** blocca la visualizzazione del **profili dell'attributo**, spostare la legenda.  
+2.  Se il **legenda Data Mining** blocca la visualizzazione delle **profili dell'attributo**, spostarla dall'area di lavoro.  
   
 3.  Selezionare il **Bike Buyers High** colonna e trascinarla a destra del **popolamento** colonna.  
   
 4.  Selezionare il **Bike Buyers Low** colonna e trascinarla a destra del **Bike Buyers High** colonna.  
   
-5.  Fare clic sui **Bike Buyers High** colonna.  
+5.  Scegliere il **Bike Buyers High** colonna.  
   
-     Il **variabili** colonna viene ordinata in ordine di importanza di tale cluster. Scorrere la colonna e verificare le caratteristiche del cluster Bike Buyers High. È ad esempio più probabile che i clienti raggruppati in questo cluster abitino a breve distanza dal luogo di lavoro.  
+     Il **variabili** colonna è ordinata in ordine di importanza per tale cluster. Scorrere la colonna e verificare le caratteristiche del cluster Bike Buyers High. È ad esempio più probabile che i clienti raggruppati in questo cluster abitino a breve distanza dal luogo di lavoro.  
   
-6.  Fare doppio clic sui **Age** cella il **Bike Buyers High** colonna.  
+6.  Fare doppio clic il **età** cella il **Bike Buyers High** colonna.  
   
-     Il **legenda Data Mining** Visualizza più dettagliate Vista ed è possibile visualizzare l'intervallo di questi clienti, nonché l'età media età.  
+     Il **legenda Data Mining** Visualizza modo più dettagliato Vista ed è possibile visualizzare l'intervallo di questi clienti, nonché l'età media età.  
   
-7.  Fare doppio clic sui **Bike Buyers Low** colonna e selezionare **Nascondi colonna**.  
+7.  Fare doppio clic il **Bike Buyers Low** colonna e selezionare **Nascondi colonna**.  
   
 
   
 ##  <a name="ClusterCharacteristicsTab"></a> Scheda caratteristiche cluster  
- Con il **caratteristiche Cluster** scheda, è possibile esaminare in dettaglio le caratteristiche che costituiscono un cluster. Anziché confrontare le caratteristiche di tutti i cluster (come nella scheda Profili cluster), è possibile esplorare un cluster alla volta. Ad esempio, se si seleziona **Bike Buyers High** dal **Cluster** elenco, è possibile visualizzare le caratteristiche dei clienti in questo cluster. Sebbene la visualizzazione sia diversa dalla scheda Profili cluster, i risultati sono gli stessi.  
+ Con il **caratteristiche Cluster** scheda, è possibile esaminare in dettaglio le caratteristiche che costituiscono un cluster. Anziché confrontare le caratteristiche di tutti i cluster (come nella scheda Profili cluster), è possibile esplorare un cluster alla volta. Ad esempio, se si seleziona **Bike Buyers High** dalle **Cluster** elenco, è possibile visualizzare le caratteristiche dei clienti in questo cluster. Sebbene la visualizzazione sia diversa dalla scheda Profili cluster, i risultati sono gli stessi.  
   
 > [!NOTE]  
->  A meno che non si imposta un valore iniziale per **holdoutseed**, i risultati variano ogni volta che si elabora il modello. Per altre informazioni, vedere [elemento HoldoutSeed](../analysis-services/scripting/properties/holdoutseed-element.md)  
+>  A meno che non si imposta un valore iniziale per **holdoutseed**, risultati varieranno ogni volta che si elabora il modello. Per altre informazioni, vedere [elemento HoldoutSeed](../analysis-services/scripting/properties/holdoutseed-element.md)  
   
 
   
 ##  <a name="ClusterDiscriminationTab"></a> Scheda Analisi discriminante tra cluster  
- Con il **analisi discriminante tra Cluster** scheda, è possibile esplorare le caratteristiche che distinguono ogni cluster da un altro. Dopo aver selezionato due cluster, uno dal **Cluster 1** elenco e uno dal **Cluster 2** elenco, il Visualizzatore calcola le differenze tra i cluster e visualizza un elenco degli attributi che distinguono maggiormente i cluster.  
+ Con il **analisi discriminante tra Cluster** scheda, è possibile esplorare le caratteristiche che distinguono ogni cluster da un altro. Dopo aver selezionato due cluster, uno dal **Cluster 1** elenco e uno dalle **Cluster 2** elenco, il Visualizzatore calcola le differenze tra i cluster e visualizza un elenco degli attributi che distinguono maggiormente i cluster.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>Per esplorare il modello nella scheda Analisi discriminante tra cluster  
   
@@ -107,7 +107,7 @@ ms.locfileid: "36313189"
   
 3.  Fare clic su **variabili** per ordinare in ordine alfabetico.  
   
-     Alcune delle differenze più sostanziali fra i clienti nel **Bike Buyers Low** e **Bike Buyers High** cluster includono l'età, automobile, il numero di elementi figlio e area.  
+     Alcune delle differenze più sostanziali fra i clienti nel **Bike Buyers Low** e **Bike Buyers High** cluster includono l'età, automobile, il numero di figli e l'area.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Per esplorare gli altri modelli di data mining, vedere gli argomenti seguenti.  
@@ -123,9 +123,9 @@ ms.locfileid: "36313189"
  [Esplorazione del modello di albero delle decisioni &#40;esercitazione di base di Data Mining&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Visualizzare un modello utilizzando il visualizzatore Microsoft Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)   
- [Scheda Analisi discriminante tra cluster &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/cluster-discrimination-tab-mining-model-viewer.md)   
- [Cluster profili della scheda &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/cluster-profiles-tab-mining-model-viewer.md)   
+ [Visualizzare un modello usando il visualizzatore Microsoft Clustering](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)   
+ [Scheda Analisi discriminante del cluster &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/cluster-discrimination-tab-mining-model-viewer.md)   
+ [Scheda profili di cluster &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/cluster-profiles-tab-mining-model-viewer.md)   
  [Scheda caratteristiche cluster &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/cluster-characteristics-tab-mining-model-viewer.md)   
  [Scheda diagramma dei cluster &#40;visualizzatore modello di Data Mining&#41;](../../2014/analysis-services/cluster-diagram-tab-mining-model-viewer.md)  
   

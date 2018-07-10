@@ -1,5 +1,5 @@
 ---
-title: Creare un'origine dati incorporata o condivisa (SSRS) | Documenti Microsoft
+title: Creare un'origine dati incorporata o condivisa (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,32 +8,32 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 caps.latest.revision: 40
-author: douglaslM
+author: maggiesmsft
 ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 28609edfbfc504d3949abb6a19f7f04098fde07b
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 9cd820de9b6710e4524b39323bcc9837fad820b6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064633"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230731"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Creare un'origine dati incorporata o condivisa (SSRS)
-  Un'origine dati del report consente di specificare un nome e le informazioni di connessione. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita in una definizione del report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita come elemento separato e può essere utilizzata da più report. Per altre informazioni, vedere [incorporata e condivisa connessioni dati o origini dati &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
+  Un'origine dati del report consente di specificare un nome e le informazioni di connessione. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supporta due tipi di origini dati, ovvero incorporate e condivise. Un'origine dati incorporata viene definita in una definizione del report e viene utilizzata solo dal report specifico, mentre un'origine dati condivisa viene definita come elemento separato e può essere utilizzata da più report. Per altre informazioni, vedere [incorporate e condivise le connessioni dati o origini dati &#40;Generatore Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
   
  In Generatore report accedere al server di report o al sito di SharePoint e selezionare le origini dati oppure creare origini dati incorporate. Non è possibile creare origini dati condivise in Generatore report.  
   
- In Progettazione report è possibile creare origini dati condivise o incorporate. Dal riquadro dati Report, iniziare a creare un riferimento all'origine dati e quindi selezionare il **New** opzione. Dopo aver creato il riferimento all'origine dati, una nuova origine dati condivisa verrà aggiunta automaticamente a Esplora soluzioni nella cartella Origini dati condivise.  
+ In Progettazione report è possibile creare origini dati condivise o incorporate. Nel riquadro dati Report, iniziare a creare un riferimento all'origine dati e quindi selezionare il **New** opzione. Dopo aver creato il riferimento all'origine dati, una nuova origine dati condivisa verrà aggiunta automaticamente a Esplora soluzioni nella cartella Origini dati condivise.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
   
- È possibile creare anche origini dati condivise direttamente in un server di report o in un sito di SharePoint. Per altre informazioni, vedere [creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41; ](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) o [creare e gestire origini dati condivise di &#40;Reporting Services in modalità integrata SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
+ È possibile creare anche origini dati condivise direttamente in un server di report o in un sito di SharePoint. Per altre informazioni, vedere [creare, eliminare o modificare un'origine dati condivisa &#40;gestione Report&#41; ](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md) oppure [creare e gestire origini dati condivise &#40;Reporting Services in modalità integrata SharePoint&#41;](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  
   
 ### <a name="to-create-an-embedded-or-shared-data-source"></a>Per creare un'origine dati incorporata o condivisa  
   
@@ -80,19 +80,19 @@ ms.locfileid: "36064633"
   
 ### <a name="to-convert-an-embedded-data-source-to-a-shared-data-source-in-report-designer"></a>Per convertire un'origine dati incorporata in un'origine dati condivisa in Progettazione report  
   
--   Nel riquadro dati Report, fare doppio clic su origine dati e quindi fare clic su **Converti in origine dati condivisa**.  
+-   Nel riquadro dati Report fare doppio clic su origine dati e quindi fare clic su **Converti in origine dati condivisa**.  
   
 ### <a name="to-convert-a-shared-data-source-to-an-embedded-data-source-in-report-builder"></a>Per convertire un'origine dati condivisa in un'origine dati incorporata in Generatore report  
   
--   Nel riquadro dati Report, fare doppio clic su origine dati e aprire **proprietà dell'origine dati**.  
+-   Nel riquadro dati Report fare doppio clic su origine dati e aprire **proprietà dell'origine dati**.  
   
 -   Fare clic su **connessione incorporata** e completare la creazione l'origine dati incorporata, come descritto in una procedura precedente.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Archiviare le credenziali in un'origine dati di Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [Incorporate e condivise le connessioni dati o origini dati &#40;SSRS e Generatore Report&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Conversione di un'origine dati da incorporata a condivisa &#40;SSRS e Generatore Report&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [Associare un Report o un modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Incorporate e condivise le connessioni dati o origini dati &#40;Report e SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Conversione di un'origine dati da incorporata a condivisa &#40;Report e SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
+ [Associare un Report o modello a un'origine dati condivisa &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Configurare le proprietà delle origini dati per un report  &#40;Gestione report&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
