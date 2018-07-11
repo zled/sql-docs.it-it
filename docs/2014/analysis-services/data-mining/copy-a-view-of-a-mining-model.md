@@ -1,5 +1,5 @@
 ---
-title: Copiare una vista di un modello di Data Mining | Documenti Microsoft
+title: Copiare una vista di un modello di Data Mining | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - clipboards [data mining]
 - Mining Model Viewer [Analysis Services], clipboards
 - copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 caps.latest.revision: 37
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c26bcc65a22cd6e893cb8c0f287c800939b5bd22
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8edc61b1de9b67480ff267614337ee7a92218708
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069306"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157222"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Copiare una vista di un modello di data mining
   Nella scheda **Visualizzatore modello di data mining** di Progettazione modelli di data mining in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] viene usato un visualizzatore separato per ogni tipo di modello di data mining. Alcuni visualizzatori includono componenti da cui è possibile copiare i contenuti negli Appunti e quindi incollarli in un documento o in un software per la modifica di immagini. Questa funzionalità è disponibile nei componenti seguenti:  

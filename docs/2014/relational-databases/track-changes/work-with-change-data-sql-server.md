@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - change data [SQL Server]
 - change data capture [SQL Server], query function scenarios
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - change data capture [SQL Server], query functions
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ff879a145b56f9bc46a95f7669ee4e81812dec6e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.openlocfilehash: df86d149bcdf6d9e1619499edf2bc41137433392
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069147"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153992"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utilizzare i dati delle modifiche (SQL Server)
   I dati delle modifiche vengono resi disponibili ai consumer della funzionalità Change Data Capture tramite funzioni con valori di tabella. Per tutte le query di queste funzioni sono necessari due parametri che definiscono l'intervallo di numeri di sequenza del file di log (LSN) idonei durante lo sviluppo del set di risultati restituito. Entrambi i valori LSN che rappresentano il limite inferiore e quello superiore dell'intervallo sono inclusi nell'intervallo stesso.  

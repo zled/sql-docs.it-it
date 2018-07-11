@@ -1,5 +1,5 @@
 ---
-title: Attributi elemento (XMLA) | Documenti Microsoft
+title: Gli attributi di elemento (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
 caps.latest.revision: 14
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: bad3c0949f4c6c241a81bf4a8b90834aadfdfdf3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: f064935032298e037938734fa5d3d1ac9fcbae84
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068123"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161082"
 ---
 # <a name="attributes-element-xmla"></a>Elemento Attributes (XMLA)
   Contiene una raccolta di elementi [Attribute](attribute-element-xmla.md) utilizzata dal comando padre [Inserisci](../xml-elements-commands/insert-element-xmla.md) or [Aggiorna](../xml-elements-commands/update-element-xmla.md) , o dall’elemento padre [Dove](where-element-xmla.md) .  
@@ -65,7 +65,7 @@ ms.locfileid: "36068123"
 |Elementi padre|[Insert](../xml-elements-commands/insert-element-xmla.md), [Update](../xml-elements-commands/update-element-xmla.md), [Where](where-element-xmla.md)|  
 |Elementi figlio|[Attribute](attribute-element-xmla.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;XMLA&#41;](xml-elements-properties.md)  

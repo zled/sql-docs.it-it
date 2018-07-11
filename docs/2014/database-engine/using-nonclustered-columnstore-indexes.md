@@ -1,30 +1,28 @@
 ---
-title: Utilizzo di indici Columnstore non cluster | Documenti Microsoft
+title: Con indici Columnstore non cluster | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-indexes
+ms.technology: table-view-index
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
-caps.latest.revision: 7
-author: barbkess
-ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: fd711b644c551da7a658eff7ede74007d69a2286
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f32acde4b49b8b4b91c087fb66e41d4c2cf276ce
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068091"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157022"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilizzo di indici columnstore non cluster
   Vengono descritte le attività principali per l'utilizzo di un indice columnstore non cluster in una tabella di [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- Per una panoramica degli indici columnstore, vedere [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Per una panoramica degli indici columnstore, vedere [descrizione degli indici Columnstore](../relational-databases/indexes/columnstore-indexes-described.md).  
   
  Per informazioni sugli indici columnstore cluster, vedere [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
@@ -35,7 +33,7 @@ ms.locfileid: "36068091"
 -   [Modificare i dati in un indice Columnstore non cluster](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)  
   
 ##  <a name="load"></a> Creare un indice Columnstore non cluster  
- Per caricare dati in un indice columnstore non cluster, caricare innanzitutto i dati in una tabella rowstore tradizionale archiviata come heap o cluster di indice e quindi utilizzare [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) per creare un indice ColumnStore.  
+ Per caricare dati in un indice columnstore non cluster, caricare innanzitutto i dati in una tabella rowstore tradizionale archiviata come heap o cluster di indice e di usarla [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) per creare un indice ColumnStore.  
   
  ![Il caricamento dei dati in un indice columnstore](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "il caricamento dei dati in un indice columnstore")  
   

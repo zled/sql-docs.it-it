@@ -1,5 +1,5 @@
 ---
-title: Contenuto del modello di data mining per i modelli di Clustering (Analysis Services - Data Mining) | Documenti Microsoft
+title: Contenuto dei modelli di data mining per i modelli di Clustering (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
 - clustering [Data Mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - clustering algorithms [Analysis Services]
 ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 caps.latest.revision: 15
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 19b4b4192fd38fe4e3bab142c6a327e4c2510d5d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: dc2d9ce1c0581d067b8a0a9be0ad52643ee6287a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153312"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenuto dei modelli di data mining per i modelli di clustering (Analysis Services - Data mining)
   In questo argomento viene descritto il contenuto dei modelli di data mining specifico per i modelli che utilizzano l'algoritmo Microsoft Clustering. Per una spiegazione generale del contenuto del modello di data mining valida per tutti i tipi di modello, vedere [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "36068827"
 > [!NOTE]  
 >  La varianza rappresenta la varianza totale per il cluster. Se il valore relativo alla varianza è piccolo, significa che la maggior parte dei valori della colonna sono relativamente vicini alla media. Per ottenere la deviazione standard, calcolare la radice quadrata della varianza.  
   
- Si noti che per ognuno degli attributi è disponibile un `Missing` del tipo valore che indica il numero di case in cui i dati per l'attributo. I dati mancanti possono essere significativi e influiscono sui calcoli in vari modi, a seconda del tipo di dati. Per altre informazioni, vedere [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
+ Si noti che per ogni attributo è disponibile un `Missing` del tipo valore che indica il numero di case in cui i dati per l'attributo. I dati mancanti possono essere significativi e influiscono sui calcoli in vari modi, a seconda del tipo di dati. Per altre informazioni, vedere [Missing Values &#40;Analysis Services - Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Contenuto di un modello di clustering  
  In questa sezione vengono forniti dettagli ed esempi relativi solo alle colonne del contenuto dei modelli di data mining pertinenti per i modelli di clustering.  
@@ -156,16 +156,16 @@ ms.locfileid: "36068827"
   
  **Nodi del cluster** Nome del cluster. Esempio: Cluster 1.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] offre più metodi per la creazione di un modello di clustering. Se non si conosce il metodo impiegato per creare il modello in uso, è possibile recuperare a livello di programmazione i metadati del modello, utilizzando un client ADOMD o AMO oppure eseguendo una query sul set di righe dello schema di data mining. Per altre informazioni, vedere [Eseguire query sui parametri usati per creare un modello di data mining](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  La struttura e il contenuto del modello rimangono invariati, indipendentemente dal metodo di clustering o dai parametri utilizzati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Contenuto del modello di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenuto dei modelli di data mining &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visualizzatori modello di Data Mining](data-mining-model-viewers.md)   
  [Algoritmo Microsoft Clustering](microsoft-clustering-algorithm.md)   
- [Query di Data Mining](data-mining-queries.md)  
+ [Query di data mining](data-mining-queries.md)  
   
   

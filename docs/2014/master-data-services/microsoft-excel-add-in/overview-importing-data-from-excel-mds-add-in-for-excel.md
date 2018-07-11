@@ -1,5 +1,5 @@
 ---
-title: Pubblicazione di dati (aggiuntivo MDS per Excel) | Documenti Microsoft
+title: Pubblicazione dei dati (aggiuntivo MDS per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - master-data-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
 caps.latest.revision: 8
-author: douglaslMS
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 39acbad0925e8dfc250fcd4cc3913dbaf0ff0771
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: leolimsft
+ms.author: lle
+manager: craigg
+ms.openlocfilehash: f9fbee4ad70222c81f8f2fc40c460974f6f5ac05
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069412"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155062"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Pubblicazione dei dati (componente aggiuntivo MDS per Excel)
   In [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]pubblicare i dati nel repository MDS per condividerlo con altri utenti. Appena i dati vengono pubblicati, sono disponibili per essere scaricati dagli altri utenti del componente aggiuntivo.  
@@ -39,7 +39,7 @@ ms.locfileid: "36069412"
   
 -   Non è possibile annotare eliminazioni, anche se le eliminazioni vengono salvate come transazioni che possono essere annullate da un amministratore.  
   
--   Se si modifica il **codice** valore per un membro, non viene registrato come transazione e tutte le transazioni precedenti per il membro non sono disponibili.  
+-   Se si modifica il **codice** valore per un membro, non viene registrato come una transazione e non sono disponibili tutte le transazioni precedenti per il membro.  
   
 -   È possibile visualizzare le transazioni effettuate per un membro dagli altri utenti. È possibile visualizzare anche tutte le transazioni effettuate per un membro, anche se non si dispone più delle autorizzazioni per specifici attributi.  
   

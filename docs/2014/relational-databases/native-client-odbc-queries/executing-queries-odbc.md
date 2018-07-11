@@ -1,13 +1,11 @@
 ---
-title: L'esecuzione di query (ODBC) | Documenti Microsoft
+title: L'esecuzione di query (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: d935bcba-8ce6-4159-8395-6c86431602ad
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1ac76e677ba7afba9cff2523286a14c6b754dc48
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 552a9d37d06ba145e371650dd56027ca38eb7c20
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063824"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37416280"
 ---
 # <a name="executing-queries-odbc"></a>Esecuzione di query (ODBC)
   Dopo che un'applicazione ODBC inizializza un handle di connessione e si connette a un'origine dati, alloca uno o più handle di istruzione nell'handle di connessione. L'applicazione può quindi eseguire [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istruzioni dell'handle di istruzione. Di seguito viene indicata la sequenza generale degli eventi nell'esecuzione di un'istruzione SQL:  
@@ -39,7 +37,7 @@ ms.locfileid: "36063824"
   
 4.  Recuperare tutti i set di risultati.  
   
- Dopo che un'applicazione recupera tutte le righe in tutti i set di risultati restituiti dall'istruzione SQL, può eseguire un'altra query sullo stesso handle di istruzione. Se un'applicazione determina che non è necessario recuperare tutte le righe in un determinato set di risultati, è possibile annullare il resto del set di risultati tramite una chiamata a [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) oppure [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
+ Dopo che un'applicazione recupera tutte le righe in tutti i set di risultati restituiti dall'istruzione SQL, può eseguire un'altra query sullo stesso handle di istruzione. Se un'applicazione determina che non è necessario recuperare tutte le righe in un determinato set di risultati, è possibile annullare il resto del set di risultati tramite la chiamata a [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) oppure [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
  Se in un'applicazione ODBC è necessario eseguire la stessa istruzione SQL più volte con dati diversi, utilizzare un marcatore di parametro rappresentato da un punto interrogativo (?) nella creazione di un'istruzione SQL:  
   

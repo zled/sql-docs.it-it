@@ -1,13 +1,11 @@
 ---
-title: 'Recuperare colonne tramite IRow:: GetColumns (o IRow:: Open) e ISequentialStream | Documenti Microsoft'
+title: 'Recuperare colonne usando IRow:: GetColumns (o IRow:: Open) e ISequentialStream | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -16,15 +14,15 @@ helpviewer_keywords:
 - GetColumns method
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 caps.latest.revision: 20
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 67c7206bb030f1e0e2390013657f97eeb8278aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: c4fef8e98871fe65e8f885e878d124468321ba9a
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063582"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37420750"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Recuperare colonne mediante IRow::GetColumns (o IRow::Open) e ISequentialStream
   I dati di grandi dimensioni possono essere associati o recuperati utilizzando l'interfaccia `ISequentialStream`. Per le colonne associate, il flag di stato DBSTATUS_S_TRUNCATED indica che i dati sono troncati.  
@@ -42,18 +40,18 @@ ms.locfileid: "36063582"
   
     -   `IRow::Open()` può essere utilizzato per aprire una `ISequentialStream` nella riga. Specificare DBGUID_STREAM per indicare che la colonna contiene un flusso di dati binari (è quindi possibile utilizzare `IStream` o `ISequentialStream` per leggere i dati dalla colonna).  
   
-    -   Se `IRow::GetColumns()` viene utilizzato, il **pData** elemento della struttura DBCOLUMNACCESS viene impostato in modo che punti a un oggetto flusso.  
+    -   Se `IRow::GetColumns()` viene usato, il **pData** elemento di struttura DBCOLUMNACCESS viene impostato in modo che punti a un oggetto flusso.  
   
 4.  Uso **ISequentialStream::Read()** ripetutamente per leggere il numero specificato di byte nel buffer del consumer.  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come recuperare una singola riga mediante IRow. In questo esempio viene recuperata una colonna per volta dalla riga. In questo esempio viene illustrato l'utilizzo di IRow::Open() e di IRow::GetColumns(). Per leggere i dati della colonna, nell'esempio viene utilizzato un oggetto ISequentialStream::Read.  
   
- In questo esempio richiede il database di esempio AdventureWorks, è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) homepage.  
+ In questo esempio richiede il database di esempio AdventureWorks, che è possibile scaricare dal [Microsoft SQL Server Samples and Community Projects](http://go.microsoft.com/fwlink/?LinkID=85384) home page di.  
   
  Il primo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di creare una tabella utilizzata dall'esempio.  
   
- Compilare con ole32.lib oleaut32.lib ed eseguirlo il secondo listato di codice (C++). In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" per L"(local)\\\name", dove nome rappresenta l'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
+ Compilare con ole32.lib oleaut32.lib ed eseguirlo il secondo listato di codice (C++). In questa applicazione viene eseguita la connessione all'istanza predefinita di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nel computer in uso. In alcuni sistemi operativi Windows sarà necessario modificare (local) o (localhost) impostando il valore sul nome dell'istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Per connettersi a un'istanza denominata, modificare la stringa di connessione da L"(local)" a L"(local)\\\name", dove nome è un'istanza denominata. Per impostazione predefinita, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express viene installato in un'istanza denominata. Verificare che nella variabile di ambiente INCLUDE sia presente la directory che contiene sqlncli.h.  
   
  Il terzo listato di codice ([!INCLUDE[tsql](../../includes/tsql-md.md)]) consente di eliminare la tabella utilizzata dall'esempio.  
   

@@ -1,28 +1,26 @@
 ---
-title: Elaborazione dei risultati (ODBC) | Documenti Microsoft
+title: Elaborare i risultati (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - processing results [ODBC]
 ms.assetid: 4810fe3f-78ee-4f0d-8bcc-a4659fbcf46f
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: fa20ed943be8195eb7719265d3bd2ef0aa26a38c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: e3c929008c4be8a14bf5233d8d41b3349ba735b7
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055914"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412954"
 ---
 # <a name="process-results-odbc"></a>Elaborare i risultati (ODBC)
     
@@ -63,6 +61,6 @@ ms.locfileid: "36055914"
 >  Per annullare l'elaborazione di un set di risultati prima che [SQLFetch](http://go.microsoft.com/fwlink/?LinkId=58401) restituisca SQL_NO_DATA, chiamare [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Procedure di risultati per l'elaborazione &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+ [Procedure per i risultati di elaborazione &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
   

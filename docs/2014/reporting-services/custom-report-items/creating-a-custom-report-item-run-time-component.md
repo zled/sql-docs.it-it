@@ -14,15 +14,15 @@ helpviewer_keywords:
 - custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 caps.latest.revision: 33
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 66f4a277fc820c379ba74e335453feeb97c6942f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: 4c33a315a81854d606d37433b8e06a4e2dffe3c8
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067977"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157762"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Creazione di un componente runtime dell'elemento del report personalizzato
   Il componente runtime dell'elemento del report personalizzato viene implementato come componente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usando un linguaggio conforme a CLS e viene chiamato in fase di esecuzione dal componente Elaborazione report. Le proprietà del componente runtime vengono definite nell'ambiente di progettazione modificando il componente della modalità progettazione corrispondente dell'elemento del report personalizzato.  

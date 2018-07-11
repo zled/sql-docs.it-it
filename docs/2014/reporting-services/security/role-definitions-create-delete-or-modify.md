@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
 - deleting roles
@@ -21,13 +21,13 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 caps.latest.revision: 41
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 4443cdc530e2aeb3e600db9ba09bf7d54a6d9d9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4f2c77960d87f06aed87ffddefa534b8ee8a1640
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069770"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148232"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Creare, eliminare o modificare un ruolo (Management Studio)
   In Reporting Services sono disponibili ruoli predefiniti che definiscono un livello di accesso a un server di report. La richiesta di accesso al server di report da parte di ogni utente o gruppo viene effettuata tramite un ruolo che descrive le attività che possono essere eseguite. I ruoli vengono definiti per il server di report complessivamente. Non è possibile variare una definizione di ruolo per parti specifiche del server di report o specificare che un ruolo venga utilizzato in modo diverso a seconda delle circostanze.  
@@ -81,7 +81,7 @@ ms.locfileid: "36069770"
   
 ## <a name="see-also"></a>Vedere anche  
  [Eseguire la connessione a un server di report in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
- (creare-e-gestire-ruolo-assignments.md)   
+ (create-e-Gestisci-ruolo-assignments.md)   
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

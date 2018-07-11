@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 16994bcc5c3b4f2be0617f4e4d4521062bd850a3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ebf2117570a343c740eaaaa964d956d2c8faede2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068768"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37158786"
 ---
 # <a name="manage-a-cdc-instance"></a>Gestire un'istanza di CDC
   È possibile utilizzare CDC Designer Console per visualizzare le informazioni relative alle istanze create e per gestire l'operazione delle istanze.  
@@ -76,7 +76,7 @@ ms.locfileid: "36068768"
     |![Errore](../media/error.gif "errore")|**Error**. L'istanza di Oracle CDC non è in esecuzione perché si è verificato un errore irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Misconfigured**: si è verificato un errore di configurazione che richiede l'intervento manuale.<br /><br /> **Password Required:** nessuna password impostata per l'istanza di Oracle CDC oppure la password non è valida.<br /><br /> **Unexpected**. Tutti gli altri errori non reversibili.|  
     |![OK](../media/okay.gif "OK")|**Running**: l'istanza di CDC è in esecuzione ed è in corso l'elaborazione dei record delle modifiche. Sono disponibili gli stati secondari seguenti.<br /><br /> **Idle**: tutti i record delle modifiche sono stati elaborati e archiviati nelle tabelle delle modifiche di destinazione. Non sono presenti transazioni attive.<br /><br /> **Processing**: è in corso l'elaborazione di alcuni record delle modifiche che non sono ancora stati scritti nelle tabelle delle modifiche.|  
     |![Arrestare](../media/stop.gif "arrestare")|**Stopped**: l'istanza di CDC non è in esecuzione. Lo stato stopped indica che l'istanza di CDC è stata interrotta in modo normale.|  
-    |![In pausa](../media/paused.gif "in pausa")|**Paused**: l'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore non irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Disconnected**: non è possibile stabilire la connessione al database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> **Storage**: lo spazio di archiviazione è esaurito. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione.<br /><br /> **Logger**: il logger è connesso a Oracle ma non è in grado di leggere i log delle transazioni Oracle a causa di un problema temporaneo, ad esempio un log delle transazioni necessario non è disponibile.|  
+    |![In pausa](../media/paused.gif "messo in pausa")|**Paused**: l'istanza di CDC è in esecuzione ma l'elaborazione è stata sospesa in seguito a un errore non irreversibile. Sono disponibili gli stati secondari seguenti:<br /><br /> **Disconnected**: non è possibile stabilire la connessione al database Oracle di origine. L'elaborazione verrà ripresa dopo il ripristino della connessione.<br /><br /> **Storage**: lo spazio di archiviazione è esaurito. L'elaborazione verrà ripresa non appena sarà nuovamente disponibile dello spazio di archiviazione.<br /><br /> **Logger**: il logger è connesso a Oracle ma non è in grado di leggere i log delle transazioni Oracle a causa di un problema temporaneo, ad esempio un log delle transazioni necessario non è disponibile.|  
   
 -   **Detailed Status**: stato secondario corrente.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "36068768"
  Per informazioni su queste proprietà e su come modificarle, vedere [Edit the Advanced Properties](edit-the-advanced-properties.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come creare l'istanza di Database SQL Server Change](how-to-create-the-sql-server-change-database-instance.md)   
+ [Come creare l'istanza di Database SQL Server Cambia](how-to-create-the-sql-server-change-database-instance.md)   
  [Procedura di visualizzazione delle proprietà dell'istanza di CDC](how-to-view-the-cdc-instance-properties.md)   
  [Come modificare le proprietà di istanza di CDC](how-to-edit-the-cdc-instance-properties.md)   
  [Usare la Procedura guidata nuova istanza](use-the-new-instance-wizard.md)  

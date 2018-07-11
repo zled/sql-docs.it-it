@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 7f217126c83e1bc4f81971df3c3e7b5044f08171
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce2da77e51370960d433981e28c32c5e7c4e55cd
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068552"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151322"
 ---
 # <a name="look-up-infopackage"></a>Cerca InfoPackage
   Utilizzare la finestra di dialogo **Cerca InfoPackage** per cercare un InfoPackage definito nel sistema SAP Netweaver BW. Quando viene visualizzato l'elenco di InfoPackage, selezionare l'InfoPackage desiderato e le opzioni associate verranno compilate con i valori richiesti dalla destinazione.  
@@ -82,6 +82,6 @@ ms.locfileid: "36068552"
   
 ## <a name="see-also"></a>Vedere anche  
  [Editor destinazione SAP BW &#40;pagina Gestione connessione&#41;](sap-bw-destination-editor-connection-manager-page.md)   
- [Microsoft Connector 1.1 for SAP BW F1 Guida in linea](../microsoft-connector-for-sap-bw-f1-help.md)  
+ [Guida (F1) di Microsoft Connector 1.1 for SAP BW](../microsoft-connector-for-sap-bw-f1-help.md)  
   
   

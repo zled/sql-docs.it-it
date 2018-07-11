@@ -1,13 +1,11 @@
 ---
-title: SQL Server Native Client (ODBC) | Documenti Microsoft
+title: SQL Server Native Client (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client  - "database-engine" - "docset-sql-devref"
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC, about SQL Server Native Client ODBC driver
 ms.assetid: 811d5ba3-a2b8-48c0-adbc-8c91f041f458
 caps.latest.revision: 45
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 4a70dbbdb338673288ee6f3cb51c9df02e01a0f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: da24388b12c83931ea2a4af9b525e5e2030f6940
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055671"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426300"
 ---
 # <a name="sql-server-native-client-odbc"></a>SQL Server Native Client (ODBC)
   ODBC è una definizione standard di un'API utilizzata per accedere ai dati nei database ISAM o relazionali o indicizzati. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta ODBC, tramite il driver ODBC di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, come una delle API native per la scrittura delle applicazioni C e C++ mediante le quali è possibile comunicare con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -41,9 +39,9 @@ ms.locfileid: "36055671"
   
 -   [Nomi di origine dati e sistemi operativi a 64 bit](data-source-names-and-64-bit-operating-systems.md)  
   
--   [Creazione di un'applicazione Driver ODBC di SQL Server Native Client](creating-a-driver-application.md)  
+-   [Creazione di un'applicazione driver ODBC di SQL Server Native Client](creating-a-driver-application.md)  
   
--   [La comunicazione con SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+-   [Comunicazione con SQL Server &#40;ODBC&#41;](../../native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
 -   [L'esecuzione di query &#40;ODBC&#41;](../../native-client-odbc-queries/executing-queries-odbc.md)  
   
@@ -51,7 +49,7 @@ ms.locfileid: "36055671"
   
 -   [Utilizzo di cursori &#40;ODBC&#41;](../../native-client-odbc-cursors/using-cursors-odbc.md)  
   
--   [L'esecuzione di transazioni &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
+-   [Esecuzione di transazioni di &#40;ODBC&#41;](../../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
 -   [Gestione di errori e messaggi](../../native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
@@ -59,21 +57,21 @@ ms.locfileid: "36055671"
   
 -   [Uso delle funzioni catalogo](using-catalog-functions.md)  
   
--   [L'esecuzione di operazioni di copia Bulk &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+-   [Esecuzione di operazioni di copia Bulk &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
 -   [Gestione di colonne di tipo text e image](../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md)  
   
 -   [Profilatura delle prestazioni del driver ODBC](profiling-odbc-driver-performance.md)  
   
--   [Table-Valued Parameters &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
+-   [I parametri con valori di tabella &#40;ODBC&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)  
   
--   [Data e ora miglioramenti &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+-   [Data e miglioramenti per la fase &#40;ODBC&#41;](../../native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
 -   [Tipi definiti dall'utente CLR di grandi dimensioni &#40;ODBC&#41;](large-clr-user-defined-types-odbc.md)  
   
 -   [Supporto FILESTREAM &#40;ODBC&#41;](filestream-support-odbc.md)  
   
--   [Nomi dell'entità servizio &#40;i nomi SPN&#41; nelle connessioni Client &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
+-   [Nomi dell'entità servizio &#40;entità servizio&#41; nelle connessioni Client &#40;ODBC&#41;](service-principal-names-spns-in-client-connections-odbc.md)  
   
 -   [Supporto per colonne di tipo sparse &#40;ODBC&#41;](sparse-columns-support-odbc.md)  
   

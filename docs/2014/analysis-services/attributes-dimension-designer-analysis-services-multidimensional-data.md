@@ -1,5 +1,5 @@
 ---
-title: Attributi (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Attributi (scheda struttura dimensione, progettazione dimensioni) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.attributespane.f1
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 caps.latest.revision: 31
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 289127d0d4bb155045c530cc49b336048a80034c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 693eb878c4e16e2b25dc959ce54a1e908c0d50d7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068369"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161622"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributi (scheda Struttura dimensione, Progettazione dimensioni) (Analysis Services – Dati multidimensionali)
   Utilizzare questo riquadro per gestire gli attributi associati alla dimensione selezionata. È possibile trascinare gli attributi da questo riquadro al riquadro **Gerarchie** per creare gerarchie e livelli. Per altre informazioni, vedere [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "36068369"
   
 ## <a name="see-also"></a>Vedere anche  
  [Struttura dimensione &#40;progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Gerarchie &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
- [Barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
+ [Gerarchie di &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Sulla barra degli strumenti &#40;scheda struttura dimensione, progettazione dimensioni&#41; &#40;Analysis Services - dati multidimensionali&#41;](toolbar-dimension-structure-designer-analysis-services-multidimensional-data.md)  
   
   

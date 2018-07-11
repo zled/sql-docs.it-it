@@ -1,29 +1,28 @@
 ---
-title: Consentire a un Endpoint mirroring del Database per l'utilizzo di certificati per le connessioni in entrata (Transact-SQL) | Documenti Microsoft
+title: Consenti un Endpoint mirroring del Database per usare i certificati per le connessioni in entrata (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - certificates [SQL Server], database mirroring
 - inbound connections
 - database mirroring [SQL Server], security
 ms.assetid: 5d48bb98-61f0-4b99-8f1a-b53f831d63d0
 caps.latest.revision: 28
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 42288b0f58a2d021c846625fc7c1ec43133ec7ec
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 54f0e50786d500b22c7fba7cd52c5bee116147ad
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068317"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37229661"
 ---
 # <a name="allow-a-database-mirroring-endpoint-to-use-certificates-for-inbound-connections-transact-sql"></a>Impostazione dell'endpoint del mirroring del database per l'utilizzo di certificati per le connessioni in entrata (Transact-SQL)
   In questo argomento viene illustrata la procedura per configurare le istanze del server in modo da utilizzare i certificati per l'autenticazione delle connessioni in ingresso per il mirroring del database. Prima di impostare le connessioni in entrata, è necessario configurare le connessioni in uscita in ogni istanza del server. Per altre informazioni, vedere [Impostare l'endpoint del mirroring del database per l'uso di certificati per le connessioni in uscita &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md).  
@@ -167,7 +166,7 @@ GO
  Quando si copia un certificato in un altro sistema, utilizzare un metodo di copia sicuro. È estremamente importante garantire la protezione di tutti i certificati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza del trasporto per gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)   
  [Impostare un database mirror crittografato](set-up-an-encrypted-mirror-database.md)   
  [Endpoint del mirroring del database &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   

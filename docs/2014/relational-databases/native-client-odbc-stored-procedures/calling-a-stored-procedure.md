@@ -1,13 +1,11 @@
 ---
-title: Chiamare una Stored Procedure | Documenti Microsoft
+title: Chiama una Stored Procedure | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,21 +18,21 @@ helpviewer_keywords:
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 352d447329a76318f362e958094ee835d36b9d87
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 11c8c691cf605942ef226927c9f0c2e940b28d63
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063107"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37411540"
 ---
 # <a name="calling-a-stored-procedure"></a>Chiamata di una stored procedure
   Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client supporta sia la sequenza di escape ODBC CALL e la [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) istruzione per l'esecuzione di stored procedure, la sequenza di escape ODBC CALL è il metodo preferito. L'utilizzo di sintassi ODBC consente a un'applicazione di recuperare i codici restituiti delle stored procedure e il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client è anch'esso ottimizzato per l'utilizzo di un protocollo sviluppato in origine per l'invio di chiamate a procedure remote (RPC, Remote Procedure Call) tra computer che eseguono [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo protocollo RPC migliora le prestazioni riducendo l'elaborazione dei parametri e l'analisi delle istruzioni eseguite sul server.  
   
 > [!NOTE]  
->  Quando si chiama [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure utilizzando parametri denominati con ODBC (per altre informazioni, vedere [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), i nomi di parametro devono iniziare con il ' @' caratteri. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC (Microsoft Data Access Components).  
+>  Quando si chiama [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedure utilizzando parametri denominati con ODBC (per altre informazioni, vedere [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkID=209721)), i nomi dei parametri devono iniziare con il ' @' caratteri. Si tratta di una restrizione specifica di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il driver ODBC di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client applica questa limitazione in modo più restrittivo rispetto a MDAC (Microsoft Data Access Components).  
   
  La sequenza di escape ODBC CALL per la chiamata a una procedura è la seguente:  
   
@@ -42,11 +40,11 @@ ms.locfileid: "36063107"
   
  in cui *procedure_name* specifica il nome di una stored procedure e *parametro* specifica un parametro di routine. I parametri denominati sono supportati solo nelle istruzioni che utilizzano la sequenza di escape ODBC CALL.  
   
- Una procedura può avere zero o più parametri. Una procedura può inoltre restituire un valore, come indicato dall'indicatore di parametro facoltativo ?= all'inizio della sintassi. Se un parametro è un parametro di input/output, può essere un valore letterale o un marcatore di parametro. Se il parametro è un parametro di output, deve essere un marcatore di parametro, in quanto l'output non è noto. I marcatori di parametro devono essere associati con [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) prima della chiamata di stored procedure viene eseguita l'istruzione.  
+ Una procedura può avere zero o più parametri. Una procedura può inoltre restituire un valore, come indicato dall'indicatore di parametro facoltativo ?= all'inizio della sintassi. Se un parametro è un parametro di input/output, può essere un valore letterale o un marcatore di parametro. Se il parametro è un parametro di output, deve essere un marcatore di parametro, in quanto l'output non è noto. Marcatori di parametro devono essere associati con [SQLBindParameter](../../relational-databases/native-client-odbc-api/sqlbindparameter.md) prima della chiamata di procedura viene eseguita l'istruzione.  
   
  I parametri di input e di input/output possono essere omessi dalle chiamate alle procedure. Se una procedura viene chiamata con parentesi ma senza alcun parametro, il driver indica all'origine dati di utilizzare il valore predefinito per il primo parametro. Esempio:  
   
- {**chiamare** * procedure_name ***()**}  
+ {**chiamare** * * procedure_name**all'indirizzo**}  
   
  Se la procedura non include alcun parametro, può non essere eseguita. Se una procedura viene chiamata senza parentesi, il driver non invia alcun valore di parametro. Esempio:  
   

@@ -1,5 +1,5 @@
 ---
-title: Pianificazione per Reporting Services e supporto Browser per Power View (Reporting Services 2014) | Documenti Microsoft
+title: Pianificazione per Reporting Services e supporto Browser per Power View (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
 - scripts [Reporting Services], requirements
@@ -22,24 +22,24 @@ ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
 caps.latest.revision: 99
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 1777dac1c625c9f6eb49bb06ec1bc51f688086fb
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ba6f4bd415f5e418d80b691e2461d08c8b1a8d19
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067447"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37164322"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Pianificazione per il supporto browser per Reporting Services e Power View (Reporting Services 2014)
-  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], utilizzare un web browser per visualizzare i report ed eseguire Gestione Report. Solo alcuni browser supportano tutte le funzionalità report. In questo argomento viene descritto il supporto e i requisiti per le funzionalità di gestione di Gestione report, per la visualizzazione dei report e i comandi del visualizzatore di report in Visual Studio. Viene inoltre riepilogata la disponibilità delle funzionalità per i browser supportati, i requisiti di autenticazione e i requisiti di script.  
+  Nelle [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], si usa un web browser per visualizzare i report ed eseguire Gestione Report. Solo alcuni browser supportano tutte le funzionalità report. In questo argomento viene descritto il supporto e i requisiti per le funzionalità di gestione di Gestione report, per la visualizzazione dei report e i comandi del visualizzatore di report in Visual Studio. Viene inoltre riepilogata la disponibilità delle funzionalità per i browser supportati, i requisiti di autenticazione e i requisiti di script.  
   
  **[!INCLUDE[applies](../includes/applies-md.md)]** Modalità SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] | Modalità nativa di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]  
   
  **Contenuto dell'argomento**  
   
--   [Scenari del Browser per Power View](#bkmk_powerview)  
+-   [Scenari del Browser Power View](#bkmk_powerview)  
   
--   [Requisiti del Browser Manager report (modalità nativa)](#bkmk_reportmanager)  
+-   [Requisiti del Browser tramite Gestione report (modalità nativa)](#bkmk_reportmanager)  
   
 -   [Requisiti del browser per visualizzare i report](#bkmk_reportviewer)  
   
@@ -47,22 +47,22 @@ ms.locfileid: "36067447"
   
 -   [Supporto browser per controlli Server Web ReportViewer in Visual Studio](#bkmk_controls)  
   
-##  <a name="bkmk_powerview"></a> Scenari del Browser per Power View  
- L'elenco dei browser supportati e le versioni di browser che [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supporta, dipende dal tipo di documento è aperto. Nelle cartelle di lavoro di Excel 2013 e nei file con estensione "**rdlx**" vengono utilizzati componenti diversi.  
+##  <a name="bkmk_powerview"></a> Scenari del Browser Power View  
+ L'elenco di versioni di browser e browser supportati che [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] supporta, dipende dal tipo di documento è aperto. Nelle cartelle di lavoro di Excel 2013 e nei file con estensione "**rdlx**" vengono utilizzati componenti diversi.  
   
 |Tipo di documento|Ambiente|Supporto browser|  
 |-------------------|-----------------|---------------------|  
 |Report Power View (RDLX)|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] su [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] integrata SharePoint, la modalità e l'applicazione web di Power View.|Vedere [Power View in SharePoint Server e modalità integrata SharePoint per Reporting Services](#bkmk_powerview_on_SSRS).|  
-|Cartella di lavoro di Excel 2013 con fogli di lavoro di Power View|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Excel Services.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] nell'applicazione Web di Excel.|Vedere [Power View in Excel Services o Excel Web App in SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
+|Cartella di lavoro di Excel 2013 con fogli di lavoro di Power View|**SharePoint Server:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] in Excel Services.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] nell'App Web di Excel.|Vedere [Power View in Excel Services o Excel Web App in SharePoint Online](#bkmk_powerview_on_ExcelServices).|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> Power View in SharePoint Server e modalità integrata SharePoint di Reporting Services  
  Nella tabella seguente sono riepilogate le versioni di browser supportate per [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando un utente apre il report Power View (RDLX) in una farm di SharePoint con un'applicazione di servizio [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] e il componente aggiuntivo [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] per SharePoint installato e configurato.  
   
 -   La tabella è valida per SharePoint 2010 e SharePoint 2013.  
   
--   Per ulteriori informazioni sul supporto browser per SharePoint 2013, vedere [pianificare il supporto browser in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Per altre informazioni sul supporto browser per SharePoint 2013, vedere [pianificare il supporto browser in SharePoint 2013](http://technet.microsoft.com//library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
--   Per ulteriori informazioni sul supporto browser per SharePoint 2010, vedere [pianificare il supporto browser (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
+-   Per altre informazioni sul supporto browser per SharePoint 2010, vedere [pianificare il supporto browser (SharePoint Server 2010)](http://technet.microsoft.com/library/cc263526\(office.14\).aspx) (http://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
 |**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -80,9 +80,9 @@ ms.locfileid: "36067447"
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] non supporta la funzionalità InPrivate Browsing in [!INCLUDE[msCoName](../includes/msconame-md.md)] Internet Explorer 8 e Internet Explorer 9. Per altre informazioni su InPrivate Browsing, vedere l'articolo che [spiega cos'è InPrivate Browsing](http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing) (http://windows.microsoft.com/Windows7/What-is-InPrivate-Browsing).  
   
 ###  <a name="bkmk_powerview_on_ExcelServices"></a> Power View in Excel Services o Excel Web App in SharePoint Online  
- Nella tabella seguente sono riepilogate le versioni di browser supportate per [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando un utente apre una cartella di lavoro di Excel 2013 con fogli di Power View in un SharePoint Server in cui è in esecuzione Excel Services:  
+ La tabella seguente riepiloga le versioni di browser supportate per [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] quando un utente apre una cartella di lavoro di Excel 2013 con fogli di Power View in un SharePoint Server in cui è in esecuzione Excel Services:  
   
--   Per ulteriori informazioni sul supporto browser per SharePoint 2013, vedere [pianificare il supporto browser in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
+-   Per altre informazioni sul supporto browser per SharePoint 2013, vedere [pianificare il supporto browser in SharePoint 2013](http://technet.microsoft.com/library/cc263526\(office.15\).aspx) (http://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
 |**Browser**|**Windows 8 e 8.1**|**Windows 7**|**Windows Server 2012 e 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10.6 – 10.9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
@@ -94,10 +94,10 @@ ms.locfileid: "36067447"
 |**Apple Safari (ultima versione pubblicamente rilasciata)**|Non supportato|Non supportato|Non supportato|Non supportato|Non supportato|32 bit, 64 bit|  
 |**Google Chrome (ultima versione pubblicamente rilasciata)**|32 bit **(\*)** per periodo di tempo limitato|32 bit **(\*)** per periodo di tempo limitato|32 bit **(\*)** per periodo di tempo limitato|32 bit **(\*)** per periodo di tempo limitato|32 bit **(\*)** per periodo di tempo limitato|Non supportato|  
   
- **(\*)** Chrome smetterà di supporto di Netscape plug-in API (NPAPI) usato da Silverlight. Power View dipende da Silverlight.  Per altre informazioni, vedere [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
+ **(\*)** Chrome interromperà il supporto di Netscape plug-in di API (NPAPI) usato da Silverlight. Power View dipende da Silverlight.  Per altre informazioni, vedere [The Final Countdown for NPAPI](http://blog.chromium.org/2014/11/the-final-countdown-for-npapi.html).  
   
-##  <a name="bkmk_reportmanager"></a> Requisiti del Browser Manager report (modalità nativa)  
- Ecco l'elenco corrente dei browser supportati che è possibile utilizzare per eseguire il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gestione Report per gestire report e il server di report in modalità nativa.  
+##  <a name="bkmk_reportmanager"></a> Requisiti del Browser tramite Gestione report (modalità nativa)  
+ Di seguito è riportato l'elenco corrente dei browser supportati, è possibile usare per eseguire il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gestione Report per gestire report e il server di report in modalità nativa.  
   
 |Browser|  
 |-------------|  
@@ -126,9 +126,9 @@ ms.locfileid: "36067447"
   
 -   Visualizzare in modo interattivo i report in Apple Safari nei dispositivi di iOS. Tra le funzionalità supportate sono incluse l'espansione e la compressione, il riquadro dei parametri e l'ordinamento interattivo.  
   
--   Per altre informazioni, vedere [visualizzazione report di Reporting Services sui dispositivi di Microsoft Surface e Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
+-   Per altre informazioni, vedere [visualizzazione report di Reporting Services su dispositivi Microsoft Surface e Apple iOS](../../2014/reporting-services/view-reporting-services-reports-surface-ios-devices.md).  
   
- **Nota** Se si accede a un server di report da un computer Macintosh, è consigliabile utilizzare Safari. Se si utilizza un prodotto SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [pianificare il supporto browser (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
+ **Nota** Se si accede a un server di report da un computer Macintosh, è consigliabile utilizzare Safari. Se si usa un prodotto SharePoint integrato con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vedere [pianificare il supporto browser (Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkId=183583).  
   
 ### <a name="url-access-for-viewing-reports"></a>Accesso con URL per la visualizzazione di report  
  Per visualizzare direttamente i report, anziché tramite Gestione report, è possibile utilizzare l'accesso con URL per creare un collegamento al report e al visualizzatore di report. L'accesso con URL supporta un'ampia gamma di browser.  
@@ -182,21 +182,21 @@ ms.locfileid: "36067447"
 |**Safari (ultima versione pubblicamente rilasciata)**|Non supportato|Non supportato|Non supportato|Non supportato|Non supportato|Sì|La stampa e lo zoom non sono supportati.<br /><br /> Il controllo di calendario utilizzato per selezionare date in un report con parametri è disabilitato in questo browser. È necessario che gli utenti digitino manualmente le date desiderate nell'area di richiesta parametri.|  
 |**Chrome (ultima versione pubblicamente rilasciata)**|Sì|Sì|Sì|Sì|Sì|Non supportato|La stampa e lo zoom non sono supportati.|  
   
- <sup>1</sup>nella modalità degli standard Internet Explorer 7.0 e 8.0 vengono visualizzate le righe inclinate nei report. Se si utilizzano righe inclinate nei report, impostare la pagina ASP.NET per essere eseguita in modalità non standard in Internet Explorer. A tale scopo, trovare il \<! DOCTYPE > tag nella pagina ASP.NET. In alternativa, se si utilizza una pagina master, è possibile trovare il tag nel file con estensione master. Il tag è simile al seguente:  
+ <sup>1</sup>nella modalità degli standard, Internet Explorer 7.0 e 8.0 non vengono visualizzate le righe inclinate nei report. Se si utilizzano righe inclinate nei report, impostare la pagina ASP.NET per essere eseguita in modalità non standard in Internet Explorer. A tale scopo, trovare il \<! Tipo di documento > tag nella pagina ASP.NET. In alternativa, se si utilizza una pagina master, è possibile trovare il tag nel file con estensione master. Il tag è simile al seguente:  
   
 ```  
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
 ```  
   
- Sostituire il \<! DOCTYPE > tag con il seguente tag:  
+ Sostituire il \<! Tipo di documento > tag con il seguente tag:  
   
 ```  
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">  
 ```  
   
- Per ulteriori informazioni sulle modalità di compatibilità in Internet Explorer, vedere [definizione della compatibilità del documento](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
+ Per altre informazioni sulle modalità di compatibilità in Internet Explorer, vedere [definizione della compatibilità del documento](http://go.microsoft.com/fwlink/?LinkId=180380) (http://go.microsoft.com/fwlink/?LinkId=180380).  
   
- Per ulteriori informazioni sull'utilizzo dei controlli ReportViewer, vedere [distribuzione di report e controlli ReportViewer](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
+ Per altre informazioni sull'uso dei controlli ReportViewer, vedere [distribuzione di controlli Reports e ReportViewer](http://msdn.microsoft.com/library/ms251723.aspx) (http://msdn.microsoft.com/library/ms251723.aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Reporting Services](tools/reporting-services-tools.md)   

@@ -1,5 +1,5 @@
 ---
-title: Tipo di dati CubeDimensionBinding (ASSL) | Documenti Microsoft
+title: Tipo di dati CubeDimensionBinding (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - CubeDimensionBinding data type
 ms.assetid: 7288e345-4a3e-4197-82e9-9daa38f6e928
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 44e652f281b6c5164b4ccc44fe85ed2b0a0b5a01
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e511f26166e7f8457b2423df2bd3030e695edde1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069497"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157342"
 ---
 # <a name="cubedimensionbinding-data-type-assl"></a>Tipo di dati CubeDimensionBinding (ASSL)
-  Definisce un tipo di dati derivato che rappresenta l'associazione di un [dimensione](../objects/dimension-element-assl.md), [misura](../objects/measure-element-assl.md), o [MiningModel](../objects/miningmodel-element-assl.md) elemento da una dimensione del cubo.  
+  Definisce un tipo di dati derivato che rappresenta l'associazione di un [dimensione](../objects/dimension-element-assl.md), [misura](../objects/measure-element-assl.md), o [MiningModel](../objects/miningmodel-element-assl.md) elemento a una dimensione del cubo.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -60,13 +60,13 @@ ms.locfileid: "36069497"
 |Relazione|Elemento|  
 |------------------|-------------|  
 |Elementi padre|None|  
-|Elementi figlio|[CubeDimensionID](../properties/id-element-assl.md), [CubeID](../properties/cubeid-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md), [filtro](../properties/filter-element-trace-assl.md)|  
+|Elementi figlio|[Elemento CubeDimensionID](../properties/id-element-assl.md), [CubeID](../properties/cubeid-element-assl.md), [DataSourceID](../properties/datasourceid-element-assl.md), [filtro](../properties/filter-element-trace-assl.md)|  
 |Elementi derivati|Vedere [associazione](binding-data-type-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
- Per ulteriori informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [tipo di dati Binding &#40;ASSL&#41;](binding-data-type-assl.md).  
+## <a name="remarks"></a>Note  
+ Per altre informazioni sul `Binding` tipo, incluse le tabelle di oggetti di Analysis Services Scripting Language (ASSL) del `Binding` tipo e la gerarchia di ereditarietà dei `Binding` tipi, vedere [associazione tipo di dati &#40;ASSL&#41;](binding-data-type-assl.md).  
   
- Per una panoramica delle associazioni dati in ASSL, vedere [origini dati e le associazioni &#40;multidimensionali SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
+ Per una panoramica delle associazioni di dati in ASSL, vedere [origini dati e associazioni &#40;multidimensionale di SSAS&#41;](../../multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).  
   
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.CubeDimensionBinding>.  
   

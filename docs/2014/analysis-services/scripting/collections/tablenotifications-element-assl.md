@@ -1,5 +1,5 @@
 ---
-title: Elemento TableNotifications (ASSL) | Documenti Microsoft
+title: Elemento TableNotifications (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - TableNotifications element
 ms.assetid: 4cecdfea-0d4d-4bd6-bbb3-4d0d2284c665
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 87a1328bf4e7e302b16fa4d0a45fc105ce820d54
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8c146f223d0819c8570b051d77d5764ae384d1b1
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069018"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163402"
 ---
 # <a name="tablenotifications-element-assl"></a>Elemento TableNotifications (ASSL)
   Contiene la raccolta di [TableNotification](../objects/tablenotification-element-assl.md) gli elementi che forniscono informazioni per il [ProactiveCaching](../objects/proactivecaching-element-assl.md) elemento sulle tabelle o viste in un'origine dati che sono state modificate.  
@@ -59,7 +59,7 @@ ms.locfileid: "36069018"
 |Elementi padre|[ProactiveCachingTablesBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|[TableNotification](../objects/tablenotification-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.TableNotificationCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

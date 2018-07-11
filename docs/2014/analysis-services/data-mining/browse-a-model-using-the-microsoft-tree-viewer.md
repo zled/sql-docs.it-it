@@ -1,5 +1,5 @@
 ---
-title: Visualizzare un modello utilizzando il visualizzatore Microsoft Decision Trees | Documenti Microsoft
+title: Visualizzare un modello usando il visualizzatore Microsoft Decision Trees | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Tree Viewer [Analysis Services]
 - predictions [Analysis Services], discrete attributes
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 caps.latest.revision: 45
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68675833943b33e49594d3613bd440699e8c244c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f66d8ed3ba6a545a3088f121c9564b6008ebfa9c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065719"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278447"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Visualizzare un modello utilizzando il Visualizzatore Microsoft Decision Trees
   Il Visualizzatore [!INCLUDE[msCoName](../../includes/msconame-md.md)] Trees disponibile in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] consente di visualizzare alberi delle decisioni compilati con l'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees è un algoritmo dell'albero delle decisioni ibrido che supporta classificazione e regressione. È anche possibile pertanto usare il visualizzatore per visualizzare modelli basati sull'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression. L'algoritmo [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees viene usato per la modellazione predittiva di attributi discreti e continui. Per altre informazioni su questo algoritmo, vedere [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md).  
@@ -109,8 +109,8 @@ ms.locfileid: "36065719"
   
 ## <a name="see-also"></a>Vedere anche  
  [Algoritmo Microsoft Decision Trees](microsoft-decision-trees-algorithm.md)   
- [Visualizzatori dei modelli di data mining &#40;progettazione modello di Data Mining&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Procedure dettagliate e attività del visualizzatore modello di data mining](mining-model-viewer-tasks-and-how-tos.md)   
+ [Visualizzatori modello di data mining &#40;Progettazione modelli di Data Mining&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Attività del Visualizzatore modelli e procedure dettagliate di data mining](mining-model-viewer-tasks-and-how-tos.md)   
  [Strumenti di Data Mining](data-mining-tools.md)   
  [Visualizzatori modello di data mining](data-mining-model-viewers.md)  
   

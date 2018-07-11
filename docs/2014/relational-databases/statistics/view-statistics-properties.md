@@ -5,26 +5,24 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-statistics
+ms.technology: performance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.statistics.details.f1
 helpviewer_keywords:
 - viewing statistics properties
 - statistics [SQL Server], viewing properties
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
-caps.latest.revision: 10
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ba98c86bfafaeb9a1a0acb6127c3eebd64955882
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 597ab8195b46b7e8badb6bd2b48744493152d988
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36063994"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37417960"
 ---
 # <a name="view-statistics-properties"></a>Visualizzare le proprietà delle statistiche
   È possibile visualizzare le statistiche di ottimizzazione delle query correnti per una tabella o una vista indicizzata in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizzando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'oggetto statistiche include un'intestazione con metadati relativi alle statistiche, un istogramma con la distribuzione dei valori nella prima colonna chiave dell'oggetto stesso e un vettore di densità per misurare la correlazione tra colonne. Per altre informazioni sugli istogrammi e sui vettori di densità, vedere [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)  

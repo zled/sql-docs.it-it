@@ -1,5 +1,5 @@
 ---
-title: Connettersi ai dati di origine (Client di Data Mining per Excel) | Documenti Microsoft
+title: Connettersi ai dati di origine (Client di Data Mining per Excel) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - connections
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dacc0416cc7f86dbfb90adc8b74268ca8cb18857
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5e750ec50aff2d4d69b90a974b28ddb77c54b068
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068371"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163602"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connessione ai dati di origine (client di data mining per Excel)
   In questo argomento viene descritto come creare e utilizzare le connessioni utilizzate per archiviare i modelli di data mining e per accedere a dati esterni archiviati in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "36068371"
   
  La connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] è necessaria per utilizzare gli strumenti di modellazione e di visualizzazione dei componenti aggiuntivi perché questi ultimi dipendono da strutture dei dati e algoritmi forniti da [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
- **Connessioni a origini dati esterne.** È inoltre possibile creare connessioni a dati esterni durante la compilazione di modelli o il salvataggio dei risultati. È ad esempio possibile creare un modello di data mining in un server, quindi eseguire una query di stima sul modello utilizzando i dati archiviati in un'altra istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], in una tabella dati di Excel o in un'origine dati esterna, ad esempio [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. Ogni volta che si accede a una nuova origine dati, viene chiesto di creare una connessione tramite una finestra di dialogo.  
+ **Connessioni alle origini dati esterne.** È inoltre possibile creare connessioni a dati esterni durante la compilazione di modelli o il salvataggio dei risultati. È ad esempio possibile creare un modello di data mining in un server, quindi eseguire una query di stima sul modello utilizzando i dati archiviati in un'altra istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], in una tabella dati di Excel o in un'origine dati esterna, ad esempio [!INCLUDE[msCoName](../includes/msconame-md.md)] Access. Ogni volta che si accede a una nuova origine dati, viene chiesto di creare una connessione tramite una finestra di dialogo.  
   
 ##  <a name="bkmk_prereq2"></a> Prerequisites  
  Per questa versione dei componenti aggiuntivi è necessario che l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sia SQL Server 2012. Se si desidera connettersi a una versione precedente di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], è disponibile una versione separata dei componenti aggiuntivi. Esistono versioni dei componenti aggiuntivi che supportano SQL Server 2005, SQL Server 2008 e SQL Server 2008 R2.  
@@ -53,7 +53,7 @@ ms.locfileid: "36068371"
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Creazione di una nuova connessione al server nei componenti aggiuntivi per Excel  
   
-1.  Fare clic sui **connessione** pulsante della barra di **Analizza** o **Data Mining** della barra multifunzione.  
+1.  Fare clic sul **connessione** pulsante il **Analizza** oppure **Data Mining** della barra multifunzione.  
   
     > [!NOTE]  
     >  Il testo del pulsante indica se è presente una connessione. Quando nel foglio di lavoro non è stata stabilita alcuna connessione, il pulsante contiene il testo "\<Nessuna connessione >." Se invece nel foglio di lavoro è stata precedentemente effettuata una connessione, nel pulsante verrà visualizzato il nome della connessione.  
@@ -79,7 +79,7 @@ ms.locfileid: "36068371"
   
 ##### <a name="create-an-http-connection-to-analysis-services"></a>Creazione di una connessione HTTP ad Analysis Services  
   
-1.  Aprire la **nuova connessione Analysis Services** finestra di dialogo.  
+1.  Aprire il **nuova connessione Analysis Services** nella finestra di dialogo.  
   
 2.  Come nome del server digitare http:// seguito dall'URL assegnato al server [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
@@ -96,22 +96,22 @@ ms.locfileid: "36068371"
   
 2.  Trascinare e rilasciare la forma in una pagina vuota.  
   
-3.  Nel **selezionare un'origine dati** finestra di dialogo, selezionare un tipo di dati di origine dall'elenco oppure fare clic su **New**.  
+3.  Nel **Vybrat zdroj** finestra di dialogo, selezionare una data di origine dall'elenco oppure fare clic su **New**.  
   
-4.  Se si seleziona **New**, seguire la procedura descritta in precedenza per specificare un nome di catalogo e il server o per connettersi tramite un servizio Web.  
+4.  Se si seleziona **New**, seguire la procedura descritta in precedenza per specificare un nome di catalogo e il server o per la connessione tramite un servizio Web.  
   
-##  <a name="bkmk_change"></a> Modifica delle connessioni  
+##  <a name="bkmk_change"></a> Se si cambia connessione  
  È possibile creare più connessioni nello stesso foglio di lavoro, ma può essere attiva solo una connessione alla volta. Viene visualizzato il nome della connessione corrente nel **connessione** pulsante.  
   
- Nel Client di Data Mining per Excel, è inoltre possibile verificare la stringa di connessione e lo stato per la connessione corrente facendo clic **traccia** e quindi scegliendo **connessione corrente**.  
+ Nel Client di Data Mining per Excel, è anche possibile verificare la stringa di connessione e lo stato per la connessione corrente facendo **traccia** e quindi scegliendo **connessione corrente**.  
   
 #### <a name="use-a-different-server-connection"></a>Utilizzo di una connessione a un altro server  
   
 1.  Fare clic su **connessione**.  
   
-2.  Nel **connessioni ad Analysis Services** riquadro, selezionare una connessione di **altre connessioni** elenco e fare clic su **imposta come corrente**.  
+2.  Nel **connessioni ad Analysis Services** riquadro, selezionare una connessione di **altre connessioni** elenco e fare clic su **Make Current**.  
   
-3.  Fare clic su **Test connessione** per verificare che la connessione sia disponibile.  
+3.  Fare clic su **Test connessione** per verificare che sia disponibile la connessione.  
   
  Al termine dell'elaborazione di un modello di data mining, i risultati vengono archiviati localmente e se si interrompe la connessione a un server per connettersi a un altro server non si hanno ripercussioni sui dati. È consigliabile tuttavia evitare di cambiare connessione o di interrompere la connessione durante l'elaborazione di un modello di data mining, in quanto si potrebbero danneggiare i dati.  
   
@@ -121,26 +121,26 @@ ms.locfileid: "36068371"
   
 2.  Se è necessario modificare la stringa di connessione per aumentare il timeout per le query o aggiungere altri parametri specifici dell'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], un'opzione consiste nel modificare il file DMC, in cui è archiviata la stringa di connessione.  
   
-     \<unità: > \Users\\< nomeutente\>\AppData\Local\Microsoft\Data il componente aggiuntivo Data Mining  
+     \<unità: > \Users\\< myusername\>\AppData\Local\Microsoft\Data componente aggiuntivo Data Mining  
   
 ##  <a name="bkmk_extconnections"></a> La connessione alle origini dati esterne  
- Mentre gli strumenti disponibili nel **Analizza** sulla barra multifunzione funzionano esclusivamente con i dati in Excel, gli strumenti disponibili nel **Data Mining** della barra multifunzione consentono di connettersi direttamente alle origini dati esterne da utilizzare come input per il modello o per campionamento.  
+ Mentre gli strumenti disponibili nel **Analyze** sulla barra multifunzione funzionano esclusivamente con i dati in Excel, gli strumenti disponibili nel **Data Mining** della barra multifunzione consentono di connettersi direttamente alle origini dati esterne da utilizzare come input per il modello o per campionamento.  
   
  Gli strumenti seguenti in questi componenti aggiuntivi supportano l'utilizzo di dati esterni per il data mining:  
   
 -   [Dati di esempio &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](sample-data-sql-server-data-mining-add-ins.md)  
   
--   [Procedura guidata classificazione &#40;componenti aggiuntivi data mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
+-   [Procedura guidata classificazione &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Procedura guidata stima &#40;componenti aggiuntivi data mining per Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
+-   [Procedura guidata stima &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Creazione guidata del cluster &#40;componenti aggiuntivi data mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
+-   [Creazione guidata del cluster &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)  
   
--   [Procedura guidata previsione &#40;componenti aggiuntivi data mining per Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
+-   [Procedura guidata previsione &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)  
   
 -   [Crea struttura di Data Mining &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)  
   
--   [Grafico accuratezza modello di &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)  
+-   [Grafico di accuratezza &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](accuracy-chart-sql-server-data-mining-add-ins.md)  
   
 -   [Grafico profitti &#40;componenti aggiuntivi Data Mining di dati SQL Server&#41;](profit-chart-sql-server-data-mining-add-ins.md)  
   

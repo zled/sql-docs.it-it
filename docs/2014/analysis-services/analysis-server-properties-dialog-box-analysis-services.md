@@ -1,5 +1,5 @@
 ---
-title: Finestra di dialogo proprietà di Analysis Server (Analysis Services) | Documenti Microsoft
+title: Finestra di dialogo Proprietà Analysis Server (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
 - SQL12.ASVS.SQLSERVERSTUDIO.SERVERPROPERTIES.F1
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Analysis Server Properties dialog box
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 60183e1c37a7e94b4b3b88239b837530ef81826c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 8e3dfe081a2400c795b8c0bd08a5667eaa996268
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065257"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260015"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Finestra di dialogo Proprietà computer Analysis Server (Analysis Services)
   Usare la finestra di dialogo **Proprietà computer Analysis Server** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] per definire le impostazioni generali, di sicurezza e di lingua e regole di confronto per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Per visualizzare la finestra di dialogo **Proprietà computer Analysis Server**, è possibile fare clic con il pulsante destro del mouse su un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in **Esplora oggetti** e scegliere **Proprietà** dal menu di scelta rapida. Nella finestra di dialogo **Proprietà computer Analysis Server** sono incluse le proprietà seguenti.  
@@ -81,7 +81,7 @@ ms.locfileid: "36065257"
   
 -   L'opzione**Distinzione maiuscole/minuscole** viene usata per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra lettere maiuscole e minuscole.  
   
-     Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni maiuscole e minuscole non accentate delle lettere. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] non definisce se lettere minuscole ordinate più in alto o in relazione a maiuscola lettere quando **distinzione maiuscole/minuscole** non è selezionata.  
+     Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali le versioni maiuscole e minuscole non accentate delle lettere. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] indica se le lettere minuscole debbano essere ordinate più o versione successiva in relazione a lettere maiuscole di lettere quando **distinzione maiuscole/minuscole** non è selezionata.  
   
 -   L'opzione**Distinzione caratteri accentati/non accentati** viene usata per ordinare e confrontare i dati in base alle regole del dizionario specificate per la lingua o l'alfabeto associato, nonché per distinguere tra lettere accentate e non accentate. Il carattere 'a' non viene ad esempio considerato uguale ad 'à'.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "36065257"
      Se questa opzione non è selezionata, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considera uguali la rappresentazione a un byte e la rappresentazione a due byte dello stesso carattere.  
   
 ## <a name="security-properties"></a>Proprietà di sicurezza  
- Utilizzare questa pagina per specificare gli account utente e di gruppo di Windows appartenenti al ruolo di amministratore del server per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenenza a questo ruolo concede le autorizzazioni necessarie per effettuare attività a livello di intero server, ad esempio la creazione o l'elaborazione di un database, la modifica delle proprietà del server, l'aggiunta o la rimozione di altri membri di questo ruolo oppure l'avvio di una traccia. Vedere [concedere le autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per informazioni dettagliate.  
+ Utilizzare questa pagina per specificare gli account utente e di gruppo di Windows appartenenti al ruolo di amministratore del server per un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . L'appartenenza a questo ruolo concede le autorizzazioni necessarie per effettuare attività a livello di intero server, ad esempio la creazione o l'elaborazione di un database, la modifica delle proprietà del server, l'aggiunta o la rimozione di altri membri di questo ruolo oppure l'avvio di una traccia. Visualizzare [Concedi autorizzazioni di amministratore del Server &#40;Analysis Services&#41; ](instances/grant-server-admin-rights-to-an-analysis-services-instance.md) per informazioni dettagliate.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Determinare la modalità Server di un'istanza di Analysis Services](instances/determine-the-server-mode-of-an-analysis-services-instance.md)   

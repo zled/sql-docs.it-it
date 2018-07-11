@@ -5,24 +5,23 @@ ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-data-compression
+ms.technology: ''
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode data compression
 - compression [SQL Server], Unicode data
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 caps.latest.revision: 7
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 53c1b66b26fe785fe932870f02ff67326c335e31
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 216e2278418747a713575c165f14390c7b785e71
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37156334"
 ---
 # <a name="unicode-compression-implementation"></a>Implementazione della compressione Unicode
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un'implementazione dell'algoritmo SCSU (Standard Compression Scheme for Unicode) per comprimere i valori Unicode archiviati in oggetti compressi di riga o pagina. Per questi oggetti compressi, la compressione Unicode è automatica per le colonne `nchar(n)` e `nvarchar(n)`. [!INCLUDE[ssDE](../../includes/ssde-md.md)] archivia i dati Unicode come 2 byte, indipendentemente dalle impostazioni locali. Questa funzionalità è nota come codifica UCS-2. Per alcune impostazioni locali, l'implementazione della compressione SCSU in SQL Server consente di risparmiare fino al 50 percento di spazio di archiviazione.  

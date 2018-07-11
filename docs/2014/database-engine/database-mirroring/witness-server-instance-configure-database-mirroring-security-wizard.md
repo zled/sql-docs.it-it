@@ -5,23 +5,22 @@ ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.swb.configdbmsecurwiz.witnsrvr.f1
 ms.assetid: b5763663-984a-473b-93a3-6cd3322ad41c
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 7e067aae5e0fd22cd2c7ffc55cab4f9e50791927
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5e6def053b7480c3c35c8cdc81710ff4cfc1d196
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068569"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151018"
 ---
 # <a name="witness-server-instance-configure-database-mirroring-security-wizard"></a>Istanza server di controllo del mirroring (Configurazione guidata sicurezza mirroring del database)
   Utilizzare questa pagina per specificare informazioni sull'istanza del server che opera come istanza di controllo del mirroring per la sessione.  

@@ -1,13 +1,11 @@
 ---
-title: SQLColAttribute | Documenti Microsoft
+title: SQLColAttribute | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 topic_type:
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
 caps.latest.revision: 52
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ade4f8eb2c102ef0b58db935482f7a6e6cd087ae
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1ca244662cf8924ac033004dde92b5de4df41ccf
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36054989"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37422660"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  È possibile utilizzare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata `SQLColAttribute` su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna set di risultati come parte dell'esecuzione dell'istruzione, pertanto la chiamata `SQLColAttribute` dopo il completamento della **SQLExecute** oppure **SQLExecDirect** does non comportano un round trip del server.  
+  È possibile usare `SQLColAttribute` per recuperare un attributo di una colonna del set di risultati per le istruzioni ODBC preparate o eseguite. La chiamata `SQLColAttribute` su istruzioni preparate provoca un round trip al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client riceve i dati di colonna del set di risultati come parte dell'esecuzione dell'istruzione, quindi la chiamata `SQLColAttribute` dopo il completamento della **SQLExecute** oppure **SQLExecDirect** viene non comporta un round trip del server.  
   
 > [!NOTE]  
 >  Gli attributi di identificazione di colonna ODBC non sono disponibili in tutti i set di risultati di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -77,9 +75,9 @@ ms.locfileid: "36054989"
 |SQL_CA_SS_NUM_COMPUTES|Numero di clausole COMPUTE specificate nell'istruzione Transact-SQL SELECT corrente.|  
 |SQL_CA_SS_NUM_ORDERS|Numero di colonne specificate in una clausola ORDER BY di un'istruzione ODBC o Transact-SQL SELECT.|  
   
- \*   L'opzione è disponibile se l'attributo dell'istruzione SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
+ \*   È disponibile se l'attributo dell'istruzione SQL_SOPT_SS_HIDDEN_COLUMNS è impostato su SQL_HC_ON.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ha introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare il nome della raccolta XML schema, il nome dello schema e il nome del catalogo, rispettivamente. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ha introdotto i campi di descrizione specifici del driver per fornire informazioni aggiuntive per indicare rispettivamente il nome della raccolta XML schema, il nome dello schema e il nome del catalogo. Tali proprietà non richiedono virgolette o un carattere di escape se contengono caratteri non alfanumerici. Nella tabella seguente sono inclusi i nuovi campi di descrizione:  
   
 |Nome colonna|Tipo|Description|  
 |-----------------|----------|-----------------|  
@@ -99,15 +97,15 @@ ms.locfileid: "36054989"
  L'identificatore SQL_DESC_TYPE_NAME del campo di descrizione esistente viene utilizzato per indicare il nome del tipo definito dall'utente. Il campo SQL_DESC_TYPE per una colonna con tipo definito dall'utente è SQL_SS_UDT.  
   
 ## <a name="sqlcolattribute-support-for-enhanced-date-and-time-features"></a>Supporto di SQLColAttribute per le caratteristiche avanzate di data e ora  
- Per i valori restituiti per i tipi di data/ora, vedere la sezione "Informazioni restituite nei campi IRD" in [metadati per parametri e risultati](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
+ Per i valori restituiti per i tipi data/ora, vedere la sezione "Informazioni restituite nei campi IRD" in [Parameter and Result Metadata](../native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Per altre informazioni, vedere [data e ora miglioramenti &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+ Per altre informazioni, vedere [data e miglioramenti per la fase &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-large-clr-udts"></a>Supporto di SQLColAttribute per tipi CLR definiti dall'utente di grandi dimensioni  
  `SQLColAttribute` supporta i tipi CLR definiti dall'utente di grandi dimensioni. Per altre informazioni, vedere [Large CLR User-Defined tipi &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Supporto di SQLColAttribute per colonne di tipo sparse  
- Il nuovo campo implementazione riga IRD (descrittore), SQL_CA_SS_IS_COLUMN_SET, per determinare se una colonna è una query SQLColAttribute un `column_set` colonna.  
+ SQLColAttribute esegue una query il nuovo campo implementazione riga IRD (descrittore), SQL_CA_SS_IS_COLUMN_SET, per determinare se una colonna è una `column_set` colonna.  
   
  Per altre informazioni, vedere [supporto per colonne di tipo Sparse &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   

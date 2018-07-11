@@ -1,5 +1,5 @@
 ---
-title: Creare un cubo da un modello senza utilizzare una vista origine dati | Documenti Microsoft
+title: Creare un cubo da un modello senza utilizzare una vista origine dati | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 caps.latest.revision: 7
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c834ce714cd4ad0de92f3638288146674d4bc1e6
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a03699873933bb98cf1657cc5fa0ae057eabf52e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067293"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161382"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Creare un cubo da un modello senza utilizzare una vista origine dati
   Selezionare **Build the cube without using a data source** (Crea il cubo senza usare un'origine dati) nella prima pagina di Creazione guidata cubo per creare un cubo senza usare una vista origine dati. Successivamente è possibile usare Generazione guidata schema per generare lo schema relazionale per la vista origine dati in base alla struttura del cubo e possibilmente ad altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Per altre informazioni sulla generazione di uno schema, vedere [Generazione guidata schema &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "36067293"
   
  Se si usa un modello per creare il cubo, nella griglia in **Selezionare le dimensioni dal modello** vengono visualizzate le dimensioni nel modello. È possibile deselezionare la casella di controllo accanto a una qualsiasi dimensione per rimuoverla dal cubo. Deselezionare la casella di controllo nella barra del titolo della griglia per rimuovere tutte le dimensioni elencate. Se non si utilizza un modello, nella griglia viene elencata solo la dimensione temporale.  
   
- È possibile aggiungere dimensioni al cubo nella griglia in **Aggiungi nuove dimensioni**. Per aggiungere una dimensione, fare clic sulla cella il `Name` colonna che contiene il testo **Aggiungi nuova dimensione**e quindi digitare un nome per la dimensione. Per rimuovere una riga dall'elenco, fare clic sull'icona di eliminazione (**X**).  
+ È possibile aggiungere dimensioni al cubo nella griglia in **Aggiungi nuove dimensioni**. Per aggiungere una dimensione, fare clic nella cella le `Name` colonna che contiene il testo **Aggiungi nuova dimensione**e quindi digitare un nome per la dimensione. Per rimuovere una riga dall'elenco, fare clic sull'icona di eliminazione (**X**).  
   
  Sia nella griglia **Selezionare le dimensioni dal modello** sia nella griglia **Aggiungi nuove dimensioni** vengono visualizzati i valori delle colonne descritte nella tabella seguente. È possibile fare clic su un valore in entrambi gli elenchi per modificarlo.  
   

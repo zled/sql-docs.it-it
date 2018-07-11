@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
 caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 9fecc22f3f88f0546bb9e31075d75575a540da05
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bff4aba1e3b9095b2962165bc7a1b96d5ac4771f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067878"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151642"
 ---
 # <a name="open-a-knowledge-base"></a>Apertura di una Knowledge Base
   In questo argomento viene descritto come aprire una Knowledge Base esistente in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) e prepararla per le attività di gestione del dominio, individuazione delle informazioni o aggiunta di criteri di corrispondenza.  

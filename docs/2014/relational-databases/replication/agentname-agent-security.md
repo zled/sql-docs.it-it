@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rep.newsubwizard.agentnameagentsecurity.f1
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 caps.latest.revision: 20
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: e0d562e0fee10e4533153dfe4fcf4e4be780dcd2
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: f1f2cf0d93d00cf062566fdc7d8dea433cc1c8df
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065349"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240591"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Sicurezza agente &lt;NomeAgente&gt;
   La pagina Sicurezza agente **\<NomeAgente>** consente di specificare gli account utilizzati per l'esecuzione dall'agente di distribuzione (per la replica transazionale e snapshot) o dall'agente di merge (per la replica di tipo merge) e per la creazione di connessioni ai computer in una topologia di replica. Per informazioni sulle autorizzazioni necessarie per gli agenti e le procedure migliori per la sicurezza della replica, vedere [Modello di sicurezza dell'agente di replica](security/replication-agent-security-model.md) e [Procedure consigliate per la sicurezza della replica](security/replication-security-best-practices.md).  

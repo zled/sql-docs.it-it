@@ -1,5 +1,5 @@
 ---
-title: Report in modalità locale e Modalità connessa ed nel Visualizzatore di Report (Reporting Services in modalità SharePoint) | Documenti Microsoft
+title: Report in modalità locale e Connessione nel Visualizzatore di Report (Reporting Services in modalità SharePoint) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,23 +8,23 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
 caps.latest.revision: 11
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: b971bd46283911b81449565e5ad9410912ed456a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f1094375d1c911934255878b0e8af6eb7174a761
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068430"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157802"
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer-reporting-services-in-sharepoint-mode"></a>Report in modalità locale e Report in modalità locale nel visualizzatore di report (Reporting Services in modalità SharePoint)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report possono essere configurati per l'esecuzione in *modalità locale* oppure *modalità connessa*, che usa un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. In alternativa, è possibile utilizzare il visualizzatore di report per eseguire il rendering dei report direttamente da SharePoint quando l'estensione per i dati supporta la creazione di report in modalità locale. Questo approccio è definito *modalità locale*. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la farm di SharePoint è necessario essere connessi a un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server configurato in modalità SharePoint così il controllo Visualizzatore Report è stato possibile eseguire il rendering di report. Questo approccio è definito *modalità remota* o *modalità con connessione*.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] i report possono essere configurati per l'esecuzione in *modalità locale* oppure *modalità connessa*, che usa un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. In alternativa, è possibile utilizzare il visualizzatore di report per eseguire il rendering dei report direttamente da SharePoint quando l'estensione per i dati supporta la creazione di report in modalità locale. Questo approccio è definito *modalità locale*. Nelle versioni precedenti di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], la farm di SharePoint è necessaria essere connessi a un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server è configurato in modalità SharePoint così il controllo Visualizzatore Report è stato possibile eseguire il rendering di report. Questo approccio è definito *modalità remota* o *modalità con connessione*.  
   
- In *modalità locale* è presente alcun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. È necessario installare il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] componente aggiuntivo per prodotti SharePoint, ma nessun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report è obbligatorio. Con la modalità locale, gli utenti possono visualizzare report ma non potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
+ Nelle *modalità locale* è presente alcun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. È necessario installare il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] componente aggiuntivo per prodotti SharePoint, ma non [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è richiesto il server di report. Con la modalità locale, gli utenti possono visualizzare report ma non potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
   
 ||  
 |-|  
@@ -39,15 +39,15 @@ ms.locfileid: "36068430"
 -   [Configurare la creazione di report in modalità locale con SharePoint 2010](#bkmk_local_mode_sharepoint2010)  
   
 ##  <a name="bkmk_local_vs_connected"></a> Confronto tra modalità locale e modalità connessa ed estensioni supportate  
- **Modalità locale:** se è disponibile un'estensione per i dati che supporta la modalità locale, il Visualizzatore report esegue direttamente il rendering dei report da SharePoint. In *modalità locale* è presente alcun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. È necessario installare il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] componente aggiuntivo per prodotti SharePoint, ma nessun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report è obbligatorio. Con la modalità locale, gli utenti possono visualizzare report ma **non** potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
+ **Modalità locale:** se è disponibile un'estensione per i dati che supporta la modalità locale, il Visualizzatore report esegue direttamente il rendering dei report da SharePoint. Nelle *modalità locale* è presente alcun [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report. È necessario installare il [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] componente aggiuntivo per prodotti SharePoint, ma non [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] è richiesto il server di report. Con la modalità locale, gli utenti possono visualizzare report ma **non** potranno accedere alle funzionalità lato server quali sottoscrizioni e avvisi dati.  
   
- **Modalità connessa**, definita anche *modalità remota* richiede un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report in modalità SharePoint, connesso alla farm di SharePoint in modo che il controllo Visualizzatore Report è stato possibile eseguire il rendering di report...  
+ **Modalità connessa**, definita anche *modalità remota* richiede una [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] server di report in modalità SharePoint, connesso alla farm di SharePoint in modo che il controllo Visualizzatore Report è stato possibile eseguire il rendering di report...  
   
  Di seguito è riportato un elenco delle estensioni per l'elaborazione dati che supportano la creazione di report in modalità locale:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] Estensione di report di Access 2010. Per altre informazioni su Access Services, vedere l'articolo [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)(Utilizzo di Access Services con SQL Reporting Services: installazione del componente aggiuntivo SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Estensione per il reporting Access 2010. Per altre informazioni su Access Services, vedere l'articolo [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)(Utilizzo di Access Services con SQL Reporting Services: installazione del componente aggiuntivo SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)).  
   
--   Estensione per i dati dell'elenco SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Per ulteriori informazioni sull'estensione per i dati elenco SharePoint, vedere [origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+-   Estensione per i dati dell'elenco SharePoint di [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Per altre informazioni sull'estensione dati elenco SharePoint, vedere [origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
  È inoltre possibile sviluppare estensioni personalizzate per l'elaborazione dati per il supporto della modalità locale. Per ulteriori informazioni, vedere [Implementing a Data Processing Extension](extensions/data-processing/implementing-a-data-processing-extension.md).  
   
@@ -85,7 +85,7 @@ ms.locfileid: "36068430"
  Per altre informazioni, vedere l'articolo [Use Access Services with SQL Reporting Services: Installing SQL Server 2008 R2 Reporting Services Add-In (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686) (Utilizzo di Access Services con SQL Reporting Services: installazione del componente aggiuntivo SQL Server 2008 R2 Reporting Services (SharePoint Server 2010)) e [Enable-SPSessionStateService](http://technet.microsoft.com/library/ff607857\(v=office.15\).aspx).  
   
 ## <a name="connected-mode"></a>modalità connessa  
- Per informazioni aggiornate sull'utilizzo delle estensioni ADS con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] modalità connessa, vedere [Report di Access Services nel sito di SharePoint viene visualizzato l'errore nei dati di estensione 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
+ Per informazioni aggiornate sull'uso delle estensioni ADS con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in modalità connessa, vedere [Report di Access Services nel sito di SharePoint viene visualizzato errore nei dati di estensione 'ADS'](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Origini dati supportate da Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  

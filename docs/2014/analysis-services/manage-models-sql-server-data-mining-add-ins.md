@@ -1,5 +1,5 @@
 ---
-title: Gestione modelli (SQL Server Data Mining Add-ins) | Documenti Microsoft
+title: Gestire i modelli (SQL Server Data Mining Add-ins) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - mining models, importing
 - mining models, deleting
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - mining models, exporting
 ms.assetid: c11380f0-7c24-4668-9cdf-9c53e4aff665
 caps.latest.revision: 18
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 824c9fb75de1c0d2fcfc7da7cbd3ffcf17c8e38f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f5b0ebb3690bd74e0e058a1ede2497c0b404d143
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069048"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161452"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Gestione modelli (componenti aggiuntivi Data mining di SQL Server)
   ![Pulsante Gestisci modelli, barra multifunzione Data Mining](media/dmc-manage.gif "pulsante Gestione modelli, barra multifunzione Data Mining")  
@@ -34,7 +34,7 @@ ms.locfileid: "36069048"
  Il **Gestione modelli** finestra di dialogo consente di interagire con i modelli di data mining esistente e strutture di data mining archiviati nel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] server a cui si è attualmente connessi. È inoltre possibile visualizzare e gestire strutture e modelli temporanei creati durante la connessione corrente. Se sono stati utilizzati sia modelli di sessione che modelli archiviati in un server, nella finestra di dialogo saranno visibili entrambi i tipi di modelli.  
   
 ## <a name="using-the-manage-models-wizard"></a>Utilizzo della procedura guidata Gestione modelli  
- Quando fa clic su **Gestione modelli**, la **gestire strutture e modelli** verrà visualizzata la finestra di dialogo, che fornisce l'accesso alle funzionalità seguenti per la gestione dei modelli di data mining e strutture esistenti:  
+ Quando fa clic su **Gestione modelli**, il **gestire strutture e modelli** verrà visualizzata la finestra di dialogo, che fornisce accesso alle funzionalità seguenti per la gestione dei modelli di data mining e strutture esistenti:  
   
 -   Ridenominazione di un modello o di una struttura di data mining  
   
@@ -47,15 +47,15 @@ ms.locfileid: "36069048"
 -   Esportazione o importazione di un modello o di una struttura di data mining  
   
 > [!NOTE]  
->  Non è possibile creare query o modelli utilizzando questa finestra di dialogo. Per creare una nuova struttura di data mining, utilizzare una delle procedure guidate disponibili nel Client di Data Mining per Excel oppure utilizzare il **Editor di avanzato Query di Data Mining**.  
+>  Non è possibile creare query o modelli utilizzando questa finestra di dialogo. Per creare una nuova struttura di data mining, utilizzare una delle procedure guidate disponibili nel Client di Data Mining per Excel oppure utilizzare il **Editor avanzato di Query di Data Mining**.  
   
 ### <a name="requirements"></a>Requisiti  
- Per gestire i modelli di data mining, è innanzitutto necessario creare una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È necessaria una connessione anche se si stanno utilizzando modelli di sessione archiviati in un file temporaneo. Per ulteriori informazioni su come creare o modificare una connessione, vedere [Connetti ai dati di origine &#40;Client di Data Mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+ Per gestire i modelli di data mining, è innanzitutto necessario creare una connessione a un'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. È necessaria una connessione anche se si stanno utilizzando modelli di sessione archiviati in un file temporaneo. Per altre informazioni su come creare o modificare una connessione, vedere [Connetti ai dati di origine &#40;Client di Data Mining per Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Se l'istanza di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a cui si è connessi non contiene strutture o modelli di data mining esistenti, sarà possibile crearli utilizzando le procedure guidate e altri strumenti disponibili in questo componente aggiuntivo. È anche possibile creare nuovi modelli utilizzando il **modello avanzato Editor di Data Mining**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Documentazione di modelli di Data Mining &#40;componenti aggiuntivi data mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
- [Distribuzione e scalabilità di modelli di Data Mining &#40;componenti aggiuntivi data mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
+ [Documentazione di modelli di Data Mining &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)   
+ [Distribuzione e scalabilità di modelli di Data Mining &#40;dati di componenti aggiuntivi Data Mining per Excel&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)   
 
   

@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 caps.latest.revision: 19
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 830df1dd0f44b237e1571700f81919abeca826ce
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
+ms.openlocfilehash: 5a57623bc05b443de086835374b5f409f630b9de
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068727"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37184278"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Monitoraggio delle prestazioni con Archivio query
-  La funzionalità dell'archivio query mette a disposizione degli amministratori di database informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. La funzionalità acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva in modo che sia possibile esaminarli successivamente. I dati vengono separati dagli intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. L'archivio query può essere configurato utilizzando il [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) opzione.  
+  La funzionalità dell'archivio query mette a disposizione degli amministratori di database informazioni dettagliate sulle prestazioni e sulla scelta del piano di query. Semplifica la risoluzione dei problemi in quanto consente di individuare rapidamente le variazioni delle prestazioni causate da modifiche nei piani di query. La funzionalità acquisisce automaticamente una cronologia delle query, dei piani e delle statistiche di runtime e li conserva in modo che sia possibile esaminarli successivamente. I dati vengono separati dagli intervalli di tempo, consentendo di visualizzare i modelli di utilizzo del database e capire quando sono state apportate modifiche al piano di query nel server. L'archivio query può essere configurato usando le [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) opzione.  
   
 ||  
 |-|  
@@ -36,7 +36,7 @@ ms.locfileid: "36068727"
   
 #### <a name="by-using-the-query-store-page-in-management-studio"></a>Abilitazione nella pagina Archivio query in Management Studio  
   
-1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un database e quindi scegliere **Proprietà**. (Richiede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] versione di 2016 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
+1.  In Esplora oggetti fare clic con il pulsante destro del mouse su un database e quindi scegliere **Proprietà**. (Richiede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la versione di 2016 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].)  
   
 2.  Nella finestra di dialogo **Proprietà database** selezionare la pagina **Archivio query** .  
   
@@ -44,7 +44,7 @@ ms.locfileid: "36068727"
   
 #### <a name="by-using-transact-sql-statements"></a>Abilitazione con le istruzioni Transact-SQL  
   
-1.  Utilizzare il `ALTER DATABASE` istruzione per abilitare l'archivio query. Esempio:  
+1.  Usare il `ALTER DATABASE` statement per abilitare l'archivio query. Esempio:  
   
     ```  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
@@ -74,7 +74,7 @@ ms.locfileid: "36068727"
   
 -   Analizzare i modelli di utilizzo delle risorse (CPU, I/O e memoria) per un determinato database.  
   
- L'archivio query contiene due archivi: un **archivio piani** per salvare in modo permanente le informazioni sul piano di esecuzione e un **archivio delle statistiche di runtime** per salvare in modo permanente le informazioni sulle statistiche di esecuzione. Il numero di piani univoci che possono essere archiviati per una query nell'archivio piani è limitata dal `max_plans_per_query` opzione di configurazione. Per migliorare le prestazioni, le informazioni vengono scritte nei due archivi in modo asincrono. Per ridurre al minimo l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. Per visualizzare le informazioni contenute in questi archivi, è possibile eseguire una query sulle viste del catalogo dell'archivio query.  
+ L'archivio query contiene due archivi: un **archivio piani** per salvare in modo permanente le informazioni sul piano di esecuzione e un **archivio delle statistiche di runtime** per salvare in modo permanente le informazioni sulle statistiche di esecuzione. Il numero di piani univoci che possono essere archiviati per una query nell'archivio piani è limitata dalla `max_plans_per_query` opzione di configurazione. Per migliorare le prestazioni, le informazioni vengono scritte nei due archivi in modo asincrono. Per ridurre al minimo l'utilizzo dello spazio, le statistiche di esecuzione di runtime nell'archivio delle statistiche di runtime vengono aggregate in un intervallo di tempo fisso. Per visualizzare le informazioni contenute in questi archivi, è possibile eseguire una query sulle viste del catalogo dell'archivio query.  
   
  La query seguente restituisce le informazioni sulle query e sui piani inclusi nell'archivio query.  
   
@@ -94,7 +94,7 @@ JOIN sys.query_store_query_text AS Txt
   
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
   
- Selezione **query Regredite**, consente di aprire la **query Regredite** riquadro [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. in cui sono visualizzati i piani e le query presenti nell'archivio query. Le caselle a discesa nella parte superiore consentono di selezionare le query in base a diversi criteri. Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti per visualizzare la query di origine, forzare e annullar e la forzatura di un piano di query e aggiornare la visualizzazione.  
+ Selezionando **query Regredite**, consente di aprire le **query Regredite** riquadro [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. in cui sono visualizzati i piani e le query presenti nell'archivio query. Le caselle a discesa nella parte superiore consentono di selezionare le query in base a diversi criteri. Selezionare un piano per visualizzare il piano di query con interfaccia grafica. Sono disponibili pulsanti per visualizzare la query di origine, forzare e annullar e la forzatura di un piano di query e aggiornare la visualizzazione.  
   
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")  
   
@@ -125,7 +125,7 @@ JOIN sys.query_store_query_text AS Txt
  
   
 ##  <a name="Related"></a> Viste, funzioni e procedure correlate  
- L'archivio Query possono essere visualizzata e gestita tramite [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o tramite le viste e le procedure seguenti.  
+ La Query Store possono essere visualizzate e gestite tramite [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] oppure usando le viste e le procedure seguenti.  
   
 -   [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql)  
   
@@ -211,7 +211,7 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  Si noti che non sono consentiti valori arbitrari. È necessario usare uno dei valori seguenti: 1, 5, 10, 15, 30 e 60.  
   
- Nuovo valore per l'intervallo viene esposto tramite `sys.database_query_store_options` vista.  
+ Nuovo valore per l'intervallo viene esposto tramite `sys.database_query_store_options` visualizzazione.  
   
  Se lo spazio di archiviazione di Archivio query è esaurito, usare l'istruzione seguente per estenderlo.  
   
@@ -279,18 +279,18 @@ DEALLOCATE adhoc_queries_cursor;
   
  Per la cancellazione dei dati che non sono più rilevanti, è possibile definire procedure personalizzate con logiche diverse.  
   
- Nell'esempio precedente viene usata la `sp_query_store_remove_query` extended stored procedure per la rimozione dei dati non necessari. È anche possibile usare altre due procedure.  
+ L'esempio precedente Usa la `sp_query_store_remove_query` extended stored procedure per la rimozione dei dati non necessari. È anche possibile usare altre due procedure.  
   
 -   `sp_query_store_reset_exec_stats` : cancellare le statistiche di runtime per un determinato piano.  
   
--   `sp_query_store_remove_plan` -Rimuove un singolo piano.  
+-   `sp_query_store_remove_plan` : rimuove un singolo piano.  
   
 
   
 ###  <a name="Peformance"></a> Controllo delle prestazioni e risoluzione dei problemi  
  Dal momento che Archivio query conserva la cronologia delle metriche relative a compilazione e runtime per tutte le esecuzioni delle query, è possibile rispondere facilmente a numerose domande relative al carico di lavoro.  
   
- **Ultimo *n* le query eseguite sul database.**  
+ **Ultima *n* le query eseguite sul database.**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -338,7 +338,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **Il numero di query che aveva il principali Media i/o fisico legge nelle ultime 24 ore, con numero medio di righe corrispondente e il conteggio esecuzioni.**  
+ **Il numero di query con le principali Media i/o fisiche legge nelle ultime 24 ore, con numero medio di righe corrispondente e il conteggio delle esecuzioni.**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -386,7 +386,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **Le query che recentemente peggiorate delle prestazioni (confrontando diversi nel tempo).** L'esempio di query seguente restituisce tutte le query in cui il tempo di esecuzione è raddoppiato nelle ultime 48 ore in seguito alla modifica del piano selezionato. La query confronta tutti gli intervalli delle statistiche di runtime affiancandoli.  
+ **Le query che recentemente peggiorate delle prestazioni (confrontando altro punto nel tempo).** L'esempio di query seguente restituisce tutte le query in cui il tempo di esecuzione è raddoppiato nelle ultime 48 ore in seguito alla modifica del piano selezionato. La query confronta tutti gli intervalli delle statistiche di runtime affiancandoli.  
   
 ```  
 SELECT   
@@ -425,7 +425,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  Per visualizzare tutte le regressioni delle prestazioni, non solo quelle correlate alla modifica del piano selezionato, è sufficiente rimuovere la condizione `AND p1.plan_id <> p2.plan_id` dalla query precedente.  
   
- **Query che recentemente peggiorate delle prestazioni (confrontando cronologia delle esecuzioni recenti e).** La query successiva confronta le esecuzioni di query in base ai periodi di esecuzione. In questo specifico esempio la query confronta le esecuzioni nel periodo recente (1 ora) con il periodo della cronologia (ultimo giorno) e identifica quelle che hanno introdotto additional_duration_workload. Questa metrica viene ottenuta moltiplicando la differenza tra l'esecuzione media recente e quella media della cronologia e il numero delle esecuzioni recenti. Rappresenta in effetti la quantità di esecuzioni recenti con durata aggiuntiva introdotte rispetto alla cronologia:  
+ **Query regredite recente delle prestazioni (confrontando cronologia delle esecuzioni recenti e).** La query successiva confronta le esecuzioni di query in base ai periodi di esecuzione. In questo specifico esempio la query confronta le esecuzioni nel periodo recente (1 ora) con il periodo della cronologia (ultimo giorno) e identifica quelle che hanno introdotto additional_duration_workload. Questa metrica viene ottenuta moltiplicando la differenza tra l'esecuzione media recente e quella media della cronologia e il numero delle esecuzioni recenti. Rappresenta in effetti la quantità di esecuzioni recenti con durata aggiuntiva introdotte rispetto alla cronologia:  
   
 ```  
 --- "Recent" workload - last 1 hour  
@@ -503,7 +503,7 @@ OPTION (MERGE JOIN);
 
   
 ###  <a name="Stability"></a> Misure per garantire la stabilità delle prestazioni di esecuzione delle query  
- Per le query eseguite più volte è possibile notare che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usati piani diversi che hanno utilizzi diversi delle risorse e durata. Archivio query consente di rilevare facilmente il momento in cui si verifica una regressione delle prestazioni di esecuzione delle query e di determinare il piano ottimale in un periodo di interesse. È quindi possibile forzare il piano ottimale per le future esecuzioni delle query.  
+ Per le query eseguite più volte in cui è possibile notare che [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usati piani diversi che hanno comportato diversi delle risorse e la durata. Archivio query consente di rilevare facilmente il momento in cui si verifica una regressione delle prestazioni di esecuzione delle query e di determinare il piano ottimale in un periodo di interesse. È quindi possibile forzare il piano ottimale per le future esecuzioni delle query.  
   
  È anche possibile identificare incoerenze nelle prestazioni di una query con parametri (impostati sia automaticamente che manualmente). Tra i diversi piani è possibile identificare quello più rapido e adatto per tutti o per la maggior parte dei valori di parametro e forzarne l'uso in modo da garantire prestazioni prevedibili per un ampio numero di scenari utente.  
   
@@ -513,9 +513,9 @@ OPTION (MERGE JOIN);
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
- Quando si utilizza `sp_query_store_force_plan` è possibile forzare solo piani che sono stati registrati da archivio Query come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire Q1 mentre Archivio query era attivo.  
+ Quando si usa `sp_query_store_force_plan` è possibile forzare solo piani che sono stati registrati da Query Store come piani per tale query. In altre parole, gli unici piani disponibili per una query sono quelli già usati per eseguire Q1 mentre Archivio query era attivo.  
   
- **Rimuovere l'utilizzo forzato del piano per una query.** Per usare di nuovo sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query optimizer per calcolare il piano di query ottimale, utilizzare `sp_query_store_unforce_plan` annullare la forzatura del piano selezionato per la query.  
+ **Rimuovere l'utilizzo forzato del piano per una query.** Per usare di nuovo sul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] query optimizer per calcolare il piano di query ottimale, usare `sp_query_store_unforce_plan` annullare la forzatura del piano selezionato per la query.  
   
 ```  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  

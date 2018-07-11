@@ -1,5 +1,5 @@
 ---
-title: Filtri di riga (ruolo progettazione)(Tabular Model) | Documenti Microsoft
+title: Filtri di riga ()(Tabular Model) della finestra di progettazione ruoli | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql.asvs.roledesignerdialog.rowfilters.imbi.f1
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 caps.latest.revision: 4
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 3535382298512d9feca59af13518838188abad59
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 269ad2f2983db72aa49d5617466ae54884ec26b0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068797"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155314"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtri di riga (Progettazione ruoli)(Modello tabulare)
   Usare la pagina **Filtri di riga** di Progettazione ruoli per definire filtri a livello di riga per il ruolo associato. I filtri di riga possono essere definiti solo per ruoli con le autorizzazioni di lettura e di lettura ed elaborazione.  
@@ -36,7 +36,7 @@ ms.locfileid: "36068797"
  **Filtro DAX**  
  Formula DAX che restituisce una condizione booleana.  
   
- **Filtro DAX - \<tablename >**  
+ **Filtro DAX - \<NomeTabella >**  
  Formula una formula DAX che restituisce una condizione booleana.  
   
 ## <a name="see-also"></a>Vedere anche  

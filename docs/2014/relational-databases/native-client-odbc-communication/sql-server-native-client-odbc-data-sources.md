@@ -1,13 +1,11 @@
 ---
-title: Origini dati ODBC di SQL Server Native Client | Documenti Microsoft
+title: Origini dati SQL Server Native Client ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - ODBC data sources
 ms.assetid: a6a50fd0-d439-43fd-b76f-16ec02f478c5
 caps.latest.revision: 27
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 3b74f989db617c2fcd86e0d823b9bb563c7dcda1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: ee13a0180896316e10b20148b2a22a5b0cf4c149
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064888"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37408470"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Origini dati ODBC di SQL Server Native Client
   Un nome di origine dati (DSN, Data Source Name) di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica un'origine dati ODBC che contiene tutte le informazioni necessarie a un'applicazione ODBC per connettersi a un database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un server specifico. Per definire un nome di origine dati ODBC, è possibile procedere in due modi diversi:  
@@ -50,6 +48,6 @@ ms.locfileid: "36064888"
  Un'applicazione ODBC non è necessaria per connettersi tramite un'origine dati. L'applicazione, tuttavia, deve fornire le stesse informazioni sulla connettività a una funzione di connessione ODBC altrimenti individuate dal driver in un nome di origine dati.  
   
 ## <a name="see-also"></a>Vedere anche  
- [La comunicazione con SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
+ [Comunicazione con SQL Server &#40;ODBC&#41;](communicating-with-sql-server-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: I trigger CLR | Documenti Microsoft
+title: Trigger CLR | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,15 +27,15 @@ helpviewer_keywords:
 - transactions [CLR integration]
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 caps.latest.revision: 67
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 0f2f0d4d3c7dbe6ed46e169645de057492d55c42
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: c6702a9a3851e7ce41862f8f314d9aebdb7a5745
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069037"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37160992"
 ---
 # <a name="clr-triggers"></a>Trigger CLR
   Grazie all'integrazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con CLR (Common Language Runtime) di [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], è possibile utilizzare qualsiasi linguaggio [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] per creare trigger CLR. In questa sezione vengono fornite informazioni specifiche relative ai trigger implementati utilizzando l'integrazione con CLR. Per una descrizione completa dei trigger, vedere [trigger DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -77,9 +77,9 @@ ms.locfileid: "36069037"
 -   Per i trigger DDL, l'elenco dei valori TriggerAction possibili è molto più lungo. Per ulteriori informazioni, vedere "Enumerazione TriggerAction" in .NET Framework SDK.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Utilizzo delle tabelle Inserted e Deleted  
- Nelle istruzioni dei trigger DML vengono utilizzate due tabelle speciali: il **inserito** tabella e il **eliminato** tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
+ Nelle istruzioni di trigger DML vengono utilizzate due tabelle speciali: il **inserito** tabella e il **eliminato** tabella. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea e gestisce queste tabelle automaticamente. È possibile utilizzare queste tabelle temporanee per verificare gli effetti di determinate modifiche apportate ai dati e impostare le condizioni per le azioni dei trigger DML. Non è tuttavia possibile modificare direttamente i dati nelle tabelle.  
   
- I trigger CLR possono accedere il **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Esempio:  
+ Trigger CLR possono accedere le **inserito** e **eliminato** tabelle tramite il provider in-process CLR. A tale scopo è necessario ottenere un oggetto `SqlCommand` dall'oggetto SqlContext. Esempio:  
   
  C#  
   
@@ -485,7 +485,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- Il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione che crea il trigger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è indicato di seguito e presuppone che l'assembly **SQLCLRTest** è già registrato nell'oggetto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
+ Il [!INCLUDE[tsql](../../includes/tsql-md.md)] istruzione che crea il trigger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] è come indicato di seguito e presuppone che l'assembly **SQLCLRTest** è già registrato nell'attuale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -665,7 +665,7 @@ DROP TABLE Table1;
  [Trigger DML](../../relational-databases/triggers/dml-triggers.md)   
  [Trigger DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [La creazione di oggetti di Database con Common Language Runtime &#40;CLR&#41; integrazione](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Compilazione di oggetti di Database con Common Language Runtime &#40;CLR&#41; integrazione](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

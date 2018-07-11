@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un Report o un Feed di dati (SSAS) | Documenti Microsoft
+title: Connettersi a un Report o un Feed di dati (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,26 +8,26 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 96e2ad7374493c375e85db4f9bff97a475174997
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 726007e635a41295c682ebc929e909fda8f0b0a9
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068599"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210291"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connettersi a un report o a un feed di dati (SSAS)
   Questa pagina dell' **Importazione guidata tabella** consente di connettersi a un feed di dati. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
   
 ## <a name="from-a-report"></a>Da un report  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome descrittivo per la connessione al feed di dati.  
   
  **Percorso report**  
@@ -45,7 +45,7 @@ ms.locfileid: "36068599"
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  
   
 ## <a name="from-an-azure-datamarket-dataset"></a>Da un set di dati di Azure DataMarket  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome descrittivo per la connessione al feed di dati.  
   
  **URL Feed di dati**  
@@ -59,7 +59,7 @@ ms.locfileid: "36068599"
  **Chiave dell'account**  
  Specificare la chiave di account utilizzata per accedere alle sottoscrizioni al set di dati di Windows Azure Marketplace.  
   
- **Trova**  
+ **Trovare**  
  Individuare una chiave di account associata a un account di Windows Live.  
   
  **Salva chiave account**  
@@ -72,7 +72,7 @@ ms.locfileid: "36068599"
  Provare a stabilire una connessione all'origine dati utilizzando le impostazioni correnti. Viene visualizzato un messaggio che indica se la connessione è stata stabilita.  
   
 ## <a name="from-other-feeds"></a>Dagli altri feed  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome descrittivo per la connessione al feed di dati.  
   
  **URL Feed di dati**  

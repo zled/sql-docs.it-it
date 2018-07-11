@@ -1,13 +1,11 @@
 ---
-title: Associazione dei parametri | Documenti Microsoft
+title: Associazione di parametri | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - bound parameter markers [SQL Server Native Client]
 ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 caps.latest.revision: 31
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f9c78e5e26e967699c0bf69577bece7426461f0a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: f117cf02f863eb2c5d3dae602ce4503e71b885e1
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055461"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37423040"
 ---
 # <a name="binding-parameters"></a>Associazione di parametri
   Ogni marcatore di parametro in un'istruzione SQL deve essere associato a una variabile nell'applicazione prima di eseguire l'istruzione. Questa operazione viene eseguita chiamando il [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) (funzione). **SQLBindParameter** descrive la variabile di programma (indirizzo, tipo di dati C e così via) al driver. La funzione identifica inoltre il marcatore di parametro specificandone il valore ordinale e quindi descrive le caratteristiche dell'oggetto SQL rappresentato (tipo di dati SQL, precisione e così via).  
@@ -49,9 +47,9 @@ ms.locfileid: "36055461"
   
 -   L'associazione per riga viene eseguita quando tutti i parametri nell'istruzione SQL vengono associati come unità a una matrice di strutture contenente le singole variabili per i parametri.  
   
-     L'associazione viene specificata chiamando **SQLSetStmtAttr** con *attributo* impostato su SQL_ATTR_PARAM_BIND_TYPE e *ValuePtr* impostato sulla dimensione dell'azienda struttura il variabili di programma.  
+     L'associazione per riga viene specificata chiamando **SQLSetStmtAttr** con *attributo* impostato su SQL_ATTR_PARAM_BIND_TYPE e *ValuePtr* impostata sulle dimensioni dell'azienda struttura il variabili di programma.  
   
- Quando il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Invia carattere o i parametri di stringa binaria al server, aggiunge i valori per la lunghezza specificata **SQLBindParameter** *ColumnSize* parametro. Se un'applicazione ODBC 2.x specifica 0 per *ColumnSize*, il driver aggiunge il valore del parametro alla precisione del tipo di dati. La precisione è 8000 in caso di connessione a server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 in caso di connessione a versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* è espresso in byte per le colonne variant.  
+ Quando la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] driver ODBC Native Client Invia carattere o stringa binaria con parametri al server, aggiunge i valori alla lunghezza specificata **SQLBindParameter** *ColumnSize* parametro. Se un'applicazione ODBC 2.x specifica 0 per *ColumnSize*, il driver aggiunge il valore del parametro alla precisione del tipo di dati. La precisione è 8000 in caso di connessione a server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 255 in caso di connessione a versioni precedenti di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *ColumnSize* è espressa in byte per le colonne variant.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supporta la definizione di nomi per parametri delle stored procedure. Anche in ODBC 3.5 è stato introdotto il supporto per parametri denominati utilizzati per chiamare stored procedure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Questo supporto può essere utilizzato per effettuare le operazioni seguenti:  
   
@@ -59,9 +57,9 @@ ms.locfileid: "36055461"
   
 -   Specificare i parametri in un ordine diverso nell'applicazione rispetto all'ordine specificato alla creazione della stored procedure.  
   
- I parametri denominati sono supportati solo quando si utilizza il [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` istruzione o la sequenza di escape ODBC CALL per eseguire una stored procedure.  
+ I parametri denominati sono supportati solo quando si usa la [!INCLUDE[tsql](../../includes/tsql-md.md)] `EXECUTE` istruzione o la sequenza di escape ODBC CALL per eseguire una stored procedure.  
   
- Se per un parametro della stored procedure è impostato `SQL_DESC_NAME`, sarà necessario impostare `SQL_DESC_NAME` anche per tutti gli altri parametri della stored procedure nella query.  Se i valori letterali sono utilizzati nelle chiamate a stored procedure, in cui i parametri hanno `SQL_DESC_NAME` impostato, i valori letterali devono utilizzare il formato *' nome*=*valore*', dove *nome* è il nome di parametro della stored procedure (ad esempio, @p1). Per altre informazioni, vedere [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215).  
+ Se per un parametro della stored procedure è impostato `SQL_DESC_NAME`, sarà necessario impostare `SQL_DESC_NAME` anche per tutti gli altri parametri della stored procedure nella query.  Se i valori letterali vengono usati nelle chiamate a stored procedure, in cui i parametri hanno `SQL_DESC_NAME` impostato, i valori letterali devono utilizzare il formato *' nome*=*valore*', dove *nome* è il nome di parametro della stored procedure (ad esempio, @p1). Per altre informazioni, vedere [Binding Parameters by Name (Named Parameters)](http://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Uso dei parametri di un'istruzione](using-statement-parameters.md)  

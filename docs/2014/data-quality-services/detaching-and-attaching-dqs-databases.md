@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 22f525a1eed94e3125dab5cdc3930dc6bc20ec91
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 763a1eb2db612eff3e1d6a895e91fb0878d465e3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068116"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37159132"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Scollegamento e collegamento di database DQS
   In questo argomento viene descritto come scollegare e collegare i database DQS.  
@@ -31,7 +31,7 @@ ms.locfileid: "36068116"
   
 ###  <a name="Prerequisites"></a> Prerequisiti  
   
--   Assicurarsi che non vi siano attività o processi in esecuzione in DQS. È possibile verificare utilizzando la schermata **Monitoraggio attività** . Per informazioni dettagliate sull'utilizzo di questa schermata, vedere [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
+-   Assicurarsi che non vi siano attività o processi in esecuzione in DQS. È possibile verificare utilizzando la schermata **Monitoraggio attività** . Per informazioni dettagliate su funzionamento di questa schermata, vedere [Monitor DQS Activities](../../2014/data-quality-services/monitor-dqs-activities.md).  
   
 -   Assicurarsi che non vi siano utenti connessi al [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
@@ -46,7 +46,7 @@ ms.locfileid: "36068116"
 -   È necessario disporre del ruolo dqs_administrator sul database DQS_MAIN per interrompere qualsiasi attività in esecuzione o arrestare processi in corso in DQS.  
   
 ##  <a name="Detach"></a> Scollegare i database DQS  
- Quando si scollega un database DQS utilizzando SQL Server Management Studio, i file scollegati non vengono eliminati dal computer e possono essere ricollegati alla stessa istanza di SQL Server o possono essere spostati in un altro server dove vengono collegati. I file di database DQS sono in genere disponibili nel seguente percorso nel computer Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Instance_Name >* \MSSQL\DATA.  
+ Quando si scollega un database DQS utilizzando SQL Server Management Studio, i file scollegati non vengono eliminati dal computer e possono essere ricollegati alla stessa istanza di SQL Server o possono essere spostati in un altro server dove vengono collegati. I file di database DQS sono in genere disponibili nel percorso seguente nel computer Data Quality Services: C:\Program Files\Microsoft SQL Server\MSSQL12. *< Nome_istanza >* \MSSQL\DATA.  
   
 1.  Avviare Microsoft SQL Server Management Studio e connettersi all'istanza di SQL Server appropriata.  
   

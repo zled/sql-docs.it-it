@@ -15,20 +15,20 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], retrieving report server information
 ms.assetid: adbce647-18f3-470c-8114-42f8bcc95dc2
 caps.latest.revision: 34
-author: douglaslM
-ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ccffffd38ed25bea72bfcafdfaf2161e7b88c666
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: e0a03b385bc6cbc4f4d1c5794829a52bcf3d7cf7
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069535"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153952"
 ---
 # <a name="using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension"></a>Utilizzo dell'interfaccia IDeliveryReportServerInformation per un'estensione per il recapito
   L'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation> espone diverse proprietà che è possibile utilizzare per recuperare informazioni su un server di report. È possibile utilizzare queste informazioni per recapitare notifiche e report. Quando si implementa la classe di estensioni per il recapito, si implementa la proprietà <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A>, come richiesto dall'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension>. La proprietà <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ReportServerInformation%2A> restituisce un oggetto che implementa l'interfaccia <xref:Microsoft.ReportingServices.Interfaces.IDeliveryReportServerInformation>. Da questo oggetto è possibile ottenere un elenco di estensioni per il rendering attualmente supportate dal server di report.  
   
- I seguenti `for` ciclo può essere utilizzato per archiviare un elenco di estensioni per il rendering attualmente disponibili nel server di report in un **ArrayList** oggetto.  
+ Quanto segue `for` ciclo può essere usato per archiviare un elenco di estensioni per il rendering attualmente disponibili nel server di report in un **ArrayList** oggetto.  
   
 ```vb  
 Dim renderFormats As New ArrayList()  

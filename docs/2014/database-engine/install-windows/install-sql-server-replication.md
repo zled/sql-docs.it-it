@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - components [SQL Server replication]
 - command line installations [SQL Server replication]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 caps.latest.revision: 40
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: f63d8eee7708b70eedf9b9e00b85e646132dd986
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 70978d835a5c63589de69ad48fbeeef690dfef2c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065643"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278228"
 ---
 # <a name="install-sql-server-replication"></a>Installare la replica di SQL Server
   I componenti della replica possono essere installati mediante l'Installazione guidata di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dal prompt dei comandi. L'installazione della replica può essere eseguita durante l'installazione di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oppure durante la modifica di un'istanza esistente.  
@@ -43,7 +43,7 @@ ms.locfileid: "36065643"
 ## <a name="installing-replication-from-the-command-prompt"></a>Installazione della replica dal prompt dei comandi  
  **Per installare la replica durante l'installazione di una nuova istanza di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**  
   
--   Vedere [installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
+-   Visualizzare [installare SQL Server 2014 dal Prompt dei comandi](install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="see-also"></a>Vedere anche  
  [Installare SQL Server 2014](install-sql-server.md)   

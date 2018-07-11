@@ -1,5 +1,5 @@
 ---
-title: Editor origine Excel (pagina Gestione connessione) | Documenti Microsoft
+title: Editor origine Excel (pagina Gestione connessione) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 caps.latest.revision: 39
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: eeb3af2f65be818c41dd88dc89028cb0f27cb36e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: bb74698304e70e1125003e5b15cef991f8511ed4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068754"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37161032"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor origine Excel (pagina Gestione connessione)
   Usare il nodo **Gestione connessione** della finestra di dialogo **Editor origine Excel** per selezionare la cartella di lavoro di [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] da usare come origine. L'origine Excel legge i dati da un foglio di lavoro o da un intervallo denominato in una cartella di lavoro esistente.  
@@ -84,9 +84,9 @@ ms.locfileid: "36068754"
  Consente di selezionare la variabile contenente il testo della query SQL.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor origine Excel &#40;pagina colonne&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [Editor origine Excel &#40;pagina di Output di errore&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Editor origine Excel &#40;(pagina colonne)&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [Editor origine Excel &#40;pagina dell'Output degli errori&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Gestione connessione Excel](connection-manager/excel-connection-manager.md)   
  [Esecuzione di un ciclo su file e tabelle di Excel usando un contenitore Ciclo Foreach](control-flow/foreach-loop-container.md)  
   

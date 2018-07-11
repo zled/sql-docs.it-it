@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 03157682c4b5a5dcaa89c46a64b094f8e321ec8e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 44bb65b09d081ba43aef2de6991bb09b9f6ecf4f
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067422"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37228891"
 ---
 # <a name="tutorial-introducing-expressions"></a>Esercitazione: Introduzione alle espressioni
-  Le espressioni consentono di creare report potenti e flessibili. In questa esercitazione verrà illustrato come creare e implementare espressioni in cui vengono utilizzati operatori e funzioni comuni. Si utilizzerà la **espressione** finestra di dialogo per scrivere espressioni che consentono di concatenare i valori di nome, cercare i valori in un set di dati separato, visualizzare immagini differenti in base a valori di campo e così via.  
+  Le espressioni consentono di creare report potenti e flessibili. In questa esercitazione verrà illustrato come creare e implementare espressioni in cui vengono utilizzati operatori e funzioni comuni. Si userà il **espressione** finestra di dialogo per scrivere espressioni che concatenano valori di nomi, ricercare valori in un set di dati separato, visualizzare immagini differenti in base a valori dei campi e così via.  
   
  Il report è a barre con righe alternate in bianco e in un altro colore che può essere selezionato tramite un parametro incluso nel report.  
   
@@ -33,13 +33,13 @@ ms.locfileid: "36067422"
 ##  <a name="BackToTop"></a> Lezioni dell'esercitazione  
  In questa esercitazione verranno illustrate le operazioni seguenti:  
   
-1.  [Creare un Report di tabella e un set di dati della tabella o la creazione guidata matrice](#Setup)  
+1.  [Creare un Report tabella e un set di dati dalla tabella o dalla creazione guidata matrice](#Setup)  
   
 2.  [Aggiornare i nomi predefiniti dei dati di origine e set di dati](#UpdateNames)  
   
-3.  [Nome e cognome nome visualizzato](#Concatenate)  
+3.  [Nome e cognome, nome visualizzato](#Concatenate)  
   
-4.  [Utilizzare immagini per visualizzare il sesso](#Gender)  
+4.  [Utilizzare le immagini per visualizzare il sesso](#Gender)  
   
 5.  [Cercare il nome CountryRegion](#Lookup)  
   
@@ -47,11 +47,11 @@ ms.locfileid: "36067422"
   
 7.  [Utilizzare un indicatore per mostrare il confronto vendite](#Indicator)  
   
-8.  [La relazione di che una barra di colore verde"" del Report](#GreenBar)  
+8.  [La creazione di che una barra di colore verde"" del Report](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Altri passaggi facoltativi  
   
--   [Formattare la colonna della data](#DateFormat)  
+-   [Formattare la colonna Data](#DateFormat)  
   
 -   [Aggiungere un titolo al Report](#Title)  
   
@@ -78,10 +78,10 @@ ms.locfileid: "36067422"
      Verrà visualizzata la finestra di dialogo **Riquadro attività iniziale** .  
   
     > [!NOTE]  
-    >  Se il **Getting Started** finestra di dialogo non viene visualizzata, dal **Generatore Report** pulsante, fare clic su **nuovo**.  
+    >  Se il **Guida introduttiva** non viene visualizzato nella finestra di dialogo, dalle **Generatore Report** pulsante, fare clic su **New**.  
   
     > [!NOTE]  
-    >  Se si preferisce utilizzare la versione ClickOnce di Generatore Report, aprire Gestione Report e fare clic su **Generatore Report**, o passare a un sito di SharePoint in cui Reporting Services i tipi di contenuto, ad esempio i report sono abilitati e fare clic su  **Report di Generatore Report** nella **nuovo documento** menu il **documenti** scheda di una libreria di documenti condivisi.  
+    >  Se si preferisce usare la versione ClickOnce di Generatore Report, aprire Gestione Report e fare clic su **Generatore Report**, o passare a un sito di SharePoint in cui Reporting Services i tipi di contenuto, ad esempio i report sono abilitati e fare clic su  **Report di Generatore Report** sul **nuovo documento** menu il **documenti** scheda di una libreria di documenti condivisi.  
   
 2.  Nel riquadro sinistro verificare che sia selezionata l'opzione **Nuovo report** .  
   
@@ -146,7 +146,7 @@ ms.locfileid: "36067422"
     > [!NOTE]  
     >  I campi FirstName e LastName non sono inclusi. Verranno aggiunti in un passaggio successivo.  
   
-13. Nel **valori** elenco, fare doppio clic su `CountryRegionID` e fare clic sui **somma** opzione.  
+13. Nel **i valori** elenco, fare doppio clic su `CountryRegionID` e fare clic sui **somma** opzione.  
   
      Al campo CountryRegionID non viene più applicata la somma.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "36067422"
   
 16. Nella pagina **Scegliere il layout** fare clic su **Avanti**.  
   
-17. Nel **scegliere uno stile** fare clic su **ardesia**e quindi fare clic su **fine**.  
+17. Nel **scegliere uno stile** pagina, fare clic su **Slate**e quindi fare clic su **fine**.  
   
 ##  <a name="UpdateNames"></a> 2. Aggiornare i nomi predefiniti dell'origine dati e del set di dati  
   
@@ -360,7 +360,7 @@ ms.locfileid: "36067422"
   
 6.  Nell'elenco **Categoria** fare clic su **Fields (Expressions)**.  
   
-7.  Nel **valori** elenco, fare doppio clic su `CountryRegionID`.  
+7.  Nel **i valori** elenco, fare doppio clic su `CountryRegionID`.  
   
 8.  Se il cursore non si trova già subito dopo `CountryRegionID.Value`, posizionarlo in tale punto.  
   
@@ -642,7 +642,7 @@ ms.locfileid: "36067422"
   
      Viene eseguito il rendering del report e nelle righe alternate verrà visualizzato lo sfondo scelto.  
   
-##  <a name="DateFormat"></a> (facoltativo) Formattare la colonna della data  
+##  <a name="DateFormat"></a> (facoltativo) Formattare la colonna Data  
  Formattare la colonna **Last Purchase** in cui sono contenute le date.  
   
 #### <a name="to-format-date-column"></a>Per formattare la colonna della data  
@@ -701,7 +701,7 @@ ms.locfileid: "36067422"
   
 1.  Fare clic sul pulsante **Generatore report** , quindi su **Salva con nome**.  
   
-2.  Fare clic su **Desktop`, `documenti**, oppure **computer**e quindi passare alla cartella in cui si desidera salvare il report.  
+2.  Fare clic su **Desktop`, `documenti**, o **mio computer**e quindi passare alla cartella in cui si desidera salvare il report.  
   
 3.  In **Nome** sostituire il nome predefinito con **Sales Comparison Summary**.  
   
@@ -710,9 +710,9 @@ ms.locfileid: "36067422"
 ## <a name="see-also"></a>Vedere anche  
  [Espressioni &#40;Generatore report e SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Indicatori &#40;SSRS e Generatore Report&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Immagini, caselle di testo, rettangoli e righe &#40;SSRS e Generatore Report&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Indicatori &#40;Report e SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
+ [Le immagini, caselle di testo, rettangoli e linee &#40;Report e SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
  [Tabelle &#40;Generatore report e SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
- [Aggiungere dati a un Report &#40;SSRS e Generatore Report&#41;](report-data/report-datasets-ssrs.md)  
+ [Aggiungere dati a un Report &#40;Report e SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Origini dati e associazioni (SSAS multidimensionale) | Documenti Microsoft
+title: Origini dati e associazioni (SSAS multidimensionale) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
 - DSO, bindings
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - partitions [Analysis Services], bindings
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 caps.latest.revision: 40
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0d5386a2a09928f8a7dbc04248df74e8112749f4
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d6009cfc820cb3eec8a0aa8499850546f31dba57
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064814"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230201"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Origini dati e associazioni (SSAS - multidimensionale)
   È possibile associare cubi, dimensioni e altri oggetti di [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un'origine dati. Un'origine dati può essere rappresentata da uno dei seguenti oggetti:  
@@ -92,7 +92,7 @@ ms.locfileid: "36064814"
   
  È possibile eseguire l'override di queste associazioni predefinite in modo selettivo per partizione. Ogni partizione può specificare un'origine dati, un nome di tabella o di query o un'espressione di filtro differente. La strategia di partizionamento più comune consiste nell'eseguire l'override della tabella per partizione, utilizzando la stessa origine dati. È anche possibile applicare un filtro diverso per partizione o modificare l'origine dati.  
   
- È necessario definire l'origine dati predefinita nella tabella origine dati, fornendo le informazioni sullo schema e includendo i dettagli delle relazioni. Sebbene le tabelle e le query aggiuntive specificate a livello di partizione non debbano essere elencate nella vista origine dati, devono avere lo stesso schema della tabella predefinita definita per il gruppo di misure o contenere almeno tutte le colonne utilizzate dalle misure o dagli attributi di granularità. Non è possibile eseguire l'override a livello di partizione delle associazioni dettagliate per misura e attributo di granularità. Si presuppone inoltre che si tratti delle stesse colonne definite per il gruppo di misure. Pertanto, se la partizione utilizza un'origine dati che in realtà dispone di uno schema diverso, il `TableDefinition` query definita per la partizione deve restituire lo stesso schema come schema utilizzato dal gruppo di misure.  
+ È necessario definire l'origine dati predefinita nella tabella origine dati, fornendo le informazioni sullo schema e includendo i dettagli delle relazioni. Sebbene le tabelle e le query aggiuntive specificate a livello di partizione non debbano essere elencate nella vista origine dati, devono avere lo stesso schema della tabella predefinita definita per il gruppo di misure o contenere almeno tutte le colonne utilizzate dalle misure o dagli attributi di granularità. Non è possibile eseguire l'override a livello di partizione delle associazioni dettagliate per misura e attributo di granularità. Si presuppone inoltre che si tratti delle stesse colonne definite per il gruppo di misure. Pertanto, se la partizione Usa un'origine dati che con uno schema diverso, il `TableDefinition` query definita per la partizione deve restituire lo stesso schema utilizzato dal gruppo di misure.  
   
 ### <a name="measuregroup-granularity-attributes"></a>Attributi di granularità dei gruppi di misure  
  Se la granularità di un gruppo di misure corrisponde alla granularità nota nel database ed esiste una relazione diretta tra la tabella dei fatti e la tabella delle dimensioni, l'attributo di granularità deve essere associato solo alla colonna chiave esterna appropriata o alle colonne nella tabella dei fatti. Si considerino ad esempio la tabella dei fatti e la tabella delle dimensioni seguenti:  
@@ -111,7 +111,7 @@ ms.locfileid: "36064814"
   
  Se si esegue l'analisi in base al prodotto ordinato, l'attributo di granularità Product viene associato a Sales.OrderedProductID per il ruolo di dimensione Ordered Product on Sales.  
   
- In alcuni casi è tuttavia possibile che gli `GranularityAttributes` non esistano come colonne nella tabella dei fatti. Ad esempio, il `GranularityAttributes` potrebbe non esistere come colonne nelle circostanze seguenti:  
+ In alcuni casi è tuttavia possibile che gli `GranularityAttributes` non esistano come colonne nella tabella dei fatti. Ad esempio, il `GranularityAttributes` potrebbero non esistere come colonne nelle circostanze seguenti:  
   
 -   La granularità OLAP è più grossolana della granularità nell'origine.  
   
@@ -166,11 +166,11 @@ ms.locfileid: "36064814"
 ## <a name="out-of-line-bindings"></a>associazioni out-of-line  
  Le associazioni out-of-line consentono di modificare temporaneamente le associazioni dati esistenti per la durata di un comando. Le associazioni out-of-line si riferiscono ad associazioni incluse in un comando e non sono persistenti. Tali associazioni si applicano solo durante l'esecuzione del comando specifico. Le associazioni inline sono invece contenute in una definizione di oggetto ASSL e risultano persistenti con la definizione di oggetto nei metadati del server.  
   
- ASSL consente associazioni out-of-line in è necessario specificare un `Process` comando, se non è in un batch o in un `Batch` comando. Se le associazioni out-of-line sono specificate nel comando `Batch`, tutte le associazioni specificate nel comando `Batch` creano un nuovo contesto di associazione in cui vengono eseguiti tutti i comandi `Process` del batch. Il nuovo contesto di associazione include oggetti elaborati indirettamente a causa del comando `Process`.  
+ ASSL consente di specificare in uno associazioni out-of-line una `Process` comando, se non è in un batch o in un `Batch` comando. Se le associazioni out-of-line sono specificate nel comando `Batch`, tutte le associazioni specificate nel comando `Batch` creano un nuovo contesto di associazione in cui vengono eseguiti tutti i comandi `Process` del batch. Il nuovo contesto di associazione include oggetti elaborati indirettamente a causa del comando `Process`.  
   
- Quando vengono specificate in un comando, le associazioni out-of-line eseguono l'override delle associazioni inline contenute nell'istruzione DDL persistente per gli oggetti specificati. Tali oggetti elaborati possono includere l'oggetto denominato direttamente nel `Process` comando o possono essere inclusi altri oggetti la cui elaborazione viene inizializzata automaticamente come parte dell'elaborazione.  
+ Quando vengono specificate in un comando, le associazioni out-of-line eseguono l'override delle associazioni inline contenute nell'istruzione DDL persistente per gli oggetti specificati. Tali oggetti elaborati possono includere l'oggetto denominato direttamente nel `Process` comando oppure possono includere altri oggetti la cui elaborazione viene inizializzata automaticamente come parte dell'elaborazione.  
   
- Le associazioni out-of-line vengono specificate includendo l'oggetto raccolta `Bindings` facoltativo nel comando di elaborazione. L'opzione facoltativa `Bindings` insieme contiene gli elementi seguenti.  
+ Le associazioni out-of-line vengono specificate includendo l'oggetto raccolta `Bindings` facoltativo nel comando di elaborazione. L'opzione facoltativa `Bindings` raccolta costituita dagli elementi seguenti.  
   
 |Proprietà|Cardinalità|Tipo|Description|  
 |--------------|-----------------|----------|-----------------|  
@@ -181,14 +181,14 @@ ms.locfileid: "36064814"
  Tutti gli elementi che fanno riferimento alle associazioni out-of-line sono facoltativi. Per qualsiasi elemento non specificato, ASSL utilizza la specifica contenuta nell'istruzione DDL dell'oggetto persistente. La specifica di `DataSource` o `DataSourceView` nel comando `Process` è facoltativa. Se `DataSource` o `DataSourceView` è specificato, la relativa istanza non viene creata. Gli oggetti non risultano inoltre persistenti una volta completato il comando `Process`.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definizione del tipo di associazione out-of-line  
- Nella raccolta `Bindings` out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ciascuna proprietà `Binding`. Ciascuna proprietà `Binding` ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto assume il formato flat tipico del `Object` elemento `Process` comandi, tranne che il \< *oggetto*>\<*/Object*> non siano presenti tag.  
+ Nella raccolta `Bindings` out-of-line, ASSL supporta una raccolta di associazioni per più oggetti, una per ciascuna proprietà `Binding`. Ciascuna proprietà `Binding` ha un riferimento all'oggetto esteso, che è simile al riferimento all'oggetto, ma può riferirsi anche a oggetti minori, ad esempio attributi della dimensione e attributi del gruppo di misure. Questo oggetto assume il formato flat tipico del `Object` nell'elemento `Process` comandi, a meno che il \< *oggetto*>\<*/oggetto*> i tag non sono presenti.  
   
- Ciascun oggetto per cui è specificata l'associazione è identificato da un elemento XML nel formato \< *oggetto*> ID (ad esempio, `DimensionID`). Dopo aver identificato l'oggetto in modo specifico con il modulo \< *oggetto*> ID, si identifica l'elemento per cui è stata specificata l'associazione, in genere `Source`. Una situazione comune da tenere presente è quella in cui `Source` è una proprietà sul `DataItem`, nel caso delle associazioni di colonna in un attributo. In questo caso, non specificare il tag `DataItem`. Specificare solo la proprietà `Source`, come se si trovasse direttamente nella colonna da associare.  
+ Ogni oggetto per cui è specificata l'associazione è identificato da un elemento XML nel formato \< *oggetto*> ID (ad esempio, `DimensionID`). Dopo aver identificato l'oggetto in modo specifico con il modulo \< *oggetto*> ID, si identifica l'elemento per cui è stata specificata l'associazione, ovvero in genere `Source`. Una situazione comune da tenere presente è quella in cui `Source` è una proprietà nel `DataItem`, che avviene per le associazioni di colonna in un attributo. In questo caso, non specificare il tag `DataItem`. Specificare solo la proprietà `Source`, come se si trovasse direttamente nella colonna da associare.  
   
  L'identificazione di `KeyColumns` viene effettuata in base all'ordinamento nella raccolta `KeyColumns`. Non è possibile ad esempio specificare solo la prima e la terza colonna chiave di un attributo, perché non è possibile indicare di ignorare la seconda colonna chiave. Tutte le colonne chiave devono essere presenti nell'associazione out-of-line per un attributo della dimensione.  
   
  Sebbene non dispongano di un ID, le `Translations` sono identificate a livello semantico in base alla lingua. È pertanto necessario che le `Translations` in `Binding` includano l'identificatore di lingua.  
   
- Un elemento aggiuntivo consentite all'interno di un `Binding` non esiste direttamente nell'istruzione DDL è `ParentColumnID`, che viene usato per le tabelle nidificate per il data mining. In questo caso, è necessario identificare la colonna padre nella tabella nidificata per la quale è fornita l'associazione.  
+ Un ulteriore elemento consentita all'interno di un `Binding` che non esiste direttamente nell'istruzione DDL è `ParentColumnID`, che viene usato per le tabelle nidificate per il data mining. In questo caso, è necessario identificare la colonna padre nella tabella nidificata per la quale è fornita l'associazione.  
   
   

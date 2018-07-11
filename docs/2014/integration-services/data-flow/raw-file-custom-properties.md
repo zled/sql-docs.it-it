@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
 caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: ee1b5a26edc9c1335abf35dd2af23e7035b84809
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a991f1e7362be2e9516857ec2f6d98b4e487b536
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36066132"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277447"
 ---
 # <a name="raw-file-custom-properties"></a>Proprietà personalizzate del file non elaborato
   **Proprietà personalizzate delle origini**  
@@ -47,7 +47,7 @@ ms.locfileid: "36066132"
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (enumerazione)|Valore che specifica se la proprietà FileName include un nome file o il nome di una variabile che contiene un nome file. Le opzioni valide sono `File name` (0) e `File name from variable` (1).|  
 |FileName|String|Nome del file in cui la destinazione file non elaborato scrive.|  
-|WriteOption|Integer (enumerazione)|Valore che specifica se la destinazione file non elaborato elimina un file esistente con lo stesso nome. Le opzioni sono `Create Always` (0), `Create Once` (1), `Truncate and Append` (3), e `Append` (2). Il valore predefinito di questa proprietà è `Create Always` (0).|  
+|WriteOption|Integer (enumerazione)|Valore che specifica se la destinazione file non elaborato elimina un file esistente con lo stesso nome. Le opzioni disponibili sono `Create Always` (0), `Create Once` (1), `Truncate and Append` (3), e `Append` (2). Il valore predefinito di questa proprietà è `Create Always` (0).|  
   
 > [!NOTE]  
 >  È possibile eseguire un'operazione di aggiunta solo se i metadati dei dati aggiunti corrispondono a quelli dei dati già presenti nel file.  

@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - data-quality-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
 caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: fa65e6742004206c5116437c4e3bba7dbd316798
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d60f4db93721d20b85b613459a034eaa896dc87a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068583"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37165252"
 ---
 # <a name="create-a-domain"></a>Creazione di un dominio
   In questo argomento viene descritto come creare un dominio in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). I valori nel dominio sono una rappresentazione semantica dei dati in un campo. Per altre informazioni sui domini, vedere [Gestione di un dominio](../../2014/data-quality-services/managing-a-domain.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "36068583"
 1.  Nella finestra di dialogo **Crea dominio** immettere un nome univoco per la Knowledge Base e una descrizione di un massimo di 256 caratteri.  
   
     > [!NOTE]  
-    >  Per ulteriori informazioni sulle proprietà del dominio, vedere [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >  Per altre informazioni sulle proprietà del dominio, vedere [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  Dall'elenco **Tipo di dati** selezionare un tipo di dati per i valori nel dominio. Il tipo di dati può essere **Stringa** (valore predefinito), **Data**, **Intero**o **Decimale**.  
   

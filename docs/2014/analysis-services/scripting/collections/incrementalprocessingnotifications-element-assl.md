@@ -1,5 +1,5 @@
 ---
-title: Elemento IncrementalProcessingNotifications (ASSL) | Documenti Microsoft
+title: Elemento IncrementalProcessingNotifications (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - IncrementalProcessingNotifications element
 ms.assetid: 46f3c9d0-46cc-4833-8f15-7831207f57ce
 caps.latest.revision: 16
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: c19cc7a3a0b4ade2dab73b3ef5d28bc33c2ac57c
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 14d49b5e7a4d86aec5a2ac555cb67094b30b2fef
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068341"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230001"
 ---
 # <a name="incrementalprocessingnotifications-element-assl"></a>Elemento IncrementalProcessingNotifications (ASSL)
   Contiene la raccolta di [IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md) gli elementi che forniscono informazioni per il [ProactiveCaching](../objects/proactivecaching-element-assl.md) sulle query da eseguire per determinare lo stato dell'elemento elaborazione incrementale.  
@@ -60,7 +60,7 @@ ms.locfileid: "36068341"
 |Elementi padre|[ProactiveCachingIncrementalProcessingBinding](../data-type/binding-data-type-assl.md)|  
 |Elementi figlio|[IncrementalProcessingNotification](../objects/incrementalprocessingnotification-element-assl.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'elemento corrispondente nel modello a oggetti oggetti AMO (Analysis Management) è <xref:Microsoft.AnalysisServices.IncrementalProcessingNotificationCollection>.  
   
 ## <a name="see-also"></a>Vedere anche  

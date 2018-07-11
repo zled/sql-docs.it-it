@@ -1,5 +1,5 @@
 ---
-title: Elemento ParentObject (XMLA) | Documenti Microsoft
+title: Elemento ParentObject (XMLA) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - ParentObject element
 ms.assetid: f821f8f1-554a-4f16-bf09-262a9448e304
 caps.latest.revision: 16
-author: mgblythe
-ms.author: mblythe
-manager: mblythe
-ms.openlocfilehash: 1fae76d5f4c4dc1e3fbd64ca456af60719de4aaa
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: minewiskan
+ms.author: owend
+manager: craigg
+ms.openlocfilehash: c9795913ee483aa3b89b8f9fac88ec9515acf834
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065678"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259167"
 ---
 # <a name="parentobject-element-xmla"></a>Elemento ParentObject (XMLA)
-  Contiene l'identificatore dell'oggetto padre in cui si desidera creare gli oggetti definiti dall'elemento padre [crea](../xml-elements-commands/create-element-xmla.md) elemento.  
+  Contiene l'identificatore dell'oggetto padre in cui creare gli oggetti definiti dall'elemento padre [Create](../xml-elements-commands/create-element-xmla.md) elemento.  
   
 ## <a name="syntax"></a>Sintassi  
   
@@ -65,11 +65,11 @@ ms.locfileid: "36065678"
 |Elementi padre|[Creare](../xml-elements-commands/create-element-xmla.md)|  
 |Elementi figlio|Elementi ASSL (Analysis Services Scripting Language) obbligatori. Specificato elencando gli elementi ID dell'oggetto e i suoi predecessori (tranne l'oggetto `Server`.) Ad esempio, l'elemento `ParentObject` seguente identifica una partizione:<br /><br /> `<ParentObject>`<br /><br /> `<DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>`<br /><br /> `<CubeID>Adventure Works</CubeID>`<br /><br /> `<MeasureGroupID>Internet Sales</MeasureGroupID>`<br /><br /> `<PartitionID>Inernet_Sales_2001</PartitionID>`<br /><br /> `</ParentObject>`|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'ordine nel quale sono visualizzati gli identificatori non è importante.  
   
 ## <a name="example"></a>Esempio  
- Nell'esempio seguente viene creato il `Market Basket` struttura di data mining inclusi nel [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] campione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
+ L'esempio seguente crea il `Market Basket` struttura di data mining inclusi nel [!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] campione [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] database.  
   
 ```  
 <Create xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

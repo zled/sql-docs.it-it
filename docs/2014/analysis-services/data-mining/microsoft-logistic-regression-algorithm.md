@@ -1,5 +1,5 @@
 ---
-title: Algoritmo Microsoft Logistic Regression | Documenti Microsoft
+title: Algoritmo Microsoft Logistic Regression | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - logical regression algorithms [Analysis Services]
 - algorithms [data mining]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: dc5fbf84c23d93efcf6efa02c128f4e978624b6a
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 4c561ce22f55007083e07fc898063295fa8008b5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065490"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278387"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algoritmo Microsoft Logistic Regression
   La regressione logistica è una nota tecnica statistica utilizzata per modellare i risultati binari.  
@@ -72,7 +72,7 @@ ms.locfileid: "36065490"
   
 -   Per esempi di query su un modello di regressione lineare, vedere [Esempi di query sul modello di clustering](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
   
 -   Non supporta il drill-through. Questo perché la struttura di nodi nel modello di data mining non corrisponde necessariamente in modo diretto ai dati sottostanti.  
   
