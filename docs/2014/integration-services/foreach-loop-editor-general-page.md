@@ -1,5 +1,5 @@
 ---
-title: Editor ciclo foreach (pagina generale) | Documenti Microsoft
+title: Editor ciclo foreach (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
 caps.latest.revision: 25
-author: douglaslMS
+author: douglaslms
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 451c87f7612cdf8cb474f30018769d241e18a076
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 28040eac1a9bac3a05c890315502dd67c8e069d3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065168"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37277397"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Editor ciclo Foreach (pagina Generale)
   Utilizzare la pagina **Generale** della finestra di dialogo **Editor ciclo Foreach** per assegnare un nome e una descrizione al contenitore Ciclo Foreach che utilizza un enumeratore specificato per ripetere un flusso di lavoro per ogni membro di una raccolta.  
@@ -39,7 +39,7 @@ ms.locfileid: "36065168"
  Consente di digitare una descrizione del contenitore Ciclo Foreach.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Riferimenti per i messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Riferimento ai messaggi e agli errori di Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor ciclo foreach &#40;pagina della raccolta&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Editor ciclo foreach &#40;pagina mapping variabili&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
  [Pagina espressioni](expressions/expressions-page.md)   

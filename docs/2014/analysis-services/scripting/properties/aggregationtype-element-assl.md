@@ -1,5 +1,5 @@
 ---
-title: Elemento AggregationType (ASSL) | Documenti Microsoft
+title: Elemento AggregationType (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - AggregationType element
 ms.assetid: c1393bc6-d715-4397-8bc5-82abdb275330
 caps.latest.revision: 13
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b2241c85d9cc83e4cf48affacef10021eec7bc94
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: f7c95f9566f483ec7a047ceedd074237f9ff5f7e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067901"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183218"
 ---
 # <a name="aggregationtype-element-assl"></a>Elemento AggregationType (ASSL)
   Definisce il tipo di aggregazione archiviata per il [partizione](../objects/partition-element-assl.md) elemento.  
@@ -56,10 +56,10 @@ ms.locfileid: "36067901"
   
 |Relazione|Elemento|  
 |------------------|-------------|  
-|Elemento padre|[AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
+|Elemento padre|[Elemento AggregationInstance](../objects/aggregationinstance-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe nella tabella seguente.  
   
 |valore|Description|  

@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - replication
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - non-SQL Server Subscribers, IBM DB2
 - data types [SQL Server replication], non-SQL Server Subscribers
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 caps.latest.revision: 72
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 1705586884d09aa847a6ba308ffb821faa1d6cac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6edc4c9ce7f19a6b9771966e9547d0bf1fd5bffc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064889"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230811"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supporta le sottoscrizioni push a database IBM DB2/AS 400, DB2/MVS e DB2/Universal tramite i provider OLE DB inclusi in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server.  
@@ -35,11 +35,11 @@ ms.locfileid: "36064889"
   
 1.  Installare la versione più recente del provider [!INCLUDE[msCoName](../../../includes/msconame-md.md)] OLE DB per DB2 nel server di distribuzione:  
   
-    -   Se si utilizza [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]via il [download di SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) pagina Web il **download correlati** sezione, fare clic sul collegamento per la versione più recente del Feature Pack di Microsoft SQL Server 2008. Nella pagina Web **Feature Pack di Microsoft SQL Server 2008** cercare **Provider Microsoft OLE DB per DB2**.  
+    -   Se si usa [!INCLUDE[ssEnterpriseEd11](../../../includes/ssenterpriseed11-md.md)]via il [download di SQL Server 2008](http://go.microsoft.com/fwlink/?LinkId=149256) pagina Web il **download correlati** sezione, fare clic sul collegamento per la versione più recente del Feature Pack di Microsoft SQL Server 2008. Nella pagina Web **Feature Pack di Microsoft SQL Server 2008** cercare **Provider Microsoft OLE DB per DB2**.  
   
     -   Se si utilizza [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Standard, installare la versione più recente del server [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (HIS), che include il provider.  
   
-     Oltre a installare il provider, si consiglia di installare lo strumento di accesso ai dati, viene utilizzato nel passaggio successivo (viene installata per impostazione predefinita con il download per [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Per ulteriori informazioni sull'installazione e sull'utilizzo dello strumento di accesso ai dati, vedere la documentazione del provider o di HIS.  
+     Oltre a installare il provider, è consigliabile installare lo strumento di accesso di dati, che viene usato nel passaggio successivo (viene installata per impostazione predefinita con il download di [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Enterprise). Per ulteriori informazioni sull'installazione e sull'utilizzo dello strumento di accesso ai dati, vedere la documentazione del provider o di HIS.  
   
 2.  Creare una stringa di connessione per il Sottoscrittore. La stringa di connessione può essere creata in qualsiasi editor di testo, ma è consigliabile utilizzare lo strumento di accesso ai dati. Per creare la stringa nello strumento di accesso ai dati:  
   
@@ -147,16 +147,16 @@ ms.locfileid: "36064889"
 |`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`xml`|VARCHAR(0)<sup>1</sup>|  
   
- <sup>1</sup> vedere la sezione successiva per ulteriori informazioni sui mapping al VARCHAR(0).  
+ <sup>1</sup> vedere la sezione successiva per altre informazioni sui mapping al VARCHAR(0).  
   
 ### <a name="data-type-mapping-considerations"></a>Considerazioni sui mapping dei tipi di dati  
  Quando si esegue la replica nei Sottoscrittori DB2, considerare gli aspetti seguenti relativi ai mapping dei tipi di dati:  
   
--   Durante il mapping [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` e `varbinary` DB2 CHAR, VARCHAR, CHAR FOR BIT DATA e VARCHAR FOR BIT DATA, rispettivamente, la replica imposta la lunghezza del tipo di dati DB2 sia uguale a quello di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
+-   Quando il mapping [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`, `varchar`, `binary` e `varbinary` a DB2 CHAR, VARCHAR, CHAR FOR BIT DATA e VARCHAR FOR BIT DATA, rispettivamente, la replica imposta la lunghezza del tipo di dati DB2 sia uguale a quello del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo.  
   
      In questo modo, la tabella generata viene creata correttamente nel Sottoscrittore, a condizione che il vincolo relativo alla dimensione della pagina DB2 consenta di supportare la dimensione massima delle righe. Verificare che l'account di accesso al database DB2 disponga delle autorizzazioni per utilizzare gli spazi tabella con dimensioni sufficienti per le tabelle replicate in DB2.  
   
--   DB2 può supportare colonne VARCHAR di grandezza pari a 32 KB. È pertanto possibile che venga eseguito correttamente il mapping tra alcune colonne LOB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le colonne VARCHAR DB2. Il provider OLE DB utilizzato dalla replica per DB2, tuttavia, non supporta l'esecuzione del mapping tra oggetti di grandi dimensioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e oggetti di grandi dimensioni di DB2. Per questo motivo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, e `nvarchar(max)` colonne vengono mappate agli VARCHAR(0) negli script di creazione generati. È necessario modificare il valore di lunghezza 0 in un valore appropriato prima di applicare lo script nel Sottoscrittore. Se la lunghezza del tipo di dati non cambia, in DB2 viene generato l'errore 604 quando si tenta di creare la tabella nel Sottoscrittore DB2. L'errore 604 indica che l'attributo di precisione o di lunghezza di un tipo di dati non è valido.  
+-   DB2 può supportare colonne VARCHAR di grandezza pari a 32 KB. È pertanto possibile che venga eseguito correttamente il mapping tra alcune colonne LOB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e le colonne VARCHAR DB2. Il provider OLE DB utilizzato dalla replica per DB2, tuttavia, non supporta l'esecuzione del mapping tra oggetti di grandi dimensioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e oggetti di grandi dimensioni di DB2. Per questo motivo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`, `varchar(max)`, `ntext`, e `nvarchar(max)` colonne vengono mappate a VARCHAR(0) negli script di creazione generati. È necessario modificare il valore di lunghezza 0 in un valore appropriato prima di applicare lo script nel Sottoscrittore. Se la lunghezza del tipo di dati non cambia, in DB2 viene generato l'errore 604 quando si tenta di creare la tabella nel Sottoscrittore DB2. L'errore 604 indica che l'attributo di precisione o di lunghezza di un tipo di dati non è valido.  
   
      In base alle informazioni in proprio possesso sulla tabella di origine di cui si esegue la replica, determinare se sia opportuno eseguire il mapping tra un oggetto di grandi dimensioni di [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] e un elemento DB2 di lunghezza variabile e specificare una lunghezza massima appropriata in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "36064889"
   
 -   Quando si replicano [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` e `nvarchar` DB2 CHAR e VARCHAR, la replica utilizza lo stesso identificatore di lunghezza per il tipo DB2 che per il [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo. La lunghezza del tipo di dati, tuttavia, potrebbe essere troppo ridotta per la tabella DB2 generata.  
   
-     In alcuni ambienti DB2 un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento dati non è limitato ai caratteri a byte singolo; la lunghezza di un elemento di tipo CHAR o VARCHAR deve prendere in considerazione questa. È inoltre necessario considerare i *caratteri di controllo SI* e i *caratteri di controllo SO* , se richiesti. Se si replicano tabelle con `nchar` e `nvarchar` colonne, è necessario specificare una lunghezza massima maggiore per il tipo di dati in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
+     In alcuni ambienti DB2 un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` elemento dati non è limitato a caratteri a byte singolo, la lunghezza di un elemento CHAR o VARCHAR necessario prendere in considerazione. È inoltre necessario considerare i *caratteri di controllo SI* e i *caratteri di controllo SO* , se richiesti. Se si replicano tabelle con `nchar` e `nvarchar` colonne, potrebbe essere necessario specificare una lunghezza massima maggiore per il tipo di dati in uno script di creazione personalizzato. Per informazioni sulla definizione di uno script di creazione personalizzato, vedere il passaggio 5 nella sezione "Configurazione di un Sottoscrittore IBM DB2" in questo argomento.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   

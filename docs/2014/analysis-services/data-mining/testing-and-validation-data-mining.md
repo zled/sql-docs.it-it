@@ -1,5 +1,5 @@
 ---
-title: Test e convalida (Data Mining) | Documenti Microsoft
+title: Test e convalida (Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
 - comparing mining models
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - accuracy testing [data mining]
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 caps.latest.revision: 60
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 0e83f8e0ad6227444f4dbc0962a83e1aedd8a5f5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: d3fb68f21136da8236c653aaae71c9a9e461b432
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067496"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37230153"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test e convalida (Data mining)
   La convalida è il processo che consente di valutare le prestazioni dei modelli di data mining rispetto ai dati reali. Per convalidare in modo corretto i modelli di data mining, è importante comprenderne la qualità e le caratteristiche prima di distribuirli in un ambiente di produzione.  
@@ -97,6 +97,6 @@ ms.locfileid: "36067496"
 ## <a name="see-also"></a>Vedere anche  
  [Strumenti di Data Mining](data-mining-tools.md)   
  [Soluzioni di Data Mining](data-mining-solutions.md)   
- [Testing e le attività di convalida e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

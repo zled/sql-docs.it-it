@@ -1,5 +1,5 @@
 ---
-title: Seleziona metodo di creazione (Creazione guidata cubo) | Documenti Microsoft
+title: Selezione metodo di creazione (Creazione guidata cubo) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.cubedefinition.f1
 ms.assetid: 985d3b5b-7891-465b-862d-f7e75431b342
 caps.latest.revision: 28
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: b99ea0d73d9d24992af5fcac09d8df3f4d71fafd
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: e3a623381738e4d2f96222aaa193cf09ec619889
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064530"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37259427"
 ---
 # <a name="select-creation-method-cube-wizard"></a>Seleziona metodo di creazione (Creazione guidata cubo)
   Utilizzare la pagina **Seleziona metodo di creazione** per specificare la modalità di creazione del cubo.  
@@ -30,13 +30,13 @@ ms.locfileid: "36064530"
  **Usa tabelle esistenti**  
  Selezionare per creare un cubo utilizzando le tabelle esistenti in un'origine dati. La procedura guidata descriverà dettagliatamente il processo di selezione e definizione dei gruppi di misure e delle dimensioni in base alle tabelle esistenti per compilare il cubo nuovo.  
   
- **Crea un cubo vuoto**  
+ **Creare un cubo vuoto**  
  Selezionare per creare un cubo vuoto. Questa opzione è utile per creare tutto manualmente o quando tutti i gruppi di misure nel cubo sono gruppi di misure collegati.  
   
 > [!NOTE]  
 >  Questa opzione è disponibile solo quando si lavora a un progetto [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] e non quando si è connessi direttamente a un database [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Genera tabelle nell'origine dei dati**  
+ **Genera tabelle nell'origine dati**  
  Selezionare per creare prima un cubo e quindi generare tabelle nuove nell'origine dati in base alla definizione del cubo.  
   
 > [!NOTE]  
