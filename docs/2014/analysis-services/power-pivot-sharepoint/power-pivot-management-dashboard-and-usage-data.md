@@ -1,5 +1,5 @@
 ---
-title: PowerPivot Management Dashboard and Usage Data | Documenti Microsoft
+title: PowerPivot Management Dashboard and Usage Data | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 541c8b1f-c6c2-423d-a97d-65c379967e0c
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 28d410f99884aa1d01a2a97201bd4da9fc2cd6c3
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 97bb7addcbbdf9a4e5a2b8b1151e081f48d0fea3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36064811"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278347"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Dati di utilizzo e dashboard di gestione PowerPivot
   Il dashboard di gestione PowerPivot è una raccolta di report e web part predefiniti in Amministrazione centrale SharePoint che consente di amministrare una distribuzione di PowerPivot per SharePoint di SQL Server. Nel dashboard di gestione sono disponibili informazioni relative all'integrità del server, all'attività della cartella di lavoro e all'aggiornamento dati. I dati utilizzati nel dashboard provengono dalla raccolta dati di utilizzo di SharePoint.  
@@ -28,7 +28,7 @@ ms.locfileid: "36064811"
   
  [Panoramica delle sezioni del Dashboard](#items)  
   
- [Aprire Gestione il Dashboard PowerPivot](#open)  
+ [Dashboard di gestione PowerPivot aperte](#open)  
   
  [Dati di origine nei dashboard](#sourcedata)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "36064811"
 |Aggiornamento dati: errori recenti|Vengono elencate le cartelle di lavoro di PowerPivot per le quali non è stato completato correttamente l'aggiornamento dati.|  
 |Report|Sono inclusi i collegamenti ai report che è possibile aprire in Excel.|  
   
-##  <a name="open"></a> Aprire Gestione il Dashboard PowerPivot  
+##  <a name="open"></a> Dashboard di gestione PowerPivot aperte  
  Nel dashboard vengono mostrate le informazioni relative a un'applicazione di servizio PowerPivot per volta. È possibile aprire il dashboard di gestione da due percorsi diversi.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Aprire il dashboard da Impostazioni generali applicazione  

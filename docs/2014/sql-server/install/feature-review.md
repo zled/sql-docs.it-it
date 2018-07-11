@@ -1,5 +1,5 @@
 ---
-title: Funzionalità revisione | Documenti Microsoft
+title: Verifica delle funzionalità | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 caps.latest.revision: 10
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 180ea5799d178e6c722ea37da1d0799f00247a36
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 6b9293aeb938a5898ab80f94f4b3879e381b4848
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067959"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150032"
 ---
 # <a name="feature-review"></a>Esame caratteristiche
   La pagina Esame caratteristiche è un elenco di sola lettura di caratteristiche che sono state preparate e saranno configurate e completate alla fine del passaggio di completamento dell'immagine. L'elenco delle caratteristiche viene selezionato durante il passaggio relativo alla preparazione dell'immagine e non può essere modificato durante il passaggio di completamento dell'immagine. Oltre alle caratteristiche visualizzate, un'istanza predisposta include anche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, Writer di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -34,6 +34,6 @@ ms.locfileid: "36067959"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|In[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sono inclusi componenti client e server per la creazione, la gestione e la distribuzione di report tabulari, matrice, grafici e in formato libero. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è inoltre una piattaforma estendibile che consente di sviluppare applicazioni di creazione di report.|  
   
 ## <a name="see-also"></a>Vedere anche  
- [Installare SQL Server 2014 tramite SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
+ [Installare SQL Server 2014 con SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  
   
   

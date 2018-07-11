@@ -1,5 +1,5 @@
 ---
-title: Specifica di operatori booleani nelle query XPath (SQLXML 4.0) | Documenti Microsoft
+title: Specifica di operatori booleani nelle query XPath (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
 caps.latest.revision: 24
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 1e30c4e9ec48604cca89c5ee62dacfbf00f663ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: 2abd38453d9b8ac124d1a06fe3aab4fd632e6972
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36068670"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154102"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Specifica di operatori booleani in query XPath (SQLXML 4.0)
   Negli esempi seguenti viene illustrato come specificare operatori booleani in query XPath. Le query XPath di questi esempi vengono specificate sullo schema di mapping contenuto in SampleSchema1.xml. Per informazioni su questo schema di esempio, vedere [Schema XSD con annotazioni di esempio per gli esempi XPath &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "36068670"
 ## <a name="examples"></a>Esempi  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Specificare l'operatore booleano OR  
- Questa query XPath restituisce il  **\<cliente >** figli del nodo di contesto con il **CustomerID** valore di 13 o 31 attributo:  
+ Questa query XPath restituisce il  **\<cliente >** figli del nodo di contesto con il **CustomerID** attributo pari a 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -46,11 +46,11 @@ ms.locfileid: "36068670"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un  **\<attributo >** nodo, in quanto il  **\<attributo >** nodo è il nodo primario per il `attribute` asse). Il predicato filtra il  **\<cliente >** elementi e restituisce solo quelli che soddisfano le condizioni specificate nel predicato.  
+ Nel predicato `attribute` è l'asse e `CustomerID` è il test di nodo (TRUE se **CustomerID** è un  **\<attributo >** nodo, in quanto il  **\<attributo >** nodo è il nodo primario per il `attribute` asse). Il predicato filtra le  **\<cliente >** elementi e restituisce solo quelli che soddisfano le condizioni specificate nel predicato.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Per testare query Xpath sullo schema di mapping  
   
-1.  Copia il [schema codice di esempio](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
+1.  Copia il [esempi di codice schema](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md) e incollarlo in un file di testo. Salvare il file con il nome SampleSchema1.xml.  
   
 2.  Creare il modello seguente (BooleanOperatorsA.xml) e salvarlo nella directory in cui è stato salvato il file SampleSchema1.xml.  
   

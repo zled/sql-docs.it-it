@@ -1,5 +1,5 @@
 ---
-title: Connettersi a un File di Microsoft Excel (SSAS) | Documenti Microsoft
+title: Connettersi a un File di Microsoft Excel (SSAS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connexcelfile.f1
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 caps.latest.revision: 11
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 48de9fd006c3918a23227a097743a95e138b577e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 022bdfa3e94aa2bd94c8f1806391b877a9c500bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067926"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37155482"
 ---
 # <a name="connect-to-a-microsoft-excel-file-ssas"></a>Connessione a un file di Microsoft Excel (SSAS)
   Questa pagina dell'**Importazione guidata tabella** consente di connettersi a un file di Microsoft Excel archiviato nel computer locale. Per accedere alla procedura guidata da [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dal menu **Modello** selezionare **Importa da origine dati**.  
@@ -32,7 +32,7 @@ ms.locfileid: "36067926"
 >  Le credenziali dell'utente corrente vengono utilizzate in caso di selezione di un file in questa pagina. Tuttavia, l'importazione non verrà completata se l'utente specificato nella pagina Impostazioni di rappresentazione non dispone di privilegi sufficienti per leggere dal file selezionato.  
   
 ## <a name="uielement-list"></a>Elenco degli elementi di interfaccia  
- **Nome descrittivo della connessione**  
+ **Nome descrittivo connessione**  
  Digitare un nome univoco per questa connessione all'origine dati. Questo campo è obbligatorio.  
   
  **Percorso File di Excel**  

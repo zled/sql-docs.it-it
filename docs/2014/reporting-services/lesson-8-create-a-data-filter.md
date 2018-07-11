@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 8
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 9e3a0f9aac098f7bc9998cc657e937c04b438359
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: markingmyname
+ms.author: maghan
+manager: craigg
+ms.openlocfilehash: cdc62c2e2fa4b4a6bfd662c1b20de6287fc8ff86
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36065771"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37278837"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lezione 8: Creare un filtro di dati
   Dopo aver aggiunto un'azione drill-through nel report padre, il passaggio successivo consiste nel creare un filtro di dati per la tabella di dati definita per il report figlio.  
@@ -43,13 +43,13 @@ ms.locfileid: "36065771"
   
 3.  Fare clic sui **filtri** pagina e quindi fare clic su **Add**.  
   
-4.  Nel **espressione** archiviato, fare clic su `ProductID` dall'elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
+4.  Nel **espressione** segnalati, fare clic su `ProductID` nell'elenco a discesa. Si tratta della colonna a cui applicare il filtro.  
   
 5.  Fare clic su di uguale (**=**) operatore nel **operatore** elenco a discesa.  
   
-6.  Fare clic sul pulsante espressione accanto al **valore** campo, fare clic su **parametri** nel **categoria** area e fai doppio clic su `productid` nel  **I valori** area. Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
+6.  Fare clic sul pulsante espressione accanto al **valore** campo, fare clic su **parametri** nel **categoria** area e quindi fare doppio clic `productid` nel  **I valori** area. Il campo **Imposta espressione per: Valore** dovrebbe contenere ora un'espressione simile a **=Parameters!productid.Value**.  
   
-7.  Fare clic su **OK,** e **OK** nuovamente il **proprietà Tablix** finestra di dialogo.  
+7.  Fare clic su **OK,** e **OK** nuovamente il **proprietà Tablix** nella finestra di dialogo.  
   
 8.  Salvare il file con estensione rdlc.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "36065771"
   
 2.  Creare una nuova funzione che accetta un parametro, `productid`, di tipo Integer, restituisce un oggetto `datatable` e consente di eseguire le operazioni riportate di seguito.  
   
-    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: definire una connessione dati e tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Creare una connessione al database di SQL Server per eseguire la query definita nella **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
   
@@ -111,9 +111,9 @@ ms.locfileid: "36065771"
   
 2.  Fare clic con il pulsante destro del controllo ReportViewer e quindi fare clic su **proprietà.**  
   
-3.  Nel **delle proprietà** fare clic sul **eventi** icona.  
+3.  Nel **delle proprietà** pagina, fare clic sul **eventi** icona.  
   
-4.  Fare doppio clic sui **drill-through** evento.  
+4.  Fare doppio clic il **drill-through** evento.  
   
      Verrà aggiunta una sezione del gestore eventi nel codice, che sarà simile al blocco riportato di seguito.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "36065771"
   
 2.  Creare una nuova funzione che accetta un parametro, `productid`, di tipo Integer, restituisce un oggetto `datatable` e consente di eseguire le operazioni riportate di seguito.  
   
-    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: definire una connessione dati e tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crea un'istanza del set di dati, `DataSet2`, che è stato creato nel passaggio 2 della [lezione 4: definire una connessione dati e un tabella di dati per il Report figlio](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
     2.  Creare una connessione al database di SQL Server per eseguire la query definita in **Lezione 4: Definire una connessione dati e una tabella di dati per il report figlio**.  
   
@@ -222,9 +222,9 @@ ms.locfileid: "36065771"
   
 2.  Il pulsante destro del controllo ReportViewer e quindi fare clic su **proprietà**.  
   
-3.  Nel **delle proprietà** riquadro, fare clic sul **eventi** icona.  
+3.  Nel **le proprietà** riquadro, fare clic sul **eventi** icona.  
   
-4.  Fare doppio clic sui **drill-through** evento.  
+4.  Fare doppio clic il **drill-through** evento.  
   
      Verrà aggiunta una sezione del gestore eventi nel codice, che sarà simile a quanto riportato di seguito.  
   

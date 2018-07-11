@@ -5,9 +5,7 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - bcp_init function
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 caps.latest.revision: 38
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: 6b9644196575b148277752c6100d94b51e027474
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 7a929e7a3f013314915bca3d95aafdc3fa1e28b8
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36055232"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37430640"
 ---
 # <a name="bcpinit"></a>bcp_init
   Inizializza l'operazione di copia bulk.  
@@ -61,17 +59,17 @@ eDirection
  Handle di connessione ODBC abilitato per la copia bulk.  
   
  *szTable*  
- Nome della tabella di database per la copia interna o esterna. Il nome può includere anche il nome del database o del proprietario, Ad esempio **pubs.gracie.titles**, **pubs... i titoli**, **gracie. titles**, e **titoli** sono tutti i nomi di tabella validi.  
+ Nome della tabella di database per la copia interna o esterna. Il nome può includere anche il nome del database o del proprietario, Ad esempio, **pubs.gracie.titles**, **pubs... titoli**, **gracie. titles**, e **titoli** sono tutti i nomi di tabella validi.  
   
  Se *eDirection* è DB_OUT, *szTable* può anche essere il nome di una vista di database.  
   
- Se *eDirection* è DB_OUT e viene specificata un'istruzione SELECT utilizzando [bcp_control](bcp-control.md) prima [bcp_exec](bcp-exec.md) viene chiamato, **bcp_init * * * szTable*deve essere impostato su NULL.  
+ Se *eDirection* DB_OUT e viene specificata un'istruzione SELECT utilizzando [bcp_control](bcp-control.md) prima [bcp_exec](bcp-exec.md) viene chiamato, **bcp_init * * * szTable*deve essere impostato su NULL.  
   
  *szDataFile*  
- Nome del file utente per la copia interna o esterna. Se vengono copiati i dati direttamente dalle variabili tramite [bcp_sendrow](bcp-sendrow.md), impostare *szDataFile* su NULL.  
+ Nome del file utente per la copia interna o esterna. Se i dati vengono copiati direttamente dalle variabili tramite [bcp_sendrow](bcp-sendrow.md), impostare *szDataFile* su NULL.  
   
  *szErrorFile*  
- Nome del file degli errori in cui inserire messaggi di stato, messaggi di errore e copie delle righe che per qualche motivo non è stato possibile copiare da un file utente in una tabella. Se NULL viene passato come *szErrorFile*, viene utilizzato alcun file di errore.  
+ Nome del file degli errori in cui inserire messaggi di stato, messaggi di errore e copie delle righe che per qualche motivo non è stato possibile copiare da un file utente in una tabella. Se NULL viene passato come *szErrorFile*, non viene usato alcun file degli errori.  
   
  *eDirection*  
  Direzione della copia, ovvero DB_IN oppure DB_OUT. DB_IN indica una copia da variabili di programma o da un file utente a una tabella. DB_OUT indica una copia da una tabella di database a un file utente. È necessario specificare un nome di file utente con DB_OUT.  
@@ -79,30 +77,30 @@ eDirection
 ## <a name="returns"></a>Valori di codice restituiti  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Chiamare **bcp_init** prima di chiamare qualsiasi altra funzione di copia bulk. **bcp_init** esegue le inizializzazioni necessarie per una copia bulk dei dati tra la workstation e [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Il **bcp_init** funzione deve essere fornita con un handle di connessione ODBC abilitato per l'utilizzo con funzioni di copia bulk. Per abilitare l'handle, utilizzare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_BCP impostato su SQL_BCP_ON su un handle di connessione allocato ma non collegato. Il tentativo di assegnare l'attributo su un handle collegato comporta un errore.  
+ Il **bcp_init** funzione deve essere fornita con un handle di connessione ODBC abilitato per l'uso con funzioni di copia bulk. Per abilitare l'handle, usare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_BCP impostato su SQL_BCP_ON su un handle di connessione allocato ma non collegato. Il tentativo di assegnare l'attributo su un handle collegato comporta un errore.  
   
  Quando viene specificato un file di dati, **bcp_init** esamina la struttura della tabella di database origine o destinazione, non il file di dati. **bcp_init** specifica i valori di formato di dati per il file di dati in base a ogni colonna nella tabella di database, visualizzazione o set di risultati SELECT. Questa specifica include il tipo di dati di ogni colonna, la presenza o meno di un indicatore di lunghezza o Null e di stringhe di byte con carattere di terminazione nei dati e la larghezza dei tipi di dati a lunghezza fissa. **bcp_init** imposta questi valori come indicato di seguito:  
   
--   Il tipo di dati specificato è quello della colonna della vista o della tabella di database oppure del set di risultati SELECT. Il tipo di dati viene enumerato in base ai tipi di dati nativi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificati in sqlncli.h. I dati vengono rappresentati nel relativo formato elettronico, Ovvero, i dati da una colonna di **integer** tipo di dati è rappresentato da una sequenza a quattro byte big- o little endian a seconda del computer che ha creato il file di dati.  
+-   Il tipo di dati specificato è quello della colonna della vista o della tabella di database oppure del set di risultati SELECT. Il tipo di dati viene enumerato in base ai tipi di dati nativi di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] specificati in sqlncli.h. I dati vengono rappresentati nel relativo formato elettronico, Vale a dire i dati da una colonna di **integer** tipo di dati è rappresentato da una sequenza a quattro byte big- o LITTLE_ENDIAN a seconda del computer che ha creato il file di dati.  
   
--   Se un tipo di dati del database ha una lunghezza fissa, anche i dati del file di dati presenteranno una lunghezza fissa. Funzioni di copia bulk che elaborano i dati (ad esempio [bcp_exec](bcp-exec.md)) analizzano le righe di dati prevedendo che la lunghezza dei dati nel file di dati sia identica alla lunghezza dei dati specificata nella tabella di database, visualizzazione o elenco di colonne SELECT. Ad esempio, i dati di una colonna di database definiti come **char(13** devono essere rappresentati da 13 caratteri per ogni riga di dati nel file. I dati a lunghezza fissa possono essere preceduti da un indicatore Null se la colonna del database consente valori Null.  
+-   Se un tipo di dati del database ha una lunghezza fissa, anche i dati del file di dati presenteranno una lunghezza fissa. Funzioni di copia bulk che elaborano i dati (ad esempio, [bcp_exec](bcp-exec.md)) analizzano le righe di dati prevedendo che la lunghezza dei dati nel file di dati sia identica alla lunghezza dei dati specificata nella tabella di database, visualizzazione o elenco di colonne SELECT. Ad esempio, i dati per una colonna del database definito come **char(13** devono essere rappresentati da 13 caratteri per ogni riga di dati nel file. I dati a lunghezza fissa possono essere preceduti da un indicatore Null se la colonna del database consente valori Null.  
   
 -   Quando viene definita la sequenza di byte con caratteri di terminazione, la lunghezza di tale sequenza è impostata su 0.  
   
 -   Quando si esegue la copia in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il file di dati deve includere dati per ogni colonna della tabella di database. Quando si esegue la copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], i dati di tutte le colonne della vista o della tabella di database o del set di risultati SELECT vengono copiati nel file di dati.  
   
--   Quando si esegue la copia dati di in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posizione ordinale di una colonna nel file di dati deve essere identica alla posizione ordinale della colonna nella tabella di database. Durante la copia dal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** inserisce dati in base alla posizione ordinale della colonna nella tabella di database.  
+-   Quando si esegue la copia dati di in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la posizione ordinale di una colonna nel file di dati deve essere identica alla posizione ordinale della colonna nella tabella di database. Durante la copia da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** inserisce dati in base alla posizione ordinale della colonna nella tabella di database.  
   
--   Se un tipo di dati di database è di lunghezza variabile (ad esempio **varbinary(22)**) o se una colonna del database può contenere valori null, i dati nel file di dati sono preceduti da un indicatore di lunghezza o null. La larghezza dell'indicatore varia in base al tipo di dati e alla versione della copia bulk.  
+-   Se un tipo di dati di database è di lunghezza variabile (ad esempio, **varbinary(22)**) o se una colonna del database può contenere valori null, i dati nel file di dati sono preceduti da un indicatore di lunghezza o null. La larghezza dell'indicatore varia in base al tipo di dati e alla versione della copia bulk.  
   
  Per modificare i valori del formato dati specificati per un file di dati, chiamare [bcp_columns](bcp-columns.md) e [bcp_colfmt](bcp-colfmt.md).  
   
  Le copie bulk eseguite in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possono essere ottimizzate per le tabelle che non contengono indici impostando il modello di recupero del database su SIMPLE o BULK_LOGGED. Per altre informazioni, vedere [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) e [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Se viene utilizzato alcun file di dati, è necessario chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per specificare il formato e la posizione in memoria dei dati per ogni colonna, quindi copiare le righe di dati per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizzando [bcp_sendrow](bcp-sendrow.md).  
+ Se non viene usato alcun file di dati, è necessario chiamare [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) per specificare il formato e la posizione in memoria dei dati per ogni colonna, quindi copiare le righe di dati per il [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando [bcp_sendrow](bcp-sendrow.md).  
   
 ## <a name="example"></a>Esempio  
  In questo esempio viene illustrato come utilizzare la funzione ODBC bcp_init con un file di formato.  

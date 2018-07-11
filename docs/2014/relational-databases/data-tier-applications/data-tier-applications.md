@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - dbe-data-tier-apps
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designing DACs
 - How to [DAC]
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 26
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: c3fb074e97422942dfe9cac25a84c47ff65bac9e
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 74e9a61fb053a1d861a6be732ae9a0ac0eb3060a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067827"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37152502"
 ---
 # <a name="data-tier-applications"></a>Applicazioni livello dati
   Un'applicazione livello dati è un'entità logica di gestione dei database che definisce tutti gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ad esempio le tabelle, le viste e gli oggetti istanza, tra cui gli account di accesso, associati a un database dell'utente. Un'applicazione livello dati è un'unità indipendente della distribuzione di database di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] che consente a sviluppatori di livello dati e ad amministratori di database di comprimere gli oggetti [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in un elemento portabile chiamato pacchetto di applicazione livello dati, noto anche come DACPAC.  
@@ -115,7 +115,7 @@ ms.locfileid: "36067827"
  Entrambe queste funzionalità sono supportate dagli strumenti di gestione di database Server Management Studio, il Portale di gestione per SQL Azure e l'API DACFx.  
   
 ## <a name="permissions"></a>Autorizzazioni  
- È necessario essere un membro del `dbmanager` ruolo o assegnato `CREATE DATABASE` delle autorizzazioni per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. È necessario essere un membro del `dbmanager` ruoli, o sono stati assegnati `DROP DATABASE` le autorizzazioni per eliminare un database.  
+ È necessario essere un membro del `dbmanager` ruolo assegnato o `CREATE DATABASE` le autorizzazioni per creare un database, compresa la creazione di un database tramite la distribuzione di un pacchetto di applicazione livello dati. È necessario essere un membro del `dbmanager` ruolo, o sono stati assegnati `DROP DATABASE` le autorizzazioni per eliminare un database.  
   
 ## <a name="data-tier-application-tasks"></a>Attività dell'applicazione livello dati  
   
