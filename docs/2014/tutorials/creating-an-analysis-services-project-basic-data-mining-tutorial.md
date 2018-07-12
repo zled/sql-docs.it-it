@@ -1,5 +1,5 @@
 ---
-title: Creazione di un'analisi di progetto (esercitazione di Data Mining dei dati di base) di servizi | Documenti Microsoft
+title: Creazione di un'analisi di progetto (esercitazione di base di Data Mining) di servizi | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 caps.latest.revision: 50
 author: minewiskan
 ms.author: owend
-manager: kfile
-ms.openlocfilehash: d650feead984a358d169851fba246215a58b6d34
-ms.sourcegitcommit: 8c040e5b4e8c7d37ca295679410770a1af4d2e1f
+manager: craigg
+ms.openlocfilehash: d7f191090750d9a4417b6432ce31f24f3214376b
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36312529"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37260117"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Creazione di un progetto di Analysis Services (Esercitazione di base sul data mining)
-  Ogni [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto definisce gli oggetti in una singola [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] può contenere molti tipi diversi di oggetti  
+  Ciascuna [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetto definisce gli oggetti in una singola [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. Un database di [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] può contenere molti tipi diversi di oggetti  
   
 -   Modelli multidimensionali (cubi)  
   
@@ -32,11 +32,11 @@ ms.locfileid: "36312529"
   
  Si noti che il processo di data mining **non** richiede l'uso di un cubo. Se è necessario eseguire il data mining in un cubo esistente, occorre aggiungere i modelli di data mining nello stesso progetto usato per compilare il cubo. Per la maggior parte delle operazioni è tuttavia possibile compilare i modelli in origini dati relazionali, ad esempio un data warehouse, evitando così l'uso di un cubo che comporta una riduzione delle prestazioni.  
   
- In questa esercitazione si utilizzerà un data warehouse relazionale, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], come origine dati. Si distribuirà tutti gli oggetti di data mining di dati a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database denominato `BasicDataMining`, utilizzato esclusivamente per il data mining.  
+ In questa esercitazione si userà un data warehouse relazionale, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], come origine dati. Si distribuirà tutti gli oggetti di data mining di dati a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database denominato `BasicDataMining`, usato esclusivamente per il data mining.  
   
- Per impostazione predefinita [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Usa la **localhost** istanza per i nuovi progetti. Se si usa un'istanza denominata o un server diverso, è necessario creare e aprire il progetto prima di modificare il nome dell'istanza.  
+ Per impostazione predefinita [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilizza le **localhost** istanza per i nuovi progetti. Se si usa un'istanza denominata o un server diverso, è necessario creare e aprire il progetto prima di modificare il nome dell'istanza.  
   
- Per ulteriori informazioni [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetti, vedere [creazione di un progetto di Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Per altre informazioni sulle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] progetti, vedere [creazione di un progetto di Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Per creare un progetto di Analysis Services  
   
@@ -48,13 +48,13 @@ ms.locfileid: "36312529"
   
 4.  Nel riquadro **Modelli** selezionare **Progetto multidimensionale e di data mining di Analysis Services**.  
   
-5.  Nel **nome** casella, denominare il nuovo progetto `BasicDataMining`.  
+5.  Nel **Name** casella, denominare il nuovo progetto `BasicDataMining`.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>Per modificare l'istanza in cui vengono archiviati gli oggetti di data mining  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]via il **progetto** dal menu **proprietà**.  
+1.  Nella [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]via il **Project** dal menu **proprietà**.  
   
 2.  Sul lato sinistro del riquadro **Pagine delle proprietà** fare clic su **Distribuzione**in **Proprietà di configurazione**.  
   

@@ -1,28 +1,26 @@
 ---
-title: Utilizzare Microsoft Distributed Transaction Coordinator (ODBC) | Documenti Microsoft
+title: Utilizzare Microsoft Distributed Transaction Coordinator (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - MS DTC, using
 ms.assetid: 12a275e1-8c7e-436d-8a4e-b7bee853b35c
 caps.latest.revision: 11
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: dfa177809f12f4190f888be8d0dc97ac5e36e2a5
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: 1e7661b628e2664ba58c1020bd55fdec1e3d3e58
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36067594"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37414190"
 ---
 # <a name="use-microsoft-distributed-transaction-coordinator-odbc"></a>Utilizzare Microsoft Distributed Transaction Coordinator (ODBC).
     
@@ -50,6 +48,6 @@ ms.locfileid: "36067594"
 >  È inoltre possibile chiamare [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) e [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) per ogni computer SQL Server anziché come suggerito nei passaggi 4 e 5.  
   
 ## <a name="see-also"></a>Vedere anche  
- [L'esecuzione di transazioni &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
+ [Esecuzione di transazioni di &#40;ODBC&#41;](../../database-engine/dev-guide/performing-transactions-odbc.md)  
   
   

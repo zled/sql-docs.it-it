@@ -1,5 +1,5 @@
 ---
-title: Elemento NonEmptyBehavior (ASSL) | Documenti Microsoft
+title: Elemento NonEmptyBehavior (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - NonEmptyBehavior element
 ms.assetid: b4c78af4-b049-4189-a35b-206e3938d1db
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: d328b41ee8c40497019fe918d40925b3ce2a1436
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: eda18e3ed67884e964439e80e0ae0103f522e116
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36155851"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183298"
 ---
 # <a name="nonemptybehavior-element-assl"></a>Elemento NonEmptyBehavior (ASSL)
   Determina il comportamento non vuoto associato al padre del [CalculationProperty](../objects/calculationproperty-element-assl.md) elemento.  
@@ -61,10 +61,10 @@ ms.locfileid: "36155851"
 |Elemento padre|[CalculationProperty](../objects/calculationproperty-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- Il `NonEmptyBehavior` proprietà si applica alle `CalculationProperty` gli elementi con un [CalculationType](calculationtype-element-assl.md) impostato su *membro*.  
+## <a name="remarks"></a>Note  
+ Il `NonEmptyBehavior` proprietà si applica a `CalculationProperty` gli elementi con un [CalculationType](calculationtype-element-assl.md) impostata su *membro*.  
   
- L'elemento che corrisponde al padre di `NonEmptyBehavior` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ L'elemento che corrisponde al padre di `NonEmptyBehavior` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento Calculationproperty &#40;ASSL&#41;](../collections/calculationproperties-element-assl.md)   

@@ -1,5 +1,5 @@
 ---
-title: Avviso di proprietà nuovo avviso (pagina generale) | Documenti Microsoft
+title: Avviso di proprietà-nuovo avviso (pagina generale) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - dbe-cross-instance
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.ag.alert.general.f1
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
 caps.latest.revision: 15
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: ee0b8c8224b935415c3fa60c7a9fdeb930ecdf21
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 664daafc77750275a72c6a0933edd66fbd684d38
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167555"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157622"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Avviso di proprietà nuovo avviso (pagina generale)
+# <a name="alert-properties-new-alert-general-page"></a>Avviso proprietà-nuovo avviso (pagina generale)
   Usare questa pagina per visualizzare e modificare le proprietà generali degli avvisi di [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 ## <a name="options"></a>Opzioni  

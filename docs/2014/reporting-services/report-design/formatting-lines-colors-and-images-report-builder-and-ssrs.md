@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.border.f1
 - "10502"
@@ -24,15 +24,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.reportbody.border.f1
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 8b40615a063e9dfe24fa7a3373867047f0583485
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: a4ea6769c88498b15b3145992c3f7024aaf240b3
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158615"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258207"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Formattazione di linee, colori e immagini (Generatore report e SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] è possibile formattare linee, colori, aree dati, immagini e altri elementi del report.  
@@ -60,8 +60,8 @@ ms.locfileid: "36158615"
  È anche possibile aggiungere immagini, quali logo, allo sfondo di un report, a un rettangolo, una casella di testo, una tabella, una matrice o parti di un grafico oppure al corpo o a sezioni della pagina di un report. Per altre informazioni, vedere [Immagini &#40;Generatore report e SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Vedere anche  
- [Formattazione di testo e segnaposto &#40;SSRS e Generatore Report&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Formattazione di numeri e date &#40;SSRS e Generatore Report&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Formattazione di testo e segnaposto &#40;Report e SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Formattazione di numeri e date di &#40;Report e SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Formattare il testo in una casella di testo &#40;Generatore report e SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Finestra di dialogo Riempimento &#40;Generatore report e SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

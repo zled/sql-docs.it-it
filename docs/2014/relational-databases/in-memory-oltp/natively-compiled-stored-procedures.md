@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - database-engine-imoltp
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: stevestein
-ms.author: sstein
-manager: jhubbard
-ms.openlocfilehash: b566be21bdd5756a4f37be09a436c65fe1565bb1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+ms.openlocfilehash: 377aa0cd89ad794bb9efb3744cbf62723512d12c
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168296"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37148712"
 ---
 # <a name="natively-compiled-stored-procedures"></a>stored procedure compilate in modo nativo
   Le stored procedure compilate in modo nativo sono stored procedure [!INCLUDE[tsql](../../includes/tsql-md.md)] compilate nel codice nativo che accedono a tabelle ottimizzate per la memoria. Le stored procedure compilate in modo nativo consentono un'esecuzione efficiente delle query e della logica di business nella stored procedure. Per altri dettagli sul processo di compilazione nativa, vedere [Compilazione nativa di tabelle e stored procedure](native-compilation-of-tables-and-stored-procedures.md). Per altre informazioni sulla migrazione delle stored procedure basate su disco alle stored procedure compilate in modo nativo, vedere [Problemi di migrazione relativi alle stored procedure compilate in modo nativo](migration-issues-for-natively-compiled-stored-procedures.md).  
@@ -35,11 +35,11 @@ ms.locfileid: "36168296"
   
 -   [Blocchi atomici](atomic-blocks-in-native-procedures.md)  
   
--   [Costrutti supportati nelle Stored procedure compilate in modo nativo](supported-features-for-natively-compiled-t-sql-modules.md)  
+-   [Costrutti supportati in stored procedure compilate in modo nativo](supported-features-for-natively-compiled-t-sql-modules.md)  
   
--   [Utilizzo di Try... Catch nella Stored procedure compilate in modo nativo](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
+-   [Uso di try...catch in stored procedure compilate in modo nativo](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
   
--   [Costrutti supportati su Stored procedure compilate in modo nativo](supported-ddl-for-natively-compiled-t-sql-modules.md)  
+-   [Costrutti supportati su stored procedure compilate in modo nativo](supported-ddl-for-natively-compiled-t-sql-modules.md)  
   
 -   [Stored procedure compilate in modo nativo e opzioni SET di esecuzione](natively-compiled-stored-procedures-and-execution-set-options.md)  
   

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 4db31968d249659890924917be5c40533c0e19af
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 5ea0a37304bbde2ac84e5092e67744226a03b0db
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166118"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239401"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilizzo del servizio Oracle CDC
   In questa sezione vengono descritti alcuni concetti importanti relativi al servizio Oracle CDC. I concetti inclusi in questa sezione sono i seguenti:  
@@ -63,7 +63,7 @@ ms.locfileid: "36166118"
   
 -   [dbo. xdbcdc_trace](#BKMK_dboxdbcdc_trace)  
   
--   [xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
+-   [dbo. xdbcdc_databases](#BKMK_dboxdbcdc_databases)  
   
 -   [dbo.xdbcdc_services](#BKMK_dboxdbcdc_services)  
   
@@ -118,7 +118,7 @@ ms.locfileid: "36166118"
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Stored procedure del database MSXDBCDC  
  In questa sezione vengono descritte le stored procedure del database MSXDBCDC seguenti.  
   
--   [dbo. xcbcdc_reset_db (nome del Database)](#BKMK_dboxcbcdc_reset_db)  
+-   [dbo. xcbcdc_reset_db (nome Database)](#BKMK_dboxcbcdc_reset_db)  
   
 -   [dbo.xdbcdc_disable_db(DBName)](#BKMK_dboxdbcdc_disable_db)  
   
@@ -265,7 +265,7 @@ ms.locfileid: "36166118"
  **Nota**: qualsiasi parametro contenente spazi o virgolette doppie deve essere racchiuso tra virgolette doppie ("). Le virgolette doppie incorporate devono essere raddoppiate, ad esempio per usare **"A#B" D** come password immettere **""A#B"" D"**.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Come utilizzare l'interfaccia della riga di comando del servizio CDC](how-to-use-the-cdc-service-command-line-interface.md)   
+ [Come usare l'interfaccia della riga di comando del servizio CDC](how-to-use-the-cdc-service-command-line-interface.md)   
  [Procedura di preparazione di SQL Server per CDC](prepare-sql-server-for-cdc.md)  
   
   

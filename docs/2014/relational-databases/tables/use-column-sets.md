@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - sparse columns, column sets
 - column sets
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 caps.latest.revision: 27
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: ec3a9c752a3ba03f61b21e6280afe47361435784
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 6c6807bbb743b39177e282f965916e5d5d78e4bc
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069579"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37258217"
 ---
 # <a name="use-column-sets"></a>Utilizzare set di colonne
   Nelle tabelle che utilizzano colonne di tipo sparse è possibile definire un set di colonne per restituire tutte le colonne di tipo sparse della tabella. Un set di colonne è una rappresentazione XML non tipizzata che combina tutte le colonne di tipo sparse di una tabella in un output strutturato. Un set di colonne è analogo a una colonna calcolata poiché non è archiviato fisicamente nella tabella, ma differisce da una colonna calcolata poiché è direttamente aggiornabile.  
@@ -97,7 +97,7 @@ ms.locfileid: "36069579"
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>Inserimento o modifica di dati in un set di colonne  
  Per manipolare i dati di una colonna di tipo sparse, è possibile utilizzare il nome delle colonne singole o fare riferimento al nome del set di colonne e specificarne i valori utilizzando il formato XML del set di colonne stesso. Nella colonna XML le colonne di tipo sparse possono essere visualizzate in qualsiasi ordine.  
   
- Quando i valori di colonna di tipo sparse vengono inseriti o aggiornati utilizzando il set di colonne XML, i valori inseriti nelle colonne di tipo sparse sottostanti vengono convertiti implicitamente dal `xml` tipo di dati. Nel caso di colonne numeriche, un valore vuoto nel codice XML per la colonna numerica viene convertito in una stringa vuota, provocando l'inserimento di uno zero nella colonna numerica come illustrato nell'esempio seguente.  
+ Quando i valori di colonna di tipo sparse vengono inseriti o aggiornati usando il set di colonne XML, i valori inseriti nelle colonne di tipo sparse sottostanti vengono convertiti implicitamente dal `xml` tipo di dati. Nel caso di colonne numeriche, un valore vuoto nel codice XML per la colonna numerica viene convertito in una stringa vuota, provocando l'inserimento di uno zero nella colonna numerica come illustrato nell'esempio seguente.  
   
 ```  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  

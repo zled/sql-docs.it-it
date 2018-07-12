@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - statements [SQL Server], command prompt
 - QUIT command
@@ -24,15 +24,15 @@ helpviewer_keywords:
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
 caps.latest.revision: 48
-author: craigg-msft
-ms.author: craigg
-manager: jhubbard
-ms.openlocfilehash: 2ebfb7cbe8a000a751243d1117d904056295d294
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: bd66af98effae023f2a1436b6eb88e76c78a2e44
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158376"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37240001"
 ---
 # <a name="osql-utility"></a>Utilità osql
   L'utilità **osql** consente di immettere istruzioni [!INCLUDE[tsql](../includes/tsql-md.md)] , procedure di sistema e file script. Questa utilità comunica con il server tramite ODBC.  
@@ -116,7 +116,7 @@ C:\>osql
  Specifica il numero di righe da stampare tra le intestazioni delle colonne. Per impostazione predefinita, le intestazioni vengono stampate una volta per ogni set di risultati delle query. Utilizzare -1 per non stampare alcuna intestazione. Se si usa -1, non inserire spazi tra il parametro e l'impostazione (**-h-1**e non **-h -1**).  
   
  **-s** *col_separator*  
- Specifica il carattere separatore di colonne che, per impostazione predefinita, è uno spazio vuoto. Per utilizzare caratteri con un significato speciale per il sistema operativo (ad esempio, |; & \< >), racchiudere il carattere virgolette doppie (").  
+ Specifica il carattere separatore di colonne che, per impostazione predefinita, è uno spazio vuoto. Utilizzare i caratteri che hanno un significato speciale per il sistema operativo (ad esempio, |, & \< >), racchiudere il carattere virgolette doppie (").  
   
  **-w** *column_width*  
  Consente di impostare la larghezza della schermata per l'output. Il valore predefinito è 80 caratteri. Se una riga di output raggiunge la larghezza massima della schermata, viene suddivisa su più righe.  
@@ -195,10 +195,10 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  Le opzioni **-n**, **-O** e **-D** non sono più supportate da **osql**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  L'utilità **osql** viene avviata direttamente dal sistema operativo con le opzioni elencate di seguito per le quali la distinzione tra maiuscole e minuscole è rilevante. Dopo l'avvio, **osql**accetta istruzioni SQL e le invia a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in modo interattivo. I risultati vengono formattati e visualizzati sullo schermo (**stdout**). Per uscire da **osql**usare QUIT o EXIT.  
   
- Se non si specifica un nome utente quando si avvia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verifica le variabili di ambiente e Usa tali valori, ad esempio **osqluser = (*`user`*)** oppure **osqlserver = (*`server`*)**. Se non sono state impostate variabili di ambiente, viene utilizzato il nome utente della workstation. Se non si specifica un server, viene utilizzato il nome della workstation.  
+ Se non si specifica un nome utente quando si avvia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] controlla le variabili di ambiente e Usa tali valori, ad esempio **osqluser = (*`user`*)** oppure **osqlserver = (*`server`*)**. Se non sono state impostate variabili di ambiente, viene utilizzato il nome utente della workstation. Se non si specifica un server, viene utilizzato il nome della workstation.  
   
  Se non si specifica l'opzione **-U** né l'opzione **-P** , [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cerca di stabilire la connessione tramite la modalità di autenticazione di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. L'autenticazione si basa sull'account di [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows dell'utente che esegue **osql**.  
   
@@ -298,7 +298,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  L'utilità esegue il batch, viene chiusa e non restituisce alcun valore.  
   
--   USCITA **(*`query`*)**  
+-   ESCI **(*`query`*)**  
   
 > [!NOTE]  
 >  L'utilità esegue il batch, inclusa la query, quindi viene chiusa dopo aver restituito i risultati della query.  
@@ -329,7 +329,7 @@ RAISERROR(50001, 10, 127)
      Si è verificato un errore di conversione durante la selezione del valore restituito.  
   
 ## <a name="displaying-money-and-smallmoney-data-types"></a>Visualizzazione dei tipi di dati money e smallmoney  
- **osql** consente di visualizzare il `money` e `smallmoney` i tipi di dati con due cifre decimali Sebbene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archivia il valore internamente con quattro cifre decimali. Si consideri l'esempio seguente:  
+ **osql** consente di visualizzare il `money` e `smallmoney` tipi di dati con due cifre decimali Sebbene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] archivia il valore internamente con quattro cifre decimali. Si consideri l'esempio seguente:  
   
 ```  
 SELECT CAST(CAST(10.3496 AS money) AS decimal(6, 4))  

@@ -8,18 +8,18 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: 7
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 92395b7b91d94187dc790978baa084c418224686
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 3022c5d802da527dc1c1bfb062f8a5dca267f50e
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168674"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157742"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Funzione Multilookup (Generatore report e SSRS)
   Viene restituito il set di valori di prima corrispondenza per il set di nomi specificato da un set di dati che contiene coppie nome/valore.  
@@ -36,13 +36,13 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 #### <a name="parameters"></a>Parametri  
  *source_expression*  
- (`VariantArray`) Un'espressione valutata nell'ambito corrente e che specifica il set di nomi o chiavi per la ricerca. Ad esempio per un parametro multivalore, `=Parameters!IDs.value`.  
+ (`VariantArray`) Un'espressione valutata nell'ambito corrente e che specifica il set di nomi o chiavi da ricercare. Ad esempio per un parametro multivalore, `=Parameters!IDs.value`.  
   
  *destination_expression*  
  (`Variant`) Espressione valutata per ogni riga in un set di dati che specifica il nome o la chiave con cui eseguire la corrispondenza, Ad esempio, `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Espressione valutata per la riga nel set di dati in cui *espressione_origine* = *destination_expression*, che specifica il valore da recuperare. Ad esempio, `=Fields!Name.Value`.  
+ (`Variant`) Espressione valutata per la riga nel set di dati in cui *source_expression* = *destination_expression*, che specifica il valore da recuperare. Ad esempio, `=Fields!Name.Value`.  
   
  *set di dati*  
  Costante che specifica il nome di un set di dati nel report, ad esempio "Colori".  
@@ -50,8 +50,8 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Return  
  Restituisce un `VariantArray`, o `Nothing` se non esiste alcuna corrispondenza.  
   
-## <a name="remarks"></a>Remarks  
- Utilizzare `Multilookup` per recuperare un set di valori da un set di dati per coppie nome / valore in cui ogni coppia è presente una relazione 1-a-1. `MultiLookup` equivale a chiamare il metodo `Lookup` per un set di nomi o chiavi. Ad esempio, per un parametro multivalore basato su identificatori di chiave primaria, è possibile utilizzare `Multilookup` in un'espressione in una casella di testo in una tabella per recuperare i valori associati da un set di dati che non è associato al parametro o alla tabella.  
+## <a name="remarks"></a>Note  
+ Usare `Multilookup` per recuperare un set di valori da un set di dati per coppie nome / valore in cui ogni coppia è presente una relazione 1 a 1. `MultiLookup` equivale a chiamare il metodo `Lookup` per un set di nomi o chiavi. Ad esempio, per un parametro multivalore basato su identificatori di chiave primaria, è possibile usare `Multilookup` in un'espressione in una casella di testo in una tabella per recuperare i valori associati da un set di dati non associato al parametro o alla tabella.  
   
  `Multilookup` esegue le operazioni seguenti:  
   
@@ -127,9 +127,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ```  
   
 ## <a name="see-also"></a>Vedere anche  
- [Espressione viene utilizzata nei report di &#40;SSRS e Generatore Report&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Uso delle espressioni nei report di &#40;Report e SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Esempi di espressioni &#40;Generatore report e SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Tipi di dati nelle espressioni &#40;Generatore report e SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;SSRS e Generatore Report&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Ambito di espressioni per totali, aggregazioni e raccolte predefinite &#40;Report e SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Elemento Measurequalification (ASSL) | Documenti Microsoft
+title: Elemento Measurequalification (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,15 +20,15 @@ helpviewer_keywords:
 - MeasureQualification element
 ms.assetid: 754a037c-f20b-4717-a6e8-12f495e8e3b4
 caps.latest.revision: 12
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 795e2b7b10f9d7e9988747025c322b25ffa0af47
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: cb84c39d7d7a3b69ea3c13e43dfda0b331c548e4
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36157013"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149502"
 ---
 # <a name="measurequalificaton-element-assl"></a>Elemento MeasureQualification (ASSL)
   Determina se viene applicato un prefisso alle misure nel [MeasureGroup](../objects/group-element-assl.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "36157013"
 |Elemento padre|[Gruppo di misure](../objects/group-element-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  
@@ -67,8 +67,8 @@ ms.locfileid: "36157013"
 |*Nessuno*|Alle misure all'interno del gruppo di misure non viene applicato alcun prefisso.|  
 |*PrefixMeasureGroup*|Il nome univoco e la didascalia di ogni misura all'interno del gruppo di misure sono preceduti da un prefisso corrispondente al nome del gruppo di misure e da un singolo spazio.|  
   
-## <a name="remarks"></a>Remarks  
- L'elemento che corrisponde al padre di `MeasureQualification` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroup>.  
+## <a name="remarks"></a>Note  
+ L'elemento che corrisponde al padre di `MeasureQualification` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.MeasureGroup>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Elemento del cubo &#40;ASSL&#41;](../objects/cube-element-assl.md)   

@@ -8,29 +8,29 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
 caps.latest.revision: 6
-author: douglaslM
-ms.author: douglasl
-manager: mblythe
-ms.openlocfilehash: 1457c44ed95f09891bb8e8617968d2f9b9cbfbc9
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: maggiesMSFT
+ms.author: maggies
+manager: craigg
+ms.openlocfilehash: 2776ccbb78346ad6243e5b6a4ed1e7c5827d31bf
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167813"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37157832"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendering in formato HTML (Generatore report e SSRS)
   L'estensione per il rendering HTML consente di eseguire il rendering di un report in formato HTML. Può inoltre generare pagine HTML complete o frammenti di HTML da incorporare in altre pagine HTML. Tutto il codice HTML viene generato con la codifica UTF-8.  
   
  Per i report visualizzati in un browser, inclusi quelli eseguiti in Gestione report, viene utilizzata l'estensione per il rendering HTML per impostazione predefinita.  
   
- Per i report visualizzati in un browser, inclusi quelli eseguiti in Gestione report, viene utilizzata l'estensione per il rendering HTML per impostazione predefinita. L'estensione per il rendering HTML può generare frammenti HTML o documenti HTML completi. Se il codice HTML è un frammento, il `HEAD`, `HTML`, e `BODY` tag del documento HTML vengono rimossi. Viene eseguito il rendering solo del contenuto del tag `BODY`. Questa funzionalità è particolarmente utile se si desidera incorporare il frammento HTML nel codice HTML prodotto da un'altra applicazione.  
+ Per i report visualizzati in un browser, inclusi quelli eseguiti in Gestione report, viene utilizzata l'estensione per il rendering HTML per impostazione predefinita. L'estensione per il rendering HTML può generare frammenti HTML o documenti HTML completi. Se il codice HTML viene generato un frammento, il `HEAD`, `HTML`, e `BODY` tag del documento HTML vengono rimossi. Viene eseguito il rendering solo del contenuto del tag `BODY`. Questa funzionalità è particolarmente utile se si desidera incorporare il frammento HTML nel codice HTML prodotto da un'altra applicazione.  
   
  In alcuni scenari i parametri del report possono essere utilizzati per avviare attacchi intrusivi negli script durante il rendering di report in HTML. Per altre informazioni sulla sicurezza dei report, vedere [Garantire la sicurezza di report e risorse](../security/secure-reports-and-resources.md).  
   
- Per ulteriori informazioni sui browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
+ Per altre informazioni sui browser, vedere [Planning for Reporting Services e supporto Browser per Power View &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -105,7 +105,7 @@ ms.locfileid: "36167813"
 ## <a name="see-also"></a>Vedere anche  
  [Paginazione in Reporting Services &#40;Generatore report e SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Tipi di rendering &#40;Generatore report e SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Funzionalità interattiva per estensioni per il Rendering di Report differenti &#40;SSRS e Generatore Report&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Funzionalità interattiva per estensioni di Rendering del Report diversi &#40;Report e SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendering degli elementi del report &#40;Generatore report e SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabelle, matrici ed elenchi &#40;Generatore report e SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

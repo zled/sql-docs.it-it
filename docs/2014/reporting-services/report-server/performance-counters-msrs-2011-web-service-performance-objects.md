@@ -1,5 +1,5 @@
 ---
-title: Contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service e oggetti prestazioni MSRS 2014 Windows Service (modalità nativa) | Documenti Microsoft
+title: Contatori delle prestazioni per il MSRS 2014 Web Service e oggetti prestazioni MSRS 2014 Windows Service (modalità nativa) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - performance counters [Reporting Services]
 - Report Server Web service, performance counters
@@ -20,13 +20,13 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 caps.latest.revision: 51
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 2606c760b03225a5cbb9d82db0aecd18ef4753ab
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 99e19d3cf5ead97dca19e982b6d9255b296c8d93
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168023"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37150122"
 ---
 # <a name="performance-counters-for-the-msrs-2014-web-service-and-msrs-2014-windows-service-performance-objects-native-mode"></a>Contatori delle prestazioni per gli oggetti prestazioni MSRS 2014 Web Service e MSRS 2014 Windows Service (modalità nativa)
   In questo argomento sono descritti i contatori delle prestazioni per gli oggetti prestazioni `MSRS 2014 Web Service` e `MSRS 2014 Windows Service`.  
@@ -38,7 +38,7 @@ ms.locfileid: "36168023"
   
  Gli oggetti prestazioni sono disponibili in Monitoraggio prestazioni di Windows (**Perfmon.exe**). Per altre informazioni, vedere la documentazione di Windows, [Profilatura di runtime](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Per informazioni correlate ai contatori delle prestazioni in modalità SharePoint, vedere [contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint modalità &#40;modalità SharePoint&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
+ Per informazioni correlate ai contatori delle prestazioni in modalità SharePoint, vedere [contatori delle prestazioni per il MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;in modalità SharePoint&#41; ](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md).  
   
  **Contenuto dell'argomento:**  
   
@@ -51,7 +51,7 @@ ms.locfileid: "36168023"
 ##  <a name="bkmk_webservice"></a> Contatori delle prestazioni MSRS 2014 Web Service  
  Tramite l'oggetto prestazioni `MSRS 2014 Web Service` vengono monitorate le prestazioni del server di report. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni nel server di report avviate in genere da operazioni di visualizzazione dei report interattive. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche. I contatori vengono reimpostati ogni volta che [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Arresta il servizio Web ReportServer.  
   
- Nella tabella seguente sono elencati i contatori inclusi con il `MSRS 2014 Web Service` oggetto prestazioni.  
+ Nella tabella seguente sono elencati i contatori inclusi con il `MSRS 2014 Web Service` oggetto delle prestazioni.  
   
 |Contatore|Description|  
 |-------------|-----------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "36168023"
 |`Memory Cache Misses/Sec`|Numero di volte al secondo in cui non è stato possibile recuperare i report dalla cache in memoria.|  
 |`Next Session Requests/Sec`|Numero di richieste al secondo di report aperti in una sessione esistente, ovvero i report di cui è stato eseguito il rendering da una sessione di snapshot.|  
 |`Report Requests`|Numero di report attualmente attivi e gestiti dal server di report.|  
-|`Reports Executed/Sec`|Numero di report eseguiti al secondo. Fornisce informazioni statistiche sul volume dei report. Utilizzare questo contatore con `Request/Sec` per confrontare l'esecuzione di report per le richieste di report che possono essere restituiti dalla cache.|  
+|`Reports Executed/Sec`|Numero di report eseguiti al secondo. Fornisce informazioni statistiche sul volume dei report. Usare questo contatore con `Request/Sec` per confrontare l'esecuzione del report per le richieste di report restituibili dalla cache.|  
 |`Requests/Sec`|Numero di richieste al secondo inviate al server di report. Tramite questo contatore si tiene traccia di tutti i tipi di richieste gestite dal server di report.|  
 |`Total Cache Hits`|Numero totale di richieste di report alla cache dall'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] .|  
 |`Total Cache Hits (Semantic Models)`|Numero totale di richieste per il modello dalla cache dopo l'avvio del servizio. Il contatore viene reimpostato ogni volta che il servizio Web ReportServer viene arrestato da ASP.NET.|  
@@ -81,7 +81,7 @@ ms.locfileid: "36168023"
 ##  <a name="bkmk_windowsservice"></a> Contatori delle prestazioni MSRS 2014 Windows Service  
  Il `MSRS 2014 Windows Service` oggetto prestazione consente di monitorare il servizio Windows ReportServer. Questo oggetto prestazione include una raccolta di contatori che consentono di tenere traccia delle elaborazioni di report avviate tramite operazioni pianificate, quali sottoscrizioni e recapiti, snapshot delle esecuzioni dei report e cronologie dei report. Quando si configura questo contatore, è possibile applicarlo a tutte le istanze di [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] oppure è possibile selezionare istanze specifiche.  
   
- Nella tabella seguente sono elencati i contatori inclusi nel `MSRS 2014 Windows Service` oggetto prestazioni.  
+ Nella tabella seguente sono elencati i contatori inclusi nel `MSRS 2014 Windows Service` oggetto delle prestazioni.  
   
 |Contatore|Description|  
 |-------------|-----------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "36168023"
 |`Cache Misses/Sec`|Numero di richieste al secondo che non hanno restituito un report dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |`Cache Misses/Sec (Semantic Models)`|Numero di richieste al secondo tramite cui non è stato restituito alcun modello dalla cache. Consente di stabilire se le risorse utilizzate per la memorizzazione nella cache, su disco o in memoria, siano sufficienti.|  
 |`Delivers/Sec`|Numero di recapiti di report al secondo, da parte di tutte le estensioni per il recapito.|  
-|`Events/Sec`|Numero di eventi elaborati al secondo. Gli eventi che vengono monitorati includono `SnapshotUpdated` e `TimedSubscription`.|  
+|`Events/Sec`|Numero di eventi elaborati al secondo. Gli eventi monitorati comprendono `SnapshotUpdated` e `TimedSubscription`.|  
 |`First Session Requests/Sec`|Numero di nuove sessioni di esecuzione del report create al secondo.|  
 |`Memory Cache Hits/Sec`|Numero di volte al secondo in cui è stato possibile recuperare i report dalla cache in memoria. La*cache in memoria* è una parte della cache che archivia i report nella memoria della CPU. Quando viene usata la cache in memoria, il server di report non esegue query su [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] per individuare il contenuto memorizzato nella cache.|  
 |`Memory Cache Misses/Sec`|Numero di volte al secondo in cui non è stato possibile recuperare i report dalla cache in memoria.|  
@@ -132,7 +132,7 @@ get-counter -listset msr*
   
 ## <a name="see-also"></a>Vedere anche  
  [Monitoraggio delle prestazioni del Server di Report](monitoring-report-server-performance.md)   
- [Contatori delle prestazioni per l'oggetto prestazione MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;modalità SharePoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Contatori delle prestazioni per il MSRS 2014 Web Service SharePoint Mode e oggetti prestazioni MSRS 2014 Windows Service SharePoint in modalità &#40;modalità SharePoint&#41;](../report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Contatori delle prestazioni per gli oggetti prestazioni ReportServer:Service e ReportServerSharePoint:Service](performance-counters-reportserver-service-performance-objects.md)  
   
   

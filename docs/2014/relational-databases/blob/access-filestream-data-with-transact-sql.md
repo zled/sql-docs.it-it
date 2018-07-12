@@ -5,23 +5,21 @@ ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-blob
+ms.technology: filestream
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-caps.latest.revision: 16
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e0247063d6885706c5f7a7206be64b9fc7c7e8d1
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
+ms.openlocfilehash: f28e4d17ca71432f8d3908c58ce6b689dc868acb
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36158282"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37412700"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Accedere a Dati FILESTREAM con Transact-SQL
   Questo argomento descrive come usare le istruzioni [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE e DELETE per gestire dati FILESTREAM.  
@@ -30,7 +28,7 @@ ms.locfileid: "36158282"
 >  Gli esempi riportati in questo argomento richiedono il database e la tabella abilitati per FILESTREAM creati in [Creare un database abilitato per FILESTREAM](create-a-filestream-enabled-database.md) e [Creare una tabella per archiviare dati FILESTREAM](create-a-table-for-storing-filestream-data.md).  
   
 ##  <a name="ins"></a> Inserimento di una riga che contiene dati FILESTREAM  
- Per aggiungere una riga a una tabella che supporta i dati FILESTREAM, utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Quando si inseriscono dati in una colonna FILESTREAM, è possibile inserire NULL o una `varbinary(max)` valore.  
+ Per aggiungere una riga a una tabella che supporta i dati FILESTREAM, utilizzare l'istruzione [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT. Quando si inseriscono dati in una colonna FILESTREAM, è possibile inserire NULL o un `varbinary(max)` valore.  
   
 ### <a name="inserting-null"></a>Inserimento di NULL  
  Nell'esempio seguente viene illustrato come inserire il valore `NULL`. Se il valore FILESTREAM è `NULL`, il [!INCLUDE[ssDE](../../includes/ssde-md.md)] non crea alcun file nel file system.  

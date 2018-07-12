@@ -1,5 +1,5 @@
 ---
-title: Service Account (modalità nativa SSRS) | Documenti Microsoft
+title: Service Account (modalità nativa SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,39 +8,39 @@ ms.suite: ''
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 caps.latest.revision: 8
 author: markingmyname
 ms.author: maghan
-manager: jhubbard
-ms.openlocfilehash: 91b4f45089cf6de1883cf4bc27b482bd05814146
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 36b1b0621cd660855638e4fa0a936e9700efb4d5
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168002"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37153552"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Account del servizio (modalità nativa SSRS)
   Nella pagina Account servizio è possibile specificare l'account con cui viene eseguito il servizio del server di report. Questo account viene configurato inizialmente durante l'installazione, ma può essere modificato se si desidera utilizzare un account o una password diversa. Il servizio Web ReportServer, Gestione report e l'applicazione di elaborazione in background verranno tutti eseguiti con l'identità del servizio specificata in questa pagina.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- L'account specificato per il servizio del server di report deve disporre dell'autorizzazione necessaria per accedere al Registro di sistema, ai file di programma del server di report e al database del server di report. Tutte le autorizzazioni vengono configurate per l'account automaticamente quando si usa il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per impostare l'account. Se si utilizza l'account del servizio per la connessione al database del server di report, Gestione configurazione crea un accesso al database per l'account e configura le autorizzazioni di database assegnando l'account a RSExecRole sul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza che ospita il database del server di report. Il database del server di report è l'unico archivio dati in cui scrive un server di report. Per l'account del servizio non sono necessarie autorizzazioni per altri archivi dati.  
+ L'account specificato per il servizio del server di report deve disporre dell'autorizzazione necessaria per accedere al Registro di sistema, ai file di programma del server di report e al database del server di report. Tutte le autorizzazioni vengono configurate per l'account automaticamente quando si usa il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager per impostare l'account. Se si usa l'account del servizio per connettersi al database del server di report, Configuration Manager crea un account di accesso di database per l'account e configura le autorizzazioni di database assegnando l'account a RSExecRole nel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] istanza che ospita il database del server di report. Il database del server di report è l'unico archivio dati in cui scrive un server di report. Per l'account del servizio non sono necessarie autorizzazioni per altri archivi dati.  
   
  Per aprire questa pagina, avviare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager e selezionare il collegamento nel riquadro di spostamento. Per altre informazioni, vedere [Gestione configurazione Reporting Services &#40;modalità nativa&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 > [!IMPORTANT]  
->  Ogni volta che è necessario aggiornare l'account o password, è consigliabile utilizzare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. L'utilizzo di Gestione configurazione per aggiornare l'account garantisce che vengano aggiornate automaticamente anche le altre impostazioni interne che dipendono dall'identità del servizio.  
+>  Ogni volta che è necessario aggiornare l'account o password, è consigliabile usare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. L'utilizzo di Gestione configurazione per aggiornare l'account garantisce che vengano aggiornate automaticamente anche le altre impostazioni interne che dipendono dall'identità del servizio.  
   
 ## <a name="options"></a>Opzioni  
- **Utilizzare un account predefinito**  
+ **Usare un account predefinito**  
  Selezionare **Servizio di rete**, **Sistema locale**o **Servizio locale** dall'elenco. L'unica opzione consigliata è **Servizio di rete** . È tuttavia possibile configurare l'utilizzo di qualsiasi account disponibile.  
   
- **Utilizzare un altro account**  
- Selezionare questa opzione per specificare un account utente di Windows. È possibile immettere un account utente locale di Windows o un account utente di dominio. Specificare un account di dominio nel formato seguente:  *\<dominio >\\< utente\>*. Specificare un account utente locale di Windows nel formato seguente:  *\<nome computer >\\< utente\>*. È possibile solo selezionare un account esistente: in Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è possibile creare nuovi account.  
+ **Usare un altro account**  
+ Selezionare questa opzione per specificare un account utente di Windows. È possibile immettere un account utente locale di Windows o un account utente di dominio. Specificare un account di dominio nel formato seguente:  *\<dominio >\\< utente\>*. Specificare un account utente locale di Windows nel formato seguente:  *\<nome_computer >\\< utente\>*. È possibile solo selezionare un account esistente: in Configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] non è possibile creare nuovi account.  
   
  Il limite massimo di caratteri per l'account è 20.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "36168002"
  Se si passa a un altro tipo di account, ad esempio sostituendo un account di Windows con un altro o un account predefinito con un account di dominio di Windows, verrà richiesto di creare una copia di backup della chiave di crittografia. La copia di backup verrà ripristinata automaticamente quando si seleziona il nuovo account.  
   
 > [!NOTE]  
->  In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene richiesto di eseguire il backup e il ripristino della chiave di crittografia ogni volta che si modifica l'account del servizio. Questa procedura è necessaria per garantire che i dati crittografati restino disponibili per il server di report. Per ulteriori informazioni su queste azioni, vedere [chiavi di crittografia &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
+>  In Gestione configurazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] viene richiesto di eseguire il backup e il ripristino della chiave di crittografia ogni volta che si modifica l'account del servizio. Questa procedura è necessaria per garantire che i dati crittografati restino disponibili per il server di report. Per altre informazioni su queste azioni, vedere [chiavi di crittografia &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
- Inoltre, se si dispone di un server di report è configurato per l'esecuzione in SharePoint integrata modalità e si modifica l'account del servizio utilizzando il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, è necessario aprire anche amministrazione centrale SharePoint e utilizzare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Concedi accesso al Database** pagina per applicare nuovamente le impostazioni di istanza e del server di report. Questo passaggio concederà al nuovo servizio account accesso al database di SharePoint, che è obbligatorio per l'integrazione [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con un prodotto o tecnologia SharePoint. Per ulteriori informazioni su come concedere l'accesso al database in Amministrazione centrale SharePoint, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) e [ Installazione in modalità SharePoint di Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
+ Inoltre, se si dispone di un server di report configurato per l'esecuzione in SharePoint integrata modalità e si modifica l'account del servizio utilizzando il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager, è necessario aprire anche amministrazione centrale SharePoint e utilizzare il [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Concedi accesso al Database** pagina per applicare nuovamente le impostazioni di istanza e del server di report. Questo passaggio concederà al nuovo servizio account accesso al database di SharePoint, che è necessario per l'integrazione di [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con un prodotto o tecnologia SharePoint. Per altre informazioni su come concedere l'accesso al database in Amministrazione centrale SharePoint, vedere [configurazione e amministrazione di un Server di Report &#40;Reporting Services SharePoint Mode&#41; ](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md) e [ Installazione in modalità SharePoint di Reporting Services &#40;SharePoint 2010 e SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
 ## <a name="choosing-an-account"></a>Scelta di un account  
  Per ottenere risultati ottimali, specificare un account che dispone delle autorizzazioni necessarie per stabilire connessioni di rete, con accesso ai controller di dominio di rete e ai server o ai gateway SMTP aziendali. Nella tabella seguente vengono forniti un riepilogo degli account e alcuni consigli per utilizzarli.  
@@ -77,6 +77,6 @@ ms.locfileid: "36168002"
 ## <a name="see-also"></a>Vedere anche  
  [Configurare l'account del servizio del server di report &#40;Gestione configurazione SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurare un Account del servizio &#40;Gestione configurazione SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Gli argomenti della Guida F1 di Gestione configurazione di Reporting Services &#40;modalità nativa SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

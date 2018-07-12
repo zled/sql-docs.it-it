@@ -1,5 +1,5 @@
 ---
-title: Grafico profitti (Analysis Services - Data Mining) | Documenti Microsoft
+title: Grafico profitti (Analysis Services - Data Mining) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
 - revenue, estimating
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 caps.latest.revision: 22
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 68a78acb38762075dba4bd3a6350c68f729f4716
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 898f0d6fe8dacfb2ec2a8148297d7bd5c0eeb949
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36166742"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239931"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Grafico profitti (Analysis Services - Data mining)
   In un grafico dei profitti viene visualizzata la redditività associata all'utilizzo di un modello di data mining. Si supponga, ad esempio, che il modello preveda quali sono i clienti che una società dovrebbe contattare in uno scenario aziendale. In tal caso, sarebbe necessario aggiungere le informazioni del grafico dei profitti in merito al costo della campagna di mailing diretto. Successivamente, nel grafico completato verrà visualizzato il profitto stimato della campagna indirizzata ai clienti corretti, rispetto a quello di una campagna con clienti contattati casualmente.  
@@ -79,7 +79,7 @@ ms.locfileid: "36166742"
   
  Come illustrato, è possibile utilizzare un grafico dei profitti per confrontare più modelli, purché in tutti venga stimato lo stesso attributo discreto.  
   
- ![confronto tra tre modelli del grafico profitti](../media/dm14-profitchartupdated.gif "profitto grafico di confronto di tre modelli")  
+ ![confronto tra tre modelli di grafico profitti](../media/dm14-profitchartupdated.gif "confronto di tre modelli di grafico profitti")  
   
  Si noti la linea verticale grigia nel grafico. Quando si fa clic e si trascina la riga, la descrizione comando mostra la percentuale della popolazione di destinazione inclusa sotto la curva in corrispondenza di quel punto.  
   
@@ -95,10 +95,10 @@ ms.locfileid: "36166742"
   
 |Argomento|Collegamenti|  
 |------------|-----------|  
-|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base di Data Mining](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base di Data Mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|Viene fornita una procedura dettagliata relativa alla creazione di un grafico di accuratezza per il modello Targeted Mailing.|[Esercitazione di base sul data mining](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [Test dell'accuratezza con i grafici di accuratezza &#40;esercitazione di base di Data Mining&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
 |Vengono illustrati i tipi di grafici correlati.|[Grafico di accuratezza &#40;Analysis Services - Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Matrice di classificazione &#40;Analysis Services - Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Grafico a dispersione &#40;Analysis Services - Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
 |Viene descritta la convalida incrociata per modelli e strutture di data mining.|[La convalida incrociata &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Testing e le attività di convalida e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Vengono descritti i passaggi per la creazione di grafici di accuratezza e di altri grafici simili.|[Test e convalida le attività e procedure relative alla &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>Vedere anche  
  [Test e convalida &#40;Data Mining&#41;](testing-and-validation-data-mining.md)   

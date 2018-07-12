@@ -1,13 +1,11 @@
 ---
-title: Assegnazione di archiviazione | Documenti Microsoft
+title: Assegnazione di archiviazione | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: native-client
 ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - array binding
 ms.assetid: 11c81955-5300-495f-925f-9256f2587b58
 caps.latest.revision: 30
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: eb77a63cb3522d86b40742780e44a141dc0a6c15
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.openlocfilehash: cc3ce031d7f59395ec54abe1c21276e9b4be9054
+ms.sourcegitcommit: f8ce92a2f935616339965d140e00298b1f8355d7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36156218"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37426350"
 ---
 # <a name="assigning-storage"></a>Assegnazione di archiviazione
   In un'applicazione è possibile assegnare l'archiviazione per i risultati prima o dopo l'esecuzione di un'istruzione SQL. Se la preparazione o l'esecuzione dell'istruzione SQL avviene prima, è possibile richiedere informazioni sul set di risultati prima di archiviare i risultati. Se ad esempio il set di risultati non è noto, è necessario recuperare il numero di colonne prima dell'assegnazione dell'archiviazione.  
@@ -58,7 +56,7 @@ ms.locfileid: "36156218"
   
 -   L'associazione a livello di riga è completa quando tutti i parametri dell'istruzione SQL vengono associati come un'unità a una matrice di strutture contenenti le singole variabili per i parametri.  
   
-     L'associazione viene specificata chiamando **SQLSetStmtAttr** con *attributo* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostato sulla dimensione dell'azienda struttura il le colonne impostate variabili che riceveranno il risultato.  
+     L'associazione per riga viene specificata chiamando **SQLSetStmtAttr** con *attributo* impostato su SQL_ATTR_ROW_BIND_TYPE e *ValuePtr* impostata sulle dimensioni dell'azienda struttura il colonne di impostare le variabili che riceveranno il risultato.  
   
  Viene inoltre impostato SQL_ATTR_ROW_ARRAY_SIZE sul numero di elementi presenti nelle matrici di colonne o di righe e vengono impostati SQL_ATTR_ROW_STATUS_PTR e SQL_ATTR_ROWS_FETCHED_PTR.  
   

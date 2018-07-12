@@ -1,29 +1,28 @@
 ---
-title: Risolvere i problemi di configurazione di gruppi di disponibilità AlwaysOn (SQL Server) | Documenti Microsoft
+title: Risolvere i problemi di configurazione di gruppi di disponibilità AlwaysOn (SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.suite: ''
-ms.technology:
-- dbe-high-availability
+ms.technology: high-availability
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - troubleshooting [SQL Server], deploying
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 caps.latest.revision: 38
-author: MikeRayMSFT
-ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 1847da6db0f0bc7e3ad8e480d5682dcfbc178a9d
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: MashaMSFT
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: efd9cb30582ffcf48c8a7f410dcb164e0a4d3da0
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167732"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37209861"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Risolvere i problemi relativi alla configurazione di Gruppi di disponibilità AlwaysOn (SQL Server)
   In questo argomento vengono fornite informazioni per la risoluzione dei problemi tipici relativi alla configurazione delle istanze del server per [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Tra i problemi di configurazione tipici sono inclusi la disabilitazione di [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , la configurazione errata degli account, l'endpoint del mirroring del database inesistente, l'endpoint inaccessibile (errore di SQL Server 1418), l'accesso alla rete inesistente e l'esito negativo di un comando di creazione di join del database (errore di SQL Server 35250).  
@@ -56,7 +55,7 @@ ms.locfileid: "36167732"
   
     1.  Se i partner vengono eseguiti con lo stesso account utente di dominio, gli account di accesso corretti saranno disponibili automaticamente in ambedue i database **master** . Questa scelta semplifica la configurazione della sicurezza del database ed è quella consigliata.  
   
-    2.  Se due istanze del server vengono eseguite con account diversi, è necessario creare l'accesso per ogni account nel database **master** nell'istanza del server remoto e a tale account di accesso è necessario concedere le autorizzazioni CONNECT per la connessione all'endpoint del mirroring del database di tale istanza del server. Per altre informazioni, vedere[impostare degli account di accesso per gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
+    2.  Se due istanze del server vengono eseguite con account diversi, è necessario creare l'accesso per ogni account nel database **master** nell'istanza del server remoto e a tale account di accesso è necessario concedere le autorizzazioni CONNECT per la connessione all'endpoint del mirroring del database di tale istanza del server. Per altre informazioni, vedere[Set di account di accesso per gruppi di disponibilità AlwaysOn o mirroring del Database &#40;SQL Server&#41;](../../database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md).  
   
 2.  Se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene eseguito come account predefinito, ad esempio Sistema locale, Servizio locale o Servizio di rete, oppure come account non di dominio, è necessario utilizzare certificati per l'autenticazione dell'endpoint. Se gli account del servizio utilizzano account di dominio nello stesso dominio, è possibile scegliere di concedere l'accesso CONNECT per ogni account del servizio su tutti i percorsi di replica oppure utilizzare certificati. Per altre informazioni, vedere [Usare certificati per un endpoint del mirroring del database &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
@@ -165,11 +164,11 @@ ms.locfileid: "36167732"
   
 -   [Pagina relativa al cluster di failover Get-ClusterLog](http://technet.microsoft.com/library/ee461045.aspx)  
   
--   [SQL Server AlwaysOn Team Blog: Di SQL Server AlwaysOn Team Blog ufficiale](http://blogs.msdn.com/b/sqlalwayson/)  
+-   [SQL Server AlwaysOn Team Blog: Il Blog ufficiale di SQL Server AlwaysOn Team](http://blogs.msdn.com/b/sqlalwayson/)  
   
 ## <a name="see-also"></a>Vedere anche  
- [Sicurezza del trasporto per gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
+ [Sicurezza del trasporto per i gruppi di disponibilità AlwaysOn e mirroring del Database &#40;SQL Server&#41;](../../database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configurazione di rete dei client](../../configure-windows/client-network-configuration.md)   
- [Prerequisiti, restrizioni e consigli per i gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [Prerequisiti, restrizioni e consigli per gruppi di disponibilità AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

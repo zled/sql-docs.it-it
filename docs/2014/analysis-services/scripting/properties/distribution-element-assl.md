@@ -1,5 +1,5 @@
 ---
-title: Elemento Distribution (ASSL) | Documenti Microsoft
+title: Elemento Distribution (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Distribution element
 ms.assetid: a1309b90-8ad8-431b-a918-67f0cdd4fd20
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: a556b4dc3745ecf45eab71339f2db3a0f9174f06
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ea3422fead59b45957ebdb15735736fba89ddff2
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167525"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37163542"
 ---
 # <a name="distribution-element-assl"></a>Elemento Distribution (ASSL)
   Contiene un valore specifico del provider che descrive i valori come scalari vengono distribuiti in una colonna di una [MiningStructure](../objects/miningstructure-element-assl.md) elemento.  
@@ -61,10 +61,10 @@ ms.locfileid: "36167525"
 |Elementi padre|[ScalarMiningStructureColumn](../data-type/miningstructurecolumn-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
- I valori disponibili per il `Distribution` elemento, ad esempio *Normal* o *uniforme,* specifiche per ogni provider di algoritmi di data mining. Per ulteriori informazioni sui valori validi `Distribution`, vedere la documentazione riguardante il provider dell’algoritmo di data mining.  
+## <a name="remarks"></a>Note  
+ I valori disponibili per il `Distribution` elemento, ad esempio *normale* o *uniforme,* specifiche per ogni provider di algoritmi di data mining. Per ulteriori informazioni sui valori validi `Distribution`, vedere la documentazione riguardante il provider dell’algoritmo di data mining.  
   
- L'elemento corrispondente dell'elemento padre del `Distribution` nell'oggetto oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
+ L'elemento che corrisponde al padre di `Distribution` nell'oggetto gli oggetti AMO (Analysis Management) è modello <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn>.  
   
 ## <a name="see-also"></a>Vedere anche  
  [Proprietà &#40;ASSL&#41;](properties-assl.md)  

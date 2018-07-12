@@ -1,5 +1,5 @@
 ---
-title: Collegare un Report a un modello come Report click-through | Documenti Microsoft
+title: Collegare un Report a un modello come Report click-through | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,7 +8,7 @@ ms.suite: ''
 ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - customizing clickthrough reports
 - clickthrough reports, customizing
@@ -17,16 +17,16 @@ ms.assetid: 3af42de3-67ef-41c2-bc8a-7045baec6f63
 caps.latest.revision: 26
 author: markingmyname
 ms.author: maghan
-manager: mblythe
-ms.openlocfilehash: 9dfe16933e0c2b335cf68816113c336561aac1ac
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 3df0b140c8d1eb08fc3b1502eb2a627be7f175c6
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36167564"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37210731"
 ---
 # <a name="link-a-report-to-a-model-as-a-clickthrough-report"></a>Collegare un report a un modello come report click-through
-  Invece di utilizzare i modelli di report click-through predefiniti, è possibile creare un report con Generatore report e quindi collegarlo a un'entità specifica nel modello di report. Quando l'utente che visualizza il report fa clic sui dati interattivi nel report principale, questo report viene visualizzato come report click-through. Per collegare un report a un'entità, usare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gestione Report.  
+  Invece di utilizzare i modelli di report click-through predefiniti, è possibile creare un report con Generatore report e quindi collegarlo a un'entità specifica nel modello di report. Quando l'utente che visualizza il report fa clic sui dati interattivi nel report principale, questo report viene visualizzato come report click-through. Per collegare un report a un'entità, utilizzare [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] gestione Report.  
   
 > [!IMPORTANT]  
 >  L'entità primaria, o di base, che viene utilizzata nel report deve coincidere con quella a cui il report è collegato.  

@@ -1,5 +1,5 @@
 ---
-title: Impostazione convenzioni di denominazione (generazione guidata Schema) (Analysis Services - dati multidimensionali) | Documenti Microsoft
+title: Impostazione convenzioni di denominazione (generazione guidata Schema) (Analysis Services - dati multidimensionali) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,20 +8,20 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.schemagenwizard.namingconventions.f1
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 caps.latest.revision: 21
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 93be42d99f0f255807caa23cdf91582e24a8a132
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: a984b84c485c24302288eb16747cb3a964794156
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168881"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37151532"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Impostazione convenzioni di denominazione (Generazione guidata schema) (Analysis Services - Dati multidimensionali)
   Utilizzare la pagina **Impostazione convenzioni di denominazione** per definire le convenzioni di denominazione utilizzate in Generazione guidata schema per la creazione di oggetti dello schema.  
@@ -44,7 +44,7 @@ ms.locfileid: "36168881"
  Consente di indicare un valore per l'opzione specificata in **Opzione** da usare per la generazione dello schema.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Della Guida F1 di procedura guidata di generazione dello schema &#40;Analysis Services - dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Guida F1 di procedura guidata di generazione dello schema &#40;Analysis Services - dati multidimensionali&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
  [Procedure guidate di Analysis Services &#40;dati multidimensionali&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

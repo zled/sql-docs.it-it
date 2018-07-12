@@ -1,5 +1,5 @@
 ---
-title: Impostare o modificare il metodo di connessione preferito per DirectQuery | Documenti Microsoft
+title: Impostare o modificare il metodo di connessione preferito per DirectQuery | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -8,21 +8,21 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 caps.latest.revision: 5
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: bf6abf3e4576fb28155529ee1bdfd24520176010
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: c5c9ad99aad3ae46b3e97c3d3b6dfbec03dcff27
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168394"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37149522"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Impostare o modificare il metodo di connessione preferito per DirectQuery
-  Quando si crea un modello per l'utilizzo nella modalità DirectQuery, è innanzitutto necessario configurare l'ambiente di progettazione affinché supporti l'utilizzo di DirectQuery. A tale scopo, vedere [abilitare la modalità DirectQuery &#40;modello tabulare di SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
+  Quando si crea un modello per l'utilizzo nella modalità DirectQuery, è innanzitutto necessario configurare l'ambiente di progettazione affinché supporti l'utilizzo di DirectQuery. A questo scopo, vedere [abilitare la modalità DirectQuery &#40;modello tabulare di SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
   
  Prima di distribuire il modello, è necessario impostare alcune proprietà aggiuntive per consentire agli utenti di accedere al modello utilizzando una delle modalità DirectQuery:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "36168394"
   
 ### <a name="to-set-the-preferred-connection-method-for-a-directquery-model"></a>Per impostare il metodo di connessione preferito per un modello DirectQuery  
   
-1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], aprire il file della soluzione per il modello DirectQuery.  
+1.  In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], aprire il file di soluzione per il modello DirectQuery.  
   
 2.  In Visual Studio scegliere **Proprietà** dal menu **Progetto**.  
   

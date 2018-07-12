@@ -1,5 +1,5 @@
 ---
-title: Elemento Usage (DimensionAttribute) (ASSL) | Documenti Microsoft
+title: Elemento Usage (DimensionAttribute) (ASSL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Usage element
 ms.assetid: c5e38d2e-5a8e-4157-84e9-285e78c84e74
 caps.latest.revision: 34
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 2e7787edb562580eaaddc3cdaf1094958eec9742
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: ce7dea2cb3c0e928b5a1b0c80aa0ca526f5f8329
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36168882"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37183240"
 ---
 # <a name="usage-element-dimensionattribute-assl"></a>Elemento Usage (DimensionAttribute) (ASSL)
   Descrive la modalità di utilizzo di un attributo.  
@@ -61,7 +61,7 @@ ms.locfileid: "36168882"
 |Elemento padre|[DimensionAttribute](../data-type/dimensionattribute-data-type-assl.md)|  
 |Elementi figlio|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Note  
  Il valore di questo elemento è limitato a una delle stringhe elencate nella tabella seguente.  
   
 |valore|Description|  

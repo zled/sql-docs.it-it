@@ -1,5 +1,5 @@
 ---
-title: Aggiornare lo Schema in una vista origine dati (Analysis Services) | Documenti Microsoft
+title: Aggiornare lo Schema in una vista origine dati (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,22 +8,22 @@ ms.suite: ''
 ms.technology:
 - analysis-services
 ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - refreshing data source views
 - data source views [Analysis Services], refreshing
 ms.assetid: 634b0504-1437-43e7-8ac7-3248ac7989a3
 caps.latest.revision: 33
-author: Minewiskan
+author: minewiskan
 ms.author: owend
-manager: mblythe
-ms.openlocfilehash: 517c3e9c0c608a0e38d79fd6aff8147a68403671
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+manager: craigg
+ms.openlocfilehash: 06859536c3f63e35bca7ab43593eac44b3bba22a
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36069042"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37239771"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Aggiornare lo schema in una vista origine dati (Analysis Services)
   Dopo la definizione di una vista origine dati in un database o un progetto di [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], è possibile che lo schema di un'origine dati sottostante venga modificato. Tali modifiche non vengono automaticamente rilevate o aggiornate in un progetto di sviluppo. Inoltre, se è stato distribuito il progetto in un server, verranno rilevati errori di elaborazione qualora non sia più possibile la connessione di Analysis Services all'origine dati esterna.  
@@ -52,7 +52,7 @@ ms.locfileid: "36069042"
   
  Durante l'aggiornamento, in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] vengono eseguite query su tutte le origini dati relazionali sottostanti per determinare se sono state apportate modifiche nelle tabelle o nelle viste incluse nella vista origine dati. Se è possibile stabilire connessioni a tutte le origini dati sottostanti e sono state apportate modifiche, queste verranno visualizzate nella finestra di dialogo **Aggiorna vista origine dati** .  
   
- ![Aggiorna vista origine dati finestra di dialogo](../media/ssas-olapdsv-refresh.gif "finestra di dialogo Aggiorna vista origine dati")  
+ ![Finestra di dialogo Vista origine dati di aggiornamento](../media/ssas-olapdsv-refresh.gif "nella finestra di dialogo Aggiorna vista origine dati")  
   
  Nella finestra di dialogo vengono elencati tabelle, colonne, vincoli e relazioni che verranno eliminati o aggiunti nella vista origine dati. Inoltre, nel report viene elencato un calcolo o una query denominata che non è possibile preparare correttamente. Gli oggetti interessati vengono elencati in una visualizzazione albero contenente le colonne e le relazioni nidificate nelle tabelle e il tipo di modifica (eliminazione o aggiunta) indicata per ogni oggetto. Le icone di oggetti della vista origine dati standard indicano il tipo di oggetto interessato.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "36069042"
  Dopo aver esaminato il report, è possibile accettare le modifiche oppure annullare l'aggiornamento e rifiutare così qualsiasi modifica. Tutte le modifiche devono essere accettate o rifiutate insieme. Non è possibile scegliere elementi singoli nell'elenco. È inoltre possibile salvare un report delle modifiche.  
   
 ## <a name="see-also"></a>Vedere anche  
- [Viste origine dati nei modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
+ [Viste origine dati in modelli multidimensionali](data-source-views-in-multidimensional-models.md)  
   
   

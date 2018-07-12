@@ -1,5 +1,5 @@
 ---
-title: Esempio CLR Transactions | Documenti Microsoft
+title: Esempio CLR Transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,15 +12,15 @@ ms.tgt_pltfrm: ''
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 caps.latest.revision: 12
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.openlocfilehash: e1bf79778ca7c4376545570a538e41c5fa8db17f
-ms.sourcegitcommit: 5dd5cad0c1bbd308471d6c885f516948ad67dfcf
+author: mashamsft
+ms.author: mathoma
+manager: craigg
+ms.openlocfilehash: 581510c786e31ab83399bb1ca0d21dd8391ff547
+ms.sourcegitcommit: c18fadce27f330e1d4f36549414e5c84ba2f46c2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36169059"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37154982"
 ---
 # <a name="clr-transactions-sample"></a>Esempio CLR Transactions
   In questo esempio viene illustrato il controllo delle transazioni tramite le API gestite dello spazio dei nomi `System.Transactions` . In particolare, viene utilizzata la classe `System.Transactions.TransactionScope` per stabilire un limite della transazione al fine di garantire che i valori delle scorte non vengano rettificati a meno che siano presenti scorte sufficienti per soddisfare la richiesta. Se le scorte sono sufficienti, si garantisce che il trasferimento dal magazzino o da una posizione a un'altra avvenga in modo atomico. La registrazione automatica in una transazione distribuita viene dimostrata registrando le modifiche alle scorte in un database di controllo presente in un'istanza distinta di [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
